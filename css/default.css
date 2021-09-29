@@ -1,7 +1,6 @@
 * {
   margin: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,7 +31,7 @@ p {
 
 .termsUseHighlight {
   font-weight: bold;
-  color: var(--dark-gray) !important;
+  color: var(--body-text) !important;
   cursor: pointer;
 }
 
@@ -49,15 +48,15 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 22px;
-  background-color: white;
-  border-bottom: 1px solid var(--navy-lighter-gray);
+  background-color: var(--body-background);
+  border-bottom: 1px solid var(--card-border);
   position: fixed;
   width: 100%;
   gap: 1rem;
 }
 
 .scroll {
-  box-shadow: 0px 4px 8px var(--navy-lighter-gray);
+  box-shadow: 0px 4px 8px var(--box-shadow);
 }
 
 #logoHeader {
@@ -80,7 +79,7 @@ p {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.008em;
-  color: var(--navy);
+  color: var(--link-color);
 }
 
 #logoImg {
@@ -124,7 +123,7 @@ code pre {
 
 .fa-pencil-alt {
   margin-right: 5px;
-  color: var(--electric-blue);
+  color: var(--link-color-hover);
 }
 
 /*
@@ -150,7 +149,7 @@ code pre {
 
 .defaultfooter {
   padding: 19px 0;
-  background-color: var(--lighter-gray);
+  background-color: var(--card-background);
 }
 
 .defaultfooter span {
@@ -194,11 +193,11 @@ ul.mysidebar.nav {
   flex-direction: column;
   height: 150px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--body-background);
 }
 
 .defaultsidebar {
-  background-color: var(--white);
+  background-color: var(--body-background);
   display: flex;
   padding-top: 2%;
   margin-right: 0% !important;
@@ -221,8 +220,8 @@ ul.mysidebar.nav {
   min-width: 100%;
   margin-top: 64px;
   width: 100%;
-  background-color: var(--lighter-gray);
-  color: var(--darker-gray);
+  background-color: var(--card-background);
+  color: var(--card-text);
   margin-bottom: -25px;
 }
 
@@ -285,7 +284,7 @@ ul.mysidebar.nav {
 
 .darken button {
   background-color: transparent !important;
-  color: white;
+  color: var(--button-text-secondary);
 }
 
 .darken code {
@@ -334,7 +333,7 @@ ul.mysidebar.nav {
 }
 
 .bluehighlight {
-  color: var(--electric-blue);
+  color: var(--link-color-hover);
 }
 
 .breadhidden {
@@ -343,14 +342,14 @@ ul.mysidebar.nav {
 
 #aa-search-input {
   border-radius: 25px;
-  border: 1px solid var(--mid-gray);
-  background-color: white;
+  border: 1px solid var(--card-border);
+  background-color: var(--body-background);
   width: 90%;
   min-width: 250px;
   font-size: 16px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding: 10px;
-  border-bottom: 1px solid var(--mid-gray);
+  border-bottom: 1px solid var(--card-border);
   padding-left: 48px;
 }
 
@@ -395,6 +394,15 @@ ul.mysidebar.nav {
 
 .aa-input-search {
   width: 100%;
+}
+
+input.aa-input-search.aa-hint {
+  background: none 0% 0% / auto repeat scroll padding-box border-box
+    var(--body-background) !important;
+}
+
+input#aa-search-input {
+  color: var(--title-text);
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--title {
@@ -529,7 +537,7 @@ table tbody td img {
   background-color: var(--lighter-sky-blue);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--navy);
+  color: var(--link-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
@@ -581,7 +589,7 @@ table tbody td img {
   background-color: var(--lighter-red);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--navy);
+  color: var(--link-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
@@ -653,22 +661,22 @@ a.loginText {
 }
 
 .loginButton {
-  color: var(--electric);
+  color: var(--button-text-secondary);
   border: none;
-  background-color: white;
+  background-color: var(--button-background-secondary);
 }
 
 .loginButton:hover {
-  color: var(--hover-electric-blue);
+  color: var(--link-color-hover);
 }
 
 .trialButton:hover {
-  background-color: var(--hover-electric-blue);
+  background-color: var(--link-color-hover);
 }
 
 .trialButton {
-  background-color: var(--electric-blue);
-  color: white;
+  background-color: var(--link-color);
+  color: var(--button-text);
   border: 0px;
 }
 
@@ -860,7 +868,7 @@ a.loginText {
 }
 
 .subfolder > a {
-  color: var(--dark-gray) !important;
+  color: var(--body-text) !important;
   font-size: 12px !important;
   font-weight: normal;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
@@ -874,7 +882,7 @@ a.loginText {
 .homeitem > a {
   font-family: "Roboto";
   font-size: 16px;
-  color: var(--dark-gray) !important;
+  color: var(--body-text) !important;
 }
 
 .homeitem > a:hover {
@@ -1051,7 +1059,7 @@ a.loginText {
 }
 
 .defaultbutton a {
-  color: var(--electric-blue);
+  color: var(--link-color);
 }
 
 .defaultbutton div {
@@ -1084,7 +1092,7 @@ a.loginText {
   /* color: var(--secondary-black); */
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: var(--dark-gray);
+  color: var(--title-text);
   font-weight: bold;
   line-height: 16px;
 }
@@ -1094,7 +1102,7 @@ a.loginText {
 }
 
 #anchorlist::-webkit-scrollbar-track {
-  color: var(--lightest-gray);
+  color: var(--card-background);
 }
 
 #anchorlist::-webkit-scrollbar-thumb {
@@ -1110,20 +1118,20 @@ a.loginText {
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 24px;
-  color: var(--navy-gray);
+  color: var(--body-text);
 }
 
 /*
  make sure background is white */
 .highlightlink {
-  background-color: white !important;
-  color: var(--dark-gray) !important;
+  background-color: var(--body-background) !important;
+  color: var(--body-text) !important;
   font-weight: bold;
 }
 
 .repositionSafariSidebar {
-  color: var(--dark-gray);
-  background-color: white;
+  color: var(--body-text);
+  background-color: var(--body-background);
   width: 20px;
   height: 20px;
   border: 0;
@@ -1141,8 +1149,8 @@ a.loginText {
 }
 
 .sidebarbutton {
-  color: var(--dark-gray);
-  background-color: white;
+  color: var(--body-text);
+  background-color: var(--body-background);
   width: 20px;
   height: 20px;
   border: 0;
@@ -1170,8 +1178,8 @@ a.loginText {
 
 .sidebarbutton span:first-of-type {
   border-top: 10px solid transparent;
-  background: white;
-  border-left: 10px solid var(--dark-gray);
+  background: var(--body-background);
+  border-left: 10px solid var(--title-text);
   transform: rotate(-135deg);
   top: 4px;
 }
@@ -1179,7 +1187,7 @@ a.loginText {
 .clicked span:first-of-type {
   transform: rotate(-45deg);
   border-top: 10px solid transparent;
-  background: white;
+  background: var(--body-background);
   border-left: 10px solid var(--orange);
   top: 2px;
 }
@@ -1355,6 +1363,61 @@ a.loginText {
   display: none;
 }
 
+/* toggle switch  */
+
+.dark {
+  background-color: var(--body-background);
+  color: var(--body-text);
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.theme-switch-wrapper .theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 45px;
+  text-align: right;
+}
+.theme-switch-wrapper .theme-switch input {
+  display: none;
+}
+.theme-switch-wrapper .slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.theme-switch-wrapper .slider:before {
+  background-color: var(--title-text);
+  bottom: 0px;
+  content: "";
+  height: 20px;
+  left: 0px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+.theme-switch-wrapper input:checked + .slider {
+  background-color: var(--cta-background);
+}
+.theme-switch-wrapper input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.theme-switch-wrapper .slider.round {
+  border-radius: 34px;
+}
+.theme-switch-wrapper .slider.round:before {
+  border-radius: 50%;
+}
+/* toggle end */
+
 .apiLink {
   cursor: pointer;
   list-style: none;
@@ -1401,7 +1464,7 @@ a.loginText {
 input#csds-button {
   border-radius: 15px;
   color: #fff;
-  background-color: var(--electric-blue);
+  background-color: var(--link-color);
   border: 0;
   height: 32px;
   padding: 0 10px 0 10px;
