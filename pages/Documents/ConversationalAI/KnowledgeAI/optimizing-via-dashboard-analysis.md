@@ -23,7 +23,7 @@ Take note of the alerts and warnings in the upper-right corner. These let you kn
 
 To find opportunities to answer questions in conversations, evaluate the **Bot conversations using answers** panel:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_botconvsusinganswers.png">
+<img style="width:800px" src="img/ConvoBuilder/kb_botconvsusinganswers.png">
 
 This data shows you how well KnowledgeAI is supporting automated consumer conversations. It helps you to see the opportunities to better leverage answers in your conversations. For example:
 
