@@ -33,7 +33,7 @@ Please make sure to whitelist the **fully qualified domain name**. Further also 
 {:.notice}
 **Please be aware** that it might take up to **10 minutes** until the whitelisted domain becomes active on the proxy.
 
-Under the hood, the toolbelt configured the HTTP client to communicate with the proxy, which enforces the domain whitelist. Please see this [page](liveperson-functions-developing-with-faas-function-connectivity) for more information on general HTTP communication. 
+Under the hood, the toolbelt configured the HTTP client to communicate with the proxy, which enforces the domain whitelist. Please see this [page](liveperson-functions-developing-with-faas-function-connectivity.html) for more information on general HTTP communication. 
 
 {:.notice}
 Be aware that the proxy will close the socket if the request is to a domain that is not whitelisted, yielding a `Socket is closed`-Error for the function.
