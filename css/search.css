@@ -65,7 +65,7 @@ span.searchcontentcontainer {
   font-size: 21px;
   font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   text-decoration: none;
-  color: var(--electric-blue);
+  color: var(--link-color);
   font-weight: bold;
   margin-left: 20px;
   margin-top: 20px;
