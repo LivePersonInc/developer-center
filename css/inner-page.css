@@ -647,7 +647,7 @@ div.sidebarTitle-holder {
   display: inline-block;
   padding-right: 1em;
   padding-left: 0em;
-  color: #5896ed;
+  color: var(--link-color);
   font-size: 0.8em;
   font-weight: bold;
   text-decoration: none;
@@ -707,7 +707,7 @@ div.sidebarTitle-holder {
 .post-content p strong {
   font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: var(navy-gray);
+  color: var(--title-text);
 }
 
 .post-content,
