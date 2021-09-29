@@ -3,7 +3,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
     $("#mainHeader").css(
       "box-shadow",
-      $(this).scrollTop() > 10 ? "0px 4px 8px #DADBE5" : ""
+      $(this).scrollTop() > 10 ? "0px 4px 8px var(--box-shadow)" : ""
     )
   })
   crossBrowserSafariCheck()
@@ -165,7 +165,7 @@ function navigateContent(url) {
       $(window).scroll(function () {
         $("#mainHeader").css(
           "box-shadow",
-          $(this).scrollTop() > 10 ? "0px 4px 8px var(--navy-lighter-gray)" : ""
+          $(this).scrollTop() > 10 ? "0px 4px 8px var(--box-shadow)" : ""
         )
       })
       crossBrowserSafariCheck()

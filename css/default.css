@@ -56,7 +56,7 @@ p {
 }
 
 .scroll {
-  box-shadow: 0px 4px 8px var(--navy-lighter-gray);
+  box-shadow: 0px 4px 8px var(--box-shadow);
 }
 
 #logoHeader {
@@ -79,7 +79,7 @@ p {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.008em;
-  color: var(--navy);
+  color: var(--link-color);
 }
 
 #logoImg {
@@ -149,7 +149,7 @@ code pre {
 
 .defaultfooter {
   padding: 19px 0;
-  background-color: var(--lighter-gray);
+  background-color: var(--card-background);
 }
 
 .defaultfooter span {
@@ -220,8 +220,8 @@ ul.mysidebar.nav {
   min-width: 100%;
   margin-top: 64px;
   width: 100%;
-  background-color: var(--lighter-gray);
-  color: var(--darker-gray);
+  background-color: var(--card-background);
+  color: var(--card-text);
   margin-bottom: -25px;
 }
 
@@ -284,7 +284,7 @@ ul.mysidebar.nav {
 
 .darken button {
   background-color: transparent !important;
-  color: white;
+  color: var(--button-text-secondary);
 }
 
 .darken code {
@@ -342,14 +342,14 @@ ul.mysidebar.nav {
 
 #aa-search-input {
   border-radius: 25px;
-  border: 1px solid var(--mid-gray);
-  background-color: white;
+  border: 1px solid var(--card-border);
+  background-color: var(--body-background);
   width: 90%;
   min-width: 250px;
   font-size: 16px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding: 10px;
-  border-bottom: 1px solid var(--mid-gray);
+  border-bottom: 1px solid var(--card-border);
   padding-left: 48px;
 }
 
@@ -394,6 +394,15 @@ ul.mysidebar.nav {
 
 .aa-input-search {
   width: 100%;
+}
+
+input.aa-input-search.aa-hint {
+  background: none 0% 0% / auto repeat scroll padding-box border-box
+    var(--body-background) !important;
+}
+
+input#aa-search-input {
+  color: var(--title-text);
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--title {
@@ -528,7 +537,7 @@ table tbody td img {
   background-color: var(--lighter-sky-blue);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--navy);
+  color: var(--link-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
@@ -580,7 +589,7 @@ table tbody td img {
   background-color: var(--lighter-red);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--navy);
+  color: var(--link-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
@@ -667,7 +676,7 @@ a.loginText {
 
 .trialButton {
   background-color: var(--link-color);
-  color: white;
+  color: var(--button-text);
   border: 0px;
 }
 
@@ -1093,7 +1102,7 @@ a.loginText {
 }
 
 #anchorlist::-webkit-scrollbar-track {
-  color: var(--lightest-gray);
+  color: var(--card-background);
 }
 
 #anchorlist::-webkit-scrollbar-thumb {
@@ -1367,9 +1376,9 @@ a.loginText {
 }
 .theme-switch-wrapper .theme-switch {
   display: inline-block;
-  height: 34px;
+  height: 20px;
   position: relative;
-  width: 60px;
+  width: 45px;
   text-align: right;
 }
 .theme-switch-wrapper .theme-switch input {
@@ -1386,17 +1395,17 @@ a.loginText {
   transition: 0.4s;
 }
 .theme-switch-wrapper .slider:before {
-  background-color: #fff;
-  bottom: 4px;
+  background-color: var(--title-text);
+  bottom: 0px;
   content: "";
-  height: 26px;
-  left: 4px;
+  height: 20px;
+  left: 0px;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
+  width: 20px;
 }
 .theme-switch-wrapper input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: var(--cta-background);
 }
 .theme-switch-wrapper input:checked + .slider:before {
   transform: translateX(26px);

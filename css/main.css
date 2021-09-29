@@ -598,10 +598,10 @@ body.search-opened #search-container {
 }
 
 #search-container {
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  background-color: var(--body-background);
+  box-shadow: var(--box-shadow) 0px 0px 0px 1px;
   box-sizing: border-box;
-  color: rgb(24, 35, 89);
+  color: var(--title-text);
   display: none;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -626,7 +626,7 @@ body.search-opened #search-container {
 }
 
 .aa-input-search {
-  color: white;
+  color: var(--body-background);
   padding: 10px;
   border: none;
   width: 0px;

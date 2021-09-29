@@ -169,7 +169,7 @@ table tbody tr:last-child {
 }
 
 .post-content table > thead > tr > th {
-  background-color: var(--lightest-gray);
+  background-color: var(--card-background);
   font-family: "Open Sans";
   text-transform: uppercase;
   font-weight: 600;
@@ -362,7 +362,7 @@ div#toc ul li ul li ul {
 ul.mysidebar.nav {
   text-decoration: none;
   position: fixed;
-  height: 75vh;
+  height: 100%;
   width: 300px;
   min-width: 300px;
 
@@ -379,11 +379,11 @@ ul.mysidebar.nav {
 }
 
 .navy::-webkit-scrollbar-track {
-  color: var(--lightest-gray);
+  color: var(--card-background);
 }
 
 .nav::-webkit-scrollbar-thumb {
-  background-color: var(--mid-gray);
+  background-color: var(--card-border);
   border-radius: 100px;
 }
 
@@ -519,10 +519,14 @@ ul.mysidebar.nav li.activepage a:hover {
 
   margin-top: -1px;
 }
-
+input#metricsSearch {
+  background: var(--body-background);
+  border-color: var(--card-border);
+  color: var(--body-text);
+}
 .mysidebar.nav li.folder > a:hover {
   background-color: initial !important;
-  color: var(--darker-gray);
+  color: var(--link-color-hover);
 }
 
 .innerfolder > ul > .innerfolder > a {
@@ -687,6 +691,11 @@ div.sidebarTitle-holder {
   color: var(--body-text) !important;
 }
 
+.post-content > p.notice,
+.post-content > p.important {
+  color: var(--primary-content) !important;
+}
+
 .post-content ol ol {
   list-style-type: upper-latin;
 }
@@ -707,9 +716,9 @@ div.sidebarTitle-holder {
 }
 
 .alert-warning {
-  background-color: #f8f8f8;
-  border-color: #5879da;
-  color: #4a4a4a;
+  background-color: var(--card-text);
+  border-color: var(--card-background);
+  color: var(--card-background);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 

@@ -52,6 +52,7 @@
   --button-text: #fcfcfd;
   --button-background-secondary: transparent;
   --button-text-secondary: #2dbae6;
+  --box-shadow: #dadbe5e0;
 }
 .dark {
   --primary: #03011d;
@@ -60,7 +61,7 @@
   --secondary-background: #005ef4;
   --secondary-text: #fcfcfd;
   --link-color: #005ef4;
-  --link-color-hover: #091043;
+  --link-color-hover: #2a79ff;
   --body-background: #03011d;
   --body-text: #a7acbe;
   --title-text: #fcfcfd;
@@ -76,4 +77,5 @@
   --button-text: #fcfcfd;
   --button-background-secondary: transparent;
   --button-text-secondary: #2dbae6;
+  --box-shadow: #000000d6;
 }
