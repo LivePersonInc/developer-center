@@ -1374,6 +1374,25 @@ a.loginText {
   background-color: var(--body-background);
   color: var(--body-text);
 }
+
+.theme-switch-wrapper .slider.round:before {
+  background-image: url(/img/darkmode-sun.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #d9d4d0;
+}
+
+.theme-switch-wrapper input:checked + .slider:before {
+  background-image: url(/img/darkmode-moon.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.18),
+    0px 2px 3px rgba(0, 0, 0, 0.12);
+}
+
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -1381,16 +1400,18 @@ a.loginText {
 }
 .theme-switch-wrapper .theme-switch {
   display: inline-block;
-  height: 20px;
+  height: 32px;
   position: relative;
-  width: 45px;
+  width: 64px;
   text-align: right;
+  margin-bottom: 0;
 }
 .theme-switch-wrapper .theme-switch input {
   display: none;
 }
 .theme-switch-wrapper .slider {
-  background-color: #ccc;
+  background-color: var(--body-background);
+  border: 1px solid #d9d4d0;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -1400,23 +1421,32 @@ a.loginText {
   transition: 0.4s;
 }
 .theme-switch-wrapper .slider:before {
-  background-color: var(--title-text);
-  bottom: 0px;
+  bottom: 3px;
   content: "";
-  height: 20px;
-  left: 0px;
+  height: 24px;
+  left: 3px;
   position: absolute;
   transition: 0.4s;
-  width: 20px;
+  width: 24px;
+  background: var(--card-background);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px rgb(0 0 0 / 25%), 0px 1px 2px rgb(0 0 0 / 18%),
+    0px 2px 3px rgb(0 0 0 / 12%);
 }
 .theme-switch-wrapper input:checked + .slider {
-  background-color: var(--cta-background);
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.18))
+    drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.12));
 }
 .theme-switch-wrapper input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(34px);
 }
 .theme-switch-wrapper .slider.round {
-  border-radius: 34px;
+  border-radius: 16px;
 }
 .theme-switch-wrapper .slider.round:before {
   border-radius: 50%;

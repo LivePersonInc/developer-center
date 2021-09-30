@@ -688,12 +688,17 @@ div.sidebarTitle-holder {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.71;
-  color: var(--body-text) !important;
+  color: var(--body-text);
 }
 
 .post-content > p.notice,
 .post-content > p.important {
-  color: var(--primary-content) !important;
+  color: var(--primary-content);
+}
+
+.post-content > p.notice strong,
+.post-content > p.important strong {
+  color: var(--link-color);
 }
 
 .post-content ol ol {
