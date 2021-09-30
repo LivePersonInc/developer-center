@@ -71,6 +71,11 @@ p {
   margin: 0;
 }
 
+svg.sitelogo {
+  width: 100%;
+  max-width: 100%;
+}
+
 .devLabel {
   flex-shrink: 0;
   font-family: Roboto;
