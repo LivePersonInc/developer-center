@@ -16,7 +16,7 @@ body {
 b,
 strong {
   font-weight: bold !important;
-  color: var(navy-gray) !important;
+  color: var(--navy-gray) !important;
 }
 
 a:hover,
