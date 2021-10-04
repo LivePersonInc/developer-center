@@ -334,7 +334,10 @@
             - subpagename: Best Practices
         - pagename: Using Intents with KBs
         - pagename: Sending Content to Consumers and Agents
-        - pagename: Optimizing via Dashboard Analysis
+        - pagename: Optimizing Your Content
+          subpages:
+            - subpagename: Tuning a Knowledge Base
+            - subpagename: Optimizing via Dashboard Analysis
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
