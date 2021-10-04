@@ -1,11 +1,13 @@
 ---
 pagename: Optimizing via Dashboard Analysis
 redirect_from:
+    - knowledgeai-optimizing-via-dashboard-analysis.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
-permalink: knowledgeai-optimizing-via-dashboard-analysis.html
+subfoldername: Optimizing Your Content
+permalink: knowledgeai-optimizing-your-content-optimizing-via-dashboard-analysis.html
 indicator: both
 ---
 
