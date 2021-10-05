@@ -698,7 +698,7 @@ div.sidebarTitle-holder {
 
 .post-content > p.notice strong,
 .post-content > p.important strong {
-  color: var(--link-color);
+  color: var(--widget-text);
 }
 
 .post-content ol ol {
