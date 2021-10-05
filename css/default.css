@@ -375,18 +375,21 @@ ul.mysidebar.nav {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  color: var(--input-search);
 }
 
 #aa-search-input:-ms-input-placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  color: var(--input-search);
 }
 
 #aa-search-input:-moz-placeholder {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  color: var(--input-search);
 }
 
 .algolia-autocomplete {
