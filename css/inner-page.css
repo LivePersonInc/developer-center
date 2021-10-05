@@ -1,5 +1,5 @@
 a {
-  color: var(--link-color);
+  color: var(--post-link);
 }
 
 a:focus {
@@ -8,7 +8,13 @@ a:focus {
 }
 
 a:hover {
-  color: var(--link-color-hover);
+  color: var(--post-link-hover);
+}
+
+a:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline: -webkit-focus-ring-color dashed 1px;
+  border-radius: 4px;
 }
 
 .footer {
@@ -358,11 +364,11 @@ div#toc ul li ul li ul {
 }
 
 /*end toc nav bar */
-/*left nav bar */
+/*left nav bar - new sticky */
 ul.mysidebar.nav {
   text-decoration: none;
-  position: fixed;
-  height: 100%;
+  position: sticky;
+  top: 10px;
   width: 300px;
   min-width: 300px;
 

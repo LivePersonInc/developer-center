@@ -665,7 +665,7 @@ a.loginText {
 }
 
 .loginButton {
-  color: var(--secondary-background);
+  color: var(--button-text-secondary);
   border: none;
   background-color: var(--button-background-secondary);
 }
@@ -1604,10 +1604,5 @@ input#csds-button {
   }
   img.fancyimage {
     width: 100% !important;
-  }
-}
-@media screen and (max-width: 1305px) {
-  ul.mysidebar.nav {
-    position: relative !important;
   }
 }

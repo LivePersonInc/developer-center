@@ -38,6 +38,9 @@
   --secondary-text: #fcfcfd;
   --link-color: #675d55;
   --link-color-hover: #282422;
+  --post-link: var(--secondary-background);
+  --post-link-hover: #86e1fc;
+  --post-link-visited: #47a2c3;
   --body-background: #ffffff;
   --body-text: #494b51;
   --title-text: #2a2b2e;
@@ -51,7 +54,7 @@
   --button-background: #005ef4;
   --button-text: #fcfcfd;
   --button-background-secondary: transparent;
-  --button-text-secondary: #2dbae6;
+  --button-text-secondary: #005ef4;
   --box-shadow: #dadbe5e0;
   --widget-text: #090c43;
   --important-background: #edf5fa;
@@ -69,6 +72,9 @@
   --secondary-text: #fcfcfd;
   --link-color: #8aa1e5;
   --link-color-hover: #bcc9f0;
+  --post-link: #5ed7fb;
+  --post-link-hover: #86e1fc;
+  --post-link-visited: #47a2c3;
   --body-background: #03011d;
   --body-text: #a2a3b8;
   --title-text: #f5f5fa;
