@@ -64,13 +64,13 @@
 
 .breadcrumbs .breadcrumb-item {
   font-size: 0.9em;
-  color: var(--body-text);
+  color: var(--secondary-background);
   font-family: "Open Sans";
   font-weight: 300;
 }
 
 .no-after {
-  color: var(--body-text) !important;
+  color: var(--widget-text) !important;
 }
 
 .breadcrumbs a.breadcrumb-item:after {
