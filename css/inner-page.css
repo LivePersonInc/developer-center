@@ -693,7 +693,7 @@ div.sidebarTitle-holder {
 
 .post-content > p.notice,
 .post-content > p.important {
-  color: var(--primary-content);
+  color: var(--widget-text);
 }
 
 .post-content > p.notice strong,

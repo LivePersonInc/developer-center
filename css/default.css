@@ -584,16 +584,16 @@ table tbody td img {
 }
 
 .notice {
-  border-left-color: var(--red);
+  border-left-color: var(--error-border);
   border-radius: 4px;
   padding: 12px 24px 12px 30px;
   margin: 2em 0;
   border-left-width: 4px;
   border-left-style: solid;
-  background-color: var(--lighter-red);
+  background-color: var(--error-background);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--link-color);
+  color: var(--error-border);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
