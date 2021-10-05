@@ -685,7 +685,7 @@ a.loginText {
 }
 
 .trialButton:hover {
-  background-color: var(--link-color-hover);
+  background-color: var(--footer-background);
 }
 
 .trialButton {
