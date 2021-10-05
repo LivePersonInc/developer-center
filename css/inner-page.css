@@ -227,8 +227,8 @@ table > tbody > tr:nth-of-type(even) {
   width: 50px;
   font-size: 2.5em;
   color: var(--body-background);
-  background-color: orange;
-  border: 3px solid darkorange;
+  background-color: var(--link-color);
+  border: 3px solid var(--link-color-hover);
   height: 50px;
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -403,7 +403,7 @@ ul#mysiderbar li {
 }
 
 .innerlink {
-  color: var(--title-text);
+  color: var(--link-color);
   font-size: 12px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
@@ -414,12 +414,12 @@ ul#mysiderbar li {
 }
 
 .pageitem > a {
-  color: var(--title-text);
+  color: var(--link-color);
   font-size: 12px;
 }
 
 .innerpageitem > a {
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 /* .topfolder>a>span {
@@ -427,7 +427,7 @@ ul#mysiderbar li {
 } */
 
 .innerfolder > a {
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 .pageitem {
@@ -441,19 +441,19 @@ ul#mysiderbar li {
 }
 
 .activeitem {
-  border-left: 4px solid var(--orange) !important;
+  border-left: 4px solid var(--link-color-hover) !important;
   margin-left: -4px;
 }
 
 .activeleaf {
   margin-left: 30px;
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
 }
 
 .activeleafSolo {
   margin-left: 16px;
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
 }
 
@@ -461,7 +461,7 @@ ul.mysidebar.nav .topfolder > a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: bold;
   overflow-wrap: break-word;
 }
@@ -477,7 +477,7 @@ ul.mysidebar li ul li {
 }
 
 ul.mysidebar.nav li a.active {
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: 500;
 }
 
@@ -494,18 +494,18 @@ ul.mysidebar.nav li.activepage {
 }
 
 ul.mysidebar.nav li.activepage a {
-  color: var(--orange) !important;
+  color: var(--link-color) !important;
   font-weight: bold;
 }
 
 ul.mysidebar.nav li.activepage a:hover {
-  color: var(--hover-orange) !important;
+  color: var(--link-color-hover) !important;
 }
 
 .spacebetweenHyperlink {
   justify-content: space-between;
   display: flex !important;
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: bold;
 }
 
@@ -535,11 +535,11 @@ input#metricsSearch {
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder > a:focus {
-  background-color: #3d4558 !important;
+  background-color: var(--link-color-hover) !important;
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder > a:hover {
-  background-color: #3d4558 !important;
+  background-color: var(--link-color-hover) !important;
 }
 
 ul.mysidebar.nav li ul li {
@@ -712,7 +712,7 @@ div.sidebarTitle-holder {
 .post-content p strong {
   font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 .post-content,

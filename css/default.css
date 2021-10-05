@@ -16,7 +16,7 @@ body {
 b,
 strong {
   font-weight: bold !important;
-  color: var(--navy-gray) !important;
+  color: var(--link-color);
 }
 
 a:hover,
@@ -154,7 +154,13 @@ code pre {
 
 .defaultfooter {
   padding: 19px 0;
-  background-color: var(--card-background);
+  display: flex;
+  min-width: 100%;
+  margin-top: 64px;
+  width: 100%;
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  margin-bottom: -25px;
 }
 
 .defaultfooter span {
@@ -220,16 +226,6 @@ ul.mysidebar.nav {
   flex: 3;
 }
 
-.defaultfooter {
-  display: flex;
-  min-width: 100%;
-  margin-top: 64px;
-  width: 100%;
-  background-color: var(--card-background);
-  color: var(--card-text);
-  margin-bottom: -25px;
-}
-
 .searchHighlight {
   background: rgba(0, 119, 255, 0.1);
 }
@@ -239,12 +235,12 @@ ul.mysidebar.nav {
 }
 
 .activepage {
-  color: var(--orange) !important;
+  color: var(--link-color-hover) !important;
   font-weight: 500;
 }
 
 .activepage:hover {
-  color: var(--hover-orange) !important;
+  color: var(--link-color-hover) !important;
 }
 
 .codebtn {
@@ -1130,7 +1126,7 @@ a.loginText {
  make sure background is white */
 .highlightlink {
   background-color: var(--body-background) !important;
-  color: var(--body-text) !important;
+  color: var(--link-color) !important;
   font-weight: bold;
 }
 
@@ -1184,7 +1180,7 @@ a.loginText {
 .sidebarbutton span:first-of-type {
   border-top: 10px solid transparent;
   background: var(--body-background);
-  border-left: 10px solid var(--title-text);
+  border-left: 10px solid var(--link-color);
   transform: rotate(-135deg);
   top: 4px;
 }
@@ -1193,7 +1189,7 @@ a.loginText {
   transform: rotate(-45deg);
   border-top: 10px solid transparent;
   background: var(--body-background);
-  border-left: 10px solid var(--orange);
+  border-left: 10px solid var(--link-color-hover);
   top: 2px;
 }
 
