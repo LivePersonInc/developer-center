@@ -593,7 +593,7 @@ table tbody td img {
   background-color: var(--error-background);
   font-size: 14px !important;
   line-height: 1.71;
-  color: var(--error-border);
+  color: var(--widget-text);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
