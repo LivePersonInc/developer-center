@@ -53,6 +53,13 @@
   --button-background-secondary: transparent;
   --button-text-secondary: #2dbae6;
   --box-shadow: #dadbe5e0;
+  --widget-text: #090c43;
+  --important-background: #edf5fa;
+  --important-border: #016ba7;
+  --error-background: #fff5f5;
+  --error-border: #bf3e3e;
+  --success-background: #eff2e9;
+  --success-border: #5a7826;
 }
 .dark {
   --primary: #03041a;
@@ -78,4 +85,11 @@
   --button-background-secondary: transparent;
   --button-text-secondary: #2dbae6;
   --box-shadow: #000000d6;
+  --widget-text: #dadbe5;
+  --important-background: #0b2240;
+  --important-border: #2d9cdb;
+  --error-background: #311525;
+  --error-border: #eb5757;
+  --success-background: #13171a;
+  --success-border: #a0c125;
 }

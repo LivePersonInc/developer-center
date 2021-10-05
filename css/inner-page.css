@@ -169,14 +169,14 @@ table tbody tr:last-child {
 }
 
 .post-content table > thead > tr > th {
-  background-color: var(--card-background);
+  background-color: var(--footer-background);
   font-family: "Open Sans";
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--navy-mid-gray);
+  color: var(--widget-text);
   font-size: 12px;
   padding: 14px 22px;
-  border-bottom: 1px solid var(--navy-light-gray) !important;
+  border-bottom: 1px solid var(--card-border) !important;
 }
 
 /*
@@ -245,7 +245,7 @@ code {
 }
 
 p .darken {
-  color: #fff;
+  color: var(--widget-text);
 }
 
 td code {
@@ -253,7 +253,7 @@ td code {
 }
 
 td .darken {
-  color: #fff !important;
+  color: var(--widget-text) !important;
 }
 
 /*toc nav bar */
