@@ -665,7 +665,7 @@ a.loginText {
 }
 
 .loginButton {
-  color: var(--button-text-secondary);
+  color: var(--secondary-background);
   border: none;
   background-color: var(--button-background-secondary);
 }
@@ -679,7 +679,7 @@ a.loginText {
 }
 
 .trialButton {
-  background-color: var(--link-color);
+  background-color: var(--secondary-background);
   color: var(--button-text);
   border: 0px;
 }
