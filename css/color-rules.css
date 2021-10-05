@@ -63,6 +63,8 @@
   --error-border: #bf3e3e;
   --success-background: #eff2e9;
   --success-border: #5a7826;
+  --breadcrumbs-background: #f5f5fa;
+  --breadcrumbs-text: #5f617a;
 }
 .dark {
   --primary: #03041a;
@@ -98,4 +100,6 @@
   --error-border: #eb5757;
   --success-background: #13171a;
   --success-border: #a0c125;
+  --breadcrumbs-background: #2d2f52;
+  --breadcrumbs-text: #dadbe6;
 }

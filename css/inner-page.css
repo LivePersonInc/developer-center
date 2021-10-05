@@ -603,8 +603,8 @@ div.sidebarTitle-holder {
 
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator {
-  color: var(--navy-mid-gray);
-  background: #f7f8fa;
+  color: var(--breadcrumbs-text);
+  background: var(--breadcrumbs-background);
   border-radius: 4px;
   font-family: Roboto;
   font-style: normal;

@@ -92,8 +92,10 @@ svg.sitelogo {
 }
 
 #searchHeader {
+  position: relative;
   flex: 3;
   -ms-flex: 3; /* IE 10 */
+  align-items: center;
 }
 
 #loginHeader {
@@ -186,13 +188,18 @@ code pre {
   display: flex;
   align-items: center;
   position: absolute;
+  height: 100%;
 }
 
-.searchimage img {
+/* .searchimage img {
   height: 24px;
   right: -35px;
   position: relative;
   top: -12px;
+} */
+.searchimage svg {
+  right: -35px;
+  position: relative;
 }
 
 ul.mysidebar.nav {
@@ -872,7 +879,7 @@ a.loginText {
 }
 
 .subfolder > a {
-  color: var(--body-text) !important;
+  color: var(--link-color) !important;
   font-size: 12px !important;
   font-weight: normal;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
@@ -1542,6 +1549,10 @@ input#csds-button {
 } */
 
 @media (max-width: 767px) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: 100px;
+  }
   .defaultwrapper {
     display: flex;
     min-width: 100%;
