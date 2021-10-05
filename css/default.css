@@ -142,11 +142,11 @@ code pre {
 }
 
 .suggestbutton a {
-  color: var(--navy-mid-gray);
+  color: var(--post-link);
 }
 
 .suggestbutton i {
-  color: var(--navy-mid-gray);
+  color: var(--post-link);
   margin-right: 8px;
 }
 
