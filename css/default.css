@@ -685,7 +685,8 @@ a.loginText {
 }
 
 .trialButton:hover {
-  background-color: var(--footer-background);
+  background-color: var(--link-color);
+  color: var(--body-background);
 }
 
 .trialButton {
@@ -1098,7 +1099,7 @@ a.loginText {
   max-height: 360px;
   overflow-wrap: anywhere;
   padding-right: 8px;
-  max-width: 110px;
+  padding: 0 50px;
   overflow-y: scroll;
 }
 
@@ -1554,12 +1555,6 @@ input#csds-button {
     }
 } */
 
-@media (max-width: 500px) {
-  .theme-switch-wrapper {
-    position: absolute;
-    top: 100px;
-  }
-}
 @media (max-width: 767px) {
   .defaultwrapper {
     display: flex;
@@ -1623,5 +1618,12 @@ input#csds-button {
   }
   img.fancyimage {
     width: 100% !important;
+  }
+}
+@media (max-width: 500px) {
+  div#loginHeader {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 2px;
   }
 }
