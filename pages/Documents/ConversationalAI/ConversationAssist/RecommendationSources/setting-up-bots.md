@@ -1,16 +1,17 @@
 ---
-pagename: Setting Up Bot Recommendations
+pagename: Setting Up Bots
 redirect_from:
   - maven-maven-assist-recommended-actions-for-bots.html
   - maven-ai-maven-assist-recommended-actions-for-automations.html
   - conversation-orchestrator-maven-assist-recommended-actions-for-automations.html
   - conversation-orchestrator-agent-assist-recommended-actions-for-automations.html
+  - conversation-orchestrator-agent-assist-setting-up-bot-recommendations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-setting-up-bot-recommendations.html
+documentname: Conversation Assist
+subfoldername: Recommendation Sources
+permalink: conversation-assist-recommendation-sources-setting-up-bots.html
 indicator: messaging
 ---
 

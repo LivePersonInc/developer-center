@@ -1,11 +1,12 @@
 ---
 pagename: FAQs
+redirect_from:
+    - conversation-orchestrator-agent-assist-faqs.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-faqs.html
+documentname: Conversation Assist
+permalink: conversation-assist-faqs.html
 indicator: messaging
 ---
 

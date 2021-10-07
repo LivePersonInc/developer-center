@@ -4,12 +4,12 @@ redirect_from:
   - maven-maven-assist-overview.html
   - maven-ai-maven-assist-overview.html
   - conversation-orchestrator-maven-assist-overview.html
+  - conversation-orchestrator-agent-assist-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-overview.html
+documentname: Conversation Assist
+permalink: conversation-assist-overview.html
 indicator: messaging
 ---
 

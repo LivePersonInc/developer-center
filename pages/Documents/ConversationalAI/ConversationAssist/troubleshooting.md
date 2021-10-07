@@ -1,11 +1,12 @@
 ---
 pagename: Troubleshooting
+redirect_from:
+    - conversation-orchestrator-agent-assist-troubleshooting.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-troubleshooting.html
+documentname: Conversation Assist
+permalink: conversation-assist-troubleshooting.html
 indicator: messaging
 ---
 

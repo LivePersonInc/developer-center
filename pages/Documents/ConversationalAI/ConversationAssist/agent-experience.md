@@ -1,11 +1,12 @@
 ---
 pagename: Agent Experience
+redirect_from:
+    - conversation-orchestrator-agent-assist-agent-experience.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-agent-experience.html
+documentname: Conversation Assist
+permalink: conversation-assist-agent-experience.html
 indicator: messaging
 ---
 

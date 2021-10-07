@@ -1,16 +1,17 @@
 ---
-pagename: Setting Up Knowledge Base Recommendations
+pagename: Setting Up Knowledge Bases
 redirect_from:
   - maven-maven-assist-recommended-actions-for-knowledge-base.html
   - maven-ai-maven-assist-recommended-actions-for-knowledge-base.html
   - conversation-orchestrator-maven-assist-recommended-actions-for-knowledge-base.html
   - conversation-orchestrator-agent-assist-recommended-actions-for-knowledge-base.html
+  - conversation-orchestrator-agent-assist-setting-up-knowledge-base-recommendations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-setting-up-knowledge-base-recommendations.html
+documentname: Conversation Assist
+subfoldername: Recommendation Sources
+permalink: conversation-assist-recommendation-sources-setting-up-knowledge-bases.html
 indicator: messaging
 ---
 

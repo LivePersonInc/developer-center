@@ -1,11 +1,12 @@
 ---
 pagename: Testing
+redirect_from:
+    - conversation-orchestrator-agent-assist-testing.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Orchestrator
-subfoldername: Agent Assist
-permalink: conversation-orchestrator-agent-assist-testing.html
+documentname: Conversation Assist
+permalink: conversation-assist-testing.html
 indicator: messaging
 ---
 
