@@ -275,6 +275,7 @@
           subpages:
             - subpagename: Setting Up Bots
             - subpagename: Setting Up Knowledge Bases
+            - subpagename: Configuring Settings
         - pagename: Testing
         - pagename: Agent Experience
         - pagename: Best Practices
