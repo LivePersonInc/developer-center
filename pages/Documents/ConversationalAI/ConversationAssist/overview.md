@@ -17,7 +17,7 @@ indicator: messaging
 Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
 
 {: .important}
-For some practice with Conversation Assist, complete the [Using Conversation Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
+For some practice with Conversation Assist, complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 ### What is Conversation Assist?
 Conversation Assist is a suite of features that improve the productivity of human agents. Conversation Assist’s key feature is intent-based and skill-based recommendations of knowledge base articles and bots.

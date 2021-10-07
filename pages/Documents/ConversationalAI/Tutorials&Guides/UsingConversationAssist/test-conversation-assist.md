@@ -1,15 +1,17 @@
 ---
-pagename: Test Agent Assist
+pagename: Test Conversation Assist
+redirect_from:
+    - tutorials-guides-using-agent-assist-test-agent-assist.html
 keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
-subfoldername: Using Agent Assist
-permalink: tutorials-guides-using-agent-assist-test-agent-assist.html
+subfoldername: Using Conversation Assist
+permalink: tutorials-guides-using-conversation-assist-test-conversation-assist.html
 indicator: both
 ---
 
-### Step 8: Test Agent Assist
+### Step 8: Test Conversation Assist
 
 With the engagement up and running, we can now test out the functionality of Agent Assist in a live conversation.
 

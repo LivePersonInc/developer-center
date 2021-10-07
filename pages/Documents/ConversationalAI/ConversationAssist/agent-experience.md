@@ -23,7 +23,7 @@ In Conversational Cloud, bot and article recommendations are displayed inline wi
 
 **To use a recommended bot**
 
-* Click **Use bot** to join a bot to the conversation, so the bot takes over. You stay in the conversation, so you can monitor the bot’s progress and remove the bot if needed.
+* Click **Delegate to bot** to join a bot to the conversation, so the bot takes over. You stay in the conversation, so you can monitor the bot’s progress and remove the bot if needed.
 
     <img width="550" src="img/agentassist/use_bot.png">
 
@@ -31,9 +31,10 @@ In Conversational Cloud, bot and article recommendations are displayed inline wi
 
 **To use a recommended article**
 
-* Click **Use Article** to copy the article’s text to the agent’s text input area. You can edit the text before sending it to the consumer.
+* Click **Use Answer** to copy the article’s text to the agent’s text input area. You can edit the text before sending it to the consumer.
 
     <img width="550" src="img/agentassist/use_article.png">
+    <img width="550" src="img/agentassist/use_article2.png">
 
 ### Remove or replace the current bot
 

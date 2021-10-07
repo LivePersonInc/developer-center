@@ -139,12 +139,12 @@
           subpages:
             - subpagename: Implementing a Web View Integration
             - subpagename: Using LivePerson Functions with a Bot
-        - pagename: Using Agent Assist
+        - pagename: Using Conversation Assist
           subpages:
             - subpagename: Overview
             - subpagename: Prerequisite Steps
-            - subpagename: Configure Agent Assist
-            - subpagename: Test Agent Assist
+            - subpagename: Configure Conversation Assist
+            - subpagename: Test Conversation Assist
     - documentname: Conversation Builder
       pages:
         - pagename: Best Practices

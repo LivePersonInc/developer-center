@@ -1,17 +1,19 @@
 ---
-pagename: Configure Agent Assist
+pagename: Configure Conversation Assist
+redirect_from:
+    - tutorials-guides-using-agent-assist-configure-agent-assist.html
 keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
-subfoldername: Using Agent Assist
-permalink: tutorials-guides-using-agent-assist-configure-agent-assist.html
+subfoldername: Using Conversation Assist
+permalink: tutorials-guides-using-conversation-assist-configure-conversation-assist.html
 indicator: both
 ---
 
 After completing the [prerequisite steps](tutorials-guides-using-agent-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Orchestrator to configure the Agent Assist capabilities.
 
-### Step 5: Configure Agent Assist bot recommendations
+### Step 5: Configure Conversation Assist bot recommendations
 
 1. From the Conversational AI portal, click the **Conversation Orchestrator** menu option.
 
@@ -28,7 +30,7 @@ After completing the [prerequisite steps](tutorials-guides-using-agent-assist-pr
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/config_bot_recommendations.png">
 
-### Step 6: Configure Agent Assist knowledge base recommendations
+### Step 6: Configure Conversation Assist knowledge base recommendations
 
 1. Select the **Knowledge Bases** menu option under **Agent Assist**.
 2. Confirm that the **Enable recommendations** toggle is still turned on. The maximum number of recommendations should be the same as well.
@@ -58,4 +60,4 @@ Updates to the Agent Assist configuration can take up to 20 minutes to be reflec
 
 ### What's next?
 
-Continue on to the [next step](tutorials-guides-using-agent-assist-test-agent-assist.html) in the tutorial.
+Continue on to the [next step](tutorials-guides-using-conversation-assist-test-conversation-assist.html) in the tutorial.

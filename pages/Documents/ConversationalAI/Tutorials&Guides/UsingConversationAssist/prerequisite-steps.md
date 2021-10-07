@@ -1,11 +1,13 @@
 ---
 pagename: Prerequisite Steps
+redirect_from:
+    - tutorials-guides-using-agent-assist-prerequisite-steps.html
 keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
-subfoldername: Using Agent Assist
-permalink: tutorials-guides-using-agent-assist-prerequisite-steps.html
+subfoldername: Using Conversation Assist
+permalink: tutorials-guides-using-conversation-assist-prerequisite-steps.html
 indicator: both
 ---
 
@@ -147,4 +149,4 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 ### What's next?
 
-Continue on to the [next step](tutorials-guides-using-agent-assist-configure-agent-assist.html) in the tutorial.
+Continue on to the [next step](tutorials-guides-using-conversation-assist-configure-conversation-assist.html) in the tutorial.
