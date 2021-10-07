@@ -12,7 +12,7 @@ indicator: messaging
 
 **Tip:** Before testing recommendations, verify that your bots and knowledge bases work in isolation.
 
-**To test recommended actions**
+**To test recommendations**
 
 1. Create a test skill, and assign it to your bot and/or knowledge base.
 2. [Start a new messaging conversation](https://developers.liveperson.io/web-messaging/) from the consumer side.
