@@ -52,7 +52,7 @@ Some measures that are useful to assess while monitoring and improving your bots
 * Did they express any negative feedback or run into unforeseen problems?
 * How many conversations encountered fallback? 
 
-#### Escalations
+#### Transfers
 * Was the bot equipped with all the resources needed to satisfy the consumer's intent?
 * How often did an experience end up getting transferred from a bot to a human agent?
 
@@ -70,4 +70,4 @@ All bot views except the **Overview** and the **MACS** view, let you download th
 You can query for and download data for any 60-day time period in the last 13 months. If you need to download at one time the data for a longer time period, use [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
 
 {: .important}
-All downloaded data represents dates and times in UTC.
+All downloaded data represents dates and times in UTC.<br><br>When downloading custom events in specific, the limit is 100,000 in number.

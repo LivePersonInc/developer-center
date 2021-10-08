@@ -18,7 +18,7 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 There are several types of dialogs:
 
-- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-builder-intents.html) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
+- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
@@ -68,7 +68,7 @@ You can import dialogs from one bot to another within your organization. This ca
     * Global functions
     * Environment variables (you can [export](conversation-builder-environment-variables.html#export-environment-variables-to-a-csv-file) these)
 * During the import, the associations of domains, intents, and entities to interactions are maintained.
-* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-common-settings-tasks.html#common-configurable-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledgeai-common-settings-tasks.html#common-configurable-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the KnowledgeAI application.
 
 When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs.
 

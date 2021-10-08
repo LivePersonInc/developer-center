@@ -18,10 +18,11 @@ A meta intent is a wrapper for a grouping of related intents.
 
 <img style="width:500px" src="img/ConvoBuilder/advtutorial/meta_intents_diagram.png">
 
-Using meta intents, you can funnel a variety of intents into a single dialog for processing. A meta intent can have many standard intents, and standard intents can belong to one meta intent. Another way to think about this relationship is as a parent-children model, with the meta intent being the parent and all its standard intents as its children. Additional information about meta intents can be found [here](intent-builder-meta-intents.html).
+Using meta intents, you can funnel a variety of intents into a single dialog for processing. A meta intent can have many standard intents, and standard intents can belong to one meta intent. Another way to think about this relationship is as a parent-children model, with the meta intent being the parent and all its standard intents as its children. Additional information about meta intents can be found [here](intent-manager-key-terms-concepts.html#meta-intents).
 
-1. From the **Conversational AI** section of the Conversational Cloud, navigate to **Intent Builder**, and select the "LP_Cross-vertical" domain.
-2. Create a meta intent by selecting **Add Intent** and completing with the following:
+1. From the **Conversational AI** dashboard of applications, select **Intent Manager**.
+2. From the domain list on the Intent Manager dashboard (home page), select the "LP_Cross-vertical" domain.
+3. Create a meta intent by selecting **Add Intent** and completing with the following:
 
 	* Intent name: FAQ
 	* Intent Display Name: FAQ
@@ -37,12 +38,12 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
 	<img style="width:300px" src="img/ConvoBuilder/advtutorial/meta_intents_list.png">
 
-3. Once saved, you will need to re-train your domain for your changes to take effect. Click **Train** in the upper-right corner.
-4. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the **Model version** dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should see both the standard intent and its parent meta intent triggered with the same confidence score.
+4. Once saved, you will need to re-train your domain for your changes to take effect. Click **Train** in the upper-right corner.
+5. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the **Model version** dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should see both the standard intent and its parent meta intent triggered with the same confidence score.
 
 	<img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png">	
 
-5. With a newly created meta intent in hand, activate the new model version, so the changes are reflected in your bot.
+6. With a newly created meta intent in hand, activate the new model version, so the changes are reflected in your bot.
 
 	The next step will be to create a new knowledge base. 
 
@@ -50,9 +51,9 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
 In this step, you’ll create a new FAQ knowledge base and add FAQ articles to it.
 
-1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Knowledge Base** section.
+1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **KnowledgeAI** section.
 
-2. Click **Add Knowledge Base** in the upper-right corner.
+2. Click **Add Knowledge Base** in the upper-right corner. (If you don't have any existing knowledge bases, you'll need to click **Let's go** instead in this step.)
 
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 
@@ -65,7 +66,7 @@ In this step, you’ll create a new FAQ knowledge base and add FAQ articles to i
 
 	<img style="width:800px" src="img/ConvoBuilder/advtutorial/add_kb.png">
 
-5. The next step is to add the FAQ articles that will be triggered by intents from our LP_Cross-vertical domain. Click **Add New** in the upper-right corner to create your first article. Complete the **Add Article** form with the following information:
+5. The next step is to add the FAQ articles that will be triggered by intents from our LP_Cross-vertical domain. Click **Add article** in the upper-right corner to create your first article. Complete the **Add Article** form with the following information:
 
 	* **Title**: Password reset
 	* **Intent**: reset password
@@ -113,7 +114,7 @@ In our **Service Bot**, we will now create a FAQs dialog which will be triggered
 
 	<img style="width:600px" src="img/ConvoBuilder/advtutorial/kai_tile.png">
 
-5. In the Knowledge AI interaction, select the **Settings** icon and navigate to the **Advanced** menu. The Knowledge AI offers several options in how to display the article contents. For this example, select the **Simple** option from the **Answer layout** dropdown. This will ensure that the results are displayed in the same conversational fashion as our other interactions. Keep all other fields as their defaults and select the **Save** button.
+5. In the Knowledge AI interaction, select the **Settings** icon and navigate to the **Advanced** menu. The Knowledge AI offers several options in how to display the article contents. For this example, select the "Auto render, plain" option from the **Answer layout** dropdown. This will ensure that the results are displayed in the same conversational fashion as our other interactions. Keep all other fields as their defaults and select the **Save** button.
 
 	<img style="width:600px" src="img/ConvoBuilder/advtutorial/kai_tile_2.png">
 

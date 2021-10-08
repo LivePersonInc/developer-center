@@ -62,7 +62,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
     * **Response Data Variable Name**: OrderStatus
     * **Integration Type**: API
     * **Method**: GET
-    * **URL**: https://5ed69a5fc2ca2300162c67f1.mockapi.io/api/v1/order-status/{$botContext.orderNumber}
+    * **URL**: https://5fc54a0936bc790016344a09.mockapi.io/order-status/{$botContext.orderNumber}
 
         Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
 

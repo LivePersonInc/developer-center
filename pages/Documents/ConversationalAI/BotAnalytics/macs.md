@@ -9,9 +9,25 @@ permalink: bot-analytics-macs.html
 indicator: Messaging
 ---
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/572593924" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Introduction
 
-A Meaningful Automated Conversation Score (MACS) is a measure of the quality of a bot conversation. Every closed bot conversation is classified with MACS 1, 2, or 3 as follows:
+A Meaningful Automated Conversation Score (MACS) is a measure of the quality of a bot conversation.
+
+LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, MACS is calculated by identifying and quantifying this using proprietary LivePerson AI logic. Issues within the bot conversation’s structure are detected and used to derive a score, for example:
+
+* Did the bot understand the consumer’s question?
+* Was the consumer stuck in an endless loop?
+
+Here is a conversation with these example issues:
+
+<img style="width:800px" src="img/ConvoBuilder/macs_example_conv2.png">
+
+MACS is calculated for a bot conversation based on issues like those above. The conversation is classified with MACS 1, 2 or 3 where:
 
 | Score | Icon | Description |
 | --- | --- | --- |
@@ -21,8 +37,8 @@ A Meaningful Automated Conversation Score (MACS) is a measure of the quality of 
 
 Within Bot Analytics, you can review in-depth MACS data for your bots. This data helps you to quickly identify underperforming bots, find their issues, and move to bot/intent tuning for enhanced performance.
 
-{: .important}
-**Before you begin** working with MACS in Bot Analytics, please see [this topic](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center for an extensive introduction to MACS, its benefits, information on how MACS is scored, solutions for improving scores, and more.
+### Before you begin
+Before you begin working with MACS in Bot Analytics, please see [this topic](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center for an extensive introduction to MACS, its benefits, information on how MACS is scored, solutions for improving scores, and more.
 
 ### Main dashboard
 
@@ -92,7 +108,7 @@ In the other charts, you can select one or more interactions, issue types, and/o
 Note the following about adding filters.
 
 * When you add a filter from a chart, this updates that chart and all others except the **Overall trend** chart. The **Overall trend** chart doesn’t impact the other charts, nor is it impacted by the other charts.
-* Within a filter, an “OR” search is performed. Across the filter set, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Around in circles” OR “Bad transfer”)).
+* Within a filter, an “OR” search is performed. Across the filter set, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Stuck in a loop” OR “Poor transfer experience”)).
 * The system is configured to display **Issue type** data only when a particular issue type is measured in a conversation above a certain, internal threshold, called a “confidence threshold.” As a result, when you filter the data by **Issue type**, only conversations *where the confidence threshold that the issue exists is met* are displayed. This ensures there is high confidence with respect to the displayed data.
 
 ### Viewing conversations

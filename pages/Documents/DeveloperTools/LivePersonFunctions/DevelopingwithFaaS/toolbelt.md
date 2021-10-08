@@ -29,7 +29,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 | Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
-| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
+| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html).|
 
 Here are usage example, which are taken out of the official templates:
 
@@ -185,10 +185,10 @@ Additionally, most of the LivePerson API calls need authorization. The LP Client
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
+<!-- <td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
 <td>Yes</td>
 </tr>
-<tr>
+<tr> -->
 <td><a href="predefined-content-api-overview.html">Predefined Content API</a></td>
 <td>Read only</td>
 </tr>
@@ -632,7 +632,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 
 #### Get SDEs from Conversation
 
-The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](http://localhost:3000/liveperson-functions-development-toolbelt.html#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
+The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
 
 **Sample Usage**
 
@@ -713,7 +713,7 @@ If there were no errors, the result is an object which allways contains an array
 ```
 
 ### Context Service Client
-The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html). This is especially useful for storing data between function calls.
+The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html). This is especially useful for storing data between function calls.
 
 After all [prerequisites for using the context session store](liveperson-functions-developing-with-faas-data-storage.html#prerequisitesinstallation) have been set up successfully, the client can be instantiated as follows.
 

@@ -7,7 +7,7 @@
   min-height: 5vh;
   margin-right: 0 !important;
   overflow-y: auto;
-  background: white;
+  background: var(--body-background);
 
   box-shadow: 0px 8px 16px rgba(129, 130, 153, 0.64);
   border-radius: 4px;
@@ -24,13 +24,13 @@
 }
 
 .searchtitlecontainer:hover {
-  background-color: #f2f1f2;
+  background-color: var(--body-background);
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .aa-cursor {
-  background-color: #f2f1f2;
+  background-color: var(--body-background);
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -58,14 +58,14 @@ span.searchcontentcontainer {
 .ais-Highlight {
   font-style: normal;
   font-weight: 600;
-  color: var(--orange);
+  color: var(--link-color-hover);
 }
 
 .aa-empty {
   font-size: 21px;
   font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   text-decoration: none;
-  color: var(--electric-blue);
+  color: var(--link-color);
   font-weight: bold;
   margin-left: 20px;
   margin-top: 20px;

@@ -180,6 +180,8 @@ The max width for an image in this repo is 800px.
 
 ### Building the Site Locally
 
+**IMPORTANT:** This repository requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
+
 If you have not already done so, make sure your computer has Ruby installed. Here's a helpful guide on how best do that on [Mac](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, you don't need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/).
 
 Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you're on Windows, don't forget to run your CLI as an admin**.

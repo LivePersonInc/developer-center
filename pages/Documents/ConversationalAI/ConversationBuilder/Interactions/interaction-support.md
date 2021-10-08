@@ -34,7 +34,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | Yes |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Connector API
@@ -251,7 +251,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
 | Universal | No | 
-| survey interactions | No |
+| survey interactions | Yes |
 
 ### Web messaging
 

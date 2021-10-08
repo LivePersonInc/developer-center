@@ -25,9 +25,7 @@ Along with the invocation, the function is sent a payload containing the convers
 
 Agents need the following permissions to use Conversational Commands:
 
-* Agent Permission: `Use enhanced Agent Workspace`
-
-* Admin Permission: `FaaS-Invocation`. We recommend to set up a special admin profile for Agents that are allowed to use Conversational Commands with only the `FaaS-Invocation` permission enabled.
+* Agent Permission: `Use enhanced Agent Workspace` and `FaaS-Invocation` permission has to be enabled.
 
 ### Conversational Commands events for Function Invocation
 
