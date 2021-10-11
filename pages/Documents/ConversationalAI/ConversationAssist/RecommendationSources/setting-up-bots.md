@@ -32,21 +32,23 @@ If, for utterance matching, you’ll be using intents instead of patterns, you m
 * Create a domain
 * Create an intent
 
-For exposure to these applications and tasks, we recommend that you complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series:
-
-If you are building a third-party bot (using Google DialogFlow or IBM Watson), see [here](third-party-bots-getting-started.html) for Getting Started information on connecting your bots to LivePerson’s Conversational Cloud.
+For exposure to these applications and tasks, we recommend that you complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series.
 
 ### High-level workflow
-1. In Conversation Builder or your third-party application, create the bots.
+1. In Conversation Builder, create the bots.
 2. In Conversational Cloud, create the skills and bot users.
-3. In Conversation Builder, deploy your Conversation Builder bots. Or, use your third-party application and Conversational Cloud to connect your bots to Conversational Cloud.
-4. In Conversation Orchestrator, configure Agent Assist.
+3. In Conversation Builder, deploy your bots.
+4. In Conversation Assist, configure your recommendation sources (i.e., your bots) and configure a few other settings.
 
 ### Step 1: Create the bots
-Before Conversation Orchestrator can start recommending bots, you need to create at least one bot. Conversation Orchestrator supports bots created in:
+Before Conversation Assist can start recommending bots, you need to create at least one bot in Conversation Builder. For help, see the tutorial [here](tutorials-guides-getting-started-with-bot-building-overview.html). 
+
+<!--
+Conversation Assist supports bots created in:
 * [Conversation Builder](tutorials-guides-getting-started-with-bot-building-overview.html)
 * [Google DialogFlow](third-party-bots-google-dialogflow-cx.html)
 * [IBM Watson](third-party-bots-ibm-watson-assistant.html)
+-->
 
 ### Step 2: Create the Conversational Cloud skills and bot users
 Next, configure Conversational Cloud by creating a skill and a bot user for each bot. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
@@ -57,8 +59,11 @@ Next, configure Conversational Cloud by creating a skill and a bot user for each
 ### Step 3: Deploy the bots to Conversational Cloud
 Once Conversational Cloud is configured, the bots need to be deployed or connected to enable them to respond to conversations in Conversational Cloud.
 
-* To deploy a *Conversation Builder* bot, follow the steps [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
-* To connect a *DialogFlow or Watson* bot to LivePerson’s Conversational Cloud, follow the [Third-Party Bots Getting Started Guide](third-party-bots-getting-started.html). Then follow the specific guide for [DialogFlow](third-party-bots-google-dialogflow-cx.html) or [IBM Watson](third-party-bots-ibm-watson-assistant.html). Be sure to press the play button in the bot dashboard to enable the bot.
+* To deploy a Conversation Builder bot, follow the steps [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
+
+<!--
+* To connect a DialogFlow or Watson bot to LivePerson’s Conversational Cloud, follow the [Third-Party Bots Getting Started Guide](third-party-bots-getting-started.html). Then follow the specific guide for [DialogFlow](third-party-bots-google-dialogflow-cx.html) or [IBM Watson](third-party-bots-ibm-watson-assistant.html). Be sure to press the play button in the bot dashboard to enable the bot.
+-->
 
 ### Step 4: Configure Agent Assist
 Configuration of Agent Assist involves the following:
@@ -71,7 +76,7 @@ Configuration of Agent Assist involves the following:
 6. Customize the messages for join/remove bot, if desired.
 
 #### Verify the bots have been discovered and enabled
-By default, once you deploy and start a Conversation Builder or third-party bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
+By default, once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
 
 <img width="800" src="img/agentassist/verify_bots.png">
 

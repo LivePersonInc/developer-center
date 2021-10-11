@@ -41,7 +41,7 @@ Both tutorial series focus primarily on using the Conversation Builder applicati
 
 ### High-level workflow
 1. In the KnowledgeAI application, create the knowledge bases and the articles therein, using your content source or working from scratch.
-2. In the Conversation Orchestrator application, configure Agent Assist.
+2. In the Conversation Assist, configure your recommendation sources (i.e., your knowledge bases) and configure a few other settings.
 
 ### Step 1: Create the knowledge bases and articles
 Before Agent Assist can start recommending articles, you need to create at least one knowledge base from your [content source](knowledgeai-overview.html#content-sources) or from scratch. You can create and use any type of knowledge base, and the knowledge base can be public or private.
