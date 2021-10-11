@@ -76,7 +76,7 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 2. Click the **Bots** tab.
 
-    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist. So you should see your bot here. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
+    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist. So you should see your bots here. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
 
     <img width="700" src="img/agentassist/configbot1.png">
 
@@ -120,6 +120,4 @@ When managing bots, if you select one or more, menu options for performing actio
 
 <img width="800" src="img/agentassist/update_user_creds.png">
 
-Use the **Update bot user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the **User Management** area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations.
-
-Whenever you change the bot user’s credentials in **User Management**, manually update the credentials here in Conversation Assist.
+Use the **Update bot user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the **User Management** area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in **User Management**, manually update the credentials here in Conversation Assist.

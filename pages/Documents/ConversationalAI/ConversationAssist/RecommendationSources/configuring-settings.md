@@ -13,6 +13,8 @@ The **Settings** page in Conversation Assist contains settings that are shared b
 
 ### General
 
+General settings apply to all recommendation sources.
+
 <img width="600" src="img/agentassist/settings_general.png">
 
 * **Max # of recommendations**: Specify the maximum number of bot and answer recommendations that Conversation Assist offers at one time. The default value is 3.
