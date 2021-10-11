@@ -13,9 +13,9 @@ indicator: both
 
 ### Step 8: Test Conversation Assist
 
-With the engagement up and running, we can now test out the functionality of Agent Assist in a live conversation.
+With the engagement up and running, we can now test out the functionality of Conversation Assist in a live conversation.
 
-In a separate browser window, navigate to [https://developers.liveperson.com/web-messaging/emulator.html](https://developers.liveperson.com/web-messaging/emulator.html). Here, provide your Conversational Cloud account number, and click **Show Window**. If the Agent Assist Testing engagement has been set up correctly, there will be a “Message us” call to action button along the right side of the screen.
+In a separate browser window, navigate to [https://developers.liveperson.com/web-messaging/emulator.html](https://developers.liveperson.com/web-messaging/emulator.html). Here, provide your Conversational Cloud account number, and click **Show Window**. If the Conversation Assist Testing engagement has been set up correctly, there will be a “Message us” call to action button along the right side of the screen.
 
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/message_us.png">
 
@@ -23,7 +23,7 @@ Click the **Message us** button to start a conversation with the human agent on 
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/incoming_message.png">
 
-Once connected, you can now test out Agent Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your user.
+Once connected, you can now test out Conversation Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your user.
 
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/recommendations_c.png">
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/recommendations.png">
@@ -34,7 +34,7 @@ Here, selecting **Use bot** will bring the Booking Bot into the conversation and
 
 When the bot has completed the task for the user, remove the bot from the conversation by selecting the **Remove bot** button at the top of the messaging window.
 
-Each time the user sends a message, Agent Assist will check to see if the utterance triggers an appropriate response from the connected bots or knowledge bases. Try again by asking “Are you able to help me upgrade my seat?”
+Each time the user sends a message, Conversation Assist will check to see if the utterance triggers an appropriate response from the connected bots or knowledge bases. Try again by asking “Are you able to help me upgrade my seat?”
 
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/upgrade_seat.png">
 

@@ -16,13 +16,13 @@ indicator: messaging
 ---
 
 {: .important}
-For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
+For some practice with Conversation Assist, complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 {: .important}
-It takes up to 3 hours for changes in Agent Assist configuration to take effect.
+It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
 
 ### Prerequisite knowledge
-To set up Conversation Orchestrator’s Agent Assist to suggest recommended bots, you must have some prerequisite knowledge of a few other applications in the Conversational AI suite.
+To set up Conversation Assist to suggest recommended bots, you must have some prerequisite knowledge of a few other applications in the Conversational AI suite.
 
 If you are building your bots using Conversation Builder, you must be able to use Conversation Builder to:
 * Create a bot
@@ -65,13 +65,13 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 * To connect a DialogFlow or Watson bot to LivePerson’s Conversational Cloud, follow the [Third-Party Bots Getting Started Guide](third-party-bots-getting-started.html). Then follow the specific guide for [DialogFlow](third-party-bots-google-dialogflow-cx.html) or [IBM Watson](third-party-bots-ibm-watson-assistant.html). Be sure to press the play button in the bot dashboard to enable the bot.
 -->
 
-### Step 4: Configure Agent Assist
-Configuration of Agent Assist involves the following:
+### Step 4: Configure Conversation Assist
+Configuration of Conversation Assist involves the following:
 
 1. Verify that the bots you created have been automatically discovered and enabled.
 2. Assign one or more skills to the bots.
 3. Enable recommendations.
-4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
+4. Specify the maximum number of recommendations that Conversation Assist will make. By default, this is 3.
 5. Configure the confidence threshold.
 6. Customize the messages for join/remove bot, if desired.
 
@@ -80,12 +80,12 @@ By default, once you deploy and start a bot (i.e., in the system, it is a valid 
 
 <img width="800" src="img/agentassist/verify_bots.png">
 
-A discovered bot is enabled by default as a convenience, saving you this step. However, it will not be recommended in conversations until you also assign one or more skills to the bot within Agent Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
+A discovered bot is enabled by default as a convenience, saving you this step. However, it will not be recommended in conversations until you also assign one or more skills to the bot within Conversation Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
 
 **To verify your bots have been automatically discovered and enabled**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Agent Assist**, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
 3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
 4. Verify that the bots are listed and enabled.
 
@@ -101,23 +101,23 @@ In our example below, for the human agent to be presented with a recommendation 
 
 **To assign skills to the bots**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Agent Assist**, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
 3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
 4. Add at least one skill to each available bot. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the bot, and then use the menu option that appears.
 
     <img width="800" src="img/agentassist/assign_skills2.png">
 
 #### Enable recommendations
-With the bot ready to go, now enable recommendations. This must be done so that Agent Assist recommends articles and bots inline in conversations.
+With the bot ready to go, now enable recommendations. This must be done so that Conversation Assist recommends articles and bots inline in conversations.
 
 {: .important}
 The **Enable recommendations** setting is a shared setting. Enabling or disabling it for bots also does so for knowledge bases, and vice versa.
 
 **To enable recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Agent Assist**, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
 3. Scroll down to **Enable recommendations**.
 
     <img width="500" src="img/agentassist/enable_recs.png">
@@ -125,15 +125,15 @@ The **Enable recommendations** setting is a shared setting. Enabling or disablin
 4. Turn on the **enabled** toggle switch.
 
 #### Specify the maximum number of recommendations
-You can specify the maximum number of recommendations that Agent Assist will make when recommending articles and bots based on a detected intent (the consumer’s input). By default, up to 3 recommendations are provided to the agent.  You can change this at any time.
+You can specify the maximum number of recommendations that Conversation Assist will make when recommending articles and bots based on a detected intent (the consumer’s input). By default, up to 3 recommendations are provided to the agent.  You can change this at any time.
 
 {: .important}
 The **Maximum number of recommendations** setting is a shared setting. Setting its value for bots also updates the value for knowledge bases, and vice versa.
 
 **To specify the maximum number of recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Agent Assist**, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
 3. Scroll down to **Enable recommendations**.
 
     <img width="500" src="img/agentassist/enable_recs.png">
@@ -147,8 +147,8 @@ Bot recommendations have a score indicating how relevant the predicted intent is
 
 **To configure the confidence threshold**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Agent Assist**, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
 3. Scroll down to **Confidence threshold**.
 4. Move the slider to the desired point.
 
@@ -158,8 +158,8 @@ If the default messages for when a bot is joined to and removed from the convers
 
 **To customize the messages for join/remove bot**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under Agent Assist, click **Bots**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. On the left navigation bar, under Conversation Assist, click **Bots**.
 3. Scroll down to the section named **Customize the bot join/remove messages**.
 
     <img width="650" src="img/agentassist/customize_msgs.png">
@@ -169,8 +169,8 @@ If the default messages for when a bot is joined to and removed from the convers
 
 ### Updating user credentials
 
-When configuring bot recommendations for Agent Assist, if you select one or more bots, menu options for performing actions in bulk appear.
+When configuring bot recommendations for Conversation Assist, if you select one or more bots, menu options for performing actions in bulk appear.
 
 <img width="800" src="img/agentassist/update_user_creds.png">
 
-Use the **Update user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the User Management area of Conversational Cloud. This menu option refreshes Agent Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in User Management, manually update the credentials here in Agent Assist.
+Use the **Update user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the User Management area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in User Management, manually update the credentials here in Conversation Assist.
