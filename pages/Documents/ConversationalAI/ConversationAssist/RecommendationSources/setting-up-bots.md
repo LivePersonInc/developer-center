@@ -76,22 +76,32 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 2. Click the **Bots** tab.
 
-    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist and "turned on" for use. This is done as a convenience to save you this step. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
+    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist. So you should see your bot here. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
 
-3. Verify that the bot is displayed and has a **Status** of "On." (If you don't see your bot, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).)
+    <img width="700" src="img/agentassist/configbot1.png">
 
-    {: .important}
-    The bots will not be recommended in conversations until you also assign one or more skills to the bots.
+3. Verify that your bot is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
+
+    Your bot doesn't have any assigned skills yet, so its **Status** is initially set to "Off." For the bot to be recommended in conversations, you must assign one or more skills **and** change the **Status**.
 
 4. Assign one or more skills to the bot:
-    1. Locate the bot and click its (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, assign one or more skills to the bot.
+    1. Beside the bot, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+    2. In the **Manage recommendation source** dialog, add one or more skills.
+
+        <img width="700" src="img/agentassist/configbot2.png">
+
+        And to offer recommendations from this bot, keep the **Status** value as "ON." (You can change the status later as desired.)
+
     3. Click **Save**.
-5. Repeat this process for additional knowledge bases as needed.
+5. Repeat this process for additional bots as needed.
 
-    After you assign at least one skill to each of the bots, the bots can be recommended in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which bots are candidates for recommendation to agents.
+    After you assign at least one skill to each of the bots, the bots can be recommended in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which bots are candidates for recommendation to human agents.
 
-    In our example below, for the human agent to be presented with a recommendation for the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. (Keep in mind that the conversation is routed to the skills assigned to the campaign’s engagement.)
+    In our example below, for the agent to be recommended the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. 
+
+    <img width="700" src="img/agentassist/configbot3.png">
+
+    Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
 {: .important}
 If you later delete a bot, the next time you access the **Bots** tab, the list is updated automatically.
@@ -106,8 +116,10 @@ If you later delete a bot, the next time you access the **Bots** tab, the list i
 
 ### Updating user credentials
 
-When configuring bot recommendations for Conversation Assist, if you select one or more bots, menu options for performing actions in bulk appear.
+When managing bots, if you select one or more, menu options for performing actions in bulk appear.
 
 <img width="800" src="img/agentassist/update_user_creds.png">
 
-Use the **Update user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the User Management area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in User Management, manually update the credentials here in Conversation Assist.
+Use the **Update bot user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the **User Management** area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations.
+
+Whenever you change the bot user’s credentials in **User Management**, manually update the credentials here in Conversation Assist.
