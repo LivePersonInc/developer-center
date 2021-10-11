@@ -45,9 +45,9 @@ Both tutorial series focus primarily on using the Conversation Builder applicati
 3. In **Conversation Assist**, configure relevant settings.
 
 ### Step 1: Create the KBs and articles
-Use [KnowledgeAI](knowledgeai-overview.html#access-knowledgeai) to create at least one knowledge base (KB) from your [content source](knowledgeai-overview.html#content-sources) or from scratch. You can create and use any type of knowledge base, and the knowledge base can be public or private.
+[Access KnowledgeAI](knowledgeai-overview.html#access-knowledgeai) and create at least one knowledge base (KB) from your [content source](knowledgeai-overview.html#content-sources) or from scratch. You can create and use any type of knowledge base, and the knowledge base can be public or private.
 
-To get started, it’s recommended that you create at least one article in the knowledge base, so you can verify that your setup is complete and working. You can continue to add more articles at any time after setup.
+To get started, it’s recommended that you create at least one article therein, so you can verify that your setup is complete and working. You can continue to add more articles at any time after setup.
 
 If you’re setting up a knowledge base that associates intents with articles, then you’ll also need to use [Intent Manager](intent-manager-overview.html) to create the domain and the necessary intents therein. Once this is done, back in KnowledgeAI, you’ll need to [associate the intents with the articles](knowledgeai-using-intents-with-kbs.html).
 
@@ -81,7 +81,7 @@ If you later delete a knowledge base in KnowledgeAI, the next time you access th
 
 ### Step 3: Configure settings
 
-1. In Conversation Assist, click **Settings**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**
 2. Configure the following relevant settings:
     * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#general)
     * [Answer confidence](conversation-assist-recommendation-sources-configuring-settings.html#answer-confidence)

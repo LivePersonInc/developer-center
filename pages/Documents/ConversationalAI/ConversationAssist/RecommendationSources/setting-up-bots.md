@@ -22,26 +22,30 @@ For some practice with Conversation Assist, complete the [Using Conversation Ass
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
 
 ### Prerequisite knowledge
-To set up Conversation Assist to suggest recommended bots, you must have some prerequisite knowledge of a few other applications in the Conversational AI suite.
+To set up Conversation Assist to recommend bots, you must have some prerequisite knowledge of other applications in the Conversational AI suite.
 
-If you are building your bots using Conversation Builder, you must be able to use Conversation Builder to:
+<!--
+If you are building your bots using Conversation Builder
+-->
+You must be able to use [Conversation Builder](conversation-builder-bot-workspace.html) to:
 * Create a bot
 * Deploy a bot
 
-If, for utterance matching, you’ll be using intents instead of patterns, you must be able to use Intent Manager to:
+If, for utterance matching, you’ll be using intents instead of patterns, you must also be able to use [Intent Manager](intent-manager-overview.html) to:
 * Create a domain
 * Create an intent
 
 For exposure to these applications and tasks, we recommend that you complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series.
 
 ### High-level workflow
-1. In Conversation Builder, create the bots.
-2. In Conversational Cloud, create the skills and bot users.
-3. In Conversation Builder, deploy your bots.
-4. In Conversation Assist, configure your recommendation sources (i.e., your bots) and configure a few other settings.
+1. In **Conversation Builder**, create the bots.
+2. In **Conversational Cloud**, create the skills and bot users.
+3. In **Conversation Builder**, deploy your bots.
+4. In **Conversation Assist**, configure the bots for Conversation Assist.
+5. In **Conversation Assist**, configure relevant settings.
 
 ### Step 1: Create the bots
-Before Conversation Assist can start recommending bots, you need to create at least one bot in Conversation Builder. For help, see the tutorial [here](tutorials-guides-getting-started-with-bot-building-overview.html). 
+[Access Conversation Builder](conversation-builder-bot-workspace.html#access-conversation-builder) and create at least one bot. For help, see the tutorial [here](tutorials-guides-getting-started-with-bot-building-overview.html). 
 
 <!--
 Conversation Assist supports bots created in:
@@ -50,122 +54,55 @@ Conversation Assist supports bots created in:
 * [IBM Watson](third-party-bots-ibm-watson-assistant.html)
 -->
 
-### Step 2: Create the Conversational Cloud skills and bot users
-Next, configure Conversational Cloud by creating a skill and a bot user for each bot. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
+### Step 2: Create the skills and bot users
+Configure **Conversational Cloud** by creating a skill and a bot user for each bot. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
 
 * Create the skill name and bot user name that make sense for your use case.
 * Be sure to assign the bot skill to the bot user.
 
-### Step 3: Deploy the bots to Conversational Cloud
-Once Conversational Cloud is configured, the bots need to be deployed or connected to enable them to respond to conversations in Conversational Cloud.
+### Step 3: Deploy the bots
+Use **Conversation Builder** to deploy the bots, so they can respond to conversations in Conversational Cloud. Deployment is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
 
-* To deploy a Conversation Builder bot, follow the steps [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
+When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
 
 <!--
+Once Conversational Cloud is configured, the bots need to be deployed or connected to enable them to...
+
 * To connect a DialogFlow or Watson bot to LivePerson’s Conversational Cloud, follow the [Third-Party Bots Getting Started Guide](third-party-bots-getting-started.html). Then follow the specific guide for [DialogFlow](third-party-bots-google-dialogflow-cx.html) or [IBM Watson](third-party-bots-ibm-watson-assistant.html). Be sure to press the play button in the bot dashboard to enable the bot.
 -->
 
-### Step 4: Configure Conversation Assist
-Configuration of Conversation Assist involves the following:
+### Step 4: Configure the bots
 
-1. Verify that the bots you created have been automatically discovered and enabled.
-2. Assign one or more skills to the bots.
-3. Enable recommendations.
-4. Specify the maximum number of recommendations that Conversation Assist will make. By default, this is 3.
-5. Configure the confidence threshold.
-6. Customize the messages for join/remove bot, if desired.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources**.
+2. Click the **Bots** tab.
 
-#### Verify the bots have been discovered and enabled
-By default, once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
+    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist and "turned on" for use. This is done as a convenience to save you this step. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
 
-<img width="800" src="img/agentassist/verify_bots.png">
+3. Verify that the bot is displayed and has a **Status** of "On." (If you don't see your bot, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).)
 
-A discovered bot is enabled by default as a convenience, saving you this step. However, it will not be recommended in conversations until you also assign one or more skills to the bot within Conversation Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
+    {: .important}
+    The bots will not be recommended in conversations until you also assign one or more skills to the bots.
 
-**To verify your bots have been automatically discovered and enabled**
+4. Assign one or more skills to the bot:
+    1. Locate the bot and click its (Manage source) icon.
+    2. In the **Manage recommendation source** dialog, assign one or more skills to the bot.
+    3. Click **Save**.
+5. Repeat this process for additional knowledge bases as needed.
 
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
-3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
-4. Verify that the bots are listed and enabled.
+    After you assign at least one skill to each of the bots, the bots can be recommended in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which bots are candidates for recommendation to agents.
+
+    In our example below, for the human agent to be presented with a recommendation for the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. (Keep in mind that the conversation is routed to the skills assigned to the campaign’s engagement.)
 
 {: .important}
-If you subsequently delete a bot, the next time you access this page, the list is updated automatically.
+If you later delete a bot, the next time you access the **Bots** tab, the list is updated automatically.
 
-#### Assign skills to the bots
-After verifying the bots are discovered and enabled, assign at least one skill to each of the bots. Once this is done, the bot can be recommended in conversations that are currently routed to the same skills. In this manner, you can control and configure which bots are candidates for recommendation to agents on a skill-by-skill basis. 
+### Step 5: Configure settings
 
-In our example below, for the human agent to be presented with a recommendation for the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. (Keep in mind that the conversation is routed to the skills assigned to the campaign’s engagement.)
-
-<img width="800" src="img/agentassist/assign_skills.png">
-
-**To assign skills to the bots**
-
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
-3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
-4. Add at least one skill to each available bot. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the bot, and then use the menu option that appears.
-
-    <img width="800" src="img/agentassist/assign_skills2.png">
-
-#### Enable recommendations
-With the bot ready to go, now enable recommendations. This must be done so that Conversation Assist recommends articles and bots inline in conversations.
-
-{: .important}
-The **Enable recommendations** setting is a shared setting. Enabling or disabling it for bots also does so for knowledge bases, and vice versa.
-
-**To enable recommendations**
-
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
-3. Scroll down to **Enable recommendations**.
-
-    <img width="500" src="img/agentassist/enable_recs.png">
-
-4. Turn on the **enabled** toggle switch.
-
-#### Specify the maximum number of recommendations
-You can specify the maximum number of recommendations that Conversation Assist will make when recommending articles and bots based on a detected intent (the consumer’s input). By default, up to 3 recommendations are provided to the agent.  You can change this at any time.
-
-{: .important}
-The **Maximum number of recommendations** setting is a shared setting. Setting its value for bots also updates the value for knowledge bases, and vice versa.
-
-**To specify the maximum number of recommendations**
-
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
-3. Scroll down to **Enable recommendations**.
-
-    <img width="500" src="img/agentassist/enable_recs.png">
-
-4. For **Maximum number of recommendations**, select a value.
-
-#### Configure the confidence threshold
-Bot recommendations have a score indicating how relevant the predicted intent is to a given consumer message. Recommendations are shown only if they are above the score threshold, which is configurable as shown below. The default score threshold is 70%.
-
-<img width="650" src="img/agentassist/confidence.png">
-
-**To configure the confidence threshold**
-
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under **Conversation Assist**, click **Bots**.
-3. Scroll down to **Confidence threshold**.
-4. Move the slider to the desired point.
-
-#### Customize the messages for join/remove bot
-
-If the default messages for when a bot is joined to and removed from the conversation don’t meet your needs, you can customize them. For example, you might need to change the language that’s used.
-
-**To customize the messages for join/remove bot**
-
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
-2. On the left navigation bar, under Conversation Assist, click **Bots**.
-3. Scroll down to the section named **Customize the bot join/remove messages**.
-
-    <img width="650" src="img/agentassist/customize_msgs.png">
-
-4. Enter new messages using the guidance provided regarding the use of variables.
-5. Click **Save**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
+2. Configure the following relevant settings:
+    * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#general)
+    * [Bot confidence](conversation-assist-recommendation-sources-configuring-settings.html#bot-confidence)
+    * [Bot messages](conversation-assist-recommendation-sources-configuring-settings.html#bot-messages)
 
 ### Updating user credentials
 
