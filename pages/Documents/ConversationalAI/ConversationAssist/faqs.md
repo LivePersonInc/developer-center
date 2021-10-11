@@ -57,13 +57,4 @@ If the account’s Conversation Assist settings are 1) maximum number of recomme
 * knowledge base article 4 = 75%
 * knowledge base article 1 = 72%
 
-In this case, the agent doesn’t see any bot recommendations because article recommendations are always included first. The maximum number of recommendations is 4, and there are 4 article recommendations with a relevance score of GOOD or better. 
-
-#### I created a few knowledge bases, but I don’t see them within Conversation Assist. Why is this?
-
-This happens if any of the following conditions are true:
-
-* The knowledge base is empty, i.e., it doesn’t have any articles yet. In this case, add some articles.
-* The knowledge base has articles, but none of the articles are enabled yet. In this case, enable some articles.
-* The knowledge base is a legacy knowledge base, so it isn't supported within Conversation Assist. In other words, it uses Knowledge Base intents and the LivePerson (Legacy) NLU engine behind the scenes. In this case, download the knowledge base and import the export file into a new knowledge base. All new knowledge bases use the LivePerson NLU engine by default.
-
+In this case, the agent doesn’t see any bot recommendations because article recommendations are always included first. The maximum number of recommendations is 4, and there are 4 article recommendations with a relevance score of GOOD or better.
