@@ -55,26 +55,35 @@ If you’re setting up a knowledge base that associates intents with articles, t
 At this point, use KnowledgeAI to verify that the desired articles are active. The knowledge base should have at least one active article.
 
 ### Step 2: Configure the KBs
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 
     The **Knowledge Bases** tab is displayed by default.
 
-    Once you create a knowledge base (KB) in KnowledgeAI, it is automatically discovered by Conversation Assist and "turned on" for use. This is done as a convenience to save you this step.
+    Once you create a knowledge base (KB) in KnowledgeAI, it is automatically discovered by Conversation Assist, so you should see your knowledge base here.
 
-2. Verify that the knowledge base is displayed and has a **Status** of "On." (If you don't see your knowledge base, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).)
+    <img width="700" src="img/agentassist/configkb1.png">
+
+2. Verify that your knowledge base is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
 
     {: .important}
-    The articles will not be recommended as answers in conversations until you also assign one or more skills to the knowledge base.
+    The articles in the knowledge base will not be recommended as answers in conversations until you also **assign one or more skills** to the knowledge base.
 
 3. Assign one or more skills to the knowledge base:
-    1. Locate the knowledge base and click its (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, assign one or more skills to the knowledge base.
+    1. Beside the knowledge base, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+    2. In the **Manage recommendation source** dialog, add one or more skills.
+
+        <img width="700" src="img/agentassist/configkb2.png">
+
+        And to offer recommendations from this knowledge base, keep the **Status** set to "ON." (You can change the status later as desired.)
+
     3. Click **Save**.
 4. Repeat this process for additional knowledge bases as needed.
 
     After you assign at least one skill to each of the knowledge bases, their articles can be recommended as answers in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which knowledge bases are candidates for recommendation to agents.
 
-    In our example below, for the human agent to be offered an answer from the Order Questions knowledge base, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. (Keep in mind that the conversation is routed to the skills assigned to the campaign’s engagement.)
+    In our example below, for the human agent to be offered an answer from the Order Questions knowledge base, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. (Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.)
+
+    <img width="700" src="img/agentassist/configkb3.png">
 
 {: .important}
 If you later delete a knowledge base in KnowledgeAI, the next time you access the **Knowledge Bases** tab, the list is updated automatically.

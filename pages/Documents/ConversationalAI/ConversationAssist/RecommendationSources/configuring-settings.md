@@ -20,9 +20,9 @@ The **Settings** page in Conversation Assist contains settings that are shared b
 
 ### Answer confidence
 
-<img width="400" src="img/agentassist/settings_answerconfidence.png">
-
 Set the **Answer confidence** if you’re using knowledge bases as recommendation sources.
+
+<img width="400" src="img/agentassist/settings_answerconfidence.png">
 
 The consumer’s intent will be matched to the articles in the knowledge bases, where each match is assigned a score indicating the system’s confidence in the match. Select the minimum confidence score that an article must have for it to be offered as a recommended answer that can be sent to the consumer. 
 
@@ -31,6 +31,8 @@ The higher the score, the more relevant the recommendations. To offer more recom
 ### Bot confidence
 
 Set the **Bot confidence** if you’re using bots as recommendation sources.
+
+<img width="400" src="img/agentassist/settings_botconfidence.png">
 
 The consumer’s intent will be matched to the bots, where each match is assigned a score indicating the system’s confidence in the match. Select the minimum score that a bot must have for it to be offered as a recommended bot that can handle the conversation.
 

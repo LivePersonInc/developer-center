@@ -73,7 +73,7 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 
 ### Step 4: Configure the bots
 
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources**.
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 2. Click the **Bots** tab.
 
     Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist and "turned on" for use. This is done as a convenience to save you this step. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
