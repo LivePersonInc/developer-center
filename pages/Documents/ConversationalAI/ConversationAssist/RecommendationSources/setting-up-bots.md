@@ -16,7 +16,7 @@ indicator: messaging
 ---
 
 {: .important}
-For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
+For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 {: .important}
 It takes up to 3 hours for changes in Agent Assist configuration to take effect.
@@ -84,7 +84,7 @@ A discovered bot is enabled by default as a convenience, saving you this step. H
 
 **To verify your bots have been automatically discovered and enabled**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
 4. Verify that the bots are listed and enabled.
@@ -101,7 +101,7 @@ In our example below, for the human agent to be presented with a recommendation 
 
 **To assign skills to the bots**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
 4. Add at least one skill to each available bot. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the bot, and then use the menu option that appears.
@@ -116,7 +116,7 @@ The **Enable recommendations** setting is a shared setting. Enabling or disablin
 
 **To enable recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to **Enable recommendations**.
 
@@ -132,7 +132,7 @@ The **Maximum number of recommendations** setting is a shared setting. Setting i
 
 **To specify the maximum number of recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to **Enable recommendations**.
 
@@ -147,7 +147,7 @@ Bot recommendations have a score indicating how relevant the predicted intent is
 
 **To configure the confidence threshold**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to **Confidence threshold**.
 4. Move the slider to the desired point.
@@ -158,7 +158,7 @@ If the default messages for when a bot is joined to and removed from the convers
 
 **To customize the messages for join/remove bot**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under Agent Assist, click **Bots**.
 3. Scroll down to the section named **Customize the bot join/remove messages**.
 

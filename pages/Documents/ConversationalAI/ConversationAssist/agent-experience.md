@@ -27,7 +27,7 @@ In Conversational Cloud, bot and article recommendations are displayed inline wi
 
     <img width="550" src="img/agentassist/use_bot.png">
 
-    **Tip**: As shown in the image above, a system message announces when the bot joins the conversation. You can [customize this message](conversation-orchestrator-agent-assist-setting-up-bot-recommendations.html#customize-the-messages-for-joinremove-bot).
+    **Tip**: As shown in the image above, a system message announces when the bot joins the conversation. You can [customize this message](conversation-assist-recommendation-sources-configuring-settings.html#bot-messages).
 
 **To use a recommended article**
 

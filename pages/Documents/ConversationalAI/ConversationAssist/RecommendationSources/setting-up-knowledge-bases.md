@@ -16,7 +16,7 @@ indicator: messaging
 ---
 
 {: .important}
-For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
+For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 {: .important}
 It takes up to 3 hours for changes in Agent Assist configuration to take effect.
@@ -67,7 +67,7 @@ A knowledge base is enabled by default as a convenience, saving you this step. H
 
 **To verify your knowledge bases have been automatically discovered and enabled**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to the **Configure article recommendations** section, which lists all discovered knowledge bases.
 4. Verify that the knowledge bases are listed and enabled. At this point, you should also verify that the desired articles in the knowledge base are active. The knowledge base should have at least one active article.
@@ -84,7 +84,7 @@ In our example below, for the human agent to be presented with an article recomm
 
 **To assign skills to the knowledge bases**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to the **Configure article recommendations** section, which lists all knowledge bases.
 4. Add at least one skill to each available knowledge base. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the knowledge base, and then use the menu option that appears.
@@ -99,7 +99,7 @@ The **Enable recommendations** setting is a shared setting. Enabling or disablin
 
 **To enable recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to **Enable recommendations**.
 
@@ -115,7 +115,7 @@ The **Maximum number of recommendations** setting is a shared setting. Setting i
 
 **To specify the maximum number of recommendations**
 
-1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-assist-overview.html#access-conversation-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to **Enable recommendations**.
 

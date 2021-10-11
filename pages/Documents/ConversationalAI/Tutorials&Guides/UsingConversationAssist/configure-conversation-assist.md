@@ -11,7 +11,7 @@ permalink: tutorials-guides-using-conversation-assist-configure-conversation-ass
 indicator: both
 ---
 
-After completing the [prerequisite steps](tutorials-guides-using-agent-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Orchestrator to configure the Agent Assist capabilities.
+After completing the [prerequisite steps](tutorials-guides-using-conversation-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Orchestrator to configure the Agent Assist capabilities.
 
 ### Step 5: Configure Conversation Assist bot recommendations
 

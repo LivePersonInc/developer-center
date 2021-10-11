@@ -29,6 +29,6 @@ indicator: messaging
 
     <img width="550" src="img/agentassist/test2.png">
 
-6. Test [using the recommendations](conversation-orchestrator-agent-assist-agent-experience.html), i.e., use the bot or the article.
+6. Test [using the recommendations](conversation-assist-agent-experience.html), i.e., use the bot or the article.
 
     Make sure to test both positively and negatively. For example, if you enter a consumer message that doesn’t map to an intent, you should expect to receive no recommendations.
