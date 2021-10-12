@@ -13,46 +13,65 @@ indicator: both
 
 After completing the [prerequisite steps](tutorials-guides-using-conversation-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Assist to configure its capabilities.
 
-### Step 5: Configure Conversation Assist bot recommendations
+### Step 5: Configure the bots for Conversation Assist
 
-1. From the Conversational AI portal, click the **Conversation Assist** menu option.
+1. From the Conversational AI dashboard of applications, click **Conversation Assist**.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/co_menu_option.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/ca_menu_option.png">
 
-2. Ensure that the **Enable recommendations** toggle is turned on. Here, there is an option to select the maximum number of recommendations provided to a human agent. Leave the selection to the default of 3.
+2. Click **Recommendation Sources** at the top of the page, and then select the **Bots** tab.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/max_num_recommendations.png">
+    You should see that your bots have been automatically discovered and, therefore, are listed on the page. Any bots that are connected to active agent connectors should be visible here.
 
-3. The **Confidence threshold** section allows customization of the confidence percentage used for a bot suggestion. Leave the slider at the default 70%.
-4. Under **Configure bot recommendations**, both the Booking Bot and Seating Bot should be listed. Any bots that are connected to active agent connectors should be visible here.
-5. Recommendations are tied to skills, which must be specified in this section before they will display to a human agent during a conversation. Earlier, the logged-in human agent was assigned an “agent” skill, which is what needs to be specified for these bots to be recommended. In the skills form field, type in “Agent”.
+    <img style="width:800px" src="img/agentassisttutorial/botlist.png">
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/config_bot_recommendations.png">
+    Recommendations are tied to skills, so you must assign skills to the bots before the bots can be offered to human agents during conversations.
+    
+    Earlier, you assigned an "Agent" skill to the logged-in human agent; this is what needs to be assigned for these two bots to be recommended.
 
-### Step 6: Configure Conversation Assist knowledge base recommendations
+3. Assign the "Agent" skill to the Seating Bot:
+    1. Beside the bot, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+    2. In the **Manage recommendation source** dialog, add the "Agent" skill.
 
-1. Select the **Knowledge Bases** menu option under **Conversation Assist**.
-2. Confirm that the **Enable recommendations** toggle is still turned on. The maximum number of recommendations should be the same as well.
-3. Follow the steps that were taken with bots: Enable the Airline FAQ knowledge base under the **Configure article recommendations** section, and assign the “Agent” skill to it.
+        <img width="700" src="img/agentassisttutorial/assignskill.png">
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/config_article_recommendations.png">
+        And to offer recommendations from this bot, keep the **Status** value as "ON."
+
+    3. Click **Save**.
+
+4. Repeat the process for the previous step to assign the "Agent" skill to the Booking Bot.
+
+### Step 6: Configure the KB for Conversation Assist
+
+1. Still on the **Recommendation Sources** page, select the **Knowledge Bases** tab.
+
+    <img style="width:800px" src="img/agentassisttutorial/kblist.png">
+
+2. Follow the steps that you used for the bots: Assign the "Agent" skill to the Airline FAQ knowledge base (KB), and change its **Status** to "ON."
+
+    <img style="width:800px" src="img/agentassisttutorial/kblist2.png">
+
+    For the purpose of this tutorial, we're relying on the default values for several settings, e.g., the **Max # of recommendations** to offer at any one time. You can read about these settings [here](conversation-assist-recommendation-sources-configuring-settings.html).
 
 {: .important}
-**Customize your POC:** If you built out additional resources in previous steps, make sure to enable those resources too. Depending on the number of resources, it might be useful to increase the number of recommendations that you display to your agents when they are in a conversation.
+**Customize your POC:** If you built out additional resources in previous steps, make sure to turn on those resources too. Depending on the number of resources, it might be useful to increase the number of recommendations that you display to your agents when they are in a conversation.
 
 ### Step 7: Create the Web messaging engagement
 
 Updates to the Conversation Assist configuration can take up to 20 minutes to be reflected in conversations. While waiting for these changes to take effect, create a web messaging engagement that connects to the “Agent” skill. 
 
 1. Back in the Conversational Cloud, select the **Manage campaigns and engagements** icon <img style="width:30px" src="img/agentassisttutorial/icon_campaigns.png"> from the left-side menu.
-2. From the **Campaign Builder** portal, select **+ Add campaign** in the lower-left corner.
+2. From the **Campaign Builder** portal, click **+ Add campaign** in the lower-left corner.
 3. Give the campaign the name "Conversation Assist Testing," and under **Campaign goal**, select the default “Interact with consumers.” 
-4. Click the **+ Add engagement** link to specify a web messaging engagement as the source. 
-5. In the resulting workflow, keep the default values for all screens except for the **Engagement settings**. In **Engagement settings**, it is important that this engagement is routing to the "Agent" skill that has been assigned to the human agent. As the Conversation Assist settings have been configured to recommend bots and knowledge bases to this particular skill, skipping this important step will result in recommendations not being sent.
+4. Click the **+ Add engagement** link, and then select "Web" as the engagement source.
+5. In the **Engagement template gallery**, accept the default value, and click **Next**.
+6. In the **Engagement settings**, under **Routing**, route to the specific skill "Agent."
 
     <img class="fancyimage" style="width:650px" src="img/agentassisttutorial/engagement_settings.png">
+    
+    It is important that this engagement is routing to the "Agent" skill that has been assigned to the human agent. As the Conversation Assist settings have been configured to recommend bots and answers to this particular skill, skipping this important step will result in recommendations not being sent.
 
-6. Continue through the workflow, accepting the default values. When you’ve reached the last option, "Behavior," select the **Done** button in the lower-right corner.
+6. Click **Next**, and continue through the workflow, accepting the default values. When you’ve reached the last option, "Behavioral targeting library," click **Done** in the lower-right corner.
 7. Back on the "Conversation Assist Testing" page, confirm that the skill being routed to is "Agent." If so, select the orange **Publish** button in the upper-right corner. Once published, there will be a visible Running icon <img style="width:90px" src="img/agentassisttutorial/icon_running.png"> to the right of the engagement.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/engagement.png">
