@@ -11,14 +11,21 @@ indicator: messaging
 
 The **Settings** page in Conversation Assist contains settings that are shared by all recommendation sources, or by all recommendation sources of a given type (bots or knowledge bases).
 
-### General
+### Suspend/Resume recommendations
 
-General settings apply to all recommendation sources.
+This setting applies to all recommendation sources.
+
+<img width="600" src="img/agentassist/settings_general2.png">
+
+When this setting is on (blinking green), Conversation Assist recommends bots and answers inline in conversations. Click the toggle to suspend or resume recommendations globally.
+
+### Max # of recommendations
+
+This setting applies to all recommendation sources.
 
 <img width="600" src="img/agentassist/settings_general.png">
 
-* **Max # of recommendations**: Specify the maximum number of bot and answer recommendations that Conversation Assist offers at one time. The default value is 3.
-* **Suspend/Resume**: When this setting is on (blinking green), Conversation Assist recommends bots and answers inline in conversations. Use this **Suspend**/**Resume** toggle to turn on and off recommendations globally.
+Set the maximum number of recommendations (bot and answer) that Conversation Assist offers at one time. The default value is 3.
 
 ### Answer confidence
 

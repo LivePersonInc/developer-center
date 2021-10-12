@@ -110,7 +110,7 @@ If you later delete a bot, the next time you access the **Bots** tab, the list i
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
 2. Configure the following relevant settings:
-    * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#general)
+    * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#max--of-recommendations)
     * [Bot confidence](conversation-assist-recommendation-sources-configuring-settings.html#bot-confidence)
     * [Bot messages](conversation-assist-recommendation-sources-configuring-settings.html#bot-messages)
 
