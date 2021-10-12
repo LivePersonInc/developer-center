@@ -23,7 +23,7 @@ Click the **Message us** button to start a conversation with the human agent on 
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/incoming_message.png">
 
-Once connected, you can now test out Conversation Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your user.
+Once connected, you can now test out Conversation Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your consumer.
 
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/recommendations_c.png">
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/recommendations.png">
