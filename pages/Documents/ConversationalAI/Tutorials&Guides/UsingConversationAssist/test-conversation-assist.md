@@ -19,7 +19,7 @@ In a separate browser window, navigate to [https://developers.liveperson.com/web
 
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/message_us.png">
 
-Click the **Message us** button to start a conversation with the human agent on the account, which should be yourself. Type in any message and send it to see a notification come through on the Conversational Cloud, along with an opportunity to accept the incoming conversation.
+Click the **Message us** button to start a conversation with the human agent on the account, which should be yourself. Type in any message and send it to see a notification come through on the Conversational Cloud, along with an opportunity to accept the incoming conversation. Click **Accept**.
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/incoming_message.png">
 
