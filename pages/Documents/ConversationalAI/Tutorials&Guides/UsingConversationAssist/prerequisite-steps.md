@@ -101,7 +101,7 @@ Every bot and human agent requires a user profile and an associated skill to be 
     * **User type**: Bot
     * **Login name**: Booking Bot
     * **Email**: Your email address
-    * **Nickname**: Booking
+    * **Nickname**: Booking Bot
     * **Name**: Booking Bot
     * **Choose login method**: API key
     * **API key**: Generate API key
@@ -115,7 +115,7 @@ Every bot and human agent requires a user profile and an associated skill to be 
     * **User type**: Bot
     * **Login name**: Seating Bot
     * **Email**: Your email address
-    * **Nickname**: Seating
+    * **Nickname**: Seating Bot
     * **Name**: Seating Bot
     * **Choose login method**: API key
     * **API key**: Generate API key
