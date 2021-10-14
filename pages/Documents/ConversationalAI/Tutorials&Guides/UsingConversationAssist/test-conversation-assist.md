@@ -23,23 +23,23 @@ Click the **Message us** button to start a conversation with the human agent on 
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/incoming_message.png">
 
-Once connected, you can now test out Conversation Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I want to book a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your consumer.
+Once connected, you can now test out Conversation Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I want to book a flight” from your consumer. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your consumer.
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/recommendations_c.png">
 <img class="fancyimage" style="width:500px" src="img/agentassisttutorial/recommendations.png">
 
-Select **Delegate to bot** to bring the Booking Bot into the conversation and immediately start the user with the correct, associated dialog.
+Select **Delegate to bot** to bring the Booking Bot into the conversation and immediately start the consumer with the correct, associated dialog.
  
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/use_bot.png">
 
-When the bot has completed the task for the user, remove the bot from the conversation by selecting the **Remove bot** button at the top of the messaging window.
+When the bot has completed the task for the consumer, remove the bot from the conversation by selecting the **Remove bot** button at the top of the messaging window.
 
-Each time the user sends a message, Conversation Assist will check to see if the utterance triggers an appropriate response from the connected bots or knowledge bases. Try again by asking “Are you able to help me upgrade my seat?”
+Each time the consumer sends a message, Conversation Assist will check to see if the utterance triggers an appropriate response from the connected bots or knowledge bases. Try again by asking, “Are you able to help me upgrade my seat?”
 
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/upgrade_seat.png">
 
-This time, select **Use answer** to bring the Seating assignment article into the messaging prompt for the agent. This allows the agent to personalize and update the article text to fit the user's specific needs.
+This time, select **Use answer** to bring the seating assignment article into the messaging prompt for the agent. This allows the agent to personalize and update the article text to fit the consumer's specific needs.
 
-<img class="fancyimage" style="width:450px" src="img/agentassisttutorial/use_article.png">
+<img class="fancyimage" style="width:350px" src="img/agentassisttutorial/use_article.png">
 
 Congratulations on completing this tutorial!
