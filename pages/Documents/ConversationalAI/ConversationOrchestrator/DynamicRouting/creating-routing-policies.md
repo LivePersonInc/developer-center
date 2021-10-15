@@ -231,6 +231,10 @@ When adding conditions, there are several conditional operators that can be used
 
 The chosen operator automatically determines the data type of the value. For example, (<) operator expects a number or attribute, Is in expect lists and Contains expects a string.
 
+### Complex conditions including time-based criteria
+
+Dynamic routing includes an Expression Editor that allows you to configure advanced routing policies using nested conditions, logical operators and time-based functions. For more details, see [here](conversation-orchestrator-dynamic-routing-advanced-routing.html).
+
 ### More about actions
 
 Policies can trigger the following actions:

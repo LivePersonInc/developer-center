@@ -141,7 +141,7 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
 
 {: .important}
-When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.
+When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.<br><br>Additionally, be aware that the values are reported in the order of the buttons. So, in Analytics Builder, when setting up a custom report, ensure you set up your columns in the same order and name the columns accordingly.
 
 #### Open-ended, custom
 
