@@ -58,11 +58,11 @@ First, in the **Advanced Settings** of the article, enter the URLs to send **(1)
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png">
 
 {: .important}
-The remainder of this information below is for the benefit of bot developers using a Knowledge Base integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a Knowledge Base integration, namely, use of the Knowledge AI interaction in Conversation Builder. For details on this interaction, see [here](conversation-builder-interactions-integrations.html#knowledge-ai-interactions).
+The remainder of this information below is for the benefit of bot developers using a KnowledgeAI integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a KnowledgeAI integration, namely, use of the Knowledge AI interaction in Conversation Builder. For details on this interaction, see [here](conversation-builder-interactions-integrations.html#knowledge-ai-interactions).
 
-#### Configure the Knowledge Base integration in the bot
+#### Configure the KnowledgeAI integration in the bot
 
-Next, open Conversation Builder and navigate to the [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) inside the bot that uses the knowledge base.
+Next, open Conversation Builder and navigate to the [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) inside the bot that uses the knowledge base.
 
 Verify that the appropriate knowledge base is selected **(2)**, and then add custom data fields for the content links that you're using **(3)**.
 
