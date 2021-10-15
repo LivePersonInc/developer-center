@@ -21,7 +21,7 @@ The rules for how the recommendations are made and ordered are as follows:
 
 1. **Which recommendations to include?** First, include all answer (article) recommendations. Second, include all bot recommendations. This means that answers are included before bots even when the answer scores are lower than that of the top bot recommendation.
 
-    Included answers must have a relevance score of GOOD (70%) or higher. The scores for included bots must meet the [Bot Confidence** threshold](conversation-assist-recommendation-sources-configuring-settings.html), which is configurable during setup.
+    Included answers must have a relevance score of GOOD (70%) or higher. The scores for included bots must meet the [Bot Confidence threshold](conversation-assist-recommendation-sources-configuring-settings.html), which is configurable during setup.
 
 2. **How to order the recommendations?** Within each subgroup of recommendations (answers, bots), sort the recommendations by relevance score in descending order so that the higher the score, the higher the recommendation.
 

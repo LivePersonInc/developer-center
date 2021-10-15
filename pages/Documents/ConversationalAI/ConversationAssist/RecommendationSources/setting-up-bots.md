@@ -16,7 +16,7 @@ indicator: messaging
 ---
 
 {: .important}
-For some practice with Conversation Assist, complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
+Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 {: .important}
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
@@ -114,7 +114,7 @@ If you later delete a bot, the next time you access the **Bots** tab, the list i
     * [Bot confidence](conversation-assist-recommendation-sources-configuring-settings.html#bot-confidence)
     * [Bot messages](conversation-assist-recommendation-sources-configuring-settings.html#bot-messages)
 
-### Updating user credentials
+### Updating bot user credentials
 
 When managing bots, if you select one or more, menu options for performing actions in bulk appear.
 

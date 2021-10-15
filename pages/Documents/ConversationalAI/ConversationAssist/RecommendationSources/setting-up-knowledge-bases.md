@@ -16,7 +16,7 @@ indicator: messaging
 ---
 
 {: .important}
-For some practice with Conversation Assist, complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
+Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 {: .important}
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
