@@ -182,6 +182,31 @@ Add the following special tag inline inside your text interaction to force a bre
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
 
+### Add comments
+
+You can add comments to an interaction to annotate your solution, i.e., to describe what the interaction is for, what it does, and what it needs.
+
+Use comments to quickly explain things. They are particularly helpful when you work in a collaborative context that includes multiple bot builders, and when the person maintaining the bot isn’t the one who built it originally.
+
+Comments are displayed at the bottom of the interaction like so:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments2.png">
+
+#### To add a comment to an interaction
+
+1. Select the interaction.
+2. Enter the comment in the field provided at the bottom of the interaction, and press Enter. You can enter only text; HTML is not allowed.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments1.png">
+
+#### To show or hide comments
+
+When you select an interaction, if it has a comment, the comment is always shown. This is done as a convenience because you're actively working in the interaction.
+
+However, you can toggle on and off the display of comments in the other interactions in the dialog. To do this, use the **Comments** slider at the top of the dialog. 
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments3.png">
+
 ### Save changes
 Some but not all changes are automatically saved after you make them. As a general rule, always do a manual save after making changes.
 
