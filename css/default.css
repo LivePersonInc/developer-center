@@ -288,10 +288,10 @@ ul.mysidebar.nav {
   background-color: transparent !important;
   color: var(--button-text-secondary);
 }
-
+/* 
 .darken code {
   filter: brightness(280%);
-}
+} */
 
 .darken code span::selection {
   background-color: var(--sky-blue);
@@ -1374,8 +1374,10 @@ a.loginText {
   display: none;
 }
 
-div#post-content img {
-  margin: 0 auto;
+div#post-content p img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 a:focus-visible {
