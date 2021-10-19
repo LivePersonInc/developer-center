@@ -68,6 +68,9 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
 ### Add a domain manually or using an import file
 
+{: .important}
+If you're adding a domain that will use your own Rasa-based engine as the NLU provider, see [here](intent-manager-natural-language-understanding-external-rasa-based-nlu-engine.html#connect-the-nlu-engine) for additional information that you need to provide when you do this.
+
 **To add a domain manually or using an import file**
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
