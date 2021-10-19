@@ -1374,11 +1374,13 @@ a.loginText {
   display: none;
 }
 
-div#post-content img.fancyimage {
+div#post-content img {
   margin: 0 auto;
 }
 
-a:focus-visible,
+a:focus-visible {
+  color: var(--post-link-hover);
+}
 a:focus-within {
   border: 1px dashed var(--post-link-hover);
 }
