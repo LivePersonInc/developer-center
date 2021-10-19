@@ -1,20 +1,21 @@
 ---
-pagename: Third-Party NLU Engines
+pagename: Google Dialogflow and IBM Watson NLU Engines
 redirect_from:
+    - intent-manager-natural-language-understanding-third-party-nlu-engines.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
 subfoldername: Natural Language Understanding
-permalink: intent-manager-natural-language-understanding-third-party-nlu-engines.html
+permalink: intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html
 indicator: both
 ---
 
-### Bug fix for third-party NLU engines
+### Bug fix
 
-LivePerson has resolved an issue impacting intent domains that integrate with third-party NLU engines (i.e., Google Dialogflow or IBM Watson). This fix was deployed on **July 28 and 29, 2021**, and **your action is required** to properly adopt the fix.
+LivePerson has resolved an issue impacting intent domains that integrate with Google Dialogflow or IBM Watson. This fix was deployed on **July 28 and 29, 2021**, and **your action is required** to properly adopt the fix.
 
-If, in Intent Manager, you have one or more domains that uses a third-party NLU engine, please do the following:
+If, in Intent Manager, you have one or more domains that uses a Google Dialogflow or IBM Watson NLU engine, please do the following:
 
 1. In Google Dialogflow or IBM Watson, delete the model versions.
 2. In Bot Accounts, disable (turn off) the **WatsonAssistant** or **Google DialogFlow** setting on the **Account** Details page. Wait a few seconds, and then re-enable the setting.
@@ -23,14 +24,7 @@ If, in Intent Manager, you have one or more domains that uses a third-party NLU 
 
 3. In Intent Manager, train the domains to create new model versions.
 
-### Third-party NLU limitations
-
-- Doesn't support [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
-- The length of the domain name should not exceed 64 characters. (Watson limitation)
-- A domain can only support one language, which is specified on the Domain Settings page.
-- LivePerson does not support "pulling" into Intent Manager existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Manager.
-
-### Connect a third-party NLU engine
+### Connect a Google Dialogflow or IBM Watson NLU engine
 
 #### Step 1: Enable 3rd-party NLU support
 
@@ -74,6 +68,9 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
 In Intent Manager, [add a domain](intent-manager-build-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
+
+{: .important}
+The length of the domain name should not exceed 64 characters. (Watson limitation)
 
 #### Step 4: Create the NLU provider credentials
 

@@ -21,7 +21,7 @@ Use this high-level workflow when working with a domain using the LivePerson eng
 
 <img style="width:600px" src="img/ConvoBuilder/domain_workflow.png">
 
-If the domain is using a third-party NLU engine, you'll need to [connect the NLU engine](intent-manager-natural-language-understanding-third-party-nlu-engines.html#connect-a-third-party-nlu-engine) before you train.
+If the domain is using a third-party NLU engine, you'll need to connect the NLU engine before you train.
 
 ### Add a prebuilt domain
 
@@ -239,7 +239,7 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
 7. In the Add NLU Provider Credential dialog box, specify the following:
     * **Credential Name**: Enter a name for the credential.
     * **NLU Provider**: Select the 3rd-party NLU engine.
-    * **Credentials**: Paste here the credentials that you downloaded when you [set up your IBM Watson  or Google Dialogflow account](intent-manager-natural-language-understanding-third-party-nlu-engines.html#connect-a-third-party-nlu-engine).
+    * **Credentials**: Paste here the credentials that you downloaded when you [set up your IBM Watson  or Google Dialogflow account](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#connect-a-google-dialogflow-or-ibm-watson-nlu-engine).
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png">
 
@@ -259,7 +259,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, click **Train** in the upper-right corner.
-5. Select the [NLU provider credential](intent-manager-natural-language-understanding-third-party-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
+5. Select the [NLU provider credential](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 
@@ -273,7 +273,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
 #### Alternating service credentials
 
-When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-manager-natural-language-understanding-third-party-nlu-engines.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
+When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
 

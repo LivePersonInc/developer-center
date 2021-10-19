@@ -25,3 +25,8 @@ While LivePerson provides its own proprietary NLU out of the box, Intent Manager
 
 {: .important}
 If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Manager. Third-party providers require an additional setup process that's outlined [on this page](tent-manager-natural-language-understanding-third-party-nlu-engines.html).
+
+### Limitations of third-party NLU engines
+
+- Don't support [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
+- LivePerson does not support "pulling" into Intent Manager existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Manager.

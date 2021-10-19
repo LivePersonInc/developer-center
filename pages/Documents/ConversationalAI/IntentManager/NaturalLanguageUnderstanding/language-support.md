@@ -29,7 +29,7 @@ The [LivePerson (Legacy) NLU engine](intent-manager-natural-language-understandi
 
 ### IBM Watson NLU engine
 
-Available with [IBM Watson](intent-manager-natural-language-understanding-third-party-nlu-engines.html):
+Available with [IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html):
 * Arabic
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
@@ -45,7 +45,7 @@ Available with [IBM Watson](intent-manager-natural-language-understanding-third-
 
 ### Google Dialogflow NLU engine
 
-Available with [Google Dialogflow](intent-manager-natural-language-understanding-third-party-nlu-engines.html):
+Available with [Google Dialogflow](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html):
 * Chinese, Cantonese (Hong Kong)
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
