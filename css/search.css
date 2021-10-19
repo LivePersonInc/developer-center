@@ -58,7 +58,7 @@ span.searchcontentcontainer {
 .ais-Highlight {
   font-style: normal;
   font-weight: 600;
-  color: var(--orange);
+  color: var(--link-color-hover);
 }
 
 .aa-empty {

@@ -1,5 +1,5 @@
 a {
-  color: var(--link-color);
+  color: var(--post-link);
 }
 
 a:focus {
@@ -8,7 +8,13 @@ a:focus {
 }
 
 a:hover {
-  color: var(--link-color-hover);
+  color: var(--post-link-hover);
+}
+
+a:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline: -webkit-focus-ring-color dashed 1px;
+  border-radius: 4px;
 }
 
 .footer {
@@ -169,14 +175,14 @@ table tbody tr:last-child {
 }
 
 .post-content table > thead > tr > th {
-  background-color: var(--card-background);
+  background-color: var(--footer-background);
   font-family: "Open Sans";
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--navy-mid-gray);
+  color: var(--widget-text);
   font-size: 12px;
   padding: 14px 22px;
-  border-bottom: 1px solid var(--navy-light-gray) !important;
+  border-bottom: 1px solid var(--card-border) !important;
 }
 
 /*
@@ -227,8 +233,8 @@ table > tbody > tr:nth-of-type(even) {
   width: 50px;
   font-size: 2.5em;
   color: var(--body-background);
-  background-color: orange;
-  border: 3px solid darkorange;
+  background-color: var(--link-color);
+  border: 3px solid var(--link-color-hover);
   height: 50px;
   border-radius: 50%;
   -moz-border-radius: 50%;
@@ -245,7 +251,7 @@ code {
 }
 
 p .darken {
-  color: #fff;
+  color: var(--widget-text);
 }
 
 td code {
@@ -253,7 +259,7 @@ td code {
 }
 
 td .darken {
-  color: #fff !important;
+  color: var(--widget-text) !important;
 }
 
 /*toc nav bar */
@@ -358,14 +364,13 @@ div#toc ul li ul li ul {
 }
 
 /*end toc nav bar */
-/*left nav bar */
+/*left nav bar - new sticky */
 ul.mysidebar.nav {
   text-decoration: none;
-  position: fixed;
-  height: 100%;
+  position: sticky;
+  top: 10px;
   width: 300px;
   min-width: 300px;
-
   overflow-y: auto;
 
   overflow-x: hidden;
@@ -403,7 +408,7 @@ ul#mysiderbar li {
 }
 
 .innerlink {
-  color: var(--title-text);
+  color: var(--link-color);
   font-size: 12px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
@@ -414,12 +419,12 @@ ul#mysiderbar li {
 }
 
 .pageitem > a {
-  color: var(--title-text);
+  color: var(--link-color);
   font-size: 12px;
 }
 
 .innerpageitem > a {
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 /* .topfolder>a>span {
@@ -427,7 +432,7 @@ ul#mysiderbar li {
 } */
 
 .innerfolder > a {
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 .pageitem {
@@ -441,19 +446,19 @@ ul#mysiderbar li {
 }
 
 .activeitem {
-  border-left: 4px solid var(--orange) !important;
+  border-left: 4px solid var(--link-color-hover) !important;
   margin-left: -4px;
 }
 
 .activeleaf {
   margin-left: 30px;
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
 }
 
 .activeleafSolo {
   margin-left: 16px;
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
 }
 
@@ -461,7 +466,7 @@ ul.mysidebar.nav .topfolder > a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: bold;
   overflow-wrap: break-word;
 }
@@ -477,7 +482,7 @@ ul.mysidebar li ul li {
 }
 
 ul.mysidebar.nav li a.active {
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: 500;
 }
 
@@ -494,18 +499,18 @@ ul.mysidebar.nav li.activepage {
 }
 
 ul.mysidebar.nav li.activepage a {
-  color: var(--orange) !important;
+  color: var(--link-color) !important;
   font-weight: bold;
 }
 
 ul.mysidebar.nav li.activepage a:hover {
-  color: var(--hover-orange) !important;
+  color: var(--link-color-hover) !important;
 }
 
 .spacebetweenHyperlink {
   justify-content: space-between;
   display: flex !important;
-  color: var(--title-text);
+  color: var(--link-color);
   font-weight: bold;
 }
 
@@ -535,11 +540,11 @@ input#metricsSearch {
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder > a:focus {
-  background-color: #3d4558 !important;
+  background-color: var(--link-color-hover) !important;
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder > a:hover {
-  background-color: #3d4558 !important;
+  background-color: var(--link-color-hover) !important;
 }
 
 ul.mysidebar.nav li ul li {
@@ -597,8 +602,8 @@ div.sidebarTitle-holder {
 
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator {
-  color: var(--navy-mid-gray);
-  background: #f7f8fa;
+  color: var(--breadcrumbs-text);
+  background: var(--breadcrumbs-background);
   border-radius: 4px;
   font-family: Roboto;
   font-style: normal;
@@ -688,12 +693,17 @@ div.sidebarTitle-holder {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.71;
-  color: var(--body-text) !important;
+  color: var(--body-text);
 }
 
 .post-content > p.notice,
 .post-content > p.important {
-  color: var(--primary-content) !important;
+  color: var(--widget-text);
+}
+
+.post-content > p.notice strong,
+.post-content > p.important strong {
+  color: var(--widget-text);
 }
 
 .post-content ol ol {
@@ -707,7 +717,7 @@ div.sidebarTitle-holder {
 .post-content p strong {
   font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: var(--title-text);
+  color: var(--link-color);
 }
 
 .post-content,
@@ -858,7 +868,12 @@ iframe {
   border: 0;
 }
 
-@media only screen and (max-width: 767px) {
+@media (min-width: 767px) {
+  ul.mysidebar.nav {
+    height: 100vh;
+  }
+}
+@media (max-width: 767px) {
   /* the div containing the iframe is responsive */
   .visualping-container {
     -webkit-box-sizing: inherit;

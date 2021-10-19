@@ -72,6 +72,14 @@ Create a new function using one of the messaging templates.
 
 Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
+Once you have selected a "messaging conversations" event you can further specify its criteria to be invoked by one or more skills. A lambda with a set amount of skills will only be triggered if the conversation had this specific skill is attached to it. The set of skills can be changed at any given time.
+
+<img src="img/faas-select-skill.png" alt="Functions select skill" style="width:100%;"/>
+
+<div class="important">By default no skill is selected. This will cause the lambda to react to all invocations regardless of skill. The maximum number of skills which can be specified is <b>10</b>. Changing the skills of a lambda does not require a redeployment. The change is reflected within 5 minutes after saving.</div>
+
+Specifying a skill has the advantage of reducing the complexity of the lambda's code. Furthermore, it reduces the number of unnecessary invocations.
+
 #### Step 2 - Edit the Function
 
 Adjust the coding from the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open):
