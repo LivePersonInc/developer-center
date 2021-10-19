@@ -18,7 +18,7 @@ By adopting mTLS, LivePerson is looking to adhere to industry standards and offe
 
 The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication has been achieved.
 
-### What is Hashicorp vault?
+### What is Hashicorp Vault?
 
 HashiCorp provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. Vault, first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
@@ -68,6 +68,6 @@ Check out the [on-boarding guide](/mtls-onboarding.html) for next steps.
 
 * The mTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
 
-* Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configration (certificate CRUD) resource is not cached.
+* Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configuration (certificate CRUD) resource is not cached.
 
 * It is possible to use the same certificate for different services but for each mapping of accountId + serviceName + url it will be only one certificate and the certificate name is unique.
