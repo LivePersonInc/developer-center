@@ -1381,7 +1381,7 @@ div#post-content img {
 a:focus-visible {
   color: var(--post-link-hover);
 }
-a:focus-within {
+a:focus-within:not(.anchorjs-link) {
   border: 1px dashed var(--post-link-hover);
 }
 
