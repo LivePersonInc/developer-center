@@ -511,6 +511,23 @@ Color code for the text of the automatic messages.
    </figure>
 </div>
 
+#### controller_message_markdown_hyperlink_text_color
+Color code for the markdown hyperlink in the automatic messages.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #5b5c5e (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/controller_message_markdown_hyperlink_text_color.png" alt="hyperlinkautomaticmessagecoller">
+   </figure>
+</div>
+
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
