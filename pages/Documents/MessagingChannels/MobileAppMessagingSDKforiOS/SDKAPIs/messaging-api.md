@@ -31,7 +31,7 @@ func checkActiveConversation(_ conversationQuery: ConversationParamProtocol) -> 
 
 ### clearHistory
 
-Use this API method only when there is no active conversation because it clears the local database. The history is still available on the server but is unretrievable from the specific device unless the device has a fresh install.
+Use this API method only when there is no active conversation because it will clear the messages presented on the Conversation Screen. The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
 
 {: .important}
 Due to current product limitations, when calling the `logout` method in Authentication Mode, the user's history shows up when they return to the conversation, even if calling `clearHistory` previously.
