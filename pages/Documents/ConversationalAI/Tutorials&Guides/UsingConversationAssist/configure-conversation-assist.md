@@ -19,7 +19,10 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/ca_menu_option.png">
 
-2. Click **Recommendation Sources** at the top of the page, and then select the **Bots** tab.
+    {: .important}
+    If it's your first time accessing Conversation Assist, you might see a window that introduces you to the application. Just click **Get started** in the window, and then click **Got it** at the next prompt. You'll be on the **Recommendation Sources** page at this point, which is good.
+
+2. If necessary, click **Recommendation Sources** at the top of the page, and then select the **Bots** tab.
 
     You should see that your bots have been automatically discovered and, therefore, are listed on the page. Any bots that are connected to active agent connectors should be visible here.
 
