@@ -25,7 +25,7 @@ This is a LivePerson layer embedded into the customer app (mobile/web). It media
 ### ID Token Exchange
 
 **ID Token exchange using LivePerson's SDK for native mobile application**  
-To authenticate a user (brand's consumer), the SDK requires an OAuth 2.0 code or JWT (depending on the specific flow) supplied by the mobile app. for implementation details please read [How It Works?](.....)
+To authenticate a user (brand's consumer), the SDK requires an OAuth 2.0 code or JWT (depending on the specific flow) supplied by the mobile app.
 
 **ID Token exchange using JavaScript for web application**  
 The customer web app is based on an embedded LivePerson's Web-SDK. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.

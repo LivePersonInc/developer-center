@@ -41,7 +41,7 @@ This method is subjected to Rate Limiting. User manager should not send more tha
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/account/{accountId}/metrics?offset=0&limit=50&sort=closedConversations:desc
+POST| https://[{domain}](/domain-api.html)/manager_workspace/api/account/{accountId}/metrics?offset=0&limit=50&sort=closedConversations:desc
 
 **URL Parameters**
 

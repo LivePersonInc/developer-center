@@ -36,7 +36,7 @@ NOTE: Total supported results is 1000, meaning offset+limit can't exceed 1000
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required |
 |includeAgentMetadata| Indicates whether the response should include agent's metadata. | Boolean | Optional | Default value: true.
-|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>close_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>
+|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>close_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>avg_conversations_duration<br/>
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>active_conversations<br/>assigned_conversations<br/>agent_load<br/>agent_current_status<br/>agent_current_status_start_time<br/>agent_current_status_reason<br/>agent_current_status_reason_start_time<br/>pending_agent_response<br/>pending_agent_response_rate<br/>available_slots<br/>max_slots
 
 _filters info_ 
@@ -138,6 +138,7 @@ _agentViewRecords info_
 | transfers | The number of escalated conversation with Skill or Agent reason, within the selected timeframe.| Long |
 | backToQueue| The number conversations that were transferred back to queue within the selected timeframe.| Long |
 | csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
+| avgConversationsDuration| The average handling time of closed conversations within the selected timeframe.| Long |
 | onlineDuration | Agent online duration within the selected timeframe.| Long  | Freshness: 1 minute, does not include bots
 | transferRate | transfers / concludedConversations within the selected timeframe.| Double
 | closeRate | closedConversations / concludedConversations within the selected timeframe.| Double

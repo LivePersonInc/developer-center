@@ -1215,7 +1215,7 @@ Set the link message text color
 - **Type:** color
 - **Default value:** For iOS 13, we use UIColor.label, anything below that uses UIColor.black
 
-<img src="../../../../img/ios-hyperlink-color-cofiguration.png" alt="Hyperlink color configuration" style="width: 600px;padding: 20px;">
+<img src="/img/ios-hyperlink-color-cofiguration.png" alt="Hyperlink color configuration" style="width: 600px;padding: 20px;">
 
 
 ---

@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Overview 
 
-Google Business Messages (GBM) enables customers to contact a brand through Google Maps or Google Search. Google Business Messages provides enhances messaging capabilities like Rich Cards, Carousels and Quick Replies.
+Google Business Messages (GBM) enables customers to contact a brand through Google Maps or Google Search. Google Business Messages provides enhanced messaging capabilities like Rich Cards, Carousels and Quick Replies.
 
 The GBM connector now provides Structured Content Templates that are rendered by Google. When agents or bots on Conversational Cloud share structured content templates, consumers will view the rendered templates via the Android Messages app.
 

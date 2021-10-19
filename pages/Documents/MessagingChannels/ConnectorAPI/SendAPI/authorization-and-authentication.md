@@ -54,7 +54,7 @@ The `kid` (key id) is composed of `appjwt` and the date when it was issued. `typ
   "aud": "le81823118",
   "azp": "75588e18-0213-4e33-8174-883acac7e3c4",
   "scope": "msg.consumer",
-  "iss": "sentinel",
+  "iss": "Sentinel",
   "exp": 1524646270,
   "iat": 1524642670
 }
