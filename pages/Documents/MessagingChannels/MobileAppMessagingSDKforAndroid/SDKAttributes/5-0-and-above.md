@@ -4446,6 +4446,104 @@ Action mode background color.
 
 ---
 
+### Schedule Slot List
+
+#### lp_appointment_header_background_color
+Appointment Scheduler window header background color.
+* **Type:** color
+* **(Light Theme) Default value:** #0363AD
+* **(Dark Theme) Default value:** #2E2E2E
+
+
+#### lp_appointment_header_text_color
+Appointment Scheduler window text color code for title, date and confirm button (enabled) on header.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #FFFFFF
+
+#### lp_appointment_week_day_title_color
+Color code for week days text: S, M, T, W, ....
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FCFCFD
+
+#### lp_appointment_week_date_text_color
+Color code for week date text color
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_week_day_active_text_color
+Color code for an active calendar day where appointments are available.
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FCFCFD
+
+#### lp_appointment_week_day_inactive_text_color
+Color code for an in-active calendar day where appointments are not available.
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_disabled_confirm_btn_color
+Color code for Confirm button (disabled) when no appointment is selected.
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_scheduler_background_color
+Color code for background color of scheduler window.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #000000
+
+#### lp_appointment_selected_background_color
+Color code for curretnly selected appointment slot.
+* **Type:** color
+* **(Light Theme) Default value:** #0363AD
+* **(Dark Theme) Default value:** #BA86FC
+
+#### lp_appointment_title_text_color
+Color code for an appointment's title and description for un-selected slots.
+* **Type:** color
+* **(Light Theme) Default value:** #DE000000
+* **(Dark Theme) Default value:** #DEFFFFFF
+
+#### lp_appointment_selected_title_text_color
+Color code for an appointment's title and description when slot is currently selected.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #DE000000
+
+#### lp_appointment_time_text_color
+Color code for an appointment's time for un-selected slots.
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FFFFFF
+
+#### lp_appointment_selected_time_text_color
+Color code for an appointment's time when slot is currently selected.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #000000
+
+#### lp_appointment_header_date_format
+Configuration to set date format of a header date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** EEE, MMM d
+
+#### lp_appointment_week_date_format
+Configuration to set date format of a current week's date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** MMMM yyyy
+
+#### lp_appointment_time_format
+Configuration to set time format of all appointment slots.
+* **Type:** String
+* **Default value:** hh:mm aaa
+
+---
+
 ### Proactive and IVR Deflection to App Messaging
 
 #### show_outbound_in_app_message
