@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-If you’ve deployed and now host your own NLU engine built on the Rasa open-source NLU framework, you can use it for Natural Language Understanding intelligence within LivePerson’s Conversational Cloud. Importantly, this lets you keep the investment that you’ve made in your own NLU solution.
+If you’ve deployed and now host your own NLU engine built on the [Rasa](https://rasa.com/) open-source NLU framework, you can use it for Natural Language Understanding intelligence within LivePerson’s Conversational Cloud. Importantly, this lets you keep the investment that you’ve made in your own NLU solution.
 
 When you integrate a Rasa NLU engine, training data and other model-related data is completely encapsulated within your solution. For its part, Conversation Cloud uses three of the engine’s exposed endpoints:
 
@@ -36,13 +36,11 @@ Your Rasa implementation must conform to the schemas at the links above.
 
     At this point, you can import the intents and entities, or you can add them manually after the domain is created. Do one or the other before proceeding to the next step.
 
-3. Train the domain (discussed below). This creates a model version that you can test.
+3. Train the domain. This is discussed below. This creates a model version that you can test.
 
 ### Train a domain
 
-### Train a LivePerson domain
-
-You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
 
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
