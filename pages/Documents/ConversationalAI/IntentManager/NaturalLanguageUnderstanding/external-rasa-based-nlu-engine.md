@@ -40,4 +40,17 @@ Your Rasa implementation must conform to the schemas at the links above.
 
 ### Train a domain
 
-to be added
+### Train a LivePerson domain
+
+You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+
+Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+
+**To train a domain**
+
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
+4. On the **Intents** page, click **Train** in the upper-right corner.
+
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.

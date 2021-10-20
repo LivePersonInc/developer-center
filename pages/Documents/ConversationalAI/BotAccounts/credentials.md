@@ -22,7 +22,7 @@ There are several types of credentials that you can define to support [API integ
 
 There's also a credential type that supports the use of [third-party NLU engines](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html):
 
-- **Third-party NLU (Fire API)**: If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), you can use this to authenticate with that engine.
+- **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
 {: .important}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
@@ -187,13 +187,16 @@ Like the Basic Authentication credential (discussed above), this type of credent
     - **Token Type**: Enter the type of token; typically, this value is "Bearer" or "Basic," but this field allows for free text to let you specify another third-party type that isn't supported by any protocol.
 7. Click **Save**.
 
-### Add a Third-party NLU (Fire API) credential
+### Add a third-party NLU credential
+
+{: .important}
+This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain creation* in [Intent Manager](intent-manager-overview.html).
 
-If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), when you create the domain that will contain the intents and you specify the NLU to use to match intents, you can also specify the credential to use to authenticate with that third-party NLU engine.
+When you create the domain that will contain the intents and you specify the NLU provider, you can also specify the credential to use to authenticate with that third-party NLU engine.
 
-**To add a Third-party NLU (Fire API) credential**
+**To add a third-party NLU credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
