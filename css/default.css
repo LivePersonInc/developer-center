@@ -152,7 +152,7 @@ code pre {
   padding: 19px 0;
   display: flex;
   min-width: 100%;
-  margin-top: 64px;
+  margin-top: 35px;
   width: 100%;
   background-color: var(--footer-background);
   color: var(--footer-text);
@@ -1374,7 +1374,8 @@ a.loginText {
   display: none;
 }
 
-div#post-content p img {
+div#post-content p img,
+img.fancyimage {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -1387,10 +1388,10 @@ a:focus-within:not(.anchorjs-link) {
   border: 1px dashed var(--post-link-hover);
 }
 
-.dark #post-content img {
+/* .dark #post-content img {
   filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.12))
     drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
-}
+} */
 /* toggle switch  */
 
 .dark {
