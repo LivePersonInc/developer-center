@@ -77,7 +77,7 @@ Use the [Get Web View Variables](conversation-builder-scripting-functions-get-se
 
 ### System environment variables
 
-If you’re using `system_handleIntermediateUserMessage` and `system_intermediateBotResponseTimeout` to block consumer interruptions for a period of time so that the bot can respond to the consumer (see [here](conversation-builder-advanced-use-cases.html#block-consumer-interruptions)), be aware that these environment variables also cause the bot to likewise catch and ignore system messages received via a Web View integration. To get around this—so Web View messages are still processed by the bot—set the `system_processWebviewIntermediateMessage` environment variable to “true.”
+If you’re using `system_handleIntermediateUserMessage` and `system_intermediateBotResponseTimeout` to block consumer interruptions for a period of time so that the bot can respond to the consumer (see [here](conversation-builder-best-practices-block-consumer-interruptions.html)), be aware that these environment variables also cause the bot to likewise catch and ignore system messages received via a Web View integration. To get around this—so Web View messages are still processed by the bot—set the `system_processWebviewIntermediateMessage` environment variable to “true.”
 
 | Environment Variable | Description | Type | Example |
 |---|---|---|--|
