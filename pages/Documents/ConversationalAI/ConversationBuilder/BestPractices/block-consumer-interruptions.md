@@ -14,7 +14,7 @@ indicator: both
 
 Sometimes, a bot needs some time to respond to the consumer. For example, a scenario that’s common is to have the bot send several text interactions containing information, with small delays between each interaction to aid accessibility issues. After the interactions are sent in sequence, the bot then asks the consumer a question to decide the next step in the conversation flow.
 
-The problem that can occur in such scenarios is that there’s nothing to prevent the consumer from sending another message while the bot is still responding to their last message. When this happens, if the bot were to process the message for matching intents and patterns, it could “jump” the consumer to an upcoming question in the current dialog, to another dialog, or even result in a fallback response.
+The problem that can occur in such scenarios is that there’s nothing to prevent the consumer from sending another message while the bot is still responding to their last message. When this happens, if the bot were to process the new message for matching intents and patterns, it could “jump” the consumer to an upcoming question in the current dialog, to another dialog, or even result in a fallback response.
 
 Conversation Builder bots address this issue as follows: By default, while the bot is responding to the consumer, the bot blocks—i.e., it catches and ignores—all consumer messages. This is done until the next question is reached or until 15 seconds passes, whichever happens first. During this time, the bot doesn’t acknowledge the consumer’s “interrupt” messages.
 
