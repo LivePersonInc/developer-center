@@ -207,6 +207,10 @@ However, you can toggle on and off the display of comments in the other interact
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_comments3.png">
 
+When comments are hidden throughout the dialog, you’ll see a small icon in the lower-left corner of an interaction to let you know that a comment exists for the interaction.
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments4.png">
+
 ### Save changes
 Some but not all changes are automatically saved after you make them. As a general rule, always do a manual save after making changes.
 
