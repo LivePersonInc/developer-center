@@ -16,6 +16,7 @@ The [LivePerson NLU engine](intent-manager-natural-language-understanding-livepe
 * English
 * French
 * German
+* Indonesian
 * Italian
 * Japanese
 * Portuguese
