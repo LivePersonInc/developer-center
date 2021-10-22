@@ -12,8 +12,8 @@ indicator: both
 ### Introduction
 
 Brands can provide LivePerson's Conversational Builder Bots a consumer (OAuth 2.0) access token. This token can later be used to access the brand's APIs on behalf of the consumer.  
-By configuring Consumer Authentication credentials, an authentication challange is sent to the consumer. Once autnentication is completed, an access token is obtained and sent to the bot. This “delegates” access to the bot, so it can make the API calls.  
-This can be done in order to accomplish many business and operational use cases on which Bots integrates with brand's APIs such as:
+By configuring Consumer Authentication credentials, an authentication challange is sent to the consumer. Once authentication is completed, an access token is obtained and sent to the bot. This “delegates” access to the bot, so it can make the API calls.  
+This can be done in order to accomplish many business and operational use cases on which Bots integrate with brand's APIs such as:
 * To enrich conversation by retrieving information about the consumer.
 * To perform an operation on behalf of the consumer
 
@@ -67,7 +67,7 @@ To use a defined Consumer Authentication credential in a bot, go into the bot an
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/consumerAuthCred.png">
 
 Then, add the provided access as an authorization header to the API integration.  
-In request headers, add authozion header:  
+In request headers, add authorization header:  
 **key** = Authorization  
 **value** = Bearer {$botContext.cidp_accessToken}  
 
@@ -78,7 +78,7 @@ In request headers, add authozion header:
 Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
 
 **4. Configutre Dialog**  
-Dialog should inclde an API integration and consumer verification delegation button.  
+Dialog should include an API integration and consumer verification delegation button.  
 **Note:** The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.  
 
 ***4.1 add integration***  
@@ -98,8 +98,8 @@ if(cidp_accessToken) {
 
 ***4.2. Add Consumer Delegation Link to the Conversation Flow***  
   
-Before accessing the protected integrated API, we need to prompt user to verify his identity. This will be done in the conversation dialog by adding an interactive button to the conversation.  
-The following paraeter should be define in the [inetartive button/questions](conversation-builder-interactions-questions.html):  
+Before accessing the protected integrated API, we need to prompt the user to verify their identity. This will be done in the conversation dialog by adding an interactive button to the conversation.  
+The following paraeter should be define in the [interactive button/questions](conversation-builder-interactions-questions.html):  
 **Button Label** = Login  
 **Action Type** = Web URL  
 **Webview** = Full  
