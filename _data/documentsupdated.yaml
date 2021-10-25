@@ -152,6 +152,7 @@
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
             - subpagename: Prevent Inadvertent Context Switching
+            - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
