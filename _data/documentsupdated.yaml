@@ -151,7 +151,7 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
-            - subpagename: Block Consumer Interruptions
+            - subpagename: Prevent Inadvertent Context Switching
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
