@@ -190,7 +190,7 @@ If this field is unset or you set this field to false, the selected button’s c
 #### escalateOnStuckConversation
 If this is true, and if the bot is stuck, the conversation is transferred to a specific skill. This transfer is only done as a final measure after other strategies, if enabled, are tried and found to be unsuccessful. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
-**Default value**: false<br>
+**Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
  
@@ -287,7 +287,7 @@ If the bot’s context is reset because the bot is stuck, the consumer is asked 
 **Chat**: No
 
 #### userRetryOnStuckConversation
-If this is true, and if the bot fails to respond to the consumer’s message after retrying the consumer’s last message based on messageResendMaxRetries, the bot’s context is reset, and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If this is true, the bot’s context is reset, and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: null<br>
 **Messaging**: Yes<br>
