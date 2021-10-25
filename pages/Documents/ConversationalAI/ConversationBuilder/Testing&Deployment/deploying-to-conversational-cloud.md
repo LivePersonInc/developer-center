@@ -282,7 +282,7 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 #### userNotificationMessageOnStuckConversation
 If the bot’s context is reset because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
-**Default value**: I’m sorry. Something went wrong, so let’s start fresh. How can I help you today?<br>
+**Default value**: I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
