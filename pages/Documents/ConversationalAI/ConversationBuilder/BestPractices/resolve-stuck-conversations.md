@@ -14,7 +14,7 @@ indicator: both
 
 A *stuck* conversation is one where the bot repeatedly fails to respond to the consumer’s message. A conversation can become stuck for a variety of reasons. For example, this might be due to a long delay in receiving a response from a third-party system.
 
-To promote the best conversational experience, your bot should attempt to resolve stuck conversations. This helps the bot to re-engage the consumer when the conversation isn’t progressing as expected.
+As a best practice, your bot should attempt to resolve stuck conversations. This helps the bot to re-engage the consumer when the conversation isn’t progressing as expected.
 
 ### Understanding the default "retry" flow
 
