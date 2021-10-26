@@ -140,8 +140,14 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
 
-{: .important}
-When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.<br><br>Additionally, be aware that the values are reported in the order of the buttons. So, in Analytics Builder, when setting up a custom report, ensure you set up your columns in the same order and name the columns accordingly.
+In the closed-ended question, every answer choice has two values:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png">
+
+* **Text value** - This value is shown to the consumer as the answer choice.
+* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder.
+
+As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
 #### Open-ended, custom
 
