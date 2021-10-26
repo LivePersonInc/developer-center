@@ -26,8 +26,8 @@ You can use these environment variables to customize how disambiguation works; f
 - `system_groupConsecutiveIntentRanksInDisambiguation`
 - `system_useIntentsOnlyWithDialogStartersInDisambiguation`
 
-#### Variables for blocking consumer interruptions
-These environment variables work together to block consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-inadvertent-context-switching.html).
+#### Variables for preventing consumer interruptions
+These environment variables work together to prevent consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-consumer-interruptions.html).
 - `system_handleIntermediateUserMessage`
 - `system_intermediateBotMessage`
 - `system_intermediateBotResponseTimeout`

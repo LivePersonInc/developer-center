@@ -1,28 +1,26 @@
 ---
-pagename: Prevent Inadvertent Context Switching
+pagename: Prevent Consumer Interruptions
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
-permalink: conversation-builder-best-practices-prevent-inadvertent-context-switching.html
+permalink: conversation-builder-best-practices-prevent-consumer-interruptions.html
 indicator: both
 ---
 
-### How bots prevent inadvertent context switching
+### How bots prevent consumer interruptions
 
-Sometimes, a bot needs some time to respond to the consumer's message. For example, to formulate its response, the bot might need time to make an API call to a third-party system, and this can require a bit of time.
+Sometimes, a bot needs some time to respond to the consumer's message. For example, to formulate its response, the bot might need time to make an API call to a third-party system, and this can require a bit of time. Because this is the case, by default, Conversation Builder bots prevent consumer interruptions. This works as follows:
 
-Because scenarios like this happen, by default, Conversation Builder bots prevent the consumer's context from switching inadvertently. This works as follows:
-
-* While a bot is responding to a consumer’s message, it *blocks* additional messages from the consumer until the next interaction in the dialog flow is reached or until the default timeout of 15 seconds passes, whichever happens first. This ensures the bot is given sufficient time to send its response.
+* While a bot is responding to a consumer’s message, the bot *blocks* additional messages from the consumer until the bot has finished responding or until the default timeout of 15 seconds passes, whichever happens first. This ensures the bot is given sufficient time to send its response.
 
 * During this time when the bot is blocking consumer messages, the bot doesn’t acknowledge any additional messages from the consumer. If you want, you can optionally configure a bot message to send in response, for example, "Please wait. I’m still responding to your last message. Thanks for your patience."
 
 ### Why this behavior is used
 
-All Conversation Builder bots use this blocking behavior by default so that a bot is given sufficient time to send its response to the consumer. Without the behavior, if the consumer were to send another message while the bot was still responding to their last message, the new message would be processed for matching intents and patterns. As a result, the bot could jump the consumer to an upcoming question in the current dialog, to another dialog, or even send a fallback response. This leads to a poor consumer experience.
+All Conversation Builder bots use this "blocking" behavior by default so that a bot is given sufficient time to send its response to the consumer. Without the behavior, if the consumer were to send another message while the bot was still responding to their last message, the new message would be processed for matching intents and patterns. As a result, the bot could jump the consumer to an upcoming question in the current dialog, to another dialog, or even send a fallback response. This leads to a poor consumer experience.
 
 {: .important}
 In practice, it should be rare that a bot takes 15 seconds to respond to the consumer. If you find that this is happening, evaluate and address other aspects of your solution, e.g., the speed of your API calls, and so on.
@@ -77,6 +75,6 @@ To disable the blocking behavior:
 
 #### Previously, I enabled this behavior by manually adding the environment variables discussed above to an environment. Does my implementation still work?
 
-Yes. In the November 2021 release, we changed things so that all bots prevent inadvertent context switching by default.
+Yes. In the November 2021 release, we changed things so that all bots prevent consumer interruptions by default.
 
-In previous releases, the blocking behavior was existing functionality that you could manually enable by `adding system_handleIntermediateUserMessage`, `system_intermediateBotMessage`, and `system_intermediateBotResponseTimeout` to the environment that’s linked to your bot. If this is your case, your implementation still works, and no change is required by you. The feature works as it did previously. Your custom values for the variables are simply used to control the behavior.
+In previous releases, the behavior was existing functionality that you could manually enable by adding the same environment variables described above: `system_handleIntermediateUserMessage`, `system_intermediateBotMessage`, and `system_intermediateBotResponseTimeout`. If this is your case, your implementation still works, and no change is required by you. The feature works as it did previously. Your custom values for the variables are simply used to control the behavior.
