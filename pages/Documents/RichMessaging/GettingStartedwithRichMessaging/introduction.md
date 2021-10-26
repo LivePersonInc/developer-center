@@ -208,6 +208,7 @@ Each structured content template will contain one or more **elements** in the `e
 | Property Name | Description                                                                         | Type   | Required |
 | :------------ | :---------------------------------------------------------------------------------- | :----- | :------- |
 | type          | Type of template. Often used to specify arrangement like "vertical" or "horizontal" | Enum   | Y        |
+| border        | Type of border. "border" (default) or "borderLess" or "dropShadow"                  | Enum   | N        |
 | tag           | Further specifies the template type                                                 | String | N        |
 | elements      | List of element objects                                                             | Array  | Y        |
 
@@ -234,6 +235,7 @@ A simple Button which triggers an Action when clicked.
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. Must be 'button'                                                                                                                       | Enum      | Y        |            |
+| class          | Look and feel of the button. Default is text                                                                                                                       | Enum - text/button     | N        |            |
 | title         | Button title                                                                                                                                            | String    | Y        | 128 chars  |
 | click         | On-click operation (included metadata and/or actions clauses)                                                                                           |           | Y        |            |
 | tooltip       | Button tooltip, used also as aria                                                                                                                       | String    | N        | 256 chars  |
