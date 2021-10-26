@@ -192,9 +192,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 {: .important}
 This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
-While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain creation* in [Intent Manager](intent-manager-overview.html).
-
-When you create the domain that will contain the intents and you specify the NLU provider, you can also specify the credential to use to authenticate with that third-party NLU engine.
+While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).
 
 **To add a third-party NLU credential**
 
