@@ -58,7 +58,7 @@ There are two date picker options:
       "elements": [
         {
           "type": "image",
-          "url": "http://www.kulaone.com/images/lp/calendar1.png",
+          "url": "https://agents-lp.github.io/structured-content-widget/img/date-picker-single.png",
           "tooltip": "image tooltip"
         },
         {
