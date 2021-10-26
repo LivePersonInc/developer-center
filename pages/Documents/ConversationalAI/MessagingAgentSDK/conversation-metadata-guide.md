@@ -604,6 +604,44 @@ const content = {
 };
 ```
 
+**Facebook Public - Consumer to Agent - Identifying Facebook Dark Posts (Ads):**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The New Agent Workspace (NAW) will use the action field *parentPostIsAd* to render the information about Ads on the message metadata like the mockup below: | ![](images/social/facebook/public-comment-ad.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "CP",
+        "parent": {
+            "attachmentUrl": "{post_url}",
+            "pageName": "QA le90617479",
+            "postId": "163516112161217",
+            "postText": "Brand post demo.",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "Public",
+    "conversationState": {
+        "dmChatId": "107202510969932",
+        "currentChannel": "Public"
+    },
+    "actions": [
+      {
+        "name": "parentPostIsAd",
+        "payload": "true"
+      },
+      {
+        "name": "parentPostIsPublished",
+        "payload": "false" // the visibility Post status on Facebook
+      }
+    ]
+};
+```
+
 ***Twitter - Schema***
 
 ```javascript
