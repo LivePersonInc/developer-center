@@ -270,7 +270,7 @@ Survey bot settings include:
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a Session Expired message when the session has expired. Then enter the message to send. (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the Session Expired message when the session has expired. Then enter the message to send. Note that if you don't customize the message, the following default message is always sent: "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
 ### Adding support for emailed transcripts
 
