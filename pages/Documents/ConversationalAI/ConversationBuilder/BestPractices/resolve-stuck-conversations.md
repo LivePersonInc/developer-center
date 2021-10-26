@@ -20,9 +20,9 @@ As a best practice, your bot should attempt to resolve stuck conversations. This
 
 By default, in a conversation, when a bot fails to respond to the consumer within 60 seconds, the consumer’s last message is resent to the bot one time. This retry flow is always attempted when needed.
 
-Optionally, you can customize the timeout interval and the number of retries by adding the [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval) and [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) fields, respectively, to the bot's agent connector. LivePerson recommends you set the number of retries to 3 or fewer. You cannot set the number of retries to zero to skip this flow.
+Optionally, you can customize the retry flow by changing the timeout interval and the number of retries. You do this by adding the [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval) and [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) fields, respectively, to the bot's agent connector. LivePerson recommends you set the number of retries to 3 or fewer. You cannot set the number of retries to zero to skip the retry flow.
 
-After this retry flow is completed fully, if the bot still fails to respond to the consumer, the conversation is identified as “stuck." There are a few strategies you can use to resolve stuck conversations; these are described below.
+Once the retry flow is fully completed, if the bot still fails to respond to the consumer, the conversation is identified as “stuck." There are a few strategies you can use to resolve stuck conversations; these are described below.
 
 ### Resolving stuck conversations
 
