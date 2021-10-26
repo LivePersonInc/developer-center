@@ -12,7 +12,7 @@ indicator: both
 
 ### How bots prevent consumer interruptions
 
-Sometimes, a bot needs some time to respond to the consumer's message. For example, to formulate its response, the bot might need time to make an API call to a third-party system, and this can require a bit of time. Because this is the case, by default, Conversation Builder bots prevent consumer interruptions. This works as follows:
+Sometimes, a bot needs some time to respond to the consumer's message. For example, to formulate its response, the bot might need time to make an API call to a third-party system, and this can require a bit of time. Because this is the case, by default, Conversation Builder bots prevent consumer interruptions as a best practice. This works as follows:
 
 * While a bot is responding to a consumer’s message, the bot *blocks* additional messages from the consumer until the bot has finished responding or until the default timeout of 15 seconds passes, whichever happens first. This ensures the bot is given sufficient time to send its response.
 
