@@ -48,13 +48,13 @@ To customize the behavior:
     **Default value**: BLANK_MESSAGE
 
     {: .important}
-    If you want to customize the timeout period or bot message, you must add all three variables. In this case of customization, you can use the default values or specify your own values, but not a mix of both.
+    If you want to customize the timeout period or bot message, you must add all three variables, including the variable for enablement.
 
 3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn’t already linked.
 
 ### Disabling the behavior
 
-To prevent the consumer’s context from changing inadvertently, LivePerson recommends that you keep this behavior enabled. However, you can disable it if you want.
+To ensure the best consumer experience, LivePerson recommends that you keep this behavior enabled. However, you can disable it.
 
 To disable the behavior:
 
