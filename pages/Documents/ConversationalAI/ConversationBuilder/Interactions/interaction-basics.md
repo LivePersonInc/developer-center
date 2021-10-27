@@ -195,9 +195,13 @@ Comments are displayed at the bottom of the interaction like so:
 #### To add a comment to an interaction
 
 1. Select the interaction.
-2. Enter the comment in the field provided at the bottom of the interaction, and press Enter. You can enter only text; HTML is not allowed.
+2. Enter the comment in the field provided at the bottom of the interaction, and press Enter. You can enter only text; HTML tags are not allowed.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments1.png">
+
+    In a comment, a maximum of 240 characters is allowed. If you go over this limit, you are notified:
+
+    <img style="width:700px" src="img/ConvoBuilder/interactions_comments5.png">
 
 #### To show or hide comments
 
