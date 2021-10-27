@@ -45,8 +45,6 @@ Your Rasa implementation must conform to the schemas at the links above.
 
 You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can activate it and then use the testing tools to test. Please see the testing constraints discussed farther below.
 
-If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
-
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
 **To train a domain**
@@ -55,6 +53,8 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, click **Train** in the upper-right corner.
+
+    (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
 
     To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 

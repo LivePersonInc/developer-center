@@ -69,8 +69,6 @@ All these factors directly influence the intent matching after retraining. There
 
 You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
 
-If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
-
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
 {: .important}
@@ -85,6 +83,8 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, click **Train** in the upper-right corner.
+
+    (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
