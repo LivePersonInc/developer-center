@@ -31,12 +31,12 @@ You can resolve stuck conversations by:
 1. **Asking the consumer to resend their original query**: If you configure this, the conversation starts anew, and the consumer is sent, “I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?” You can change the bot message if desired.
 2. **Transferring the conversation to a human agent**: To add support for this, you must specify the human agent skill ID that can better assist the consumer. 
 
-These steps are tried in the order indicated above. You can add just one step (start anew only, or transfer only), or you can add both. Both steps are optional and disabled by default.
+You can add just one step (start anew only, or transfer only), or you can add both. Both steps are optional and disabled by default. The steps are tried in the order indicated above.
 
 {: .important}
 For an optimal consumer experience, LivePerson recommends that you configure both steps.<br><br>Additionally, be aware that, in the case of Step 1, the consumer's response after starting the conversation anew might not match any intents or patterns in the bot; this will trigger the fallback response.
 
-**To add support** for handling stuck conversations, you [edit the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and add various [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields).
+**To add support for resolving stuck conversations**, you [edit the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and add various [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields).
 
 To configure Step 1 (start anew with the consumer's original query), use:
 
