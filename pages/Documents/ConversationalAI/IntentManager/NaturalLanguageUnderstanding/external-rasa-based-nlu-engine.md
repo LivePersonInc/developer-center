@@ -39,11 +39,11 @@ Your Rasa implementation must conform to the schemas at the links above.
 
     At this point, you can import the intents and entities, or you can add them manually after the domain is created. Do one or the other before proceeding to the next step.
 
-3. Train the domain. This is discussed below. This creates a model version that you can test.
+3. Train the domain. This is discussed below.
 
 ### Train a domain
 
-You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can activate it and then use the testing tools to test. Please see the testing constraints discussed farther below.
 
 If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
 
