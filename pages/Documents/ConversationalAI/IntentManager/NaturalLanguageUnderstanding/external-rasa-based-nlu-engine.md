@@ -43,6 +43,8 @@ Your Rasa implementation must conform to the schemas at the links above.
 
 You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
 
+If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
+
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
 **To train a domain**
