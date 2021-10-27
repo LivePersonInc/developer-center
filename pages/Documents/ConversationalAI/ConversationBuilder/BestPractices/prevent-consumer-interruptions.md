@@ -54,7 +54,7 @@ To customize the behavior:
 
 ### Disabling the behavior
 
-To ensure the best consumer experience, LivePerson recommends that you keep this behavior enabled. However, you can disable as follows:
+To ensure the best consumer experience, LivePerson recommends that you keep this behavior enabled. However, you can disable it as follows:
 
 1. [Add an environment](conversation-builder-environment-variables.html#add-environment-variables) that stores a set of environment variables for the bot. If the bot is already linked to an existing environment, skip this step and append the variable to the existing environment.
 2. In the environment, add just this one environment variable:
