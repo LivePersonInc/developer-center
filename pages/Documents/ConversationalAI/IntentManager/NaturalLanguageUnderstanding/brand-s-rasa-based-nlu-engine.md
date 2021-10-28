@@ -1,18 +1,18 @@
 ---
-pagename: External Rasa-Based NLU Engine
+pagename: Brand's Rasa-Based NLU Engine
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
 subfoldername: Natural Language Understanding
-permalink: intent-manager-natural-language-understanding-external-rasa-based-nlu-engine.html
+permalink: intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html
 indicator: both
 ---
 
 ### Introduction
 
-If you’ve deployed and now host your own NLU engine built on the [Rasa](https://rasa.com/) open-source NLU framework, you can use it for Natural Language Understanding intelligence within LivePerson’s Conversational Cloud. Importantly, this lets you keep the investment that you’ve made in your own NLU solution.
+If you’ve deployed your own NLU engine built on the [Rasa](https://rasa.com/) open source NLU framework, you can use it for Natural Language Understanding intelligence within LivePerson’s Conversational Cloud. Importantly, this lets you keep the investment that you’ve made in your own NLU solution.
 
 When you integrate a Rasa-based NLU engine, training data and other model-related data is completely encapsulated within your solution. For its part, Conversation Cloud uses three of the engine’s exposed endpoints:
 
@@ -30,7 +30,7 @@ Your Rasa implementation must conform to the schemas at the links above.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/rasa1.png">
 
-    * **NLU Provider**: Select “Brand's Rasa,” to indicate that you’re using a custom solution that’s hosted externally by you.
+    * **NLU Provider**: Select “Brand's Rasa,” to indicate that you’re using a custom solution that you deployed.
     * **Rasa Host URL**: Enter the base URL for your Rasa training and prediction endpoints.
     * **Authorization**: Select the [type of authentication](https://rasa.com/docs/rasa/pages/http-api) to use when making API calls to the Rasa engine, either “TokenAuth” or “JWT.” Then enter the permanent token to use. For security reasons, unauthenticated connections aren’t supported.
     * **Credential**: This is optional. If you’d like to add an extra layer of security when transferring data, select the [Mutual Authentication credential](bot-accounts-credentials.html#add-a-mutual-authentication-credential) to use along with the token. If you have the proper [permissions](bot-accounts-permissions.html), you can create one on the Credentials page in Bot Accounts, and you can also create one on-the-fly here.
