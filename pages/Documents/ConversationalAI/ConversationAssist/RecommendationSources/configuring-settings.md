@@ -50,3 +50,5 @@ The higher the score, the more relevant the recommendations. To offer more recom
 ### Bot messages
 
 Customize the **bot messages** if you’re using bots as recommendation sources. The messages are sent to the consumer when the bot is added to and removed from a conversation. They help consumers to understand when a bot is involved in a conversation.
+
+<img width="800" src="img/agentassist/settings_botmessages.png">

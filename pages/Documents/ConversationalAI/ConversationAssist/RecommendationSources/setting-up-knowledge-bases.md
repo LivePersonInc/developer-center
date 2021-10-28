@@ -69,11 +69,9 @@ At this point, use KnowledgeAI to verify that the desired articles are active. T
 
 3. Assign one or more skills to the knowledge base:
     1. Beside the knowledge base, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, add one or more skills.
+    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
 
         <img width="700" src="img/agentassist/configkb2.png">
-
-        And to offer recommendations from this knowledge base, keep the **Status** value as "ON." (You can change the status later as desired.)
 
     3. Click **Save**.
 4. Repeat this process for additional knowledge bases as needed.

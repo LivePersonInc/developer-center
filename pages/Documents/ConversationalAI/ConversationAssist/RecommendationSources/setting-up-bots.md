@@ -86,11 +86,9 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 
 4. Assign one or more skills to the bot:
     1. Beside the bot, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, add one or more skills.
+    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
 
         <img width="700" src="img/agentassist/configbot2.png">
-
-        And to offer recommendations from this bot, keep the **Status** value as "ON." (You can change the status later as desired.)
 
     3. Click **Save**.
 5. Repeat this process for additional bots as needed.
