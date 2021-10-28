@@ -204,7 +204,7 @@ If the conversation is transferred to a skill because the bot is stuck, this is 
 #### escalationSkillIdOnStuckConversation
 If the conversation is transferred to a skill because the bot is stuck, this is the ID of the appropriate skill to which to transfer the conversation. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
-If you don’t set this field, the transfer will fail.
+If you don’t set this field, the transfer will not occur.
 
 **Default value**: null<br>
 **Messaging**: Yes
