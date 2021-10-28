@@ -35,3 +35,5 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 - [Conversation Orchestrator](maven-overview.html) is the Artificial Intelligence engine that runs across the entire Conversational AI suite.
 
 - [Third-Party Bots](third-party-bots-getting-started.html) explains how to connect external bot builders and frameworks to LivePerson.
+
+- [Conversation Assist](conversation-assist-overview.html) saves the time of human agents and improves conversation outcomes with just-in-time recommendations. Improve your agents' efficiency through AI.

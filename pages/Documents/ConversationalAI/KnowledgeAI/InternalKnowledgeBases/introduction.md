@@ -31,7 +31,7 @@ When adding an internal knowledge base, follow this workflow:
     3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
-    * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Assist) Adding a [Knowledge Base integration](conversation-assist-overview.html)
 
 ### Domain intents versus Knowledge Base intents
 

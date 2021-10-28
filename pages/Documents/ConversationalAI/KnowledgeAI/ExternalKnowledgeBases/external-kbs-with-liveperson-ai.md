@@ -29,7 +29,7 @@ When adding an external knowledge base with LivePerson AI, follow this high-leve
     3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
 3. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
-    * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Assist) Adding a [Knowledge Base integration](conversation-assist-overview.html)
 
 {: .important}
 After making any changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
