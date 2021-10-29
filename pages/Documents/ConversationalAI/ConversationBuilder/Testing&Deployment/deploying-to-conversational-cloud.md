@@ -245,7 +245,14 @@ We have logic to collect and aggregate user messages before sending to the bot s
 **Chat**: No
 
 #### messageResendMaxRetries
-If the bot fails to respond to the consumer’s message, this is the maximum number of times to resend it to the bot. Used in conjunction with `retryMessageInterval`. Do not set this value to zero. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+ Note that this number represents tries, not retries. Examples: 
+
+* For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
+* For 2 retries, set this to 3.
+
+Do not set this value to zero. The default value is 1, which means the consumer's last message is never retried when the bot doesn't respond. Effectively, the retry flow is skipped by default.
 
 **Default value**: 1<br>
 **Messaging**: Yes<br>

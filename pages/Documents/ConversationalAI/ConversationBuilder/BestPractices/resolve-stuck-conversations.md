@@ -16,29 +16,41 @@ A *stuck* conversation is one where the bot repeatedly fails to respond to the c
 
 As a best practice, your bot should resolve stuck conversations. This helps the bot to re-engage the consumer when the conversation isn’t progressing as expected.
 
-### Understanding the default "retry" flow
+### Retrying the consumer's last message
 
-By default, in a conversation, when a bot fails to respond to the consumer within 60 seconds, the consumer’s last message is resent to the bot one time.
+In a conversation, when a bot fails to respond to the consumer, the consumer’s last message can be resent to the bot one or more times. However, this retry flow is disabled by default.
 
-Optionally, you can customize this "retry" flow by changing the timeout interval and the number of retries. You do this by adding the [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval) and [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) fields, respectively, to the bot's agent connector. LivePerson recommends you set the number of retries to 3 or fewer. You cannot set the number of retries to zero to skip the flow.
+#### Adding support
 
- The retry flow is always attempted when needed. Once it is fully completed, if the bot still fails to respond to the consumer, the conversation is identified as “stuck." There are a few strategies you can use to resolve stuck conversations; these are described below.
+To retry the consumer's last message, [edit the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and add these [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields):
+
+* [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) - Add this field, which specifies the number of tries, not retries. LivePerson recommends that you set this no higher than 3. Examples:
+    * For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
+    * For 2 retries, set this to 3.
+
+    The default value of this field is 1, which means the consumer's last message is never retried when the bot doesn't respond. Effectively, the retry flow is skipped by default.
+
+* [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval) - This is the amount of time to wait before resending the consumer's last message. The default value is 60000 milliseconds (60 seconds). To customize the timeout interval, add this field, and set it as desired. 
 
 ### Resolving stuck conversations
+
+When the retry flow described above is added, it is always attempted to re-engage the bot. Once the flow is fully completed, if the bot still fails to respond to the consumer, the conversation is identified as “stuck."
 
 You can resolve stuck conversations by:
 
 1. **Asking the consumer to resend their original query**: If you configure this, the conversation starts anew, and the consumer is sent, “I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?” You can change the bot message if desired.
 2. **Transferring the conversation to a human agent**: To add support for this, you must specify the human agent skill ID that can better assist the consumer. 
 
-You can add just one step (start anew only, or transfer only), or you can add both. Both steps are optional and disabled by default. The steps are tried in the order indicated above.
+These steps are disabled by default. You can add just one step (start anew only, or transfer only), or you can add both. The steps are tried in the order above.
 
 {: .important}
-For an optimal consumer experience, LivePerson recommends that you configure both steps.<br><br>Additionally, be aware that, in the case of Step 1, the consumer's response after starting the conversation anew might not match any intents or patterns in the bot; this will trigger the fallback response.
+For an optimal consumer experience, LivePerson recommends that you configure both steps.
 
-#### Adding support for resolving stuck conversations
+Be aware that, in the case of Step 1, the consumer's response after starting the conversation anew might not match any intents or patterns in the bot; this will trigger the fallback response.
 
-This involves [editing the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and adding various [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields).
+#### Adding support
+
+Like with the retry flow, adding support for resolving stuck conversations involves [editing the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and adding various [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields).
 
 To configure Step 1 (start anew with the consumer's original query), use:
 
