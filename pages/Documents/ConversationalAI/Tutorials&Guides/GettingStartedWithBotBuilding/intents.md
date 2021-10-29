@@ -12,6 +12,7 @@ indicator: both
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical starter pack, which is designed as a great starting point for any brand with an online presence.
 
+<!--
 ### Watch the video - Intents & entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/441795640" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
@@ -21,6 +22,7 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/464652923" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
 ### Step 5: Import the Cross-vertical starter pack
 
