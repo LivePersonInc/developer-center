@@ -18,17 +18,20 @@ As a best practice, your bot should resolve stuck conversations. This helps the 
 
 ### Retrying the consumer's last message
 
-In a conversation, when a bot fails to respond to the consumer, the consumer’s last message can be resent to the bot one or more times. However, this retry flow is disabled by default.
+In a conversation, when a bot fails to respond to the consumer, the consumer’s last message can be resent to the bot one or more times. However, you must manually add support for this retry flow.
 
 #### Adding support
 
 To retry the consumer's last message, [edit the bot's agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#edit-an-agent-connector) and add these [custom configuration fields](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#custom-configuration-fields):
 
-* [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) - Add this field, which specifies the number of tries, not retries. LivePerson recommends that you set this no higher than 3. Examples:
-    * For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
-    * For 2 retries, set this to 3.
+* [messageResendMaxRetries](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#messageresendmaxretries) - This is the maximum number of times to send the consumer's message to the bot. The number represents the total tries, not the retries alone. So, to add support for the retry flow, add this field, and set it to 2 or higher:
 
-    The default value of this field is 1, which means the consumer's last message is never retried when the bot doesn't respond. Effectively, the retry flow is skipped by default.
+    * For 1 retry, set it to 2. (1 for the original try + 1 for the single retry)
+    * For 2 retries, set it to 3. (1 for the original try + 2 for the two retries)
+
+    LivePerson recommends that you set this field no higher than 3.
+
+    The default value of this field is 1, which means the consumer's message will be sent only once. This means if you don't want to add the retry flow, there's no need to add this field.
 
 * [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval) - This is the amount of time to wait before resending the consumer's last message. The default value is 60000 milliseconds (60 seconds). To customize the timeout interval, add this field, and set it as desired. 
 
