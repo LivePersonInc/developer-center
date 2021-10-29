@@ -982,6 +982,7 @@
             - subpagename: Sample App
             - subpagename: Open Source List and Dependencies
             - subpagename: Upgrade Guide - Android
+            - subpagename: Uses-permission and Uses-feature
     - documentname: Mobile App Messaging SDK for iOS
       pages:
         - pagename: Overview
