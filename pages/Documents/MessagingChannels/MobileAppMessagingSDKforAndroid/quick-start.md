@@ -50,7 +50,7 @@ repositories {
 3. In the **dependencies** section, add:
    ```java
    dependencies {
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.9.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.10.0"
    }
    ```
 
@@ -84,7 +84,7 @@ repositories {
        androidTestImplementation "com.android.support.test:runner:1.0.1"
        androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
        // LivePerson SDK
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.9.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.10.0"
    }
    ```
 
