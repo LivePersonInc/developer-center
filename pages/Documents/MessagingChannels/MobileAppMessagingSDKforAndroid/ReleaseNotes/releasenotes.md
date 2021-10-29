@@ -795,6 +795,47 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.10.0
+
+**Release date:** October 29, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.10.0 release includes Schedule Slot List support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.10.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.2.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:1.0.0"
+
+
+# New Features:
+
+## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
+
+<div style="width: 100%; position: relative;">
+    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+</div>
+
+
+{: .notice}
+ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
+
+
+# Bugs Fixed:
+- Crash on initialization/logout.
+- Deep link fails to open.
+- Secure form self closed after returning to the app.
+
+# Enhancements:
+- When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
+- Support markdown hyperlink in controller bot message.
+
 # Android Messaging SDK - Version 4.9.1
 
 **Release date:** September 07, 2021
