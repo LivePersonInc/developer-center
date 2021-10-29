@@ -22,9 +22,11 @@ Just getting started? Complete the [Using Conversation Assist](tutorials-guides-
 ### What is Conversation Assist?
 Conversation Assist offers recommended bots and answers to your human agents inline in their conversations with consumers.
 
-<img width="800" src="img/agentassist/example2.gif">
+<img width="400" src="img/agentassist/example2.gif" align="left" style="margin: 0px 25px 0px 0px;">
 
-When your agents take advantage of these just-in-time recommendations, they become more efficient and save time. What's more, their conversational outcomes are improved and more consistent. Conversation Assist can even help to reduce the time to onboard new agents. 
+When your agents take advantage of these just-in-time recommendations, they become more efficient and save time. What's more, their conversational outcomes are improved and more consistent. Conversation Assist can even help to reduce the time to onboard new agents.
+
+You can set up bot and answer recommendations in just a few clicks.
 
 On the **Home** page of Conversation Assist, you'll find a dashboard of rich analytics, which you can use to continuously monitor and tune recommendation performance. Use this valuable data to understanding the impact that your solution is having on your agent operations.
 
