@@ -290,7 +290,6 @@
             - subpagename: Language Support
             - subpagename: LivePerson NLU Engine
             - subpagename: Google Dialogflow and IBM Watson NLU Engines
-            - subpagename: Brand's Rasa-Based NLU Engine
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices

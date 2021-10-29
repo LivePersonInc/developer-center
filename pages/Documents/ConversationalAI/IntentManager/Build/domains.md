@@ -68,8 +68,10 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
 ### Add a domain manually or using an import file
 
+<!--
 {: .important}
 If you're adding a domain that will use your own Rasa-based engine as the NLU provider, see [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#connect-the-nlu-engine) for additional information that you need to provide when you do this.
+-->
 
 **To add a domain manually or using an import file**
 
@@ -182,7 +184,7 @@ This action overwrites the content in the domain with the content in the Google 
 
 * LivePerson NLU engine - See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
 * Google Dialogflow or IBM Watson NLU engine - See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
-* Brand's Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
+<!-- * Brand's Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain). -->
 
 ### Activate the latest model version
 
