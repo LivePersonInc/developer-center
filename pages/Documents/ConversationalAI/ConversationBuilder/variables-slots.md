@@ -45,7 +45,7 @@ The [Get and Set Bot Variables functions](conversation-builder-scripting-functio
 
 #### Cleaning variable data
 
-Before setting or storing data in a variable, in the [Process User Response code](conversation-builder-interactions-configuration-custom-code.html#process-user-response), it's a good idea to "clean" or "sanitize" the data by parsing it and transforming it to remove problematic issues, i.e., remove leading or trailing white space, remove new lines ( \\n ) and special characters, and so on.
+Before setting or storing data in a variable, in the [Process User Response code](conversation-builder-interactions-configuration-custom-code.html#process-user-response), it's a good idea to "clean" or "sanitize" the data by parsing it and transforming it to remove problematic issues, i.e., remove leading or trailing white space, remove new lines (\\n) and special characters, and so on.
 
 ### Slots
 
