@@ -196,7 +196,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * When no app exists on the receiving device that can consume the message, if this URL is a HTTP(S) url, it will be loaded in a web browser.
 
-* The root object of the JSON in the URL field should be a dictionary (key:value) and not an array ( {} and not [] ).
+* The root object of the JSON in the URL field should be a dictionary (key:value) and not an array ({} and not []).
 
 #### Metadata Limitations
 
