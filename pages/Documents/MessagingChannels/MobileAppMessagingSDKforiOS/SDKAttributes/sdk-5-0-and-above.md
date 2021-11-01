@@ -340,6 +340,14 @@ Color code for the text of the controller bubble.
 </div> -->
 
 
+##### controllerBubbleHyperlinkColor
+
+Controls text color for hyperlink item on the system messages bubble
+
+- **Type:** UIColor
+- **Default Value:** LPColor.lpGray2
+- **Available since:** 6.6.0
+
 --- 
 
 ### Conversations
@@ -2908,3 +2916,183 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
    
 - **Type:** UIImage?    
 - **Default value:** nil
+
+
+---
+
+### Appointment List
+
+#### appointmentCalendarViewFontMedium
+Default value for calendar view medium font
+
+- **Type:** CGFloat
+- **Default Value**: 14
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewFontLarge
+Default value for calendar view large font
+
+- **Type:** CGFloat
+- **Default Value**: 16
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewDateCellHeight
+Default value for Calendar View Date Cell Height
+
+- **Type:** CGFloat
+- **Default Value**: 35
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewSelectedColor
+Default value for when user presses and selects a cell from the calendar view
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListCalendarBlueColor
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewTodayColor
+Default value for the color of today’s cell
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListCalendarBlueColor
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewTextDark
+Default value for dark text in calendar view
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListDarkTextColor
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewTextLight
+Default value for light text in calendar view
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListLightTextColor
+- **Available since:** 6.6.0
+
+#### appointmentCalendarViewDateColor
+Default value for calendar date color
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListDateColor
+- **Available since:** 6.6.0
+
+#### appointmentCalendarBackgroundColor
+Default value for calendar background color
+
+- **Type:** UIColor
+- **Default Value**: LPColor.white
+- **Available since:** 6.6.0
+
+#### appointmentSlotImage
+Default image for appointment slot image
+
+- **Type:** UIImage
+- **Default Value**: image named LP_APPOINTMENT_IMAGE
+- **Available since:** 6.6.0
+
+#### appointmentCellImageTintColor
+Default color for appointment slot image
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListCellImageTintColor
+- **Available since:** 6.6.0
+
+#### appointmentRightChevron
+Default image for right chevron
+
+- **Type:** UIImage
+- **Default Value**: image named LP_DATE_PICKER_CHEVRON
+- **Available since:** 6.6.0
+
+#### appointmentLeftChevron
+Default image for left chevron
+
+- **Type:** UIImage
+- **Default Value**: image named LP_DATE_PICKER_CHEVRON
+- **Available since:** 6.6.0
+
+#### appointmentCellTitleLabelTextColor
+Default color for calendar cell title text color
+
+- **Type:** UIColor
+- **Default Value**: UIColor.black
+- **Available since:** 6.6.0
+
+#### appointmentCellDetailLabelTextColor
+Default color for calendar cell detail text color
+
+- **Type:** UIColor
+- **Default Value**: UIColor.gray
+- **Available since:** 6.6.0
+
+#### appointmentCellAccessoryLabelTextColor
+Default color for calendar cell accessory text color
+
+- **Type:** UIColor
+- **Default Value**: UIColor.black
+- **Available since:** 6.6.0
+
+#### appointmentCellSelectedColor
+Default color for when user presses and selects a cell from the calendar view
+
+**Type:** UIColor
+**Default Value**: UIColor.appointmentListCalendarBlueColor
+- **Available since:** 6.6.0
+
+#### appointmentConfirmationViewBackgroundColor
+Default color for confirmation view background
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListCalendarBlueColor
+- **Available since:** 6.6.0
+
+#### appointmentConfirmButtonTitle
+Default text for confirmation button
+
+- **Type:** String
+- **Default Value**: Confirm
+- **Available since:** 6.6.0
+
+#### appointmentConfirmButtonBackgroundColor
+Default color for confirmation button background
+
+- **Type:** UIColor
+- **Default Value**: UIColor.white
+- **Available since:** 6.6.0
+
+#### appointmentConfirmButtonTitleTextColor
+Default color for confirmation view button title text
+
+- **Type:** UIColor
+- **Default Value**: UIColor.appointmentListCalendarBlueColor
+- **Available since:** 6.6.0
+
+#### appointmentConfirmButtonCornerRadius
+Default radius for confirmation button corner radius
+
+- **Type:** CGFloat
+- **Default Value**: 20
+- **Available since:** 6.6.0
+
+#### appointmentConfirmButtonTitleFontSize
+Default size for confirmation button title font
+
+- **Type:** CGFloat
+- **Default Value**: 18
+- **Available since:** 6.6.0
+
+#### appointmentCustomOutputDateFormat
+Default format to present date in output message
+
+- **Type:** String
+- **Default Value**: “EEEE, MMMM d”
+- **Available since:** 6.6.0
+
+#### appointmentCustomFontName
+Default format for appointment font
+
+- **Type:** String
+- **Default Value:** “Arial”
+- **Available since:** 6.6.0
