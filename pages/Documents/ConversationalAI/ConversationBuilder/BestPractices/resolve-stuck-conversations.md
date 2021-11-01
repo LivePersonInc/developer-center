@@ -48,7 +48,9 @@ You can resolve stuck conversations by:
 You must manually add support for this flow. You can add just Step 1 or both Steps 1 and 2. You cannot add Step 2 alone.
 
 {: .important}
-For an optimal consumer experience, LivePerson recommends that you configure both steps.<br><br>If you configure both steps, the flow works as follows: Step 1 starts a 10-minute timer. If the conversation is identified as "stuck" again within the 10-minute window, Step 2 is performed immediately. If the conversation is identified as "stuck" after the 10-minute window has expired, Step 1 is performed again.
+For an optimal consumer experience, LivePerson recommends that you configure both steps.
+
+If you configure both steps, the flow works as follows: Step 1 starts a 10-minute timer. If the conversation is identified as "stuck" again within the 10-minute window, Step 2 is performed immediately. If the conversation is identified as "stuck" after the 10-minute window has expired, Step 1 is performed again.
 
 Be aware that, in the case of Step 1, the consumer's response after starting the conversation anew might not match any intents or patterns in the bot; this will trigger the fallback response.
 
