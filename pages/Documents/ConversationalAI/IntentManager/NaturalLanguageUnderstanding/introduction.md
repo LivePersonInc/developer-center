@@ -22,7 +22,7 @@ While LivePerson provides its own proprietary NLU out of the box, Intent Manager
 - LivePerson's native NLU
 - Google Dialogflow
 - IBM Watson
-<!-- - Your own custom, Rasa-based NLU engine -->
+- Your own custom, Rasa-based NLU engine
 
 {: .important}
 If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Manager. Third-party providers require an additional setup process.
