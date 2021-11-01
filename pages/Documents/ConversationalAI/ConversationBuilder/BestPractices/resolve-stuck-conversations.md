@@ -42,12 +42,12 @@ When the retry flow described above is added, it is always attempted to re-engag
 You can resolve stuck conversations by:
 
 1. **Asking the consumer to resend their original query**: If you configure this, the conversation starts anew, and the consumer is sent, “I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?” You can change the bot message if desired.
-2. **Transferring the conversation to a human agent**: To add support for this, you must specify the human agent skill ID that can better assist the consumer. 
+2. **Transferring the conversation to a human agent**
 
-These steps are disabled by default. You can add just one step (start anew only, or transfer only), or you can add both. The steps are tried in the order above.
+You must manually add support for this flow. You can add just one step (start anew only, or transfer only), or you can add both.
 
 {: .important}
-For an optimal consumer experience, LivePerson recommends that you configure both steps.
+For an optimal consumer experience, LivePerson recommends that you configure both steps.<br><br>If you configure both steps, the flow works as follows: Step 1 starts a 10-minute timer. If the conversation is marked as "stuck" again within the 10-minute window, Step 2 is performed immediately. If the conversation is marked as "stuck" after the 10-minute window has expired, Step 1 is tried again.
 
 Be aware that, in the case of Step 1, the consumer's response after starting the conversation anew might not match any intents or patterns in the bot; this will trigger the fallback response.
 
