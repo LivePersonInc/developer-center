@@ -29,7 +29,8 @@ To retry the consumer's last message, [edit the bot's agent connector](conversat
     * For 1 retry, set it to 2. (1 for the original try + 1 for the single retry)
     * For 2 retries, set it to 3. (1 for the original try + 2 for the two retries)
 
-    LivePerson recommends that you set this field no higher than 3.
+    {: .important}
+    LivePerson recommends you add support for this retry flow by setting this to 2 or 3, but no higher than 3.
 
     The default value of this field is 1, which means the consumer’s message will be sent only once. This means if you don’t want to add the retry flow, there’s no need to add this field.
 
