@@ -287,14 +287,14 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 **Chat**: No
 
 #### userNotificationMessageOnStuckConversation
-If the bot’s context is reset because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If the bot’s context is reset (the conversation starts anew) because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### userRetryOnStuckConversation
-If this is true, the bot’s context is reset, and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If this is true, and if the bot is stuck, the bot’s context is reset (the conversation starts anew), and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: null<br>
 **Messaging**: Yes<br>
