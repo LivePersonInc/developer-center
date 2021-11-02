@@ -352,6 +352,7 @@
     - documentname: Bot Analytics
       pages:
         - pagename: Overview
+        - pagename: Key Terms & Concepts
         - pagename: Account-Level Performance
         - pagename: Bot Performance
         - pagename: Tuning Opportunities
