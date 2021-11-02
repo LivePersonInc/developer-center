@@ -45,6 +45,9 @@ Based on the issues detected, the conversation is classified with a MACS 1 (belo
 {: .important}
 For an in-depth introduction to MACS, its benefits, its scoring, and more, see [here](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center. For information on using MACS within Bot Analytics, see [here](bot-analytics-macs.html) in this Developer Center.
 
+#### Intent Match Rate
+This metric is the percentage of consumer questions that were matched with intents, patterns, Regex, exact value matches, evaluated options, or Knowledge Base articles. Be aware that the system doesn’t make a determination as to whether a match was a false positive.
+
 ### Containment of bot conversations
 
 #### Bot disengaged
@@ -64,6 +67,9 @@ The system calculates this metric as follows:
 `# Consumer Disengaged = (Bot session has timed out) AND (Conversation isn’t closed) AND (Conversation isn’t transferred) AND (Last message is from the bot but isn’t a form of “bye”)`
 
 Be aware that this metric can include conversations where the consumer’s need was resolved. For example, consider the scenario where the consumer asks a question, and the bot sends a response, such as a link to an FAQ or a product listing. In this case, the consumer might not respond to the bot’s last message because their need was resolved. The system still considers such a conversation as one where the consumer disengaged.
+
+#### Transfers
+Previously called “Escalations”. This metric is the total number of conversations intentionally or unintentionally (auto escalated) transferred to a human agent.
 
 #### Intended transfers
 This metric is the number of conversations transferred from the bot to a human agent as designed, e.g., via an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) or a [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). For example, you might want to transfer to a human agent for the purpose of collecting credit card information from the consumer.
