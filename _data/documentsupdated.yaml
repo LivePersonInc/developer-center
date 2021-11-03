@@ -751,7 +751,6 @@
             - subpagename: Storing Secrets
             - subpagename: Data Storage
             - subpagename: Debugger
-            - subpagename: Orchestration Functions
             - subpagename: Common Examples
             - subpagename: Best Practices
             - subpagename: Limitations & Restrictions
