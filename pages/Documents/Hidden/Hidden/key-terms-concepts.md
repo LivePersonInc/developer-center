@@ -1,52 +1,17 @@
 ---
 pagename: Key Terms & Concepts
 redirect_from:
-Keywords:
+    - bot-analytics-key-terms-concepts.html
 sitesection: Documents
-categoryname: "Conversational AI"
-documentname: Bot Analytics
-permalink: bot-analytics-key-terms-concepts.html
+categoryname: Hidden
+documentname: Hidden
+permalink: hidden-key-terms-concepts.html
+layout: hidden-layout
 indicator: Messaging
 ---
 
 ### Introduction
-Throughout the Bot Analytics application, valuable metrics are provided, giving you insight into the activity, quality, and success/failure of your bot conversations. These metrics are defined here.
-
-### Volume of bot conversations
-
-Volume metrics help you to understand and compare volume. Use them to discover trends, for example, daily trends of traffic patterns during business hours and off hours, and so on.
-
-#### Bot Sessions
-This metric is the total number of bot sessions, which gives you insight into how many sessions on average your conversations go through.
-
-#### Conversations
-This metric is the total number of Conversational Cloud conversations in which the bot participated. Includes closed and open conversations; excludes those performed in [Preview](conversation-builder-testing-deployment-previewing.html).
-
-This metric gives you insight into how many conversations are automated by bots.
-
-#### Messages
-This metric is the total number of messages sent by the consumer and received by the bot.
-
-#### Users
-This metric is the total number of unique users that were connected to the bot.
-
-### Quality of bot conversations
-
-#### MACS
-A Meaningful Automated Conversation Score (MACS) is a measure of the quality of bot conversation.
-
-LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, MACS is calculated by identifying and quantifying this using proprietary LivePerson AI logic. Issues within the bot conversation’s structure are detected and used to derive a score for example:
-
-* Did the bot understand  the consumer’s question?
-* Was the consumer stuck in an endless loop?
-
-Based on the issues detected, the conversation is classified with a MACS 1 (below average), 2 (average), or 3 (good). Use the MACS to understand the perceived consumer experience.
-
-{: .important}
-For an in-depth introduction to MACS, its benefits, its scoring, and more, see [here](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center. For information on using MACS within Bot Analytics, see [here](bot-analytics-macs.html) in this Developer Center.
-
-#### Intent Match Rate
-This metric is the percentage of consumer questions that were matched with intents, patterns, Regex, exact value matches, evaluated options, or Knowledge Base articles. Be aware that the system doesn’t make a determination as to whether a match was a false positive.
+Throughout the Bot Analytics application, valuable metrics are provided, giving you insight into the success/failure, quality, and activity of your bot conversations. These metrics are defined here.
 
 ### Containment of bot conversations
 
@@ -91,3 +56,39 @@ This metric is the number of conversations that were received and handled by the
 The system calculates this metric as follows:
 
 `# Contained = # Total Conversations - (# Intended Transfers + # Unintended Transfers + # Bot Disengaged + # Consumer Disengaged)`
+
+### Quality of bot conversations
+
+#### MACS
+A Meaningful Automated Conversation Score (MACS) is a measure of the quality of bot conversation.
+
+LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, MACS is calculated by identifying and quantifying this using proprietary LivePerson AI logic. Issues within the bot conversation’s structure are detected and used to derive a score for example:
+
+* Did the bot understand  the consumer’s question?
+* Was the consumer stuck in an endless loop?
+
+Based on the issues detected, the conversation is classified with a MACS 1 (below average), 2 (average), or 3 (good). Use the MACS to understand the perceived consumer experience.
+
+{: .important}
+For an in-depth introduction to MACS, its benefits, its scoring, and more, see [here](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center. For information on using MACS within Bot Analytics, see [here](bot-analytics-macs.html) in this Developer Center.
+
+#### Intent Match Rate
+This metric is the percentage of consumer questions that were matched with intents, patterns, Regex, exact value matches, evaluated options, or Knowledge Base articles. Be aware that the system doesn’t make a determination as to whether a match was a false positive.
+
+### Volume of bot conversations
+
+Volume metrics help you to understand and compare volume. Use them to discover trends, for example, daily trends of traffic patterns during business hours and off hours, and so on.
+
+#### Bot Sessions
+This metric is the total number of bot sessions, which gives you insight into how many sessions on average your conversations go through.
+
+#### Conversations
+This metric is the total number of Conversational Cloud conversations in which the bot participated. Includes closed and open conversations; excludes those performed in [Preview](conversation-builder-testing-deployment-previewing.html).
+
+This metric gives you insight into how many conversations are automated by bots.
+
+#### Messages
+This metric is the total number of messages sent by the consumer and received by the bot.
+
+#### Users
+This metric is the total number of unique users that were connected to the bot.
