@@ -285,7 +285,7 @@ A button at the bottom of a rich card.
     <td>title</td>
     <td>
     The text of the button.<br/>
-    The text can not be longer than 25 characters.
+    The text can not be longer than 20 characters.
     </td>
     <td>String</td>
     <td>Y</td>
