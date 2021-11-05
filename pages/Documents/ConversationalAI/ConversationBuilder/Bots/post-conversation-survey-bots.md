@@ -145,7 +145,7 @@ In the closed-ended question, every answer choice has two values:
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png">
 
 * **Text value** - This value is shown to the consumer as the answer choice.
-* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder.
+* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
 
 As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
