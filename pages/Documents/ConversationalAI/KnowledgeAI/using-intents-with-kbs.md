@@ -15,7 +15,7 @@ indicator: both
 
 If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
 
-To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding.html) to use. Then, within the KnowledgeAI application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
+To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use. Then, within the KnowledgeAI application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
 
 {: .important}
 Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
@@ -42,37 +42,7 @@ You don’t need to link your articles to intents right away, as the **Intent** 
 
 ### Tune a knowledge base
 
-After you've added your content and linked it to intents, tune the knowledge base. At a high-level, tuning involves:
-
-1. Performing a search using a consumer utterance.
-2. Reviewing the results.
-3. Adding or removing training phrases in the intents as needed.
-
-**To tune a knowledge base**
-
-1. Open the knowledge base, and click **Articles** in the menu in the upper-left corner.
-2. In the **Answer Tester** on the right, specify the following:
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png">
-
-    * **Question**: Enter the consumer utterance for which you want to find matching articles.
-    * **Search mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
-    * **Threshold**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
-    * **# of results**: Select how many results to return.
-    * **Article status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
-
-3. Click **Get Answers**.
-4. Review the results under **Matched Answers**.
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test2.png">
-
-5. You can click on an article title to see the article, and toggle between this and its JSON.
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test3.png">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test4.png">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test5.png">
-
-6. Based on the results, adjust the training phrases for the intents in the associated domain if needed.
+For information on this, see [here](knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html).
 
 ### Search modes
 
