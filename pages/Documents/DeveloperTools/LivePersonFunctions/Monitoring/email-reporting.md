@@ -15,7 +15,7 @@ indicator: both
 
 After selecting the **Frequency of the report**, you can add recipients for the report by entering the email addresses of the recipients and clicking on the **Add** button.
 
-To remove a recipient from the list, click on the **trash can** icon displayed next to the email address  
+To remove a recipient from the list, click on the **trash can** icon displayed next to the email address
 
 <div class="important"> A maximum number of 10 email addresses can be added per account. Should you require more recipients, we would recommend you to use a mailing list.</div>
 ### Frequencies
@@ -48,24 +48,29 @@ To remove a recipient from the list, click on the **trash can** icon displayed n
 <div class="important">When you set up the report for the first time, you will receive an initial report on the next full hour (e.g. if the frequency is set as Daily at 9:30 am, the report will arrive at 10:00 am)</div>
 
 ### The Report
- When you schedule a report, you will receive a report as displayed below:
+
+When you schedule a report, you will receive a report as displayed below:
 
 <img src="img/faas-email-reporting-email.png" alt="LivePerson Functions - Email Reporting - Report" style="width:100%;"/>
 
-In the subject of the email, you can see your account number. The subject also indicates the time range of the data for  this report.
+In the subject of the email, you can see your account number. The subject also indicates the time range of the data for this report.
 
 The statistics presented in the email are:
 
-- **Total Functions** displays the current number of functions available  in the account. This number includes both *draft* and *deployed* functions out of 50 which is the maximum number of functions permitted for each account. 
+- **Total Functions** displays the current number of functions available in the account. This number includes both _draft_ and _deployed_ functions out of 50 which is the maximum number of functions permitted for each account.
 
-- **Deployed Functions** shows the current number of functions with a *productive*/*modified* state alongside the maximum allowed *productive* functions for the account.
+- **Deployed Functions** shows the current number of functions with a _productive_/_modified_ state alongside the maximum allowed _productive_ functions for the account.
 
-- **Successful Invocations** represents the total number of *successful* invocations for the functions of the account since the beginning of the current month. 
+- **Successful Invocations** represents the total number of _successful_ invocations for the functions of the account during the reporting period.
 
-- **Failed Invocations** represents the total number of *failed* invocations for the functions of the account since the beginning of the current month.
+- **Failed Invocations** represents the total number of _failed_ invocations for the functions of the account during the reporting period. The uncategorized invocation errors are also counted here.
 
-In addition to the total  numbers, you can also see **Individual Function Statistics** for each deployed function in your account as a table.
+- **Ended with timeout** represents the number of invocations that _failed_ due to a timeout error (execution took more than 30s) for the functions of the account during the reporting period.
 
-The table includes the name, the `UUID` associated with the function, **Successful Invocations** and **Failed Invocations** for  each deployed function (deployed at the time of the report creation).
+- **Function failure** represents the number of invocations that _failed_ due to function coding errors for the functions of the account during the reporting period.
+
+In addition to the total numbers, you can also see **Individual Function Statistics** for each deployed function in your account as a table. The table includes the name, the event associated with the function, **Successful Invocations**, **Failed Invocations**, **Ended with timeout** and **Function failure** for each deployed function (deployed at the time of the report creation).
+
+<div class="important">The numbers in parenthesis on the right of each metric indicate the difference between the current report and the previous.</div>
 
 <div class="important">You will not see any statistics of functions that  were deleted at the time of the report creation</div>
