@@ -78,9 +78,11 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
 8. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
 
-9. Click **Upgrade**.
+    Note the **Upgrade** button. If this button isn't enabled, your account needs a configuration change made by LivePerson; contact your administrator for assistance.
 
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases3.png">
+
+9. Click **Upgrade**.
 
     At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version of the Production bot has been created.
 

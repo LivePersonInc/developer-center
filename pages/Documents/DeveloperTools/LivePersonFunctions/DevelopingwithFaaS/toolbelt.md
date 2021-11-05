@@ -186,10 +186,10 @@ Additionally, most of the LivePerson API calls need authorization. The LP Client
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
+<!-- <td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
 <td>Yes</td>
 </tr>
-<tr>
+<tr> -->
 <td><a href="predefined-content-api-overview.html">Predefined Content API</a></td>
 <td>Read only</td>
 </tr>
@@ -837,7 +837,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 
 #### Get SDEs from Conversation
 
-The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](http://localhost:3000/liveperson-functions-development-toolbelt.html#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
+The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
 
 **Sample Usage**
 

@@ -44,7 +44,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain2.png">
 
-    For now, you won’t add any additional content, but keep in mind that any new intents you add will need a minimum of 20 training phrases, and that any changes will result in the model needing to be re-trained.
+    For now, you won’t add any additional content, but keep in mind that any new intents you add will need a minimum of 15 training phrases, and that any changes will result in the model needing to be re-trained.
 
 6. In the **Test User Input** panel on the right, you can test utterances and see how they score against the provided intents. You will be using the "make payment" intent in this tutorial, so enter an utterance that you would expect to trigger this particular intent, such as, “I want to make a payment.” Select "1" for your **Model version**, and toggle the **Search in domain** switch to "on." Then click **Test**.
 

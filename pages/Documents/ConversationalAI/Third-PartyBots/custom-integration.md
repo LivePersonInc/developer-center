@@ -694,7 +694,7 @@ function lambda(input, callback) {
 
   const addPrivateSMLinkMetadata = () => {
     if (socialMetadata && socialMetadata.channel === "Public") {
-      const privateLink = 'I\'m a BOT, please join to our private chat to talk with a live agent:\n https://m.me/' + socialMetadata.conversationState.dmChatId;
+      const myMessage = 'I\'m a BOT, please join to our private chat to talk with a live agent:\n https://m.me/' + socialMetadata.conversationState.dmChatId;
 
       // The following is an example of Facebook Public Replies
       const socialMetadataResponse = {
@@ -713,9 +713,16 @@ function lambda(input, callback) {
 
       // LEGACY
       // See: Sending (single) Structured content via 'context' property (Legacy)
+      const structureContentSM = {
+        type: "vertical",
+        elements: [{
+          type: 'text',
+          text: myMessage,
+          alt: 'sm-piggyback',
+        }],
+      }
+      response.context.structuredContent = structureContentSM;
       response.context.metadata.push(socialMetadataResponse);
-
-      response.messages.push(privateLink);
 
       // TRANSFER
       // See: Transfer / Escalations

@@ -17,7 +17,7 @@ indicator: both
 | Statement of intent (SOI) | A consumer message that contains an intent. |
 | Domain | A list of intents and entities; these can be matched to consumer training phrases (utterances) with an intent-recognition model. |
 | Prebuilt domain | A prebuilt domain is a starting point for you to get going with intents. The intent-recognition model is filled with predefined intents that have been trained and activated for your convenience. The model has been developed using aggregated and anonymized data from several brands. While a prebuilt domain is functional, you’ll need to customize it for your specific needs to get the best performance. |
-| NLU | NLU stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. For more, see [here](intent-manager-natural-language-understanding.html). |
+| NLU | NLU stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. For more, see [here](intent-manager-natural-language-understanding-introduction.html). |
 | Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent. For best practices, see [here](intent-manager-best-practices.html#training-phrases).<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
 | Inference | The process by which a “learned” model attempts to map an incoming message to an intent class. |
@@ -45,7 +45,7 @@ A "prebuilt domain" is a ready-made, pretrained domain that includes a set of we
 
 Once you [add a prebuilt domain](intent-manager-build-domains.html#add-a-prebuilt-domain), you can customize the domain as you see fit. If you later decide that you don't want to use your customizations, you can also [overwrite your domain](intent-manager-build-domains.html#overwrite-from-a-prebuilt-domain) to reflect the prebuilt domain that's offered by LivePerson.
 
-Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine).
+Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine).
 
 ### Primary domain
 
@@ -58,7 +58,7 @@ Second, when intent tracking data is gathered for analysis within Intent Manager
 As an example, assume you have three domains A, B and C, and domain B is your primary domain. The consumer says, “I want to disconnect from Acme Telecommunications.” This matches an intent in domain A with a 90% confidence score, an intent in domain B with a 60% confidence score, and an intent in domain C with a 20% confidence score. In this case, the intent in domain B is considered the best matched intent even though it’s confidence score is lower than that for the intent in domain A. This is because domain B is your primary domain, and the scores for the intents in both domains A and B are at least GOOD scores. If the match to the intent in domain B were 59% (FAIR PLUS), then the intent in domain A would be considered the best intent match.
 
 {: .important}
-The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, Knowledge Base, Agent Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
+The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, KnowledgeAI, Agent Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
 
 ### Intents
 
@@ -149,7 +149,7 @@ Entities facilitate the creation and curation of training phrases. Using entitie
 
 You can use entities in two places:
 * Training phrases for intents defined in Intent Manager
-* Intent qualifiers for articles defined in [Knowledge Base](knowledge-base-overview.html)
+* Intent qualifiers for articles defined in [KnowledgeAI](knowledgeai-overview.html)
 
 {: .important}
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
@@ -189,7 +189,7 @@ Continuing our `ORDER_NO` example, you might use the entity in the training phra
 * "I want to check on my order ORDER_NO"
 * "What's the status of order ORDER_NO"
 
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 #### Built-in entities
 
