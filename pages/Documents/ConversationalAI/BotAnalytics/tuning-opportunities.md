@@ -10,8 +10,9 @@ permalink: bot-analytics-tuning-opportunities.html
 indicator: both
 ---
 
-You can use Bot Analytics to evaluate a bot's performance and thereby identify tuning opportunities. There are a few key approaches to the data: conversation status, MACS, and intents.
+You can use Bot Analytics to evaluate a bot's performance and thereby identify tuning opportunities. There are a few key approaches to the data: MACS and intents. <!-- There are a few key approaches to the data: conversation status, MACS, and intents. -->
 
+<!-- 
 ### Conversation status
 
 The conversation status is the end state of the bot conversation, which can be:
@@ -32,6 +33,7 @@ Select a data point in the table to display a list of conversations with a given
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ba_conversationsview2.png">
 
 Use the conversations list to easily perform a targeted review of transcripts. This is an efficient way to identify not only opportunities for bot tuning, but also missed opportunities for automation.
+-->
 
 ### MACS
 

@@ -20,7 +20,7 @@ After you access Bot Analytics, the main dashboard is displayed. The dashboard i
 {: .important}
 The trend charts can show data for November 1, 2020 and later.
 
-Most of the metrics are specific to deployed bots and exclude conversations conducted via Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool. However, the **Intent Match Rate** includes conversations conducted via Preview. This means you can test a bot’s performance with respect to intent matching without having to deploy it.
+**MACS**, **Conversation**, and **Transfers** metrics are specific to deployed bots and exclude conversations conducted via Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool. However, the rest of the metrics (**Messages**, **Users**, and **Intent Match Rate**) include conversations conducted via Preview. This means you can test a bot’s performance, for example, its intent matching, without having to deploy it.
 
 Use the dashboard page to get a quick indication of the overall performance of your organization’s automation program.
 

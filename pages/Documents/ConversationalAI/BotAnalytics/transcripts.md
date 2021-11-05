@@ -13,6 +13,7 @@ Transcripts of conversations in which a bot participated are logged if the botâ€
 
 Review of transcripts is a great way to identify opportunities for tuning.
 
+<!--
 ### Transcript review via the Conversations view
 
 You can use the **Conversations** view to perform a targeted review of transcripts based on the conversation status of the conversations, which can be:
@@ -25,6 +26,7 @@ You can use the **Conversations** view to perform a targeted review of transcrip
 For an explanation of each status, see [here](bot-analytics-key-terms-concepts.html#containment-of-bot-conversations).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ba_conversationsview3.png">
+-->
 
 ### Transcript review via the MACS view
 

@@ -26,10 +26,10 @@ From the **Overview**, you can access additional views for more detailed informa
 
 <img style="width:500px" src="img/ConvoBuilder/ba_views.png">
 
-Use the views to understand how consumers are interacting with the bot, for example:
+Use the views to understand the bot's performance, for example:
 
-* Use the **Conversations** view to understand how well the bot contains conversations. This view displays the [conversation status](bot-analytics-key-terms-concepts.html#containment-of-bot-conversations) of the bot's conversations: Bot Disengaged, Consumer Disengaged, Unintended Transfer, and so on. You can easily use this view to perform a targeted review of transcripts.
-* Use the **MACS** view to understand the bot's Meaningful Automated Conversation Score, or [MACS](bot-analytics-macs.html). Like the **Conversations** view, this view is great for performing a targeted review of transcripts.
+<!-- * Use the **Conversations** view to understand how well the bot contains conversations. This view displays the [conversation status](bot-analytics-key-terms-concepts.html#containment-of-bot-conversations) of the bot's conversations: Bot Disengaged, Consumer Disengaged, Unintended Transfer, and so on. You can easily use this view to perform a targeted review of transcripts. -->
+* Use the **MACS** view to understand the bot's Meaningful Automated Conversation Score, or [MACS](bot-analytics-macs.html). <!-- Like the **Conversations** view, --> This view is great for performing a targeted review of transcripts.
 * Use the **Users** view to understand volume. This view displays the number of unique consumers that connected to the bot.
 
 Some measures that are useful to assess while monitoring and improving your bots include:
