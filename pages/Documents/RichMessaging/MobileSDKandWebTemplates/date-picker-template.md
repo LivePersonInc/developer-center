@@ -39,7 +39,6 @@ There are two date picker options:
 | title       | Title displayed on view         | String  | Y        |    |
 | minDate          | Minimum date in range  | Int(Seconds) | N        |            |
 | maxDate   | Maximum date in range | Int(Seconds) | N        |     |
-| dateFormat       | The date format | String  | N        |    |
 
 ### Example
 
@@ -58,7 +57,7 @@ There are two date picker options:
       "elements": [
         {
           "type": "image",
-          "url": "http://www.kulaone.com/images/lp/calendar1.png",
+          "url": "https://agents-lp.github.io/structured-content-widget/img/date-picker-single.png",
           "tooltip": "image tooltip"
         },
         {

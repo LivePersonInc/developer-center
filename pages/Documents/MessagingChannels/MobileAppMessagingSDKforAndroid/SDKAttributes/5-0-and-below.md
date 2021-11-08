@@ -511,6 +511,23 @@ Color code for the text of the automatic messages.
    </figure>
 </div>
 
+#### controller_message_markdown_hyperlink_text_color
+Color code for the markdown hyperlink in the automatic messages.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #5b5c5e (dark gray)</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/controller_message_markdown_hyperlink_text_color.png" alt="hyperlinkautomaticmessagecoller">
+   </figure>
+</div>
+
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
@@ -3996,6 +4013,91 @@ Set the link message text color.
 * **Type:** color
 * **Default value:** @android:color/white
 
+
+---
+
+### Schedule Slot List
+
+#### lp_appointment_header_background_color
+Appointment Scheduler window header background color.
+* **Type:** color
+* **Default value:** #0363AD
+
+
+#### lp_appointment_header_text_color
+Appointment Scheduler window text color code for title, date and confirm button (enabled) on header.
+* **Type:** color
+* **Default value:** #FFFFFF
+
+#### lp_appointment_week_day_title_color
+Color code for week days text: S, M, T, W, ....
+* **Type:** color
+* **Default value:** #000000
+
+#### lp_appointment_week_date_text_color
+Color code for week date text color
+* **Type:** color
+* **Default value:** #ADBACC
+
+#### lp_appointment_week_day_active_text_color
+Color code for an active calendar day where appointments are available.
+* **Type:** color
+* **Default value:** #000000
+
+#### lp_appointment_week_day_inactive_text_color
+Color code for an in-active calendar day where appointments are not available.
+* **Type:** color
+* **Default value:** #ADBACC
+
+#### lp_appointment_disabled_confirm_btn_color
+Color code for Confirm button (disabled) when no appointment is selected.
+* **Type:** color
+* **Default value:** #ADBACC
+
+#### lp_appointment_scheduler_background_color
+Color code for background color of scheduler window.
+* **Type:** color
+* **Default value:** #FFFFFF
+
+#### lp_appointment_selected_background_color
+Color code for curretnly selected appointment slot.
+* **Type:** color
+* **Default value:** #0363AD
+
+#### lp_appointment_title_text_color
+Color code for an appointment's title and description for un-selected slots.
+* **Type:** color
+* **Default value:** #DE000000
+
+#### lp_appointment_selected_title_text_color
+Color code for an appointment's title and description when slot is currently selected.
+* **Type:** color
+* **Default value:** #FFFFFF
+
+#### lp_appointment_time_text_color
+Color code for an appointment's time for un-selected slots.
+* **Type:** color
+* **Default value:** #000000
+
+#### lp_appointment_selected_time_text_color
+Color code for an appointment's time when slot is currently selected.
+* **Type:** color
+* **Default value:** #FFFFFF
+
+#### lp_appointment_header_date_format
+Configuration to set date format of a header date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** EEE, MMM d
+
+#### lp_appointment_week_date_format
+Configuration to set date format of a current week's date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** MMMM yyyy
+
+#### lp_appointment_time_format
+Configuration to set time format of all appointment slots.
+* **Type:** String
+* **Default value:** hh:mm aaa
 
 ---
 

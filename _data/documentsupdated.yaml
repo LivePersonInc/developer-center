@@ -985,6 +985,7 @@
             - subpagename: Sample App
             - subpagename: Open Source List and Dependencies
             - subpagename: Upgrade Guide - Android
+            - subpagename: Uses-permission and Uses-feature
     - documentname: Mobile App Messaging SDK for iOS
       pages:
         - pagename: Overview
@@ -1071,6 +1072,7 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Date Picker Template
+        - pagename: Schedule Slot List Template
         - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout

@@ -808,6 +808,9 @@ function searchClick(event) {
 //legacy function, probably not needed
 $("#mysidebar").height($(".nav").height())
 
+//images center
+$("p").has("img").css({ textAlign: "center" })
+
 function domainTool() {
   var $title = $(".h1").text()
   //if we're on the Domain API page
