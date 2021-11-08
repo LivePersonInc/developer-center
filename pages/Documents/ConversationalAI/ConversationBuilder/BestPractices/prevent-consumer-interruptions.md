@@ -71,6 +71,12 @@ To ensure the best consumer experience, LivePerson recommends that you keep this
 
 ### FAQs
 
+#### I see “BLANK_MESSAGE” when I test this behavior in the Preview tool. Is “BLANK_MESSAGE” sent to the consumer?
+
+No. While you do see “BLANK_MESSAGE” in the [Preview tool](conversation-builder-testing-deployment-previewing.html), this is never sent to the consumer.
+
+If you keep the default value of “BLANK_MESSAGE” for `system_intermediateBotMessage`, no message will be sent to the consumer. The bot will silently ignore consumer interrupt messages.
+
 #### Previously, I enabled this behavior by manually adding the environment variables discussed above to an environment. Does my implementation still work?
 
 Yes. In the November 2021 release, we changed things so that all bots prevent consumer interruptions by default.
