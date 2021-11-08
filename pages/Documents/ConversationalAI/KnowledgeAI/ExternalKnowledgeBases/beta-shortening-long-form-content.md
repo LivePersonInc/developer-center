@@ -16,7 +16,7 @@ This topic discusses an experimental feature in Beta release. It’s applicable 
 
 Conversational messaging works best with content that’s as brief as possible. Therefore, LivePerson recommends that, when possible, you take one of the following approaches with your external CMS:
 
-* For any content that you want to serve over messaging, edit it to be as short as possible.  The “summary” field should contain a brief summary that fits within a single messaging bubble (300 characters or less). The “details” field should contain slightly longer content (1,000 characters or less) that fits within a short sequence of messaging bubbles.
+* For any content that you want to serve over messaging, edit it to be as short as possible.  The “summary” field should contain a brief summary that fits within a single messaging bubble (300 characters or less). The “details” field should contain slightly longer content (5,000 characters or less) that fits within a short sequence of messaging bubbles.
 * Add a custom field to your CMS to support this content variant for messaging. Map this custom field to the LivePerson schema (to our “summary” or “detail” fields in the transformation spec), so it can be used instead. 
 
 Sometimes, however, these approaches aren’t possible. For example, you might be using your long-form content to support a web site, so you need to leave your CMS content as is. You might also need to leave your CMS schema unchanged. In cases like these, LivePerson offers a solution that automates some of the work of readying your content for conversational messaging:
@@ -64,7 +64,7 @@ To promote best practices, the following limits are enforced by the application:
 | Attribute | Limit |
 | --- | --- |
 | Summary | 300 characters |
-| Detail | 1,000 characters if no HTML is used, or 320 characters if HTML is used<br><br>A single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. For this reason, HTML isn't suitable if you have more than 320 characters, as the HTML might break if the text is split. Thus, this limit is applied. |
+| Detail | 5,000 characters<br><br>If you include HTML markup, take care to test it and ensure it doesn’t break when the content is sent to the consumer. |
 
 ### The runtime behavior
 

@@ -21,7 +21,7 @@ This topic contains information on settings and tasks that are common to both [e
 
 ### Common, configurable settings
 
-* **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
+* **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
 * **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Associated Domain**: If the knowledge base's **Intent Association** is "Domain Intents," this indicates the domain that's associated with the knowledge base.
 * **Language**: The language of the content.
@@ -110,7 +110,7 @@ Note the following:
 Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
 
 {: .important}
-Before you delete a knowledge base, ensure it isn't being used in any [Knowledge Base integrations](conversation-builder-integrations-knowledge-base-integrations.html).
+Before you delete a knowledge base, ensure it isn't being used in any KnowledgeAI integrations.
 
 **To delete a knowledge base**
 1. Open the knowledge base.

@@ -151,6 +151,8 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Prevent Consumer Interruptions
+            - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
@@ -204,7 +206,7 @@
             - subpagename: Integration Basics
             - subpagename: API Integrations
             - subpagename: Email Integrations
-            - subpagename: Knowledge Base Integrations
+            - subpagename: KnowledgeAI Integrations
             - subpagename: LivePerson Agent Escalation Integrations
             - subpagename: File Integrations
             - subpagename: LivePerson Functions Integrations
@@ -287,7 +289,8 @@
             - subpagename: Introduction
             - subpagename: Language Support
             - subpagename: LivePerson NLU Engine
-            - subpagename: Third-Party NLU Engines
+            - subpagename: Google Dialogflow and IBM Watson NLU Engines
+            - subpagename: Brand's Rasa-Based NLU Engine
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices

@@ -86,7 +86,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 5. In the dialog that appears, select the domain.
 
     * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
-    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021.**
+    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021.**
     * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
 
 6. In the confirmation dialog, click **Confirm**.
