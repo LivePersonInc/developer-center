@@ -89,7 +89,7 @@ If you later delete a knowledge base in KnowledgeAI, the next time you access th
 
 ### Step 3: Configure settings
 
-1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
 2. Configure the following relevant settings:
     * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#max--of-recommendations)
     * [Answer confidence](conversation-assist-recommendation-sources-configuring-settings.html#answer-confidence)

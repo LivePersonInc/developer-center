@@ -10,6 +10,41 @@ permalink: conversation-assist-faqs.html
 indicator: messaging
 ---
 
+#### Are third-party bots supported?
+
+Not yet, but this is coming soon, so please stay tuned! For now, only Conversation Builder bots are supported.
+
+#### Can I turn off all recommendations?
+Yes, you can turn off recommendations globally. To do this:
+
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. Click **Settings** from the menu at the top.
+3. Under **General**, click the Suspend toggle.
+
+#### Can I turn off recommendations from an individual recommendation source?
+Yes, you can do this per recommendation source. To do this:
+
+1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
+2. Click **Recommendations Sources** from the menu at the top.
+3. Click the **Knowledge Bases** tab or the **Bots** tab, as appropriate.
+4. Beside the source, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+5. In the **Manage recommendation source** dialog, change the Status to “OFF.”
+6. Click **Save**.
+
+#### Why aren’t my knowledge bases discovered?
+
+There are a few reasons why this might be the case. For more, see [here](conversation-assist-troubleshooting.html#knowledge-bases) in *Troubleshooting*.
+
+#### Why aren’t my knowledge base answers formatted?
+
+Currently, only hyperlinks are supported.
+
+#### On the Home page, in the Recommendations widget, the Summary data does not align with the graph data. Why is this?
+
+There’s a bug in the Summary information in this widget. It should show the number of used recommendations “over” the number of offered recommendations, where the latter (the denominator) reflects the recommendations that were and weren’t used.
+
+Currently, the denominator is incorrect. It reflects only the recommendations that weren’t used.
+
 #### How are recommendations made?
 
 To make recommendations, Conversation Assist analyzes the available bots and knowledge base articles that match the consumer’s intent, and it finds the best ones. The recommendations are made by choosing those ranked highest by relevance score.
@@ -21,7 +56,7 @@ The rules for how the recommendations are made and ordered are as follows:
 
 1. **Which recommendations to include?** First, include all answer (article) recommendations. Second, include all bot recommendations. This means that answers are included before bots even when the answer scores are lower than that of the top bot recommendation.
 
-    Included answers must have a relevance score of GOOD (70%) or higher. The scores for included bots must meet the [Bot Confidence threshold](conversation-assist-recommendation-sources-configuring-settings.html), which is configurable during setup.
+    The scores for included answers must meet the [Answer Confidence threshold](conversation-assist-recommendation-sources-configuring-settings.html#answer-confidence), which is configurable during setup. Similarly, the scores for included bots must meet the [Bot Confidence threshold](conversation-assist-recommendation-sources-configuring-settings.html), which is also configurable during setup.
 
 2. **How to order the recommendations?** Within each subgroup of recommendations (answers, bots), sort the recommendations by relevance score in descending order so that the higher the score, the higher the recommendation.
 
@@ -33,13 +68,13 @@ As an example, assume that you have set up 2 knowledge bases and 3 bots. They ge
 * bot 2 = 80%
 * bot 3 = 0%
 
-If the account’s Conversation Assist settings are 1) maximum number of recommendations = 4, and 2) Bot Confidence threshold = 70%, then the agent receives the following, ordered list of recommendations:
+If the account’s Conversation Assist settings are 1) maximum number of recommendations = 4, 2) Answer Confidence = GOOD (70%), and 3) Bot Confidence = 70%, then the agent receives the following, ordered list of recommendations:
 
 * knowledge base article 1 (90%)
 * bot 1 (100%)
 * bot 2 (80%)
 
-Knowledge base 2 has been filtered out because its relevance score isn’t GOOD or better (70% or higher). Bot 3 has been filtered out because its score didn’t meet the confidence threshold for bots.
+Knowledge base 2 and Bot 3 have been filtered out because their relevance scores didn't meet the confidence thresholds that were configured.
 
 As a second example, assume that you have set up 4 knowledge bases and 2 bots. They get called for recommendations, and the following scores are returned:
 
@@ -50,7 +85,7 @@ As a second example, assume that you have set up 4 knowledge bases and 2 bots. T
 * bot 1 = 100%
 * bot 2 = 100%
 
-If the account’s Conversation Assist settings are 1) maximum number of recommendations = 4, and 2) Bot Confidence threshold = 70%, then the agent receives the following, ordered list of recommendations:
+If the account’s Conversation Assist settings are 1) maximum number of recommendations = 4, and 2) Answer Confidence = GOOD (70%), and 3) Bot Confidence = 70%, then the agent receives the following, ordered list of recommendations:
 
 * knowledge base article 3 = 100%
 * knowledge base article 2 = 80%
