@@ -50,14 +50,14 @@ Figure 2.1 Public API simple flow of sending messages command
 
 #### Step 3. Get Bearer Token
 
-To use our Public API you must perform a login request to Third-Party Bots API domain which will in response send you a Third-Party Bots bearer token. Moreover, you do not need to perform Login Request multiple times. One successful login call will send a bearer that can be used with multiple commands of Public API. There are two ways in which you can perform the login.
+To use our Public API you must perform a login request to Third-Party Bots API domain which will in response send you a Third-Party Bots bearer token. Moreover, you do not need to perform the login request multiple times. One successful login call will send a bearer that can be used with multiple commands of Public API. There are two ways in which you can perform the login.
 
 <ul>
   <li>Bearer Token via Username/Password</li>
   <li>Bearer Token via API (OAuth)</li>
 </ul>
 
-To perform login requests you will need a valid dedicated Public API bot user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and have the login method set either to `Password` or `API Key` as shown in Figure 3.1.
+To perform login requests you will need a valid and dedicated Public API bot user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and have the login method set either to `Password` or `API Key` as shown in Figure 3.1.
 
 **Please note** LivePerson maintains one session per user, thus if you receive an invalid bearer token error from Public API, you can always generate a new bearer by performing the login request again. We require making a dedicated Public API Bot Agent user that is dedicated for your Public API call.
 
