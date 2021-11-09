@@ -31,7 +31,7 @@ func checkActiveConversation(_ conversationQuery: ConversationParamProtocol) -> 
 
 ### clearHistory
 
-Use this API method only when there is no active conversation because it clears the local database. The history is still available on the server but is unretrievable from the specific device unless the device has a fresh install.
+Use this API method only when there is no active conversation because it will clear the messages presented on the Conversation Screen. The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
 
 {: .important}
 Due to current product limitations, when calling the `logout` method in Authentication Mode, the user's history shows up when they return to the conversation, even if calling `clearHistory` previously.
@@ -244,7 +244,7 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 
 Use this API method to check if the active conversation, if existing, is marked as urgent; otherwise, it returns false.
 
-**Note:** You must check that the SDK is in [ready state](consumer-experience-ios-sdk-advanced-configurations.html) before calling this method.
+**Note:** You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.
 
 ```swift
 func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool

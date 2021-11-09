@@ -151,6 +151,8 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Prevent Consumer Interruptions
+            - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
@@ -204,7 +206,7 @@
             - subpagename: Integration Basics
             - subpagename: API Integrations
             - subpagename: Email Integrations
-            - subpagename: Knowledge Base Integrations
+            - subpagename: KnowledgeAI Integrations
             - subpagename: LivePerson Agent Escalation Integrations
             - subpagename: File Integrations
             - subpagename: LivePerson Functions Integrations
@@ -268,6 +270,7 @@
           - subpagename: Routing Conversations by SDEs
           - subpagename: Routing Conversations by Intents
           - subpagename: Routing Conversations by Channel
+          - subpagename: Advanced Routing
           - subpagename: Using Dynamic Routing Outside of Conversational Cloud
           - subpagename: Testing with the Web Emulator
           - subpagename: Policy Logs for v2
@@ -282,6 +285,12 @@
         - pagename: Overview
         - pagename: Key Terms & Concepts
         - pagename: Natural Language Understanding
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Language Support
+            - subpagename: LivePerson NLU Engine
+            - subpagename: Google Dialogflow and IBM Watson NLU Engines
+            - subpagename: Brand's Rasa-Based NLU Engine
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices
@@ -308,7 +317,7 @@
           subpages:
             - subpagename: Getting Started
             - subpagename: Model Tester External APIs
-    - documentname: Knowledge Base
+    - documentname: KnowledgeAI
       pages:
         - pagename: Overview
         - pagename: External Knowledge Bases
@@ -327,7 +336,11 @@
             - subpagename: Articles
             - subpagename: Best Practices
         - pagename: Using Intents with KBs
-        - pagename: Sending Content to Consumers
+        - pagename: Sending Content to Consumers and Agents
+        - pagename: Optimizing Your Content
+          subpages:
+            - subpagename: Tuning a Knowledge Base
+            - subpagename: Optimizing via Dashboard Analysis
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
@@ -861,7 +874,6 @@
             - subpagename: Messaging Skill Segment
             - subpagename: Messaging Agent Segment
             - subpagename: Messaging Queue Health By Group
-
         - pagename: Appendix
     - documentname: Operational Realtime API
       basedomain: https://{domain}/operations/api/account/{accountID}
@@ -886,6 +898,15 @@
             - subpagename: Metrics
             - subpagename: Historical
             - subpagename: Agent View
+    - documentname: Agent Activity API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Status Changes
+        - pagename: Error Codes
+
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -964,6 +985,7 @@
             - subpagename: Sample App
             - subpagename: Open Source List and Dependencies
             - subpagename: Upgrade Guide - Android
+            - subpagename: Uses-permission and Uses-feature
     - documentname: Mobile App Messaging SDK for iOS
       pages:
         - pagename: Overview
@@ -1050,6 +1072,7 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Date Picker Template
+        - pagename: Schedule Slot List Template
         - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
@@ -1094,7 +1117,11 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Limitations
-- categoryname: "Security & Authentication"
+    - documentname: WhatsApp Business Messages Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Reply Button Template
+- categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
     - documentname: Cookies and Conversational Cloud

@@ -43,7 +43,7 @@ input, button {
 }
 
 .toggleImg{
-  background-image:url('../imgs/46x24-sprite.png');
+  background-image:url('/img/46x24-sprite.png');
   height:24px;
   width:46px;
   display:inline-block;
@@ -53,7 +53,7 @@ input, button {
 }
 
 .toggleImgOff{
-  background-image:url('../imgs/46x24-sprite.png');
+  background-image:url('/img/46x24-sprite.png');
   height:24px;
   width:46px;
   display:inline-block;

@@ -52,7 +52,7 @@ This error happens when either one or multiple of the following conditions not m
 - `failOnError` is an optional parameter and it has not being provided as **Boolean** 
  
 #### Error Solution
-Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-version-2.html#change-time-to-response-of-conversation)
+Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-cx.html#change-time-to-response-of-conversation)
  
 ## Dialog Flow V2 Invalid Text Body
 ## Description
@@ -63,28 +63,28 @@ This error happens when the bot's response has an invalid value in its text mess
 This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it. It can be a wrong parameter or a value;
  
 #### Error Solution
-Please check [Sending Rich Content](third-party-bots-google-dialogflow-version-2.html#sending-rich-content-structured-content)
+Please check [Sending Rich Content](third-party-bots-google-dialogflow-cx.html#sending-rich-content-structured-content)
  
 ## Dialog Flow V2 Invalid Text With Encoded Metadata Body
 ## Description
 This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or there is something wrong with the encoded metadata body.
  
 #### Error Solution
-Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-version-2.html#sending-encoded-metadata)
+Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-cx.html#sending-encoded-metadata)
  
 ## Dialog Flow V2 Invalid Delay Body
 ## Description
 This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value.
  
 #### Error Solution
-Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-version-2.html#sending-pausedelay-message)
+Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message)
  
 ## Dialog Flow V2 Invalid Private Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
  
 #### Error Solution
-Please check [Sending Private Text Message](third-party-bots-google-dialogflow-version-2.html#sending-private-text-message)
+Please check [Sending Private Text Message](third-party-bots-google-dialogflow-cx.html#sending-private-text-message)
  
 ## Dialog Flow V2 Invalid AI Vendor Response
 ## Description

@@ -11,40 +11,49 @@ order: 3
 indicator: both
 ---
 
-### Conversational Cloud UI
+### Consumer Identity Provider
+
+#### To define the OAuth 2.0 authentication:
+
+1.	In Conversational Cloud, go to [Management Console](https://knowledge.liveperson.com/admin-settings-management-console-overview.html)
+
+2.	Search for "Consumer Identity Provider"
+
+![Search for Consumer Identity Provider in the Management Console](img/mgmt_search_consumer_idp.png) 
+
+{:start="3"}
+3.  Click on 'Click to configure'
+
+![Click to configure the Consumer Identity Provider](img/mgmt_consumer_idp_configure.png)
+
+{:start="4"}
+4. In section #2 - "Define Identity Provider", select the preferred oAuth 2.0 Authentication Type, and then complete the required fields
+
+![Select consumer authentication type](img/consumer_idp_select_type.png)
 
 The following parameters should be defined:
 
-*	Implicit or Code Flow
+* **OAuth 2.0 Authentication Type** - Implicit / Code Flow
 
-*	OAuth 2.0 Authentication Endpoint (when separate browser window is used)
+* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Seperate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
 
-*	OAuth 2.0 Token Endpoint (when Code Flow is used)
+* **OAuth 2.0 Token Endpoint** - An HTTPS URL that used in Code Flow
 
-*	OAuth 2.0 JWT Public Key
+* **Choose IDP Certificate Type** - JWT Public Key / JWKS Endpoint
 
-*	OAuth 2.0 Client ID
+* **OAuth 2.0 Client ID** - Used in Code Flow
 
-*	OAuth 2.0 Client Secret (when Code Flow is used)
+* **OAuth 2.0 Client Secret** - Used in Code Flow
 
-*	JS method name and context (when Conversational Cloud embedded window is used in Web)
+* **JS Method Name** - When Conversational Cloud embedded window is used in Web 
 
-To define the OAuth 2.0 authentication:
-
-1.	In Conversational Cloud, select Campaign Builder. In the footnote, select Data sources.
-
-2.	In the Connectors area, next to the authentication server, click Configure. The Authentication Server page is displayed.
-
-![Selecting Implicit Flow or Code Flow](img/authenticationserver.png)
-
-{:start="3"}
-3.	From the dropdown menu, select your preferred authentication method, and then complete the required fields
+* **JS Context** - When Conversational Cloud embedded window is used in Web
 
 ### RFC Compliance
 
-There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working authentication configured - chances are you're working with the "openID" version. If you're setting up authentication for the first time - chances are you want the "OAuth 2 RFC" version.
+There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working consumer identity provider configured - chances are you're working with the "openID" version. If you're setting up a consumer identity provider for the first time - chances are you want the "OAuth 2 RFC" version.
 
-Starting with version 9.3.0 of the Unified Window (May 2018) - all newly created authentication connectors will use the "OAuth 2 RFC" version by default.
+Starting with version 9.3.0 of the Unified Window (May 2018) - all newly created consumer identity providers will use the "OAuth 2 RFC" version by default.
 
 #### What's the difference
 

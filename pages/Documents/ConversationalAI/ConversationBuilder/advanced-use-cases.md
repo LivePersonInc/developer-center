@@ -39,32 +39,6 @@ When the user enters anything but a well-formed email address, this yields a con
 
 For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
-### Block consumer interruptions
-
-One bot scenario that is typical is to have the bot present several text interactions containing information, with small delays between each interaction (to aid accessibility issues). After the interactions are sent in sequence, the bot then asks the consumer a question to decide the next step in the conversation flow.
-
-The problem that can occur in this scenario is that there's nothing to prevent the consumer from typing an utterance while the bot is sending the sequence of messages. When this happens, the utterance is processed for matching intents and patterns, which means it can "jump" the consumer to an upcoming question in the current dialog, to another dialog, or result in a fallback response.
-
-To solve this problem where the consumer interrupts the bot with "intermediate" messages, you can use a set of specific environment variables that work together to catch and ignore all consumer utterances until the next question is reached. 
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/bp_ignoreMessages1.png">
-
-**To implement this solution**
-
-1. [Add an environment](conversation-builder-environment-variables.html#add-environment-variables) that stores a set of environment variables for the bot. If the bot is already linked to an existing environment, skip this step and append the variables to the existing environment.
-2. In the environment, add the following system [environment variables](conversation-builder-environment-variables.html):
-    * `system_handleIntermediateUserMessage` - Set this to true.
-    * `system_intermediateBotMessage` - Specify a value.
-    * `system_intermediateBotResponseTimeout` - Specify a value.
-    
-    | Environment variable name | Description | Type | Example | 
-    |----|----|----|----|
-    | system_handleIntermediateUserMessage | Enables the behavior to catch and ignore "interrupt" messages by the consumer. | Boolean | true |
-    | system_intermediateBotMessage | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. | string | Please wait...we are still responding to your last message. |
-    | system_intermediateBotResponseTimeout | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 10000 = 10 seconds). Use this to specify for how long the bot should block (catch and ignore) consumer messages. If unspecified, the default value of 15000 (15 seconds) is used. | string | 10000 |
-
-3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn't already linked.
-
 ### Base 64 encoding
 
 The JavaScript editor within Conversation Builder doesn't natively support encoding to and decoding from Base 64. If you have a case where you need to do so, you can call a FaaS function and use the `crypto` package to encode a value and return it to your bot. Alternatively, using the following code in your Global Functions will give you access to this functionality without having to call outside of Conversation Builder.
