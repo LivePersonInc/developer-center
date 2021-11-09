@@ -43,7 +43,7 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 In order to use Public API you must create a dedicated Public API bot agent/user via LivePerson User Management UI. You must not use this dedicated Public API agent/user user in any other LivePerson business process. For example, using the same Public API Bot Agent to create a Third-Party Bot or using this bot agent user to call other LivePerson APIs. The reason for this requirement is to ensure that the session created by the Public API is not invalidated by any other service/business process.
 
-Figure 2.1 shows a simple scenario below where a dedicated Public API user is first making a login call and then sending "Done" message to and ongoing conversation of a Customer with a Third-Party Bot.
+Figure 2.1 shows a simple scenario below where a dedicated Public API user is first making a login call and then sending message via Third-Party bot to an ongoing conversation connected via LP Messaging.
 
 <img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png">
 Figure 2.1 Public API simple flow of sending messages command
