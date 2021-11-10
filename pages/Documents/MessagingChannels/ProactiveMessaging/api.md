@@ -24,6 +24,18 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
     * Click on Enable button to onboard to proactive api.
     * Click on show secrets to get app Id and secrets which will be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
+### Proactive 2.0 Product Capabilities
+
+| Details | 2.0 API |
+| :--- | :--- |
+| Channel | SMS <br /> WhatsApp <br /> In-App |
+| Rate throttling | Upto 10 requests per second |
+| Send rate |  SMS - 9** MPS <br /> WhatsApp - 9** MPS <br /> In-App - 9** MPS <br /> <br /> MPS - message per sec |
+| API batching capability | 100*** recipients per campaign |
+
+** - Reach Proactive team for higher MPS <br />
+*** - Reach Proactive team for increasing recipients per campaign
+
 ### API Specifications
 ## API Domain
 * Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
@@ -296,6 +308,49 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             "consumerContent": {
                 "sms": "1234456678899",
                 "wa": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - SMS Multi-Variables (Handoff with SMS multi variables)**
+
+```json
+{
+   "campaignName":"TestProactiveAPI",
+   "skill":"sales",
+   "templateId":"H1234567890", 
+   "consumers":[
+    {
+         "consumerContent": {"wa": "12345678891", "sms": "12345678891"},
+         "variables":{
+            "1":"TestVariable1",
+            "2":"TestVariable2",
+            "3":"TestVariable3",
+            "4":"TestVariable4"
+         }
+      }]
+}
+
+```
+
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891",
+                "wa": "12345678891"
             }
         }
     ]
