@@ -135,7 +135,7 @@ With this layout:
 8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
 
 {: .important}
-You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated KnowledgeAI integration.
 
 #### No auto rendering: Using a custom answer layout
 

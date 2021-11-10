@@ -30,7 +30,13 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 **To display the log for the conversation that occurred in the Preview window**
 
 1. With the Dialogs page displayed, click **Preview** in the upper-right corner.
-2. In the upper-right corner of the Preview window, click **Bot Logs**. This toggles the display to show the Bot Logs window.
+2. Just outside the lower-left corner of the Preview window, click the **Bot Logs** icon.
+    
+    <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png">
+
+    This opens the Bot Logs window, so it is displayed beside the Preview window.
+
+    <img style="width:600px" src="img/ConvoBuilder/debuggingWindow3.png">
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 

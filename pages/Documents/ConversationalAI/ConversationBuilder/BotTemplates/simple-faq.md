@@ -61,7 +61,7 @@ All of the additional parameters are configured for you.
 <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/template_faq_simple_image_3.png">
 
 {: .important}
-For detailed information on adding a Knowledge Base integration, see [here](conversation-builder-integrations-knowledge-base-integrations.html).
+For detailed information on adding a KnowledgeAI integration, see [here](conversation-builder-integrations-knowledgeai-integrations.html).
 
 #### Test your bot
 

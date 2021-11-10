@@ -1,37 +1,39 @@
 ---
-pagename: Knowledge Base Integrations
+pagename: KnowledgeAI Integrations
+redirect_from:
+    - conversation-builder-integrations-knowledge-base-integrations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Integrations
-permalink: conversation-builder-integrations-knowledge-base-integrations.html
+permalink: conversation-builder-integrations-knowledgeai-integrations.html
 indicator: both
 ---
 
 {: .important}
-Knowledge Base integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a Knowledge Base integration.
+KnowledgeAI integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a KnowledgeAI integration.
 
-Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledgeai-overview.html).
+Use a KnowledgeAI integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledgeai-overview.html).
 
-One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
+One use case for this type of integration is within a fallback dialog, to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed. If no results are found, you might then display a "sorry" message or [transfer the conversation](conversation-builder-interactions-integrations.html#agent-transfer-interactions) to a human agent.
 
 {: .important}
 The Simple FAQ bot template provides a bot that answers users' questions by connecting to a knowledge base. For details, see [here](conversation-builder-templates-simple-faq.html).
 
-**To add a Knowledge Base integration**
+**To add a KnowledgeAI integration**
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
-    - **Integration Type**: Select **Knowledge Base**.
+    - **Integration Type**: Select **KnowledgeAI**.
     
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
-        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or an import file.
+        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the KnowledgeAI UI or an import file.
         - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
     - **Request Parameters for a Phrase search**:
         - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledgeai-using-intents-with-kbs.html#search-modes). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
