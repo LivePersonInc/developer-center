@@ -353,12 +353,13 @@ Controls text color for hyperlink item on the system messages bubble
 ### Conversations
 
 #### maxPreviousConversationToPresent  
-Number of conversations to show in advance. 
+Number of conversations to show. 
 
    - **Type:** UInt
    - **Default value:** 2 
 
-
+{:.notice}
+This configuration will limit the conversations presented on the screen, once this number has been reached, no more conversations will be added to the Screen even if more are available
 
 
 #### deleteClosedConversationOlderThanMonths  
