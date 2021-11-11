@@ -31,6 +31,18 @@ If the connector appears to be in a stuck state, use this as a troubleshooting t
 2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
 
+### Refresh surveys
+
+When you refresh surveys, all survey metadata and data is regenerated. This includes all the IDs for the surveys, questions and answers.
+
+You might need to refresh surveys as a troubleshooting technique if you find that the consumer’s input in the bot’s survey interactions isn’t being reflected in reporting in Analytics Builder or MCS Toolkit.
+
+**To refresh surveys**
+
+1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Refresh Surveys**.
+
 ### Disable a single survey bot
 
 For information on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html#how-do-i-disable-a-survey-bot).

@@ -40,7 +40,7 @@ If markdownHyperlinkFromAgent is enabled, link preview won’t be displayed.
 
 On SDK 5.2.1, the border was introduced as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
 
-<img src="../../../../img/structuredContentButtonBorderColor.png" alt="Structured Content Button Border" style="width: 600px;padding: 20px;">
+<img src="/img/structuredContentButtonBorderColor.png" alt="Structured Content Button Border" style="width: 600px;padding: 20px;">
 
 `structuredContentButtonBorderColor`: Sets border color for button type element on Structured Content
 
