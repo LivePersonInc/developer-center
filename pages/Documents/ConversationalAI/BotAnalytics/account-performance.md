@@ -1,11 +1,12 @@
 ---
-pagename: Account-Level Performance
+pagename: Account Performance
 redirect_from:
+    - bot-analytics-account-level-performance.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Analytics
-permalink: bot-analytics-account-level-performance.html
+permalink: bot-analytics-account-performance.html
 indicator: both
 ---
 

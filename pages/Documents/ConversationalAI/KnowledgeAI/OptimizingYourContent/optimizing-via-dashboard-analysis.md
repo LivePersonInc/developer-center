@@ -63,6 +63,10 @@ Use this information to help improve answer performance.
 
 For example, text searches have a higher risk of returning answers when they shouldn’t, i.e., instances of “false positives.” To reduce false positives, update the training phrases for the intent that’s associated with the article, or associate an intent to the article.
 
+### Export the data and dive deeper
+
+Click the **CSV** download icon in the upper-right corner to download data on question and answer events. This data provide easy visibility into the questions asked by consumers and the resulting actions from KnowledgeAI.
+
 ### Statuses
 
 On the Home dashboard and the individual knowledge base dashboards, you’ll see a few status indicators. These are defined below.
