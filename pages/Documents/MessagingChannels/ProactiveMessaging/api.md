@@ -319,7 +319,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 ```json
 {
    "campaignName":"TestProactiveAPI",
-   "skill":"sales",
+   "skill":"testSkill",
    "templateId":"H1234567890", 
    "consumers":[
     {
