@@ -30,6 +30,7 @@ All Brands who use Proactive Messaging version 2.0 and Connect To Messaging vers
 As of today we don't have the capability to view full-funnel flow for a given transaction. The Outbound Reporting API feature will fill this gap.
 What Message channels are supported in this API:
 SMS - Twilio Messaging Gateway
+INAPP - Liveperson Mobile SDK
 WhatsApp
 
 **Feature Details**
