@@ -63,7 +63,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 - Total summary of eligibility, sent, delivered combined for all channels / skills per IVR outbound number is not currently available in the Outbound Reporting API.
 - Total summary of eligibility, sent, delivered combined for all channels / skills per account is not currently available in the Outbound Reporting API.
 - The capability of generating reports of all the consumers who previously opt out from Proactive Messaging to receive any future messages is not available in the Outbound Reporting API.
-- Maximum time duration for a reporting api request cannot exceed 24 hours.
+- Maximum time duration for a transaction reporting api request cannot exceed 24 hours.
 - The data is persisted in the system for a period of 13 months as per the company retention policy period.
 - In-App message channel events are currently not available in the Outbound Reporting API.
 - The Reporting API data is upto 10 min delayed from the time the messaging events are generated.
@@ -317,8 +317,8 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
  "requestMetadata": {
    "accountId": "string",
    "app": "string",
-   "attemptedStartTime": 0,
-   "attemptedEndTime": 0,
+   "attemptedStartTime": 1634675790000,
+   "attemptedEndTime": 1634848590000,
    "filters": {
      "channels": [
        "SMS"
