@@ -164,7 +164,7 @@ Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
-```javascript
+```json-doc
 {
   "output": {
     "generic": [
@@ -224,7 +224,7 @@ Figure 2.4 List fields filled example
 
 If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
 
-```javascript
+```json-doc
 {
   "output": {
     "generic": [
@@ -732,7 +732,7 @@ During a conversation, it is possible to trigger a LivePerson Function that is d
 
 To invoke a LivePerson Function, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 7.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
-```json
+```json-doc
 {
   "output": {
     "text": {
@@ -774,7 +774,7 @@ Figure 8.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
 
-```javascript
+```json-doc
 {
   "message": "Some Message",
   "context": {
@@ -999,7 +999,15 @@ It is also possible to send a private text message with the action (e.g. Transfe
 
 Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no machtching intent was found.
 
-To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
+To use Watson Discovery the Watson Assistant Bot needs to have a [search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
+
+### Disambiguation Responses
+Disambiguation is a feature configurable in the Watson Assistant UI. It triggers if a bot can't confidently identify an intent.
+Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
+Disambiguation responses will be renderes as `Quick Replies`.
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png">
+Figure 10.1 Configure Watson Disambiguation
 
 ### Limitations
 

@@ -25,7 +25,7 @@ body {
 }
 
 #lp_username {
-    background: url('../img/group-15.png') no-repeat scroll 8px 11px;
+    background: url('/img/group-15.png') no-repeat scroll 8px 11px;
     /*width: 291px;*/
     height: 40px;
     border-radius: 20px;
