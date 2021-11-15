@@ -24,17 +24,14 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
     * Click on Enable button to onboard to proactive api.
     * Click on show secrets to get app Id and secrets which will be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
-### Proactive 2.0 Product Capabilities
+### Proactive 2.0 API Limits
 
 | Details | 2.0 API |
 | :--- | :--- |
 | Channel | SMS <br /> WhatsApp <br /> In-App |
 | Rate throttling | Upto 10 requests per second |
-| Send rate |  SMS - 9** MPS <br /> WhatsApp - 9** MPS <br /> In-App - 9** MPS <br /> <br /> MPS - message per sec |
-| API batching capability | 100*** recipients per campaign |
-
-** - Reach Proactive team for higher MPS <br />
-*** - Reach Proactive team for increasing recipients per campaign
+| Send rate |  SMS - 9** MPS <br /> WhatsApp - 9** MPS <br /> In-App - 9** MPS <br /> <br /> MPS - message per sec <br /> (**Reach Proactive team for higher MPS) |
+| API recipients batching limit per request | 100** recipients per request <br /> (**Reach Proactive team for increasing recipients per request) |
 
 ### API Specifications
 ## API Domain
