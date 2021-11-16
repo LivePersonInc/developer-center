@@ -201,8 +201,8 @@ The platform automatically detects the entities listed below:
 * DURATION - Time periods
 * SET - Group (example month, week)
 * ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
-* DATE - Date-related. Today, Tomorrow or explicit dates such as 03/01/2017
-* TIME - Time of day, for example, 2PM or 23:00.
+* DATE - Date-related. Today, tomorrow, or explicit dates, for example, 03/01/2017. This also includes absolute date&timestamps such as "6 p.m. tomorrow."
+* TIME - Time of day, for example, 2PM or 23:00. This also includes times such as "everyday at 8 a.m."
 * PERCENT - A percentage, for example, 100%.
 * LOCATION - Names of locations, e.g., countries or cities, such as Paris.
 

@@ -21,7 +21,7 @@ Use this high-level workflow when working with a domain using the LivePerson eng
 
 <img style="width:600px" src="img/ConvoBuilder/domain_workflow.png">
 
-If the domain is using a third-party NLU engine, you'll need to [connect the NLU engine](intent-manager-natural-language-understanding-third-party-nlu-engines.html#connect-a-third-party-nlu-engine) before you train.
+If the domain is using a third-party NLU engine, you'll need to connect the NLU engine before you train.
 
 ### Add a prebuilt domain
 
@@ -67,6 +67,9 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
 
 ### Add a domain manually or using an import file
+
+{: .important}
+If you're adding a domain that will use your own Rasa-based engine as the NLU provider, see [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#connect-the-nlu-engine) for additional information that you need to provide when you do this.
 
 **To add a domain manually or using an import file**
 
@@ -175,107 +178,11 @@ This action overwrites the content in the domain with the content in the Google 
 4. Scroll down to the advanced settings, and beside **Sync Google Sheet**, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png"> (Refresh icon).
 5. Train the domain so that the changes are reflected in a new model version.
 
-### Train a LivePerson domain
+### Train a domain
 
-You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
-
-If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
-
-Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
-
-{: .important}
-As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
-
-{: .important}
-Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
-
-**To train a LivePerson domain**
-
-1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. Locate the domain list in the Intent Manager dashboard.
-3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
-4. On the **Intents** page, click **Train** in the upper-right corner.
-
-    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
-
-    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
-
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
-
-### Convert a LivePerson (Legacy) domain to LivePerson
-
-{: .important}
-Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
-
-**To convert a LivePerson (Legacy) domain to the LivePerson engine**
-
-1. Download the domain that uses the LivePerson (Legacy) engine.
-2. Import the intents and entities into a domain that uses the LivePerson engine.
-3. Update the intents:
-    
-    * Provide at least 5 intents.
-    * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
-    * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.
-
-### Create a 3rd-party NLU provider credential
-
-You must create a 3rd-party NLU provider credential, as the system requires and uses the credentials when training the domain to create a model version.
-
-**To create a 3rd-party NLU provider credential**
-
-1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. Locate the domain list in the Intent Manager dashboard.
-3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
-4. On the **Intents** page, click **Train** in the upper-right corner.
-5. In the Train dialog, click the "Select NLU Provider Credential" option.
-
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred1.png">
-
-    This changes the option, so you can create a credential instead.
-
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred2.png">
-
-6. Click "Create a new NLU Provider Credential."
-7. In the Add NLU Provider Credential dialog box, specify the following:
-    * **Credential Name**: Enter a name for the credential.
-    * **NLU Provider**: Select the 3rd-party NLU engine.
-    * **Credentials**: Paste here the credentials that you downloaded when you [set up your IBM Watson  or Google Dialogflow account](intent-manager-natural-language-understanding-third-party-nlu-engines.html#connect-a-third-party-nlu-engine).
-
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png">
-
-8. Click **Save Credentials**.
-
-    During training, you'll need to alternate between 2 sets of service credentials, as described below.
-
-### Train a 3rd-party NLU domain
-
-You must train the 3rd-party NLU domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Test tool to test.
-
-Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
-
-**To train a 3rd-party NLU domain**
-
-1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. Locate the domain list in the Intent Manager dashboard.
-3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
-4. On the **Intents** page, click **Train** in the upper-right corner.
-5. Select the [NLU provider credential](intent-manager-natural-language-understanding-third-party-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
-
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
-
-    Note that you'll need to alternate between using your two sets of credentials, as discussed farther below.
-
-6. Wait until the training is completed.
-
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
-
-    Once training is completed, you can start testing with the model version in the Debugger.
-
-#### Alternating service credentials
-
-When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-manager-natural-language-understanding-third-party-nlu-engines.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
-
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+* LivePerson NLU engine - See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
+* Google Dialogflow or IBM Watson NLU engine - See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
+* Brand's Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
 
 ### Activate the latest model version
 

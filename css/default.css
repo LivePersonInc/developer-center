@@ -236,12 +236,12 @@ ul.mysidebar.nav {
 }
 
 .activepage {
-  color: var(--link-color-hover) !important;
+  color: var(--side-border-color) !important;
   font-weight: 500;
 }
 
 .activepage:hover {
-  color: var(--link-color-hover) !important;
+  color: var(--side-border-color) !important;
 }
 
 .codebtn {
@@ -681,8 +681,7 @@ a.loginText {
 }
 
 .trialButton:hover {
-  background-color: var(--link-color);
-  color: var(--body-background);
+  background-color: var(--hover-electric-blue);
 }
 
 .trialButton {
@@ -1199,7 +1198,7 @@ a.loginText {
   transform: rotate(-45deg);
   border-top: 10px solid transparent;
   background: var(--body-background);
-  border-left: 10px solid var(--link-color-hover);
+  border-left: 10px solid var(--side-border-color);
   top: 2px;
 }
 
@@ -1385,7 +1384,7 @@ a:focus-visible {
   color: var(--post-link-hover);
 }
 a:focus-within:not(.anchorjs-link) {
-  border: 1px dashed var(--post-link-hover);
+  border: 1px dashed var(--post-link-hover) !important;
 }
 
 /* .dark #post-content img {

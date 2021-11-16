@@ -69,7 +69,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
-    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you.
+    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you. If you leave the picture URL unspecified (this is an optional field), no picture is used.
     
     * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
 
@@ -140,8 +140,14 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
 
-{: .important}
-When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.<br><br>Additionally, be aware that the values are reported in the order of the buttons. So, in Analytics Builder, when setting up a custom report, ensure you set up your columns in the same order and name the columns accordingly.
+In the closed-ended question, every answer choice has two values:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png">
+
+* **Text value** - This value is shown to the consumer as the answer choice.
+* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
+
+As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
 #### Open-ended, custom
 
@@ -270,7 +276,7 @@ Survey bot settings include:
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a Session Expired message when the session has expired. Then enter the message to send. (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the Session Expired message when the session has expired. Then enter the message to send. Note that if you don't customize the message, the following default message is always sent: "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
 ### Adding support for emailed transcripts
 

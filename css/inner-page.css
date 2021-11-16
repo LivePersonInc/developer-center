@@ -459,7 +459,7 @@ ul#mysiderbar li {
 
 .activeleafSolo {
   margin-left: 16px;
-  border-left: 4px solid var(--link-color-hover);
+  border-left: 4px solid var(--side-border-color);
   padding-left: 20px !important;
 }
 
@@ -532,7 +532,7 @@ input#metricsSearch {
 }
 .mysidebar.nav li.folder > a:hover {
   background-color: initial !important;
-  color: var(--link-color-hover);
+  color: var(--side-border-color);
 }
 
 .innerfolder > ul > .innerfolder > a {
