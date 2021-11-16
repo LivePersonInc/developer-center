@@ -22,9 +22,16 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 - Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
     * Click on Settings tab in menu bar.
     * Click on Enable button to onboard to proactive api.
-    * Click on show secrets to get app Id and secrets which will be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+    * Click on show secrets to get app Id and secrets which will be used later to create APP JWT.
 
 ### API Specifications
+
+## OAuth 2.0 Authorization 
+* Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
+![Secrets](img/proactive/proactive-show-secrets.png)  
+* The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+* The access_token retrieved from above APP JWT response should be used in the Request Header for Authorization.
+
 ## API Domain
 * Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
 
@@ -46,6 +53,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 | **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
+
 ## Campaign API: Example Request and Response
 * Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) to go through API spec and use example here to get started.
 
@@ -65,9 +73,9 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
+| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) as mentioned in OAuth 2.0 Authorization section above. | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template, including customer SDE**
+**Request Body Example - JSON Payload - Whatsapp With Rich Template, including customer SDE**
 
 ```json
 {
@@ -190,13 +198,13 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - New Version - SMS**
+**Request Body Example - JSON Payload - SMS channel**
 
 ```json
 {
     "campaignName": "TestProactiveAPI",
     "skill": "sales",
-    "templateId": "666555567888",
+    "templateId": "H1234567890", //Handoff Id should be used here 
     "outboundNumber": "22222222222",
     "consent": true,
     "consumers": [
@@ -243,13 +251,13 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - New Version - Handoff(SMS + Whatsapp without Rich Template)**
+**Request Body Example - JSON Payload - SMS + Whatsapp (Without Rich Template)**
 
 ```json
 {
     "campaignName": "TestProactiveAPI",
     "skill": "sales",
-    "templateId": "1234567890",
+    "templateId": "H1234567890", //Handoff Id should be used here
     "outboundNumber": "22222222222",
     "consent": true,
     "consumers": [
@@ -302,13 +310,13 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - New Version - Inapp Handoff**
+**Request Body Example - JSON Payload - Inapp channel**
 
 ```json
 {
     "campaignName": "TestInappProactiveAPI",
     "skill": "sales",
-    "templateId": "H1234567890",
+    "templateId": "H1234567890", //Handoff Id should be used here
     "consent": true,
     "consumers": [
         {
