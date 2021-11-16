@@ -51,3 +51,7 @@ For more on permissions, see [here](bot-accounts-permissions.html).
 ### Enable intent discovery, optimization & analysis
 
 Intent Manager’s Intent Discovery, Optimization, and Analysis features are disabled by default for all Intent Manager customers. To enable these features, contact your LivePerson account team.
+
+### Getting started
+
+If you're just beginning with Intent Manager, we recommend the Getting Started tutorial series [here](tutorials-guides-getting-started-with-bot-building-overview.html).

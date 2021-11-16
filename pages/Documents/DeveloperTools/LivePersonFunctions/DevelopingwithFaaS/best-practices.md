@@ -22,7 +22,7 @@ The following section shows some best practices for using the LivePerson Functio
 
 There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It's recommended to use this notation, because it provides more readable code and bypasses `then..catch`-chains. It’s surprisingly easy to understand and use. The word `async` before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically. The keyword `await` makes JavaScript wait until that promise settles and returns its result.
 
-It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this. If an async call inside of a LivePerson function has no proper error handling, it could be executed longer than the maximum execution time. In such a case a `Lambda Execution is taking too long` error will be thrown. 
+It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this. If an async call inside of a LivePerson function has no proper error handling, it could be executed longer than the maximum execution time. In such a case a `Lambda Execution is taking too long` error will be thrown.
 
 If a promise resolves normally, then `await` promise returns the result. But in the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
 
@@ -34,10 +34,10 @@ try {
 } catch(error) {
   // Handle error or pass it to the callback
   callback(error, null)
-} 
+}
 ```
 
-<div class="important"> 
+<div class="important">
   To use async/await and LivePerson Functions correctly together, it is mandatory that the function is completed with a callback. Please note that the callback is always the last execution within a function. Everything afterwards is ignored and can lead to a malfunction of the function.
 </div>
 
@@ -59,11 +59,11 @@ async function lambda(input, callback) {
       simple: false, // IF true => Status Code != 2xx & 3xx will throw
       resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
     });
-      
+
     const { statusCode, body } = response;
     // Perform Action based on Status Code
     switch (statusCode) {
-      case 200: 
+      case 200:
         return callback(null, statusCode);
       // If not Whitelisted Proxy will reject with 403. Body contains also a message indicating that
       case 403:
@@ -105,4 +105,57 @@ function lambda(input, callback) {
   </ul>
 </div>
 
-See [Environment Variables](liveperson-functions-development-overview.html#environment-variables) for more information about it. 
+See [Environment Variables](liveperson-functions-development-overview.html#environment-variables) for more information about it.
+
+### Design your Lambda for idempotency
+
+When creating Liveperson Functions an [at least once](https://en.wikipedia.org/wiki/Reliability_(computer_networking)) approach to invocations was chosen. This means that every invocation should be guaranteed to run at a minimum one time but can also run multiple times. In certain edge cases when the invocation of a lambda fails (e.g. a network corruption occurs) automatic retries can occur. These retries can manifest in multiple invocations with the same payload.
+
+Therefore you should always try to design your lambda in an [idempotent](https://en.wikipedia.org/wiki/Idempotence) manner. Multiple invocations with the same payload should not change the result of the invocation beyond its initial try. Failing to do so can lead to errors, unwanted side effects, and bad performance.
+
+One way to mitigate this issue is using the [Context Session Store](liveperson-functions-developing-with-faas-data-storage.html). Saving payload identifiers (e.g. the ``convId``) to the context store and later retrieving it at the start of an invocation can help mitigate problems with duplicate invocations.
+
+```javascript
+async function lambda(input, callback) {
+    const { Toolbelt } = require('lp-faas-toolbelt');
+    const contextClient = Toolbelt.ContextServiceClient({ apiKey: 'YOUR_DEVELOPER_KEY', accountId: 'YOUR_ACCOUNT_ID' });
+
+    const conversationId = input.payload.general.convId
+    let hasConversationIdBeenServed = false;
+
+    // Read from context session store if conversationId was already served
+     try {
+        hasConversationIdBeenServed = await contextClient.getPropertyInSession(
+            'PastInvocations',
+            'hasBeenServed',
+            conversationId
+        );
+        console.info(`conversationId ${conversationId} has been served: ${hasConversationIdBeenServed}`);
+    } catch (error) {
+        console.error('Could not fetch property from the context store');
+    }
+
+    if (hasConversationIdBeenServed) {
+        callback(null, "Duplicate invocation")
+    }
+
+    // Regular invocation logic here ...
+
+
+    // Save converstionId to store
+    try {
+        // If no sessionId is passed, it will take the __default__ session.
+        await contextClient.updatePropertiesInNamespace(
+            'PastInvocations',
+            {
+                hasBeenServed: true,
+            },
+            conversationId
+        );
+    } catch (error) {
+        console.error('Could not update properties in the context store');
+    }
+
+    callback(null, `Done`);
+}
+```
