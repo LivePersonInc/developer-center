@@ -35,10 +35,7 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 
 {: .notice}
 Each page in the API response is limited to 20 state changes * limit parameter * query days. 
-For example, if the limit is set to 10 (agents), 1 day query then limitation per page = 200 states changes
-
-In case of an excessive state changes, some of the states/agents may be truncated based on the maxumim states limitation.
-This will be updated on v2 where all states will be returned in a flat response (not grouped by agent).
+For example, if the limit is set to 10 (agents), 1 day query then limitation per page = 200 state changes.<br/> In case of an excessive state changes, some of the states/agents may be truncated based on the maximum states limitation.<br/>This will be updated on v2 where all states will be returned in a flat response (not grouped by agent).
 
 
 | Property Name | Description | Type | Notes |
