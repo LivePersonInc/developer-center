@@ -147,6 +147,7 @@
             - subpagename: Test Agent Assist
     - documentname: Conversation Builder
       pages:
+        - pagename: Overview
         - pagename: Best Practices
           subpages:
             - subpagename: Conversational Design
@@ -352,7 +353,7 @@
     - documentname: Bot Analytics
       pages:
         - pagename: Overview
-        - pagename: Account-Level Performance
+        - pagename: Account Performance
         - pagename: Bot Performance
         - pagename: Tuning Opportunities
         - pagename: MACS
@@ -360,6 +361,7 @@
         - pagename: Troubleshooting
     - documentname: Bot Accounts
       pages:
+        - pagename: Overview
         - pagename: Account Details
         - pagename: Permissions
         - pagename: Credentials
