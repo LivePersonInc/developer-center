@@ -481,3 +481,26 @@ Mostly this issue happens because of a wrong integration on customer end where n
 #### Solutions
 Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
 Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
+
+
+### com.liveperson.bot-connectors-worker.error.aivendor.client.test-connection
+
+#### Description
+Testing the connection to the vendor failed.
+#### Reasons
+Most of the time this is caused by wrong credentials or because the bot instance on vendor side is not running.
+#### Solutions
+Check if your bot credentials are configured correctly in Third-Party Bots and the bot is healthy on the vendor side.
+
+
+### com.liveperson.bot-connectors-worker.error.aivendor.medallia.parse-message.parser-error
+
+#### Description
+Parsing the response of the Madallia Adapter failed.
+#### Reasons
+In this case the Medallia Adapter sent some data we did not expect.
+#### Solutions
+Contact the Medallia Adapter and provide them the data of the conversation error.
+
+
+
