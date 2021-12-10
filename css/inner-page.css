@@ -171,7 +171,7 @@ table tbody tr:last-child {
   border-right: solid 1px var(--card-border);
   padding: 21px 25.5px 21px 23px;
   vertical-align: inherit;
-  border-bottom: 1px solid var(--navy-lighter-gray);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .post-content table > thead > tr > th {
@@ -368,6 +368,7 @@ div#toc ul li ul li ul {
 ul.mysidebar.nav {
   text-decoration: none;
   position: sticky;
+  padding-right: 4px;
   top: 10px;
   width: 300px;
   min-width: 300px;
@@ -458,7 +459,7 @@ ul#mysiderbar li {
 
 .activeleafSolo {
   margin-left: 16px;
-  border-left: 4px solid var(--link-color-hover);
+  border-left: 4px solid var(--side-border-color);
   padding-left: 20px !important;
 }
 
@@ -531,7 +532,7 @@ input#metricsSearch {
 }
 .mysidebar.nav li.folder > a:hover {
   background-color: initial !important;
-  color: var(--link-color-hover);
+  color: var(--side-border-color);
 }
 
 .innerfolder > ul > .innerfolder > a {
@@ -699,6 +700,7 @@ div.sidebarTitle-holder {
 .post-content > p.notice,
 .post-content > p.important {
   color: var(--widget-text);
+  display: -webkit-box !important;
 }
 
 .post-content > p.notice strong,

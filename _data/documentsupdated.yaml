@@ -147,10 +147,13 @@
             - subpagename: Test Agent Assist
     - documentname: Conversation Builder
       pages:
+        - pagename: Overview
         - pagename: Best Practices
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Prevent Consumer Interruptions
+            - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
@@ -204,7 +207,7 @@
             - subpagename: Integration Basics
             - subpagename: API Integrations
             - subpagename: Email Integrations
-            - subpagename: Knowledge Base Integrations
+            - subpagename: KnowledgeAI Integrations
             - subpagename: LivePerson Agent Escalation Integrations
             - subpagename: File Integrations
             - subpagename: LivePerson Functions Integrations
@@ -287,7 +290,8 @@
             - subpagename: Introduction
             - subpagename: Language Support
             - subpagename: LivePerson NLU Engine
-            - subpagename: Third-Party NLU Engines
+            - subpagename: Google Dialogflow and IBM Watson NLU Engines
+            - subpagename: Brand's Rasa-Based NLU Engine
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices
@@ -349,7 +353,7 @@
     - documentname: Bot Analytics
       pages:
         - pagename: Overview
-        - pagename: Account-Level Performance
+        - pagename: Account Performance
         - pagename: Bot Performance
         - pagename: Tuning Opportunities
         - pagename: MACS
@@ -357,6 +361,7 @@
         - pagename: Troubleshooting
     - documentname: Bot Accounts
       pages:
+        - pagename: Overview
         - pagename: Account Details
         - pagename: Permissions
         - pagename: Credentials
@@ -984,6 +989,7 @@
             - subpagename: Sample App
             - subpagename: Open Source List and Dependencies
             - subpagename: Upgrade Guide - Android
+            - subpagename: Uses-permission and Uses-feature
     - documentname: Mobile App Messaging SDK for iOS
       pages:
         - pagename: Overview
@@ -1070,6 +1076,7 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Date Picker Template
+        - pagename: Schedule Slot List Template
         - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout

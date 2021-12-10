@@ -24,8 +24,8 @@ After you've added your content and linked it to intents, tune the knowledge bas
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png">
 
     * **Question**: Enter the consumer utterance for which you want to find matching articles.
-    * **Search mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
-    * **Threshold**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
+    * **Search mode**: Select the type of search to perform. For explanations of each search mode, see [here](knowledgeai-using-intents-with-kbs.html#search-modes).
+    * **Threshold**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
     * **# of results**: Select how many results to return.
     * **Article status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 

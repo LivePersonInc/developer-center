@@ -33,6 +33,11 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 
 ### Response
 
+{: .notice}
+Each page in the API response is limited to 20 state changes * limit parameter * query days. 
+For example, if the limit is set to 10 (agents), 1 day query then limitation per page = 200 state changes.<br/> In case of an excessive state changes, some of the states/agents may be truncated based on the maximum states limitation.<br/>This will be updated on v2 where all states will be returned in a flat response (not grouped by agent).
+
+
 | Property Name | Description | Type | Notes |
 | --- | --- | --- | --- |
 | timeframe | | object | |
@@ -59,26 +64,26 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 ```json
 {
     "timeframe": {
-        "startTime": "",
-        "endTime": ""
+        "startTime": "2021-08-25T15:00:00Z",
+        "endTime": "2021-08-25T23:59:00Z"
     },
     "agentsInfo": [
         {
             "agentId": #,
-            "employeeId": "",
-            "agentLoginName": "",
-            "agentUserName": "",
-            "agentGroupId": #,
+            "employeeId": "1234567",
+            "agentLoginName": "testuser",
+            "agentUserName": "test user",
+            "agentGroupId": 118643451,
             "statusChangeHistory": [
                 {
-                  "time": "",
-                  "sessionId": #,
-                  "sequenceNumber": #,
-                  "statusType": #,
-                  "statusSubType": #,
-                  "statusReasonId": #,
-                  "statusReasonText": "",
-                  "prevStatusChangeTime": "",
+                  "time": "2021-08-25T00:17:59.747Z",
+                  "sessionId": 95354544,
+                  "sequenceNumber": 1,
+                  "statusType": 1,
+                  "statusSubType": 4,
+                  "statusReasonId": 1,
+                  "statusReasonText": "Training",
+                  "prevStatusChangeTime": "2021-08-25T00:15:59.747Z",
                 },
                 ...
             ]

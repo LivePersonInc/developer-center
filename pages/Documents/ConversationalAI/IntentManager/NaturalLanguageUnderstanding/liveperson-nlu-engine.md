@@ -24,7 +24,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
 * The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **15 training phrases per intent** to activate training for a model in the Intent Manager. Anything less adversely affects model performance.
-* Requires the model to be [trained](intent-manager-build-domains.html#train-a-liveperson-domain).
+* Requires the model to be trained (discussed below).
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from the change. No additional tuning is required; simply retrain the domain as is.
@@ -65,12 +65,39 @@ All these factors directly influence the intent matching after retraining. There
 * The test samples contain clear, single intents.
 * The training samples are diverse within an intent and distinguishable from other intents.
 
+### Train a LivePerson domain
+
+You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+
+Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+
+{: .important}
+As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
+
+{: .important}
+Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
+
+**To train a LivePerson domain**
+
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
+4. On the **Intents** page, click **Train** in the upper-right corner.
+
+    (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
+
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
+
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
+
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+
 ### LivePerson (Legacy) NLU engine
 
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics include:
 
@@ -87,3 +114,19 @@ Key characteristics include:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
     * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledgeai-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained.
+
+
+### Convert a LivePerson (Legacy) domain to LivePerson
+
+{: .important}
+Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
+
+**To convert a LivePerson (Legacy) domain to the LivePerson engine**
+
+1. Download the domain that uses the LivePerson (Legacy) engine.
+2. Import the intents and entities into a domain that uses the LivePerson engine.
+3. Update the intents:
+    
+    * Provide at least 5 intents.
+    * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
+    * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.

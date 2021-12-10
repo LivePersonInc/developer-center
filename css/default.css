@@ -19,12 +19,6 @@ strong {
   color: var(--link-color);
 }
 
-a:hover,
-a:focus {
-  text-decoration: none !important;
-  color: var(--darker-gray);
-}
-
 p {
   margin: 0 0 16px !important;
 }
@@ -158,7 +152,7 @@ code pre {
   padding: 19px 0;
   display: flex;
   min-width: 100%;
-  margin-top: 64px;
+  margin-top: 35px;
   width: 100%;
   background-color: var(--footer-background);
   color: var(--footer-text);
@@ -242,12 +236,12 @@ ul.mysidebar.nav {
 }
 
 .activepage {
-  color: var(--link-color-hover) !important;
+  color: var(--side-border-color) !important;
   font-weight: 500;
 }
 
 .activepage:hover {
-  color: var(--link-color-hover) !important;
+  color: var(--side-border-color) !important;
 }
 
 .codebtn {
@@ -294,10 +288,10 @@ ul.mysidebar.nav {
   background-color: transparent !important;
   color: var(--button-text-secondary);
 }
-
+/* 
 .darken code {
   filter: brightness(280%);
-}
+} */
 
 .darken code span::selection {
   background-color: var(--sky-blue);
@@ -353,6 +347,8 @@ ul.mysidebar.nav {
   border: 1px solid var(--card-border);
   background-color: var(--body-background);
   width: 90%;
+  line-height: 24px;
+  letter-spacing: 0.01em;
   min-width: 250px;
   font-size: 16px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -685,8 +681,7 @@ a.loginText {
 }
 
 .trialButton:hover {
-  background-color: var(--link-color);
-  color: var(--body-background);
+  background-color: var(--hover-electric-blue);
 }
 
 .trialButton {
@@ -1203,7 +1198,7 @@ a.loginText {
   transform: rotate(-45deg);
   border-top: 10px solid transparent;
   background: var(--body-background);
-  border-left: 10px solid var(--link-color-hover);
+  border-left: 10px solid var(--side-border-color);
   top: 2px;
 }
 
@@ -1377,10 +1372,25 @@ a.loginText {
 .methodcategory {
   display: none;
 }
-.dark #post-content img {
+
+div#post-content p img,
+img.fancyimage {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+a:focus-visible {
+  color: var(--post-link-hover);
+}
+a:focus-within:not(.anchorjs-link) {
+  border: 1px dashed var(--post-link-hover) !important;
+}
+
+/* .dark #post-content img {
   filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.12))
     drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
-}
+} */
 /* toggle switch  */
 
 .dark {

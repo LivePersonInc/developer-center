@@ -18,6 +18,8 @@ indicator: chat
 | :------ | :------- |
 | GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
+This API allows access to visitor data only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
+
 **OAuth**
 
 This API supports OAuth 1.0 authentication patterns and requires SSL protocol. Please see [this document's overview](rt-interactions-visit-information-overview.html) for more information on how to retrieve your API keys.
@@ -75,7 +77,7 @@ See [JSON Example](#json-example).
 | 404 | 6 |  Invalid Account ID |
 | 404 | 37 |  Invalid Visitor ID  |
 | 404 | 39 |  Invalid Session ID |
-| 404 | 12 |  Not Found |
+| 404 | 12 |  Requested session not found. Check if you are trying to access a session that started more than 6 hours ago |
 | 500 | -- |  Internal Server Error |
 
 **JSON Example:**
