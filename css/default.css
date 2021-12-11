@@ -1387,12 +1387,6 @@ a:focus-within:not(.anchorjs-link) {
   border: 1px dashed var(--post-link-hover) !important;
 }
 
-/* .dark #post-content img {
-  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.12))
-    drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
-} */
-/* toggle switch  */
-
 .dark {
   background-color: var(--body-background);
   color: var(--body-text);
