@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "browser-sync": "^2.26.14",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "http-proxy": ">=1.18.1",
