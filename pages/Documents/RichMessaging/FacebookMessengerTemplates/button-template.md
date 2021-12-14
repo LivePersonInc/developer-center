@@ -16,7 +16,7 @@ The [Button template](https://developers.facebook.com/docs/messenger-platform/se
 
 * Text title
 * Text subtitle
-* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions
+* Up to 3 buttons (Facebook limitation) with either link or publish text button actions
 
 *Button example image with all button actions, including publish text button tap view:*
 
