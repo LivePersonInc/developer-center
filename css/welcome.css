@@ -5,7 +5,6 @@
   min-height: 180px;
   /* Primary/White */
   background: var(--card-background);
-  /* J/Navy Lighter Gray */
   margin-bottom: 16px;
   border: 1px solid var(--card-border);
   box-sizing: border-box;
