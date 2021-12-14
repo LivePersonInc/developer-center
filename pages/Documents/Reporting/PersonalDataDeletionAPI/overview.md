@@ -43,7 +43,8 @@ A few things you'll need to get started with this API:
 
 ### Deletion Process
 
-Once a deletion request is sent via the API, it will become final and irrevocable after a pre-defined time period (5 days by default). During that time period, it is possible for the brand to cancel the deletion request. this allows the brand to monitor the deletion requests that are issued on their behalf.
+Once a deletion request is sent via the API, it will become final and irrevocable after a pre-defined time period (5 days by default). During that time period, it is possible for the brand to cancel the deletion request. This allows the brand to monitor the deletion requests that are issued on their behalf.
+
 After the deletion request is made final (the default period of time elapses), the deletion process will start and we guarantee full deletion from all repositories within 20 days.
 
 There is a limitation of the number of deletion requests that a brand can issue within a calendar month. By default, the requests threshold is set to 100 requests. If you wish to change this, please contact your LivePerson Account Team.
@@ -106,4 +107,4 @@ The tickets themselves will not be deleted but rather the metadata which links t
 
 ### Limitations:
 
-This API is not meant for massive deletion of data, there is an internal mechanism which will protect the system from such misuse of the API.
+This API is not meant for massive deletion of data. There is an internal mechanism which will protect the system from misuse of the API.
