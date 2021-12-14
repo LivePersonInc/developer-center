@@ -51,4 +51,7 @@ You can use the **Transcripts** view to access all the transcripts for a specifi
     <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_filter.png">
 
     {: .important}
+    Currently, Phrase Search is disabled.
+
+    {: .important}
     When downloading transcripts, a maximum of 10,000 messages per download is allowed. For example, if you request the transcripts for February 15, 2021 through February 21, 2021, and the bot conversations for that period contain an average of 10 messages each, then the maximum number of bot conversations in the download would be approximately 1,000.
