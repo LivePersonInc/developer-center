@@ -264,17 +264,17 @@
             - subpagename: Methods v2
         - pagename: Dynamic Routing
           subpages:
-          - subpagename: Overview
-          - subpagename: Getting Started
-          - subpagename: Creating Routing Policies
-          - subpagename: Managing Routing Policies
-          - subpagename: Routing Conversations by SDEs
-          - subpagename: Routing Conversations by Intents
-          - subpagename: Routing Conversations by Channel
-          - subpagename: Advanced Routing
-          - subpagename: Using Dynamic Routing Outside of Conversational Cloud
-          - subpagename: Testing with the Web Emulator
-          - subpagename: Policy Logs for v2
+            - subpagename: Overview
+            - subpagename: Getting Started
+            - subpagename: Creating Routing Policies
+            - subpagename: Managing Routing Policies
+            - subpagename: Routing Conversations by SDEs
+            - subpagename: Routing Conversations by Intents
+            - subpagename: Routing Conversations by Channel
+            - subpagename: Advanced Routing
+            - subpagename: Using Dynamic Routing Outside of Conversational Cloud
+            - subpagename: Testing with the Web Emulator
+            - subpagename: Policy Logs for v2
         - pagename: Next Actions API
           subpages:
             - subpagename: Overview
@@ -847,12 +847,6 @@
             - subpagename: Create Deletion Request
             - subpagename: Cancel Deletion Request
             - subpagename: Get Deletion Request
-    - documentname: Data Usage Audit API
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Retrieve Data Usage Logs
     - documentname: Agent Metrics API
       basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
       pages:
@@ -1123,7 +1117,7 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
-- categoryname: 'Security & Authentication'
+- categoryname: "Security & Authentication"
   image: security-authentication
   documents:
     - documentname: Cookies and Conversational Cloud
