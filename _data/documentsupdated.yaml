@@ -847,6 +847,12 @@
             - subpagename: Create Deletion Request
             - subpagename: Cancel Deletion Request
             - subpagename: Get Deletion Request
+    - documentname: Data Usage Audit API
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Retrieve Data Usage Logs
     - documentname: Agent Metrics API
       basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
       pages:
