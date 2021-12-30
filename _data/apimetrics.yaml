@@ -419,7 +419,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of conversations closed by a consumer which included no agent message. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill BSkill B has an abandoned segment while Skill A does not."
+  Description: "The number of conversations closed by a consumer which included no agent message. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments. For example: Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill BSkill B has an abandoned segment while Skill A does not."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
@@ -427,7 +427,7 @@
   analysisType: Skill Performance
   Channel: Messaging
   formulaOptional:
-  Description: "The number of conversations closed by a consumer which included no agent message since no agent was assigned. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments.For example:Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill B before an Agent is assigned to itSkill B has an abandoned segment while Skill A does not."
+  Description: "The number of conversations closed by a consumer which included no agent message since no agent was assigned. Measured during the last skill-segment of the conversation, and is unaffected by the agent activity from previous skill-segments. For example: Start Consumer: Hi Skill-A-Agent: Hello Transfer to Skill B Conversation Closed by Consumer while in Skill B before an Agent is assigned to itSkill B has an abandoned segment while Skill A does not."
   apiMethod: Messaging Operations - Messaging Skill Segments
   filteredBy: Skill
 - metricitem:
