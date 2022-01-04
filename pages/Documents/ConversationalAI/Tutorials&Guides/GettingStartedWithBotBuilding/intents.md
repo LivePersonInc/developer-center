@@ -10,7 +10,7 @@ permalink: tutorials-guides-getting-started-with-bot-building-intents.html
 indicator: both
 ---
 
-In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical starter pack, which is designed as a great starting point for any brand with an online presence.
+In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
 <!--
 ### Watch the video - Intents & entities
@@ -24,7 +24,7 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 <br>
 -->
 
-### Step 5: Import the Cross-vertical starter pack
+### Step 5: Import the Cross-vertical domain
 
 Since you’re going to be using an intent in this tutorial, you need to leave the Conversation Builder application for a moment.
 
@@ -42,7 +42,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain.png">
 
-5. Adding the Cross-vertical starter pack provides you with a robust, trained domain with several intents designed to quickly get you up and running. Take some time to look at the intents provided along the left side. Clicking any of them displays the intent name and its training phrases, which can be modified to suit your specific needs.
+5. Adding the Cross-vertical pre-built domain provides you with a robust, trained domain with several intents designed to quickly get you up and running. Take some time to look at the intents provided along the left side. Clicking any of them displays the intent name and its training phrases, which can be modified to suit your specific needs.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain2.png">
 
