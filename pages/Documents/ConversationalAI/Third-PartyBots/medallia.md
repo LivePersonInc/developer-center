@@ -11,13 +11,17 @@ indicator:
 ### Overview
 
 This document outlines the configuration and functionality of bots using **Medallia** as a vendor.
-This vendor is only available for the Survey Bot Type.
+This vendor is only available for the Survey Bot type.
+
+In order to use Medallia as a survey source an additional adapter must be configured.
+Please contact your LivePerson account representative to set this up.
 
 ### Bot Configuration
 
 #### Authentication
 Third-Party Bots uses an App Installation for authentication.
-Please check to the Medallia Integration documentation on how to retrieve the ID and secret of the
+This app installation will be generated in the initial configuration step for Medallia mentioned above.
+Ask your LivePerson account representative for the ID and secret of the
 App Installation needed to authenticate against the LP Medallia Adapter.
 
 The following Dialogflow CX information should be provided to LivePerson:
