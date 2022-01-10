@@ -245,6 +245,7 @@
     - documentname: Conversation Orchestrator
       pages:
         - pagename: Overview
+        - pagename: Before You Begin
         - pagename: Agent Assist
           subpages:
             - subpagename: Overview
