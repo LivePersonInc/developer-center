@@ -20,7 +20,7 @@ The Connector uses Lex ApiVersion 2016-11-28.
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide before using this document to complete pre-requisite steps.
+See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 

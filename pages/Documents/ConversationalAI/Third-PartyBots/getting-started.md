@@ -19,10 +19,10 @@ indicator: both
 
 ### Introduction
 
-Third party bot providers can be used and managed through LivePerson's Conversational Cloud just like a normal human agent or a LivePerson bot Using our connectors, you can provision IBM Watson, Google Dialogflow, Amazon Lex, or Microsoft bots. You can also leverage LivePerson Functions to build custom integrations with other third party bot providers.
+Third party bot providers can be used and managed through LivePerson's Conversational Cloud just like a normal human agent or a LivePerson bot Using our connectors, you can provision IBM Watson, Google Dialogflow, Amazon Lex, or Microsoft bots. You can also leverage LivePerson Functions to build FaaS integrations with other third party bot providers.
 
 {: .important}
-If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
+If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-faas-integration.html) for instructions.
 
 Each connector provides the ability to:
 
@@ -951,14 +951,18 @@ If no other skills are configured, it might be that the bot will escalate the co
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
-- [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+- [Watson Assistant](third-party-bots-ibm-watson-assistant.html)
 
-- [Dialogflow V1 (No longer supported)](bot-connectors-google-dialogflow.html)
+- [Watson Assistant V2](third-party-bots-ibm-watson-assistant-version-2.html)
 
-- [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
+- [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)
 
-- [Amazon Lex](bot-connectors-amazon-lex.html)
+- [Dialogflow ES](third-party-bots-google-dialogflow-es-introduction.html)
 
-- [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
+- [Dialogflow CX](third-party-bots-google-dialogflow-cx.html)
+
+- [Amazon Lex](third-party-bots-amazon-lex.html)
+
+- [Microsoft Direct Line](third-party-bots-microsoft-direct-line-introduction.html)
 
 - [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)

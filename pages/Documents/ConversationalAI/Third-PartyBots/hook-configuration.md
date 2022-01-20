@@ -16,7 +16,7 @@ As the Hook feature uses [LivePerson Functions](https://developers.liveperson.co
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
+See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 #### Step-by-Step Hook creation and deployment guide
 
@@ -83,7 +83,7 @@ The following payload content will be recieved from the Function when an error i
       <tr>
     <td>faasPayload</td>
     <td>Object</td>
-    <td>Custom Integration</td>
+    <td>FaaS Integration</td>
     <td>Defines the vendor payload </td>
   </tr>
       <tr>
@@ -200,7 +200,7 @@ if (queryInput.text && queryInput.text.text) {
 return callback(null, payload);
 ```
 
-##### Custom Integration
+##### FaaS Integration
 
 ###### Request payload
 
@@ -445,7 +445,7 @@ if (
 return callback(null, payload);
 ```
 
-##### Custom Integration via Faas
+##### FaaS Integration via Faas
 
 ###### Request payload
 
