@@ -29,7 +29,7 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 | agentId | This filters the results to status changes of the agent with the specified LivePerson ID | number | Optional | |{::nomarkdown}<ul> <li>If provided, `empId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | empId | This filters the results to status changes of the employee with the specified employee ID | string | Optional | |{::nomarkdown}<ul> <li>If provided, `agentId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | limit | This limits the number of state changes | number | Optional | 50 | Maximum value: 20,000 |
-| offset | This allows to get more results in case you have more agents than `limit` | number | Optional | 0 |  |
+| offset | This allows to get more results in case you have more state changes than `limit` | number | Optional | 0 |  |
 
 ### Response
 
