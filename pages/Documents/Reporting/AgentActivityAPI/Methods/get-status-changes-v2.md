@@ -33,9 +33,6 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 
 ### Response
 
-{: .notice}
-Each page in the API response is limited to the limit set in the request, if not set it will be 50 state changes.
-
 | Property Name | Description | Type | Notes |
 | --- | --- | --- | --- |
 | timeframe | | object | |
