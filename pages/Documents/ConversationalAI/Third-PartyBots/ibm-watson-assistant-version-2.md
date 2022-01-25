@@ -50,24 +50,24 @@ You need to fill in the following infromation:
   </thead>
   <tbody>
   <tr>
-    <td>Client ID</td>
-    <td>ID of the Application Installation with the scope ihub.medallia.bot</td>
-    <td>c11a6ba2-7a75-412b-b71a-03a8786fe407</td>
+    <td>Workspace URL</td>
+    <td>Watson Assistant Workspace URL. Note that this workspace URL changes according to your account. In order to figure out which URL is correct for you, check the location of your Assistant in IBM's Cloud console. Then, choose the corresponding URL based on geo-location. For example, if your IBM location is "eu-gb", the London URL is the correct one for you.</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
-    <td>Client Secret</td>
-    <td>Secret of the Application Installation with the scope ihub.medallia.bot</td>
-    <td>1ujn2stk7qtudu49r4daahv2qs</td>
+    <td>Assistant ID</td>
+    <td>Watson Assistant Assistant ID. Retrievable from the settings of your Watson Assistant.</td>
+    <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
   </tr>
   <tr>
-    <td>Survey App ID</td>
-    <td>ID of the Application Installation that triggers a PCS survey</td>
-    <td>a22a6ba2-7a75-412b-b71a-03a8786fe407</td>
+    <td>Username</td>
+    <td>Username for the Watson Assistant conversation. Retrievable from the settings of your Watson Assistant.</td>
+    <td>de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751</td>
   </tr>
   <tr>
-    <td>Skills</td>
-    <td>List of skills that have the Survey App ID assigned should be handled by this bot</td>
-    <td>survey_test</td>
+    <td>Password</td>
+    <td>password for the Watson Assistant conversation which should be used for the bot</td>
+    <td>Dxxxxxxxxxx1</td>
   </tr>
   </tbody>
 </table>

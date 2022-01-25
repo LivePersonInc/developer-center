@@ -496,11 +496,11 @@ Check if your bot credentials are configured correctly in Third-Party Bots and t
 ### com.liveperson.bot-connectors-worker.error.aivendor.medallia.parse-message.parser-error
 
 #### Description
-Parsing the response of the Madallia Adapter failed.
+Parsing the response of the Medallia Adapter failed.
 #### Reasons
 In this case the Medallia Adapter sent some data we did not expect.
 #### Solutions
-Contact the Medallia Adapter and provide them the data of the conversation error.
+Contact the Medallia Adapter team and provide them the data of the conversation error.
 
 
 
