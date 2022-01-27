@@ -50,8 +50,7 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Dialogflow CX agent id</td>
     <td>abcderwe-dc8e-4a83-b2f2-369089753c42</td>
   </tr>
-  </tr>
-    <tr>
+  <tr>
     <td>Environment ID</td>
     <td>Dialogflow CX environment id (optional)</td>
     <td>abc4fff1-380c-4c8a-afbb-0289bc4e1234</td>
@@ -61,7 +60,7 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Email address of the Google Service account</td>
     <td>dialogflow-xxxxxx@bxx-xxxxxxx-xxx-dialogflow-cx.iam.gserviceaccount.com</td>
   </tr>
-   <tr>
+  <tr>
     <td>Service location</td>
     <td>Location of the Dialogflow API Backend</td>
     <td>us-dialogflow.googleapis.com</td>
@@ -554,7 +553,7 @@ Figure 12.1 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow CX these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/QueryParameters)). An example of the request body can be seen below:
 
-```javascript
+```json-doc
 {
   "session": "SomeSession",
   "queryParams": {
