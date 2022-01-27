@@ -7,75 +7,99 @@ permalink: third-party-bots-bot-conversation-errors.html
 indicator: both
 ---
 
-## Introduction
+### Introduction
 
 This document describes possible errors which can be thrown during a conversation, with the reason for the error and the solution to fix the error.
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.send-message
 
-#### Description
-This error indicates that the message could not be send to the conversation
-#### Reasons
-The reason for this is mostly wrong formatted structured content. Another issue could be missing url whitelisting for  images 
-#### Solutions
-Please check [structured content](getting-started-with-rich-messaging-introduction.html)
+### connector.messaging
+#### send-message {#comlivepersonbot-connectors-workererrorconnectormessagingsend-message}
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.end-conversation
+<table>
+<thead>
+<th colspan="2">com.liveperson.bot-connectors-worker.error.connector.messaging.send-message</th>
+</thead>
+  <tbody>
+  <tr>
+    <td>Description</td>
+    <td>This error indicates that the message could not be sent to the conversation</td>
+  </tr>
+  <tr>
+    <td>Reason</td>
+    <td>The reason for this is mostly wrongly formatted structured content. Another issue could be missing url whitelisting for images</td>
+  </tr>
+  <tr>
+    <td>Solutions</td>
+    <td>Please check [structured content](getting-started-with-rich-messaging-introduction.html)</td>
+  </tr>
+  </tbody>
+</table>
 
-#### Description
+
+
+##### Reasons
+
+##### Solutions
+
+
+#### end-conversation {#comlivepersonbot-connectors-workererrorconnectormessagingend-conversation}
+##### Description
 This error indicates an issue with closing a messaging conversation.
-#### Reasons
+##### Reasons
 This usually happens if the conversation was already closed/transferred while the bot is evaluating the response.
-#### Solutions
+##### Solutions
 None.
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.change-ttr
+#### change-ttr {#comlivepersonbot-connectors-workererrorconnectormessagingchange-ttr}
 
-#### Description
+##### Description
 This error indicates an issue in changing the TTR value for the current conversation.
-#### Reasons
+##### Reasons
 Mostly, the error is a wrong value which is used for the TTL
-#### Solutions
+##### Solutions
 Please choose the right value for your TTR step.
 See the documentation for the individual vendors on how to set TTR properly
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.transfer-to-skill
 
-#### Description
+#### transfer-to-skill {#comlivepersonbot-connectors-workererrorconnectormessagingtransfer-to-skill}
+
+##### Description
 This happens if the bot could not transfer the conversation to the desired messaging skill.
-#### Reasons
+##### Reasons
 Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
-#### Solutions
+##### Solutions
 None.
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.conversation-closed
+#### conversation-closed {#comlivepersonbot-connectors-workererrorconnectormessagingconversation-closed}
 
-#### Description
+##### Description
 This happens if the bot tries to send commands to an already closed conversation.
-#### Reasons
+##### Reasons
 Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
-#### Solutions
+##### Solutions
 None.
 
-### com.liveperson.bot-connectors-worker.error.connector.messaging.agent-not-authorized
+#### agent-not-authorized {#comlivepersonbot-connectors-workererrorconnectormessagingagent-not-authorized}
 
-#### Description
+##### Description
 This happens if the bot tried to send a command to a conversation which is not assigned to the bot anymore.
-#### Reasons
+##### Reasons
 Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime
-#### Solutions
+##### Solutions
 None.
 
-### com.liveperson.bot-connectors-worker.error.connector.chat.send-message
-
-#### Description
+### connector.chat
+#### send-message
+##### Description
 This happens if the bot could not send a message to a chat conversation
-#### Reasons
+##### Reasons
 Mostly the structured content format is wrong, so please double-check this.
-#### Solutions
+##### Solutions
 Please check [structured content](getting-started-with-rich-messaging-introduction.html)
 
-### com.liveperson.bot-connectors-worker.error.connector.chat.end-conversation
+
+
+#### end-conversation
 
 #### Description
 This happens if a chat conversation could not be closed by the bot.
@@ -84,7 +108,7 @@ Usually, this happens if the conversation was already closed by the consumer in 
 #### Solutions
 None.
 
-### com.liveperson.bot-connectors-worker.error.connector.chat.transfer-to-skill
+#### transfer-to-skill
 
 #### Description
 This happens if a chat conversation could not be transferred to the desired chat skill.
@@ -93,81 +117,85 @@ For chat conversations, there must be an agent available with the desired skill 
 #### Solutions
 If this issue happens frequently, increase the capacity for the desired chat skill
 
-### com.liveperson.bot-connectors-worker.error.pipes.messaging-handle-bot-action.transfer-skill-not-existing
+### pipes
 
-#### Description
+#### messaging-handle-bot-action.transfer-skill-not-existing
+
+##### Description
 This happens if the provided skill in the action parameters is not valid.
-#### Reasons
+##### Reasons
 The skill name provided in the action parameters can not be found on the lp account.
-#### Solutions
+##### Solutions
 Double-check that the skill exists on your account and also check the spelling, it's case sensitive.
 
-### com.liveperson.bot-connectors-worker.error.pipes.verify-ai-response.missing-action-and-messages
+#### verify-ai-response.missing-action-and-messages
 
-#### Description
+##### Description
 This error is thrown if the response of the AI Vendor does not contain any action nor messages.
-#### Reasons
+##### Reasons
 Since the bot does not know how to behave without any AI Vendor feedback, we are throwing an error.
-#### Solutions
+##### Solutions
 Make sure that your AI Vendor has a valid response for every user input.
 
-### com.liveperson.bot-connectors-worker.error.pipes.verify-ai-response.no-messages-and-not-supported-action
+#### verify-ai-response.no-messages-and-not-supported-action
 
-#### Description
+##### Description
 This error is thrown if the response of the AI Vendor does not contain any messages and the provided actions are not supported by our bot connector.
-#### Reasons
+##### Reasons
 Since the bot does not know how to behave without any AI Vendor feedback, we are throwing an error.
-#### Solutions
+##### Solutions
 Make sure that your AI Vendor has a valid response for every user input.
 
-### com.liveperson.bot-connectors-worker.error.pipes.verify-ai-response.quick-replies-not-supported
+#### verify-ai-response.quick-replies-not-supported
 
-#### Description
+##### Description
 This happens if the AI Vendor returns a quickReplies response for a chat conversation.
-#### Reasons
+##### Reasons
 QuickReplies are only supported for Messaging Conversations
-#### Solutions
+##### Solutions
 Do not send QuickReplies to Chat Conversations
 
-### com.liveperson.bot-connectors-worker.error.pipes.conversation-limit-checker.max-conv-limit-reached
+#### conversation-limit-checker.max-conv-limit-reached
 
-#### Description
+##### Description
 The bot does not accept new conversation anymore and instead error escalates them.
-#### Reasons
+##### Reasons
 To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned.
-#### Solutions
+##### Solutions
 Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)
 
-### com.liveperson.bot-connectors-worker.error.events-queue.not-catched-pipeline-error
+### events-queue
+#### not-catched-pipeline-error
 
-#### Description
+##### Description
 This error indicates that there is an unknown error while processing the consumer event.
-#### Reasons
+##### Reasons
 Mostly implementation errors on our end.
-#### Solutions
+##### Solutions
 Please reach out to LivePerson Support and provide the exact error details. You can do this by clicking copy on the relevant error.
 
-### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowv2.send-query
+### aivendor
+#### dialogflowv2.send-query
 
-#### Description
+##### Description
 Could not send a query to DialogFlow.
-#### Reasons
+##### Reasons
 Mostly issues with DialogFlow APIS.
-#### Solutions
+##### Solutions
 Double-check you have enough credits left for your Dialogflow account.
 Check for any interruption on Dialogflow side.
 
-### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.send-request
+#### dialogflowcx.send-request
 
-#### Description
+##### Description
 Could not send a request to DialogFlow CX.
-#### Reasons
+##### Reasons
 Mostly issues with DialogFlow CX APIS.
-#### Solutions
+##### Solutions
 Double-check you have enough credits left for your Dialogflow CX account.
 Check for any interruption on Dialogflow CX side.
 
-### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.test-connection
+### dialogflowcx.test-connection
 
 #### Description
 Testing connection with DialogFlow CX failed.
@@ -176,7 +204,7 @@ Mostly credential issues.
 #### Solutions
 Check for your bot credentials.
 
-### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.parse-message.parser-error
+#### dialogflowcx.parse-message.parser-error
 
 #### Description
 Testing connection with DialogFlow CX failed.
@@ -185,7 +213,7 @@ This error happens when credentials are not provided correctly.
 #### Solutions
 Verify the credentials provided for the bot.
 
-### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.parse-message.multiple-actions
+#### dialogflowcx.parse-message.multiple-actions
 
 #### Description
 This error happens when there are invalid or unknown multiple actions are received from the vendor.
