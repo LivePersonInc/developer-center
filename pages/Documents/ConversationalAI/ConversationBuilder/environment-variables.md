@@ -26,21 +26,11 @@ You can use these environment variables to customize how disambiguation works; f
 - `system_groupConsecutiveIntentRanksInDisambiguation`
 - `system_useIntentsOnlyWithDialogStartersInDisambiguation`
 
-#### Variables for blocking consumer interruptions
-These environment variables work together to block consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-advanced-use-cases.html#block-consumer-interruptions).
+#### Variables for preventing consumer interruptions
+These environment variables work together to prevent consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-consumer-interruptions.html).
 - `system_handleIntermediateUserMessage`
 - `system_intermediateBotMessage`
 - `system_intermediateBotResponseTimeout`
-
-{: .important}
-These environment variables likewise work together to block (catch and ignore) system messages sent via a Web View integration.
-
-#### Variables for allowing system messages sent via a Web View integration
-
-This environment variable is:
-- `system_processWebviewIntermediateMessage`
-
-It’s designed for use if you have a Web View integration, and you’re also using  `system_handleIntermediateUserMessage` and `system_intermediateBotResponseTimeout` (listed above). Web View messages are considered system messages; this environment variable gives control to process these messages even within the timeout window. For details, see [here](conversation-builder-integrations-web-view-integration-api.html#system-environment-variables).
 
 ### Add environment variables
 

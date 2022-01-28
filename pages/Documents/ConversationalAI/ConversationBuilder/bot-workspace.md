@@ -13,22 +13,13 @@ permalink: conversation-builder-bot-workspace.html
 indicator: both
 ---
 
-### Access Conversation Builder
-
-**To access the Conversation Builder application**
-
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Conversation Builder**.
-
-### The bot workspace
-
-The Conversation Builder application is the primary workspace for designing a bot. It is what ties together all the other aspects of the platform.
+The Conversation Builder application is the primary workspace for designing a bot.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace.png">
 
 A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basics.html) that each contain one or more [interactions](conversation-builder-interactions-interaction-basics.html). In the image above of the Dialogs view in Conversation Builder, note the following:
 
-* The open "hello world" bot has 6 dialogs. These are listed in the dialogs panel on the left.
+* The open "Hello World" bot has 6 dialogs. These are listed in the dialogs panel on the left.
 * The Billing dialog contains 5 interactions. These are also listed in the dialogs panel on the left.
 * The Billing dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
 

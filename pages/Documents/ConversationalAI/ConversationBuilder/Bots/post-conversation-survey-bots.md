@@ -69,6 +69,14 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
+    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you. If you leave the picture URL unspecified (this is an optional field), no picture is used.
+    
+    * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
+
+        Note that a message's status isn't taken into account when counting the number of messages sent by an agent or a user. This means that a message will be counted as sent in the situation where the message was sent but wasn't delivered to the recipient for some reason.
+        
+        This is an account-level setting, so it's applied to all your post-conversation survey bots. However, you can override this setting on a per bot basis; do this in an individual bot's **Bot Settings**.
+    
     * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience.
  
         If this setting is disabled, the consumer always receives a survey when one is triggered.
@@ -80,6 +88,10 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
         With option 2, if the consumer receives survey A, they will not receive survey A again until 20 days have passed. During this time, they still might receive surveys B and C.
 
     * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
+
+    {: .important}
+    The conditions for all enabled rules must be met in order for the survey to be triggered. For example, if you enable two of these settings, but the conditions for just one setting are met, then the survey is not triggered.
+
 4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
 
 ### Creating the survey bot
@@ -91,7 +103,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
     * **Name**: Enter a name for the bot that's concise and clear.
     * **Description**: Enter a description that's meaningful to you and others.
     * **Bot Language**: Select a language.
-    * **Skill**: Select the skill(s) that will trigger this survey bot. A skill can be assigned to only one survey bot. You can add skills in Conversational Cloud.
+    * **Skill**: Select the skill(s) that will trigger this survey bot. You can use the available controls to sort and filter the skills and to search for a skill. A skill can be assigned to only one survey bot. You can add skills in Conversational Cloud.
 5. Click **Create Bot**.
 
     This creates a survey bot that includes a single dialog of type "Survey" (that's also named "survey" by default). Define the survey in this dialog.
@@ -130,8 +142,14 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
 
-{: .important}
-When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.
+In the closed-ended question, every answer choice has two values:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png">
+
+* **Text value** - This value is shown to the consumer as the answer choice.
+* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
+
+As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
 #### Open-ended, custom
 
@@ -255,10 +273,12 @@ You can use only a subset of the standard interaction types in the Survey dialog
 
 Survey bot settings include:
 
-- **Skill**: If desired, change the skill(s) that will trigger this survey bot.
+- **Skill**: If desired, change the skill(s) that will trigger this survey bot. You can use the available controls to sort and filter the skills and to search for a skill.
+- **Max number of fallback responses**: Consumer responses that are repeatedly unrecognized by the bot result in a loop where the fallback response is sent repeatedly. This setting stops the loop and closes the survey. You can specify the maximum number of fallback responses to send (the default is 3) before closing the survey. You can't specify zero to disable this behavior; it is always on. You can customize the closing message that is sent just before the survey is closed.
+- **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send. (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the Session Expired message when the session has expired. Then enter the message to send. Note that if you don't customize the message, the following default message is always sent: "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
 ### Adding support for emailed transcripts
 

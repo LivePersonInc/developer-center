@@ -313,7 +313,7 @@ function getOauthToHeaders(siteObject, url, method) {
 
 function run() {
   try {
-    const headers = getOauthToHeaders(siteObject, `https://${domain}/${path}`, method);
+    const headers = getOauthToHeaders(siteObject, `https://${domain}${path}`, method);
     console.log(headers.Authorization);
   } catch (error) {
     console.log('error', error);

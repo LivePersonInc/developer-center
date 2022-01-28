@@ -3,17 +3,17 @@ body {
   text-align: center;
   font-weight: 100;
 }
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
-input[type=checkbox] + label,
-input[type=radio] + label {
+input[type="checkbox"] + label,
+input[type="radio"] + label {
   display: inline-block;
 }
-input[type=checkbox] + label:before,
-input[type=radio] + label:before {
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
   content: "";
   display: inline-block;
   vertical-align: -0.2em;
@@ -22,29 +22,29 @@ input[type=radio] + label:before {
   border: 0.15em solid #0074d9;
   border-radius: 0.2em;
   margin-right: 0.3em;
-  background-color: white;
+  background-color: var(--body-background);
 }
-input[type=radio] + label:before {
+input[type="radio"] + label:before {
   border-radius: 50%;
 }
-input[type=radio]:checked + label:before,
-input[type=checkbox]:checked + label:before {
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before {
   background-color: #0074d9;
-  box-shadow: inset 0 0 0 0.15em white;
+  box-shadow: inset 0 0 0 0.15em var(--card-border);
 }
-input[type=radio]:focus + label:before,
-input[type=checkbox]:focus + label:before {
+input[type="radio"]:focus + label:before,
+input[type="checkbox"]:focus + label:before {
   outline: 0;
 }
 .btn {
   font-size: 140%;
   letter-spacing: 1px;
   border: 0;
-  background-color: #16214D;
-  color: white;
+  background-color: var(--button-background);
+  color: var(--button-text);
 }
 .btn:hover {
-  background-color: #44C7F4;
+  background-color: var(--button-background-hover);
 }
 .btn:focus {
   outline: none !important;
@@ -91,6 +91,7 @@ label {
   padding-left: 10%;
   margin-bottom: 20px;
 }
-.login-page .login-box, .index{
+.login-page .login-box,
+.index {
   padding: 40px 0;
 }

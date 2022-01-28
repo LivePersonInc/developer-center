@@ -98,7 +98,10 @@ The following SDEs are already available in the dynamic routing interface and ca
 1. Write a function to retrieve the SDE and add it to the Conversation Context Service.
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
- 
+
+{: .important}
+This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
+
 #### Detailed process
  
 **Step 1: Create a function to pull the SDE to the Conversation Context Service**
@@ -119,75 +122,128 @@ The following SDEs are already available in the dynamic routing interface and ca
   <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png">
 9. In the editor, delete any existing code, and add the code in the snippet below.
 
+{: .important}
+This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
+
 ```javascript
-  // import FaaS Toolbelt
+// import FaaS Toolbelt
 const { Toolbelt, ConversationContentTypes } = require('lp-faas-toolbelt');
-   
+  
 // Create SDE/Conversation-Util instance
 const conversationUtil = Toolbelt.ConversationUtil();
 const sdeUtil = Toolbelt.SDEUtil();
-   
+    
 const sdeType = 'customerInfo';
 const sdeKey = 'storeNumber';
-   
+    
 async function getAuthCustomerInfo(conversationId) {
-// Parameters for authSDEs
-const contentToRetrieve = [
-   ConversationContentTypes.SDES,
-];
-   
-// Get Conversation and extract SDEs
-const conversation = await conversationUtil.getConversationById(conversationId, contentToRetrieve);
-// sde interface https://developers.liveperson.com/liveperson-functions-development-toolbelt.html
-const sdes = sdeUtil.getSDEsFromConv(conversation);
-   
-// Get certain type of array
-return sdes.sdes.events.filter(item => item.hasOwnProperty(sdeType));
+  // Parameters for authSDEs
+  const contentToRetrieve = [
+      ConversationContentTypes.SDES,
+  ];
+      
+  // Get Conversation and extract SDEs
+  let conversation;
+  for (let i = 0; i < 3; i++) {
+    try {
+    conversation = await conversationUtil.getConversationById(
+      conversationId,
+      contentToRetrieve
+    );
+    } catch(e) {
+      console.error(`attempt ${i + 1} to conversationUtil failed`);
+      if (i >= 2) {
+        return undefined;
+      }
+    }
+  }
+  // sde interface https://developers.liveperson.com/liveperson-functions-development-toolbelt.html
+  let sdes;
+  for (let i = 0; i < 3; i++) {
+    try {
+      sdes = sdeUtil.getSDEsFromConv(conversation);
+    } catch(e) {
+      console.error(`attempt ${i + 1} to sdeUtil failed`);
+      if (i >= 2) {
+        return undefined;
+      }
+    }
+  }
+      
+  // Get certain type of array
+  return sdes.sdes.events.filter(item => item.hasOwnProperty(sdeType));
 }
-   
+    
 async function getUnAuthCustomerInfo(conversationId) {
-// Parameters for unAuthSDEs
-const contentToRetrieve = [
-   ConversationContentTypes.UNAUTH_SDES,
-];
-   
-// Get Conversation and extract SDEs
-const conversation = await conversationUtil.getConversationById(conversationId, contentToRetrieve);
-const sdes = sdeUtil.getSDEsFromConv(conversation);
-   
-// Get certain type of array
-return sdes.unAuthSdes.events.filter(item => item.hasOwnProperty(sdeType));
+  // Parameters for unAuthSDEs
+  const contentToRetrieve = [
+      ConversationContentTypes.UNAUTH_SDES,
+  ];
+      
+  // Get Conversation and extract SDEs
+  let conversation;
+  for (let i = 0; i < 3; i++) {
+    try {
+    conversation = await conversationUtil.getConversationById(
+      conversationId,
+      contentToRetrieve
+    );
+    } catch(e) {
+      console.error(`attempt ${i + 1} to conversationUtil failed`);
+      if (i >= 2) {
+        return undefined;
+      }
+    }
+  }
+  // sde interface https://developers.liveperson.com/liveperson-functions-development-toolbelt.html
+  let sdes;
+  for (let i = 0; i < 3; i++) {
+    try {
+      sdes = sdeUtil.getSDEsFromConv(conversation);
+    } catch(e) {
+      console.error(`attempt ${i + 1} to sdeUtil failed`);
+      if (i >= 2) {
+        return undefined;
+      }
+    }
+  }
+      
+  // Get certain type of array
+  return sdes.unAuthSdes.events.filter(item => item.hasOwnProperty(sdeType));
 }
-   
+    
 async function getSdeValue(arrayOfCustomerInfo) {
-const sortedDescendingArrayOfCustomerInfo = arrayOfCustomerInfo.sort((a, b) => b.customerInfo.originalTimeStamp - a.customerInfo.originalTimeStamp);
-   
-if (sortedDescendingArrayOfCustomerInfo
-   && sortedDescendingArrayOfCustomerInfo[0]
-   && sortedDescendingArrayOfCustomerInfo[0][sdeType]
-   && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType]
-   && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey]
-   && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey].length) {
-   return sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey];
+  const sortedDescendingArrayOfCustomerInfo = arrayOfCustomerInfo.sort((a, b) => b.customerInfo.originalTimeStamp - a.customerInfo.originalTimeStamp);
+      
+  if (sortedDescendingArrayOfCustomerInfo
+      && sortedDescendingArrayOfCustomerInfo[0]
+      && sortedDescendingArrayOfCustomerInfo[0][sdeType]
+      && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType]
+      && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey]
+      && sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey].length) {
+      return sortedDescendingArrayOfCustomerInfo[0][sdeType][sdeType][sdeKey];
+  }
+  return '';
 }
-return '';
-}
-   
+    
 async function lambda(input, callback) {
-const conversationId = input.payload;
-try {
-   // You can select and use one of the following two functions depending on your purpose.
-   // * getAuthCustomerInfo : Reads data from auth SDE
-   // * getUnAuthCustomerInfo : Reads data from unAuth SDE
-   const arrayOfCustomerInfo = await getAuthCustomerInfo(conversationId);
-   const sdeVal = await getSdeValue(arrayOfCustomerInfo);
-   
-   console.info(`Fetched following SDE ${sdeVal} for ${conversationId}`);
-   callback(null, sdeVal);
-} catch (e) {
-   console.error(`Received ${error.message} during obtaining SDE's for ${conversationId}`);
-   callback(e, null);
-}
+  const conversationId = input.payload;
+  try {
+      // You can select and use one of the following two functions depending on your purpose.
+      // * getAuthCustomerInfo : Reads data from auth SDE
+      // * getUnAuthCustomerInfo : Reads data from unAuth SDE
+      const arrayOfCustomerInfo = await getAuthCustomerInfo(conversationId);
+      if (!arrayOfCustomerInfo) {
+        throw new Error('Failed to fetch sde data');
+      }
+      const sdeVal = await getSdeValue(arrayOfCustomerInfo);
+      
+      console.info(`Fetched following SDE ${sdeVal} for ${conversationId}`);
+      callback(null, sdeVal);
+  } catch (e) {
+      console.error(`Received ${e.message} during obtaining SDE's for ${conversationId}`);
+      callback(e, null);
+  }
 }
 ```
 

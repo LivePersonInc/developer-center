@@ -308,7 +308,7 @@ Time Picker button has additional [Click Metadata](structured-content-introducti
 
 | Property Name | Description                                                                                                                                                                                           | Type    | Required | Size Limit |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- | :--------- |
-| startTime     | A UTC date string, represented by a valid date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2018-05-26T08:27:55+00:00, 2018-05-26T08:27:55+0000, or 2018-05-26T08:27:55Z | string  | Y        |            |
+| startTime     | A UTC date string, represented by a valid, future date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2018-05-26T08:27:55+00:00, 2018-05-26T08:27:55+0000, or 2018-05-26T08:27:55Z | string  | Y        |            |
 | Duration      | An integer representing the duration of the time slot, in seconds                                                                                                                                     | integer | Y        |            |
 
 

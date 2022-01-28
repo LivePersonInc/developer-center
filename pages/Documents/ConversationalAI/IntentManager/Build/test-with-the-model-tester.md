@@ -130,13 +130,13 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 
 **Low Test Coverage**: This indicates that many intents in the domain aren't represented in the test set. To improve the test coverage:
 
-* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover.html) to enrich your training set.
+* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.
 * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
 
 **Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:
