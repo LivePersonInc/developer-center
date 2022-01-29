@@ -13,7 +13,7 @@ redirect_from:
 
 ### Introduction
 
-The Outbound Reporting API provides a complete message journey of the conversation from start to finish. It provides a full end to end summary of messages/deflections sent, including how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. This service stitches pre and post conversation events of every message/deflections and provide 360° analytical data to API clients.
+The Outbound Reporting API provides a complete message journey of the conversation from start to finish. It provides a full end to end summary of messages/deflections sent, including how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. This service stitches pre and post conversation events of every message/deflections and provide full analytical data to API clients.
 
 ### API provides reporting for below services
 * Proactive Messaging 2.0
@@ -39,7 +39,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 
 | # | Data Field | Definition |
 | 1 | Attempted | Total Outbound Messages/Total IVR Deflections sent to the Proactive Messaging / Connect To Messaging systems |
-| 2 | Eligible | From total attempted messages how many consumers are eligible to receive messages. |
+| 2 | Eligible | From total attempted messages how many consumers are eligible to receive messages. For example, trying to send a SMS message to a landline will not count as eligible |
 | 4 | Invite Sent | Total eligible messages sent to the messaging gateway |
 | 5 | Delivered | Total messages delivered to the consumer as reported by the messaging gateway |
 | 6 | Read | Total messages successfully read by consumers |
