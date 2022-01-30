@@ -39,7 +39,7 @@ More specifically, refer to Amazon’s **ip-ranges JSON file** that you can acce
 |----|----|
 | Agent connectors to LiveEngage | All IPs for the EC2 service |
 | API integrations | All IPs for the EC2 service |
-| Custom integrations (if any developed specifically for your brand) | All IPs for the EC2 service |
+| FaaS integrations (if any developed specifically for your brand) | All IPs for the EC2 service |
 
 ### Whitelisting rich media
 

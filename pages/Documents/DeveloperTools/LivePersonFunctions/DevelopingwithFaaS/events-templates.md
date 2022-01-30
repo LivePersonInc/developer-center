@@ -37,7 +37,7 @@ Currently the following events are supported:
 |Messaging Survey Started|Triggered when a messaging post survey started.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversation-survey.html).|Post Survey Bot|1|✅|
 |Messaging TTR (Time to Respond)|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html). |Conversational Exchange Service (Messaging Auto Messages)|1|✅|
 |No Event|Used for lambdas which only can be invoked externally|-||
-|Third-Party Bots Custom Integration|Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
+|Third-Party Bots FaaS Integration|Triggered when a bot, which is using the Third-Party Bots' FaaS Integration receives a message.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
 |Third-Party Bots Post Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked after the vendor responded.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
 |Third-Party Bots Pre Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked before the vendor receives the payload.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
 |Third-Party Bots Error Hook|Triggered when a bot, which is using the Third-Party Bots' Error Hooks is having an issue.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
@@ -80,7 +80,7 @@ Additionally, Functions offers a number of templates. They can be used as a samp
 ||Logging Template|An example of how to write logs during lambda execution.|
 ||Salesforce Template|An example of how to connect to Saleforce.|
 ||Secret Storage Template|An example of how to use the Secret Storage.|
-|Third-Party Bots Custom Integration|Default Template|A template displaying some basic ways how the "Third-Party Bots Custom Integration"-Event can be used.|
+|Third-Party Bots FaaS Integration|Default Template|A template displaying some basic ways how the "Third-Party Bots FaaS Integration"-Event can be used.|
 
 
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
