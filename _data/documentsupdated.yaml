@@ -387,7 +387,7 @@
             - subpagename: Basic Content
             - subpagename: Advanced Features
             - subpagename: PVA
-        - pagename: FaaS Integration
+        - pagename: Custom Integration
         - pagename: Hook Configuration
         - pagename: Public API
         - pagename: Conversation Tester
