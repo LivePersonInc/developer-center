@@ -393,7 +393,6 @@
             - subpagename: PVA
         - pagename: Medallia
         - pagename: Custom Integration
-
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
