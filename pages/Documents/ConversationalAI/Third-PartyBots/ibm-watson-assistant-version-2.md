@@ -26,6 +26,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .notice}
 **IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).
 
+{: .important}
+**Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
+
 ### Authentication
 
 With Watson there are two methods of authentication that are currently supported. These methods are username/password and IAM (token based) authentication. You can choose either one for your bot configuration but IAM is **highly recommended** (as it is more secure).

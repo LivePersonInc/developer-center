@@ -24,6 +24,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .important}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
+{: .important}
+**Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
+
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
 #### UserPass authentication
