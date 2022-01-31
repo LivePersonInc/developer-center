@@ -30,19 +30,20 @@ When adding an internal knowledge base, follow this workflow:
     2. [Add the articles](knowledgeai-internal-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
-    * (Conversation Builder) [Adding a KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in a bot
-    * (Conversation Orchestrator) Adding a KnowledgeAI integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
+    * (Conversation Assist) Adding a [Knowledge Base integration](conversation-assist-overview.html)
 
 ### Domain intents versus Knowledge Base intents
 
 #### Domain intents
-When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
+
+When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password.").
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
 
 <img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
 
-Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do: 
+Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do:
 
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png">
 
@@ -51,9 +52,10 @@ Within the newly created knowledge base, you then link each article to an intent
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png">
 
 With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding-introduction.html) for intent matching:
+
 * LivePerson
 * LivePerson (Legacy)
-* A third-party NLU engine 
+* A third-party NLU engine
 
 Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like Intent Manager's [Intent Analyzer](intent-manager-overview.html).
 
@@ -91,7 +93,7 @@ In the KnowledgeAI application, you can easily identify an article's current sta
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html).
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
 

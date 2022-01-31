@@ -22,12 +22,12 @@ An external knowledge base without LivePerson AI:
 
 When adding an external knowledge base without LivePerson AI, follow this high-level workflow:
 
-1. In KnowledgeAI: 
+1. In KnowledgeAI:
     1. Add the external knowledge base.
     2. Use the Search tool to test the integration.
 2. Expose the articles to consumers by:
-    * (Conversation Builder) [Adding a KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in a bot
-    * (Conversation Orchestrator) Adding a KnowledgeAI integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
+    * (Conversation Assist) Adding a [Knowledge Base integration](conversation-assist-overview.html)
 
 ### Add an external KB without LivePerson AI
 
@@ -56,7 +56,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **+ Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
-    
+
         Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
@@ -76,7 +76,7 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 2. Enter an utterance in the **Answer Tester** on the right, and click **Get answers**.
 
     This performs a search against the CMS.
-    
+
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
