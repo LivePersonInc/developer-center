@@ -18,7 +18,7 @@ The following documentation outlines the configuration for the connector and how
 ### Configuration
 
 {: .important}
-See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps.
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings if you select Dialogflow ES.
 

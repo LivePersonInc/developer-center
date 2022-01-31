@@ -1,25 +1,24 @@
 ---
-pagename: FaaS Integration
+pagename: Custom Integration
 redirect_from:
   - custom-third-party-bots.html
   - bot-connectors-custom-third-party-bots.html
-  - third-party-bots-custom-integration.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
-permalink: third-party-bots-faas-integration.html
+permalink: third-party-bots-custom-integration.html
 indicator: both
 ---
 
-The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to Conversational Cloud. In order to achieve this, we will implement a LivePerson Functions **FaaS Integration**.
+The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to Conversational Cloud. In order to achieve this, we will implement a LivePerson Functions **Custom Integration**.
 
 {: .important}
-As the FaaS Integration feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
+As the Custom Integration feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 Once you have completed the guide above, you will be presented with following screen to complete the Vendor Settings in order to add a bot.
 
@@ -31,7 +30,7 @@ Click on the "Create LivePerson Function" button. This will allow you to impleme
 
 ##### Step 1 - Create a function
 
-Create a new function using the **_Third-Party Bots FaaS Integration_** event.
+Create a new function using the **_Third-Party Bots Custom Integration_** event.
 
 ##### Step 2 - Edit the Function
 
@@ -418,7 +417,7 @@ const payload = {
 };
 ```
 
-**Please note**: that quick replies can be sent in via `context` and `messages` both ways like any other structured content. for more information check [send rich content section](third-party-bots-faas-integration.html#sending-rich-content-structured-content)
+**Please note**: that quick replies can be sent in via `context` and `messages` both ways like any other structured content. for more information check [send rich content section](third-party-bots-custom-integration.html#sending-rich-content-structured-content)
 
 ### Sending Pause/Delay Message
 

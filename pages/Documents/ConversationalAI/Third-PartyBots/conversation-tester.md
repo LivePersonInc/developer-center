@@ -452,14 +452,14 @@ This error happens when either one or multiple of the following conditions not m
 - `failOnError` is an optional parameter and it has not being provided as **Boolean**
  
 #### Error Solution
-Please check [Change Time To Response of Conversation](third-party-bots-faas-integration.htmll#change-time-to-response-of-conversation)
+Please check [Change Time To Response of Conversation](third-party-bots-custom-integration.htmll#change-time-to-response-of-conversation)
  
 ## Faas Invalid Body
 ## Description
 This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
  
 #### Error Solution
-Please check [Sending intent information](third-party-bots-faas-integration.htmll#sending-intent-information)
+Please check [Sending intent information](third-party-bots-custom-integration.htmll#sending-intent-information)
  
  
 ## Faas Invalid AI Vendor Response
