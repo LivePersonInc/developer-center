@@ -1,5 +1,5 @@
 ---
-pagename: Legacy - Post Conversation Survey (PCS)
+pagename: Post Conversation Survey (PCS)
 redirect_from:
   - messaging-window-api-tutorials-post-conversation-survey.html
   - messaging-window-api-tutorials-post-conversation-survey-pcs.html
@@ -11,10 +11,7 @@ permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.ht
 indicator: messaging
 ---
 
-{: .important}
-This topic discusses a legacy solution for post-conversation surveys (PCS) and is made available for the benefit of brands using this solution. **If you're new to post-conversation surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
-
-In this tutorial, we demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation. When we use the term "Post Conversation Survey" in this tutorial, we refer to this solution,  not the [older survey solution](messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html) where only a single CSAT question could be presented to the consumer when the conversation ends. Once the Post Conversation Survey is configured and working, it will be presented to the consumer instead of the older CSAT one. There is no situation in which both work together.
+In this tutorial, we demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation by a PCS Bot. When we use the term "Post Conversation Survey" in this tutorial, we refer to this solution, not the [older survey solution](messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html) where only a single CSAT question could be presented to the consumer when the conversation ends. Once the Post Conversation Survey is configured and working, it will be presented to the consumer instead of the older CSAT one. There is no situation in which both work together.
 
 ### Multi-Dialog Conversation
 
