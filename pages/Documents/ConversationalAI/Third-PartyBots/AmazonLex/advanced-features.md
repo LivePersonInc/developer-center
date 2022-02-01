@@ -1,7 +1,5 @@
 ---
 pagename: Advanced Features
-redirect_from:
-  - bot-connectors-amazon-lex.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots

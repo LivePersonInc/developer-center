@@ -1,6 +1,7 @@
 ---
 pagename: IBM Watson Assistant Version 2
 redirect_from:
+  - bot-connectors-ibm-watson-assistant-v2.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
