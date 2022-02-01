@@ -60,7 +60,7 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
 Figure 2.1 Configuration of the welcome event
 
-### Structured Content
+### Sending Rich Content (Structured Content)
 
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
@@ -122,7 +122,7 @@ Example Metadata
 
 Figure 2.3 Structured Content Example
 
-### Quick Replies
+### Sending Quick Replies (Structured Content)
 
 {: .important}
 **Please note** Quick Replies are only supported in Messaging Conversations.
