@@ -367,7 +367,9 @@ Figure 2.13 Structured Content Watson JSON Structure (JSON Editor should contain
 
 Figure 2.14 Structured Content Watson JSON Example (JSON Editor should contain this object structure for Rich Content)
 
-For new IAM workspaces that have a new Watson response, _Then respond with_ "text" should be used:
+#### Structured Content Watson JSON Example (IAM)
+
+For new IAM workspaces that have a new Watson response, `Then respond with` "text" should be used:
 
 <img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
@@ -481,7 +483,7 @@ the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CO
 Further down the line, if any additional functionality is added that can be called by an action from the AI,
 it will follow the same naming convention.
 
-For escalations, the naming convention for these skills should use a "-" instead of "\_". Furthermore,
+For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore,
 if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name
 with "BOT-" within Conversational Cloud.
 
@@ -541,7 +543,7 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (cas
 
 Figure 2.18
 
-In the _Then respond with:_ JSON editor block, use the following:
+In the `Then respond with:` JSON editor block, use the following:
 
 ```json
 {

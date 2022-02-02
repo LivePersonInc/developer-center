@@ -281,7 +281,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
   "context": {
     // ... contains some more information about conversation as well
     "lpEvent": {}, // Holds LP Events
-    "lpSdes": {}
+    "lpSdes": {} // Holds SDES
   }
 }
 ```
@@ -337,7 +337,7 @@ A demo of our WhatsApp map example with the above bot configuration (defined abo
 
 ### Watson Discovery
 
-Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no machtching intent was found.
+Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no matching intent was found.
 
 To use Watson Discovery the Watson Assistant Bot needs to have a [search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
 
@@ -345,7 +345,7 @@ To use Watson Discovery the Watson Assistant Bot needs to have a [search skill](
 
 Disambiguation is a feature configurable in the Watson Assistant UI. It triggers if a bot can't confidently identify an intent.
 Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
-Disambiguation responses will be renderes as `Quick Replies`.
+Disambiguation responses will be renders as `Quick Replies`.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png">
 Figure 3.10 Configure Watson Disambiguation
@@ -356,6 +356,5 @@ As a good practice and to prevent that the bot goes into a conversation loop dur
 
 ### Limitations
 
-<ul>
-  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
-</ul>
+- Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information [read here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
+- Currently IBM Watson allows **only 5** response types per node.
