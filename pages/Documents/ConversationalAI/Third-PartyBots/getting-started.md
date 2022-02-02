@@ -52,23 +52,32 @@ We will be automatically error escalate any new conversation if the bot has reac
 
 During run-time, your bot may have different operational states. These states are based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
 
-#### Offline
-
-The bot is offline and won't accept any conversations.
-
-#### Online
-
-The bot is online and will accept and process new conversations.
-
-#### Vendor Interruption
-
-The bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the configured AI Vendor is not reachable/working.
-
-#### Service Interruption
-
-The bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
-
-In this state the bot will try to restart automatically once every minute until the interruption is resolved.
+<table>
+  <thead>
+  <tr>
+    <th>Bot State </th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Offline</td>
+    <td>The bot is offline and won't accept any conversations.</td>
+  </tr>
+  <tr>
+    <td>Online</td>
+    <td>The bot is online and will accept and process new conversations.</td>
+  </tr>
+  <tr>
+    <td>Vendor Interruption</td>
+    <td>The bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the configured AI Vendor is not reachable/working.</td>
+  </tr>
+  <tr>
+    <td>Service Interruption</td>
+    <td>The bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within LivePerson APIs/servers.In this state the bot will try to restart automatically once every minute until the interruption is resolved.</td>
+  </tr>
+  </tbody>
+</table>
 
 ### Limitations
 
@@ -180,32 +189,6 @@ Follow the steps below to add a new bot.
 #### Settings for Messaging:
 
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
-
-##### Settings for Welcome Messages:
-
-By enabling the Welcome Messages option in our Wizard, Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
-
-##### Settings for Combine Messages:
-
-By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
-
-<ul>
-  <li>
-  Max messages to combine: The maximum amount of messaged that will be connected to one message.
-  </li>
-  <li>
-  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
-  </li>
-  <li>
-  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
-  </li>
-</ul>
-
-<figure>
-<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
-    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
-</figure>
-<br />
 
 ##### Settings for Engagement Attributes:
 
@@ -946,22 +929,46 @@ If no other skills are configured, it might be that the bot will escalate the co
 
 1. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](#next-steps).
 
+##### Settings for Combine Messages:
+
+By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
+
+<ul>
+  <li>
+  Max messages to combine: The maximum amount of messaged that will be connected to one message.
+  </li>
+  <li>
+  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
+  </li>
+  <li>
+  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
+  </li>
+</ul>
+
+<figure>
+<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
+    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
+</figure>
+<br />
+
+##### Settings for Welcome Messages:
+
+By enabling the Welcome Messages option in our Wizard, Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
+
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
-- [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+- [Watson Assistant V1 & V2](third-party-bots-ibm-watson-assistant-introduction.html)
 
-- [Watson Assistant V2](bot-connectors-ibm-watson-assistant-v2.html)
+- [Dialogflow V2/ES](third-party-bots-google-dialogflow-es-introduction.html)
 
-- [Dialogflow V1 (No longer supported)](bot-connectors-google-dialogflow.html)
+- [Dialogflow CX](third-party-bots-google-dialogflow-cx-introduction.html)
 
-- [Dialogflow V2/ES](bot-connectors-google-dialogflow-version-2.html)
+- [Amazon Lex](third-party-bots-amazon-lex-introduction.html)
 
-- [Dialogflow CX](bot-connectors-google-dialogflow-cx.html)
+- [Microsoft Bot Framework](third-party-bots-microsoft-direct-line-introduction.html)
 
-- [Amazon Lex](bot-connectors-amazon-lex.html)
+- [LivePerson Functions Bots](third-party-bots-liveperson-functions-introduction.html)
 
-- [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
-
-- [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)
+- [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)
