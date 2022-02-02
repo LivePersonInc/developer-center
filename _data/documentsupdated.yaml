@@ -383,6 +383,10 @@
             - subpagename: Basic Content
             - subpagename: Advanced Features
         - pagename: IBM Watson Assistant
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: IBM Watson Assistant Version 2
         - pagename: Amazon Lex
           subpages:
