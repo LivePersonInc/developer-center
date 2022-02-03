@@ -29,15 +29,15 @@ Functions for messaging listens for messaging events asynchronously. As a conseq
 
 ### Messaging events for Function Invocation
 
-Conversational Cloud messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.
+Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.
 
-#### System messages and invocations on messaging events
+#### System Messages and invocations on messaging events
 
-System messages feature (also known as automatic messages) is responsible for invoking functions on certain messaging events.
+System Messages feature (also known as Automatic Messages) is responsible for invoking functions on certain messaging events.
 
 <div class="important">Multiple conversation event types are mapped to the same invocation messaging event.</div>
 
-A deployed function on certain messaging event can be invoked on multiple conversation events. I.e, a function deployed on `Messaging conversation end` event will be invoked when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
+A deployed function on certain messaging event can be invoked on multiple conversation events. I.e, a function deployed on **Messaging conversation end** event will be invoked when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
 
 In order to distinguish the conversation event type during the invocation, the `cbotEventType` property is included in the invocation payload. The following table shows the conversation event type mapping to messaging events on functions:
 
@@ -67,13 +67,13 @@ In order to distinguish the conversation event type during the invocation, the `
 </tbody></table>
 
 
-#### System messages disabled
+#### System Messages disabled
 
-<div class="important">if a system message is disabled, the associated function will be invoked regardless of the state of the enabled flag</div>
+<div class="important">If a system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
 
-I you don't want your function to be invoked for a disabled system message, you have these options:
+If you don't want your function to be invoked for a disabled system message, you have these options:
 - Undeploy your function.
-- Ignore it in you function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
+- Ignore it in your function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
 
 ### Callback commands
 
