@@ -3,6 +3,7 @@ pagename: Introduction
 redirect_from:
   - custom-third-party-bots.html
   - bot-connectors-custom-third-party-bots.html
+  - third-party-bots-custom-integration.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots

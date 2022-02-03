@@ -24,29 +24,17 @@ Third party bot providers can be used and managed through LivePerson's Conversat
 {: .important}
 If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
 
-Each connector provides the ability to:
-
-- send/receive text messages
-
-- send [structured content](getting-started-with-rich-messaging-introduction.html)
-
-- transfer the conversation to other skills
-
-- change Time To Response for a messaging conversation
-
-- close a conversation
-
 {: .important}
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
 {: .important}
-Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
+We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
 
 {: .important}
 Please be advised that we recommend to have one bot for 250 open and active conversations, if you want your to handle more load, please add more bots to ensure a smooth and convenient consumer experience. Furthermore we recommend adding at least 2 bots for one bot skill to support a failover and a higher availability in case of any service interruptions and issues.
 
-{: .important}
-We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
+{: .notice}
+Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
 
 ### Bot Lifecycle
 
@@ -153,42 +141,14 @@ Follow the steps below to add a new bot.
 
 4. Assign agent: Create a new bot agent or select the agent you created in the step above
 
-5. Bot Type specific configurations: See [Bot Type](third-party-bots-bot-types.html) for a detailed description on the
-   configuration steps for each bot type.
+5. Conversation Type & Error Handling: Choose bot type specific configurations follow [Bot Type](third-party-bots-bot-types.html) for a detailed description on the
+   configuration of these steps.
 
-6. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](#next-steps).
-
-
-##### Settings for Combine Messages:
-
-By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
-
-<ul>
-  <li>
-  Max messages to combine: The maximum amount of messaged that will be connected to one message.
-  </li>
-  <li>
-  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
-  </li>
-  <li>
-  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
-  </li>
-</ul>
-
-<figure>
-<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
-    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
-</figure>
-<br />
-
-##### Settings for Welcome Messages:
-
-By enabling the Welcome Messages option in our Wizard, Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
+6. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](third-party-bots-getting-started.html#next-steps).
 
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
-
 
 - [Watson Assistant V1 & V2](third-party-bots-ibm-watson-assistant-introduction.html)
 
@@ -202,8 +162,6 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [LivePerson Functions Bots](third-party-bots-liveperson-functions-introduction.html)
 
-- [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)
-
-- [Medallia (for Survey Bots)](third-party-bots-medallia.html)
+- [Medallia (for Survey Bots)](third-party-bots-medallia-introduction.html)
 
 - [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)

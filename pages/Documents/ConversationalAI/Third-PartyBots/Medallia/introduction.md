@@ -1,12 +1,15 @@
 ---
-pagename: Medallia
+pagename: Introduction
+redirect_from:
+  - bot-connectors-medallia.html
+  - third-party-bots-medallia.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
-permalink: third-party-bots-medallia.html
+subfoldername: Medallia
+permalink: third-party-bots-medallia-introduction.html
 indicator:
 ---
-
 
 ### Overview
 
@@ -19,12 +22,13 @@ Please contact your LivePerson account representative to set this up.
 ### Bot Configuration
 
 #### Authentication
+
 Third-Party Bots uses an App Installation for authentication.
 This app installation will be generated in the initial configuration step for Medallia mentioned above.
 Ask your LivePerson account representative for the ID and secret of the
 App Installation needed to authenticate against the LP Medallia Adapter.
 
-The following Dialogflow CX information should be provided to LivePerson:
+The following Medallia information should be provided to LivePerson:
 
 <table>
   <thead>
@@ -58,8 +62,8 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tbody>
 </table>
 
-
 ### Limitations
+
 {: .important}
 Not all messages are currently forwarded by the LP Medallia adapter. The Bot will only
 send the messages forwarded so far. This does e.g. not include Welcome and Goodbye messages.

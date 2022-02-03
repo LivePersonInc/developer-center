@@ -386,11 +386,6 @@
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
-        - pagename: IBM Watson Assistant Version 2
-          subpages:
-            - subpagename: Introduction
-            - subpagename: Basic Content
-            - subpagename: Advanced Features
         - pagename: Amazon Lex
           subpages:
             - subpagename: Introduction
@@ -407,7 +402,9 @@
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
-        - pagename: Medallia            
+        - pagename: Medallia   
+          subpages:
+            - subpagename: Introduction                 
         - pagename: Public API
         - pagename: Hook Configuration
         - pagename: Conversation Tester
