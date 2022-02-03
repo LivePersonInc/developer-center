@@ -268,7 +268,9 @@ Some setup of your Conversational Cloud environment is required before using thi
     - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
     - **In progress message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
 
-4. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
+4. Immediately after the File Upload interaction, add an Integration interaction: <img style="width:30px" src="img/ConvoBuilder/icon_integration.png">
+
+    In the Integration interaction, select the File integration to invoke (Integration type = File).
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
