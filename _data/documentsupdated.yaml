@@ -369,6 +369,7 @@
     - documentname: Third-Party Bots
       pages:
         - pagename: Getting Started
+        - pagename: Bot Types
         - pagename: Google Dialogflow
         - pagename: Google Dialogflow ES
           subpages:
@@ -406,12 +407,12 @@
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
+        - pagename: Medallia            
         - pagename: Public API
         - pagename: Hook Configuration
         - pagename: Conversation Tester
         - pagename: Bot Status Dashboard
         - pagename: Bot Conversation Errors
-
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
