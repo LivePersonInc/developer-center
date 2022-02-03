@@ -9,8 +9,7 @@ indicator:
 ---
 
 {: .important}
-At this time, Lex response cards & audio messages are not supported.
-The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
+As the LivePerson functions feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Sending Encoded Metadata
 
