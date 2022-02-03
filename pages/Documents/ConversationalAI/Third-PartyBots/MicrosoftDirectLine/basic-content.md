@@ -9,25 +9,27 @@ indicator:
 ---
 
 ### Introduction
+
 Most of the basic content must be send either via the text property of an activity or via the json object provided on
 the `channelData` property of the activity. Improving support for native content is planned but as of now most of the
-content needs to be provided in the described custom format. 
+content needs to be provided in the described custom format.
 
 ### Structured Content
+
 Structured content generally needs to be provided in the format that LivePerson supports.
 Documentation on this format can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-This should contain a valid structured content body, along with an optional property containing metadata required for 
-the structured content. Always validate your structured content using 
+This should contain a valid structured content body, along with an optional property containing metadata required for
+the structured content. Always validate your structured content using
 [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
 Direct Line bots need to send this payload in the `channelData` property of the message activity.
 
 {: .important}
-If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration 
+If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration
 (Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list manually. Wildcards are not supported.
-Moreover, all domains must be HTTPS secure. 
+Moreover, all domains must be HTTPS secure.
 
 ```json-doc
 {
@@ -66,18 +68,18 @@ Figure 2.1 Activity with Structured Content
 <br>
 <br>
 
-
 ### Sending Quick Replies
 
 {: .important}
 Quick Replies are only supported in Messaging Conversations.
 
-Quick Replies are a special type of structured content. It is a message sent along with predefined answers. The 
-documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
-For detailed information on Quick Replies check out the documentation for the respective channel 
-([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), 
-[Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), 
-[Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html))
+Quick Replies are a special kind of the Structured Content.
+The content should be added to the quickReplies property of the structuredContent object and there also
+a message be included in the structuredContent object.
+This message will be sent to the customer along with the Quick Replies.
+For detailed information on Quick Replies check out the documentation for the specific channel
+([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html),
+[Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
 ```json-doc
 {
@@ -148,22 +150,21 @@ Figure 2.2 Activity with Quick Replies
 
 ### The Welcome Event
 
-The behavior of the welcome event is different depending on whether the bot is configured for chat or messaging. 
+The behavior of the welcome event is different depending on whether the bot is configured for chat or messaging.
 This divergence comes down to the way that each individual LivePerson product works.
 
-A messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends 
-their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the 
-conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent 
-determined. It is possible however to enable in the bot's 
-[settings for messaging](third-party-bots-microsoft-direct-line-introduction#settings-for-messaging) that a welcome event will also 
+A messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends
+their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the
+conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent
+determined. It is possible however to enable in the bot's
+[settings for messaging](third-party-bots-microsoft-direct-line-introduction#settings-for-messaging) that a welcome event will also
 be sent if an existing conversation is transferred to the bot.
 
-A chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to 
-provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ 
+A chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to
+provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’
 event is utilized as a start point for the bot to prompt the user to provide input and progress the conversation.
 
 Ensure you have an ‘entry point’ in your bot that responds to the default ‘WELCOME’ action send by a new chat customer.
-
 
 ```json-doc
 {
@@ -176,14 +177,15 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
     }
   }
 }
-```  
+```
 
 Figure 2.3 Welcome activity on chat
 <br>
-<br> 
+<br>
 
 ### Bot Actions
-#### Transfer 
+
+#### Transfer
 
 This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
 
@@ -195,18 +197,16 @@ skill matching to work.
 
 #### Transfer To Skill
 
-This option transfers the conversation to the next available agent using the provided skill. 
+This option transfers the conversation to the next available agent using the provided skill.
 
-At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is 
+At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is
 retrieved, keyed by name and stored.
 
-When the bot requests a transfer, the provided skill name is matched to the skill existing on the account and the 
+When the bot requests a transfer, the provided skill name is matched to the skill existing on the account and the
 conversation is transfered based on this skill.
-
 
 The payload for a transfer request sent in the `channelData` is shown in Figure 2.4.
 The action must be named `TRANSFER` and a skill name must be provided.
-
 
 ```json-doc
 {
@@ -223,12 +223,13 @@ The action must be named `TRANSFER` and a skill name must be provided.
   }
 }
 ```
+
 Figure 2.4 Custom transfer to skill action
 <br>
 <br>
 
-It is also possible to use a native handoff event to transfer the conversation to another skill. You can use the 
-official Microsoft BotBuilder SDK method called 
+It is also possible to use a native handoff event to transfer the conversation to another skill. You can use the
+official Microsoft BotBuilder SDK method called
 [EventFactory.createHandoffInitiation](https://docs.microsoft.com/en-us/javascript/api/botbuilder/eventfactory?view=botbuilder-ts-latest).
 
 An additional text message can also be provided.
@@ -240,11 +241,12 @@ import { EventFactory, TurnContext } from "botbuilder";
 const handoffContext = { skill: "human-expert" };
 
 const payload = {
-    text: "I'll transfer you to a human agent",
-    ...EventFactory.createHandoffInitiation(context, handoffContext),
+  text: "I'll transfer you to a human agent",
+  ...EventFactory.createHandoffInitiation(context, handoffContext),
 };
 ```
-Figure 2.5 Microsoft BotBuilder example code 
+
+Figure 2.5 Microsoft BotBuilder example code
 <br>
 <br>
 
@@ -255,10 +257,8 @@ This feature is depending on [permissions](https://knowledge.liveperson.com/cont
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
 
-
 The payload for a transfer request sent in the `channelData` is shown in Figure 2.6.
 The action must be named `TRANSFER` and a skill name alongside agentId must be provided.
-
 
 ```json-doc
 {
@@ -276,13 +276,14 @@ The action must be named `TRANSFER` and a skill name alongside agentId must be p
   }
 }
 ```
+
 Figure 2.6 Custom transfer to agent action
 <br>
 <br>
 
 #### Close Conversation
 
-A conversation can be closed by sending an action in the `channelData` similarly to the transfer action. 
+A conversation can be closed by sending an action in the `channelData` similarly to the transfer action.
 The action must be named `CLOSE_CONVERSATION` in this case.
 
 ```json-doc
@@ -297,6 +298,7 @@ The action must be named `CLOSE_CONVERSATION` in this case.
   }
 }
 ```
+
 Figure 2.7 Activity for a close conversation request
 <br>
 <br>
@@ -317,6 +319,7 @@ To close a conversation without triggering a post conversation survey, you need 
   }
 }
 ```
+
 Figure 2.8 Activity to close a conversation without a post conversation survey
 <br>
 <br>
@@ -350,4 +353,5 @@ A text message can also be provided simultaneously in the activity json.
   }
 }
 ```
+
 Figure 2.9 Activity to change the TTR
