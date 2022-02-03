@@ -370,11 +370,6 @@
       pages:
         - pagename: Getting Started
         - pagename: Bot Types
-        - pagename: Bot Status Dashboard
-        - pagename: Hook Configuration
-        - pagename: Public API
-        - pagename: Conversation Tester
-        - pagename: Bot Conversation Errors
         - pagename: Google Dialogflow
         - pagename: Google Dialogflow ES
           subpages:
@@ -382,17 +377,39 @@
             - subpagename: Basic Content
             - subpagename: Advanced Features
         - pagename: Google Dialogflow CX
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: IBM Watson Assistant
-        - pagename: IBM Watson Assistant Version 2
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: Amazon Lex
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features        
         - pagename: Microsoft Direct Line
           subpages:
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
             - subpagename: PVA
-        - pagename: Medallia
-        - pagename: Custom Integration
+        - pagename: LivePerson Functions
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
+        - pagename: Medallia   
+          subpages:
+            - subpagename: Introduction                 
+        - pagename: Public API
+        - pagename: Hook Configuration
+        - pagename: Conversation Tester
+        - pagename: Bot Status Dashboard
+        - pagename: Bot Conversation Errors
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
