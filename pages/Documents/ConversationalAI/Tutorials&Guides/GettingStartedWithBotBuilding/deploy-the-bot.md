@@ -47,7 +47,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 ### Step 12: Create an engagement
 
-1. Click the Campaign Builder icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page.
+1. Click the Campaign Builder icon <img class="inlineimage"  style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page.
 2. Click **+ Add Campaign** in the lower-left corner.
 3. On the page that appears, specify the following:
 
