@@ -23,7 +23,7 @@ In this tutorial, you walk through how to link your bot to Conversational Cloud.
 
 In this step, you create a new user agent and skill for the bot, create a new engagement for web messaging, and connect the bot agent to the engagement.
 
-1. Click on the User Management icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_user_mgmt.png"> along the left side of the Conversational Cloud page. 
+1. Click on the User Management icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_user_mgmt.png"> along the left side of the Conversational Cloud page.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/users_tab.png">
 
@@ -39,7 +39,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Api key**: Generate API key
     * **Assignment > Assign Profile**: Agent
     * **Skills**: Bot
-	
+
     {: .important}
     By typing in the skill name **Bot**, a new skill with the name **Bot** is created.
 
@@ -47,7 +47,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 ### Step 12: Create an engagement
 
-1. Click the Campaign Builder icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page. 
+1. Click the Campaign Builder icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page.
 2. Click **+ Add Campaign** in the lower-left corner.
 3. On the page that appears, specify the following:
 
@@ -92,7 +92,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 ### Step 14: Test the deployment
 
-1. In a browser, navigate to the [Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html). 
+1. In a browser, navigate to the [Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html).
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
 
