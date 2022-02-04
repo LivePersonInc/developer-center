@@ -16,7 +16,7 @@ You can add custom code to an interaction. The code can be executed before the i
 ### Access the Custom Code panel
 
 1. Select the interaction.
-2. In the interaction's upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_customCode_int.png"> (Custom Code icon).
+2. In the interaction's upper-right corner, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_customCode_int.png"> (Custom Code icon).
 
     This displays the Custom Code panel.
 
