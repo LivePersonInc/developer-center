@@ -133,16 +133,18 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
  },
  "analytics": [
    {
-     "date": "string",
+     "transactionday": "string",
      "channel": "string",
      "skill": "string",
      "attempted": 0,
      "eligible": 0,
      "skipped": 0,
+     "optouts": 0,
      "sent": 0,
      "failed": 0,
      "delivered": 0,
      "read": 0,
+     "optins": 0,
      "conversationsCreated": 0,
      "conversationsClosed": 0,
      "csat": 0
@@ -217,16 +219,18 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
   },
   "analytics": [
     {
-      "date": "string",
+      "transactionday": "string",
       "channel": "string",
       "skill": "string",
       "attempted": 0,
       "eligible": 0,
       "skipped": 0,
+      "optouts": 0,
       "sent": 0,
       "failed": 0,
       "delivered": 0,
       "read": 0,
+      "optins": 0,
       "conversationsCreated": 0,
       "conversationsClosed": 0,
       "csat": 0
