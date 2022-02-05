@@ -131,7 +131,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
 6. Wait until the training is completed.
 
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
     Once training is completed, you can start testing with the model version in the Test tool.
 

@@ -97,7 +97,7 @@ Click the message, and then select **Unselected** to see the list of intents for
     * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
 4. Click **Test**.
 
-    You can click <img style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
+    You can click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_run_report.png">
 
