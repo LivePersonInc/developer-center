@@ -498,9 +498,9 @@ Check if your bot credentials are configured correctly in Third-Party Bots and t
 #### Description
 Parsing the response of the Medallia Adapter failed.
 #### Reasons
-In this case the Medallia Adapter sent some data we did not expect.
+The response Third-Party Bots retrieved from the Medallia adapter was not according to the specification.
 #### Solutions
-Contact the Medallia Adapter team and provide them the data of the conversation error.
+Please reach out to LP Support with the error details.
 
 
 
