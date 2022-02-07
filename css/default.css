@@ -35,12 +35,12 @@ body {
 
 b,
 strong {
-  font-weight: bold !important;
+  font-weight: bold;
   color: var(--link-color);
 }
 
 p {
-  margin: 0 0 16px !important;
+  margin: 0 0 16px;
 }
 
 .termsUseHighlight {
@@ -79,7 +79,7 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 24px;
+  gap: 32px;
 }
 
 .scroll {
@@ -237,10 +237,6 @@ code pre {
 .searchimage svg {
   right: 0;
   position: relative;
-}
-
-ul.mysidebar.nav {
-  width: 100%;
 }
 
 .sidebartop {
