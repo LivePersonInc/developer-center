@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <div id="mainHeader">
+  <div class="flex items-center" id="mainHeader">
+    <div class="max-width">
     <div id="logoHeader">
       <a href="/">
         <!-- <img alt="LivePerson Knowledge Center" class="sitelogo" src="img/liveperson-header.svg" /> -->
@@ -32,18 +33,13 @@
         name="search" autocomplete="on" />
     </div>
     <div id="loginHeader">
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-      </div>
       <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
         <button class="loginButton">Sign in</button>
       </a>
       <a target="_blank" href="register.html" class="trialText">
         <button class="trialButton">Start free trial</button>
       </a>
+    </div>
     </div>
   </div>
   <div class="defaultwrapper" id="defaultwrapper">
@@ -61,7 +57,7 @@
           </div>
 
         </div>
-        <div id="indicator-container" style="display:flex; margin-bottom:40px">
+        <div class="indicator-container" id="indicator-container">
           {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
           <div class="indicator chat">Chat</div>
           {% endif %}
@@ -86,6 +82,12 @@
   </div>
 
   <div id="defaultfooter" class="defaultfooter">
+     <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+      </div>
     <span class="centermobile" style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
       <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
         <span class="footer-tags">

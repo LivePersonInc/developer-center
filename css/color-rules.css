@@ -63,8 +63,8 @@
   --error-border: #b00020;
   --success-background: #f3f5f1;
   --success-border: #008738;
-  --breadcrumbs-background: #f5f5fa;
-  --breadcrumbs-text: #5f617a;
+  --breadcrumbs-background: #e7e8ec;
+  --breadcrumbs-text: #5a5f72;
   --input-search: #a39c96;
   --side-border-color: #282422;
 }
@@ -102,8 +102,8 @@
   --error-border: #ea405f;
   --success-background: #101e1f;
   --success-border: #3f9f66;
-  --breadcrumbs-background: #2d2f52;
-  --breadcrumbs-text: #dadbe6;
+  --breadcrumbs-background: #363944;
+  --breadcrumbs-text: #c6c9d2;
   --input-search: #818299;
   --side-border-color: #bcc9f0;
 }

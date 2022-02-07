@@ -40,17 +40,16 @@ img {
 }
 
 /*inner page css */
-h1[id],
+/* h1[id],
 h2[id],
 h3[id],
 h4[id],
 h5[id],
 h6[id],
 dt[id] {
-  margin-top: 40px;
   margin-bottom: 4px;
   padding-top: 0;
-}
+} */
 
 h2[id] {
   color: var(--title-text);
@@ -65,7 +64,7 @@ h3[id] {
   color: var(--title-text);
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-unit);
 }
 
 h4[id] {
@@ -75,14 +74,14 @@ h4[id] {
   font-weight: 600;
   font-style: inherit;
   margin-top: 15px;
-  margin-bottom: 16px;
+  margin-bottom: var(--space4);
 }
 
 h5[id] {
   font-family: "Space Grotesk", sans-serif;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: var(--space4);
 }
 
 h4 code.highlighter-rouge {
@@ -92,11 +91,12 @@ h4 code.highlighter-rouge {
 
 .h1 {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 32px;
-  margin-bottom: 16px;
-
+  font-family: Space Grotesk;
+  font-style: normal;
   font-weight: bold;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: var(--space4);
 }
 
 .h2 {
@@ -111,7 +111,7 @@ h4 code.highlighter-rouge {
   font-size: 20px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.9333em;
-  margin-bottom: 16px;
+  margin-bottom: var(--space4);
 
   margin-top: 14px;
 }
@@ -121,7 +121,7 @@ h4 code.highlighter-rouge {
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.86em;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: var(--space4);
   margin-top: 7px;
 }
 
@@ -290,7 +290,7 @@ div#toc > ul {
 
 .post-content ul,
 ol {
-  padding-left: 16px !important;
+  padding-left: var(--space4) !important;
 }
 
 .post-content > *:first-child {
@@ -458,7 +458,7 @@ ul#mysiderbar li {
 }
 
 .activeleafSolo {
-  margin-left: 16px;
+  margin-left: var(--space4);
   border-left: 4px solid var(--side-border-color);
   padding-left: 20px !important;
 }
@@ -466,7 +466,7 @@ ul#mysiderbar li {
 ul.mysidebar.nav .topfolder > a {
   display: inline-block;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--link-color);
   font-weight: bold;
   overflow-wrap: break-word;
@@ -555,8 +555,8 @@ ul.mysidebar.nav li ul li {
 ul.mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
-  margin-top: 16px !important;
-  margin-bottom: 16px;
+  margin-top: var(--space4) !important;
+  margin-bottom: var(--space4);
 }
 
 .innerList {
@@ -605,16 +605,14 @@ div.sidebarTitle-holder {
 .indicator {
   color: var(--breadcrumbs-text);
   background: var(--breadcrumbs-background);
-  border-radius: 4px;
+  border-radius: 16px;
   font-family: Inter;
   font-style: normal;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 14px;
-  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
   padding: 3px 8px;
   align-self: center;
-  margin-right: 8px;
 }
 
 .indicator:nth-child(3) {
@@ -625,11 +623,7 @@ div.sidebarTitle-holder {
 .breadcrumbs {
   background-color: var(--body-background);
   border-radius: 0;
-  margin-bottom: 8px;
-  min-height: 42px;
-
-  padding-left: 0;
-  padding-top: 8px;
+  padding-bottom: 16px;
   z-index: 10;
 }
 
@@ -689,11 +683,12 @@ div.sidebarTitle-holder {
 .post-content > p,
 .post-content ol,
 .post-content ul {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-wrap: break-word;
-  font-size: 16px;
+  font-style: normal;
   font-weight: normal;
-  line-height: 1.71;
+  font-size: 18px;
+  line-height: 28px;
   color: var(--body-text);
 }
 
@@ -750,12 +745,12 @@ div.sidebarTitle-holder {
 pre {
   border: none;
   border-radius: 0px;
-  padding: 0px 97px 16px 20px;
+  padding: 0px 97px var(--space4) 20px;
   order: 10;
 }
 
 pre code {
-  margin-top: 16px;
+  margin-top: var(--space4);
 }
 
 /*change the defaults colors to match yeal design*/

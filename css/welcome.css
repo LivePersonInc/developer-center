@@ -1,15 +1,19 @@
 .welcome-card {
-  flex: 0 47%;
-  padding: 24px;
-  margin-right: 1%;
-  min-height: 180px;
+  width: 47%;
+  flex-grow: 1;
+  padding: var(--space8);
+  min-height: 172px;
   /* Primary/White */
   background: var(--card-background);
   /* J/Navy Lighter Gray */
-  margin-bottom: 16px;
+  margin-bottom: 0;
   border: 1px solid var(--card-border);
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .welcome-card:hover {
@@ -20,11 +24,6 @@
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  width: 670px;
-  flex: 2;
-  line-height: 24px;
-  letter-spacing: 0.01em;
   color: var(--body-text);
 }
 
@@ -40,20 +39,20 @@
 }
 
 .container-image {
-  margin: 0 0 16px 0;
+  margin: 0 0 var(--space4) 0;
 }
 
 .card-container {
   display: flex;
-  margin-top: 64px;
-  padding-right: 48px;
+  margin-top: var(--space8);
   width: 100%;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 img.card-container {
   margin-top: 24px;
-  margin-bottom: 16px;
+  margin-bottom: var(--space4);
 }
 
 .welcome-title {
@@ -61,9 +60,10 @@ img.card-container {
   font-weight: bold;
   margin: 0;
   max-width: 424px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.01em;
+  margin-top: 0;
 }
 
 .welcome-title.parent:hover {
@@ -72,6 +72,7 @@ img.card-container {
 
 .welcome-content {
   color: var(--body-text);
+  margin-bottom: 0;
 }
 
 #success-stories {
@@ -83,15 +84,16 @@ img.card-container {
     url("img/welcomebanner.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 #free-trial {
   background: var(--cta-background);
-  flex: 0 95%;
+  width: 100%;
   display: flex;
-  margin-top: 40px;
-  padding: 40px 0 40px 40px;
-  border-radius: 8px;
+  margin-top: var(--space8);
+  padding: var(--space8);
+  border-radius: 0;
 }
 
 #free-trial-button-welcome {
@@ -104,7 +106,6 @@ img.card-container {
 
 .free-trial-container {
   display: flex;
-  padding-right: 48px;
   width: 100%;
   flex-wrap: wrap;
 }

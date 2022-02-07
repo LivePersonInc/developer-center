@@ -6,13 +6,14 @@ permalink: index.html
 redirect_from:
   - get-started-LE-APIs.html
 ---
+
 <div class="header-label">
 Whether you are a startup or a large enterprise, we look forward to building amazing
 solutions with you!
 </div>
 
 <div class="card-container">
-  <div id="success-stories" class="welcome-card" style="padding:58px 22px 58px 22px;">
+  <div id="success-stories" class="welcome-card">
     <a href="/platform-overview.html">
       <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson’s Conversational AI, bots and tools </p>
       <p class="free-trial-label" style="margin-left: 18px !important; ">
@@ -22,24 +23,28 @@ solutions with you!
   </div>
     <a class="welcome-card"  href="/first-steps.html">
       <img class="container-image" src="img/ic_get_started.svg"/>
-      <h5 class="welcome-title">Get Started with LivePerson</h5>
+      <h3 class="welcome-title h3">Get Started with LivePerson</h3>
       <p class="welcome-content">Build on our platform using quick start guides, APIs and SDKs. </p>
     </a>
     <a  class="welcome-card"  href="/liveperson-functions-overview.html">
       <img class="container-image" src="img/ic_functions.svg"/>
-      <h5 class="welcome-title">Explore Function as a Service (FaaS) to learn how to create custom logic for your business.</h5>
+      <h3 class="welcome-title h3">Explore Function as a Service (FaaS)</h3>
+      <p class="welcome-content">Learn how to create custom logic for your business</p>
     </a>
       <a  class="welcome-card"  href="/getting-started-with-rich-messaging-introduction.html">
       <img class="container-image" src="img/ic_richmessaging.svg"/>
-      <h5 class="welcome-title">Extend your messaging capabilities with Rich Messaging.</h5>
+      <h3 class="welcome-title h3">Rich Messaging</h3>
+      <p class="welcome-content">Extend your messaging capabilities</p>
     </a>
   <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
       <img class="container-image" src="img/ic_support.svg"/>
-      <h5 class="welcome-title">Need help? Get answers to common questions or contact support.</h5>
+      <h3 class="welcome-title h3">Get help</h3>
+       <p class="welcome-content">Get answers to common questions or contact support</p>
     </a>
     <a  class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new-latest-whats-new.html">
       <img class="container-image" src="img/ic_news.svg"/>
-      <h5 class="welcome-title">Stay informed with LivePerson’s latest news and updates.</h5>
+      <h3 class="welcome-title h3">Stay Informed</h3>
+      <p class="welcome-content">Get the LivePerson’s latest news and updates.</p>
     </a>
 </div>
 <div class="free-trial-container">

@@ -1,3 +1,22 @@
+:root {
+  --max-width: 1616px; /*  1616px */
+  --header-padding: 0;
+
+  /*  size */
+  --space-unit: 4px; /*  4px */
+  --space2: calc(2 * var(--space-unit)); /*  8px */
+  --space3: calc(3 * var(--space-unit)); /*  14px */
+  --space4: calc(4 * var(--space-unit)); /*  16px */
+  --space6: calc(6 * var(--space-unit)); /*  24px */
+  --space8: calc(8 * var(--space-unit)); /*  32px */
+  --space10: calc(10 * var(--space-unit)); /*  40px */
+  --space12: calc(12 * var(--space-unit)); /*  48px */
+  --space16: calc(16 * var(--space-unit)); /*  64px */
+  --space175: calc(17.5 * var(--space-unit)); /*  70px */
+  --space25: calc(25 * var(--space-unit)); /*  100px */
+  --navbar-padding: 24px 0;
+}
+*,
 * {
   margin: 0;
 }
@@ -37,17 +56,19 @@ p {
 
 #mainHeader {
   top: 0;
-  height: 90px;
+  min-height: 96px;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px;
   background-color: var(--body-background);
   border-bottom: 1px solid var(--card-border);
   position: fixed;
   width: 100%;
-  gap: 1rem;
+}
+#mainHeader > .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
 }
 
 .scroll {
@@ -112,10 +133,15 @@ code pre {
   font-size: 15px;
 }
 
+.indicator-container {
+  display: flex;
+  gap: 4px;
+}
 .documenttitlecontainer {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: var(--space8);
+  margin-bottom: var(--space8);
 }
 
 .titlecontainer {
@@ -128,12 +154,16 @@ code pre {
   color: var(--link-color-hover);
 }
 
-/*
-    Margin-left is 12 because the indicator has a marginright of 12 to add up to 24
-*/
+.indicator-container {
+  gap: 8px;
+}
+
 .suggestbutton {
-  align-self: center;
-  margin-left: 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
 }
 
 .suggestbutton a {
@@ -221,8 +251,8 @@ ul.mysidebar.nav {
 
 .defaultcontent {
   display: flex;
-  padding: 0 40px;
-  margin-bottom: 80px;
+  padding: 0 var(--space8);
+  margin-bottom: var(--space8);
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   flex: 3;
@@ -441,6 +471,30 @@ table tbody td img {
   display: none;
 }
 
+.max-width {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .max-width {
+    max-width: 100%;
+    margin: inherit;
+  }
+}
+@media (min-width: 769px) and (max-width: 1680px) {
+  .max-width {
+    padding-left: var(--space8);
+    padding-right: var(--space8);
+  }
+}
+@media (max-width: 768px) {
+  .max-width {
+    padding-left: 0;
+    padding-right: 0;
+    word-break: break-word;
+  }
+}
+
 #featurestable {
   width: 100%;
   max-width: none;
@@ -537,14 +591,13 @@ table tbody td img {
 
 .important {
   border-left-color: var(--important-border);
-  padding: 12px 24px 12px 30px;
+  padding: 16px;
   margin: 2em 0;
   border-radius: 4px;
   border-left-width: 4px;
   border-left-style: solid;
   background-color: var(--important-background);
   color: var(--widget-text);
-  padding-left: 15px;
 }
 
 .beforeImportant {
@@ -687,11 +740,14 @@ a.loginText {
 
 .loginButton,
 .trialButton {
-  border-radius: 25px;
-  width: 120px;
   text-align: center;
-  padding: 12px;
-  font-weight: 500;
+  padding: 12px var(--space8);
+  font-family: Space Grotesk;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 24px;
 }
 
 .documentsbutton {
@@ -999,7 +1055,6 @@ a.loginText {
 
 .documenttitle {
   display: flex;
-  margin-top: 8px;
 }
 
 .documenttitle .h1 {
@@ -1418,7 +1473,7 @@ a:focus-within:not(.anchorjs-link) {
 }
 .theme-switch-wrapper .theme-switch {
   display: inline-block;
-  height: 32px;
+  height: var(--space8);
   position: relative;
   width: 64px;
   text-align: right;
@@ -1519,7 +1574,7 @@ input#csds-button {
   color: #fff;
   background-color: var(--link-color);
   border: 0;
-  height: 32px;
+  height: var(--space8);
   padding: 0 10px 0 10px;
 }
 
@@ -1633,5 +1688,11 @@ input#csds-button {
   }
   div#loginHeader a.trialText {
     display: none;
+  }
+}
+
+@media (min-width: 1921px) {
+  html {
+    font-size: 17px;
   }
 }
