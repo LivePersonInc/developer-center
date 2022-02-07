@@ -12,12 +12,6 @@ body {
   font-style: normal;
 }
 
-.flex {
-  display: flex;
-}
-.items-center {
-  align-items: center;
-}
 /*colors */
 .find {
   background-color: yellow;

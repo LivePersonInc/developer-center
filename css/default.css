@@ -54,6 +54,17 @@ p {
   flex-wrap: wrap;
 }
 
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+
+.side-width {
+  width: 320px;
+}
+
 #mainHeader {
   top: 0;
   min-height: 96px;
@@ -79,11 +90,9 @@ p {
   display: flex;
   -ms-flex: 1; /* IE 10 */
   flex: 1;
-  padding-top: 5px;
 }
 
 .sitelogo {
-  padding-bottom: 5px;
   margin: 0;
 }
 
@@ -112,6 +121,7 @@ svg.sitelogo {
   flex: 3;
   -ms-flex: 3; /* IE 10 */
   align-items: center;
+  width: 100%;
 }
 
 #loginHeader {
@@ -136,12 +146,12 @@ code pre {
 .indicator-container {
   display: flex;
   gap: 4px;
+  padding-bottom: var(--space8);
 }
 .documenttitlecontainer {
   display: flex;
   flex-direction: column;
-  margin-top: var(--space8);
-  margin-bottom: var(--space8);
+  padding-top: var(--space8);
 }
 
 .titlecontainer {
@@ -202,10 +212,11 @@ code pre {
 }
 
 .defaultwrapper {
-  margin-top: 90px;
+  padding-top: 96px;
   min-height: calc(100vh - 58px);
   display: flex;
   min-width: 100%;
+  gap: 32px;
 }
 
 .searchimage {
@@ -214,6 +225,7 @@ code pre {
   align-items: center;
   position: absolute;
   height: 100%;
+  right: 16px;
 }
 
 /* .searchimage img {
@@ -223,7 +235,7 @@ code pre {
   top: -12px;
 } */
 .searchimage svg {
-  right: -35px;
+  right: 0;
   position: relative;
 }
 
@@ -242,16 +254,15 @@ ul.mysidebar.nav {
 .defaultsidebar {
   background-color: var(--body-background);
   display: flex;
-  padding-top: 2%;
+  padding-top: var(--space8);
   margin-right: 0% !important;
-  width: 310px;
-  padding-bottom: 2%;
+  min-width: 310px;
+  padding-bottom: var(--space8);
   flex-direction: column;
 }
 
 .defaultcontent {
   display: flex;
-  padding: 0 var(--space8);
   margin-bottom: var(--space8);
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
@@ -376,16 +387,14 @@ ul.mysidebar.nav {
 #aa-search-input {
   border-radius: 25px;
   border: 1px solid var(--card-border);
-  background-color: var(--body-background);
-  width: 90%;
+  background-color: var(--input-search-background);
+  width: 100%;
   line-height: 24px;
-  letter-spacing: 0.01em;
   min-width: 250px;
   font-size: 16px;
   font-family: "Inter", sans-serif;
-  padding: 10px;
   border-bottom: 1px solid var(--card-border);
-  padding-left: 48px;
+  padding: 12px 20px;
 }
 
 #aa-search-input:focus {
@@ -394,21 +403,27 @@ ul.mysidebar.nav {
 
 #aa-search-input::-webkit-input-placeholder {
   font-family: "Inter", sans-serif;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
+  line-height: 24px;
 }
 
 #aa-search-input::-moz-placeholder {
   font-family: "Inter", sans-serif;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
-  color: var(--input-search);
+  line-height: 24px;
+  color: var(--input-search-text);
 }
 
 #aa-search-input:-ms-input-placeholder {
   font-family: "Inter", sans-serif;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
+  line-height: 24px;
   color: var(--input-search);
 }
 
@@ -423,7 +438,6 @@ ul.mysidebar.nav {
   height: auto;
   flex: 1;
   display: flex !important;
-  padding-left: 20px;
 }
 
 .algolia-autocomplete .ds-dropdown-menu {
@@ -492,6 +506,9 @@ table tbody td img {
     padding-left: 0;
     padding-right: 0;
     word-break: break-word;
+  }
+  .side-width {
+    width: 100%;
   }
 }
 
@@ -824,7 +841,6 @@ a.loginText {
 .topfolder {
   line-height: 1.5em;
   padding: 12px 0;
-  margin-left: 35px;
 }
 
 .topfolder > ul {

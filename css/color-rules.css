@@ -67,6 +67,8 @@
   --breadcrumbs-text: #5a5f72;
   --input-search: #a39c96;
   --side-border-color: #282422;
+  --input-search-background: #eeeff1;
+  --input-search-text: #292b33;
 }
 .dark {
   --primary: #03041a;
@@ -106,4 +108,6 @@
   --breadcrumbs-text: #c6c9d2;
   --input-search: #818299;
   --side-border-color: #bcc9f0;
+  --input-search-background: #24262e;
+  --input-search-text: #81899c;
 }
