@@ -54,7 +54,10 @@ dt[id] {
 h2[id] {
   color: var(--title-text);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.0666em;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
   margin-bottom: 0;
   margin-top: 30px;
 }
@@ -62,8 +65,10 @@ h2[id] {
 h3[id] {
   font-family: "Space Grotesk", sans-serif;
   color: var(--title-text);
-  font-size: 20px;
-  font-weight: 600;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
   margin-bottom: var(--space-unit);
 }
 
@@ -79,7 +84,10 @@ h4[id] {
 
 h5[id] {
   font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
   margin-top: 0;
   margin-bottom: var(--space4);
 }
@@ -102,15 +110,20 @@ h4 code.highlighter-rouge {
 .h2 {
   color: var(--title-text);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
   margin-bottom: 30px;
 }
 
 .h3 {
   color: var(--title-text);
-  font-size: 20px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 0.9333em;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
   margin-bottom: var(--space4);
 
   margin-top: 14px;

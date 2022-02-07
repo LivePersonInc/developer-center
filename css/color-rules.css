@@ -69,6 +69,7 @@
   --side-border-color: #282422;
   --input-search-background: #eeeff1;
   --input-search-text: #292b33;
+  --text-invert: #fff;
 }
 .dark {
   --primary: #03041a;
@@ -110,4 +111,5 @@
   --side-border-color: #bcc9f0;
   --input-search-background: #24262e;
   --input-search-text: #81899c;
+  --text-invert: #000;
 }

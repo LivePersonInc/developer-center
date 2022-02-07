@@ -55,7 +55,7 @@ img.card-container {
   margin-bottom: var(--space4);
 }
 
-.card-container a.welcome-card .welcome-title {
+.card-container .welcome-card .welcome-title {
   color: var(--card-text);
   margin: 0;
   font-style: normal;
@@ -63,25 +63,29 @@ img.card-container {
   font-size: 24px;
   line-height: 32px;
 }
+.card-container #success-stories .welcome-title {
+  color: var(--text-invert);
+}
 
 .welcome-title.parent:hover {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
 }
 
-.card-container a.welcome-card .welcome-content {
+.card-container .welcome-card .welcome-content {
   color: var(--body-text);
   margin-bottom: 0;
 }
 
 #success-stories {
-  background-image: linear-gradient(
-      180deg,
-      rgba(15, 9, 67, 0.88) 0%,
-      rgba(41, 39, 64, 0.8) 100%
-    ),
-    url("img/welcomebanner.png");
   background-repeat: no-repeat;
   background-position: center;
+  background: linear-gradient(
+      180deg,
+      rgba(41, 43, 51, 0.35) 0%,
+      rgba(41, 43, 51, 0.7) 100%
+    ),
+    url("img/welcomebanner.png");
+  border: 2px solid #eeeff1;
   background-size: cover;
 }
 

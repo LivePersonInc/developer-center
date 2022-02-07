@@ -15,10 +15,9 @@ solutions with you!
 <div class="card-container">
   <div id="success-stories" class="welcome-card">
     <a href="/platform-overview.html">
-      <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson’s Conversational AI, bots and tools </p>
-      <p class="free-trial-label" style="margin-left: 18px !important; ">
-      <img class="dots-container" src="img/four-dots-white.svg"/>
-      Learn more</p>
+      <img class="container-image" src="img/ic_get_started.svg"/>
+    <h3 class="welcome-title h3 ">Get Started with LivePerson</h3>
+      <p class="welcome-content">Build on our platform using quick start guides, APIs and SDKs. </p>
     </a>
   </div>
     <a class="welcome-card"  href="/first-steps.html">
