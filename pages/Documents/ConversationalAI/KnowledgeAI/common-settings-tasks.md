@@ -88,7 +88,7 @@ Note the following:
 
 1. Open the knowledge base, and use the Search box at the top of the page to find the article.
 
-2. Click the <img style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
+2. Click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png">
     

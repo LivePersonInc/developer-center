@@ -1373,7 +1373,7 @@ a.loginText {
   display: none;
 }
 
-div#post-content p img,
+div#post-content p img:not(.inlineimage),
 img.fancyimage {
   margin-right: auto;
   margin-left: auto;
@@ -1586,7 +1586,7 @@ input#csds-button {
   .defaultcontent {
     flex: initial;
     width: 100%;
-    padding: 0 35px 0 15px;
+    padding: 0 35px;
   }
   div#defaultwrapper #jumpto {
     width: initial;
@@ -1635,5 +1635,8 @@ input#csds-button {
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 2px;
+  }
+  div#loginHeader a.trialText {
+    display: none;
   }
 }

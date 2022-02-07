@@ -352,15 +352,6 @@ Controls text color for hyperlink item on the system messages bubble
 
 ### Conversations
 
-#### maxPreviousConversationToPresent  
-Number of conversations to show. 
-
-   - **Type:** UInt
-   - **Default value:** 2 
-
-{:.notice}
-This configuration will limit the conversations presented on the screen, once this number has been reached, no more conversations will be added to the Screen even if more are available
-
 
 #### deleteClosedConversationOlderThanMonths  
 Upon SDK initialization, all closed conversations with an end date older than X months will be deleted from the database. Setting 0 deletes all closed conversations. 
@@ -585,6 +576,22 @@ The configuration to control our modal presentation stylen for LPDatePicker cont
 - **Type:** UIModalPresentationStyle
 - **Default Value:** fullScreen
 - **Available since:** 6.5.0
+
+##### enableHideWelcomeMessageOnClearHistory
+- **Description:** Show or hide the welcome message when calling the Clear History functionality.
+- **Type:** Bool
+- **Default Value:** false
+- **Available since:** 6.7.0
+- **See also:** [Clear History Function](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#clearhistory)
+- **Limitations:** The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
+
+##### enableWelcomeMessageForHistoryControlAPI
+- **Description:** This configuration will only enable showing the Welcome Message when `LPConversationsHistoryStateToDisplay.Open`
+- **Type:** Bool
+- **Default Value:** false
+- **Available since:** 6.7.0
+- **See also:** [Control History API](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html#optional-code-sample-to-enable-welcome-message)
+
 
 --- 
 
