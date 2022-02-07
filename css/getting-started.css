@@ -25,7 +25,7 @@
 }
 
 .teaser-header {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -43,7 +43,7 @@
 }
 
 .hyperlink {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -62,14 +62,14 @@
 }
 
 .getting-started-paragraph {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
   margin-top: 8px;
   display: flex;
   flex: 2;
-  font-size: 16px;
-  line-height: 24px;
   letter-spacing: 0.01em;
   color: var(--body-text);
 }
@@ -83,7 +83,7 @@
 }
 
 .getting-started-h5 {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   width: 640px;
@@ -122,7 +122,7 @@
 }
 
 .header-lp4 {
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 20px;
   flex: 0 50%;
   margin-right: 10%;
@@ -136,7 +136,7 @@
 }
 
 .header-lp4-external {
-  font-family: Roboto;
+  font-family: Inter;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -156,7 +156,7 @@
 
 .link-padding {
   margin-bottom: 16px;
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -227,13 +227,12 @@
 }
 
 .small-header {
-  font-family: Roboto;
+  font-family: Space Grotesk;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 24px;
+  line-height: 32px;
   margin-top: 32px;
-  line-height: 28px;
-  letter-spacing: 0.01em;
   color: var(--link-color);
 }
 
@@ -246,7 +245,7 @@
 }
 
 .concierge-bot-header {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;

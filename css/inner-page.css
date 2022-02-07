@@ -54,14 +54,14 @@ dt[id] {
 
 h2[id] {
   color: var(--title-text);
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 1.0666em;
   margin-bottom: 0;
   margin-top: 30px;
 }
 
 h3[id] {
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   color: var(--title-text);
   font-size: 20px;
   font-weight: 600;
@@ -69,7 +69,7 @@ h3[id] {
 }
 
 h4[id] {
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   color: var(--title-text);
   font-size: 15px;
   font-weight: 600;
@@ -79,7 +79,7 @@ h4[id] {
 }
 
 h5[id] {
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 16px;
@@ -92,7 +92,7 @@ h4 code.highlighter-rouge {
 
 .h1 {
   color: var(--title-text);
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 32px;
   margin-bottom: 16px;
 
@@ -101,7 +101,7 @@ h4 code.highlighter-rouge {
 
 .h2 {
   color: var(--title-text);
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 24px;
   margin-bottom: 30px;
 }
@@ -109,7 +109,7 @@ h4 code.highlighter-rouge {
 .h3 {
   color: var(--title-text);
   font-size: 20px;
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 0.9333em;
   margin-bottom: 16px;
 
@@ -118,7 +118,7 @@ h4 code.highlighter-rouge {
 
 .h4 {
   color: var(--title-text);
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 0.86em;
   font-weight: 600;
   margin-bottom: 16px;
@@ -465,7 +465,7 @@ ul#mysiderbar li {
 
 ul.mysidebar.nav .topfolder > a {
   display: inline-block;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--link-color);
   font-weight: bold;
@@ -606,7 +606,7 @@ div.sidebarTitle-holder {
   color: var(--breadcrumbs-text);
   background: var(--breadcrumbs-background);
   border-radius: 4px;
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 11px;
@@ -689,7 +689,7 @@ div.sidebarTitle-holder {
 .post-content > p,
 .post-content ol,
 .post-content ul {
-  font-family: "Roboto", Arial;
+  font-family: "Space Grotesk", sans-serif;
   overflow-wrap: break-word;
   font-size: 16px;
   font-weight: normal;
@@ -731,7 +731,7 @@ div.sidebarTitle-holder {
   background-color: var(--card-text);
   border-color: var(--card-background);
   color: var(--card-background);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .alert-warning hr {
@@ -739,7 +739,7 @@ div.sidebarTitle-holder {
 }
 
 .alert-warning h2 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .btn-primary.active {

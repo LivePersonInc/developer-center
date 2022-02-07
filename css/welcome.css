@@ -17,7 +17,7 @@
 }
 
 .header-label {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -31,7 +31,7 @@
 .success-stories-header {
   font-size: 24px;
   max-width: 418px;
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   line-height: 40px;
@@ -136,7 +136,7 @@ img.card-container {
 }
 
 .free-trial-label {
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;

@@ -11,6 +11,7 @@ html body {
 
 body {
   padding-top: 0 !important;
+  font-family: "Inter", sans-serif;
 }
 
 b,
@@ -72,7 +73,7 @@ svg.sitelogo {
 
 .devLabel {
   flex-shrink: 0;
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -114,7 +115,7 @@ code pre {
 .documenttitlecontainer {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .titlecontainer {
@@ -163,7 +164,7 @@ code pre {
   display: flex;
   margin: 0 auto;
   font-size: 14px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .defaultfooter span a {
@@ -351,7 +352,7 @@ ul.mysidebar.nav {
   letter-spacing: 0.01em;
   min-width: 250px;
   font-size: 16px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 10px;
   border-bottom: 1px solid var(--card-border);
   padding-left: 48px;
@@ -362,27 +363,27 @@ ul.mysidebar.nav {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
 
 #aa-search-input::-moz-placeholder {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: var(--input-search);
 }
 
 #aa-search-input:-ms-input-placeholder {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: var(--input-search);
 }
 
 #aa-search-input:-moz-placeholder {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: var(--input-search);
@@ -488,7 +489,7 @@ table tbody td img {
   font-size: 14px;
   padding: 10px;
   border-radius: 3px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   margin-top: 9px;
   margin-left: -8.1px;
 }
@@ -542,14 +543,8 @@ table tbody td img {
   border-left-width: 4px;
   border-left-style: solid;
   background-color: var(--important-background);
-  font-size: 14px !important;
-  line-height: 1.71;
   color: var(--widget-text);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.01em;
 }
 
 .beforeImportant {
@@ -600,7 +595,7 @@ table tbody td img {
   font-size: 14px !important;
   line-height: 1.71;
   color: var(--widget-text);
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   padding-left: 15px;
 }
 
@@ -618,7 +613,7 @@ table tbody td img {
   font-size: 14px;
   line-height: 1.71;
   color: #4a4a4a;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   padding-left: 15px;
 }
 
@@ -701,7 +696,7 @@ a.loginText {
 
 .documentsbutton {
   flex: 1;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   margin-right: 50px;
   display: flex;
@@ -719,7 +714,7 @@ a.loginText {
 
 .solutionsbutton {
   flex: 1;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -1033,7 +1028,7 @@ a.loginText {
 .supportbutton {
   padding: 10px;
   margin-left: 39px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -1045,13 +1040,13 @@ a.loginText {
 }
 
 .supportbutton span {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #f2f1f2;
 }
 
 .defaultbutton {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -1100,7 +1095,7 @@ a.loginText {
 
 #anchorlist a {
   /* color: var(--secondary-black); */
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   color: var(--title-text);
   font-weight: bold;
@@ -1122,7 +1117,7 @@ a.loginText {
 
 .jumpToAnchor {
   text-align: right;
-  font-family: Roboto;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
