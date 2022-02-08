@@ -37,7 +37,7 @@ To use the Conversation Tester, the entire pipeline for messaging must be in pla
 
 You can access the Conversation Tester in two ways:
 
-* From within a custom bot, click <img style="width:30px" src="img/ConvoBuilder/icon_3_dot_menu.png"> on the menu bar, and select **Conversation Tester**.
+* From within a custom bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_3_dot_menu.png"> on the menu bar, and select **Conversation Tester**.
 
     This option is available only when the bot has an agent connector (regardless of its status). When you want to test a specific bot, this method is quicker because it automatically starts a conversation with that bot, routing it to the first, associated skill that is found.
 
@@ -108,10 +108,10 @@ Keep the **Auto update** setting on if you want to continuously fetch the latest
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ct_debug_auto_update.png">
 
-If you don't need the log, you can turn **Auto update** off, which keeps the connection clean. In this case, you can manually refresh the log by clicking <img style="width:30px" src="img/ConvoBuilder/icon_ct_refresh_debug_log.png">.
+If you don't need the log, you can turn **Auto update** off, which keeps the connection clean. In this case, you can manually refresh the log by clicking <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_refresh_debug_log.png">.
 
 #### Show and hide debug messages
-The debug log can become verbose and long, so it can be helpful to show and hide specific types of messages. Click <img style="width:30px" src="img/ConvoBuilder/icon_ct_filter_debug_msgs.png"> and use the available filters to do this.
+The debug log can become verbose and long, so it can be helpful to show and hide specific types of messages. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_filter_debug_msgs.png"> and use the available filters to do this.
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_debug_filter.png">
 
