@@ -478,9 +478,11 @@ ul#mysiderbar li {
 ul.mysidebar.nav .topfolder > a {
   display: inline-block;
   font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
+  line-height: 28px;
   color: var(--link-color);
-  font-weight: bold;
   overflow-wrap: break-word;
 }
 
@@ -531,12 +533,6 @@ ul.mysidebar.nav li.activepage a:hover {
   color: var(--darker-gray);
 }
 
-.mysidebar.nav li.folder > a {
-  font-size: 14px;
-  font-weight: bold;
-
-  margin-top: -1px;
-}
 input#metricsSearch {
   background: var(--body-background);
   border-color: var(--card-border);

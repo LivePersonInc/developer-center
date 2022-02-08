@@ -36,7 +36,7 @@
   --primary-content: #03011d;
   --secondary-background: #3863e5;
   --secondary-text: #fcfcfd;
-  --link-color: #675d55;
+  --link-color: #3863e5;
   --link-color-hover: var(--post-link-hover);
   --post-link: var(--secondary-background);
   --post-link-hover: #204ac5;

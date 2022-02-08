@@ -75,13 +75,7 @@
       {% endif %}
       {{ content | extlinks }}
       <div id="defaultfooter" class="defaultfooter">
-     <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-      </div>
-    <span class="centermobile" style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
+    <div class="centermobile" style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
       <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
         <span class="footer-tags">
           Copyright
@@ -90,7 +84,13 @@
           <span class="footer-tags">Terms of Use
           </span>
         </a>
-    </span>
+          <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+      </div>
+      </div>
   </div>
     </div>
     <div id="jumpto">
