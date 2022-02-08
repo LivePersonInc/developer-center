@@ -74,8 +74,8 @@ Figure 2.1 Activity with Structured Content
 Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
-The content should be added to the quickReplies property of the structuredContent object and there also
-a message be included in the structuredContent object.
+The content needs to be provided as a quickReplies object in the structuredContent.
+It is also required to provide a message property in the structuredContent,
 This message will be sent to the customer along with the Quick Replies.
 For detailed information on Quick Replies check out the documentation for the specific channel
 ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html),
