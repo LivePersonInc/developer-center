@@ -58,7 +58,7 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html) the bot to a Conversational Cloud environment.
 
-* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
+* The <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
 
     * **Bot Settings** (see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings))
     * **Bot Change History**
