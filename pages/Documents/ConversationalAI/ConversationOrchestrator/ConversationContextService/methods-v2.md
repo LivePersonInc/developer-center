@@ -24,9 +24,9 @@ The APIs can be called as shown below. Every API call requires the secure token
 {domain}/{api}?access_token=<Token> 
 
 Domain URL per environment:
-* AMERICAS : https://z1.context.liveperson.net
-* EMEA: https://z2.context.liveperson.net
-* APAC: https://z3.context.liveperson.net
+* AMERICAS : https://z1.ccs.liveperson.net/
+* EMEA: https://z2.ccs.liveperson.net/
+* APAC: https://z3.ccs.liveperson.net/
 
 {: .important}
 For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
