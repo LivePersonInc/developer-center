@@ -19,13 +19,14 @@ In WhatsApp Business Messages, a List Message has the following structure:
 3. Footer (optional)
 4. Vertical (at least 1 is mandatory)
 
-_Examples Of WhatsApp Reply Button:_
+_Examples Of WhatsApp List Message:_
 
-![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
+![Whatsapp List message Examples](img/connectors/wa_listmessage1.png)
+![Whatsapp List message Examples](img/connectors/wa_listmessage2.png)
 
-### Reply Button
+### List Message Button
 
-The Reply Button is the container that holds the information that should be displayed by the connector.
+The List Message Button is the container that holds the information that should be displayed by the connector.
 
 #### Properties
 
