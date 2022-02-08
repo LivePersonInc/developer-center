@@ -58,7 +58,7 @@ a:hover {
   font-size: 14px;
   margin-bottom: 0px;
   line-height: 32px;
-  letter-spacing: 0.01em;
+
   color: #5f617a;
 }
 
@@ -71,7 +71,7 @@ a:hover {
   font-size: 14px;
   line-height: 24px;
   /* identical to box height, or 171% */
-  letter-spacing: 0.01em;
+
   /* Primary/Electric Blue */
   color: #005ef4;
   margin-bottom: 12px;
@@ -93,7 +93,7 @@ a:hover {
   line-height: 24px;
   /* or 150% */
   width: 302px;
-  letter-spacing: 0.01em;
+
   margin-bottom: 16px;
   /* Brand/Navy */
 
@@ -106,7 +106,7 @@ a:hover {
   font-weight: bold;
   padding-top: 24px;
   line-height: 24px;
-  letter-spacing: 0.01em;
+
   color: #005ef4;
   /* Primary/Electric Blue */
 }
@@ -116,7 +116,7 @@ a:hover {
   font-family: Inter;
   font-weight: bold;
   line-height: 24px;
-  letter-spacing: 0.01em;
+
   color: #005ef4;
   /* Primary/Electric Blue */
 }
@@ -201,7 +201,7 @@ a:hover {
   font-weight: bold;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0.01em;
+
   font-family: Inter;
   color: #ffffff;
   margin-bottom: 16px;
@@ -213,7 +213,7 @@ a:hover {
   font-weight: normal !important;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0.01em;
+
   font-family: Inter;
   color: #ffffff;
   margin-bottom: 16px;

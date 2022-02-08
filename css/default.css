@@ -193,9 +193,7 @@ code pre {
   padding: 19px 0;
   display: flex;
   min-width: 100%;
-  margin-top: 35px;
   width: 100%;
-  background-color: var(--footer-background);
   color: var(--footer-text);
   margin-bottom: -25px;
 }

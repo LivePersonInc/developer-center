@@ -7,7 +7,7 @@
   background: var(--card-background);
   /* J/Navy Lighter Gray */
   margin-bottom: 0;
-  border: 1px solid var(--card-border);
+  border: 2px solid var(--card-border);
   box-sizing: border-box;
   border-radius: 0;
   display: flex;
@@ -17,7 +17,8 @@
 }
 
 .welcome-card:hover {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+  border-width: 4px;
+  margin: -2px;
 }
 
 .header-label {
@@ -68,7 +69,8 @@ img.card-container {
   color: var(--text-invert);
 }
 
-.card-container #success-stories .welcome-content {
+.card-container #success-stories .welcome-content,
+.card-container #success-stories {
   color: var(--text-invert);
 }
 
@@ -87,28 +89,23 @@ img.card-container {
   margin-top: 4px;
 }
 
+.card-container .welcome-card {
+  color: var(--body-text);
+}
+
 #success-stories {
   background-repeat: no-repeat;
   background-position: center;
-  background: linear-gradient(
-      180deg,
-      rgba(41, 43, 51, 0.35) 0%,
-      rgba(41, 43, 51, 0.7) 100%
-    ),
-    url("img/welcomebanner.png");
+  background: var(--card-bg-background), url("img/welcomebanner.png");
   border: 2px solid #eeeff1;
   background-size: cover;
 }
 
 #free-trial {
-  background: var(--cta-background);
   width: 100%;
   display: flex;
-  margin-top: var(--space8);
-  padding: var(--space8);
   border-radius: 0;
 }
-
 #free-trial-button-welcome {
   flex: 1;
   display: flex;
@@ -116,52 +113,46 @@ img.card-container {
   padding-right: 24px;
   justify-content: flex-end;
 }
-
 .free-trial-container {
   display: flex;
   width: 100%;
+  margin-top: var(--space8);
+  padding: var(--space8);
   flex-wrap: wrap;
+  background: url(../img/free-trial-banner.jpg) no-repeat center;
 }
-
 #free-trial-content-container {
   flex: 3;
 }
-
 .create-button {
-  border-radius: 25px;
+  background: #ededfa;
+  font-family: Space Grotesk;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 24px;
   text-align: center;
-  padding: 12px;
-
+  padding: 12px 32px;
   font-weight: bold;
-  color: var(--cta-text);
-  border: 1px solid var(--cta-text);
-  background-color: inherit;
+  color: #000;
+  border: none;
 }
-
 .create-button:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: #fcfcfc;
 }
-
-.free-trial-header {
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.01em;
+.free-trial-container #free-trial .free-trial-header {
+  margin: 0 0 4px 0;
   color: var(--button-text);
 }
-
 .free-trial-label {
   font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
   padding-right: 24px;
-  letter-spacing: 0.01em;
   color: var(--cta-text);
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
-
 div#success-stories p.free-trial-label img.dots-container {
   margin: 0 10px 0 0;
 }

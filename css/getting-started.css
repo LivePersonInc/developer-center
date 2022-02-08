@@ -5,7 +5,6 @@
   margin: 0;
   text-transform: uppercase;
   line-height: 16px;
-  letter-spacing: 0.01em;
 }
 
 .getstarted-content {
@@ -14,7 +13,7 @@
   margin: 0;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.01em;
+
   padding-bottom: 24px;
 }
 
@@ -34,7 +33,6 @@
   flex: 2;
   margin-top: 40px !important;
   margin-left: 40px !important;
-  letter-spacing: 0.01em;
 
   color: #ffffff;
 
@@ -48,7 +46,7 @@
   font-size: 14px;
   line-height: 20px;
   padding-top: 12px;
-  letter-spacing: 0.01em;
+
   color: var(--link-color);
 }
 
@@ -69,7 +67,7 @@
   margin-top: 8px;
   display: flex;
   flex: 2;
-  letter-spacing: 0.01em;
+
   color: var(--body-text);
 }
 
@@ -91,7 +89,7 @@
   flex: 2;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.01em;
+
   color: var(--body-text);
 }
 
@@ -160,7 +158,7 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.01em;
+
   color: var(--link-color);
 }
 
@@ -250,8 +248,6 @@
   font-size: 20px;
   line-height: 28px;
   /* identical to box height, or 140% */
-
-  letter-spacing: 0.01em;
 
   /* J/Navy */
 

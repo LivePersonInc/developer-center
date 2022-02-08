@@ -70,7 +70,7 @@ body {
   font-style: normal;
   margin-left: 24px;
   line-height: normal;
-  letter-spacing: 0.01em;
+
   text-align: center;
   color: #ffffff;
   outline: none;
@@ -549,7 +549,7 @@ a {
   font-weight: normal !important;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0.01em;
+
   font-family: Inter;
   color: #ffffff;
   margin-bottom: 16px;
@@ -564,7 +564,7 @@ a {
   font-weight: bold;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: 0.01em;
+
   font-family: Inter;
   color: #ffffff;
   margin-bottom: 16px;
