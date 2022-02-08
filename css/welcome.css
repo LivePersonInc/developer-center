@@ -63,7 +63,12 @@ img.card-container {
   font-size: 24px;
   line-height: 32px;
 }
+
 .card-container #success-stories .welcome-title {
+  color: var(--text-invert);
+}
+
+.card-container #success-stories .welcome-content {
   color: var(--text-invert);
 }
 
@@ -74,6 +79,12 @@ img.card-container {
 .card-container .welcome-card .welcome-content {
   color: var(--body-text);
   margin-bottom: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
 }
 
 #success-stories {
