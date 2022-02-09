@@ -1126,6 +1126,7 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
+        - pagename: List Message Template
 - categoryname: "Security & Authentication"
   image: security-authentication
   documents:
