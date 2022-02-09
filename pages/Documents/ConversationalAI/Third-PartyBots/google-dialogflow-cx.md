@@ -90,7 +90,6 @@ Dialogflow CX adheres to Google’s oAuth2. Some degree of familiarity with Goog
 
 The expected output of a service account setup is a JSON file, example below:
 
-
 ```json
 {
   "type": "service_account",
@@ -105,6 +104,7 @@ The expected output of a service account setup is a JSON file, example below:
   "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
 }
 ```
+
 Figure 1.2 JSON containing Private key that is generated during the Service Account setup
 
 {: .notice}
@@ -121,13 +121,13 @@ Figure 1.3 Environments in the Dialogflow CX Console
 The necessary Environment ID is the last part of the environment URI you can copy in the Dialogflow CX console.
 
 {: .important}
-projects/test-project/locations/us-central1/agents/a11a1aa1-aa1a-1a11-a1a1-1111111111a11/environments/***53ad121d-5196-41a3-4682-d9de6df94203***
+projects/test-project/locations/us-central1/agents/a11a1aa1-aa1a-1a11-a1a1-1111111111a11/environments/**_53ad121d-5196-41a3-4682-d9de6df94203_**
 
 <br />
 #### Test Connection
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you 
-have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeed 
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you
+have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeed
 or fails.
 You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
 
@@ -227,7 +227,7 @@ Figure 3.2
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
 
-This is achieved creating a Custom Payload in your page with the and action object, having TRANSFER as name and anther parameter named parameters that must contain the skill property and the skill name. 
+This is achieved creating a Custom Payload in your page with the and action object, having TRANSFER as name and anther parameter named parameters that must contain the skill property and the skill name.
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
@@ -528,19 +528,18 @@ To close a conversation without triggering a post conversation survey, please ad
 
 ### Invoke LivePerson Function
 
-During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
 
 The method for triggering an invocation is similar to the transfer action in that the Custom Payload feature must be use to set the action and the parameters.
 
 The action field needs to be set to **INVOCATION** to instruct the connector to invoke the sepecified LivePerson Function
 
-It is also required to provide the **lambdaUuid** of the function that should be invoked in parameters. 
+It is also required to provide the **lambdaUuid** of the function that should be invoked in parameters.
 To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
 
 The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
-
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowcx/image_13.png">
 Figure 11.1
@@ -565,3 +564,107 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
   }
 }
 ```
+
+### Receiving Rich Content Response (Messaging Only)
+
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
+(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
+
+An example use case of the Rich Content Event(`RichContentEvent`) response sent by Third-Party Bots is described below. The example will show how to set up and access the `RichContentEvent` response with Google Dialogflow CX after a user shares the location.
+
+#### Create Intent for RichContentEvent
+
+We needs to create a intent which should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 4.1 below.
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-intent.png">
+Figure 4.1 Intent creation in Dialogflow CX console
+
+#### Create Google Cloud Function
+
+For accessing the `RichContentEvent` body sent by Third-Party Bots you will need to create a Google cloud function that should be capable of receiving
+the response sent by Third-Party Bots. Below is a minimal code example that checks if there is `RichContentEvent` present in
+the request sent by Third-Party Bots, then sends back raw `RichContentEvent` data. Please note that the response should follow the Dialogflow CX response schema.
+
+```javascript
+/**
+ * Responds to any HTTP request.
+ *
+ * @param {!express:Request} req HTTP request context of Dialogflow CX.
+ * @param {!express:Response} res HTTP response context.
+ */
+exports.dialogflowCxCloudFunction = (req, res) => {
+  const { body: { payload: { lpEvent: { event } = {} } = {} } = {} } = req;
+
+  let fulfillmentResponse;
+
+  if (event && event.type && event.type === "RichContentEvent") {
+    fulfillmentResponse = {
+      fulfillmentResponse: {
+        messages: [
+          {
+            text: {
+              text: [`RichContentEvent Received`],
+            },
+          },
+          {
+            text: {
+              text: [`Raw Data: ${JSON.stringify(event)}`],
+            },
+          },
+        ],
+      },
+    };
+  } else {
+    fulfillmentResponse = {
+      fulfillmentResponse: {
+        messages: [
+          {
+            text: {
+              text: [`No RichContentEvent found`],
+            },
+          },
+        ],
+      },
+    };
+  }
+
+  res.status(200).send(fulfillmentResponse);
+};
+```
+
+Example `RichContentEvent` body of a map rich content that will be sent by Third-Party Bots on user sharing location in WhatsApp is as below:
+
+```json
+{
+  "content": {
+    "type": "vertical",
+    "elements": [
+      {
+        "la": 49.82380908513249,
+        "type": "map",
+        "alt": "49.82380908513249, 2.021484375",
+        "lo": 2.021484375
+      }
+    ]
+  },
+  "type": "RichContentEvent"
+}
+```
+
+#### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
+
+After the cloud function has been deployed, it can be added to the fulfillment of the page or your route by enabling WebHook.
+An example of enabling such a WebHook via Google Cloud function can be found in Figure 4.2 Highlighted area. If your function is deployed and active,
+It should populate in the list. Moreover, The Dialogflow CX console allows us to attach Third-Party WebHook calls as well.
+Please note, you need to ensure that, Third-Party Cloud WebHooks should be accessible and respond in the expected Dialogflow CX
+response formate as we have shown in the example of Google Cloud Function above.
+
+<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-enable-webhook.png">
+Figure 4.2 Showing a Google Cloud Function named `googleRichContentEventCloudFunction` attached to the fulfillment Response
+
+Once all of the above steps have been configured then the Dialogflow CX bot will be able to respond to the requests via the cloud function.
+A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
+
+<img class="fancyimage" style="width:300px" src="img/dialogflowcx/dialogflow_cx_richcontent_demo.gif">
