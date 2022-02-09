@@ -17,8 +17,7 @@
 }
 
 .welcome-card:hover {
-  border-width: 4px;
-  margin: -2px;
+  outline: 2px solid var(--card-border);
 }
 
 .header-label {

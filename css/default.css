@@ -1444,7 +1444,7 @@ a:focus-visible {
   color: var(--post-link-hover);
 }
 a:focus-within:not(.anchorjs-link) {
-  border: 1px dashed var(--post-link-hover) !important;
+  border: 2px dashed var(--post-link-hover) !important;
 }
 
 /* .dark #post-content img {
