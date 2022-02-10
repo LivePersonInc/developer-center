@@ -13,7 +13,8 @@ redirect_from:
 
 ### Overview
 
-Quick Replies for Viber include the question/statement text and a set of up to 11 replies that each contain:
+Quick Replies for Viber include the question/statement text and a set of up to 11 replies that will appear as a custom keyboard.
+The Quick Replies can contain:
 
 * Title text (including emojis)
 * Publish text click action
