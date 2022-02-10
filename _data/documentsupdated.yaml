@@ -757,47 +757,32 @@
     - documentname: LivePerson Functions
       pages:
         - pagename: Overview
+        - pagename: Provisioning
         - pagename: Getting Started
-        - pagename: Developing with FaaS
           subpages:
-            - subpagename: Overview
-            - subpagename: Events & Templates
-            - subpagename: Function Connectivity
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Snippets
-            - subpagename: Storing Secrets
-            - subpagename: Data Storage
-            - subpagename: Debugger
-            - subpagename: Common Examples
+            - subpagename: Your First Function
+            - subpagename: Deep Dive UI
+            - subpagename: Deep Dive CLI
+            - subpagename: Configure
+            - subpagename: Monitoring
+        - pagename: Foundations
+          subpages:
+            - subpagename: Concepts
+            - subpagename: Features
+            - subpagename: Networking
+            - subpagename: Limitations
             - subpagename: Best Practices
-            - subpagename: Limitations & Restrictions
-        - pagename: "Command Line Interface (CLI)"
-        - pagename: Deployment
-        - pagename: Monitoring
-          subpages:
-            - subpagename: Activities
-            - subpagename: Deployment History
-            - subpagename: Logs
-            - subpagename: Metrics
-            - subpagename: Email Reporting
-        - pagename: Scheduled Invocations
-        - pagename: External Invocations
+            - subpagename: LivePerson Functions CLI
+        - pagename: Event Sources
           subpages:
             - subpagename: Overview
-            - subpagename: Client Credentials
-            - subpagename: Authorization Code
-            - subpagename: Error Codes
-            - subpagename: Java Client
-            - subpagename: JavaScript Client
-        - pagename: Integrations
-          subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
-            - subpagename: Messaging Conversation Survey
-            - subpagename: Conversational AI
+            - subpagename: System Messages
+            - subpagename: Conversation Builder
             - subpagename: Conversational Commands
-
+            - subpagename: Chat Post Survey
+            - subpagename: Third Party Bots
+        - pagename: Permission System
+        - pagename: Examples
 - categoryname: Reporting
   image: historical-data
   documents:
