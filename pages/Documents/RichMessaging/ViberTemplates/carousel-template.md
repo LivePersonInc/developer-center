@@ -18,7 +18,6 @@ The Viber carousel is a horizontally scrollable carousel of up to 10 vertical ri
 * Subtitle text
 * Image (which will be placed above the title, subtitle and buttons) - image is not required to be placed in a card
 * Buttons with the following actions:
-
     * Link
     * Publish text
 
@@ -26,10 +25,6 @@ Note:  When building a Viber carousel card you must keep in mind that each card 
 of any kind.  This includes the title, subtitle, image, and button elements. As long as you do not go over the 7 row
 limitation (Viber limitation) then each card will properly render in the carousel.  Else the carousel will start rendering incorrectly
 to the Viber user.
-
-*Carousel example image:*
-
-![Carousel example](img/google_rcs_structuredcontent_image_4.png)
 
 ### JSON Template Properties
 
@@ -87,21 +82,21 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   </tr>
   <tr>
     <td>style</td>
-    <td>Basic structured content elements style object (for RCS this element will be ignored since style configuration is not supported)</td>
+    <td>Basic structured content elements style object (Only applies to text and button elements)</td>
     <td>Style elements </td>
     <td>N</td>
   </tr>
   <tr>
-    <td>bold</td>
-    <td>Defines if text will be bold or not. Will always be set to ‘true’ in RCS cards and carousels. </td>
-    <td>Boolean</td>
-    <td>N</td>
+    <td>color</td>
+    <td>Defines what the text color of the element will be.</td>
+    <td>String</td>
+    <td>#000000</td>
   </tr>
   <tr>
-    <td>size</td>
-    <td>Defines the element size. Will always be set to ‘large’ in RCS cards and carousels.</td>
-    <td>Enum - small/medium/large</td>
-    <td>N</td>
+    <td>background-color</td>
+    <td>Defines what the background color of the element will be. (Only applies to buttons)</td>
+    <td>String</td>
+    <td>#000000</td>
   </tr>
   <tr>
     <td>button</td>
@@ -117,7 +112,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   </tr>
   <tr>
     <td>action</td>
-    <td>Actions are a list of applicative user actions on buttons, which will run on the consumer side and will help them to achieve their operation. Button actions for RCS cards and carousels can be set to Publish text, Link or Navigate</td>
+    <td>Actions are a list of applicative user actions on buttons, which will run on the consumer side and will help them to achieve their operation. Button actions for Viber cards and carousels can be set to Publish text or Link</td>
     <td>Enum - “publishText”, “link”, “navigate”</td>
     <td>N</td>
   </tr>
@@ -142,7 +137,10 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
                     "type": "text",
                     "tag": "title",
                     "text": "Title",
-                    "tooltip": "Title"
+                    "tooltip": "Title",
+                    "style": {
+                      "color": "#FFFFFF"
+                    }
                 }, {
                     "type": "text",
                     "tag": "subtitle",
@@ -152,6 +150,10 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
                     "type": "button",
                     "tooltip": "Add to cart",
                     "title": "Add to cart",
+                    "style": {
+                      "color": "#FFFFFF",
+                      "background-color": "#000000"
+                    },
                     "click": {
                         "actions": [{
                             "type": "publishText",

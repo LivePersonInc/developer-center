@@ -21,15 +21,10 @@ The vertical card contains the following elements:
 * Title text
 * Subtitle text
 * Image: image in a vertical card is displayed as a horizontal image at the top of the card with aspect ratio of 2:1, 16:9, or 7:3.
-* Up to 4 buttons (RCS limitation) with the following actions:
-    * Link
-    * Navigation
-    * Publish text
-
-*Vertical card example image:*
-
-![Vertical card example](img/google_rcs_structuredcontent_image_3.png)
-
+* Buttons with the following actions:
+  * Link
+  * Publish text
+    
 ### JSON Template Properties
 
 <table>
@@ -86,21 +81,21 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   </tr>
   <tr>
     <td>style</td>
-    <td>Basic structured content elements style object (for Viber this element will be ignored since style configuration is not supported)</td>
+    <td>Basic structured content elements style object. (Only applies to text and button elements)</td>
     <td>Style elements </td>
     <td>N</td>
   </tr>
   <tr>
-    <td>bold</td>
-    <td>Defines if text will be bold or not. Will always be set to ‘true’ in Viber cards and carousels. </td>
-    <td>Boolean</td>
-    <td>N</td>
+    <td>color</td>
+    <td>Defines what the text color of the element will be.</td>
+    <td>String</td>
+    <td>#000000</td>
   </tr>
   <tr>
-    <td>size</td>
-    <td>Defines the element size. Will always be set to ‘large’ in Viber cards and carousels.</td>
-    <td>Enum - small/medium/large</td>
-    <td>N</td>
+    <td>background-color</td>
+    <td>Defines what the background color of the element will be. (Only applies to buttons)</td>
+    <td>String</td>
+    <td>#000000</td>
   </tr>
   <tr>
     <td>button</td>
@@ -143,18 +138,28 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
           "type": "text",
           "tag": "title",
           "text": "Birthday Bouquet",
-          "tooltip": "Title"
+          "tooltip": "Title",
+          "style": {
+            "color": "#FFFFFF"
+          }
         },
         {
           "type": "text",
           "tag": "subtitle",
           "text": "Wild flowers",
-          "tooltip": "subtitle"
+          "tooltip": "subtitle",
+          "style": {
+            "color": "#000000"
+          }
         },
         {
           "type": "button",
           "tooltip": "Publish text example",
           "title": "Publish text example",
+          "style": {
+            "color": "#FFFFFF",
+            "background-color": "#000000"
+          },
           "click": {
             "actions": [
               {
