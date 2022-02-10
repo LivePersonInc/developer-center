@@ -24,6 +24,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .important}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
+{: .important}
+**Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
+
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
 #### UserPass authentication
@@ -571,7 +574,6 @@ Figure 3.7 Quick Replies StructuredContent example.
 
 Change the TTR of a conversation based on the action response of Watson. There have 3 different types. "URGENT", "NORMAL", "PRIORITIZED". The time values of these are defined in the Agent Workspace.
 
-
 ```json
 {
   "output": {
@@ -608,7 +610,7 @@ For escalations, the naming convention for these skills should use a "-" instead
 
 #### Transfer To Skill
 
-This option transfers the conversation to the next available agent using the provided skill. 
+This option transfers the conversation to the next available agent using the provided skill.
 
 At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched inthe stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
@@ -1002,12 +1004,62 @@ Discovery Search is a tool that uses the knowledge of websites, documents and ot
 To use Watson Discovery the Watson Assistant Bot needs to have a [search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
 
 ### Disambiguation Responses
+
 Disambiguation is a feature configurable in the Watson Assistant UI. It triggers if a bot can't confidently identify an intent.
 Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
 Disambiguation responses will be renderes as `Quick Replies`.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png">
 Figure 10.1 Configure Watson Disambiguation
+
+### Receiving Rich Content Response (Messaging Only)
+
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
+(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
+
+An example use case of the Rich Content Event (`RichContentEvent`) response sent by Third-Party Bots is described below. The example will show how to set up and access the `RichContentEvent` response with Watson Assistant after a user shares the location.
+
+#### Create Intent for RichContentEvent
+
+We needs to create a intent that should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 11.1 below
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-intent.png">
+Figure 11.1 Intent creation in Watson Assistant console
+
+#### Accessing the RichContentEvent Data in Dialogs
+
+The `RichContentEvent` is sent with the context. Thus, for Watson Assistant, we can leverage
+the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables)
+for accessing the `RichContentEvent` data. The context information that is sent by Third-Party Bots contains in `$lpEvent`.
+An example of accessing `RichContentEvent` from that context variable can be seen in Figure 11.2.
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-access-event.png">
+Figure 11.2 Displaying how to access the Rich Content/Structured Content using Context Variables
+
+Usually a `RichContentEvent` of type map will have following JSON schema:
+
+```json
+{
+  "content": {
+    "type": "vertical",
+    "elements": [
+      {
+        "la": 49.82380908513249,
+        "type": "map",
+        "alt": "49.82380908513249, 2.021484375",
+        "lo": 2.021484375
+      }
+    ]
+  },
+  "type": "RichContentEvent"
+}
+```
+
+A demo of our WhatsApp map example with the above bot configuration (defined above) can be seen below:
+
+<img class="fancyimage" style="width:300px" src="img/watsonassistant/watson_v1_richcontent_demo.gif">
 
 ### Limitations
 
@@ -1017,4 +1069,4 @@ Figure 10.1 Configure Watson Disambiguation
 
 ### Prevent Tranfering loop behaviour
 
-As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.  
+As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.
