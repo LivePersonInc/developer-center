@@ -111,7 +111,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
+6. In the Interactions toolbar, click the Text Statement icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
 
     (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
 

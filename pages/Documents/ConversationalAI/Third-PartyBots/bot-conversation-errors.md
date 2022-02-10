@@ -202,7 +202,7 @@ This indicates an issue during Faas invocation.
 This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
 #### Solutions
 Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to understand how to test your function code. 
-Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [FaaS Integration](third-party-bots-faas-integration.html). Failure to do so will result in the erroneous result.
+Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body
 
@@ -211,7 +211,7 @@ This happens if there is no response body provided.
 #### Reasons
 The Faas callback was invoked without a response body object.
 #### Solutions
-Please make sure to provide a response body in the callback, for further information see [FaaS Integration Documentation](liveperson-functions-deployment.html#testing-your-function)
+Please make sure to provide a response body in the callback, for further information see [Custom Integration Documentation](liveperson-functions-deployment.html#testing-your-function)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook
 
@@ -459,7 +459,7 @@ This indicates an issue during Faas invocation.
 This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
 #### Solutions
 Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to understand how to test your function code. 
-Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [FaaS Integration](third-party-bots-faas-integration.html). Failure to do so will result in the erroneous result.
+Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
 
 If none of these applies and the errors persist, please escalate to LP Support and provide the exact error information by copying it from within the Conversation Errors UI.
 
@@ -481,3 +481,26 @@ Mostly this issue happens because of a wrong integration on customer end where n
 #### Solutions
 Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
 Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
+
+
+### com.liveperson.bot-connectors-worker.error.aivendor.client.test-connection
+
+#### Description
+Testing the connection to the vendor failed.
+#### Reasons
+Most of the time this is caused by wrong credentials or because the bot instance on vendor side is not running.
+#### Solutions
+Check if your bot credentials are configured correctly in Third-Party Bots and the bot is healthy on the vendor side.
+
+
+### com.liveperson.bot-connectors-worker.error.aivendor.medallia.parse-message.parser-error
+
+#### Description
+Parsing the response of the Medallia Adapter failed.
+#### Reasons
+The response Third-Party Bots retrieved from the Medallia adapter was not according to the specification.
+#### Solutions
+Please reach out to LP Support with the error details.
+
+
+

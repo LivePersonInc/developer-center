@@ -155,7 +155,7 @@ These methods for closing the conversation **don't** trigger a post-conversation
 ### Configure dialog settings
 
 **To configure dialog settings**
-1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
