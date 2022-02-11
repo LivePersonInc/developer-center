@@ -12,7 +12,7 @@ redirect_from:
 
 ### General limitations
 
-* A rich card can contain any or all of the supported elements: image, title, subtitle, buttons. However, it **must contain at least an image** or title to be valid.
+* A rich card can contain any or all of the supported elements: image, title, subtitle, buttons. However, it **must contain at least an image or title** to be valid.
 
 ### Element limitations
 
