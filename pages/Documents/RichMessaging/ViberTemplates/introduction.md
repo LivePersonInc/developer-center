@@ -1,13 +1,12 @@
 ---
 pagename: Introduction
 redirect_from:
-- structured-content-viber-templates-introduction.html
-  Keywords: structured content rich messaging
-  sitesection: Documents
-  categoryname: "Rich Messaging"
-  documentname: Viber Templates
-  permalink: viber-templates-introduction.html
-  indicator: messaging
+Keywords: structured content rich messaging
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Viber Templates
+permalink: viber-templates-introduction.html
+indicator: messaging
 ---
 
 ### Overview

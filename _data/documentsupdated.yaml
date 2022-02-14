@@ -1126,6 +1126,13 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
+    - documentname: Viber Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
 - categoryname: "Security & Authentication"
   image: security-authentication
   documents:
