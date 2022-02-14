@@ -683,6 +683,7 @@ answerId | Survey answer ID. | string
         "startTime": "2016-08-29 14:30:24.565+0000",
         "startTimeL": 1472481024565,
         "endTime": "2016-08-29 19:58:24.565+0000",
+        "endTimeL": 1472500733000,
         "conversationEndTime": "2016-08-29 18:58:24.565+0000",
         "conversationEndTimeL": 1472497133000,
         "fullDialogEndTime": "2016-08-29 19:58:24.565+0000",
