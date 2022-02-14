@@ -203,7 +203,7 @@ startTime| Start-time of the conversation.  | long |
 endTime  | End time of the conversation. | long | The end time is set to the end of the conversation and updated upon survey submission/timeout.
 conversationEndTime  | The end time of the conversation regardless of the survey’s status. Human-readable timestamp. | long |
 conversationEndTimeL  | Same as above in epoch time. | long |
-fullDialogEndTime  | The close time of a conversation including after survey submission. | long | Survey can be submitted or timed-out
+fullDialogEndTime  | The close time of the conversation including after survey submission. | long | Survey can be submitted or timed-out
 fullDialogEndTimeL  | Same as above in epoch time. | long |
 duration | Time from when the consumer started the conversation until it ended. | long | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason | Reason for closing the conversation - by agent / consumer.  | string  |
