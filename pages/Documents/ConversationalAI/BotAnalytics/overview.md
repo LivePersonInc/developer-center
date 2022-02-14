@@ -19,5 +19,5 @@ The Bot Analytics application is intended to provide real time data on your bots
 
 **To access the Bot Analytics application**
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bot Analytics**.

@@ -18,7 +18,7 @@ Let's return to Conversation Builder, where we will create our "Refund Request" 
 
 1. Navigate to Conversation Builder, and select the Order Bot.
 2. In the lower-left corner, click **Add Dialog**, and create a new standard dialog with the name **Refund Request**.
-3. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
+3. Open the Assist tool by clicking <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
 
     Select the “LP_Cross-vertical” domain, followed by the "request refund" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to request a refund." Selecting this intent associates it with the dialog starter.
 

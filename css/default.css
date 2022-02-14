@@ -1373,7 +1373,7 @@ a.loginText {
   display: none;
 }
 
-div#post-content p img,
+div#post-content p img:not(.inlineimage),
 img.fancyimage {
   margin-right: auto;
   margin-left: auto;
