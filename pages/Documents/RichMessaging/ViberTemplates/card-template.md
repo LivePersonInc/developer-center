@@ -1,13 +1,12 @@
 ---
 pagename: Card Template
 redirect_from:
-- structured-content-viber-templates-card-template.html
-  Keywords: structured content rich messaging
-  sitesection: Documents
-  categoryname: "Rich Messaging"
-  documentname: Viber Templates
-  permalink: viber-templates-card-template.html
-  indicator: messaging
+Keywords: structured content rich messaging
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Viber Templates
+permalink: viber-templates-card-template.html
+indicator: messaging
 ---
 
 ### Overview
