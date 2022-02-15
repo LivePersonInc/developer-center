@@ -1,12 +1,12 @@
 ---
-pagename: List Messages Template
+pagename: List Message Template
 redirect_from:
-  - structured-content-whatsapp-business-messages-templates-list-messages-template.html
+  - structured-content-whatsapp-business-messages-templates-list-message-template.html
 Keywords: structured content rich messaging whatsapp business messages list messages picker
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: WhatsApp Business Messages Templates
-permalink: whatsapp-business-messages-templates-list-messages-template.html
+permalink: whatsapp-business-messages-templates-list-message-template.html
 indicator: messaging
 ---
 
@@ -19,10 +19,12 @@ In WhatsApp Business Messages, a List Message has the following structure:
 3. Footer (optional)
 4. Vertical (at least 1 is mandatory)
 
-_Examples Of WhatsApp List Message:_
+**Examples Of WhatsApp List Message:**
 
-![Whatsapp List message Examples](img/connectors/wa_listmessage1.png)
-![Whatsapp List message Examples](img/connectors/wa_listmessage2.png)
+<p float="left">
+  <img src="img/connectors/wa_listmessage1.jpeg" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage2.jpeg" style="display: inline; margin: 0" />
+</p>
 
 ### List Message Button
 

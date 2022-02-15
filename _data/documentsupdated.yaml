@@ -1129,6 +1129,7 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
+        - pagename: List Message Template
     - documentname: Viber Templates
       pages:
         - pagename: Introduction
