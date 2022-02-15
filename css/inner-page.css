@@ -447,7 +447,7 @@ ul#mysiderbar li {
 }
 
 .pageitem {
-  padding-left: 53px !important;
+  padding-left: 80px !important;
 }
 
 .innerpageitem {
@@ -457,15 +457,19 @@ ul#mysiderbar li {
 }
 
 .activeitem {
-  border-left: 4px solid var(--link-color-hover) !important;
-  margin-left: -4px;
+  /* border-left: 4px solid var(--link-color-hover) !important;
+  margin-left: -4px; */
 }
 
-.activeleaf {
+li .activeitem a {
+  font-weight: bold;
+}
+
+/* .activeleaf {
   margin-left: 30px;
   border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
-}
+} */
 /* 
 .activeleafSolo {
   margin-left: var(--space4);
@@ -473,12 +477,14 @@ ul#mysiderbar li {
   padding-left: 20px !important;
 } */
 
-.activeleafSolo a {
+.activeleafSolo a,
+.activeleaf a,
+a.highlightlink.active {
   font-weight: bold !important;
 }
 
 ul.mysidebar.nav .topfolder > a {
-  display: inline-block;
+  display: flex;
   color: var(--link-color);
   overflow-wrap: break-word;
 }
@@ -541,11 +547,6 @@ input#metricsSearch {
 .mysidebar.nav li.folder > a:hover {
   background-color: initial !important;
   color: var(--side-border-color);
-}
-
-.innerfolder > ul > .innerfolder > a {
-  font-weight: normal !important;
-  font-size: 12px;
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder > a:focus {

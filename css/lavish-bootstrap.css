@@ -322,7 +322,7 @@ hr {
   border: 0;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
 }
 .lead {
   margin-bottom: 20px;
@@ -602,7 +602,7 @@ code {
 pre {
   display: block;
   padding: 9.5px;
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   font-size: 13px;
   line-height: 1.428571429;
   word-break: break-all;

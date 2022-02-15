@@ -952,9 +952,6 @@ a.loginText {
 
 .subfolder > a {
   color: var(--link-color) !important;
-  font-size: 12px !important;
-  font-weight: normal;
-  font-family: "Inter", sans-serif;
 }
 
 .nav > li > a:focus {
@@ -1156,27 +1153,24 @@ a.loginText {
 
 #jumpto {
   flex: 1;
-  justify-content: flex-end;
 }
 
 #anchorlist {
   margin-top: 90px;
-  text-align: right;
+  text-align: left;
   position: fixed;
   max-height: 360px;
   overflow-wrap: anywhere;
-  padding-right: 8px;
-  padding: 0 50px;
   overflow-y: scroll;
 }
 
 #anchorlist a {
   /* color: var(--secondary-black); */
   font-family: "Inter", sans-serif;
-  font-size: 12px;
-  color: var(--title-text);
-  font-weight: bold;
-  line-height: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 #anchorlist::-webkit-scrollbar {
@@ -1195,12 +1189,16 @@ a.loginText {
 .jumpToAnchor {
   text-align: right;
   font-family: Inter;
+  margin-bottom: 12px;
+  color: var(--link-color);
   font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-  margin-bottom: 24px;
-  color: var(--body-text);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.jump-top-title {
+  display: none;
 }
 
 /*
@@ -1238,9 +1236,9 @@ a.loginText {
   border: 0;
   display: inline-flex;
   font-size: 1.5em;
-  position: relative;
+  display: flex;
   align-self: center;
-  top: 5px;
+  align-items: center;
 }
 
 .sidebarbutton:focus {
@@ -1249,11 +1247,9 @@ a.loginText {
 
 .innerArrowAdjust {
   margin-left: 22px;
-  top: -1px !important;
 }
 
 .sidebarbutton span {
-  position: absolute;
   transition: 0.3s;
   background: #b1b5bc;
 }
@@ -1276,9 +1272,9 @@ a.loginText {
 
 .highlighter-rouge {
   background-color: var(--footer-background);
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
-  margin-top: 24px;
+  margin-top: 32px;
   font-family: "Roboto Mono", Monaco, courier, monospace;
   color: var(--widget-text);
 }
