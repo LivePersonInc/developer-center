@@ -12,7 +12,7 @@ indicator: messaging
 
 #### Are third-party bots supported?
 
-Not yet, but this is coming soon, so please stay tuned! For now, only Conversation Builder bots are supported.
+Yes, contact your LivePerson account representatives to add support.
 
 #### Can I turn off all recommendations?
 Yes, you can turn off recommendations globally. To do this:
