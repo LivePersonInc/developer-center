@@ -904,6 +904,7 @@ iframe {
     width: 100%;
     display: flex !important;
     flex-direction: column;
+    padding: 0 35px;
   }
   img {
     max-width: 100%;

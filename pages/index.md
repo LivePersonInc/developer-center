@@ -8,8 +8,7 @@ redirect_from:
 ---
 
 <div class="header-label">
-  Whether you are a startup or a large enterprise, we look forward to building amazing
-  solutions with you!
+We empower developers to build innovative solutions that are tailored to their business needs
 </div>
 
 <div class="card-container">
@@ -104,7 +103,7 @@ redirect_from:
   <div id="free-trial">
     <div id="free-trial-content-container">
       <h3 class="free-trial-header h3">Excited? Let’s start your free trial today.</h3>
-      <div style="display:flex; gap: 15px">
+      <div class="cta-mobile-new">
         <p class="free-trial-label"> &#10004; Free 45 days trial</p>
         <p class="free-trial-label">&#10004; No credit card</p>
       </div>

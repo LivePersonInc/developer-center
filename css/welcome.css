@@ -118,7 +118,8 @@ img.card-container {
   margin-top: var(--space8);
   padding: var(--space8);
   flex-wrap: wrap;
-  background: url(../img/free-trial-banner.jpg) no-repeat center;
+  background: url(../img/free-trial-banner.jpg);
+  background-size: cover;
 }
 #free-trial-content-container {
   flex: 3;
