@@ -487,6 +487,7 @@ ul.mysidebar.nav .topfolder > a {
   display: flex;
   color: var(--link-color);
   overflow-wrap: break-word;
+  gap: 8px;
 }
 ul.mysidebar.nav a {
   font-family: "Inter", sans-serif;
@@ -557,15 +558,15 @@ input#metricsSearch {
   background-color: var(--link-color-hover) !important;
 }
 
-ul.mysidebar.nav li ul li {
-  padding-left: 6px;
-}
-
 ul.mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
   margin-top: var(--space4) !important;
   margin-bottom: var(--space4);
+}
+
+ul.mysidebar.nav ul li:first-child a {
+  margin-top: 12px !important;
 }
 
 .innerList {

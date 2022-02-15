@@ -52,7 +52,7 @@ We empower developers to build innovative solutions that are tailored to their b
 <path d="M19.5893 16.2147L20.6667 16.7547C21.2758 17.078 21.8338 17.4896 22.3227 17.976C22.4397 18.1015 22.5911 18.1896 22.7581 18.2293C22.925 18.269 23.0999 18.2585 23.2609 18.1991C23.4219 18.1397 23.5617 18.0341 23.6628 17.8954C23.764 17.7568 23.8219 17.5914 23.8293 17.42C23.9436 16.4209 23.7308 15.4117 23.2228 14.5438C22.7148 13.6759 21.9391 12.9962 21.012 12.6067" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M31.1667 24.1693L23.8427 22.2507" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-    <h3 class="welcome-title h3">Get started with LivePerson’s Conversational Cloud</h3>
+    <h3 class="welcome-title h3">Get Started</h3>
     <p class="welcome-content">Get up and running quickly using our getting started guides, APIs, and SDKs</p>
   </a>
   <a class="welcome-card" href="/liveperson-functions-overview.html">
@@ -88,12 +88,12 @@ We empower developers to build innovative solutions that are tailored to their b
     <h3 class="welcome-title h3">FAQs & Contact Support</h3>
     <p class="welcome-content">Get answers to common questions or contact support directly</p>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new-latest-whats-new.html">
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new">
   <svg class="container-image" width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M31.5 7V26C31.5 26.7957 31.1839 27.5587 30.6213 28.1213C30.0587 28.6839 29.2957 29 28.5 29C27.7044 29 26.9413 28.6839 26.3787 28.1213C25.8161 27.5587 25.5 26.7957 25.5 26V3C25.5 2.46957 25.2893 1.96086 24.9142 1.58579C24.5391 1.21071 24.0304 1 23.5 1H3.5C2.96957 1 2.46086 1.21071 2.08579 1.58579C1.71071 1.96086 1.5 2.46957 1.5 3V26C1.5 26.7957 1.81607 27.5587 2.37868 28.1213C2.94129 28.6839 3.70435 29 4.5 29H28.5" stroke="#292B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.5 19H20.5" stroke="#292B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.5 23H14.5" stroke="#292B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6.5 6H20.5V14H6.5V6Z" stroke="#292B33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.5 7V26C31.5 26.7957 31.1839 27.5587 30.6213 28.1213C30.0587 28.6839 29.2957 29 28.5 29C27.7044 29 26.9413 28.6839 26.3787 28.1213C25.8161 27.5587 25.5 26.7957 25.5 26V3C25.5 2.46957 25.2893 1.96086 24.9142 1.58579C24.5391 1.21071 24.0304 1 23.5 1H3.5C2.96957 1 2.46086 1.21071 2.08579 1.58579C1.71071 1.96086 1.5 2.46957 1.5 3V26C1.5 26.7957 1.81607 27.5587 2.37868 28.1213C2.94129 28.6839 3.70435 29 4.5 29H28.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 19H20.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 23H14.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
     <h3 class="welcome-title h3">Stay Informed</h3>
     <p class="welcome-content">Get LivePerson’s latest news, updates and releases</p>

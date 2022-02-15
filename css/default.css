@@ -379,15 +379,16 @@ code pre {
 
 #aa-search-input {
   border-radius: 25px;
-  border: 1px solid var(--card-border);
-  background-color: var(--input-search-background);
+  background-color: var(--input-search-background) !important;
   width: 100%;
-  line-height: 24px;
   min-width: 250px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
-  border-bottom: 1px solid var(--card-border);
+  line-height: 24px;
   padding: 12px 20px;
+  border: none;
 }
 
 #aa-search-input:focus {
@@ -885,14 +886,6 @@ a.loginText {
   display: flex;
 }
 
-.innerfolder > a > span {
-  margin-left: 14px;
-}
-
-.topfolder > a > span {
-  margin-left: 14px;
-}
-
 .innerfolder > a > .expand {
   float: none;
   margin-right: 20px;
@@ -929,7 +922,7 @@ a.loginText {
 }
 
 .sololink {
-  margin-left: 36px;
+  margin-left: 24px;
 }
 
 .topfolder img {
@@ -1235,22 +1228,19 @@ a.loginText {
 .sidebarbutton {
   color: var(--body-text);
   background-color: var(--body-background);
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 0;
   display: inline-flex;
   font-size: 1.5em;
   display: flex;
   align-self: center;
   align-items: center;
+  padding: 0;
 }
 
 .sidebarbutton:focus {
   outline: 0;
-}
-
-.innerArrowAdjust {
-  margin-left: 22px;
 }
 
 .sidebarbutton span {
