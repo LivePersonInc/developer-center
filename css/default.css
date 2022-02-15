@@ -173,8 +173,8 @@ code pre {
 .suggestbutton {
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
   align-items: center;
 }
 
@@ -612,7 +612,7 @@ table tbody td img {
 .important {
   border-left-color: var(--important-border);
   padding: 16px;
-  margin: 0;
+  margin: 0 0 24px 0;
   border-radius: 4px;
   border-left-width: 4px;
   border-left-style: solid;
@@ -1097,6 +1097,10 @@ a.loginText {
 .sidebarbuttoncontainer {
   display: flex;
   flex-direction: column;
+}
+
+.sidebarbuttoncontainer:not(:last-child) {
+  margin-top: 28px;
 }
 
 .supportbutton {

@@ -2,7 +2,6 @@
   width: 47%;
   flex-grow: 1;
   padding: var(--space8);
-  min-height: 172px;
   /* Primary/White */
   background: var(--card-background);
   /* J/Navy Lighter Gray */

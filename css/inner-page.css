@@ -887,6 +887,20 @@ iframe {
     box-sizing: inherit;
     max-width: 95%;
   }
+  .h1,
+  h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  p,
+  .p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 /*visualping ends*/

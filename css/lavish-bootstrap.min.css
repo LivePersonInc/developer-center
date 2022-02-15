@@ -251,7 +251,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 1.428571429;
-  background-color: #fff;
+  background-color: var(--body-background);
 }
 input,
 button,
