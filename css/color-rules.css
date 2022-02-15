@@ -45,7 +45,7 @@
   --body-text: #292b33;
   --title-text: #292b33;
   --footer-background: #f8f5f3;
-  --footer-text: #000000;
+  --footer-text: #6c7288;
   --card-background: #ffffff;
   --card-text: #0f0943;
   --card-border: #eeeff1;
@@ -66,7 +66,7 @@
   --breadcrumbs-background: #e7e8ec;
   --breadcrumbs-text: #5a5f72;
   --input-search: #a39c96;
-  --side-border-color: #282422;
+  --side-border-color: #292b33;
   --input-search-icon: #101040;
   --input-search-background: #eeeff1;
   --input-search-text: #292b33;
@@ -92,7 +92,7 @@
   --body-text: #afb3c0;
   --title-text: #afb3c0;
   --footer-background: #090c43;
-  --footer-text: #a2a3b8;
+  --footer-text: #6c7288;
   --card-background: #03041a;
   --card-text: #f7f7f9;
   --card-border: #363944;
@@ -115,7 +115,7 @@
   --breadcrumbs-text: #c6c9d2;
   --input-search: #818299;
   --input-search-icon: #afb3c0;
-  --side-border-color: #bcc9f0;
+  --side-border-color: #afb3c0;
   --input-search-background: #24262e;
   --input-search-text: #81899c;
   --text-invert: #000;

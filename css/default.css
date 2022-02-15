@@ -44,8 +44,7 @@ p {
 }
 
 .termsUseHighlight {
-  font-weight: bold;
-  color: var(--body-text) !important;
+  color: currentColor !important;
   cursor: pointer;
 }
 
@@ -57,6 +56,11 @@ p {
 .flex {
   display: flex;
 }
+
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
@@ -198,13 +202,10 @@ code pre {
 
 .defaultfooter span {
   display: flex;
-  margin: 0 auto;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
 }
 
 .defaultfooter span a {
-  color: #8b8b8b;
+  color: currentColor;
 }
 
 .defaultwrapper {
@@ -271,7 +272,7 @@ code pre {
 
 .activepage {
   color: var(--side-border-color) !important;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .activepage:hover {
@@ -482,6 +483,16 @@ table tbody td img {
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
+  .welcome-card {
+    width: 100%;
+  }
+  #free-trial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
   .max-width {
     max-width: 100%;
     margin: inherit;
@@ -601,7 +612,7 @@ table tbody td img {
 .important {
   border-left-color: var(--important-border);
   padding: 16px;
-  margin: 2em 0;
+  margin: 0;
   border-radius: 4px;
   border-left-width: 4px;
   border-left-style: solid;
@@ -724,7 +735,7 @@ table tbody td img {
 }
 
 a.loginText {
-  margin-right: 12px;
+  display: flex;
 }
 
 .loginButton {
@@ -747,10 +758,17 @@ a.loginText {
   border: 0px;
 }
 
+#loginHeader {
+  gap: 24px;
+}
+
+.trialButton {
+  padding: 12px 32px;
+}
+
 .loginButton,
 .trialButton {
   text-align: center;
-  padding: 12px var(--space8);
   font-family: Space Grotesk;
   font-style: normal;
   font-weight: 600;
@@ -832,7 +850,7 @@ a.loginText {
 
 .topfolder {
   line-height: 1.5em;
-  padding: 12px 0;
+  padding: 0 0 12px 0;
 }
 
 .topfolder > ul {
@@ -864,10 +882,7 @@ a.loginText {
 }
 
 .innerfolder > a {
-  font-size: 12px !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
-  margin-left: -4px;
 }
 
 .innerfolder > a > span {
@@ -907,8 +922,7 @@ a.loginText {
 
 .documentslist,
 .solutionslist .innerlink {
-  font-size: 14px !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Inter", sans-serif;
   padding-left: 19px;
   margin-bottom: 2px;
   list-style: none;
@@ -940,7 +954,7 @@ a.loginText {
   color: var(--link-color) !important;
   font-size: 12px !important;
   font-weight: normal;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Inter", sans-serif;
 }
 
 .nav > li > a:focus {
@@ -949,7 +963,7 @@ a.loginText {
 }
 
 .homeitem > a {
-  font-family: "Roboto";
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--body-text) !important;
 }
@@ -1245,18 +1259,18 @@ a.loginText {
 }
 
 .sidebarbutton span:first-of-type {
-  border-top: 10px solid transparent;
+  border-top: 7px solid transparent;
   background: var(--body-background);
-  border-left: 10px solid var(--link-color);
+  border-left: 7px solid var(--link-color);
   transform: rotate(-135deg);
   top: 4px;
 }
 
 .clicked span:first-of-type {
   transform: rotate(-45deg);
-  border-top: 6px solid transparent;
+  border-top: 7px solid transparent;
   background: var(--body-background);
-  border-left: 6px solid var(--side-border-color);
+  border-left: 7px solid var(--side-border-color);
   top: 2px;
 }
 
@@ -1600,13 +1614,9 @@ input#csds-button {
 #post-content .free-trial-container .cta-mobile-new {
   gap: 14px;
   display: flex;
+  margin: 8px 0;
 }
 @media (max-width: 767px) {
-  #post-content .free-trial-container .cta-mobile-new {
-    flex-direction: column;
-    gap: 0;
-    margin: 8px 0;
-  }
   .logoHeader {
     width: auto;
   }
@@ -1639,13 +1649,7 @@ input#csds-button {
     width: initial;
     display: none !important;
   }
-  .loginButton,
-  .trialButton {
-    border-radius: 20px;
-    width: initial;
-    padding: 9px;
-    font-size: 12px;
-  }
+
   /* home */
   .header-label {
     width: 100%;
@@ -1655,15 +1659,8 @@ input#csds-button {
   #free-trial {
     flex: 0 100%;
   }
-  .card-container,
-  .free-trial-container,
-  .free-trial-label,
-  #free-trial-button-welcome {
-    padding-right: 0;
-  }
   #free-trial,
   #success-stories {
-    padding: 25px;
     flex-direction: column;
     align-items: center;
   }

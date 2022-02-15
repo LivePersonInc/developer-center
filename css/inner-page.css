@@ -422,8 +422,7 @@ ul#mysiderbar li {
 
 .innerlink {
   color: var(--link-color);
-  font-size: 12px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+  font-family: "Inter", sans-serif;
 }
 
 .mysidebar > li:not(.folder) {
@@ -433,7 +432,6 @@ ul#mysiderbar li {
 
 .pageitem > a {
   color: var(--link-color);
-  font-size: 12px;
 }
 
 .innerpageitem > a {
@@ -468,27 +466,29 @@ ul#mysiderbar li {
   border-left: 4px solid var(--link-color-hover);
   padding-left: 20px !important;
 }
-
+/* 
 .activeleafSolo {
   margin-left: var(--space4);
   border-left: 4px solid var(--side-border-color);
   padding-left: 20px !important;
+} */
+
+.activeleafSolo a {
+  font-weight: bold !important;
 }
 
 ul.mysidebar.nav .topfolder > a {
   display: inline-block;
+  color: var(--link-color);
+  overflow-wrap: break-word;
+}
+ul.mysidebar.nav a {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-  color: var(--link-color);
-  overflow-wrap: break-word;
-}
-
-ul.mysidebar.nav > li > a {
-  padding: 2px 10px 0 0;
-  font-size: 15px;
+  padding: 0;
 }
 
 ul.mysidebar li ul li {
@@ -581,14 +581,14 @@ div.sidebarTitle {
   margin-left: 26px;
   width: 240px;
   top: 68px;
-  font-family: "Roboto", "Open Sans", Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   visibility: hidden;
   position: absolute;
 }
 
 div.sidebarTitle span {
   vertical-align: top;
-  font-family: "Roboto", "Open Sans", Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 div.sidebarTitle-holder {
@@ -720,7 +720,7 @@ div.sidebarTitle-holder {
 }
 
 .post-content p strong {
-  font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   color: var(--link-color);
 }

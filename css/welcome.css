@@ -120,6 +120,7 @@ img.card-container {
   flex-wrap: wrap;
   background: url(../img/free-trial-banner.jpg);
   background-size: cover;
+  background-position: center;
 }
 #free-trial-content-container {
   flex: 3;
@@ -147,7 +148,6 @@ img.card-container {
 }
 .free-trial-label {
   font-family: Inter;
-  padding-right: 24px;
   color: var(--cta-text);
   display: flex;
   align-items: center;

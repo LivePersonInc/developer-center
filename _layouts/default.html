@@ -82,15 +82,7 @@
       {% endif %}
       {{ content | extlinks }}
       <div id="defaultfooter" class="defaultfooter">
-    <div style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
-      <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
-        <span class="footer-tags">
-          Copyright
-        </span>
-        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226;
-          <span class="footer-tags">Terms of Use
-          </span>
-        </a>
+    <div class="flex flex-col"> <p>© {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> <span class="footer-tags"> Copyright </span> </a> <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> <span class="footer-tags">Terms of Use </span> </a> </p>
           <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
