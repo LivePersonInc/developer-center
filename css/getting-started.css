@@ -5,6 +5,7 @@
   margin: 0;
   text-transform: uppercase;
   line-height: 16px;
+  letter-spacing: 0.01em;
 }
 
 .getstarted-content {
@@ -13,18 +14,18 @@
   margin: 0;
   font-size: 16px;
   line-height: 24px;
-
+  letter-spacing: 0.01em;
   padding-bottom: 24px;
 }
 
 .lp-container {
   display: flex;
+  padding-right: 48px;
   width: 100%;
-  justify-content: space-between;
 }
 
 .teaser-header {
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -34,6 +35,7 @@
   flex: 2;
   margin-top: 40px !important;
   margin-left: 40px !important;
+  letter-spacing: 0.01em;
 
   color: #ffffff;
 
@@ -41,13 +43,13 @@
 }
 
 .hyperlink {
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
   padding-top: 12px;
-
+  letter-spacing: 0.01em;
   color: var(--link-color);
 }
 
@@ -60,14 +62,15 @@
 }
 
 .getting-started-paragraph {
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
+  margin-top: 8px;
   display: flex;
   flex: 2;
-
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
   color: var(--body-text);
 }
 
@@ -80,7 +83,7 @@
 }
 
 .getting-started-h5 {
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   width: 640px;
@@ -89,7 +92,7 @@
   flex: 2;
   font-size: 16px;
   line-height: 24px;
-
+  letter-spacing: 0.01em;
   color: var(--body-text);
 }
 
@@ -105,7 +108,11 @@
 
 .welcome-card-modified {
   flex: 0 47%;
+  margin-top: 24px;
+  padding: 0px 24px 0px 0px;
+  margin-right: 1%;
   background: var(--card-background);
+  margin-bottom: 16px;
   border-radius: 8px;
   box-sizing: border-box;
 }
@@ -115,7 +122,7 @@
 }
 
 .header-lp4 {
-  font-family: Inter;
+  font-family: Roboto;
   font-size: 20px;
   flex: 0 50%;
   margin-right: 10%;
@@ -129,7 +136,7 @@
 }
 
 .header-lp4-external {
-  font-family: Inter;
+  font-family: Roboto;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -149,12 +156,12 @@
 
 .link-padding {
   margin-bottom: 16px;
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-
+  letter-spacing: 0.01em;
   color: var(--link-color);
 }
 
@@ -220,30 +227,33 @@
 }
 
 .small-header {
-  font-family: Space Grotesk;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
   margin-top: 32px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
   color: var(--link-color);
 }
 
 .container-note {
   display: flex;
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   width: 100%;
   flex-wrap: wrap;
 }
 
 .concierge-bot-header {
-  font-family: Inter;
+  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
   /* identical to box height, or 140% */
+
+  letter-spacing: 0.01em;
 
   /* J/Navy */
 

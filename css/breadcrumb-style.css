@@ -43,6 +43,7 @@
 
 .breadcrumbs {
   padding-left: 0;
+  margin-bottom: 1rem;
   background-color: var(--body-text);
   border-radius: 0.25rem;
 }
@@ -62,12 +63,10 @@
 }
 
 .breadcrumbs .breadcrumb-item {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.9em;
   color: var(--secondary-background);
+  font-family: "Open Sans";
+  font-weight: 500;
 }
 
 .no-after {
