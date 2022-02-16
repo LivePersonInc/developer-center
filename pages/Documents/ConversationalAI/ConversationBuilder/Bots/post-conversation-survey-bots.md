@@ -73,6 +73,8 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
     
     * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
 
+        Note that a message's status isn't taken into account when counting the number of messages sent by an agent or a user. This means that a message will be counted as sent in the situation where the message was sent but wasn't delivered to the recipient for some reason.
+        
         This is an account-level setting, so it's applied to all your post-conversation survey bots. However, you can override this setting on a per bot basis; do this in an individual bot's **Bot Settings**.
     
     * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience.
