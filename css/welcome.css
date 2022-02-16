@@ -1,5 +1,6 @@
 .welcome-card {
-    width: 100%;
+    width: 47%;
+    flex-grow: 1;
     padding: var(--space8);
     background: var(--card-background);
     margin-bottom: 0;
@@ -10,6 +11,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+.home-container .welcome-card {
+    width: 100%;
 }
 
 .welcome-card:hover {
@@ -43,6 +48,10 @@
     margin-top: var(--space8);
     width: 100%;
     gap: 32px;
+}
+
+.card-container:not(.home-container) {
+    flex-wrap: wrap;
 }
 
 img.card-container {

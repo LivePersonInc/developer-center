@@ -511,6 +511,9 @@ table tbody td img {
     .home-container {
         flex-direction: column;
     }
+    .home-container .welcome-card {
+        width: 100%;
+    }
     .welcome-card {
         width: 100%;
     }

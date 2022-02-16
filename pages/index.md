@@ -40,7 +40,53 @@ redirect_from:
           AI automation</p>
       </div>
     </a>
-    <a class="welcome-card" href="/first-steps.html">
+    <a class="welcome-card" href="/liveperson-functions-overview.html">
+      <svg class="container-image" width="30" height="32" viewBox="0 0 30 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M29 29.004C29 29.5344 28.7893 30.0431 28.4142 30.4182C28.0391 30.7933 27.5304 31.004 27 31.004H3C2.46957 31.004 1.96086 30.7933 1.58579 30.4182C1.21071 30.0431 1 29.5344 1 29.004V3.004C1 2.47357 1.21071 1.96486 1.58579 1.58979C1.96086 1.21472 2.46957 1.004 3 1.004H23.06C23.5822 1.00406 24.0838 1.2084 24.4573 1.57333L28.3973 5.416C28.5882 5.60242 28.7399 5.82516 28.8434 6.07109C28.9469 6.31702 29.0001 6.58118 29 6.848V29.004Z"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M13 11.004H12C11.5067 10.9705 11.02 11.1329 10.6456 11.4559C10.2712 11.7788 10.0392 12.2364 10 12.7293V14.392C9.99194 14.6886 9.90523 14.9777 9.74873 15.2298C9.59224 15.4819 9.37158 15.6879 9.10933 15.8267L7 17.04L9.10933 18.252C9.3714 18.391 9.59191 18.597 9.74838 18.8491C9.90484 19.1011 9.99167 19.3901 10 19.6867V21.3507C10.0392 21.8435 10.2712 22.3009 10.6457 22.6237C11.0201 22.9465 11.5068 23.1085 12 23.0747H13"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M17 11.004H18C18.4934 10.9702 18.9803 11.1324 19.3548 11.4554C19.7292 11.7785 19.9611 12.2363 20 12.7293V14.392C20.0081 14.6886 20.0948 14.9777 20.2513 15.2298C20.4078 15.4819 20.6284 15.6879 20.8907 15.8267L23 17.04L20.8907 18.252C20.6286 18.391 20.4081 18.597 20.2516 18.8491C20.0952 19.1011 20.0083 19.3901 20 19.6867V21.3507C19.9608 21.8435 19.7288 22.3009 19.3543 22.6237C18.9799 22.9465 18.4932 23.1085 18 23.0747H17"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <h3 class="welcome-title h3">Explore Functions</h3>
+      <p class="welcome-content">Learn how to create custom logic, flows and integrations for your business</p>
+    </a>
+    <a class="welcome-card" target="_blank"
+      href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
+      <svg class="container-image" width="32" height="32" viewBox="0 0 32 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6 24H5C3.93913 24 2.92172 23.5786 2.17157 22.8284C1.42143 22.0783 1 21.0609 1 20V16C1 14.9391 1.42143 13.9217 2.17157 13.1716C2.92172 12.4214 3.93913 12 5 12H6C6.26522 12 6.51957 12.1054 6.70711 12.2929C6.89464 12.4804 7 12.7348 7 13V23C7 23.2652 6.89464 23.5196 6.70711 23.7071C6.51957 23.8946 6.26522 24 6 24Z"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M27 24H26C25.7348 24 25.4804 23.8946 25.2929 23.7071C25.1054 23.5196 25 23.2652 25 23V13C25 12.7348 25.1054 12.4804 25.2929 12.2929C25.4804 12.1054 25.7348 12 26 12H27C28.0609 12 29.0783 12.4214 29.8284 13.1716C30.5786 13.9217 31 14.9391 31 16V20C31 21.0609 30.5786 22.0783 29.8284 22.8284C29.0783 23.5786 28.0609 24 27 24Z"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M5 12C5 9.08262 6.15893 6.28473 8.22183 4.22183C10.2847 2.15893 13.0826 1 16 1V1C18.9174 1 21.7153 2.15893 23.7782 4.22183C25.8411 6.28473 27 9.08262 27 12"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M20 29H23C24.0609 29 25.0783 28.5786 25.8284 27.8284C26.5786 27.0783 27 26.0609 27 25V24"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M18 31H16C15.4696 31 14.9609 30.7893 14.5858 30.4142C14.2107 30.0391 14 29.5304 14 29C14 28.4696 14.2107 27.9609 14.5858 27.5858C14.9609 27.2107 15.4696 27 16 27H18C18.5304 27 19.0391 27.2107 19.4142 27.5858C19.7893 27.9609 20 28.4696 20 29C20 29.5304 19.7893 30.0391 19.4142 30.4142C19.0391 30.7893 18.5304 31 18 31Z"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M12 11C12.0001 10.2667 12.2019 9.54756 12.5831 8.92116C12.9643 8.29476 13.5104 7.78521 14.1617 7.44821C14.813 7.1112 15.5444 6.95971 16.2759 7.01029C17.0074 7.06087 17.711 7.31157 18.3097 7.735C18.9084 8.15842 19.3792 8.73828 19.6706 9.41119C19.962 10.0841 20.0628 10.8242 19.962 11.5505C19.8613 12.2768 19.5628 12.9615 19.0992 13.5296C18.6356 14.0978 18.0247 14.5276 17.3333 14.772C16.9432 14.9099 16.6055 15.1654 16.3667 15.5033C16.1279 15.8412 15.9998 16.2449 16 16.6587V17"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M16 21C15.9011 21 15.8044 21.0293 15.7222 21.0843C15.64 21.1392 15.5759 21.2173 15.5381 21.3087C15.5002 21.4 15.4903 21.5006 15.5096 21.5975C15.5289 21.6945 15.5765 21.7836 15.6464 21.8536C15.7164 21.9235 15.8055 21.9711 15.9025 21.9904C15.9994 22.0097 16.1 21.9998 16.1913 21.9619C16.2827 21.9241 16.3608 21.86 16.4157 21.7778C16.4707 21.6956 16.5 21.5989 16.5 21.5C16.5 21.3674 16.4473 21.2402 16.3536 21.1464C16.2598 21.0527 16.1326 21 16 21Z"
+          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <h3 class="welcome-title h3">FAQs & Contact Support</h3>
+      <p class="welcome-content">Get answers to common questions or contact support directly</p>
+    </a>
+    </div>
+  <div class="flex flex-col gap-32">
+  <a class="welcome-card" href="/first-steps.html">
       <svg class="container-image" width="33" height="32" viewBox="0 0 33 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M1.83333 24.1693L16.5 28.1693" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
@@ -76,24 +122,6 @@ redirect_from:
       <h3 class="welcome-title h3">Get Started</h3>
       <p class="welcome-content">Get up and running quickly using our getting started guides, APIs, and SDKs</p>
     </a>
-    <a class="welcome-card" href="/liveperson-functions-overview.html">
-      <svg class="container-image" width="30" height="32" viewBox="0 0 30 32" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M29 29.004C29 29.5344 28.7893 30.0431 28.4142 30.4182C28.0391 30.7933 27.5304 31.004 27 31.004H3C2.46957 31.004 1.96086 30.7933 1.58579 30.4182C1.21071 30.0431 1 29.5344 1 29.004V3.004C1 2.47357 1.21071 1.96486 1.58579 1.58979C1.96086 1.21472 2.46957 1.004 3 1.004H23.06C23.5822 1.00406 24.0838 1.2084 24.4573 1.57333L28.3973 5.416C28.5882 5.60242 28.7399 5.82516 28.8434 6.07109C28.9469 6.31702 29.0001 6.58118 29 6.848V29.004Z"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M13 11.004H12C11.5067 10.9705 11.02 11.1329 10.6456 11.4559C10.2712 11.7788 10.0392 12.2364 10 12.7293V14.392C9.99194 14.6886 9.90523 14.9777 9.74873 15.2298C9.59224 15.4819 9.37158 15.6879 9.10933 15.8267L7 17.04L9.10933 18.252C9.3714 18.391 9.59191 18.597 9.74838 18.8491C9.90484 19.1011 9.99167 19.3901 10 19.6867V21.3507C10.0392 21.8435 10.2712 22.3009 10.6457 22.6237C11.0201 22.9465 11.5068 23.1085 12 23.0747H13"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M17 11.004H18C18.4934 10.9702 18.9803 11.1324 19.3548 11.4554C19.7292 11.7785 19.9611 12.2363 20 12.7293V14.392C20.0081 14.6886 20.0948 14.9777 20.2513 15.2298C20.4078 15.4819 20.6284 15.6879 20.8907 15.8267L23 17.04L20.8907 18.252C20.6286 18.391 20.4081 18.597 20.2516 18.8491C20.0952 19.1011 20.0083 19.3901 20 19.6867V21.3507C19.9608 21.8435 19.7288 22.3009 19.3543 22.6237C18.9799 22.9465 18.4932 23.1085 18 23.0747H17"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <h3 class="welcome-title h3">Explore Functions</h3>
-      <p class="welcome-content">Learn how to create custom logic, flows and integrations for your business</p>
-    </a>
-    </div>
-  <div class="flex flex-col gap-32">
     <a class="welcome-card" href="/getting-started-with-rich-messaging-introduction.html">
       <svg class="container-image" width="33" height="32" viewBox="0 0 33 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -112,34 +140,6 @@ redirect_from:
       <h3 class="welcome-title h3">Reach Customers with Rich Messaging</h3>
       <p class="welcome-content">Unify your customer experience across channels and create meaningful, personalized
         connections </p>
-    </a>
-    <a class="welcome-card" target="_blank"
-      href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
-      <svg class="container-image" width="32" height="32" viewBox="0 0 32 32" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M6 24H5C3.93913 24 2.92172 23.5786 2.17157 22.8284C1.42143 22.0783 1 21.0609 1 20V16C1 14.9391 1.42143 13.9217 2.17157 13.1716C2.92172 12.4214 3.93913 12 5 12H6C6.26522 12 6.51957 12.1054 6.70711 12.2929C6.89464 12.4804 7 12.7348 7 13V23C7 23.2652 6.89464 23.5196 6.70711 23.7071C6.51957 23.8946 6.26522 24 6 24Z"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M27 24H26C25.7348 24 25.4804 23.8946 25.2929 23.7071C25.1054 23.5196 25 23.2652 25 23V13C25 12.7348 25.1054 12.4804 25.2929 12.2929C25.4804 12.1054 25.7348 12 26 12H27C28.0609 12 29.0783 12.4214 29.8284 13.1716C30.5786 13.9217 31 14.9391 31 16V20C31 21.0609 30.5786 22.0783 29.8284 22.8284C29.0783 23.5786 28.0609 24 27 24Z"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M5 12C5 9.08262 6.15893 6.28473 8.22183 4.22183C10.2847 2.15893 13.0826 1 16 1V1C18.9174 1 21.7153 2.15893 23.7782 4.22183C25.8411 6.28473 27 9.08262 27 12"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M20 29H23C24.0609 29 25.0783 28.5786 25.8284 27.8284C26.5786 27.0783 27 26.0609 27 25V24"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M18 31H16C15.4696 31 14.9609 30.7893 14.5858 30.4142C14.2107 30.0391 14 29.5304 14 29C14 28.4696 14.2107 27.9609 14.5858 27.5858C14.9609 27.2107 15.4696 27 16 27H18C18.5304 27 19.0391 27.2107 19.4142 27.5858C19.7893 27.9609 20 28.4696 20 29C20 29.5304 19.7893 30.0391 19.4142 30.4142C19.0391 30.7893 18.5304 31 18 31Z"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M12 11C12.0001 10.2667 12.2019 9.54756 12.5831 8.92116C12.9643 8.29476 13.5104 7.78521 14.1617 7.44821C14.813 7.1112 15.5444 6.95971 16.2759 7.01029C17.0074 7.06087 17.711 7.31157 18.3097 7.735C18.9084 8.15842 19.3792 8.73828 19.6706 9.41119C19.962 10.0841 20.0628 10.8242 19.962 11.5505C19.8613 12.2768 19.5628 12.9615 19.0992 13.5296C18.6356 14.0978 18.0247 14.5276 17.3333 14.772C16.9432 14.9099 16.6055 15.1654 16.3667 15.5033C16.1279 15.8412 15.9998 16.2449 16 16.6587V17"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M16 21C15.9011 21 15.8044 21.0293 15.7222 21.0843C15.64 21.1392 15.5759 21.2173 15.5381 21.3087C15.5002 21.4 15.4903 21.5006 15.5096 21.5975C15.5289 21.6945 15.5765 21.7836 15.6464 21.8536C15.7164 21.9235 15.8055 21.9711 15.9025 21.9904C15.9994 22.0097 16.1 21.9998 16.1913 21.9619C16.2827 21.9241 16.3608 21.86 16.4157 21.7778C16.4707 21.6956 16.5 21.5989 16.5 21.5C16.5 21.3674 16.4473 21.2402 16.3536 21.1464C16.2598 21.0527 16.1326 21 16 21Z"
-          stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <h3 class="welcome-title h3">FAQs & Contact Support</h3>
-      <p class="welcome-content">Get answers to common questions or contact support directly</p>
     </a>
     <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new">
       <svg class="container-image" width="33" height="30" viewBox="0 0 33 30" fill="none"
