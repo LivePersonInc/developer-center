@@ -462,7 +462,7 @@ ul#mysiderbar li {
 }
 
 .pageitem {
-    padding-left: 80px !important;
+    padding-left: 47px !important;
 }
 
 .innerpageitem {
@@ -505,7 +505,6 @@ ul.mysidebar.nav .topfolder>a {
     display: flex;
     color: var(--link-color);
     overflow-wrap: break-word;
-    gap: 8px;
 }
 
 ul.mysidebar.nav a {
@@ -583,6 +582,7 @@ ul.mysidebar.nav ul li a {
     padding-left: 0px;
     margin-top: var(--space4) !important;
     margin-bottom: var(--space4);
+    gap: 8px;
 }
 
 ul.mysidebar.nav ul li:first-child a {
@@ -595,7 +595,7 @@ ul.mysidebar.nav ul li:last-child a {
 
 .innerList {
     display: block;
-    margin-left: 34px;
+    margin-left: 24px;
 }
 
 div.sidebarTitle {
@@ -748,9 +748,7 @@ div.sidebarTitle-holder {
 }
 
 .post-content p strong {
-    font-family: "Inter", sans-serif;
     font-weight: bold;
-    color: var(--link-color);
 }
 
 .post-content,

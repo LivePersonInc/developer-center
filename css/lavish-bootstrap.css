@@ -294,8 +294,8 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    font-size: 14px;
-    line-height: 1.428571429;
+    font-size: 18px;
+    line-height: 28px;
     /*color: #77777a; */
     background-color: var(--body-background);
 }
