@@ -13,10 +13,12 @@ LivePerson Functions can be connected to Conversational Cloud events at the crea
 
 ### Events Integrations
 
+Functions can be integrated with other LivePerson systems through events leveraging additional/custom functionalities that can be coded in a function.
+
 {: .notice}
 The amount of lambdas connected to a specific event is restricted and can be seen in the table below.
 
-Each event has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the Invoke screen, this payload is shown on the left-hand side. During development, the event payload of the lambda is visible on the right-hand side at the sidebar-tab.
+Each event has a specific input (payload) associated with it, that the triggering system will provide at runtime. When using the Invoke screen, this payload is shown on the left-hand side. During development, the event payload of the lambda is visible on the right-hand side at the sidebar-tab.
 Currently the following event sources are supported:
 
 #### Chat Post Survey
@@ -43,7 +45,7 @@ Conversational Command allows agents to invoke functions during a conversation i
 |--- |--- |--- |--- |---
 |Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|Controller Bot (Messaging Automatic Messages)|1|✅|
-|Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|Conversational Exchange Service (Messaging Auto Messages)|1|✅|
+|Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Line in Off-Hours|Triggered when a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Consumer Step Up|Triggered when a consumer step up occurs, i.e. when a participant authenticates themselves during a conversation.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging New Conversation|Triggered for every new messaging conversation. **This event should not be used for routing. Use a routing bot instead.**|Controller Bot (Messaging Automatic Messages)|1|✅|
@@ -60,7 +62,7 @@ Conversational Command allows agents to invoke functions during a conversation i
 
 #### Third Party Bots
 
-Third party bot are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider.Please see details [here](liveperson-functions-event-sources-third-party-bots.html).
+Third party bot are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider. Please see details [here](liveperson-functions-event-sources-third-party-bots.html).
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
@@ -105,4 +107,3 @@ Additionally, Functions offers a number of templates. They can be used as a samp
 ||Secret Storage Template|An example of how to use the Secret Storage.|
 |Third-Party Bots Custom Integration|Default Template|A template displaying some basic ways how the "Third-Party Bots Custom Integration"-Event can be used.|
 
-Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
