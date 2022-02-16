@@ -21,8 +21,8 @@ indicator: both
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
-            <div class="getting-started-paragraph" style="display:block;">
-         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
+            <div class="getting-started-paragraph" style="padding: 0 12px 0 0; display:block;">
+         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction. 
             </div>
         </div>
     <div id="teaser-banner" class="welcome-card-modified">
@@ -42,7 +42,7 @@ indicator: both
 </div>
 
 <div class="container-note">
-    <div class="important" style="width:90%">
+    <div class="important" style="width:63%">
         <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial"> register </a> for a free 45-day trial.
     </div>
 </div>
@@ -69,12 +69,12 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html">
+  <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Starting with your Concierge Bot</p>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html">
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Learn more about the Conversation Builder</p>
@@ -89,17 +89,17 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html">
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
     <img class="container-image" src="img/ic_Facebook.svg"/>
     <h5 class="getstarted-title">Messaging Channels</h5>
     <h5 class="getstarted-content ">Enable Facebook Messenger</h5>
     </a>
-    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html">
+    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
     <img class="container-image" src="img/ic_SMS.svg"/>
     <h5 class="getstarted-title">Messaging Channels</h5>
     <h5 class="getstarted-content ">Enable SMS </h5>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html">
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html"> 
         <img class="container-image" src="img/ic_messaging.svg"/>
         <h5 class="getstarted-title">Messaging Channels</h5>
         <h5 class="getstarted-content ">Channels overview </h5>
@@ -123,13 +123,13 @@ Connect to mobile channels and customize your Concierge Bot
                 </a>
               </div>
             </div>
-        </div>
+        </div>   
 </div>
 
 <div class="free-trial-container">
   <div id="free-trial">
     <div id="free-trial-content-container">
-      <p class="free-trial-header" style="width:55%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p>
+      <p class="free-trial-header" style="width:55%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p> 
     </div>
     <div id="free-trial-button-welcome">
       <a target="_blank" href="https://www.liveperson.com/upgrade/">
@@ -144,7 +144,7 @@ var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("teaser-banner");
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName["close"](0);
+var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
 }

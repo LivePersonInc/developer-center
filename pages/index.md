@@ -4,41 +4,20 @@ sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
 redirect_from:
-- get-started-LE-APIs.html
+  - get-started-LE-APIs.html
 ---
-
 <div class="header-label">
-  We empower developers to build innovative solutions that are tailored to their business needs to best manage and
-  automate all consumer conversations.
+Whether you are a startup or a large enterprise, we look forward to building amazing
+solutions with you!
 </div>
 
-<div class="card-container home-container">
-  <div class="flex flex-col gap-32">
-    <a href="/platform-overview.html" id="success-stories" class="welcome-card">
-      <div href="/platform-overview.html">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 23.1547C12 21.9929 11.5386 20.8787 10.7172 20.0571C9.89584 19.2354 8.78178 18.7737 7.62001 18.7733C7.54934 18.7733 7.48667 18.7907 7.41467 18.7947"
-            stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M7.41467 13.3613C7.48401 13.3613 7.54801 13.3827 7.62001 13.3827C8.78178 13.3823 9.89584 12.9206 10.7172 12.0989C11.5386 11.2773 12 10.1631 12 9.00134"
-            stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M16 8.00134V24.0013" stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-          <path
-            d="M20 23.1547C20 21.9929 20.4614 20.8787 21.2828 20.0571C22.1042 19.2354 23.2182 18.7737 24.38 18.7733C24.4507 18.7733 24.5133 18.7907 24.5853 18.7947"
-            stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M24.5853 13.3613C24.516 13.3613 24.452 13.3827 24.38 13.3827C23.2182 13.3823 22.1042 12.9206 21.2828 12.0989C20.4614 11.2773 20 10.1631 20 9.00134"
-            stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M31 16C30.9998 15.1292 30.7155 14.2822 30.1902 13.5877C29.6648 12.8932 28.9272 12.3891 28.0893 12.152C28.5027 11.7509 28.7918 11.2393 28.9219 10.6782C29.0521 10.1172 29.0179 9.53051 28.8234 8.98841C28.6288 8.44631 28.2822 7.97173 27.825 7.62146C27.3678 7.27119 26.8194 7.06006 26.2453 7.01334C26.0827 6.83026 25.8987 6.66732 25.6973 6.528C26.096 5.56889 26.1059 4.49232 25.7251 3.526C25.3442 2.55969 24.6024 1.77942 23.6565 1.35023C22.7107 0.921043 21.635 0.876596 20.657 1.22629C19.6789 1.57599 18.8753 2.2924 18.416 3.224C18.1374 2.84503 17.7735 2.53692 17.3538 2.32456C16.9341 2.1122 16.4704 2.00155 16 2.00155C15.5296 2.00155 15.0659 2.1122 14.6462 2.32456C14.2265 2.53692 13.8626 2.84503 13.584 3.224C13.1306 2.28165 12.3262 1.55431 11.3432 1.19779C10.3601 0.841278 9.27644 0.883935 8.32441 1.31663C7.37238 1.74932 6.62766 2.53764 6.24977 3.51272C5.87187 4.48779 5.89087 5.57209 6.30267 6.53334C6.10128 6.67265 5.91731 6.83559 5.75467 7.01867C5.18145 7.06606 4.63397 7.27738 4.17757 7.62741C3.72116 7.97745 3.37511 8.45141 3.1807 8.99273C2.9863 9.53406 2.95175 10.1199 3.08119 10.6803C3.21062 11.2407 3.49857 11.7521 3.91067 12.1533C3.07277 12.3906 2.33519 12.8948 1.80996 13.5895C1.28472 14.2841 1.00052 15.1312 1.00052 16.002C1.00052 16.8728 1.28472 17.7199 1.80996 18.4145C2.33519 19.1092 3.07277 19.6134 3.91067 19.8507C3.49689 20.2517 3.20745 20.7634 3.07703 21.3247C2.94661 21.8859 2.98073 22.4729 3.1753 23.0153C3.36988 23.5576 3.71666 24.0324 4.17413 24.3828C4.63159 24.7331 5.18034 24.9442 5.75467 24.9907C5.91731 25.1737 6.10128 25.3367 6.30267 25.476C5.90672 26.4347 5.89863 27.5097 6.28012 28.4742C6.66161 29.4387 7.40285 30.2173 8.34745 30.6458C9.29204 31.0742 10.3661 31.119 11.3431 30.7707C12.3201 30.4223 13.1236 29.7081 13.584 28.7787C13.8626 29.1576 14.2265 29.4657 14.6462 29.6781C15.0659 29.8905 15.5296 30.0011 16 30.0011C16.4704 30.0011 16.9341 29.8905 17.3538 29.6781C17.7735 29.4657 18.1374 29.1576 18.416 28.7787C18.8765 29.7081 19.6799 30.4223 20.6569 30.7707C21.6339 31.119 22.708 31.0742 23.6526 30.6458C24.5972 30.2173 25.3384 29.4387 25.7199 28.4742C26.1014 27.5097 26.0933 26.4347 25.6973 25.476C25.8987 25.3367 26.0827 25.1737 26.2453 24.9907C26.8197 24.9442 27.3684 24.7331 27.8259 24.3828C28.2833 24.0324 28.6301 23.5576 28.8247 23.0153C29.0193 22.4729 29.0534 21.8859 28.923 21.3247C28.7926 20.7634 28.5031 20.2517 28.0893 19.8507C28.9277 19.6134 29.6656 19.1089 30.191 18.4139C30.7163 17.7188 31.0004 16.8713 31 16Z"
-            stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <h3 class="welcome-title h3 ">LivePerson’s Conversational AI platform</h3>
-        <p class="welcome-content">Learn how to build and improve customer experiences through our intent discovery and
-          AI automation</p>
-      </div>
+<div class="card-container">
+  <div id="success-stories" class="welcome-card" style="padding:58px 22px 58px 22px;">
+    <a href="/platform-overview.html">
+      <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson’s Conversational AI, bots and tools </p>
+      <p class="free-trial-label" style="margin-left: 18px !important; ">
+      <img class="dots-container" src="img/four-dots-white.svg"/>
+      Learn more</p>
     </a>
     <a class="welcome-card" href="/liveperson-functions-overview.html">
       <svg class="container-image" width="30" height="32" viewBox="0 0 30 32" fill="none"
@@ -157,13 +136,12 @@ redirect_from:
       <h3 class="welcome-title h3">Stay Informed</h3>
       <p class="welcome-content">Get LivePerson’s latest news, updates and releases</p>
     </a>
-  </div>
 </div>
 <div class="free-trial-container">
-  <div id="free-trial">
+<div id="free-trial">
     <div id="free-trial-content-container">
-      <h3 class="free-trial-header h3">Excited? Let’s start your free trial today.</h3>
-      <div class="cta-mobile-new">
+      <p class="free-trial-header">Excited? Let’s start your free trial today.</p>
+      <div style="display:flex; gap: 15px">
         <p class="free-trial-label"> &#10004; Free 45 days trial</p>
         <p class="free-trial-label">&#10004; No credit card</p>
       </div>
