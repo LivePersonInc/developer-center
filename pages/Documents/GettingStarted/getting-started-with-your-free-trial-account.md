@@ -116,11 +116,10 @@ Connect to mobile channels and customize your Concierge Bot
 <div class="whole-external-link">
       <div class="next-steps-container">
           <div id="LEFeatures" class="header-lp4-external">
-            Next Steps
+            <h3>Next Steps</h3>
               <div class="link-padding" style="margin-top:24px">
-                <a  href="/do-more-with-the-conversational-cloud.html"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
-                       Do More with the Conversational Cloud 
+                <a  href="/do-more-with-the-conversational-cloud.html">
+                       Do More with the Conversational Cloud
                 </a>
               </div>
             </div>
