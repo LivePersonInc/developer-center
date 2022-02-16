@@ -777,10 +777,11 @@
           subpages:
             - subpagename: Overview
             - subpagename: System Messages
-            - subpagename: Conversation Builder
+            - subpagename: Post Conversation Survey
             - subpagename: Conversational Commands
-            - subpagename: Chat Post Survey
             - subpagename: Third Party Bots
+            - subpagename: Chat Post Survey
+            - subpagename: Conversation Builder
         - pagename: Permission System
         - pagename: Examples
 - categoryname: Reporting

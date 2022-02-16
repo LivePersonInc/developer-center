@@ -21,22 +21,6 @@ The amount of lambdas connected to a specific event is restricted and can be see
 Each event has a specific input (payload) associated with it, that the triggering system will provide at runtime. When using the Invoke screen, this payload is shown on the left-hand side. During development, the event payload of the lambda is visible on the right-hand side at the sidebar-tab.
 Currently the following event sources are supported:
 
-#### Chat Post Survey
-
-There is only a single event of Chat Post Survey that uses Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended. Please see details [here](liveperson-functions-event-sources-chat-post-survey.html).
-
-|Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
-|--- |--- |--- |--- |---
-|Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.|Chat Service|10|
-
-#### Conversational commands
-
-Conversational Command allows agents to invoke functions during a conversation in the Agent Workspace. please see details [here](liveperson-functions-event-sources-conversational-commands.html).
-
-|Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
-|--- |--- |--- |--- |---
-|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|Agent Workspace (NAW only)|30|
-
 #### System Messages
 
  System Messages (also known as Automatic Messages) allows brands to send custom messages during conversations at Conversational Cloud Events (E.g Conversation started, Agent joined conversation, etc.) When any of those events occur during a conversation a Function can be invoked if the there is a deployed function associated to that Event. Please see details [here](liveperson-functions-event-sources-system-messages.html).
@@ -60,6 +44,14 @@ Conversational Command allows agents to invoke functions during a conversation i
 |Messaging Survey Ended|Triggered when a messaging post survey ended.|Survey Bot|1|✅|
 |Messaging Survey Started|Triggered when a messaging post survey started.|Survey Bot|1|✅|
 
+#### Conversational commands
+
+Conversational Command allows agents to invoke functions during a conversation in the Agent Workspace. please see details [here](liveperson-functions-event-sources-conversational-commands.html).
+
+|Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
+|--- |--- |--- |--- |---
+|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|Agent Workspace (NAW only)|30|
+
 #### Third Party Bots
 
 Third party bot are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider. Please see details [here](liveperson-functions-event-sources-third-party-bots.html).
@@ -70,6 +62,14 @@ Third party bot are managed through LivePerson's Conversational Cloud and can be
 |Third-Party Bots Post Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked after the vendor responded.|Bot Connector|15|
 |Third-Party Bots Pre Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked before the vendor receives the payload.|Bot Connector|15|
 |Third-Party Bots Error Hook|Triggered when a bot, which is using the Third-Party Bots' Error Hooks is having an issue.|Bot Connector|15|
+
+#### Chat Post Survey
+
+There is only a single event of Chat Post Survey that uses Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended. Please see details [here](liveperson-functions-event-sources-chat-post-survey.html).
+
+|Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
+|--- |--- |--- |--- |---
+|Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.|Chat Service|10|
 
 ### Integrations without events
 
@@ -106,4 +106,3 @@ Additionally, Functions offers a number of templates. They can be used as a samp
 ||Salesforce Template|An example of how to connect to Saleforce.|
 ||Secret Storage Template|An example of how to use the Secret Storage.|
 |Third-Party Bots Custom Integration|Default Template|A template displaying some basic ways how the "Third-Party Bots Custom Integration"-Event can be used.|
-
