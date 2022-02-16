@@ -58,6 +58,32 @@ In case of an agent bot are two additional steps that must be configured.
 
 <img style="width:900px" src="img/ThirdPartyBots/agent-conversation-type-messaging.png">
 
+##### Welcome Message
+
+By enabling the Welcome Messages option in our Wizard, Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
+
+##### Combine Messages
+
+By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
+
+<ul>
+  <li>
+  Max messages to combine: The maximum amount of messaged that will be connected to one message.
+  </li>
+  <li>
+  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
+  </li>
+  <li>
+  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
+  </li>
+</ul>
+
+<figure>
+<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
+    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
+</figure>
+<br />
+
 ##### Engagement Attributes:
 
 Third-Party bots allow the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is enabled. These attributes are collected only at the **start** of every conversation. These attributes are then passed alongside every message as contextual information. Third-Party bots leverage the LivePerson Visit Information API to collect these engagement attributes.
@@ -751,32 +777,6 @@ const lpEvent = {
   },
 };
 ```
-
-##### Combine Messages
-
-By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
-
-<ul>
-  <li>
-  Max messages to combine: The maximum amount of messaged that will be connected to one message.
-  </li>
-  <li>
-  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
-  </li>
-  <li>
-  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
-  </li>
-</ul>
-
-<figure>
-<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
-    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
-</figure>
-<br />
-
-##### Welcome Message
-
-By enabling the Welcome Messages option in our Wizard, Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
 
 #### Error Handling
 
