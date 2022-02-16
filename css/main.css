@@ -12,6 +12,9 @@ body {
   font-style: normal;
 }
 
+.flex {
+  display: flex;
+}
 /*colors */
 .find {
   background-color: yellow;
