@@ -60,6 +60,8 @@ Conversational Command allows agents to invoke functions during a conversation i
 
 #### Third Party Bots
 
+Third party bot are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider.Please see details [here](liveperson-functions-event-sources-third-party-bots.html).
+
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
 |Third-Party Bots Custom Integration|Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message.|Bot Connector|15|
@@ -69,19 +71,16 @@ Conversational Command allows agents to invoke functions during a conversation i
 
 ### Integrations without events
 
-There are other LivePerson systems that can invoke Function function without an event associated. Currently Only Conversation Builded Bots can be configured to invoke Functions at conversation time.
+There are other LivePerson systems that can invoke functions without an event associated. Currently Only Conversation Builded Bots can be configured to invoke Functions without event.
 
 #### Conversation builder
 
-There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with Conversation Builder.
-
-#### External Invocation
-
-ewtwet
+Conversation Builder Bots can be integrated with Functions. If there is some custom logic that can be done with a function, you can do it with Conversation Builder.
+The configured bot will invoke a function at dialog [interactions](conversation-builder-conversation-builder-interactions.html#integrations). You can select from all functions under your LivePerson account and there are not constrains here regarding lambdas limit. Please see details [here](liveperson-functions-event-sources-conversation-builder.html).
 
 ### Templates
 
-Additionally, Functions offers a number of templates. They can be used as a sample to kick-start the development of custom scenarios. Some of them are connected to events which the template list below is grouped by. Templates which have the same name as the related event are to be considered the default template for an event.
+Additionally, Functions offers a number of templates. They can be used as a sample to ease the development of custom scenarios. Some of them are connected to events which the template list below is grouped by. Templates which have the same name as the related event are to be considered the default template for an event.
 
 |Event|Template Name|Template Description|
 |--- |--- |--- |
@@ -105,6 +104,5 @@ Additionally, Functions offers a number of templates. They can be used as a samp
 ||Salesforce Template|An example of how to connect to Saleforce.|
 ||Secret Storage Template|An example of how to use the Secret Storage.|
 |Third-Party Bots Custom Integration|Default Template|A template displaying some basic ways how the "Third-Party Bots Custom Integration"-Event can be used.|
-
 
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
