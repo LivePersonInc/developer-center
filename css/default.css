@@ -437,53 +437,7 @@ table tbody td img {
 }
 
 .mobilefeaturestable {
-    display: none;
-}
-
-.max-width {
-    max-width: var(--max-width);
-    margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-    .home-container {
-        flex-direction: column;
-    }
-    .home-container .welcome-card {
-        width: 100%;
-    }
-    .welcome-card {
-        width: 100%;
-    }
-    #free-trial {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-    .max-width {
-        max-width: 100%;
-        margin: inherit;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1680px) {
-    .max-width {
-        padding-left: var(--space8);
-        padding-right: var(--space8);
-    }
-}
-
-@media (max-width: 768px) {
-    .max-width {
-        padding-left: 0;
-        padding-right: 0;
-        word-break: break-word;
-    }
-    .side-width:not(.logoHeader) {
-        width: 100%;
-    }
+  display: none;
 }
 
 #featurestable {
