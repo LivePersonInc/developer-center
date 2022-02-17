@@ -13,6 +13,11 @@ indicator: both
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/674928030" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### The high-level deployment process
 
 #### Prerequisite steps
@@ -58,7 +63,7 @@ An agent can belong to only one bot.
     
     The Add Agent Connector dialog appears.
 
-4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
 
     **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through Conversational Cloud (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever Conversational Cloud account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the Conversational Cloud account, an error is displayed.
 

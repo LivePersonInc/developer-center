@@ -22,7 +22,7 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 5. Evaluate and improve the model. As a quick measure, review the results on the Intent Manager [dashboard](intent-manager-dashboard.html). For more thorough testing, use the [Model Tester](intent-manager-build-test-with-the-model-tester.html) (under “Build”).
 
 ### Number of intents
-Intent Manager requires a minimum of 5 intents and 20 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
+Intent Manager requires a minimum of 5 intents and 15 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
 
 The average number of intents for a taxonomy with good coverage is 20-60.
 
