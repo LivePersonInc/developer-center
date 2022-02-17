@@ -21,9 +21,9 @@ The amount of lambdas connected to a specific event is restricted and can be see
 Each event has a specific input (payload) associated with it, that the triggering system will provide at runtime. When using the Invoke screen, this payload is shown on the left-hand side. During development, the event payload of the lambda is visible on the right-hand side at the sidebar-tab.
 Currently the following event sources are supported:
 
-#### System Messages
+#### Automatic Messages
 
- System Messages (also known as Automatic Messages) allows brands to send custom messages during conversations at Conversational Cloud Events (E.g Conversation started, Agent joined conversation, etc.) When any of those events occur during a conversation a Function can be invoked if the there is a deployed function associated to that Event. Please see details [here](liveperson-functions-event-sources-system-messages.html).
+ Automatic Messages (also known as System Messages) allows brands to send custom messages during conversations at Conversational Cloud Events (E.g Conversation started, Agent joined conversation, etc.) When any of those events occur during a conversation a Function can be invoked if the there is a deployed function associated to that Event. Please see details [here](liveperson-functions-event-sources-automatic-messages.html).
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
