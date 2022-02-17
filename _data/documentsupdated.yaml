@@ -776,7 +776,7 @@
         - pagename: Event Sources
           subpages:
             - subpagename: Overview
-            - subpagename: System Messages
+            - subpagename: Automatic Messages
             - subpagename: Post Conversation Survey
             - subpagename: Conversational Commands
             - subpagename: Third Party Bots
