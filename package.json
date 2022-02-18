@@ -3,7 +3,7 @@
   "description": "developers-community",
   "version": "1.0.0",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.25.0",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-shell": "^0.7.1",
