@@ -756,6 +756,14 @@ div.sidebarTitle-holder {
     overflow-wrap: break-word;
 }
 
+.post-content a {
+    text-decoration: underline;
+}
+
+.post-content a:hover {
+    text-decoration: none;
+}
+
 .alert-warning {
     background-color: var(--card-text);
     border-color: var(--card-background);
@@ -917,6 +925,7 @@ iframe {
 }
 
 @media (max-width: 767px) {
+
     /* the div containing the iframe is responsive */
     .visualping-container {
         -webkit-box-sizing: inherit;
@@ -924,6 +933,7 @@ iframe {
         box-sizing: inherit;
         max-width: 95%;
     }
+
     .h1,
     h1 {
         font-style: normal;
@@ -931,6 +941,7 @@ iframe {
         font-size: 32px;
         line-height: 36px;
     }
+
     p,
     .p {
         font-style: normal;
@@ -959,6 +970,7 @@ iframe {
         flex-direction: column;
         padding: 0 35px;
     }
+
     img {
         max-width: 100%;
     }
