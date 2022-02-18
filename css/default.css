@@ -508,15 +508,23 @@ table tbody td img {
 }
 
 @media (max-width: 1024px) {
+    .flex-col-ipad {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
     .home-container {
         flex-direction: column;
     }
+
     .home-container .welcome-card {
         width: 100%;
     }
+
     .welcome-card {
         width: 100%;
     }
+
     #free-trial {
         width: 100%;
         display: flex;
@@ -524,6 +532,7 @@ table tbody td img {
         align-items: center;
         gap: 16px;
     }
+
     .max-width {
         max-width: 100%;
         margin: inherit;
@@ -543,6 +552,7 @@ table tbody td img {
         padding-right: 0;
         word-break: break-word;
     }
+
     .side-width:not(.logoHeader) {
         width: 100%;
     }
@@ -1684,57 +1694,70 @@ input#csds-button {
     .logoHeader {
         width: auto;
     }
+
     #mainHeader {
         padding: 0 35px;
     }
+
     .defaultwrapper {
         display: flex;
         min-width: 100%;
         flex-direction: column-reverse;
     }
+
     #searchHeader,
     button.loginButton {
         display: none;
     }
+
     img.sitelogo,
     ul.mysidebar.nav,
     #defaultsidebar {
         width: 100%;
     }
+
     #anchorlist {
         margin-top: 50px;
     }
+
     .defaultcontent {
         flex: initial;
         width: 100%;
         padding: 0 35px;
     }
+
     #defaultwrapper #jumpto {
         width: initial;
         display: none !important;
     }
+
     /* home */
     .header-label {
         width: 100%;
         flex: initial;
     }
+
     #free-trial,
     #success-stories {
         flex-direction: column;
         align-items: center;
     }
+
     .centermobile {
         display: flex;
         flex-direction: column;
         gap: 5px;
         align-items: center;
     }
+
     img.fancyimage {
         width: 100% !important;
     }
+
     .desktop-logo {
         display: none;
     }
+
     .mobile-logo {
         display: flex;
     }

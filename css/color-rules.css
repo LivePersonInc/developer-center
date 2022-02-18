@@ -65,7 +65,8 @@
     --input-search-background: #eeeff1;
     --input-search-text: #292b33;
     --text-invert: #fff;
-    --card-bg-background: linear-gradient( 180deg, rgba(41, 43, 51, 0.35) 0%, rgba(41, 43, 51, 0.7) 100%);
+    --card-bg-background: linear-gradient(180deg, rgba(41, 43, 51, 0.35) 0%, rgba(41, 43, 51, 0.7) 100%);
+    --table-cell: #F4F4F6;
 }
 
 .dark {
@@ -110,5 +111,6 @@
     --input-search-background: #24262e;
     --input-search-text: #81899c;
     --text-invert: #000;
-    --card-bg-background: linear-gradient( 0deg, rgba(196, 199, 212, 0.7), rgba(196, 199, 212, 0.7));
+    --card-bg-background: linear-gradient(0deg, rgba(196, 199, 212, 0.7), rgba(196, 199, 212, 0.7));
+    --table-cell: #24262E;
 }
