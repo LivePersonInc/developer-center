@@ -752,7 +752,7 @@ div.sidebarTitle-holder {
     overflow-wrap: break-word;
 }
 
-.post-content a {
+.post-content a:not(.welcome-card) {
     text-decoration: underline;
 }
 
