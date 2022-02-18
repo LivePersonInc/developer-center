@@ -215,8 +215,8 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    margin-top: 32px;
-    color: var(--link-color);
+    margin: 32px 0;
+    color: var(--body-text);
 }
 
 .container-note {
@@ -235,5 +235,5 @@
     line-height: 28px;
     /* identical to box height, or 140% */
     /* J/Navy */
-    color: var(--link-color);
+    color: var(--body-text);
 }
