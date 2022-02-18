@@ -162,10 +162,6 @@ pre code {
     max-width: initial;
 }
 
-table tbody tr:last-child {
-    border-bottom: 1px solid var(--navy-mid-gray) !important;
-}
-
 .post-content table td:first-child {
     width: unset;
     /*max-width: 150px;*/
@@ -177,29 +173,29 @@ table tbody tr:last-child {
 }
 
 .post-content table tr td {
-    font-size: 14px;
-    background-color: var(--body-background);
-    font-family: "Open Sans";
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
     color: var(--body-text);
     line-height: 1.8;
     max-width: 160px;
-    height: 50px;
+    min-height: 50px;
     hyphens: none;
-    border-right: solid 1px var(--card-border);
-    padding: 21px 25.5px 21px 23px;
-    vertical-align: inherit;
-    border-bottom: 1px solid var(--card-border);
+    padding: 16px;
 }
 
 .post-content table>thead>tr>th {
-    background-color: var(--footer-background);
-    font-family: "Open Sans";
-    text-transform: uppercase;
     font-weight: 600;
-    color: var(--widget-text);
+    color: var(--body-text);
     font-size: 12px;
-    padding: 14px 22px;
-    border-bottom: 1px solid var(--card-border) !important;
+    padding: 16px;
+    font-family: Space Grotesk;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
 }
 
 
@@ -214,8 +210,8 @@ table>thead>tr>th {
     border-bottom: none;
 }
 
-table>tbody>tr:nth-of-type(even) {
-    background-color: #f8f8f8;
+table>tbody>tr:nth-of-type(odd) {
+    background-color: var(--table-cell);
 }
 
 .designsheet table tr td {
