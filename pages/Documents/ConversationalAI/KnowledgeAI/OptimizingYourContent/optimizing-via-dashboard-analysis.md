@@ -75,6 +75,6 @@ On the Home dashboard and the individual knowledge base dashboards, you’ll see
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_kbsummary.png">
 
-* **Active**: Configuration of the knowledge base is complete, and the knowledge base has been used in the last 7 days. By “used,” we mean that it has powered answers to consumers in bot conversations (via a Conversation Builder integration) and/or served recommended answers to agents (via an Agent Assist integration).
+* **Active**: Configuration of the knowledge base is complete, and the knowledge base has been used in the last 7 days. By “used,” we mean that it has powered answers to consumers in bot conversations (via a Conversation Builder integration) and/or served recommended answers to agents (via a Conversation Assist integration).
 * **Idle**: Configuration of the knowledge base is complete, but the knowledge base hasn’t been used in the last 7 days.
 * **Incomplete**: Applies to external knowledge bases only. Configuration of the knowledge base is incomplete. For more on this, see [here](knowledgeai-external-knowledge-bases-introduction.html#getting-started-saving-an-incomplete-knowledge-base).

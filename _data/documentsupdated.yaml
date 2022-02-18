@@ -139,12 +139,12 @@
           subpages:
             - subpagename: Implementing a Web View Integration
             - subpagename: Using LivePerson Functions with a Bot
-        - pagename: Using Agent Assist
+        - pagename: Using Conversation Assist
           subpages:
             - subpagename: Overview
             - subpagename: Prerequisite Steps
-            - subpagename: Configure Agent Assist
-            - subpagename: Test Agent Assist
+            - subpagename: Configure Conversation Assist
+            - subpagename: Test Conversation Assist
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
@@ -242,20 +242,23 @@
             - subpagename: Apple Pay
         - pagename: Advanced Use Cases
         - pagename: Networking & Security
+    - documentname: Conversation Assist
+      pages:
+        - pagename: Overview
+        - pagename: Recommendation Sources
+          subpages:
+            - subpagename: Setting Up Bots
+            - subpagename: Setting Up Knowledge Bases
+            - subpagename: Configuring Settings
+        - pagename: Testing
+        - pagename: Agent Experience
+        - pagename: Best Practices
+        - pagename: Troubleshooting
+        - pagename: FAQs
     - documentname: Conversation Orchestrator
       pages:
         - pagename: Overview
         - pagename: Before You Begin
-        - pagename: Agent Assist
-          subpages:
-            - subpagename: Overview
-            - subpagename: Setting Up Bot Recommendations
-            - subpagename: Setting Up Knowledge Base Recommendations
-            - subpagename: Testing
-            - subpagename: Agent Experience
-            - subpagename: Best Practices
-            - subpagename: Troubleshooting
-            - subpagename: FAQs
         - pagename: Conversation Context Service
           subpages:
             - subpagename: Overview
@@ -1126,6 +1129,14 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
+        - pagename: List Message Template
+    - documentname: Viber Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
 - categoryname: "Security & Authentication"
   image: security-authentication
   documents:

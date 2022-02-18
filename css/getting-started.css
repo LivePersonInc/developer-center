@@ -1,261 +1,239 @@
 .getstarted-title {
-  color: var(--post-link);
-  font-weight: bold;
-  font-size: 12px;
-  margin: 0;
-  text-transform: uppercase;
-  line-height: 16px;
-  letter-spacing: 0.01em;
+    color: var(--post-link);
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 16px;
 }
 
 .getstarted-content {
-  color: var(--link-color);
-  font-weight: bold;
-  margin: 0;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  padding-bottom: 24px;
+    color: var(--link-color);
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 24px;
 }
 
 .lp-container {
-  display: flex;
-  padding-right: 48px;
-  width: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .teaser-header {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  display: inline-flex;
-  /* or 150% */
-  flex: 2;
-  margin-top: 40px !important;
-  margin-left: 40px !important;
-  letter-spacing: 0.01em;
-
-  color: #ffffff;
-
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    flex: 2;
+    margin-top: 32px !important;
+    margin-left: 32px !important;
+    color: #ffffff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hyperlink {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  padding-top: 12px;
-  letter-spacing: 0.01em;
-  color: var(--link-color);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 12px;
+    color: var(--link-color);
 }
 
 .dots-container {
-  margin: 0px 4px 0px 0px;
+    margin: 0px 4px 0px 0px;
 }
 
 .dots-container:hover {
-  color: var(--link-color-hover);
+    color: var(--link-color-hover);
 }
 
 .getting-started-paragraph {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 8px;
-  display: flex;
-  flex: 2;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  color: var(--body-text);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    flex: 2;
+    color: var(--body-text);
 }
 
 .play-icon {
-  margin-top: 40px;
-  flex: 1;
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
+    margin-top: 40px;
+    flex: 1;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
 }
 
 .getting-started-h5 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  width: 640px;
-  margin-top: 8px;
-  display: flex;
-  flex: 2;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  color: var(--body-text);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    width: 640px;
+    margin-top: 8px;
+    display: flex;
+    flex: 2;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--body-text);
 }
 
 #teaser-banner {
-  background-image: linear-gradient(
-      180deg,
-      rgba(15, 9, 67, 0.88) 0%,
-      rgba(41, 39, 64, 0.8) 100%
-    ),
-    url("img/Img_video_overview.png");
-  cursor: pointer;
+    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("img/Img_video_overview.png");
+    cursor: pointer;
 }
 
 .welcome-card-modified {
-  flex: 0 47%;
-  margin-top: 24px;
-  padding: 0px 24px 0px 0px;
-  margin-right: 1%;
-  background: var(--card-background);
-  margin-bottom: 16px;
-  border-radius: 8px;
-  box-sizing: border-box;
+    flex: 0 47%;
+    background: var(--card-background);
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .welcome-car-modified:hover {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
 }
 
 .header-lp4 {
-  font-family: Roboto;
-  font-size: 20px;
-  flex: 0 50%;
-  margin-right: 10%;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.4;
-
-  letter-spacing: 0.2px;
-  color: var(--link-color);
+    font-family: Inter;
+    font-size: 20px;
+    flex: 0 50%;
+    margin-right: 10%;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: var(--link-color);
 }
 
-.header-lp4-external {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.4;
-
-  letter-spacing: 0.2px;
-  color: var(--link-color);
+.header-lp4-external h3 {
+    font-family: Space Grotesk;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--body-text);
 }
 
 .external-link-container {
-  width: 300px;
-  flex: 0 50%;
-  display: inline-flex;
-  height: 180px;
+    width: 300px;
+    flex: 0 50%;
+    display: inline-flex;
+    margin: 32px 0;
 }
 
-.link-padding {
-  margin-bottom: 16px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.01em;
-  color: var(--link-color);
+.link-padding a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    position: relative;
+}
+
+.link-padding a:before {
+    content: "-";
+    position: absolute;
+    left: -12px;
+    color: var(--body-text)
 }
 
 .whole-external-link {
-  display: flex;
-  width: 93%;
-  margin-top: 48px;
+    display: flex;
+    width: 93%;
+    margin-top: 48px;
 }
+
 
 /* MODAL STUFF BELOW */
+
+
 /* The Modal (background) */
+
 .modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  padding: 2% 0;
-  /* Sit on top */
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow-y: hidden !important;
-  /* Enable scroll if needed */
-  /* Fallback color */
-
-  background-color: rgb(6, 8, 46, 0.8);
-
-  /* Black w/ opacity */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    padding: 2% 0;
+    /* Sit on top */
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow-y: hidden !important;
+    /* Enable scroll if needed */
+    /* Fallback color */
+    background-color: rgb(6, 8, 46, 0.8);
+    /* Black w/ opacity */
 }
+
 
 /* Modal Content */
+
 .modal-content {
-  background-color: rgb(6, 8, 46, 0) !important;
-  border: none !important;
-  box-shadow: none !important;
-  display: flex;
-  margin: 0 3%;
-  width: 94% !important;
-  height: 94%;
+    background-color: rgb(6, 8, 46, 0) !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    margin: 0 3%;
+    width: 94% !important;
+    height: 94%;
 }
 
+
 /* The Close Button */
+
 .close {
-  color: var(--lightest-gray) !important;
-  width: 40px;
-  margin-right: 3%;
-  font-size: 40px !important;
-  font-weight: 400 !important;
-  margin-bottom: 2%;
-  opacity: 0.8 !important;
+    color: var(--lightest-gray) !important;
+    width: 40px;
+    margin-right: 3%;
+    font-size: 40px !important;
+    font-weight: 400 !important;
+    margin-bottom: 2%;
+    opacity: 0.8 !important;
 }
 
 .close:hover,
 .close:focus {
-  color: var(--lightest-gray) !important;
-  text-decoration: none;
-  cursor: pointer;
+    color: var(--lightest-gray) !important;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .small-header {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 32px;
-  line-height: 28px;
-  letter-spacing: 0.01em;
-  color: var(--link-color);
+    font-family: Space Grotesk;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0;
+    color: var(--body-text);
 }
 
 .container-note {
-  display: flex;
-  margin-top: 32px;
-  margin-bottom: 40px;
-  width: 100%;
-  flex-wrap: wrap;
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .concierge-bot-header {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 28px;
-  /* identical to box height, or 140% */
-
-  letter-spacing: 0.01em;
-
-  /* J/Navy */
-
-  color: var(--link-color);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    /* J/Navy */
+    color: var(--body-text);
 }
