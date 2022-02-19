@@ -56,6 +56,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |:---- | :---------- | :---------- | :------- | :---|
 |start {from, to} | Conversation's start time range.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 |end {from, to} | Conversation's end time range.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|fullDialogEndTime {from,to} | The end time of the conversation including survey closure.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 |status  | Latest status of the conversation.| Array `<status>` | Optional | Valid values: "OPEN", "CLOSE"
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
@@ -199,7 +200,11 @@ conversationId | ID of conversation.  | string  |
 brandId  | ID of brand.| string  |
 status| Latest status of the conversation.  | string  |
 startTime| Start-time of the conversation.  | long |
-endTime  | End-time of the conversation. | long |
+endTime  | End time of the conversation. | long | The end time is set to the end of the conversation and updated upon survey submission/timeout.
+conversationEndTime  | The end time of the conversation regardless of the survey’s status. Human-readable timestamp. | long |
+conversationEndTimeL  | Same as above in epoch time. | long |
+fullDialogEndTime  | The close time of the conversation including survey submission. | long | Survey can be submitted or timed-out
+fullDialogEndTimeL  | Same as above in epoch time. | long |
 duration | Time from when the consumer started the conversation until it ended. | long | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason | Reason for closing the conversation - by agent / consumer.  | string  |
 closeReasonDescription | Additional information regarding the conversation close reason| string  |
@@ -677,8 +682,12 @@ answerId | Survey answer ID. | string
       "info": {
         "startTime": "2016-08-29 14:30:24.565+0000",
         "startTimeL": 1472481024565,
-        "endTime": "undefined",
-        "endTimeL": -1,
+        "endTime": "2016-08-29 19:58:24.565+0000",
+        "endTimeL": 1472500733000,
+        "conversationEndTime": "2016-08-29 18:58:24.565+0000",
+        "conversationEndTimeL": 1472497133000,
+        "fullDialogEndTime": "2016-08-29 19:58:24.565+0000",
+        "fullDialogEndTimeL": 1472500733000,
         "duration": 78970,
         "conversationId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
         "brandId": "qa26409991",
