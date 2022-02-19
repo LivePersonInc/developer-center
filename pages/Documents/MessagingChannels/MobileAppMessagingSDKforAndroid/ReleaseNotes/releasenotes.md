@@ -34,7 +34,7 @@ The Android Mobile Messaging SDK version 5.9.0 uses:
 - Failed to apply Quick reply button radius in dark mode.
 
 # Enhancements:
-- SDK performance improvements to reduce conversation loading time.
+- SDK performance improvements to reduce conversation window loading time.
 - Use APIs instead of shell commands to delete files cached during file sharing.
 - Added configuration to hide welcome message on clearing a history.
 

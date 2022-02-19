@@ -910,8 +910,6 @@ Define the text color of empty history view.
    </ul>
 </div>
 
-
-
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
