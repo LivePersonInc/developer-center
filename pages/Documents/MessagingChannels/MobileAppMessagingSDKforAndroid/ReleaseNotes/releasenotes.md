@@ -31,14 +31,15 @@ The Android Mobile Messaging SDK version 5.9.0 uses:
 
 # Bugs Fixed:
 - SDK does not auto re-connect for UnAuth users.
-- Secure form self closed after returning to the app.
+- Failed to apply Quick reply button radius in dark mode.
 
 # Enhancements:
 - SDK performance improvements to reduce conversation loading time.
 - Use APIs instead of shell commands to delete files catched during file sharing.
 - Added configuration to hide welcome message on clearing a history.
+
 ```xml
-<bool name="lp_hide_welcome_message_on_clear_history">true</bool>
+<bool name="lp_hide_welcome_message_on_clear_history">false</bool>
 ```
 
 
