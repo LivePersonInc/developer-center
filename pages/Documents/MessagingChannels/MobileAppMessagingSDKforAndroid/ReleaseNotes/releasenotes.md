@@ -35,7 +35,7 @@ The Android Mobile Messaging SDK version 5.9.0 uses:
 
 # Enhancements:
 - SDK performance improvements to reduce conversation loading time.
-- Use APIs instead of shell commands to delete files catched during file sharing.
+- Use APIs instead of shell commands to delete files cached during file sharing.
 - Added configuration to hide welcome message on clearing a history.
 
 ```xml
