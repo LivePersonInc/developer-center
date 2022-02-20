@@ -136,7 +136,7 @@ indicator: both
    // Get the button that opens the modal
    var btn = document.getElementById("teaser-banner");
    // Get the <span> element that closes the modal
-   var span = document.getElementsByClassName["close"](0);
+   var span = document.getElementsByClassName("close")[0];
    btn.onclick = function() {
      modal.style.display = "block";
    }
