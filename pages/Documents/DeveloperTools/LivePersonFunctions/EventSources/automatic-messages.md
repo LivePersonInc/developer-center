@@ -30,23 +30,25 @@ This is the Automatic Messages flow with Functions integration:
     4. Do nothing.
     5. Messaging Line in Off-Hours
 
-### How to Start
+### Configuration
 
 #### Step 1 - Enable Automatic Messages
 
-Enable *Controller Bot*, please contact your account team in order to do this.
+Enable the Automatic Messages feature.
+
+<div class="important"> It is required that your account has the Controller Bot permissions enabled; please contact your account team in order to do this.</div>
 
 #### Step 2 - Create function
 
-Create a new function using one of the messaging events.
+Create a new function using one of the messaging events:
 
-1. Messaging new conversation.
-2. Messaging conversation end.
-3. Messaging conversation routing.
-4. Messaging participants change.
-5. Messaging TTR.
-6. Messaging conversation idle.
-7. Messaging consumer step up.
+* Messaging new conversation.
+* Messaging conversation end.
+* Messaging conversation routing.
+* Messaging participants change.
+* Messaging TTR.
+* Messaging conversation idle.
+* Messaging consumer step up.
 
 You can select one of the available [templates](liveperson-functions-event-sources-overview.html#templates) for the chosen event. Currently, only one function per template type can be created for those conversational events. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
@@ -62,11 +64,7 @@ Just like any other function, this function must be deployed before it can be us
 
 ### Messaging events for Function Invocation
 
-Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.
-
-### Automatic Messages and invocations on Functions events
-
-System Messages feature (also known as Automatic Messages) is responsible for invoking functions on certain messaging events.
+Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.The Controller Bot (Automatic Messages) is responsible for invoking functions on certain messaging events.
 
 <div class="important">Multiple conversation event types are mapped to the same invocation messaging event.</div>
 
@@ -130,6 +128,10 @@ With the controller bot as the invoker, as is the case for messaging events, you
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
 Please have a look at [this page](function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the LivePerson Functions application itself.
+
+### Failed invocations
+
+Controller Bot will retry upt to 3 times when an invocation failed... //TODO explain consecuences
 
 ### Payload Details
 
