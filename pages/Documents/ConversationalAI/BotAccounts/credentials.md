@@ -201,7 +201,7 @@ While the credential types discussed above support [API integrations](conversati
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
-    - **Authentication Type**: Select "Fire API."
+    - **Authentication Type**: Select "Third-party NLU."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     - **NLU Provider**: Select the NLU provider.
@@ -210,7 +210,7 @@ While the credential types discussed above support [API integrations](conversati
 
 ### Delete a credential
 
-Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of Fire API credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
+Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of third-party NLU credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
 
 **To delete a credential**
 
