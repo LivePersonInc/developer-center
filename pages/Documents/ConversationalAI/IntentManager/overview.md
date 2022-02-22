@@ -45,9 +45,13 @@ For more on permissions, see [here](bot-accounts-permissions.html).
 
 ### Access Intent Manager
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Intent Manager**.
 
 ### Enable intent discovery, optimization & analysis
 
 Intent Manager’s Intent Discovery, Optimization, and Analysis features are disabled by default for all Intent Manager customers. To enable these features, contact your LivePerson account team.
+
+### Getting started
+
+If you're just beginning with Intent Manager, we recommend the Getting Started tutorial series [here](tutorials-guides-getting-started-with-bot-building-overview.html).

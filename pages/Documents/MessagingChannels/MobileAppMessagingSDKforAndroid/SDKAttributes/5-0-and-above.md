@@ -504,7 +504,7 @@ Define the color of status bar text color while trying to connect.
    <ul>
       <li><b>Type:</b> color</li>
        <li><b>(Light Theme) Default value:</b> #46474A</li>
-       <li><b>(Dark Theme) Default value:</b> #CC000000</li>
+       <li><b>(Dark Theme) Default value:</b> #F2F5F5F5</li>
    </ul>
 </div>
 
@@ -891,6 +891,13 @@ Define if SDK shows conversation until pass authentication check.
 
 * **Type:** bool
 * **Default value:** true
+
+
+#### lp_hide_welcome_message_on_clear_history
+Define to hide welcome message on clearing a history.
+
+* **Type:** bool
+* **Default value:** false
 
 
 #### empty_history_view_text_color
@@ -3040,7 +3047,7 @@ Integer in dp for the bubble stroke width of the structured content bubble.
 * **Default value:** 1dp
 
 
-#### structured_content_map_zoom&
+#### structured_content_map_zoom
 Integer that defines the zoom level of the structured content map view. For more details, see [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom).
 
 * **Type:** integer

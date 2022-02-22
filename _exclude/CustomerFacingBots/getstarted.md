@@ -20,4 +20,4 @@ Follow the steps below to get started.
 
 2. Start a Session in LiveEngage - [Retrieve your account domain](agent-domain-domain-api.html) and use the [Login Service API](login-getting-started.html) in order to enable your user to start a session in LiveEngage, while using the authorization bearer in the authorization header for all Chat Agent API requests.
 
-3. Virtual Agent Simulator-  [Use this Node.JS sample app](chat-agent-sample-app.html) in order to start testing your bot services via some of the Chat Agent API endpoints such as: login, set availability to online, create agent session, accept incoming chats, get messages from visitor and send lines.
+3. Virtual Agent Simulator - [Use this Node.js sample app](chat-agent-sample-app.html) in order to start testing your bot services via some of the Chat Agent API endpoints such as: login, set availability to online, create agent session, accept incoming chats, get messages from visitor and send lines.

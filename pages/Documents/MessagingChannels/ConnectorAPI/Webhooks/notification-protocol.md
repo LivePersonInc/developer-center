@@ -53,7 +53,7 @@ String examplePayload = {
 // the client's secret and the HmacSHA1 algorithm.
 
 Mac mac = Mac.getInstance("HmacSHA1");
-mac.init(new SecretKeySpec("THE_CLIENT_SECRET".getBytes("MUTF-8"), "HmacSHA1"));
+mac.init(new SecretKeySpec("THE_CLIENT_SECRET".getBytes("UTF-8"), "HmacSHA1"));
 byte[] signature = Base64.getEncoder().encode(mac.doFinal(examplePayload.getBytes("UTF-8")));
 System.out.println(signature);
 ```

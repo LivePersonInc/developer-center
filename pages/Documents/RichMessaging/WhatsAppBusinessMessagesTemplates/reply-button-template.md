@@ -20,7 +20,7 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 4. Footer (optional)
 5. Buttons (between 1 and 3)
 
-_Examples Of WhatsApp Reply Button:_
+**Examples Of WhatsApp Reply Button:**
 
 ![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
 
@@ -285,7 +285,7 @@ A button at the bottom of a rich card.
     <td>title</td>
     <td>
     The text of the button.<br/>
-    The text can not be longer than 25 characters.
+    The text can not be longer than 20 characters.
     </td>
     <td>String</td>
     <td>Y</td>

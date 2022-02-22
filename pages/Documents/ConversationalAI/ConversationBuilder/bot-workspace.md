@@ -13,15 +13,6 @@ permalink: conversation-builder-bot-workspace.html
 indicator: both
 ---
 
-### Access Conversation Builder
-
-**To access the Conversation Builder application**
-
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Conversation Builder**.
-
-### The bot workspace
-
 The Conversation Builder application is the primary workspace for designing a bot.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace.png">
@@ -67,7 +58,7 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html) the bot to a Conversational Cloud environment.
 
-* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
+* The <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
 
     * **Bot Settings** (see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings))
     * **Bot Change History**
