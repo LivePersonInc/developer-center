@@ -55,8 +55,6 @@ Bot settings include:
 
 - **Entity**: You can use this option to associate _a domain_ with the bot. However, the [Assist](conversation-builder-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
-- **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from Conversational Cloud, the organization you were using in Conversational Cloud is active and can't be changed, and nothing appears in this list.
-
 - **Public**: When you want other users in your Conversational Cloud account to be able to view and edit the bot, click the slider to On. The default value is Off. 
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
