@@ -222,7 +222,7 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 In the **Advanced Settings** of many of the survey interactions, you can configure several display settings:
 
 1. Display Choices As
-2. Choices Per Row
+2. Choices per Row
 3. Text Only Fallback > List Style for Choices
 
 1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
