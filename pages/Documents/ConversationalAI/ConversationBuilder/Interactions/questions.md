@@ -41,9 +41,11 @@ The user can either enter or select the answers.
 
 Configure the following settings in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
 
-- **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
+- **Display choices as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
 
 <img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
+
+- **Choices per Row**: This setting is available when you select to display the choices as quick reply "chips" (in **Display choices as**). Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
 - **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
@@ -155,7 +157,13 @@ Details vary by channel. For example, Apple Business Chat does not support Quick
 
 #### Question text
 
-Enter the question to send. 
+Enter the question to send.
+
+#### Interaction settings
+
+Configure the following setting in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
+
+- **Choices per Row**: Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
 #### Quick Reply settings
 
