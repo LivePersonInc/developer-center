@@ -14,11 +14,15 @@ indicator: both
 You can add custom code to an interaction. The code can be executed before the interaction runs, after the user has responded to the interaction, or after the interaction runs.
 
 ### Custom code indicator
-An interaction that contains custom code displays a green dot.
+An interaction that contains custom code displays a green dot:
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator.png">
 
-Check for this to understand at a glance whether there's code in the Process User Response, Pre-Process Code or Post-Process Code panels in the interaction.
+Check for this to understand at a glance whether there's code in the Process User Response, Pre-Process Code or Post-Process Code in the interaction.
+
+You'll also see this green dot next to the name of any tab that contains custom code:
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator2.png">
 
 ### Access the Custom Code panel
 
