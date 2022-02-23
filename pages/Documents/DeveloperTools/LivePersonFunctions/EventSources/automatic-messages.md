@@ -16,19 +16,16 @@ With Functions for messaging you are able to invoke lambdas from standard messag
 
 <img src="img/faas-automessages-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
 
-<div class="important">If an auto-message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
-
 This is the Automatic Messages flow with Functions integration:
 
 1. Controller Bot listens at conversation events.
 2. If there is an Auto-message configured for the event --> It will send that message to the conversation.
 3. If there is a Function deployed associated to that event -->  The function will be invoked.
-4. After invocation --> Controller Bot will check the response and will perform one the following actions base on the callback payload:
+4. After invocation --> Controller Bot will check the response and will perform one of the following actions based on the callback payload:
     1. Transfer Conversation to a different Skill.
     2. Transfer Conversation to a different Agent.
     3. Close the Conversation.
     4. Do nothing.
-    5. Messaging Line in Off-Hours
 
 ### Configuration
 
@@ -49,6 +46,7 @@ Create a new function using one of the messaging events:
 * Messaging TTR.
 * Messaging conversation idle.
 * Messaging consumer step up.
+* Messaging Line in Off-Hours
 
 You can select one of the available [templates](liveperson-functions-event-sources-overview.html#templates) for the chosen event. Currently, only one function per template type can be created for those conversational events. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
@@ -60,11 +58,11 @@ Adjust the coding from the template according to your needs by modifying the fun
 
 #### Step 4 - deploy your function
 
-Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. At this point, you can also test your function.
 
 ### Messaging events for Function Invocation
 
-Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.The Controller Bot (Automatic Messages) is responsible for invoking functions on certain messaging events.
+Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions. The Controller Bot (Automatic Messages) is responsible for invoking functions on certain messaging events.
 
 <div class="important">Multiple conversation event types are mapped to the same invocation messaging event.</div>
 
@@ -123,20 +121,63 @@ With the controller bot as the invoker, as is the case for messaging events, you
 
 * Close the Conversation
 
+Here's an example of a response sent back to the invoker using a few of those commands:
+
+```javascript
+let result = [
+   {
+       type: "systemMessage", // Returns a system message into the conversation
+       text: "your message"
+   },
+   {
+       type: "transfer", // Transfers the conversation.
+       skillId: "123456", // Transfer to different skill.
+       agentId: "123456" // Propose an agent.
+   },
+   {
+       type: "closeConversation" // Closes the conversation
+   }
+]
+callback(null, result);
+```
+
 <div class="important">Using callback commands is <b>not</b> mandatory. If you only wish to use the events listed above to trigger functions and nothing else, there's no reason for you to pass callback commands back.</div>
 
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
 
 Please have a look at [this page](function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the LivePerson Functions application itself.
 
-### Failed invocations
+### Best Practices
 
-Controller Bot will retry upt to 3 times when an invocation failed... //TODO explain consecuences
+#### Messaging event are asynchronous
+
+Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Conversation Context Service](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation.
+
+<div class="important">if the authenticated consumer's previous conversation was auto-closed, and the new one opened within 48 hours of that, the new conversation event won't be triggered.</div>
+
+#### Controller Bot will Retry on failed invocation
+
+If your function invocation takes too long or you have coding errors, the Controller Bot will retry up to 3 times, this will increase the number of invocations when your function does not perform well and could lead to more overload.
+
+<div class="important">Controller Bot will retry up to 3 times when an invocation fails.</div>
+
+#### Multiple Messaging events are mapped to the same Functions event
+
+Since multiple conversational events are mapped to the same Functions event, you can differentiate the conversational event by the `cbotEventType` property in the invocation payload and adapt your for the interested events. 
+
+#### System Messages disabled
+
+<div class="important">If any system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
+
+If you don't want your function to be invoked for a disabled system message, you have these options:
+- Undeploy your function.
+- Ignore it in your function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
 
 ### Payload Details
 
 <table>
 <thead><tr><th>1. level</th><th>2. level</th><th>3. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
+ <tr><td>general</td><td>cbotEventType</td><td>&nbsp;</td><td>ID of the system message</td><td>STRING</td><td>CONSUMER_OPEN_NEW_CONVERSATION_FIRST_TIME_OFF_HOURS</td></tr>
  <tr><td>end</td><td>closeReason</td><td>&nbsp;</td><td>which role closed conversation</td><td>STRING</td><td>AGENT/CONSUMER/SYSTEM</td></tr>
  <tr><td>general</td><td>type</td><td>&nbsp;</td><td>notification type</td><td>STRING</td><td>UPSERT</td></tr>
  <tr><td>general</td><td>convId</td><td>&nbsp;</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
@@ -182,11 +223,3 @@ Controller Bot will retry upt to 3 times when an invocation failed... //TODO exp
  <tr><td>ttr</td><td>newTtr</td><td>ttrType</td><td>type of ttr of the new state</td><td>STRING</td><td>URGENT</td></tr>
  <tr><td>ttr</td><td>newTtr</td><td>value</td><td>value of ttr of the new state (after change for example to URGENT)</td><td>NUMBER</td><td>300</td></tr>
 </tbody></table>
-
-
-### Best Practices
-
-Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Conversation Context Service](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation.
-
-
-<div class="important">if the authenticated consumer's previous conversation was auto-closed, and the new one opened within 48 hours of that, the new conversation event won't be triggered.</div>
