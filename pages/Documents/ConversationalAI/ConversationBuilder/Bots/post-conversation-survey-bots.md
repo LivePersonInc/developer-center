@@ -233,12 +233,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-2 - Use the **Choices Per Row** setting to control how the answer choices are presented when they exceed the available space in the messaging window:
-
-* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience. **Note**: This option isn't supported if the target channel is Facebook, Google Business Messaging, or LINE.
-* **Scroll**: If you select this, the answer choices are all presented on the same line, and the consumer must scroll across to see them all.
-
-<img style="width:500px" src="img/ConvoBuilder/surveyBot_bestFit.png">
+2 - The **Choices per Row** setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row in the Web Messaging channel. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows. **Important**: Used in Web messaging only. In all other channels, all choices are on 1 row.
 
 3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
