@@ -16,7 +16,7 @@ With Functions for messaging you are able to invoke lambdas from standard messag
 
 <img src="img/faas-automessages-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
 
-<div class="important">If concrete system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
+<div class="important">If an specific system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
 
 This is the Automatic Messages flow with Functions integration:
 
@@ -37,32 +37,32 @@ Enable the Automatic Messages feature.
 
 <div class="important"> It is required that your account has the Controller Bot permissions enabled; please contact your account team in order to do this.</div>
 
-#### Step 2 - Create function
+#### Step 2 - Create a function
 
-Create a new function using one of the messaging events:
+Create a new function using one of the following messaging events:
 
 * Messaging new conversation.
 * Messaging conversation end.
 * Messaging conversation routing.
 * Messaging participants change.
 * Messaging TTR.
+* Messaging Line in Off-Hours
 * Messaging conversation idle.
 * Messaging consumer step up.
-* Messaging Line in Off-Hours
 
 You can select one of the available [templates](liveperson-functions-event-sources-overview.html#templates) for the chosen event. Currently, only one function per template type can be created for those conversational events. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
 
 You can select a Skill or set of Skills. Specifying a skill has the advantage of reducing the complexity of the lambda's code. Furthermore, it reduces the number of unnecessary invocations.
 
-#### Step 3 - Edit the Function
+#### Step 3 - Edit your Function
 
 Adjust the coding from the template according to your needs by modifying the function. The function can return a series of commands back to the invoker.
 
-#### Step 4 - deploy your function
+#### Step 4 - Deploy your function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. At this point, you can also test your function.
 
-### Messaging events for Function Invocation
+### Messaging events
 
 Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions. The Controller Bot (Automatic Messages) is responsible for invoking functions on certain messaging events.
 
@@ -107,7 +107,6 @@ With the controller bot as the invoker, as is the case for messaging events, you
 
 <div class="important">
   <ul>
-    <li></li>
     <li>If no message is set in the result of the function (which it returns to the invoker, for example: <code>callback();</code> ), the default automatic message for the account will be triggered.</li>
     <li>The default automatic message can be overwritten with
         <code>{
@@ -123,7 +122,7 @@ With the controller bot as the invoker, as is the case for messaging events, you
 
 * Close the Conversation
 
-Here's an example of a response sent back to the invoker using a few of those commands:
+Here's an example of a response sent back to the invoker using those commands:
 
 ```javascript
 let result = [
@@ -146,8 +145,6 @@ callback(null, result);
 <div class="important">Using callback commands is <b>not</b> mandatory. If you only wish to use the events listed above to trigger functions and nothing else, there's no reason for you to pass callback commands back.</div>
 
 If you add more than one command of a certain type (e.g. 2 messages) **only the first command** of this type will be processed.
-
-Please have a look at [this page](function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the LivePerson Functions application itself.
 
 ### Best Practices
 
