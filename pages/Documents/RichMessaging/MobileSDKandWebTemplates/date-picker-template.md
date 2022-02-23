@@ -100,7 +100,7 @@ There are two date picker options:
             "title": "Select range of date for the report",
             "minDate": 1618613044,
             "maxDate": 1634424244,
-            "dateFormat": "DD-MM-YYYY"
+            "dateFormat": "dd-MM-YYYY"
           }
         ]
       }
@@ -123,8 +123,9 @@ There are two date picker options:
     - It’s better to restrict the date selection by making those inactive — by doing that you will help users avoid selecting unavailable dates and end up in zero-results dead ends. The default configurations have those dates in a disabled state.
 
 4. **Date Format and Language**
-    - If a date format is provided in the JSON schema, that one will be used. If one is NOT provided, the date format will default to MMM dd, yyyy.
-    - Locale will be used for date format and language.
+    - If a date format is provided in the JSON schema, that one will be used on Mobile SDK. If one is NOT provided, the date format will default to MMM dd, yyyy.
+    - Locale will be used for date format on Web Messaging.
+    - Locale will be used for language.
 
 5. **Min and Max Dates**
     - If no min and max date selected:
