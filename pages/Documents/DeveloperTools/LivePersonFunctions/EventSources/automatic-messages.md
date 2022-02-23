@@ -16,6 +16,8 @@ With Functions for messaging you are able to invoke lambdas from standard messag
 
 <img src="img/faas-automessages-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
 
+<div class="important">If concrete system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
+
 This is the Automatic Messages flow with Functions integration:
 
 1. Controller Bot listens at conversation events.
@@ -163,15 +165,14 @@ If your function invocation takes too long or you have coding errors, the Contro
 
 #### Multiple Messaging events are mapped to the same Functions event
 
-Since multiple conversational events are mapped to the same Functions event, you can differentiate the conversational event by the `cbotEventType` property in the invocation payload and adapt your for the interested events. 
+Since multiple conversational events are mapped to the same Functions event, you can differentiate the conversational event by the `cbotEventType` property in the invocation payload and adapt your for the interested events.
 
-#### System Messages disabled
+#### Any automatic message is disabled
 
-<div class="important">If any system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
+As mentioned above, if any auto message is disabled, the Controller Bot will invoke your function when any of the mentioned conversational event occurs within the conversation. You could disable all the automatic messages and your function still will be invoke in for those events, but you cannot disable the a Automatic Messages feature, the Controller Bot needs to be running and listening for conversational events in order to invoke you function. If you don't want your function to be invoked for a disabled system message, you have these options:
 
-If you don't want your function to be invoked for a disabled system message, you have these options:
-- Undeploy your function.
-- Ignore it in your function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
+* Undeploy your function.
+* Ignore it in your function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
 
 ### Payload Details
 
