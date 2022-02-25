@@ -16,7 +16,7 @@ indicator: both
       <span class="close">&times;</span>
    </div>
 </div>
-<div class="lp-container">
+<div class="lp-container flex-col-ipad">
    <div class=" welcome-card-modified">
       <div class="getting-started-paragraph" style="display:block;">
          <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
@@ -121,7 +121,7 @@ indicator: both
 <div class="free-trial-container">
    <div id="free-trial">
       <div id="free-trial-content-container">
-         <p class="free-trial-header" style="width:55%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p>
+         <p class="free-trial-header" style="width:80%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p>
       </div>
       <div id="free-trial-button-welcome">
          <a target="_blank" href="https://www.liveperson.com/upgrade/">

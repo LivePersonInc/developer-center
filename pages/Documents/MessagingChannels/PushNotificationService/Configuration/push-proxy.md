@@ -26,18 +26,28 @@ In order to enable the push proxy feature, you will require the following data a
 
 * **End Point URL** - an end URL to be used for the relevant app’s push.
 
-* **Optional configuration**
+---
 
-	* **Authorization** - HTTP Basic Authentication (BA) header.
+### Optional configurations
 
-		* Username. _Example_:  Alibaba.
+* **Authorization** - HTTP Basic Authentication (BA) header.
 
-		* Password. _Example_: opensesame.
+    * Username. _Example_:  Alibaba.
 
-	* **Key** - TLS Key file. _Example_: mybrandpushKey.pem
+    * Password. _Example_: opensesame.
 
-  * **Certificate** - TLS certification file. _Example_: mybrandpushCrt.pem
+* **Key** - TLS Key file. _Example_: mybrandpushKey.pem
+
+* **Certificate** - TLS certification file. _Example_: mybrandpushCrt.pem
+
+* **Custom Headers** - Custom HTTP header set by the Brand (up to 4 custom headers)
+
+  * Name - max length of 24 characters (only alphabets)
+
+  * Value - max length of 300 characters (allows alphanumeric & special characters : -, _, $, &, @,.,#,*)
+
+--- 
 
 This information can be added to the Mobile app management section under Data Sources
 
-![Mobile app management](https://knowledge.liveperson.com/img/week-of-october-15th-2018-2.png)
+<img src="/img/pusher/ProxyHeaders.png" alt="Push Notification Proxy" style="width: 800px;padding: 20px;">
