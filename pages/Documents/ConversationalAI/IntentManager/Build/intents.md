@@ -63,7 +63,7 @@ Note:
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, select the intent.
-5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
+5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn1.png">
 

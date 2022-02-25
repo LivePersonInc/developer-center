@@ -15,7 +15,7 @@ The following documentation outlines the configuration for the connector and how
 
 {: .important}
 At this time, Lex response cards & audio messages are not supported.
-The Connector uses Lex ApiVersion 2016-11-28.
+The Connector uses Lex ApiVersion 2016-11-28. Currently, we don't support Amazon Lex V2.
 
 ### Bot Configuration
 
@@ -552,14 +552,13 @@ To close the conversation without triggering the post conversation survey use fo
 
 Figure 10.3 Lex Example Close Conversation without PCS payload
 
-
 ### Invoke LivePerson Function
 
-During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
 
 The action field needs to be set to **INVOCATION** to instruct the connector to invoke the specified LivePerson Function.
 
-It is also required to provide the **lambdaUuid**, of the function that should be invoked, in `data`. 
+It is also required to provide the **lambdaUuid**, of the function that should be invoked, in `data`.
 To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
@@ -597,8 +596,122 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
   "requestAttributes": {
     "BC-LP-CONTEXT": {
       "lpEvent": {}, // Holds LP Events
-      "lpSdes": {}
+      "lpSdes": {} // Holds SDES
     }
   }
 }
 ```
+
+### Receiving Rich Content Response (Messaging Only)
+
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
+(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
+
+An example use case of the Rich Content Event (`RichContentEvent`) response sent by Third-Party Bots is described below. The example will show how to set up and access the `RichContentEvent` response in Amazon Lex. We will use Amazon Lex capability of providing fulfillment via Amazon Lambda.
+
+#### Create Amazon Lambda Function
+
+Information of Rich Content Event is part of context information sent by Third-Party Bots in the request. To access the `RichContentEvent` body
+we will need to create an Amazon Lambda function using which we can get `RichContentEvent` from the request attributes and send back the response that is
+relevant for business use-cases. Below is a minimal code example that will check for `RichContentEvent` information and respond
+with the event raw data. Please note that response should follow the Lex response schema and for more information on how to create Lambda function for Amazon Lex
+you can also follow [the official documentation](https://docs.aws.amazon.com/lex/latest/dg/gs2-prepare.html)
+
+```javascript
+"use strict";
+
+function close(sessionAttributes, fulfillmentState, message) {
+  return {
+    sessionAttributes,
+    dialogAction: {
+      type: "Close",
+      fulfillmentState,
+      message,
+    },
+  };
+}
+
+// --------------- Events -----------------------
+
+function dispatch(intentRequest, callback) {
+  const sessionAttributes = intentRequest.sessionAttributes;
+  const requestAttributes = intentRequest.requestAttributes;
+  let response;
+
+  if (requestAttributes && requestAttributes["BC-LP-CONTEXT"]) {
+    const parsedLpContext = JSON.parse(requestAttributes["BC-LP-CONTEXT"]);
+
+    if (
+      parsedLpContext.lpEvent &&
+      parsedLpContext.lpEvent.event &&
+      parsedLpContext.lpEvent.event.type &&
+      parsedLpContext.lpEvent.event.type === "RichContentEvent"
+    ) {
+      response = `I received RichContentEvent. Raw Data: ${JSON.stringify(
+        parsedLpContext.lpEvent.event
+      )}`;
+    } else {
+      response = "Unable to find any RichContentEvent data";
+    }
+  } else {
+    response = "Unable to find any LP Context Information";
+  }
+
+  callback(
+    close(sessionAttributes, "Fulfilled", {
+      contentType: "PlainText",
+      content: response,
+    })
+  );
+}
+
+// --------------- Main handler -----------------------
+
+// Route the incoming request based on intent.
+// The JSON body of the request is provided in the event slot.
+exports.handler = (event, context, callback) => {
+  try {
+    dispatch(event, (response) => {
+      callback(null, response);
+    });
+  } catch (err) {
+    callback(err);
+  }
+};
+```
+
+An example of a `RichContentEvent` body that will be sent by Third-Party Bots on user sharing location in WhatsApp is as follows:
+
+```json
+{
+  "content": {
+    "type": "vertical",
+    "elements": [
+      {
+        "la": 49.82380908513249,
+        "type": "map",
+        "alt": "49.82380908513249, 2.021484375",
+        "lo": 2.021484375
+      }
+    ]
+  },
+  "type": "RichContentEvent"
+}
+```
+
+#### Create Intent for RichContentEvent and Link Amazon Lambda
+
+After the Amazon Lambda function is deployed now we need to create an intent which should have Sample utterances
+`com.liveperson.bot-connectors.consumer.send-rich-content`. After the Sample utterances are added move to section
+of the fulfillment and choose AWS Lambda function. Our deployed lambda function should populate in the list of selections.
+Select the lambda function which in our example case is `botplRichContentEventLamda`. This can be seen in Figure 4.1 below
+
+<img class="fancyimage" style="width:800px" src="img/lex/lex_richcontentevent-intent-lamda.png">
+Figure 4.1 Sample utterances and Lambda function configuration for `RichContentEvent`
+
+Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to
+respond to the requests via the Amazon Lambda function. A demo of our WhatsApp map example (defined above) can be seen below:
+
+<img class="fancyimage" style="width:300px" src="img/lex/lex_richcontent_demo.gif">
