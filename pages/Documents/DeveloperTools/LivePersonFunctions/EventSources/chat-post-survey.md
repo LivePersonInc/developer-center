@@ -17,13 +17,15 @@ Chat Post Survey integrates LivePerson Functions and LiveEngage Chat. This integ
 
 ### Configuration
 
+There is not further requirements that FaaS feature enabled. Remember that this integration is available only with LiveEngage Chat.
+
 #### Step 1 - Create a new Function
 
-Create a new lambda/function. **Remember**: templates, once selected, cannot be changed due to risk of undesired side effects. For more information on how to create functions, [please see this document](function-as-a-service-getting-started.html).
+Create a new lambda/function from **Chat Post Survey E-mail Transcript" event. THe default template for this event will be selected for the function.
 
 #### Step 2 - Edit the Function
 
-Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function. For more information on developing a function within Functions, [please see this document](function-as-a-service-developing-with-functions.html).
+Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function.
 
 The email result entry needs to contain the following properties:
 
@@ -37,8 +39,7 @@ The email result entry needs to contain the following properties:
 
 #### Step 3 - Deploy the Function
 
-Adjust the coding from the template according to your needs by modifying the function
-
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. 
 ### Events
 
 Only *Post Survey Email Transcript event* is available within this integration.
@@ -75,7 +76,7 @@ This sample code checks whether the `csatRank` is smaller than or equal to 3, th
 
 ### Invocation Errors
 
-If there is any error during the invocation, the email wont be sent , (there is no reatry mechanims for this integration)
+If there is any error during the invocation, the email wont be sent , (there is no retry mechanissm for this integration)
 
 ### Payload Details
 
