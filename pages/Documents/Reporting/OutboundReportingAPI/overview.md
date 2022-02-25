@@ -268,22 +268,24 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
    "nextOffset": -1
  },
  "consumersReport": [
-   {
-     "id": "70cf3fc5-75c5-1129-3275-4665ce2s5c32",
-     "consumerId": "123456789",
-     "status": "DELIVERED",
-     "errorSource": null,
-     "errorCode": null,
-     "errorMessage": null,
-   },
-   {
-     "id": "x02f3scr-7wc5-1429-2575-6635sd2d5f32",
-     "consumerId": "987654321",
-     "status": "FAILED",
-     "errorSource": "400",
-     "errorCode": "prmsg",
-     "errorMessage": "Message failed to send",
-   }
+        {
+            "id": "217d4ce7-c86c-72cb-8fc4-7d7954302429",
+            "errorCode": null,
+            "errorMessage": null,
+            "errorSource": null,
+            "status": "RESPONDED",
+            "consumerId": "",
+            "conversationId": "2a69d9c4-82ae-46ce-bb8d-f8f4f31c1e71"
+        },
+        {
+            "id": "3a0e900d-04f3-a706-0832-f43143a42b24",
+            "errorCode": 300,
+            "errorMessage": "Message Failed to Send",
+            "errorSource": "prmsg",
+            "status": "FAILED",
+            "consumerId": "",
+            "conversationId": null
+        }
  ]
 }
 ```
@@ -352,7 +354,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/api/account/{accountId}/app/{app}/transactions/
+| POST | https://{domain}/api/account/{accountId}/app/{app}/transactions/
 
 **Path Parameters**
 
