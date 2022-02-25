@@ -18,7 +18,7 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/platform_main.png">
 
-### Modules
+### Applications
 
 - [Conversation Builder](conversation-builder-bot-workspace.html) is the primary application that allows you to design and scale AI-powered bots. Leveraging all of the other applications, this is where the user configures and designs conversational flows, API integrations, etc.
 
