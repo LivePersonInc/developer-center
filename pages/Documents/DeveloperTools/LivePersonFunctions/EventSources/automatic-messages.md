@@ -103,26 +103,53 @@ You have the option to send callback commands back to the invoker. You can add m
 
 With the controller bot as the invoker, as is the case for messaging events, you have the option to execute the following callback commands:
 
-* Send a message
+* Send a message. The default automatic message can be overwritten with:
 
-<div class="important">
-  <ul>
-    <li>If no message is set in the result of the function (which it returns to the invoker, for example: <code>callback();</code> ), the default automatic message for the account will be triggered.</li>
-    <li>The default automatic message can be overwritten with
-        <code>{
+<code>{
             type: "systemMessage",
             text: "your message"
-        }</code>. To set the message empty just pass <code>[]</code> as text.</li>
-  </ul>
+        }</code>. To set the message empty just pass <code>[]</code> as text.
+
+<div class="important">
+    If no message is set in the result of the function (which it returns to the invoker, for example: <code>callback();</code> ), the default automatic message for the account will be triggered.
 </div>
 
-* Transfer Conversation to a different Skill
+* Transfer Conversation to a different Skill:
 
-* Transfer Conversation to a different Agent (to configure this feature see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html))
+```javascript
+let result = [
+   {
+       type: "transfer", // Transfers the conversation.
+       skillId: "123456", // Transfer to different skill.
+   }
+]
+callback(null, result);
+```
 
-* Close the Conversation
+* Transfer Conversation to a different Agent (to configure this feature see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html)):
 
-Here's an example of a response sent back to the invoker using those commands:
+```javascript
+let result = [
+   {
+       type: "transfer", // Transfers the conversation.
+       agentId: "123456", // Transfer to different skill.
+   }
+]
+callback(null, result);
+```
+
+* Close the Conversation:
+
+```javascript
+let result = [
+   {
+       type: "closeConversation" // Closes the conversation
+   }
+]
+callback(null, result);
+```
+
+Here's an example of a response sent back to the invoker using multiple of these commands:
 
 ```javascript
 let result = [
