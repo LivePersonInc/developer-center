@@ -31,7 +31,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the “LP_Cross-vertical” domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
