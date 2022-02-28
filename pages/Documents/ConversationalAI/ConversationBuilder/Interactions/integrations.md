@@ -63,6 +63,11 @@ Alternatively, you might have an FAQ bot that is driven by a knowledge base full
 
 Powering bots with intelligent answers can increase containment: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
 
+#### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/682936871" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 #### How the Knowledge AI search works
 
 * **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
