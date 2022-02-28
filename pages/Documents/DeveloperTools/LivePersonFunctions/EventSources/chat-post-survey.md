@@ -9,11 +9,9 @@ permalink: liveperson-functions-event-sources-chat-post-survey.html
 indicator: both
 ---
 
-Chat Post Survey integrates LivePerson Functions and LiveEngage Chat. This integration will use Functions to re-create one of our Legacy features, the ability to conditionally send out email transcripts after a chat conversation ended. This integration a function will be invoke only for  *Post email transcript* event.
+Chat Post Survey integrates LivePerson Functions with LiveEngage Chat. This integration will use Functions to re-create one of our Legacy features, the ability to conditionally send out email transcripts after a chat conversation ended.
 
-**Note:** Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.
-
-<div class="important">Once a Function is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
+<div class="important">Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.</div>
 
 ### Configuration
 
@@ -21,7 +19,9 @@ There is not further requirements that FaaS feature enabled. Remember that this 
 
 #### Step 1 - Create a new Function
 
-Create a new lambda/function from **Chat Post Survey E-mail Transcript" event. THe default template for this event will be selected for the function.
+Create a new lambda/function from **Chat Post Survey E-mail Transcript** event. The default template for this event will be selected for the function.
+
+<div class="important">Once a Function is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
 
 #### Step 2 - Edit the Function
 
@@ -40,13 +40,9 @@ The email result entry needs to contain the following properties:
 #### Step 3 - Deploy the Function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. 
-### Events
+### Function example
 
-Only *Post Survey Email Transcript event* is available within this integration.
-
-### Example
-
-Based on the payload sent from the Conversational Cloud server described above, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to Conversational Cloud:
+Based on the payload sent from the Conversational Cloud server described bellow, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to Conversational Cloud:
 
 ```javascript
 module.exports = (data, cb) => {
@@ -74,25 +70,19 @@ module.exports = (data, cb) => {
 
 This sample code checks whether the `csatRank` is smaller than or equal to 3, that the `skillName` matches "CustomerCare" and that the `agentName` was “John Doe”. If these conditions are true, a new entry will be written to the returned email property list.
 
-### Invocation Errors
-
-If there is any error during the invocation, the email wont be sent , (there is no retry mechanissm for this integration)
-
 ### Payload Details
 
 The integration between Conversational Cloud and Functions in this case is done based on an event that Conversational Cloud sends to the Functions platform once a Post Conversation Survey has been submitted. This event invokes our function within the platform that we want to use. This event sends the following data to the function:
 
-* CSAT Rank: Numeric value between 1 (Very Dissatisfied) - 5 (Very Satisfied).
-
-* Skill name: Name of the skill the chat was assigned to.
-
-* Agent name: Full name of the agent in the format "first name surname"
-
-* List of all survey questions which were answered. Each list entry is an entity containing the following properties:
-
-    * Question: Full question string
-
-    * Answer: Complete answer. For multi-selection, the answers will be separated by a semicolon.
+<table>
+<thead><tr><th>1. level</th><th>2. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
+<tr><td>csatRank</td><td></td><td>Numeric value between 1 (Very Dissatisfied) - 5 (Very Satisfied).</td><td>NUMBER</td><td>3</td></tr>
+<tr><td>skillName</td><td></td><td>Name of the skill the chat was assigned to.</td><td>STRING</td><td>CustomerCare</td></tr>
+<tr><td>agentName</td><td></td><td>Full name of the agent in the format "first name surname".</td><td>STRING</td><td>John Doe</td></tr>
+<tr><td>questionWithAnswers</td><td></td><td>List of all survey questions which were answered.</td><td>STRING</td><td></td></tr>
+<tr><td>questionWithAnswers</td><td>Question</td><td>Full question string.</td><td>STRING</td><td>How was the chat experience?</td></tr>
+<tr><td>questionWithAnswers</td><td>Answer</td><td>Complete answer. For multi-selection, the answers will be separated by a semicolon.</td><td>STRING</td><td>Poor;Below Average</td></tr>
+</tbody></table>
 
 The following is an example of the payload that Conversational Cloud Chat sends to Functions in a JSON format:
 
@@ -113,3 +103,9 @@ The following is an example of the payload that Conversational Cloud Chat sends 
   }
 }
 ```
+
+### Hints
+
+* Only **Chat Post Survey E-mail Transcript** event is supported for this integration.
+* Functions platform won't send the email. The chat server will take care of sending out emails.
+* If there is any error during an invocation, the email wont be sent (there is no retry mechanism in the chat server for this integration).
