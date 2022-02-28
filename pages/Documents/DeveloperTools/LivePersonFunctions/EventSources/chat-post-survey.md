@@ -15,7 +15,7 @@ Chat Post Survey integrates LivePerson Functions with LiveEngage Chat. This inte
 
 ### Configuration
 
-There is not further requirements that FaaS feature enabled. Remember that this integration is available only with LiveEngage Chat.
+There is not further requirements than FaaS feature enabled. Remember that this integration is available only with LiveEngage Chat.
 
 #### Step 1 - Create a new Function
 
@@ -29,13 +29,15 @@ Adjust the coding from the template according to your needs by modifying the lam
 
 The email result entry needs to contain the following properties:
 
-* targetEmail: Receiving email address
-
-* senderName: The name of the sender of the post-survey email transcript
-
-* senderEmail: Sender email address
-
-* subject: Email subject
+<table>
+  <thead><tr><th>Property</th><th>description</th><th>type</th></tr></thead>
+  <tbody>
+    <tr><td>targetEmail</td><td>Receiving email address.</td><td>STRING</td></tr>
+    <tr><td>senderName</td><td>The name of the sender of the post-survey email transcript.</td><td>STRING</td></tr>
+    <tr><td>senderEmail</td><td>Sender email address.</td><td>STRING</td></tr>
+    <tr><td>subject</td><td>Email subject.</td><td>STRING</td></tr>
+  </tbody>
+</table>
 
 #### Step 3 - Deploy the Function
 
@@ -107,5 +109,6 @@ The following is an example of the payload that Conversational Cloud Chat sends 
 ### Hints
 
 * Only **Chat Post Survey E-mail Transcript** event is supported for this integration.
-* Functions platform won't send the email. The chat server will take care of sending out emails.
-* If there is any error during an invocation, the email wont be sent (there is no retry mechanism in the chat server for this integration).
+* Functions platform won't send out any email. The chat server will take care of sending out emails.
+* Any old logic/rules related to this event outside the Functions will be replaced by the function once it is deployed. Be sure to implement the completed logic to avoid unexpected behaviors.
+* If there is any error during an invocation, the email won't be sent, there is no retry mechanism in the chat server for this integration.
