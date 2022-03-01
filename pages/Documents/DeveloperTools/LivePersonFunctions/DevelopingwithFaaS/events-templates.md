@@ -51,7 +51,7 @@ Specific events can be restricted to only invoke a lambda on certain skills. Thi
 
 <img src="img/faas-select-skill.png" alt="Functions select skill" style="width:100%;"/>
 
-To specify to which skill the lambda should react, simply select the skills during the creation/editing process of your lambda. By default, the lambda will react to all skills. If the lambda should only react to specific skills then there is a maximum of <b>10</b> skills that can be selected at any given time. 
+To specify to which skill the lambda should react, simply select the skills during the creation/editing process of your lambda. By default, the lambda will react to all skills. If the lambda should only react to specific skills then there is a maximum of <b>50</b> skills that can be selected at any given time. 
 
 You can create more than one event lambda of the same event if you set different skills FOR each of the lambdas. If you do not assign a skill to the lambda you are only allowed to have one lambda of the given event. 
 
