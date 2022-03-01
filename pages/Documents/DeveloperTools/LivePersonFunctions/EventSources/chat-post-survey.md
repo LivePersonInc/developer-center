@@ -42,6 +42,7 @@ The email result entry needs to contain the following properties:
 #### Step 3 - Deploy the Function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function.
+
 ### Function example
 
 Based on the payload sent from the Conversational Cloud server described bellow, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to Conversational Cloud:

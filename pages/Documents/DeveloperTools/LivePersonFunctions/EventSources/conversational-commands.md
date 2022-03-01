@@ -47,7 +47,7 @@ Just like any other function, this function must be deployed before it can be us
 
 ### Examples
 
-You can find more information and example in the the LivePerson [Knowledge site] (https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-conversational-commands.html/)
+You can find more information and examples in the the [LivePerson Knowledge Center](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-conversational-commands.html/)
 
 ### Payload details
 

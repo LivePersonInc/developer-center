@@ -9,9 +9,11 @@ permalink: liveperson-functions-event-sources-third-party-bots.html
 indicator: both
 ---
 
-# Third Party Bots
 
-How to enable/configure setup Event Source?
-How it reacts to errors from functions ?
-How is the interaction between fn & event source ?
-Special twerks of the event source
+Third party bot are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider. Please see details [here](liveperson-functions-event-sources-third-party-bots.html).
+
+
+### Custom integration
+
+#### Hook Configuration
+
