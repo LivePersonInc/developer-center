@@ -19,7 +19,7 @@ There is not further requirements than FaaS feature enabled. Remember that this 
 
 #### Step 1 - Create a new Function
 
-Create a new lambda/function from **Chat Post Survey E-mail Transcript** event. The default template for this event will be selected for the function.
+Create a new `lambda` from **Chat Post Survey E-mail Transcript** event. The default template for this event will be selected for the function.
 
 <div class="important">Once a Function is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
 
@@ -41,7 +41,7 @@ The email result entry needs to contain the following properties:
 
 #### Step 3 - Deploy the Function
 
-Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. 
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function.
 ### Function example
 
 Based on the payload sent from the Conversational Cloud server described bellow, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to Conversational Cloud:

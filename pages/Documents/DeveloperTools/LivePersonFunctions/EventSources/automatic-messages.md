@@ -12,7 +12,7 @@ indicator: both
 
 Automatic Messages (also known as System Messages) are predefined messages triggered upon specific events that are detected by the system (e.g. the consumer opens a new conversation, the conversation is transferred to another agent, the time to respond is updated, etc.). When the auto messages are sent, they are displayed to the consumer and the agent within the conversation transcript, and they also appear in the conversation’s history both on the consumer’s side and in LiveEngage.
 
-With Functions for messaging you are able to invoke lambdas from standard messaging events thanks to our integration with Automatic Messages. Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
+With Functions for messaging you are able to invoke `lambdas` from standard messaging events thanks to our integration with Automatic Messages. Along with the invocation, the function is sent a payload containing metadata related to the conversation which invoked the function. This payload can then be used in the function for further processing and referencing.
 
 <img src="img/faas-automessages-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
 
