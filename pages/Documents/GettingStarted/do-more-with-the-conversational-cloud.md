@@ -8,7 +8,7 @@ indicator: both
 
 <div class="lp-container">
             <div class="header-paragraph">
-       Now that you know the basics, you’re ready to take a deeper dive into the full capabilities of the Conversational Cloud. Select a journey below to learn more about the tools and customization options available. 
+       Now that you know the basics, you’re ready to take a deeper dive into the full capabilities of the Conversational Cloud. Select a journey below to learn more about the tools and customization options available.
             </div>
 </div>
 <div class="container-note">
@@ -17,34 +17,33 @@ indicator: both
   </div>
 </div>
 
-
 <div class="card-container" style="margin-top:40px;">
-        <a class="welcome-card"  href="https://knowledge.liveperson.com/getting-started-getting-started-with-intents.html"> 
+        <a class="welcome-card"  href="https://knowledge.liveperson.com/getting-started-getting-started-with-intents.html">
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Understand consumer intents</h5>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-proactive-messaging.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-proactive-messaging.html">
         <img class="container-image" src="img/ic_Facebook.svg"/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Engage with consumers proactively</p>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html">
         <img class="container-image" src="img/ic_Facebook.svg"/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Customize your messaging operations</p>
         </a>
-        <a class="welcome-card"  href="/tutorials-guides-getting-started-with-bot-building-overview.html"> 
+        <a class="welcome-card"  href="/tutorials-guides-getting-started-with-bot-building-overview.html">
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Create new bots and dialogs</h5>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html">
         <img class="container-image" src="img/ic_functions.svg"/>
         <h5 class="getstarted-title">FUNCTION AS A SERVICE</h5>
         <h5 class="getstarted-content ">Develop custom behaviors </h5>
         </a>
-        <a class="welcome-card" href="/api-guidelines-accessing-liveperson-apis.html"> 
+        <a class="welcome-card" href="/api-guidelines-accessing-liveperson-apis.html">
         <img class="container-image" src="img/ic_APIs.svg"/>
         <h5 class="getstarted-title">LIVEPERSON APIS</h5>
         <h5 class="getstarted-content ">Build your own solution</h5>
@@ -52,28 +51,25 @@ indicator: both
 </div>
   <div class="external-link-container">
         <div id="LEFeatures" class="header-lp4-external">
-            Next Steps
+            <h3>Next Steps</h3>
             <div class="link-padding" style="margin-top:24px">
-                <a  href="/customizing-the-conversational-cloud.html"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
+                <a  href="/customizing-the-conversational-cloud.html">
+
                        Customize Conversational Cloud features
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/tutorials-guides-getting-started-with-bot-building-overview.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
+                <a  href="/tutorials-guides-getting-started-with-bot-building-overview.html">
                           Leverage intents in your bots
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/conversation-orchestrator-dynamic-routing-overview.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
+                <a  href="/conversation-orchestrator-dynamic-routing-overview.html">
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="https://www.liveperson.com/upgrade/"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
+                <a  href="https://www.liveperson.com/upgrade/">
                        Learn about your upgrade options and speak with an expert
                 </a>
             </div>
