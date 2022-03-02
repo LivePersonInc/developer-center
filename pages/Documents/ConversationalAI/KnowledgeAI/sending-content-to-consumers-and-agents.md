@@ -23,4 +23,4 @@ Alternatively, you might have an FAQ dialog or bot that is driven by a knowledge
 
 **For agents**
 
-Save agents time by offering articles as recommended answers to consumer questions. To do this, add a Knowledge Base integration within [Agent Assist](conversation-orchestrator-agent-assist-overview.html).
+Save agents time by offering articles as recommended answers to consumer questions. To do this, add a Knowledge Base integration within [Conversation Assist](conversation-assist-overview.html).

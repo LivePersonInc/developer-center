@@ -22,6 +22,7 @@ This bot provides basic information and contact options to your consumers. If yo
 ### Exploring your Concierge Bot
 
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
+
 1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in</a>.
 2. On the left sidebar, click the bot icon ("Manage conversational AI and bots").
 3. In the Conversational AI dashboard, click <b> Conversation Builder</b>.
@@ -30,13 +31,12 @@ When you are ready to start getting to know your bot, you can check out your Con
 Then you will see a screen like this:
 
 <img class="fancyimage" style="width:700px; margin-left: 16px;" src="img/conciergeBot/Concierge-bot-1.jpeg">
-From here you can test your bot by clicking <b>Preview</b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>, 
+From here you can test your bot by clicking <b>Preview</b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>,
 <i> ‘Contact’ </i>, etc. to see your bot from behind the scenes.
 
 ### Customize your Concierge Bot
 
 Now it’s time to make this bot your own. With LivePerson’s Conversational AI platform, you can fully customize what your bot says and does through our powerful tools and integrations. Here we will focus on customizing your bot in 3 ways: (1) personalizing what your bot says to align to your brand, (2) improving what your bot can understand, and (3) completing your bot’s ability to collect customer information after-hours or when your agents aren’t available.
-
 
 #### Personalize what your bot says
 
@@ -51,7 +51,7 @@ The Conversation Builder lets you easily update and change what your bot says. L
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-4.jpeg">
 5. Test your changes using <b>Preview</b>.
 
-You can update any other dialog in this bot as you see fit the same way! 
+You can update any other dialog in this bot as you see fit the same way!
 
 TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurately represent your hours of operation, removing the <i>‘new user tips’</i> in the <i>‘Open Hours’</i> and <i>‘Fallback’</i> dialogs.
 
@@ -70,9 +70,9 @@ Your bot can understand some messages from your customers out-of-the-box.  For e
 
 You can update the dialog starters for each of the dialogs in this bot in the same way.
 
-TIP: You can use [Intent Manager](intent-manager-overview.html) to further improve your bot’s ability to accurately understand and respond to customers. 
+TIP: You can use [Intent Manager](intent-manager-overview.html) to further improve your bot’s ability to accurately understand and respond to customers.
 
-#### Complete the ‘Contact’ dialog 
+#### Complete the ‘Contact’ dialog
 
 Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from a customer and send it to you as an email. To complete this dialog so that you can receive this email from your bot, you need to update your bot’s <b> Email Integration </b>.
 
@@ -86,31 +86,25 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
 5. Click <b>Save</b>.
 6. Test your changes using <b>Preview</b>.
 
-
 <div class="whole-external-link">
       <div class="next-steps-container">
           <div id="LEFeatures" class="header-lp4-external">
-            Next Steps
+            <h3>Next Steps</h3>
               <div class="link-padding" style="margin-top:24px">
-                <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
+                <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html">
                        Connect to a Mobile Channel
                 </a>
-              </div>       
+              </div>
               <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
+                <a target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html">
                        Continue learning about Conversational AI
                 </a>
               </div>
               <div class="link-padding" >
-                <a  target="_blank" href="/intent-manager-key-terms-concepts.html#intents"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
+                <a  target="_blank" href="/intent-manager-key-terms-concepts.html#intents">
                        Get started with Intents
                 </a>
               </div>
             </div>
-        </div>   
+        </div>
 </div>
-
-
