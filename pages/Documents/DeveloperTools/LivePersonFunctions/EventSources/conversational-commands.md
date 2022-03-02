@@ -17,11 +17,13 @@ Along with the invocation, the function is sent a payload containing the convers
 
 **Note** The response is not actually stored in the conversation transcript, it will only be stored temporarily in the browser and is only visible to the agent.
 
-<div class="important"> It is required that your account has the New Agent Workspace enabled; please contact your account team in order to do this.</div>
+{: .important}
+It is required that your account has the New Agent Workspace enabled; please contact your account team in order to do this.
 
 ### Configuration
 
-<div class="important">Agent required permissions: Use enhanced Agent Workspace and FaaS-Invocation permission has to be enabled.</div>
+{: .important}
+Agent permissions required: **Use enhanced Agent Workspace** and **FaaS-Invocation** permissions have to be enabled.
 
 #### Step 1 - Create a new Function
 
