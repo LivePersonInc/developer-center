@@ -11,27 +11,26 @@ indicator: both
 
 Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction.
 
-Before a function can be used in an interaction, users who are tasked with more technical work in Conversation Builder must first 1) [create and deploy the function](liveperson-functions-getting-started.html) in the LivePerson Functions UI, and then 2) [add a Function (FaaS) integration](conversation-builder-integrations-liveperson-functions-integrations.html) to the bot in Conversation Builder. This makes the integration available for use in a bot interaction.
-
 As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.
 
 ### Configuration
 
-<div class="important">You must have an user account for the Conversational Cloud and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.</div>
+{: .important}
+You must have an user account for the Conversational Cloud and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
 
 #### Step 1 - Create a new Function
 
-Create a new lambda/function  **without evet**. There are not templates for this integration since this is a customizable bot that every payload will vary for each case.
+Create a new lambda/function  **without event**. There aren't templates for this integration since this is a customizable bot which every payload will be different for each case.
 
 #### Step 2 - Edit the Function
 
-Edit and configure your function with the custom logic that you need for your use case. see below an example.
+Edit and configure your function with the custom logic that you need for your use cases. see below an example.
 
 #### Step 3 - Deploy the Function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function.
 
-#### Step 4 - Configure the integration in Conversation Builder.
+#### Step 4 - Configure the integration in Conversation Builder
 
 Please follow this [step by step guide](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html#conversation-builder---configure-the-integration) for configuring you custom integration.
 
