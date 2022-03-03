@@ -660,7 +660,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
             "inviteTime": "2021-02-17T22:55:14.543Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign124",
+            "proactiveCampaignId": "campaign124",
             "readTime": null,
             "sentTime": "2021-02-17T22:55:14.716Z",
             "initialSkill": "billing",
