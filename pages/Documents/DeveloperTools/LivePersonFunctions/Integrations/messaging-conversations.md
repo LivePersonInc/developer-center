@@ -29,9 +29,51 @@ Functions for messaging listens for messaging events asynchronously. As a conseq
 
 ### Messaging events for Function Invocation
 
-Conversational Cloud messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.
+Conversational Cloud Messaging uses a series of "Conversation State Change Events" which are fired when specific actions or events occur within the conversation. You are able to use these events to trigger your functions.
+
+#### System Messages and invocations on messaging events
+
+System Messages feature (also known as Automatic Messages) is responsible for invoking functions on certain messaging events.
+
+<div class="important">Multiple conversation event types are mapped to the same invocation messaging event.</div>
+
+A deployed function on certain messaging event can be invoked on multiple conversation events. I.e, a function deployed on **Messaging conversation end** event will be invoked when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
+
+In order to distinguish the conversation event type during the invocation, the `cbotEventType` property is included in the invocation payload. The following table shows the conversation event type mapping to messaging events on functions:
+
+<table>
+<thead><tr><th>Event Type</th><th>Mapped to</th></tr></thead><tbody>
+<tr><td>CONSUMER_OPEN_NEW_CONVERSATION_FIRST_TIME_OFF_HOURS</td><td>Messaging new conversation</td></tr>
+<tr><td>CONSUMER_OPEN_NEW_CONVERSATION_OFF_HOURS</td><td>Messaging new conversation</td></tr>
+<tr><td>CONSUMER_OPEN_NEW_CONVERSATION_FIRST_TIME</td><td>Messaging new conversation</td></tr>
+<tr><td>CONSUMER_OPEN_NEW_CONVERSATION</td><td>Messaging new conversation</td></tr>
+<tr><td>CONSUMER_OPEN_NEW_CONVERSATION_AFTER_AUTOCLOSE</td><td>Messaging new conversation</td></tr>
+<tr><td>AGENT_END_CONVERSATION</td><td>Messaging conversation end</td></tr>
+<tr><td>CONSUMER_END_CONVERSATION</td><td>Messaging conversation end</td></tr>
+<tr><td>SYSTEM_END_CONVERSATION</td><td>Messaging conversation end</td></tr>
+<tr><td>ENGAGEMENT_TRANSFERED</td><td>messaging conversation routing</td></tr>
+<tr><td>YOU_ARE_CONNECTED_TO</td><td>Messaging participants change</td></tr>
+<tr><td>BACK_TO_QUEUE</td><td>Messaging participants change</td></tr>
+<tr><td>JOINED_AGENT_LEFT_CONVERSATION</td><td>Messaging participants change</td></tr>
+<tr><td>ANOTHER_AGENT_JOINED_CONVERSATION</td><td>Messaging participants change</td></tr>
+<tr><td>AGENT_UPDATED_RESPONSE_TIME</td><td>Messaging TTR</td></tr>
+<tr><td>CONSUMER_CANCELED_URGENT_RESPONSE_TIME</td><td>Messaging TTR</td></tr>
+<tr><td>CONSUMER_ASKED_URGENT_RESPONSE_TIME</td><td>Messaging TTR</td></tr>
+<tr><td>CONSUMER_SEND_MESSAGE_ON_OFFHOURS</td><td>Messaging Line in Off-Hours</td></tr>
+<tr><td>CONV_AWAITING_IN_QUEUE</td><td>Messaging conversation idle</td></tr>
+<tr><td>AGENT_NON_RESPONSIVE</td><td>Messaging conversation idle</td></tr>
+<tr><td>CONSUMER_NON_RESPONSIVE</td><td>Messaging conversation idle</td></tr>
+<tr><td>CONSUMER_STEP_UP</td><td>Messaging consumer step up</td></tr>
+</tbody></table>
 
 
+#### System Messages disabled
+
+<div class="important">If a system message is disabled, the associated function will be invoked regardless of the state of the enabled flag.</div>
+
+If you don't want your function to be invoked for a disabled system message, you have these options:
+- Undeploy your function.
+- Ignore it in your function code. You can distinguish the system message with the `cbotEventType` property included in the invocation payload.
 
 ### Callback commands
 
@@ -117,6 +159,7 @@ Just like any other function, this function must be deployed before it can be us
 <table>
 <thead><tr><th>1. level</th><th>2. level</th><th>3. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
  <tr><td>end</td><td>closeReason</td><td>&nbsp;</td><td>which role closed conversation</td><td>STRING</td><td>AGENT/CONSUMER/SYSTEM</td></tr>
+ <tr><td>general</td><td>cbotEventType</td><td>&nbsp;</td><td>ID of the system message</td><td>STRING</td><td>CONSUMER_OPEN_NEW_CONVERSATION_FIRST_TIME_OFF_HOURS</td></tr>
  <tr><td>general</td><td>type</td><td>&nbsp;</td><td>notification type</td><td>STRING</td><td>UPSERT</td></tr>
  <tr><td>general</td><td>convId</td><td>&nbsp;</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
  <tr><td>general</td><td>dialogId</td><td>&nbsp;</td><td>ID of dialog</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
