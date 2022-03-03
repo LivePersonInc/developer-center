@@ -21,11 +21,11 @@ If you have not done so yet, see the [overview](actual-handle-time-api-overview.
 
 #### Request Query Parameters
 
-| Name   | Description                                                                                                                     | Type       | Required? | Default | Notes                                                                                                                  |
-|--------|---------------------------------------------------------------------------------------------------------------------------------|------------|-----------|---------|------------------------------------------------------------------------------------------------------------------------|
-| from   | Query period: Query start date                                                                                                  | Epoch time | Required  |         | The query period will be limited to 1 day                                                                              |
-| to     | Query period: Query end date                                                                                                    | Epoch time | Required  |         | The query period will be limited to 1 day                                                                              |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string     | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI |
+| Name   | Description                                                                                                                     | Type   | Required? | Default | Notes                                                                                                                  |
+|--------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|------------------------------------------------------------------------------------------------------------------------|
+| from   | Query period: Query start date                                                                                                  | long   | Required  |         | The query period will be limited to 1 day , Epoch time                                                                 |
+| to     | Query period: Query end date                                                                                                    | long   | Required  |         | The query period will be limited to 1 day ,Epoch time                                                                  |
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI |
 
 ### Response
 
