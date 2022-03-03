@@ -914,7 +914,14 @@
           subpages:
             - subpagename: Get Status Changes
         - pagename: Error Codes
-
+    - documentname: Actual Handle Time API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Segments
+        - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
