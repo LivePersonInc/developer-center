@@ -21,10 +21,11 @@ If you have not done so yet, see the [overview](actual-handle-time-api-overview.
 
 #### Request Query Parameters
 
-| Name   | Description                                                                                                                         | Type   | Required? | Default | Notes                                                                                                                                 |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|---------------------------------------------------------------------------------------------------------------------------------------|
-| path   | Relative file path as received from the Breakdown API                                                                               | string | Required  |         | Must match the following regex: ^/year=\d{4}/month=\d{1,2}/day=\d{1,2}/hour=\d{1,2}/accountId=[a-zA-Z0-9]+/[a-zA-Z0-9_.-]+\.json\.gz$ |
-| source | Used to describe the originator of the call.</br>The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI                |
+| Name   | Description                                                                                                                         | Type   | Required? | Default | Notes                                                                                                                  |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|------------------------------------------------------------------------------------------------------------------------|
+| path   | Relative file path as received from the Breakdown API                                                                               | string | Required  |         | Must match the following regex: </br> ^/year=\d{4}/month=\d{1,2}/day=\d{1,2}/hour=\d{1,2}/accountId=[a-zA-Z0-9]+/[a-zA-Z0-9_.-]+\.json\.gz$                                                                                 |
+| source | Used to describe the originator of the call.</br>The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI |
+
 ### Response
 
 | Property Name         | Description                                   | Type                                                             | Notes                                                                                                                                |
