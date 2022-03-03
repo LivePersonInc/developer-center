@@ -346,11 +346,16 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 ### Transaction API
 
-API for account level transactions 
+API for account level transactions. 
 
-**1. Get details for Transactions - Version 1.0**
+There are two versions of transaction API's.
 
-Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Transaction/transactions) to go through API spec to get started.
+| Version | Description  |
+| :--- | :--- |
+| Version 1.0 | Existing version of transaction API with filtering on channels and skills. This version is going to be deprecated |
+| Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channles and skills |
+
+**1. Get details for Transactions - Version 1.0** 
 
 | Method | URI  |
 | :--- | :--- |
@@ -396,7 +401,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 }
 ```
 
-**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return records from next page. 
+**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records. 
 
 **Response Example**
 
@@ -543,6 +548,12 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 **Request Body**
 
+| Key | Description | Values/Examples |
+| :--- | :--- | :--- |
+| offset | The offset specifies from which record to retrieve the data | Default = 0 |
+| limit | The limit is max records per page | Default = 100, Max = 5000 |
+| messagestatus | Filter on message status of transactions | "FAILED", "SKIPPED", "SENT", "DELIVERED", "READ", "RESPONDED" |
+
 ```json
 {
     "offset": 0,
@@ -555,8 +566,8 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
             "billing", "sales"
         ],
         "messagestatus": [
-            "FAILED", "READ",  "DELIVERED"
-        ],
+            "FAILED", "READ"
+        ], 
         "transactionids" : [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
