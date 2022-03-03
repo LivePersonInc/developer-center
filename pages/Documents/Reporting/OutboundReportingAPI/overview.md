@@ -353,7 +353,7 @@ There are two versions of transaction API's.
 | Version | Description  |
 | :--- | :--- |
 | Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
-| Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channles and skills |
+| Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channels and skills |
 
 **1. Get details for Transactions - Version 1.0** 
 
@@ -449,7 +449,7 @@ There are two versions of transaction API's.
             "inviteTime": "2021-02-17T22:57:13.480Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign125",
+            "proactiveCampaignId": "campaign125",
             "readTime": null,
             "sentTime": "2021-02-17T22:57:13.586Z",
             "initialSkill": "prmsgoutbound",
@@ -476,7 +476,7 @@ There are two versions of transaction API's.
             "inviteTime": "2021-02-17T22:55:14.543Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign124",
+            "proactiveCampaignId": "campaign124",
             "readTime": null,
             "sentTime": "2021-02-17T22:55:14.716Z",
             "initialSkill": "billing",
@@ -503,7 +503,7 @@ There are two versions of transaction API's.
             "inviteTime": "2021-02-17T22:57:13.503Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign123",
+            "proactiveCampaignId": "campaign123",
             "readTime": null,
             "sentTime": "2021-02-17T22:57:13.613Z",
             "initialSkill": "prmsgoutbound",
@@ -631,7 +631,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
             "inviteTime": "2021-02-17T22:57:13.480Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign125",
+            "proactiveCampaignId": "campaign125",
             "readTime": "2021-02-17T22:57:13.586Z",
             "sentTime": "2021-02-17T22:57:13.586Z",
             "initialSkill": "prmsgoutbound",
