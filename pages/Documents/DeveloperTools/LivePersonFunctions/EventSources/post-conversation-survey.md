@@ -9,43 +9,49 @@ permalink: liveperson-functions-event-sources-post-conversation-survey.html
 indicator: both
 ---
 
-A post-conversation survey bot is a bot that is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on the consumer's experience with your brand. A survey bot is a great way to measure agent/bot and skill performance and to identify opportunities to improve on your quality targets.
+A post-conversation survey flow is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on the consumer's experience with your brand. A survey bot is a great way to measure agent/bot and skill performance and to identify opportunities to improve on your quality targets.
 
-Survey bots can be integrated with Functions.  A `lambada`can be invoke when the Survey start (at the end of the conversation) and when teh survey ends. In comparison to the [chat post survey](function-as-a-service-use-cases-post-chat-survey-transcripts.html) this integration will not send any automated emails.
+Survey bots can be integrated with Functions.  A `lambada` can be invoke when the Survey start (at the end of the conversation) and when teh survey ends. In comparison to the [chat post survey](function-as-a-service-use-cases-post-chat-survey-transcripts.html) this integration will not send any automated emails.
 
 {: .important}
-Post conversation survey bot only are available for **Messaging** , not for chat.
+Post Conversation Survey Bot is only available for **Messaging**, not for chat.
 
-<img src="img/faas-post-conversation-survey-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
+<img src="img/faas-survey-bot-flow.png" alt="FaaS Automatic Messages Flow" style="width:70%;"/>
 
 This is the Post Conversation Survey flow with Functions integration:
 
-1. Survey Bot listens at conversation end events.
+1. Survey Bot listens to conversation end events.
 2. If certain conditions occur, Survey bot will send the survey first question to the conversation:
-3. If there is a Function deployed associated to that survey start event -->  The function will be invoked.
-4. Survey will listen for survey resposeses and send more question
-5. When the Survey ends --> Survey Bot will invoke the function on theat vetns
+    1. If there is a Function deployed on *Messaging Survey Started* event -->  The function will be invoked.
+    2. Survey will listen for survey responses and send more question.
+3. When the Survey ends on *Messaging Survey Ended* event --> Survey Bot will invoke the function.
 
 ### Configuration
 
+Survey Bot can be configured under  [Conversation Builder Survey Bots](conversation-builder-bots-post-conversation-survey-bots.html).
+
+{: .important}
+Please, follow this guide on how to configure a [Post Conversation Survey Bot](conversation-builder-bots-post-conversation-survey-bots.html) before start. If you have already a survey bot configured make sure you have Functions enabled for your account.
+
 #### Step 1 - Create function
 
-Create a new function using one of the messaging survey templates.
+Create a new function using one of the messaging survey templates. There are are the following events:
 
-Currently, only one function per template type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
+* *Messaging Survey Started.*
+* *Messaging Survey Ended.*
+
+Currently, only one function per event type can be created. If there are multiple types of functionality needed that stem from the same event invocation, these should be coded into the same `lambda`.
+
+{: .important}
+The Survey Bot won't process any callback payload during the invocation. //TODO: needs to clarify
 
 #### Step 2 - Edit the Function
 
-Adjust the code in the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open).
-
-As mentioned above, the function can return a series of commands back to the invoker. In the template code you can see the current available commands.
-
-In the event of the function not being threaded by the calling system, the function can simply return `ok` within the callback.
+Adjust the code in the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open). In the event of the function not being threaded by the calling system, the function can simply return `ok` within the callback.
 
 #### Step 4 - Deploy the function
 
-Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
-
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. At this point, you can also test your function.
 
 ### Payload details
 

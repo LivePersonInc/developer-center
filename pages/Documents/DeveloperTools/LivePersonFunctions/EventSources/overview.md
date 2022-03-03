@@ -41,8 +41,8 @@ Currently the following event sources are supported:
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
-|Messaging Survey Ended|Triggered when a messaging post survey ended.|Survey Bot|1|✅|
 |Messaging Survey Started|Triggered when a messaging post survey started.|Survey Bot|1|✅|
+|Messaging Survey Ended|Triggered when a messaging post survey ended.|Survey Bot|1|✅|
 
 #### Conversational commands
 
