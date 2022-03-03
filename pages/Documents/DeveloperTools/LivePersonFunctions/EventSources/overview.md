@@ -23,21 +23,21 @@ Currently the following event sources are supported:
 
 #### Automatic Messages
 
- Automatic Messages (also known as System Messages) allows brands to send custom messages during conversations at Conversational Cloud Events (E.g Conversation started, Agent joined conversation, etc.) When any of those events occur during a conversation a Function can be invoked if the there is a deployed function associated to that Event. Please see details [here](liveperson-functions-event-sources-automatic-messages.html).
+ Automatic Messages (also known as System Messages) allows brands to send custom messages during conversations at Conversational Cloud Events (E.g Conversation started, Agent joined conversation, etc.) When any of these events are triggered during a conversation, a function can be invoked if the there is a deployed function associated to that Event. Please see details [here](liveperson-functions-event-sources-automatic-messages.html).
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
 |Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|Controller Bot (Messaging Automatic Messages)|1|✅|
-|Messaging Line in Off-Hours|Triggered when a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).|Controller Bot (Messaging Automatic Messages)|1|✅|
+|Messaging Line in Off-Hours|Triggered when a conversation was *open* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging Consumer Step Up|Triggered when a consumer step up occurs, i.e. when a participant authenticates themselves during a conversation.|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging New Conversation|Triggered for every new messaging conversation. **This event should not be used for routing. Use a routing bot instead.**|Controller Bot (Messaging Automatic Messages)|1|✅|
 |Messaging TTR (Time to Respond)|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time. |Controller Bot (Messaging Automatic Messages)|1|✅|
 
 #### Post Conversation Survey
 
-[Post conversation Survey Bots](conversation-builder-bots-post-conversation-survey-bots.html) collect consumers feedback at the end of a conversation. This integration with Functions occurs when the survey starts and ends. A Survey Bot can be configured in the Conversation Builder. Please see details [here](liveperson-functions-event-sources-system-messages.html).
+[Post conversation Survey Bots](conversation-builder-bots-post-conversation-survey-bots.html) collect consumers feedback at the end of a conversation. This integration with Functions occurs when the survey starts and ends. A Survey Bot can be configured in the Conversation Builder. Please see details [here](liveperson-functions-event-sources-post-conversation-survey.html).
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
@@ -50,7 +50,7 @@ Conversational Command allows agents to invoke functions during a conversation i
 
 |Event Name|Event Description|Event Source|Lambda Limit| Supports Skills|
 |--- |--- |--- |--- |---
-|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|Agent Workspace (NAW only)|30|
+|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the Agent Workspace in Conversational Cloud by typing "/".|Agent Workspace (NAW only)|30|
 
 #### Third Party Bots
 
@@ -78,7 +78,7 @@ There are other LivePerson systems that can invoke functions without an event as
 #### Conversation builder
 
 Conversation Builder Bots can be integrated with Functions. If there is some custom logic that can be done with a function, you can do it with Conversation Builder.
-The configured bot will invoke a function at dialog [interactions](conversation-builder-conversation-builder-interactions.html#integrations). You can select from all functions under your LivePerson account and there are not constrains here regarding lambdas limit. Please see details [here](liveperson-functions-event-sources-conversation-builder.html).
+The configured bot will invoke a function at dialog [interactions](conversation-builder-interactions-interaction-basics.html). You can select from all functions under your LivePerson account and there are not constrains here regarding lambdas limit. Please see details [here](liveperson-functions-event-sources-conversation-builder.html).
 
 ### Templates
 

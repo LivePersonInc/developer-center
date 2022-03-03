@@ -9,7 +9,7 @@ permalink: liveperson-functions-event-sources-conversation-builder.html
 indicator: both
 ---
 
-Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction.
+Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-integrations-liveperson-functions-integrations.html) to a dialog in a bot works just like adding any other type of integration interaction.
 
 As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.
 
