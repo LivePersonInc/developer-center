@@ -9,7 +9,7 @@ permalink: liveperson-functions-event-sources-third-party-bots.html
 indicator: both
 ---
 
-Third party bots are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider. Third party bots connectors allows you to:
+Third Party Bots are managed through LivePerson's Conversational Cloud and can be displayed as a human agent or a LivePerson bot. You can leverage it with Functions to build custom integrations with other third party bot provider. Third Party Bots connectors allows you to:
 
 * Send/receive text messages.
 * Send structured content.
@@ -17,20 +17,20 @@ Third party bots are managed through LivePerson's Conversational Cloud and can b
 * Change Time To Response for a messaging conversation.
 * Close a conversation.
 
-There are two types of integrations supported by Third Party Bots: *Custom integration* and *Hooks integration*.
+There are two types of LivePerson Functions integrations supported by Third Party Bots: **Custom integration** and **Hooks integration**.
 
 {: .important}
-Please follow the Third party bots [Getting Started guide](third-party-bots-getting-started.html) first to complete pre-requisite steps.
+Please follow the Third Party Bots [Getting Started guide](third-party-bots-getting-started.html) first to complete pre-requisite steps.
 
 ### Custom integration
 
-You can configure a bot connector using Functions instead nstead of a vendor, like IBM Watson for example, you can write your own custom bot and connect it to Conversational Cloud with **custom integration**.
+You can configure a bot connector using Functions instead of a vendor, like IBM Watson for example, you can write your own custom bot and connect it to Conversational Cloud with **custom integration**.
 
-In order  to perform the Custom integration with Functions, you need to create a function on **Third-Party Bots Custom Integration** event. Please follow this guide about [Third party bots custom integration](third-party-bots-custom-integration.html).
+In order  to perform the Custom integration with Functions, you need to create a function on **Third-Party Bots Custom Integration** event. Please follow this guide about [Third Party Bots custom integration](third-party-bots-custom-integration.html).
 
 ### Hooks integration
 
-You can configure hooks in a bot connector using Functions to modify vendor payloads, responses and read out errors. Pease follow this guide about [Third party bots hooks configuration](third-party-bots-hook-configuration.html). These are the following hooks events:
+You can configure hooks in a bot connector using Functions to modify vendor payloads, responses and read out errors. Pease follow this guide about [Third Party Bots hooks configuration](third-party-bots-hook-configuration.html). These are the following hooks events:
 
  **Third-Party Bots Error Hook** : Triggered when a bot, which is using the Third-Party Bots' Error Hooks is having an issue.
 
@@ -44,7 +44,7 @@ You can configure hooks in a bot connector using Functions to modify vendor payl
 ### Bot conversation errors
 
 {: .important}
-Please follow the complete guide about [Third Party Bots conversation errors](third-party-bots-bot-conversation-errors.html).
+Please follow the complete guide about [Third Party Bots conversation errors](third-party-bots-bot-conversation-errors.html) for more details and solutions.
 
 These are the errors returned in a bot connector associated with Functions:
 
