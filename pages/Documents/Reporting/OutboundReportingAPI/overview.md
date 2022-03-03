@@ -352,7 +352,7 @@ There are two versions of transaction API's.
 
 | Version | Description  |
 | :--- | :--- |
-| Version 1.0 | Existing version of transaction API with filtering on channels and skills. This version is going to be deprecated |
+| Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
 | Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channles and skills |
 
 **1. Get details for Transactions - Version 1.0** 
