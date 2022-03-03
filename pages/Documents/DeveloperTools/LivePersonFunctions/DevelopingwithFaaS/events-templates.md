@@ -60,12 +60,6 @@ Some example scenarios:
 ✅ Event A, Default-skill
 ❌ Event A, Skill 1,2 + Event A, Skill 3,4 +  Default-skill
 
-##### Event Skill Scenarios
-✅ Event A, Skill 1,2 + Event A, Skill 3,4
-✅ Event A, Skill 1,2 + Event A, Skill 3,4 + Event B, Default-skill
-✅ Event A, Default-skill
-❌ Event A, Skill 1,2 + Event A, Skill 3,4 +  Default-skill
-
 <img src="img/faas-select-skill-2.png" alt="Functions select multiple skill" style="width:100%;"/>
 
 <div class="important">Changing the skills of a lambda does not require a redeployment. The change is reflected within 5 minutes after saving.</div>
