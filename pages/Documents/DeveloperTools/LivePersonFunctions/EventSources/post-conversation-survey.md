@@ -9,9 +9,9 @@ permalink: liveperson-functions-event-sources-post-conversation-survey.html
 indicator: both
 ---
 
-A post-conversation survey flow is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on the consumer's experience with your brand. A survey bot is a great way to measure agent/bot and skill performance and to identify opportunities to improve on your quality targets.
+A Post-Conversation Survey flow is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on the consumer's experience with your brand. A Survey Bot is a great way to measure agent/bot and skill performance and to identify opportunities to improve on your quality targets.
 
-Survey bots can be integrated with Functions.  A `lambada` can be invoke when the Survey start (at the end of the conversation) and when teh survey ends. In comparison to the [chat post survey](function-as-a-service-use-cases-post-chat-survey-transcripts.html) this integration will not send any automated emails.
+Survey bots can be integrated with Functions. A `lambda` can be invoked when the Survey starts (at the end of the conversation) and when teh survey ends. In comparison to the [chat post survey](function-as-a-service-use-cases-post-chat-survey-transcripts.html) this integration will not send any automated emails.
 
 {: .important}
 Post Conversation Survey Bot is only available for **Messaging**, not for chat.
@@ -20,15 +20,15 @@ Post Conversation Survey Bot is only available for **Messaging**, not for chat.
 
 This is the Post Conversation Survey flow with Functions integration:
 
-1. Survey Bot listens to conversation end events.
+1. Survey Bot listens to *conversation end* events.
 2. If certain conditions occur, Survey bot will send the survey first question to the conversation:
-    1. If there is a Function deployed on *Messaging Survey Started* event -->  The function will be invoked.
-    2. Survey will listen for survey responses and send more question.
-3. When the Survey ends on *Messaging Survey Ended* event --> Survey Bot will invoke the function.
+    1. If there is a Function deployed on *Messaging Survey Started* event -->  The associated function will be invoked (if deployed).
+    2. Survey will listen for survey responses, send more questions and listen to responses.
+3. When the Survey ends on *Messaging Survey Ended* event --> Survey Bot will invoke the associated function (if deployed).
 
 ### Configuration
 
-Survey Bot can be configured under  [Conversation Builder Survey Bots](conversation-builder-bots-post-conversation-survey-bots.html).
+Survey Bot can be configured under [Conversation Builder Survey Bots](conversation-builder-bots-post-conversation-survey-bots.html).
 
 {: .important}
 Please, follow this guide on how to configure a [Post Conversation Survey Bot](conversation-builder-bots-post-conversation-survey-bots.html) before start. If you have already a survey bot configured make sure you have Functions enabled for your account.
@@ -45,7 +45,7 @@ Currently, only one function per event type can be created. If there are multipl
 {: .important}
 The Survey Bot won't process any callback payload during the invocation. //TODO: needs to clarify
 
-#### Step 2 - Edit the Function
+#### Step 2 - Edit the function
 
 Adjust the code in the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open). In the event of the function not being threaded by the calling system, the function can simply return `ok` within the callback.
 
