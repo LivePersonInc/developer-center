@@ -133,7 +133,8 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
       "read": 400,
       "conversationscreated": 200,
       "conversationsclosed": 185,
-      "csat": "2.5"
+      "csat": "2.5",
+      "error_aggregation": {"whatsapp_123": 25, "prmsg_999": 25}
    }
  ]
 }
@@ -166,16 +167,25 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 ```json
 {
- "filters": {
-   "channels": [
-     "sms"
-   ],
-   "skills": [
-     "billing"
-   ]
- }
+ "channels": [
+   "sms"
+ ],
+ "skills": [
+   "billing"
+ ],
+ "messagestatus": [
+   "DELIVERED", "FAILED", "RESPONDED", "READ"
+ ],
+ "handoffids": [
+   "H123456", "H987655"
+ ],
+  "source": [
+   "API", "UI", "LPWF"
+ ]
 }
 ```
+
+Each of the filter options shown above are optional. Regardless of what filter options are used, the results will always be grouped by channel, skill, and transactionday. When additional filters, such as source or messagstatus or handoffid are added, the results will be grouped by them as well and these will fields will be included in the response.
 
 **Request Headers**
 
@@ -217,7 +227,8 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
       "read": 400,
       "conversationscreated": 200,
       "conversationsclosed": 185,
-      "csat": "2.5"
+      "csat": "2.5",
+      "error_aggregation": {"whatsapp_123": 25, "prmsg_999": 25}
    }
   ]
 }
@@ -383,13 +394,24 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 ```json
 {
  "channels": [
-   "sms", "inapp"
+   "sms"
  ],
  "skills": [
-   "billing", "sales"
+   "billing"
+ ],
+ "messagestatus": [
+   "DELIVERED", "FAILED", "RESPONDED", "READ"
+ ],
+ "transactionids": [
+   "03cb1b10-2e46-4c10-bdc7-3d9c23654d51"
+ ],
+  "source": [
+   "API", "UI", "LPWF"
  ]
 }
 ```
+
+Each of the filter options shown above are optional.
 
 **Response Example**
 
@@ -489,9 +511,9 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
             "initialChannel": "sms",
             "ivrNumber": "",
             "skippedTime": null
-        },
- ]
-}
+            },
+          ]
+        }
 ```
 
 ### Common Error Responses
