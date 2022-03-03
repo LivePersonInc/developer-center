@@ -11,7 +11,8 @@ indicator: both
 
 Chat Post Survey integrates LivePerson Functions with LiveEngage Chat. This integration will use Functions to re-create one of our Legacy features, the ability to conditionally send out email transcripts after a chat conversation ended.
 
-<div class="important">Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.</div>
+{: .important}
+Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.
 
 ### Configuration
 
@@ -21,13 +22,12 @@ There is not further requirements than FaaS feature enabled. Remember that this 
 
 Create a new `lambda` from **Chat Post Survey E-mail Transcript** event. The default template for this event will be selected for the function.
 
-<div class="important">Once a Function is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
+{: .important}
+Once a Function is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deployment.
 
 #### Step 2 - Edit the Function
 
-Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function.
-
-The email result entry needs to contain the following properties:
+Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function. The email result entry needs to contain the following properties:
 
 <table>
   <thead><tr><th>Property</th><th>description</th><th>type</th></tr></thead>

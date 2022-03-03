@@ -13,7 +13,7 @@ With **Conversational Commands**, agents are able to invoke `lambdas` from the A
 
 ![Conversational Commands](img/conversational_commands.png)
 
-Along with the invocation, the function is sent a payload containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript.
+Along with the invocation a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript.
 
 **Note** The response is not actually stored in the conversation transcript, it will only be stored temporarily in the browser and is only visible to the agent.
 
@@ -35,7 +35,7 @@ Here is an example for the description of a Conversational Command that sends th
 
 `[email, subject:optional] - Sends the transcript of the conversation to the provided email address.`
 
-**Note** You can create up to 30 functions for this event.
+**Note:** You can create up to 30 functions for this event.
 
 #### Step 2 - Edit the Function
 
@@ -45,7 +45,7 @@ As mentioned above, the function must return either a string or a number. This r
 
 #### Step 3 - Deploy the function
 
-Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. At this point, you can also test your function.
 
 ### Examples
 
@@ -55,11 +55,11 @@ You can find more information and examples in the the [LivePerson Knowledge Cent
 
 <table>
 <thead><tr><th>property</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
- <tr><td>conversationId</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
+ <tr><td>conversationId</td><td>ID of the conversation.</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
  <tr><td>arguments</td><td>Array of strings with the arguments the Agent provided.</td><td>ARRAY</td><td>["arg1", "arg2", "argN"]</td></tr>
 </tbody></table>
 
-The following is an example of the payload that the agent workspace sends to Functions in a JSON format:
+The following is an example of a payload that the Agent Workspace sends to Functions in a JSON format:
 
 ```json
 {
