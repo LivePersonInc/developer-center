@@ -13,6 +13,11 @@ indicator: both
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/674928030" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### The high-level deployment process
 
 #### Prerequisite steps
@@ -58,7 +63,7 @@ An agent can belong to only one bot.
     
     The Add Agent Connector dialog appears.
 
-4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
 
     **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through Conversational Cloud (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever Conversational Cloud account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the Conversational Cloud account, an error is displayed.
 
@@ -144,16 +149,29 @@ By default, a message from the consumer is shown to the consumer as "Read' once 
 **Chat**: No
 
 #### defaultGreetingMessage
-The greeting message sent to the bot when the user connects.
+The greeting message sent to the bot when the bot agent connects to a new conversation. This message is sent to the bot if a message is not received from the consumer within *3 seconds* of the bot agent joining the conversation. The value of 3 seconds cannot be adjusted.
+
+Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot includes a dialog flow that supports receipt of whatever message you use here.
+
+See also `disableGreetings`, which is farther below.
 
 **Default value**: hi<br>
 **Messaging**: Yes<br>
-**Chat**: Yes
+**Chat**: No
 
 #### defaultStepupMessage
 The StepUp message sent to the bot when Stepup Authentication happens.
 
 **Default value**: \_STEPUP\_<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### disableGreetings
+If true, the greeting message specified in the `defaultGreetingMessage` custom configuration field is *not* sent. If false, the default greeting message is sent when properly triggered.
+
+See also `defaultGreetingMessage`, which is farther above.
+
+**Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -172,6 +190,29 @@ If this field is unset or you set this field to false, the selected button’s c
 
 **Default value**: false<br>
 **Messaging**: Yes<br>
+**Chat**: No
+
+#### escalateOnStuckConversation
+If this is true, and if the bot is stuck, the conversation is transferred to a specific skill. This transfer is only done as a final measure after other strategies, if enabled, are tried and found to be unsuccessful. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: null<br>
+**Messaging**: Yes<br>
+**Chat**: No
+ 
+#### escalationMessageOnStuckConversation
+If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: I’m having some trouble. Let me connect you with an agent.<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### escalationSkillIdOnStuckConversation
+If the conversation is transferred to a skill because the bot is stuck, this is the ID of the appropriate skill to which to transfer the conversation. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+If you don’t set this field, the transfer will not occur.
+
+**Default value**: null<br>
+**Messaging**: Yes
 **Chat**: No
 
 #### fallbackEscalationTime
@@ -209,16 +250,23 @@ We have logic to collect and aggregate user messages before sending to the bot s
 **Chat**: No
 
 #### messageResendMaxRetries
-After sending a message to the Conversation Builder chat server, if there is no bot response or mark\_seen message type, it will resend the message up to the messageResendMaxRetries count.
+This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+ Note that this number represents the total tries, not the retries alone. Examples: 
+
+* For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
+* For 2 retries, set this to 3.
+
+Do not set this value to zero. The default value of this field is 1, which means the consumer's message will be sent only once. This means if you don't want to add a retry flow, there's no need to add this field.
 
 **Default value**: 1<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### retryMessageInterval
-Tied with messageResendMaxRetries; wait 30000 milliseconds before re-sending the message.
+If the bot fails to respond to the consumer’s message, wait this amount of time (in milliseconds) before resending it based on the value of `messageResendMaxRetries`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
-**Default value**: 30000<br>
+**Default value**: 60000<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -240,6 +288,20 @@ If "false", when a bot receives a conversation, it sees the last utterance in th
 Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
 
 **Default value**: vertical<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### userNotificationMessageOnStuckConversation
+If the bot’s context is reset (the conversation starts anew) because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### userRetryOnStuckConversation
+If this is true, and if the bot is stuck, the bot’s context is reset (the conversation starts anew), and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
 

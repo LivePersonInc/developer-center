@@ -15,10 +15,12 @@ Many use cases require integration with an API to send and receive data. Followi
 {: .important}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
+<!--
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/450720977" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
 ### Step 8: Create the Order Status dialog
 
@@ -29,7 +31,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the ‚ÄúLP_Cross-vertical‚Äù domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
@@ -62,7 +64,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
     * **Response Data Variable Name**: OrderStatus
     * **Integration Type**: API
     * **Method**: GET
-    * **URL**: https://5ed69a5fc2ca2300162c67f1.mockapi.io/api/v1/order-status/{$botContext.orderNumber}
+    * **URL**: https://5fc54a0936bc790016344a09.mockapi.io/order-status/{$botContext.orderNumber}
 
         Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
 

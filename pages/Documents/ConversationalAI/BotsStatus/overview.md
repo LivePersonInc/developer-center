@@ -24,7 +24,7 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 
 **To access the Bot Status application**
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bots Status**.
 
 ### Dashboard

@@ -18,7 +18,7 @@ You can use the **Test User Input** tool to test how a single utterance performs
 The Test User Input tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the tool, you can quickly and easily test that phrase to see how it behaves.
 
 {: .important}
-If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
+If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 {: .important}
 If the domain uses the LivePerson engine for NLU, you can't use the Test User Input tool to directly test and reveal entity matching. LivePerson recommends that you test entities by 1) creating an intent that uses the entities, and then 2) testing the intent itself.
@@ -46,4 +46,4 @@ If the domain uses the LivePerson engine for NLU, you can't use the Test User In
 
     For details on the intent scoring, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
     
-    After reviewing the results, if the score isn't where you’d like it, you can add more training phrases.
+    After reviewing the results, if the score isn't where you want it, you can add more training phrases.

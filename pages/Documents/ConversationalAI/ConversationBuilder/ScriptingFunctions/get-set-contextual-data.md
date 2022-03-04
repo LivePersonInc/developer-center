@@ -133,6 +133,20 @@ case "help":
 }      
 ```
 
+### Get bot ID
+
+The `getChatBotId` function retrieves the bot ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getChatBotId()` | None | Bot ID (string) |
+
+#### Example
+
+```javascript
+// store the bot's ID in a variable inside your current pre/post process code
+var botId = botContext.getChatBotId();
+```
 
 ### Get conversation ID
 
@@ -237,7 +251,7 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 ### Get NLP responses
 
 {: .important}
-This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy).
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy).
 
 `getNlpResponse` is used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
 
@@ -264,7 +278,7 @@ botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: 
 ### Get sentiment
 
 {: .important}
-This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy).
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy).
 
 `getSentiment` is used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
 

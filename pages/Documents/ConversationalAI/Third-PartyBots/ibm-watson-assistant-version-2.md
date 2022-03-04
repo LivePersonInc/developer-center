@@ -26,6 +26,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .notice}
 **IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).
 
+{: .important}
+**Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
+
 ### Authentication
 
 With Watson there are two methods of authentication that are currently supported. These methods are username/password and IAM (token based) authentication. You can choose either one for your bot configuration but IAM is **highly recommended** (as it is more secure).
@@ -159,7 +162,7 @@ Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 If you use the **JSON Editor** then the default body of the native content is as follows:
 
-```javascript
+```json-doc
 {
   "output": {
     "generic": [
@@ -219,7 +222,7 @@ Figure 2.4 List fields filled example
 
 If you are using the **JSON Editor** use the below structure to create a list. Note that the `options` property is an array of objects which holds the different choices presented to the user.
 
-```javascript
+```json-doc
 {
   "output": {
     "generic": [
@@ -502,7 +505,7 @@ This message will be sent to the customer along with the quick replies.
 
 ##### Figure 3.7 Quick Replies StructuredContent structure.
 
-```javascript
+```json-doc
 {
   "structuredContent": {
     "quickReplies": {
@@ -635,7 +638,7 @@ For escalations, the naming convention for the skills you escalate should use a 
 
 #### Transfer To Skill
 
-This option transfers the conversation to the next available agent using the provided skill. 
+This option transfers the conversation to the next available agent using the provided skill.
 
 At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched inthe stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
@@ -665,7 +668,7 @@ Figure 4.1
 }
 ```
 
-In the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the  `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
+In the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
 
 #### Transfer to Agent
 
@@ -755,7 +758,7 @@ During a conversation, it is possible to trigger a LivePerson Function that is d
 
 To invoke a LivePerson Function, we utilize the action object as we did for a close chat/conversation (see example above). In the example below, the **Watson Assistant** JSON response should be mirrored as follows:
 
-```json
+```json-doc
 {
   "output": {
     "text": {
@@ -795,7 +798,7 @@ Figure 7.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes. Further information on the Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V2 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, the `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/docs/assistant?topic=assistant-api-client-get-context)). An example of the request body can be seen below:
 
-```javascript
+```json-doc
 {
   "message": "Some Message",
   "context": {
@@ -1010,11 +1013,70 @@ It is also possible to send a private text message with an action (e.g. Transfer
   ]
 }
 ```
+
 ### Watson Discovery
 
 Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no machtching intent was found.
 
-To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
+To use Watson Discovery the Watson Assistant Bot needs to have a [search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
+
+### Disambiguation Responses
+
+Disambiguation is a feature configurable in the Watson Assistant UI. It triggers if a bot can't confidently identify an intent.
+Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
+Disambiguation responses will be renderes as `Quick Replies`.
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png">
+Figure 10.1 Configure Disambiguation
+
+### Receiving Rich Content Response (Messaging Only)
+
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
+(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
+
+An example use case of the Rich Content Event (`RichContentEvent`) response sent by Third-Party Bots is described below. The example will show how to set up and access the `RichContentEvent` response with Watson Assistant after a user shares the location.
+
+#### Create Intent for RichContentEvent
+
+We needs to create a intent that should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 11.1 below
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/watson_richcontentevent-intent.png">
+Figure 11.1 Intent creation in Watson Assistant console
+
+#### Accessing the RichContentEvent Data in Dialogs
+
+The `RichContentEvent` is sent with the context. Thus, for Watson Assistant, we can leverage
+the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables)
+for accessing the `RichContentEvent` data. The context information that is sent by Third-Party Bots contains in `$lpEvent`.
+An example of accessing `RichContentEvent` from that context variable can be seen in Figure 11.2
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/watson_richcontentevent-access-event.png">
+Figure 11.2 Displaying how to access the Rich Content/Structured Content using Context Variables
+
+Usually a `RichContentEvent` of type map will have following JSON schema:
+
+```json
+{
+  "content": {
+    "type": "vertical",
+    "elements": [
+      {
+        "la": 49.82380908513249,
+        "type": "map",
+        "alt": "49.82380908513249, 2.021484375",
+        "lo": 2.021484375
+      }
+    ]
+  },
+  "type": "RichContentEvent"
+}
+```
+
+A demo of our WhatsApp map example with the above bot configuration (defined above) can be seen below:
+
+<img class="fancyimage" style="width:300px" src="img/watsonassistantv2/watson_v2_richcontent_demo.gif">
 
 ### Limitations
 
@@ -1023,4 +1085,4 @@ To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill]
 
 ### Prevent Tranfering loop behaviour
 
-As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.  
+As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.

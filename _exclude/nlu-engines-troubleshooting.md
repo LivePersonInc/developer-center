@@ -39,4 +39,4 @@ Steps:
 6. Delete skill:
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png">
 
-Select the skill. Click on the Delete link in the Context menu.This opens a popup. Enter the text as DELETE and click on Save. This successfully deletes the Skill.
+Select the skill. Click on the Delete link in the Context menu. This opens a popup. Enter the text as DELETE and click on Save. This successfully deletes the Skill.

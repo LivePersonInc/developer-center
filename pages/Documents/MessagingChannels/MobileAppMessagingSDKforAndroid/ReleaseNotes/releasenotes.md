@@ -13,6 +13,118 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.9.0
+
+# Overview
+Android Mobile Messaging SDK version 5.9.0 release includes performance improvements and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.9.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.1”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+
+# Bugs Fixed:
+- SDK does not auto re-connect for UnAuth users.
+- Failed to apply Quick reply button radius in dark mode.
+
+# Enhancements:
+- SDK performance improvements to reduce conversation window loading time.
+- Use APIs instead of shell commands to delete files cached during file sharing.
+- Added configuration to hide welcome message on clearing a history.
+
+```xml
+<bool name="lp_hide_welcome_message_on_clear_history">false</bool>
+```
+
+
+
+# Android Messaging SDK - Version 5.8.0
+
+**Release date:** October 18, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.8.0 release includes Schedule Slot List support, Dark Mode for Date Picker, Android 12 support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.8.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+**(compileSdkVersion and targetSdkVersion bump to 31)**
+
+# New Features:
+
+## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
+
+<div style="width: 100%; position: relative;">
+    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+</div>
+
+
+{: .notice}
+ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
+
+## [Date Picker](mobile-sdk-and-web-templates-date-picker-template.html) now supports Dark Mode.
+
+<div style="width: 100%; position: relative;">
+    <img src="/img/android_datepicker_single_darkmode.png" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/android_datepicker_range_darkmode.png" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+</div>
+
+
+# Bugs Fixed:
+- Crash on initialization/logout.
+- Deep link fails to open.
+- Secure form self closed after returning to the app.
+
+# Enhancements:
+- When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
+- Support markdown hyperlink in controller bot message.
+
+
+
+# Android Messaging SDK - Version 5.7.1
+
+**Release date:** September 10, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.7.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.7.1 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
+
+**(unchanged from version 5.7.0)**
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
+
 # Android Messaging SDK - Version 5.7.0
 
 **Release date:** July 19, 2021
@@ -26,14 +138,16 @@ The Android Mobile Messaging SDK version 5.7.0 uses:
 - Compile API version 30
 - Target API version 30
 - Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
 
 # New Feature:
 
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -46,6 +160,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 5.6.0
@@ -82,8 +201,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -707,6 +826,77 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.10.0
+
+**Release date:** October 29, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.10.0 release includes Schedule Slot List support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.10.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.2.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:1.0.0"
+
+
+# New Features:
+
+## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
+
+<div style="width: 100%; position: relative;">
+    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+</div>
+
+
+{: .notice}
+ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
+
+
+# Bugs Fixed:
+- Crash on initialization/logout.
+- Deep link fails to open.
+- Secure form self closed after returning to the app.
+
+# Enhancements:
+- When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
+- Support markdown hyperlink in controller bot message.
+
+# Android Messaging SDK - Version 4.9.1
+
+**Release date:** September 07, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.9.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.9.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+
+**(unchanged from version 4.9.0)**
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
+
 # Android Messaging SDK - Version 4.9.0
 
 **Release date:** July 12, 2021
@@ -720,6 +910,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 - Compile API version 28
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
 
 **(unchanged from version 4.8.1)**
 
@@ -728,8 +920,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -741,6 +933,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 4.8.1
@@ -777,8 +974,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -965,7 +1162,7 @@ The Android Mobile Messaging SDK version 4.7.1 uses:
 
 ## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
 
-Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-push-proxy.html) is supported.
 
 The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
 
@@ -1607,7 +1804,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ##### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 ---   
 

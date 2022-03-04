@@ -33,7 +33,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 
 | Name            | Description                | Type/Value | Required |  Notes |
 | :---------      | :---------------           | :----------| :--------|  :-----|
-| conversationId | ID of the conversation to search.    | string | Required  |
+| conversationId | ID of the conversation to search    | string | Optional (conditional) | Optional if 'conversationIds' was provided
+| conversationIds | List of conversation Ids (Limited to 100 conversations) | string | Optional (conditional)  | Optional if 'conversationId' was provided  
 | contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys | 
 
 ### Response

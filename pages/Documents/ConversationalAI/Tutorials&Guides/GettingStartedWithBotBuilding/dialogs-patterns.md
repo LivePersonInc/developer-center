@@ -10,10 +10,12 @@ permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.h
 indicator: both
 ---
 
+<!--
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/440317206" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
 ### Prerequisite steps
 
@@ -109,7 +111,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
+6. In the Interactions toolbar, click the Text Statement icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
 
     (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
 

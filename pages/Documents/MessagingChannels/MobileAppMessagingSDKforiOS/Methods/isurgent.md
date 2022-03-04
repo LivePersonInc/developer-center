@@ -16,7 +16,7 @@ indicator: messaging
 
 Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false. 
 
-*Note: You must check that the SDK is in [ready state](consumer-experience-ios-sdk-advanced-configurations.html) before calling this method.*
+*Note: You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.*
 
 `func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool`
 
