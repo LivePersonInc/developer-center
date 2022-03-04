@@ -13,12 +13,16 @@ redirect_from:
 
 # Features
 
-## Scheduling
+### Scheduling
 
-## Toolbelt
+### Toolbelt
 
 Make sure to properly document all the available methods. Maybe we are able to generate something basic from JS/TS-Docs to get us started.
 
-## Secret Store
+### Secret Store
 
-## Domain Whitelisting
+### Domain Whitelisting
+
+As explained within our [networking foundation](liveperson-functions-foundations-networking.html) the communication between a function and external services is subject to a domain allow list, also called whitelist. The next paragraphs should highlight how to add new domains to the whitelist and also how to remove them. Further it will provide some important hints based on frequent questions received surrounding the whitelisting of domains.
+
+
