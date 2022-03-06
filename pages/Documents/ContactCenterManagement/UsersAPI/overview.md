@@ -36,11 +36,21 @@ A few things you'll need to get started with this API:
 
 	* Read/Write: accountConfigReadWrite
 
-2. This API requires authorization using _either_ a login or an API key methodology.
+2. This API requires authorization using _either_ a user login or a machine-to-machine authorization.
 
-	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+	* **A user token requires login into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow** 
+		* **OAuth 1.0 App Keys** - [follow these instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
+		
+		{:.important}
+	For the Users API, select the Admisintration category and check Users
+
+		* **OAuth 2.0 Client Credentials flow** - [follow these instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token.  
+
+		{:.important}
+	When registering an OAuth 2.0 application for using the Users API, use the 'users.read' and 'users.write' scopes
+
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
