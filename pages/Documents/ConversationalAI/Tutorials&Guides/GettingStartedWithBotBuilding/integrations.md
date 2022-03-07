@@ -56,6 +56,9 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout the bot. In this case, we will use that within our API call to find the user’s order.
 
+    {: .important}
+    For more on variables, see [here](conversation-builder-variables-slots.html).
+
 ### Step 9: Create an Order Status API integration
 
 1. In the upper-left corner, click **Integrations**.
@@ -95,7 +98,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
     In the Structured Question title section, add `{OrderStatus.name}`.
 
     {: .important}
-    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.”
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
