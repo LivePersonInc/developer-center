@@ -12,9 +12,7 @@ permalink: mobile-sdk-and-web-templates-structured-content-rendering-tool.html
 indicator: both
 ---
 
-The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html).
-
-You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
+The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock). In addition to the Json-Pollock library, the [Rich Content Validation](https://github.com/LivePersonInc/rich-content-validator) library can be used for validating rich content across different channels. 
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
 

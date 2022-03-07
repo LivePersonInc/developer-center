@@ -19,6 +19,8 @@ The LINE carousel is a horizontally scrollable carousel of up to 10 rich cards. 
     * Link
     * Publish text 
 
+Note that each carousel card must contain the same number of elements.
+
 Carousel example image: 
 
 <img  style="width:350px" src="img/line_sc_carousel.jpg">
