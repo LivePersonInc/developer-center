@@ -15,13 +15,7 @@ This API is intended for reporting and information purposes, not for real-time d
 
 ### Introduction
 
-The Agent Activity API provides an historical raw data solution to track agent adherence on both messaging and chat channels.
-
-The API allows its consumer to track the agent login and logout hours, and also the state changes during the login hours, including predefined custom states as defined by the brand.
-
-**Note**: At this point, away states are not calculated based upon productive and non-productive away status.
-
-The API is based on HTTPS GET functionality, and all data is returned in a JSON format.
+Actual Handle Time metric tracks events within the agent workspace. The metric is based on a complex algorithm that looks at several factors to give the most accurate view of handle time effort at an individual segment level. (In essence, it tracks time whenever an agent has a conversation selected on the screen that is awaiting their response.)
 
 ### Getting started
 
@@ -43,10 +37,8 @@ A few things you'll need to get started with this API:
 
 ### Use cases
 
-* Evaluate how much time agents spend in each away state.
+* Tracking Contact Center teams activity/BPOs performance ( Online hours, Quality, Quantity ) to renegotiate contracts and gain insights on the agent activity level.
   
-* Measures agent schedule adherence by monitoring agent login and logout behavior.
+* Resource planning and staffing based on historical data, historical agent adherence, and "away" reason values provide actual shrinkage for more accurate planning.
 
-* Tracking agent behavior by monitoring agent status updates.
-
-* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g online hours, quantity of closed conversations.
+* Identify overstaffing/understaffing.

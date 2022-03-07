@@ -8,7 +8,11 @@ permalink: actual-handle-time-api-methods-get-agent-segments-breakdown-files-lis
 indicator: both
 ---
 
-This method provides raw data about agent states changes.
+This method provides a list of files names that contains a breakdown of the Actual handle time calculation. The file contains all the handling time units (HTUs) that contribute to the total handling time.
+Using the file list you should be able to pull the content of the files using the [Get Agent Segments Breakdown File](actual-handle-time-api-methods-get-agent-segments-breakdown-file.html) 
+
+**Note:**
+This API is not available by default. To enable it please contact your account manager.
 
 {: .important}
 If you have not done so yet, see the [overview](actual-handle-time-api-overview.html) of this product.
@@ -21,18 +25,19 @@ If you have not done so yet, see the [overview](actual-handle-time-api-overview.
 
 #### Request Query Parameters
 
-| Name   | Description                                                                                                                     | Type   | Required? | Default | Notes                                                                                                                  |
-|--------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|------------------------------------------------------------------------------------------------------------------------|
-| from   | Query period: Query start date                                                                                                  | long   | Required  |         | The query period will be limited to 1 day , Epoch time                                                                 |
-| to     | Query period: Query end date                                                                                                    | long   | Required  |         | The query period will be limited to 1 day ,Epoch time                                                                  |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI |
+| Name                 | Description                                                                                                                     | Type              | Required? | Default | Notes                                                                                                                  |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------|-------------------|-----------|---------|------------------------------------------------------------------------------------------------------------------------|
+| source               | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string            | Required  |         | Source name should be up to 20 characters </br>Must match the following regex: ^[a-zA-Z0-9_]+$</br>Example: LP_AgentUI |
+| timeframe (from, to) | The timeframe for pulling records (based on the segment’s end date)                                                             | long - Epoch time | Optional  | 1 day   | The maximum time frame interval is 1-day                                                                               |
 
 ### Response
 
-| Property Name | Description                         | Type    | Notes      |
-|---------------|-------------------------------------|---------|------------|
-| timeframe     | The requested start date & end time | Numeric | Epoch time |
-| files         | List of matching files              | string  |            |
+| Property Name | Description                           | Type              | Notes |
+|---------------|---------------------------------------|-------------------|-------|
+| timeframe     |                                       | object            |       |
+| startTime     | The start of the requested time frame | long - Epoch time |       |
+| endTime       | The end of the requested time frame   | long - Epoch time |       |
+| files         | Container of the breakdown file names | container         |       |
 
 #### Response Example
 
