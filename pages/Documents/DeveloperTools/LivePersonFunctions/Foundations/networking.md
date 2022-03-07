@@ -18,3 +18,6 @@ Further the communication from the function to external services is bound to che
 <img class="fancyimage" alt="Functions: Tunneling" src="img/functions/functions_network_tunneling.png">
 
 As shown the function will reach out to the proxy using the `CONNECT`-method while specifying a target. If the target domains is not on the allowed domain list it refuses the connection and aborts the request. If it is included it will reach out the target and establish a TCP connection. Once that succeeded it will return a success response to the function and hand-over the tcp connection to the target by tunneling. The further SSL handshake is than performed between function and the target directly. Therefore the proxy is not able to listen to the ongoing communication between function and target, this implies from the point the TCP handshake happened we don't have any insights.
+
+{:.notice}
+Please be aware that we have a rate limit for outgoing calls of 20 requests/second per function, every request beyond that limit will be yielding a 429
