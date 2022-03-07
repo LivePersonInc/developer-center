@@ -393,3 +393,7 @@ Yes, this works just like for a custom bot. The survey questions are displayed a
 #### Can a consumer skip a survey entirely?
 
 There's no way for the consumer to indicate they want to skip the survey entirely (e.g., no Skip button). However, the consumer can close the window to leave the survey.
+
+#### If a consumer starts, then abandons a survey, what gets captured?
+
+Responses are counted (captured) as they are sent. If, for example, the consumer answers the first 2 of 5 survey questions, then the results would still include the first 2.
