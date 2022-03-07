@@ -133,3 +133,6 @@ If you need to store data for the long term, use the [Conversation Context Servi
   * [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
 
   * API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`
+
+{: .important}
+For a tutorial on using variables in interactions, see [here](tutorials-guides-getting-started-with-bot-building-integrations.html).

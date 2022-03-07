@@ -52,12 +52,12 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png">
 
+    {: .important}
+    `{$userMessage}` is just one of many system variables you can use in your interactions. For the complete list, and for more on variables, see [here](conversation-builder-variables-slots.html).
+
     Click **Save**.
 
     By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout the bot. In this case, we will use that within our API call to find the user’s order.
-
-    {: .important}
-    For more on variables, see [here](conversation-builder-variables-slots.html).
 
 ### Step 9: Create an Order Status API integration
 
