@@ -71,7 +71,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
 
         Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
 
-    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here.
+    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here. (For more on processing API results with custom data fields, see [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).)
 
     | Key | Value |
     | --- | --- |
