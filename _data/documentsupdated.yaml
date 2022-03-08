@@ -773,6 +773,8 @@
             - subpagename: Concepts
             - subpagename: Features
             - subpagename: Networking
+            - subpagename: External Invocation
+            - subpagename: Error Codes
             - subpagename: Limitations
             - subpagename: Best Practices
             - subpagename: LivePerson Functions CLI
