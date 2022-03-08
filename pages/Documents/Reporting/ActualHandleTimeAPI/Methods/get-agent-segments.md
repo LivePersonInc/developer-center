@@ -10,29 +10,26 @@ indicator: both
 
 This method tracks human agent time spent on each segment (from the moment of assignment to the moment the conversation was closed or transferred).
 
-{: .important}
-If you have not done so yet, see the [overview](actual-handle-time-api-overview.html) of this product.
-
 ### Request
 
-| Method | URL |
-| --- | --- |
-| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountID}/agent-segments?source={source} |
+| Method | URL                                                                                                      |
+|--------|----------------------------------------------------------------------------------------------------------|
+| GET    | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountID}/agent-segments?source={source} |
 
 #### Request Query Parameters
 
-| Name                | Description                                                                                             | Type                                                              | Required? | Default             | Notes                                                                                                                                      |
-|---------------------|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| source              | Used to describe the originator of the call. The source name should be unique for every project/process | string                                                            | Required  |                     | Source name should not exceed 20 characters                                                                                                |
-| limit               | The maximum amount of agent segments that can be retrieved                                              | long                                                              | Optional  | 100                 | Max value: 500                                                                                                                             |
-| offset              | The offset specifies from which records to retrieve the data                                            | long                                                              | Optional  | 0                   |                                                                                                                                            |
-| sort                | The order of the results                                                                                | string                                                            | Optional  | Segment date (desc) | Valid values : {::nomarkdown}<ul> <li>Date</li> <li>Conversation</li><li>Agent</li><li>Employee</li><li>Skill</li><li>Group</li> </ul>{:/} |
-| timeframe (from,to) | The timeframe for pulling records (based on the segment’s end date)                                     | [[RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional  | 1 day               | The maximum time frame interval is 1 week                                                                                                  |
-| Conversation Id     | Retrieves only segments for the specific conv id                                                        | string                                                            | Optional  | 50                  |                                                                                                                                            |
-| Agent Id            | Retrieves only segments for the specific Agent id                                                       | string                                                            | Optional  |                     |                                                                                                                                            |
-| Employee Id         | Retrieves only segments for the specific employee id                                                    | string                                                            | Optional  | 0                   |                                                                                                                                            |
-| Skill Id            | Retrieves only segments for the specific skill id                                                       | string                                                            | Optional  |                     |                                                                                                                                            |
-| Group Id            | Retrieves only segments for the specific group id                                                       | string                                                            | Optional  |                     |                                                                                                                                            |
+| Name                | Description                                                                                             | Type                                                              | Required? | Default             | Notes                                                                                    |
+|---------------------|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------|---------------------|------------------------------------------------------------------------------------------|
+| source              | Used to describe the originator of the call. The source name should be unique for every project/process | string                                                            | Required  |                     | Source name should not exceed 20 characters. regex: ^[a-zA-Z0-9_]+$  Example: LP_AgentUI |
+| limit               | The maximum amount of agent segments that can be retrieved                                              | long                                                              | Optional  | 100                 | Max value: 500                                                                           |
+| offset              | The offset specifies from which records to retrieve the data                                            | long                                                              | Optional  | 0                   |                                                                                          |
+| sort                | The order of the results                                                                                | string                                                            | Optional  | Segment date (desc) | Valid values : Date,Conversation,Agent,Employee,Skill,Group                              |
+| timeframe (from,to) | The timeframe for pulling records (based on the segment’s end date)                                     | [[RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional  | 1 day               | The maximum time frame interval is 1 week                                                |
+| ConversationId      | Retrieves only segments for the specific conv id                                                        | string                                                            | Optional  | 50                  |                                                                                          |
+| AgentId             | Retrieves only segments for the specific Agent id                                                       | string                                                            | Optional  |                     |                                                                                          |
+| EmployeeId          | Retrieves only segments for the specific employee id                                                    | string                                                            | Optional  | 0                   |                                                                                          |
+| SkillId             | Retrieves only segments for the specific skill id                                                       | string                                                            | Optional  |                     |                                                                                          |
+| GroupId             | Retrieves only segments for the specific group id                                                       | string                                                            | Optional  |                     |                                                                                          |
 
 ### Response
 
@@ -102,4 +99,4 @@ If you have not done so yet, see the [overview](actual-handle-time-api-overview.
 
 ### Error Codes
 
-See [Error Codes](actual-handle-time-api-error-codes.html.html)
+See [Error Codes](actual-handle-time-api-error-codes.html)

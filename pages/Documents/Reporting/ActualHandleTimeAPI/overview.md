@@ -10,9 +10,6 @@ indicator: both
 {: .important}
 This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
 
-{: .notice}
-This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
-
 ### Introduction
 
 Actual Handle Time metric tracks events within the agent workspace. The metric is based on a complex algorithm that looks at several factors to give the most accurate view of handle time effort at an individual segment level. (In essence, it tracks time whenever an agent has a conversation selected on the screen that is awaiting their response.)
