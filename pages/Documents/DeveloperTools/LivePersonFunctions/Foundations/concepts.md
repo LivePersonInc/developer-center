@@ -7,8 +7,6 @@ documentname: LivePerson Functions
 subfoldername: Foundations
 permalink: liveperson-functions-foundations-concepts.html
 indicator: both
-redirect_from:
-  - function-as-a-service-foundations-concepts.html
 ---
 
 On this page, we will introduce the different concepts that are relevant for the LivePerson Functions platform. As a user of the platform, it is important that you have a basic understanding of the information that is shared in the chapters below. Further, there are also important clarifications and details in them.
@@ -33,7 +31,7 @@ In this chapter we will speak about the timeline for an invocation and also high
 
 ### Triggers
 
-Triggers will usually invoke functions, this can happen in two ways. Either by calling a specific functions or raising an event. The main difference here is that for event based invocation, the trigger does not need to know any details of the function listening to the event. Those triggers are usually [Event Sources](liveperson-functions-event-sources-overview.html), therefore the words trigger and [Event Sources](liveperson-functions-event-sources-overview.html) will be used interchangeable. Opposed to events for a external/direct invocation the caller needs to know about the function and call it specifically. This are usually schedules, external invocations and also some event sources.
+Triggers will usually invoke functions, this can happen in two ways. Either by calling a specific functions or raising an event. The main difference here is that for event based invocation, the trigger does not need to know any details of the function listening to the event. Those triggers are usually [Event Sources](liveperson-functions-event-sources-overview.html), therefore the words trigger and [Event Sources](liveperson-functions-event-sources-overview.html) will be used interchangeable. Opposed to events for a external/direct invocation the caller needs to know about the function and call it specifically. This are usually [scheduled invocations](liveperson-functions-foundations-features.html#scheduling), [external invocations](liveperson-functions-foundations-external-invocation.html) and also some event sources.
 
 The following graph also shows the general invocation flow for both types of invocation styles.
 
@@ -47,25 +45,3 @@ Please be aware that a failing functions will abort the invocation chain for tha
 <img class="fancyimage" alt="Functions: Direct Invocation" src="img/functions/functions_concept_direct_invocation.png">
 
 Prior to calling the external trigger may check if the function is productive. However, they can also decide to directly invoke the function and handle potential not-found error directly. For a direct call the caller needs to know the uuid, than it can be used to invoke a specific function. The response of the execution will be relayed from our platform to the calling trigger.
-
-### External Invocation
-
-In this chapter we will focus a bit more on the ability to directly call a functions, which is also refer to as external invocation. This gives the users of our platform the ability to trigger there functions externally through their own systems.
-
-#### Authentication
-
-For invocation flows we allow the usage of bearer from an users, given he has the [necessary privileges](liveperson-functions-permission-system.html), or OAuth 2.0. LivePerson services may leverage additionally OAuth 1.0.
-
-We support the following [grant types](https://oauth.net/2/grant-types/) out of the OAuth 2.0 specification. If you want to learn more about OAuth 2.0 check out [this video](https://www.youtube.com/watch?v=CPbvxxslDTU):
-
-1. [Client Credentials](https://oauth.net/2/grant-types/client-credentials/): This is the preferred way to authorize for machine-to-machine communication. Choose this option if you want to call functions from an external system.
-2. [Authorization Code](https://oauth.net/2/grant-types/authorization-code/): This is a redirect based flow. Use this grant type if you want to call Functions on behalf of a Conversational Cloud user such as an Agent or Administrator.
-
-#### API
-
-In order to interact with our systems we are providing libraries for javascript and java. Those allow you interact with our API in a stable and secure way. Within this chapter we will explore how to leverage them and what functionalities they offer.
-
-##### Java Client
-
-
-##### JavaScript Client
