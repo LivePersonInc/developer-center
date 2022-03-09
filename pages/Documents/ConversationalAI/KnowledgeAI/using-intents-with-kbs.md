@@ -13,9 +13,9 @@ indicator: both
 
 ### Why use intents?
 
-If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), it can make use of Natural Language Understanding or NLU to find the right answer (article) to use to respond to a consumer's message. What's so great about NLU? In short, it's superior to the alternative that is text-based search. NLU is much more nuanced and leverages AI to identify various attributes of a message: meaning, intent, sentiment, and more. It makes answer retrieval more accurate.
+If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), it can make use of Natural Language Understanding or NLU to find the right answer (article) to use to respond to a consumer's message. What's so great about NLU? It's superior to the alternative, which is text-based search. NLU is much more nuanced and leverages AI to identify various attributes of a message: meaning, intent, sentiment, and more. It makes answer retrieval more accurate.
 
-To use NLU, you'll need to link the articles in the knowledge base to the intents in a domain, as described below.
+To take advantage of NLU, you'll need to link the articles in the knowledge base to the intents in a domain. So, in summary, using intents is the way you tap into the power of NLU.
 
 ### Getting started
 
@@ -24,9 +24,9 @@ To use NLU, you'll need to link the articles in the knowledge base to the intent
     {: .important}
     Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
 
-2. In KnowledgeAI, associate the domain with the knowledge base. Then associate the domain's intents with the articles.
+2. In KnowledgeAI, associate the domain with the knowledge base. Then associate the domain's intents with the knowledge base's articles.
 
-3. Train the knowledge base.
+3. Train the knowledge base (and the underlying intents) until you get the performance you expect.
 
     When NLU is used, the consumer's message is evaluated against the intents that are associated with the articles, and the highest scoring article is returned as the answer.
 
