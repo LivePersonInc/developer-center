@@ -11,14 +11,26 @@ permalink: knowledgeai-using-intents-with-kbs.html
 indicator: both
 ---
 
-### Introduction
+### Why use intents?
 
-If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
+If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), it can make use of Natural Language Understanding or NLU to find the right answer (article) to use to respond to a consumer's message. What's so great about NLU? In short, it's superior to the alternative that is text-based search. NLU is much more nuanced and leverages AI to identify various attributes of a message: meaning, intent, sentiment, and more. It makes answer retrieval more accurate.
 
-To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use. Then, within the KnowledgeAI application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
+To use NLU, you'll need to link the articles in the knowledge base to the intents in a domain, as described below.
 
-{: .important}
-Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
+### Getting started
+
+1. In [Intent Manager](intent-manager-overview.html), create a domain with the necessary intents. The domain specifies the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use.
+
+    {: .important}
+    Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
+
+2. In KnowledgeAI, associate the domain with the knowledge base. Then associate the domain's intents with the articles.
+
+3. Train the knowledge base.
+
+    When NLU is used, the consumer's message is evaluated against the intents that are associated with the articles, and the highest scoring article is returned as the answer.
+
+For more details, see below.
 
 ### Associate a domain with a knowledge base
 
@@ -26,7 +38,7 @@ You associate a domain with an external knowledge base when you [add the knowled
 
 <img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png">
 
-And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
+And you can likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
 
 <img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
 
