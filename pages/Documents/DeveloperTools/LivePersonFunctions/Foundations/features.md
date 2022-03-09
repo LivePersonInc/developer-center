@@ -15,7 +15,21 @@ redirect_from:
 
 ### Toolbelt
 
-Make sure to properly document all the available methods. Maybe we are able to generate something basic from JS/TS-Docs to get us started.
+In order to ease to ease the solution of some common tasks we introduced our runtime library the Toolbelt. It comes with a set of clients and features that allow the accomplishment of a wide variety of tasks. Following features/clients are included:
+
+* MTLS Client: Allows MTLS based requests to be send, especially relevant for zero-trust environments
+* HTTP Client: Allows http/https based requests
+* Secret Client: Interaction with our Secret Store during runtime
+* Context Service Client: Interaction with Conversation Context Store, right now only supports V1 of the API
+* LP Client: Eases the interactions with common LivePerson Api's
+
+In order to start leveraging the Toolbelt, you will need to import it as a dependency. This is achieved using the `require` functionality.
+
+```javascript
+    const { Toolbelt } = require("lp-faas-toolbelt");
+```
+
+Both the [UI](liveperson-functions-getting-started-deep-dive-ui.html#code-documentation--types) and the [CLI](liveperson-functions-getting-started-deep-dive-cli.html#code-snippets) come with out of the box support of typings for our Toolbelt library. Nevertheless you should check out the [documentation](liveperson-functions-toolbelt-documentation-toolbelt.html) of the toolbelt.
 
 ### Secret Store
 
