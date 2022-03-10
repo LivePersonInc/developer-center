@@ -38,8 +38,6 @@ At the bottom of the page you can see a toggle that will activate/deactivate the
 
 #### Step: Domain Whitelisting
 
-# TODO: Image
-
 When adding a domain to the whitelist you should always consider some pitfalls. First make sure your domain is not redirecting, because in this case you also need to whitelist any domain that is part of the redirection chain. A good way to test if your domain redirecting, if you are unsure, is to leverage the following command:
 
 ```sh
@@ -58,6 +56,13 @@ The following example shows that when calling `http://google.com` a redirection 
 Next make sure when working with subdomains that you whitelisted the correct domain. Lets say you are visiting `https://www.liveperson.com` and therefore whitelisted `liveperson.com`. Than you fell into the trap, because `www.` is a subdomain, instead the correct domain to whitelist would be `www.liveperson.com` or `*.liveperson.com`.
 
 Finally as shown above we do support the use of wildcards by setting `*`. But you should be aware that we only support one wildcard in the domain meaning that `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
+
+# TODO: Image
+
+The domain is added by inserting it and than clicking the "Add"-Button next to the input field. Once it is saved it will be reflected in the domain list below.
+
+{: .notice}
+Please be aware that adding a domain can take up to 5 minutes until being "active"
 
 #### Step: Function Description
 

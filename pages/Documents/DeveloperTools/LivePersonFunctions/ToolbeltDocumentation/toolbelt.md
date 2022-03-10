@@ -47,26 +47,26 @@ ___
 
 ### ConversationUtil
 
-▸ `Static` **ConversationUtil**(): [`IConversationUtil`](liveperson-functions-toolbelt-documentation-conversation-util.html )
+▸ `Static` **ConversationUtil**(): [`IConversationUtil`](liveperson-functions-toolbelt-documentation-conversation-util.html)
 
 Returns a Conversation Util, which can be used to retrieve conversations and
 execute operations upon them.
 
 #### Returns
 
-[`IConversationUtil`](liveperson-functions-toolbelt-documentation-conversation-util.html )
+[`IConversationUtil`](liveperson-functions-toolbelt-documentation-conversation-util.html)
 
 ___
 
 ### GDPRUtil
 
-▸ `Static` **GDPRUtil**(): [`IGDPRUtil`](liveperson-functions-toolbelt-documentation-gdpr-util.html )
+▸ `Static` **GDPRUtil**(): [`IGDPRUtil`](liveperson-functions-toolbelt-documentation-gdpr-util.html)
 
 Returns GDPR Util, which can be used for GDPR related functionality such as deleting files of a conversation.
 
 #### Returns
 
-[`IGDPRUtil`](liveperson-functions-toolbelt-documentation-gdpr-util.html )
+[`IGDPRUtil`](liveperson-functions-toolbelt-documentation-gdpr-util.html)
 
 ___
 
@@ -117,26 +117,26 @@ ___
 
 ### OrchestratorClient
 
-▸ `Static` **OrchestratorClient**(): [`IOrchestratorClient`](../interfaces/internal_.IOrchestratorClient.md)
+▸ `Static` **OrchestratorClient**(): [`IOrchestratorClient`](liveperson-functions-toolbelt-documentation-orchestrator-client.html)
 
 Returns an OrchestratorClient which can be used to invoke other lambdas
 
 #### Returns
 
-[`IOrchestratorClient`](../interfaces/internal_.IOrchestratorClient.md)
+[`IOrchestratorClient`](liveperson-functions-toolbelt-documentation-orchestrator-client.html)
 
 ___
 
 ### SDEUtil
 
-▸ `Static` **SDEUtil**(): [`ISDEUtil`](../interfaces/internal_.ISDEUtil.md)
+▸ `Static` **SDEUtil**(): [`ISDEUtil`](liveperson-functions-toolbelt-sde-util.html)
 
 Returns a SDE Util, which can be used to add SDEs and other SDE
 related operations.
 
 #### Returns
 
-[`ISDEUtil`](../interfaces/internal_.ISDEUtil.md)
+[`ISDEUtil`](liveperson-functions-toolbelt-sde-util.html)
 
 ___
 
@@ -152,17 +152,17 @@ Returns an Salesforce Client, that is configured to work with the proxy.
 
 | Name | Type |
 | :------ | :------ |
-| `connectToSalesforce` | (`params`: [`IConnectionOptions`](../interfaces/internal_.IConnectionOptions.md)) => [`Connection`](http://jsforce.github.io/jsforce/doc/Connection.html) |
+| `connectToSalesforce` | (`params`: [`IConnectionOptions`](http://jsforce.github.io/jsforce/doc/Connection.html)) => [`Connection`](http://jsforce.github.io/jsforce/doc/Connection.html) |
 
 ___
 
 ### SecretClient
 
-▸ `Static` **SecretClient**(): [`ISecretClient`](../interfaces/internal_.ISecretClient.md)
+▸ `Static` **SecretClient**(): [`ISecretClient`](liveperson-functions-toolbelt-documentation-secret-client.html)
 
 Returns an Secret Client, which is setup to allow read and update access
 to the secret storage of the Site ID.
 
 #### Returns
 
-[`ISecretClient`](../interfaces/internal_.ISecretClient.md)
+[`ISecretClient`](liveperson-functions-toolbelt-documentation-secret-client.html)

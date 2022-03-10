@@ -782,10 +782,13 @@
           subpages:
             - subpagename: Toolbelt
             - subpagename: FaaS Context Service Client
-            - subpagename: Conversation Util
-            - subpagename: GDPR Util
             - subpagename: LP Client
             - subpagename: MTLS Client
+            - subpagename: Secret Client
+            - subpagename: Orchestrator Client
+            - subpagename: Conversation Util
+            - subpagename: GDPR Util
+            - subpagename: SDE Util
         - pagename: Event Sources
           subpages:
             - subpagename: Overview

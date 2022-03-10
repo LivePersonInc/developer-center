@@ -311,5 +311,5 @@ Time to Live in seconds. If not provided/defined it will be permanent.
 
 **Properties:**
 
-• **accountId**: `string`
-• **apiKey**: `string`
+- **accountId**: `string`
+- **apiKey**: `string`
