@@ -30,7 +30,7 @@ In that coding, you may leverage external services or LivePerson APIs. The below
 <img src="img/faas-overview.png" alt="LivePerson Functions Overview" style="width:100%;"/>
 
 <div class="card-container">
-    <a  class="welcome-card"  href="/liveperson-functions-getting-started-your-first-function.html" style="flex: 0 95%;">
+    <a  class="welcome-card"  href="/liveperson-functions-getting-started-your-first-function.html" style="flex: 0 100%;">
       <img class="container-image" src="img/functions/ic_functions_first_fn.svg"/>
       <h5 class="welcome-title">Develop your first function in under 10 minutes</h5>
     </a>
