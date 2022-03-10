@@ -79,10 +79,10 @@ LivePerson Functions supports the [Client Credentials](https://oauth.net/2/grant
 
 The Client Credentials are used by clients to obtain an [Access Token](https://auth0.com/docs/glossary?term=access-token) outside of the context of a user.
 
-<img src="img/faas-oauth-client-credentials-flow.jpg" alt="LivePerson Functions OAuth" style="width:50%;"/>
+<img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
 {: .notice}
-It's recommended to store the `clientId` and `clientSecret` in the <a href="liveperson-functions-development-toolbelt.html#secret-storage-client">secret storage</a>
+It's recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client)
 
 
 ```javascript
@@ -132,7 +132,7 @@ async function lambda(input, callback) {
 
 The Refresh Token grant type is used by clients to exchange a refresh token for an access token when the access token has expired. It's recommended to run a scheduled function which refreshes the access token for the defined expiration time and stores the new access token and refresh token in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client) for further usage in other functions.
 
-<img src="img/faas-common-examples-oauth2-refresh-token.jpg" alt="LivePerson Functions OAuth2 Refresh Token" style="width:40%;"/>
+<img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth2 Refresh Token" class="fancyimage"/>
 
 The following reduced code snippet shows an example on how to obtain the refresh and access token.
 
