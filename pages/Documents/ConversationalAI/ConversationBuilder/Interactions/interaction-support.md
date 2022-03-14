@@ -105,28 +105,6 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Universal | Yes | 
 | survey interactions | Yes |
 
-### Instagram
-
-| Interaction | Supported? |
-| --- | --- |
-| Dialog Starter | Yes |
-| Text statement | Yes |
-| Image statement | Yes |
-| Apple rich link | No |
-| Multiple choice question | No |
-| Text question | Yes |
-| Structured question | No |
-| Button question | No |
-| Quick Reply question | Yes |
-| List Picker question | No |
-| Time Picker question | No |
-| Integration | Yes |
-| Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
-| Apple Pay integration | No |
-| Universal | No | 
-| survey interactions | Yes |
-
 ### LINE
 
 | Interaction | Supported? |
@@ -275,7 +253,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Apple rich link | No |
 | Multiple choice question | Yes | 
 | Text question | Yes | 
-| Structured question | No | 
+| Structured question | Yes | 
 | Button question | No | 
 | Quick Reply question | No |
 | List Picker question | No | 
