@@ -243,9 +243,11 @@ When the agent escalation fails, we send an \_agent\_escalation\_failed\_ messag
 **Chat**: No
 
 #### messageDelay
-We have logic to collect and aggregate user messages before sending to the bot service, i.e., if the user sends two messages, “hi” and “how are you,” we will wait 300 milliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot.
+The bot collects and aggregates consumer messages before processing them. By default, anything sent to the bot within a 300-millisecond window is concatenated into a single message for processing. For example, if the consumer sends “hi,” pauses briefly, then sends “how are you,” and both messages are sent within the 300-millisecond window, the bot receives “hi how are you” for processing.
 
-**Default value**: 300 \(default set to \.3 ms, 3 seconds would be 3000\)<br>
+You can customize this per your requirements; for example, to use a 3-second window, specify 3000 milliseconds.
+
+**Default value**: 300 (milliseconds)<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
