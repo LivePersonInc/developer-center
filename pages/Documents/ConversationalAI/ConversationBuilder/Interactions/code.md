@@ -50,7 +50,7 @@ With the exception that you enter JSON code instead of interaction data, a Unive
 
     <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png">
 
-* [Configure](conversation-builder-interactions-configuration-settings.html) basic settings, for example, specify an interaction delay.
+* [Configure](conversation-builder-interactions-configuration-settings.html) basic settings. For example, enable the **User Input Required** setting if the interaction should wait for a response from the consumer. If you disable the setting, the flow will immediately continue to the next action.
 * [Configure](conversation-builder-interactions-configuration-next-action.html) a Next Action, including via custom rules.
 * [Configure](conversation-builder-interactions-configuration-custom-code.html) Pre-Process code, Process User Response code, and Post-Process code.
 
