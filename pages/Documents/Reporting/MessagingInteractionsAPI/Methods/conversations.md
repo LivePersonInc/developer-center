@@ -83,7 +83,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |invalidFreeTextAnswer | Search only for conversations that contain invalid free text answer. | String  | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
 |surveyBotConversations | Search only for conversations with PCS. | String  | Optional | Valid values: SURVEY_BOT. |
 |surveyIds  | An array of PCS IDs, represented as numbers.  | Array `<surveyID>`  | Optional |
-|fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no. |
+|fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no, 1, 0. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve | String, String| Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
