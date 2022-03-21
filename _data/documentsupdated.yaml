@@ -794,7 +794,7 @@
           subpages:
             - subpagename: Overview
             - subpagename: Automatic Messages
-            - subpagename: Post Conversation Survey
+            - subpagename: Post Conversation Survey (Legacy)
             - subpagename: Conversational Commands
             - subpagename: Third Party Bots
             - subpagename: Chat Post Survey

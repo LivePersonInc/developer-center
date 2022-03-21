@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Event Sources
-permalink: liveperson-functions-event-sources-post-conversation-survey.html
+permalink: liveperson-functions-event-sources-post-conversation-survey-legacy.html
 indicator: both
 ---
 
