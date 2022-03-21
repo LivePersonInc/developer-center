@@ -8,22 +8,22 @@ permalink: liveperson-functions-permission-system.html
 indicator: both
 ---
 
-There are 3 user permissions pertaining to Functions:
+There are three user permissions concerning Functions:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the whitelist for external domains and manage secrets. This permission is by default set to 'ON' for all admins on the account. It is however possible to limit your admin's access as well. You can create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the relevant permissions as needed, by creating a custom profile.
-* FaaS-Developer - allowed to manage `lambdas`, read whitelisted domains and read encrypted secrets.
-* FaaS-Invocation - provides basic read access on all functions and permission to invoke them. The Agent profile has this permission enabled by default.
+* FaaS-Admin - allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You can create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
+* FaaS-Developer - allowed to manage `lambdas`, read safelisted domains and read encrypted secrets.
+* FaaS-Invocation - provides primary read access on all functions and permission to invoke them. The Agent profile has this permission enabled by default.
 
 ### Permissions by role
 
 <div class="notice">Only users with an Administrator role automatically have all the relevant Function Permissions as is described below.</div>
 
-Agent Manager roles will have all Function permission disabled by default and Agents only will be able to have FaaS-Invocation permissions.
+Agent Manager roles will have all Function permission disabled by default, and Agents only will be able to have FaaS-Invocation permissions.
 
 <table class="thinner" style="width: 100%">
 <thead>
   <tr>
-    <th>Permission name	</th>
+    <th>Permission name </th>
     <th  style="text-align: center; vertical-align: middle;">Agent</th>
     <th  style="text-align: center; vertical-align: middle;">Agent Manager</th>
     <th  style="text-align: center; vertical-align: middle;" >Campaign Manager</th>
@@ -34,7 +34,7 @@ Agent Manager roles will have all Function permission disabled by default and Ag
   <tr>
     <td>FaaS-Admin</td>
     <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒	</td>
+    <td style="text-align: center; vertical-align: middle;" >🔒</td>
     <td style="text-align: center; vertical-align: middle;" >❌</td>
     <td style="text-align: center; vertical-align: middle;" >✅</td>
   </tr>
@@ -55,10 +55,10 @@ Agent Manager roles will have all Function permission disabled by default and Ag
   </tbody>
 </table>
 
-If users who do not have an Administrator based role require any of the Functions related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account.
+If users who do not have an Administrator based role require any Functions-related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account.
 #### Table Legend
-* ❌ : Permission is Not available for the Role.
-* 🔒 : Permission is disabled by default, but can be enabled.
+* ❌ : Permission is Not available for the role.
+* 🔒 : Permission is disabled by default but can be enabled.
 * ✅ : Permission is available and enabled.
 
 ### Permissions details
@@ -189,9 +189,9 @@ If users who do not have an Administrator based role require any of the Function
 </tbody>
 </table>
 
-You can configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html),the process is simple:
+You can configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html). The process is simple:
 
-* Click on the users tab at the top of the Conversational Cloud UI and then click profiles.
+* Click on the Users tab at the top of the Conversational Cloud UI and then click profiles.
 * Create/Edit a profile and add the relevant FaaS-* permission to it.
 
 ![FaaSPermissionSystem](img/functions/functions_permission_system.png)
@@ -199,5 +199,5 @@ You can configure these permissions in Conversational Cloud. More info on adding
 ### Hints
 
 * Please be aware that roles like Agent don't have the option to get FaaS Developer/Admin permission. You will need to use a different role in that case.
-* The [CLI](liveperson-functions-foundations-liveperson-functions-cli.html) leverages the same permissions, therefore you need to make sure that the user used has at least the FaaS-Developer permission.
-* We suggest obeying the security principle of least privilege and therefore only selecting the minimal set of permissions. E.g. If the user will be only using function (invoking). Then the FaaS-Invocation is only required.
+* The [CLI](liveperson-functions-foundations-liveperson-functions-cli.html) leverages the same permissions. Therefore you need to ensure that the user used has at least the FaaS-Developer permission.
+* We suggest obeying the security principle of least privilege and, therefore, only selecting the minimal set of permissions. E.g. If the user will be only using function (invoking). Then the FaaS-Invocation is only required.
