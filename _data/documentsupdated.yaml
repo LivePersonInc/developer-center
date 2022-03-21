@@ -202,6 +202,7 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+        - pagename: System Patterns
         - pagename: Integrations
           subpages:
             - subpagename: Integration Basics

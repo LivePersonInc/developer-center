@@ -33,7 +33,7 @@ Basic settings are those that are common to all interactions.
     {: .important}
     If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
 
-* **Interaction Enabled**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
+* **Enable Interaction**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
 * **Fallback Response**: Applicable to questions only. Enter the text to be sent to the user if none of the defined conditions are met.
 
 ### Advanced settings
