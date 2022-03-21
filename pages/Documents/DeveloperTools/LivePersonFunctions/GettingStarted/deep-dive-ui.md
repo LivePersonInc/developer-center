@@ -34,8 +34,6 @@ You may choose a event to react to from the dropdown, the default value is `No E
 
 At the bottom of the page you can see a toggle that will activate/deactivate the second step, that allows you to configure a [whitelist](liveperson-functions-foundations-features.html#domain-whitelisting) entry.
 
-// TODO: Consider speaking about Skills here, but that should also be mentioned at the event source article.
-
 #### Step: Domain Whitelisting
 
 When adding a domain to the whitelist you should always consider some common pitfalls. First make sure your domain is not redirecting, because in this case you also need to whitelist any domain that is part of the redirection chain. A good way to test if your domain redirecting, if you are unsure, is to leverage the following command:
