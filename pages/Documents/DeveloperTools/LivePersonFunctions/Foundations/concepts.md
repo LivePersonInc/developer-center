@@ -7,22 +7,41 @@ documentname: LivePerson Functions
 subfoldername: Foundations
 permalink: liveperson-functions-foundations-concepts.html
 indicator: both
-redirect_from:
-  - function-as-a-service-foundations-concepts.html
 ---
 
-# Concepts
+On this page, we will introduce the different concepts that are relevant for the LivePerson Functions platform. As a user of the platform, it is important that you have a basic understanding of the information that is shared in the chapters below. Further, there are also important clarifications and details in them.
 
-## Concurrency
+### Concurrency
 
-## Cold Start
+The concurrency is describing how multiple requests happening at the same time are handled and processed. This is something important to Function-as-a-Service (FaaS) offerings. Looking at the common and big vendors in this sector, they are usually handling one request in one instance. Meaning each individual request is handled by its own instance running the logic. LivePerson Functions, however, operates a bit different in this regard, by batching multiple requests together and handling them within one instance. Meaning that not each individual request is handled by its own instance. This has the implication that blocking code may negatively impact other requests that are handled at the time. Multiple instances will be spawned based on the overall traffic that is being received. If due to scaling there is more than one instance, traffic is distributed between them.
 
-## Execution Time(line)
+You may also consider that (local) changes to a function instance are not distributed to other instances. For example, changing an environment variable at runtime will be not replicated to other running instances.
 
-## Triggers
+### Cold Start
 
-### Eventsources
+A cold start is referring to the time cost that arises when a (new) function instance is spawned to handle an incoming request. Where the cold start penalty is basically the time window in which the function instance is spawned and waited for it to become ready to process. Given that we batch multiple calls as described in the [above chapter](#concurrency) we usually only see cold start occurring if there was not a call for a long time. If you run into issues where a cold start happens you always have the option to keep the instance warm by having scheduled invocation running, ensuring it never turns cold.
 
-Link to Eventsources
+If you plan on implementing a [scheduled invocation](liveperson-functions-foundations-features.html#scheduling) to keep it warm, make sure that the "warming" logic is separated from your regular flow. As this might cause unexpected issues or behaviors.
 
-### External Invocation
+### Execution Time(line)
+
+In this chapter, we will speak about the timeline for an invocation and also highlight which part of it counts towards our execution time limit of 30s. As highlighted by the graphic below the invocation process starts with the event raising by a [Trigger](#triggers). The event will be received by our services that will start invoking every function listening to the specific event. For simplicity, we only considered one function. Our service will invoke the listening functions, which then starts processing based on the coding. With the receiving of the event by the function instance the 30s time limit starts ticking down. Once the processing is finished our service takes over the response and relays it to the triggering service. Which than will react on the response.
+
+<img class="fancyimage" alt="Functions: Execution Timeline" src="img/functions/functions_concepts_timeline.png">
+
+### Triggers
+
+Triggers will usually invoke functions, this can happen in two ways. Either by calling specific functions or raising an event. The main difference here is that for event based invocation, the trigger does not need to know any details of the function listening to the event. Those triggers are usually [Event Sources](liveperson-functions-event-sources-overview.html), therefore the words trigger and [Event Sources](liveperson-functions-event-sources-overview.html) will be used interchangeably. Opposed to events for an external/direct invocation the caller needs to know about the function and call it specifically. These are usually [scheduled invocations](liveperson-functions-foundations-features.html#scheduling), [external invocations](liveperson-functions-foundations-external-invocation.html), and also some event sources.
+
+The following graph also shows the general invocation flow for both types of invocation styles.
+
+<img class="fancyimage" alt="Functions: Event Invocation" src="img/functions/functions_concept_event_invocation.png">
+
+Prior to raising an event the event source will actually check if there is a function listening for the specified event. Only **productive** functions are considered. If there is a function listening to the event, the trigger will raise an event. Our platform will search all functions listening to the specified event and start calling them. Once all responses are received it will combine them and return it to the event source.
+
+{:.notice}
+Please be aware that failing functions will abort the invocation chain for that event.
+
+<img class="fancyimage" alt="Functions: Direct Invocation" src="img/functions/functions_concept_direct_invocation.png">
+
+Prior to calling the external trigger may check if the function is productive. However, they can also decide to directly invoke the function and handle potential not-found error directly. For a direct call the caller needs to know the function's uuid. The response of the execution will be sent from our platform to the calling trigger.

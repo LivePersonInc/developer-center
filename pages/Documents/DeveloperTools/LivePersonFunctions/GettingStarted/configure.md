@@ -9,8 +9,6 @@ permalink: liveperson-functions-getting-started-configure.html
 indicator: both
 ---
 
-# Configure
-
 This page will introduce you to all available methods to configure your functions. Please also have a look at the [whitelisting domains](liveperson-functions-foundations-features.html#domain-whitelisting) as this is required for the access to external resources.
 
 ### Environment Variables

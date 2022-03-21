@@ -773,9 +773,22 @@
             - subpagename: Concepts
             - subpagename: Features
             - subpagename: Networking
+            - subpagename: External Invocation
+            - subpagename: Error Codes
             - subpagename: Limitations
             - subpagename: Best Practices
             - subpagename: LivePerson Functions CLI
+        - pagename: Toolbelt Documentation
+          subpages:
+            - subpagename: Toolbelt
+            - subpagename: FaaS Context Service Client
+            - subpagename: LP Client
+            - subpagename: MTLS Client
+            - subpagename: Secret Client
+            - subpagename: Orchestrator Client
+            - subpagename: Conversation Util
+            - subpagename: GDPR Util
+            - subpagename: SDE Util
         - pagename: Event Sources
           subpages:
             - subpagename: Overview
