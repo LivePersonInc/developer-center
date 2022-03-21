@@ -194,7 +194,7 @@ You can configure these permissions in Conversational Cloud. More info on adding
 * Click on the users tab at the top of the Conversational Cloud UI and then click profiles.
 * Create/Edit a profile and add the relevant FaaS-* permission to it.
 
-![FaaSPermissionSystem](img/functions/functions-permission-system.png)
+![FaaSPermissionSystem](img/functions/functions_permission_system.png)
 
 ### Hints
 

@@ -27,7 +27,7 @@ The platform can be a powerful tool to customize your accounts. Therefore please
 You can select from a set of possible events, that are [triggered](liveperson-functions-foundations-concepts.html#Triggers) by different services ([Event Sources](liveperson-functions-event-sources-overview.html)), [schedules](liveperson-functions-foundations-features.html#scheduling) and [external triggers](liveperson-functions-foundations-concepts.html#external-invocation). Those events contain event-specific data, which allows the creation of custom logic. Further based on the event source you may also interact with it actively influencing processes happening on the platform.
 In that coding, you may leverage external services or LivePerson APIs. The below infographic visualizes this flow from the original event source to the lambda coding and back.
 
-<img src="img/functions/functions-overview.png" alt="LivePerson Functions Overview" style="width:100%;"/>
+<img src="img/functions/functions_overview.png" alt="LivePerson Functions Overview" style="width:100%;"/>
 
 <div class="card-container">
     <a  class="welcome-card"  href="/liveperson-functions-getting-started-your-first-function.html" style="flex: 0 100%;">
