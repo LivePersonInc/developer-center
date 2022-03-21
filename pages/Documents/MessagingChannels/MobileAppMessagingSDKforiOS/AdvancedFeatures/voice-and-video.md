@@ -21,7 +21,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
 {:.important}
 Voice & Video capabilities are available only on iOS SDK 6.3.0 and above
 
-KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
+KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-live-chat-cobrowse-for-live-chat.html)
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
