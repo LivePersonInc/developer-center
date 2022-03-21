@@ -25,7 +25,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text question | Yes |
 | Structured question | No |
 | Button question | No |
-| Quick Reply question | Yes |
+| Quick Reply question | No |
 | List Picker question | Yes |
 | Time Picker question | Yes |
 | Integration | Yes |
