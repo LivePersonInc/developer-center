@@ -8,7 +8,7 @@ permalink: liveperson-functions-provisioning.html
 indicator: both
 ---
 
-To leverage the full functionality of the LivePerson Functions platform we require to perform some provisioning tasks. This process needs to be performed by a Conversational Cloud Admin and it happens during the initial agreement to the terms of use. Furthermore, we may perform partial provisioning in the future if new features require them. This process will happen in the background during login to the UI.
+To leverage the full functionality of the LivePerson Functions platform, we require to perform some provisioning tasks. This process needs to be performed by a Conversational Cloud Admin, and it happens during the initial agreement to the terms of use. Furthermore, we may perform partial provisioning in the future if new features require them. This process will happen in the background during login to the UI.
 
 <img src="img/functions/functions_ui_terms_of_use.png" alt="Functions: Terms of Use" style="width:100%;"/>
 
@@ -16,17 +16,17 @@ The following provisioning tasks will be performed:
 
 * Activating the LivePerson Functions feature on your account.
 * [Installing default secrets](liveperson-functions-foundations-features.html#secret-store) to interact with other LivePerson APIs
-* [Whitelisting default domains](liveperson-functions-foundations-features.html#domain-whitelisting) of internal LivePerson APIs
+* [Allowlisting default domains](liveperson-functions-foundations-features.html#domain-whitelisting) of internal LivePerson APIs
 
 ### Provisioning secrets
 
-Interaction between Functions and other LivePerson APIs needs to get authenticated. Therefore, special key/secret pairs are added to your account during provisioning. These secrets are as follows:
+Interaction between Functions and other LivePerson APIs needs to get authenticated. Therefore, particular key/secret pairs will be added to your account during provisioning. These secrets are as follows:
 
-* **lp-faas-default-app-key**: This secret is required and used by the LP Client to access LivePerson Apis, which is available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
-* **lp-faas-orchestrator-app-key**: This secret is required and used for the Orchestrator Feature, which is available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
+* **lp-faas-default-app-key**: This secret is required by the LP Client to access LivePerson Apis, which is available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
+* **lp-faas-orchestrator-app-key**: This secret is required and used for the Orchestrator Feature, available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
 
 {: .notice}
-In order to ease functions development, Toolbelt clients for internal APIs make use of those secrets, in this way the functions developers don't need to implement any authentication method for those APIs.
+To ease functions development, Toolbelt clients for internal APIs use those secrets. In this way, the developers don't need to implement any authentication method for those APIs.
 
 #### lp-faas-default-app-key privileges
 
@@ -130,9 +130,9 @@ In order to ease functions development, Toolbelt clients for internal APIs make 
   </tbody>
 </table>
 
-### Default whitelisted domains
+### Default allowlisted domains
 
-The [Toolbelt](liveperson-functions-foundations-features.html#toolbelt) clients use the domains below to call internal LivePerson APIs. These API domains are whitelisted during provisioning and are accessible from your functions.
+Clients use the domains below to call internal LivePerson APIs from the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). These API domains are safelisted during provisioning and are accessible from your functions.
 
 <table class="thinner" style="width: 100%">
 <thead>
@@ -200,7 +200,7 @@ The [Toolbelt](liveperson-functions-foundations-features.html#toolbelt) clients 
   </tr>
   <tr>
     <td>leDataReporting</td>
-    <td style="text-align: center; vertical-align: middle;" >Messaging Operations API	and Operational Realtime API</td>
+    <td style="text-align: center; vertical-align: middle;" >Messaging Operations API and Operational Realtime API</td>
     <td style="text-align: center; vertical-align: middle;" >Messaging Operations API: Snapshot of current state of messaging operations. Closed conversation, idle, etc.  Operational Realtime API: Soft real-time data about call center efficiency. Returns data by skill, agent, etc.</td>
   </tr>
   <tr>

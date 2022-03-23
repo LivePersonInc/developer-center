@@ -9,47 +9,47 @@ permalink: liveperson-functions-getting-started-configure.html
 indicator: both
 ---
 
-This page will introduce you to all available methods to configure your functions. Please also have a look at the [whitelisting domains](liveperson-functions-foundations-features.html#domain-whitelisting) as this is required for the access to external resources.
+This page will introduce you to all available methods to configure your functions. Please also look at the [allowlisting domains](liveperson-functions-foundations-features.html#domain-whitelisting) as this is required to access external resources.
 
 ### Environment Variables
 
-You can use environment variables to make your function more configurable, without the need to adjust the code. Access to the environment variables is possible at runtime using `process.env.NAME_OF_ENV` property. The LivePerson Functions platform does reserve a few environment variables for internal use.  In case of a conflict, you will see the following message: `Variable name is reserved and thereby blocked for use.`
+You can use environment variables to make your function more configurable without adjusting the code. Access to the environment variables is possible at runtime using `process.env.NAME_OF_ENV` property. The LivePerson Functions platform does reserve a few environment variables for internal use. In case of a conflict, you will see the following message: `Variable name is reserved and thereby blocked for use.`
 
 <img class="fancyimage" alt="Functions: Reserved Environment Variable" src="img/functions/functions_env_reserved.png">
 
 #### Creating an Environment Variable
 
-You can create a new environment variable by pressing "Set variable"-Button within the side panel of the editor UI.
-The sidepanel is depicted in the following screenshot:
+You can create a new environment variable by pressing the "Set variable"-Button within the side panel of the editor UI.
+The side panel is depicted in the following screenshot:
 
 <img class="fancyimage" alt="Functions: Environment Variable Sidepannel" src="img/functions/functions_env_sidepannel.png">
 
-Once you clicked the button a dialog window will open up and ask you enter a variable name and its value.
+Once you click the button, a dialogue window will open and ask you to enter a variable name and its value.
 
 <img class="fancyimage" alt="Functions: Environment Variable Creation" src="img/functions/functions_env_creation.png">
 
-Any environment variable will be checked against following restrictions:
+Any environment variable will be checked against the following restrictions:
 
-* Is it a reserved environment variable ?
-* Is the name exceeding 200 characters ?
-* Is the value exceeding 200 characters ?
+* Is it a reserved environment variable?
+* Is the name exceeding 200 characters?
+* Is the value exceeding 200 characters?
 
 #### Updating an Environment Variable
 
 {: .notice}
-Please be aware that changes made to environment variable at runtime via `process.env` are local to the instance of the function. They are not propagated to the UI or any other running instance.
+Please be aware that changes made to the environment variable at runtime via `process.env` are local to the instance of the function. They are not propagated to the UI or any other running instance.
 
 The modification of existing environment variables is possible via the side panel of the editor UI. Select the environment variable you want to change by clicking its name on the list.
 
 <img class="fancyimage" alt="Functions: Environment Variable update Sidepannel" src="img/functions/functions_env_update_sitepannel.png">
 
-Once you clicked on "Set" you will have to save the lambda to store the changes permanently. Please be aware that environment variables are static. Meaning that changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead you will need to redeploy the function in order to have the change take effect. 
+Once you click on "Set", you will have to save the lambda to store the changes permanently. Please be aware that environment variables are static. Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect. 
 
 <img class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
 
 #### Accessing Environment Variable
 
-Your configured environment variables are accessible via `process.env` from within the code. Generally speaking, you have both read and write access to environment variables that where configured by you. Please checkout the caveats on modifying environment variables at runtime [here](#updating-an-environment-variable). Be aware that by default environment variables are interpreted as strings within Javascript. Hence if you want to use special types like JSON (e.g. `JSON.parse`) or a Number (e.g. `Number.parseInt`) you will have to parse them first.
+Your configured environment variables are accessible via `process.env` from within the code. Generally speaking, you have both read and write access to the environment variables you configured. Please check out the caveats on modifying environment variables at runtime [here](#updating-an-environment-variable). Be aware that environment variables are interpreted as strings within Javascript by default. Hence if you want to use special types like JSON (e.g. `JSON.parse`) or a Number (e.g. `Number.parseInt`), you will have to parse them first.
 
 ```javascript
     // Accessing an environment variable and using it as string
@@ -62,36 +62,36 @@ Your configured environment variables are accessible via `process.env` from with
 ### Secrets
 
 {: .notice}
-We discourage storing of credentials which cannot be easily revoked like passwords. If possible, we recommend using credentials for token-based authentication methods instead.
+We discourage storing credentials that cannot be easily revoked, like passwords. If possible, we recommend using credentials for token-based authentication methods instead.
 
-We offer a secure storage for storing sensitive data such as credentials and tokens. Functions can read and write to this store at runtime. By default your store will contain secrets, that are created as part of the [provisioning](liveperson-functions-provisioning.html).
+We offer secure storage for storing sensitive data such as credentials and tokens. Functions can read and write to this store at runtime. By default, your store will contain secrets created as part of the [provisioning](liveperson-functions-provisioning.html).
 
 #### Creation of a secret
 
-Secrets can only be created through the web interface and not via CLI. In order to add a secret you need to head to the "Settings"-Page with a user meeting the required [permissions](liveperson-functions-permission-system.html). Than select the "Secret Storage"-Tab where you should see a list of existing secrets and a button "Add a secret".
+Secrets can only be created through the web interface and not via CLI. To add a secret, you need to head to the "Settings"-Page with a user meeting the required [permissions](liveperson-functions-permission-system.html). Then select the "Secret Storage"-Tab where you should see a list of existing secrets and a button "Add a secret".
 
-Any secret will be checked against following restrictions:
+Any secret will be checked against the following restrictions:
 
-* Is it a secret that was created during provisioning ?
-* Is the name exceeding 100 characters ?
-* Is the name containing any characters that are not `Alphanumeric`, `_` or `-` ?
-* Is the value exceeding 10000 characters ?
+* Is it a secret that was created during provisioning?
+* Is the name exceeding 100 characters?
+* Is the name containing any characters that are not `Alphanumeric`, `_` or `-`?
+* Is the value exceeding 10000 characters?
 
 <img class="fancyimage" alt="Functions: Secret Overview Page" src="img/functions/functions_secret_page.png">
 
-After clicking the button you will be presented with a dialog, that allows you select a name and provide the content of the secret.
+After clicking the button, you will be presented with a dialogue that allows you to select a name and provide the content of the secret.
 
 <img class="fancyimage" alt="Functions: Secret Creation" src="img/functions/functions_secret_creation.png">
 
-You can select the data type of the secret from the drop-down menu. Please be aware that this simply modifies the validation and does not influence the [access](#accessing-secrets) to the secrets later. For example, if you select `JSON` it will check the syntax of the JSON and reject faulty json strings.
+You can select the data type of the secret from the drop-down menu. Please be aware that this modifies the validation and does not influence the [access](#accessing-secrets) to the secrets later. For example, if you select `JSON`, it will check the syntax of the JSON and reject faulty JSON strings.
 
 <img class="fancyimage" alt="Functions: Secret Type Dropdown" src="img/functions/functions_secret_type.png">
 
-You might notice that you are not able to see the contents of the secret after the creation. This is intended and related to security restrictions. Therefore, updating a secret is only possible by deleting and recreating the secret. Secrets can be updated during the runtime by the function. The next chapter will explain the details of this process.
+You might notice that you cannot see the contents of the secret after the creation. This is intended and related to security restrictions. Therefore, updating a secret is only possible by deleting and recreating the secret. Secrets can be updated during the runtime by the function. The next chapter will explain the details of this process.
 
 #### Updating Secrets (only at Runtime)
 
-As mentioned above we don't allow the modification of secrets from the UI, you may however change them at runtime. For this task you can leverage the `SecretClient` which is offered by our runtime library the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). Please notice the `try`-`catch` block in the code below, this should highlight that accessing a secret can fail and in the process of failing will raise an error.
+As mentioned above, we don't allow the modification of secrets from the UI. You may, however, change them at runtime. You can leverage the `SecretClient`, which our runtime library offers the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt) for this task. Please notice the `try`-`catch` block in the code below. This should highlight that accessing a secret can fail and will raise an error in the process of failing.
 
 **Async-Await Style:**
 
@@ -129,7 +129,7 @@ As mentioned above we don't allow the modification of secrets from the UI, you m
 
 #### Accessing Secrets
 
-The access to the secrets of the account are possible at runtime thanks to the `SecretClient` which is offered by our runtime library the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). Please be notice the `try`-`catch` block in the code below, this should highlight that accessing a secret can fail and in the process of failing will raise an error.
+Access to the secrets of the account is possible at runtime thanks to the `SecretClient`, which our runtime library offers the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). Please be notice the `try`-`catch` block in the code below. This should highlight that accessing a secret can fail and will raise an error in the process of failing.
 
 **Async-Await Style:**
 
@@ -167,7 +167,7 @@ The access to the secrets of the account are possible at runtime thanks to the `
             });
 ```
 
-> If you know that your secret won't be changing as it is static and not getting updated at runtime. You may load it once into memory and than store it. Please checkout the below coding that shows an lazy initialization of a secret using a variable.
+> If you know that your secret won't be changing as it is static and not getting updated at runtime. You may load it once into memory and then store it. Please check out the below coding that shows a lazy initialization of a secret using a variable.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -202,7 +202,7 @@ function lambda(input, callback) {
 
 ### Dependencies
 
-The functions have access to a set of libraries, which we define in our functions template. You are not able to add your own dependencies. Please see the following list of dependencies that are available to you.
+The functions have access to a set of libraries, which we define in our functions template. You are not able to add your dependencies. Please see the following list of dependencies that are available to you.
 
 <table class="thinner" style="width: 100%">
 <thead>

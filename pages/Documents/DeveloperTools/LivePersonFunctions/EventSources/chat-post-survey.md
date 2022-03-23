@@ -9,25 +9,25 @@ permalink: liveperson-functions-event-sources-chat-post-survey.html
 indicator: both
 ---
 
-Chat Post Survey integrates LivePerson Functions with LiveEngage Chat. This integration will use Functions to re-create one of our Legacy features: the ability to conditionally send out email transcripts after a chat conversation ended.
+Chat Post Survey integrates LivePerson Functions with Conversational Cloud Chat. This integration will use Functions to re-create one of our Legacy features: the ability to send out email transcripts after a chat conversation ends conditionally.
 
 {: .important}
-Using this integration the chat server will still take care of sending out emails. Functions will only enable you to write more sophisticated conditions.
+For this integration, the chat server will still take care of sending out emails. Functions will only enable you to write more sophisticated conditions.
 
 ### Configuration
 
-There is no further requirements other than your Functions account has been [provisioned](liveperson-functions-provisioning.html). This integration is available only with LiveEngage Chat not LiveEngage Messaging.
+There are no further requirements other than your Functions account has been [provisioned](liveperson-functions-provisioning.html). This integration is available only with Conversational Cloud Chat, not Conversational Cloud Messaging.
 
 #### Step 1 - Create a new Function
 
-Create a new function from **Chat Post Survey E-mail Transcript** event. Leave the default template selected.
+Create a new function from the **Chat Post Survey E-mail Transcript** event. Leave the default template selected.
 
 {: .important}
-Once a Function is implemented for this specific event, any logic outside of Functions will be ignored (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deployment.
+Once a Function implements this specific event, it will disable the existing logic (i.e., any rules defined otherwise in Conversational Cloud). Therefore, confirm that you implemented the current logic within your function before deployment.
 
 #### Step 2 - Edit the Function
 
-Adjust the coding from the template according according to your needs. The email result entry **needs** to contain the following properties:
+Adjust the coding from the template according to your needs. The email result entry **needs** to contain the following properties:
 
 |Property|description|type|
 |--- |--- |--- |
@@ -68,11 +68,11 @@ function lambda(input, callback) {
 };
 ```
 
-This sample code checks whether the `csatRank` is smaller than or equal to 3, that the `skillName` matches "CustomerCare" and that the `agentName` was “John Doe”. If these conditions are true, a new entry will be written to the returned email property list.
+This sample code checks whether the `csatRank` is smaller than or equal to 3, that the `skillName` matches "CustomerCare", and that the `agentName` was “John Doe”. If these conditions are true, a new entry will be written to the returned email list.
 
 ### Payload Details
 
-The Conversational Cloud sends events to the Functions platform once a *Post Conversation Survey* has been submitted. This event invokes our function which has the *Post Conversation Survey* event attached. This event contains the following data:
+The Conversational Cloud sends events to the Functions platform once a *Post Conversation Survey* has been submitted. This event invokes our function, which is attached to the *Post Conversation Survey* event. This event contains the following data:
 
 |1. level|2. level|description|type|example|
 |--- |--- |--- |--- |--- |
@@ -106,6 +106,6 @@ The following example is a payload that Conversational Cloud Chat sends to Funct
 ### Hints
 
 * Only **Chat Post Survey E-mail Transcript** event is supported for this integration.
-* Functions platform won't send out any email. Instead the triggering service will send out the email based on the function's response.
-* Any logic/rules related to this event outside the Functions will be replaced by the function once it is deployed. Be sure to implement the completed logic to avoid unexpected behaviors.
-* If there is any error during an invocation, the email won't be sent, there is **no retry** mechanism in the chat server for this integration.
+* Functions platform won't send out any email. Instead, the triggering service will send the email based on the function's response.
+* Any logic/rules related to this event outside the Functions will be replaced by the function once deployed. Be sure to implement the completed logic to avoid unexpected behaviours.
+* If there is an error during an invocation, the email won't be sent. There is **no retry** mechanism in the chat server for this integration.

@@ -11,9 +11,9 @@ redirect_from:
 ---
 
 {: .notice}
-The platform can be a powerful tool to customize your accounts. Therefore please have a look at our [Terms of Use](https://knowledge.liveperson.com/developer-tools-liveperson-functions-terms-of-use.html).
+The platform can be a powerful tool to customize your accounts. Therefore, please look at our [Terms of Use](https://knowledge.liveperson.com/developer-tools-liveperson-functions-terms-of-use.html).
 
-[LivePerson Functions](https://faas.liveperson.net) is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational cloud, to better tailor the system to their specific needs. By offering these capabilities, Functions enables developers to write a simple function, deploy it to LivePerson's infrastructure and make it available to their LivePerson account in minutes. This allows you to create custom logic inside the LivePerson Conversational Cloud platform.
+[LivePerson Functions](https://faas.liveperson.net) is a Function as a Service (FaaS) platform which enables brands to develop custom behaviours within LivePerson's conversational cloud to better tailor the system to their specific needs. Functions would allow developers to write a simple function, deploy it to LivePerson's infrastructure, and make it available to their LivePerson account in minutes. Functions will enable you to create custom logic inside the LivePerson Conversational Cloud platform.
 
 * Extend the Conversational Cloud to integrate your existing services like CRMs and ticketing systems using LivePerson Functions.
 * Run custom solutions on reliable and scalable infrastructure without the need to manage it

@@ -9,48 +9,46 @@ permalink: liveperson-functions-event-sources-conversational-commands.html
 indicator: both
 ---
 
-When properly set up, agents can use Conversational Commands to invoke functions from the Agent Workspace. By typing `/` into the messaging input in the connections panel, all available commands are shown. This empowers agents to use a bank of preconfigured, account-specific commands, to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
+When correctly set up, agents can use Conversational Commands to invoke functions from the Agent Workspace. All available commands are shown by typing `/` into the messaging input in the connections panel. This empowers agents to use a bank of preconfigured, account-specific commands to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
 
 <img src="img/functions/functions_conversational_commands.png" alt="Functions: Conversational Commands" style="width:50%;"/>
 
-Along with the invocation a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript.
+Along with the invocation, a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used for further processing and referencing. The result of the function has to either be a string or a number. And will be shown in the Agent Workspace as a message in the transcript.
 
-**Note:** The response is not actually stored in the conversation transcript, it will only be stored temporarily in the browser and is only visible to the agent.
+**Note:** The response is not stored in the conversation transcript. It will only be stored temporarily in the browser and is only visible to the agent.
 
 ### Configuration
 
 {: .important}
-It is required that your account has the New Agent Workspace enabled; please contact your account team in order to do this.
+It is required that your account has the New Agent Workspace enabled; don't hesitate to get in touch with your account team to do this.
 
-To be able to use Conversational Commands an Agent needs the following permissions:
+To be able to use Conversational Commands, an Agent needs the following permissions:
 
 * **Use enhanced Agent Workspace**
 * **FaaS-Invocation**
 
 #### Step 1 - Create a new Function
 
-Create a new function with the **Conversational Command** event as the trigger. The name of the function will be displayed as the name of the Conversational Command in the Agent Workspace.
+Create a new function with the **Conversational Command** event as the trigger. The function's name will be displayed as the name of the Conversational Command in the Agent Workspace.
 
-The `description` will also be shown in the Agent Workspace. To give the Agent a hint on how to use the function, we recommend providing the available arguments for the function in square brackets in the description.
+The `description` will also be shown in the Agent Workspace. The description can be leveraged to provide a usage hint to the agent. Therefore we recommend displaying the available arguments in square brackets. Here is an example for the description of a Conversational Command that sends the transcript of the conversation via email:
 
-Here is an example for the description of a Conversational Command that sends the transcript of the conversation via email:
-
-`[email, subject:optional] - Sends the transcript of the conversation to the provided email address.`
+`[email, subject:optional] - Sends the conversation transcript to the provided email address.`
 
 **Note:** You can create up to 30 functions for this event.
 
 #### Step 2 - Edit the Function
 
-Adjust the code in the template according to your needs by modifying the function. On the right side you can see an example of the payload (in the sidebar, which you might need to open).
+Adjust the code in the template according to your needs by modifying the function. On the right side, you can see an example of the payload (in the sidebar, which you might need to open).
 
-The function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the Agent will only be shown a generic success message. If the function returns an `Error`, this will be presented to the Agent as an error message.
+The function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the agent will only be shown a generic success message. If the function returns an `Error`, this will be presented to the agent as an error message.
 Please see our [deep dive UI Creation Process](liveperson-functions-getting-started-deep-dive-ui.html#creation-process) section or as alternative [deep dive CLI Create](liveperson-functions-getting-started-deep-dive-cli.html) section for further information.
 #### Step 3 - Deploy the function
 
-Just like any other function, this function must be deployed before it can be used.  Please see our [deep dive UI Deployment Process](liveperson-functions-getting-started-deep-dive-ui.html#deployment-process) section or as alternative [deep dive CLI Deploy](liveperson-functions-getting-started-deep-dive-cli.html) section for more information on how to deploy your function.
+Like any other function, this function must be deployed before it can be used.  Please see our [deep dive UI Deployment Process](liveperson-functions-getting-started-deep-dive-ui.html#deployment-process) section or as alternative [deep dive CLI Deploy](liveperson-functions-getting-started-deep-dive-cli.html) section for more information on how to deploy your function.
 ### Examples
 
-You can find more information and examples in the the [LivePerson Knowledge Center](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-conversational-commands.html/)
+You can find more information and examples in the [LivePerson Knowledge Center](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-conversational-commands.html/)
 
 ### Payload details
 

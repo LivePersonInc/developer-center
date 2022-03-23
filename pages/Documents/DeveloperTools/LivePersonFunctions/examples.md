@@ -9,12 +9,12 @@ indicator: both
 ---
 
 # Examples
-When programming Functions you will often come across similar use cases. Here we will show you some common examples for such use cases and how you could possibly solve them.
+When programming Functions, you will often come across similar use cases. Here we will show you some common examples for such use cases and how you could solve them.
 
 ## OAuth 1
 OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the login credentials. LivePerson Functions offers the possibility to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package to support the [OAuth 1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
 
-The following code shows an example which performs a `POST` request with Authorization `Header`.
+The following code shows an example that performs a `POST` request with Authorization `Header`.
 
 {: .notice}
   It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](function-as-a-service-foundations-features.html#toolbelt)
@@ -71,13 +71,13 @@ async function lambda(input, callback) {
 ```
 ## OAuth 2
 
-[OAuth 2.0](https://tools.ietf.org/html/rfc6749) is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service. It works by delegating user authentication to the service that hosts the user account, and authorizing third-party applications to access the user account. OAuth 2 provides authorization flows for web and desktop applications, and mobile devices. To get access OAuth 2.0 supports several different grant types.
+[OAuth 2.0](https://tools.ietf.org/html/rfc6749) is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service. It works by delegating user authentication to the service that hosts the user account and authorizing third-party applications to access the user account. OAuth 2 provides authorization flows for web and desktop applications and mobile devices. To get access OAuth 2.0 supports several different grant types.
 
 LivePerson Functions supports the [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) and [Refresh Token](https://oauth.net/2/grant-types/refresh-token/) as `Grant Type`.
 
 **Client Credentials**
 
-The Client Credentials are used by clients to obtain an [Access Token](https://auth0.com/docs/glossary?term=access-token) outside of the context of a user.
+Clients use the Client Credentials to obtain an [Access Token](https://auth0.com/docs/glossary?term=access-token) outside of the context of a user.
 
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
@@ -130,11 +130,11 @@ async function lambda(input, callback) {
 ```
 **Refresh Token**
 
-The Refresh Token grant type is used by clients to exchange a refresh token for an access token when the access token has expired. It's recommended to run a scheduled function which refreshes the access token for the defined expiration time and stores the new access token and refresh token in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client) for further usage in other functions.
+Clients use the Refresh Token grant type to exchange a refresh token for an access token when the access token has expired. We recommend refreshing the token using a scheduled function. Refreshed details are written back to the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client) for further usage in other functions.
 
 <img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth2 Refresh Token" class="fancyimage"/>
 
-The following reduced code snippet shows an example on how to obtain the refresh and access token.
+The following reduced code snippet shows how to obtain the refresh and access token.
 
 ```javascript
   const client_id = await secretClient.readSecret('clientId');
@@ -168,10 +168,10 @@ The following reduced code snippet shows an example on how to obtain the refresh
   });
 ```
 ### Caching inside lambdas
-A simple way to make your function more performant and more reliable is caching requested data that exists outside of your functions context. In the following example we use caching to improve the interaction with the secret store. Caching the secret makes your code highly reliable against problems that might arise from network congestion. Additionally, it improves your functions performance since you omit unnecessary network calls. The following code uses an environment variable `TTL` to indicate how long to keep the data in-memory.
+A simple way to make your function more performant and more reliable is caching requested data outside of the context of your function. In the following example, we use caching to improve the interaction with the secret store. Caching the secret makes your code highly reliable against problems that might arise from network congestion. Additionally, it enhances the performance of your functions since you omit unnecessary network calls. The following code uses an environment variable `TTL` to indicate how long to keep the data in memory.
 
 {: .notice}
-This cache is in-memory. If your function is down-scaled due to inactivity data in the cache will be lost. Likewise if your function is upscaled to multiple instances than there is no mechanism to synchronize the caches between instances.
+This cache is in-memory. If your function is down-scaled due to inactivity, data in the cache will be lost. Likewise, if your function is upscaled to multiple instances, there is no mechanism to synchronize the caches.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -225,7 +225,7 @@ async function getSecret(key) {
 }
 ```
 ### Inform customers about the maximum wait time
-In this simple example the lambda listens to the *Messaging Conversation Routing* event. We extract the `skillId` from the `payload` and use it to find available agents for this skill. If we do not find one we communicate this to the customer. If at least one agent is available we query the LivePerson *Message Queue Health* API to receive an approximate wait time. This information is lastly communicated to the customer.
+The lambda listens to the *Messaging Conversation Routing* event in this simple example. We extract the `skillId` from the `payload` and use it to find available agents for this skill. If we do not find one, we communicate this to the customer. If at least one agent is available, we query the LivePerson *Message Queue Health* API to receive an approximate wait time. This information is lastly communicated to the customer.
 
 ```javascript
 const { Toolbelt, LpServices } = require('lp-faas-toolbelt');
