@@ -34,6 +34,25 @@ You may choose a event to react to from the dropdown, the default value is `No E
 
 At the bottom of the page you can see a toggle that will activate/deactivate the second step, that allows you to configure a [whitelist](liveperson-functions-foundations-features.html#domain-whitelisting) entry.
 
+Suppose you want to ensure that a function is triggered only for specific skills as the logic is not required for every skill. We provide you with the ability to do so. Please note that this functionality is **limited** to the [Automatic Messages](liveperson-functions-event-sources-overview.html#automatic-messages). 
+
+Skills can be selected via the drop-down menu, and it is populated using the skills available in the conversational cloud. By default, the function will respond to all skills. Please be aware that the maximum number of skills is **50**.
+
+<img src="img/functions/functions_select_skill.png" alt="Functions: select multiple skill" style="width:100%;"/>
+
+{: .notice}
+The drop-down menu is always disabled if the selected function template is not an Automatic Messages template.
+
+You can create more than one function of the same event if you set different skills for each function. Generally, as long as they are not overlapping, you can create multiple functions for the same event. The following Scenario should highlight the implications:
+
+✅  Function 1 for Event A [Skill 1,2] + Function 2 for Event A [Skill 3,4]
+✅  Function 1 for Event A [Skill 1,2] + Function 2 for Event A [Skill 3,4] + Function 3 for Event B [Default-skill]
+✅  Function 1 for Event A [Default-skill]
+❌  Function 1 for Event A [Skill 1,2] + Function 2 for Event A [Skill 3,4] + [Default-skill]
+
+{: .important}
+The above example, "Default-skill", refers to not selecting any skill, the default behaviour.
+
 #### Step: Domain Whitelisting
 
 When adding a domain to the whitelist you should always consider some common pitfalls. First make sure your domain is not redirecting, because in this case you also need to whitelist any domain that is part of the redirection chain. A good way to test if your domain redirecting, if you are unsure, is to leverage the following command:
@@ -150,6 +169,10 @@ Our editor is based on [Monaco](https://microsoft.github.io/monaco-editor/), off
 By pressing left-click you are able to access a menu that allows basic code navigation and access to replacement/renaming functionality. You can also leverage this menu to reach the command palette which offers a variety of features.
 
 <img class="fancyimage" alt="Functions: access command palette" src="img/functions/functions_editor_access_palette.gif">
+
+To Update the skills on an existing function, you will find the skills drop-down menu inside the General information accordion menu on the right side of the code Editor. Updating of skills does not require redeployment, the change is reflected within 5 minutes after saving.
+
+<img src="img/functions/functions_select_skill_edit.png" alt="Functions: select multiple skill" style="width:100%;"/>
 
 ##### Code Navigation
 
