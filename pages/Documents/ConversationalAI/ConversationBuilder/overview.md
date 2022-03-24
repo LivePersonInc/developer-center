@@ -26,7 +26,7 @@ For more on MACS, see [here](https://knowledge.liveperson.com/ai-bots-automation
 ### Access Conversation Builder
 
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Conversation Builder**.
+2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Builder**.
 
 ### Getting started
 

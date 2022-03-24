@@ -45,7 +45,9 @@ Your Rasa implementation must conform to the schemas at the links above.
 
 You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can activate it and then use the testing tools to test. Please see the testing constraints discussed farther below.
 
-Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+Note the following:
+* Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
 
 **To train a domain**
 
