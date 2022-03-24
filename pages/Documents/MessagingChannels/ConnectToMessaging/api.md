@@ -79,57 +79,57 @@ SMS, WA
     "skill": "support",
     "ivrNumber": "180000",
     "sdes": [{
-            "type": "personal",
-            "info": {
-                "firstname": "Smith",
-                "lastname": "John",
-                "age": {
-                    "age": 31,
-                    "year": 1990,
-                    "month": 1,
-                    "day": 11
-                },
-                "contacts": [{
-                    "email": "test@example.com",
-                    "phone": "+18004444444",
-                    "address": {
-                        "country": "United States",
-                        "region": "NA"
-                    }
-                }],
-                "gender": "MALE",
-                "language": "en-US",
-                "company": "LP"
-            }
-        },
-        {
-            "type": "ctmrinfo",
-            "info": {
-                "cstatus": "VIP",
-                "ctype": "Gold",
-                "customerId": "138766AC",
-                "balance": -200.99,
-                "currency": "EUR",
-                "socialId": "11256324780",
-                "imei": "3543546543545688",
-                "userName": "user000",
-                "companySize": 500,
-                "companyBranch": "East Village",
-                "accountName": "Bank corp",
-                "role": "Marketing manager",
-                "lastPaymentDate": {
-                    "day": 15,
-                    "month": 10,
-                    "year": 2016
-                },
-                "registrationDate": {
-                    "day": 23,
-                    "month": 5,
-                    "year": 2015
-                },
-                "loginStatus": 1
-            }
-        }]
+        "type": "personal",
+        "info": {
+            "firstname": "Smith",
+            "lastname": "John",
+            "age": {
+                "age": 31,
+                "year": 1990,
+                "month": 1,
+                "day": 11
+            },
+            "contacts": [{
+                "email": "test@example.com",
+                "phone": "+18004444444",
+                "address": {
+                    "country": "United States",
+                    "region": "NA"
+                }
+            }],
+            "gender": "MALE",
+            "language": "en-US",
+            "company": "LP"
+        }
+    },
+    {
+        "type": "ctmrinfo",
+        "info": {
+            "cstatus": "VIP",
+            "ctype": "Gold",
+            "customerId": "138766AC",
+            "balance": -200.99,
+            "currency": "EUR",
+            "socialId": "11256324780",
+            "imei": "3543546543545688",
+            "userName": "user000",
+            "companySize": 500,
+            "companyBranch": "East Village",
+            "accountName": "Bank corp",
+            "role": "Marketing manager",
+            "lastPaymentDate": {
+                "day": 15,
+                "month": 10,
+                "year": 2016
+            },
+            "registrationDate": {
+                "day": 23,
+                "month": 5,
+                "year": 2015
+            },
+            "loginStatus": 1
+        }
+    }]
 }
 
 ```
