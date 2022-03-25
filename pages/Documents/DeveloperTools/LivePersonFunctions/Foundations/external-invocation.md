@@ -91,6 +91,10 @@ Authorization Code:
 {:.important}
 You might want to check out this [example application](authorizing-conversational-cloud-applications-samples-application-login-sample-app.html) that highlights the `Authorization Code`-Flow in JavaScript.
 
+### Function UUID
+
+When you perform an external invocation, it is required to pass the function UUID in the request URL. To retrieve the UUID of the function that should be invoked, you can get it by navigating to the Deployments section in the UI and opening the [invoke screen](liveperson-functions-getting-started-deep-dive-ui.html#testing-your-function). The Function UUID will be displayed there.
+
 ### API
 
 To interact with our systems, we provide libraries for javascript and java. Those allow you to interact with our API stably and securely. This chapter will explore how to leverage them and what functionalities they offer. Make also sure to check out our [Error Codes & HTTP Responses](liveperson-functions-foundations-error-codes.html).

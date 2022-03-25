@@ -17,7 +17,7 @@ OAuth is an open-standard authorization protocol or framework that describes how
 The following code shows an example that performs a `POST` request with Authorization `Header`.
 
 {: .notice}
-  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](function-as-a-service-foundations-features.html#toolbelt)
+  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
 
 ```javascript
 async function lambda(input, callback) {

@@ -783,7 +783,7 @@ To invoke a LivePerson Function, we utilize the action object as we did for a cl
 }
 ```
 
-To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-foundations-external-invocation.html#function-uuid)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 
