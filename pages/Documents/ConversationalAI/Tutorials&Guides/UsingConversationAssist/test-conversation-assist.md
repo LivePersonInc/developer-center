@@ -28,7 +28,7 @@ Once connected, you can now test out Conversation Assist by conversing with your
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/recommendations_c.png">
 <img class="fancyimage" style="width:500px" src="img/agentassisttutorial/recommendations.png">
 
-Select **Delegate to bot** to bring the Booking Bot into the conversation and immediately start the consumer with the correct, associated dialog.
+Select **Delegate** to bring the Booking Bot into the conversation and immediately start the consumer with the correct, associated dialog.
  
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/use_bot.png">
 
@@ -40,6 +40,6 @@ Each time the consumer sends a message, Conversation Assist will check to see if
 
 This time, select **Use answer** to bring the seating assignment article into the messaging prompt for the agent. This allows the agent to personalize and update the article text to fit the consumer's specific needs.
 
-<img class="fancyimage" style="width:350px" src="img/agentassisttutorial/use_article.png">
+<img class="fancyimage" style="width:450px" src="img/agentassisttutorial/use_article.png">
 
 Congratulations on completing this tutorial!

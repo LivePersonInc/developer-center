@@ -804,8 +804,8 @@ a.loginText {
     padding: 12px 32px;
 }
 
-.loginButton,
-.trialButton {
+.trialButton,
+.loginButton {
     text-align: center;
     font-style: normal;
     font-weight: 600;
