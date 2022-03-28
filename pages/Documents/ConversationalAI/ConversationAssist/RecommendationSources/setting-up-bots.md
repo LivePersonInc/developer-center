@@ -111,11 +111,3 @@ If you later delete a bot, the next time you access the **Bots** tab, the list i
     * [Max # of recommendations](conversation-assist-recommendation-sources-configuring-settings.html#max--of-recommendations)
     * [Bot confidence](conversation-assist-recommendation-sources-configuring-settings.html#bot-confidence)
     * [Bot messages](conversation-assist-recommendation-sources-configuring-settings.html#bot-messages)
-
-### Updating bot user credentials
-
-When managing bots, if you select one or more, menu options for performing actions in bulk appear.
-
-<img width="800" src="img/agentassist/update_user_creds.png">
-
-Use the **Update bot user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the **User Management** area of Conversational Cloud. This menu option refreshes Conversation Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in **User Management**, manually update the credentials here in Conversation Assist.

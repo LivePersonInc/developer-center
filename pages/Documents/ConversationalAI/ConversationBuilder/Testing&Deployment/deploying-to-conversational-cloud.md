@@ -69,14 +69,14 @@ An agent can belong to only one bot.
 
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
-    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (see farther above).
+    - **Role**: Select the profile that's assigned to the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (see farther above).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of Conversational Cloud account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in Conversational Cloud. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
-    - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to Conversational Cloud. Enter the URL to which the HTTP connector will post user messages to external endpoints.
+    - **External Webhook URL**: This option is for brands that want to use a third-party messaging service instead of LivePerson’s. Enter the URL of the external endpoint to which the user messages will be posted.
     - **Custom Configurations**: If desired, click **+ Custom Configurations**, and enter any custom configuration fields to set. For information on these, see "Custom configuration fields" later in this topic.
-    - **Accessibility**: Select this if you want the bot messages to support Accessibility. If you select this, the fields sent in the JSON object have the tooltip attribute.
+    - **Accessibility**: Select this if you want to enable tooltips in the bot messages, so they can be read by screen readers.
 7. Click **Save**.
 
     This establishes the connection between the bot and the bot agent in the target Conversational Cloud environment.
@@ -243,9 +243,11 @@ When the agent escalation fails, we send an \_agent\_escalation\_failed\_ messag
 **Chat**: No
 
 #### messageDelay
-We have logic to collect and aggregate user messages before sending to the bot service, i.e., if the user sends two messages, “hi” and “how are you,” we will wait 300 milliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot.
+The bot collects and aggregates consumer messages before processing them. By default, anything sent to the bot within a 300-millisecond window is concatenated into a single message for processing. For example, if the consumer sends “hi,” pauses briefly, then sends “how are you,” and both messages are sent within the 300-millisecond window, the bot receives “hi how are you” for processing.
 
-**Default value**: 300 \(default set to \.3 ms, 3 seconds would be 3000\)<br>
+You can customize this per your requirements; for example, to use a 3-second window, specify 3000 milliseconds.
+
+**Default value**: 300 (milliseconds)<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -361,3 +363,8 @@ If you set this true, the bot agent is notified of conversation updates only in 
 **Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
+
+### What's next?
+Once you’ve deployed your bot, you can use [this page](https://developers.liveperson.com/web-messaging/emulator.html) to test the experience in Web messaging at any time. You can also test using the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html).
+
+However, to test in any other messaging channel (Facebook, WhatsApp, etc.), you’ll need to set up that channel. For information on this, see the **Messaging Channels** section in the Knowledge Center.

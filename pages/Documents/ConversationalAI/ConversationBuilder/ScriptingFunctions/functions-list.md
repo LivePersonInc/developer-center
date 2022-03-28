@@ -32,6 +32,7 @@ For quick reference, below is an alphabetically-ordered list of all built-in fun
 * [getLPCustomerInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)
 * [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-engagement-attribute)
 * [getLPUserPersonalInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)
+* [getMetadata](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-metadata)
 * [getNamedEntities](conversation-builder-scripting-functions-get-set-contextual-data.html#get-named-entities)
 * [getNlpResponse](conversation-builder-scripting-functions-get-set-contextual-data.html#get-nlp-responses)
 * [getQuickReplyPayload](conversation-builder-scripting-functions-get-set-contextual-data.html#get-quick-reply-payload)
