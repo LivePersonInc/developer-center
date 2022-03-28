@@ -496,3 +496,40 @@ Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https:
 | skill | 255 char max length |
 | overrideMessage | 1600 char max length |
 | handoffId | 16 char max length |
+
+<strong>9. Is WA Rich Template supported?</strong>
+
+Yes.
+
+<strong>10. What are different components of a WA Rich Template? Are all the components mandatory to be present in a rich template?</strong>
+
+- Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
+- Body
+- Footer
+- Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
+<br /><br />
+Message body in WA Rich Template is mandatory. Header, footer, buttons are optional in WA Rich Template depending on template design.
+
+<strong>11. What extensions are supported for WA Rich Template in the header section?</strong>
+
+Allowed extensions for different types of header for a WA Rich Template: 
+- Image:[jpg,png],
+- Document:[pdf],
+- Video:[mp4]
+
+<strong>12. Are there any limitations on the URL added for header image/video/document type?</strong>
+
+Below are the limitations:
+- URL provided for header (image/video/document) should be publicly accessible
+- Only https urls are supported
+- Before sending WA Rich Messages using a template with header of type image/video/document, get the Root domain/URL whitelisted in Connect to Messaging Web Tool.
+<br />
+ For example; if the brand wants to send images from upload.wikimedia.org like: 
+https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
+
+<br />Brand should add https://upload.wikimedia.org in permitted list of domains in Connect to Messaging Web Tool as shown in the screenshot below. 
+<img src="images/c2m_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+
+<strong>13. Do we need any input from user for footer and quick reply buttons section while calling eligibility endpoint using WA Rich Template?</strong>
+
+Footer and quick reply buttons have static values and do not need any user input. However, call to action buttons can accept variables for Website URL which can be provided during eligibility API.
