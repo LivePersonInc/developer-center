@@ -921,8 +921,6 @@
         - pagename: Methods
           subpages:
             - subpagename: Get Agent Segments
-            - subpagename: Get Agent Segments Breakdown Files List
-            - subpagename: Get Agent Segments Breakdown File
         - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
