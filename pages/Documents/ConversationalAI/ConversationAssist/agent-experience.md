@@ -23,7 +23,7 @@ In Conversational Cloud, bot and article recommendations are displayed inline wi
 
 **To use a recommended bot**
 
-* Click **Delegate to bot** to join a bot to the conversation, so the bot takes over. You stay in the conversation, so you can monitor the bot’s progress and remove the bot if needed.
+* Click **Delegate** to join a bot to the conversation, so the bot takes over. You stay in the conversation, so you can monitor the bot’s progress and remove the bot if needed.
 
     <img width="550" src="img/agentassist/use_bot.png">
 
@@ -40,7 +40,7 @@ In Conversational Cloud, bot and article recommendations are displayed inline wi
 
 After you have joined a bot to a conversation, you can remove or replace it if desired:
 
-* To remove the current bot, click **Remove Bot** at the top of the messaging panel. The agent can then take over.
-* To replace the current bot, click **Replace Bot** beside the bot you want to substitute into the conversation. The selected bot joins the conversation, taking over for the previous bot. (Only one bot can be joined to a conversation at a time.)
+* To remove the current bot, click **Remove bot** at the top of the messaging panel. The agent can then take over.
+* To replace the current bot, click **Replace bot** beside the bot you want to substitute into the conversation. The selected bot joins the conversation, taking over for the previous bot. (Only one bot can be joined to a conversation at a time.)
 
     <img width="550" src="img/agentassist/remove_replace_bot.png">
