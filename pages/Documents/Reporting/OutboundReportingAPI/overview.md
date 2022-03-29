@@ -400,15 +400,6 @@ There are two versions of transaction API's.
  ],
  "skills": [
    "billing"
- ],
- "messagestatus": [
-   "DELIVERED", "FAILED", "RESPONDED", "READ"
- ],
- "transactionids": [
-   "03cb1b10-2e46-4c10-bdc7-3d9c23654d51"
- ],
-  "source": [
-   "API", "UI", "LPWF"
  ]
 }
 ```
