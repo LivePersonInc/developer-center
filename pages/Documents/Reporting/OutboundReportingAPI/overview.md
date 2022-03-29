@@ -173,9 +173,6 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
  "skills": [
    "billing"
  ],
- "messagestatus": [
-   "DELIVERED", "FAILED", "RESPONDED", "READ"
- ],
  "handoffids": [
    "H123456", "H987655"
  ],
