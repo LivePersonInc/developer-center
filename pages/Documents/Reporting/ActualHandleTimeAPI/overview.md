@@ -9,9 +9,6 @@ indicator: both
 
 {: .important}
 This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
- 
-{: .notice}
-This API is not available by default. To enable it please contact your account manager.
 
 ### Introduction
 
