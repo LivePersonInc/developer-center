@@ -298,7 +298,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 }
 ```
 
-**2. Campaign - Get analytics for the given campaign **
+**2. Campaign - Get analytics for the given campaign**
 
 Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Campaign/campaignAnalytics) to go through API spec to get started.
 
@@ -354,11 +354,16 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 ### Transaction API
 
-API for account level transactions 
+API for account level transactions. 
 
-**1. Get details for transactions**
+There are two versions of transaction API's.
 
-Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Transaction/transactions) to go through API spec to get started.
+| Version | Description  |
+| :--- | :--- |
+| Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
+| Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channels and skills |
+
+**1. Get details for Transactions - Version 1.0** 
 
 | Method | URI  |
 | :--- | :--- |
@@ -409,6 +414,22 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 ```
 
 Each of the filter options shown above are optional.
+```json
+    "filters": {
+        "channels": [
+            "sms", "inapp"
+        ],
+        "skills": [
+            "billing", "sales"
+        ]
+    },
+    "page": {
+        "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
+    }
+}
+```
+
+**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records. 
 
 **Response Example**
 
@@ -419,14 +440,23 @@ Each of the filter options shown above are optional.
    "accountId": "123456",
    "app": "prmsg",
    "attemptedStartTime": 1602007811000,
-   "attemptedEndTime": 1602008344000
+   "attemptedEndTime": 1602008344000,
+   "filters": {
+        "channels": [
+            "sms", 
+            "inapp"
+        ],
+        "skills": [
+            "billing", 
+            "sales"
+        ]
+    }
  },
  "page": {
-   "count": 100,
-   "previousOffset": 100,
-   "currentOffset": 200,
-   "nextOffset": 300
- },
+    "count": 1111,
+    "currentPage": "MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSWWWsDADDAwLS0yLTIyLTIwMjItNQ==",
+    "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
+  },
  "transactions": [
         {
             "channel": "sms",
@@ -447,7 +477,7 @@ Each of the filter options shown above are optional.
             "inviteTime": "2021-02-17T22:57:13.480Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign125",
+            "proactiveCampaignId": "campaign125",
             "readTime": null,
             "sentTime": "2021-02-17T22:57:13.586Z",
             "initialSkill": "prmsgoutbound",
@@ -474,7 +504,7 @@ Each of the filter options shown above are optional.
             "inviteTime": "2021-02-17T22:55:14.543Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign124",
+            "proactiveCampaignId": "campaign124",
             "readTime": null,
             "sentTime": "2021-02-17T22:55:14.716Z",
             "initialSkill": "billing",
@@ -501,7 +531,7 @@ Each of the filter options shown above are optional.
             "inviteTime": "2021-02-17T22:57:13.503Z",
             "optInsTime": null,
             "optOutsTime": null,
-            "proactiveCampaignId": "camapign123",
+            "proactiveCampaignId": "campaign123",
             "readTime": null,
             "sentTime": "2021-02-17T22:57:13.613Z",
             "initialSkill": "prmsgoutbound",
@@ -511,6 +541,165 @@ Each of the filter options shown above are optional.
             },
           ]
         }
+```
+
+**2. Get details for Transactions - Version 2.0**
+
+Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Transaction/transactions) to go through API spec to get started.
+
+| Method | URI  |
+| :--- | :--- |
+| POST | https://{domain}/api/account/{accountId}/app/{app}/transactions/
+
+**Path Parameters**
+
+| Name  | Description | Required | Value/Example |
+| :--- | :--- | :--- | :--- |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
+| accountId | LivePerson site ID | Yes | 12345678 |
+| app | App name | Yes | "prmsg" or "c2m" |
+
+**Query Parameters**
+
+| Name  | Description | Required | Value/Example |
+| :--- | :--- | :--- | :--- |
+| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
+| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
+| v | Transaction API version | Yes | 2.0 |
+
+**Request Headers**
+
+| Header | Description | Value/Example |
+| :--- | :--- | :--- |
+| Content-Type | Used to indicate the media type of the resource | application/json |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
+
+**Request Body**
+
+| Key | Description | Values/Examples |
+| :--- | :--- | :--- |
+| offset | The offset specifies from which record to retrieve the data | Default = 0 |
+| limit | The limit is max records per page | Default = 100, Max = 5000 |
+| messagestatus | Filter on message status of transactions | "FAILED", "SKIPPED", "SENT", "DELIVERED", "READ", "RESPONDED" |
+
+```json
+{
+    "offset": 0,
+    "limit": 1000,
+    "filters": {
+        "channels": [
+            "wa", "sms"
+        ],
+        "skills": [
+            "billing", "sales"
+        ],
+        "messagestatus": [
+            "FAILED", "READ"
+        ], 
+        "transactionids" : [
+            "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
+        ]
+    }
+}
+
+```
+
+**Response Example**
+
+200 Success
+```json
+{
+ "requestMetadata": {
+   "accountId": "123456",
+   "app": "prmsg",
+   "attemptedStartTime": 1602007811000,
+   "attemptedEndTime": 1602008344000,
+   "filters": {
+            "channels": [
+                "wa",
+                "sms"
+            ],
+            "skills": [
+                "billing",
+                "sales"
+            ],
+            "messagestatus": [
+                "FAILED",
+                "READ",
+                "DELIVERED"
+            ],
+            "transactionids": [
+                "0102dec8-ea9d-aca0-394b-82f6c89b2988",
+                "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
+            ]
+        }
+ },
+ "page": {
+        "count": 2,
+        "offset": 0,
+        "limit": 1000
+ },
+ "transactions": [
+        {
+            "channel": "sms",
+            "skill": "billing",
+            "transactionId": "0102dec8-ea9d-aca0-394b-82f6c89b2988",
+            "attemptedTime": "2021-02-17T22:57:13.214Z",
+            "cancelledTime": null,
+            "conversationId": null,
+            "conversationsClosedTime": null,
+            "conversationsCreatedTime": null,
+            "consumerId": null,
+            "deliveredTime": "2021-02-17T23:00:18.533Z",
+            "eligibleTime": null,
+            "errorCode": null,
+            "errorMessage": null,
+            "errorSource": null,
+            "failedTime": null,
+            "inviteTime": "2021-02-17T22:57:13.480Z",
+            "optInsTime": null,
+            "optOutsTime": null,
+            "proactiveCampaignId": "campaign125",
+            "readTime": "2021-02-17T22:57:13.586Z",
+            "sentTime": "2021-02-17T22:57:13.586Z",
+            "initialSkill": "prmsgoutbound",
+            "initialChannel": "sms",
+            "handOffId": "H000000000000000",
+            "skippedTime": null,
+            "ivrNumber": "",
+            "messageStatus": "READ"
+        },
+        {
+            "channel": "sms",
+            "skill": "sales",
+            "transactionId": "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9",
+            "attemptedTime": "2021-02-17T22:55:14.228Z",
+            "cancelledTime": null,
+            "conversationId": null,
+            "conversationsClosedTime": null,
+            "conversationsCreatedTime": null,
+            "consumerId": null,
+            "deliveredTime": "2021-02-17T23:00:18.533Z",
+            "eligibleTime": null,
+            "errorCode": "400",
+            "errorMessage": "Message failed to send",
+            "errorSource": "prmsg",
+            "failedTime": "2021-02-17T22:55:14.543Z",
+            "inviteTime": "2021-02-17T22:55:14.543Z",
+            "optInsTime": null,
+            "optOutsTime": null,
+            "proactiveCampaignId": "campaign124",
+            "readTime": null,
+            "sentTime": "2021-02-17T22:55:14.716Z",
+            "initialSkill": "billing",
+            "initialChannel": "sms",
+            "handOffId": "H000000000000000",
+            "skippedTime": null,
+            "ivrNumber": "",
+            "messageStatus": "FAILED"
+        }
+ ]
+}
 ```
 
 ### Common Error Responses
