@@ -62,7 +62,7 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
     * **Bot Settings** (see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings))
     * **Bot Change History**
-    * **Bot Diff**
+    * **Bot Compare**
     * **Visualize**
     * **Releases** (see [here](conversation-builder-versions-releases.html))
     * **Versions** (see [here](conversation-builder-versions-releases.html))

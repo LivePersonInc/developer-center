@@ -214,6 +214,60 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
+### Get conversation metadata
+
+Understanding the context of a consumer message can be valuable. This context or metadata can empower the bot with relevant information that’s actionable. For example, in the case of a conversation on a social messaging platform, it can be helpful to retrieve the platform in use, the page the consumer is on, the type of message (direct message, comment to post, comment to comment, etc.), and so on.
+
+Use the `getMetadata` function to retrieve metadata from the most recent message from the consumer during a bot conversation. You can find the list of metadata types that can be retrieved [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata).
+
+{: .important}
+Keep in mind that the metadata changes with each consumer message.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| getMetadata(metadataEventTypeName) | metadataEventTypeName (String) - The name of the metadata type. For the list of types, see [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). | If the metadata type exists, the JSON list is returned. If it does not, returns null/undefined. |
+
+#### Example
+```javascript
+var socialMetaData = botContext.getMetadata(“SocialMessagingEventData”)
+```
+
+The `socialMetaData` variable receives the `SocialMessagingEventData` from the metadata Javascript object array:
+
+```
+[{
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "{DirectMessage | Post | CC |CP }", // Post - User post into page community wall | CC - Comment to Comment | CP - Comment to Post
+        "parent": { // not required
+            "attachmentUrl": "{post_url}",
+            "pageName": "{FB Page Name}",
+            "postId": "{Parent Post or Comment Id}",
+            "postText": "{Parent text}",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "{Public|Private}",
+    "replyToId": "{The id of the message which will be send the response - used from Agent->Consumer}" // not required - from Consumer to Agent
+    "conversationState": {
+        "dmChatId": "{Messenger Id}",
+        "currentChannel": "{Public|Private}",
+        "enabledChannels": { // not required - channels enabled for this Facebook Page - configured on Connector
+            "private": true,
+            "public": true
+        }
+    },
+    "actions": [{ // not required
+        "name": "{Name of the action or field to be used on the connector}",
+        "payload": "{payload or field content}"
+        }
+    ]
+}]
+```
+
+The object array can be converted to a JSON list with JSON.stringify() in JavaScript.
+
 ### Get matched intent
 `getDialogStarterIntent` is used to retrieve the intent (associated with a Dialog Starter interaction) that was matched to the most recent user utterance.
 

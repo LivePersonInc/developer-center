@@ -1,13 +1,12 @@
 ---
 pagename: Carousel Template
 redirect_from:
-- structured-content-viber-templates-carousel-template.html
-  Keywords: structured content rich messaging
-  sitesection: Documents
-  categoryname: "Rich Messaging"
-  documentname: Viber Templates
-  permalink: viber-templates-carousel-template.html
-  indicator: messaging
+Keywords: structured content rich messaging
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Viber Templates
+permalink: viber-templates-carousel-template.html
+indicator: messaging
 ---
 
 ### Overview

@@ -53,7 +53,7 @@ $(document).ready(function () {
   var $title = $(".h1").text()
 
   if (
-    $title.indexOf("Let's build a conversational future together!") != -1 ||
+    $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
     $title.indexOf("Index") != -1
   ) {
     console.log("Welcome to LivePerson Developers!")
@@ -151,7 +151,7 @@ function navigateContent(url) {
       }
 
       if (
-        $title.indexOf("Let's build a conversational future together!") != -1 ||
+        $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
         console.log("Welcome to LivePerson Developers!")
@@ -249,7 +249,7 @@ function handleUniquePages() {
     indicatorContainer.css("display", "none")
     if (is_root) {
       document.getElementById("document-title-h1").innerText =
-        "Let's build a conversational future together!"
+        "Let's build the right Conversational AI solutions together"
     }
   } else {
     console.log("not in  root folder")
@@ -376,7 +376,7 @@ function populateAnchors() {
     $(".anchorlist").css("visibility", "hidden")
     //if there are anchorlinks, display the box
   } else {
-    html = '<p class="jumpToAnchor">Jump to:</p>'
+    html = '<p class="jumpToAnchor jump-top-title">Jump to:</p>'
     $(".anchorlist").css("visibility", "visible")
     //for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
     $.each(anchorlinks, function () {
@@ -427,7 +427,7 @@ function sidebarCollapse(url) {
   var currentPage = $('a[href="' + modifiedURL + '"]')
   var currentPageTitle = $(currentPage).html()
   //if this is the homepage
-  if (currentPageTitle == "Let's build a conversational future together!") {
+  if (currentPageTitle == "Let's build the right Conversational AI solutions together") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
     $(".innerfolder > .active > button").removeClass("clicked")
     $(".folder ul").slideUp(400, null)

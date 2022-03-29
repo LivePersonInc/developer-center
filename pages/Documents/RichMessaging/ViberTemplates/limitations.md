@@ -1,13 +1,12 @@
 ---
 pagename: Limitations
 redirect_from:
-- structured-content-viber-templates-limitations.html
-  Keywords: structured content rich messaging
-  sitesection: Documents
-  categoryname: "Rich Messaging"
-  documentname: Viber Messaging Templates
-  permalink: viber-templates-limitations.html
-  indicator: messaging
+Keywords: structured content rich messaging
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Viber Templates
+permalink: viber-templates-limitations.html
+indicator: messaging
 ---
 
 ### General limitations

@@ -1,14 +1,13 @@
 ---
 pagename: Quick Replies Template
 redirect_from:
-- quick-replies-viber-template.html
-  Keywords: quick replies rich messaging
-  sitesection: Documents
-  categoryname: "Rich Messaging"
-  documentname: Viber Templates
-  permalink: viber-templates-quick-replies-template.html
-  root-link: true
-  indicator: messaging
+Keywords: quick replies rich messaging
+sitesection: Documents
+categoryname: "Rich Messaging"
+documentname: Viber Templates
+permalink: viber-templates-quick-replies-template.html
+root-link: true
+indicator: messaging
 ---
 
 ### Overview
