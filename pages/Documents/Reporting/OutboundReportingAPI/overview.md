@@ -185,7 +185,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-Each of the filter options shown above are optional. Regardless of what filter options are used, the results will always be grouped by channel, skill, and transactionday. When additional filters, such as source or messagstatus or handoffid are added, the results will be grouped by them as well and these will fields will be included in the response.
+Each of the filter options shown above are optional. Regardless of what filter options are used, the results will always be grouped by channel, skill, and transactionday. When additional filters, such as source or handoffid are added, the results will be grouped by them as well and they will be included in the response.
 
 **Request Headers**
 
