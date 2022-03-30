@@ -167,7 +167,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 Figure 1.1 Showing the configuration that needs to be filled out when using username/password authentication
 
-You need to fill in the following infromation:
+You need to fill in the following information:
 
 <table>
   <thead>
