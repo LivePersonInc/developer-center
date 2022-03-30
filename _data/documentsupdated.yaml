@@ -408,7 +408,12 @@
             - subpagename: Advanced Features
         - pagename: Medallia   
           subpages:
-            - subpagename: Introduction                 
+            - subpagename: Introduction
+        - pagename: Custom Endpoint   
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: Public API
         - pagename: Hook Configuration
         - pagename: Conversation Tester
