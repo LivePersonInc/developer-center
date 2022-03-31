@@ -55,8 +55,8 @@ The below documents cover where to configure the initial message on a given plat
   </tbody>
 </table>
 
-A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response.
-In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
+A chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response.
+In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilized as a start point for the bot to prompt the user to provide input and progress the conversation.
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME-INTENT’ event.
 

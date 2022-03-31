@@ -164,4 +164,6 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Medallia (for Survey Bots)](third-party-bots-medallia-introduction.html)
 
+- [Custom Endpoint](third-party-bots-custom-endpoint-introduction.html)
+
 - [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)

@@ -2,7 +2,7 @@
 
 **As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH ON THE PUBLIC VERSION OF THIS REPOSITORY. THERE IS NO MORE NEED FOR THE INTERNAL REPOSITORY**
 
-**This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com for issues, questions, and the such**.
+**This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com / ihaephrati@liveperson.com for issues, questions, and the such**.
 
 This repository generates LivePerson's Developer Center, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 

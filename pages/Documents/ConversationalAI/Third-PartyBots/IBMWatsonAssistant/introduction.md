@@ -20,7 +20,7 @@ The following documentation outlines the configuration for the connector and how
 ### Watson Version 1 Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide before using this document to complete pre-requisite steps.
+See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
 {: .important}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
@@ -152,7 +152,7 @@ Once you are done with providing configuration you can save it by pressing on "D
 ### Watson Assistant Version 2 Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide before using this document to complete pre-requisite steps.
+See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
 {: .important}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
@@ -167,7 +167,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 Figure 1.1 Showing the configuration that needs to be filled out when using username/password authentication
 
-You need to fill in the following infromation:
+You need to fill in the following information:
 
 <table>
   <thead>

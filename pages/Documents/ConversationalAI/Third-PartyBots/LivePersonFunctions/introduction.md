@@ -22,7 +22,7 @@ As the LivePerson functions feature uses [LivePerson Functions](https://develope
 ### Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
+See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 Once you have completed the guide above, you will be presented with following screen to complete the Vendor Settings in order to add a bot.
 
