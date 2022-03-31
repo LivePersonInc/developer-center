@@ -135,4 +135,4 @@ Continue if you are familiar with how to implement a Custom Endpoint service.
 
 ### Limitations
 
-- Custom Endpoint support only content events content events and rich content events (consumer messages). We do not support any other UMS events nor we forward any other events.
+- Custom Endpoint support only content events and rich content events (consumer messages). We do not support any other UMS events nor we forward any other events.
