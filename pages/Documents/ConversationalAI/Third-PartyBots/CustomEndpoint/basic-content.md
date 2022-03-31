@@ -18,7 +18,7 @@ on abstract level can be defined as follows
 <ol>
 <li>Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)</li>
 <li>CM that was sent to UMS reaches to the Third-Party Bot connector</li>
-<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e "www.mybotapi.com/api" in the Figure 2.1) </li>
+<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e `www.mybotapi.com/api` in the Figure 2.1) </li>
 <li>Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector which parse and validate it</li>
 <li>Third-Party Bot connector send the bot response to the UMS</li>
 <li>UMS send the bot response to the consumer</li>
@@ -37,10 +37,10 @@ The Custom Endpoint vendor has a public Github [Repository](https://github.com/L
 contracts/interface in the format of swagger file that needs to be implemented by brands.
 Following are the methods defined by the specification:
 
-- **Get Bot Environments**: This API fetch the list of enviorments defined for the passed `botId`
+- **Get Bot Environments**: This API fetch the list of environments defined for the passed `botId`
 - **Get Bot State**: This API sends the bot state if the bot is `online` or not.
 - **Get Conversation Events**: This API sends bot responses on the passed consumer messages.
-- **Create Conversation**: This API creates a conversation instance for the given conversationd
+- **Create Conversation**: This API creates a conversation instance for the given conversation
   (`convId`) for a given `botId`
 
 Please refer to the [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
@@ -50,10 +50,10 @@ for detailed information on Request and Response bodies created or expected by T
 
 Third-Party Bot connector uses official Conversational Cloud [OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) (App-JWT)
 Authorization mechanism for server to server interaction. Third-party bot connector uses the provided
-`Client ID` and `Client Seceret` of App Installation in vendor configuration to generate breare token.
-More information on the sentinal API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+`Client ID` and `Client Secret` of App Installation in vendor configuration to generate bearer token.
+More information on the sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
-Third-Party Bot connector sends `Authorization` header with the bearar token to all of the requests
+Third-Party Bot connector sends `Authorization` header with the bearer token to all of the requests
 to Custom Endpoint service. The brands needs to ensure authentication and authorization for their
 Custom Endpoint service endpoints.
 
@@ -65,35 +65,35 @@ section will be called by Third-Party Bot connector.
 
 {: .important}
 Please note brands needs to store information of Conversation and Bot on their Custom Endpoint
-service so that information can be reterived.
+service so that information can be retrieved.
 
 - Test Connection
 - Consumer Message
 
 #### Test Connection
 
-Test connection flow is exectuted on two diffrent places.
+Test connection flow is executed on two different places.
 
-- When a user while creating a Custom Endpoint Bot uses the featue of Test Connection
+- When a user while creating a Custom Endpoint Bot uses the feature of Test Connection
 - When a user starts a bot and Third-Party Bot connector verifies the connection to the Custom Endpoint service
 
 In both scenarios Figure 2.2 shows the sequence diagram which endpoint in the Custom Endpoint
 service is called
 
 {: .important}
-For more information on Request body and Responses expected by or recveid from Custom Endpoint service are avalible
+For more information on Request body and Responses expected by or received from Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
 <img class="fancyimage" src="img/customendpoint/test-connection-flow.png">
 Figure 2.2 showing the happy test connection flow
 
-1. Test Connection Caller call the Thrid-party Bots Connector/API
+1. Test Connection Caller call the Third-party Bots Connector/API
 2. Third-Party Bots Connector/API get Sentinel Bearer by using the credentials provided
    in vendor configuration
 3. Response from Sentinel API is sent back with the access token that can be used as bearer
 4. Get Bot State endpoint of Custom Endpoint service is called with the bearer token received
    from Sentinel API
-5. Response from the Get Bot State endpoint is recived by Third-Party Bots Connector/API
+5. Response from the Get Bot State endpoint is received by Third-Party Bots Connector/API
 6. Response of Success or Failure is sent back based on the response of the Get Bot State endpoint
 
 #### Consumer Message
@@ -109,18 +109,18 @@ in [API Service Specification](https://github.com/LivePersonInc/third-party-bots
 <img class="fancyimage" src="img/customendpoint/consumer-message-flow.png">
 Figure 2.3 showing the happy consumer message flow
 
-1. Consumer Message notification is received by the Thrid-party Bots Connector from UMS
-2. If Sentinal bearer does not exsists Third-Party Bots Connector/API get Sentinel Bearer from
+1. Consumer Message notification is received by the Third-party Bots Connector from UMS
+2. If Sentinel bearer does not exists Third-Party Bots Connector/API get Sentinel Bearer from
    Sentinel API by using the credentials provided in vendor configuration
 3. If received Consumer Message context does not contain conversation id or a new conversation
    received then call Create Conversation method of Custom Endpoint service. This call will include
    SDES information and LivePerson context
 4. After creation of conversation, Third-Party Bot Connector sends consumer message with the
-   Conversation Context to the Get Converstaion Event method of Custom Endpoint service
-5. After receving bot response, Third-Party Bot Connector parse and validate it and send back
+   Conversation Context to the Get Conversation Event method of Custom Endpoint service
+5. After receiving bot response, Third-Party Bot Connector parse and validate it and send back
    parsed bot response
 
-**Please Note**: In Consumer Message flow if Thrid-Party bot connector receive HTTP 404 response
+**Please Note**: In Consumer Message flow if Third-Party bot connector receive HTTP 404 response
 on Get Conversation Events method call, Retry mechanism from Step 3 onward will be tried one time
 more to send the consumer message to Custom Endpoint service.
 
@@ -261,25 +261,25 @@ tell the connector to transfer the conversation to a given skill.
 
 Multiple scenarios for transfer/escalations exist and are as follows:
 
-1. If the Bot does not have an appropriate answer, it should recognise this as a scenario
+1. If the Bot does not have an appropriate answer, it should recognize this as a scenario
    for a transfer. Depending on the connector configuration or the decision making capacity
    of the bot, the bot will transfer to a particular skill or default skill.
 
 2. Explicit request from visitor to transfer to an agent
 
-3. If there is a internal error in Third-Party connetor or the Custom Endpoint service
+3. If there is a internal error in Third-Party connector or the Custom Endpoint service
    cannot be reached then Third-Party Bot connector will transfer to a default skill
    set up during configuration.
 
 Transfer action has two sets of responses that are as below:
 
 {: .important}
-The response is expected to be sent by Get Conversation Events method of Custom Endpoint service
-to ensure validity of response brands can use our [Conversation Tester feature](third-party-bots-conversation-tester.html)
+The response is expected to be sent by Get Conversation Events method of Custom Endpoint service.
+To ensure validity of response, brands can use our [Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ##### Transfer to Skill
 
-In this case transfer action will happen to the given skill name (case sensative) that is passed.
+In this case transfer action will happen to the given skill name (case sensitive) that is passed.
 An example of such response can be seen below in Figure 2.5. More information on responses expected
 by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
@@ -374,6 +374,10 @@ to have the bot end the conversation. An example response can be seen below in F
 More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
+{: .important}
+The response is expected to be sent by Get Conversation Events method of Custom Endpoint service.
+To ensure validity of response, brands can use our [Conversation Tester feature](third-party-bots-conversation-tester.html)
+
 ```json
 {
   "response": [
@@ -440,6 +444,10 @@ LivePerson Messaging uses 3 different types of priorities:
 An example response with `URGENT` priority can be seen below in Figure 2.9.
 More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
+
+{: .important}
+The response is expected to be sent by Get Conversation Events method of Custom Endpoint service.
+To ensure validity of response, brands can use our [Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
