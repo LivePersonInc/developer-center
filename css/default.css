@@ -804,15 +804,22 @@ a.loginText {
     padding: 12px 32px;
 }
 
-.loginButton,
-.trialButton {
+.trialButton,
+.loginButton {
     text-align: center;
-    font-family: Space Grotesk;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     border-radius: 24px;
+}
+
+button.loginButton {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .documentsbutton {

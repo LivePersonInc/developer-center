@@ -46,7 +46,7 @@ For more on permissions, see [here](bot-accounts-permissions.html).
 ### Access Intent Manager
 
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Intent Manager**.
+2. In the [Conversational AI dashboard](platform-overview.html), click **Intent Manager**.
 
 ### Enable intent discovery, optimization & analysis
 
