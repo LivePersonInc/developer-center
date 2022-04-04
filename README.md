@@ -132,7 +132,7 @@ To updated production and staging enviornments, create a pull request for master
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 
-* Staging (built from the `Staging` branch): [https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
+* Staging (built from the `Staging` branch): [https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
 
 
 #### Updating/Creating Headers
