@@ -219,7 +219,7 @@ Currently, only APIs that use [API Key](guides-gettingstarted.html) authorizatio
 
 If you need to access an API which is not covered by the default API-key/Whitelisting, you need to perform the following steps:
  1. Create and maintain the API Key credentials
- * Create an API Key as described [here](guides-gettingstarted.html). (the [Messaging Interactions API](messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`)
+ * Create an OAuth 1.0 API Key as described [here](guides-gettingstarted.html). (the [Messaging Interactions API](messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`)
  * Create a new [secret](liveperson-functions-development-storing-secrets.html) of the type JSON to save the API Key credentials. The JSON has to have the structure as displayed below. Provide the name of the created secret when using the LP Client (see Sample Usage below for an example).
 
     ```javascript
