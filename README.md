@@ -115,8 +115,7 @@ Example Documentname is pagename:
       - documentname: API Guidelines
         pages:
         - pagename: Accessing LivePerson APIs
-        - pagename: Create OAuth 1.0 API keys
-        - pagename: OAuth 2.0 Client Credentials
+        - pagename: Create API keys
         - pagename: Domain API
         - pagename: Data APIs
         - pagename: API Data Metrics

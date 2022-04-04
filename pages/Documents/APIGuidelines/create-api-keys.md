@@ -1,8 +1,8 @@
 ---
-pagename: Create OAuth 1.0 API keys
+pagename: Create API keys
 sitesection: Documents
 categoryname: "API Guidelines"
-permalink: create-oauth-1-0-api-keys.html
+permalink: create-api-keys.html
 indicator: both
 redirect_from:
     - essential-resources-create-api-keys.html
@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 
-### Create an OAuth 1.0 API key
+### Create an API key
 
 API keys are security tokens that you use to access Conversational Cloud services. The API key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
 
@@ -30,11 +30,8 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 {:start="4"}
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
-5. Select the relevant category for your API, check the relevant checkbox for selecting API permissions and then click **Save**.  
- 
-    {:.important}
-   For bots logins, you will need to select the **Agent Interactions** category and check the **User Login** API permission
- 
+5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
+
    ![](/img/APIKeyCreation.png)
 
 {:start="6"}
