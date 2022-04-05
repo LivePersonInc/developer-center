@@ -2,7 +2,7 @@
 
 **As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH ON THE PUBLIC VERSION OF THIS REPOSITORY. THERE IS NO MORE NEED FOR THE INTERNAL REPOSITORY**
 
-**This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com / ihaephrati@liveperson.com for issues, questions, and the such**.
+**This site is maintained by the Product Communications and Experience team. Please contact ihaephrati@liveperson.com for issues, questions, and the such**.
 
 This repository generates LivePerson's Developer Center, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 
@@ -115,7 +115,8 @@ Example Documentname is pagename:
       - documentname: API Guidelines
         pages:
         - pagename: Accessing LivePerson APIs
-        - pagename: Create API keys
+        - pagename: Create OAuth 1.0 API keys
+        - pagename: OAuth 2.0 Client Credentials
         - pagename: Domain API
         - pagename: Data APIs
         - pagename: API Data Metrics
@@ -132,7 +133,7 @@ To updated production and staging enviornments, create a pull request for master
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 
-* Staging (built from the `Staging` branch): [https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
+* Staging (built from the `Staging` branch): [https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
 
 
 #### Updating/Creating Headers
