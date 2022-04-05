@@ -1,16 +1,17 @@
 ---
-pagename: Get & Set Contextual Data
+pagename: Get & Set Session Data
 redirect_from:
+    - conversation-builder-scripting-functions-get-set-contextual-data.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-get-set-contextual-data.html
+permalink: conversation-builder-scripting-functions-get-set-session-data.html
 indicator: both
 ---
 
-Use the following built-in functions to get and set contextual data.
+Use the following built-in functions to get and set session data.
 
 ### Get and set bot variable
 

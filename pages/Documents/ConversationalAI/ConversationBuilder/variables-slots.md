@@ -41,7 +41,7 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 #### Storing and accessing variables with code
 
-The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable) can be used to store and access variables in the Pre-Process / Post-Process Code or the Process User Response JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html).
+The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-set-session-data.html#get-and-set-bot-variable) can be used to store and access variables in the Pre-Process / Post-Process Code or the Process User Response JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html).
 
 #### Cleaning variable data
 
