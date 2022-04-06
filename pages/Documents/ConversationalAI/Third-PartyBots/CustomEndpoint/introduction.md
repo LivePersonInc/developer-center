@@ -16,7 +16,6 @@ The following document outlines the configuration of the  **Custom Endpoint** co
 
 It enables brands to connect orchestration layers, develop their own adapters for unsupported ai vendors or write
 completely custom bot implementations and connect them to the Conversational Cloud.
-Bot responses for incoming consumer messages, and connect to conversations taking place in the
 Conversational Cloud.
 
 ### Configuration
