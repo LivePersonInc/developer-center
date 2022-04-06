@@ -38,7 +38,7 @@ Following are the methods defined by the specification:
 
 - **Get Bot Environments**: This endpoint fetches the list of environments defined for the passed `botId`
 - **Get Bot State**: This endpoint is called on test connection. It should response with the bot state and the bot version. Every state besides 'online' will let the test connection fail.
-- **Get Conversation Events**: This API sends bot responses on the passed consumer messages.
+- **Send Conversation Events**: This API sends bot responses on the passed consumer messages.
 - **Create Conversation**: This API creates a conversation instance for the given conversation
   (`convId`) for a given `botId`
 
