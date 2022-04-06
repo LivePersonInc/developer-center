@@ -37,7 +37,7 @@ contracts/interface in the format of a swagger file that needs to be implemented
 Following are the methods defined by the specification:
 
 - **Get Bot Environments**: This API fetches the list of environments defined for the passed `botId`
-- **Get Bot State**: This API sends the bot state if the bot is `online` or not.
+- **Get Bot State**: This endpoint is called on test connection. It should response with the bot state and the bot version. Every state besides 'online' will let the test connection fail.
 - **Get Conversation Events**: This API sends bot responses on the passed consumer messages.
 - **Create Conversation**: This API creates a conversation instance for the given conversation
   (`convId`) for a given `botId`
