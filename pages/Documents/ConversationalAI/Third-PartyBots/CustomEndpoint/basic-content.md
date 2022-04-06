@@ -53,7 +53,7 @@ mechanism for a server to server interaction. Third-Party Bots uses the provided
 More information on the Sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
 Third-Party Bots sends the bearer token inside the `Authorization` on all requests
-to Custom Endpoint service. The brands need to ensure authentication and authorization for their
+to the Custom Endpoint service. The brands need to ensure the request is authorised, e.g. if the account the request is coming from is allowed to access the addressed bot
 Custom Endpoint service endpoints.
 
 ### Custom Endpoint (CE) Service Flows
