@@ -76,7 +76,7 @@ Test connection flow is executed in two different scenarios:
 - When a user while creating a Custom Endpoint Bot uses the feature of Test Connection
 - When a user starts a bot and Third-Party Bot connector verifies the connection to the Custom Endpoint service
 
-In both scenarios Figure 2.2 shows the sequence diagram which endpoint in the Custom Endpoint
+In both scenarios Figure 2.2 shows the sequence of interactions with the involved services
 service is called
 
 {: .important}
