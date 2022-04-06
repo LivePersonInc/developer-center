@@ -91,7 +91,7 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   </tr>
   <tr>
     <td>Bot ID</td>
-    <td>Bot Identifier created by the Custom Endpoint service. Preferred is UUID</td>
+    <td>Alphanumeric bot Identifier for the bot on the Custom Endpoint service. We recommend using UUIDs</td>
     <td>1e9bebc6-0403-43a1-9a5e-2e17ca876568</td>
   </tr>
   <tr>
