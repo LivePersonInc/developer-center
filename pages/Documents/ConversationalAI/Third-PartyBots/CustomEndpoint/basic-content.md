@@ -32,7 +32,7 @@ response is sent back.
 #### Custom Endpoint (CE) Service Methods
 
 The Custom Endpoint vendor has a public [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-(a.k.a Third-Party Bots Custom Endpoint Reference Service) which contains endpoints and their
+which contains the [OpenAPI Specification](https://swagger.io/specification) any service needs to implement in order to connect to Third-Party Bots via the Custom Endpoint Vendor
 contracts/interface in the format of a swagger file that needs to be implemented by brands.
 Following are the methods defined by the specification:
 
