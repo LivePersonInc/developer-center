@@ -52,7 +52,7 @@ Authorization mechanism for a server to server interaction. Third-party bot conn
 `Client ID` and `Client Secret` of App Installation in vendor configuration to generate bearer token.
 More information on the sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
-Third-Party Bot connector sends `Authorization` header with the bearer token to all of the requests
+Third-Party Bots sends the bearer token inside the `Authorization` on all requests
 to Custom Endpoint service. The brands need to ensure authentication and authorization for their
 Custom Endpoint service endpoints.
 
