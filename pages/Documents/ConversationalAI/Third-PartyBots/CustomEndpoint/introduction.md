@@ -14,7 +14,8 @@ indicator:
 
 The following document outlines the configuration of the  **Custom Endpoint** connector.
 
-Custom Endpoint enables brands to plug in orchestration layers between their bot and Conversational Cloud.
+It enables brands to connect orchestration layers, develop their own adapters for unsupported ai vendors or write
+completely custom bot implementations and connect them to the Conversational Cloud.
 The custom endpoint feature of Third Party Bots allows brands to build their API that generates
 Bot responses for incoming consumer messages, and connect to conversations taking place in the
 Conversational Cloud.
