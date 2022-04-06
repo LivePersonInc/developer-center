@@ -49,7 +49,7 @@ for detailed information on Request and Response bodies created or expected by t
 
 Third-Party Bot connector uses [App-JWT OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) authentication 
 mechanism for a server to server interaction. Third-Party Bots uses the provided
-`Client ID` and `Client Secret` of App Installation in vendor configuration to generate bearer token.
+`Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate bearer tokens.
 More information on the sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
 Third-Party Bots sends the bearer token inside the `Authorization` on all requests
