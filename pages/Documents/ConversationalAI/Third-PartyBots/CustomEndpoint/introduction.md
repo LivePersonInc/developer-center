@@ -33,7 +33,7 @@ To complete the Custom Endpoint vendor configuration step, please ensure you hav
   repository [here](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
   Third-Party Bots connector will call the defined endpoint with the consumer message as payload.
 
-- Custom Endpoint service endpoint/URL must be whitelisted before configuring/starting the bot. If
+- The custom endpoint domain must be whitelisted before configuring/starting the bot. If
   whitelisting is not done then the bot will not start nor will be able to perform test connection
   successfully. Please contact the Third-Party Bots team or LivePerson account representative to set this up for you.
 
