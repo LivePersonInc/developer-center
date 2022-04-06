@@ -34,7 +34,7 @@ To complete the Custom Endpoint vendor configuration step, please ensure you hav
   Third-Party Bots connector will call the defined endpoint with the consumer message as payload.
 
 - The custom endpoint domain must be whitelisted before configuring/starting the bot. If
-  whitelisting is not done then the bot will not start nor will be able to perform test connection
+  whitelisting is not done then the bot will fail to start. Also the "Test Connection" feature will indicate an issue
   successfully. Please contact the Third-Party Bots team or LivePerson account representative to set this up for you.
 
 - Third-Party Bots uses an App Installation for authentication of Custom Endpoint bot. There is a guide available
