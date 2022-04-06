@@ -29,7 +29,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 To complete the Custom Endpoint vendor configuration step, please ensure you have the following measures taken:
 
 - The orchestration layer (a.k.a Custom Endpoint service) must be implemented according to the provided API specification
-  defined by Third-Party Bots. An example of such an API specification Reference can be found on the public git
+  defined by Third-Party Bots. A reference implementation of the API specification can be found on the public git
   repository [here](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
   Third-Party Bots connector will call APIs with the consumer message as a payload.
 
