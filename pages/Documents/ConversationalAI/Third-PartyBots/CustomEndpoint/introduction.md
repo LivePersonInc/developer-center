@@ -105,7 +105,7 @@ The following Custom Endpoint information should be provided to Third-Party Bots
 </table>
 
 {: .important}
-You have to agree to Data Disclaimer from now onward to use the services of the Third-Party Bots connector.
+You have to agree to the Data Disclaimer to use the services of the Third-Party Bots connector.
 For that, you can click on the checkbox "I agree to the Data Disclaimer"
 
 #### Test Connection
