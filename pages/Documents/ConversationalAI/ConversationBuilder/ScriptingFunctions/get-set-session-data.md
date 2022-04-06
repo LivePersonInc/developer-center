@@ -456,26 +456,26 @@ switch(type){
   case "WKEND_REG_HOURS":
     msg = "Let me connect you to an Agent who can help you.";
     botContext.setBotVariable('transferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('Liveperson Transfer');
+    botContext.setTriggerNextMessage('Liveperson Transfer');
     break;
 
   case "AFTER_HOURS":
   case "WKEND_AFTER_HOURS":
     msg = "You have reached us after our business hours. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_THANKS":
     msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_XMAS":
     msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 }
 ```
