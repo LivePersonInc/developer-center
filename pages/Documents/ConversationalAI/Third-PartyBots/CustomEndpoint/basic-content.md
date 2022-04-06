@@ -47,7 +47,7 @@ for detailed information on Request and Response bodies created or expected by t
 
 #### Authorization and Authentication
 
-Third-Party Bot connector uses the official Conversational Cloud [OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) (App-JWT)
+Third-Party Bot connector uses [App-JWT OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) authentication 
 Authorization mechanism for a server to server interaction. Third-party bot connector uses the provided
 `Client ID` and `Client Secret` of App Installation in vendor configuration to generate bearer token.
 More information on the sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
