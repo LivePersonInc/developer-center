@@ -22,7 +22,7 @@ Conversational Cloud.
 ### Configuration
 
 {: .important}
-See the [Getting Started](third-party-bots-getting-started.html) guide first to complete bot configuration pre-requisite steps.
+See the [Getting Started](third-party-bots-getting-started.html) guide first to complete the necessary preparations for your account to use Third Party Bots
 
 #### Prerequisite for Vendor Configuration
 
