@@ -31,7 +31,7 @@ To complete the Custom Endpoint vendor configuration step, please ensure you hav
 - The orchestration layer (a.k.a Custom Endpoint service) must be implemented according to the provided API specification
   defined by Third-Party Bots. A reference implementation of the API specification can be found on the public git
   repository [here](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
-  Third-Party Bots connector will call APIs with the consumer message as a payload.
+  Third-Party Bots connector will call the defined endpoint with the consumer message as payload.
 
 - Custom Endpoint service endpoint/URL must be whitelisted before configuring/starting the bot. If
   whitelisting is not done then the bot will not start nor will be able to perform test connection
