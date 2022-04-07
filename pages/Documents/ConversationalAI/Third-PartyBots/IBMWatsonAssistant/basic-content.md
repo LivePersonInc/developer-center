@@ -472,6 +472,9 @@ Figure 2.16 Quick Replies StructuredContent example.
 
 ### Bot Actions
 
+{: .notice}
+Please note we only support **ONE ACTION** per response
+
 #### Transfer / Escalations
 
 <div class="notice">

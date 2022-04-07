@@ -69,11 +69,21 @@ During run-time, your bot may have different operational states. These states ar
 
 ### Limitations
 
-#### Supported customer content
+#### Supported customer content events
 
-Currently, the bot connectors only support plain text input from the customer. If the customer sends an image or a file to the bot, the bot will replace it with a special identifier so the bot can handle this special use-case with custom code.
+Currently, the bot connectors only support following events from the customer:
 
-The identifier which will replace images or files is **com.liveperson.bot-connectors.consumer.send-file**.
+- Plain text input
+- Rich Content
+- File
+
+We do not support passing of any other UMS events. If the customer sends an
+rich content or a file to the bot, the bot will replace it with a special
+identifier so the bot can handle this special use-case with custom code.
+Those identifies are as follows:
+
+- Rich Content Identifier: **com.liveperson.bot-connectors.consumer.send-rich-content**
+- File Content Identifier: **com.liveperson.bot-connectors.consumer.send-file**
 
 #### Support for different messaging channels and corresponding rich content
 
