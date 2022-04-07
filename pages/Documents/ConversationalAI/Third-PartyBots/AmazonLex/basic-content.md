@@ -203,6 +203,9 @@ Figure 2.4 QuickReplies Structured Content example
 
 ### Bot Actions
 
+{: .notice}
+Please note we only support **ONE ACTION** per Custom Endpoint service response
+
 #### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.

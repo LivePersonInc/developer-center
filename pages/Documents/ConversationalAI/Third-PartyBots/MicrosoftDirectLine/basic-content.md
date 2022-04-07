@@ -185,6 +185,9 @@ Figure 2.3 Welcome activity on chat
 
 ### Bot Actions
 
+{: .notice}
+Please note we only support **ONE ACTION** per Custom Endpoint service response
+
 #### Transfer
 
 This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
