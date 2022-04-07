@@ -12,11 +12,21 @@ indicator:
 
 ### Overview
 
-The following document outlines the configuration of the  **Custom Endpoint** connector.
+The following document outlines the configuration of the **Custom Endpoint** connector.
 
-It enables brands to connect orchestration layers, develop their own adapters for unsupported ai vendors or write
-completely custom bot implementations and connect them to the Conversational Cloud.
-Conversational Cloud.
+The Custom Endpoint feature of Third Party Bots allows brands to provide their REST API
+as a service of bot responses inside the Conversational Cloud. This is complementary to
+the LivePerson Functions integration and suited for solutions that are: too complex to be
+comfortably implemented in a LivePerson function, or need to be implemented in a different
+programming language or they are necessary to be fully controlled by the brand.
+Possible user-cases that can help brands leverage the custom endpoint feature are as follows:
+
+- Brands can provide a REST API service as an orchestration layer between the Conversational Cloud
+  and the AI vendors of their choice that fulfills tasks like context enrichment, data
+  sanitization, or routing.
+- Brands can connect their instance of the Conversational Cloud to AI vendors that are not
+  supported out-of-the-box by LivePerson. AI vendors can provide a REST API service to
+  get out-of-the-box support between the Conversational Cloud and their platform.
 
 ### Configuration
 
@@ -27,14 +37,14 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 To complete the Custom Endpoint vendor configuration step, please ensure you have the following measures taken:
 
-- The orchestration layer (a.k.a Custom Endpoint service) must be implemented according to the provided API specification
+- The Custom Endpoint service must be implemented according to the provided API specification
   defined by Third-Party Bots. A reference implementation of the API specification can be found on the public git
   repository [here](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
   Third-Party Bots connector will call the defined endpoint with the consumer message as payload.
 
-- The custom endpoint domain must be whitelisted before configuring/starting the bot. If
-  whitelisting is not done then the bot will fail to start. Also the "Test Connection" feature will indicate an issue
-  successfully. Please contact the Third-Party Bots team or LivePerson account representative to set this up for you.
+- The Custom Endpoint service domain must be whitelisted before it can be used in Third-Party Bots. If
+  whitelisting is not done, then the bot will not start nor will it be able to perform a test connection.
+  Please contact the Third-Party Bots team or LivePerson account representative to set this up for you.
 
 - Third-Party Bots uses an App Installation for authentication of Custom Endpoint bot. There is a guide available
   [here](conversational-cloud-applications-installing-conversational-cloud-applications.html) on how to install
@@ -81,7 +91,7 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   </tr>
   <tr>
     <td>Client ID</td>
-    <td>ID of the Installed App with the scope <b>ihub.tpb.customendpoint</b></td>
+    <td>ID of the Installed App</td>
     <td>xxxxxxx-123e-xxxx-xxxx-xxxxxxx0441c</td>
   </tr>
   <tr>
@@ -133,8 +143,3 @@ completed the configuration of the Custom Endpoint bot.
 Following guide is going to introduce how to implement functions for Custom Endpoint using reference of
 [API Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
 Continue if you are familiar with how to implement a Custom Endpoint service.
-
-### Limitations
-
-- Custom Endpoint support only content events and rich content events (consumer messages).
-  We do not support any other UMS events nor do we forward any other events.
