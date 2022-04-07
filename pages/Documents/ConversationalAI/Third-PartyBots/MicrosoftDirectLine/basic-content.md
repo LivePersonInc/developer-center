@@ -186,7 +186,7 @@ Figure 2.3 Welcome activity on chat
 ### Bot Actions
 
 {: .notice}
-Please note we only support **ONE ACTION** per Custom Endpoint service response
+Please note we only support **ONE ACTION** per response
 
 #### Transfer
 

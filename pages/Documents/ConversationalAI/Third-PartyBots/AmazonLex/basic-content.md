@@ -204,7 +204,7 @@ Figure 2.4 QuickReplies Structured Content example
 ### Bot Actions
 
 {: .notice}
-Please note we only support **ONE ACTION** per Custom Endpoint service response
+Please note we only support **ONE ACTION** per response
 
 #### Transfer / Escalations
 

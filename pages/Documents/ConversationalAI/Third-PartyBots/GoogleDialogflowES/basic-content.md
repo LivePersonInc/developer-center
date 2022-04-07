@@ -196,7 +196,7 @@ Figure 2.4 Example of Quick Replies as Structured Content
 ### Bot Actions
 
 {: .notice}
-Please note we only support **ONE ACTION** per Custom Endpoint service response
+Please note we only support **ONE ACTION** per response
 
 #### Transfer
 
