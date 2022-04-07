@@ -50,7 +50,8 @@ To complete the Custom Endpoint vendor configuration step, please ensure you hav
   [here](conversational-cloud-applications-installing-conversational-cloud-applications.html) on how to install
   an Application in the Conversational Cloud. Please contact the LivePerson account representative to ensure you
   have already installed the app. The example payload for App Installation can be found below
-  (Please note the `scope` value as well. Currently Third-Party bots itself does not enforce any specific scope. This is expected to change in a future release)
+  (Please note, the `scope` value as well. Currently Third-Party Bots itself does not enforce any specific scope.
+  This is expected to change in a future release)
 
 ```json
 {

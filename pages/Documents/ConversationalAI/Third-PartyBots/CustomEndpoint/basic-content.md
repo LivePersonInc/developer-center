@@ -8,48 +8,12 @@ permalink: third-party-bots-custom-endpoint-basic-content.html
 indicator:
 ---
 
-### API Service Specification
-
-The Custom Endpoint vendor of Third Party Bots allows brands to build their own API that generates
-Bot responses for incoming consumer messages, and connect this to conversations taking place in the
-Conversational Cloud. The basic flow of how a consumer message is sent and bot response is received
-on an abstract level can be seen in Figure 2.1
-
-<img class="fancyimage" style="width:800px" src="img/customendpoint/message-flow.png">
-Figure 2.1 Depicts how a consumer message is sent to Custom Endpoint and a
-response is sent back.
-
-<ol>
-<li>Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)</li>
-<li>CM that was sent to UMS reaches the Third-Party Bot connector</li>
-<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e `www.mybotapi.com/api` in Figure 2.1) </li>
-<li>Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector 
-    which parses and validates it</li>
-<li>Third-Party Bot connector sends the bot response to the UMS</li>
-<li>UMS sends the bot response to the consumer</li>
-</ol>
-
-### Engagement attributes (SDES)
-
-Third-Party bots allow the collection of engagement attributes (more information can be found
-[here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes`
-option is checked in the `Conversation Type` step as shown in Figure 2.4.
-
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
-Figure 2.4 `Conversation Type step` in creation/modification of bot configuration.
-
-These attributes are **only** collected at the start of a conversation. we send those engagement attributes
-when the Third-Party Bot connector calls the [Create Conversation](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method defined in the Custom Endpoint service.
-
-{: .important}
-**Please Note** It is the responsibility of the Custom Endpoint service owner to ensure
-storing/updating of SDES on their end.
-
-Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes,
-Further information on Visit Information API can be found [here](visit-information-api-visit-information.html).
-Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and are
-only passed along with each message request.
+This section will describe The responses that are expected to be sent by the
+[Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
+endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
+[Conversation Tester feature](third-party-bots-conversation-tester.html).
+In the case of Structure Content validation, you can also leverage
+[this tool](https://livepersoninc.github.io/json-pollock/editor/).
 
 ### Sending Rich Content (Structured Content)
 
@@ -63,14 +27,8 @@ must add all possible domains to this list manually as wildcards are not support
 All domains must be HTTPS secure.
 
 An example of a Rich Content message response along with any optional metadata and analytical
-information (intents) can be seen in Figure 2.5 below. More information on responses expected
+information (intents) can be seen in Figure 3.1 below. More information on responses expected
 by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of the Custom Endpoint service please ensure valid structured content is sent by using our
-[Conversation Tester feature](third-party-bots-conversation-tester.html) or using
-[this tool](https://livepersoninc.github.io/json-pollock/editor/).
 
 ```json
 {
@@ -108,7 +66,7 @@ method of the Custom Endpoint service please ensure valid structured content is 
 }
 ```
 
-Figure 2.5 Showing an example response of Structure Content Message
+Figure 3.1 Showing an example response of Structure Content Message
 
 ### Sending Quick Replies (Structured Content)
 
@@ -120,14 +78,8 @@ For detailed information on Quick Replies check out the documentation for the sp
 [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
 An example of a Quick Replies message response along with any optional metadata and analytical
-information (intents) can be seen below in Figure 2.6. More information on responses expected
+information (intents) can be seen below in Figure 3.2. More information on responses expected
 by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of the Custom Endpoint service please ensure valid structured content is sent by using our
-[Conversation Tester feature](third-party-bots-conversation-tester.html) or using
-[this tool](https://livepersoninc.github.io/json-pollock/editor/).
 
 ```json
 {
@@ -178,12 +130,12 @@ method of the Custom Endpoint service please ensure valid structured content is 
 }
 ```
 
-Figure 2.6 Showing an example of a Quick Replies response
+Figure 3.2 Showing an example of a Quick Replies response
 
 ### Bot Actions
 
 {: .notice}
-Please note we only support **ONE ACTION** per Custom Endpoint service response
+Please note we only support **ONE ACTION** per response
 
 #### Transfer
 
@@ -205,15 +157,10 @@ Multiple scenarios for transfer/escalations exist and are as follows:
 
 Transfer action has two sets of responses that are as below:
 
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
-
 ##### Transfer to Skill
 
 In this case, transfer action will happen to the given skill name (case sensitive) that is passed.
-An example of such a response can be seen below in Figure 2.7. More information on responses expected
+An example of such a response can be seen below in Figure 3.3. More information on responses expected
 by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
 ```json
@@ -245,7 +192,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
 }
 ```
 
-Figure 2.7 Example of a Transfer action to a skill with a message
+Figure 3.3 Example of a Transfer action to a skill with a message
 
 ##### Transfer to Agent
 
@@ -256,7 +203,7 @@ This option transfers the conversation to the particular agent matching the prov
 and skill. If the agent is not available, the conversation will be transferred to an available
 agent with the same skill.
 
-An example response can be seen below in Figure 2.8. More information on responses expected
+An example response can be seen below in Figure 3.4. More information on responses expected
 by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
 ```json
@@ -296,21 +243,16 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
 }
 ```
 
-Figure 2.8 Example response of a transfer action to a agent with a message
+Figure 3.4 Example response of a transfer action to a agent with a message
 
 #### Close Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation
 without escalating to a live agent. If a query has been answered, or the brand has
 determined that no escalation is required for a given query, then it is best practice
-to have the bot end the conversation. An example response can be seen below in Figure 2.9.
+to have the bot end the conversation. An example response can be seen below in Figure 3.5.
 More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -333,11 +275,11 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 2.9 Example response of a close action with a message
+Figure 3.5 Example response of a close action with a message
 
 We also allow closing of a conversation without triggering a post conversation survey,
 This can be done by adding the parameter `withoutPcs` as `true` to the parameters
-property of action payload. Example response of such close action can be seen in the Figure 2.10
+property of action payload. Example response of such close action can be seen in the Figure 3.6
 
 ```json
 {
@@ -363,7 +305,7 @@ property of action payload. Example response of such close action can be seen in
 }
 ```
 
-Figure 2.10 Example response of a close action with `withoutPcs` property
+Figure 3.6 Example response of a close action with `withoutPcs` property
 
 #### Change Time To Response of Conversation (TTR)
 
@@ -375,14 +317,9 @@ LivePerson Messaging uses 3 different types of priorities:
 - NORMAL
 - PRIORITIZED
 
-Example response with `URGENT` priority can be seen below in Figure 2.11.
+Example response with `URGENT` priority can be seen below in Figure 3.7.
 More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -404,4 +341,4 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 2.11 Example response of a Change TTR action with `URGENT` priority
+Figure 3.7 Example response of a Change TTR action with `URGENT` priority

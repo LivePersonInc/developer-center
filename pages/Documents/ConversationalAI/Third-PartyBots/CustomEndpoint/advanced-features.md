@@ -8,6 +8,13 @@ permalink: third-party-bots-custom-endpoint-advanced-features.html
 indicator:
 ---
 
+This section will describe The responses that are expected to be sent by the
+[Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
+endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
+[Conversation Tester feature](third-party-bots-conversation-tester.html).
+In the case of Structure Content validation, you can also leverage
+[this tool](https://livepersoninc.github.io/json-pollock/editor/).
+
 ### Sending Encoded Metadata
 
 The Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”)
@@ -30,13 +37,8 @@ This feature is only available for messaging conversations, not for chat convers
 #### Sending Text Message with Encoded Metadata
 
 You can send encodedMetadata with a simple text message an example of such a response can be seen in
-Figure 3.1. More information on responses expected by Third-Party Bot Connector can be found at
+Figure 4.1. More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -67,18 +69,13 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 3.1 Showing example response of a text with encoded metadata
+Figure 4.1 Showing example response of a text with encoded metadata
 
 #### Sending Rich Content (structured content) with Encoded Metadata
 
 You can send encodedMetadata with a structured content message an example of such a response can be seen in
-Figure 3.2. More information on responses expected by Third-Party Bot Connector can be found at
+Figure 4.2. More information on responses expected by Third-Party Bot Connector can be found at
 [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -122,20 +119,15 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 3.2 Showing an example response of structured content with encoded metadata
+Figure 4.2 Showing an example response of structured content with encoded metadata
 
 ### Sending Pause/Delay Message
 
 It is possible to send an event of type "delay" before regular content events and actions.
 This specifies the time the bot will wait before displaying the next message. An example
-of such a response can be seen in Figure 3.3 where one text message is displayed then 5 seconds
+of such a response can be seen in Figure 4.3 where one text message is displayed then 5 seconds
 of delay and after that, a structured content is presented. More information on responses expected by
 Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -199,7 +191,7 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 3.3 Showing an example response of structured content with encoded metadata
+Figure 4.3 Showing an example response of structured content with encoded metadata
 
 ### Sending Private Text Message
 
@@ -219,13 +211,8 @@ to see the `Private` message indicator in the conversation window. Nevertheless,
 private text messages will not be shown to the consumer and only remain visible
 to Agents and Managers.
 
-An example of such a response can be seen in Figure 3.4. More information on responses
+An example of such a response can be seen in Figure 4.4. More information on responses
 expected by Third-Party Bot connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -256,7 +243,7 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 3.4 Showing an example response of private text and a normal text
+Figure 4.4 Showing an example response of private text and a normal text
 
 ### Invoke LivePerson Function
 
@@ -265,15 +252,10 @@ the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Se
 We provide a way to run custom logic with a bot. You need to ensure that the LivePerson Function
 is deployed and running. Furthermore, the user can provide a payload as well that will be sent to
 the LivePerson function while invocation. The invoke response is considered an action response.
-An example of such a response can be seen in Figure 3.5.
+An example of such a response can be seen in Figure 4.5.
 
 {: .notice}
 Please note we only support **ONE ACTION** per Custom Endpoint service response
-
-{: .important}
-The response is expected to be sent by the [Get Conversation Events](third-party-bots-custom-endpoint-basic-content.html#custom-endpoint-ce-service-methods)
-method of Custom Endpoint service. To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
 
 ```json
 {
@@ -305,10 +287,10 @@ method of Custom Endpoint service. To ensure validity of response, brands can us
 }
 ```
 
-Figure 3.5 Showing an example response of invoke LivePerson function
+Figure 4.5 Showing an example response of invoke LivePerson function
 
 The bot does not escalate on a failed invocation by default. To enable this, set the additional
-parameter `failOnError` to `true`. An example of such a response can be seen in Figure 3.6
+parameter `failOnError` to `true`. An example of such a response can be seen in Figure 4.6
 
 ```json
 {
@@ -343,7 +325,25 @@ parameter `failOnError` to `true`. An example of such a response can be seen in 
 }
 ```
 
-Figure 3.6 Showing an example response of invoke LivePerson function with `failOnError` property
+Figure 4.6 Showing an example response of invoke LivePerson function with `failOnError` property
+
+### Engagement attributes (SDES) as context
+
+Third-Party bots allow the collection of engagement attributes (more information can be found
+[here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes`
+option is checked in the `Conversation Type` step as shown in Figure 2.4.
+
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+Figure 2.4 `Conversation Type step` in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. we send those engagement attributes
+when the Third-Party Bot connector calls the [Create Conversation](third-party-bots-custom-endpoint-service-implementation.html#create-conversation)
+endpoint of the Custom Endpoint service.
+
+Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes,
+Further information on Visit Information API can be found [here](visit-information-api-visit-information.html).
+Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and are
+only passed along with each message request.
 
 ### Receiving Rich Content Response (Messaging Only)
 
@@ -356,7 +356,7 @@ capabilities for each channel, browse or search the table on the
 [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
 
 An example of a request body of Rich Content Event (of type `map`) sent by Third-Party Bot
-container to Custom Endpoint service can be seen in Figure 3.7. More information on the request
+container to Custom Endpoint service can be seen in Figure 4.7. More information on the request
 expected by Third-Party Bot Connector can be found at [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
 
 ```json
@@ -382,7 +382,7 @@ expected by Third-Party Bot Connector can be found at [API Service Specification
 }
 ```
 
-Figure 3.7 An example of Rich Content Event request sent by Third-Party Bot connector to Custom Endpoint service
+Figure 4.7 An example of Rich Content Event request sent by Third-Party Bot connector to Custom Endpoint service
 
 Some important things to notice here are
 
@@ -390,8 +390,8 @@ Some important things to notice here are
 - The actual body of the Rich Content Event can be accessed via `data.content` property
 
 A demo of our WhatsApp map example with the response from an example custom endpoint service
-can be seen in Figure 3.8:
+can be seen in Figure 4.8:
 
 <img class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
 
-Figure 3.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
+Figure 4.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
