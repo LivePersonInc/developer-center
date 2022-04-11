@@ -36,7 +36,7 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 ### Add a Regular Expression entity
 
 {: .important}
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
 
@@ -58,7 +58,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For information on using entities with Knowledge Base articles, see [here](knowledge-base-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
+To refresh on using entities with intents, check out the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For information on using entities with Knowledge Base articles, see [here](knowledgeai-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
 
 #### Can I detect entities using JavaScript?
 

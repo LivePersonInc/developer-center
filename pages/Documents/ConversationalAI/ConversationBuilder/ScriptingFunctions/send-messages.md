@@ -18,9 +18,6 @@ Use the following built-in functions to send different types of messages to the 
 `sendMessage` is used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
-
-{: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
 
 | Function Name | Arguments | Returns |

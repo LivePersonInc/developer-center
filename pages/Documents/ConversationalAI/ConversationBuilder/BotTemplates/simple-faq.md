@@ -46,7 +46,7 @@ The FAQ Search dialog handles calling the Knowledge Base integration and display
 #### FAQ integration
 
 {: .important}
-You will need to [create an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base) **before** setting up this integration.
+You will need to [create an internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base) **before** setting up this integration.
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "Knowledge Base" should be selected as the **Integration Type**.
 
@@ -61,7 +61,7 @@ All of the additional parameters are configured for you.
 <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/template_faq_simple_image_3.png">
 
 {: .important}
-For detailed information on adding a Knowledge Base integration, see [here](conversation-builder-integrations-knowledge-base-integrations.html).
+For detailed information on adding a KnowledgeAI integration, see [here](conversation-builder-integrations-knowledgeai-integrations.html).
 
 #### Test your bot
 

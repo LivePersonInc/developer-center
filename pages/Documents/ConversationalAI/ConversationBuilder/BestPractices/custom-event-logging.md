@@ -20,7 +20,7 @@ Custom events originate from a scripting function that is written in either the 
 
 ### Bot Configuration
 
-When using a [knowledge base](knowledge-base-overview.html), it might be desirable to know if a result was displayed successfully and whether the user was satisfied with the result. Having this information in hand is important when training and tuning your knowledge base intents. To achieve this, we're going to include two custom events in our fallback dialog:
+When using a [knowledge base](knowledgeai-overview.html), it might be desirable to know if a result was displayed successfully and whether the user was satisfied with the result. Having this information in hand is important when training and tuning your knowledge base intents. To achieve this, we're going to include two custom events in our fallback dialog:
 
 * A custom event to log when we have a successful response from our FAQ knowledge base
 * A custom event that is triggered from a user response indicating the correctness of the returned article

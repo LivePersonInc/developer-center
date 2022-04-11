@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-events-onrequestchat.html
 indicator: chat
 ---
 
-Triggered in response to [requestChat](consumer-experience-javascript-chat-startchatrequestchat.html).
+Triggered in response to [requestChat](javascript-chat-sdk-methods-requestchat.html.html).
 
 **Notes**:
 

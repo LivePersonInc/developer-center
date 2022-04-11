@@ -51,7 +51,7 @@ Use the guided Add/Edit Next Action Rule window to:
 
 1. Specify the rule name.
 2. Define the condition that must evaluate to true for the rule to be executed.
-3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
+3. Store data in a [variable or slot](conversation-builder-variables-slots.html). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
 #### Adding variable conditions

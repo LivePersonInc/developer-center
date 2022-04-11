@@ -50,9 +50,12 @@ With the exception that you enter JSON code instead of interaction data, a Unive
 
     <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png">
 
-* [Configure](conversation-builder-interactions-configuration-settings.html) basic settings, for example, specify an interaction delay.
+* [Configure](conversation-builder-interactions-configuration-settings.html) basic settings. For example, enable the **User Input Required** setting if the interaction should wait for a response from the consumer. If you disable the setting, the flow will immediately continue to the next action.
 * [Configure](conversation-builder-interactions-configuration-next-action.html) a Next Action, including via custom rules.
 * [Configure](conversation-builder-interactions-configuration-custom-code.html) Pre-Process code, Process User Response code, and Post-Process code.
+
+#### Templates
+There are templates available [here](https://github.com/LivePersonInc/ConversationBuilder-Samples/tree/main/universal-tile-templates) for various channels. Use these to get up and running quickly.
 
 #### JSON validation
 Within the code editor, a validation check is performed to ensure that the code is valid JSON.

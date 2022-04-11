@@ -1,57 +1,44 @@
 .getstarted-title {
-    color: var(--navy-mid-gray);
+    color: var(--post-link);
     font-weight: bold;
     font-size: 12px;
     margin: 0;
     text-transform: uppercase;
     line-height: 16px;
-    letter-spacing: 0.01em;
 }
 
 .getstarted-content {
-    color: var(--navy);
+    color: var(--link-color);
     font-weight: bold;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.01em;
     padding-bottom: 24px;
 }
 
-
 .lp-container {
     display: flex;
-    padding-right: 48px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .teaser-header {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
     display: inline-flex;
-    /* or 150% */
     flex: 2;
-    margin-top: 40px !important;
-    margin-left: 40px !important;
-    letter-spacing: 0.01em;
-
-    color: #FFFFFF;
-
+    margin-top: 32px !important;
+    margin-left: 32px !important;
+    color: #ffffff;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hyperlink {
-    font-family: Roboto;
+    font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     padding-top: 12px;
-    letter-spacing: 0.01em;
-    color: var(--electric-blue);
+    color: var(--link-color);
 }
 
 .dots-container {
@@ -59,20 +46,18 @@
 }
 
 .dots-container:hover {
-    color: var(--hover-electric-blue);
+    color: var(--link-color-hover);
 }
 
 .getting-started-paragraph {
-    font-family: Roboto;
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    margin-top: 8px;
+    font-size: 18px;
+    line-height: 28px;
     display: flex;
     flex: 2;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    color: var(--navy-gray);
+    color: var(--body-text);
 }
 
 .play-icon {
@@ -84,7 +69,7 @@
 }
 
 .getting-started-h5 {
-    font-family: Roboto;
+    font-family: Inter;
     font-style: normal;
     font-weight: normal;
     width: 640px;
@@ -93,22 +78,17 @@
     flex: 2;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.01em;
-    color: var(--navy-gray);
+    color: var(--body-text);
 }
 
 #teaser-banner {
-    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url('img/Img_video_overview.png');
+    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("img/Img_video_overview.png");
     cursor: pointer;
 }
 
 .welcome-card-modified {
     flex: 0 47%;
-    margin-top: 24px;
-    padding: 0px 24px 0px 0px;
-    margin-right: 1%;
-    background: #FFFFFF;
-    margin-bottom: 16px;
+    background: var(--card-background);
     border-radius: 8px;
     box-sizing: border-box;
 }
@@ -118,7 +98,7 @@
 }
 
 .header-lp4 {
-    font-family: Roboto;
+    font-family: Inter;
     font-size: 20px;
     flex: 0 50%;
     margin-right: 10%;
@@ -126,39 +106,40 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
-
     letter-spacing: 0.2px;
-    color: var(--navy);
+    color: var(--link-color);
 }
 
-.header-lp4-external {
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: bold;
-    font-stretch: normal;
+.header-lp4-external h3 {
+    font-family: Space Grotesk;
     font-style: normal;
-    line-height: 1.4;
-
-    letter-spacing: 0.2px;
-    color: var(--navy);
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--body-text);
 }
 
 .external-link-container {
     width: 300px;
     flex: 0 50%;
     display: inline-flex;
-    height: 180px;
+    margin: 32px 0;
 }
 
-.link-padding {
-    margin-bottom: 16px;
-    font-family: Roboto;
+.link-padding a {
     font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.01em;
-    color: var(--electric-blue);
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration-line: underline;
+    position: relative;
+}
+
+.link-padding a:before {
+    content: "-";
+    position: absolute;
+    left: -12px;
+    color: var(--body-text)
 }
 
 .whole-external-link {
@@ -167,8 +148,12 @@
     margin-top: 48px;
 }
 
+
 /* MODAL STUFF BELOW */
+
+
 /* The Modal (background) */
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -187,13 +172,13 @@
     overflow-y: hidden !important;
     /* Enable scroll if needed */
     /* Fallback color */
-
     background-color: rgb(6, 8, 46, 0.8);
-
     /* Black w/ opacity */
 }
 
+
 /* Modal Content */
+
 .modal-content {
     background-color: rgb(6, 8, 46, 0) !important;
     border: none !important;
@@ -204,7 +189,9 @@
     height: 94%;
 }
 
+
 /* The Close Button */
+
 .close {
     color: var(--lightest-gray) !important;
     width: 40px;
@@ -223,35 +210,30 @@
 }
 
 .small-header {
-    font-family: Roboto;
+    font-family: Space Grotesk;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    margin-top: 32px;
-    line-height: 28px;
-    letter-spacing: 0.01em;
-    color: var(--navy);
+    font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0;
+    color: var(--body-text);
 }
 
 .container-note {
     display: flex;
     margin-top: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     width: 100%;
     flex-wrap: wrap;
 }
 
 .concierge-bot-header {
-    font-family: Roboto;
+    font-family: Inter;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 28px;
     /* identical to box height, or 140% */
-
-    letter-spacing: 0.01em;
-
     /* J/Navy */
-
-    color: #090C43;
+    color: var(--body-text);
 }

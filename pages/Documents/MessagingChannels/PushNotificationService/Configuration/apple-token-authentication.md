@@ -22,14 +22,14 @@ In order to enable Apple Token Authentication, you will require the following da
 
      * Android Registration for Push Method - See SDK’s  [registerLPPusher](android-registerlppusher.html) method.
 
-     * IOS Registration for Push - The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](consumer-experience-ios-sdk-methods.html#registerpushnotifications) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e `com.mybrand.app-Dev`).
+     * IOS Registration for Push - The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](/mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e `com.mybrand.app-Dev`).
 
 * **Key File** - p8 file containing Apple Token Key, to obtain your Token Key, see how to [Obtain an Encryption Key and Key ID from Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns).
 
 {:.important}
 Key File should be an authentication token signing key, specified as a text file (with a .p8 file extension), as downloaded from the Apple Developer Portal.
 
-* **Team ID:** - Unique Apple Team Identifier, for how to achieve this, see [link](http://127.0.0.1:4000/push-notification-service-configuring-on-the-conversational-cloud-apple-token-authentication.html#how-to-get-your-apple-team-id)
+* **Team ID:** - Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
 
 * **Key ID:** - A 10-character string with the Key ID.
   
@@ -44,12 +44,12 @@ This information can be added to the Mobile app management section under Campaig
 
 * Once the App is created, on the **Key File** dropdown select **Apple Key**
 
-<img src="../../../../../img/pusher/AppleKeyOption.png" alt="Apple Push Token Authentication Option" style="width: 800px;padding: 20px;">
+<img src="/img/pusher/AppleKeyOption.png" alt="Apple Push Token Authentication Option" style="width: 800px;padding: 20px;">
 * Locate and upload your p8 file containing your Token Authentication Key.
 
 * Enter both your Team ID and Key ID on their respective fields.
 
-<img src="../../../../../img/pusher/AppleKeyDetails.png" alt="Apple Push Token Authentication Details" style="width: 800px;padding: 20px;">
+<img src="/img/pusher/AppleKeyDetails.png" alt="Apple Push Token Authentication Details" style="width: 800px;padding: 20px;">
 
 {:.important}
 if your Application is running on debug mode (running from Xcode), the **Production** switch should be **OFF**.

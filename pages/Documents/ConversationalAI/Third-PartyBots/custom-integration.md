@@ -142,13 +142,13 @@ const payload = {
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”. The time values are defined in Conversational Cloud's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". 
+Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”. The time values are defined in Conversational Cloud's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue".
 
 Below is an example of an payload, which changes the TTR:
 
-| key     | value                                       | notes                        |
-| ------- | ------------------------------------------- | ---------------------------- |
-| action  | CHANGE_TTR                                  | Mandatory                    |
+| key     | value                             | notes     |
+| ------- | --------------------------------- | --------- |
+| action  | CHANGE_TTR                        | Mandatory |
 | ttrtype | "URGENT", “NORMAL”, “PRIORITIZED” |
 
 ```javascript
@@ -157,7 +157,7 @@ const payload = {
   context: {
     action: "CHANGE_TTR",
     actionParameters: {
-      ttrType: "URGENT"
+      ttrType: "URGENT",
     },
   },
 };
@@ -169,15 +169,15 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 Transfers and escalations rely on the `action` key in the response object and its value.
 
-| key      | value                                             | notes                         |
-| -------- | ------------------------------------------------- | ----------------------------- |
-| action   | TRANSFER                                          | case sensitive, mandatory     |
-| skill    | a skill name which exists in your account account | case sensitive                |
-| agentId  | id of agent which exists in your account          | optional, premission required |
+| key     | value                                             | notes                         |
+| ------- | ------------------------------------------------- | ----------------------------- |
+| action  | TRANSFER                                          | case sensitive, mandatory     |
+| skill   | a skill name which exists in your account account | case sensitive                |
+| agentId | id of agent which exists in your account          | optional, premission required |
 
 #### Transfer To Skill
 
-This option transfers the conversation to the next available agent using the provided skill. 
+This option transfers the conversation to the next available agent using the provided skill.
 
 Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer to skill action.
 
@@ -206,14 +206,12 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 
 ```javascript
 const payload = {
-  messages: [
-    "Please wait will I transfer you to a specific agent",
-  ],
+  messages: ["Please wait will I transfer you to a specific agent"],
   context: {
     action: "TRANSFER",
     actionParameters: {
       skill: "bot-escalation",
-      agentId: "4129463410"
+      agentId: "4129463410",
     },
   },
 };
@@ -223,21 +221,20 @@ const payload = {
 
 During a conversation, it is possible to trigger a different LivePerson Function. This provides a way to run additional custom logic with a bot.
 
-To invoke a different LivePerson Function, we use the `action` key in the response object as we did for a transfer (see example above). 
+To invoke a different LivePerson Function, we use the `action` key in the response object as we did for a transfer (see example above).
 
-| key          | value                                                      | notes                     |
-| ------------ | ---------------------------------------------------------- | ------------------------- |
-| action       | INVOCATION                                                 | case sensitive, mandatory |
-| lambdaUuid   | lambda UUID of LivePerson Function                         | case sensitive, mandatory |
-| payload      | content that will be sent to the LivePerson Function       | case sensitive            |
-| failOnError  | boolean that decides if bot escalates on failed invocation | case sensitive            |
+| key         | value                                                      | notes                     |
+| ----------- | ---------------------------------------------------------- | ------------------------- |
+| action      | INVOCATION                                                 | case sensitive, mandatory |
+| lambdaUuid  | lambda UUID of LivePerson Function                         | case sensitive, mandatory |
+| payload     | content that will be sent to the LivePerson Function       | case sensitive            |
+| failOnError | boolean that decides if bot escalates on failed invocation | case sensitive            |
 
-To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter.
 
 The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**.
-
 
 ```javascript
 const payload = {
@@ -527,14 +524,14 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 ```javascript
 const payload = {
   messages: [
-    'Unfortunately I am unable to help you with this query. Have a nice day.'
+    "Unfortunately I am unable to help you with this query. Have a nice day.",
   ],
   context: {
-    action: 'CLOSE_CONVERSATION',
+    action: "CLOSE_CONVERSATION",
     actionParameters: {
-      withoutPcs: true // tell the connector not to trigger post conversation survey, instead close entire conversation
-    }
-  }
+      withoutPcs: true, // tell the connector not to trigger post conversation survey, instead close entire conversation
+    },
+  },
 };
 ```
 
@@ -671,61 +668,154 @@ const payload = {
 
 ```javascript
 function lambda(input, callback) {
-
   // Take a look at this guide to get further information about Social Messaging & Conversation Metadata
   // https://developers.liveperson.com/messaging-agent-sdk-conversation-metadata-guide.html
 
   const {
     message,
     convId,
-    context: {
-      lpEvent: {
-        metadata: umsMetadata = []
-      } = {}
-    } = {}
+    context: { lpEvent: { metadata: umsMetadata = [] } = {} } = {},
   } = input.payload;
   const response = {
     context: {
-      metadata: []
+      metadata: [],
     },
-    messages: []
-  }
-  const socialMetadata = umsMetadata.find(m => m.type === 'SocialMessagingEventData');
+    messages: [],
+  };
+  const socialMetadata = umsMetadata.find(
+    (m) => m.type === "SocialMessagingEventData"
+  );
 
   const addPrivateSMLinkMetadata = () => {
     if (socialMetadata && socialMetadata.channel === "Public") {
-      const privateLink = 'I\'m a BOT, please join to our private chat to talk with a live agent:\n https://m.me/' + socialMetadata.conversationState.dmChatId;
+      const myMessage =
+        "I'm a BOT, please join to our private chat to talk with a live agent:\n https://m.me/" +
+        socialMetadata.conversationState.dmChatId;
 
       // The following is an example of Facebook Public Replies
       const socialMetadataResponse = {
-        "type": "SocialMessagingEventData",
-        "channel": "Public",
-        "replyToId": `${socialMetadata.replyToId}`,
-        "event": {
-          "source": "Facebook",
-          "type": "CC"
+        type: "SocialMessagingEventData",
+        channel: "Public",
+        replyToId: `${socialMetadata.replyToId}`,
+        event: {
+          source: "Facebook",
+          type: "CC",
         },
-        "conversationState": {
-          "currentChannel": "Public",
-          "dmChatId": `${socialMetadata.conversationState.dmChatId}`
-        }
+        conversationState: {
+          currentChannel: "Public",
+          dmChatId: `${socialMetadata.conversationState.dmChatId}`,
+        },
       };
 
       // LEGACY
       // See: Sending (single) Structured content via 'context' property (Legacy)
+      const structureContentSM = {
+        type: "vertical",
+        elements: [
+          {
+            type: "text",
+            text: myMessage,
+            alt: "sm-piggyback",
+          },
+        ],
+      };
+      response.context.structuredContent = structureContentSM;
       response.context.metadata.push(socialMetadataResponse);
-
-      response.messages.push(privateLink);
 
       // TRANSFER
       // See: Transfer / Escalations
       response.context.action = "TRANSFER";
       response.context.actionParameters = { skill: "facebook" };
     }
-  }
+  };
 
   addPrivateSMLinkMetadata();
 
   callback(null, response);
 }
 ```
+
+### Receiving Rich Content Response (Messaging Only)
+
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
+(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
+
+In Custom Bots integration Rich Content Event (`RichContentEvent`) is passed via the property `event` which is part of another property `lpEvent`
+that is sent with `context` information. An example of the request body containing `RichContentEvent` can be seen below:
+
+```javascript
+const {
+  message,
+  convId,
+  context: {
+    lpEvent: {
+      event: { type, content }, // this contain the RichContentEvent
+    },
+  },
+} = input.payload;
+```
+
+A sample `RichContentEvent` request of a user who shared location via WhatsApp will look like this:
+
+```json
+{
+  "convId": "abcdefg-1234-a1b2-6787-fkljwuhs7yk2",
+  "context": {
+    "lpEvent": {
+      "event": {
+        "type": "RichContentEvent",
+        "content": {
+          "type": "vertical",
+          "elements": [
+            {
+              "type": "map",
+              "la": 49.82380908513249,
+              "lo": 2.021484375,
+              "alt": "49.82380908513249, 2.021484375"
+            }
+          ]
+        }
+      },
+    "lpSdes": {}
+  },
+  "message": "com.liveperson.bot-connectors.consumer.send-rich-content" // Message from Third-Party Bots will be sent as this value
+}
+```
+
+A minimal Custom Integration function code for the demonstration of WhatsApp sharing location can be seen below. This Custom Integration function will
+check if the input payload has `RichContentEvent` then will respond with the entire body.
+
+```javascript
+function lambda(input, callback) {
+  const payload = {
+    messages: [],
+    context: {},
+  };
+  const {
+    message,
+    context: { lpEvent: { event: { type = "", content = {} } = {} } = {} } = {},
+  } = input.payload;
+
+  if (message && message.toLowerCase() === "hi") {
+    payload.messages.push("Hi there! How can I help you today?");
+  } else if (
+    message &&
+    message === "com.liveperson.bot-connectors.consumer.send-rich-content" &&
+    type === "RichContentEvent"
+  ) {
+    payload.messages.push(
+      `I received a rich content it contains: ${JSON.stringify(input.content)} `
+    );
+  } else {
+    payload.messages.push("I am sorry i don't understand. Can you repeat?");
+  }
+
+  callback(null, payload);
+}
+```
+
+We can see the above Custom Integration function in action below:
+
+<img class="fancyimage" style="width:300px" src="img/faas/faas_richcontent_demo.gif">

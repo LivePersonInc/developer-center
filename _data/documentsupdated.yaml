@@ -10,7 +10,8 @@
   image: api-guidelines
   documents:
     - documentname: Accessing LivePerson APIs
-    - documentname: Create API keys
+    - documentname: Create OAuth 1.0 API keys
+    - documentname: OAuth 2.0 Client Credentials
     - documentname: Domain API
     - documentname: Data APIs
     - documentname: API Data Metrics
@@ -139,18 +140,21 @@
           subpages:
             - subpagename: Implementing a Web View Integration
             - subpagename: Using LivePerson Functions with a Bot
-        - pagename: Using Agent Assist
+        - pagename: Using Conversation Assist
           subpages:
             - subpagename: Overview
             - subpagename: Prerequisite Steps
-            - subpagename: Configure Agent Assist
-            - subpagename: Test Agent Assist
+            - subpagename: Configure Conversation Assist
+            - subpagename: Test Conversation Assist
     - documentname: Conversation Builder
       pages:
+        - pagename: Overview
         - pagename: Best Practices
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Prevent Consumer Interruptions
+            - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
             - subpagename: Reusable Components
             - subpagename: A Pre-Launch Checklist
@@ -199,12 +203,13 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+        - pagename: System Patterns
         - pagename: Integrations
           subpages:
             - subpagename: Integration Basics
             - subpagename: API Integrations
             - subpagename: Email Integrations
-            - subpagename: Knowledge Base Integrations
+            - subpagename: KnowledgeAI Integrations
             - subpagename: LivePerson Agent Escalation Integrations
             - subpagename: File Integrations
             - subpagename: LivePerson Functions Integrations
@@ -239,19 +244,23 @@
             - subpagename: Apple Pay
         - pagename: Advanced Use Cases
         - pagename: Networking & Security
+    - documentname: Conversation Assist
+      pages:
+        - pagename: Overview
+        - pagename: Recommendation Sources
+          subpages:
+            - subpagename: Setting Up Bots
+            - subpagename: Setting Up Knowledge Bases
+            - subpagename: Configuring Settings
+        - pagename: Testing
+        - pagename: Agent Experience
+        - pagename: Best Practices
+        - pagename: Troubleshooting
+        - pagename: FAQs
     - documentname: Conversation Orchestrator
       pages:
         - pagename: Overview
-        - pagename: Agent Assist
-          subpages:
-            - subpagename: Overview
-            - subpagename: Setting Up Bot Recommendations
-            - subpagename: Setting Up Knowledge Base Recommendations
-            - subpagename: Testing
-            - subpagename: Agent Experience
-            - subpagename: Best Practices
-            - subpagename: Troubleshooting
-            - subpagename: FAQs
+        - pagename: Before You Begin
         - pagename: Conversation Context Service
           subpages:
             - subpagename: Overview
@@ -261,16 +270,17 @@
             - subpagename: Methods v2
         - pagename: Dynamic Routing
           subpages:
-          - subpagename: Overview
-          - subpagename: Getting Started
-          - subpagename: Creating Routing Policies
-          - subpagename: Managing Routing Policies
-          - subpagename: Routing Conversations by SDEs
-          - subpagename: Routing Conversations by Intents
-          - subpagename: Routing Conversations by Channel
-          - subpagename: Using Dynamic Routing Outside of Conversational Cloud
-          - subpagename: Testing with the Web Emulator
-          - subpagename: Policy Logs for v2
+            - subpagename: Overview
+            - subpagename: Getting Started
+            - subpagename: Creating Routing Policies
+            - subpagename: Managing Routing Policies
+            - subpagename: Routing Conversations by SDEs
+            - subpagename: Routing Conversations by Intents
+            - subpagename: Routing Conversations by Channel
+            - subpagename: Advanced Routing
+            - subpagename: Using Dynamic Routing Outside of Conversational Cloud
+            - subpagename: Testing with the Web Emulator
+            - subpagename: Policy Logs for v2
         - pagename: Next Actions API
           subpages:
             - subpagename: Overview
@@ -282,6 +292,12 @@
         - pagename: Overview
         - pagename: Key Terms & Concepts
         - pagename: Natural Language Understanding
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Language Support
+            - subpagename: LivePerson NLU Engine
+            - subpagename: Google Dialogflow and IBM Watson NLU Engines
+            - subpagename: Brand's Rasa-Based NLU Engine
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices
@@ -308,7 +324,7 @@
           subpages:
             - subpagename: Getting Started
             - subpagename: Model Tester External APIs
-    - documentname: Knowledge Base
+    - documentname: KnowledgeAI
       pages:
         - pagename: Overview
         - pagename: External Knowledge Bases
@@ -327,7 +343,11 @@
             - subpagename: Articles
             - subpagename: Best Practices
         - pagename: Using Intents with KBs
-        - pagename: Sending Content to Consumers
+        - pagename: Sending Content to Consumers and Agents
+        - pagename: Optimizing Your Content
+          subpages:
+            - subpagename: Tuning a Knowledge Base
+            - subpagename: Optimizing via Dashboard Analysis
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
@@ -339,7 +359,7 @@
     - documentname: Bot Analytics
       pages:
         - pagename: Overview
-        - pagename: Account-Level Performance
+        - pagename: Account Performance
         - pagename: Bot Performance
         - pagename: Tuning Opportunities
         - pagename: MACS
@@ -347,13 +367,18 @@
         - pagename: Troubleshooting
     - documentname: Bot Accounts
       pages:
+        - pagename: Overview
         - pagename: Account Details
         - pagename: Permissions
         - pagename: Credentials
     - documentname: Third-Party Bots
       pages:
         - pagename: Getting Started
+        - pagename: Bot Types
         - pagename: Bot Status Dashboard
+        - pagename: Hook Configuration
+        - pagename: Public API
+        - pagename: Conversation Tester
         - pagename: Bot Conversation Errors
         - pagename: Google Dialogflow
         - pagename: Google Dialogflow ES
@@ -372,9 +397,7 @@
             - subpagename: Advanced Features
             - subpagename: PVA
         - pagename: Custom Integration
-        - pagename: Hook Configuration
-        - pagename: Public API
-        - pagename: Conversation Tester
+        - pagename: Medallia
 
     - documentname: Messaging Agent SDK
       pages:
@@ -861,7 +884,6 @@
             - subpagename: Messaging Skill Segment
             - subpagename: Messaging Agent Segment
             - subpagename: Messaging Queue Health By Group
-
         - pagename: Appendix
     - documentname: Operational Realtime API
       basedomain: https://{domain}/operations/api/account/{accountID}
@@ -886,6 +908,15 @@
             - subpagename: Metrics
             - subpagename: Historical
             - subpagename: Agent View
+    - documentname: Agent Activity API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Status Changes
+        - pagename: Error Codes
+
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -964,6 +995,7 @@
             - subpagename: Sample App
             - subpagename: Open Source List and Dependencies
             - subpagename: Upgrade Guide - Android
+            - subpagename: Uses-permission and Uses-feature
     - documentname: Mobile App Messaging SDK for iOS
       pages:
         - pagename: Overview
@@ -1050,6 +1082,7 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Date Picker Template
+        - pagename: Schedule Slot List Template
         - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
@@ -1088,6 +1121,18 @@
         - pagename: Quick Replies Template
         - pagename: Limitations
     - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
+    - documentname: WhatsApp Business Messages Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Reply Button Template
+        - pagename: List Message Template
+    - documentname: Viber Templates
       pages:
         - pagename: Introduction
         - pagename: Card Template

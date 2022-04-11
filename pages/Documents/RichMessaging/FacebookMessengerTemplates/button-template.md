@@ -16,7 +16,7 @@ The [Button template](https://developers.facebook.com/docs/messenger-platform/se
 
 * Text title
 * Text subtitle
-* Up to 3 buttons (Facebook limitation) with either link, publish text or navigation button actions
+* Up to 3 buttons (Facebook limitation) with either link or publish text button actions
 
 *Button example image with all button actions, including publish text button tap view:*
 
@@ -103,8 +103,8 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>action</td>
-    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic or button can be set to Publish text, Link or Navigate</td>
-    <td>Enum - “publishText”, “link”, “navigate”</td>
+    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic or button can be set to Publish text or Link</td>
+    <td>Enum - “publishText”, “link”</td>
     <td>Y</td>
   </tr>
 </table>
@@ -151,20 +151,8 @@ If using Carousel, type of header element will always be “carousel”</td>
               }
             ]
           }
-        },
-        {
-          "type": "button",
-          "title": "Navigate",
-          "click": {
-               "actions": [
-              {
-                "type": "navigate",
-                "lo": 40.7562,
-                "la": -73.99861
-              }
-            ]
-          }
         }
       ]
     }]}
 ```
+*Note: When using “link” as a button action, note that Facebook Messenger desktop clients use an iframe to display the web links. Your brands website will need to support iframes in order for the consumer to be able to view it from FB desktop. If the website that you are adding does not support iframes, the content will not display either (eg. Google Maps)*

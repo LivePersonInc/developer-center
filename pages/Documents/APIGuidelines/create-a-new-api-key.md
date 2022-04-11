@@ -31,7 +31,7 @@ You use the API key when you create bots.
 
 5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
 
-   ![](../../../img/APIKeyCreation.png)
+   ![](/img/APIKeyCreation.png)
 
 6. Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
 
@@ -43,11 +43,11 @@ You use the API key when you create bots.
 
    - Access token secret
 
-   ![](../../../img/apikeycreation1.png)
+   ![](/img/apikeycreation1.png)
 
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
-   ![](../../../img/close-window.png)
+   ![](/img/close-window.png)
 
 8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
