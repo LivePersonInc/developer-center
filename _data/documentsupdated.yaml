@@ -1003,7 +1003,6 @@
         - pagename: Push Notifications
         - pagename: Quick Starts
           subpages:
-            - subpagename: Quick Start 5.2.1 and below
             - subpagename: Quick Start - 6.0 and up (XCFramework support)
         - pagename: Advanced Features
           subpages:
@@ -1028,9 +1027,8 @@
         - pagename: SDK Attributes
           subpages:
             - subpagename: Attributes Design Sheet
+            - subpagename: Branding and Configurations
             - subpagename: Deprecated Attributes
-            - subpagename: SDK 5.0 and above
-            - subpagename: SDK 4.1 and below
         - pagename: String Localization
           subpages:
             - subpagename: Localization Keys
