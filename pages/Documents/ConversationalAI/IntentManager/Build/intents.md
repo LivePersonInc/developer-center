@@ -75,6 +75,13 @@ Note:
 8. Back on the Intents page, click **Save** to save the change.
 9. Retrain the domain.
 
+### Using intents
+
+Check out these topics on using intents:
+
+* For a practical walkthrough on using intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
+* For info on using Conversation Builder's **Assist** tool to associate a dialog starter with a domain and an intent -- to trigger the dialog's flow if there's a match to the consumer's query -- see [here](conversation-builder-assist.html).
+
 ### Delete an intent
 
 Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.

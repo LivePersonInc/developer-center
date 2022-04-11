@@ -58,11 +58,14 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For information on using entities with Knowledge Base articles, see [here](knowledgeai-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
+Check out these topics on using entities:
+
+* For a practical walkthrough on using entities with intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
+* For info on using Conversation Builder's **Assist** tool to associate a question with an entity, see [here](conversation-builder-assist.html#associate-a-question-with-an-entity). When you use Assist to do this, it automatically creates a slot to store the consumer's response. A slot is a special type of variable that brings dynamic, fluid behavior to storing consumer input; you can read up on slots [here](conversation-builder-variables-slots-slots.html).
 
 #### Can I detect entities using JavaScript?
 
-There is a JS method to detect which entities have been picked up by the NLU called [getNamedEntities();](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
+There is a JavaScript method to detect which entities have been picked up by the NLU called [getNamedEntities();](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
 
 ```javascript
 var toppingObjects = botContext.getNamedEntities('toppings');
