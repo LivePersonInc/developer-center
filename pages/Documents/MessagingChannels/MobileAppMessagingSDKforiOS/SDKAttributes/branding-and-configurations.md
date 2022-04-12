@@ -1,22 +1,23 @@
 ---
-pagename: SDK 5.0 and above
+pagename: Branding and Configurations
 redirect_from:
   - consumer-experience-ios-sdk-attributes.html
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html
   - mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
+  - mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-5-0-and-above.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
-permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-5-0-and-above.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-branding-and-configurations.html
 indicator: messaging
 ---
 
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
 
 ### iOS 13 UIColors and DarkMode support 
-With the addition of Dark Mode support in iOS 13, we now utilize Apple’s UIUserInterface enum values observed by UIColor objects to update colors based on the selection provided by the OS.  We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations.  
+With the addition of Dark Mode supports in iOS 13, we now utilize Apple’s UIUserInterface enum values observed by UIColor objects to update colors based on the selection provided by the OS.  We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations.  
 
 #### What this means for our customers who use our default Attribute configurations? 
 If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 

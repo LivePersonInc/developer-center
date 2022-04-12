@@ -10,7 +10,8 @@
   image: api-guidelines
   documents:
     - documentname: Accessing LivePerson APIs
-    - documentname: Create API keys
+    - documentname: Create OAuth 1.0 API keys
+    - documentname: OAuth 2.0 Client Credentials
     - documentname: Domain API
     - documentname: Data APIs
     - documentname: API Data Metrics
@@ -1024,7 +1025,6 @@
         - pagename: Push Notifications
         - pagename: Quick Starts
           subpages:
-            - subpagename: Quick Start 5.2.1 and below
             - subpagename: Quick Start - 6.0 and up (XCFramework support)
         - pagename: Advanced Features
           subpages:
@@ -1049,9 +1049,8 @@
         - pagename: SDK Attributes
           subpages:
             - subpagename: Attributes Design Sheet
+            - subpagename: Branding and Configurations
             - subpagename: Deprecated Attributes
-            - subpagename: SDK 5.0 and above
-            - subpagename: SDK 4.1 and below
         - pagename: String Localization
           subpages:
             - subpagename: Localization Keys
