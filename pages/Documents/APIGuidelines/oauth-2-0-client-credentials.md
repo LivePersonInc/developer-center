@@ -6,7 +6,7 @@ permalink: oauth-2-0-client-credentials.html
 indicator: both
 ---
 
-This section describes how to register a OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize for machine-to-machine communication.
+This section describes how to register an OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize machine-to-machine communication.
 
 
 ### Step 1: Generate client_id & client_secret:
@@ -42,15 +42,39 @@ However, instead of hardcoding the authorization server, it is recommended to us
 ### Step 3: Generate OAuth 2.0 access token
 
 Together with the retrieved domain of the authorization server and the `client_id` + `client_secret`, you can now generate an access-token.
-Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request. 
-The following HTTPS request exemplifies how to get the JWT access token:
+"Sentinel", the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request. 
 
+### API Versioning
+We currently have two versions for token generation.  
+
+**API V1** - This API uses a static private signing key. 
+
+Please use the following public key for the JWT signature validation:
+```jwtPublicKey
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGQctwBFFZBaSu+LC4LVk/4/XyVQmhcwM5a91lT7BwZug/GtpR+ZGpKkiZSgTehRdBJKSPjv5K6D8/cBm28OV11Mekjn1PJrveSXrRsfUbOqIHgpfVtnkxN3ZaV6GSWQrrZArkpbAm+Kf5o5jxFPhCadB8BdRGCbMI3rFEkYSFqnmptI3olIAtAjmtbLJnwYZyXl2WZXMBmORLXnV9aTMGp4uFZdX+QbK808q55zxSB5HM3N9B8NLUP1TELc6N2dhWk2RwR/C9WvQYH/UAnxqVEwrAXt+rb+YWuu92Dj4NLAmpEYbRQi+S+5Y6t5g6kX/QMQ/ycdFOW/WA3JoptUSQIDAQAB
+```
+
+The following HTTPS request exemplifies how to get the JWT access token with **API V1**:
 ```http
-POST /sentinel/api/account/{account_id}/app/token?v=1.0&grant_type=client_credentials HTTP/1.1
+POST /sentinel/api/account/{account_id}/app/token?v=1.0 HTTP/1.1
 Host: {sentinel_service_domain}
 Content-Type: application/x-www-form-urlencoded
 
-client_id={client_id}&client_secret={client_secret}
+client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
+``` 
+
+**API V2** - uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
+```url
+https://{sentinel_service_domain}/sentinel/well-known/jwks
+```
+
+The following HTTPS request exemplifies how to get the JWT access token with **API V2**:
+```http
+POST /sentinel/api/v2/account/{accountId}/app/token HTTP/1.1
+Host: {sentinel_service_domain}
+Content-Type: application/x-www-form-urlencoded
+
+client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
 ```
 
 The `sentinel_service_domain` has been retrieved in step #2.
