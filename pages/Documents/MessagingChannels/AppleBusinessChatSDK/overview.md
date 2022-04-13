@@ -41,9 +41,9 @@ The SDK has 2 distinctive contextual integration environments:
 #### Consumer Transaction over iMessage App
 
 1. Consumer is messaging an appliance brand via Business Chat
-2. Consumer is asking the agent to provide details on the delivery and installation offering for the their ovens.
-3. Agent gives the consumer all the details on the delivery and installation, and consumer decides to buy both the oven and the delivery package.
-4. Agent sends the consumer an iMessage app interaction that includes all products selected in cart area, with payment flow.
+2. Consumer is asking the agent to provide details on the delivery and installation offering for their ovens.
+3. Agent gives the consumer all the details on the delivery and installation, and the consumer decides to buy both the oven and the delivery package.
+4. Agent sends the consumer an iMessage app interaction that includes all products selected in the cart area, with payment flow.
 
 Path A:
 
