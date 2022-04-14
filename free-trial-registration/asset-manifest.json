@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/free-trial-registration/static/css/main.cf506294.css",
-    "main.js": "/free-trial-registration/static/js/main.d6999372.js",
+    "main.js": "/free-trial-registration/static/js/main.70c927c9.js",
     "static/media/logo.svg": "/free-trial-registration/static/media/logo.3d6770a6ea3302e011ce5aa227cd7bc2.svg",
     "static/media/icon-shield.svg": "/free-trial-registration/static/media/icon-shield.cfe99fae0ecae77ed58f7947a5c442e6.svg",
     "static/media/icon-creating.svg": "/free-trial-registration/static/media/icon-creating.1f205c915a67753adcb6f7a85324cb1f.svg",
@@ -11,10 +11,10 @@
     "static/media/icon-timeout.svg": "/free-trial-registration/static/media/icon-timeout.e4fcc93a0b48824b76510d1787b184b3.svg",
     "static/media/icon-check.svg": "/free-trial-registration/static/media/icon-check.61aa2a952c155d6c6dbb4719da226c9e.svg",
     "main.cf506294.css.map": "/free-trial-registration/static/css/main.cf506294.css.map",
-    "main.d6999372.js.map": "/free-trial-registration/static/js/main.d6999372.js.map"
+    "main.70c927c9.js.map": "/free-trial-registration/static/js/main.70c927c9.js.map"
   },
   "entrypoints": [
     "static/css/main.cf506294.css",
-    "static/js/main.d6999372.js"
+    "static/js/main.70c927c9.js"
   ]
 }
