@@ -18,9 +18,11 @@ For an explanation of an intent, see [here](intent-manager-key-terms-concepts.ht
 {: .important}
 For some practice with intents, complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-intents.html) tutorial series.
 
-### Add an intent
+### Import a batch of intents
 
-**To add an intent**
+You can create a domain using an [import file](intent-manager-build-domains.html#create-an-import-file) that contains a set of intents. For info on this, see [here](intent-manager-build-domains.html#add-a-domain-manually-or-using-an-import-file).
+
+### Add an intent
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
@@ -80,7 +82,7 @@ Note:
 Check out these topics on using intents:
 
 * For a practical walkthrough on using intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
-* For info on using Conversation Builder's **Assist** tool to associate a dialog starter with a domain and an intent -- to trigger the dialog's flow if there's a match to the consumer's query -- see [here](conversation-builder-assist.html).
+* In a Conversation Builder bot, you can trigger a dialog flow if the consumer's query matches the intent that's associated with the dialog starter. To set this up, you use Conversation Builder's **Assist** tool to associate the dialog starter with the domain and the intent. More on this [here](conversation-builder-assist.html).
 
 ### Delete an intent
 
