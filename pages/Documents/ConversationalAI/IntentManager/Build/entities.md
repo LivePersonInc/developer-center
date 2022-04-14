@@ -56,60 +56,13 @@ Regular Expression entities are available only in domains using the [LivePerson 
 7. Click **Save**.
 8. Train the domain so that the addition is reflected in a new model version.
 
-### Using entities
+### Capture an entity using Conversation Builder's Assist
 
-Check out these topics on using entities:
+For info on using Conversation Builder's **Assist** tool to associate a question with an entity, see [here](conversation-builder-assist.html#associate-a-question-with-an-entity). When you use Assist to do this, it automatically creates a slot to store the consumer's response. A slot is a special type of variable that brings dynamic, fluid behavior to storing consumer input; you can read up on slots [here](conversation-builder-variables-slots-slots.html).
 
-* For a practical walkthrough on using entities with intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
-* For info on using Conversation Builder's **Assist** tool to associate a question with an entity, see [here](conversation-builder-assist.html#associate-a-question-with-an-entity). When you use Assist to do this, it automatically creates a slot to store the consumer's response. A slot is a special type of variable that brings dynamic, fluid behavior to storing consumer input; you can read up on slots [here](conversation-builder-variables-slots-slots.html).
+### Detect entities using JavaScript
 
-#### Can I detect entities using JavaScript?
-
-There is a JavaScript method to detect which entities have been picked up by the NLU called [getNamedEntities();](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
-
-```javascript
-var toppingObjects = botContext.getNamedEntities('toppings');
-
-var toppings = [];
-
-if (toppingObjects != null && toppingObjects.length > 0) {
-
-    for (j = 0; j < toppingObjects.length; j++) {
-
-        toppings.push(toppingObjects[j].getPhrase())
-
-    }
-
-}
-```
-
-#### Can an entity return a different value?
-
-Sometimes you will want an entity match to return a value, say for sending to an API. For example, if you have an entity for "color" with values like red, blue, green, yellow, black but your API is expecting a numeric data values like red: 10, blue: 11, green: 12, yellow: 13, black: 14 how would you create this mapping?
-
-In the Intent Manager, when creating your entities, you can provide data with additional values by adding a "~" between the phrase and the data value like this: red~10, blue~11, etc. When calling the entity you would use the following to get the data value:
-
-```javascript
-var color = botContext.getNamedEntities('colors');
-
-var whichColor = '';
-
-if (color != null && color.length > 0) {
-
-    for (j = 0; j < color.length; j++) {
-
-        whichColor = color[j].getDataValue();
-
-    }
-
-}
-```
-
-#### How do I use multiple entities to map to a single value?
-
-Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Let’s take an Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
-
-Using a similar script to the above color example, which returns the data value, would get you the "LAX" or “DFW” you need.
+Use the `getNamedEntities` scripting function, as described [here](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities).
 
 ### Delete an entity
 
