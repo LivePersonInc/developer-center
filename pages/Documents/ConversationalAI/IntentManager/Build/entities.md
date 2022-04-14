@@ -58,11 +58,15 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Capture an entity using Conversation Builder's Assist
 
-For info on using Conversation Builder's **Assist** tool to associate a question with an entity, see [here](conversation-builder-assist.html#associate-a-question-with-an-entity). When you use Assist to do this, it automatically creates a slot to store the consumer's response. A slot is a special type of variable that brings dynamic, fluid behavior to storing consumer input; you can read up on slots [here](conversation-builder-variables-slots-slots.html).
+Use Conversation Builder's **Assist** tool to associate a question with an entity, so you can capture the consumer's response as the value of that entity. This is illustrated [here](conversation-builder-assist.html#associate-a-question-with-an-entity).
+
+When you use Assist to associate a question with an entity, Assist automatically creates a slot to store the consumer's response. A slot is a special -- and powerful -- type of variable that brings dynamic, fluid behavior to storing consumer input; more on slots [here](conversation-builder-variables-slots-slots.html).
+
+Using Assist is the easiest way to capture an entity, and it should suit most use cases. For more advanced use cases, such as those that involve modifying or cleaning entities, you can use the [getNamedEntities](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) scripting function.
 
 ### Detect entities using JavaScript
 
-Use the `getNamedEntities` scripting function, as described [here](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities).
+Use the [getNamedEntities](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) scripting function.
 
 ### Delete an entity
 
