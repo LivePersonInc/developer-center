@@ -53,7 +53,7 @@ botContext.addQuickReples(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03'
 ### Log escalation event
 
 {: .important}
-This function isn't supported since it no longer logs events. The system logs escalation events by default.
+This function isn't supported. The system logs escalation events automatically, and this data is viewable in Bot Analytics.
 
 `logEscalationEvent` is used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
 
