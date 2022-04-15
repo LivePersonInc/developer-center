@@ -10,7 +10,7 @@ permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
 ---
 
-Deprecated functions are still supported but not recommended. Bot developers are encouraged to use stated alternatives instead.
+Most deprecated functions are still supported but not recommended. Bot developers are encouraged to use stated alternatives instead.
 
 ### Get channel
 
@@ -33,7 +33,7 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 ### Add quick reples
 
 {: .important}
-addQuickReples is supported but not recommended. Bot developers are encouraged to use [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies) instead.
+This function is supported but not recommended. Bot developers are encouraged to use [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies) instead.
 
 The Add Quick Reples function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
@@ -48,4 +48,21 @@ The example below shows how quick replies can be added easily to your message.
 ```javascript
 // Add these quick replies to an existing message
 botContext.addQuickReples(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
+```
+
+### Log escalation event
+
+{: .important}
+This function isn't supported since it no longer logs events. The system logs escalation events by default.
+
+`logEscalationEvent` is used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void |
+
+#### Example
+
+```javascript
+botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
 ```

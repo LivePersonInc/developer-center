@@ -43,7 +43,6 @@ For quick reference, below is an alphabetically-ordered list of all built-in fun
 * [getWebViewVariables](conversation-builder-scripting-functions-get-set-session-data.html#get-web-view-variables)
 * [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful)
 * [logCustomEvent](conversation-builder-scripting-functions-log-debug.html#log-custom-event)
-* [logEscalationEvent](conversation-builder-scripting-functions-log-debug.html#log-escalation-event)
 * [printDebugMessage](conversation-builder-scripting-functions-log-debug.html#print-debug-message)
 * [sendImmediateReply](conversation-builder-scripting-functions-send-messages.html#send-immediate-reply)
 * [sendMessage](conversation-builder-scripting-functions-send-messages.html#send-message)
