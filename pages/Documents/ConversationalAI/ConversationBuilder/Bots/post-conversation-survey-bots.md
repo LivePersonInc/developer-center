@@ -238,8 +238,8 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
-* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
-* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
+* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format. For the Net Promoter Score (NPS) interaction in specific, we recommend the letter format. The numeric format can confuse consumers because the NPS scores themselves range from 0 to 10 (note they start with zero), but the numeric format starts numbering the options with 1. Since these don’t match, selecting a score can be confusing.
+* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer. In the question, make sure to include information on how to respond (e.g., “type 1 for very bad, 5 for excellent, or something in-between.”).
 
 #### Handling free text answers
 
