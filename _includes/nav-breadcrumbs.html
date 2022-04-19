@@ -2,6 +2,7 @@
   <nav class="breadcrumbs breadhidden hidden-sm-down">
 
     {% if page.categoryname %}
+    <a onclick="breadClick(event)" class="breadcrumb-item">Developer Center</a>
     <a onclick="breadClick(event)" class="breadcrumb-item" >{{ page.categoryname }}</a>
     {% endif %}
     {% if page.documentname %}

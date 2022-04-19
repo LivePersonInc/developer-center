@@ -24,60 +24,66 @@ Third party bot providers can be used and managed through LivePerson's Conversat
 {: .important}
 If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
 
-Each connector provides the ability to:
-
-- send/receive text messages
-
-- send [structured content](getting-started-with-rich-messaging-introduction.html)
-
-- transfer the conversation to other skills
-
-- change Time To Response for a messaging conversation
-
-- close a conversation
-
 {: .important}
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
 {: .important}
-Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
+We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
 
 {: .important}
 Please be advised that we recommend to have one bot for 250 open and active conversations, if you want your to handle more load, please add more bots to ensure a smooth and convenient consumer experience. Furthermore we recommend adding at least 2 bots for one bot skill to support a failover and a higher availability in case of any service interruptions and issues.
 
-{: .important}
-We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
-
+{: .notice}
+Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
 
 ### Bot Lifecycle
 
 During run-time, your bot may have different operational states. These states are based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
 
-#### Offline
-
-The bot is offline and won't accept any conversations.
-
-#### Online
-
-The bot is online and will accept and process new conversations.
-
-#### Vendor Interruption
-
-The bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the configured AI Vendor is not reachable/working.
-
-#### Service Interruption
-
-The bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
-
-In this state the bot will try to restart automatically once every minute until the interruption is resolved.
+<table>
+  <thead>
+  <tr>
+    <th>Bot State </th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Offline</td>
+    <td>The bot is offline and won't accept any conversations.</td>
+  </tr>
+  <tr>
+    <td>Online</td>
+    <td>The bot is online and will accept and process new conversations.</td>
+  </tr>
+  <tr>
+    <td>Vendor Interruption</td>
+    <td>The bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the configured AI Vendor is not reachable/working.</td>
+  </tr>
+  <tr>
+    <td>Service Interruption</td>
+    <td>The bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within LivePerson APIs/servers.In this state the bot will try to restart automatically once every minute until the interruption is resolved.</td>
+  </tr>
+  </tbody>
+</table>
 
 ### Limitations
 
-#### Supported customer content
+#### Supported customer content events
 
-Currently, the bot connectors only support plain text input from the customer. If the customer sends an image or a file to the bot, the bot will replace it with a special identifier so the bot can handle this special use-case with custom code.
+Currently, the bot connectors only support following events from the customer:
 
-The identifier which will replace images or files is **com.liveperson.bot-connectors.consumer.send-file**.
+- Plain text input
+- [Rich Content](getting-started-with-rich-messaging-introduction.html)
+- [File](file-sharing-file-sharing-for-web-messaging.html)
+
+We do not support passing of any other UMS events. If the customer sends an
+rich content or a file to the bot, the bot will replace it with a special
+identifier so the bot can handle this special use-case with custom code.
+Those identifies are as follows:
+
+- Rich Content Identifier: **com.liveperson.bot-connectors.consumer.send-rich-content**
+- File Content Identifier: **com.liveperson.bot-connectors.consumer.send-file**
 
 #### Support for different messaging channels and corresponding rich content
 
@@ -141,31 +147,33 @@ Follow the steps below to add a new bot.
 
    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
 
-3. Choose [Bot Type](third-party-bots-bot-types.html): Decide what type of bot you want to add.
+3. Choose [Bot Type](third-party-bots-bot-types.html): Decide which type of bot you want to add.
 
 4. Assign agent: Create a new bot agent or select the agent you created in the step above
 
-5. Bot Type specific configurations: See [Bot Type](third-party-bots-bot-types.html) for a detailed description on the 
-   configuration steps for each bot type.
-   
-6. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](#next-steps).
+5. Conversation Type & Error Handling: Choose bot type specific configurations follow [Bot Type](third-party-bots-bot-types.html) for a detailed description on the
+   configuration of these steps.
+
+6. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](third-party-bots-getting-started.html#next-steps).
 
 ### Next Steps
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
-- [Watson Assistant V1](third-party-bots-ibm-watson-assistant.html)
+- [Watson Assistant V1 & V2](third-party-bots-ibm-watson-assistant-introduction.html)
 
-- [Watson Assistant V2](third-party-bots-ibm-watson-assistant-version-2.html)
+- [Dialogflow V2/ES](third-party-bots-google-dialogflow-es-introduction.html)
 
-- [Dialogflow ES](third-party-bots-google-dialogflow-es-introduction.html)
+- [Dialogflow CX](third-party-bots-google-dialogflow-cx-introduction.html)
 
-- [Dialogflow CX](third-party-bots-google-dialogflow-cx.html)
+- [Amazon Lex](third-party-bots-amazon-lex-introduction.html)
 
-- [Amazon Lex](third-party-bots-amazon-lex.html)
+- [Microsoft Bot Framework](third-party-bots-microsoft-direct-line-introduction.html)
 
-- [Microsoft Direct Line](third-party-bots-microsoft-direct-line-introduction.html)
+- [LivePerson Functions Bots](third-party-bots-liveperson-functions-introduction.html)
 
-- [Custom Integration](third-party-bots-custom-integration.html)
+- [Medallia (for Survey Bots)](third-party-bots-medallia-introduction.html)
 
-- [Medallia (for Survey Bots)](third-party-bots-medallia.html)
+- [Custom Endpoint (only accessible to early adapters)](third-party-bots-custom-endpoint-introduction.html)
+
+- [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)
