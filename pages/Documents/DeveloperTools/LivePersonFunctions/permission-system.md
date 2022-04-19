@@ -10,13 +10,13 @@ indicator: both
 
 There are three user permissions concerning Functions:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You can create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
-* FaaS-Developer - allowed to manage `lambdas`, read safelisted domains and read encrypted secrets.
-* FaaS-Invocation - provides primary read access on all functions and permission to invoke them. The Agent profile has this permission enabled by default.
+* FaaS-Admin - allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You may create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
+* FaaS-Developer - allowed to manage `lambdas`, read allowlisted domains and read encrypted secrets.
+* FaaS-Invocation - provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
 
 ### Permissions by role
-
-<div class="notice">Only users with an Administrator role automatically have all the relevant Function Permissions as is described below.</div>
+{: .important}
+Only the Administrator role has all the Function permissions enabled by default as described below.
 
 Agent Manager roles will have all Function permission disabled by default, and Agents only will be able to have FaaS-Invocation permissions.
 
@@ -189,15 +189,15 @@ If users who do not have an Administrator based role require any Functions-relat
 </tbody>
 </table>
 
-You can configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html). The process is simple:
+You may configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html). The process is simple:
 
-* Click on the Users tab at the top of the Conversational Cloud UI and then click profiles.
+* Select Users tab at the top of the Conversational Cloud UI and then click profiles.
 * Create/Edit a profile and add the relevant FaaS-* permission to it.
 
 ![FaaSPermissionSystem](img/functions/functions_permission_system.png)
 
 ### Hints
 
-* Please be aware that roles like Agent don't have the option to get FaaS Developer/Admin permission. You will need to use a different role in that case.
+* Please be aware that roles like Agent do not have the option to get FaaS Developer/Admin permission. You will need to use a different role in that case.
 * The [CLI](liveperson-functions-foundations-liveperson-functions-cli.html) leverages the same permissions. Therefore you need to ensure that the user used has at least the FaaS-Developer permission.
-* We suggest obeying the security principle of least privilege and, therefore, only selecting the minimal set of permissions. E.g. If the user will be only using function (invoking). Then the FaaS-Invocation is only required.
+* We suggest obeying the security principle of least privilege and, therefore, only selecting the minimal set of permissions, e.g. if the user will only invoke functions solely, the FaaS-Invocation is required.

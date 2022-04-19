@@ -10,10 +10,7 @@ redirect_from:
   - function-as-a-service-overview.html
 ---
 
-{: .notice}
-The platform can be a powerful tool to customize your accounts. Therefore, please look at our [Terms of Use](https://knowledge.liveperson.com/developer-tools-liveperson-functions-terms-of-use.html).
-
-[LivePerson Functions](https://faas.liveperson.net) is a Function as a Service (FaaS) platform which enables brands to develop custom behaviours within LivePerson's conversational cloud to better tailor the system to their specific needs. Functions would allow developers to write a simple function, deploy it to LivePerson's infrastructure, and make it available to their LivePerson account in minutes. Functions will enable you to create custom logic inside the LivePerson Conversational Cloud platform.
+[LivePerson Functions](https://faas.liveperson.net) is a Function as a Service (FaaS) platform which enables brands to develop custom behaviours within LivePerson's Conversational Cloud to better tailor the system to their specific needs. The Functions platform allows developers to write a simple function, deploy it to LivePerson's infrastructure, and make it available to their LivePerson account in minutes. Functions enable you to create custom logic inside the LivePerson Conversational Cloud platform.
 
 * Extend the Conversational Cloud to integrate your existing services like CRMs and ticketing systems using LivePerson Functions.
 * Run custom solutions on reliable and scalable infrastructure without the need to manage it
@@ -24,8 +21,10 @@ The platform can be a powerful tool to customize your accounts. Therefore, pleas
 
 ## How it works
 
-You can select from a set of possible events, that are [triggered](liveperson-functions-foundations-concepts.html#Triggers) by different services ([Event Sources](liveperson-functions-event-sources-overview.html)), [schedules](liveperson-functions-foundations-features.html#scheduling) and [external triggers](liveperson-functions-foundations-concepts.html#external-invocation). Those events contain event-specific data, which allows the creation of custom logic. Further based on the event source you may also interact with it actively influencing processes happening on the platform.
-In that coding, you may leverage external services or LivePerson APIs. The below infographic visualizes this flow from the original event source to the lambda coding and back.
+Select an event that suits your needs, implement the code of your function and deploy it to the LivePerson Functions platform.
+
+There are three basic types of events: [Triggered](liveperson-functions-foundations-concepts.html#triggers) by different services ([Event Sources](liveperson-functions-event-sources-overview.html)), [schedules](liveperson-functions-foundations-features.html#scheduling) and [external triggers](http://localhost:4000/liveperson-functions-foundations-external-invocation.html). Those events contain event-specific data, which allows the creation of custom logic. Depending on the event source, you can also interact with it, actively influencing processes happening on the platform.
+You may leverage external services or LivePerson APIs in your function. The below infographic visualizes this flow from the original event source to the function code and back.
 
 <img src="img/functions/functions_overview.png" alt="LivePerson Functions Overview" style="width:100%;"/>
 
@@ -34,12 +33,12 @@ In that coding, you may leverage external services or LivePerson APIs. The below
       <img class="container-image" src="img/functions/ic_functions_first_fn.svg"/>
       <h5 class="welcome-title">Develop your first function in under 10 minutes</h5>
     </a>
-      <a  class="welcome-card"  href="/liveperson-functions-getting-started-deep-dive-ui.html">
+      <a  class="welcome-card"  href="/liveperson-functions-getting-started-development-deep-dive-ui.html">
       <img class="container-image" src="img/functions/ic_functions_ui.svg"/>
-      <h5 class="welcome-title">Dive into our webinterface</h5>
+      <h5 class="welcome-title">Dive into developing functions with our webinterface</h5>
     </a>
-    <a  class="welcome-card"  href="/liveperson-functions-getting-started-deep-dive-cli.html">
+    <a  class="welcome-card"  href="/liveperson-functions-getting-started-development-deep-dive-cli.html">
       <img class="container-image" src="img/functions/ic_functions_cli.svg"/>
-      <h5 class="welcome-title">Dive into our commandline interface</h5>
+      <h5 class="welcome-title">Dive into developing functions with our commandline interface</h5>
     </a>
 </div>

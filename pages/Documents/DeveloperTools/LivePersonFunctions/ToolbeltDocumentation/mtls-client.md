@@ -11,7 +11,7 @@ indicator: both
 
 # Interface: IMTLSClient
 
-Interface definition for the MTLS Client.
+Interface definition for the mTLS Client.
 
 ## Table of contents
 
@@ -31,7 +31,7 @@ Interface definition for the MTLS Client.
 
 ▸ **delete**(`url`, `headers?`, `body?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS delete request using the configured client certificate + key.
+Performs a mTLS delete request using the configured client certificate + key.
 
 #### Parameters
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **get**(`url`, `headers?`, `body?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS get request using the configured client certificate + key
+Performs a mTLS get request using the configured client certificate + key
 
 #### Parameters
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **head**(`url`, `headers?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS head request using the configured client certificate + key. Any body
+Performs a mTLS head request using the configured client certificate + key. Any body
 returned by the endpoint will be ignored and forcefully overridden with undefined.
 
 #### Parameters
@@ -94,7 +94,7 @@ ___
 
 ▸ **options**(`url`, `headers?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS options request using the configured client certificate + key. Any body
+Performs a mTLS options request using the configured client certificate + key. Any body
 returned by the endpoint will be ignored and forcefully overridden with undefined.
 
 #### Parameters
@@ -115,7 +115,7 @@ ___
 
 ▸ **patch**(`url`, `headers?`, `body?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS put request using the configured client certificate + key.
+Performs a mTLS put request using the configured client certificate + key.
 
 #### Parameters
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **post**(`url`, `headers?`, `body?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS post request using the configured client certificate + key.
+Performs a mTLS post request using the configured client certificate + key.
 
 #### Parameters
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **put**(`url`, `headers?`, `body?`, `options?`): `Promise`<[`MTLSResponse`](#interface-mtlsresponse)\>
 
-Performing a MTLS put request using the configured client certificate + key.
+Performs a mTLS put request using the configured client certificate + key.
 
 #### Parameters
 
@@ -191,15 +191,15 @@ ___
 - `Optional` **allowSelfSigned**: `boolean`
 
 To ignore errors raised by self-signed certificates on the called endpoint.
-Alternative to this is providing the ca-cert as part of the clientTLS config.
+Alternatively you can provide the ca-cert as part of the clientTLS config.
 
 - `Optional` **json**: `boolean`
 
-Set this flag to true, to automatically stringify body + set correct content header. And parse response to json.
+Set this flag to true, to automatically stringify body + set correct content header and parse response to json.
 
 - `Optional` **timeout**: `number`
 
-Time in ms until request should timeout. Please be aware that MTLS calls take longer than regular HTTP calls.
+Time in ms until request should timeout. Please be aware that mTLS calls take longer than regular HTTP calls.
 
 ### Interface: Header
 

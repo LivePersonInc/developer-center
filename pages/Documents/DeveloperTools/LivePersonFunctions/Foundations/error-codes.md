@@ -39,4 +39,4 @@ This chapter will highlight all potential error codes and HTTP responses that ou
 | 408           |   Request Timeout                     | Server did not receive the complete request by the client within the read limit                    |
 | 429           |   Ratelimit                           | The client exceeded the rate-limit, which is based on a per-account level                          |
 | 500,502,504   |   Internal Server Error               | Unexpected Server Error, which can be temporary                                                    |
-| 901           |   Error during lambda execution       | Function Execution failed due to an issue with the function coding. This can include runtime exception, exceeding processing window & returning of an error by the lambda|
+| 901           |   Error during lambda execution       | Function Execution failed due to an issue with the function's code. This can include runtime exception, exceeding processing window & returning of an error by the lambda|

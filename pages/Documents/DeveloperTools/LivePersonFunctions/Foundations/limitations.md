@@ -24,7 +24,7 @@ This page will offer you a high-level overview of all limitations in place. It s
 ### Function
 
 * Source Code must not exceed 100.000 characters
-* A single functions instance handles multiple requests
+* A single functions instance [handles multiple requests](liveperson-functions-foundations-concepts.html#Concurrency)
 * Resources of a function instance are limited to 500m units of CPU and 256 MB of RAM
   * Exceeding the resource limit will result in the immediate stopping of the function, failing any request being processed by it
 * Only the last five deployments will be stored
@@ -32,21 +32,21 @@ This page will offer you a high-level overview of all limitations in place. It s
 
 #### Timeouts
 
-This is not a direct limitation but a strong discouragement from our side. Please avoid the usage of `setTimeout` in your code. Given that a single function instance might handle more than one request, running timeouts may negatively impact performance. Such issues can arise when the function is experiencing high traffic volumes. Generally, any coding that blocks or fills up the event loop should be avoided. 
+This is not a direct limitation but a strong discouragement from our side. Please avoid the usage of `setTimeout` in your code. Given that a single function instance might handle more than one request, running timeouts may negatively impact performance. Such issues can arise when the function is experiencing high traffic volumes. Generally, any code that blocks or fills up the [event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) should be avoided. 
 
 ### Communication
 
 * HTTP/HTTPS are the only allowed protocols
-* Any used [domain needs to be allowed](liveperson-functions-foundations-features.html#domain-whitelisting) before using it
-  * Changes to the allow list of domains may take up to 5 minutes
-  * Please be aware of potential redirects of your used domains, as the whole redirect chain needs to be allow listed
-* MTLS is supported, but certificate handling and monitoring needs to be performed by you
+* Any used [domain needs to be allowed](liveperson-functions-foundations-features.html#domain-allowlisting) before using it
+  * Changes to the allowlist of domains may take up to 5 minutes
+  * Please be aware of potential redirects of your used domains, as the whole redirect chain needs to be allowlisted
+* mTLS is supported, but certificate handling and monitoring needs to be performed by you
 * Outbound traffic is limited to 20 requests/second per function. Every request beyond that limit will yield a 429
 
 ### Logging
 
 * You must not write more than 10 logs during a single invocation
-* You must not exceed 6000 characters across all logs. Both message and extras count towards this limit
+* You must not exceed 6000 characters across all logs per invocation. Both message and extras count towards this limit
 * Logs written as part of a test invocation are not persisted. Further, they may also inform you about issues with your logging (e.g. exceeding any limit)
 * Logs are pushed directly from the function to our services, meaning if a function is crashing or timing out, logs may be lost
 * Debug logs are never persisted

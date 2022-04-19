@@ -30,7 +30,7 @@ indicator: both
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `invocations` | [`IOrchestratorInvocation`](#interface-iorchestratorinvocation)[] | contains the UUIDs of the lambdas which will be invoked with their respective information |
-| `deadline` | `number` | gives the maximum time the orchestrator function is waiting for an answer (max 25s) |
+| `deadline` | `number` | provides the maximum time the orchestrator function is waiting for an answer (max 25s) |
 | `options?` | [`IOrchestratorOptions`](#interface-iorchestratoroptions) | Orchestrator invoke options: timeout, parallel invocation and error strategy |
 
 #### Returns

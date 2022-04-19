@@ -11,14 +11,14 @@ redirect_from:
   - function-as-a-service-foundations-liveperson-functions-cli.html
 ---
 
-The Functions Command Line Interface (CLI) tool will enable you to develop, test and manage your functions from the comfort of your local machine. Additionally, if you want to integrate Functions in an automated process (e.g. CI/CD), the CLI is the perfect place to start. You can inspect the CLI's code and find detailed documentation on the CLI's public GitHub [repository](https://github.com/LivePersonInc/faas-cli).
+The Functions Command Line Interface (CLI) tool will enable you to develop, test and manage your functions from the comfort of your local machine. If you want to integrate Functions in an automated process (e.g. CI/CD), the CLI is the perfect place to start. You can inspect the CLI's code and find detailed documentation on the CLI's public [GitHub repository](https://github.com/LivePersonInc/faas-cli).
 
 ### How to install
 
  {: .notice}
-The CLI is optimized for use with macOS and Linux. If you want to use the CLI from a Windows machine, we recommend using the Linux subsystem.
+The CLI is optimized for use with macOS and Linux. If you want to use the CLI from a Windows machine, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about).
 
-Use the command `npm install -g liveperson-functions-cli` or `yarn global add liveperson-functions-cli` to install the CLI on your local machine. Once the CLI has been successfully installed using `lpf version` should show something along the lines off:
+Use the command `npm install -g liveperson-functions-cli` or `yarn global add liveperson-functions-cli` to install the CLI on your local machine. Once the CLI has been successfully installed you can display the current version using `lpf version`:
 
 <img class="fancyimage" alt="Functions: cli version" src="img/functions/functions_cli_version.png">
 
@@ -47,24 +47,25 @@ All CLI functionality is available through the `lpf` command followed by:
 
 ### Local Development
 
-Local development with Functions is easy using the CLI if you require a more detailed step-by-step guide, than please check out our [CLI deep dive](liveperson-functions-getting-started-deep-dive-cli.html)
+Local development with Functions is easy using the CLI if you require a more detailed step-by-step guide, than please refer to [CLI deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html)
 #### Initialization
 The development process should start with initializing your functions environment using `lpf init` in an empty folder or an existing functions project. This will create the basic structure of your functions project. Additionally, it will add all the required files for local development, such as snippets or the debugger runtime.
 
 {: .notice}
-Each time you update the CLI or download a project created with the CLI it is recommended to reinitialize with `lpf init`. As changes to the CLI's might introduce new features that have to be added to the project's codebase.
+Each time you update the CLI or download a project created with the CLI it is recommended to reinitialize with `lpf init`, as changes to the CLI tools can introduce new features that have to be added to the project's codebase.
 
 #### Development and Testing
-You can create a new function locally using `lpf create:function` from your project's root folder. After following the steps, a new folder for your function will be created.
+To create a new function locally use `lpf create:function` from your project's root folder. After following the steps, a new folder for your function will be created.
 
-You can develop your function's code within this folder by modifying the `index.js` using the IDE of your choice, similarly to the Functions UI. If you want to alter your function's meta-information (e.g. description), you can do so in the `config.json`.
+You can develop your function's code within this folder by modifying the `index.js` using the IDE of your choice, similarly to the Functions UI. To alter your function's metadata (e.g. description), you can do so in the `config.json`.
 
 {: .notice}
-Modifying the `config.json` should be done with care. The lambdas name is immutable and used as an identifier with functions platform.
+Modifying the `config.json` should be done with care. The function name is immutable and used as an identifier within the Functions platform.
 
-Testing a function locally can be done by using the `lpf invoke FUNCTION_NAME --local` or `lpf debugger FUNCTION_NAME` to either invoke or debug the function. In both cases, the `input` property of the `config.json` will be used for payload. For a step-by-step guide please consult the [CLI deep dive](liveperson-functions-getting-started-deep-dive-cli.html).
+Testing a function locally can be done by using the `lpf invoke FUNCTION_NAME --local` or `lpf debugger FUNCTION_NAME` to either invoke or debug the function. In both cases, the `input` property of the `config.json` will be used for payload. For a step-by-step guide please consult the [CLI deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html).
 # Pushing and Deploying
-Pushing the function with `lpf push FUNCTION_NAME` will create or update a lambda on the functions platform. This can overwrite changes done to the function as such great care should be taken.
+Pushing the function with `lpf push FUNCTION_NAME` will create or update a function on the Functions platform. This can overwrite changes done to the function as it will update a pre-existing function.
+
 Once the function exists on the platform or is already deployed, you can check its status using `lpf get functions`:
 
 <img class="fancyimage" alt="Functions: cli get functions" src="img/functions/functions_cli_get_functions.png">
@@ -72,9 +73,9 @@ Once the function exists on the platform or is already deployed, you can check i
 Using `lpf deploy FUNCTION_NAME`, you can (re)deploy your function. This will changes its state to productive.
 ## Example CI Setup
 
-One of the practical uses of the CLI is to use it with a CI/CD solution to automate your development and deployment of functions.
+You can use the CLI to integrate into a CI/CD solution to automate your development and deployment of functions.
 
-The recommended way of using the CLI in an automated environment is authentication using a bot user. To create a bot user first create an API key in your conversational cloud:
+We recommend authenticating with a bot user to use the CLI in an automated environment. To create a bot user, first create an API key in your Conversational Cloud:
 
  <img class="fancyimage" alt="Functions: create an API key" src="img/functions/functions_create_api_key.png">
 
@@ -82,7 +83,7 @@ This API key should have **Data Access** and **User Login** permissions. Afterwa
 
  <img class="fancyimage" alt="Functions: create CI/CD profile" src="img/functions/functions_create_cicd_profile.png">
 
- Lastly, we create the actual bot user. Do so by choosing "bot" under user type. Next, choose the API key as the login method and select the previously created key from the list. Assign the Functions Developer profile and save the user:
+ Lastly, we create the actual bot user. Choose "bot" as user type. Next, choose the API key as the login method and select the previously created key from the list. Assign the Functions Developer profile and save the user:
 
  <img class="fancyimage" alt="Functions: create a bot user" src="img/functions/functions_create_bot_user.png">
 

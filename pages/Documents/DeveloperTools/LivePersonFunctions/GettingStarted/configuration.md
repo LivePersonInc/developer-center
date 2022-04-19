@@ -1,15 +1,15 @@
 ---
-pagename: Configure
+pagename: Configuration
 keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Getting Started
-permalink: liveperson-functions-getting-started-configure.html
+permalink: liveperson-functions-getting-started-configuration.html
 indicator: both
 ---
 
-This page will introduce you to all available methods to configure your functions. Please also look at the [allowlisting domains](liveperson-functions-foundations-features.html#domain-whitelisting) as this is required to access external resources.
+This page will introduce you to all available methods to configure your functions. Please also look at the [allowlisting domains](liveperson-functions-foundations-features.html#domain-allowlisting) as this is required to access external resources.
 
 ### Environment Variables
 
@@ -19,8 +19,7 @@ You can use environment variables to make your function more configurable withou
 
 #### Creating an Environment Variable
 
-You can create a new environment variable by pressing the "Set variable"-Button within the side panel of the editor UI.
-The side panel is depicted in the following screenshot:
+You can create a new environment variable by pressing the "Set variable"-button within the side panel of the editor UI.
 
 <img class="fancyimage" alt="Functions: Environment Variable Sidepannel" src="img/functions/functions_env_sidepannel.png">
 
@@ -37,19 +36,22 @@ Any environment variable will be checked against the following restrictions:
 #### Updating an Environment Variable
 
 {: .notice}
-Please be aware that changes made to the environment variable at runtime via `process.env` are local to the instance of the function. They are not propagated to the UI or any other running instance.
+Changes made to the environment variable at runtime via `process.env` are local to the instance of the function. They are not propagated to the UI or any other running instance.
 
 The modification of existing environment variables is possible via the side panel of the editor UI. Select the environment variable you want to change by clicking its name on the list.
 
 <img class="fancyimage" alt="Functions: Environment Variable update Sidepannel" src="img/functions/functions_env_update_sitepannel.png">
 
-Once you click on "Set", you will have to save the lambda to store the changes permanently. Please be aware that environment variables are static. Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect. 
+Once you click on "Set", you will have to save the function to store the changes permanently. Environment variables are static.
+
+{: .important}
+Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect. 
 
 <img class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
 
-#### Accessing Environment Variable
+#### Accessing Environment Variables
 
-Your configured environment variables are accessible via `process.env` from within the code. Generally speaking, you have both read and write access to the environment variables you configured. Please check out the caveats on modifying environment variables at runtime [here](#updating-an-environment-variable). Be aware that environment variables are interpreted as strings within Javascript by default. Hence if you want to use special types like JSON (e.g. `JSON.parse`) or a Number (e.g. `Number.parseInt`), you will have to parse them first.
+Your configured environment variables are accessible via `process.env` from within the code. You have both read and write access to the environment variables you configured. Be aware that environment variables are interpreted as strings within JavaScript by default. Hence if you want to use special types like JSON (e.g. `JSON.parse`) or a Number (e.g. `Number.parseInt`), you will have to parse them first.
 
 ```javascript
     // Accessing an environment variable and using it as string
@@ -83,7 +85,7 @@ After clicking the button, you will be presented with a dialogue that allows you
 
 <img class="fancyimage" alt="Functions: Secret Creation" src="img/functions/functions_secret_creation.png">
 
-You can select the data type of the secret from the drop-down menu. Please be aware that this modifies the validation and does not influence the [access](#accessing-secrets) to the secrets later. For example, if you select `JSON`, it will check the syntax of the JSON and reject faulty JSON strings.
+You can select the data type of the secret from the drop-down menu. This only modifies the validation and does not influence the [access](#accessing-secrets) to the secrets later. For example, if you select `JSON`, it will check the syntax of the JSON and reject faulty JSON strings.
 
 <img class="fancyimage" alt="Functions: Secret Type Dropdown" src="img/functions/functions_secret_type.png">
 
@@ -91,7 +93,7 @@ You might notice that you cannot see the contents of the secret after the creati
 
 #### Updating Secrets (only at Runtime)
 
-As mentioned above, we don't allow the modification of secrets from the UI. You may, however, change them at runtime. You can leverage the `SecretClient`, which our runtime library offers the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt) for this task. Please notice the `try`-`catch` block in the code below. This should highlight that accessing a secret can fail and will raise an error in the process of failing.
+As mentioned above, we do not allow the modification of secrets from the UI. You may, however, change them at runtime. You can leverage the `SecretClient`, which is available in our [Toolbelt](liveperson-functions-foundations-features.html#toolbelt) for this task. Please notice the `try`-`catch` block in the code below. This highlights the importance of error handling, since accessing a secret can fail.
 
 **Async-Await Style:**
 
@@ -129,7 +131,7 @@ As mentioned above, we don't allow the modification of secrets from the UI. You 
 
 #### Accessing Secrets
 
-Access to the secrets of the account is possible at runtime thanks to the `SecretClient`, which our runtime library offers the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). Please be notice the `try`-`catch` block in the code below. This should highlight that accessing a secret can fail and will raise an error in the process of failing.
+Access to the secrets of the account is possible at runtime thanks to the `SecretClient` offered by our [Toolbelt](liveperson-functions-foundations-features.html#toolbelt). Please notice the `try`-`catch` block in the code below. This highlights the importance of error handling, since accessing a secret can fail.
 
 **Async-Await Style:**
 
@@ -167,7 +169,8 @@ Access to the secrets of the account is possible at runtime thanks to the `Secre
             });
 ```
 
-> If you know that your secret won't be changing as it is static and not getting updated at runtime. You may load it once into memory and then store it. Please check out the below coding that shows a lazy initialization of a secret using a variable.
+{: .important}
+If you know that your secret will not be changing as it is static and not getting updated at runtime. You may load it once into memory and then store it. This example code shows a lazy initialization of a secret using a variable.
 
 ```javascript
 const { Toolbelt } = require('lp-faas-toolbelt');
@@ -208,35 +211,29 @@ The functions have access to a set of libraries, which we define in our function
 <thead>
   <tr>
     <th>Dependency Name</th>
-    <th  style="text-align: center; vertical-align: middle;">Semver</th>
     <th  style="text-align: center; vertical-align: middle;" >Documentation</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>jsforce</td>
-    <td style="text-align: center; vertical-align: middle;" >1.10.1</td>
-    <td style="text-align: center; vertical-align: middle;" >https://jsforce.github.io/</td>
+    <td style="text-align: center; vertical-align: middle;" ><a href="https://jsforce.github.io/">https://jsforce.github.io/</a></td>
   </tr>
   <tr>
     <td>oauth-1.0a</td>
-    <td style="text-align: center; vertical-align: middle;" >2.2.6</td>
-    <td style="text-align: center; vertical-align: middle;" >https://www.npmjs.com/package/oauth-1.0a</td>
+    <td style="text-align: center; vertical-align: middle;" ><a href="https://www.npmjs.com/package/oauth-1.0a">https://www.npmjs.com/package/oauth-1.0a</a></td>
   </tr>
   <tr>
     <td>luxon</td>
-    <td style="text-align: center; vertical-align: middle;" >1.27.0</td>
-    <td style="text-align: center; vertical-align: middle;" >https://moment.github.io/luxon/#/?id=luxon</td>
+    <td style="text-align: center; vertical-align: middle;" ><a href="https://moment.github.io/luxon/#/?id=luxon">https://moment.github.io/luxon/#/?id=luxon</a></td>
   </tr>
   <tr>
     <td>lodash</td>
-    <td style="text-align: center; vertical-align: middle;" >4.17.21</td>
-    <td style="text-align: center; vertical-align: middle;" >https://lodash.com/</td>
+    <td style="text-align: center; vertical-align: middle;" ><a href="https://lodash.com/">https://lodash.com/</a></td>
   </tr>
   <tr>
     <td>lp-faas-toolbelt</td>
-    <td style="text-align: center; vertical-align: middle;" >x.x.x</td>
-    <td style="text-align: center; vertical-align: middle;" >https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt</td>
+    <td style="text-align: center; vertical-align: middle;" ><a href="https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt">https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt</a></td>
   </tr>
   </tbody>
 </table>

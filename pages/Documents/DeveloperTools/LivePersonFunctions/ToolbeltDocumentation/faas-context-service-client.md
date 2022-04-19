@@ -156,7 +156,7 @@ ___
 ▸ **getListOfNamespaces**(): `Promise`<[`Namespace`](#interface-namespace)[]\>
 
 Returns a list containing all custom namespaces for the account the client was initialised for.
-Please be aware that built-in namespaces won't show up with exception to
+Please be aware that built-in namespaces will not show up with exception to
 the default namespace.
 
 **`throws`** SDK Error when API returned non successful status code

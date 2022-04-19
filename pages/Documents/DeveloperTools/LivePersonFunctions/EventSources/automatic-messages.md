@@ -9,14 +9,14 @@ permalink: liveperson-functions-event-sources-automatic-messages.html
 indicator: both
 ---
 
-Automatic Messages (also known as System Messages) are predefined messages triggered upon events that occur through the lifecycle of a conversation (e.g. the consumer opens a new conversation, the conversation is transferred to another agent & the time to respond is updated). Auto messages will be sent to both agent and consumer by the system. Therefore they appear in the conversation's history both on the consumer and conversation cloud side.
+Automatic Messages (also known as System Messages or Auto Messages) are predefined messages triggered upon events that occur through the lifecycle of a conversation (e.g. the consumer opens a new conversation, the conversation is transferred to another agent time to respond is updated). Automatic Messages will be sent to both agent and consumer by the system. Therefore they appear in the conversation's history both on the consumer and Conversational Cloud side.
 
-Thanks to our integration with Automatic Messages, we can have functions being triggered based on selected events. A payload is sent to a function containing metadata related to the specific conversation and based on the selected event during the invocation. This payload can then be used for further processing and referencing.
+Thanks to our integration with Automatic Messages, you can create functions triggered based on selected events. A payload is sent to a function containing metadata related to the specific conversation and based on the selected event during the invocation. This payload can then be used for further processing and referencing.
 
 <img src="img/functions/functions_automessages_flow.png" alt="Functions: Automatic Messages Flow" style="width:100%;"/>
 
 {: .notice}
-If a specific system message is disabled, the associated function will be invoked regardless of the state of the enabled flag. To entirely avoid firing of functions, you have to undeploy your function. You may choose to ignore a specific event by leveraging the `cbotEventType` property included in the invocation payload. However, the ignored invocations here would still count towards your usage limits.
+A function will trigger regardless of the state of the enabled flag of an Automatic Message. To avoid a function being triggered, you must undeploy your function. You can choose to ignore a specific event by leveraging the `cbotEventType` property included in the invocation payload. However, the ignored invocations here would still count towards your usage limits.
 
 This is the Automatic Messages flow with Functions integration:
 
@@ -37,7 +37,7 @@ This is the Automatic Messages flow with Functions integration:
 Enable the Automatic Messages feature.
 
 {: .important}
-It is required that your account has the Automatic Messages permissions enabled; don't hesitate to get in touch with your account team to do this.
+Your account must have the Automatic Messages permissions enabled; please get in touch with your account team to enable the feature.
 
 #### Step 2 - Create a function
 
@@ -52,27 +52,27 @@ Create a new function using one of the following messaging events:
 * Messaging conversation idle.
 * Messaging consumer step up.
 
-You can select one of the available [templates](liveperson-functions-event-sources-overview.html#templates) for the chosen event. Currently, only one function per template type can be created for these conversational events. Suppose multiple types of functionality are needed that stem from the same event invocation. In that case, you can do it with an[Orchestrator Function](liveperson-functions-foundations-features.html) that can invoke multiple functions from the same function, or that functionality should be coded into the same function.
+You can select one of the available [templates](liveperson-functions-event-sources-overview.html#templates) for the chosen event. Currently, you can create only one function per template type for these conversational events. If multiple implementations of an event are necessary, you can achieve this with an[Orchestrator Function](liveperson-functions-foundations-features.html). Leveraging this feature, you can invoke multiple functions from the same (orchestrator) function.
 
-You can select a Skill or set of Skills. Specifying a skill can reduce the complexity of the function's code. Furthermore, it reduces the number of unnecessary invocations.
+You can select a Skill or set of Skills. Specifying a Skill can reduce the complexity of the function's code, reducing the number of unnecessary invocations.
 
 #### Step 3 - Edit your Function
 
-Adjust the coding from the template according to your needs by modifying the function. The function can return a series of commands to the trigger.
-Please see our [deep dive UI Creation Process](liveperson-functions-getting-started-deep-dive-ui.html#creation-process) section or as alternative [deep dive CLI Create](liveperson-functions-getting-started-deep-dive-cli.html) section for further information.
+Adjust the code of the template according to your needs. The function can return a series of commands to the trigger.
+Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
 #### Step 4 - Deploy your function
 
-Like any other function, this function must be deployed before it can be used. Please see our [deep dive UI Deployment Process](liveperson-functions-getting-started-deep-dive-ui.html#deployment-process) section or as alternative [deep dive CLI Deploy](liveperson-functions-getting-started-deep-dive-cli.html) section for more information on how to deploy your function. At this point, you can also test your function.
+Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function. At this point, you can also test your function.
 
 ### Messaging events
 
-Conversational Cloud Messaging uses a series of "Conversation State Change Events", fired when specific actions or events occur within the conversation. You can use these events to trigger your functions. The Automatic Messages (Automatic Messages) is responsible for invoking functions on certain messaging events.
+Conversational Cloud Messaging uses a series of "Conversation State Change Events", fired when specific actions or events occur within the conversation. You can use these events to trigger your functions. The Automatic Messages are responsible for invoking functions on certain messaging events.
 
 {: .notice}
 Multiple conversation event types are mapped to the same invocation messaging event.
 
-A deployed function on a specific messaging event can be invoked on multiple conversation events. I.e., a function deployed on the **Messaging conversation end** event will fire when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
+A deployed function on a specific messaging event can be invoked on multiple conversation events. For example, a function deployed on the **Messaging conversation end** event will fire when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
 
 The `cbotEventType` property is included in the invocation payload to distinguish the conversation event type during the invocation. The following table shows the conversation event type mapping to messaging events on functions:
 
@@ -102,7 +102,7 @@ The `cbotEventType` property is included in the invocation payload to distinguis
 
 ### Interaction via Commands
 
-You have the option to send commands back to the trigger. You can choose to send one command or multiple commands at a time by simply adding them to an array. Using callback commands is **not** mandatory. If you don't want to take any actions, return an empty array `[]`. This will result in no operation.
+You can send commands back to the trigger by returning one command or multiple commands by simply adding them to an array. Using callback commands is **not** mandatory. If you do not want to take any actions, return an empty array `[]`. This will result in no operation.
 
 {: .important}
 If no message is set in the result of the function (which it returns to the trigger, for example: `callback();` ), the default automatic message for the account will be triggered.
@@ -115,7 +115,7 @@ let result = [
    },
    {
        type: "transfer", // Transfers the conversation.
-       skillId: "123456", // Transfer to different skill.
+       skillId: "123456", // Transfer to different Skill.
        agentId: "123456" // Propose an agent.
    },
    {
@@ -125,7 +125,7 @@ let result = [
 callback(null, result);
 ```
 
-With the Automatic Messages as the trigger, you have the option to execute the following commands:
+With Automatic Messages selected as trigger, you have the option to execute the following commands:
 
 * Send a message. The default automatic message can be overwritten with:
 
@@ -181,14 +181,14 @@ If you add more than one command of a particular type (e.g. two messages) **only
 
 #### Messaging events are asynchronous
 
-Functions for messaging listens for messaging events asynchronously. Consequently, this can cause race conditions with other parts of the conversation cloud. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in the process of being routed), e.g. a conversation is idle, or a message line has been sent in off-hours. Functions are an excellent option to enrich data with third-party systems like CRMs or save data in the [Conversation Context Service](maven-context-warehouse-overview.html) to make it usable by another system like this, the Conversation Orchestrator.
+Functions for messaging listens for messaging events asynchronously. Consequently, this can cause race conditions with other parts of the Conversational Cloud. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in the process of being routed), e.g. a conversation is idle, or a message line has been sent in off-hours. Functions are an excellent option to enrich data with third-party systems like CRMs or save data in the [Conversation Context Service](maven-context-warehouse-overview.html) to make it usable by another system like this, the Conversation Orchestrator.
 
 {: .notice}
-if the authenticated consumer's previous conversation was auto-closed and the new one opened within 48 hours, the new conversation event won't be triggered.
+If the authenticated consumer's previous conversation was auto-closed and the new one opened within 48 hours, the new conversation event will not be triggered.
 
 #### Automatic Messages Error Handling
 
-If your function invocation takes too long or you have coding errors, Automatic Messages will retry up to 3 times. This will increase the number of invocations when your function does not perform well and lead to more overload.
+If your function invocation takes too long or you have errors in your code, **Automatic Messages will retry up to 3 times**. This will increase the number of invocations when your function does not perform well and lead to more overload.
 
 ### Payload Details
 

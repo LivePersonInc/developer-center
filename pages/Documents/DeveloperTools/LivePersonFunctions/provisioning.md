@@ -8,7 +8,7 @@ permalink: liveperson-functions-provisioning.html
 indicator: both
 ---
 
-To leverage the full functionality of the LivePerson Functions platform, we require to perform some provisioning tasks. This process needs to be performed by a Conversational Cloud Admin, and it happens during the initial agreement to the terms of use. Furthermore, we may perform partial provisioning in the future if new features require them. This process will happen in the background during login to the UI.
+You must perform your first sign-in to the LivePerson Functions platform with a Conversational Cloud Admin account. During your initial agreement to the terms of use, we automatically provision your LivePerson Functions environment. 
 
 <img src="img/functions/functions_ui_terms_of_use.png" alt="Functions: Terms of Use" style="width:100%;"/>
 
@@ -16,7 +16,7 @@ The following provisioning tasks will be performed:
 
 * Activating the LivePerson Functions feature on your account.
 * [Installing default secrets](liveperson-functions-foundations-features.html#secret-store) to interact with other LivePerson APIs
-* [Allowlisting default domains](liveperson-functions-foundations-features.html#domain-whitelisting) of internal LivePerson APIs
+* [Allowlisting default domains](liveperson-functions-foundations-features.html#domain-allowlisting) of internal LivePerson APIs
 
 ### Provisioning secrets
 
@@ -26,7 +26,7 @@ Interaction between Functions and other LivePerson APIs needs to get authenticat
 * **lp-faas-orchestrator-app-key**: This secret is required and used for the Orchestrator Feature, available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
 
 {: .notice}
-To ease functions development, Toolbelt clients for internal APIs use those secrets. In this way, the developers don't need to implement any authentication method for those APIs.
+To ease functions development, Toolbelt clients for internal APIs use those secrets. In this way, the developers do not need to implement any authentication method for those APIs.
 
 #### lp-faas-default-app-key privileges
 
@@ -176,7 +176,7 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
   <tr>
     <td>asyncMessagingEnt</td>
     <td style="text-align: center; vertical-align: middle;" >Messaging Window API, Connector API and Shift Status API</td>
-    <td style="text-align: center; vertical-align: middle;" >Usually same as "asyncMessaging" domain, it may be different for certain brands.</td>
+    <td style="text-align: center; vertical-align: middle;" >Usually same as "asyncMessaging" domain, it can be different for certain brands.</td>
   </tr>
   <tr>
     <td>engHistDomain</td>

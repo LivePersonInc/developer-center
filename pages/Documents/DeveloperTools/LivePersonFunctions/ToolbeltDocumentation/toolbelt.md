@@ -99,7 +99,7 @@ ___
 
 ▸ `Static` **MTLSClient**(`clientTLS`): [`IMTLSClient`](liveperson-functions-toolbelt-documentation-mtls-client.html)
 
-Returns an MTLS Client which is configured with the provided config. Please make sure that you set _allowSelfSigned_
+Returns an mTLS Client which is configured with the provided config. Please make sure that you set _allowSelfSigned_
 to true when calling an endpoint that relies on a self-signed cert. Another alternative would be to leverage the
 ca cert, that needs to be passed via the clientTLS config.
 
@@ -119,7 +119,7 @@ ___
 
 ▸ `Static` **OrchestratorClient**(): [`IOrchestratorClient`](liveperson-functions-toolbelt-documentation-orchestrator-client.html)
 
-Returns an OrchestratorClient which can be used to invoke other lambdas
+Returns an OrchestratorClient which can be used to invoke other functions
 
 #### Returns
 

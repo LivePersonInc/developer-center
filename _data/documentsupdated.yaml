@@ -765,9 +765,9 @@
         - pagename: Getting Started
           subpages:
             - subpagename: Your First Function
-            - subpagename: Deep Dive UI
-            - subpagename: Deep Dive CLI
-            - subpagename: Configure
+            - subpagename: Development Deep Dive (UI)
+            - subpagename: Development Deep Dive (CLI)
+            - subpagename: Configuration
             - subpagename: Monitoring
         - pagename: Foundations
           subpages:
@@ -796,7 +796,7 @@
             - subpagename: Automatic Messages
             - subpagename: Post Conversation Survey (Legacy)
             - subpagename: Conversational Commands
-            - subpagename: Third Party Bots
+            - subpagename: Third-Party Bots
             - subpagename: Chat Post Survey
             - subpagename: Conversation Builder
         - pagename: Permission System

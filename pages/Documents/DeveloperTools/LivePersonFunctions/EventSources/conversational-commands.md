@@ -9,18 +9,16 @@ permalink: liveperson-functions-event-sources-conversational-commands.html
 indicator: both
 ---
 
-When correctly set up, agents can use Conversational Commands to invoke functions from the Agent Workspace. All available commands are shown by typing `/` into the messaging input in the connections panel. This empowers agents to use a bank of preconfigured, account-specific commands to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
+Agents can use Conversational Commands to invoke functions from the Agent Workspace. All available commands are displayed by typing `/` into the messaging input in the connections panel, after Conversational Commands are set up. This empowers agents to use a set of preconfigured, account-specific commands to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
 
 <img src="img/functions/functions_conversational_commands.png" alt="Functions: Conversational Commands" style="width:50%;"/>
 
-Along with the invocation, a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used for further processing and referencing. The result of the function has to either be a string or a number. And will be shown in the Agent Workspace as a message in the transcript.
-
-**Note:** The response is not stored in the conversation transcript. It will only be stored temporarily in the browser and is only visible to the agent.
+Along with the invocation, a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript. The response **is not stored in the conversation transcript**. It will only be stored temporarily in the browser and is only visible to the agent.
 
 ### Configuration
 
 {: .important}
-It is required that your account has the New Agent Workspace enabled; don't hesitate to get in touch with your account team to do this.
+Your account must have the New Agent Workspace enabled; please get in touch with your account team to enable the feature.
 
 To be able to use Conversational Commands, an Agent needs the following permissions:
 
@@ -35,17 +33,18 @@ The `description` will also be shown in the Agent Workspace. The description can
 
 `[email, subject:optional] - Sends the conversation transcript to the provided email address.`
 
-**Note:** You can create up to 30 functions for this event.
+{: .important}
+You can create up to 30 functions for this event.
 
 #### Step 2 - Edit the Function
 
-Adjust the code in the template according to your needs by modifying the function. On the right side, you can see an example of the payload (in the sidebar, which you might need to open).
+Adjust the code in the template according to your needs by modifying the function. You can see an example of the payload in the sidebar, which might be collapsed.
 
-The function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the agent will only be shown a generic success message. If the function returns an `Error`, this will be presented to the agent as an error message.
-Please see our [deep dive UI Creation Process](liveperson-functions-getting-started-deep-dive-ui.html#creation-process) section or as alternative [deep dive CLI Create](liveperson-functions-getting-started-deep-dive-cli.html) section for further information.
+The function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the agent will only be shown a generic success message. If the function returns an `Error`, this will be displayed to the agent as an error message.
+Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 #### Step 3 - Deploy the function
 
-Like any other function, this function must be deployed before it can be used.  Please see our [deep dive UI Deployment Process](liveperson-functions-getting-started-deep-dive-ui.html#deployment-process) section or as alternative [deep dive CLI Deploy](liveperson-functions-getting-started-deep-dive-cli.html) section for more information on how to deploy your function.
+Like any other function, this function must be deployed before it can be used.  Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
 ### Examples
 
 You can find more information and examples in the [LivePerson Knowledge Center](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-conversational-commands.html/)

@@ -9,12 +9,12 @@ indicator: both
 ---
 
 # Examples
-When programming Functions, you will often come across similar use cases. Here we will show you some common examples for such use cases and how you could solve them.
+When programming functions, you will often come across similar use cases. Here we will show you some common examples for such use cases and how you could solve them.
 
 ## OAuth 1
-OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the login credentials. LivePerson Functions offers the possibility to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package to support the [OAuth 1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
+OAuth is an open-standard authorization framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the login credentials. LivePerson Functions offers the option to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package to support the [OAuth 1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
 
-The following code shows an example that performs a `POST` request with Authorization `Header`.
+The following code shows an example that performs a `POST` request with `Authorization Header`.
 
 {: .notice}
   It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
@@ -82,7 +82,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
 {: .notice}
-It's recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client)
+It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client)
 
 
 ```javascript
@@ -225,7 +225,7 @@ async function getSecret(key) {
 }
 ```
 ### Inform customers about the maximum wait time
-The lambda listens to the *Messaging Conversation Routing* event in this simple example. We extract the `skillId` from the `payload` and use it to find available agents for this skill. If we do not find one, we communicate this to the customer. If at least one agent is available, we query the LivePerson *Message Queue Health* API to receive an approximate wait time. This information is lastly communicated to the customer.
+The function listens to the *Messaging Conversation Routing* event in this simple example. We extract the `skillId` from the `payload` and use it to find available agents for this skill. If we do not find one, we communicate this to the customer. If at least one agent is available, we query the LivePerson *Message Queue Health* API to receive an approximate wait time. This information is then sent to the customer.
 
 ```javascript
 const { Toolbelt, LpServices } = require('lp-faas-toolbelt');

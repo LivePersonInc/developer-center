@@ -13,11 +13,11 @@ indicator: both
       <img class="container-image" src="img/functions/ic_functions_first_fn.svg"/>
       <h5 class="welcome-title">Develop your first function in under 10 minutes</h5>
     </a>
-      <a  class="welcome-card"  href="/liveperson-functions-getting-started-deep-dive-ui.html">
+      <a  class="welcome-card"  href="/liveperson-functions-getting-started-development-deep-dive-ui.html">
       <img class="container-image" src="img/functions/ic_functions_ui.svg"/>
       <h5 class="welcome-title">Dive into our webinterface</h5>
     </a>
-    <a  class="welcome-card"  href="/liveperson-functions-getting-started-deep-dive-cli.html">
+    <a  class="welcome-card"  href="/liveperson-functions-getting-started-development-deep-dive-cli.html">
       <img class="container-image" src="img/functions/ic_functions_cli.svg"/>
       <h5 class="welcome-title">Dive into our commandline interface</h5>
     </a>

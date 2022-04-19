@@ -12,22 +12,22 @@ indicator: both
 Chat Post Survey integrates LivePerson Functions with Conversational Cloud Chat. This integration will use Functions to re-create one of our Legacy features: the ability to send out email transcripts after a chat conversation ends conditionally.
 
 {: .important}
-For this integration, the chat server will still take care of sending out emails. Functions will only enable you to write more sophisticated conditions.
+For this integration, the chat server will still take care of sending out emails. Functions will enable you to write more sophisticated conditions.
 
 ### Configuration
 
-There are no further requirements other than your Functions account has been [provisioned](liveperson-functions-provisioning.html). This integration is available only with Conversational Cloud Chat, not Conversational Cloud Messaging.
+There are no further requirements other than your Functions account has been [provisioned](liveperson-functions-provisioning.html). This integration is available **only with Conversational Cloud Chat, not Conversational Cloud Messaging**.
 
 #### Step 1 - Create a new Function
 
-Create a new function from the **Chat Post Survey E-mail Transcript** event. Leave the default template selected.
+Create a new function from the **Chat Post Survey Email Transcript** event. Leave the default template selected.
 
 {: .important}
 Once a Function implements this specific event, it will disable the existing logic (i.e., any rules defined otherwise in Conversational Cloud). Therefore, confirm that you implemented the current logic within your function before deployment.
 
 #### Step 2 - Edit the Function
 
-Adjust the coding from the template according to your needs. The email result entry **needs** to contain the following properties:
+Adjust the code of the template according to your needs. The email result entry **needs** to contain the following properties:
 
 |Property|description|type|
 |--- |--- |--- |
@@ -36,10 +36,10 @@ Adjust the coding from the template according to your needs. The email result en
 |senderEmail|Sender email address.|STRING|
 |subject|Email subject.|STRING|
 
-Please see our [deep dive UI Creation Process](liveperson-functions-getting-started-deep-dive-ui.html#creation-process) section or as alternative [deep dive CLI Create](liveperson-functions-getting-started-deep-dive-cli.html) section for further information.
+Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 #### Step 3 - Deploy the Function
 
-Like any other function, this function must be deployed before it can be used. Please see our [deep dive UI Deployment Process](liveperson-functions-getting-started-deep-dive-ui.html#deployment-process) section or as alternative [deep dive CLI Deploy](liveperson-functions-getting-started-deep-dive-cli.html) section for more information on how to deploy your function.
+Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
 ### Function example
 
 The following code is an example function that processes a payload sent from the Conversational Cloud. The function processes the data and returns a list of email addresses to Conversational Cloud:
@@ -103,9 +103,9 @@ The following example is a payload that Conversational Cloud Chat sends to Funct
 }
 ```
 
-### Hints
+### Helpful hints
 
-* Only **Chat Post Survey E-mail Transcript** event is supported for this integration.
-* Functions platform won't send out any email. Instead, the triggering service will send the email based on the function's response.
+* Only **Chat Post Survey Email Transcript** event is supported for this integration.
+* The Functions platform will not send out any email. Instead, the triggering service will send the email based on the function's response.
 * Any logic/rules related to this event outside the Functions will be replaced by the function once deployed. Be sure to implement the completed logic to avoid unexpected behaviours.
-* If there is an error during an invocation, the email won't be sent. There is **no retry** mechanism in the chat server for this integration.
+* If there is an error during an invocation, the email will not be sent. There is **no retry** mechanism in the chat server for this integration.
