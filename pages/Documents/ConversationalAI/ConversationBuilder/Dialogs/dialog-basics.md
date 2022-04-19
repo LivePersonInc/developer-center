@@ -68,7 +68,7 @@ You can import dialogs from one bot to another within your organization. This ca
     * Global functions
     * Environment variables (you can [export](conversation-builder-environment-variables.html#export-environment-variables-to-a-csv-file) these)
 * During the import, the associations of domains, intents, and entities to interactions are maintained.
-* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-common-settings-tasks.html#common-configurable-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledgeai-common-settings-tasks.html#common-configurable-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the KnowledgeAI application.
 
 When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs.
 
@@ -155,7 +155,7 @@ These methods for closing the conversation **don't** trigger a post-conversation
 ### Configure dialog settings
 
 **To configure dialog settings**
-1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 

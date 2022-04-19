@@ -25,7 +25,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font: 16px / 1.8 Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font: 16px / 1.8 Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
   color: #575757;
 }
@@ -85,7 +85,7 @@ html {
 .grid-container:after,
 *[class*="grid-width"]:before,
 .grid-container:before {
-  content: '';
+  content: "";
   display: block;
   overflow: hidden;
   visibility: hidden;
@@ -423,7 +423,7 @@ html {
   font: inherit;
   color: inherit;
   border: 1px solid #d9d9d9;
-  padding: .2em .5em;
+  padding: 0.2em 0.5em;
 }
 .content input:focus,
 .content select:focus,
@@ -506,7 +506,7 @@ html {
   font-size: 0.75rem;
   line-height: 21.6px;
   line-height: 1.35rem;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 2px 6px;
   -webkit-box-shadow: 0 0 4px #ffffff inset, 0 2px 0 #d9d9d9;
   -moz-box-shadow: 0 0 4px #ffffff inset, 0 2px 0 #d9d9d9;
@@ -531,7 +531,8 @@ html {
   font-size: 0.743rem;
   line-height: 21.4px;
   line-height: 1.34rem;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 .content pre a,
 .content code a {
@@ -600,12 +601,12 @@ body input.button-a {
 body a.button-a.icon-pos-left,
 body button.button-a.icon-pos-left,
 body input.button-a.icon-pos-left {
-  padding-left: .8em;
+  padding-left: 0.8em;
 }
 body a.button-a.icon-pos-right,
 body button.button-a.icon-pos-right,
 body input.button-a.icon-pos-right {
-  padding-right: .8em;
+  padding-right: 0.8em;
 }
 body a.button-a.button-a-no-text,
 body button.button-a.button-a-no-text,
@@ -736,7 +737,7 @@ body input.navigation-b ul li a:hover:hover {
   background: #ebebeb;
   display: inline-block;
   white-space: nowrap;
-  padding: .4em 1.2em .2em;
+  padding: 0.4em 1.2em 0.2em;
   font-weight: 700;
   position: relative;
   z-index: 1000;
@@ -747,7 +748,7 @@ body input.navigation-b ul li a:hover:hover {
   color: #575757;
 }
 .balloon-a:before {
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   border-style: solid;
@@ -775,7 +776,7 @@ body input.navigation-b ul li a:hover:hover {
 }
 .icon-pos-left:before,
 .icon-pos-right:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -854,7 +855,7 @@ body input.navigation-b ul li a:hover:hover {
 }
 .switch .switch-inner {
   float: left;
-  background-color: #FFF;
+  background-color: #fff;
   height: 1.5em;
   width: 4.125em;
   padding: 2px;
@@ -881,7 +882,7 @@ body input.navigation-b ul li a:hover:hover {
   background-clip: padding-box;
 }
 .switch .switch-inner .handler:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -963,7 +964,7 @@ body input.navigation-b ul li a:hover:hover {
 .modal {
   padding: 20px;
   border-radius: 3px;
-  background-color: white;
+  background-color: var(--body-background);
   max-width: 700px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1047,7 +1048,7 @@ footer > div {
 }
 .adjoined-bottom:before {
   z-index: -1;
-  content: '';
+  content: "";
   background: #27c0d8;
   position: absolute;
   top: 0;
@@ -1074,11 +1075,11 @@ main .grid-container.freed-width {
   top: -40px;
   right: 50%;
   margin-right: -15px;
-  background: #FFEFC1;
-  border-bottom-color: #DCDCA4;
+  background: #ffefc1;
+  border-bottom-color: #dcdca4;
 }
 .switch .balloon-a:before {
-  border-color: #FFEFC1 transparent transparent transparent;
+  border-color: #ffefc1 transparent transparent transparent;
 }
 #toolbar .editors-container {
   overflow: hidden;
@@ -1089,7 +1090,7 @@ main .grid-container.freed-width {
   height: auto;
 }
 #main #editor {
-  background: #FFF;
+  background: #fff;
   padding: 2% 4%;
   border: dashed 5px #27c0d8;
 }
@@ -1209,7 +1210,7 @@ header .balloon-a {
   opacity: 1;
 }
 .cke_toolbar.active:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -1365,7 +1366,7 @@ div.toolbarModifier > ul > li[data-type="separator"] {
   background: #f5f5f5;
 }
 div.toolbarModifier > ul > li[data-type="separator"]:after {
-  content: '';
+  content: "";
   width: 100%;
 }
 div.toolbarModifier > ul > li[data-type="separator"] > p {
@@ -1439,10 +1440,21 @@ div.toolbarModifier > ul > li ul li[data-type="subgroup"] [data-type="button"] {
   background-clip: padding-box;
   padding: 0 2px;
 }
-div.toolbarModifier > ul > li ul li[data-type="subgroup"] [data-type="button"]:focus {
+div.toolbarModifier
+  > ul
+  > li
+  ul
+  li[data-type="subgroup"]
+  [data-type="button"]:focus {
   background: rgba(0, 0, 0, 0.04);
 }
-div.toolbarModifier > ul > li ul li[data-type="subgroup"] [data-type="button"] input {
+div.toolbarModifier
+  > ul
+  > li
+  ul
+  li[data-type="subgroup"]
+  [data-type="button"]
+  input {
   vertical-align: middle;
 }
 div.toolbarModifier > ul > li ul li > p,
@@ -1514,7 +1526,7 @@ div.toolbarModifier-hints dl dt {
   text-align: right;
   border-top: 1px solid #dddddd;
   padding-left: 1.5em;
-  padding-right: .1em;
+  padding-right: 0.1em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1533,7 +1545,7 @@ div.toolbarModifier-hints dl dd code {
   line-height: 2.2em;
 }
 div.toolbarModifier-hints dl dd:after {
-  content: '\00a0';
+  content: "\00a0";
   display: block;
   clear: left;
   float: right;
@@ -1562,7 +1574,8 @@ div.toolbarModifier-hints dl dd:after {
   font-size: 0.813rem;
   line-height: 23.42px;
   line-height: 1.46rem;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 .CodeMirror pre {
   border: none;
@@ -1593,7 +1606,8 @@ div.toolbarModifier-hints dl dd:after {
   font-size: 0.875rem;
   line-height: 25.2px;
   line-height: 1.57rem;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 .CodeMirror-hints.toolbar-modifier .CodeMirror-hint-active {
   color: #575757;

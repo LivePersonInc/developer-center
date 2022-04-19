@@ -49,7 +49,7 @@ Adding training phrases to an intent can sometimes be a challenge, so Intent Man
 Generating training phrases is useful when: 
 
 * You’re building out a LivePerson or third-party NLU domain that you’ve created from scratch.
-* You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
+* You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
 
 Note:
 * This feature is only available for English-language domains.
@@ -63,11 +63,11 @@ Note:
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, select the intent.
-5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
+5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn1.png">
 
-6. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the *FAQs* farther below regarding typos and misspellings.)
+6. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the FAQ [here](intent-manager-faqs.html) regarding typos and misspellings.)
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn2.png">
 

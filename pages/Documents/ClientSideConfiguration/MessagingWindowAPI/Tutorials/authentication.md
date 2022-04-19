@@ -19,7 +19,7 @@ In this tutorial you will use the APIs with the authenticated identity of the co
 
 ### Prerequisites
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
-In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator) according to [these instructions](consumer-int-account-provision.html).
+In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator).
 
 ### Step 1 - Configure the Authentication Connector
 Log into Conversational Cloud and navigate to Campaign Builder > Data Sources > Authentication Server > Configure.

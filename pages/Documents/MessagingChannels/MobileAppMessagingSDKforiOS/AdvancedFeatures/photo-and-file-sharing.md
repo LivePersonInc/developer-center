@@ -63,7 +63,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 #### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
   
@@ -172,13 +172,13 @@ By default, the value is set to **true**.
 
    - conversationNavigationTintColor colors the L &amp; R bar buttons as well as the title color.
 
-   <img src="../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding-bottom: 20px;">
+   <img src="/img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding-bottom: 20px;">
 
    **View Controller Mode:**
 
    Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
 
-   <img src="../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding-bottom: 20px;">
+   <img src="/img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding-bottom: 20px;">
 
 
-You can find all the related configurations in the [resources ID table](http://localhost:4000/consumer-experience-ios-sdk-attributes.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.
+You can find all the related configurations in the [resources ID table](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-sdk-attributes-branding-and-configurations.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.

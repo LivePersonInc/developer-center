@@ -57,42 +57,49 @@ Use a Knowledge AI interaction in a bot when you want to search a knowledge base
 
 ![Carousel](img/ConvoBuilder/knowledge_ai.gif)
 
-A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+A common use case for the Knowledge AI interaction is within a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+Alternatively, you might have an FAQ bot that is driven by a knowledge base full of articles.
+
+Powering bots with intelligent answers can increase containment: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
+
+#### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/682936871" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
 
 #### How the Knowledge AI search works
 
 * **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
+* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-using-intents-with-kbs.html#search-modes).
 * **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
 
-When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, one of:
+When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, i.e., one of these:
 
-* Structured
-* Simple
-* Custom 
+<img style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png">
 
-Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
+The first two options are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
-If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
+If you require control over the article content and layout that's used, you can choose to use a custom answer layout instead of auto rendering. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
 
 Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
 
-#### The Structured answer layout
+#### The "Auto render, rich" answer layout
 
-The Structured layout looks like this:
+This layout looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
-With the Structured layout:
+With this layout:
 
 * Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
-* The results degrade gracefully to the Simple layout when the channel in use doesn't support the carousel.
+* The results degrade gracefully to the "Auto render, plain" layout when the channel in use doesn't support the carousel.
 
-#### The Simple answer layout
+#### The "Auto render, plain" answer layout
 
-The Simple layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
+This layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
@@ -100,7 +107,7 @@ On all other channels, it looks like this:
 
 <img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png">
 
-With the Simple layout:
+With this layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
@@ -114,30 +121,30 @@ With the Simple layout:
 
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. On the Basic tab, specify the following:
-    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below). If you don't want this message to be sent, enter "BLANK_MESSAGE".
+    * **Message When Results Not Found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. If you don't want this message to be sent, enter "BLANK_MESSAGE".
 5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
 6. Switch to the Advanced tab, and specify the following:
 
     <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png">
 
-    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
+    * **Min Confidence Score for Answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
 
-        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
+        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
-    * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
-    * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
-    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the **Structured** layout is used, and when the **Simple** layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the **Simple** layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
-    * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
-    * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
+    * **Max Number of Answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Answer Layout**: Select "Auto render, rich," "Auto render, plain," or "No auto rendering" based on your requirements. These layout options are discussed farther above.
+    * **Link Text for Content URL**: This setting is available when you select an "auto rendering" option for the **Answer Layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the "Auto render, rich" layout is used, and when the "Auto render, plain" layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the "Auto render, plain" layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
+    * **Default Image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer Layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Response Data Variable**: This setting is available only when you select "No auto rendering" for the **Answer Layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
-8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer Layout** setting, you’ll also need to add the interactions that display the answers.
 
 {: .important}
-You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated KnowledgeAI integration.
 
-#### Using the Custom answer layout
+#### No auto rendering: Using a custom answer layout
 
-Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+Choose the "No auto rendering" answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
 
 To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
 
@@ -177,6 +184,8 @@ Configure the **Next Action** for each of these rules based on the direction in 
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png">
 
+If you delete the **Match Not Found** rule, then when a search is performed and no answer is found, the fallback message is sent ("Sorry, I could not find anything for that."). However, if you've configured the **Message when results not found** setting in the interaction, then that message is sent instead.
+
 ### Agent Transfer interactions
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
@@ -203,7 +212,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. Select the **Advanced** tab, and specify the following:
 
-    * **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
+    * **Agent ID**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
     
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
@@ -261,12 +270,12 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
     - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
-    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
-    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
-    - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    - **In progress message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
+    - **Success Message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
+    - **Failure Message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
+    - **Validation Failure Message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
+    - **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
 
-4. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
+4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png">. In the Integration interaction, select the File integration to invoke (Integration type = File).
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
@@ -303,6 +312,88 @@ You can create a failure dialog similarly. In this case, the Dialog Starter inte
 If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 
 `file_upload_success:*`
+
+### Dynamic Routing interactions
+
+Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents -- bot or human -- based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+
+Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code. 
+
+{: .important}
+The Dynamic Routing interaction is only available to brands who log in with single sign-on via Conversational Cloud. It isn’t available if you log into Conversation Builder directly. <br><br>
+This section provides basic information on Conversation Builder’s Dynamic Routing interaction. For detailed information on using this interaction, see the Conversation Orchestrator getting started documentation that’s [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+#### How the interaction works
+
+A Dynamic Routing interaction does the following:
+
+1. It automatically performs an `askMaven` call to get the next routing actions for the current conversation.
+
+    [askMaven](conversation-builder-scripting-functions-askmaven.html) is the Conversation Builder JavaScript function that conveniently wraps Conversation Orchestrator’s Next Actions API. You don’t need to manually add this call; the Dynamic Routing interaction automates the logic.
+
+2. It sets the following in the Conversation Orchestrator namespace:
+
+    * **orchestrator.channel**: The channel in use
+    * **orchestrator.userMessage**: The most recent user message
+    * **orchestrator.intent**: The ID of the most recently matched Dialog Starter intent
+
+3. It iterates through the next actions returned by the `askMaven` call and automatically performs all the actions in the order they were returned. For example, it might send a message to the consumer, and then transfer the conversation to a particular skill. A next action can be one of:
+
+    * Send a message
+    * Route to skill
+    * Route to agent
+
+    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
+
+#### Prerequisites
+
+Before using the Dynamic Routing interaction, make sure that Conversation Orchestrator’s Conversation Context Service is enabled for your account, as described [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started). If your account is relatively new, it’s likely that this was done automatically for you by LivePerson when your account was set up. However, brands with older accounts will need to enable this manually.
+
+Enabling the Conversation Context Service for your account is necessary because when the Dynamic Routing interaction performs the `askMaven` call, the CCS is used to store and pass some information.
+
+#### Add a Dynamic Routing interaction
+
+1. Select the interaction just above where you want to perform the dynamic routing, and click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png"> (Dynamic Routing) on the interactions toolbar.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png">
+
+2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can define and prioritize your routing policies if you haven’t done so already. For help with this step, see [here](conversation-orchestrator-dynamic-routing-managing-routing-policies.html). 
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. On the **Basic** tab, specify the following:
+
+    * **Fallback Skill ID**: If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value. If this setting isn’t set, the conversation flow continues to the next action in the dialog.
+    * **Fallback Skill Name**: Enter the name of the agent skill that you specified in the **Fallback Skill ID** setting. Entering the name provides you with something display-friendly and “readable” by which to readily understand which skill is being used (since the skill ID is a number).
+
+5. Select the **Advanced** tab, and specify the following:
+
+    * **Escalation Message**: This is the message to send to the consumer before transferring the conversation as determined by the next actions, for example, “Hold on while I connect you with a suitable agent who can assist you.” You can enter static text, use a variable, or both. If you need to insert a new line, use an escape character like so: \\\\n.
+
+6. Click **Save**.
+
+    Optionally, you can add Pre-Process or Post-Process code to the interaction to override standard behaviors. For example, you might want to direct the flow to a different interaction, not to the Dynamic Routing interaction, based on certain conditions. You could do this in the Pre-process Code.
+
+#### Using the Dynamic Routing bot
+
+If you are setting up a new routing or concierge bot, it might be helpful to use the Dynamic Routing bot. The bot already includes the Dynamic Routing interactions and additional, out-of-the-box functionality, such as routing by intent. For more on this, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+#### FAQs
+
+**How many Dynamic Routing interactions can I add within a bot?**
+
+You can add just one.
+
+**How does disambiguation work when a Dynamic Routing interaction is used?**
+
+Disambiguation is the responsibility of the bot, so if you want to let the consumer clarify their intent before the flow moves to the Dynamic Routing interaction, implement a [Disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html).
+
+**Why can’t I add custom rules to the interaction?**
+
+As mentioned above, the end result of this interaction is always a transfer. Custom rules that control the next action can’t be specified because the transfer happens asynchronously.
+
+**Can I alter the behavior of the askMaven call that’s performed by the Dynamic Routing interaction?**
+
+No, this can’t be done. If you’d like to do this, the Dynamic Routing interaction isn’t the best solution. Use one of the more manual methods described [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html).
+
 
 ### Apple Pay interactions
 
