@@ -12,6 +12,10 @@ indicator:
 
 ### Overview
 
+{: .notice}
+Please note Custom Endpoint is only accessible for early adapters. Contact
+Third-Party Bots team to enable the Custom Endpoint for your brand.
+
 The following document outlines the configuration of the **Custom Endpoint** connector.
 
 The Custom Endpoint feature of Third Party Bots allows brands to provide their REST API

@@ -278,7 +278,11 @@ Figure 2.6 Example request body of Rich Content event sent to Send Content Event
 
 ### Authorization and Authentication
 
-Third-Party Bots uses [App-JWT OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) authentication
+{: .notice}
+Please note we expect brands to use [OAuth 2.0](oauth-2-0-client-credentials.html) for
+authentication and authorization
+
+Third-Party Bots uses [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
 mechanism for a server to server interaction. Third-Party Bots uses the provided
 `Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate a JWT.
 More information on the Sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
