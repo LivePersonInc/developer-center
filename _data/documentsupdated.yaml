@@ -1047,10 +1047,11 @@
         - pagename: Complex Layout
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
-    - documentname: Apple Business Chat Templates
+    - documentname: Apple Messages for Business Templates
       pages:
         - pagename: Introduction
         - pagename: List Picker Template
+        - pagename: Quick Replies Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
         - pagename: Apple Auth Template
