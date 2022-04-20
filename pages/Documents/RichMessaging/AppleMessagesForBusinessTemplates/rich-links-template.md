@@ -3,8 +3,8 @@ pagename: Rich Links Template
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-rich-links-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-rich-links-template.html
 indicator: messaging
 ---
 
@@ -12,7 +12,7 @@ indicator: messaging
 
 Apple has provided a new type of message that allows you to send rich links to the consumer device. 
 
-When sending a plain URL link (eg. `https://www.apple.com`) through Apple Business Chat, it will show "Tap to Load" by default on the consumer device. This requires the consumer to tap before seeing the preview in the message transcript. 
+When sending a plain URL link (eg. `https://www.apple.com`) through Apple Messages for Business, it will show "Tap to Load" by default on the consumer device. This requires the consumer to tap before seeing the preview in the message transcript. 
 
 You can now override this default "Tap to Load" behavior by sending a rich link stuctured content template instead of a plain URL.
 

@@ -6,8 +6,8 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-guidelines-and-limitations.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-guidelines-and-limitations.html
 indicator: messaging
 ---
 

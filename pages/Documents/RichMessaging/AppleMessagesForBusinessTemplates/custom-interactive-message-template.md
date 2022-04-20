@@ -3,8 +3,8 @@ pagename: Custom Interactive Message Template
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-custom-interactive-message-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-custom-interactive-message-template.html
 indicator: messaging
 ---
 

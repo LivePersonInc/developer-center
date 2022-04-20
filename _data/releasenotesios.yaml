@@ -12,7 +12,8 @@ Additional:
 #Limited Release
 Limited:
   versions: [
-   { version: "5.2.1.swift5.3.xcode12.beta4"},
+    { version: "6.7.1" },
+    { version: "5.2.1.swift5.3.xcode12.beta4"},
     { version: "4.0.0.swift4.2.signed" },
     { version: "4.0.0.swift4.2" },
     { version: "4.0.0.xcodebeta6" }
