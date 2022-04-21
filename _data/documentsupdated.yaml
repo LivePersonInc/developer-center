@@ -314,6 +314,7 @@
             - subpagename: Intents
             - subpagename: Meta Intents
             - subpagename: Entities
+            - subpagename: Versions
             - subpagename: Test a Single Utterance
             - subpagename: Test with the Model Tester
         - pagename: Optimize

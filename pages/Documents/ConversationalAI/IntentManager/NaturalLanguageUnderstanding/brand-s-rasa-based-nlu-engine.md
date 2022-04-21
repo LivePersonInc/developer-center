@@ -47,7 +47,7 @@ You must train the domain after every update to the training data therein if you
 
 Note the following:
 * Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
-* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
 **To train a domain**
 
@@ -68,7 +68,7 @@ A Rasa-based NLU engine can only run predictions on the model that's currently a
 
 1. Make changes to your domain.
 2. Train the domain.
-3. [Activate the model version](intent-manager-build-domains.html#activate-the-latest-model-version).
+3. [Activate the model version](intent-manager-build-versions.html#activate-a-model-version).
 4. Test.
 
 The issue with this workflow is that you can't test a model version *before* you activate it. And once you activate it, it's used everywhere: Both within Intent Manager and outside of Intent Manager, e.g., in Conversation Builder, in API calls to the NLU engine, and so on.
