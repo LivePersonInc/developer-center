@@ -22,6 +22,8 @@ There are four, general categories of interactions:
 
 - **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
 
+- **Code**: Code interactions are for creating custom logic or displaying a custom bot response. For more on code interactions, see [here](conversation-builder-interactions-code.html).
+
 ### Order of operations
 
 The order of operations for statements and integrations works like this:
