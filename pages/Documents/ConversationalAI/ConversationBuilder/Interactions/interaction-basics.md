@@ -22,6 +22,22 @@ There are four, general categories of interactions:
 
 - **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
 
+### Order of operations
+
+The order of operations for statements and integrations works like this:
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction (if a statement) or execute the integration (if an integration).
+3. Execute the interaction's Post-Process code.
+4. Execute the interaction's next action.
+
+And for questions it works like this:
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Wait for the time set in the **Interaction Delay** (if set), and send the content of the question.
+3. Wait for the user (consumer) response.
+4. Execute the interaction's Process User Response code.
+5. Execute the interaction's Post-Process code.
+6. Execute the interaction's custom rules (if any). Otherwise, execute the interaction's next action.
+
 ### General guidelines and best practices
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
 
