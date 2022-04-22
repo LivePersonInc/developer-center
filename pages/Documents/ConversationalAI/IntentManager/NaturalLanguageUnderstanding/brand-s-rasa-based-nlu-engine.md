@@ -28,12 +28,23 @@ Your Rasa implementation must conform to the schemas at the links above.
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Add a domain as described [here](intent-manager-build-domains.html#add-a-domain-manually-or-using-an-import-file). When you do this, you need to provide some information specifically about your Rasa solution:
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/rasa1.png">
+    <img style="width:600px" src="img/ConvoBuilder/rasa1.png">
 
     * **NLU Provider**: Select “Brand's Rasa,” to indicate that you’re using a custom solution that you deployed.
     * **Rasa Host URL**: Enter the base URL for your Rasa training and prediction endpoints.
-    * **Authorization**: Select the [type of authentication](https://rasa.com/docs/rasa/pages/http-api) to use when making API calls to the Rasa engine, either “TokenAuth” or “JWT.” Then enter the permanent token to use. For security reasons, unauthenticated connections aren’t supported.
+    * **Authorization**: Select the [type of authentication](https://rasa.com/docs/rasa/pages/http-api) to use when making API calls to the Rasa engine: TokenAuth, JWT, or Custom. Then enter the permanent token to use. For security reasons, unauthenticated connections aren’t supported.
+
+        Select “Custom” if you’re using an authentication type other than TokenAuth or JWT. When you select “Custom,” you can enter the authentication type (e.g., “Bearer”) in the field below, although this isn’t required.
+
+        <img style="width:600px" src="img/ConvoBuilder/rasa2.png">
+        
+        In the Authorization header of a request, the custom authentication type that you entered is used as the prefix denoting the token type (e.g., if the type is “Bearer,” the header’s value is “Bearer &lt;tokenValue&gt;”). If you don’t enter a custom authentication type, the token alone is sent (e.g., the header’s value is simply “&lt;tokenValue&gt;”).
+
     * **Credential**: This is optional. If you’d like to add an extra layer of security when transferring data, select the [Mutual Authentication credential](bot-accounts-credentials.html#add-a-mutual-authentication-credential) to use along with the token. If you have the proper [permissions](bot-accounts-permissions.html), you can create one on the Credentials page in Bot Accounts, and you can also create one on-the-fly here.
+
+    * **Request Headers**: Add any HTTP headers required by the web service.
+
+    * **Request Parameters**: Add any request parameters required by the web service.
 
     <br>You don't need to define the language of your domain.
 
