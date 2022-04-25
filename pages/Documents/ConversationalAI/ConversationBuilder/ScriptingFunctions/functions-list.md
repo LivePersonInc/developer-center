@@ -48,6 +48,7 @@ For quick reference, below is an alphabetically-ordered list of all built-in fun
 * [sendMessage](conversation-builder-scripting-functions-send-messages.html#send-message)
 * [sendMessages](conversation-builder-scripting-functions-send-messages.html#send-messages)
 * [sendMessageWithQuickReplies](conversation-builder-scripting-functions-send-messages.html#send-message-with-quick-reply)
+* [sendPrivateMessage](conversation-builder-scripting-functions-send-messages.html#send-private-message-to-agent)
 * [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response)
 * [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-get-set-session-data.html#set-bot-transfer-intent-by-domain)
 * [setBotTransferIntentId](conversation-builder-scripting-functions-get-set-session-data.html#set-bot-transfer-intent-id)
