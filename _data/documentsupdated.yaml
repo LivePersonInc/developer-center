@@ -353,6 +353,7 @@
           subpages:
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
+            - subpagename: Evaluating Consumer Queries
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
