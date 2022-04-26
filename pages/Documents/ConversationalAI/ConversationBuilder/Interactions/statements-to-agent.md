@@ -16,7 +16,7 @@ Private messages are messages that are visible to all conversation participants 
 
 Human agents can send private messages within a conversation. This allows agents to privately seek guidance from managers. In turn, it also allows managers to provide that guidance privately. More on this [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
 
-Bots can send private messages too. You can design a bot to send a private message at any time in the conversation flow.
+Bots can send private messages too. You can design a bot to send a private message at any time in the conversation flow. Typically though, you'll want to do this just before a transfer to a human agent.
 
 <img style="width:450px" src="img/ConvoBuilder/statements_privatemsg1.png">
 
