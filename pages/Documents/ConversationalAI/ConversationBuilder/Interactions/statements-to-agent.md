@@ -60,6 +60,14 @@ Yes, private messages are visible within [Preview](conversation-builder-testing-
 
 Yes. However, there’s an important exception: Conversation transcripts that are sent to consumers (e.g., by way of a post-conversation survey bot) don’t include private messages.
 
+**Can both agent and manager bots send private messages?**
+
+Yes, they can.
+
+**In which types of dialogs can a private message be sent?**
+
+You can send a private message in any type of dialog.
+
 **Are there any associated scripting functions?**
 
 Yes, there's the [sendPrivateMessage](conversation-builder-scripting-functions-send-messages.html#send-private-message-to-agent) function.
