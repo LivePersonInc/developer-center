@@ -82,7 +82,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
 {: .notice}
-It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client)
+It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
 
 
 ```javascript

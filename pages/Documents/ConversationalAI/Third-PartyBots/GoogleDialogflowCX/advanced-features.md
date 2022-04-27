@@ -156,7 +156,7 @@ The method for triggering an invocation is similar to the transfer action in tha
 The action field needs to be set to **INVOCATION** to instruct the connector to invoke the sepecified LivePerson Function
 
 It is also required to provide the **lambdaUuid** of the function that should be invoked in parameters.
-To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-foundations-external-invocation.html#function-uuid)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
 
