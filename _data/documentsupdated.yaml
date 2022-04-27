@@ -784,47 +784,46 @@
     - documentname: LivePerson Functions
       pages:
         - pagename: Overview
+        - pagename: Provisioning
         - pagename: Getting Started
-        - pagename: Developing with FaaS
           subpages:
-            - subpagename: Overview
-            - subpagename: Events & Templates
-            - subpagename: Function Connectivity
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Snippets
-            - subpagename: Storing Secrets
-            - subpagename: Data Storage
-            - subpagename: Debugger
-            - subpagename: Common Examples
-            - subpagename: Best Practices
-            - subpagename: Limitations & Restrictions
-        - pagename: "Command Line Interface (CLI)"
-        - pagename: Deployment
-        - pagename: Monitoring
+            - subpagename: Your First Function
+            - subpagename: Development Deep Dive (UI)
+            - subpagename: Development Deep Dive (CLI)
+            - subpagename: Configuration
+            - subpagename: Monitoring
+        - pagename: Foundations
           subpages:
-            - subpagename: Activities
-            - subpagename: Deployment History
-            - subpagename: Logs
-            - subpagename: Metrics
-            - subpagename: Email Reporting
-        - pagename: Scheduled Invocations
-        - pagename: External Invocations
-          subpages:
-            - subpagename: Overview
-            - subpagename: Client Credentials
-            - subpagename: Authorization Code
+            - subpagename: Concepts
+            - subpagename: Features
+            - subpagename: Networking
+            - subpagename: External Invocation
             - subpagename: Error Codes
-            - subpagename: Java Client
-            - subpagename: JavaScript Client
-        - pagename: Integrations
+            - subpagename: Limitations
+            - subpagename: Best Practices
+            - subpagename: LivePerson Functions CLI
+        - pagename: Toolbelt Documentation
           subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
-            - subpagename: Messaging Conversation Survey
-            - subpagename: Conversational AI
+            - subpagename: Toolbelt
+            - subpagename: FaaS Context Service Client
+            - subpagename: LP Client
+            - subpagename: MTLS Client
+            - subpagename: Secret Client
+            - subpagename: Orchestrator Client
+            - subpagename: Conversation Util
+            - subpagename: GDPR Util
+            - subpagename: SDE Util
+        - pagename: Event Sources
+          subpages:
+            - subpagename: Overview
+            - subpagename: Automatic Messages
+            - subpagename: Post Conversation Survey (Legacy)
             - subpagename: Conversational Commands
-
+            - subpagename: Third-Party Bots
+            - subpagename: Chat Post Survey
+            - subpagename: Conversation Builder
+        - pagename: Permission System
+        - pagename: Examples
 - categoryname: Reporting
   image: historical-data
   documents:
