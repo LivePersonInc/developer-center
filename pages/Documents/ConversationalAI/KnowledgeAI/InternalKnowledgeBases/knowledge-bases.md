@@ -42,7 +42,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
 {: .important}
-The import file can contain the subset of HTML that’s discussed [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
+The import file can contain the subset of HTML that’s discussed [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article), and it should adhere to the limits discussed [here](knowledgeai-limits.html). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
 

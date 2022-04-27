@@ -69,13 +69,14 @@ All these factors directly influence the intent matching after retraining. There
 
 You must train the LivePerson domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
 
-Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+Note the following:
+* Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.
+* Before you train, consider exporting a CSV of the intents. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
+* Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
-
-{: .important}
-Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 
 **To train a LivePerson domain**
 
@@ -90,7 +91,7 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
 ### LivePerson (Legacy) NLU engine
 

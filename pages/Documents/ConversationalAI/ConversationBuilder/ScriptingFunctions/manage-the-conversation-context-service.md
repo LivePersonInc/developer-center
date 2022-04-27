@@ -14,7 +14,7 @@ indicator: both
 
 The Conversation Context Service is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
 
-Within the Conversation Context Service, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on. Namespaces are per account.
+Within the Conversation Context Service, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. Namespaces are per account.
 
 In Conversation Builder, the following built-in functions for managing the Conversation Context Service are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 

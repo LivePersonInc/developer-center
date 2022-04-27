@@ -13,6 +13,37 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.9.0
+
+# Overview
+Android Mobile Messaging SDK version 5.9.0 release includes performance improvements and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.9.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.1”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+
+# Bugs Fixed:
+- SDK does not auto re-connect for UnAuth users.
+- Failed to apply Quick reply button radius in dark mode.
+
+# Enhancements:
+- SDK performance improvements to reduce conversation window loading time.
+- Use APIs instead of shell commands to delete files cached during file sharing.
+- Added configuration to hide welcome message on clearing a history.
+
+```xml
+<bool name="lp_hide_welcome_message_on_clear_history">false</bool>
+```
+
+
+
 # Android Messaging SDK - Version 5.8.0
 
 **Release date:** October 18, 2021

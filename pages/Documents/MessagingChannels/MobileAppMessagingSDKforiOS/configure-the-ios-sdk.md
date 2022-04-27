@@ -84,7 +84,7 @@ During the course of the conversation, consumers can take several actions such a
 
 #### Methods
 
-For information about the methods, see to [Messaging API](consumer-experience-ios-sdk-messaging-methods.html).
+For information about the methods, see to [Messaging API](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html).
 
 * Check for an active conversation:
    - **True** - Active conversation 
@@ -473,7 +473,7 @@ To determine the layout of messaging within the app, you can utilize various act
    public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
    ```
 
-   **Note:** Refer to [[Messaging API](consumer-experience-ios-sdk-messaging-methods.html#togglechatactions) to learn more about `toggleChatActions`.
+   **Note:** Refer to [[Messaging API](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#togglechatactions) to learn more about `toggleChatActions`.
 
 
 * Triggered each time the SDK menu is opened/closed:

@@ -1,73 +1,72 @@
 .aa-dropdown-menu {
-  width: 88%;
-  max-width: unset !important;
-  min-width: unset !important;
-  max-height: 80vh;
-  left: 20px !important;
-  min-height: 5vh;
-  margin-right: 0 !important;
-  overflow-y: auto;
-  background: var(--body-background);
-
-  box-shadow: 0px 8px 16px rgba(129, 130, 153, 0.64);
-  border-radius: 4px;
+    width: 88%;
+    max-width: unset !important;
+    min-width: unset !important;
+    max-height: 80vh;
+    left: 20px !important;
+    min-height: 5vh;
+    margin-right: 0 !important;
+    overflow-y: auto;
+    background: var(--body-background);
+    box-shadow: 0px 8px 16px rgba(129, 130, 153, 0.64);
+    border-radius: 4px;
 }
 
 .aa-dataset-dev {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .searchtitlecontainer {
-  margin-top: 10px;
-  width: 90%;
-  padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px;
 }
 
 .searchtitlecontainer:hover {
-  background-color: var(--body-background);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: var(--body-background);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .aa-cursor {
-  background-color: var(--body-background);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: var(--body-background);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .searchtitle {
-  font-size: 18px;
-  font-family: "Roboto";
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
 }
 
 span.documentContainer {
-  color: #888888;
-  font-size: 12px;
-  display: flex;
+    color: #888888;
+    font-size: 12px;
+    display: flex;
 }
 
 span.searchcontentcontainer {
-  font-family: "Roboto", Arial;
-  overflow-wrap: break-word;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.71;
-  color: #4a4a4a !important;
+    font-family: "Space Grotesk", sans-serif;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.71;
+    color: #4a4a4a !important;
 }
 
 .ais-Highlight {
-  font-style: normal;
-  font-weight: 600;
-  color: var(--link-color-hover);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--link-color-hover);
 }
 
 .aa-empty {
-  font-size: 21px;
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: bold;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    font-size: 21px;
+    font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
