@@ -43,7 +43,7 @@ You can create a FaaS function to fetch information from an external source at r
 
 #### Setup LivePerson Functions
 
-[Create and deploy a FaaS function](liveperson-functions-getting-started.html). 
+[Create and deploy a FaaS function](liveperson-functions-getting-started-deep-dive-ui.html).
 
 Next you need to setup an API user to invoke the function.
 
