@@ -133,7 +133,7 @@ Even answered queries can provide opportunities for tuning.
     <img style="width:700px" src="img/ConvoBuilder/kai_csq14.png">
 
     The reason you marked the query as bad determines what happens next:
-    * **Wrong content matched**: This takes you through a guided flow, right within the view. You’re prompted to find the right article for the query, and to add the query as a training phrase to the article’s intent. If the article doesn’t have an associated intent, you’re prompted to associate an existing one or to create one. 
+    * **Wrong content served**: This takes you through a guided flow, right within the view. You’re prompted to find the right article for the query, and to add the query as a training phrase to the article’s intent. If the article doesn’t have an associated intent, you’re prompted to associate an existing one or to create one. 
     * **Inadequate content**: This too takes you through a guided flow, right within the view. You can update the article, and optionally associate an intent.
 5. Repeat this process for other unanswered queries.
 
