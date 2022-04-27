@@ -31,7 +31,7 @@ Will retrieve a conversation Object from the Live-Engage Messaging Interaction A
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `conversationId` | `string` | ID of the conversation which should be retrieved |
-| `contentToRetrieve?` | [`ConversationContentTypes`](../enums/ConversationContentTypes.md)[] | Array which can be used to define which contents of the conversation should be retrieved. Use `const { ConversationContentTypes } = require("lp-faas-toolbelt");` to get an overview of possible options. |
+| `contentToRetrieve?` | `ConversationContentTypes`[] | Array which can be used to define which contents of the conversation should be retrieved. Use `const { ConversationContentTypes } = require("lp-faas-toolbelt");` to get an overview of possible options. |
 
 #### Returns
 

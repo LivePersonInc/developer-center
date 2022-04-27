@@ -102,7 +102,7 @@ To interact with our systems, we provide libraries for JavaScript and Java. Thos
 
 #### Java Client
 
-Our client is available within Maven Central. To get the latest version, you can head over [here](https://mvnrepository.com/artifact/com.liveperson.faas/functions-client) to get the latest version. Then you can add it to your existing setup using the below XML snippet:
+Our client is available within Maven Central. To get the latest version, you can head over [to the Maven repository](https://mvnrepository.com/artifact/com.liveperson.faas/functions-client) to get the latest version. Then you can add it to your existing setup using the below XML snippet:
 
 ```xml
 <dependency>

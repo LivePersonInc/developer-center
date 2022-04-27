@@ -13,7 +13,7 @@ indicator: both
 Our Functions CLI tool allows you to bring your local setup to Functions development and automate your interactions with the Functions platform. For a more general overview of the CLI, please visit its [Foundations chapter](liveperson-functions-foundations-liveperson-functions-cli.html). The CLI package is open-source and [hosted on GitHub](https://github.com/LivePersonInc/faas-cli/).
 
 ## Login
-There are two ways to log in to your Functions account using the CLI. You can use `username` and `password` to sign in or alternatively use a `bearer token`. The latter way is preferred for automated solutions such as a CI pipeline. More information can be found in our [CI/CD guide](liveperson-functions-foundations-liveperson-functions-cli.html#ExampleCISetup).
+There are two ways to log in to your Functions account using the CLI. You can use `username` and `password` to sign in or alternatively use a `bearer token`. The latter way is preferred for automated solutions such as a CI pipeline. More information can be found in our [CI/CD guide](liveperson-functions-foundations-liveperson-functions-cli.html#example-ci-setup).
 
 To initialize a login, either use your `lpf login` and follow the command prompt entering `accountId`, `username` and the user's `password` in succession:
 
