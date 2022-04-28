@@ -133,7 +133,8 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
       "read": 400,
       "conversationscreated": 200,
       "conversationsclosed": 185,
-      "csat": "2.5"
+      "csat": "2.5",
+      "error_aggregation": {"whatsapp_123": 25, "prmsg_999": 25}
    }
  ]
 }
@@ -166,16 +167,22 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 ```json
 {
- "filters": {
-   "channels": [
-     "sms"
-   ],
-   "skills": [
-     "billing"
-   ]
- }
+ "channels": [
+   "sms"
+ ],
+ "skills": [
+   "billing"
+ ],
+ "handoffids": [
+   "H123456", "H987655"
+ ],
+  "source": [
+   "API", "UI", "LPWF"
+ ]
 }
 ```
+
+Each of the filter options shown above are optional. Regardless of what filter options are used, the results will always be grouped by channel, skill, and transactionday. When additional filters, such as source or handoffid are added, the results will be grouped by them as well and they will be included in the response.
 
 **Request Headers**
 
@@ -217,7 +224,8 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
       "read": 400,
       "conversationscreated": 200,
       "conversationsclosed": 185,
-      "csat": "2.5"
+      "csat": "2.5",
+      "error_aggregation": {"whatsapp_123": 25, "prmsg_999": 25}
    }
   ]
 }
@@ -387,6 +395,17 @@ There are two versions of transaction API's.
 
 ```json
 {
+ "channels": [
+   "sms"
+ ],
+ "skills": [
+   "billing"
+ ]
+}
+```
+
+Each of the filter options shown above are optional.
+```json
     "filters": {
         "channels": [
             "sms", "inapp"
@@ -510,9 +529,9 @@ There are two versions of transaction API's.
             "initialChannel": "sms",
             "ivrNumber": "",
             "skippedTime": null
-        },
- ]
-}
+            },
+          ]
+        }
 ```
 
 **2. Get details for Transactions - Version 2.0**
