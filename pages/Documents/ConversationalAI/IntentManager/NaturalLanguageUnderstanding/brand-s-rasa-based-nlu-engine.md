@@ -42,9 +42,9 @@ Your Rasa implementation must conform to the schemas at the links above.
 
     * **Credential**: This is optional. If you’d like to add an extra layer of security when transferring data, select the [Mutual Authentication credential](bot-accounts-credentials.html#add-a-mutual-authentication-credential) to use along with the token. If you have the proper [permissions](bot-accounts-permissions.html), you can create one on the Credentials page in Bot Accounts, and you can also create one on-the-fly here.
 
-    * **Request Headers**: Add any HTTP headers required by the web service.
+    * **Request Headers**: Add any custom HTTP headers required by the web service.
 
-    * **Request Parameters**: Add any request parameters required by the web service.
+    * **Request Parameters**: Add any custom request parameters required by the web service.
 
     <br>You don't need to define the language of your domain.
 
