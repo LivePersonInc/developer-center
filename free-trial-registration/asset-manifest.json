@@ -1,27 +1,20 @@
 {
   "files": {
-    "main.js": "/free-trial-registration/static/js/main.bdd601dc.chunk.js",
-    "main.js.map": "/free-trial-registration/static/js/main.bdd601dc.chunk.js.map",
-    "runtime-main.js": "/free-trial-registration/static/js/runtime-main.0d95aea8.js",
-    "runtime-main.js.map": "/free-trial-registration/static/js/runtime-main.0d95aea8.js.map",
-    "static/css/2.0978f8b3.chunk.css": "/free-trial-registration/static/css/2.0978f8b3.chunk.css",
-    "static/js/2.4b59743e.chunk.js": "/free-trial-registration/static/js/2.4b59743e.chunk.js",
-    "static/js/2.4b59743e.chunk.js.map": "/free-trial-registration/static/js/2.4b59743e.chunk.js.map",
+    "main.css": "/free-trial-registration/static/css/main.cf506294.css",
+    "main.js": "/free-trial-registration/static/js/main.34f270c3.js",
+    "static/media/logo.svg": "/free-trial-registration/static/media/logo.3d6770a6ea3302e011ce5aa227cd7bc2.svg",
+    "static/media/icon-shield.svg": "/free-trial-registration/static/media/icon-shield.cfe99fae0ecae77ed58f7947a5c442e6.svg",
+    "static/media/icon-creating.svg": "/free-trial-registration/static/media/icon-creating.1f205c915a67753adcb6f7a85324cb1f.svg",
     "index.html": "/free-trial-registration/index.html",
-    "static/css/2.0978f8b3.chunk.css.map": "/free-trial-registration/static/css/2.0978f8b3.chunk.css.map",
-    "static/js/2.4b59743e.chunk.js.LICENSE.txt": "/free-trial-registration/static/js/2.4b59743e.chunk.js.LICENSE.txt",
-    "static/media/icon-check.61aa2a95.svg": "/free-trial-registration/static/media/icon-check.61aa2a95.svg",
-    "static/media/icon-creating.1f205c91.svg": "/free-trial-registration/static/media/icon-creating.1f205c91.svg",
-    "static/media/icon-error.2dd3d152.svg": "/free-trial-registration/static/media/icon-error.2dd3d152.svg",
-    "static/media/icon-shield.cfe99fae.svg": "/free-trial-registration/static/media/icon-shield.cfe99fae.svg",
-    "static/media/icon-success.9abe398a.svg": "/free-trial-registration/static/media/icon-success.9abe398a.svg",
-    "static/media/icon-timeout.e4fcc93a.svg": "/free-trial-registration/static/media/icon-timeout.e4fcc93a.svg",
-    "static/media/logo.3d6770a6.svg": "/free-trial-registration/static/media/logo.3d6770a6.svg"
+    "static/media/icon-success.svg": "/free-trial-registration/static/media/icon-success.9abe398a9a34dd3284ba3325e70e8aaa.svg",
+    "static/media/icon-error.svg": "/free-trial-registration/static/media/icon-error.2dd3d152feed267c01eb2d570562cfa7.svg",
+    "static/media/icon-timeout.svg": "/free-trial-registration/static/media/icon-timeout.e4fcc93a0b48824b76510d1787b184b3.svg",
+    "static/media/icon-check.svg": "/free-trial-registration/static/media/icon-check.61aa2a952c155d6c6dbb4719da226c9e.svg",
+    "main.cf506294.css.map": "/free-trial-registration/static/css/main.cf506294.css.map",
+    "main.34f270c3.js.map": "/free-trial-registration/static/js/main.34f270c3.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0d95aea8.js",
-    "static/css/2.0978f8b3.chunk.css",
-    "static/js/2.4b59743e.chunk.js",
-    "static/js/main.bdd601dc.chunk.js"
+    "static/css/main.cf506294.css",
+    "static/js/main.34f270c3.js"
   ]
 }
