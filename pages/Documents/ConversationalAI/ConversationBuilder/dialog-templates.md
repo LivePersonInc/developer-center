@@ -60,7 +60,7 @@ There are two reasons for this constraint:
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
     * **+ Add Dialog**: Select and add the dialogs upon which this dialog relies, if any. You can only select to include dialogs of type Dialog (no Fallback, Disambiguation, or Auto Escalation dialog). Keep this in mind when designing and building the dialog itself. For example, normal dialogs often rely on logic in a Fallback dialog, such as counting how many times a fallback has been triggered in a conversation. As you craft your dialogs and dialog templates, consider employing different techniques.
     * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. During an import of this template:
-        * If the dialogs use [pre-built domains](intent-builder-overview.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
+        * If the dialogs use [pre-built domains](intent-manager-key-terms-concepts.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
         *  If the dialogs use *custom domains* that already exist within your organization, the domain/intent associations are updated accordingly. If the custom domains don't exist, all assocations are removed. To avoid this, add the needed domains and intents before importing the template.
     * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that the dialog template relies on. You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
     * **+ Add Global Function**: Click this, and specify the global functions that the dialog template relies on. Copy the needed functions in the left panel, paste them into the right panel, and click **Add**.
@@ -122,9 +122,9 @@ When you import a dialog template, you import the dialog, the integrations used 
 * Global functions
 
 Note the following:
-* If the dialogs in the template use [pre-built domains](intent-builder-overview.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
+* If the dialogs in the template use [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
 *  If the dialogs in the template use *custom domains* that already exist within your organization, the domain/intent associations are updated accordingly. If the custom domains don't exist, all assocations are removed during the import. To avoid this, add the needed domains and intents before importing the dialog template.
-* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the KnowledgeAI application.
 
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 

@@ -51,7 +51,7 @@ Use the guided Add/Edit Next Action Rule window to:
 
 1. Specify the rule name.
 2. Define the condition that must evaluate to true for the rule to be executed.
-3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
+3. Store data in a [variable or slot](conversation-builder-variables-slots.html). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
 #### Adding variable conditions
@@ -104,8 +104,8 @@ In the rule, there's a condition that determines if the user's response matches 
 
 Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following match types:
 
-* **Response Intent**: This triggers the Next Action when the user input matches the selected [intent](intent-builder-intents.html). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
-* **Regular Expression**: This triggers the Next Action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply. Take advantage of the [hint feature](conversation-builder-interactions-interaction-basics.html#advanced-patterns-with-regular-expressions) that's available.
+* **Response Intent**: This triggers the Next Action when the user input matches the selected [intent](intent-manager-key-terms-concepts.html#intents). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
+* **Regular Expression**: This triggers the Next Action when the user input matches the RegEx that you specify. All standard [Regex rules](https://regex101.com/) apply. Take advantage of the [hint feature](conversation-builder-interactions-interaction-basics.html#advanced-patterns-with-regular-expressions) that's available.
 * **Pattern**: This triggers the Next Action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching. Take advantage of the [pattern library](conversation-builder-interactions-interaction-basics.html#popular-patterns) that's available.
 * **Exact Value**: This triggers the Next Action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 * **Evaluate Options**: Available for multiple choice questions only. This triggers the Next Action when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the interaction's settings).

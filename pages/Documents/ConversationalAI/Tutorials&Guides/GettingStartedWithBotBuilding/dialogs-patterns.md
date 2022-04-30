@@ -10,10 +10,12 @@ permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.h
 indicator: both
 ---
 
+<!--
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/440317206" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
 ### Prerequisite steps
 
@@ -24,8 +26,8 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
 2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
-4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click **Next**.
-5. Give the bot a unique name and description, and click **Create Bot**.
+4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click the orange **Next** arrow.
+5. Give the bot a unique name (e.g., Getting Started Bot) and a description, and click **Create Bot**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/custom_bot.png">
 
@@ -109,9 +111,11 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
+6. In the Interactions palette (shown below), click the Text Statement icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
 
-    (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/interactions_palette.png">
+
+    (If you can't see the Interactions palette, close the Preview window, which might be covering it up.)
 
 7. In the interaction, enter a goodbye message (e.g., "Thanks for stopping by."), and press Enter.
 

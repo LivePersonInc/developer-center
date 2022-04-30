@@ -16,7 +16,7 @@ When a user receives a message that contains quick reply buttons from a brand, t
 
 A LINE quick reply button consists of the question/statement text and a set of up to 13 buttons and that each contain:
 
-* Title text (including emojis)
+* Title text (including emojis, max. 20 characters)
 * Publish text click action
 
 Quick reply example image:

@@ -23,7 +23,7 @@ Multiple choice questions let the consumer select an answer from a list of choic
 
 <img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png">
 
-One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
+One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-manager-key-terms-concepts.html#entities).
 
 <img style="width:650px" src="img/ConvoBuilder/questions_mcq3.png">
 
@@ -41,9 +41,11 @@ The user can either enter or select the answers.
 
 Configure the following settings in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
 
-- **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
+- **Display Choices as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
 
 <img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
+
+- **Choices per Row**: This setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
 - **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
@@ -98,7 +100,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | 10% off all headphones |
 | Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
-| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. The Slideout option is supported for Web messaging. | Required | New Window |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
 | Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL. If you selected "Postback" for the **Action Type**, this value  should be whatever value you want to send to the bot. <br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
 
 #### Populating a Structured question dynamically
@@ -136,7 +138,7 @@ Enter the question to send.
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | Sure! |
 | Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field).<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
-| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. The Slideout option is supported for Web messaging. | Required | New Window |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
 | Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Optional | https://www.surveymonkey.com/mysurvey.html |
 
 ### Quick Reply questions
@@ -155,7 +157,13 @@ Details vary by channel. For example, Apple Business Chat does not support Quick
 
 #### Question text
 
-Enter the question to send. 
+Enter the question to send.
+
+#### Interaction settings
+
+Configure the following setting in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
+
+- **Choices per Row**: Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
 #### Quick Reply settings
 

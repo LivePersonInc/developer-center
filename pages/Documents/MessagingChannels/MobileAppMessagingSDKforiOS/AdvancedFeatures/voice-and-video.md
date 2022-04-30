@@ -14,14 +14,14 @@ indicator: messaging
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/iosSDK/in_app_sdk_ios_voice_call.png" alt="Voice call example screen" style="float: left; width: 15%;height: auto; margin-right: 1em">
-    <img src="../../../../img/iosSDK/in_app_sdk_ios_video_call.png" alt="Video call example screen" style="width: 15%;height: auto;">
+    <img src="/img/iosSDK/in_app_sdk_ios_voice_call.png" alt="Voice call example screen" style="float: left; width: 15%;height: auto; margin-right: 1em">
+    <img src="/img/iosSDK/in_app_sdk_ios_video_call.png" alt="Video call example screen" style="width: 15%;height: auto;">
 </div>
 
 {:.important}
 Voice & Video capabilities are available only on iOS SDK 6.3.0 and above
 
-KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
+KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-live-chat-cobrowse-for-live-chat.html)
 
 To enable the feature on your Conversational Cloud account please review the KB article
 

@@ -19,15 +19,29 @@ Successfully deployed survey bots display "Deployed" beneath the bot name.
 {: .important}
 Since all survey bots share a single agent connector, performing any operation on the agent connector affects all the survey bots.
 
-### Troubleshooting - Redeploy the connector
+### Redeploy the connector
 
-Redeploying the connector stops and restarts it. Use this as a troubleshooting technique when the connector appears to be in a stuck state.
+Redeploying the connector stops and restarts it.
+
+If the connector appears to be in a stuck state, use this as a troubleshooting technique.
 
 **To redeploy the survey bot connector**
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
 2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
+
+### Refresh surveys
+
+When you refresh surveys, all survey metadata and data is regenerated. This includes all the IDs for the surveys, questions and answers.
+
+You might need to refresh surveys as a troubleshooting technique if you find that the consumer’s input in the bot’s survey interactions isn’t being reflected in reporting in Analytics Builder or MCS Toolkit.
+
+**To refresh surveys**
+
+1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Refresh Surveys**.
 
 ### Disable a single survey bot
 

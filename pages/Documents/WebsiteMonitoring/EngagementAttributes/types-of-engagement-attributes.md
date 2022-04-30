@@ -125,7 +125,7 @@ This Engagement Attribute is used to track any money transaction, purchase of it
 
 #### Viewed product
 
-This Engagement Attribute is used to track a product or service that interests visitors. Each product is described by Name, Category, and SKU.
+This Engagement Attribute is used to track a product or service that interests visitors. Each product is described by Name, Category, SKU, stock status and quantity in stock.
 
 This information can be used to target visitors. For example, you can offer products to visitors which are in the same category or price range as the products they previously viewed.
 
@@ -148,7 +148,9 @@ This information can be used to target visitors. For example, you can offer prod
             "name": "red high heel shoe", //PRODUCT NAME
             "category": "women shoes", //PRODUCT CATEGORY NAME
             "sku": "xyz567", //PRODUCT SKU OR UNIQUE IDENTIFIER
-            "price": 77.8 //SINGLE PRODUCT PRICE
+            "price": 77.8, //SINGLE PRODUCT PRICE
+            "statusInStock": "low",  //PRODUCT STATUS IN STOCK
+            "quantityInStock": 7  //AVAILABLE QUANTITY IN STOCK
         }
     }]
 }

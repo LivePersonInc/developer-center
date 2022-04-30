@@ -2,6 +2,8 @@
 pagename: Photo and File Sharing
 redirect_from:
   - android-photo-sharing.html
+  - mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html
+  - mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -74,7 +76,7 @@ Consumers can share:
 
 ### How photo and file sharing works from agent to consumer
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
 ---
@@ -188,14 +190,14 @@ Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-f
 - When clicked on "Go To Settings" button on request dialog, consumer will be taken to app's Settings screen where they have to manually grant respective permissions.
 
 ### Request Storage Permission
-<img src="../../../../img/android_permission_dialog_storage.png" alt="Requesting Storage Permission" style="width: 600px;padding: 20px;">
+<img src="/img/android_permission_dialog_storage.png" alt="Requesting Storage Permission" style="width: 600px;padding: 20px;">
 ### Request Camera Permission
-<img src="../../../../img/android_permission_dialog_camera.png" alt="Requesting Camera Permission" style="width: 600px;padding: 20px;">
+<img src="/img/android_permission_dialog_camera.png" alt="Requesting Camera Permission" style="width: 600px;padding: 20px;">
 ### Request Microphone Permission
-<img src="../../../../img/android_permission_dialog_microphone.png" alt="Requesting Microphone Permission" style="width: 600px;padding: 20px;">
+<img src="/img/android_permission_dialog_microphone.png" alt="Requesting Microphone Permission" style="width: 600px;padding: 20px;">
 
 ---
 
 ### User Interface to save files on consumer's device
 - When decided to save a file, consumer now can choose a specific folder on their devices, SD card or upload the file to a cloud service such as Google drive.
-<img src="../../../../img/android_save_file_to_UI.png" alt="Save file" style="width: 600px;padding: 20px;">
+<img src="/img/android_save_file_to_UI.png" alt="Save file" style="width: 600px;padding: 20px;">

@@ -38,7 +38,6 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 | lastPaymentDate | The customer's last payment date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
 | registrationDate| The customer's registration date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
 | companySize     | The company size. |v1- alphanumeric, v2- int|
-| accountName     | A nickname for the account for B2B like the salesforce account name. | alphanumeric|
 | companyBranch   | The branch of the company. | alphanumeric | |
 | storeZipCode    | The zip code of the store. | alphanumeric|
 | storeNumber     | The number of the store.| alphanumeric|
@@ -121,7 +120,8 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 | category           | Product category.  | alphanumeric|
 | sku        | Unique product ID identifier in consumer database.    | alphanumeric|
 | price        | Product price.    | double|
-
+| statusInStock | Product stock status | alphanumeric |
+| quantityInStock | Product quantity left in stock | int |
 ### visitorError
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |

@@ -20,9 +20,9 @@ There are several types of credentials that you can define to support [API integ
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
 
-There's also a credential type that supports the use of [third-party NLU engines](intent-builder-natural-language-understanding.html#connect-a-3rd-party-nlu-engine):
+There's also a credential type that supports the use of [third-party NLU engines](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html):
 
-- **Third-party NLU (Fire API)**: If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), you can use this to authenticate with that engine.
+- **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
 {: .important}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
@@ -100,7 +100,7 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 
 Depending on the configuration of the resource, you might need to manually reauthorize an existing credential. For example, if you've defined the expiry of the access token, but you haven't defined a refresh token (to refresh the access token when needed), you'll need to manually reauthorize the credential when the access token expires. In general, a configuration like that isn't recommended so that things can be automated as much as possible. However, you can manually reauthorize whenever you need:
 
-- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
+- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
 
     <img class="fancyimage" style="width:125px" src="img/ConvoBuilder/creds_oauth2_img6.png">
 
@@ -187,20 +187,21 @@ Like the Basic Authentication credential (discussed above), this type of credent
     - **Token Type**: Enter the type of token; typically, this value is "Bearer" or "Basic," but this field allows for free text to let you specify another third-party type that isn't supported by any protocol.
 7. Click **Save**.
 
-### Add a Third-party NLU (Fire API) credential
+### Add a third-party NLU credential
 
-While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a Third-party NLU credential is different in that it's used during *domain creation* in [Intent Builder](intent-builder-overview.html).
+{: .important}
+This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
-If you're using a supported [third-party NLU engine](intent-builder-natural-language-understanding.html#connect-a-3rd-party-nlu-engine) to match intents (for example, IBM's Watson), when you create the domain that will contain the intents and you specify the NLU to use to match intents, you can also specify the credential to use to authenticate with that third-party NLU engine.
+While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).
 
-**To add a Third-party NLU (Fire API) credential**
+**To add a third-party NLU credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
-    - **Authentication Type**: Select "Fire API."
+    - **Authentication Type**: Select "Third-party NLU."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     - **NLU Provider**: Select the NLU provider.
@@ -209,7 +210,7 @@ If you're using a supported [third-party NLU engine](intent-builder-natural-lang
 
 ### Delete a credential
 
-Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of Fire API credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
+Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of third-party NLU credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
 
 **To delete a credential**
 

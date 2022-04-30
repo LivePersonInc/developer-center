@@ -15,7 +15,7 @@ indicator: messaging
 
 ### General 
 
-The trends API retrieves messaging metrics over time filtered by agent, group or skill  for a time frame of up to 24 hours from the last 30 days.
+The trends API retrieves messaging metrics over time filtered by agent, group or skill  for a time frame of up to 24 hours.
 
 Using this API, you can enrich your customized real-time dashboard. Here are some example use cases of the API, that can assist you in analyzing your contact center performance:
 

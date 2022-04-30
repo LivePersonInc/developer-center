@@ -10,8 +10,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-intents.html
 indicator: both
 ---
 
-In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical starter pack, which is designed as a great starting point for any brand with an online presence.
+In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
+<!--
 ### Watch the video - Intents & entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/441795640" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
@@ -21,30 +22,31 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/464652923" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
-### Step 5: Import the Cross-vertical starter pack
+### Step 5: Import the Cross-vertical domain
 
 Since you’re going to be using an intent in this tutorial, you need to leave the Conversation Builder application for a moment.
 
 1. In the upper-left corner, click **< Back** twice. This returns you to the Conversational AI dashboard.
 
-2. Click **Intent Builder**.
+2. Click **Intent Manager**.
 
-    Intent Builder is where you create domains, which are collections of intents and entities. You can learn about Intent Builder [here](intent-builder-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
 
     Now let’s create a domain.
 
-3. In the upper-right corner, click **Add Domain**.
+3. Locate the domain list in the Intent Manager dashboard. In the upper-right corner, click **Add a domain**.
 
 4. On the Add Domain page, select the **Prebuilt domains** option along the top. Hover over the "Cross-vertical" option, and select **Add**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain.png">
 
-5. Adding the Cross-vertical starter pack provides you with a robust, trained domain with several intents designed to quickly get you up and running. Take some time to look at the intents provided along the left side. Clicking any of them displays the intent name and its training phrases, which can be modified to suit your specific needs.
+5. Adding the Cross-vertical pre-built domain provides you with a robust, trained domain with several intents designed to quickly get you up and running. Take some time to look at the intents provided along the left side. Clicking any of them displays the intent name and its training phrases, which can be modified to suit your specific needs.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain2.png">
 
-    For now, you won’t add any additional content, but keep in mind that any new intents you add will need a minimum of 20 training phrases and that any changes will result in the model needing to be re-trained.
+    For now, you won’t add any additional content, but keep in mind that any new intents you add will need a minimum of 15 training phrases, and that any changes will result in the model needing to be re-trained.
 
 6. In the **Test User Input** panel on the right, you can test utterances and see how they score against the provided intents. You will be using the "make payment" intent in this tutorial, so enter an utterance that you would expect to trigger this particular intent, such as, “I want to make a payment.” Select "1" for your **Model version**, and toggle the **Search in domain** switch to "on." Then click **Test**.
 
@@ -60,8 +62,8 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 With the "Make Payment" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. In the upper-left corner, click **< Back** twice to return to the Conversational AI dashboard.
-2. Click **Conversation Builder**.
+1. In the upper-left corner, click **Conversational AI** in the breadcrumb trail.
+2. Select **Conversation Builder**.
 3. Select the bot you previously created.
 4. Create a new regular dialog named "Make Payment".
 
@@ -100,7 +102,7 @@ Now you can begin to build out the Make Payment dialog.
 
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
 
-4. Add a Text statement to respond to a reply of "no". Name the interaction "No statement" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
+4. Add a Text statement to respond to a reply of "no". Name the interaction "No" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules3.png">
 

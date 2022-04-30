@@ -89,7 +89,7 @@ For bot groups that are intended only for grouping purposes:
 * Make sure to disable the Collaboration setting.
 
 For bot groups that are collaborative (the Collaboration setting is enabled):
-* If the group will include multiple bots, LivePerson recommends the use of the [LivePerson engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
+* If the group will include multiple bots, LivePerson recommends the use of the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 * The group should not contain more than 15 bots.
 * Make sure there is no overlap in the intents and patterns used by the bots.
 

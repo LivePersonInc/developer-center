@@ -26,7 +26,7 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
-source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 
 **BODY/POST Parameters**
@@ -56,6 +56,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |:---- | :---------- | :---------- | :------- | :---|
 |start {from, to} | Conversation's start time range.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 |end {from, to} | Conversation's end time range.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|fullDialogEndTime {from,to} | The end time of the conversation including survey closure.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 |status  | Latest status of the conversation.| Array `<status>` | Optional | Valid values: "OPEN", "CLOSE"
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
@@ -82,7 +83,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |invalidFreeTextAnswer | Search only for conversations that contain invalid free text answer. | String  | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
 |surveyBotConversations | Search only for conversations with PCS. | String  | Optional | Valid values: SURVEY_BOT. |
 |surveyIds  | An array of PCS IDs, represented as numbers.  | Array `<surveyID>`  | Optional |
-|fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no. |
+|fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no, 1, 0. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve | String, String| Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
@@ -129,6 +130,21 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
 ### Response
+
+#### Response codes
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 429 | -- |  Too many requests |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
 
 #### General Characterizations
 
@@ -184,7 +200,11 @@ conversationId | ID of conversation.  | string  |
 brandId  | ID of brand.| string  |
 status| Latest status of the conversation.  | string  |
 startTime| Start-time of the conversation.  | long |
-endTime  | End-time of the conversation. | long |
+endTime  | End time of the conversation. | long | The end time is set to the end of the conversation and updated upon survey submission/timeout.
+conversationEndTime  | The end time of the conversation regardless of the survey’s status. Human-readable timestamp. | long |
+conversationEndTimeL  | Same as above in epoch time. | long |
+fullDialogEndTime  | The close time of the conversation including survey submission. | long | Survey can be submitted or timed-out
+fullDialogEndTimeL  | Same as above in epoch time. | long |
 duration | Time from when the consumer started the conversation until it ended. | long | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
 closeReason | Reason for closing the conversation - by agent / consumer.  | string  |
 closeReasonDescription | Additional information regarding the conversation close reason| string  |
@@ -238,8 +258,8 @@ _Campaign info_
 | goalName | Name of the campaign's goal.  | alphanumeric (50)|
 | engagementAgentNote  | Note to the Agent defined for the campaign's engagement. | alphanumeric  |
 | engagementSource  | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc.  | alphanumeric  |
-| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available).| numeric |
-| visitorBehaviorName  | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
+| visitorBehaviorId | ID of the behavioral targeting rule defined for the campaign's engagement (in case engagement id is available).| numeric |
+| visitorBehaviorName  | Name of the behavioral targeting rule defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
 | engagementApplicationId | Engagement's application ID.  | alphanumeric - UUID | The engagement which triggered the conversation
 | engagementApplicationName  | Engagement's application name.| alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeId| Engagement's application type id | alphanumeric  | The engagement which triggered the conversation
@@ -250,8 +270,8 @@ _Campaign info_
 | lobName  | Name of the line of business of the campaign.| alphanumeric  |
 | LocationId  | ID of the location of the engagement on the screen.| numeric |
 | LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.  
-| behaviorSystemDefault| Indicates whether visitor behavior is the default one.| Boolean |
-| profileSystemDefault | Indicates whether visitor behavior is the default one.| Boolean |  
+| behaviorSystemDefault| Indicates whether behavioral targeting rule is the default one.| Boolean |
+| profileSystemDefault | Indicates whether behavioral targeting rule is the default one.| Boolean |  
 
 _Monitoring_
 
@@ -502,7 +522,7 @@ _SurveyData info_
 Name  | Description  | Type/Value | Notes
 :------- | :-------------------- | :--------- | :----------------------------
 question | Survey question text. | string  |
-answer| Survey answer text,| string  |
+answer| Survey answer text.| string  |
 questionId | Survey question ID  | string  |
 answerId| Survey answer ID,| string  | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
 questionType | Survey question type | string  |
@@ -602,9 +622,8 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |
+submittedAnswers| Agent survey questions                       | container |
 
 _Previously Submitted Agent Surveys_
 
@@ -626,8 +645,25 @@ performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
 lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+submittedAnswers| Agent survey questions.                      | container  |
+
+_Agent Survey Question_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+questionText | Survey question text. | string
+questionId | Survey question ID. | string
+questionDefinition | Survey question definition. | string
+questionCategory | Survey question category. | string
+answers | Agent survey answers. | container
+
+_Agent Survey Answer_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+answer | Survey answer text. | string
+answerId | Survey answer ID. | string
+
 
 ```json
 {
@@ -646,8 +682,12 @@ acSurveyRevision| The AC form revision.                        | string     |
       "info": {
         "startTime": "2016-08-29 14:30:24.565+0000",
         "startTimeL": 1472481024565,
-        "endTime": "undefined",
-        "endTimeL": -1,
+        "endTime": "2016-08-29 19:58:24.565+0000",
+        "endTimeL": 1472500733000,
+        "conversationEndTime": "2016-08-29 18:58:24.565+0000",
+        "conversationEndTimeL": 1472497133000,
+        "fullDialogEndTime": "2016-08-29 19:58:24.565+0000",
+        "fullDialogEndTimeL": 1472500733000,
         "duration": 78970,
         "conversationId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
         "brandId": "qa26409991",
