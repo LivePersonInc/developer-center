@@ -27,6 +27,9 @@ CCS stores data in key-value pairs and includes developer tools like js-librarie
 
 ### When to use the Conversation Context Service
 
+{: .important}
+Don’t store personally identifiable information (PII) in the Conversation Context Service.
+
 CCS attributes can be used in a variety of ways to enhance the conversational experience of consumers. Attributes are accessible at any point in the conversational journey, and they can be used in the following ways:
 
 * **Power contextual continuity between bots** - In this example, the intent and email is being saved into the CCS by one bot and is being retrieved by another bot to continue the conversation.
