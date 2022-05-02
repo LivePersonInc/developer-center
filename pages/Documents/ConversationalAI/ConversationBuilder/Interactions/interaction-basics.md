@@ -35,9 +35,9 @@ The order of operations for statements and integrations works like this:
 And for questions it works like this:
 1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
 2. Wait for the time set in the **Interaction Delay** (if set), and send the content of the question.
-3. Wait for the user (consumer) response.
-4. Execute the interaction's Process User Response code.
-5. Execute the interaction's Post-Process code.
+3. Execute the interaction's Post-Process code.
+4. Wait for the user (consumer) response.
+5. Execute the interaction's Process User Response code.
 6. Execute the interaction's custom rules (if any). Otherwise, execute the interaction's next action.
 
 ### General guidelines and best practices
