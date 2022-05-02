@@ -23,7 +23,7 @@ redirect_from:
 
 Select an event that suits your needs, implement the code of your function and deploy it to the LivePerson Functions platform.
 
-There are three basic types of events: [Triggered](liveperson-functions-foundations-concepts.html#triggers) by different services ([Event Sources](liveperson-functions-event-sources-overview.html)), [schedules](liveperson-functions-foundations-features.html#scheduling) and [external triggers](http://localhost:4000/liveperson-functions-foundations-external-invocation.html). Those events contain event-specific data, which allows the creation of custom logic. Depending on the event source, you can also interact with it, actively influencing processes happening on the platform.
+There are three basic types of events: [Triggered](liveperson-functions-foundations-concepts.html#triggers) by different services ([Event Sources](liveperson-functions-event-sources-overview.html)), [schedules](liveperson-functions-foundations-features.html#scheduling) and [external triggers](liveperson-functions-foundations-external-invocation.html). Those events contain event-specific data, which allows the creation of custom logic. Depending on the event source, you can also interact with it, actively influencing processes happening on the platform.
 You may leverage external services or LivePerson APIs in your function. The below infographic visualizes this flow from the original event source to the function code and back.
 
 <img src="img/functions/functions_overview.png" alt="LivePerson Functions Overview" style="width:100%;"/>

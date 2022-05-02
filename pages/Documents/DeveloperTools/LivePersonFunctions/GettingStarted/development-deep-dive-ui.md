@@ -191,7 +191,7 @@ We added our snippets to the context service, accessible by typing in `Snippet` 
 
 ##### Code documentation & Types
 
-Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#Dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
+Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
 
 Further, that information is also extended to function, parameters, and objects you specify within your code.
 

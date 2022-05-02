@@ -129,7 +129,7 @@ ___
 
 ### SDEUtil
 
-▸ `Static` **SDEUtil**(): [`ISDEUtil`](liveperson-functions-toolbelt-sde-util.html)
+▸ `Static` **SDEUtil**(): [`ISDEUtil`](liveperson-functions-toolbelt-documentation-sde-util.html)
 
 Returns a SDE Util, which can be used to add SDEs and other SDE
 related operations.
