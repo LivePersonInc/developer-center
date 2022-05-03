@@ -37,7 +37,51 @@ This section describes how to create a slot manually. However, if you use the As
 
 If the bot asked the consumer, "Which animal do you like?" and the user answered "dogs,” the slot for the entity “animal” would be populated with their answer. The bot could then respond with "You answered: dogs!" populating the code above with the consumer’s answer.
 
-### Slot filling with multi-entity extraction
+### Example 1: Fill a slot with a value for a single entity
+
+Consider the following bot flow: 
+
+<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_1.png">
+
+In the multiple choice question, the Pet Type rule's configuration looks like this:
+
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_2.png">
+
+The result is that:
+* If the consumer starts off with, “I want to buy a pet,” the multiple choice interaction is sent to the consumer, and the consumer can choose Dog, Cat, or Bird. This fills the slot.
+* If the consumer starts off with, “I want to buy a dog” (or any other recognized pet entity – it does not have to be dog, cat, or bird), then the multiple choice question is **not** sent to the consumer. But the slot is still filled.
+
+Either way, when the consumer reaches the text interaction, the slot will have been filled, and the text interaction sends, "So you're looking for a dog. A fine choice!" Or, "So you're looking for a tortoise. A fine choice!"
+
+The key point is that if the multiple choice question detects that the entity already exists, it performs the slot-filling step, but it does **not** send its content to the consumer. The bot flow simply continues to the next action.
+
+### Example 2: Fill a slot with a value for one of several entities
+
+Sometimes an intent can relate to multiple entities: For example, a consumer can make a reservation at a hotel or a restaurant. 
+
+To handle this, a slot-filling question can have more than one slot-filling rule. This means you can set up the question so that it captures whichever of multiple entities a consumer is interested in. Importantly, the rules can all fill the same slot, so you can easily use the slot later on. Here is an example that illustrates the concept:
+
+<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_3.png">
+
+Note the two rules in the question:
+* Capture Hotel
+* Capture Restaurant
+
+There are two different entity types involved: hotel and restaurant. Each rule captures one of those. Here is Capture Hotel:
+
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_4.png">
+
+And here is Capture Restaurant:
+
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_5.png">
+
+As we've discussed in *Example 1* above, if either of the question's rules are met by the consumer's initial intent, the question fills the slot, and it does **not** send its content to the consumer.
+
+In this case, both rules fill the slot `establishment_name`. So, regardless of whether the consumer starts off with, “I want to eat dinner at the Olive Garden” and Capture Restaurant is triggered, or “I want to stay at the Holiday Inn” and Capture Hotel is triggered, `establishment_name` will contain the restaurant or hotel name. So, it can be used in the subsequent text statement: “So that’s a reservation for Olive Garden” or “So that’s a reservation for Holiday Inn.”
+
+Importantly, if the consumer were to start off more generally with, “I need a reservation,” then neither rule in the question would be triggered, so the question would send, “Where would you like to make your reservation?” The consumer's response would then be used to fill the `establishment_name` slot according to the rules. And again, the text statement sent in response would make use of the value.
+
+### Example 3: Fill multiple slots with the values for multiple entities
 
 Slot-filling becomes especially useful when mining the entities that make up a consumer's intent to pre-populate your list of questions, and streamline the data collection process. Consider the following example:
 
