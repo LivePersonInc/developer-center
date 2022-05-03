@@ -32,11 +32,11 @@ This section describes how to create a slot manually. However, if you use the As
     <img class="fancyimage" width="800" src="img/ConvoBuilder/slotAdd2.png">
 6. Decide how long you'd like the slot's data to be kept for, i.e., the [duration](conversation-builder-variables-slots-the-basics.html#duration).
 
-`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, if you've stored an "animal" entity in a `pet_type` slot, you can have the bot respond with the consumer's stored answer with a text interaction like so:
+`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, if you've stored a "shoes" entity in a `shoe_type` slot, you can have the bot respond with the consumer's stored answer with a text interaction like so:
 
-"You answered: `{$botContext.slot.pet_type}`!"
+"You answered: `{$botContext.slot.shoe_type}`!"
 
-If the bot asked the consumer, "Which animal do you like?" and the consumer answered "dogs,” the slot for the entity “animal” would be populated with their answer. The bot could then respond with "You answered: dogs!" populating the code above with the consumer’s answer.
+If the bot asked the consumer, "What type of shoes are you looking for?" and the consumer answered "boots,” the slot for the entity “shoes” would be populated with their answer. The bot could then respond with "You answered: boots!" populating the code above with the consumer’s answer.
 
 ### Example 1: Fill a slot with a value for a single entity
 
