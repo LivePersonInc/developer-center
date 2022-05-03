@@ -17,7 +17,7 @@ indicator:
 The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to Conversational Cloud. In order to achieve this, we will implement a LivePerson Function.
 
 {: .important}
-As the LivePerson functions feature uses [LivePerson Functions](liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-your-first-function.html) for more information on setting uo LivePerson Functions and its permissions.
+As the LivePerson functions feature uses [LivePerson Functions](liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Configuration
 
