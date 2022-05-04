@@ -37,23 +37,46 @@ This document describes possible errors which can be thrown during a conversatio
 
 
 #### end-conversation {#comlivepersonbot-connectors-workererrorconnectormessagingend-conversation}
-##### Description
-This error indicates an issue with closing a messaging conversation.
-##### Reasons
-This usually happens if the conversation was already closed/transferred while the bot is evaluating the response.
-##### Solutions
-None.
+<table>
+<thead>
+<th colspan="2">com.liveperson.bot-connectors-worker.error.connector.messaging.end-conversation</th>
+</thead>
+  <tbody>
+  <tr>
+    <td>Description</td>
+    <td>This error indicates an issue with closing a messaging conversation.</td>
+  </tr>
+  <tr>
+    <td>Reason</td>
+    <td>This usually happens if the conversation was already closed/transferred while the bot is evaluating the response.</td>
+  </tr>
+  <tr>
+    <td>Solutions</td>
+    <td>None.</td>
+  </tr>
+  </tbody>
+</table>
 
-#### change-ttr {#comlivepersonbot-connectors-workererrorconnectormessagingchange-ttr}
-
-##### Description
-This error indicates an issue in changing the TTR value for the current conversation.
-##### Reasons
-Mostly, the error is a wrong value which is used for the TTL
-##### Solutions
-Please choose the right value for your TTR step.
-See the documentation for the individual vendors on how to set TTR properly
-
+#### change-ttr {#comlivepersonbot-connectors-workererrorconnectormessagingschange-ttr}
+<table>
+<thead>
+<th colspan="2">com.liveperson.bot-connectors-worker.error.connector.messaging.change-ttr</th>
+</thead>
+  <tbody>
+  <tr>
+    <td>Description</td>
+    <td>This error indicates an issue in changing the TTR value for the current conversation.</td>
+  </tr>
+  <tr>
+    <td>Reason</td>
+    <td>Mostly, the error is a wrong value which is used for the TTL</td>
+  </tr>
+  <tr>
+    <td>Solutions</td>
+    <td>Please choose the right value for your TTR step. See the documentation for the individual vendors on how to set TTR properly</td>
+  </tr>
+  </tbody>
+</table>
 
 #### transfer-to-skill {#comlivepersonbot-connectors-workererrorconnectormessagingtransfer-to-skill}
 
@@ -503,95 +526,3 @@ Mostly this issue happens because of a wrong integration on customer end where n
 #### Solutions
 Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
 Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
-
-### com.liveperson.bot-connectors-worker.error.aivendor.client.test-connection
-
-#### Description
-
-Testing the connection to the vendor failed.
-
-#### Reasons
-
-Most of the time this is caused by wrong credentials or because the bot instance on vendor side is not running.
-
-#### Solutions
-
-Check if your bot credentials are configured correctly in Third-Party Bots and the bot is healthy on the vendor side.
-
-### com.liveperson.bot-connectors-worker.error.aivendor.medallia.parse-message.parser-error
-
-#### Description
-
-Parsing the response of the Medallia Adapter failed.
-
-#### Reasons
-
-The response Third-Party Bots retrieved from the Medallia adapter was not according to the specification.
-
-#### Solutions
-
-Please reach out to LP Support with the error details.
-
-### com.liveperson.bot-connectors-worker.error.aivendor.custom-endpoint.fetch-response
-
-#### Description
-
-The request to the Custom Endpoint service failed
-
-#### Reasons
-
-The reason is that the Custom Endpoint service was unable to respond to the Third-Party Bot
-connector. It could be that service is either down or not accepting the response
-
-#### Solutions
-
-Please check if the Custom Endpoint service is reachable and responding as per the [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-
-### com.liveperson.bot-connectors-worker.error.aivendor.custom-endpoint.parse-message.parser-error
-
-#### Description
-
-The response from the Custom Endpoint service contains invalid/unsupported messages/events/actions
-
-#### Reasons
-
-Reason for this problem is that The Custom Endpoint service response was not accepted by
-Third-Party Bots connector
-
-#### Solutions
-
-Please check if the Custom Endpoint service is responding as per the
-[API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
-To ensure validity of response, brands can use our
-[Conversation Tester feature](third-party-bots-conversation-tester.html)
-
-### com.liveperson.bot-connectors-worker.error.aivendor.custom-endpoint.parse-message.test-connection
-
-#### Description
-
-Testing the connection to the vendor failed.
-
-#### Reasons
-
-Most of the time this is caused by wrong credentials or because the bot instance on vendor
-side is not running.
-
-#### Solutions
-
-Check if your bot credentials are configured correctly in Third-Party Bots and the bot is
-healthy on the vendor side.
-
-### com.liveperson.bot-connectors-worker.error.aivendor.custom-endpoint.parse-message.parse-multiple-actions
-
-#### Description
-
-This error happens when there are multiple actions are received from the Custom Endpoint service .
-
-#### Reasons
-
-The Custom Endpoint service support one **ACTION** per Custom Endpoint service response
-
-#### Solutions
-
-Verify the bot response correspond to the standards we provide in our vendors's
-[documentation](third-party-bots-custom-endpoint-basic-content.html#bot-actions).
