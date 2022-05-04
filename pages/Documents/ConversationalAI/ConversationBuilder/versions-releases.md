@@ -27,7 +27,7 @@ Any time you might be making large changes to the functionality of a bot, there 
 
 **To save a version**
 
-1. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
+1. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/versions1.png">
@@ -76,7 +76,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     This opens the new bot.
 
-8. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
+8. In the new Production bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
 
     Note the **Upgrade** button. If this button isn't enabled, your account needs a configuration change made by LivePerson; contact your administrator for assistance.
 

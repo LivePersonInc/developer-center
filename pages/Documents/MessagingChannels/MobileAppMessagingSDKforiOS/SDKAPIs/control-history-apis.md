@@ -7,39 +7,33 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: SDK APIs 
+subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html
 indicator: messaging
 ---
 
-
-The Control History APIs allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen. For example, brands can choose to present only the last 180 days of conversation history.  Use these APIs when calling `showConversation`.
-
-You can use these APIs together with `getEngagement` (Monitoring APIs) to determine how to present conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a **View conversation history** button that displays only if the closed conversations are from the time specified, for example the last 180 days.
+The Control History APIs allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen. For example, brands can choose to present only the last 180 days of conversation history. Use these APIs when calling `showConversation`.
 
 The APIs lets brands:
-
-- Get an indication if there is an open conversation or not (Monitoring APIs).
 
 - Control which conversations will be presented by status (open\closed).
 
 - Control the time frame of presented conversations (by days).
 
-
 ### Important Notes
 
-* If no conversations match the provided filter, an empty state presents with a message. The default message is *"There are no conversations at this time."* You can configure the UI elements of the state.  
+- If no conversations match the provided filter, an empty state presents with a message. The default message is _"There are no conversations at this time."_ You can configure the UI elements of the state.
 
-   - **Change the text:** change the value of `conversationEmptyState`. 
+  - **Change the text:** change the value of `conversationEmptyState`.
 
-   - **Change the text color:**  change `LPConfig → conversationEmptyStateTextColor`.
+  - **Change the text color:** change `LPConfig → conversationEmptyStateTextColor`.
 
-* When opening the window with closed conversations only, the window opens as a view only mode.
+- When opening the window with closed conversations only, the window opens as a view only mode.
 
-* Every message that arrives from the agent or sent by the consumer removes the filter and conversations present as if no filter was applied.
+- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForHistoryControlAPI`
 
-{: .notice}
-Currently this feature is not fully compatible with the [Welcome Message with Quick Replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
+{: .important}
+To see more about the Welcome Message with Quick Replies, visit the following [page](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
 
 ### Parameters
 
@@ -47,71 +41,116 @@ LPConversationViewParams includes LPConversationHistoryControlParam:
 
 ```swift
 class LPConversationHistoryControlParam: NSObject {
-var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay (default is .all)
-  var historyConversationsMaxDays: UInt?
-  historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType?
+    var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay (default is .all)
+    var historyConversationsMaxDays: UInt?
+    var historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType?
 }
 ```
 
 You have three relevant parameters for `LPConversationHistoryControlParam`:
 
-* [LPConversationsHistoryStateToDisplay](#lpconversationshistorystatetodisplay)
+- [LPConversationsHistoryStateToDisplay](#lpconversationshistorystatetodisplay)
 
-* [historyConversationsMaxDays](#historyconversationsmaxdays)
+- [historyConversationsMaxDays](#historyconversationsmaxdays)
 
-* [LPConversationHistoryMaxDaysDateType](#lpconversationhistorymaxdaysdatetype)
+- [LPConversationHistoryMaxDaysDateType](#lpconversationhistorymaxdaysdatetype)
 
 #### LPConversationsHistoryStateToDisplay
 
-Use to present open conversations or closed conversations or all conversations. *Updated:* To present all conversations please use the enum ".all"
+Used to present open conversations or closed conversations or all conversations. _Updated:_ To present all conversations please use the enum ".all"
 
-   ```swift
+```swift
    enum LPConversationsHistoryStateToDisplay: Int {
        case open
        case close
        case all
    }
-   ```
+```
 
 #### historyConversationsMaxDays
-Use to choose how much conversation history presents to the consumer by days. Not providing a value allows consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).  
 
-   {:.important}
-   When using this, you must also use `LPConversationHistoryMaxDaysDateType`.
+Used to choose how much conversation history presents to the consumer by days.
+Not providing a value allows consumers to see the last 2 conversations (more can be seen by scrolling up to fetch additional conversations if stored on the local database, otherwise they'll be retrieved from the LP server).
+
+{:.important}
+When using this property, you must also use `LPConversationHistoryMaxDaysDateType`.
 
 #### LPConversationHistoryMaxDaysDateType
-Use to decide whether to count the days from the conversation start date or end date. If not providing a value, the start date is the default. 
 
-   ```swift
+Used to decide whether to count the days from the conversation start date or end date. If not providing a value, the start date is the default.
+
+```swift
    enum LPConversationHistoryMaxDaysDateType: Int {
        case startConversationDate
        case endConversationDate
    }
-   ```
+```
 
 ### Code Sample
 
 ```swift
- @IBAction func showConversation() {
-        guard let accountNumber = self.accountTextField.text, !accountNumber.isEmpty else {
-            return
-        }
+ func showConversation() {
 
-        self.conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
-        guard self.conversationQuery != nil else {
-            return
-        }
+    let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
 
-        let historyControlParam = LPConversationHistoryControlParam(
-            historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay.open,
-            historyConversationsMaxDays: 180,
-            historyMaxDaysType: LPConversationHistoryMaxDaysDateType.startConversationDate)
+    let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .open,
+                                                                historyConversationsMaxDays: 180,
+                                                                historyMaxDaysType: .startConversationDate)
 
-        let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: self, isViewOnly: false, conversationHistoryControlParam: historyControlParam)
-        let authenticationParams = LPAuthenticationParams(authenticationCode: "zcKZeImY5h7xOVPj", jwt: nil, redirectURI: nil)
-        LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
-    }
-
+    let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!,
+                                                          containerViewController: self,
+                                                          isViewOnly: false,
+                                                          conversationHistoryControlParam: historyControlParam)
+    let authenticationParams = LPAuthenticationParams(authenticationCode: "zcKZeImY5h7xOVPj",
+                                                      jwt: nil,
+                                                      redirectURI: nil)
+    LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+}
 ```
 
+### (Optional) Code Sample to enable Welcome Message
 
+```swift
+ func showConversation() {
+    // Configuration needs to be set to true to present Welcome Message if one is configured
+    LPConfig.defaultConfiguration.enableWelcomeMessageForHistoryControlAPI = true
+
+    // Welcome Message Configuration
+
+    var messageTitle = "Hello Mr.Smith, how may we help you?\n"
+
+    let welcomeMessageParam = LPWelcomeMessage(message: messageTitle,
+                                               frequency: .everyConversation)
+
+    // Optional - Configuring Quick Replies
+    let options = [
+        LPWelcomeMessageOption(value: "My latest bill statement", displayName: "1️⃣ Bill"),
+        LPWelcomeMessageOption(value: "A recent order placed", displayName: "2️⃣ Order"),
+        LPWelcomeMessageOption(value: "Technical support", displayName: "3️⃣ Support"),
+        LPWelcomeMessageOption(value: "Account information", displayName: "4️⃣ Account")
+    ]
+
+    do {
+        try welcomeMessageParam.set(options: options)
+    } catch {
+        print(error.localizedDescription)
+    }
+
+    let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber)
+
+    let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .open,
+                                                                historyConversationsMaxDays: 180,
+                                                                historyMaxDaysType: .startConversationDate)
+
+    let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!,
+                                                          containerViewController: self,
+                                                          isViewOnly: false,
+                                                          conversationHistoryControlParam: historyControlParam,
+                                                          welcomeMessage: welcomeMessageParam)
+
+    let authenticationParams = LPAuthenticationParams(authenticationCode: "zcKZeImY5h7xOVPj",
+                                                      jwt: nil,
+                                                      redirectURI: nil)
+    LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+}
+```

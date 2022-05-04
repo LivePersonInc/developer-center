@@ -29,7 +29,7 @@ A few things you'll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
-	* agentActivity
+	* agentActivityDomain
 
 2. This API requires authorization using an API key methodology.
 

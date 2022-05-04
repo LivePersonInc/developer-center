@@ -98,7 +98,10 @@ The following SDEs are already available in the dynamic routing interface and ca
 1. Write a function to retrieve the SDE and add it to the Conversation Context Service.
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
- 
+
+{: .important}
+This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
+
 #### Detailed process
  
 **Step 1: Create a function to pull the SDE to the Conversation Context Service**
@@ -118,6 +121,9 @@ The following SDEs are already available in the dynamic routing interface and ca
 8. Click **Create function**.
   <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png">
 9. In the editor, delete any existing code, and add the code in the snippet below.
+
+{: .important}
+This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
 
 ```javascript
 // import FaaS Toolbelt

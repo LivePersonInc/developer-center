@@ -31,7 +31,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the “LP_Cross-vertical” domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
@@ -52,6 +52,9 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png">
 
+    {: .important}
+    `{$userMessage}` is just one of many system variables you can use in your interactions. For the complete list, and for more on variables, see [here](conversation-builder-variables-slots.html).
+
     Click **Save**.
 
     By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout the bot. In this case, we will use that within our API call to find the user’s order.
@@ -68,7 +71,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
         Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
 
-    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here.
+    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here. (For more on processing API results with custom data fields, see [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).)
 
     | Key | Value |
     | --- | --- |
@@ -95,7 +98,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
     In the Structured Question title section, add `{OrderStatus.name}`.
 
     {: .important}
-    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.”
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 

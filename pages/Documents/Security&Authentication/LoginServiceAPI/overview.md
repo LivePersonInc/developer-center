@@ -48,6 +48,6 @@ http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?ver
    To login as an application, you must have the <i>User Type - Bot</i> feature activated.  If you do not, contact your account team before proceeding.
    </div>
 
-### Step 3. Create an API key and new Bot
+### Step 3. Create an OAuth 1.0 API key and new Bot
 
 [Refer to our Getting Started guide for more information on creating API keys](common-resources-create-api-keys.html). You'll need the details (like username or app secert) to use the methods of this API mentioned above so make sure to note them.

@@ -1,23 +1,18 @@
-<ul
-  id="mysidebar"
-  class="mysidebar nav fixed sidebarmobileclosed documentslist"
->
-  <!-- <li class="homeitem folder topfolder active">
+<ul id="mysidebar" class="mysidebar side-width nav fixed sidebarmobileclosed documentslist">
+    <!-- <li class="homeitem folder topfolder active">
     <div class="sidebarimage" style="margin-left:40px;">
     </div>
     <a onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li> -->
-  {% for category in site.data.documentsupdated %} {% if forloop.last == true %}
-  <li class="folder topfolder lowerimage">
-    <a class="highlightlink" href="">
-      <button class="sidebarbutton"><span></span></button>
-      <span> {{ category.categoryname }} </span></a
-    >
-    <ul>
-      {% for document in category.documents %} {% if document.pages %}
-      <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href=""
-          ><button class="sidebarbutton innerArrowAdjust"><span></span></button
+    {% for category in site.data.documentsupdated %} {% if forloop.last == true %}
+    <li class="folder topfolder lowerimage">
+        <a class="highlightlink" href="">
+            <button class="sidebarbutton"><span></span></button>
+            <span> {{ category.categoryname }} </span></a>
+        <ul>
+            {% for document in category.documents %} {% if document.pages %}
+            <li class="folder innerfolder sidebarcategory">
+                <a class="highlightlink" href=""><button class="sidebarbutton innerArrowAdjust"><span></span></button
           ><span> {{ document.documentname }}</span></a
         >
         <ul>
@@ -124,7 +119,7 @@
     </ul>
   </li>
   {% endif %} {% endfor %}
-  <div class="sidebarbuttoncontainer" style="padding-left: 35px">
+  <div class="sidebarbuttoncontainer">
     <li class="folder topfolder">
       <a
         target="_blank"
@@ -132,60 +127,40 @@
         href="http://knowledge.liveperson.com"
         >Knowledge Center
         <span style="float: right">
-          <!-- <img
-            alt="Knowledge Center"
-            class="externalIconImage"
-            src="img/icon_openNewTab.svg"
-          /> -->
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="13"
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
             fill="none"
-            viewBox="0 0 12 13"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              class="externalIconImage"
+              d="M1 0V2H7.59L0 9.59L1.41 11L9 3.41V10H11V0H1Z"
               fill="var(--link-color)"
-              fill-rule="evenodd"
-              d="M5 0H0v13h12V7h-2v4H2V2h3V0zm7 0v5l-1.686-1.686-3.877 3.877-1.414-1.414L8.9 1.9 7 0h5z"
-              clip-rule="evenodd"
             />
           </svg>
         </span>
       </a>
-    </li>
-  </div>
-  <div class="sidebarbuttoncontainer" style="padding-left: 35px">
-    <li class="folder topfolder">
-      <a
-        target="_blank"
-        class="bottombuttons spacebetweenHyperlink"
-        href="https://status.liveperson.com/"
-        >Service Status Dashboard
+            </li>
+            </div>
+            <div class="sidebarbuttoncontainer">
+                <li class="folder topfolder">
+                    <a target="_blank" class="bottombuttons spacebetweenHyperlink" href="https://status.liveperson.com/">Service Status Dashboard
         <span style="float: right">
-          <!-- <img
-            alt="Service Status Dashboard"
-            class="externalIconImage"
-            src="img/icon_openNewTab.svg"
-          /> -->
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="13"
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
             fill="none"
-            viewBox="0 0 12 13"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              class="externalIconImage"
+              d="M1 0V2H7.59L0 9.59L1.41 11L9 3.41V10H11V0H1Z"
               fill="var(--link-color)"
-              fill-rule="evenodd"
-              d="M5 0H0v13h12V7h-2v4H2V2h3V0zm7 0v5l-1.686-1.686-3.877 3.877-1.414-1.414L8.9 1.9 7 0h5z"
-              clip-rule="evenodd"
             />
           </svg>
         </span>
       </a>
-    </li>
-  </div>
-</ul>
+                </li>
+            </div>
+        </ul>
