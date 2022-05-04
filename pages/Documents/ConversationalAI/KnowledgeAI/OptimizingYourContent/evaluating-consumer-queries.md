@@ -94,7 +94,7 @@ Unanswered queries are those where the knowledge base was searched for an answer
     <img style="width:400px" src="img/ConvoBuilder/kai_csq8.png">
 
 3. Decide if and how you want to take action:
-    * **Answer**: Select this if you want to add an answer for the query. This takes you through a guided flow: If you don’t have an existing article that’s suitable to respond to the query, you can create one. And if there is a suitable article, you can add the query as a training phrase to the article’s intent, or add an intent if none exists.
+    * **Add answer**: Select this if you want to add an answer for the query. This takes you through a guided flow: If you don’t have an existing article that’s suitable to respond to the query, you can create one. And if there is a suitable article, you can add the query as a training phrase to the article’s intent, or add an intent if none exists.
     * **Don’t answer**: Select this if you don’t want to add an answer for the query. You might want to do this for queries that are non-intentful, such as profanity or other spam-like messages (e.g., “bots are pathetic”). You might even want to do this for intentful messages that you don’t want to address at the moment.
     
     <br>It’s also appropriate to select **Don’t answer** if you’ve already addressed the query. Assume you see a trend where the same unanswered query is asked 5 times. You might add the answer using the first instance, add the second and third instances as training phrases to the same intent, and dismiss the remaining two because they aren’t sufficiently different. Overall, you don’t need to answer the same query over and over.
