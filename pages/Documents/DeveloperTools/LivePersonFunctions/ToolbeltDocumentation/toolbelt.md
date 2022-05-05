@@ -24,6 +24,8 @@ indicator: both
 - [SFClient](#sfclient)
 - [SecretClient](#secretclient)
 
+{: .important}
+To ensure that infrastructure security doesn’t block communication from your function to the Context service, **ContextServiceClient** needs to be whitelisted with correct domain. 
 ## Methods
 
 ### ContextServiceClient
