@@ -25,7 +25,8 @@ indicator: both
 - [SecretClient](#secretclient)
 
 {: .important}
-To ensure that infrastructure security doesn’t block communication from your function to the Context service, **ContextServiceClient** needs to be whitelisted with correct domain. 
+Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#xy). As this is not done by default.
+
 ## Methods
 
 ### ContextServiceClient
