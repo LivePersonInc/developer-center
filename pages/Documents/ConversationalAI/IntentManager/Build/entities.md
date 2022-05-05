@@ -56,6 +56,25 @@ Regular Expression entities are available only in domains using the [LivePerson 
 7. Click **Save**.
 8. Train the domain so that the addition is reflected in a new model version.
 
+### Add or update entity values in bulk
+
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or update a set of entity values in bulk.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit1.png">
+
+When you click the link, all of the values are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
+* Insert in a number of additional values at the top or the bottom of the list. This is handy if you have them in a separate file. You can quickly copy them and paste them in.
+* Select a number of co-located values and delete them all at once. This is faster than doing so one by one.
+
+<img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png">
+
+Take care when using this feature to avoid making unintended changes:
+* To replace what exists, paste over it.
+* To add to what exists, paste the additions into (not over) the list.
+* Ensure that each value is on a different line.
+
+Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without updating the entity.
+
 ### Capture an entity using Conversation Builder's Assist
 
 Use Conversation Builder's **Assist** tool to associate a question with an entity, so you can capture the consumer's response as the value of that entity. This is illustrated [here](conversation-builder-assist.html#associate-a-question-with-an-entity).

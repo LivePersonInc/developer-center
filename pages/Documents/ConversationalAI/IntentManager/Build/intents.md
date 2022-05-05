@@ -77,6 +77,25 @@ Note:
 8. Back on the Intents page, click **Save** to save the change.
 9. Retrain the domain.
 
+### Add or update training phrases in bulk
+
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or update a set of training phrases in bulk.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit1.png">
+
+When you click the link, all of the training phrases are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
+* Insert in a number of additional phrases at the top or the bottom of the list. This is handy if you have them in a separate file. You can quickly copy them and paste them in.
+* Select a number of co-located phrases and delete them all at once. This is faster than doing so one by one.
+
+<img style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit2.png">
+
+Take care when using this feature to avoid making unintended changes:
+* To replace what exists, paste over it.
+* To add to what exists, paste the additions into (not over) the list.
+* Ensure that each phrase is on a different line.
+
+Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without updating the intent.
+
 ### Using intents
 
 Check out these topics on using intents:
