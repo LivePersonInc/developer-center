@@ -119,8 +119,6 @@ If you're creating a Google sheet, add the intents to the first tab in the sheet
 
 ### Configure domain settings
 
-**To configure domain settings**
-
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
 3. Move your mouse over the name of the relevant domain, and select **Domain Settings** from the menu that appears.

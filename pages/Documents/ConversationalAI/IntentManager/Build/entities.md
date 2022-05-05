@@ -18,8 +18,6 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 
 ### Add a Value Set entity
 
-**To add a Value Set entity**
-
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
