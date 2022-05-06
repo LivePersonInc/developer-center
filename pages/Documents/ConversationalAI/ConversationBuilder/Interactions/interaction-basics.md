@@ -26,19 +26,27 @@ There are four, general categories of interactions:
 
 ### Order of operations
 
-The order of operations for statements and integrations works like this:
+#### Statements
 1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
-2. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction (if a statement) or execute the integration (if an integration).
+2. Process/prepare the content of the interaction.
 3. Execute the interaction's Post-Process code.
-4. Execute the interaction's next action.
+4. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction.
+5. Execute the interaction's next action.
 
-And for questions it works like this:
+#### Integrations
 1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
-2. Wait for the time set in the **Interaction Delay** (if set), and send the content of the question.
+2. Wait for the time set in the **Interaction Delay** (if set), and process the content of the interaction.
 3. Execute the interaction's Post-Process code.
-4. Wait for the user (consumer) response.
-5. Execute the interaction's Process User Response code.
-6. Execute the interaction's custom rules (if any). Otherwise, execute the interaction's next action.
+5. Evaluate the custom rules (if any), and execute the interaction's next action on the basis of the custom rules.
+
+#### Questions
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Process/prepare the content of the interaction.
+3. Execute the interaction's Post-Process code.
+4. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction.
+5. Wait for the user (consumer) response.
+6. Evaluate the custom rules (if any), and execute the interaction's next action on the basis of the custom rules.
+7. Execute the interaction's Process User Response code.
 
 ### General guidelines and best practices
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
