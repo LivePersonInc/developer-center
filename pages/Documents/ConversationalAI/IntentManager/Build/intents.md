@@ -84,7 +84,7 @@ Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a s
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit1.png">
 
 When you click the link, all of the training phrases are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
-* Insert in a number of additional phrases - at the top, the bottom, or anywhere in-between. This is handy if you have them in a separate file. You can quickly copy them and paste them in.
+* Insert in a number of additional phrases - at the top, the bottom, or anywhere in between. This is handy if you have them in a separate file. You can quickly copy them and paste them in.
 * Select a number of co-located phrases and delete them all at once. This is faster than doing so one by one.
 
 <img style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit2.png">
