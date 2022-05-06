@@ -79,7 +79,7 @@ Note:
 
 ### Add or update training phrases in bulk
 
-Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or update a set of training phrases in bulk.
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a set of training phrases in bulk.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit1.png">
 
@@ -89,12 +89,13 @@ When you click the link, all of the training phrases are placed into a single fi
 
 <img style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit2.png">
 
+{: .important}
+To save your changes, click the **Update Intent** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
+
 Take care when using this feature to avoid making unintended changes:
 * To replace what exists, paste over it.
 * To add to what exists, paste the additions into (not over) the list.
 * Ensure that each phrase is on a different line.
-
-Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without updating the intent.
 
 ### Using intents
 

@@ -56,7 +56,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Add or update entity values in bulk
 
-Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or update a set of entity values in bulk.
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a set of entity values in bulk.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit1.png">
 
@@ -66,12 +66,13 @@ When you click the link, all of the values are placed into a single field. This 
 
 <img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png">
 
+{: .important}
+To save your changes, click the **Update Entity** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
+
 Take care when using this feature to avoid making unintended changes:
 * To replace what exists, paste over it.
 * To add to what exists, paste the additions into (not over) the list.
 * Ensure that each value is on a different line.
-
-Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without updating the entity.
 
 ### Capture an entity using Conversation Builder's Assist
 
