@@ -159,31 +159,26 @@ When defining a [condition](conversation-builder-interactions-configuration-next
 For information on this, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).
 
 ### Format text
-#### Types of text
+#### Formatting
 
-The types of text that you can send in a Conversation Builder interaction vary depending on whether you're building a bot for **Chat** or for **Messaging**.
-
-**Messaging** only allows plain text to be sent. 
-
-**Chat** allows for plain text and a subset of HTML limited to the paragraph, linebreak and anchor tags:
-
-* `<p></p>`
-* `<br>`
-* `<a href=""></a>`
+You can use the following subset of HTML tags:
+* `<p>` and `<br>`
+* `<strong>`, `<b>` and `<i>`
+* `<ul>`, `<ol>` and `<li>`
+* `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-
-* `<a href="http://example.com/test.jpg">`
-* `<a href="http://example.com/1$2324%342523">`
-* `<a href="{$botcontext.host}/test.jpg">`
-* `<a href="http://example.com/{$botcontext.fileName}">`
-* `<a href="{$botcontext.link}”>`
+* `<a href="http://example.com/test.jpg">click here</a>`
+* `<a href="http://example.com/1$2324%342523">click here</a>`
+* `<a href=”tel:+123456789”>phone</a>`
+* `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
+* `<a href="javascript: alert(’test’)">click here</a>`
+* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
 
-* `<a href="javascript: alert(’test’)">`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
+The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 
 #### Line Breaks
 CTRL+ENTER - Hold control and hit enter/return.
