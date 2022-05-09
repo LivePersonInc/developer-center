@@ -24,6 +24,7 @@ There are four, general categories of interactions:
 
 - **Code**: Code interactions are for creating custom logic or displaying a custom bot response. For more on code interactions, see [here](conversation-builder-interactions-code.html).
 
+<!--
 ### Order of operations
 
 #### Statements
@@ -47,6 +48,7 @@ There are four, general categories of interactions:
 5. Wait for the user (consumer) response.
 6. Evaluate the custom rules (if any), and execute the interaction's next action on the basis of the custom rules.
 7. Execute the interaction's Process User Response code.
+-->
 
 ### General guidelines and best practices
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
