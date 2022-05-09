@@ -395,3 +395,24 @@ can be seen in Figure 4.8:
 <img class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
 
 Figure 4.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
+
+### Receiving Last consumer message (Messaging Only)
+
+Third-Party bot now provides a way to add the last consumer message as a part of the welcome event. When an ongoing conversation gets transferred to a new Agent or Skill, This enhancement will allow brands to respond to the last consumer message uttered as per their needs.
+
+In Custom Endpoint service, last consumer message is passed via the property `lastConsumerMessage` that is sent with `context` information as part of `lpEvent` data. An example of the request body containing WelcomeEvent can be seen below:
+
+```json
+{
+  "type": "START",
+  "source": "CONVERSATION",
+  "data": {},
+  "context": {
+    "lpEvent": {
+      "type": "ContentEvent",
+      "contentType": "welcome",
+      "lastConsumerMessage": "I need to return my order",
+    }
+  }
+}
+```
