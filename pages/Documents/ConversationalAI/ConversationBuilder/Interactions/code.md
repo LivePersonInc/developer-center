@@ -20,7 +20,7 @@ The Universal interaction, which is designed for advanced bot developers, is a f
 <img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png">
 
 {: .important}
-Currently, the interaction is supported only in the following channels: Apple Business Chat, Google Business Messages, and Web messaging. Use in other channels isn't supported.<br><br>
+Currently, the interaction is supported only in the following channels: Apple Messages for Business, Google Business Messages, and Web messaging. Use in other channels isn't supported.<br><br>
 The Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 #### Adding a Universal interaction

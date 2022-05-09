@@ -47,7 +47,7 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 - **Choices per Row**: This setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
-- **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+- **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Messages for Business or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
 - **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
 
@@ -78,7 +78,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 Like with any question, a structured question expects and waits for the user response before executing the next action.
 
 {: .important}
-Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
+Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
 
 <img style="width:600px" src="img/ConvoBuilder/questions_structured2.png">
 
@@ -151,7 +151,7 @@ And the chips disappear once the consumer selects one:
 
 <img style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png">
 
-Details vary by channel. For example, Apple Business Chat does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
+Details vary by channel. For example, Apple Messages for Business does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
 
 <img style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png">
 
@@ -177,9 +177,9 @@ Configure the following setting in the [interaction's settings](conversation-bui
 
 ### Apple List Picker
 
-**For Apple Business Chat only.**
+**For Apple Messages for Business only.**
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expects and waits for the user response before executing the next action.
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expects and waits for the user response before executing the next action.
 
 You might want to include a list picker so consumers can select from a list of:
 
@@ -263,9 +263,9 @@ Once a user makes their selection in the list picker, the reply is sent back to 
 
 
 ### Apple Time Picker
-**For Apple Business Chat only.** 
+**For Apple Messages for Business only.** 
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment. (The interaction has been developed per Apple's Time Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker).)
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment. (The interaction has been developed per Apple's Time Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker).)
 
 You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 

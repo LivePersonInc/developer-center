@@ -175,7 +175,7 @@ An open-ended question allows the consumer to provide an answer in their own wor
 * You can add a skip option to closed-ended questions but not to open-ended questions. 
 
 {: .important}
-When the target channel is Apple Business Chat, applicable survey questions are automatically sent to the consumer as List Picker interactions.
+When the target channel is Apple Messages for Business, applicable survey questions are automatically sent to the consumer as List Picker interactions.
 
 #### Customizing interaction text (FCR, CSAT and NPS)
 
