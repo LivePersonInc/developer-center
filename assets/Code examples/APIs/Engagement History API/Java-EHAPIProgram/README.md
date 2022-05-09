@@ -3,7 +3,7 @@ This program allows you to use the Engagement History API to pull your chat tran
 
 For example, if I wanted to get an email every time someone answered Dissatisfied on my post chat survey, I could use Dissatisfied as my keyword and the program will only pull those chat transcripts.
 
-To use this program, you will need to setup a SendGrid account and create an API key. SendGrid will allow you to send up to 12,000 emails for free a month. If you will be sending more that, they offer very cheap plans.
+To use this program, you will need to setup a SendGrid account and create an OAuth 1.0 API key. SendGrid will allow you to send up to 12,000 emails for free a month. If you will be sending more that, they offer very cheap plans.
 
 ## How To Use The Program
 In order to use the program you will need to get an API key for your SendGrid account, and you will need to fill out the config.properties file with your API information.

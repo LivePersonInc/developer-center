@@ -1,7 +1,7 @@
 ---
 pagename: Introduction
 redirect_from:
-  - third-party-bots-google-dialogflow-es.html
+  - bot-connectors-google-dialogflow-version-2.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -18,7 +18,7 @@ The following documentation outlines the configuration for the connector and how
 ### Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
+See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings if you select Dialogflow ES.
 
@@ -80,9 +80,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 </table>
 
 {: .important}
-Dialogflow ES adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is 
+Dialogflow ES adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is
 necessary for setting up a valid Dialogflow ES client with _Read Only API access_.
-Follow the Dialogflow ES documentation available [here](https://cloud.google.com/dialogflow/es/docs/quick/setup#sa-create) 
+Follow the Dialogflow ES documentation available [here](https://cloud.google.com/dialogflow/es/docs/quick/setup#sa-create)
 in order to set up the necessary **Service Account**
 
 While creating the service account a JSON file can be retrieved, containing most of the necessary parameters.
@@ -111,7 +111,6 @@ For the private_key especially, do not modify the string, do not remove any of t
 {: .important}
 You have to acknowledge the Data Disclaimer in order to use Third-Party Bots.
 
-
 To validate the credentials provided, you can now perform a connection test to see if the configuration you have provided
 is working and the bot is reachable. You will be able to proceed in any case, but only if **Test Connection** will result in
 **Connection Successful** the bot is expected to later start successfully.
@@ -126,7 +125,6 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 <img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png">
 
 Figure 1.3 Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
-
 
 <img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png">
 

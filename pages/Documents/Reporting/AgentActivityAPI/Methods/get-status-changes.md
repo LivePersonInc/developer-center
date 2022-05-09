@@ -17,7 +17,7 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 
 | Method | URL |
 | --- | --- |
-| GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountID}/status-changes?source={source} |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/api/v2/account/{accountID}/status-changes?source={source} |
 
 #### Request Query Parameters
 
@@ -32,11 +32,6 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 | offset | This allows to get more results in case you have more agents than `limit` | number | Optional | 0 |  |
 
 ### Response
-
-{: .notice}
-Each page in the API response is limited to 20 state changes * limit parameter * query days. 
-For example, if the limit is set to 10 (agents), 1 day query then limitation per page = 200 state changes.<br/> In case of an excessive state changes, some of the states/agents may be truncated based on the maximum states limitation.<br/>This will be updated on v2 where all states will be returned in a flat response (not grouped by agent).
-
 
 | Property Name | Description | Type | Notes |
 | --- | --- | --- | --- |
@@ -67,26 +62,36 @@ For example, if the limit is set to 10 (agents), 1 day query then limitation per
         "startTime": "2021-08-25T15:00:00Z",
         "endTime": "2021-08-25T23:59:00Z"
     },
-    "agentsInfo": [
+  "stateChanges": [
         {
-            "agentId": #,
-            "employeeId": "1234567",
-            "agentLoginName": "testuser",
-            "agentUserName": "test user",
-            "agentGroupId": 118643451,
-            "statusChangeHistory": [
-                {
-                  "time": "2021-08-25T00:17:59.747Z",
-                  "sessionId": 95354544,
-                  "sequenceNumber": 1,
-                  "statusType": 1,
-                  "statusSubType": 4,
-                  "statusReasonId": 1,
-                  "statusReasonText": "Training",
-                  "prevStatusChangeTime": "2021-08-25T00:15:59.747Z",
-                },
-                ...
-            ]
+          "agentId": 123,
+          "employeeId": "",
+          "agentLoginName": "",
+          "agentUserName": "",
+          "agentGroupId": -1,
+          "time": "2022-03-15T15:07:03.981Z",
+          "sessionId": 123,
+          "sequenceNumber": 2,
+          "statusType": 1,
+          "statusSubType": 1,
+          "statusReasonId": 0,
+          "statusReasonText": "",
+          "prevStatusChangeTime": "2022-03-15T11:59:10.898Z"
+        },
+        {
+          "agentId": 123,
+          "employeeId": "",
+          "agentLoginName": "",
+          "agentUserName": "",
+          "agentGroupId": -1,
+          "time": "2022-03-15T15:07:03.981Z",
+          "sessionId": 123,
+          "sequenceNumber": 3,
+          "statusType": 4,
+          "statusSubType": 0,
+          "statusReasonId": 0,
+          "statusReasonText": "",
+          "prevStatusChangeTime": null
         },
         ...
     ]
