@@ -203,6 +203,10 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+          subpages:
+            - subpagename: The Basics
+            - subpagename: Variables
+            - subpagename: Slots
         - pagename: System Patterns
         - pagename: Integrations
           subpages:
@@ -223,7 +227,7 @@
           subpages:
             - subpagename: Introduction
             - subpagename: Functions List
-            - subpagename: Get & Set Contextual Data
+            - subpagename: Get & Set Session Data
             - subpagename: Get User Data
             - subpagename: Get Integration Data
             - subpagename: Send Messages
@@ -311,6 +315,7 @@
             - subpagename: Intents
             - subpagename: Meta Intents
             - subpagename: Entities
+            - subpagename: Versions
             - subpagename: Test a Single Utterance
             - subpagename: Test with the Model Tester
         - pagename: Optimize
@@ -348,6 +353,7 @@
           subpages:
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
+            - subpagename: Evaluating Consumer Queries
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status

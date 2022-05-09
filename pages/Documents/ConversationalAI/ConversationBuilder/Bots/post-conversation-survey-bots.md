@@ -238,8 +238,8 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
-* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
-* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
+* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format. For the Net Promoter Score (NPS) interaction in specific, we recommend the letter format. The numeric format can confuse consumers because the NPS scores themselves range from 0 to 10 (note they start with zero), but the numeric format starts numbering the options with 1. Since these don’t match, selecting a score can be confusing.
+* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer. In the question, make sure to include information on how to respond (e.g., “type 1 for very bad, 5 for excellent, or something in-between.”).
 
 #### Handling free text answers
 
@@ -274,7 +274,7 @@ Survey bot settings include:
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a custom message in response to the consumer trying to send a message after the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is sent in response. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the message to the consumer that's proactively sent when the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is proactively sent instead of a custom message. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
 ### Adding support for emailed transcripts
 
