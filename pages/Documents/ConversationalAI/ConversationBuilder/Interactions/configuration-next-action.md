@@ -64,7 +64,7 @@ If you add a variable condition, *both* the first defined condition *and* the va
 
 To specify a `botContext` variable in a variable condition, enter only the variable name.
 
-In our example below, the consumer must answer "yes" to our question and the `channel` variable must be "ABC" for Apple Business Chat (now called Apple Messages for Business). If both are true, then the consumer is offered a promotion.
+In our example below, the consumer must answer "yes" to our question, and the `channel` variable must be "AMB" for Apple Messages for Business. If both are true, then the consumer is offered a promotion.
 
 <img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition2.png">
 
