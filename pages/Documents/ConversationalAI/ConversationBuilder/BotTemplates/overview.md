@@ -19,7 +19,7 @@ For other, more common use cases, Conversation Builder has a set of predefined, 
 
 * Intents associated with the use case
 
-* Conversational dialogs with appropriate interactions for the respective channels or end points (Web, Apple Business Chat, SMS, etc.)
+* Conversational dialogs with appropriate interactions for the respective channels or end points (Web, Apple Messages for Business, SMS, etc.)
 
 * API integrations with industry-leading services (e.g., Shopify in Retail) and brand-specific services
 

@@ -13,7 +13,7 @@ indicator: both
 
 Interaction support varies by channel. Use this page to understand whether an interaction is supported in a channel of interest.
 
-### Apple Business Chat
+### Apple Messages for Business
 
 | Interaction | Supported? |
 | --- | --- |
