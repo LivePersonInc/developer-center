@@ -94,7 +94,7 @@ There are several scenarios where private messages sent by bots can be useful:
 
     <img style="width:450px" src="img/ConvoBuilder/statements_privatemsg2.png">
 
-* **Provide contextual information**: As a consumer converses with a bot, the bot gathers useful contextual information about the consumer and their intent (e.g., name, account number, and so on). Just before transferring the conversation to a human agent, the bot can send a private message summarizing this information.
+* **Provide contextual information**: As a consumer converses with a bot, the bot gathers useful contextual information about the consumer and their intent (e.g., name, order number, and so on). Just before transferring the conversation to a human agent, the bot can send a private message summarizing this information.
 
 * **Notify the human agent when the bot leaves the conversation**: If you’re using [Conversation Assist](conversation-assist-overview.html), you might be recommending bots to handle conversations with your consumers. If so, it can be a challenge for the agent to know when the bot has finished its work. The agent must check back repeatedly on the bot’s progress. A private message sent by the bot when it’s finished handling the consumer’s request can solve this. It can tell the agent what action has been taken, and let them know that it’s time for them to rejoin the conversation to close things out with the consumer.
 
