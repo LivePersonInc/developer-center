@@ -10,6 +10,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-deploy-the-bot.htm
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+
 In this tutorial, you walk through how to link your bot to Conversational Cloud.
 
 <!--
