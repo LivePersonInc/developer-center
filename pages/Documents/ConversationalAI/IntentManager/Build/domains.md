@@ -15,14 +15,6 @@ indicator: both
 
 For an explanation of a domain, see [here](intent-manager-key-terms-concepts.html#domains).
 
-### High-level workflow
-
-Use this high-level workflow when working with a domain using the LivePerson engine or a third-party engine.
-
-<img style="width:600px" src="img/ConvoBuilder/domain_workflow.png">
-
-If the domain is using a third-party NLU engine, you'll need to connect the NLU engine before you train.
-
 ### Add a prebuilt domain
 
 Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine). For an introduction to prebuilt domains, see [here](intent-manager-key-terms-concepts.html#prebuilt-domains).
