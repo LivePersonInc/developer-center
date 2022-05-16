@@ -120,10 +120,9 @@ Clicking on an individual activity within the activity stream will bring you to 
 <img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
 
 ### Invocation Metrics
-If you want to know how often your function was invoked over time, we provide you with a chart for successful and unsuccessful invocations.
+The invocation histogram allows you to better understand, how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
 
-You find these metrics by navigating to the lambda's details page and changing to the monitoring tab:
+Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
+
+The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the X-Axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
 <img alt="Functions: Invocation Metrics" src="img/functions/functions_reporting_invocation_metrics.png">
-
-These metrics are refreshed ~ every minute. The data will be retained for the last 30 days.
-The time window for the chart can be set to display `1h`, `24h`, `7d` or `30d`.
