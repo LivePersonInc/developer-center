@@ -316,8 +316,11 @@ Furthermore, please ensure your defined function follow the standard implementat
 This happens if there is no response body provided.
 
 #### Reasons
+
 The FaaS callback was invoked without a response body object.
+
 #### Solutions
+
 Please make sure to provide a response body in the callback, for further information see [Custom Integration Documentation](liveperson-functions-getting-started-development-deep-dive-ui.html#testing-your-function)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook
@@ -690,11 +693,16 @@ Double-check that you are only using supported activity names as described [here
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-faas-request
 
 #### Description
-This indicates an issue during FaaS invocation. 
+
+This indicates an issue during FaaS invocation.
+
 #### Reasons
+
 This could have multiple reasons: function code non working, function invocation was not finished after 30s, FaFaaSas Quota limit was reached.
+
 #### Solutions
-Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Functions Documentation](liveperson-functions-getting-started-development-deep-dive-ui.html#testing-your-function) to understand how to test your function code. 
+
+Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Functions Documentation](liveperson-functions-getting-started-development-deep-dive-ui.html#testing-your-function) to understand how to test your function code.
 Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
 
 If none of these applies and the errors persist, please escalate to LP Support and provide the exact error information by copying it from within the Conversation Errors UI.
@@ -819,3 +827,23 @@ The Custom Endpoint service support one **ACTION** per Custom Endpoint service r
 
 Verify the bot response correspond to the standards we provide in our vendors's
 [documentation](third-party-bots-custom-endpoint-basic-content.html#bot-actions).
+
+### com.liveperson.bot-connectors-worker.error.connector.messaging.malformed-ums-message
+
+#### Description
+
+This error happens when a malformed event message is sent to UMS which caused failure.
+
+#### Reasons
+
+Some reasons that can cause this behavior are
+
+- The AC features are not correctly enabled for using Third-Party Bots.
+  Example of such case could be that bot tries to send Encoded Metadata
+  in their messages and the AC feature was not enabled by the account.
+- Bot response created a malformed event that was sent to UMS in previous
+  request attempts.
+
+#### Solutions
+
+Verify if the AC features and the configuration for the account are valid.
