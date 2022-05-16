@@ -119,10 +119,10 @@ Clicking on an individual activity within the activity stream will bring you to 
 
 <img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
 
-### Invocation Metrics
-The invocation histogram allows you to better understand, how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
+### Invocation Histogram
+The invocation histogram allows you to better understand how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
 
 Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
 
-The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the X-Axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
-<img alt="Functions: Invocation Metrics" src="img/functions/functions_reporting_invocation_metrics.png">
+The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the x-axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
+<img alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">
