@@ -64,7 +64,7 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | metadata | Response-related metadata | Object |  |
 | references | An array of links to the pages in the response | Array |  |
 | rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | string | Possible values: <br> self - the link to the same page in the query <br> next - link to the next page of results <br> previous - link to the previous page of results <br>first - link to the first page of the query results <br>last - link to the last page of the query results |
-| href | Pagination: The specific link for each one of the above values | string | The values: self, first, and last will always be returned whereas the others will be returned if  |
+| href | Pagination: The specific link for each one of the above values | string | The values: self and first will always be returned whereas the others will be returned if there is more than 1 page in the response |
 
 #### Response Example (V2)
 
