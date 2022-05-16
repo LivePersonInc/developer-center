@@ -118,3 +118,12 @@ All activities will be stored for roughly two months and can be reviewed in this
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
 <img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
+
+### Invocation Metrics
+If you want to know how often your function was invoked over time, we provide you with a chart for successful and unsuccessful invocations.
+
+You find these metrics by navigating to the lambda's details page and changing to the monitoring tab:
+<img alt="Functions: Invocation Metrics" src="img/functions/functions_reporting_invocation_metrics.png">
+
+These metrics are refreshed ~ every minute. The data will be retained for the last 30 days.
+The time window for the chart can be set to display `1h`, `24h`, `7d` or `30d`.
