@@ -125,4 +125,5 @@ The invocation histogram allows you to better understand how your function was i
 Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
 
 The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the x-axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
+
 <img alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">
