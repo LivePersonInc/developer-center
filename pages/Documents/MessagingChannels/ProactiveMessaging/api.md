@@ -46,21 +46,21 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 | Method | URI  |
 | :--- | :--- |
-| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/agentVep/baseURI.json?version=1.0|
+| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/baseURI.json?version=1.0|
 
 ```json
 {
-    "service": "agentVep",
+    "service": "sentinel",
     "account": "ACCOUNT_ID",
-    "baseURI": "va.agentvep.liveperson.net"
+    "baseURI": "va.sentinel.liveperson.net"
 }
 ```
 
 | If Sentinel **baseURI** then | Proactive Region | Proactive **API domain** | API Documentation |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **va**.agentvep.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **va**.sentinel.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **lo**.sentinel.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **sy**.sentinel.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
 
 ## Campaign API: Example Request and Response
@@ -195,6 +195,52 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             "errorMessage": "MISSING_VARIABLE=5"
         }
     ],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "wa": "12345678891"
+            }
+        }
+    ]
+}
+```
+**Request Body Example - JSON Payload - Whatsapp With Rich Template containing header image and buttons**
+
+```json
+{
+    "campaignName": "Test proactive campaign",
+    "skill": "billing",
+    "templateId": "H1234567890",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerCountryCode": "1",
+            "consumerPhoneNumber": "2345678891",
+            "variables": {
+                "1": "test1",
+                "2": "test2"
+            },
+            "headerVariables" : {
+                "image" : "https://cdn.pixabay.com/photo/2017/09/06/16/28/wal-2722172_1280.jpg"
+            },
+            "buttonVariables": {
+                "1": "telco"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
     "acceptedConsumers": [
         {
             "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
@@ -576,33 +622,34 @@ Proactive Messaging service has retry mechanism internally on dependent services
 <strong>Is Whatsapp Rich template enabled for all accounts?</strong>
 Yes.
 
-<strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong>
-There are four different components of a Whatsapp template
+<strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong> There are four different components of a Whatsapp template
 - Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
 - Body
 - Footer
 - Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
+<br /><br />
 Message body in WA Rich template is mandatory. Header, footer, buttons are optional in WA Rich template depending on template design.
 
 <strong>What extensions are supported for WA rich template in the header section?</strong>
 Allowed extensions for different types of header for a rich template: 
 - Image:[jpg,png],
 - Document:[pdf],
-- Video:[mp4,3gpp]
+- Video:[mp4]
 
 <strong>Are there any limitations on the URL added for header image/video/document type?</strong>
 Below are the limitations:
 - URL provided for header (image/video/document) should be publicly accessible
 - Only https urls are supported
-- Before sending WhatsApp rich messages using a template with header of type image, please reach out to your CSM to get the domain whitelisted in Houston. Root Url/ domain has to be whitelisted by CSM in houston site settings messaging.rich.content.valid.urls.
+- Before sending WhatsApp rich messages using a template with header of type image/video/document, get the Root domain/URL whitelisted in Proactive UI.
+<br />
  For example; if the brand wants to send images from upload.wikimedia.org like: 
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
 https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
-they should have https://upload.wikimedia.org added in houston site settings. Please see the screenshot below. 
-<img src="images/URL_whitelisting.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+<br />Brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below. 
+<img src="images/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
-Footer and quick reply buttons have static values and do not need any user input while campaign creation
+Footer and quick reply buttons have static values and do not need any user input while campaign creation. However, call to action buttons can accept variables for Website URL which can be provided during campaign creation.
 
 <strong>What kind of customers can get Inapp message through Proactive Messaging?</strong>
 Only registered customers can. 
