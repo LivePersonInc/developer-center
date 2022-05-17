@@ -295,6 +295,11 @@
       pages:
         - pagename: Overview
         - pagename: Key Terms & Concepts
+        - pagename: Getting Started
+        - pagename: Workflows
+        - pagename: Best Practices
+        - pagename: FAQs
+        - pagename: Dashboard
         - pagename: Natural Language Understanding
           subpages:
             - subpagename: Introduction
@@ -302,9 +307,6 @@
             - subpagename: LivePerson NLU Engine
             - subpagename: Google Dialogflow and IBM Watson NLU Engines
             - subpagename: Brand's Rasa-Based NLU Engine
-        - pagename: Dashboard
-        - pagename: Getting Started
-        - pagename: Best Practices
         - pagename: Discover
           subpages:
             - subpagename: Intent Discovery
@@ -324,7 +326,6 @@
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
             - subpagename: Conversation Details
-        - pagename: FAQs
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -943,7 +944,14 @@
           subpages:
             - subpagename: Get Status Changes
         - pagename: Error Codes
-
+    - documentname: Actual Handle Time API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Segments
+        - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:

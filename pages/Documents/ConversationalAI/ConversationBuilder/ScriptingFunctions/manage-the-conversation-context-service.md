@@ -19,7 +19,7 @@ Within the Conversation Context Service, you can have multiple namespaces for di
 In Conversation Builder, the following built-in functions for managing the Conversation Context Service are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 
 {: .important}
-All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
+Don't store personally identifiable information (PII) in the Conversation Context Service.<br><br>All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
 For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html).
 

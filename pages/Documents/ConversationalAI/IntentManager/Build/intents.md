@@ -54,9 +54,8 @@ Generating training phrases is useful when:
 * You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
 
 Note:
-* This feature is only available for English-language domains.
-* To use this feature, Intent Manager's Intent Analyzer feature must be enabled for your account, and at least one domain (any domain) in Intent Manager must have Intent Tracking enabled ([here](intent-manager-build-domains.html#configure-domain-settings)), as the feature makes use of the data that it captures.
-* If you’ve enabled Intent Analyzer recently, expect the tool’s results to improve over time as more data is captured.
+* This feature is only available 1) for English-language domains, and 2) if you log into Intent Manager through Conversational Cloud.
+* Expect the tool’s results to improve over time as more data is captured.
 * If you're a new customer, expect no results until suggestions can be offered based on utterances by your users. And here again, expect the tool's results to improve over time.
 
 **To generate training phrases**
