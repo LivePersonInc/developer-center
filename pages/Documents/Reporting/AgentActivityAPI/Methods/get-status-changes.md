@@ -8,7 +8,7 @@ permalink: agent-activity-api-methods-get-status-changes.html
 indicator: both
 ---
 
-This method provides raw data about agent states changes.. 
+This method provides raw data about agent states changes.
 
 {: .important}
 If you have not done so yet, see the [overview](agent-activity-api-overview.html) of this product.
