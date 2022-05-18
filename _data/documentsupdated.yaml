@@ -988,6 +988,7 @@
             - subpagename: Logging
             - subpagename: Voice and Video
             - subpagename: Proactive and IVR Deflection to App Messaging
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1038,6 +1039,7 @@
             - subpagename: Unauthenticated In-App Messaging
             - subpagename: Voice and Video
             - subpagename: Welcome Message with Quick Replies
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
