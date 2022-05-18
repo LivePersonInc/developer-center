@@ -138,7 +138,4 @@ Brands with existing domains using the LivePerson (Legacy) engine are encouraged
 
 When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
 
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">
+Having 2 entities match the training phrases can cause a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
