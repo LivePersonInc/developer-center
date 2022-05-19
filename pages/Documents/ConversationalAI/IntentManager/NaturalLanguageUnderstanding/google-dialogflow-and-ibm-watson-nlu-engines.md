@@ -114,7 +114,7 @@ You must train the 3rd-party NLU domain after every update to the domain if you 
 
 Note the following: 
 * Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
-* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
 **To train a domain**
 

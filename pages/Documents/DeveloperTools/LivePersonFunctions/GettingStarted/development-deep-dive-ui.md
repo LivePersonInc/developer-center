@@ -56,7 +56,7 @@ You may choose to create more than one function of the same event if you set dif
 {: .important}
 The above example, "[Default]", refers to not selecting any skill, the default behaviour.
 <br />
-#### Second step: Domain Whitelisting
+#### Second step: Adding Domains to the Allowlist
 
 When adding a domain to the allowlist, you should always consider some common pitfalls. First, make sure your target domain is not redirecting: If it is, you also need to allowlist any domain that is part of the redirection chain. An easy way to test if your domain redirecting is the following command:
 
@@ -77,7 +77,7 @@ Next, ensure that you allowlisted the correct domain when working with subdomain
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. Be aware that we only support one wildcard in the domain, so `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_whitelist_step.png">
+<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_allowlist_step.png">
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 

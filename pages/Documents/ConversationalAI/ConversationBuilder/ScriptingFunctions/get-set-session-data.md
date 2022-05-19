@@ -1,16 +1,17 @@
 ---
-pagename: Get & Set Contextual Data
+pagename: Get & Set Session Data
 redirect_from:
+    - conversation-builder-scripting-functions-get-set-contextual-data.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-get-set-contextual-data.html
+permalink: conversation-builder-scripting-functions-get-set-session-data.html
 indicator: both
 ---
 
-Use the following built-in functions to get and set contextual data.
+Use the following built-in functions to get and set session data.
 
 ### Get and set bot variable
 
@@ -281,7 +282,7 @@ var intentName = botContext.getDialogStarterIntent();
 
 ### Get named entities
 
-`getNamedEntities` is used to access user utterances that are recognized as entities.
+Use `getNamedEntities` to access user utterances that are recognized by the NLU engine as entities.
 
 To access the actual phrases used, call `getPhrase()` on the entity objects.
 
@@ -290,6 +291,8 @@ To access the actual phrases used, call `getPhrase()` on the entity objects.
 | `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects |
 
 #### Example
+
+The following returns an array of toppings found. So, in an utterance like "I would like a pizza with pepperoni, sausage and peppers," it would return [pepperoni, sausage, peppers]:
 
 ```javascript
 var toppingObjects = botContext.getNamedEntities('toppings');
@@ -301,6 +304,33 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 }
 ```
 
+#### Can an entity return a different value?
+
+Sometimes, you'll want an entity match to return a value, say for sending to an API. For example, if you have an entity for "sizes" with values like small, medium, and large, but your API is expecting numeric data values like small: 10, medium: 11, and large: 12, how would you create this mapping?
+
+In Intent Manager, when creating your entities, you can provide data with additional values by adding a "~" between the phrase and the data value like this: small~10, medium~11, etc. When calling the entity, you would use the following to get the data value:
+
+```javascript
+var size = botContext.getNamedEntities('sizes');
+
+var whichSize = '';
+
+if (size != null && size.length > 0) {
+
+    for (j = 0; j < size.length; j++) {
+
+        whichSize = size[j].getDataValue();
+
+    }
+
+}
+```
+
+#### How do I use multiple entities to map to a single value?
+
+Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Use the data value to be the unifier for these different possible utterances.
+
+Using a similar script to the above color example, which returns the data value, would get you the value that you need.
 
 ### Get NLP responses
 
@@ -455,26 +485,26 @@ switch(type){
   case "WKEND_REG_HOURS":
     msg = "Let me connect you to an Agent who can help you.";
     botContext.setBotVariable('transferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('Liveperson Transfer');
+    botContext.setTriggerNextMessage('Liveperson Transfer');
     break;
 
   case "AFTER_HOURS":
   case "WKEND_AFTER_HOURS":
     msg = "You have reached us after our business hours. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_THANKS":
     msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_XMAS":
     msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
-    botContext.setTriggerNextMessge('No Transfer');
+    botContext.setTriggerNextMessage('No Transfer');
     break;
 }
 ```

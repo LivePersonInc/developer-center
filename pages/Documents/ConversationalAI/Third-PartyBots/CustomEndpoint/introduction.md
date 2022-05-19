@@ -13,8 +13,9 @@ indicator:
 ### Overview
 
 {: .notice}
-Please note Custom Endpoint is only accessible for early adapters. Contact
-Third-Party Bots team to enable the Custom Endpoint for your brand.
+Please note Custom Endpoint is only accessible for early adopters. Enabling the use of
+Custom Endpoint integrations require a configuration change and whitelisting done by
+LivePerson. Contact your LivePerson account representative for assistance.
 
 The following document outlines the configuration of the **Custom Endpoint** connector.
 

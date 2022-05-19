@@ -13,7 +13,7 @@ indicator: both
 
 Interaction support varies by channel. Use this page to understand whether an interaction is supported in a channel of interest.
 
-### Apple Business Chat
+### Apple Messages for Business
 
 | Interaction | Supported? |
 | --- | --- |
@@ -21,11 +21,12 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | Yes |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
 | Button question | No |
-| Quick Reply question | No |
+| Quick Reply question | Yes |
 | List Picker question | Yes |
 | Time Picker question | Yes |
 | Integration | Yes |
@@ -44,6 +45,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | No |
 | Text question | Yes |
 | Structured question | Yes |
@@ -67,6 +69,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -90,6 +93,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | Yes |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -113,6 +117,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | No |
 | Text question | Yes |
 | Structured question | No |
@@ -136,6 +141,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | No |
 | Text question | Yes |
 | Structured question | Yes |
@@ -159,6 +165,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -182,6 +189,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
@@ -205,6 +213,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No  |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
@@ -228,6 +237,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | Yes |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -251,6 +261,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Text statement | Yes |
 | Image statement | No | 
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes | 
 | Text question | Yes | 
 | Structured question | Yes | 

@@ -250,7 +250,7 @@ If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the
 ### File Upload interactions
 
 {: .important}
-File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
+File Upload interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
@@ -397,13 +397,13 @@ No, this can’t be done. If you’d like to do this, the Dynamic Routing intera
 
 ### Apple Pay interactions
 
-**For Apple Business Chat only.**
+**For Apple Messages for Business only.**
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
 
 #### Prerequisite setup steps
 
-1. Review and follow LivePerson’s Apple Business Chat setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
+1. Review and follow LivePerson’s Apple Messages for Business setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
 2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. These steps are covered [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple’s developer site. Contact your LivePerson representative for help with this if needed.
 3. Implement your own merchant session endpoint, which is discussed [here](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session) on Apple’s developer site.
 
@@ -471,6 +471,6 @@ The optional endpoint URLs are for receiving and managing any updates a customer
 * **Shipping Method Update URL**: Called by Apple Pay when the customer changes the shipping method.
 * **Shipping Contact Update URL**: Called by Apple Pay when the customer changes their shipping address information.
 * **Fallback URL**: A URL that opens in a web browser so the customer can complete the purchase if their device is unable to make payments using Apple Pay.
-* **Order Tracking URL**: Called by Apple Business Chat after completing the order; provides you with an opportunity to update the order information in your system.
+* **Order Tracking URL**: Called by Apple Messages for Business after completing the order; provides you with an opportunity to update the order information in your system.
 
 For more on these endpoints, see [here](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on the Apple developer site.

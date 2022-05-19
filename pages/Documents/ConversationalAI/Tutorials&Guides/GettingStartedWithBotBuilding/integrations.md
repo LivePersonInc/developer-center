@@ -10,6 +10,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-integrations.html
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+
 Many use cases require integration with an API to send and receive data. Following the "make payment" use case, in this tutorial you add an integration to check a userâ€™s account balance.
 
 {: .important}
@@ -125,4 +128,4 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
 
 ### What's next?
 
-Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-disambiguation.html) in the series.
+Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) in the series.
