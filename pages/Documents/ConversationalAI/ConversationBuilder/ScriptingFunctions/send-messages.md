@@ -93,3 +93,19 @@ In the below example, the response variables gets what user just said and sends 
 var response = botContext.getCurrentUserMessage();
 botContext.sendImmediateReply('I think you said, ' + response);
 ```
+
+### Send private message to agent
+
+Private messages are messages that are visible to all conversation participants *except* the consumer. Use `sendPrivateMessage` to programmatically send a private message at any point in the conversation flow.
+
+Note that there’s also a Private Message interaction that’s available. For more on this, and for example scenarios where you might want to send a private message, see [here](conversation-builder-interactions-statements-to-agent.html#private-messages).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `sendPrivateMessage(message)` | message (String) - the message to send | None |
+
+#### Example
+
+```javascript
+botContext.sendPrivateMessage("This is a private message. It is visible to all the conversation participants excluding consumer.");
+```

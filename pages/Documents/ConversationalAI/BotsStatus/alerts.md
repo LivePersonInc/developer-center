@@ -19,7 +19,9 @@ To set up alerts, you don't need permissions to access the Bots Status applicati
 
 1. Do one of the following depending on where your account is located:
 
-    * If your environment is LivePerson Cloud (i.e., you access Conversation Builder from within Conversational Cloud, and your browser is pointing to the "liveperson.net" domain), open one of the Conversational AI applications: Conversation Builder, Intent Manager, Bots Status, etc. Then, in the upper-right corner of the menu bar, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_subscriptions.png"> (Subscriptions icon).
+    * If your environment is LivePerson Cloud (i.e., you access Conversation Builder from within Conversational Cloud, and your browser is pointing to the "liveperson.net" domain), open one of the Conversational AI applications: Conversation Builder, Intent Manager, Bots Status, etc. Then, in the upper-right corner of the menu bar, click the three-dot menu, and select **Subscriptions** from the menu that appears.
+
+    <img style="width:200px" src="img/ConvoBuilder/subscriptions_3.png">
 
     * If your environment is Amazon Web Services or AWS (i.e., you access Conversation Builder directly, and your browser is pointing to the "livepersonai.com" domain), in the top banner, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_profile_person.png">, and then select **Subscriptions**.
 
