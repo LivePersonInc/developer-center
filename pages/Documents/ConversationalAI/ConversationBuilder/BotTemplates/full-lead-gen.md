@@ -13,7 +13,7 @@ indicator: both
 
 The Lead Gen template is designed to capture contact information from a customer and send the results to either an email address or SMS number. In addition, there is an option to display products or services to the customer as a channel specific gallery or list. The products could come from a Shopify collection if available.
 
-The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp and Facebook Messenger. Escalation to an agent is also included.
+The template can be configured to handle Web, SMS, Apple Messages for Business, WhatsApp and Facebook Messenger. Escalation to an agent is also included.
 
 <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_0.png"> <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_1.png">
 
@@ -27,7 +27,7 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
     * This is the main dialog for collecting the user’s contact information.
     * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
 * Options for ABC
-    * If you are deploying to Apple Business Chat, you can use this List Picker driven dialog to display your product or service offerings.
+    * If you are deploying to Apple Messages for Business, you can use this List Picker driven dialog to display your product or service offerings.
     * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
 * Options for SMS
     * If you are deploying to SMS (or WhatsApp), you can use this text driven dialog to display your product or service offerings.
@@ -110,7 +110,7 @@ The first thing our functions do is to get the particular channel the user is co
 
 The Options dialogs are offered for a few different channels:
 
-* List picker for Apple Business Chat (ABC)
+* List picker for Apple Messages for Business
 
 * Simple list with a,b,c, etc., variants for SMS
 
@@ -167,9 +167,9 @@ Each of the Options dialogs are displaying a number of products or services to t
 
 If you want to display these Options dialogs, after you have configured the Global Functions appropriately, depending on which channels you are supporting, you will want to populate the various options interactions with your content.
 
-**Options for ABC**
+**Options for Apple Messages for Business**
 
-If supporting Apple Business Chat, you will want to replace and customize the ListPicker that displays your products and services. Just tap on the images or the text fields to edit. You can see over in the preview how it will appear (if you have hard coded the channel in the Global Functions).
+If supporting Apple Messages for Business, you will want to replace and customize the ListPicker that displays your products and services. Just tap on the images or the text fields to edit. You can see over in the preview how it will appear (if you have hard coded the channel in the Global Functions).
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_4.png">
 

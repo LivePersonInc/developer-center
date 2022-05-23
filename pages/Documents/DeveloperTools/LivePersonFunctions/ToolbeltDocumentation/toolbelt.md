@@ -24,6 +24,9 @@ indicator: both
 - [SFClient](#sfclient)
 - [SecretClient](#secretclient)
 
+{: .important}
+Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
+
 ## Methods
 
 ### ContextServiceClient

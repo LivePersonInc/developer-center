@@ -10,6 +10,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-escalate-to-an-age
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+
 In this final Getting Started tutorial, you add an Agent Escalation dialog to connect the user with a human agent.
 
 <!--

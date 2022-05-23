@@ -13,7 +13,7 @@ indicator: both
 
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you’ll need to do some whitelisting so that Conversation Builder can make calls to your brand’s systems and vice versa. The specifics on what to whitelist vary depending on whether your implementation is hosted in the LivePerson Cloud or Amazon Web Services (AWS) environment:
 
-* **LivePerson Cloud**: This is your environment if you access Conversation Builder from within LiveEngage, i.e., your browser is pointing to the “liveperson.net” domain.
+* **LivePerson Cloud**: This is your environment if you access Conversation Builder from within Conversational Cloud, i.e., your browser is pointing to the “liveperson.net” domain.
 * **AWS**: This is your environment if you access Conversation Builder directly, i.e., your browser is pointing to the “livepersonai.com” domain.
 
 #### LivePerson Cloud
