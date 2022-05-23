@@ -591,7 +591,8 @@ enum class LpError {
   SOCKET,
   TIMEOUT,
   INVALID_SDK_VERSION,
-  UNKNOWN
+  UNKNOWN,
+  STEP_UP_FAILURE
 }
 ```
 
@@ -603,5 +604,6 @@ enum class LpError {
 | SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
 | TIMEOUT             | A general timed out error. |
 | INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| STEP_UP_FAILURE     | Error while stepping up consumer from un-authenticated conversation to authenticated. |
 | UNKNOWN             | General SDK error. |
 
