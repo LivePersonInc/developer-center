@@ -22,7 +22,7 @@ indicator: both
 | Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent. For best practices, see [here](intent-manager-best-practices.html#training-phrases).<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
 | Inference | The process by which a “learned” model attempts to map an incoming message to an intent class. |
-| Unclassified/Undefined | The messages that do belong to an intent class that is defined in the NLU domain. |
+| Unclassified/Undefined | Statements of intent that aren't yet included in the defined set of intents. |
 | Coverage | The percentage of the messages that the intent recognition model would classify as one of the defined intents against the total number of intentful messages. |
 | Overfit | A model is overfitting, when it was trained in such a way to produce highly accurate predictions on its training set, which it has seen during training, but produces much less accurate results on a separate, unseen dataset. |
 | Tokens | The pieces of a message after a message is broken down into its smallest elements. |
