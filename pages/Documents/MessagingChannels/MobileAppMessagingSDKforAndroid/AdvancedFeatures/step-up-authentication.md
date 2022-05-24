@@ -25,7 +25,7 @@ Step Up authentication allows consumers to continue the ongoing unauthenticated 
 
 
 ### Notes
-- Step Up task will be processed automatically by SDK when performStepUp flag is turned on.
+- To enable Step Up authentication, make sure to set performStepUp flag to true.
 - SDK will trigger onError(LpError lpError, String message) callback when an error occurred while performing Step Up by LpError.STEP_UP_FAILURE enum.
 
 ### Code Samples
