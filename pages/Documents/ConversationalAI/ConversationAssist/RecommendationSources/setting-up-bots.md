@@ -75,23 +75,22 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 2. Click the **Bots** tab.
-
-    Once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Assist. So you should see your bots here. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
+3. Click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> over on the right. This syncs with Conversation Builder and shows you the available bots. Available bots include those you’ve deployed and started (i.e., they’re valid bots that can serve a conversation). You should see all of the bots that you’ve created (both public and private) and other public bots within your organization.
 
     <img width="700" src="img/agentassist/configbot1.png">
 
-3. Verify that your bot is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
+4. Verify that your bot is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
 
     Your bot doesn't have any assigned skills yet, so its **Status** is initially set to "Off." For the bot to be recommended in conversations, you must assign one or more skills **and** change the **Status**.
 
-4. Assign one or more skills to the bot:
+5. Assign one or more skills to the bot:
     1. Beside the bot, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
     2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
 
         <img width="700" src="img/agentassist/configbot2.png">
 
     3. Click **Save**.
-5. Repeat this process for additional bots as needed.
+6. Repeat this process for additional bots as needed.
 
     After you assign at least one skill to each of the bots, the bots can be recommended in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which bots are candidates for recommendation to human agents.
 
@@ -102,7 +101,7 @@ Once Conversational Cloud is configured, the bots need to be deployed or connect
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
 {: .important}
-If you later delete a bot, the next time you access the **Bots** tab, the list is updated automatically.
+If you later delete a bot, you’ll need to manually refresh the list of discovered bots in Conversation Assist in order to see the bot removed from the list.
 
 ### Step 5: Configure settings
 
