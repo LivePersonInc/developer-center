@@ -261,8 +261,6 @@ Global entities are automatically detected by the system, so you don’t have to
 * LOCATION - Names of locations, e.g., countries or cities, such as Paris.
 -->
 
-Using the [Assist tool](conversation-builder-assist.html), you can assign a global entity to a question and have the bot populate a [slot](conversation-builder-variables-slots.html) with the consumer's response.
-
 ### Training
 
 Domains that use either the LivePerson engine or a 3rd-party NLU engine must be explicitly trained (via the **Train** button that's available) after you make changes to the training data. This process is wherein the model learns to differentiate which examples belong to each intent class. The resulting model is then used to make predictions on user utterances. With these NLU engines, the trained model is able to classify a user utterance into an intent class.
