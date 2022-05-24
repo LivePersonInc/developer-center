@@ -245,6 +245,8 @@ If you have defined custom entities within your domain, you’ll see those detec
 
 <img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png">
 
+You can use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
+
 <!--
 Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include:
 
