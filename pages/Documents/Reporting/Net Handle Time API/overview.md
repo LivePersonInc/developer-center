@@ -2,14 +2,18 @@
 pagename: Overview
 sitesection: Documents
 categoryname: Reporting
-documentname: Nht API
-permalink: nht-api-overview.html
+documentname: Net Handle Time API
+permalink: net-handle-time-api-overview.html
 indicator: both
 ---
 
 ### Introduction
 
-**BETA version**
+{:.notice}
+This API is currently in its BETA version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
+
+{:.notice}
+v2 is the version to use. This  version contains pagination and epoch time support. V2 will be maintained whereas v1 will be under low maintenance until it is no longer used.
 
 Net Handle Time (NHT) is a metric produced by a heuristic calculation, which is designed to provide an approximation of the average human agent's effort time to service a single consumer interaction (agent segment) across a skill in a one-hour interval.
 
@@ -33,6 +37,9 @@ A few things you'll need to get started with this API:
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
 4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
+
+{: .important}
+This API is not available by default. To enable it please contact your account manager.
 
 ### Use cases
 
