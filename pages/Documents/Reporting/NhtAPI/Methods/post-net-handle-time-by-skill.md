@@ -2,7 +2,7 @@
 pagename: Post Net Handle Time by Skill
 sitesection: Documents
 categoryname: Reporting
-documentname: NHT API
+documentname: Nht API
 subfoldername: Methods
 permalink: nht-api-methods-post-net-handle-time-by-skill.html
 indicator: both
