@@ -952,14 +952,14 @@
           subpages:
             - subpagename: Get Agent Segments
         - pagename: Error Codes
-    - documentname: Nht API
+    - documentname: Net Handle Time API
       basedomain: https://{domain}/operations/api/account/{accountID}
       pages:
         - pagename: Overview
         - pagename: Methods
           subpages:
             - subpagename: Get Net Handle Time by Skill
-            - subpagename: Post Net Handle Time by Skill        
+        - pagename: Error Codes      
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
