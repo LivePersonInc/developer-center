@@ -2,7 +2,7 @@
 pagename: Overview
 sitesection: Documents
 categoryname: Reporting
-documentname: NHT API
+documentname: Nht API
 permalink: nht-api-overview.html
 indicator: both
 ---
