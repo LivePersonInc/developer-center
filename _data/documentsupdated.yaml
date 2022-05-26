@@ -952,7 +952,7 @@
           subpages:
             - subpagename: Get Agent Segments
         - pagename: Error Codes
-    - documentname: NHT API
+    - documentname: Nht API
       basedomain: https://{domain}/operations/api/account/{accountID}
       pages:
         - pagename: Overview
