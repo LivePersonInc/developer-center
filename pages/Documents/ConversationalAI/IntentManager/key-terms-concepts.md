@@ -247,22 +247,6 @@ If you have defined custom entities within your domain, you’ll see those detec
 
 You can use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
 
-<!--
-Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include:
-
-* PERSON - Names of people, persons
-* ORGANIZATION - Names of institutions
-* NUMBER - Numbers in a sentence (pure number)
-* MONEY - Numbers with currency ($2000)
-* DURATION - Time periods
-* SET - Group (example month, week)
-* ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
-* DATE - Date-related. Today, tomorrow, or explicit dates, for example, 03/01/2017. This also includes absolute date&timestamps such as "6 p.m. tomorrow."
-* TIME - Time of day, for example, 2PM or 23:00. This also includes times such as "everyday at 8 a.m."
-* PERCENT - A percentage, for example, 100%.
-* LOCATION - Names of locations, e.g., countries or cities, such as Paris.
--->
-
 ### Training
 
 Domains that use either the LivePerson engine or a 3rd-party NLU engine must be explicitly trained (via the **Train** button that's available) after you make changes to the training data. This process is wherein the model learns to differentiate which examples belong to each intent class. The resulting model is then used to make predictions on user utterances. With these NLU engines, the trained model is able to classify a user utterance into an intent class.
