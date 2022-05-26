@@ -2,23 +2,27 @@
 pagename: Get Net Handle Time by Skill
 sitesection: Documents
 categoryname: Reporting
-documentname: Nht API
+documentname: Net Handle Time API
 subfoldername: Methods
-permalink: nht-api-methods-get-net-handle-time-by-skill.html
+permalink: net-handle-time-api-methods-get-net-handle-time-by-skill.html
 indicator: both
 ---
 
 This method provides the Net Handle Time (NHT) at a skill level. The API  retrieves up to 9 weeks of information.
 
 {: .important}
-If you have not done so yet, see the [overview](nht-api-overview.html) of this product.
+Some metrics are calculated only in 60-minute intervals.
 
 {:.notice}
-<br>Some metrics are calculated only in 60-minute intervals. These metrics when calling the API in a 15-minutes interval will be replicated for each timeframe. <br>Timeframe type can be either ISO time format or Epoch time, not both. <br>In case there is no data available, the response element will contain -1.
+These metrics when calling the API in a 15-minutes interval will be replicated for each timeframe.
+
+{:.notice}
+Timeframe type can be either ISO time format or Epoch time, not both.
+
+{:.notice}
+In case there is no data available, the response element will contain -1.
 
 ### Request
-
-v2 is the version to use. This  version contains pagination and epoch time support. V2 will be maintained whereas v1 will be under low maintenance until it is no longer used.
 
 | Method | URL |
 | --- | --- |
@@ -31,13 +35,13 @@ v2 is the version to use. This  version contains pagination and epoch time suppo
 | v | The version of the API | Numeric | No | Two versions are supported: v1 & v2 (If not provided, will be set to v1 for backward compatibility). <br> **v1**: default version (basic maintenance). <br> **v2**: pagination support (maintained version) |
 | source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | String | Yes | Source name should be up to 20 characters. <br> Example: LP_AgentUI |
 | fromDate | Query period: Query start date | ISO format. UTC timezone | Yes - conditional | **fromMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
-| fromMillis | Query period: Query start date | long - Epoch time | Yes - conditional | **fromDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| fromMillis | Query start date (same as above) in Epoch time format | long - Epoch time | Yes - conditional | **fromDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
 | toDate | Query period: Query end date | ISO format. UTC timezone | Yes - conditional | **toMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
-| toMillis | Query period: Query end date | long - Epoch time | Yes - conditional | **toDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| toMillis | Query end date (same as above) in Epoch time format | long - Epoch time | Yes - conditional | **toDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
 | interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. <br> The buckets will be rounded to the closest rounded time (e.g. 11:00, 11:15, 11:30) | Numeric | No | Available intervals: 15/30/60. <br> Default: 60 |
 | skillIds | When provided, will return the information for the specific skills. Can be more than 1 skill | String | No | If not provided all skills will be returned. |
-| limit | limits the number of skills per page | Numeric | Optional | 10 |
-| offset | staring skill offset | Numeric | Optional | 0 |
+| limit | limits the number of skills per page | Numeric | Optional | Default = 10, Maximum = 10 |
+| offset | staring skill offset | Numeric | Optional | Default = 0 |
 
 ### Response
 
@@ -65,7 +69,7 @@ v2 is the version to use. This  version contains pagination and epoch time suppo
 | metadata | Container for additional data | Container | |
 | count | The total number of results for the query (skills) | Numeric | |
 | references | An array of links to the pages in the response | Array | |
-| rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | String | Possible values: <ul><li>self - the link to the same page in the query</li><li>previous - link to the previous page of results</li><li>previous - link to the previous page of results</li><li>first - link to the first page of the query results</li><li>last - link to the last page of the query results</li></ul> |
+| rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | String | Possible values: <br>**self** - the link to the same page in the query. <br>**previous** - link to the previous page of results. <br>**previous** - link to the previous page of results. <br>**first** - link to the first page of the query results. <br>**last** - link to the last page of the query results.|
 | href | Pagination: The specific link for each one of the above values | String | The values: self, first, and last will always be returned whereas the others will be returned if there is more than 1 page in the response |
 
 #### Response Example (V2)
