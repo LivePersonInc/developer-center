@@ -137,6 +137,16 @@ This section contains API details that are common to every API’s resource and 
 | 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials,and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
 | 10042 | Conversation Builder: Import/Export Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only export and import bots and knowledge bases. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 10043 | Conversation Builder: API Developer | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage integrations. Grant this along with Bot Builder Lite (10041) as per your requirements. |
+| 10054      | Data Transporter: access enabled                               | User can access Data Transporter   |
+| 10055      | Data Transporter: manage account settings                      | User can edit Data Transporter Account settings   |
+| 10056      | Data Transporter: view and download history                    | User can view and download historical reports   |
+| 10057      | Data Transporter: manage destinations                          | User can create, update and delete destinations   |
+| 10058      | Data Transporter: manage data sources                          | User can create, update and delete data sources   |
+| 10059      | Data Transporter: manage tasks                                 | User can create, update and delete tasks   |
+| 10060      | Performance Optimizer: access enabled                          | User can access Performance Optimizer   |
+| 10061      | Performance Optimizer: manage lines of business                | User can create, update and delete LOBs   |
+| 10062      | Staff Forecaster: access enabled                               | User can access Staff Forecaster   |
+| 10063      | Staff Forecaster: manage skill groups                          | User can create, update and delete skill groups   |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |
@@ -163,12 +173,12 @@ This section contains API details that are common to every API’s resource and 
 | 30006      | Edit Agent Manager profile                                     | Create, edit or delete Agent Manager role profiles               |
 | 30007      | Agent Groups administration                                    | Create, edit, restructure or delete their Agent Groups or Sub-groups  |
 | 30008      | Export users    | Export the list of Agent or Agent Manager users in their groups or sub-groups; this will also export the list of skills, profiles and the groups and sub-groups managed by the Agent Managers |
-| 30009      | View Conversation History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
+| 30009      | View Conversation History                                      | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
 | 30010      | View Agent List | View full list of Agents within their Group                      |
 | 30011      | Night Vision (advanced configuration)                          | Make advanced configurations within Night Vision                 |
-| 30012      | View secure form responses in Conversation History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Conversation History                               |
+| 30012      | View secure form responses in Conversation History             | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Conversation History                               |
 | 30013      | Edit Skills     | Create, edit or delete Skills                                    |
-| 30015      | View All Conversations List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
+| 30015      | View All Conversations List                                    | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
 | 30018      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |
 | 30019      | Create support cases from theConnection Area                   | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 30020      | Contact LivePersonsupport within the Connection Area           | Chat with the LivePerson support team.                           |
@@ -179,6 +189,16 @@ This section contains API details that are common to every API’s resource and 
 | 30056      | Configure messaging agent survey                               | Allow agent managers to configure agent surveys and assign them to skills   |
 | 30057      | View previously submitted messaging agent surveys              | Allow agent managers to view all agent surveys submitted for the current conversation   |
 | 30058      | Submit messaging agent survey                                  | Allow agent managers to submit agent surveys on behalf of their agents   |
+| 30088      | Data Transporter: access enabled                               | User can access Data Transporter   |
+| 30089      | Data Transporter: manage account settings                      | User can edit Data Transporter Account settings   |
+| 30090      | Data Transporter: view and download history                    | User can view and download historical reports   |
+| 30091      | Data Transporter: manage destinations                          | User can create, update and delete destinations   |
+| 30092      | Data Transporter: manage data sources                          | User can create, update and delete data sources   |
+| 30093      | Data Transporter: manage tasks                                 | User can create, update and delete tasks   |
+| 30094      | Performance Optimizer: access enabled                          | User can access Performance Optimizer   |
+| 30095      | Performance Optimizer: manage lines of business                | User can create, update and delete LOBs   |
+| 30096      | Staff Forecaster: access enabled                               | User can access Staff Forecaster   |
+| 30097      | Staff Forecaster: manage skill groups                          | User can create, update and delete skill groups   |
 | 40000      | Campaign Manager core permissions                              | Core permissions that are included with the Campaign Manager role and cannot be disabled.   |
 | 40001      | Edit campaigns  | Create and modify campaigns                                      |
 | 40002      | Publish campaigns    | Control the publishing of campaigns                              |
@@ -197,6 +217,16 @@ This section contains API details that are common to every API’s resource and 
 | 40019      | View reports in Campaign BI                                    | View reports in the Campaign BI dashboard                        |
 | 40021      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 40028      | Configure Schedule and Special Occasion library items          | View and edit Schedule and Special Occasion library items       |
+| 40046      | Data Transporter: access enabled                               | User can access Data Transporter   |
+| 40047      | Data Transporter: manage account settings                      | User can edit Data Transporter Account settings   |
+| 40048      | Data Transporter: view and download history                    | User can view and download historical reports   |
+| 40049      | Data Transporter: manage destinations                          | User can create, update and delete destinations   |
+| 40050      | Data Transporter: manage data sources                          | User can create, update and delete data sources   |
+| 40051      | Data Transporter: manage tasks                                 | User can create, update and delete tasks   |
+| 40052      | Performance Optimizer: access enabled                          | User can access Performance Optimizer   |
+| 40053      | Performance Optimizer: manage lines of business                | User can create, update and delete LOBs   |
+| 40054      | Staff Forecaster: access enabled                               | User can access Staff Forecaster   |
+| 40055      | Staff Forecaster: manage skill groups                          | User can create, update and delete skill groups   |
 
 ### Data Revisions
 
