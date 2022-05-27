@@ -65,7 +65,7 @@ Once the user selects the correct intent, if that intent is associated with a Di
     
     You can add any number of interactions to the dialog. For example, you might want to add a LivePerson Agent Escalation integration.
     
-    To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent).
+    To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-session-data.html#get-disambiguated-intent).
 
 ### Customization points
 

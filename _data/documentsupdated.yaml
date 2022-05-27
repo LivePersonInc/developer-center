@@ -203,6 +203,10 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+          subpages:
+            - subpagename: The Basics
+            - subpagename: Variables
+            - subpagename: Slots
         - pagename: System Patterns
         - pagename: Integrations
           subpages:
@@ -223,7 +227,7 @@
           subpages:
             - subpagename: Introduction
             - subpagename: Functions List
-            - subpagename: Get & Set Contextual Data
+            - subpagename: Get & Set Session Data
             - subpagename: Get User Data
             - subpagename: Get Integration Data
             - subpagename: Send Messages
@@ -291,6 +295,11 @@
       pages:
         - pagename: Overview
         - pagename: Key Terms & Concepts
+        - pagename: Getting Started
+        - pagename: Workflows
+        - pagename: Best Practices
+        - pagename: FAQs
+        - pagename: Dashboard
         - pagename: Natural Language Understanding
           subpages:
             - subpagename: Introduction
@@ -298,9 +307,6 @@
             - subpagename: LivePerson NLU Engine
             - subpagename: Google Dialogflow and IBM Watson NLU Engines
             - subpagename: Brand's Rasa-Based NLU Engine
-        - pagename: Dashboard
-        - pagename: Getting Started
-        - pagename: Best Practices
         - pagename: Discover
           subpages:
             - subpagename: Intent Discovery
@@ -311,6 +317,7 @@
             - subpagename: Intents
             - subpagename: Meta Intents
             - subpagename: Entities
+            - subpagename: Versions
             - subpagename: Test a Single Utterance
             - subpagename: Test with the Model Tester
         - pagename: Optimize
@@ -319,7 +326,6 @@
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
             - subpagename: Conversation Details
-        - pagename: FAQs
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -348,6 +354,7 @@
           subpages:
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
+            - subpagename: Evaluating Consumer Queries
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
@@ -937,7 +944,22 @@
           subpages:
             - subpagename: Get Status Changes
         - pagename: Error Codes
-
+    - documentname: Actual Handle Time API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Segments
+        - pagename: Error Codes
+    - documentname: Net Handle Time API
+      basedomain: https://{domain}/operations/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Net Handle Time by Skill
+        - pagename: Error Codes      
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -988,6 +1010,7 @@
             - subpagename: Logging
             - subpagename: Voice and Video
             - subpagename: Proactive and IVR Deflection to App Messaging
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1038,6 +1061,7 @@
             - subpagename: Unauthenticated In-App Messaging
             - subpagename: Voice and Video
             - subpagename: Welcome Message with Quick Replies
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API

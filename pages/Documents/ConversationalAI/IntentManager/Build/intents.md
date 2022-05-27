@@ -18,9 +18,11 @@ For an explanation of an intent, see [here](intent-manager-key-terms-concepts.ht
 {: .important}
 For some practice with intents, complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-intents.html) tutorial series.
 
-### Add an intent
+### Import a batch of intents
 
-**To add an intent**
+You can create a domain using an [import file](intent-manager-build-domains.html#create-an-import-file) that contains a set of intents. For info on this, see [here](intent-manager-build-domains.html#add-a-domain-manually-or-using-an-import-file).
+
+### Add an intent
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
@@ -52,9 +54,8 @@ Generating training phrases is useful when:
 * You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
 
 Note:
-* This feature is only available for English-language domains.
-* To use this feature, Intent Manager's Intent Analyzer feature must be enabled for your account, and at least one domain (any domain) in Intent Manager must have Intent Tracking enabled ([here](intent-manager-build-domains.html#configure-domain-settings)), as the feature makes use of the data that it captures.
-* If you’ve enabled Intent Analyzer recently, expect the tool’s results to improve over time as more data is captured.
+* This feature is only available 1) for English-language domains, and 2) if you log into Intent Manager through Conversational Cloud.
+* Expect the tool’s results to improve over time as more data is captured.
 * If you're a new customer, expect no results until suggestions can be offered based on utterances by your users. And here again, expect the tool's results to improve over time.
 
 **To generate training phrases**
@@ -74,6 +75,33 @@ Note:
 7. Click **Add**.
 8. Back on the Intents page, click **Save** to save the change.
 9. Retrain the domain.
+
+### Add or update training phrases in bulk
+
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a set of training phrases in bulk.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit1.png">
+
+When you click the link, all of the training phrases are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
+* Insert a number of additional phrases at the top or bottom. This is handy if you have the phrases in a separate file. You can quickly copy them and paste them in.
+* Select a number of phrases and delete them all at once. This is faster than doing so one by one.
+
+<img style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit2.png">
+
+{: .important}
+To save your changes, click the **Update Intent** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
+
+Take care when using this feature to avoid making unintended changes:
+* To replace what exists, paste over it.
+* To add to what exists, paste the additions into (not over) the list.
+* Ensure that each phrase is on a different line.
+
+### Using intents
+
+Check out these topics on using intents:
+
+* For a practical walkthrough on using intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
+* In a Conversation Builder bot, you can trigger a dialog flow if the consumer's query matches the intent that's associated with the dialog starter. To set this up, you use Conversation Builder's **Assist** tool to associate the dialog starter with the domain and the intent. More on this [here](conversation-builder-assist.html).
 
 ### Delete an intent
 
