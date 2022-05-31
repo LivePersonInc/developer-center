@@ -10,16 +10,11 @@ indicator: both
 
 This method provides the Net Handle Time (NHT) at a skill level. The API  retrieves up to 9 weeks of information.
 
-{: .important}
+{:.notice}
 Some metrics are calculated only in 60-minute intervals.
+These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
-{:.notice}
-These metrics when calling the API in a 15-minutes interval will be replicated for each timeframe.
-
-{:.notice}
-Timeframe type can be either ISO time format or Epoch time, not both.
-
-{:.notice}
+{: .important}
 In case there is no data available, the response element will contain -1.
 
 ### Request
