@@ -25,7 +25,6 @@ Users within Conversational Cloud can be agents, agent managers, administrators 
 
 ![UsersOverview](img/usersoverview.png)
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -40,7 +39,7 @@ A few things you'll need to get started with this API:
 
 	* **A user token requires login into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow** 
+	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow**
 		* **OAuth 1.0 App Keys** - [follow these instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
 		
 		{:.important}
@@ -51,11 +50,9 @@ A few things you'll need to get started with this API:
 		{:.important}
 	When registering an OAuth 2.0 application for using the Users API, use the 'users.read' and 'users.write' scopes
 
-
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
 4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
 
 ### Use Cases for Users API
 

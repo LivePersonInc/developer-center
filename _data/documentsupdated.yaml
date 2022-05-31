@@ -203,6 +203,10 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+          subpages:
+            - subpagename: The Basics
+            - subpagename: Variables
+            - subpagename: Slots
         - pagename: System Patterns
         - pagename: Integrations
           subpages:
@@ -223,7 +227,7 @@
           subpages:
             - subpagename: Introduction
             - subpagename: Functions List
-            - subpagename: Get & Set Contextual Data
+            - subpagename: Get & Set Session Data
             - subpagename: Get User Data
             - subpagename: Get Integration Data
             - subpagename: Send Messages
@@ -291,6 +295,11 @@
       pages:
         - pagename: Overview
         - pagename: Key Terms & Concepts
+        - pagename: Getting Started
+        - pagename: Workflows
+        - pagename: Best Practices
+        - pagename: FAQs
+        - pagename: Dashboard
         - pagename: Natural Language Understanding
           subpages:
             - subpagename: Introduction
@@ -298,9 +307,6 @@
             - subpagename: LivePerson NLU Engine
             - subpagename: Google Dialogflow and IBM Watson NLU Engines
             - subpagename: Brand's Rasa-Based NLU Engine
-        - pagename: Dashboard
-        - pagename: Getting Started
-        - pagename: Best Practices
         - pagename: Discover
           subpages:
             - subpagename: Intent Discovery
@@ -311,6 +317,7 @@
             - subpagename: Intents
             - subpagename: Meta Intents
             - subpagename: Entities
+            - subpagename: Versions
             - subpagename: Test a Single Utterance
             - subpagename: Test with the Model Tester
         - pagename: Optimize
@@ -319,7 +326,6 @@
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
             - subpagename: Conversation Details
-        - pagename: FAQs
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -348,6 +354,7 @@
           subpages:
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
+            - subpagename: Evaluating Consumer Queries
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
@@ -375,11 +382,6 @@
       pages:
         - pagename: Getting Started
         - pagename: Bot Types
-        - pagename: Bot Status Dashboard
-        - pagename: Hook Configuration
-        - pagename: Public API
-        - pagename: Conversation Tester
-        - pagename: Bot Conversation Errors
         - pagename: Google Dialogflow
         - pagename: Google Dialogflow ES
           subpages:
@@ -387,18 +389,45 @@
             - subpagename: Basic Content
             - subpagename: Advanced Features
         - pagename: Google Dialogflow CX
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: IBM Watson Assistant
-        - pagename: IBM Watson Assistant Version 2
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: Amazon Lex
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features        
         - pagename: Microsoft Direct Line
           subpages:
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
             - subpagename: PVA
-        - pagename: Custom Integration
-        - pagename: Medallia
-
+        - pagename: LivePerson Functions
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
+        - pagename: Medallia   
+          subpages:
+            - subpagename: Introduction
+        - pagename: Custom Endpoint   
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Service Implementation
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
+        - pagename: Public API
+        - pagename: Hook Configuration
+        - pagename: Conversation Tester
+        - pagename: Bot Status Dashboard
+        - pagename: Bot Conversation Errors
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
@@ -762,47 +791,46 @@
     - documentname: LivePerson Functions
       pages:
         - pagename: Overview
+        - pagename: Provisioning
         - pagename: Getting Started
-        - pagename: Developing with FaaS
           subpages:
-            - subpagename: Overview
-            - subpagename: Events & Templates
-            - subpagename: Function Connectivity
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Snippets
-            - subpagename: Storing Secrets
-            - subpagename: Data Storage
-            - subpagename: Debugger
-            - subpagename: Common Examples
-            - subpagename: Best Practices
-            - subpagename: Limitations & Restrictions
-        - pagename: "Command Line Interface (CLI)"
-        - pagename: Deployment
-        - pagename: Monitoring
+            - subpagename: Your First Function
+            - subpagename: Development Deep Dive (UI)
+            - subpagename: Development Deep Dive (CLI)
+            - subpagename: Configuration
+            - subpagename: Monitoring
+        - pagename: Foundations
           subpages:
-            - subpagename: Activities
-            - subpagename: Deployment History
-            - subpagename: Logs
-            - subpagename: Metrics
-            - subpagename: Email Reporting
-        - pagename: Scheduled Invocations
-        - pagename: External Invocations
-          subpages:
-            - subpagename: Overview
-            - subpagename: Client Credentials
-            - subpagename: Authorization Code
+            - subpagename: Concepts
+            - subpagename: Features
+            - subpagename: Networking
+            - subpagename: External Invocation
             - subpagename: Error Codes
-            - subpagename: Java Client
-            - subpagename: JavaScript Client
-        - pagename: Integrations
+            - subpagename: Limitations
+            - subpagename: Best Practices
+            - subpagename: LivePerson Functions CLI
+        - pagename: Toolbelt Documentation
           subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
-            - subpagename: Messaging Conversation Survey
-            - subpagename: Conversational AI
+            - subpagename: Toolbelt
+            - subpagename: FaaS Context Service Client
+            - subpagename: LP Client
+            - subpagename: MTLS Client
+            - subpagename: Secret Client
+            - subpagename: Orchestrator Client
+            - subpagename: Conversation Util
+            - subpagename: GDPR Util
+            - subpagename: SDE Util
+        - pagename: Event Sources
+          subpages:
+            - subpagename: Overview
+            - subpagename: Automatic Messages
+            - subpagename: Post Conversation Survey (Legacy)
             - subpagename: Conversational Commands
-
+            - subpagename: Third-Party Bots
+            - subpagename: Chat Post Survey
+            - subpagename: Conversation Builder
+        - pagename: Permission System
+        - pagename: Examples
 - categoryname: Reporting
   image: historical-data
   documents:
@@ -916,7 +944,22 @@
           subpages:
             - subpagename: Get Status Changes
         - pagename: Error Codes
-
+    - documentname: Actual Handle Time API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Segments
+        - pagename: Error Codes
+    - documentname: Net Handle Time API
+      basedomain: https://{domain}/operations/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Net Handle Time by Skill
+        - pagename: Error Codes      
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -967,6 +1010,7 @@
             - subpagename: Logging
             - subpagename: Voice and Video
             - subpagename: Proactive and IVR Deflection to App Messaging
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1017,6 +1061,7 @@
             - subpagename: Unauthenticated In-App Messaging
             - subpagename: Voice and Video
             - subpagename: Welcome Message with Quick Replies
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1086,10 +1131,11 @@
         - pagename: Complex Layout
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
-    - documentname: Apple Business Chat Templates
+    - documentname: Apple Messages For Business Templates
       pages:
         - pagename: Introduction
         - pagename: List Picker Template
+        - pagename: Quick Replies Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
         - pagename: Apple Auth Template

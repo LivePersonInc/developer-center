@@ -28,7 +28,7 @@ A connector is a broker between Conversational Cloud data and a messaging channe
 
 **Why do we need the Connector API?**
 
-Conversational Cloud already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
+Conversational Cloud already provides out of the box connectors to Facebook, Google My Business, Apple Messages for Business, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
 
 **What is the Connector API?**
 

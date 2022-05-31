@@ -80,7 +80,7 @@ These variables are also accessible in the pre-process or post-process code edit
 
 #### Iterating through results
 
-Occasionally, you might want to iterate through the JSON data to display multiple results from an API. This can be useful when using Structured Content (or List Picker and Time Picker for Apple Business Chat) to display multiple instances of an item a user has searched for. With this in mind, Conversation Builder has provided a way to record an API result as having an iterable value for use within dialogs. To illustrate, assume you have an API that returns items for sale and is structured in the following JSON format:
+Occasionally, you might want to iterate through the JSON data to display multiple results from an API. This can be useful when using Structured Content (or List Picker and Time Picker for Apple Messages for Business) to display multiple instances of an item a user has searched for. With this in mind, Conversation Builder has provided a way to record an API result as having an iterable value for use within dialogs. To illustrate, assume you have an API that returns items for sale and is structured in the following JSON format:
 
 ```javascript
 {
