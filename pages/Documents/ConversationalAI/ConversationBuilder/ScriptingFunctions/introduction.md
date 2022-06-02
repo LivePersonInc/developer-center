@@ -20,7 +20,11 @@ With few exceptions, functions can be used in the following JavaScript [code pan
 * Process User Response
 * Post-Process Code
 
-**Note**
+### Requirements
+
+Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
+### Immportant notes
 
 * Function names are case-sensitive in the JavaScript.
 * Functions require the `botContext.` prefix.
