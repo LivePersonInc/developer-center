@@ -17,8 +17,11 @@ Functions are modules of code that are used for accomplishing a certain task pro
 With few exceptions, functions can be used in the following JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html) in interactions:
 
 * Pre-Process Code
-* Process User Response
 * Post-Process Code
+* Process User Response
+
+{: .important}
+For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 ### Requirements
 

@@ -39,20 +39,11 @@ You'll also see this green dot next to the name of any code tab that contains cu
 
 There are three tabs for adding code:
 
-* Process User Response
 * Pre-Process Code
 * Post-Process Code
+* Process User Response
 
 Use the desired tab to add the code. You can use the built-in [scripting functions](conversation-builder-scripting-functions-functions-list.html) to access variables and manipulate data.
 
-### Pre-Process Code
-
-Use this area to add JavaScript code that executes before the interaction runs. This can be useful for any kind of processing you want to do before executing the interaction.
-
-### Process User Response
-
-Use this area to add JavaScript code that executes after the user has responded to the interaction. This code can be used in place of the response conditions, or in conjunction with them after a successful match.
-
-### Post-Process Code
-
-Use this area to add JavaScript code that executes after the interaction runs. This can be useful for any kind of processing you want to do after executing the interaction.
+{: .important}
+For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
