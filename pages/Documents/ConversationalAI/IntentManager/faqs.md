@@ -24,8 +24,10 @@ You should not use confidence scores to determine the model’s performance. The
 The similarity score is calculated using cosine similarity, measuring the angle between two vector representations of sentences. The larger the score, the smaller the angle and hence, the more similar the two sentences are. Our embeddings enable us to compare sentences on both the syntactic and the semantic levels.
 
 #### How should I improve my NLU model?
-The performance of a model depends on both the quantitative and qualitative nature of the trainingphrases. We require a minimum of five intents with 20 training phrases per intent to activate training for a model. Anything less adversely affects model performance.
+The performance of a model depends on both the quantitative and qualitative nature of the trainingphrases. We require a minimum of five intents with 15 training phrases per intent to activate training for a model. Anything less adversely affects model performance.
+
 For optimal performance, we recommend 60 to 100 training phrases per class (intent), but not more than 150 phrases due to the potential issue of model overfitting. 
+
 Be careful that the topics or actions associated with an intent are exclusive to that intent. So, for example, you don’t want two intents that are both for consumers asking how to pay their bill. Furthermore, you can improve model performance by correcting model predictions  using the “Analyze” tools, adding these messages to your training set, and retraining your model.
 
 #### I see a lot of messages that were misclassified as an intent, what should I do to fix this? (low precision)
