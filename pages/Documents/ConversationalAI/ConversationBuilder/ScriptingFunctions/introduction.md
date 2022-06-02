@@ -24,7 +24,7 @@ With few exceptions, functions can be used in the following JavaScript [code pan
 
 Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
 
-### Immportant notes
+### Important notes
 
 * Function names are case-sensitive in the JavaScript.
 * Functions require the `botContext.` prefix.
