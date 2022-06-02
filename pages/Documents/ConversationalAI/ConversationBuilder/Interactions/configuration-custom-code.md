@@ -13,6 +13,10 @@ indicator: both
 
 You can add custom code to an interaction. The code can be executed before the interaction runs, after the user has responded to the interaction, or after the interaction runs.
 
+### Requirements
+
+Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
 ### Custom code indicator
 An interaction that contains custom code displays a green dot:
 
