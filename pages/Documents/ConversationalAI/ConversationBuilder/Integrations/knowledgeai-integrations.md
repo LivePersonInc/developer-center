@@ -32,9 +32,7 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
-    - **Methods**:
-        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the KnowledgeAI UI or an import file.
-        - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
+    - **Methods**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
     - **Request Parameters for a Phrase search**:
         - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledgeai-search-modes.html). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
         - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
