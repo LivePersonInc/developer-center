@@ -325,6 +325,7 @@
           subpages:
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
+            - subpagename: Intent Details
             - subpagename: Conversation Details
         - pagename: External APIs
           subpages:
