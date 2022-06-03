@@ -33,7 +33,10 @@ indicator: both
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 
-    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article). 
+    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
+
+    {: .important}
+    If the system finds errors in the CSV file you are importing, you’re notified of this and offered a **Download errors** button. Use the button to download info on the errors that were found in the import file. Make sure your browser is configured to allow pop-ups, or you won’t be able to complete the download. 
 
 ### Create an import file
 
