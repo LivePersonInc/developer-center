@@ -260,6 +260,7 @@
         - pagename: Agent Experience
         - pagename: Best Practices
         - pagename: Troubleshooting
+        - pagename: Reports
         - pagename: FAQs
     - documentname: Conversation Orchestrator
       pages:
