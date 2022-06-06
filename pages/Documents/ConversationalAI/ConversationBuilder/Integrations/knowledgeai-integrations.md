@@ -32,11 +32,11 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
-    - **Methods**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
-    - **Request Parameters for a Phrase search**:
+    - **Method**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
+    - **Request Parameters**:
         - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledgeai-search-modes.html). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
         - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
-        - *phrases*:   Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
+        - *phrase*: Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
     - **Request Parameters for a Special Tag search**:
         - *mode*: Indicates whether to perform an "and" or "or" search using the special tags.
