@@ -44,6 +44,8 @@ Consider the following bot flow:
 
 <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_1.png">
 
+The dialog starter is associated with a domain and an intent (buy_a_pet). This association allows you to also associate entities to questions.
+
 In the multiple choice question, the Pet Type rule's configuration looks like this:
 
 <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_2.png">
@@ -63,6 +65,8 @@ Sometimes an intent can relate to multiple entities: For example, a consumer can
 To handle this, a slot-filling question can have more than one slot-filling rule. This means you can set up the question so that it captures whichever of multiple entities a consumer is interested in. Importantly, the rules can all fill the same slot, so you can easily use the slot later on. Here is an example that illustrates the concept:
 
 <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_examples_3.png">
+
+Like in *Example 1*, the dialog starter is associated with a domain and an intent (Make Reservation). This association allows you to also associate entities to questions.
 
 Note the two rules in the question:
 * Capture Hotel
@@ -84,30 +88,50 @@ Importantly, if the consumer were to start off more generally with, “I need a 
 
 ### Example 3: Fill multiple slots with the values for multiple entities
 
-Slot-filling becomes especially useful when mining the entities that make up a consumer's intent to pre-populate your list of questions, and streamline the data collection process. Consider the following example:
+As *Example 1* demonstrates, slot filling is very useful when extracting the entities in a consumer's intent, so you can pre-populate answers to questions. This can streamline the data collection process significantly, as you’ll see in this example. Examine the following basic ordering dialog:
 
-1. Create a new dialog and associate an [intent from your domain](intent-manager-key-terms-concepts.html#intents) as the dialog starter. For this example, we'll create the dialog `ordering` with the domain intent `order item`.
-2. Create a few [entities](intent-manager-key-terms-concepts.html#entities) that will be captured in the intent. For this example, we are going to create an entity for `color` with the values `blue`, `white`, and `red`; one for `item` with the values `pants`, `shoes`, `shirt`, `underwear`; and finally, one for `size` with the values `small`, `medium`, and `large`. Before moving on, we'll [update and train](intent-manager-build-domains.html#train-a-liveperson-domain) the `order item` intent with some representative training phrases that contain these entities.
-3. Next, we create the questions that the dialog will ask. We'll add one question interaction per slot that we are looking to fill. Using [Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), we'll assign the entities to the relevant questions:
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_1.png">
 
-    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
+While you can’t see it in the image above, the dialog relies on a few entities in Intent Manager:
 
-    Once completed, we'll have a list of questions that looks like the following:
+* COLOR
+* ITEM
+* SIZE
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
+COLOR is a global entity. Like all global entities, this entity is automatically detected by the system, so we didn’t need to create it. In contrast, ITEM and SIZE are two custom entities (of the Value Set type). ITEM contains the values “pants,” “shoes,” and “shirt.” SIZE contains the values “small,” “medium,” and “large.” We created ITEM and SIZE manually in a domain named `My Corp`.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions2.png">
+The My Corp domain also contains an `order item` intent. It has some representative training phrases that contain the entities. We trained and activated the `My Corp` domain, so we can use it in Conversation Builder.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions3.png">
+In Conversation Builder, in the `ordering` dialog, things start off with a dialog starter that’s associated with the `My Corp` domain and the `order item` intent. This association allows us to associate entities to questions in the dialog.
 
-    When you assign an entity to a question, this automatically creates a rule for each question. Each rule creates a slot that contains our slot variable (e.g., `item`) and whose value is the entity value (e.g., `@item`).
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_2.png">
 
-    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
+Next in the `ordering` dialog is a list of questions to ask the consumer. There’s one question for each slot we’re looking to fill.
 
-4. Test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a consumer has supplied an entity that is known to the domain, it will automatically populate the slot, skip the interaction, and move on to the next interaction's question. 
+For the questions associated with custom entities, we used [Assist](conversation-builder-assist.html) to assign the entities to the questions.
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill_prompt.png">
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_3.png">
 
-If a consumer expresses all the slots as part of their intent query, it will skip to our confirmation step.
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_4.png">
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_in_action.png">
+When you use Assist to assign an entity to a question, it automatically creates a rule for each question. In turn, each rule creates a slot that contains a slot variable (e.g., ITEM) and whose value is the entity value (e.g., @ITEM).
+
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_5.png">
+
+For the “color” question though, we couldn’t use Assist. That’s because Assist can’t be used to assign global entities to questions; Assist can only be used to assign custom entities to questions. So, in the case of the “color” question, we created its rule manually. The rule looks much like shown above: It creates a slot that contains our slot variable (COLOR) and whose value is the entity value (@COLOR).
+
+The dialog finishes with a statement that makes use of all of the entity values:
+
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_6.png">
+
+How does this dialog work in practice? Let’s examine the following conversation flow:
+
+<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_7.png">
+
+Notice that the consumer’s initial intent includes an entity value for the ITEM entity. As a result, the ITEM slot is filled automatically, and the “item” question is skipped.
+
+If the consumer’s initial intent fills all of the slots, the flow moves directly to the confirmation statement:
+
+<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/slots_ex3_8.png">
+
+Overall, you can see how slots can help to streamline the data collection process with the consumer.
