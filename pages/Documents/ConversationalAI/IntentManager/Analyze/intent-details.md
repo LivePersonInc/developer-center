@@ -36,7 +36,8 @@ If you expand an agent group, you see the data grouped by intent and only relate
 
 To display the difference between a specific value and the overall average value, select **Compare to average**.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_intent_details4.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_intent_details4a.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_intent_details4b.png">
 
 ### Customize the view
 Interested in a different combination of metrics? You can customize which metrics are displayed in the table. 
