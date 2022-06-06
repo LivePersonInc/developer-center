@@ -10,9 +10,10 @@ permalink: intent-manager-natural-language-understanding-liveperson-nlu-engine.h
 indicator: both
 ---
 
-There are two versions of LivePerson's NLU engine: 
-* **LivePerson**: Formerly known as LivePerson NLU v2
-* **LivePerson (Legacy)**: Formerly known as LivePerson NLU v1
+There are two versions of LivePerson's NLU engine:
+
+* **LivePerson**: Formerly known as LivePerson NLU v2.
+* **LivePerson (Legacy)**: Deprecated. Formerly known as LivePerson NLU v1. This legacy engine still works, but it's no longer supported apart from security updates.
 
 ### LivePerson NLU engine
 
@@ -31,7 +32,7 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
 ### Benefits of LivePerson over LivePerson (Legacy)
 
-There are significant benefits to using the LivePerson engine instead of the LivePerson (Legacy) engine for NLU. The LivePerson engine:
+There are significant benefits to using the LivePerson engine instead of the deprecated LivePerson (Legacy) engine for NLU. The LivePerson engine:
 
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
@@ -95,12 +96,12 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
 ### Still using LivePerson (Legacy) NLU?
 
-If you're still using the LivePerson (Legacy) NLU engine, this section contains relevant info for you.
+If you're still using the deprecated LivePerson (Legacy) NLU engine, this section contains relevant info for you.
 
 #### What's LivePerson (Legacy) NLU engine?
 
 {: .important}
-As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this deprecated engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics of the legacy engine include:
 
@@ -122,7 +123,7 @@ Key characteristics of the legacy engine include:
 #### Convert a LivePerson (Legacy) domain to LivePerson
 
 {: .important}
-Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
+Brands with existing domains using the deprecated LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 **To convert a LivePerson (Legacy) domain to the LivePerson engine**
 
