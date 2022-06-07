@@ -20,6 +20,10 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 4. Footer (optional)
 5. Buttons (between 1 and 3)
 
+**Examples Of WhatsApp Reply Button:**
+
+![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
+
 ### Reply Button
 
 The Reply Button is the container that holds the information that should be displayed by the connector.
@@ -308,8 +312,6 @@ A button at the bottom of a rich card.
 ```
 
 ### Full Template
-
-![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
 
 ```json
 {
