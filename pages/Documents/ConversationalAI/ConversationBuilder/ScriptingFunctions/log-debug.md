@@ -30,20 +30,6 @@ botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'AP
 {: .important}
 For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
-### Log escalation event
-
-`logEscalationEvent` is used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `logEscalationEvent(user_message, escalation_type)` | <em>user_message - </em>the user's message text<br><br><em>escalation_type - </em>'LivePerson' | void |
-
-#### Example
-
-```javascript
-botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
-```
-
 ### Print debug message
 
 `printDebugMessage` is used to log debug messages to the console. For example, in the code example below, the `response` variable stores the most recent message from the consumer, which we print to the console using `printDebugMessage`.

@@ -59,22 +59,22 @@ At this point, use KnowledgeAI to verify that the desired articles are active. T
 
     The **Knowledge Bases** tab is displayed by default.
 
-    Once you create a knowledge base (KB) in KnowledgeAI, it is automatically discovered by Conversation Assist. So you should see your knowledge base here.
+2. Click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> over on the right. This syncs with KnowledgAI and shows you the available knowledge bases.
 
     <img width="700" src="img/agentassist/configkb1.png">
 
-2. Verify that your knowledge base is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
+3. Verify that your knowledge base is displayed. If it isn't, consult the troubleshooting information [here](conversation-assist-troubleshooting.html).
 
     Your knowledge base doesn't have any assigned skills yet, so its **Status** is initially set to "Off." For the articles therein to be recommended as answers, you must assign one or more skills **and** change the **Status**.
 
-3. Assign one or more skills to the knowledge base:
+4. Assign one or more skills to the knowledge base:
     1. Beside the knowledge base, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
     2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
 
         <img width="700" src="img/agentassist/configkb2.png">
 
     3. Click **Save**.
-4. Repeat this process for additional knowledge bases as needed.
+5. Repeat this process for additional knowledge bases as needed.
 
     After you assign at least one skill to each of the knowledge bases, their articles can be recommended as answers in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which knowledge bases are candidates for recommendation to human agents.
 
@@ -85,7 +85,7 @@ At this point, use KnowledgeAI to verify that the desired articles are active. T
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
 {: .important}
-If you later delete a knowledge base in KnowledgeAI, the next time you access the **Knowledge Bases** tab, the list is updated automatically.
+If you later delete a knowledge base in KnowledgeAI, you’ll need to manually refresh the list of discovered knowledge bases in Conversation Assist in order to see the knowledge base removed from the list.
 
 ### Step 3: Configure settings
 

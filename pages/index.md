@@ -159,7 +159,7 @@ redirect_from:
     </a>
   </div>
 </div>
-<div class="free-trial-container">
+<!-- <div class="free-trial-container">
   <div id="free-trial">
     <div id="free-trial-content-container">
       <h3 class="free-trial-header h3">Excited? Let’s start your free trial today.</h3>
@@ -174,4 +174,4 @@ redirect_from:
       </a>
     </div>
   </div>
-</div>
+</div> -->

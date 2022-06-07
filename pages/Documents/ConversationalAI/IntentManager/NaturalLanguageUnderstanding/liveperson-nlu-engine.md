@@ -73,7 +73,7 @@ Note the following:
 * Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.
 * Before you train, consider exporting a CSV of the intents. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 * Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
-* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.

@@ -24,7 +24,9 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
 2. If necessary, click **Recommendation Sources** at the top of the page, and then select the **Bots** tab.
 
-    You should see that your bots have been automatically discovered and, therefore, are listed on the page. Any bots that are connected to active agent connectors should be visible here.
+3. Click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> over on the right. This syncs with Conversation Builder and shows you the available bots.
+
+    Any bots that are connected to active agent connectors should now be visible here.
 
     <img style="width:800px" src="img/agentassisttutorial/botlist.png">
 
@@ -48,7 +50,7 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
     <img style="width:800px" src="img/agentassisttutorial/kblist.png">
 
-2. Follow the steps that you used for the bots: Change the **Status** of the Airline FAQ knowledge base (KB) to "ON," and assign the "Agent" skill it.
+2. Follow the steps that you used for the bots: First click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> to sync with KnowledgeAI. Then change the **Status** of the Airline FAQ knowledge base (KB) to "ON," and assign the "Agent" skill it.
 
     <img style="width:800px" src="img/agentassisttutorial/kblist2.png">
 

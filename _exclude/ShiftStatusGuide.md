@@ -26,7 +26,7 @@ For the purpose of configuring these APIs, we will need the following:
 
 #### Bearer token retrieval
 
-For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
+For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
 
 ```javascript
 // Bearer Token Needed for Messaging Queue Health & Shift Status APIs
@@ -42,7 +42,7 @@ You likely used an account number to log into LiveEngage, but, for awareness, yo
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/guideShiftStatus_botAccountNumber.png">
 
-Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
+Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
 
 ```javascript
 //LE account number, needed for api calls
