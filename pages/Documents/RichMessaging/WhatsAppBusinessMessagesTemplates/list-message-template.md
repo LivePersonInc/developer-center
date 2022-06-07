@@ -24,6 +24,15 @@ Each horizontal can contain the following elements:
 2. Subtitle (optional)
 3. Button (at least 1 is mandatory)
 
+
+**Examples Of WhatsApp List messages:**
+
+<p float="left">
+  <img src="img/connectors/wa_listmessage1.png" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage2.png" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage3.png" style="display: inline; margin: 0" />
+</p>
+
 ## Top level vertical
 
 Wrapping element that contains the list message vertical.
@@ -448,12 +457,6 @@ These buttons are added within a section. There can be 10 options across all sec
 ```
 
 ## Full Template
-
-<p float="left">
-  <img src="img/connectors/wa_listmessage1.png" style="display: inline; margin: 0" />
-  <img src="img/connectors/wa_listmessage2.png" style="display: inline; margin: 0" />
-  <img src="img/connectors/wa_listmessage3.png" style="display: inline; margin: 0" />
-</p>
 
 ```json
 {
