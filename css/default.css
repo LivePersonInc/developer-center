@@ -794,6 +794,8 @@ a.loginText {
     background-color: var(--secondary-background);
     color: var(--button-text);
     border: 0px;
+    /* removed by request */
+    display: none;
 }
 
 #loginHeader {
