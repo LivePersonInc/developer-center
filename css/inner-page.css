@@ -727,7 +727,13 @@ div.sidebarTitle-holder {
 .post-content>p.notice,
 .post-content>p.important {
     color: var(--widget-text);
-    display: -webkit-box !important;
+    display: flex;
+    width: 100%;
+}
+
+.post-content>p.notice a,
+.post-content>p.important a {
+    margin-left: 8px;
 }
 
 .post-content>p.notice strong,
@@ -921,6 +927,16 @@ iframe {
 }
 
 @media (max-width: 767px) {
+
+    .post-content>p.notice,
+    .post-content>p.important {
+        display: block !important;
+    }
+
+    .post-content>p.notice a,
+    .post-content>p.important a {
+        margin-left: 0;
+    }
 
     /* the div containing the iframe is responsive */
     .visualping-container {
