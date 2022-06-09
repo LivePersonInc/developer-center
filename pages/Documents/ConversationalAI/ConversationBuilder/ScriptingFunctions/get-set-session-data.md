@@ -219,10 +219,12 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 
 Understanding the context of a consumer message can be valuable. This context or metadata can empower the bot with relevant information that’s actionable. For example, in the case of a conversation on a social messaging platform, it can be helpful to retrieve the platform in use, the page the consumer is on, the type of message (direct message, comment to post, comment to comment, etc.), and so on.
 
-Use the `getMetadata` function to retrieve metadata from the most recent message from the consumer during a bot conversation. You can find the list of metadata types that can be retrieved [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata).
+Use the `getMetadata` function to retrieve conversation metadata from the most recent consumer message received by the bot. Some notes on this:
 
-{: .important}
-Keep in mind that the metadata changes with each consumer message.
+* The list of metadata types that you can retrieve is [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata).
+* Remember: The metadata is always retrieved from the most recent consumer message. Also, the metadata changes with each consumer message.
+* Conversation metadata can be set by any service that can inject it into the conversation: a social messaging event, a button click event in a Structured or Button question in a Conversation Builder bot, etc.
+* If you use this function in the **Process User Response** code of a question, the metadata comes from the consumer response to the *current* question. If you use this function elsewhere in a question (or in a statement or integration), the metadata comes from the *last* consumer message. So keep in mind the [order of operations](conversation-builder-interactions-interaction-basics.html#order-of-operations) in interactions.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
