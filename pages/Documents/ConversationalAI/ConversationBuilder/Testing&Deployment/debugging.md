@@ -15,6 +15,8 @@ First, if you're encountering unexpected behavior, always check the Bot Logs win
 
 Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
 
+To get the User ID during a bot conversation, type "display userid".
+
 Here's a visual overview of the Bot Logs window:
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/debuggingWindow.png">
