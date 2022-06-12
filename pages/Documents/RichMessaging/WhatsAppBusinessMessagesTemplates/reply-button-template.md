@@ -28,8 +28,6 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 
 The Reply Button is the container that holds the information that should be displayed by the connector.
 
-#### Properties
-
 <table>
   <thead>
   <tr>
@@ -81,7 +79,7 @@ The description and at least one button element are required.</td>
 The image that will be displayed at the top of the Reply Button.
 The image size should be under 5MB.
 
-#### Properties
+
 
 <table>
   <thead>
@@ -123,7 +121,7 @@ The image size should be under 5MB.
 
 The highlighted headline of the rich card.
 
-#### Properties
+
 
 <table>
   <thead>
@@ -173,7 +171,7 @@ The highlighted headline of the rich card.
 
 The text of the rich card.
 
-#### Properties
+
 
 <table>
   <thead>
@@ -214,7 +212,7 @@ The text of the rich card.
 
 Footer of the card.
 
-#### Properties
+
 
 <table>
   <thead>
@@ -263,8 +261,6 @@ Footer of the card.
 ### Button
 
 A button at the bottom of a rich card.
-
-#### Properties
 
 <table>
   <thead>
