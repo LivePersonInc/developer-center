@@ -10,7 +10,7 @@ permalink: whatsapp-business-messages-templates-list-message-template.html
 indicator: messaging
 ---
 
-## Overview
+### Overview
 
 In WhatsApp Business Messages, a List Message has the following structure:
 
@@ -33,7 +33,7 @@ Each horizontal can contain the following elements:
   <img src="img/connectors/wa_listmessage3.png" style="display: inline; margin: 0" />
 </p>
 
-## Top level vertical
+### Top level vertical
 
 Wrapping element that contains the list message vertical.
 
@@ -71,12 +71,12 @@ Wrapping element that contains the list message vertical.
   </tr>
 </table>
 
-## List message vertical
+### List message vertical
 
 This vertical contains contains the  basic information of the list, such as
 the title, subtitle, title of the clickable options button as well as the vertical element hat contains all of
 of sections and respective selectable options that the consumer can choose from.
-#### Properties
+
 
 <table>
   <thead>
@@ -129,7 +129,6 @@ of sections and respective selectable options that the consumer can choose from.
 
 The highlighted headline of the list message.
 
-#### Properties
 
 <table>
   <thead>
@@ -183,8 +182,6 @@ The highlighted headline of the list message.
 The subtitle represents the secondary text of the List Messsage.
 This is generally where the body of the message can be entered.
 
-#### Properties
-
 <table>
   <thead>
   <tr>
@@ -237,7 +234,6 @@ This is generally where the body of the message can be entered.
 
 Footer of the list messages. This is shown below the subtitle or title if the first is absent.
 
-#### Properties
 
 <table>
   <thead>
@@ -283,12 +279,10 @@ Footer of the list messages. This is shown below the subtitle or title if the fi
 },
 ```
 
-### Options Button
+### Options Menu Button
 
 This element is a placeholder for the button shown in the user WhatsApp app.
 It can be used to change its name.
-
-#### Properties
 
 <table>
   <thead>
@@ -344,7 +338,6 @@ It can be used to change its name.
   "click": ClickOperations
 }
 ```
-
 
 ### Option section
 
@@ -394,12 +387,10 @@ just one section its title is not mandatory.
 }
 ```
 
-### Option Button
+### Option (row) Button
 
 This element represents the options that the consumer can choose from.
 These buttons are added within a section. There can be 10 options across all sections.
-
-#### Properties
 
 <table>
   <thead>
@@ -456,7 +447,7 @@ These buttons are added within a section. There can be 10 options across all sec
 }
 ```
 
-## Full Template
+### Full Template
 
 ```json
 {
