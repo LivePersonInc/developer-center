@@ -177,7 +177,7 @@ if (metadata && metadata.id) {
 ```
 
 {: .important} 
-Need help understanding custom data field in API integrations? See [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+Need help understanding custom data fields in API integrations? See [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 #### Notes on Structured questions
 
