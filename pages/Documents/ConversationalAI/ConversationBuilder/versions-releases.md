@@ -31,7 +31,7 @@ Any time you might be making large changes to the functionality of a bot, there 
 2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
-    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/versions1.png">
+    <img class="fancyimage" width="800" src="img/ConvoBuilder/bestPractices/versions1.png">
 
 3. In the Versions window, click **Save Current Version**.
 4. In the dialog that appears, specify the following:
