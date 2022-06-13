@@ -98,16 +98,86 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | 10% off all headphones |
-| Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
-| Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
+| Action Type  | If you want the button to be a link that takes the consumer to a URL, select **Web URL**. Then enter the URL in the **Callback** field.<br><br>If you want to use the button to send back to the bot a value as the consumer's message, select **Postback** here. Then enter the message to send back as the payload in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer supported. | Required  | Web URL |
+| Webview | This is a legacy feature that's no longer supported. | Not applicable | Not applicable |
 | Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
-| Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL. If you selected "Postback" for the **Action Type**, this value  should be whatever value you want to send to the bot. <br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
+| Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL.<br><br>If you select "Postback" for the **Action Type**, this value  should be whatever you want to send back to the bot as the consumer's message. You can enter the value for the button label or a different value (e.g., the number "5" instead of the word "Excellent"). Entering a different value works depending on the channel in use (e.g., there's support in Facebook but not in SMS). Make sure to test and verify on the device or in the application. Entering the same value for both the button label and the callback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Required | https://www.mysite.com/coupons/headphonesCoupon.html |
 
 #### Populating a Structured question dynamically
 
 You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an API integration. For more information, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 <img style="width:300px" src="img/ConvoBuilder/questions_structured3.png">
+
+#### Button clicks: Sending metadata back to the bot
+
+In a Structured question, you can set metadata in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using the [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the **Process User Response** code of the question.
+
+There are many use cases where this capability can be useful. Here are a few:
+
+* Scenario 1: You have a bot that includes a Structured question that gets populated with products the consumer is interested in. For each product, there’s a “Details on this” button that links to the product’s details page on your website. You add metadata to this button so that, when the consumer clicks the button, the product’s ID is sent back to the bot in the conversation metadata. The bot then retrieves and uses the product ID to determine the next action in the flow. You also track the event for analytics purposes (by [logging a custom event](conversation-builder-best-practices-custom-event-logging.html) that can later be viewed in Bot Analytics, or by posting the data to your external system via an API integration).
+* Scenario 2: You have a bot in Facebook that includes a Button question with a button to start direct messaging with an agent. You add metadata to this button so that, when the consumer clicks the button, info on that social messaging event is sent back to the bot in the conversation metadata. The bot then retrieves the event info and uses it to determine the next action in the flow, for example, closure of the bot conversation. Note that Button questions are discussed in-depth elsewhere on this page.
+
+**To send metadata back to the bot when the consumer clicks a button**
+
+1. Add and configure the button’s settings as required. For help with this, see the relevant section that’s farther above on this page.
+
+2. Switch to the **Metadata** tab, and click **Add Metadata**.
+
+    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata1.png">
+
+3. Select the type of metadata to add; you can add any of the types described [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). In the Conversation Builder UI, the available choices are named by metadata type.
+
+    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata2.png">
+
+4. Enter the JSON. As a help, some default JSON is provided to illustrate the proper format to use.
+
+    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata3.png">
+
+    When writing the JSON, ensure it’s well-formed and conforms to the format discussed [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). You can reference botContext variables as well as the custom data fields in API integrations. In our example below, we’re referencing the latter.
+
+    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata4.png">
+
+5. Click **Save**.
+
+6. Add more metadata objects if desired. You can add as many as you need. Typically, each is of a unique type, and there are just a few.
+
+##### Example
+As an example, let’s break down one of the aforementioned use cases with some more detail.
+
+Assume you have a bot that includes a Structured question that gets populated with products the consumer is interested in. This is accomplished with an API call to your system for the data. In your API integration, you capture the response data in a number of custom data fields:
+
+<img style="width:800px" src="img/ConvoBuilder/questions_structured_metadata5.png">
+
+Back in the dialog, the Structured question looks like this below. For each product, there’s a “Details on this” button that links to the product’s details page on your website.
+
+<img style="width:700px" src="img/ConvoBuilder/questions_structured_metadata6.png">
+
+On the **Settings** tab, the button is configured to use the “Web URL” action type, so the callback is set to the URL to which to take the consumer.
+
+<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata7.png">
+
+On the **Metadata** tab, there’s one metadata object added: “ExternalId.” This is used to track the consumer’s selection of the “Details on this” button.
+
+<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata8.png">
+
+The metadata object is configured so that, when the consumer clicks the button, the product’s ID is sent back to the bot in the conversation metadata.
+
+<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata9.png">
+
+Finally, in the **Process User Response** code of the interaction, the bot retrieves and uses the product ID to log a custom event to track the click event, and to determine the next action in the flow. The code looks like this:
+
+```javascript
+var metadata = botContext.getMetadata(“ExternalId”);
+
+if (metadata && metadata.id) {
+    botContext.logCustomEvent(metadata.id, 'Selected Product');
+    botContext.setTriggerNextMessage('Offer Related Items');
+}
+```
+
+{: .important} 
+Need help understanding custom data field in API integrations? See [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 #### Notes on Structured questions
 
@@ -136,10 +206,13 @@ Enter the question to send.
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | Sure! |
-| Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field).<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
-| Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
+| Action Type  | If you want the button to be a link that takes the consumer to a URL, select **Web URL**. Then enter the URL in the **Callback** field.<br><br>If you want to use the button to send back to the bot a value as the consumer's message, select **Postback** here. Then enter the message to send back as the payload in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer supported. | Required  | Web URL |
+| Webview | This is a legacy feature that's no longer supported. | Not applicable | Not applicable |
 | Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
-| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Optional | https://www.surveymonkey.com/mysurvey.html |
+| Callback | Enter the data to send back to the bot.<br><br>If you select "Web URL" for the **Action Type**, this value should be a URL.<br><br>If you select "Postback" for the **Action Type**, this value should be whatever you want to send back to the bot as the consumer's message. You can enter the value for the button label or a different value (e.g., the number "5" instead of the word "Excellent"). Entering a different value works depending on the channel in use (e.g., there's support in Facebook but not in SMS). Make sure to test and verify on the device or in the application. Entering the same value for both the button label and the callback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Required | https://www.surveymonkey.com/mysurvey.html |
+
+#### Button clicks: Sending metadata back to the bot
+In a Button question, you can set metadata in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using the [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the **Process User Response** code of the question. For more on this, see the discussion in the section on Structured questions on this page. The info is the same, and the same guidelines and rules apply.
 
 ### Quick Reply questions
 
