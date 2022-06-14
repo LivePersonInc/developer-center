@@ -448,11 +448,6 @@ ul#mysiderbar li {
     color: var(--link-color);
 }
 
-
-/* .topfolder>a>span {
-  margin-left: 14px;
-} */
-
 .innerfolder>a {
     color: var(--link-color);
 }
@@ -467,29 +462,9 @@ ul#mysiderbar li {
     overflow-wrap: anywhere;
 }
 
-.activeitem {
-    /* border-left: 4px solid var(--link-color-hover) !important;
-  margin-left: -4px; */
-}
-
-li .activeitem a {
+.activeitem a {
     font-weight: bold;
 }
-
-
-/* .activeleaf {
-  margin-left: 30px;
-  border-left: 4px solid var(--link-color-hover);
-  padding-left: 20px !important;
-} */
-
-
-/* 
-.activeleafSolo {
-  margin-left: var(--space4);
-  border-left: 4px solid var(--side-border-color);
-  padding-left: 20px !important;
-} */
 
 .activeleafSolo a,
 .activeleaf a,
@@ -727,14 +702,8 @@ div.sidebarTitle-holder {
 .post-content>p.notice,
 .post-content>p.important {
     color: var(--widget-text);
-    display: flex;
+    display: block;
     width: 100%;
-}
-
-.post-content>p.notice a,
-.post-content>p.important a {
-    margin-left: 4px;
-    margin-right: 4px;
 }
 
 .post-content>p.notice strong,
@@ -797,22 +766,6 @@ pre {
 pre code {
     margin-top: var(--space4);
 }
-
-
-/*change the defaults colors to match yeal design*/
-
-
-/*.highlight .na {
-  color: #d6c30f;
-}
-.highlight .s {
-  color: #1a78ca;
-}
-
-.highlight .nt {
-  color: #ff00ff;
-}*/
-
 
 /*not active page */
 
@@ -928,17 +881,6 @@ iframe {
 }
 
 @media (max-width: 767px) {
-
-    .post-content>p.notice,
-    .post-content>p.important {
-        display: block !important;
-    }
-
-    .post-content>p.notice a,
-    .post-content>p.important a {
-        margin-left: 0;
-        margin-right: 0;
-    }
 
     /* the div containing the iframe is responsive */
     .visualping-container {
