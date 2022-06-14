@@ -1,36 +1,37 @@
 ---
-pagename: Search Modes
+pagename: Search Methods
 redirect_from:
+    - knowledgeai-search-modes.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
-permalink: knowledgeai-search-modes.html
+permalink: knowledgeai-search-methods.html
 indicator: both
 ---
 
 ### Introduction
 
-A knowledge base search is performed using a specified "search mode." The search mode determines the type of search. Possible modes include:
+A knowledge base search is performed using a specified search method or "mode." Possible methods include:
 
 * Intents
 * Intents Only
 * Text
 
-### Intents mode
+### Intents method
 
-When the Intents mode is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, KnowledgeAI next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final, text-to-text search is performed as a fallback.
+When the Intents method is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, KnowledgeAI next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final, text-to-text search is performed as a fallback.
 
 <img style="width:750px" src="img/ConvoBuilder/kb_search_modes_ext.png">
 <img style="width:750px" src="img/ConvoBuilder/kb_search_modes_int.png">
 
-### Intents Only mode
+### Intents Only method
 
-The Intents Only mode is like the Intents mode (above) except that the final, text-to-text search isn't performed as a fallback.
+The Intents Only method is like the Intents method (above) except that the final, text-to-text search isn't performed as a fallback.
 
-### Text mode
+### Text method
 
-When the Text mode is used, a text-to-text search is performed:
+When the Text method is used, a text-to-text search is performed:
 
 * With an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
 * With an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (intent qualifiers), and tags.

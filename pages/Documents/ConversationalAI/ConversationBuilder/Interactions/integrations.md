@@ -71,7 +71,7 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 #### How the Knowledge AI search works
 
 * **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-modes.html).
+* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
 * **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
