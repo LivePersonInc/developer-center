@@ -92,7 +92,7 @@ It is rarely advised to create an affirmative/negative intent for a conversation
 
 Instead, consider simpler and safer ways to capture affirmation and negation by, for example, using pattern matching or button selection. In a controlled situation, like an anticipated consumer response to a bot yes/no question, this should be quite effective.
 
-#### What does classifying a message to "undefined" in Intent Analyzer do? Does it train the model to classify similar messages as “undefined”?
+#### What does classifying a message to "undefined" in Intent Manager do? Does it train the model to classify similar messages as “undefined”?
 It marks the message and all subsequent incoming messages that are its duplicates as “Undefined,” but it will not retrain the model unless you tell it to. Sometimes you might be curious as to why a message was labeled with an intent but should have been unclassified. It is advised not to classify the message to “undefined”, but instead revisit your training data in Intent Builder for the intent that was incorrectly applied. You might find similar training messages that you could remove to prevent another false positive in the future.
 
 #### How do I revert to a previous model?
