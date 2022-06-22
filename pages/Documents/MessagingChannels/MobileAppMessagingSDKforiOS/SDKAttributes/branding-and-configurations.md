@@ -130,6 +130,7 @@ Hides previous chat history until user identify has been verified
 avaliable on SDK 6.0 and above.
 
 ---  
+
 ### Brand
 
 #### brandName  
@@ -352,7 +353,6 @@ Controls text color for hyperlink item on the system messages bubble
 --- 
 
 ### Conversations
-
 
 #### deleteClosedConversationOlderThanMonths  
 Upon SDK initialization, all closed conversations with an end date older than X months will be deleted from the database. Setting 0 deletes all closed conversations. 
@@ -634,8 +634,7 @@ The regular expression patterns and behavior are based on Perl's regular express
    - **Default value:** "" (Empty String) - no regex
 
 
---- 
-
+---
 
 ### Date and Time
 
@@ -662,8 +661,7 @@ Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'
    - **Type:** String?
    - **Default value:** nil 
 
---- 
-
+---
 
 ### Date Separator
 
@@ -1431,6 +1429,29 @@ Bool used to allow manual configuration for enabling the SDK to register to LP P
    - **Type:** Bool
    - **Default value:**  true
 
+### Menu Options
+
+{: .notice}
+Disabling all elements will prevent the menu from being render.
+
+#### showResolveConversationMenuOption
+- **Description:** Show or hide **Resolve Conversation** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
+
+#### showMarkAsUrgentMenuOption
+- **Description:** Show or hide **Mark as Urgent** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
+
+#### showClearHistoryMenuOption
+- **Description:** Show or hide **Clear History** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
+
 ### Navigation
 
 #### conversationNavigationBackgroundColor  
@@ -2069,9 +2090,6 @@ Sets text color for text type element on Structured Content
 - **Type:** color
 - **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
 
-    
---- 
-
 ### Surveys Buttons (CSAT and FCR)
 
 #### csatSubmitButtonCornerRadius   
@@ -2212,8 +2230,7 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
    - **Default value:** 1440 
 
 
---- 
-
+---
 
 ### System Messages
 
@@ -2925,7 +2942,6 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
    
 - **Type:** UIImage?    
 - **Default value:** nil
-
 
 ---
 
