@@ -53,7 +53,7 @@ Configure Conversational Cloud by creating a skill and a bot user for each bot. 
 * Be sure to assign the bot skill to the bot user.
 
 ### Step 3: Deploy the bots
-If you've created Conversation Builder bots, then use Conversation Builder to deploy the bots. Deployment is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial. When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
+If you've created Conversation Builder bots, then use Conversation Builder to deploy the bots. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial. When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
 
 To connect a Google DialogFlow or IBM Watson bot to LivePerson’s Conversational Cloud, follow the [Getting Started Guide](third-party-bots-getting-started.html) for third-party bots. Then follow the specific guide for the vendor you're using. Be sure to press the play button in the bot dashboard to enable the bot.
 
@@ -61,7 +61,7 @@ To connect a Google DialogFlow or IBM Watson bot to LivePerson’s Conversationa
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Recommendation Sources** from the menu at the top.
 2. Click the **Bots** tab.
-3. Click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> over on the right. This syncs with Conversation Builder and shows you the available bots. Available bots include those you’ve deployed and started (i.e., they’re valid bots that can serve a conversation). You should see all of the bots that you’ve created (both public and private) and other public bots within your organization.
+3. Click <img class="inlineimage" style="width:25px" src="img/agentassist/icon_refresh.png"> over on the right. This fetches the available bots. Available bots include those you’ve deployed and started (i.e., they’re valid bots that can serve a conversation). You should see all of the bots that you’ve created (both public and private) and other public bots within your organization.
 
     <img width="700" src="img/agentassist/configbot1.png">
 
