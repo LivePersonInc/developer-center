@@ -59,16 +59,16 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
     - **Additional option to show** (checkbox): Select this if you want to add a "none of the above" type of choice to the clarification question. By default, in the conversation, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
     - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
-6. Customize the question text to send to the consumer. As you construct this message, keep in mind that the disambiguation dialog only displays when the NLU engine isn’t certain which intent the consumer is expressing, so it’s natural for this to be stressful for the consumer. Try to make this message warm and sympathetic.
+6. Customize the question text to send to the consumer. As you construct this message, keep in mind that the disambiguation dialog is displayed only when the NLU engine isn’t certain which intent the consumer is expressing, so it’s natural for this to be stressful for the consumer. Try to make this message warm and sympathetic.
     <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
 
     The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Manager](intent-manager-overview.html). Again, this situation can be stressful for the consumer; try to make the display names as clear as possible.
 
     <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png">
 
-7. Build out the Disambiguation dialog as desired.
+7. Build out the disambiguation dialog as desired.
     
-    You can add any number of interactions to the dialog. For example, you might want to add a LivePerson Agent Escalation integration.
+    You can add any number of interactions to the dialog. For example, you might want to add an [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
     
     To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-session-data.html#get-disambiguated-intent).
 
