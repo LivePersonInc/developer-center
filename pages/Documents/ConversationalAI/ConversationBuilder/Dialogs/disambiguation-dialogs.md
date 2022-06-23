@@ -48,7 +48,7 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
 ### Create a disambiguation dialog
 
 1. Open the bot, and click **Add Dialog** in the lower-left corner.
-2. In the dialog that appears, specify the following:
+2. In the window that appears, specify the following:
     - **Dialog Name**: Enter a descriptive name.
     - **Dialog Type**: Select "Disambiguation Dialog."
     - **Match Threshold**: Always select "Fair Plus."
@@ -120,3 +120,7 @@ When this happens, the [fallback dialog](conversation-builder-dialogs-fallback-d
 #### How many disambiguation dialogs can I create?
 
 There can be only one disambiguation dialog in a bot.
+
+#### If I must set the dialog's Match Threshold to Fair Plus, what are the other options for?
+
+The other options for the **Match Threshold** dialog setting are for users still using the legacy version of our LivePerson NLU engine. Still on LivePerson (Legacy)? See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of switching to the LivePerson engine.
