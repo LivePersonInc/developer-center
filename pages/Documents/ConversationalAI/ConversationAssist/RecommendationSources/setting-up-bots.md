@@ -24,8 +24,8 @@ It takes up to 3 hours for changes in Conversation Assist configuration to take 
 ### Supported bot types
 Conversation Assist supports bots created in:
 * Conversation Builder
-* Google DialogFlow
-* IBM Watson
+* Google Dialogflow ES
+* IBM Watson Assistant v1 and v2
 
 ### Prerequisite knowledge
 To set up Conversation Assist to recommend bots, you need some prerequisite knowledge of other applications in the Conversational AI suite.
@@ -55,7 +55,7 @@ Configure Conversational Cloud by creating a skill and a bot user for each bot. 
 ### Step 3: Deploy the bots
 If you've created Conversation Builder bots, then use Conversation Builder to deploy the bots. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial. When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.
 
-To connect a Google DialogFlow or IBM Watson bot to LivePerson’s Conversational Cloud, follow the [Getting Started Guide](third-party-bots-getting-started.html) for third-party bots. Then follow the specific guide for the vendor you're using. Be sure to press the play button in the bot dashboard to enable the bot.
+To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversational Cloud, follow the [Getting Started Guide](third-party-bots-getting-started.html) for third-party bots. Then follow the specific guide for the vendor you're using. Be sure to press the play button in the bot dashboard to enable the bot.
 
 ### Step 4: Configure the bots
 

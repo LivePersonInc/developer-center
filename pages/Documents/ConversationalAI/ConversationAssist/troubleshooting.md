@@ -32,7 +32,9 @@ Also, the engagement must route to specific skills. It should not be set to rout
 If you instead set the engagement to route to “All skills,” the effect is that conversations within the engagement don’t have an assigned skill. As a result, there are no recommendations within the Conversational Cloud agent workspace since all recommendations are made based on the conversation’s skills.
 
 ### Bots
-The bot must be able to join a conversation, i.e., there is an assigned bot user that is online and ready to accept conversations.
+* You must use a supported bot provider, as described [here](conversation-assist-recommendation-sources-setting-up-bots.html#supported-bot-types).
+* The bot must be able to join a conversation, i.e., there is an assigned bot user that is online and ready to accept conversations.
+* A Google Dialogflow bot with a particular region ID will only show in the messaging window for that region. Make sure your Dialogflow bot agents are set up in the appropriate region; otherwise, they won’t be offered as Conversation Assist recommendations for that region.
 
 ### Knowledge bases
 
