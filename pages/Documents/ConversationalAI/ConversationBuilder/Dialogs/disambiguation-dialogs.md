@@ -51,7 +51,7 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
 2. In the dialog that appears, specify the following:
     - **Dialog Name**: Enter a descriptive name.
     - **Dialog Type**: Select "Disambiguation Dialog."
-    - **Match Threshold**: Select the minimum ranking that an intent match must have to be considered for disambiguation. For example, if you select "Fair Plus," then all intents that match with a rank of Fair Plus and higher are considered for disambiguation. **Note:** If you’re using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) for NLU, you must select either “Fair Plus” or “Fair” here. The LivePerson engine only returns multiple matches when the match score is Fair Plus or lower. So, if you were to select “Very Good” or “Good” here, the result would be that disambiguation is never used.
+    - **Match Threshold**: Always select "Fair Plus."
     - **Disambiguate only selected domains**: If you only want the bot to include matches to intents in specific domains, select this check box, and then select those domains. You can select from all domains associated with dialogs in the bot.
 3. Click **Save**.
 4. In the Disambiguation interaction, click the **Settings** icon, click the **Advanced** tab, and specify the following:
