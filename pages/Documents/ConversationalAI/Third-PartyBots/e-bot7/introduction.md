@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
 subfoldername: e-bot7
-permalink: third-party-bots-ebot7-introduction.html
+permalink: third-party-bots-e-bot7-introduction.html
 indicator:
 ---
 
