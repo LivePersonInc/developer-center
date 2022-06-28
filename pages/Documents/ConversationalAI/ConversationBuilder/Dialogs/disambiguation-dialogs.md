@@ -95,7 +95,7 @@ In your bot, you might have some dialogs that start with dialog starters and oth
 
 | Environment variable name | Description | Type | Example |
 | ---- | ---- | ---- | ---- |
-| system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents that are used in dialog starters are considered for disambiguation. If false, all intents in the domains linked to the bot are considered for disambiguation. The default value is false. | Boolean | true |
+| system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents that are used in dialog starters are considered for disambiguation. If false, all intents in the domain linked to the bot are considered for disambiguation. The default value is false. | Boolean | true |
 
 **Example 1** - Assume you set things to show 2 intents for disambiguation, and you set this variable to *true*. The system then matches 2 intents; 1 has a dialog starter, but the other doesn't. In this case, disambiguation does not occur. The consumer is directed to the only dialog that has a dialog starter. This is because disambiguation only occurs when *multiple* intents must be clarified by the user.
 
