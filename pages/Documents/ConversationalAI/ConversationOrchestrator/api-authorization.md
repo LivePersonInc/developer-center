@@ -35,7 +35,7 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
 
     The page has three sections:
 
-    * **Token for testing the v2 APIs**: You can use this secure access token for testing the Context Service API v2 or Next Actions API v2 using API testing tools, such as Postman. This token is temporary and expires quickly. This token should **not** be used in your code.
+    * **Token for testing the v2 APIs**: You can use this secure access token for testing the Context Service API v2 or Next Actions API v2 using API testing tools, such as Postman. This token is temporary and expires in 24 hours. This token should **not** be used in your code.
     * **Credentials for using the v2 APIs in your code**: This section has a user ID and password that you can use to generate your secure access token. Please see the next step for details.
     * **API key for v1 APIs**: Users who have been upgraded to v2 will have access to the v1 API key until December 31, 2022.
 

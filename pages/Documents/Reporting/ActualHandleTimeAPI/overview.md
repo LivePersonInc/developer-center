@@ -9,11 +9,11 @@ indicator: both
 
 ### Introduction
 
+{:.notice}
+This API is currently in its BETA version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
+
 Actual Handle Time metric tracks events within the agent workspace. The metric is based on an internal algorithm that looks at several factors to give the most accurate view of handle time effort at an individual segment level. (In essence, it tracks time whenever an agent has a conversation selected on the screen that is awaiting their response.)
 This API is an offline API. The data in this API is available up to 24 hours from the moment the segments were closed.
-
-{: .notice}
-This API is not available by default. To enable it please contact your account manager.
 
 ### Getting started
 
@@ -32,6 +32,9 @@ A few things you'll need to get started with this API:
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
 4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
+
+{: .important}
+This API is not available by default. To enable it please contact your account manager.
 
 ### Use cases
 

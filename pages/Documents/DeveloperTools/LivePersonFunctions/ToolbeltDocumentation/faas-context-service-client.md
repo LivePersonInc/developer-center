@@ -11,6 +11,9 @@ indicator: both
 
 # Interface: IFaaSContextServiceClient
 
+{: .important}
+Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
+
 ## Table of contents
 
 ### Methods

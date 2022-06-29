@@ -24,8 +24,10 @@ You should not use confidence scores to determine the model’s performance. The
 The similarity score is calculated using cosine similarity, measuring the angle between two vector representations of sentences. The larger the score, the smaller the angle and hence, the more similar the two sentences are. Our embeddings enable us to compare sentences on both the syntactic and the semantic levels.
 
 #### How should I improve my NLU model?
-The performance of a model depends on both the quantitative and qualitative nature of the trainingphrases. We require a minimum of five intents with 20 training phrases per intent to activate training for a model. Anything less adversely affects model performance.
+The performance of a model depends on both the quantitative and qualitative nature of the trainingphrases. We require a minimum of five intents with 15 training phrases per intent to activate training for a model. Anything less adversely affects model performance.
+
 For optimal performance, we recommend 60 to 100 training phrases per class (intent), but not more than 150 phrases due to the potential issue of model overfitting. 
+
 Be careful that the topics or actions associated with an intent are exclusive to that intent. So, for example, you don’t want two intents that are both for consumers asking how to pay their bill. Furthermore, you can improve model performance by correcting model predictions  using the “Analyze” tools, adding these messages to your training set, and retraining your model.
 
 #### I see a lot of messages that were misclassified as an intent, what should I do to fix this? (low precision)
@@ -90,7 +92,7 @@ It is rarely advised to create an affirmative/negative intent for a conversation
 
 Instead, consider simpler and safer ways to capture affirmation and negation by, for example, using pattern matching or button selection. In a controlled situation, like an anticipated consumer response to a bot yes/no question, this should be quite effective.
 
-#### What does classifying a message to "undefined" in Intent Analyzer do? Does it train the model to classify similar messages as “undefined”?
+#### What does classifying a message to "undefined" in Intent Manager do? Does it train the model to classify similar messages as “undefined”?
 It marks the message and all subsequent incoming messages that are its duplicates as “Undefined,” but it will not retrain the model unless you tell it to. Sometimes you might be curious as to why a message was labeled with an intent but should have been unclassified. It is advised not to classify the message to “undefined”, but instead revisit your training data in Intent Builder for the intent that was incorrectly applied. You might find similar training messages that you could remove to prevent another false positive in the future.
 
 #### How do I revert to a previous model?

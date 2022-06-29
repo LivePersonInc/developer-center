@@ -10,26 +10,72 @@ permalink: whatsapp-business-messages-templates-list-message-template.html
 indicator: messaging
 ---
 
-### Overview
+## Overview
 
 In WhatsApp Business Messages, a List Message has the following structure:
 
 1. Title
 2. Subtitle (optional)
 3. Footer (optional)
-4. Vertical (at least 1 is mandatory)
+4. Horizontal (at least 1 is mandatory)
 
-**Examples Of WhatsApp List Message:**
+Each horizontal can contain the following elements:
+1. Title (mandatory)
+2. Subtitle (optional)
+3. Button (at least 1 is mandatory)
+
+
+**Examples Of WhatsApp List messages:**
 
 <p float="left">
-  <img src="img/connectors/wa_listmessage1.jpeg" style="display: inline; margin: 0" />
-  <img src="img/connectors/wa_listmessage2.jpeg" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage1.png" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage2.png" style="display: inline; margin: 0" />
+  <img src="img/connectors/wa_listmessage3.png" style="display: inline; margin: 0" />
 </p>
 
-### List Message Button
+## Top level vertical
 
-The List Message Button is the container that holds the information that should be displayed by the connector.
+Wrapping element that contains the list message vertical.
 
+<table>
+  <thead>
+  <tr>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Required</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>type</td>
+    <td>
+      Type of the Container.<br/>
+      Always <b>vertical</b> for WhatsApp list messages.
+    </td>
+    <td>Enum</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>tag</td>
+    <td>Always <b>generic</b> for WhatsApp list messages</td>
+    <td>Enum</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>elements</td>
+    <td>
+    Contains only the list message vertical (see next section).
+    </td>
+    <td>Array(Element)</td>
+    <td>Y</td>
+  </tr>
+</table>
+
+## List message vertical
+
+This vertical contains contains the  basic information of the list, such as
+the title, subtitle, title of the clickable options button as well as the vertical element hat contains all of
+of sections and respective selectable options that the consumer can choose from.
 #### Properties
 
 <table>
@@ -43,36 +89,27 @@ The List Message Button is the container that holds the information that should 
   </thead>
   <tr>
     <td>type</td>
-    <td>Type of the Container.<br/>
-For WhatsApp List Messages the type should always be <b>horizontal</b>, as it best represents the layout on customer side.</td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>Tag of template view, must be <b>generic</b>.</td>
+    <td>
+      Type of the Container.<br/>
+      For WhatsApp List Messages the type is always <b>vertical</b>.
+    </td>
     <td>Enum</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>elements</td>
-    <td>Array of elements/templates that contains the actual content of the List Message. The elements must be in the following order:<br/><br/>
-1) <a href="#title">Title</a><br/>
-2) <a href="#description">Subtitle</a><br/>
-3) <a href="#footer">Footer</a><br/>
-4) <a href="#button">Button</a><br/><br/>
-5) <a href="#vertical">Vertical</a><br/><br/>
-The title and vertical are required.
-
-There can be multiple verticals representing multiple sections.
-A vertical has the following structue:
-
-1) <a href="#horizontal-title">Title</a><br/>
-2) <a href="#horizontal-button">Button</a><br/><br/>
-
-Multiple buttons can be added.
-
-</td>
+    <td>
+      Array of elements that make the main structure of the list message.
+      Multiple horizontals can be added to create multiple sections
+      These elements must be in the following order:
+      <br/>
+      <br/>
+      1) <a href="#title">Title</a><br/>
+      2) <a href="#description">Subtitle</a><br/>
+      3) <a href="#footer">Footer</a><br/>
+      4) <a href="#button">Button</a><br/>
+      5) <a href="#horizontal">Horizontal</a><br/>
+  </td>
     <td>Array(Element)</td>
     <td>Y</td>
   </tr>
@@ -84,12 +121,13 @@ Multiple buttons can be added.
 {
   "type": "vertical",
   "tag": "generic",
-  "elements": [Title, Subtitle, Footer, Button, Vertical]
+  "elements": [Title, Subtitle, Footer, Button, Horizontal]
 }
 ```
+
 ### Title
 
-The highlighted headline of the rich card.
+The highlighted headline of the list message.
 
 #### Properties
 
@@ -119,8 +157,11 @@ The highlighted headline of the rich card.
   <tr>
     <td>text</td>
     <td>
-    The actual text of the headline.<br/>
-    The text can not be longer than 1024 characters shared with the subtitle.
+    Text of the headline <br/>
+    It's length can not be longer than 1024 characters.<br/>
+    <b>Note:</b> This length is shared with the subtitle. This means that
+    to find the real limit of this text you must substract the length of the
+    subtitle when it is set. 
     </td>
     <td>String</td>
     <td>Y</td>
@@ -133,13 +174,14 @@ The highlighted headline of the rich card.
 {
   "type": "text",
   "tag": "title",
-  "text": "Menu selection"
+  "text": "Title of the list message"
 }
 ```
 
 ### Subtitle 
 
-The subtitle is the secondary text of the List Messsage.
+The subtitle represents the secondary text of the List Messsage.
+This is generally where the body of the message can be entered.
 
 #### Properties
 
@@ -170,7 +212,10 @@ The subtitle is the secondary text of the List Messsage.
     <td>text</td>
     <td>
     The description text.<br/>
-    The text can not be longer than 1024 characters shared with the title.
+    The text can not be longer than 1024 characters
+    <b>Note: </b> This text length is shared with the title length. This means that
+    to find the real limit of this text you must substract the length of the
+    subtitle when it is set.
     </td>
     <td>String</td>
     <td>Y</td>
@@ -183,7 +228,7 @@ The subtitle is the secondary text of the List Messsage.
 ```json
 {
   "type": "text",
-  "text": "Please select your menu items",
+  "text": "Body of the message",
   "tag": "subtitle"
 }
 ```
@@ -221,7 +266,7 @@ Footer of the list messages. This is shown below the subtitle or title if the fi
     <td>text</td>
     <td>
     The description text.<br/>
-    The text can not be longer than 60 characters shared with the title.
+    The text can not be longer than 60 characters.
     </td>
     <td>String</td>
     <td>Y</td>
@@ -233,12 +278,12 @@ Footer of the list messages. This is shown below the subtitle or title if the fi
 ```json
 {
   "type": "text",
-  "text": "(Your order will be dispatched soon)",
+  "text": "Footer of the list message",
   "tag": "footer"
 },
 ```
 
-### Button
+### Options Button
 
 This element is a placeholder for the button shown in the user WhatsApp app.
 It can be used to change its name.
@@ -271,6 +316,15 @@ It can be used to change its name.
     <td>Y</td>
   </tr>
   <tr>
+    <td>subtitle</td>
+    <td>
+    Description for the button.<br/>
+    The text can not be longer than 20 characters.
+    </td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
     <td>click</td>
     <td>
     The click operations that should be executed when the customer clicks the button.<br/>
@@ -285,12 +339,124 @@ It can be used to change its name.
 ```json
 {
   "type": "button",
-  "title": "Menu List",
+  "title": "Button title",
+  "subtitle": "Button description",
   "click": ClickOperations
 }
 ```
 
-### Full Template
+
+### Option section
+
+A section is a way of grouping one or more option buttons (rows).
+At least one row must be added to the list message. In the case of using
+just one section its title is not mandatory.
+
+<table>
+  <thead>
+  <tr>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Required</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>type</td>
+    <td>
+      Always <b>horizontal</b> for WhatsApp list messages.
+    </td>
+    <td>Enum</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>elements</td>
+    <td>
+      Vertical that contains option buttons. See next section.
+  </td>
+    <td>Array(Element)</td>
+    <td>Y</td>
+  </tr>
+</table>
+
+
+#### JSON representation
+
+```json
+{
+  "type": "horizontal",
+  "elements": [
+    {
+      "type": "vertical",
+      "elements": [Button]
+    }
+  ]
+}
+```
+
+### Option Button
+
+This element represents the options that the consumer can choose from.
+These buttons are added within a section. There can be 10 options across all sections.
+
+#### Properties
+
+<table>
+  <thead>
+  <tr>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Required</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>type</td>
+    <td>Must be "button". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#button">button</a>.
+   </td>
+    <td>Enum</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>
+    The text of the button.<br/>
+    The text can not be longer than 20 characters.
+    </td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>subtitle</td>
+    <td>
+    Description for the button.<br/>
+    The text can not be longer than 20 characters.
+    </td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>click</td>
+    <td>
+    The click operations that should be executed when the customer clicks the button.<br/>
+    These click operations must contain at least one action. The WhatsApp only supports the
+    <a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a>
+    </td>
+    <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>
+    <td>Y</td>
+  </tr>
+</table>
+
+```json
+{
+  "type": "button",
+  "title": "Button title",
+  "subtitle": "Button description",
+  "click": ClickOperations
+}
+```
+
+## Full Template
 
 ```json
 {
@@ -302,28 +468,28 @@ It can be used to change its name.
         "elements": [
           {
             "type": "text",
-            "text": "Menu selection",
+            "text": "Our flower selection",
             "tag": "title"
           },
           {
             "type": "text",
-            "text": "Please select your menu items",
+            "text": "These are our current flower selection. Select the one that you are interested in.",
             "tag": "subtitle"
           },
           {
             "type": "text",
-            "text": "(Your order will be dispatched soon)",
+            "text": "(Choose one option out of all the categories)",
             "tag": "footer"
           },
           {
             "type": "button",
             "tag": "menu",
-            "title": "Menu List",
+            "title": "See options",
             "click": {
               "actions": [
                 {
                   "type": "publishText",
-                  "text": "Menu List"
+                  "text": "See options"
                 }
               ]
             }
@@ -337,40 +503,30 @@ It can be used to change its name.
                   {
                     "type": "text",
                     "tag": "title",
-                    "text": "Choose main course"
+                    "text": "Birthday Flowers"
                   },
                   {
                     "type": "button",
-                    "title": "Lasagna",
+                    "title": "Red roses bouquet",
+                    "subtitle": "12 fresh roses",
                     "click": {
                       "actions": [
                         {
                           "type": "publishText",
-                          "text": "Lasagna"
+                          "text": "Red roses bouquet"
                         }
                       ]
                     }
                   },
                   {
                     "type": "button",
-                    "title": "Spaghetti Carbonara",
+                    "title": "White lilies bouquet",
+                    "subtitle": "15 fresh lilies",
                     "click": {
                       "actions": [
                         {
                           "type": "publishText",
-                          "text": "Spaghetti Carbonara"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "type": "button",
-                    "title": "Risotto",
-                    "click": {
-                      "actions": [
-                        {
-                          "type": "publishText",
-                          "text": "Risotto"
+                          "text": "White lilies bouquet"
                         }
                       ]
                     }
@@ -388,28 +544,30 @@ It can be used to change its name.
                   {
                     "type": "text",
                     "tag": "title",
-                    "text": "Choose dessert"
+                    "text": "Just because"
                   },
                   {
                     "type": "button",
-                    "title": "Panna cotta",
+                    "title": "Tulips bouquet",
+                    "subtitle": "10 fresh tulips",
                     "click": {
                       "actions": [
                         {
                           "type": "publishText",
-                          "text": "Panna cotta"
+                          "text": "Tulips bouquet"
                         }
                       ]
                     }
                   },
                   {
                     "type": "button",
-                    "title": "Tiramisù",
+                    "title": "Gerberas bouquet",
+                    "subtitle": "10 fresh gerberas",
                     "click": {
                       "actions": [
                         {
                           "type": "publishText",
-                          "text": "Tiramisù"
+                          "text": "Gerberas bouquet"
                         }
                       ]
                     }
