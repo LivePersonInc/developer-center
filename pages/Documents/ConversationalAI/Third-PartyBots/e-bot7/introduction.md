@@ -22,14 +22,14 @@ The e-bot7 feature of Third Party Bots allows brands to connect to their existin
 as a service of bot responses inside the Conversational Cloud.
 
 {: .important}
-In order to use this integration you need to make sure to have set-up an account with e-bot7, have an existing bot and created an application to be able to connect with third-party systems. You can read more about applications in the [documentation of e-bot7](https://docs.e-bot7.com/docs/applications/how_apps_work)
+To use this integration you need to make sure to have set up an account with e-bot7, have an existing bot, and created an application to be able to connect with third-party systems. You can read more about applications in the [documentation of e-bot7](https://docs.e-bot7.com/docs/applications/how_apps_work).
 
 ### Configuration
 
 {: .important}
 See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
-You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
+You will be presented with the following screen to complete the Vendor Settings in order to add bot connector.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/e-bot7-configuration.png">
 
@@ -48,7 +48,7 @@ The parameters are as follows:
   <tbody>
   <tr>
     <td>App Key</td>
-    <td>In order to connect to bots within e-bot7 an app key is necessary. The app key must start with 'xapp'. It is shown only a single time once the application in e-bot7 is created.</td>
+    <td>To connect to bots within e-bot7 an app key is necessary. The app key must start with `xapp`. It is shown only a single time once the application in e-bot7 is created.</td>
     <td>xapp-xxxxxxxxxx</td>
   </tr>
   <tr>
@@ -58,7 +58,7 @@ The parameters are as follows:
   </tr>
   <tr>
     <td>Bot Response Delay</td>
-    <td>The bot response delay time is used once the computation of an answer from the vendor bot takes longer to respond to a message. This may happen whenever an asynchronous call (HTTP request) is used to generate a response. Please configure a time in seconds which indicates the maximum of such a delay. If no delay is expected, it can be set to 1.</td>
+    <td>The bot response delay time is used once the computation of an answer from the vendor bot takes longer to respond to a message. This may happen whenever an asynchronous call (HTTP request) is used to generate a response. Please configure a time in seconds that indicates the maximum of such a delay. If no delay is expected, it can be set to 1.</td>
     <td>1</td>
   </tr>
   </tbody>
@@ -67,4 +67,4 @@ The parameters are as follows:
 ### Limitations
 
 {: .important}
-The technical interface of e-bot7 does not allow us to take analytic insights into the answer generation of a bot. For this reason, there is unfortunately no statistical data that is collected in connection with the evaluation of an intent or that can be evaluated in the Conversation Cloud.
+The technical interface of e-bot7 does not allow us to take analytic insights into the answer generation of a bot. For this reason, there is unfortunately no statistical data that is collected in connection with the evaluation of intent or that can be evaluated in the Conversation Cloud.
