@@ -19,6 +19,9 @@ indicator: messaging
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
+{:.important}
+Make sure the conversation history is in-sync with server before call this API.
+
 ```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
 ```

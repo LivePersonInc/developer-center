@@ -22,6 +22,34 @@ There are four, general categories of interactions:
 
 - **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
 
+- **Code**: Code interactions are for creating custom logic or displaying a custom bot response. For more on code interactions, see [here](conversation-builder-interactions-code.html).
+
+<!--
+### Order of operations
+
+#### Statements
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Process/prepare the content of the interaction.
+3. Execute the interaction's Post-Process code.
+4. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction.
+5. Execute the interaction's next action.
+
+#### Integrations
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Wait for the time set in the **Interaction Delay** (if set), and process the content of the interaction.
+3. Execute the interaction's Post-Process code.
+5. Evaluate the custom rules (if any), and execute the interaction's next action on the basis of the custom rules.
+
+#### Questions
+1. Execute the interaction's Pre-Process [code](conversation-builder-interactions-configuration-custom-code.html).
+2. Process/prepare the content of the interaction.
+3. Execute the interaction's Post-Process code.
+4. Wait for the time set in the **Interaction Delay** (if set), and send the content of the interaction.
+5. Wait for the user (consumer) response.
+6. Evaluate the custom rules (if any), and execute the interaction's next action on the basis of the custom rules.
+7. Execute the interaction's Process User Response code.
+-->
+
 ### General guidelines and best practices
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
 
@@ -133,31 +161,26 @@ When defining a [condition](conversation-builder-interactions-configuration-next
 For information on this, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).
 
 ### Format text
-#### Types of text
+#### Formatting
 
-The types of text that you can send in a Conversation Builder interaction vary depending on whether you're building a bot for **Chat** or for **Messaging**.
-
-**Messaging** only allows plain text to be sent. 
-
-**Chat** allows for plain text and a subset of HTML limited to the paragraph, linebreak and anchor tags:
-
-* `<p></p>`
-* `<br>`
-* `<a href=""></a>`
+You can use the following subset of HTML tags:
+* `<p>` and `<br>`
+* `<strong>`, `<b>` and `<i>`
+* `<ul>`, `<ol>` and `<li>`
+* `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-
-* `<a href="http://example.com/test.jpg">`
-* `<a href="http://example.com/1$2324%342523">`
-* `<a href="{$botcontext.host}/test.jpg">`
-* `<a href="http://example.com/{$botcontext.fileName}">`
-* `<a href="{$botcontext.link}”>`
+* `<a href="http://example.com/test.jpg">click here</a>`
+* `<a href="http://example.com/1$2324%342523">click here</a>`
+* `<a href=”tel:+123456789”>phone</a>`
+* `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
+* `<a href="javascript: alert(’test’)">click here</a>`
+* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
 
-* `<a href="javascript: alert(’test’)">`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
+The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 
 #### Line Breaks
 CTRL+ENTER - Hold control and hit enter/return.
@@ -181,6 +204,39 @@ Add the following special tag inline inside your text interaction to force a bre
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
+
+### Add comments
+
+You can add comments to an interaction to annotate your solution, i.e., to describe what the interaction is for, what it does, and what it needs.
+
+Use comments to quickly explain things. They are particularly helpful when you work in a collaborative context that includes multiple bot builders, and when the person maintaining the bot isn’t the one who built it originally.
+
+Comments are displayed at the bottom of the interaction like so:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments2.png">
+
+#### To add a comment to an interaction
+
+1. Select the interaction.
+2. Enter the comment in the field provided at the bottom of the interaction, and press Enter. You can enter only text; HTML tags are not allowed.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments1.png">
+
+    In a comment, a maximum of 240 characters is allowed. If you go over this limit, you are notified:
+
+    <img style="width:700px" src="img/ConvoBuilder/interactions_comments5.png">
+
+#### To show or hide comments
+
+When you select an interaction, if it has a comment, the comment is always shown. This is done as a convenience because you're actively working in the interaction.
+
+However, you can toggle on and off the display of comments in the other interactions in the dialog. To do this, use the **Comments** slider at the top of the dialog. 
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments3.png">
+
+When comments are hidden throughout the dialog, you’ll see a small icon in the lower-left corner of an interaction to let you know that a comment exists for the interaction.
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments4.png">
 
 ### Save changes
 Some but not all changes are automatically saved after you make them. As a general rule, always do a manual save after making changes.

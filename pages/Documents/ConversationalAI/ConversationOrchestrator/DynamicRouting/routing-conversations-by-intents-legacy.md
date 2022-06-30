@@ -16,7 +16,7 @@ By storing a user’s intent as a variable within the Conversation Context Servi
 #### High-level process
 
 1. Create a namespace within Conversation Context Service to store intents.
-2. Retrieve the intent using [botContext scripting functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent).
+2. Retrieve the intent using [botContext scripting functions](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent).
 3. Save the intent to the namespace within the Conversation Context Service using [botContext scripting functions](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#set-a-variable).
 
 #### Detailed process
@@ -31,7 +31,7 @@ botContext.registerContextNamespace(intentRoutingNamespace);
 botContext.setBotVariable('intentRoutingNamespace', intentRoutingNamespace, true, false);
 ```
 
-Next, use the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent) scripting function in the pre/post process code of any interaction to retrieve the name of the most recently matched dialog starter intent.
+Next, use the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent) scripting function in the pre/post process code of any interaction to retrieve the name of the most recently matched dialog starter intent.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_getintent.png">
 

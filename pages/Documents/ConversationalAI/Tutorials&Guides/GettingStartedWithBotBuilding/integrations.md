@@ -10,15 +10,20 @@ permalink: tutorials-guides-getting-started-with-bot-building-integrations.html
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+
 Many use cases require integration with an API to send and receive data. Following the "make payment" use case, in this tutorial you add an integration to check a user‚Äôs account balance.
 
 {: .important}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
+<!--
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/450720977" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
+-->
 
 ### Step 8: Create the Order Status dialog
 
@@ -29,7 +34,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the ‚ÄúLP_Cross-vertical‚Äù domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
@@ -50,6 +55,9 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png">
 
+    {: .important}
+    `{$userMessage}` is just one of many system variables you can use in your interactions. For the complete list, and for more on variables, see [here](conversation-builder-variables-slots.html).
+
     Click **Save**.
 
     By saving the result of the user‚Äôs response as the variable `orderNumber`, we will have access to that data throughout the bot. In this case, we will use that within our API call to find the user‚Äôs order.
@@ -66,7 +74,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
         Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
 
-    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here.
+    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here. (For more on processing API results with custom data fields, see [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).)
 
     | Key | Value |
     | --- | --- |
@@ -93,7 +101,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
     In the Structured Question title section, add `{OrderStatus.name}`.
 
     {: .important}
-    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is ‚Äúname.‚Äù
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is ‚Äúname.‚Äù (For a quick reference on using variables in interactions, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
@@ -120,4 +128,4 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
 ### What's next?
 
-Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-disambiguation.html) in the series.
+Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) in the series.

@@ -12,6 +12,8 @@ permalink: messaging-operations-api-methods-messaging-estimated-wait-time.html
 indicator: messaging
 ---
 
+**Please note**: We are currently exploring deprecation of this feature in Q1, 2022, and discourage any new use. Until it is deprecated the feature will continue to be supported.
+
 This method returns the current average wait time in queue, per requested skill. The estimated wait time is the time from a consumer's first message until an agent is assigned to the conversation. This method can help you to better manage your operations and monitor your service level across all skills on an account. Messaging estimated wait time is calculated every 10 seconds, therefore new data will only be available every 10 seconds.
 
 **Notes**:

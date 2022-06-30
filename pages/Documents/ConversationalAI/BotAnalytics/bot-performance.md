@@ -17,19 +17,20 @@ Clicking a bot name on the main dashboard takes you to the bot’s **Overview** 
 ### Date range and time zone
 In any bot-level view, the date range for the displayed data is shown in the upper-right corner.
 
-<img style="width:600px" src="img/ConvoBuilder/ba_date_filter_bot.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_date_filter_bot.png">
 
 You can use this date filter to show the data for any 60-day date range within the last 13 months. You can also use the date filter to change the time zone in use.
 
 ### Views and measures
 From the **Overview**, you can access additional views for more detailed information. A few, important views are accessible directly from the menu bar; the rest are accessible from the dropdown menu.
 
-<img style="width:700px" src="img/ConvoBuilder/ba_views.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_views.png">
 
-Use the views to understand how consumers are interacting with the bot. For example:
+Use the views to understand the bot's performance, for example:
 
-* Use the **MACS** view to understand the bot's Meaningful Automated Conversation Score, or MACS. This is a great way to identify opportunities for bot/intent tuning. For more on MACS, see [here](bot-analytics-macs.html). 
-* Use the **Conversations** and **Users** views to understand and compare volume. These views can show you daily trends that reveal traffic patterns during business hours and off hours, and so on.
+<!-- * Use the **Conversations** view to understand how well the bot contains conversations. This view displays the [conversation status](bot-analytics-key-terms-concepts.html#containment-of-bot-conversations) of the bot's conversations: Bot Disengaged, Consumer Disengaged, Unintended Transfer, and so on. You can easily use this view to perform a targeted review of transcripts. -->
+* Use the **MACS** view to understand the bot's Meaningful Automated Conversation Score, or [MACS](bot-analytics-macs.html). <!-- Like the **Conversations** view, --> This view is great for performing a targeted review of transcripts.
+* Use the **Users** view to understand volume. This view displays the number of unique consumers that connected to the bot.
 
 Some measures that are useful to assess while monitoring and improving your bots include:
 
@@ -63,7 +64,7 @@ Some measures that are useful to assess while monitoring and improving your bots
     * Handling the quantity of interactions in an efficient manner
 
 ### Download data
-All bot views except the **Overview** and the **MACS** view, let you download the results to a CSV file. Click the **Download** link in the upper-right corner.
+All bot views except the **Overview** and the **MACS** view, let you download the results to a CSV file. Click the **Download** icon in the upper-right corner.
 
 <img style="width:400px" src="img/ConvoBuilder/ba_download.png">
 

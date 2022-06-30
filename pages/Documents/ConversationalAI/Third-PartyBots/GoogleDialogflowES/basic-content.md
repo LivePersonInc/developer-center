@@ -12,9 +12,9 @@ indicator:
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends 
-their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the 
-conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow ES and an intent 
+A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends
+their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the
+conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow ES and an intent
 determined.
 
 The below documents cover where to configure the initial message on a given platform.
@@ -58,9 +58,9 @@ Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME
 
 <img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-event.png">
 
-Figure 2.1 Configuration of the welcome event 
+Figure 2.1 Configuration of the welcome event
 
-### Structured Content
+### Sending Rich Content (Structured Content)
 
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
@@ -71,7 +71,7 @@ To send Structured Content via Dialogflow ES, send a _custom payload_ option via
 Figure 2.2 Configuration of Structured Content
 
 {: .important}
-If Images are referenced in structured content, their URLs must be added to a whitelist via internal LivePerson 
+If Images are referenced in structured content, their URLs must be added to a whitelist via internal LivePerson
 configuration (Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list as wildcards are not supported.
 Moreover, All domains must be HTTPS secure.
@@ -122,8 +122,7 @@ Example Metadata
 
 Figure 2.3 Structured Content Example
 
-### Quick Replies
-
+### Sending Quick Replies (Structured Content)
 
 {: .important}
 **Please note** Quick Replies are only supported in Messaging Conversations.
@@ -196,6 +195,9 @@ Figure 2.4 Example of Quick Replies as Structured Content
 
 ### Bot Actions
 
+{: .notice}
+Please note we only support **ONE ACTION** per response
+
 #### Transfer
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
@@ -217,8 +219,7 @@ Action: **TRANSFER (Case sensitive)**
 
 ##### Transfer To Skill
 
-This option transfers the conversation to the next available agent using the provided skill. 
-
+This option transfers the conversation to the next available agent using the provided skill.
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
@@ -230,10 +231,10 @@ Figure 2.5 Configuration for transfer to skill
 {: .important}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
-This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transferred to an available agent with the same skill
 
-Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
-‘agentId **(Case sensitive)** with ‘value’ of agentId in Conversational Cloud.
+Parameters: `skill` **(Case sensitive)** with value of skill name (case sensitive) in Conversational Cloud.
+`agentId` **(Case sensitive)** with value of agent id in Conversational Cloud.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer-agent.png">
 Figure 2.6 Configuration for transfer to agent

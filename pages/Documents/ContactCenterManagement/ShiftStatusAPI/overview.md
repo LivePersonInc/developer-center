@@ -22,7 +22,7 @@ A few things you'll need to get started with this API:
 
 	* When fetching data using the API on the account level, you need to use the login methodology. **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* When fetching data using the API on the skill level, you need to use the API token methodology. **Use the Authentication API** to pass the external token and get an API token (JWT).
+	* When fetching data using the API on the skill level, you need to use the API token methodology. **Use the Authentication API** (signup to Liveperson IDP URL) to pass the external token and get an API token (JWT). for e.g. https://{{idpDomain}}/api/account/{{accountId}}/signup to get the jwt. here idpDomain can be retrieved from [LivePerson Domain API](agent-domain-domain-api.html) and accountId is your Conversation Cloud account/site Id.
 	
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 

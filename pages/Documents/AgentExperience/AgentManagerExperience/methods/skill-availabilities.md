@@ -16,7 +16,7 @@ General description should be added here
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/account/{accountId}/skill/availability
+POST| https://[{domain}](/domain-api.html)/manager_workspace/api/account/{accountId}/skill/availability
 
 Note: The amount of retrieved skills is limited by configuration, default value is 1000.<br/>
  

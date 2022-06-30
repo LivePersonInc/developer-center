@@ -29,7 +29,7 @@ The Bot ID can be found in Conversation Builder in the bot's [Bot Settings](conv
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_botID.png">
 
-The conversation ID can be retrieved with the [botContext.getConversationId()](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id) method in bot code.
+The conversation ID can be retrieved with the [botContext.getConversationId()](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-id) method in bot code.
 
 The user ID can be retrieved with the [botContext.getUserPlatformId()](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type) method in bot code.
 

@@ -28,6 +28,8 @@ You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import
 
 In contrast, when a bot developer makes a dialog available as a template that can be imported, they must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the template is imported.
 
+<img style="width:800px" src="img/ConvoBuilder/dialogtemplates_6.png">
+
 For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required items -- make the dialog available as a dialog template.
 
 ### Make a dialog available as a template

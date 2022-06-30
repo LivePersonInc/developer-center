@@ -77,7 +77,8 @@ In request headers, add authorization header:
 
 Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
 
-**4. Configutre Dialog**  
+**4. Configure Dialog**  
+
 Dialog should include an API integration and consumer verification delegation button.  
 **Note:** The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.  
 

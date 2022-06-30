@@ -1,55 +1,55 @@
 .gettingstartedwrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-  margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 40px;
 }
 
 .gettingstartedrow {
-  display: flex;
-  margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 30px;
 }
 
 .gettingstartedrow a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 35px;
-  padding: 15px 25px 15px 25px;
-  flex: 1;
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.03), 0 7px 17px 0 rgba(0,0,0,.07);
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.03), 0 7px 17px 0 rgba(0,0,0,.07);
-  text-decoration: none;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 17px 30px;
-  background-size: 36px 36px;
-  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
-  transition: -webkit-box-shadow .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out,-webkit-box-shadow .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 35px;
+    padding: 15px 25px 15px 25px;
+    flex: 1;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.03), 0 7px 17px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.03), 0 7px 17px 0 rgba(0, 0, 0, 0.07);
+    text-decoration: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 17px 30px;
+    background-size: 36px 36px;
+    -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+    transition: -webkit-box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 
 .gettingstartedrow a:hover {
-  -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.12), 0 7px 25px 0 rgba(0,0,0,.15);
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.12), 0 7px 25px 0 rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 7px 25px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 7px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
 .gettingstartedbox:first-child {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 .gettingstartedtitle {
-  font-size: 18px;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  color: #5879DA;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    color: #5879da;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .gettingstartedsummary {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: #4a4a4a;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #4a4a4a;
 }

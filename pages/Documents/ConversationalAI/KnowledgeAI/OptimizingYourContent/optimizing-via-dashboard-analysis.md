@@ -63,6 +63,10 @@ Use this information to help improve answer performance.
 
 For example, text searches have a higher risk of returning answers when they shouldn’t, i.e., instances of “false positives.” To reduce false positives, update the training phrases for the intent that’s associated with the article, or associate an intent to the article.
 
+### Export the data and dive deeper
+
+Click the **CSV** download icon in the upper-right corner to download data on question and answer events. This data provide easy visibility into the questions asked by consumers and the resulting actions from KnowledgeAI.
+
 ### Statuses
 
 On the Home dashboard and the individual knowledge base dashboards, you’ll see a few status indicators. These are defined below.
@@ -71,6 +75,6 @@ On the Home dashboard and the individual knowledge base dashboards, you’ll see
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_kbsummary.png">
 
-* **Active**: Configuration of the knowledge base is complete, and the knowledge base has been used in the last 7 days. By “used,” we mean that it has powered answers to consumers in bot conversations (via a Conversation Builder integration) and/or served recommended answers to agents (via an Agent Assist integration).
+* **Active**: Configuration of the knowledge base is complete, and the knowledge base has been used in the last 7 days. By “used,” we mean that it has powered answers to consumers in bot conversations (via a Conversation Builder integration) and/or served recommended answers to agents (via a Conversation Assist integration).
 * **Idle**: Configuration of the knowledge base is complete, but the knowledge base hasn’t been used in the last 7 days.
 * **Incomplete**: Applies to external knowledge bases only. Configuration of the knowledge base is incomplete. For more on this, see [here](knowledgeai-external-knowledge-bases-introduction.html#getting-started-saving-an-incomplete-knowledge-base).
