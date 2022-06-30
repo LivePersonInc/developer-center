@@ -10,6 +10,11 @@ permalink: conversation-builder-bots-custom-bots.html
 indicator: both
 ---
 
+### Introduction
+A custom bot is one that you create largely from scratch.
+
+However, LivePerson does offer a set of predefined, industry-specific bot templates too. These can enable rapid adoption of automation. You can find more info on available bot templates in [this section](conversation-builder-bot-templates-overview.html).
+
 ### Create a custom bot
 
 {: .important}
@@ -17,15 +22,14 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
 **To create a custom bot**
 1. [Access Conversation Builder](conversation-builder-overview.html#access-conversation-builder).
-
 2. On the **Bots** page, click **New Bot** in the upper-right corner.
 3. In the window that appears, select the **Custom Bot** template.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bot_custom_add.png">
     
-    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. 
+    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. 
 
-4. In the next window, specify the following:
+4. In the next window that appears, specify the following:
 
     * **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable.
     * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.
