@@ -146,11 +146,7 @@ A meta intent is a wrapper that can contain many other standard intents. This fu
 
 Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
 
-Entities facilitate the creation and curation of training phrases. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
-
-You can use entities in two places:
-* Training phrases for intents defined in Intent Manager
-* Intent qualifiers for articles defined in [KnowledgeAI](knowledgeai-overview.html)
+Entities facilitate the creation and curation of training phrases. For example, you might create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training phrases, you can replace a specific product name with the entity name PRODUCT. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
 
 {: .important}
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
@@ -169,9 +165,9 @@ As their name suggests, Value Set entities are those that have a defined set of 
 
 <img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png">
 
-The LivePerson NLU engine trains the model with as many as 100 Value Set entity combinations, e.g, “I’m interested in SPORTS” yields “I’m interested in football,” “I’m interested in running,” and “I’m interested in walking.” As mentioned earlier, a maximum of one entity per training phrase is used during model training. Unlike Regular Expression entities, Value Set entities aren’t considered at intent prediction time.
-
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
+
+The LivePerson NLU engine trains the model with as many as 100 Value Set entity combinations, e.g, “I’m interested in SPORTS” yields “I’m interested in football,” “I’m interested in running,” and “I’m interested in walking.” As mentioned earlier, a maximum of one entity per training phrase is used during model training. Unlike Regular Expression entities, Value Set entities aren’t considered at intent prediction time.
 
 #### Regular Expression entities
 
@@ -194,7 +190,9 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 #### Global entities
 
-Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include things like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities include:
+Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible.
+
+Global entities include:
 
 | Entity | Description | Example |
 | --- | --- | --- |
@@ -219,6 +217,7 @@ Global entities are automatically detected by the system, so you don’t have to
 | TIME | Time of day | 2 p.m.<br>23:00 |
 | URL | A URL | https://www.google.com/search?&lt;param&gt; |
 
+**Detection of global entities**
 Keep in mind that the detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
 
 * Message: My name is Paris and I live in Paris
@@ -227,7 +226,7 @@ Keep in mind that the detection of global entities is highly dependent on contex
 * Message: Hi Tuesday, can you arrive at 2pm on Tuesday?
 * Entities: PERSON_NAME = Tuesday, TIME = 2pm, DATE = Tuesday
 
-Detection of entities is trained on commercial messages, so depending on context, you might get results that you don’t expect:
+What's more, the detection of entities is trained on commercial messages, so depending on context, you might get results that you don’t expect:
 
 * Non-commercial message: Washington cherry trees are beautiful this time of year
 * Entities: CITY = Washington 
@@ -237,7 +236,7 @@ but
 * Commercial message: Do you ship this product to Washington?
 * Entities: STATE = Washington
 
-As mentioned above, global entities are automatically detected by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
+As mentioned above, global entities are detected automatically by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
 
 <img style="width:500px" src="img/ConvoBuilder/im_entities_global1.png">
 
@@ -245,7 +244,13 @@ If you have defined custom entities within your domain, you’ll see those detec
 
 <img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png">
 
-You can use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
+**Using global entities**
+In the training phrases of intents, you can use example values of global entities, but don't use the names of global entities:
+
+* **Do** - I want to buy a phone today.
+* **Don't** - I want to buy a phone DATE.
+
+You can also use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
 
 ### Training
 
