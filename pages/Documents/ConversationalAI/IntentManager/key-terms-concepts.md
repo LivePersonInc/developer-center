@@ -218,6 +218,7 @@ Global entities include:
 | URL | A URL | https://www.google.com/search?&lt;param&gt; |
 
 **Detection of global entities**
+
 Keep in mind that the detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
 
 * Message: My name is Paris and I live in Paris
@@ -245,6 +246,7 @@ If you have defined custom entities within your domain, you’ll see those detec
 <img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png">
 
 **Using global entities**
+
 In the training phrases of intents, you can use example values of global entities, but don't use the names of global entities:
 
 * **Do** - I want to buy a phone today.
