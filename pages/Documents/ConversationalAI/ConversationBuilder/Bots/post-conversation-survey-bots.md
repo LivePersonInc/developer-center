@@ -69,10 +69,12 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
-    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you.
+    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you. If you leave the picture URL unspecified (this is an optional field), no picture is used.
     
     * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
 
+        Note that a message's status isn't taken into account when counting the number of messages sent by an agent or a user. This means that a message will be counted as sent in the situation where the message was sent but wasn't delivered to the recipient for some reason.
+        
         This is an account-level setting, so it's applied to all your post-conversation survey bots. However, you can override this setting on a per bot basis; do this in an individual bot's **Bot Settings**.
     
     * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience.
@@ -140,8 +142,14 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
 
-{: .important}
-When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.<br><br>Additionally, be aware that the values are reported in the order of the buttons. So, in Analytics Builder, when setting up a custom report, ensure you set up your columns in the same order and name the columns accordingly.
+In the closed-ended question, every answer choice has two values:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png">
+
+* **Text value** - This value is shown to the consumer as the answer choice.
+* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
+
+As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
 #### Open-ended, custom
 
@@ -150,6 +158,7 @@ An open-ended question allows the consumer to provide an answer in their own wor
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png">
 
 #### All survey questions
+* Cannot be changed from one interaction type to another.
 * Have a limit of 256 characters for the survey question.
 * Support any emojis. Just copy and paste them in, but remember to update the rules accordingly.
 
@@ -166,7 +175,7 @@ An open-ended question allows the consumer to provide an answer in their own wor
 * You can add a skip option to closed-ended questions but not to open-ended questions. 
 
 {: .important}
-When the target channel is Apple Business Chat, applicable survey questions are automatically sent to the consumer as List Picker interactions.
+When the target channel is Apple Messages for Business, applicable survey questions are automatically sent to the consumer as List Picker interactions.
 
 #### Customizing interaction text (FCR, CSAT and NPS)
 
@@ -214,7 +223,7 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 In the **Advanced Settings** of many of the survey interactions, you can configure several display settings:
 
 1. Display Choices As
-2. Choices Per Row
+2. Choices per Row
 3. Text Only Fallback > List Style for Choices
 
 1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
@@ -225,17 +234,12 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-2 - Use the **Choices Per Row** setting to control how the answer choices are presented when they exceed the available space in the messaging window:
-
-* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience. **Note**: This option isn't supported if the target channel is Facebook, Google Business Messaging, or LINE.
-* **Scroll**: If you select this, the answer choices are all presented on the same line, and the consumer must scroll across to see them all.
-
-<img style="width:500px" src="img/ConvoBuilder/surveyBot_bestFit.png">
+2 - The **Choices per Row** setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row in the Web Messaging channel. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows. **Important**: Used in Web messaging only. In all other channels, all choices are on 1 row.
 
 3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
-* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
-* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
+* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format. For the Net Promoter Score (NPS) interaction in specific, we recommend the letter format. The numeric format can confuse consumers because the NPS scores themselves range from 0 to 10 (note they start with zero), but the numeric format starts numbering the options with 1. Since these don’t match, selecting a score can be confusing.
+* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer. In the question, make sure to include information on how to respond (e.g., “type 1 for very bad, 5 for excellent, or something in-between.”).
 
 #### Handling free text answers
 
@@ -270,7 +274,7 @@ Survey bot settings include:
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a Session Expired message when the session has expired. Then enter the message to send. (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the message to the consumer that's proactively sent when the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is proactively sent instead of a custom message. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
 ### Adding support for emailed transcripts
 
@@ -389,3 +393,7 @@ Yes, this works just like for a custom bot. The survey questions are displayed a
 #### Can a consumer skip a survey entirely?
 
 There's no way for the consumer to indicate they want to skip the survey entirely (e.g., no Skip button). However, the consumer can close the window to leave the survey.
+
+#### If a consumer starts, then abandons a survey, what gets captured?
+
+Responses are counted (captured) as they are sent. If, for example, the consumer answers the first 2 of 5 survey questions, then the results would still include the first 2.

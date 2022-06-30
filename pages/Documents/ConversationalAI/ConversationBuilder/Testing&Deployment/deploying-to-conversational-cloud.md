@@ -13,6 +13,11 @@ indicator: both
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/674928030" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### The high-level deployment process
 
 #### Prerequisite steps
@@ -58,20 +63,20 @@ An agent can belong to only one bot.
     
     The Add Agent Connector dialog appears.
 
-4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
 
     **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through Conversational Cloud (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever Conversational Cloud account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the Conversational Cloud account, an error is displayed.
 
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
-    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (see farther above).
+    - **Role**: Select the profile that's assigned to the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (see farther above).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of Conversational Cloud account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in Conversational Cloud. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
-    - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to Conversational Cloud. Enter the URL to which the HTTP connector will post user messages to external endpoints.
+    - **External Webhook URL**: This option is for brands that want to use a third-party messaging service instead of LivePerson’s. Enter the URL of the external endpoint to which the user messages will be posted.
     - **Custom Configurations**: If desired, click **+ Custom Configurations**, and enter any custom configuration fields to set. For information on these, see "Custom configuration fields" later in this topic.
-    - **Accessibility**: Select this if you want the bot messages to support Accessibility. If you select this, the fields sent in the JSON object have the tooltip attribute.
+    - **Accessibility**: Select this if you want to enable tooltips in the bot messages, so they can be read by screen readers.
 7. Click **Save**.
 
     This establishes the connection between the bot and the bot agent in the target Conversational Cloud environment.
@@ -187,6 +192,29 @@ If this field is unset or you set this field to false, the selected button’s c
 **Messaging**: Yes<br>
 **Chat**: No
 
+#### escalateOnStuckConversation
+If this is true, and if the bot is stuck, the conversation is transferred to a specific skill. This transfer is only done as a final measure after other strategies, if enabled, are tried and found to be unsuccessful. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: null<br>
+**Messaging**: Yes<br>
+**Chat**: No
+ 
+#### escalationMessageOnStuckConversation
+If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: I’m having some trouble. Let me connect you with an agent.<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### escalationSkillIdOnStuckConversation
+If the conversation is transferred to a skill because the bot is stuck, this is the ID of the appropriate skill to which to transfer the conversation. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+If you don’t set this field, the transfer will not occur.
+
+**Default value**: null<br>
+**Messaging**: Yes
+**Chat**: No
+
 #### fallbackEscalationTime
 The value in milliseconds for the period of time to pass before invoking fallback escalation.
 
@@ -215,23 +243,32 @@ When the agent escalation fails, we send an \_agent\_escalation\_failed\_ messag
 **Chat**: No
 
 #### messageDelay
-We have logic to collect and aggregate user messages before sending to the bot service, i.e., if the user sends two messages, “hi” and “how are you,” we will wait 300 milliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot.
+The bot collects and aggregates consumer messages before processing them. By default, anything sent to the bot within a 300-millisecond window is concatenated into a single message for processing. For example, if the consumer sends “hi,” pauses briefly, then sends “how are you,” and both messages are sent within the 300-millisecond window, the bot receives “hi how are you” for processing.
 
-**Default value**: 300 \(default set to \.3 ms, 3 seconds would be 3000\)<br>
+You can customize this per your requirements; for example, to use a 3-second window, specify 3000 milliseconds.
+
+**Default value**: 300 (milliseconds)<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### messageResendMaxRetries
-After sending a message to the Conversation Builder chat server, if there is no bot response or mark\_seen message type, it will resend the message up to the messageResendMaxRetries count.
+This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+ Note that this number represents the total tries, not the retries alone. Examples: 
+
+* For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
+* For 2 retries, set this to 3.
+
+Do not set this value to zero. The default value of this field is 1, which means the consumer's message will be sent only once. This means if you don't want to add a retry flow, there's no need to add this field.
 
 **Default value**: 1<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### retryMessageInterval
-Tied with messageResendMaxRetries; wait 30000 milliseconds before re-sending the message.
+If the bot fails to respond to the consumer’s message, wait this amount of time (in milliseconds) before resending it based on the value of `messageResendMaxRetries`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
-**Default value**: 30000<br>
+**Default value**: 60000<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -253,6 +290,20 @@ If "false", when a bot receives a conversation, it sees the last utterance in th
 Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
 
 **Default value**: vertical<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### userNotificationMessageOnStuckConversation
+If the bot’s context is reset (the conversation starts anew) because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### userRetryOnStuckConversation
+If this is true, and if the bot is stuck, the bot’s context is reset (the conversation starts anew), and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+
+**Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -312,3 +363,8 @@ If you set this true, the bot agent is notified of conversation updates only in 
 **Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
+
+### What's next?
+Once you’ve deployed your bot, you can use [this page](https://developers.liveperson.com/web-messaging/emulator.html) to test the experience in Web messaging at any time. You can also test using the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html).
+
+However, to test in any other messaging channel (Facebook, WhatsApp, etc.), you’ll need to set up that channel. For information on this, see the **Messaging Channels** section in the [Knowledge Center](https://knowledge.liveperson.com/).

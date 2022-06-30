@@ -504,7 +504,7 @@ Define the color of status bar text color while trying to connect.
    <ul>
       <li><b>Type:</b> color</li>
        <li><b>(Light Theme) Default value:</b> #46474A</li>
-       <li><b>(Dark Theme) Default value:</b> #CC000000</li>
+       <li><b>(Dark Theme) Default value:</b> #F2F5F5F5</li>
    </ul>
 </div>
 
@@ -703,9 +703,20 @@ Define the menu item color when disabled.
 * **Type:** color
 * **Default value:** @color/lp_disabledColor
 
+#### lp_resolve_conversation_menu_item_visible
+Define the visibility of "Mark as resolved" menu item.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_urgency_menu_items_visible
+Define the visibility of "Mark as urgent" menu item.
+
+* **Type:** bool
+* **Default value:** true
 
 #### clear_history_menu_item_visible
-Define the visibility of clear history menu item.
+Define the visibility of "cCear history" menu item.
 
 * **Type:** bool
 * **Default value:** true
@@ -891,6 +902,13 @@ Define if SDK shows conversation until pass authentication check.
 
 * **Type:** bool
 * **Default value:** true
+
+
+#### lp_hide_welcome_message_on_clear_history
+Define to hide welcome message on clearing a history.
+
+* **Type:** bool
+* **Default value:** false
 
 
 #### empty_history_view_text_color
@@ -3040,7 +3058,7 @@ Integer in dp for the bubble stroke width of the structured content bubble.
 * **Default value:** 1dp
 
 
-#### structured_content_map_zoom&
+#### structured_content_map_zoom
 Integer that defines the zoom level of the structured content map view. For more details, see [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom).
 
 * **Type:** integer
@@ -3772,6 +3790,12 @@ Chat message (agent/consumer) bubble bottom padding.
 &nbsp;
 </div>
 
+#### lp_timestamps_font_size
+Update the timestamp text font size of the conversation message bubbles.
+
+* **Type:** dimen
+* **Default value:** 12sp
+
 
 #### show_agent_typing_in_message_bubble
 
@@ -4413,6 +4437,18 @@ Set the link message text color.
 
 * **Type:** color
 * **Default value:** @color/lp_consumer_action_highLight_color
+
+#### lp_enable_timestamps
+Show or hide the timestamp text of the conversation message bubbles.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_enable_read_receipts
+Show or hide read receipt text of the consumer message bubbles.
+
+* **Type:** bool
+* **Default value:** true
 
 
 ---

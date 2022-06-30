@@ -57,7 +57,7 @@ func destruct()
 
 ### dismissUrgent
 
-Use this API method to cancel the [markAsUrgent API](consumer-experience-ios-sdk-messaging-methods.html#markasurgent), which resets the SLA for the agent response back to default.  This API can be called only for open conversations.
+Use this API method to cancel the [markAsUrgent API](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#markasurgent), which resets the SLA for the agent response back to default.  This API can be called only for open conversations.
 
 ```swift
 func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
@@ -264,7 +264,7 @@ The `logout` method conducts the following:
 
 * Clears all SDK persistent data.
 
-* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct)).
+* Cleans running operations (see [destruct](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#destruct)).
 
 
 ```swift
@@ -280,7 +280,7 @@ func logout(unregisterType: LPPusherUnregisterType,
 | Failure block | A failure block with a specified error for logout failure. | Failure block invokes if at least one of the logout steps has failed. |
 
 {:.important}
-After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize).
+After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 
 #### LPPusherUnregisterType
@@ -321,7 +321,7 @@ func printSupportedLanguages()
 
 ### reconnect
 
-When using SSO in an authenticated connection, the SDK receives an auth-code (see [showConversation](consumer-experience-ios-sdk-messaging-methods.html#showconversation) API). The session, in this case, might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html)). To reconnect with a new token, use the following 'reconnect' API and pass the new token.
+When using SSO in an authenticated connection, the SDK receives an auth-code (see [showConversation](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#showconversation) API). The session, in this case, might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html)). To reconnect with a new token, use the following 'reconnect' API and pass the new token.
 
 Use this API method to reconnect the conversation's connection for conversation query.  Reconnecting opens the related WebSockets and syncs the conversation with its latest updates.
 
@@ -356,7 +356,7 @@ func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDK
 **Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number. 
 
 {:.important}
-After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize).
+After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 
 ### removeConversation
@@ -469,6 +469,10 @@ func setUserProfile(_ lpuser: LPUser, brandID: String)
 
 Use this API method to open the conversation screen.
 
+{: .important}
+Not available on iOS 12 or below
+
+
 ```swift
 func showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
 ```
@@ -483,8 +487,8 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 
 Use this API method to open or close the SDK menu.
 
-* If using [window mode](consumer-experience-ios-sdk-messaging-methods.html#showconversation), you don’t need to utilize this method as the SDK has a dedicated button in the navigation bar to toggle the menu.
-* If using [view controller mode](consumer-experience-ios-sdk-messaging-methods.html#showconversation), you may call this API to open the SDK menu or use other APIs to build your own menu.
+* If using [window mode](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#showconversation), you don’t need to utilize this method as the SDK has a dedicated button in the navigation bar to toggle the menu.
+* If using [view controller mode](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#showconversation), you may call this API to open the SDK menu or use other APIs to build your own menu.
 
 ```swift
 func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)
@@ -514,7 +518,7 @@ func handleTapForInAppNotification(notification: LPNotification)
 
 **This method is deprecated since SDK version 5.2.0.**
 
-*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](consumer-experience-ios-sdk-messaging-methods.html#getunreadmessagescount) instead*
+*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#getunreadmessagescount) instead*
 
 When unread messages are waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon, or another marker to show unread messages.
 
@@ -541,7 +545,7 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, comp
 #### getUnreadMessagesCount(Deprecated)
 **This method is deprecated since SDK version 5.2.0.**
 
-*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](consumer-experience-ios-sdk-messaging-methods.html#getunreadmessagescount) instead*
+*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#getunreadmessagescount) instead*
 
 This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
 
@@ -553,7 +557,7 @@ func getUnreadMessagesCount(brandID: String, completion: @escaping (_ badgeCount
 #### showConversation (Deprecated)
 **This method is deprecated since SDK version 2.7.0.**
 
-*Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](consumer-experience-ios-sdk-messaging-methods.html#showconversation) instead*
+*Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#showconversation) instead*
 
 This method is used to open the conversation screen.
 
@@ -568,9 +572,9 @@ func showConversation(_ conversationQuery: ConversationParamProtocol, authentica
 | containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
 
 #### reconnect (Deprecated)
-*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](consumer-experience-ios-sdk-messaging-methods.html#reconnect) instead*
+*This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#reconnect) instead*
 
-When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](consumer-experience-ios-sdk-messaging-methods.html#showconversation) API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html)). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
+When using SSO in an authenticated connection, an auth-code is passed to the SDK (see [showConversation](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#showconversation) API). The session in this case might have an expiration date (see [LPMessagingSDKTokenExpired](consumer-experience-ios-sdk-callbacks-index.html)). To reconnect with a new token, use the following 'reconnect’ API and pass the new token.
 
 This method reconnects the conversation's connection for conversation query.
 Reconnect open related webSockets and sync the conversation with its latest updates.
@@ -592,13 +596,13 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
+* Cleans running operations (see [destruct](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#destruct))
 
 ```swift
 func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
 ```
 
-*This method was deprecated since SDK version 6.2.0. Use [func logout(unregisterType: LPPusherUnregisterType, completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+*This method was deprecated since SDK version 6.2.0. Use [func logout(unregisterType: LPPusherUnregisterType, completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#logout) instead*
 
 #### logout (Deprecated)
 
@@ -608,13 +612,13 @@ This method conducts the following:
 
 * Unregisters from the push notification service.
 * Clears all SDK persistent data.
-* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
+* Cleans running operations (see [destruct](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#destruct))
 
 ```swift
 func logout()
 ```
 
-*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+*This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#logout) instead*
 
 
 ### setPushNotificationTapped

@@ -41,7 +41,7 @@ The identity function should be implemented on every authenticated page (the Web
 
 <div class="important">All 3 object keys are mandatory.</div>
 
-* iss - Issuer, who identified the consumer - usually the brand. Any alphanumeric string value is accepted, meaning that this value is arbitrary and can be set entirely by the brand according to their own needs and specifications.
+* iss - The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
 
 * acr - Authentication Context Class Reference based on [NIST-2 (2013)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf), the level of the authentication. Currently, we support the level `loa1` only and thus only it should be used in this context.
 
@@ -153,7 +153,7 @@ The following table describes the response fields:
 |    Field    |    Description   |
 |-------------|------------------|
 |    sub      |    The consumer ID of the authenticated subscriber.       |
-|    iss      |    The name of the Authorization   Service as configured in LivePerson.      |
+|    iss      |     The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.      |
 |    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
 |    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
 
@@ -191,7 +191,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 |    Name    |    Description                                                            |    Type      |    LP_Name    |
 |------------|---------------------------------------------------------------------------|--------------|---------------|
-|    iss     |    The name of the Authorization Service as configured in LivePerson.   |    string    |    -          |
+|    iss     |    The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.  |    string    |    -          |
 |    iat     |    When this JWT was issued by your Service. Seconds from 1970, UTC. See [RFC3339]. |    number     |    -          |
 |    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC3339].  |    number    |    -     |
 
@@ -206,7 +206,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 |email        |End-User's preferred e-mail address. Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax. The RP MUST NOT rely upon this value being unique, as discussed in Section 5.7.|string| Personal info (including Email address)| Personalinfo.personalcontact.email|
 |gender        |End-user's gender. Values defined by this specification are female and male. Other values MAY be used when neither of the defined values are applicable|string| Personal info (including Gender)| Personalinfo.gender|
 |preferred_username       |Shorthand name by which the end-user wishes to be referred by at the RP such as janedoe or j.doe. This value MAY be any valid JSON string including special characters such as @, /, or whitespace. The RP MUST NOT rely upon this value being unique.|string| Consumer info (including User Name)| CustomerInfo.username|
-|phone_number      |End-user's preferred telephone number. E.164 [E.164] is RECOMMENDED as the format of this Claim, for example, +1 (425) 555-1212 or +56 (2) 687 2400. If the phone number contains an extension, it is recommended that the extension be represented using the RFC 3966 [RFC3966] extension syntax, for example, +1 (604) 555-1234;ext=5678.|string| Personal info (including Phone number)| PersonalInfo.contacts[].phone|
+|phone_number      |End-user's preferred telephone number. E.164 [E.164] is RECOMMENDED as the format of this Claim, for example, +1 (425) 555-1212 or +56 (2) 687 2400. If the phone number contains an extension, it is recommended that the extension be represented using the RFC 3966 [RFC3966] extension syntax, for example, +1 (604) 555-1234;ext=5678.|string| Consumer info (including IMEI)| CustomerInfo.imei|
 
 **Example for Mandatory+Standard Claims JWT**:
 
@@ -285,6 +285,17 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 *	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
     **Note:** for more details on JWKS, please read [this(external)](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens.) aritcle
+
+### Nested JWT
+
+A JSON Web Tokens (JWT) can be signed, and then encrypted, to provide confidentiality of the claims. 
+
+*   We suppport Nested JWT in the pattern of “JWS in JWE”. While it's technically possible to perform the operations in any order to create a nested JWT, senders should first sign the JWT, then encrypt the resulting message.
+
+*   If using JWKs Endopint, Nested JWT will contain two 'kid's: 
+    1.  The singed JWT's (JWS) JOSE Header will contain the singing kid that LivePerson will use to retrive public key from customer's JWKs Endopint. 
+    2.  The encrypted JWT's (JWE) JOSE Header will contain encryption kid (that was provided by LivePerson).
+
 
 ### If you chose to configure the JWKS Endpoint
 

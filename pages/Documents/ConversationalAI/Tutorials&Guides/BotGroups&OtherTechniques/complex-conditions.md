@@ -10,6 +10,9 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html).
+
 In the [Getting Started](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series, we used conditional logic in the Make Payment dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
 
 ### Step 5: Create the Refund Request dialog
@@ -18,7 +21,7 @@ Let's return to Conversation Builder, where we will create our "Refund Request" 
 
 1. Navigate to Conversation Builder, and select the Order Bot.
 2. In the lower-left corner, click **Add Dialog**, and create a new standard dialog with the name **Refund Request**.
-3. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
+3. Open the Assist tool by clicking <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
 
     Select the “LP_Cross-vertical” domain, followed by the "request refund" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to request a refund." Selecting this intent associates it with the dialog starter.
 

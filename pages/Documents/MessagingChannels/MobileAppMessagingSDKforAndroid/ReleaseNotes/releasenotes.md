@@ -13,6 +13,98 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.10.0
+
+**Release date:** May 20, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.10.0 release includes step-up authentication feature and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.10.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.2”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# New Features
+
+### Step Up Authentication
+
+Step up authentication allows brands to let their consumers continue the ongoing unauthenticated conversations after logging in and merging it to the authenticated conversation history. For more information, follow [feature documentation](mobile-app-messaging-sdk-for-android-advanced-features-step-up-authentication.html).
+
+### Custom proactive welcome message for Non-Rich content
+
+With the support of Non-Rich content payloads, brands will be able to send "text" type proactive content messages to their consumers.
+
+# New Attributes
+
+### [lp_enable_timestamps](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_timestamps)
+
+Show or hide the timestamp text of the conversation message bubbles.
+
+### [lp_enable_read_receipts](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_read_receipts)
+
+Show or hide read receipt text of the consumer message bubbles.
+
+### [lp_timestamps_font_size](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_timestamps_font_size)
+
+Update the timestamp text font size of the conversation message bubbles.
+
+### [lp_urgency_menu_items_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_urgency_menu_items_visible)
+
+Show or hide the "Mark as urgent" context menu option.
+
+### [lp_resolve_conversation_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_resolve_conversation_menu_item_visible)
+
+Show or hide the "Mark as resolved" context menu option.
+
+# Bugs Fixed
+
+- SDK displays a message body instead of message title from payload as a proactive welcome message.
+- A color [configuration](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#consumer_bubble_message_link_text_color) value for links is being ignored from the conversation message containing a text as well as link together.
+- The background color of buttons in horizontal type structured content will overlap over the structured content borders.
+- When using SDK’s clear history feature, an infinite loading spinner will not get reset from the conversation window after history gets cleared.
+- Accessibility only announces the new message but not the number of new messages received.
+
+<br>
+<p style="text-align: left">
+<a href="mobile-app-messaging-sdk-for-android-all-release-notes.html" center><img src="/img/back-to-all-release-notes.png" style="height: 30px; width: auto;"></a></p>
+
+# Android Messaging SDK - Version 5.9.0
+
+# Overview
+Android Mobile Messaging SDK version 5.9.0 release includes performance improvements and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.9.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.1”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+
+# Bugs Fixed:
+- SDK does not auto re-connect for UnAuth users.
+- Failed to apply Quick reply button radius in dark mode.
+
+# Enhancements:
+- SDK performance improvements to reduce conversation window loading time.
+- Use APIs instead of shell commands to delete files cached during file sharing.
+- Added configuration to hide welcome message on clearing a history.
+
+```xml
+<bool name="lp_hide_welcome_message_on_clear_history">false</bool>
+```
+
+
+
 # Android Messaging SDK - Version 5.8.0
 
 **Release date:** October 18, 2021
@@ -795,6 +887,47 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.10.0
+
+**Release date:** October 29, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.10.0 release includes Schedule Slot List support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.10.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.2.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:1.0.0"
+
+
+# New Features:
+
+## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
+
+<div style="width: 100%; position: relative;">
+    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+</div>
+
+
+{: .notice}
+ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
+
+
+# Bugs Fixed:
+- Crash on initialization/logout.
+- Deep link fails to open.
+- Secure form self closed after returning to the app.
+
+# Enhancements:
+- When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
+- Support markdown hyperlink in controller bot message.
+
 # Android Messaging SDK - Version 4.9.1
 
 **Release date:** September 07, 2021
@@ -1090,7 +1223,7 @@ The Android Mobile Messaging SDK version 4.7.1 uses:
 
 ## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
 
-Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-push-proxy.html) is supported.
 
 The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
 

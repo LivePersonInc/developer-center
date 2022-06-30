@@ -49,6 +49,9 @@ func getEngagement(identities: [LPMonitoringIdentity], monitoringParams: LPMonit
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
 | failure | A Failure callback with an error in case the request fails. |  Yes |
 
+{:.notice}
+When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
+
 ### sendSDE (Deprecated)
 *This method was deprecated since SDK version 3.2.0 Use [sendSDE(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->()) instead](#sendsde) instead*
 

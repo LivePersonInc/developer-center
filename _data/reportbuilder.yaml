@@ -611,7 +611,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent? message.In case of multiple consecutive agent messages, the time will be measured from the first message. In case of multiple consecutive consumer responses, the time will be measured until the first response.This KPI is not assigned to an Agent"
+  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent? message. In case of multiple consecutive agent messages, the time will be measured from the first message. In case of multiple consecutive consumer responses, the time will be measured until the first response. This KPI is not assigned to an Agent"
   FormulaOptional: ~
   Metric: "AVG. CONSUMER RESPONSE TIME"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"
@@ -2011,7 +2011,7 @@
   AnalysisType: "Campaign Funnel"
   Channel: Chat
   Dashboard: "Business for Live Chat"
-  Description: "Number of times each engagement was offered to a consumer.If the engagement was displayed multiple times within one session, it will be counted as one exposure"
+  Description: "Number of times each engagement was offered to a consumer. If the engagement was displayed multiple times within one session, it will be counted as one exposure"
   FormulaOptional: ~
   Metric: "EXPOSURES (BRAND)"
   filteredBy: "End-Point (Source Type)"
@@ -4139,7 +4139,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "Number of conversations during which an agent did not respond to a consumer message.Conversations in which the Agent is the first to message (Resume) cannot be marked as abandoned, even if the consumer did not respond to an agent message"
+  Description: "Number of conversations during which an agent did not respond to a consumer message. Conversations in which the Agent is the first to message (Resume) cannot be marked as abandoned, even if the consumer did not respond to an agent message"
   FormulaOptional: ~
   Metric: "ABANDONED CONVERSATIONS"
   filteredBy: "Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -4195,7 +4195,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The number of consumers who were active during a selected timeframe.A consumer is marked as active if at least one of the following occurred:1) Consumer opened a conversation2) Consumer sent a message in a conversation3) Consumer closed the conversation"
+  Description: "The number of consumers who were active during a selected timeframe. A consumer is marked as active if at least one of the following occurred:1) Consumer opened a conversation2) Consumer sent a message in a conversation3) Consumer closed the conversation"
   FormulaOptional: "COUNT DISTINCT CONSUMERS"
   Metric: "ACTIVE CONSUMERS"
   filteredBy: "Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -4267,7 +4267,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of actionable conversation in queue.Filterable by Skill."
+  Description: "The average number of actionable conversation in queue. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. ACTIONABLE UNASSIGNED CONVERSATIONS"
   filteredBy: Skill
@@ -4275,7 +4275,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because the last message in the conversation was sent by the consumer.Filterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because the last message in the conversation was sent by the consumer. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. ACTIONABLE UNASSIGNED CONVERSATIONS (CONSUMER MESSAGED LAST)"
   filteredBy: Skill
@@ -4283,7 +4283,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because these conversations were transferred into the queue by an agent.Filterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because these conversations were transferred into the queue by an agent. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. ACTIONABLE UNASSIGNED CONVERSATIONS (IN TRANSFER)"
   filteredBy: Skill
@@ -4291,7 +4291,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of actionable conversation in queue. These conversations are actionable because an agent set a manual TTR (SLA) on these conversation.Filterable by Skill."
+  Description: "The average number of actionable conversation in queue. These conversations are actionable because an agent set a manual TTR (SLA) on these conversation. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. ACTIONABLE UNASSIGNED CONVERSATIONS (MANUAL TTR IS SET)"
   filteredBy: Skill
@@ -4307,7 +4307,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent? message.In case of multiple consecutive agent messages, the time will be measured from the first message. In case of multiple consecutive consumer responses, the time will be measured until the first response.This KPI is not assigned to an Agent"
+  Description: "Average of the time ([mm]:ss) taken by consumers to respond to an agent? message. In case of multiple consecutive agent messages, the time will be measured from the first message. In case of multiple consecutive consumer responses, the time will be measured until the first response. This KPI is not assigned to an Agent"
   FormulaOptional: ~
   Metric: "AVG. CONSUMER RESPONSE TIME"
   filteredBy: "Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -4339,7 +4339,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of not-actionable conversation in queue.Filterable by Skill."
+  Description: "The average number of not-actionable conversation in queue. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. NOT ACTIONABLE UNASSIGNED CONVERSATIONS"
   filteredBy: Skill
@@ -4347,7 +4347,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of not-actionable conversations in queue. These conversations include those that were transferred by an agent into the queue. Conversations in-queue and in-transfer are considered actionable by default, unless the brand chooses to change the queue management configuration.Filterable by Skill."
+  Description: "The average number of not-actionable conversations in queue. These conversations include those that were transferred by an agent into the queue. Conversations in-queue and in-transfer are considered actionable by default, unless the brand chooses to change the queue management configuration. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. NOT ACTIONABLE UNASSIGNED CONVERSATIONS (IN TRANSFER)"
   filteredBy: Skill
@@ -4355,7 +4355,7 @@
   AnalysisType: "Queue Health"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The average number of not-actionable conversations in queue. These conversations include those in which an agent set a manual TTR (SLA). Conversations in-queue and set with manual TTR are considered actionable by default, unless the brand chooses to change the queue management configuration.Filterable by Skill."
+  Description: "The average number of not-actionable conversations in queue. These conversations include those in which an agent set a manual TTR (SLA). Conversations in-queue and set with manual TTR are considered actionable by default, unless the brand chooses to change the queue management configuration. Filterable by Skill."
   FormulaOptional: "AN HOURLY AVERAGE OF A frequent SNAPSHOT OF EACH SKILL-QUEUE. EACH SNAPSHOT REPORTS ON THE NUMBER OF CONVERSATIONS IN QUEUE."
   Metric: "AVG. NOT ACTIONABLE UNASSIGNED CONVERSATIONS (MANUAL TTR IS SET)"
   filteredBy: Skill
@@ -4467,7 +4467,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The time on average a consumer waits for a response from the first human agent assigned to the conversation.If a bot was the first assigned agent, the responses from the bot are omitted from this metric's calculation."
+  Description: "The time on average a consumer waits for a response from the first human agent assigned to the conversation. If a bot was the first assigned agent, the responses from the bot are omitted from this metric's calculation."
   FormulaOptional: ~
   Metric: "AVG. WAIT TIME FOR FIRST HUMAN AGENT RESPONSE"
   filteredBy: "Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -4763,7 +4763,7 @@
   AnalysisType: "Consumer Experience"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "Number of conversations during which the consumers did not respond to an agent message.Conversations in which the Agent is the first to message (Resume), and do not include a consumer response to the agent message, are considered Non Interactive (and not abandoned)"
+  Description: "Number of conversations during which the consumers did not respond to an agent message. Conversations in which the Agent is the first to message (Resume), and do not include a consumer response to the agent message, are considered Non Interactive (and not abandoned)"
   FormulaOptional: ~
   Metric: "NON - INTERACTIVE CONVERSATIONS"
   filteredBy: "Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -5107,7 +5107,7 @@
   AnalysisType: "Agent Productivity"
   Channel: Messaging
   Dashboard: "Performance Dashboard for Messaging"
-  Description: "The number of times another agent (user) takesover conversations from a given agent.Used to analyse how many time conversations were taken over FROM a bot or human agent (example- How many conversations were takenover from 'Concierge-Bot' agent/user?)."
+  Description: "The number of times another agent (user) takesover conversations from a given agent. Used to analyse how many time conversations were taken over FROM a bot or human agent (example- How many conversations were takenover from 'Concierge-Bot' agent/user?)."
   FormulaOptional: ~
   Metric: "TAKEOVERS FROM AGENT"
   filteredBy: "Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -5531,7 +5531,7 @@
   AnalysisType: "Agent Survey"
   Channel: Messaging
   Dashboard: "Survey for Messaging"
-  Description: "The percentage (%) of questions answered by an agent out of the total questions answered.Calculated at the Agent and Skill level."
+  Description: "The percentage (%) of questions answered by an agent out of the total questions answered. Calculated at the Agent and Skill level."
   FormulaOptional: "AGENT SURVEY ANSWER COUNT (Agent Skill) / AGENT SURVEY ANSWER COUNT (Agent and Skill) question level"
   Metric: "AGENT SURVEY ANSWER RATIO (Agent Skill)"
   filteredBy: "Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)"
@@ -5611,7 +5611,7 @@
   AnalysisType: Surveys
   Channel: Messaging
   Dashboard: "Survey for Messaging"
-  Description: "The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions. Measured from the time the survey is offered by the Survey Bot till the time the survey is closed.Attributed to the Date/Hour during which the survey was offered (not close time of the survey). format- [h]:mm:ss"
+  Description: "The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions. Measured from the time the survey is offered by the Survey Bot till the time the survey is closed. Attributed to the Date/Hour during which the survey was offered (not close time of the survey). format- [h]:mm:ss"
   FormulaOptional: ~
   Metric: "AVG. DURATION OF SURVEY AVAILABILITY"
   filteredBy: "Skill, Engagement, Campaign, LoB, End-Point (Source Type)"

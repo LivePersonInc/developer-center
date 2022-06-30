@@ -18,9 +18,6 @@ Use the following built-in functions to send different types of messages to the 
 `sendMessage` is used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
-
-{: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
 
 | Function Name | Arguments | Returns |
@@ -95,4 +92,20 @@ In the below example, the response variables gets what user just said and sends 
 ```javascript
 var response = botContext.getCurrentUserMessage();
 botContext.sendImmediateReply('I think you said, ' + response);
+```
+
+### Send private message to agent
+
+Private messages are messages that are visible to all conversation participants *except* the consumer. Use `sendPrivateMessage` to programmatically send a private message at any point in the conversation flow.
+
+Note that there’s also a Private Message interaction that’s available. For more on this, and for example scenarios where you might want to send a private message, see [here](conversation-builder-interactions-statements-to-agent.html#private-messages).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `sendPrivateMessage(message)` | message (String) - the message to send | None |
+
+#### Example
+
+```javascript
+botContext.sendPrivateMessage("This is a private message. It is visible to all the conversation participants excluding consumer.");
 ```

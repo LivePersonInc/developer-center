@@ -17,6 +17,7 @@ indicator: both
 | Statement of intent (SOI) | A consumer message that contains an intent. |
 | Domain | A list of intents and entities; these can be matched to consumer training phrases (utterances) with an intent-recognition model. |
 | Prebuilt domain | A prebuilt domain is a starting point for you to get going with intents. The intent-recognition model is filled with predefined intents that have been trained and activated for your convenience. The model has been developed using aggregated and anonymized data from several brands. While a prebuilt domain is functional, you’ll need to customize it for your specific needs to get the best performance. |
+| Entity | Any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. |
 | NLU | NLU stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. For more, see [here](intent-manager-natural-language-understanding-introduction.html). |
 | Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent. For best practices, see [here](intent-manager-best-practices.html#training-phrases).<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
@@ -58,7 +59,7 @@ Second, when intent tracking data is gathered for analysis within Intent Manager
 As an example, assume you have three domains A, B and C, and domain B is your primary domain. The consumer says, “I want to disconnect from Acme Telecommunications.” This matches an intent in domain A with a 90% confidence score, an intent in domain B with a 60% confidence score, and an intent in domain C with a 20% confidence score. In this case, the intent in domain B is considered the best matched intent even though it’s confidence score is lower than that for the intent in domain A. This is because domain B is your primary domain, and the scores for the intents in both domains A and B are at least GOOD scores. If the match to the intent in domain B were 59% (FAIR PLUS), then the intent in domain A would be considered the best intent match.
 
 {: .important}
-The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, KnowledgeAI, Agent Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
+The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, KnowledgeAI, Conversation Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
 
 ### Intents
 
@@ -157,7 +158,7 @@ Use a maximum of one entity per training phrase, as only a single entity is used
 There are three types of entities:
 * Value Set entities
 * Regular Expression entities
-* Built-in entities
+* Global (built-in) entities
 
 #### Value Set entities
 
@@ -191,9 +192,10 @@ Continuing our `ORDER_NO` example, you might use the entity in the training phra
 
 Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
-#### Built-in entities
+#### Global entities
 
-The platform automatically detects the entities listed below:
+Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include:
+
 * PERSON - Names of people, persons
 * ORGANIZATION - Names of institutions
 * NUMBER - Numbers in a sentence (pure number)
@@ -201,12 +203,12 @@ The platform automatically detects the entities listed below:
 * DURATION - Time periods
 * SET - Group (example month, week)
 * ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
-* DATE - Date-related. Today, Tomorrow or explicit dates such as 03/01/2017
-* TIME - Time of day, for example, 2PM or 23:00.
+* DATE - Date-related. Today, tomorrow, or explicit dates, for example, 03/01/2017. This also includes absolute date&timestamps such as "6 p.m. tomorrow."
+* TIME - Time of day, for example, 2PM or 23:00. This also includes times such as "everyday at 8 a.m."
 * PERCENT - A percentage, for example, 100%.
 * LOCATION - Names of locations, e.g., countries or cities, such as Paris.
 
-Using the [Assist tool](conversation-builder-assist.html), you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
+Using the [Assist tool](conversation-builder-assist.html), you can assign global entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
 
 ### Training
 

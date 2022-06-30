@@ -13,16 +13,8 @@ To increase the quality of your intent matches, follow the best practices below.
 
 For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
-### Workflow
-
-1. To get up and running quickly with intents, try starting with a prebuilt domain or starter pack (discussed [here](intent-manager-getting-started.html)). There are several, vertical-specific domains available, as well as a cross-vertical domain. Otherwise, add your initial intents and training phrases manually.
-2. Understand the existing model - Review the model’s coverage, i.e., the intent names and training phrases. This gives you a good understanding of the intents that already exist in the model. This is important to keep in mind, as you don’t want your future work to overlap with any of the existing intents.
-3. Use [intent discovery](intent-manager-discover-intent-discovery.html) (under “Discover”) to find new intents to add to your current taxonomy and to classify consumer messages under those intents.
-4. Train the new model.
-5. Evaluate and improve the model. As a quick measure, review the results on the Intent Manager [dashboard](intent-manager-dashboard.html). For more thorough testing, use the [Model Tester](intent-manager-build-test-with-the-model-tester.html) (under “Build”).
-
 ### Number of intents
-Intent Manager requires a minimum of 5 intents and 20 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
+Intent Manager requires a minimum of 5 intents and 15 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
 
 The average number of intents for a taxonomy with good coverage is 20-60.
 

@@ -24,7 +24,7 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long – epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long – epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event creation time stamp.                | long – epoch time in milliseconds                | 
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType    | Customer type - will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | v1- alphanumeric, v2- double|
@@ -38,7 +38,6 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 | lastPaymentDate | The customer's last payment date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
 | registrationDate| The customer's registration date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
 | companySize     | The company size. |v1- alphanumeric, v2- int|
-| accountName     | A nickname for the account for B2B like the salesforce account name. | alphanumeric|
 | companyBranch   | The branch of the company. | alphanumeric | |
 | storeZipCode    | The zip code of the store. | alphanumeric|
 | storeNumber     | The number of the store.| alphanumeric|
