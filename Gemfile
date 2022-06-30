@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '~> 3.8.6'
 
 group :jekyll_plugins do
-   gem 'jekyll-feed', '~> 0.6'
+   gem 'jekyll-feed', '~> 0.16'
    gem 'jekyll-algolia'
    gem 'jekyll-redirect-from'
    gem 'jekyll-gzip'
