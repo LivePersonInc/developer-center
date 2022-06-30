@@ -20,7 +20,7 @@ Only the following parameters should be defined:
 
 *	OAuth 2.0 Client Secret
 
-* 	JWT Public Key - Set feild value to: "CONSUMER_DELEGATION"  
+* 	JWT Public Key - Set field value to: "CONSUMER_DELEGATION"  
 
 To define the OAuth 2.0 delegation:
 
