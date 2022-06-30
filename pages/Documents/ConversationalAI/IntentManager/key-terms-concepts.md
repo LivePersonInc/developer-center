@@ -190,7 +190,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 #### Global entities
 
-Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible.
+Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t have to add them manually.
 
 Global entities include:
 
