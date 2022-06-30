@@ -75,7 +75,7 @@ You can enable or disable collaboration for a bot group, respectively, to enable
 
 ### Delete a bot group
 
-You can delete a bot group at any time; this *doesn't* delete the bots therein. If you delete a bot group that contains bots, the bots simply no longer have an assigned bot group.
+You can delete a bot group at any time; this *doesn't* delete the bots therein. If you delete a bot group that contains bots, the bots simply no longer have an assigned bot group. So, they are moved to the **Ungrouped Bots** list.
 
 **To delete a bot group**
 
