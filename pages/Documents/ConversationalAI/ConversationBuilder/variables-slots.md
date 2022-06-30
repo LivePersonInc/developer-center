@@ -1,7 +1,7 @@
 ---
 pagename: Variables & Slots
 redirect_from:
-    - conversation-builder-conversation-builder-variables-slots.html
+- conversation-builder-conversation-builder-variables-slots.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -15,7 +15,7 @@ In the [custom rules](conversation-builder-interactions-configuration-next-actio
 
 ### Variables
 
-Variables are the default way to store and access important data points throughout the flow of a bot. 
+Variables are the default way to store and access important data points throughout the flow of a bot.
 
 #### System variables
 
@@ -81,7 +81,7 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
     <img style="width:900px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
 
-    Once completed you will have a list of questions that looks like the following:
+   Once completed you will have a list of questions that looks like the following:
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
 
@@ -89,11 +89,11 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions3.png">
 
-    When you assign an entity to a question, this automatically creates a rule for each question. Each rule creates a slot that contains our slot variable (e.g., `item`) and whose value is the entity value (e.g., `@item`).
+   When you assign an entity to a question, this automatically creates a rule for each question. Each rule creates a slot that contains our slot variable (e.g., `item`) and whose value is the entity value (e.g., `@item`).
 
     <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
 
-5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. 
+5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question.
 
 <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill_prompt.png">
 
@@ -126,10 +126,10 @@ If you need to store data for the long term, use the [Conversation Context Servi
 
 `{}` is used for inserting dynamic values inside of interactions:
 
-  * Bot variable: `{$botContext.botVariableName}`
+* Bot variable: `{$botContext.botVariableName}`
 
-  * Slot: `{$botContext.slot.slotName}`
+* Slot: `{$botContext.slot.slotName}`
 
-  * [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
+* [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
 
-  * API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`
+* API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`
