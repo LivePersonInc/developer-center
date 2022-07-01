@@ -200,7 +200,7 @@ Global entities include:
 | CITY | A city | Paris<br>Los Angeles |
 | COLOR | A color | blue<br>red |
 | COUNTRY | A country | Canada<br>United States |
-| DATE | Dates and absolute date&timestamps | today<br>tomorrow<br>03/01/2017<br>6 p.m. tomorrow |
+| DATE | Dates | today<br>tomorrow<br>03/01/2017<br>Saturday<br>next Wednesday |
 | DURATION | A time period | 2 weeks<br>2 weeks and 3 days<br>half a day<br>fortnight |
 | EMAIL | An email address | jane@myemail.com | 
 | MONEY | Numbers with currency | $2000<br>23 dollars<br>fifty bucks<br>ten pounds |
@@ -214,7 +214,7 @@ Global entities include:
 | SET | A group<br>In, "The meeting with Bob is weekly on Tuesdays," PERSON_NAME = Bob, SET = weekly, DATE = Tuesdays | month<br>week<br>every day |
 | STATE | United States state | NY<br>New York |
 | STREET | United States descriptors for street names | Main St.<br>123 Main St. NE<br>123 East-West Highway Apt. 107 |
-| TIME | Time of day | 2 p.m.<br>23:00 |
+| TIME | Time of day | 2 p.m.<br>23:00<br>morning |
 | URL | A URL | https://www.google.com/search?&lt;param&gt; |
 
 **Detection of global entities**
