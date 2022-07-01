@@ -86,7 +86,7 @@ With the NLU domain created, the next step is to create a knowledge base with ar
 
 ### Step 3: Create the users and skills
 
-Every bot and human agent requires a user profile and an associated skill to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
+Every bot and human agent requires a user profile to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
 
 {: .important}
 **Customize your POC:** This guide provides two bots that Conversation Assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain-specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
@@ -106,7 +106,6 @@ Every bot and human agent requires a user profile and an associated skill to be 
     * **Choose login method**: API key
     * **API key**: Generate API key
     * **Assignment > Assign Profile**: Agent
-    * **Skills**: booking
 
 	Click **Save**.
 
@@ -120,7 +119,6 @@ Every bot and human agent requires a user profile and an associated skill to be 
     * **Choose login method**: API key
     * **API key**: Generate API key
     * **Assignment > Assign Profile**: Agent
-    * **Skills**: seating
 
 ### Step 4: Import the Conversation Builder bots
 
