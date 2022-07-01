@@ -35,8 +35,11 @@ response is sent back.
 To connect to Third-Party Bots via the Custom Endpoint vendor few service endpoints
 methods must be implemented by brands that we will explain below. We also have provided
 a public [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-that contains the [OpenAPI Specification](https://swagger.io/specification). It includes
-detailed information on Request and Response bodies sent or expected by the Third-Party Bots.
+that includes:
+
+- [Node.js](https://nodejs.org/en/) sample implementation of custom endpoint service which mock the supported Bot responses
+- [OpenAPI Specification](https://swagger.io/specification) that describe endpoints and information on
+  Request and Response bodies sent or expected by the Third-Party Bots
 
 #### Get Bot Environments
 
@@ -59,7 +62,7 @@ This endpoint is expected to fetch the list of environments defined for a bot.
 
 Example of the response body that is expected by Third-Party Bots can be seen
 in Figure 2.2. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```json
 ["draft", "alpha"]
@@ -95,7 +98,7 @@ is interpreted as a nonhealthy and unreachable bot.
 
 Example of the response body that is expected by Third-Party Bots can be seen
 in Figure 2.3. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```json
 {
@@ -138,7 +141,7 @@ store or update [SDES](engagement-attributes-types-of-engagement-attributes.html
 
 Example of the request body that is sent by Third-Party Bots can be seen
 in Figure 2.4. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```javascript
 {
