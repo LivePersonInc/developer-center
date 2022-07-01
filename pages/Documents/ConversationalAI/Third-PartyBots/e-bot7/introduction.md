@@ -37,32 +37,11 @@ Figure 1.1 e-bot7 Vendor Step
 
 The parameters are as follows:
 
-<table>
-  <thead>
-  <tr>
-    <th>Item</th>
-    <th>Description</th>
-    <th>Example</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>App Key</td>
-    <td>To connect to bots within e-bot7 an app key is necessary. The app key must start with `xapp`. It is shown only a single time once the application in e-bot7 is created.</td>
-    <td>xapp-xxxxxxxxxx</td>
-  </tr>
-  <tr>
-    <td>Bot ID</td>
-    <td>The identifier of the bot in e-bot7 to connect with</td>
-    <td>s6j68d6ej3w21mnj01c03e0a</td>
-  </tr>
-  <tr>
-    <td>Bot Response Delay</td>
-    <td>The bot response delay time is used once the computation of an answer from the vendor bot takes longer to respond to a message. This may happen whenever an asynchronous call (HTTP request) is used to generate a response. Please configure a time in seconds that indicates the maximum of such a delay. If no delay is expected, it can be set to 1.</td>
-    <td>1</td>
-  </tr>
-  </tbody>
-</table>
+| Item               | Description                                                                                                                                                                                                                                                                                                                                              |          Example           |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------: |
+| App Key            | To connect to bots within e-bot7 an app key is necessary. The app key must start with `xapp`. It is shown only a single time once the application in e-bot7 is created.                                                                                                                                                                                  |     `xapp-xxxxxxxxxx`      |
+| Bot ID             | The identifier of the bot in e-bot7 to connect with                                                                                                                                                                                                                                                                                                      | `s6j68d6ej3w21mnj01c03e0a` |
+| Bot Response Delay | The bot response delay time is used once the computation of an answer from the vendor bot takes longer to respond to a message. This may happen whenever an asynchronous call (HTTP request) is used to generate a response. Please configure a time in seconds that indicates the maximum of such a delay. If no delay is expected, it can be set to 1. |            `1`             |
 
 ### Limitations
 

@@ -37,29 +37,11 @@ Make sure to have `Bot Message` nodes after the `Start Flow` entry point to util
 
 The flow of a bot in e-bot7 can include three different types of messages a bot can send. These are `Bot Message: Text`, `Bot Message: Image`, `Bot Message: Video`. All three types are supported with some restrictions:
 
-<table>
-  <thead>
-  <tr>
-    <th>Message type</th>
-    <th>Restrictions</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>`Bot Message: Text`</td>
-    <td>Text messages are rendered as pure text and contain no markup or rich content.</td>
-  </tr>
-  <tr>
-    <td>`Bot Message: Image`</td>
-    <td>Enabling image messages requires a whitelisting done by
-LivePerson. Contact your LivePerson account representative for assistance.</td>
-  </tr>
-  <tr>
-    <td>`Bot Message: Video`</td>
-    <td>Video messages are rendered as a button with a link action to the video.</td>
-  </tr>
-  </tbody>
-</table>
+| Message type         | Restrictions                                                                                                                       |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `Bot Message: Text`  | Text messages are rendered as pure text and contain no markup or rich content.                                                     |
+| `Bot Message: Image` | Enabling image messages requires a whitelisting done by LivePerson. Contact your LivePerson account representative for assistance. |
+| `Bot Message: Video` | Video messages are rendered as a button with a link action to the video.                                                           |
 
 ### Visitor Input
 
