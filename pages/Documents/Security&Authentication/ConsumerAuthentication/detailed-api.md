@@ -333,7 +333,7 @@ openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
 
 **Configure the JWT public key on Conversational Cloud UI:**
 
-1.	Remove the header and tail ( "-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----" )
+1.	Remove the header and tail ("-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----")
 
 Example:
 
