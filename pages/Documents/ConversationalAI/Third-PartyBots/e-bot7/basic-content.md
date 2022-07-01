@@ -51,7 +51,8 @@ The flow of a bot in e-bot7 can include three different types of messages a bot 
   </tr>
   <tr>
     <td>`Bot Message: Image`</td>
-    <td>None</td>
+    <td>Enabling image messages requires a whitelisting done by
+LivePerson. Contact your LivePerson account representative for assistance.</td>
   </tr>
   <tr>
     <td>`Bot Message: Video`</td>
