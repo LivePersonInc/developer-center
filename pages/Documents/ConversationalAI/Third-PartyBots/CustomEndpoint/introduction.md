@@ -119,6 +119,11 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   </tbody>
 </table>
 
+You can also use `App Installation` selector to fill-out the `Client ID` and`Client Secret` fields.
+If the selector is has no App Installations, then you have to do a Custom Endpoint
+[Application Install](conversational-cloud-applications-installing-conversational-cloud-applications.html).
+Contact your LivePerson account representative for assistance if you need help in this regard.
+
 {: .important}
 You have to agree to the Data Disclaimer to use the services of the Third-Party Bots connector.
 For that, you can click on the checkbox "I agree to the Data Disclaimer"
