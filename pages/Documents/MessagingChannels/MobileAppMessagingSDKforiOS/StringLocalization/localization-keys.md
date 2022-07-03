@@ -78,6 +78,8 @@ Localized keys with the English localization string.
 | facetimeAudio | "FaceTime Audio" |
 | feedbackNoButtonTitle | "No" |
 | feedbackYesButtonTitle | "Yes" |
+| fileSharingAttachmentMenu | "Attachment menu" |
+| fileSharingCloseAttachmentMenu | "Close attachment menu" |
 | fileSharingDocument | "Document" |
 | fileSharingFileSizeLimitation | "File size exceeds the %d MB limitation" |
 | fileSharingSendFile | "Send File" |
