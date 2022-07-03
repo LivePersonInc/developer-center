@@ -37,7 +37,7 @@ File name rules:
 
 Folder name rules:
 1. They must be TitleCase
-2. All files in the folder, must include a reference in its header to its folder name. This will be in either the documentname, categoryname, or subfoldername ( depending on the location of the folder)
+2. All files in the folder, must include a reference in its header to its folder name. This will be in either the documentname, categoryname, or subfoldername (depending on the location of the folder)
 3. All special characters excluding periods, dashes, and & need to be removed from Foldername
 4. Periods are replaced with dashes.
 
