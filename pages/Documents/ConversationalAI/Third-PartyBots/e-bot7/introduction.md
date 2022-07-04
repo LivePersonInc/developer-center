@@ -33,7 +33,7 @@ You will be presented with the following screen to complete the Vendor Settings 
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/e-bot7-configuration.png">
 
-Figure 1.1 e-bot7 Vendor Step
+<figure>Figure 1.1 e-bot7 Vendor Step</figure>
 
 The parameters are as follows:
 
