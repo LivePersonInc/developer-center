@@ -1,6 +1,6 @@
 {
   "name": "developers-community",
-  "description": "developers-community",
+  "description": "LivePerson’s Developers Community",
   "version": "1.0.0",
   "dependencies": {
     "axios": "^0.21.1",
@@ -18,18 +18,20 @@
     "yargs-parser": ">=21.0.1"
   },
   "devDependencies": {
+    "@j9t/imagemin-guard": "^3.2.8",
     "pre-commit": "^1.2.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bundle exec jekyll build",
+    "fixnaming": "bash ./_scripts/automated-name-fix.sh",
+    "imagemin-guard": "npx imagemin-guard --staged",
     "serve": "bundle exec jekyll serve --incremental",
-    "verify": "bash ./_scripts/verify-documents.sh",
-    "fixnaming": "bash ./_scripts/automated-name-fix.sh"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "bash ./_scripts/verify-documents.sh"
   },
   "pre-commit": {
     "silent": true,
-    "run": "verify"
+    "run": "verify, imagemin-guard"
   },
   "repository": {
     "type": "git",
