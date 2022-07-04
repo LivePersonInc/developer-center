@@ -21,7 +21,6 @@ In this scenario, all bot messages in the flow which are created before this nod
 
 <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-messaging-flow.png">
 <figure>Figure 2.1 Example conversation flow for messaging without support of the `Welcome` event</figure>
-<br>
 
 #### Chat Conversations
 
@@ -31,7 +30,6 @@ Make sure to have `Bot Message` nodes after the `Start Flow` entry point to util
 
 <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-chat-flow.png">
 <figure>Figure 2.2 Example conversation flow for chats with support of the `Welcome` event</figure>
-<br>
 
 ### Bot Messages
 
@@ -91,7 +89,6 @@ Parameters:
 
 <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-skill.png">
 <figure>Figure 2.3 Configuration for transfer to skill</figure>
-<br>
 
 ##### Transfer to Agent
 
@@ -111,7 +108,6 @@ Parameters:
 
 <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-agent.png">
 <figure>Figure 2.4 Configuration for transfer to agent</figure>
-<br>
 
 ### Close Conversation
 
