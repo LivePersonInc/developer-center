@@ -19,8 +19,10 @@ their first message. The consumer is prompted for their initial message in the c
 conversation. As a result, the consumer’s first message will be the entry point for the main flow in e-bot7, which can be processed by a `Visitor Input` node.
 In this scenario, all bot messages in the flow which are created before this node will be skipped.
 
-<img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-messaging-flow.png">
-<figure>Figure 2.1 Example conversation flow for messaging without support of the `Welcome` event</figure>
+<figure>
+ <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-messaging-flow.png" alt="e-bot7 flow without support of the 'Welcome' event">
+ <figcaption>Figure 2.1: Example conversation flow for messaging without support of the `Welcome` event</figcaption>
+</figure>
 
 #### Chat Conversations
 
@@ -28,8 +30,10 @@ A Chat conversation is considered started when the chat is routed to an agent. T
 In this scenario, all bot messages in the flow which are created before the first `Visitor Input` node will be processed.
 Make sure to have `Bot Message` nodes after the `Start Flow` entry point to utilize the `Welcome` event.
 
-<img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-chat-flow.png">
-<figure>Figure 2.2 Example conversation flow for chats with support of the `Welcome` event</figure>
+<figure>
+ <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-chat-flow.png" alt="e-bot7 flow to support the 'Welcome' event">
+ <figcaption>Figure 2.2: Example conversation flow for chats with support of the `Welcome` event</figcaption>
+</figure>
 
 ### Bot Messages
 
@@ -87,8 +91,10 @@ Parameters:
 
 - `_skill_` **(Case sensitive)** skill name in Conversational Cloud.
 
-<img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-skill.png">
-<figure>Figure 2.3 Configuration for transfer to skill</figure>
+<figure>
+ <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-skill.png" alt="Example bot message to trigger the transfer to a skill">
+ <figcaption>Figure 2.3: Configuration for transfer to skill</figcaption>
+</figure>
 
 ##### Transfer to Agent
 
@@ -106,8 +112,10 @@ Parameters:
 - `_skill_` **(Case sensitive)** skill name in Conversational Cloud.
 - `_agentId_` **(Case sensitive)** agent id in Conversational Cloud.
 
-<img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-agent.png">
-<figure>Figure 2.4 Configuration for transfer to agent</figure>
+<figure>
+ <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-agent.png" alt="Example bot message to trigger the transfer to an agent">
+ <figcaption>Figure 2.4: Configuration for transfer to agent</figcaption>
+</figure>
 
 ### Close Conversation
 
