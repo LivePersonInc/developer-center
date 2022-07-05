@@ -143,8 +143,6 @@ h4 code.highlighter-rouge {
 }
 
 .post-content h4[id] {
-    font-family: "Space Grotesk",
-        sans-serif;
     font-size: 21px;
     line-height: 28px;
     font-weight: 700;
