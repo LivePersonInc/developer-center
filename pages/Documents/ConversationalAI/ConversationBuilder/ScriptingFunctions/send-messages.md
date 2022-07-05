@@ -15,10 +15,10 @@ Use the following built-in functions to send different types of messages to the 
 
 ### Send message
 
-`sendMessage` is used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
+Use `sendMessage` to send a single message to the consumer at any place of the code, without stopping the message flow. Note the following:
 
-{: .important}
-To send multiple messages use the [sendMessages()](#send-messages) function.
+* To set a delay for the message, use the [setMessageDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value) function.
+* To send multiple messages, use the [sendMessages](conversation-builder-scripting-functions-send-messages.html#send-messages) function.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -36,13 +36,10 @@ if(count > 10){
 
 ### Send messages
 
-`sendMessages` is used to send an array of the messages to the user. In most cases we use message delay for the send messages function.
+Use `sendMessages` to send an array of the messages to the consumer. Note the following:
 
-{: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
-
-{: .important}
-To send a single message use the [sendMessage()](#send-message) function.
+* To set a delay for the messages, use the [setMessageDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value) function.
+* To send a single message, use the [sendMessage](conversation-builder-scripting-functions-send-messages.html#send-message) function.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
