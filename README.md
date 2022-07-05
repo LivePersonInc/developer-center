@@ -6,18 +6,18 @@ This repository generates LivePerson's Developer Center, which can be found at [
 
 **Table of Contents**
 
-* :satellite: &nbsp; &nbsp;[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
-* :hammer: &nbsp; &nbsp;[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
-* :clipboard: &nbsp; &nbsp;[Template](https://github.com/LivePersonInc/developers-community#template)
-* :scroll: &nbsp; &nbsp;[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
-* :ghost: &nbsp; &nbsp;[How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#hiding-files)
+* :satellite: &nbsp; [Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+* :ghost: &nbsp; [Hiding Files](https://github.com/LivePersonInc/developers-community#hiding-files)
+* :hammer: &nbsp; [Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+* :clipboard: &nbsp; [Template](https://github.com/LivePersonInc/developers-community#template)
+* :scroll: &nbsp; [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
 To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**.
 
-### Committing Changes to the Developers Site
+#### Committing Changes to the Developers Site
 
 Before making any commits, please make sure to read the Updating/Creating Headers section. There is now a Git precommit hook that makes sure you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputed to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. Our tests will use the documents updated yaml file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
 
@@ -39,7 +39,7 @@ E.G documentname: `Add Agent Widgets` should be a folder with name `AddAgentWidg
 
 * Category name will always be the top most folder in the sidebar
 
-### How to Understand the documentsupdated yaml File
+#### How to Understand the documentsupdated yaml File
 
 Example Normal Layout:
   
@@ -182,6 +182,7 @@ If you have not already done so, make sure your computer has Ruby installed. Her
 Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you're on Windows, don't forget to run your CLI as an admin.**
 
 **First time install**
+
 1. Run `npm install`
 2. Run `npm run serve`
 3. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
@@ -205,7 +206,7 @@ You have two options to run the site locally after the first install:
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
-### Algolia
+#### Algolia
 
 Algolia is the tool we use for the search bar. It generates a list of searchable items by indexing it in their dashboard which is then pulled into the search bar within the project
 
