@@ -142,6 +142,15 @@ h4 code.highlighter-rouge {
     margin-top: 7px;
 }
 
+.post-content h4[id] {
+    font-family: "Space Grotesk",
+        sans-serif;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
 .post-content table {
     width: 100%;
     max-width: 100%;
