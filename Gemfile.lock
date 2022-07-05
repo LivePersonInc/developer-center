@@ -95,6 +95,8 @@ GEM
     json (2.6.2)
     kramdown (2.4.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     liquid-tag-parser (1.9.0)
       extras (~> 0.3)
@@ -159,6 +161,7 @@ DEPENDENCIES
   jekyll-gzip
   jekyll-redirect-from
   jekyll-sitemap
+  kramdown-parser-gfm
   nokogiri (>= 1.10.4)
   rack (>= 2.0.6)
   sprockets (~> 3.7)
