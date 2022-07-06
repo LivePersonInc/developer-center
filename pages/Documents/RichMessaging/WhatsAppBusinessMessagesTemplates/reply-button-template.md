@@ -14,11 +14,13 @@ indicator: messaging
 
 In WhatsApp Business Messages, a Reply Button Message has the following structure:
 
-1. Header (optional)
+1. Image Header (optional)
 2. Title
 3. Subtitle
 4. Footer (optional)
 5. Buttons (between 1 and 3)
+
+**Note:** We only support image headers and text headers (Title element).
 
 **Examples Of WhatsApp Reply Button:**
 
@@ -53,7 +55,7 @@ For Reply Buttons in WhatsApp the type should always be <b>vertical</b>, as it b
   <tr>
     <td>elements</td>
     <td>Array of elements/templates that contains the actual content of the Reply Button. The elements must be in the following order:<br/><br/>
-1) <a href="#image">Image</a><br/>
+1) <a href="#image">Image header</a><br/>
 2) <a href="#title">Title</a><br/>
 3) <a href="#description">Subtitle</a><br/>
 4) <a href="#description">Footer</a><br/>
@@ -74,12 +76,10 @@ The description and at least one button element are required.</td>
 }
 ```
 
-### Image
+### Image Header
 
-The image that will be displayed at the top of the Reply Button.
+A image can be used as an header and it will be displayed at the top of the Reply Button.
 The image size should be under 5MB.
-
-
 
 <table>
   <thead>
@@ -119,9 +119,9 @@ The image size should be under 5MB.
 
 ### Title
 
-The highlighted headline of the rich card.
-
-
+Title is a textual header for the reply message. Since the title is part of the body message, using a image and
+a title (header) is supported. Furthermore the header length limit is the same as the body lenght as described by the
+Meta documentation.
 
 <table>
   <thead>
@@ -359,12 +359,12 @@ A button at the bottom of a rich card.
     },
     {
       "type": "button",
-      "title": "Deliver to local postoffice",
+      "title": "Post office",
       "click": {
         "actions": [  
           {
             "type": "publishText",
-            "text": "Local post office"
+            "text": "Post office"
           }
         ]
       }
