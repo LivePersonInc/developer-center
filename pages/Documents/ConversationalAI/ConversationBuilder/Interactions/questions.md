@@ -13,7 +13,7 @@ Questions present information to the user (a question that expects a reply of so
 
 With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). (You’ll need to complete the [Dialogs and Patterns tutorial](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html) first, as they build on one another.)
 
-User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
+User responses to question interactions can be saved in [variables](conversation-builder-variables-slots-variables.html), making them available for future use.
 
 {: .important}
 For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).

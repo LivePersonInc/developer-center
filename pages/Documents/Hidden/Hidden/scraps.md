@@ -49,4 +49,4 @@ but
 * **Commercial message:** Do you ship this product to Washington?
 * **Entities:** STATE = Washington
 
-Using the [Assist tool](conversation-builder-assist.html), you can assign global entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
+Using the [Assist tool](conversation-builder-assist.html), you can assign global entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots-slots.html) with the user's input to the question to which the entity was assigned.

@@ -164,7 +164,7 @@ The `getConversationId` function will retrieve the conversation ID for the curre
 var convId = botContext.getConversationId();
 ```
 
-You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots.html#system-variables) to display the conversation ID as text in interactions or post bodies.
+You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots-variables.html#system-variables) to display the conversation ID as text in interactions or post bodies.
 
 
 ### Get LP account ID

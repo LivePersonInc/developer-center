@@ -156,7 +156,7 @@ When defining a [condition](conversation-builder-interactions-configuration-next
 <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/regex_hint_2.png">
 
 ### Use variables and slots in interactions
-For information on this, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).
+For information on this, see [here](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).
 
 ### Format text
 #### Formatting
