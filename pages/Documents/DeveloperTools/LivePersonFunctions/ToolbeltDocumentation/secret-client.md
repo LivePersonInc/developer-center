@@ -23,21 +23,6 @@ Client that will handle the communication with the Secret Storage.
 
 ## Methods
 
-### getUsedSecrets
-
-▸ **getUsedSecrets**(): [`ISecretEntry`](#interface-isecretentry)[]
-
-Returns all secrets that the user has used with readSecret or updateSecret in a function.
-Used for internal purpose.
-
-#### Returns
-
-[`ISecretEntry`](#interface-isecretentry)[]
-
-Secrets in Key-Value Format in an array
-
-___
-
 ### readSecret
 
 ▸ **readSecret**(`key`): `Promise`<[`ISecretEntry`](#interface-isecretentry)\>
