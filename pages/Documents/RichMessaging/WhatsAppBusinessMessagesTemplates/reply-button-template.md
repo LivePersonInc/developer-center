@@ -119,9 +119,9 @@ The image size should be under 5MB.
 
 ### Title
 
-Title is a textual header for the reply message. Since the title is part of the body message, using a image and
-a title (header) is supported. Furthermore the header length limit is the same as the body lenght as described by the
-Meta documentation.
+Title is a textual header for the reply message. Since the title is part of the body message, using an image and
+a title (header) at the same time is supported. Furthermore the title length is not limited to the length of header described in
+the <a href="https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#header-object">Meta documentation</a>
 
 <table>
   <thead>
