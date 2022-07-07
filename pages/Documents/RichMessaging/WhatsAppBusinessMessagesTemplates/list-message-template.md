@@ -25,95 +25,31 @@ Each horizontal can contain the following elements:
 3. Button (at least 1 is mandatory)
 
 
-**Examples Of WhatsApp List messages:**
+**Examples Of WhatsApp List Messages:**
 
-<p float="left">
-  <img src="img/connectors/wa_listmessage1.png" style="display: inline; margin: 0" />
-  <img src="img/connectors/wa_listmessage2.png" style="display: inline; margin: 0" />
-  <img src="img/connectors/wa_listmessage3.png" style="display: inline; margin: 0" />
-</p>
+![](img/connectors/wa_listmessages.png)
+
 
 ### Top level vertical
 
 Wrapping element that contains the list message vertical.
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>
-      Type of the Container.<br/>
-      Always <b>vertical</b> for WhatsApp list messages.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>Always <b>generic</b> for WhatsApp list messages</td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>elements</td>
-    <td>
-    Contains only the list message vertical (see next section).
-    </td>
-    <td>Array(Element)</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type |  Type of the Container. Always vertical for WhatsApp list messages.  | Enum | Y |
+| tag | Always generic for WhatsApp list messages | Enum | Y |
+| elements |  Contains only the list message vertical (see next section).  | Array(Element) | Y |
 
-### List message vertical
+### List Message Vertical
 
 This vertical contains contains the  basic information of the list, such as
 the title, subtitle, title of the clickable options button as well as the vertical element hat contains all of
 of sections and respective selectable options that the consumer can choose from.
 
-
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>
-      Type of the Container.<br/>
-      For WhatsApp List Messages the type is always <b>vertical</b>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>elements</td>
-    <td>
-      Array of elements that make the main structure of the list message.
-      Multiple horizontals can be added to create multiple sections
-      These elements must be in the following order:
-      <br/>
-      <br/>
-      1) <a href="#title">Title</a><br/>
-      2) <a href="#description">Subtitle</a><br/>
-      3) <a href="#footer">Footer</a><br/>
-      4) <a href="#button">Button</a><br/>
-      5) <a href="#horizontal">Horizontal</a><br/>
-  </td>
-    <td>Array(Element)</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type |  Type of the Container. For WhatsApp List Messages the type is always vertical.  | Enum | Y |
+| elements |  Array of elements that make the main structure of the list message. Multiple horizontals can be added to create multiple sections These elements must be in the following order:<br> 1) Title <br> 2) Subtitle <br> 3) Footer <br> 4) Button <br> 5) Horizontal <br> | Array(Element) | Y |
 
 #### JSON Representation Card
 
@@ -129,43 +65,12 @@ of sections and respective selectable options that the consumer can choose from.
 
 The highlighted headline of the list message.
 
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "title". If missing, the first text element in the template will be set as the card text.  | Enum | Y |
+| text |  Text of the headline  It's length can not be longer than 1024 characters. Note: This length is shared with the subtitle. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>Must be "title". If missing, the first text element in the template will be set as the card text.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    Text of the headline <br/>
-    It's length can not be longer than 1024 characters.<br/>
-    <b>Note:</b> This length is shared with the subtitle. This means that
-    to find the real limit of this text you must substract the length of the
-    subtitle when it is set. 
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
 
 #### JSON Representation
 
@@ -182,42 +87,11 @@ The highlighted headline of the list message.
 The subtitle represents the secondary text of the List Messsage.
 This is generally where the body of the message can be entered.
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-    <tr>
-    <td>tag</td>
-    <td>Must be "subtitle".
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    The description text.<br/>
-    The text can not be longer than 1024 characters
-    <b>Note: </b> This text length is shared with the title length. This means that
-    to find the real limit of this text you must substract the length of the
-    subtitle when it is set.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "subtitle".  | Enum | Y |
+| text |  The description text. The text can not be longer than 1024 characters <br> **Note:**  This text length is shared with the title length. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
 
 
 #### JSON Representation
@@ -234,40 +108,12 @@ This is generally where the body of the message can be entered.
 
 Footer of the list messages. This is shown below the subtitle or title if the first is absent.
 
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "footer".  | Enum | Y |
+| text |  The description text. The text can not be longer than 60 characters.  | String | Y |
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-    <tr>
-    <td>tag</td>
-    <td>Must be "footer".
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    The description text.<br/>
-    The text can not be longer than 60 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
 
 #### JSON Representation
 
@@ -284,51 +130,13 @@ Footer of the list messages. This is shown below the subtitle or title if the fi
 This element is a placeholder for the button shown in the user WhatsApp app.
 It can be used to change its name.
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "button". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#button">button</a>.
-   </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>
-    The text of the button.<br/>
-    The text can not be longer than 20 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>subtitle</td>
-    <td>
-    Description for the button.<br/>
-    The text can not be longer than 20 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>click</td>
-    <td>
-    The click operations that should be executed when the customer clicks the button.<br/>
-    These click operations must contain at least one action. The WhatsApp only supports the
-    <a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a>
-    </td>
-    <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "button". Identifies the element as an object of type button.  | Enum | Y |
+| title |  The text of the button. The text can not be longer than 20 characters.  | String | Y |
+| subtitle |  Description for the button. The text can not be longer than 20 characters.  | String | Y |
+| click |  The click operations that should be executed when the customer clicks the button. These click operations must contain at least one action. The WhatsApp only supports the publishText  | ClickOperations | Y |
+
 
 ```json
 {
@@ -339,41 +147,18 @@ It can be used to change its name.
 }
 ```
 
-### Option section
+### Option Section
 
 A section is a way of grouping one or more option buttons (rows).
 At least one row must be added to the list message. In the case of using
 just one section its title is not mandatory.
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>
-      Always <b>horizontal</b> for WhatsApp list messages.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>elements</td>
-    <td>
-      Vertical that contains option buttons. See next section.
-  </td>
-    <td>Array(Element)</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type |  Always horizontal for WhatsApp list messages.  | Enum | Y |
+| elements |  Vertical that contains option buttons. See next section.  | Array(Element) | Y |
 
-
-#### JSON representation
+#### JSON Representation
 
 ```json
 {
@@ -392,51 +177,12 @@ just one section its title is not mandatory.
 This element represents the options that the consumer can choose from.
 These buttons are added within a section. There can be 10 options across all sections.
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "button". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#button">button</a>.
-   </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>
-    The text of the button.<br/>
-    The text can not be longer than 20 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>subtitle</td>
-    <td>
-    Description for the button.<br/>
-    The text can not be longer than 20 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>click</td>
-    <td>
-    The click operations that should be executed when the customer clicks the button.<br/>
-    These click operations must contain at least one action. The WhatsApp only supports the
-    <a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a>
-    </td>
-    <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "button". Identifies the element as an object of type button.  | Enum | Y |
+| title |  The text of the button. The text can not be longer than 20 characters.  | String | Y |
+| subtitle |  Description for the button. The text can not be longer than 20 characters.  | String | Y |
+| click |  The click operations that should be executed when the customer clicks the button. These click operations must contain at least one action. The WhatsApp only supports the publishText  | ClickOperations | Y |
 
 ```json
 {
