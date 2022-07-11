@@ -47,7 +47,6 @@ Use `sendMessages` to send an array of the messages to the consumer. Note the fo
 
 #### Example
 ```javascript
-botContext.setMessageDelay(2500);
 botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If you had been using our AcmeBank Exclusive Cash Rewards Card your current rewards balance would have been $103.50.']);
 ```
 
