@@ -915,7 +915,7 @@
   AnalysisType: "Campaign Conversions"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "The percentage (%) of the total Conversations that may not have otherwise occured (Incremental Conversion ( calculated at the Brand Level)"
+  Description: "The percentage (%) of the total Conversations that may not have otherwise occured (Incremental Conversion (calculated at the Brand Level)"
   FormulaOptional: "INCREMENTAL CONVERSIONS (BRAND) / TOTAL CONVERSIONS AFTER ENGAGEMENT"
   Metric: "INCREMENTAL CONVERSION RATIO (BRAND)"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"
@@ -5739,7 +5739,7 @@
   AnalysisType: "Agent Survey"
   Channel: Messaging
   Dashboard: "Survey for Messaging"
-  Description: "The percentage (%) of submitted survey forms ( partial or complete) out of the number of opened survey forms"
+  Description: "The percentage (%) of submitted survey forms (partial or complete) out of the number of opened survey forms"
   FormulaOptional: "SUBMITTED AGENT SURVEY / OFFERED AGENT SURVEYS"
   Metric: "SUBMISSION RATE"
   filteredBy: "Agent, Group,Skill"

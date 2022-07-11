@@ -260,6 +260,7 @@
         - pagename: Agent Experience
         - pagename: Best Practices
         - pagename: Troubleshooting
+        - pagename: Reports
         - pagename: FAQs
     - documentname: Conversation Orchestrator
       pages:
@@ -954,6 +955,14 @@
           subpages:
             - subpagename: Get Agent Segments
         - pagename: Error Codes
+    - documentname: Net Handle Time API
+      basedomain: https://{domain}/operations/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Net Handle Time by Skill
+        - pagename: Error Codes      
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -1004,6 +1013,7 @@
             - subpagename: Logging
             - subpagename: Voice and Video
             - subpagename: Proactive and IVR Deflection to App Messaging
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1054,6 +1064,7 @@
             - subpagename: Unauthenticated In-App Messaging
             - subpagename: Voice and Video
             - subpagename: Welcome Message with Quick Replies
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API

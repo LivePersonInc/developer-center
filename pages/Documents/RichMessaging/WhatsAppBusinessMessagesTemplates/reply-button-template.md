@@ -79,6 +79,7 @@ The description and at least one button element are required.</td>
 ### Image
 
 The image that will be displayed at the top of the Reply Button.
+The image size should be under 5MB.
 
 #### Properties
 
