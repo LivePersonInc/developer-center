@@ -32,14 +32,14 @@ Filters provide you with increased flexibility and the ability to cover more gra
 
 **To add a filter**
 
-1. Click the **Add Filter** button on the top-left corner. 
-2. Choose a filter property from the drop down list and add constraints based on your needs.
+1. Click the **Add Filter** button in the top-left corner. 
+2. Choose a filter property from the dropdown list and add constraints based on your needs.
 3. Optionally, click **Save** to save the filter.
 
 **To find a pattern or theme in the messages**
 
 1. Go to the **Analyze** tab, and filter by “undefined.”
-2. Click the **Add Filter** button at the top left of **Conversation Details**.
+2. Click the **Add Filter** button at the top left of **Intent Trends**.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_filters1.png">
 
