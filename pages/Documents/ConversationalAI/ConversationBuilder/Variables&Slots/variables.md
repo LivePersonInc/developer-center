@@ -36,7 +36,17 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 ### Add a variable
 
 1. In the interaction, click **Next Action**, and then click **+ Custom Rule**.
-2. In the window that appears, define the custom rule. To add the variable, click **+ Add Variable**, and then define the variable using the fields provided. These fields are illustrated in the preceding section.
+
+    <img width="600" src="img/ConvoBuilder/var_customrule.png">
+
+2. In the window that appears, define the custom rule. To add the variable, click **+ Add Variable**, and then define the variable using the fields provided.
+
+    <img width="800" src="img/ConvoBuilder/var_specify.png">
+
+    For the variable's value, you can specify:
+    * A system variable, for example: `{$userMessage}` or `{$firstname}`. See the list of available system variables farther above on this page.
+    * Another botContext variable, for example: `{$botContext.variableName}`.
+    * A string, for example, the number “1” or the phrase “vip.”
 
 ### Clean variable data
 
