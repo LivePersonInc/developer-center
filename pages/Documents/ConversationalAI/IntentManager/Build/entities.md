@@ -103,12 +103,3 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 6. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 7. In the confirmation dialog, click **Yes**.
 8. Train the domain so that the deletion is reflected in a new model version.
-
-### How entities affect the NLU score - LivePerson (Legacy) engine only
-
-When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
-
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">

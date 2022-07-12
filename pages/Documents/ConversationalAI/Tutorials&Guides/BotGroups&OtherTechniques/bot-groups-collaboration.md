@@ -52,7 +52,7 @@ Instead of creating these new bots from scratch, we will copy our Getting Starte
 
     <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/advtutorial/dialog_menu.png">
 
-    Once you’ve deleted the unnecessary dialogs, back out of the Greeter Bot and return to the Conversation Builder dashboard of bots. Two bots should now be visible: your original Getting Started Bot and the new Greeter Bot. Note that the Greeter Bot is nested under the "Many bot" group.
+    Once you’ve deleted the unnecessary dialogs, back out of the Greeter Bot and return to the Conversation Builder dashboard of bots. Two bots should now be visible: your original Getting Started Bot and the new Greeter Bot. Note that the Greeter Bot is nested under the "Many bots" group.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots.png">
 

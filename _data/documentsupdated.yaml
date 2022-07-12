@@ -326,6 +326,7 @@
           subpages:
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
+            - subpagename: Intent Details
             - subpagename: Conversation Details
         - pagename: External APIs
           subpages:
@@ -356,6 +357,7 @@
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
             - subpagename: Evaluating Consumer Queries
+        - pagename: Search Methods
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status

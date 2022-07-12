@@ -99,8 +99,8 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
 
-2. Enter your account number and optionally a username (just your first name will do fine), and then click **Update**.
-3. After a moment, you will see a Messaging "call to action," which corresponds to what we selected in the Campaign Builder. Click the Messaging call to action.
+2. Enter your account number, and click **Show Window**.
+3. After a moment, you will see a Messaging "call to action," which corresponds to what you selected in the Campaign Builder. Click the Messaging call to action.
 4. Start the bot by entering ‘hi’ or ‘hello.’
 5. Test the bot's functionality as you would in Conversation Builder's Preview.
 
