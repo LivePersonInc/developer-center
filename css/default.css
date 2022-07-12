@@ -1319,6 +1319,11 @@ button.loginButton {
     color: var(--widget-text);
 }
 
+/* Hiding the highlighter-rouge dark mode toggle */
+.highlighter-rouge button.nightbtn {
+    display: none;
+}
+
 .mysidebar::-webkit-scrollbar-thumb {
     background-color: var(--darker-gray);
 }
