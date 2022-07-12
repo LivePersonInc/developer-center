@@ -180,6 +180,7 @@
             - subpagename: Store Locator
             - subpagename: Travel Notification
             - subpagename: Conversation Orchestrator
+        - pagename: Bot Examples & More
         - pagename: Dialogs
           subpages:
             - subpagename: Dialog Basics
