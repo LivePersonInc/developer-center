@@ -47,7 +47,7 @@ Overall, short consumer messages (less than or equal to five tokens) make up rou
 ### Large taxonomies
 
 #### How many intents should I have in my taxonomy?
-To start training a model, a minimum of 5 intents and 20 training phrases (utterances) per intent are required. The average number of intents for a taxonomy with good coverage is 20-60.
+To start training a model, a minimum of 5 intents and 15 training phrases (utterances) per intent are required. The average number of intents for a taxonomy with good coverage is 20-60.
 
 #### What if I want more than 60 intents?
 LivePerson has experimented with up to 80 intents without a significant performance drawback. Going above that, there is an increasing chance of intent overlap and the number of “Undefined” might go up as a result of the model being undecided and having low confidence scores below the minimum threshold. As your taxonomy grows in size, the intents themselves will likely become more narrow and specific in their definitions. The most important thing to remember is that intents should never overlap each other in definition. This becomes of greater and greater importance as intents become more and more granular. To avoid overlap in a model with very granular intents, make sure that each message being used as training data only contains a singular topic of discussion. This topic should relate directly to the intent. It is very important that “edge case” messages (i.e. overly long messages or messages that contain multiple topics of discussion) are not used for training data when working on a large, granular taxonomy. Only use strong, clear examples as training data. 
