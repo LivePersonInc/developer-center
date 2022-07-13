@@ -127,7 +127,7 @@ A button at the bottom of a rich card.
 | Property Name | Description | Type | Required |
 | --- | --- | --- | --- |
 | type | Must be "button". Identifies the element as an object of type button.  | Enum | Y |
-| title |  The text of the button. The text can not be longer than 20 characters.  | String | Y |
+| title |  The text of the button. Please refer to the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#action-object) for the text length.  | String | Y |
 | click |  The click operations that should be executed when the customer clicks the button. These click operations must contain at least one action. The WhatsApp only supports the publishText  | ClickOperations | Y |
 
 ```json
