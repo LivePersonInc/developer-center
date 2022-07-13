@@ -25,12 +25,12 @@ Each horizontal can contain the following elements:
 3. Button (at least 1 is mandatory)
 
 
-**Examples Of WhatsApp List Messages:**
+**Examples of WhatsApp List Messages**
 
 ![](img/connectors/wa_listmessages.png)
 
 
-### Top level vertical
+### Top Level Vertical
 
 Wrapping element that contains the list message vertical.
 
@@ -172,7 +172,7 @@ just one section its title is not mandatory.
 }
 ```
 
-### Option (row) Button
+### Option (Row) Button
 
 This element represents the options that the consumer can choose from.
 These buttons are added within a section. There can be 10 options across all sections.

@@ -20,9 +20,9 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 4. Footer (optional)
 5. Buttons (between 1 and 3)
 
-**Note:** We only support image headers and text headers (Title element).
+**Note** We only support image headers and text headers (Title element).
 
-**Examples Of WhatsApp Reply Button:**
+**Examples of WhatsApp Reply Button**
 
 ![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
 
