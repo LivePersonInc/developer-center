@@ -11,10 +11,10 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-csat-behavior.
 indicator: messaging
 ---
 
-
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
-<div style="float: left; width: 50%;height: 175px;">
+<div class="flex gap-16 flex-col-mobile">
+<div>
 <p><b>Show CSAT if:</b></p>
    <ul>
       <li>CSAT configured to appear according to:<br><code>&#060;bool name=&quot;show_feedback&quot;&#062;</code></li>
@@ -23,7 +23,7 @@ You can find all the related configurations in the resources ID table, under Sur
    </ul>
 </div>
 
-<div style="float: right; width: 50%;">
+<div>
 <p><b>Dismiss CSAT if:</b></p>
    <ul>
       <li>User presses the submit button (answers get sent to the survey).</li>
@@ -32,12 +32,9 @@ You can find all the related configurations in the resources ID table, under Sur
       <li>If the CSAT is visible and the agent resumed the conversation.</li>
    </ul>
 </div>
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
 </div>
 
----  
+---
 
 The CSAT screen includes several content containers:
 
@@ -45,25 +42,23 @@ The CSAT screen includes several content containers:
 
 * [ratingQuestionView (stars)](#ratingquestionview-stars)
 
-- [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
-
+* [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
 
 ### agentView (avatar and agent name)
-   
+
 You can either hide or show the agent avatar.
 
 ```xml
 <bool name="show_agent_details_csat">
 ```
 
-- If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
+* If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
 
-- If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
+* If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
 
-- If the conversation has assigned agent, the SDK uses the agent’s nickName.
+* If the conversation has assigned agent, the SDK uses the agent’s nickName.
 
-
-### ratingQuestionView (stars) 
+### ratingQuestionView (stars)
 
 By default, it’s a blank label and always visible (you cannot configure its visibility).
 
@@ -77,13 +72,13 @@ Rating question includes Agent by default in the text. If the conversation has a
 
 ### resolutionConfirmationView (yes/no)
 
-You can either hide or show the confirmation view resolution.  
+You can either hide or show the confirmation view resolution.
 
 ```xml
 <bool name="show_yes_no_question">
 ```
 
- If both agentView (show_agent_details_csat) and resolutionConfirmationView (how_yes_no_question) are shown, resolutionConfirmationView will be always hidden (even if set to true).
+If both agentView (show_agent_details_csat) and resolutionConfirmationView (how_yes_no_question) are shown, resolutionConfirmationView will be always hidden (even if set to true).
 
 Define the question text color:
 
