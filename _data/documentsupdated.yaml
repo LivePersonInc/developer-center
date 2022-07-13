@@ -161,6 +161,7 @@
         - pagename: Bot Workspace
         - pagename: Bots
           subpages:
+            - subpagename: Language Support
             - subpagename: Custom Bots
             - subpagename: Post-Conversation Survey Bots
             - subpagename: Bot Basics
@@ -336,6 +337,7 @@
     - documentname: KnowledgeAI
       pages:
         - pagename: Overview
+        - pagename: Language Support
         - pagename: External Knowledge Bases
           subpages:
             - subpagename: Introduction
