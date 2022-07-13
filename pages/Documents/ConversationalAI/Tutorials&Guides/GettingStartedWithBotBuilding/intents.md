@@ -139,7 +139,7 @@ Now you can begin to build out the Make Payment dialog.
 
     Now let's see the dialog in action.
 
-8. Open the Preview window, and start a new session by clicking **Reset Session**.
+8. Open the Preview window, and start a new session by clicking **Reset**.
 9. Enter an utterance that should match the Make Payment intent, like, "Can you help me to make a payment?" You should see the Make Payment dialog's flow and the multiple choice question. Tap or enter “Yes” or “No” and see what response you get.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_preview.png">

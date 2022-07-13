@@ -15,10 +15,17 @@ Use the following built-in functions to affect the flow of a conversation.
 
 ### Set message delay value
 
-`setMessageDelay` is used to set a delay for a group of messages such that they appear like a real conversation.
+Use `setMessageDelay` to set a delay for a message, so the conversation appears more human-like. As a best practice, use the function within the Pre-Process code of interaction. Note the following:
 
-{: .important}
-The setMessageDelay() function should be used within the preProcess Code JavaScript.
+* If you use this function in the Pre-Process code, it overrides the value that’s set in the [Interaction Delay setting](conversation-builder-interactions-configuration-settings.html#basic-settings) in the interaction.
+* If you use this function multiple times within your code, only the last instance is applied. In the code below, both Message1 and Message2 have a 5-second delay. Message1 doesn’t have a 3-second delay.
+
+```
+      botContext.setMessageDelay(3000);
+      botContext.sendMessage(“Message1”);
+      botContext.setMessageDelay(5000);
+      botContext.sendMessage(“Message2”);
+```
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

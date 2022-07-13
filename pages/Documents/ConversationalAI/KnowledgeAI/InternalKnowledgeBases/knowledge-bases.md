@@ -33,7 +33,10 @@ indicator: both
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 
-    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article). 
+    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
+
+    {: .important}
+    If the system finds errors in the CSV file you are importing, you’re notified of this and offered a **Download errors** button. Use the button to download info on the errors that were found in the import file. Make sure your browser is configured to allow pop-ups, or you won’t be able to complete the download. 
 
 ### Create an import file
 
@@ -86,7 +89,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 5. In the dialog that appears, select the domain.
 
     * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
-    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021.**
+    * If you select a domain that uses the deprecated LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). While the legacy engine stil works, it's no longer supported apart from security updates.
     * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
 
 6. In the confirmation dialog, click **Confirm**.

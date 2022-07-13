@@ -15,13 +15,17 @@ Use the following built-in functions to log events and print debug messages.
 
 ### Log custom event
 
-`logCustomEvent` is used for tracking specific bot events for the purposes of analytics. This function requires some type of user message and event name. The event detail is optional. In the example, we are setting the user message to the currentUserMessage and naming the event “Invoice API”.
+Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name. 
+
+{: .important}
+The event detail is optional. Keep the event detail short, as it can't be more than 32 kilobytes, i.e., approximately 32,000 characters in length.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail - </em>string; any **optional** detail | Void |
 
 #### Example
+In this example, we set the user message to the current user message and name the event “Invoice API”.
 
 ```javascript
 botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'API call successful');

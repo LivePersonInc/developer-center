@@ -13,7 +13,7 @@ indicator: both
 
 All Conversation Builder bots are based on **templates**.
 
-The Custom Bot template is the best choice if you want to create a completely custom bot from scratch.
+The [Custom Bot](conversation-builder-bots-custom-bots.html) template is the best choice if you want to create a completely custom bot from scratch.
 
 For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation. Each conversational template consists of the following capabilities:
 

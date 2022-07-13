@@ -27,19 +27,19 @@ Note the following about the bots dashboard when bot groups exist:
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_dashboard.png">
 
-1. The bot group name. **Tip**: Double-click this bar to collapse/hide the bot list.
-2. The list of bots within the bot group. Click any bot name to open the bot in the Dialog Editor.
+1. The bot group name. Click this bar to show/hide the bots in the group.
+2. The list of bots in the group. Click any bot name to open the bot in the Dialog Editor.
 3. The **Collaboration** icon lets you know that collaboration ([automatic transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group)) is enabled for the group.
 4. No icon is displayed when collaboration is disabled for the group.
-5. Click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon to access the group menu, which provides options for editing and deleting the group.
+5. Click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon to access the group menu, which provides options for editing and deleting the group.
 
-### Create a bot group only to group bots
+### Create a bot group solely to group bots
 
-You can create a bot group solely for the purpose of making it easier to access and work with your bots on the bots dashboard.
+You can create a bot group for the singular purpose of making it easier to access and work with your bots on the bots dashboard.
 
-**To create a bot group only to group bots**
+**To create a bot group solely to group bots**
 1. From the bots dashboard that lists your bots, click **Create Group** in the upper-right corner.
-2. In the Create Bot Group dialog, specify the following:
+2. In the Create Bot Group window, specify the following:
 
     * **Bot group name**: Enter a group name that's concise and clear.
     * **Collaboration**: This setting lets you enable/disable automatic transfers on a group-by-group basis. Keep this set to Off (Disabled), which is the default value.
@@ -68,18 +68,18 @@ You can enable or disable collaboration for a bot group, respectively, to enable
 
 **To enable or disable collaboration for a bot group**
 
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that corresponds to the bot group name.
+1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon that corresponds to the bot group name.
 2. Select **Edit Group** from the menu that appears.
 3. In the Edit Bot Group dialog, click the **Collaboration** slider to turn it on (Enabled) or off (Disabled).
 4. Click **Update**.
 
 ### Delete a bot group
 
-You can delete a bot group at any time; this *doesn't* delete the bots therein. If you delete a bot group that contains bots, the bots simply no longer have an assigned bot group.
+You can delete a bot group at any time; this *doesn't* delete the bots therein. If you delete a bot group that contains bots, the bots simply no longer have an assigned bot group. So, they are moved to the **Ungrouped Bots** list.
 
 **To delete a bot group**
 
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that corresponds to the bot group name.
+1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon that corresponds to the bot group name.
 2. Select **Delete Group** from the menu that appears.
 3. Click **Yes** to confirm the action.
 
@@ -97,7 +97,7 @@ For bot groups that are collaborative (the Collaboration setting is enabled):
 
 #### If I use bot groups, must I assign all bots to a bot group?
 
-No, this isn't required. Bots that aren't assigned to a bot group are listed below the bot groups.
+No, this isn't required. Bots that aren't assigned to a bot group are listed above the bot groups.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
 
