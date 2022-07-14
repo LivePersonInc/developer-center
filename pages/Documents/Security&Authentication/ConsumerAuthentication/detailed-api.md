@@ -288,11 +288,11 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 ### Nested JWT
 
-A JSON Web Tokens (JWT) can be signed, and then encrypted, to provide confidentiality of the claims.
+A JSON Web Token (JWT) can be signed, and then encrypted, to provide confidentiality of the claims.
 
 * We support nested JWT in the pattern of “JWS in JWE”. While it’s technically possible to perform the operations in any order to create a nested JWT, senders should first sign the JWT, then encrypt the resulting message.
 
-* If using JWK’s endpoint, nested JWT will contain two “kids”: 
+* If using JWK’s endpoint, nested JWT will contain two “kids”:
     1. The signed JWT’s (JWS) JOSE Header will contain the singing kid that LivePerson will use to retrieve the public key from the customer’s JWK’s endpoint.
     2. The encrypted JWT’s (JWE) JOSE Header will contain an encryption kid (that is provided by LivePerson).
 
