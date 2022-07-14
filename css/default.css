@@ -81,6 +81,10 @@ p {
     gap: 32px;
 }
 
+.gap-16 {
+    gap: 16px;
+}
+
 .side-width {
     width: 320px;
 }
@@ -1705,6 +1709,10 @@ input#csds-button {
 }
 
 @media (max-width: 767px) {
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+
     .logoHeader {
         width: auto;
     }
