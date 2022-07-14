@@ -43,23 +43,25 @@ The CSAT screen includes several content containers:
 
 * [ratingQuestionView (stars)](#ratingquestionview-stars)
 
-* [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
+- [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
+
 
 ### agentView (avatar and agent name)
-
+   
 You can either hide or show the agent avatar.
 
 ```xml
 <bool name="show_agent_details_csat">
 ```
 
-* If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
+- If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image shows in the view.
 
-* If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
+- If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
 
-* If the conversation has assigned agent, the SDK uses the agent’s nickName.
+- If the conversation has assigned agent, the SDK uses the agent’s nickName.
 
-### ratingQuestionView (stars)
+
+### ratingQuestionView (stars) 
 
 By default, it’s a blank label and always visible (you cannot configure its visibility).
 
