@@ -384,7 +384,7 @@ See [this topic](https://knowledge.liveperson.com/ai-bots-automation-post-conver
 
 #### How do I disable a survey bot?
 
-If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skill(s).
+If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and assign a test skill or any unused skill.
 
 #### Are survey bots supported in text-only channels?
 

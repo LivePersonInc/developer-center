@@ -161,6 +161,7 @@
         - pagename: Bot Workspace
         - pagename: Bots
           subpages:
+            - subpagename: Language Support
             - subpagename: Custom Bots
             - subpagename: Post-Conversation Survey Bots
             - subpagename: Bot Basics
@@ -180,6 +181,7 @@
             - subpagename: Store Locator
             - subpagename: Travel Notification
             - subpagename: Conversation Orchestrator
+        - pagename: Bot Examples & More
         - pagename: Dialogs
           subpages:
             - subpagename: Dialog Basics
@@ -335,6 +337,7 @@
     - documentname: KnowledgeAI
       pages:
         - pagename: Overview
+        - pagename: Language Support
         - pagename: External Knowledge Bases
           subpages:
             - subpagename: Introduction

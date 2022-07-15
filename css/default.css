@@ -81,6 +81,10 @@ p {
     gap: 32px;
 }
 
+.gap-16 {
+    gap: 16px;
+}
+
 .side-width {
     width: 320px;
 }
@@ -1319,6 +1323,11 @@ button.loginButton {
     color: var(--widget-text);
 }
 
+/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
+.highlighter-rouge button.nightbtn {
+    display: none;
+}
+
 .mysidebar::-webkit-scrollbar-thumb {
     background-color: var(--darker-gray);
 }
@@ -1700,6 +1709,10 @@ input#csds-button {
 }
 
 @media (max-width: 767px) {
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+
     .logoHeader {
         width: auto;
     }
