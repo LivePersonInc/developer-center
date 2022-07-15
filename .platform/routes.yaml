@@ -17,3 +17,6 @@ https://developers.liveperson.com:
       '/free-trial-registration':
         to: 'https://{default}/demo/'
         prefix: true
+      '/register-test':
+        to: 'https://{default}/demo/'
+        prefix: true
