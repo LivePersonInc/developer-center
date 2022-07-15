@@ -330,6 +330,7 @@
             - subpagename: Intent Trends
             - subpagename: Intent Details
             - subpagename: Conversation Details
+        - pagename: Using Intents & Entities
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started

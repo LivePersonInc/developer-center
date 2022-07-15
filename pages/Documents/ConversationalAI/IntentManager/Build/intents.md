@@ -96,13 +96,6 @@ Take care when using this feature to avoid making unintended changes:
 * To add to what exists, paste the additions into (not over) the list.
 * Ensure that each phrase is on a different line.
 
-### Using intents
-
-Check out these topics on using intents:
-
-* For a practical walkthrough on using intents, see the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
-* In a Conversation Builder bot, you can trigger a dialog flow if the consumer's query matches the intent that's associated with the dialog starter. To set this up, you use Conversation Builder's **Assist** tool to associate the dialog starter with the domain and the intent. More on this [here](conversation-builder-assist.html).
-
 ### Delete an intent
 
 Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.
