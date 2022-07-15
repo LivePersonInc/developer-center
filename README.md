@@ -1,47 +1,51 @@
-## LivePerson Developers Community and Website
+# LivePerson Developers community and website
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
 This repository generates LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
 
-**Table of Contents**
+## Table of contents
 
-* :satellite: &nbsp; [Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
-* :ghost: &nbsp; [Hiding Files](https://github.com/LivePersonInc/developers-community#hiding-files)
-* :hammer: &nbsp; [Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
-* :clipboard: &nbsp; [Template](https://github.com/LivePersonInc/developers-community#template)
-* :scroll: &nbsp; [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+1. 📡 [Updating the documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+2. 📝 [Notes on content and code](https://github.com/LivePersonInc/developers-community#notes-on-content-and-code)
+3. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
+4. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+5. 📋 [Template](https://github.com/LivePersonInc/developers-community#template)
+6. 📜 [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
-### Updating the Documentation
+## Updating the documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
-To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**.
+All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
 
-#### Committing Changes to the Developers Site
+### Committing changes to the site
 
-Before making any commits, please make sure to read the Updating/Creating Headers section. There is now a Git precommit hook that makes sure you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputed to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. Our tests will use the documents updated yaml file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
+Before making any commits, please make sure to read the _Updating and creating headers_ section. There is now a Git precommit hook that makes sure you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputed to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. Our tests will use that YAML file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
 
 File name rules:
+
 1. All Markdown files must match the pagename that is provided in the headers
 2. Spaces in pagename must be replaced with a “-”
 3. All words are lowercased
 4. All special characters excluding periods and dashes need to be removed from the filename
-5. Periods are replaced with dashes.
+5. Periods are replaced by dashes.
 
 Folder name rules:
-1. They must be TitleCase
+
+1. They must use [upper camel case (Pascal case)](https://en.wikipedia.org/wiki/Camel_case)
 2. All files in the folder, must include a reference in its header to its folder name. This will be in either the documentname, categoryname, or subfoldername (depending on the location of the folder)
 3. All special characters excluding periods, dashes, and “&” need to be removed from Foldername
 4. Periods are replaced with dashes.
 
-E.G pagename : `Customizing the Conversational Cloud!` should be filename `customizing-the-conversational-cloud.md`
-E.G documentname: `Add Agent Widgets` should be a folder with name `AddAgentWidgets`
+Examples:
 
-* Category name will always be the top most folder in the sidebar
+* A page name `Customizing the Conversational Cloud!` should use the file name `customizing-the-conversational-cloud.md`
+* A document name `Add Agent Widgets` should use a folder with the name of `AddAgentWidgets`
 
-#### How to Understand the documentsupdated yaml File
+The category name makes for the top most folder in the sidebar.
 
-Example Normal Layout:
+### How to understand the documentsupdated.yaml file
+
+Example of a normal layout:
 
     - categoryname: Agent Experience
       image: agent-experience-new
@@ -63,17 +67,13 @@ Example Normal Layout:
         pages:
         - pagename: Overview 
 
-The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
-Add Agent Widgets is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`
-The Add Agent Widgets folder only contains one page in it. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md`
-the permalink for the file must include all parent folders excluding the layer 0 categoryname. For above example the permalink is:
-`add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`
+1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
+2. `Add Agent Widgets` is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`. The `Add Agent Widgets` folder only contains one page.
+3. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md` is the path of the file, and must list all parent folders, excluding the layer 0 `categoryname`.
+4. For the above example, the permalink is `add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`.
+5. If you look at the following document name, `Agent Workspace Widget SDK`, it is still on level 1, with path `AgentExperience/AgentWorkspaceWidgetSDK/`. The files in the folder are all listed below pages until you get to last `pagename`; i.e., the document name `Chat Agent API` is not a folder located inside `Agent Workspace Widget SDK`.
 
-If you look at the next document name `Agent Workspace Widget SDK` it is still on level 1 with path `AgentExperience/AgentWorkspaceWidgetSDK/`
-The files in the folder are all listed below pages until you get to last pagename.
-IE documentname Chat Agent API is not a folder located inside `Agent Workspace Widget SDK`
-
-Example Subfolder Layout:
+Example of a subfolder layout:
 
     - categoryname: Conversational AI
       image: agent-experience
@@ -90,14 +90,14 @@ Example Subfolder Layout:
               - subpagename: Implementing a Web View Integration
               - subpagename: Using LivePerson Functions with a Bot
   
-  1. pagename `Tutorial & Guides` because it has subpages is actually a folder not a file
-  2. in the Markdown file for `Using Meta Intents with Conversation Builder` its pagename must match the subpagename.
-  3. the file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2 
-  4. the file must include `Conversation Builder` as a `documentname` in the header. 
-  4. the permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`
-  5. notice how the `&` in the subfoldername is replaced with a dash in the permalink.
+1. The `pagename` entry `Tutorial & Guides` is actually a folder not a file, because it has subpages.
+2. In the Markdown file for `Using Meta Intents with Conversation Builder`, the `pagename` must match the `subpagename`.
+3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2. 
+4. The file must include `Conversation Builder` as a `documentname` in the header. 
+5. The permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`.
+6. Notice how the `&` in the `subfoldername` is replaced by a dash in the permalink.
   
-Example Documentname is pagename:
+Another example:
 
     - categoryname: Getting Started
       image: getting-started
@@ -118,81 +118,67 @@ Example Documentname is pagename:
         - pagename: Analytics Builder Data Metrics
         - pagename: Retry Policy Recommendations
         
-1. Documentname name is `Getting Started with your Free Trial Account` is not a folder name becauase it does not contain a pages key below it
-2. Since this above file only contains one parent, there should not be a document name in the file `getting-started-with-your-free-trial-account.md`
-3. The pagename for `getting-started-with-your-free-trial-account.md` must match the documentname in the yaml file `Getting Started with your Free Trial Account`
+1. The `documentname` entry `Getting Started with your Free Trial Account` does not represent a folder, because it does not contain a pages key.
+2. Since this above file only contains one parent, there should not be a `documentname` in the file `getting-started-with-your-free-trial-account.md`.
+3. The `pagename` for `getting-started-with-your-free-trial-account.md` must match the `documentname` in the YAML file `Getting Started with your Free Trial Account`.
 
-#### Environments
+### Environments
 
-To updated production and staging enviornments, create a pull request for master or Staging. When pull request is merged a automated release cycle will start and publish those changes in around five minutes.
+To update the production and staging environments, create a pull request for master or Staging [sic]. When the pull request is merged a automated release cycle will start and publish those changes in around five minutes.
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
-
 * Staging (built from the `Staging` branch): [https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
 
-#### Updating/Creating Headers
+### Updating and creating headers
 
-Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the “---” at the top of each document. It’s technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:
+Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the “---” at the top of each document. It’s technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply. Our headers are usually comprised of the following key/value pairs:
 
 * `pagename`: This is the name of the page that will appear at the top of the document.
-
-* `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
-
+* `keywords`: This replaces the keywords found in the respective `<meta>` element of the page. Leave it empty, as it’s not currently used.
 * `sitesection`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
-
 * `categoryname`: This is the category to which the document’s API belongs (for example, the “Create Users” method belongs to the Users API which is under Contact Center Management).
-
 * `documentname`: This is the API to which the document belongs.
-
 * `subfoldername`: This is a sub-folder to which the document belongs, if there is one.
+* `permalink`: this key defines the link at which the document can be found. The format of this value **must be** as follows; any other value format will cause the sidebar to malfunction:
+  - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
+  - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
+* `indicator`: This key sets the chat or messaging indicator (or both) on a document. It accepts `chat`, `messaging`, or `both` as its values.
+* `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
 
-* `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
+## Notes on content and code
 
-  * If the page has a `subfoldername` value: documentname - subfoldername - pagename. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`
+The max width for an image in this repo is 800 pixels.
 
-  * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
+## Hiding files
 
-* `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
+* Add the Files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden). 
+* Do not include them in the documentsupdated.yaml file.
+* Make sure the `layout` header is set to `hidden-layout`. (This is for search engines not to find it.)
+* Make sure that the headers are set correctly, following the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder.
 
-* `layout`: set the value to `hidden-layout` if you want this file to be ignored in search engines
+**Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
-### Hiding Files
+### Adding new documents to the sidebar
 
-* Add the Files to the Hidden->Hidden folder. 
-* Do not include them to documentsupdated.yaml file. 
-* Make sure Layout header is set to `hidden-layout` (This specifically makes it so search engines can’t find it)
-* Make sure that the headers are set correctly follow the file header structure of `blank.md` in the Hidden->Hidden folder
+Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
 
-**Any other parameters which are not documented here which you might find in the front-matter are deprecated and are only present for backwards compatibility purposes. These should not be used**.
+The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar. 
 
-#### Adding New Documents to the Sidebar
+## Building the site locally
 
-Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time and resource consuming).
+**Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
 
-The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its pagename, documentname, categoryname, and permalink in its header. The Markdown file might need more information depending on where it will need to be in the sidebar. 
+If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
 
-The max width for an image in this repo is 800px.
+Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 
-### Building the Site Locally
-
-**IMPORTANT:** This repository requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
-
-If you have not already done so, make sure your computer has Ruby installed. Here’s a helpful guide on how best do that on [Mac](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
-
-Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
-
-**First time install**
+### First time install
 
 1. Run `npm install`
 2. Run `npm run serve`
-3. Navigate to http://localhost:4000/ (or the port you chose) and you’ll see the site.
+3. Navigate to http://localhost:4000/ (or the port you chose) to access the site
 
-**OSX Installation**
-
-1. We recommend installing a standalone Ruby Installation and RVM
-2. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
-
-**Serving the site after the first install**
+### Serving the site after the first install
 
 You have two options to run the site locally after the first install:
 
@@ -202,16 +188,16 @@ You have two options to run the site locally after the first install:
 
 **Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
 
-### Template
+## Template
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
-#### Algolia
+### Algolia
 
 Algolia is the tool we use for the search bar. It generates a list of searchable items by indexing it in their dashboard which is then pulled into the search bar within the project
 
 To get the latest data to be added into Algolia simply do a pull request on the production branch (master)
 
-### Licensing
+## Licensing
 
-All usage of the contents, documentation or code found in this repository is subject to the [LivePerson API Terms of Use](https://www.liveperson.com/policies/apitou). Please use the link above to read them carefully before utilizing the site.
+All usage of the contents, documentation or code found in this repository is subject to the [LivePerson API Terms of Use](https://www.liveperson.com/policies/apitou).
