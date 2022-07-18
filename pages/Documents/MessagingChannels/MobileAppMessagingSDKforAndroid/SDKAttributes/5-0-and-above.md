@@ -709,7 +709,7 @@ Define the visibility of "Mark as resolved" menu item.
 * **Type:** bool
 * **Default value:** true
 
-#### lp_urgency_menu_items_visible
+#### lp_urgency_menu_item_visible
 Define the visibility of "Mark as urgent" menu item.
 
 * **Type:** bool
