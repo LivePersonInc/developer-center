@@ -118,7 +118,7 @@ indicator: both
       </div>
    </div>
 </div>
-<div class="free-trial-container">
+<!-- <div class="free-trial-container">
    <div id="free-trial">
       <div id="free-trial-content-container">
          <p class="free-trial-header" style="width:80%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p>
@@ -129,14 +129,14 @@ indicator: both
          </a>
       </div>
    </div>
-</div>
+</div> -->
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript">
+<script>
    var modal = document.getElementById("myModal");
    // Get the button that opens the modal
    var btn = document.getElementById("teaser-banner");
    // Get the <span> element that closes the modal
-   var span = document.getElementsByClassName("close")[0];
+   var span = document.getElementsByClassName["close"](0);
    btn.onclick = function() {
      modal.style.display = "block";
    }

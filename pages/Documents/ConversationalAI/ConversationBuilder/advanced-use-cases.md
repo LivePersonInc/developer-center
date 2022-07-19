@@ -39,6 +39,14 @@ When the user enters anything but a well-formed email address, this yields a con
 
 For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
+### Step Up authentication
+
+You can use Step Up authentication to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication. For more on this, see [here](https://knowledge.liveperson.com/step-up-authentication-overview/) in the Knowledge Center.
+
+Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can change it as desired (more on this [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage)).
+
+Regardless of the message text, it’s important that you catch the Step Up message in the bot’s flow and handle it: Use it to start the authenticated workflow. If you don’t catch the message, a fallback message is sent to the consumer.
+
 ### Base 64 encoding
 
 The JavaScript editor within Conversation Builder doesn't natively support encoding to and decoding from Base 64. If you have a case where you need to do so, you can call a FaaS function and use the `crypto` package to encode a value and return it to your bot. Alternatively, using the following code in your Global Functions will give you access to this functionality without having to call outside of Conversation Builder.

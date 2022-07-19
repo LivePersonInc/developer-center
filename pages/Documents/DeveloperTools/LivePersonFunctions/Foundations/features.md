@@ -73,7 +73,7 @@ As explained within our [networking foundation](liveperson-functions-foundations
 
 #### Adding a domain to the allowlist
 
-There are two ways for adding a domain to the allowlist. Either during the creation process, which is shown [here](liveperson-functions-getting-started-development-deep-dive-ui.html#second-step-domain-whitelisting) or by heading to the "Settings"-Page and opening the "Domain Whitelist"-Tab (opened by default).
+There are two ways for adding a domain to the allowlist. Either during the creation process, which is shown [here](liveperson-functions-getting-started-development-deep-dive-ui.html#second-step-adding-domains-to-the-allowlist) or by heading to the "Settings"-Page and opening the "Domain Allowlist"-Tab (opened by default).
 
 When adding a domain to the allowlist, you should always look out for common pitfalls. First, make sure your domain is not redirecting because, in this case, you also need to allowlist any domain that is part of the redirection chain. An excellent way to test if your domain is redirecting, if you are not sure, is to leverage the following command:
 
@@ -94,7 +94,7 @@ Next, ensure that you safe list the correct domain when working with subdomains.
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. But you should be aware that we only support one wildcard in the domain, `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_whitelist_add.png">
+<img class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_allowlist_add.png">
 
 Type the domain in the text field and click the "Add"-button. Once it is saved, it will be reflected in the domain list below.
 
@@ -103,6 +103,6 @@ Be aware that adding a domain can take up to 5 minutes until being "active".
 
 #### Removing a domain from the allowlist
 
-Removing a domain allowlist entry is only possible from the "Domain Whitelist"-Tab located inside the "Settings"-Page. Click on the "Bin" icon next to the entry you want to remove.
+Removing a domain allowlist entry is only possible from the "Domain Allowlist"-Tab located inside the "Settings"-Page. Click on the "Bin" icon next to the entry you want to remove.
 
-<img class="fancyimage" alt="Functions: Remove from whitelist" src="img/functions/functions_whitelist_remove.png">
+<img class="fancyimage" alt="Functions: Remove from allowlist" src="img/functions/functions_allowlist_remove.png">

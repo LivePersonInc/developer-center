@@ -18,8 +18,6 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 
 ### Add a Value Set entity
 
-**To add a Value Set entity**
-
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
@@ -56,57 +54,37 @@ Regular Expression entities are available only in domains using the [LivePerson 
 7. Click **Save**.
 8. Train the domain so that the addition is reflected in a new model version.
 
-### Using entities
+### Add or update entity values in bulk
 
-To refresh on using entities with intents, check out the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For information on using entities with Knowledge Base articles, see [here](knowledgeai-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
+Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a set of entity values in bulk.
 
-#### Can I detect entities using JavaScript?
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit1.png">
 
-There is a JS method to detect which entities have been picked up by the NLU called [getNamedEntities();](conversation-builder-scripting-functions-get-set-contextual-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
+When you click the link, all of the values are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
+* Insert a number of additional values at the top or bottom. This is handy if you have the values in a separate file. You can quickly copy them and paste them in.
+* Select a number of values and delete them all at once. This is faster than doing so one by one.
 
-```javascript
-var toppingObjects = botContext.getNamedEntities('toppings');
+<img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png">
 
-var toppings = [];
+{: .important}
+To save your changes, click the **Update Entity** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
 
-if (toppingObjects != null && toppingObjects.length > 0) {
+Take care when using this feature to avoid making unintended changes:
+* To replace what exists, paste over it.
+* To add to what exists, paste the additions into (not over) the list.
+* Ensure that each value is on a different line.
 
-    for (j = 0; j < toppingObjects.length; j++) {
+### Capture an entity using Conversation Builder's Assist
 
-        toppings.push(toppingObjects[j].getPhrase())
+Use Conversation Builder's **Assist** tool to associate a question with an entity, so you can capture the consumer's response as the value of that entity. This is illustrated [here](conversation-builder-assist.html#associate-a-question-with-an-entity).
 
-    }
+When you use Assist to associate a question with an entity, Assist automatically creates a slot to store the consumer's response. A slot is a special -- and powerful -- type of variable that brings dynamic, fluid behavior to storing consumer input; more on slots [here](conversation-builder-variables-slots-slots.html).
 
-}
-```
+Using Assist is the easiest way to capture an entity, and it should suit most use cases. For more advanced use cases, such as those that involve modifying or cleaning entities, you can use the [getNamedEntities](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) scripting function.
 
-#### Can an entity return a different value?
+### Detect entities using JavaScript
 
-Sometimes you will want an entity match to return a value, say for sending to an API. For example, if you have an entity for "color" with values like red, blue, green, yellow, black but your API is expecting a numeric data values like red: 10, blue: 11, green: 12, yellow: 13, black: 14 how would you create this mapping?
-
-In the Intent Manager, when creating your entities, you can provide data with additional values by adding a "~" between the phrase and the data value like this: red~10, blue~11, etc. When calling the entity you would use the following to get the data value:
-
-```javascript
-var color = botContext.getNamedEntities('colors');
-
-var whichColor = '';
-
-if (color != null && color.length > 0) {
-
-    for (j = 0; j < color.length; j++) {
-
-        whichColor = color[j].getDataValue();
-
-    }
-
-}
-```
-
-#### How do I use multiple entities to map to a single value?
-
-Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Let’s take an Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
-
-Using a similar script to the above color example, which returns the data value, would get you the "LAX" or “DFW” you need.
+Use the [getNamedEntities](conversation-builder-scripting-functions-get-set-session-data.html#get-named-entities) scripting function.
 
 ### Delete an entity
 
@@ -125,12 +103,3 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 6. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 7. In the confirmation dialog, click **Yes**.
 8. Train the domain so that the deletion is reflected in a new model version.
-
-### How entities affect the NLU score - LivePerson (Legacy) engine only
-
-When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
-
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">

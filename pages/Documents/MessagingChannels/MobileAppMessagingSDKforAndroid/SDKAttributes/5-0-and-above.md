@@ -703,9 +703,20 @@ Define the menu item color when disabled.
 * **Type:** color
 * **Default value:** @color/lp_disabledColor
 
+#### lp_resolve_conversation_menu_item_visible
+Define the visibility of "Mark as resolved" menu item.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_urgency_menu_item_visible
+Define the visibility of "Mark as urgent" menu item.
+
+* **Type:** bool
+* **Default value:** true
 
 #### clear_history_menu_item_visible
-Define the visibility of clear history menu item.
+Define the visibility of "cCear history" menu item.
 
 * **Type:** bool
 * **Default value:** true
@@ -3779,6 +3790,12 @@ Chat message (agent/consumer) bubble bottom padding.
 &nbsp;
 </div>
 
+#### lp_timestamps_font_size
+Update the timestamp text font size of the conversation message bubbles.
+
+* **Type:** dimen
+* **Default value:** 12sp
+
 
 #### show_agent_typing_in_message_bubble
 
@@ -4420,6 +4437,18 @@ Set the link message text color.
 
 * **Type:** color
 * **Default value:** @color/lp_consumer_action_highLight_color
+
+#### lp_enable_timestamps
+Show or hide the timestamp text of the conversation message bubbles.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_enable_read_receipts
+Show or hide read receipt text of the consumer message bubbles.
+
+* **Type:** bool
+* **Default value:** true
 
 
 ---

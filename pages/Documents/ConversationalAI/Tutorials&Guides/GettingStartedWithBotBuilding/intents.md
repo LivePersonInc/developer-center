@@ -10,6 +10,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-intents.html
 indicator: both
 ---
 
+{: .important}
+This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
 <!--
@@ -136,7 +139,7 @@ Now you can begin to build out the Make Payment dialog.
 
     Now let's see the dialog in action.
 
-8. Open the Preview window, and start a new session by clicking **Reset Session**.
+8. Open the Preview window, and start a new session by clicking **Reset**.
 9. Enter an utterance that should match the Make Payment intent, like, "Can you help me to make a payment?" You should see the Make Payment dialog's flow and the multiple choice question. Tap or enter “Yes” or “No” and see what response you get.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_preview.png">

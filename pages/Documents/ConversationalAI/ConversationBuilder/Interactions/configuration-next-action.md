@@ -51,7 +51,7 @@ Use the guided Add/Edit Next Action Rule window to:
 
 1. Specify the rule name.
 2. Define the condition that must evaluate to true for the rule to be executed.
-3. Store data in a [variable or slot](conversation-builder-variables-slots.html). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
+3. Store data in a [variable or slot](conversation-builder-variables-slots-the-basics.html). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
 #### Adding variable conditions
@@ -64,7 +64,7 @@ If you add a variable condition, *both* the first defined condition *and* the va
 
 To specify a `botContext` variable in a variable condition, enter only the variable name.
 
-In our example below, the consumer must answer "yes" to our question and the `channel` variable must be "ABC" for Apple Business Chat. If both are true, then the consumer is offered a promotion.
+In our example below, the consumer must answer "yes" to our question, and the `channel` variable must be "AMB" for Apple Messages for Business. If both are true, then the consumer is offered a promotion.
 
 <img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition2.png">
 
@@ -100,7 +100,7 @@ The question contains a single rule, which is this:
 
 <img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions2.png">
 
-In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a [slot](conversation-builder-variables-slots.html#slots), and the dialog flow continues to the next interaction.
+In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a [slot](conversation-builder-variables-slots-slots.html), and the dialog flow continues to the next interaction.
 
 Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following match types:
 

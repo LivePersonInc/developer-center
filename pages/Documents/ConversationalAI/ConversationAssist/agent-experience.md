@@ -44,3 +44,6 @@ After you have joined a bot to a conversation, you can remove or replace it if d
 * To replace the current bot, click **Replace bot** beside the bot you want to substitute into the conversation. The selected bot joins the conversation, taking over for the previous bot. (Only one bot can be joined to a conversation at a time.)
 
     <img width="550" src="img/agentassist/remove_replace_bot.png">
+
+### Notify the agent when the bot has finished
+If you’re recommending bots to your agents, it can be a challenge for the agent to know when the bot has finished its work. The agent must check back repeatedly on the bot’s progress. To solve this, the bot can send a [private message](conversation-builder-interactions-statements.html#private-message) when it’s finished handling the consumer’s request. The private message can tell the agent what action has been taken, and let them know that it’s time for them to rejoin the conservation to close things out with the consumer. More on private messages [here](conversation-builder-interactions-statements.html#private-message).

@@ -56,7 +56,7 @@ You may choose to create more than one function of the same event if you set dif
 {: .important}
 The above example, "[Default]", refers to not selecting any skill, the default behaviour.
 <br />
-#### Second step: Domain Whitelisting
+#### Second step: Adding Domains to the Allowlist
 
 When adding a domain to the allowlist, you should always consider some common pitfalls. First, make sure your target domain is not redirecting: If it is, you also need to allowlist any domain that is part of the redirection chain. An easy way to test if your domain redirecting is the following command:
 
@@ -77,7 +77,7 @@ Next, ensure that you allowlisted the correct domain when working with subdomain
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. Be aware that we only support one wildcard in the domain, so `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_whitelist_step.png">
+<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_allowlist_step.png">
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 
@@ -191,7 +191,7 @@ We added our snippets to the context service, accessible by typing in `Snippet` 
 
 ##### Code documentation & Types
 
-Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#Dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
+Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
 
 Further, that information is also extended to function, parameters, and objects you specify within your code.
 

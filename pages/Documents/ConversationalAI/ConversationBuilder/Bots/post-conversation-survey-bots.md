@@ -94,12 +94,12 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 
 4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
 
-### Creating the survey bot
+### Create the survey bot
 
-1. Log into Conversation Builder.
+1. [Access Conversation Builder](conversation-builder-overview.html#access-conversation-builder).
 2. From the Bots dashboard, click **New Bot** in the upper-right corner.
-3. In the Choose a Bot Template dialog, select **Survey Bot**.
-4. In the Survey Bot dialog, specify the following:
+3. In the Choose a Bot Template window, select **Survey Bot**.
+4. In the Survey Bot window, specify the following:
     * **Name**: Enter a name for the bot that's concise and clear.
     * **Description**: Enter a description that's meaningful to you and others.
     * **Bot Language**: Select a language.
@@ -114,7 +114,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_dashboard.png">
 
-### Building out the survey bot
+### Build out the survey bot
 
 In the dialog that's of type "Survey," define the survey. There are several types of survey questions:
 
@@ -175,9 +175,9 @@ An open-ended question allows the consumer to provide an answer in their own wor
 * You can add a skip option to closed-ended questions but not to open-ended questions. 
 
 {: .important}
-When the target channel is Apple Business Chat, applicable survey questions are automatically sent to the consumer as List Picker interactions.
+When the target channel is Apple Messages for Business, applicable survey questions are automatically sent to the consumer as List Picker interactions.
 
-#### Customizing interaction text (FCR, CSAT and NPS)
+#### Customize interaction text (FCR, CSAT and NPS)
 
 You can customize the question text and the answer choice text for the FCR, CSAT and NPS interactions. To do so, simply replace the text with your own. For example, you might want to change the language that’s used.
 
@@ -190,7 +190,7 @@ The actual value never changes, not even when you change the answer text (text v
 {: .important}
 Take care when changing the answer text; remember to update the conditions in the rules accordingly.
 
-#### Reordering answer choices (FCR, CSAT and NPS)
+#### Reorder answer choices (FCR, CSAT and NPS)
 
 Reordering an answer choice has no impact on its text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
 
@@ -203,7 +203,7 @@ Alternatively, you can use the hotkeys:
 * Previous = Shift + Ctrl
 * Next = Shift + Alt
 
-#### Making survey questions optional
+#### Make survey questions optional
 
 To add a Skip option to an FCR, CSAT or NPS question and thereby make the question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
@@ -218,7 +218,7 @@ You cannot add a Skip opton to an open-ended, custom question.
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
-#### Configuring the display format
+#### Configure the display format
 
 In the **Advanced Settings** of many of the survey interactions, you can configure several display settings:
 
@@ -238,14 +238,14 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
-* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
-* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
+* **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format. For the Net Promoter Score (NPS) interaction in specific, we recommend the letter format. The numeric format can confuse consumers because the NPS scores themselves range from 0 to 10 (note they start with zero), but the numeric format starts numbering the options with 1. Since these don’t match, selecting a score can be confusing.
+* **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer. In the question, make sure to include information on how to respond (e.g., “type 1 for very bad, 5 for excellent, or something in-between.”).
 
-#### Handling free text answers
+#### Handle free text answers
 
 The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
 
-#### Handling unrecognizable responses
+#### Handle unrecognizable responses
 
 In the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
 
@@ -255,11 +255,11 @@ You can customize the default fallback responses in the survey interactions.
 
 You cannot create a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html).
 
-#### Adding standard interactions
+#### Add standard interactions
 
 You can use only a subset of the standard interaction types in the Survey dialog; unavailable interactions are hidden from view on the toolbar.
 
-### Configuring the survey bot's settings
+### Configure the survey bot's settings
 
 1. Open the survey bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
@@ -274,9 +274,9 @@ Survey bot settings include:
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-- **Session Expired Message**: Enable this to send a custom message in response to the consumer trying to send a message after the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is sent in response. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+- **Session Expired Message**: Enable this to customize the message to the consumer that's proactively sent when the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is proactively sent instead of a custom message. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
-### Adding support for emailed transcripts
+### Add support for emailed transcripts
 
 If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
 
@@ -304,7 +304,7 @@ Note the following:
 * For convenience, the Email Transcript interaction includes two default rules. One rule uses a Regular Expression to validate whether the consumer has entered a valid email address. If you inadvertently delete this rule, you can easily add it back manually; to enter the RegEx, use the "Hints" feature that's available.
 * The Email Transcript interaction can precede or follow a Thank You Message interaction (discussed below), if used. However, the two must be last in the dialog flow. You can [move](conversation-builder-interactions-interaction-basics.html#move-an-interaction) them to reorder them, but this constraint is enforced.
 
-### Adding support for a Thank You message
+### Add support for a Thank You message
 
 If desired, you can add support for sending a Thank You message to the consumer at the end of the survey.
 
@@ -326,18 +326,18 @@ Second, configure the Thank You Message interaction:
 
 The Thank You Message interaction can precede or follow an Email Transcript interaction (discussed above), if used. However, the two must be last in the dialog flow. You can [move](conversation-builder-interactions-interaction-basics.html#move-an-interaction) them to reorder them, but this constraint is enforced.
 
-### Closing the survey conversation
+### Close the survey conversation
 
 Close a survey conversation by setting [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) as the Next Action in the final interaction in the survey dialog.
 
 {: .important}
 Make sure that a custom bot *that triggers a survey bot* also uses Close Dialog. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) allows a post-conversation survey to be triggered, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
 
-### Deploying the survey bot
+### Deploy the survey bot
 
 You don't manually deploy a survey bot. When LivePerson enables this feature for your brand, this deploys the underlying agent connector that's shared by all survey bots. Therefore, **as soon as you create a survey bot and assign it a skill, the bot is active and can receive conversations.** Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning it a production skill.
 
-### Triggering the survey bot
+### Trigger the survey bot
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes, the survey will be triggered, and the agent workspace will show the caption, “Survey in progress.”
 
@@ -372,9 +372,9 @@ In the [Bot Analytics](bot-analytics-overview.html) application, you'll see surv
 #### Report of IDs
 If you make use of survey, question, and answer IDs in your reporting, you can download a report on these for a given survey bot. In Conversation Builder, open the survey bot, access the **Bot Settings**, scroll down to **Generate IDs report**, and click the **Download** icon. This type of report is often helpful for users that have migrated from Bot Studio to Conversation Builder for creation and management of survey bots. It can help you quickly build or rebuild custom reports that use the IDs.
 
-### Monitoring survey bots
+### Monitoring
 
-If you have Bot Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to [monitor your survey bots](bots-status-managing-post-conversation-survey-bots.html). In Bots Status, you can redeploy the connector as a troubleshooting technique.
+If you have Bots Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to [monitor your survey bots](bots-status-managing-post-conversation-survey-bots.html). In Bots Status, you can redeploy the connector as a troubleshooting technique.
 
 ### FAQs
 
@@ -384,7 +384,7 @@ See [this topic](https://knowledge.liveperson.com/ai-bots-automation-post-conver
 
 #### How do I disable a survey bot?
 
-If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skill(s).
+If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and assign a test skill or any unused skill.
 
 #### Are survey bots supported in text-only channels?
 

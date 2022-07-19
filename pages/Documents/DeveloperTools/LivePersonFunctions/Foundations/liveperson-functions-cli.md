@@ -13,7 +13,7 @@ redirect_from:
 
 The Functions Command Line Interface (CLI) tool will enable you to develop, test and manage your functions from the comfort of your local machine. If you want to integrate Functions in an automated process (e.g. CI/CD), the CLI is the perfect place to start. You can inspect the CLI's code and find detailed documentation on the CLI's public [GitHub repository](https://github.com/LivePersonInc/faas-cli).
 
-### How to install
+## How to install
 
  {: .notice}
 The CLI is optimized for use with macOS and Linux. If you want to use the CLI from a Windows machine, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about).
@@ -24,7 +24,7 @@ Use the command `npm install -g liveperson-functions-cli` or `yarn global add li
 
 {: .notice}
 The user using CLI should have admin privileges. Otherwise, the correct functionality of the CLI cannot be guaranteed.
-## Overview Functionality
+### Overview Functionality
 All CLI functionality is available through the `lpf` command followed by:
 
 |||
@@ -63,7 +63,7 @@ You can develop your function's code within this folder by modifying the `index.
 Modifying the `config.json` should be done with care. The function name is immutable and used as an identifier within the Functions platform.
 
 Testing a function locally can be done by using the `lpf invoke FUNCTION_NAME --local` or `lpf debugger FUNCTION_NAME` to either invoke or debug the function. In both cases, the `input` property of the `config.json` will be used for payload. For a step-by-step guide please consult the [CLI deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html).
-# Pushing and Deploying
+## Pushing and Deploying
 Pushing the function with `lpf push FUNCTION_NAME` will create or update a function on the Functions platform. This can overwrite changes done to the function as it will update a pre-existing function.
 
 Once the function exists on the platform or is already deployed, you can check its status using `lpf get functions`:
@@ -71,7 +71,7 @@ Once the function exists on the platform or is already deployed, you can check i
 <img class="fancyimage" alt="Functions: cli get functions" src="img/functions/functions_cli_get_functions.png">
 
 Using `lpf deploy FUNCTION_NAME`, you can (re)deploy your function. This will changes its state to productive.
-## Example CI Setup
+### Example CI Setup
 
 You can use the CLI to integrate into a CI/CD solution to automate your development and deployment of functions.
 

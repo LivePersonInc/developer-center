@@ -29,7 +29,7 @@ Each reply can have:
 
 When a Quick Reply is tapped, the rest of the replies are dismissed. The agent can see the entirety of the Quick Replies group at all times, even if it is no longer visible to the consumer (after they make a selection, for example).
 
-![Quick Replies](images/quick-replies.gif)
+![Quick Replies](img/archive/quick-replies.gif)
 
 ### Template Properties
 

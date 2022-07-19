@@ -53,7 +53,7 @@ Let’s see the interactions in action!
 
 2. In the Preview window, enter “hello” or “hello there,” and click **Send**. You should see the welcome response.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/preview.png">
 
     So how is the Welcome dialog triggered?
 
@@ -72,7 +72,7 @@ Let’s see the interactions in action!
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent.png">
 
-5. In the Preview window, click **Reset Session**. This starts a new session that "picks up" your changes.
+5. In the Preview window, click **Reset**. This starts a new session that "picks up" your changes.
 
 6. Test the new patterns in the Preview window like you did before.
 
@@ -123,7 +123,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     Let's test the changes.
 
-8. Open the Preview window again, and click **Reset Session**.
+8. Open the Preview window again, and click **Reset**.
 
 9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
 

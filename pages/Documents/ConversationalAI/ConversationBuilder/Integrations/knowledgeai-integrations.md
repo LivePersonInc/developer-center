@@ -32,17 +32,12 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
-    - **Methods**:
-        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the KnowledgeAI UI or an import file.
-        - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
-    - **Request Parameters for a Phrase search**:
-        - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledgeai-using-intents-with-kbs.html#search-modes). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
+    - **Method**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
+    - **Request Parameters**:
+        - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledgeai-search-methods.html). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
         - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
-        - *phrases*:   Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
+        - *phrase*: Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots-variables.html#store-the-consumers-response), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
-    - **Request Parameters for a Special Tag search**:
-        - *mode*: Indicates whether to perform an "and" or "or" search using the special tags.
-        - *specialTags*: The comma-delimited list of tags for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 3. Click **Save**.

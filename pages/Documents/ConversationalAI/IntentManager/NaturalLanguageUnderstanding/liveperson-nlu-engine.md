@@ -10,9 +10,10 @@ permalink: intent-manager-natural-language-understanding-liveperson-nlu-engine.h
 indicator: both
 ---
 
-There are two versions of LivePerson's NLU engine: 
-* **LivePerson**: Formerly known as LivePerson NLU v2
-* **LivePerson (Legacy)**: Formerly known as LivePerson NLU v1
+There are two versions of LivePerson's NLU engine:
+
+* **LivePerson**: Formerly known as LivePerson NLU v2.
+* **LivePerson (Legacy)**: Deprecated. Formerly known as LivePerson NLU v1. This legacy engine still works, but it's no longer supported apart from security updates.
 
 ### LivePerson NLU engine
 
@@ -31,7 +32,7 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
 ### Benefits of LivePerson over LivePerson (Legacy)
 
-There are significant benefits to using the LivePerson engine instead of the LivePerson (Legacy) engine for NLU. The LivePerson engine:
+There are significant benefits to using the LivePerson engine instead of the deprecated LivePerson (Legacy) engine for NLU. The LivePerson engine:
 
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
@@ -73,7 +74,7 @@ Note the following:
 * Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.
 * Before you train, consider exporting a CSV of the intents. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 * Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
-* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate the latest model version](intent-manager-build-domains.html#activate-the-latest-model-version).
+* You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
@@ -93,14 +94,16 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
     To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
-### LivePerson (Legacy) NLU engine
+### Still using LivePerson (Legacy) NLU?
 
-This is LivePerson's legacy NLU engine. 
+If you're still using the deprecated LivePerson (Legacy) NLU engine, this section contains relevant info for you.
+
+#### What's LivePerson (Legacy) NLU engine?
 
 {: .important}
-As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this deprecated engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
-Key characteristics include:
+Key characteristics of the legacy engine include:
 
 * A recommender model based on Word Mover's Distance (WMD) algorithms. 
 * Considered an "entry level" NLU engine because it's more specific. In other words, for the algorithm to work well, the sample sentences should be close to the expected user input and have only small differences in wording, for example:
@@ -117,10 +120,10 @@ Key characteristics include:
 * Doesn't require the model to be trained.
 
 
-### Convert a LivePerson (Legacy) domain to LivePerson
+#### Convert a LivePerson (Legacy) domain to LivePerson
 
 {: .important}
-Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
+Brands with existing domains using the deprecated LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 **To convert a LivePerson (Legacy) domain to the LivePerson engine**
 
@@ -131,3 +134,9 @@ Brands with existing domains using the LivePerson (Legacy) engine are encouraged
     * Provide at least 5 intents.
     * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
     * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.
+
+#### How entities affect the NLU score - LivePerson (Legacy) engine only
+
+When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
+
+Having 2 entities match the training phrases can cause a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.

@@ -13,6 +13,100 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.11.0
+
+**Release date:** July 15, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.11.0 release provides improved accessibility support, bug fixes and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.11.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.3.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# Enhancements
+
+### Allow Consumers to submit CSAT Survey as soon as returned from background
+
+SDK now allows consumers to submit CSAT Survey responses as soon as they return from the background without waiting for the SDK to finish connecting.
+
+### Dynamically update message timestamps
+
+An enhancement has been made to the conversation message bubble to update the message timestamps dynamically, without consumers having to close and reopen the conversation window.
+
+### Accessibility enhancements
+
+Improvements on the TalkBack accessible experience for vision-impaired users.
+
+# Bugs Fixed
+
+- System message does not get displayed in current device language while using real time masking feature.
+- Message bubble padding over 8 dp causes text containing hyperlinks to be clipped.
+
+
+# Android Messaging SDK - Version 5.10.0
+
+**Release date:** May 20, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.10.0 release includes step-up authentication feature and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.10.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.2”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# New Features
+
+### Step Up Authentication
+
+Step up authentication allows brands to let their consumers continue the ongoing unauthenticated conversations after logging in and merging it to the authenticated conversation history. For more information, follow [feature documentation](mobile-app-messaging-sdk-for-android-advanced-features-step-up-authentication.html).
+
+### Custom proactive welcome message for Non-Rich content
+
+With the support of Non-Rich content payloads, brands will be able to send "text" type proactive content messages to their consumers.
+
+# New Attributes
+
+### [lp_enable_timestamps](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_timestamps)
+
+Show or hide the timestamp text of the conversation message bubbles.
+
+### [lp_enable_read_receipts](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_read_receipts)
+
+Show or hide read receipt text of the consumer message bubbles.
+
+### [lp_timestamps_font_size](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_timestamps_font_size)
+
+Update the timestamp text font size of the conversation message bubbles.
+
+### [lp_urgency_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_urgency_menu_item_visible)
+
+Show or hide the "Mark as urgent" context menu option.
+
+### [lp_resolve_conversation_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_resolve_conversation_menu_item_visible)
+
+Show or hide the "Mark as resolved" context menu option.
+
+# Bugs Fixed
+
+- SDK displays a message body instead of message title from payload as a proactive welcome message.
+- A color [configuration](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#consumer_bubble_message_link_text_color) value for links is being ignored from the conversation message containing a text as well as link together.
+- The background color of buttons in horizontal type structured content will overlap over the structured content borders.
+- When using SDK’s clear history feature, an infinite loading spinner will not get reset from the conversation window after history gets cleared.
+- Accessibility only announces the new message but not the number of new messages received.
+
 # Android Messaging SDK - Version 5.9.0
 
 # Overview

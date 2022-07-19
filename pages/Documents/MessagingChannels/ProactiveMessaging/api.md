@@ -46,21 +46,21 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 | Method | URI  |
 | :--- | :--- |
-| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/agentVep/baseURI.json?version=1.0|
+| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/baseURI.json?version=1.0|
 
 ```json
 {
-    "service": "agentVep",
+    "service": "sentinel",
     "account": "ACCOUNT_ID",
-    "baseURI": "va.agentvep.liveperson.net"
+    "baseURI": "va.sentinel.liveperson.net"
 }
 ```
 
 | If Sentinel **baseURI** then | Proactive Region | Proactive **API domain** | API Documentation |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **va**.agentvep.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **va**.sentinel.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **lo**.sentinel.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **sy**.sentinel.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
 
 ## Campaign API: Example Request and Response
@@ -607,7 +607,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong> How do we know which field is optional or required?<strong>
 - Proactive messaging is using industry recommended swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
-- <img src="images/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
+- <img src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
 
 <strong>What are the restrictions on the field in campaign request?<strong>
 
@@ -646,7 +646,7 @@ Below are the limitations:
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
 https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
 <br />Brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below. 
-<img src="images/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+<img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
 Footer and quick reply buttons have static values and do not need any user input while campaign creation. However, call to action buttons can accept variables for Website URL which can be provided during campaign creation.
