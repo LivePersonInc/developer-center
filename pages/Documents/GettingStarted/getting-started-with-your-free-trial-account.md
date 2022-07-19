@@ -131,7 +131,7 @@ indicator: both
    </div>
 </div> -->
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript">
+<script>
    var modal = document.getElementById("myModal");
    // Get the button that opens the modal
    var btn = document.getElementById("teaser-banner");
