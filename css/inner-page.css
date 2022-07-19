@@ -483,6 +483,7 @@ ul.mysidebar.nav .topfolder>a {
     display: flex;
     color: var(--link-color);
     overflow-wrap: break-word;
+    align-items: center;
 }
 
 ul.mysidebar.nav a {
