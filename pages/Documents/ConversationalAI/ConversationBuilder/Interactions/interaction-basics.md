@@ -254,7 +254,7 @@ You can move an interaction within the same dialog or across dialogs.
 1. On the **Dialogs** page, within the dialogs panel on the left, select <img class="inlineimage" style="width:25px" alt="Icon for moving an interaction" src="img/ConvoBuilder/icon_interactions_move.png"> (Move icon) beside the interaction.
 2. Drag the interaction to the desired location, and drop it.
 
-<img style="width:800px" src="img/ConvoBuilder/interactions_move.gif">
+<img style="width:800px" alt="Animated GIF showing how to move an interaction" src="img/ConvoBuilder/interactions_move.gif">
 
 ### Duplicate an interaction
 You can duplicate any type of interaction except a Dialog Starter interaction. A dialog can only have one Dialog Starter interaction.
