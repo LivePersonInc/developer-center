@@ -24,7 +24,7 @@ Using metadata properties, brands can define the received and reply bubble struc
 
 Below is an image example of a Business Chat List Picker with multi-selection turned on:
 
-![Apple Messages for Business List Picker Main](images/abc-listpicker-1.jpg)   ![Apple Messages for Business List Picker list](images/abc-listpicker-2.PNG)
+![Apple Messages for Business List Picker Main](img/archive/abc-listpicker-1.jpg)   ![Apple Messages for Business List Picker list](img/archive/abc-listpicker-2.PNG)
 
 ### Basic Template Overview
 
