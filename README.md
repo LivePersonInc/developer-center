@@ -19,7 +19,7 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 ### Committing changes to the site
 
-Before making any commits, please make sure to read the _Updating and creating headers_ section. There is now a Git precommit hook that makes sure you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputed to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. Our tests will use that YAML file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
+Before making any commits, please make sure to read the _Updating and creating headers_ section. There is now a Git precommit hook that ensures you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputted to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in the documentsupdated.yaml file. Our tests will use that YAML file as the source of truth, so make sure your header naming structure matches the documentsupdated.yaml.
 
 File name rules:
 
@@ -67,7 +67,7 @@ Example of a normal layout:
         pages:
         - pagename: Overview 
 
-1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
+1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is `AgentExperience`.
 2. `Add Agent Widgets` is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`. The `Add Agent Widgets` folder only contains one page.
 3. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md` is the path of the file, and must list all parent folders, excluding the layer 0 `categoryname`.
 4. For the above example, the permalink is `add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`.
