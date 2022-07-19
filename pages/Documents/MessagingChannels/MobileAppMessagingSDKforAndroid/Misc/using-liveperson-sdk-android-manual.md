@@ -332,7 +332,7 @@ private void openActivity() {
 
 ![Firebase Config](img/firebase1.png)
 
-1. Enter [Google Firebase console ](https://firebase.google.com/)
+1. Enter [Google Firebase console](https://firebase.google.com/)
 
 2. Enter your app’s package name and click on ‘Register App’
 
