@@ -39,7 +39,7 @@ indicator: both
 </div>
 <div class="container-note">
    <div class="important" style="width:90%">
-      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial"> register </a> for a free 45-day trial.
+      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial">register</a> for a free 45-day trial.
    </div>
 </div>
 <div class="concierge-bot-header">
@@ -50,7 +50,7 @@ indicator: both
       1. Welcome to the Conversational Cloud
    </div>
    <div class="convo-cloud-paragraph">
-      <a href="https://authentication.liveperson.net/login.html" alt="LiveEngage Login">Log in </a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
+      <a href="https://authentication.liveperson.net/login.html" alt="LiveEngage Login">Log in</a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
    </div>
 </div>
 <div class="welcome-card-modified">
@@ -103,7 +103,7 @@ indicator: both
       4. Test your bot
    </div>
    <div class="convo-cloud-paragraph"  style="width:64%;">
-      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
+      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button</a> in the top right corner of the Dialog Editor to test the interaction.
    </div>
 </div>
 <div class="whole-external-link">
