@@ -29,7 +29,7 @@ By Using the using metadata properties, the brand can also define the received a
 
 Below is an example image of a Business Chat time picker:
 
-![Apple Messages for Business Time Picker Main](images/abc-timepicker-1.jpg)   ![AApple Messages for Business Time Picker list](images/abc-timepicker-2.PNG)
+![Apple Messages for Business Time Picker Main](img/archive/abc-timepicker-1.jpg)   ![AApple Messages for Business Time Picker list](img/archive/abc-timepicker-2.PNG)
 
 ### Basic Template Overview
 
