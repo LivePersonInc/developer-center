@@ -12,10 +12,12 @@
   width: 100%;
   background-color: #f8f8f8;
 }
+
 .banner {
   width: 100%;
   background-color: #f8f8f8;
 }
+
 .banner .text {
   color: #162036;
   float: left;
@@ -23,9 +25,11 @@
   margin-left: 50px;
   margin-top: 90px;
 }
+
 .banner .text .first-line {
   font-size: 1.066em;
 }
+
 .banner .text .second-line {
   font-size: 1.866em;
   max-width: 400px;
@@ -51,6 +55,7 @@ a.typeform-share.button {
   .events img {
     display: none;
   }
+
   .img-responsive-mobile img {
     display: block;
     width: 100%;
@@ -65,6 +70,7 @@ a.typeform-share.button {
   width: 70%;
   margin: 50px auto;
 }
+
 .home-second-line {
   width: 55%;
   margin: 54px auto;
@@ -81,6 +87,7 @@ html body div.container div div.title {
   margin-bottom: 10px;
   color: #162036;
 }
+
 html body div.container div.home-first-line div.text,
 html body div.container div.home-second-line div.text {
   color: #808080;
@@ -89,6 +96,7 @@ html body div.container div.home-second-line div.text {
   /*margin-bottom: 10px;*/
   max-width: 90%;
 }
+
 .header.homepage {
   max-width: 800px;
   margin-top: 80px;
@@ -128,13 +136,15 @@ a.view-all-products::after {
   .home-first-line {
     margin-bottom: 0px;
   }
+
   .home-second-line {
     width: 70%;
     margin-bottom: 16%;
     margin-top: 0px;
   }
 }
-.botplaform > img {
+
+.botplaform>img {
   width: 850px;
   margin-top: 3%;
 }
@@ -241,7 +251,7 @@ a.view-all-products::after {
 }
 
 .developmentsummit p,
-.developmentsummit > ul > li {
+.developmentsummit>ul>li {
   color: #162036;
   font-size: 16px;
   line-height: 22px;
@@ -249,7 +259,7 @@ a.view-all-products::after {
   font-weight: 300;
 }
 
-.developmentsummit > ul > li {
+.developmentsummit>ul>li {
   margin-bottom: 20px;
 }
 
@@ -267,14 +277,13 @@ a.view-all-products::after {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
   .developmentsummit .banner-container {
-    background: url(/images/background-le-for-bots@2x.png) no-repeat center
-      center / cover;
+    background: url(/img/archive/background-le-for-bots@2x.png) no-repeat center center / cover;
   }
 }
 

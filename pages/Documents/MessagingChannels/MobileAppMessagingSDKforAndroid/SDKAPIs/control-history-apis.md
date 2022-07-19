@@ -40,9 +40,7 @@ The APIs lets brands:
 You have three relevant parameters for `ConversationViewParams`:
 
   - [LPConversationsHistoryStateToDisplay](#lpconversationshistorystatetodisplay)
-
-  - [LPConversationHistoryMaxDaysDateTyp](#lpconversationhistorymaxdaysdatetyp)
-
+  
   - [LPConversationHistoryMaxDaysDateType](#lpconversationhistorymaxdaysdatetype)
 
 ```java
@@ -65,7 +63,7 @@ public enum LPConversationsHistoryStateToDisplay {
 }
 ```
 
-#### LPConversationHistoryMaxDaysDateTyp
+#### LPConversationHistoryMaxDaysDateType
 
 * `mHistoryConversationMaxDaysType` - has the following values: 
 
@@ -73,13 +71,9 @@ public enum LPConversationsHistoryStateToDisplay {
 
    * `endConversationDate`
   
-   When using `mHistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` is the default. 
+   When using `mHistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` becomes default.
 
 * `mHistoryConversationsMaxDays` - Brands can choose how much conversation history presents to the consumer by days. Not providing a value allows consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).
-
-#### LPConversationHistoryMaxDaysDateType
-
-When using `mhistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` becomes default.
 
 ```java
 public enum LPConversationHistoryMaxDaysDateType {
