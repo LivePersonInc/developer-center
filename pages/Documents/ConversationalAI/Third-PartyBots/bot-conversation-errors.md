@@ -339,6 +339,23 @@ These errors indicate issues specific to a certain AI vendor.
 | Reason      | The bot is not capable of handling this activity name. |
 | Solutions   | Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-direct-line-basic-content.html#bot-actions)  |
 
+#### com.liveperson.bot-connectors-worker.error.aivendor.medallia.prepare-message
+
+| Description | The payload for the Medallia Adapter could not be created |
+| Reason      | A necessary parameter was missing. If this happened at the start of a survey the most likely reason is there was no assigned agent on the conversation |
+| Solutions   | Check if an agent had been assigned to the main conversation. A manager closing the conversation is not sufficient |
+
+#### com.liveperson.bot-connectors-worker.error.aivendor.medallia.send-message
+
+| Description | There was an issue getting a response from the Medallia Adapter   |
+| Reason      | If the issue persists the Medallia integration might not be configured correctly anymore |
+| Solutions   | Check if the Medallia Integration is set up correctly in the Integration Hub. Try to test the connection in the bot wizard |
+
+#### com.liveperson.bot-connectors-worker.error.aivendor.medallia.parser-error
+
+| Description | Medallia Adapter responded with unexpected data |
+| Reason      | The response was not according to specification or not supported for the current request |
+| Solutions   | Please reach out to LivePerson Support and provide the exact error details. You can do this by clicking copy on the relevant error.  |
 
 ### sdes-service
 <br/>
