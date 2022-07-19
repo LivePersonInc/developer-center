@@ -104,6 +104,12 @@ This identifies issues processing an event in the Third-Party Bots service. Thes
 | Reason      | QuickReplies are only supported for Messaging Conversations |
 | Solutions   | Do not send QuickReplies to Chat Conversations |
 
+#### com.liveperson.bot-connectors-worker.error.pipes.verify-ai-response.invalid-session-id
+
+| Description | No valid vendor session ID has been determined for this event. Since valid [Bot Response Metadata](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata) can't be generated the bot  response can't be processed|
+| Reason      | The root cause for this is dependent on the AI vendor. Reasons can be either be the data missing in a bot response or an implementation error in Third-Party Bots |
+| Solutions   | Please reach out to LivePerson Support and provide the exact error details. You can do this by clicking copy on the relevant error.  |
+
 #### com.liveperson.bot-connectors-worker.error.pipes.conversation-limit-checker.max-conv-limit-reached
 
 | Description | The bot does not accept new conversation anymore and instead error escalates them. |
