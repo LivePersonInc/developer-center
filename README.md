@@ -27,6 +27,7 @@ File name rules:
 3. All words are lowercased
 4. All special characters excluding periods and dashes need to be removed from the filename
 5. Periods are replaced with dashes.
+6. This is only a test.
 
 Folder name rules:
 1. They must be TitleCase
@@ -40,28 +41,6 @@ E.G documentname: `Add Agent Widgets` should be a folder with name `AddAgentWidg
 * Category name will always be the top most folder in the sidebar
 
 #### How to Understand the documentsupdated yaml File
-
-Example Normal Layout:
-
-    - categoryname: Agent Experience
-      image: agent-experience-new
-      documents:
-      - documentname: Add Agent Widgets
-        pages:
-        - pagename: Add Your Own Widgets to the Agent Workspace
-      - documentname: Agent Workspace Widget SDK
-        pages:
-          - pagename: Overview
-          - pagename: Limitations
-          - pagename: Methods
-          - pagename: Public Model Structure
-          - pagename: Public Properties
-          - pagename: Best Practices and Troubleshooting
-          - pagename: Release Notes
-      - documentname: Chat Agent API
-        basedomain: https://{domain}/api/account/{accountId}/agentSession
-        pages:
-        - pagename: Overview 
 
 The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
 Add Agent Widgets is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`
@@ -93,7 +72,7 @@ Example Subfolder Layout:
   1. pagename `Tutorial & Guides` because it has subpages is actually a folder not a file
   2. in the Markdown file for `Using Meta Intents with Conversation Builder` its pagename must match the subpagename.
   3. the file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2 
-  4. the file must include `Conversation Builder` as a `documentname` in the header. 
+  4. the file must include `Conversation Builder` as a `documentname` in the footer. 
   4. the permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`
   5. notice how the `&` in the subfoldername is replaced with a dash in the permalink.
   
