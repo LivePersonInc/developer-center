@@ -9,8 +9,11 @@ https://developers.liveperson.com:
     cookies: ['*']
     headers: ['Accept', 'Accept-Language']
   redirects:
-    expires: 1d
+    expires: 1w
     paths:
       '^/test/images/(.*)':
         to: 'https://{default}/img/$1'
+        regexp: true
+      '^/(free-trial-registration|register-test)':
+        to: 'https://{default}/demo/'
         regexp: true
