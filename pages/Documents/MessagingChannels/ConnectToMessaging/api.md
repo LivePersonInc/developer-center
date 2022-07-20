@@ -278,7 +278,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | 400 | 1901 | No engagement provided for the overridden skill |
 | 401 | 1100 | Invalid Bearer token | Refer to "How to generate Authorization header for APP JWT" section
 | 403 | 1101 | Not enough privilege to perform this operation | API key has no required privilege
-| 404 | 1004 | Not Found | Verify URL
+| 404 | 1004 | Not Found | Verify request URL
 | 405 | 1005 | Method Not Allowed | Verify that the request is POST
 | 415 | 1015 | Unsupported Media Type | Verify request Content-Type is "application/json"
 | 429 | 1029 | Rate limit hit | Refer to [Frequently Asked Questions](https://developers.liveperson.com/connect-to-messaging-api.html#frequently-asked-questions)
