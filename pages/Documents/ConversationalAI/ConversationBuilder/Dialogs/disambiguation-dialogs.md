@@ -17,11 +17,11 @@ Disambiguation is the process whereby the bot gets clarification from the consum
 
 Sometimes two or more intents match closely to the message, so clarification is needed:
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation1.png">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation1.png" alt="">
 
 Other times, the consumer has expressed multiple intents in a single message, so, here again, clarification is needed:
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation2.png">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation2.png" alt="">
 
 When a disambiguation dialog is used, the bot presents the best matches to the consumer and lets the consumer choose which is correct. This is shown in the examples above. The result is a better, smoother conversation.
 
@@ -37,7 +37,7 @@ You can use a disambiguation dialog to disambiguate intents if you’re using th
 
 A disambiguation dialog is triggered when the bot matches the consumer's message to **multiple intents with a Fair Plus score**. Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation4.png" alt="">
 
 Once the consumer selects the correct intent, if that intent is associated with a Dialog Starter interaction in one of the bot's dialogs, that dialog's flow begins. Or, in the Disambiguation interaction, you can configure response match conditions to direct the flow as desired.
 
@@ -60,16 +60,16 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
     - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
 6. Customize the question text to send to the consumer. As you construct this message, keep in mind that the disambiguation dialog is displayed only when the NLU engine isn’t certain which intent the consumer is expressing, so it’s natural for this to be stressful for the consumer. Try to make this message warm and sympathetic.
-    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png" alt="">
 
     The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Manager](intent-manager-overview.html). Again, this situation can be stressful for the consumer; try to make the display names as clear as possible.
 
-    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png">
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png" alt="">
 
 7. Build out the disambiguation dialog as desired.
-    
+
     You can add any number of interactions to the dialog. For example, you might want to add an [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
-    
+
     To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-session-data.html#get-disambiguated-intent).
 
 ### Customization points
