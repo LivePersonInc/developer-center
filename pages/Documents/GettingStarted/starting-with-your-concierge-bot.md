@@ -57,7 +57,7 @@ TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurate
 
 #### Improve what your bot can understand
 
-Your bot can understand some messages from your customers out-of-the-box.  For example, if a customer asks for an agent, they will be escalated to a human agent (if available). Let’s start by updating your welcome <a  href="/conversation-builder-interactions-dialog-starter.html" alt="Dialog starter"> dialog starter </a> to improve how your bot understands greetings from visitors:
+Your bot can understand some messages from your customers out-of-the-box.  For example, if a customer asks for an agent, they will be escalated to a human agent (if available). Let’s start by updating your welcome <a  href="/conversation-builder-interactions-dialog-starter.html" alt="Dialog starter">dialog starter</a> to improve how your bot understands greetings from visitors:
 
 1. Open your Concierge Bot in Conversation Builder
 2. Click on the <i> ‘Welcome’ </i>dialog to expand it

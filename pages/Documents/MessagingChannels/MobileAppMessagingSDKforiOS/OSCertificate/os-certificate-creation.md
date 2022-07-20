@@ -58,15 +58,15 @@ In Keychain Access, click **Continue** to complete the CSR generating process, y
 
 Download and run the certificate. The certificate is now added to your Keychain, paired with a private key:
 
-![certificate ](img/download-certificate.png)
+![certificate](img/download-certificate.png)
 
 ### Creating a key .p12 file
 
-![create-key ](img/createkey.png)
+![create-key](img/createkey.png)
 
 - Right-click on your new push certificate and choose **Export**.
 
-![create-key2 ](img/createkey2.png)
+![create-key2](img/createkey2.png)
 
 - Save the certificate as pushNotification.p12 as a .p12 file.
 

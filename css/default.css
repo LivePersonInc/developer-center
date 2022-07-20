@@ -912,6 +912,10 @@ button.loginButton {
     margin-bottom: 3px;
 }
 
+ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
+    height: 28px;
+}
+
 .innerfolder>ul {
     padding-left: 0;
 }
@@ -1286,7 +1290,7 @@ button.loginButton {
     display: inline-flex;
     font-size: 1.5em;
     display: flex;
-    margin-top: 8px;
+    align-items: center;
     padding: 0;
 }
 
@@ -1294,12 +1298,12 @@ button.loginButton {
     outline: 0;
 }
 
-.sidebarbutton span {
+.sidebarbutton>span {
     transition: 0.3s;
     background: #b1b5bc;
 }
 
-.sidebarbutton span:first-of-type {
+.sidebarbutton>span:first-of-type {
     border-top: 7px solid transparent;
     background: var(--body-background);
     border-left: 7px solid var(--link-color);
