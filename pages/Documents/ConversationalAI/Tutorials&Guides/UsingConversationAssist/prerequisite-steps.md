@@ -35,13 +35,13 @@ LivePerson offers a variety of domain-specific starter packs ([prebuilt domains]
 
 1. From the Conversational AI dashboard of applications, click **Intent Manager**.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/intent_manager_menu_option.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/intent_manager_menu_option.png" alt="">
 
 2. In the **Domain list** panel, click **Add a domain**.
 3. In the resulting **Add Domain** dialog, select “Prebuilt domains” along the top.
 4. The following view will display all prebuilt domains that are available with Conversational Cloud. Highlight the “Airline” domain, and click **Add**.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/add_prebuilt_domain.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/add_prebuilt_domain.png" alt="">
 
     Once completed, the LP_Airlines domain is created, fully trained and containing intents for use with any airline.
 
@@ -54,7 +54,7 @@ With the NLU domain created, the next step is to create a knowledge base with ar
 
 1. Return to the Conversational AI dashboard of applications, and click **KnowledgeAI**.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/knowledgeai_menu_option.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/knowledgeai_menu_option.png" alt="">
 
 2. Click **Add knowledge base** in the upper-right corner.
 3. In the resulting **Add knowledge base** dialog, select “Internal Knowledge Base” from within the **AI Enabled** menu.
@@ -68,7 +68,7 @@ With the NLU domain created, the next step is to create a knowledge base with ar
 	
 5. Click **Save** to upload your knowledge base articles, with intents from the LP_Airlines domain automatically associated with each article.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/articles.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/articles.png" alt="">
 
     **Note:** Intents will be automatically associated as long as you have already created the NLU model in the previous section. If you have not done so, you can make your intent associations after by aligning the intents with the correct article. 
 
@@ -91,10 +91,10 @@ Every bot and human agent requires a user profile to be deployed and accessible 
 {: .important}
 **Customize your POC:** This guide provides two bots that Conversation Assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain-specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
 
-1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png"> from the left-side menu to go to the **User Management** section of the Conversational Cloud. 
+1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png" alt=""> from the left-side menu to go to the **User Management** section of the Conversational Cloud. 
 2. From the list of users, select your logged-in human user. From the **Edit user** form, scroll to the bottom. In the **Skills** field, add the skill “Agent.” Click **Save**.
 
-    <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/agentskill.png">
+    <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/agentskill.png" alt="">
 
 3. Back on the Users screen, select the **+ Add user** button in the lower-left corner of the page. Fill out the **Add user** form with the following user details:
 
@@ -131,7 +131,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 1. Return to the Conversational AI dashboard of applications, and click **Conversation Builder**.
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/cb_menu_option.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/cb_menu_option.png" alt="">
 
 2. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded. Click **Open**.
 
@@ -141,7 +141,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 4. Click **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
 5. Click the orange **> Start** button to start the agent connector. 
 
-    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png">
+    <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png" alt="">
 
 6. Follow the same process to upload the "Seating Bot" that you downloaded, and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
 

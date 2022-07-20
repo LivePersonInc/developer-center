@@ -820,7 +820,7 @@ a.loginText {
     border-radius: 24px;
 }
 
-button.loginButton {
+span.loginButton {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -1732,7 +1732,7 @@ input#csds-button {
     }
 
     #searchHeader,
-    button.loginButton {
+    span.loginButton {
         display: none;
     }
 

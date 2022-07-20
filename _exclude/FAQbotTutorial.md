@@ -24,18 +24,17 @@ FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of
 
 ### Create a KB
 
-<img src="img/faqbot/image_1.png" style="width:600px">
-
+<img src="img/faqbot/image_1.png" alt="" style="width:600px">
 
 After you have logged into the platform, tap on the Knowledge Base icon. Here you will see all the available knowledge bases in your org.
 
-<img src="img/faqbot/image_2.png" style="width:600px">
+<img src="img/faqbot/image_2.png" alt="" style="width:600px">
 
 * Tap on the ADD KNOWLEDGE BASE button to create a new KB.
 
 * Give your knowledge base a unique name and hit Add.
 
-<img src="img/faqbot/image_3.png" style="width:600px">
+<img src="img/faqbot/image_3.png" alt="" style="width:600px">
 
 * While it is possible to create a knowledge base from a CSV export or a Google Sheet, we are going to create ours manually.
 
@@ -43,7 +42,7 @@ After you have logged into the platform, tap on the Knowledge Base icon. Here yo
 
 Before we add our content we need to "publish" our Knowledge Base to our org.
 
-* Tap on the Settings icon <img src="img/faqbot/image_4.png" style="width:40px"> and select KB Settings.
+* Tap on the Settings icon <img src="img/faqbot/image_4.png" alt="" style="width:40px"> and select KB Settings.
 
 * Tap on More Settings and look for Publish Knowledge Base. Select your org from the drop down menu and hit Save.
 
@@ -63,7 +62,7 @@ As mentioned earlier, the Knowledge Base uses our Natural Language Understanding
 
 Now, with these best practices in mind, tap on the Add New button to add your first article.
 
-<img src="img/faqbot/image_5.png" style="width:600px">
+<img src="img/faqbot/image_5.png" alt="" style="width:600px">
 
 * Let’s give it a title that is a complete sentence.
 
@@ -78,13 +77,13 @@ The detail field can be used for longer messages but for messaging it is recomme
 
 * Your finished article should look something like this:
 
-<img src="img/faqbot/image_6.png" style="width:600px">
+<img src="img/faqbot/image_6.png" alt="" style="width:600px">
 
 * Tap Save when finished.
 
 * Back in the search view, you should now see your new article. Note that it has a "Pending" notation on it. We add this for new articles, and articles created by agents using the Agent Advisor widget so that a Manager or Supervisor can approve before the article gets include in the results. You can simply tap “Approve” to continue.
 
-<img src="img/faqbot/image_7.png" style="width:600px">
+<img src="img/faqbot/image_7.png" alt="" style="width:600px">
 
 ### Training and Tuning Your KB
 
@@ -92,11 +91,11 @@ Before we add more articles, let’s test it and see how our NLU will return res
 
 In the search view, type something close to your article’s title or intent qualifiers. In our case, something like "my username isn’t working".
 
-<img src="img/faqbot/image_8.png" style="width:600px">
+<img src="img/faqbot/image_8.png" alt="" style="width:600px">
 
 Even though this utterance was not exactly the same as what was added, it still matched the article with a VERY GOOD confidence. Try a few more utterances and see what results you get.
 
-If I try something like "my password is not letting me into my account" this is different enough that it returns as FAIR PLUS. Generally we set the threshold to GOOD so this may not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up <img src="img/faqbot/image_9.png" style="width:50px"> icon . This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
+If I try something like "my password is not letting me into my account" this is different enough that it returns as FAIR PLUS. Generally we set the threshold to GOOD so this may not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up <img src="img/faqbot/image_9.png" alt="" style="width:50px"> icon . This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
 
 {: .important}
 Keep in mind that when you are training your articles, it is VERY easy to use the thumbs up button. So easy, that you might OVER train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one.
@@ -109,7 +108,7 @@ As you may recall from the Router Bot tutorial or from elsewhere in our document
 
 Previously, we had created a domain and an entity for some of our options (eg: billing). We can use this or you can feel free to create another entity. For my password/username article I will create an entity called "credentials". Note the addition of various spellings (or misspellings) of words. Entities can be very helpful for catching those.
 
-<img src="img/faqbot/image_10.png" style="width:400px">
+<img src="img/faqbot/image_10.png" alt="" style="width:400px">
 
 * Exit the Knowledge Base and return to the Intent Builder
 
@@ -121,7 +120,7 @@ Previously, we had created a domain and an entity for some of our options (eg: b
 
 * Now in our article, we are going to replace any word where we want our credentials entity to be substituted in, INCLUDING the tags. Like this:
 
-<img src="img/faqbot/image_11.png" style="width:650px">
+<img src="img/faqbot/image_11.png" alt="" style="width:650px">
 
 * Now, when someone says an utterance that includes any of our entity synonyms, they should match.
 
@@ -142,17 +141,17 @@ In the Conversation Builder, tap on the NEW BOT icon and give your bot a unique 
 
 * Where it says "Publish Bot" change to the appropriate Org and hit Save.
 
-<img src="img/faqbot/image_12.png" style="width:700px">
+<img src="img/faqbot/image_12.png" alt="" style="width:700px">
 
 ### Connecting to the Knowledge Base
 
 Your automation will use an API integration to connect to the Knowledge Base. Setting up the API is straight forward.
 
-<img src="img/faqbot/image_13.png" style="width:600px">
+<img src="img/faqbot/image_13.png" alt="" style="width:600px">
 
 You will need the source id for the Knowledge Base you’re using. Navigate to your KB and launch it. In the browser address bar, select the source id (see above) and copy it. We’ll be using it shortly.
 
-Return to the Conversation Builder and in the upper left corner of the Conversation Builder, tap on the API Integration <img src="img/faqbot/image_14.png" style="width:40px"> icon.
+Return to the Conversation Builder and in the upper left corner of the Conversation Builder, tap on the API Integration <img src="img/faqbot/image_14.png" alt="" style="width:40px"> icon.
 
 * In the left integration list, tap on the "FAQs" integration and verify the following:
 
@@ -162,7 +161,7 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 
   * The Method: GET
 
-  * The URL: https://botbuilder2-dataservice.botcentralapi.com/knowledge-0.1/articles/phraseSearch
+  * The URL: <https://botbuilder2-dataservice.botcentralapi.com/knowledge-0.1/articles/phraseSearch>
 
 * **Request Parameters:**
 
@@ -193,7 +192,6 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 </tbody>
 </table>
 
-
 * **Custom Data Fields:**
 
 <table>
@@ -211,14 +209,13 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 </tbody>
 </table>
 
-
 After you have reviewed, and tweaked, hit Save
 
 ### Testing Your Bot
 
-Let’s test our connection to the Knowledge Base. Return to the dialog editor by tapping on the <img src="img/faqbot/image_15.png" style="width:40px"> icon in the upper left. Tap on the Chat preview on the right sidebar
+Let’s test our connection to the Knowledge Base. Return to the dialog editor by tapping on the <img src="img/faqbot/image_15.png" alt="" style="width:40px"> icon in the upper left. Tap on the Chat preview on the right sidebar
 
-<img src="img/faqbot/image_16.png" style="width:400px">
+<img src="img/faqbot/image_16.png" alt="" style="width:400px" alt="">
 
 Type "**restart**", hit enter. Then type “hi” to trigger the initial Welcome message. Restart clears all variables to start fresh.
 

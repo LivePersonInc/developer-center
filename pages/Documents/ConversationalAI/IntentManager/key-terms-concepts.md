@@ -95,6 +95,7 @@ To return the best response to consumers, the NLU has a threshold of GOOD. This 
 The scoring breakdown that indicates the NLU’s level of confidence in the match is as follows:
 
 **LivePerson engine**
+
 * VERY GOOD: 75-100% match
 * GOOD: 60-75% match
 * FAIR PLUS: 45-60% match
@@ -102,6 +103,7 @@ The scoring breakdown that indicates the NLU’s level of confidence in the matc
 * POOR: 0-30% match
 
 **LivePerson (Legacy) engine or 3rd-party engine**
+
 * VERY GOOD: 85-100% match
 * GOOD: 70-85% match
 * FAIR PLUS: 65-70% match
@@ -128,10 +130,10 @@ Multi-domain support makes it possible to evaluate each consumer message against
 * Support for more than one language per account
 * Support for multiple lines of business
 * Independently tuned models for specific use cases
-    * Sales and marketing
-    * Churn detection and escalation
-    * Social media monitoring
-    * Specialized bots and automation
+  * Sales and marketing
+  * Churn detection and escalation
+  * Social media monitoring
+  * Specialized bots and automation
 
 ### Meta intents
 
@@ -139,8 +141,8 @@ You might notice as you are working on your intent taxonomy that the number of i
 
 A meta intent is a wrapper that can contain many other standard intents. This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
 
-<img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png">
-<img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png">
+<img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
 
 ### Entities
 
@@ -152,6 +154,7 @@ Entities facilitate the creation and curation of training phrases. For example, 
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
 
 There are three types of entities:
+
 * Value Set entities
 * Regular Expression entities
 * Global (built-in) entities
@@ -159,11 +162,12 @@ There are three types of entities:
 #### Value Set entities
 
 As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
+
 * football
 * running
 * walking
 
-<img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png">
+<img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
@@ -173,16 +177,18 @@ The LivePerson NLU engine trains the model with as many as 100 Value Set entity 
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
-<img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png">
+<img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
 
 Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression, e.g., "I want to check on my order 757575," the bot detects this and substitutes the ORDER_NO entity into the utterance before predicting the consumer's intent. In general though, Regular Expression entities work much like Value Set entities with this single exception: With Regular Expression entities, the matched string is replaced by the entity just before prediction.
 
 Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
+
 * Flight numbers
 * Order numbers
 * Help Desk ticket numbers
 
 Continuing our `ORDER_NO` example, you might use the entity in the training phrases for an "order status" intent, like so:
+
 * "I want to check on my order ORDER_NO"
 * "What's the status of order ORDER_NO"
 
@@ -202,7 +208,7 @@ Global entities include:
 | COUNTRY | A country | Canada<br>United States |
 | DATE | Dates | today<br>tomorrow<br>03/01/2017<br>Saturday<br>next Wednesday |
 | DURATION | A time period | 2 weeks<br>2 weeks and 3 days<br>half a day<br>fortnight |
-| EMAIL | An email address | jane@myemail.com | 
+| EMAIL | An email address | jane@myemail.com |
 | MONEY | Numbers with currency | $2000<br>23 dollars<br>fifty bucks<br>ten pounds |
 | ORG | Names of institutions | Nike factory<br>World Health Organization |
 | PERCENT | A percentage | 100%<br>forty percent |
@@ -230,7 +236,7 @@ Keep in mind that the detection of global entities is highly dependent on contex
 What's more, the detection of entities is trained on commercial messages, so depending on context, you might get results that you don’t expect:
 
 * Non-commercial message: Washington cherry trees are beautiful this time of year
-* Entities: CITY = Washington 
+* Entities: CITY = Washington
 
 but
 
@@ -239,11 +245,11 @@ but
 
 As mentioned above, global entities are detected automatically by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
 
-<img style="width:500px" src="img/ConvoBuilder/im_entities_global1.png">
+<img style="width:500px" src="img/ConvoBuilder/im_entities_global1.png" alt="">
 
 If you have defined custom entities within your domain, you’ll see those detected along with the global entities:
 
-<img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png">
+<img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png" alt="">
 
 **Using global entities**
 

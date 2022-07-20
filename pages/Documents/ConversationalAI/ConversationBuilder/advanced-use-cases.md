@@ -27,15 +27,15 @@ To solve this problem, you can create a rule with a [No Match condition](convers
 
 In our example below, the No Match condition directs the flow to the current interaction in order to repeat it. This interaction is a question that asks for the consumer's email address.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png" alt="">
 
 Our example dialog flow now looks like this:
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png" alt="">
 
 When the user enters anything but a well-formed email address, this yields a conversation that looks like the following, where the email address question is repeated:
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png" alt="">
 
 For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
@@ -97,8 +97,8 @@ function decode(string) {
 
 Once created, you can call both functions as needed from the Pre-Process and Post-Process code editors.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png" alt="">
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png" alt="">
 
 Both functions were adapted from a polyfill located [here](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).

@@ -15,7 +15,7 @@ Did you know that LivePerson has a Conversational AI forum for builders? Check i
 
 Intent Analyzer is LivePerson's hub for tracking and maintaining intents in real time. It provides enhanced reporting and analytics for your bots and automation.
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intentAnalyzer_dashboard.png">
+<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intentAnalyzer_dashboard.png" alt="" >
 
 You can leverage the consistent flow of data from Intent Analyzer to:
 
@@ -43,20 +43,20 @@ It's a best practice to have only one domain enabled for Intent Analyzer at a ti
 
 1. Open Intent Builder, as described [here](intent-builder-overview.html#access-intent-builder).
 2. In the dashboard that lists all domains, select the domain.
-3. In the list of intents in the left panel, click the <img style="width:25px" src="img/ConvoBuilder/icon_enableIntentAnalyzer.png"> (Enable Intent Analyzer) icon.
+3. In the list of intents in the left panel, click the <img style="width:25px" src="img/ConvoBuilder/icon_enableIntentAnalyzer.png" alt="" > (Enable Intent Analyzer) icon.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_enable.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_enable.png" alt="" >
 
 4. In the Enable Intent Analyzer dialog box, select the intents, and click **Save**.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/intentAnalyzer_enableIntentsDialog.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/intentAnalyzer_enableIntentsDialog.png" alt="" >
 
     In the list of intents in the left panel, the intents for which Intent Analyzer is enabled now have a green dot beside them.
 
-    <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/intentAnalyzer_enabledIntents.png">
+    <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/intentAnalyzer_enabledIntents.png" alt="" >
 
     And in the dashboard that lists your domains, the domain now indicates that Intent Analyzer is enabled.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_intentsDashboard.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_intentsDashboard.png" alt="" >
 
     You can view the enabled intents in the [Intent Analyzer dashboard](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-dashboard.html).

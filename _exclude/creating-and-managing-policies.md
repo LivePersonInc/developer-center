@@ -15,7 +15,7 @@ The Policy management interface provides the UI to create your Dynamic Routing p
 
 To start creating policies, navigate to **Intent & Context Policies** under the **Dynamic Routing** section of Conversation Orchestrator. Here, you can view an **Intent & Context Policy Usage** dashboard highlighting which policies have been used for a given timeframe and see which are the most used policies for your account. 
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policyusage.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policyusage.png" alt="">
 
 Underneath the **Policy Usage** section is the **Manage policies** section, where you can create and manage the policies for the account. Each policy is made up of two different elements:
 
@@ -24,7 +24,7 @@ Underneath the **Policy Usage** section is the **Manage policies** section, wher
 
 In the next sections, we’ll dive deeper into how to configure each element to enable dynamic routing. Additionally, we’ll discuss how you can manage and prioritize your policies.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_managepolicies2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_managepolicies2.png" alt="">
 
 ### Conditions
 
@@ -65,7 +65,7 @@ Conversational attributes are automatically provided as options in the attribute
 
 Each of these attributes are populated in the “Choose an attribute” dropdown for easy selection.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes1.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes1.png" alt="">
 
 Similarly, supported SDEs are provided in the same “Choose an attribute” dropdown. For a full listing of supported SDEs and how to use them, see [here](conversation-orchestrator-dynamic-routing-routing-conversations-by-sdes.html).
 
@@ -73,13 +73,13 @@ Similarly, supported SDEs are provided in the same “Choose an attribute” dro
 
 Custom static attributes for routing policies can be manually added to the Conversation Context Service (CCS) using the **Custom** section of the **Conversation Context Service**. 
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes2.png" alt="">
 
 These custom attributes can be a variety of data types, whether string, number, list, or even JSON, enabling you to define and use your own data (e.g., a list of names or emails).
 
 Once created, the custom attributes are available from within your policy in the “Choose an attribute” dropdown as “custom.attributeName”. 
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes3.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes3.png" alt="">
 
 Additionally, conversation-scoped context variables set using Conversation Builder functions or the REST API can be used by manually entering the namespace and property name (e.g., myNamespace.property). Please see [here](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents.html) for more information on how to set and use these properties in your policies.
 
@@ -87,11 +87,11 @@ Additionally, conversation-scoped context variables set using Conversation Build
 
 LivePerson Functions can be used to create more dynamic attributes to base policies off of. When adding a new custom attribute, click the dropdown under **Type** to change from the default **static** to **function**. Doing so generates a new section that allows you to pick from a list of your deployed functions on an account. Additionally, provide a payload to the function to pass other custom attributes, SDEs, other context session store variables, or any static data into your function for a truly dynamic result.  
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn1.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn1.png" alt="">
 
 Add custom functions as attributes in your conditions in the same way that you add static custom attributes, discussed above. The return value of the function will be used to compare against the value of the condition. If there is a match, the action will be triggered.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn2.png" alt="">
 
 Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs. For more details, see [here](conversation-orchestrator-conversation-context-service-attributes.html#getting-attributes-through-functions). 
 
@@ -102,7 +102,7 @@ Keep in mind that this function will be invoked every time the [Next Actions API
 
 When constructing your conditional statements, there are several operators available for you to make your comparisons. These are shown below.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_operators.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_operators.png" alt="">
 
 The operator that you choose can determine the data type of the value that you will be comparing to your initial attribute. For example, if you choose a less than (<) operator, the data types available in the dropdown are limited to **number** or **attribute**. The **Is in** and **Contains** operators are similarly designed to only work with specific data types. **Is in** expects the comparison value to be an array or list; it checks if the initial attribute in the condition is contained within that collection. **Contains** expects the comparison value to be a string, matching if the initial attribute is within the string provided.
 
@@ -126,7 +126,7 @@ Once all sections of both the Condition and the Action are completed, the policy
 
 Selecting the **Transfer to skill** action type generates a dropdown list of all the skills on the account in the **Value** section of the Actions form. This simplifies the process, by allowing you to simply select the skill from the list as opposed to manually entering in the Skill ID.
 
-<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_actiontypes1.png">
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_actiontypes1.png" alt="">
 
 Alternatively, you can choose to send an attribute value as well using the **Transfer to skill** action type. 
 
@@ -155,7 +155,7 @@ Selecting the **Transfer to agent** action type generates a dropdown list of all
 
 Additionally, when using the **Transfer to agent** action type, you have an option to include a fallback skill. This fallback skill is used in the event that the agent is unavailable to receive the transfer. Selecting the fallback skill is an optional feature, and doing so mirrors the dropdown experience in the Transferring to skills section above.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actiontypes2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actiontypes2.png" alt="">
 
 When received by the bot, the action is a JSON object in the following format. This object can then be parsed, passing the returned agent or skill ID to a transfer interaction.
 
@@ -181,7 +181,7 @@ When received by the bot, the action is a JSON object in the following format. T
 
 Selecting the **Send message** action type is the most flexible, allowing the developer to manually input their own string to be sent back to the bot and processed. Alternatively, a custom attribute, SDE, or other conversation context variable can be sent by selecting from the provided dropdown. 
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actiontypes3.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actiontypes3.png" alt="">
 
 When received by the bot, the action is a JSON object in the following format. This object can then be parsed, passing the message to an interaction or acting on the results within the bot JavaScript.
 
@@ -212,10 +212,10 @@ When creating a new policy, that policy is added to the bottom of the list in a 
 
 Each policy in the list will include the name and a toggle to signify if it is enabled or not. Policies with a disabled status will not be evaluated when the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called. To enable or disable policies, simply select the toggle button to switch its status.
 
-<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_enabledisable.png">
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_enabledisable.png" alt="">
 
 #### Prioritizing policies
 
 Policies are prioritized using a top-down approach, meaning that the first policy in the list that evaluates to true will be the only policy which has its actions sent to the bot. This means that the order in which they are listed is extremely important and that policies farther down the list that might have its conditions met will not be triggered if policies above it are triggered first. To prioritize the list of policies, select a policy and use the up or down arrows to move it up or down the list.
 
-<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_prioritize.png">
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_prioritize.png" alt="">

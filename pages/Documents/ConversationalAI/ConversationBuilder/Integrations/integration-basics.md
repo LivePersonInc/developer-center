@@ -19,6 +19,7 @@ The Conversation Builder [templates](conversation-builder-templates-overview.htm
 Want some practice with integrations? The [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html) provides a walkthrough of adding one. You'll need to complete the Dialogs and Patterns tutorial and the Intents tutorial first, as they build on each other.
 
 ### Integration types
+
 An integration can be one of the following types:
 
 - **API**: API integrations allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog. See [here](conversation-builder-integrations-api-integrations.html) for more.
@@ -37,8 +38,8 @@ var statusCode = botContext.getBotVariable("api_<RESPONSE DATA VARIABLE NAME OF 
 ```
 
 So, for an API Integration with the following settings:
-* Integration Name = `RegisterNamespace`
-* Response Data Variable Name = `RegisterNamespace`
+- Integration Name = `RegisterNamespace`
+- Response Data Variable Name = `RegisterNamespace`
 
 You would get the response status code by using the following:
 
@@ -68,11 +69,11 @@ Custom data fields allow you to use key/value pairs to capture data from an API 
 
 `{$.api_GetContext.<JSON_PATH>}`
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults1.png">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults1.png" alt="">
 
 Once you have created these variables, you have access to their values within the dialogs. To do so, use curly braces notation containing the integration name with the variable name you’ve created.
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/integrations_processAPIResults2.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/integrations_processAPIResults2.png" alt="">
 
 These variables are also accessible in the pre-process or post-process code editors, should you need to use their values in your bot logic:
 
@@ -93,7 +94,7 @@ Occasionally, you might want to iterate through the JSON data to display multipl
    {
      "title": "TITLE TWO",
      "description": "Description 2",
-     "image": "https://www.salesbabu.com/wp-content/uploads/2014/02/stock.png"
+     "image": "https://www.salesbabu.com/wp-content/uploads/2014/02/stock.png" alt=""
    },
    {
      "title": "TITLE THREE",
@@ -110,11 +111,11 @@ To capture each value to reproduce in a dialog, you need to iterate through this
 
 Take care to include the bracketed i in your value, as this signifies that the program needs to iterate through the “items” array to save all of the “title” values.
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults3.png">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults3.png" alt="">
 
 With these variables now set, they can be used within Structured Content interactions to display each of the titles, descriptions, and images together. Add your API variables to the relevant areas of the Structured Content tile, referencing the variables in the same way that was done in the previous example. When saved, Conversation Builder will iterate through each of the variables to display the correct content together in the user's messaging window.
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults4.png">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults4.png" alt="">
 
 <img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults5.gif">
 
@@ -122,11 +123,11 @@ With these variables now set, they can be used within Structured Content interac
 
 You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript code, you can process the responses (typically in a JSON format) and use the information within the dialogs of your bot.
 
-The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to **_Transform Result Script_** (the place where you manipulate the API response as you want).
+The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to ***Transform Result Script*** (the place where you manipulate the API response as you want).
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png" alt="">
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png" alt="">
 
 1. Get the raw API response and save it in a variable:
 
@@ -220,9 +221,10 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png" alt="">
 
 ### Delete an integration
+
 If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
 
 Deleting an integration affects only the bot for which it was added.
@@ -230,5 +232,5 @@ Deleting an integration affects only the bot for which it was added.
 **To delete an integration**
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
-2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
+2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png" alt=""> icon that appears.
 3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog.
