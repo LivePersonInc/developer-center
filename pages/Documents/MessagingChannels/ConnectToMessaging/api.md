@@ -262,26 +262,26 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-| HTTP Status | Error Code | Error Message | 
+| HTTP Status | Error Code | Error Message | Resolution
 | :--- | :--- | :--- |
-| 400 | 1000 | Invalid request |
-| 400 | 1001 | Invalid customerPhoneNumber |
-| 400 | 1002 | Invalid version |
-| 400 | 1200 | No internal user is available |
-| 400 | 1201 | No internal app is available |
+| 400 | 1000 | Invalid request | Verify if payload is correct
+| 400 | 1001 | Invalid customerPhoneNumber | Valid phone number format is E.164
+| 400 | 1002 | Invalid version | Valid version is 2.0
+| 400 | 1200 | No internal user is available | Verify if there's a user associated to Site ID
+| 400 | 1201 | No internal app is available | This is for INAPP channel only. Verify if there's an installed app.
 | 400 | 1300 | No engagement found for skill <<skill>> |
-| 400 | 1400 | Open conversation exists between customer and brand|
-| 400 | 1500 | No handoff is available |
+| 400 | 1400 | Open conversation exists between customer and brand| Close the existing conversation
+| 400 | 1500 | No handoff is available | Verify if there's an existing handoff
 | 400 | 1501 | No handoff channel is available |
 | 400 | 1600 | No setting is available |
 | 400 | 1900 | Overridden channel is not available |
 | 400 | 1901 | No engagement provided for the overridden skill |
-| 401 | 1100 | Invalid Bearer token |
-| 403 | 1101 | Not enough privilege to perform this operation |
-| 404 | 1004 | Not Found |
-| 405 | 1005 | Method Not Allowed |
-| 415 | 1015 | Unsupported Media Type |
-| 429 | 1029 | Rate limit hit |
+| 401 | 1100 | Invalid Bearer token | Refer to "How to generate Authorization header for APP JWT" section
+| 403 | 1101 | Not enough privilege to perform this operation | API key has no required privilege
+| 404 | 1004 | Not Found | Verify URL
+| 405 | 1005 | Method Not Allowed | Verify that the request is POST
+| 415 | 1015 | Unsupported Media Type | Verify request Content-Type is "application/json"
+| 429 | 1029 | Rate limit hit | Refer to [Frequently Asked Questions](https://developers.liveperson.com/connect-to-messaging-api.html#frequently-asked-questions)
 | 500 | 5000 - 7000 | Internal Server Error |
 
 ### Details on Authorization
