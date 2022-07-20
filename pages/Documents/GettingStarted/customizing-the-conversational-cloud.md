@@ -18,7 +18,7 @@ indicator: both
 </div>
 
 <div class="card-container" style="margin-top:40px;">
-        <a class="welcome-card" target="_blank" href="/mobile-app-messaging-sdk-for-ios-overview.html">
+        <a class="welcome-card" href="/mobile-app-messaging-sdk-for-ios-overview.html">
         <img class="container-image" src="img/ic_FB.svg" alt="" />
         <h5 class="getstarted-title">Messaging Channels</h5>
         <p class="getstarted-content ">Integrate Mobile Messaging SDK for iOS </p>
