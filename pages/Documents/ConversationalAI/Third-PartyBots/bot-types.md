@@ -12,7 +12,7 @@ indicator:
 While adding a new bot the wizard will first ask what type of bot should be created.
 This particular step can't be changed at a later point in time without deleting and recreating the bot.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/common-choose-bot-type.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/common-choose-bot-type.png" alt="">
 
 ### Agent Bots
 
@@ -25,7 +25,7 @@ In case of an agent bot are two additional steps that must be configured.
 
 ##### Chat
 
-<img style="width:900px" src="img/ThirdPartyBots/agent-conversation-type-chat.png">
+<img style="width:900px" src="img/ThirdPartyBots/agent-conversation-type-chat.png" alt="">
 
 <table>
   <thead>
@@ -54,9 +54,9 @@ In case of an agent bot are two additional steps that must be configured.
   </tbody>
   </table>
 
-##### Messaging:
+##### Messaging
 
-<img style="width:900px" src="img/ThirdPartyBots/agent-conversation-type-messaging.png">
+<img style="width:900px" src="img/ThirdPartyBots/agent-conversation-type-messaging.png" alt="">
 
 ##### Welcome Message
 
@@ -79,12 +79,12 @@ By enabling the Combine Messages settings you can combine a certain amount of me
 </ul>
 
 <figure>
-<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
+<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif" alt="">
     <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
 </figure>
 <br />
 
-##### Engagement Attributes:
+##### Engagement Attributes
 
 Third-Party bots allow the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is enabled. These attributes are collected only at the **start** of every conversation. These attributes are then passed alongside every message as contextual information. Third-Party bots leverage the LivePerson Visit Information API to collect these engagement attributes.
 
@@ -781,7 +781,7 @@ const lpEvent = {
 #### Error Handling
 
 Configure how the agent bot behaves in the event of an error.
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/agent-error-handling.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/agent-error-handling.png" alt="">
 
 <table>
   <thead>
@@ -835,7 +835,7 @@ In case of a survey bot the following additional settings must be configured.
 
 ##### Survey Configuration
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/survey-configuration.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/survey-configuration.png" alt="">
 
 <table>
   <thead>

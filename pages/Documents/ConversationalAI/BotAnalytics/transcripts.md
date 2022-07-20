@@ -25,18 +25,19 @@ You can use the **Conversations** view to perform a targeted review of transcrip
 
 For an explanation of each status, see [here](bot-analytics-key-terms-concepts.html#containment-of-bot-conversations).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ba_conversationsview3.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ba_conversationsview3.png" alt="">
 -->
 
 ### Transcript review via the MACS view
 
-You can use the **MACS** view to perform a targeted review of transcripts based on MACS data, such as the MACS score. For example, you might want to review the transcripts of conversations that had MACS 1 (i.e., a low conversation quality score). Or, you might want to review the transcripts of conversations where the bot didn't understand the consumer's question. 
+You can use the **MACS** view to perform a targeted review of transcripts based on MACS data, such as the MACS score. For example, you might want to review the transcripts of conversations that had MACS 1 (i.e., a low conversation quality score). Or, you might want to review the transcripts of conversations where the bot didn't understand the consumer's question.
 
-<img style="width:800px" src="img/ConvoBuilder/ba_transcripts_macs.png">
+<img style="width:800px" src="img/ConvoBuilder/ba_transcripts_macs.png" alt="">
 
 To learn more about MACS, see [here](bot-analytics-macs.html).
 
 ### Transcript review via the Transcripts view
+
 You can use the **Transcripts** view to access all the transcripts for a specified date range. This view allows you to download transcripts.
 
 **To access a bot’s transcripts via the Transcripts view**
@@ -44,11 +45,11 @@ You can use the **Transcripts** view to access all the transcripts for a specifi
 1. [Access Bot Analytics](bot-analytics-overview.html#access-bot-analytics), and select the bot in the table on the main dashboard.
 2. From the dropdown menu on the menu bar, select **Transcripts**.
 
-    <img style="width:500px" src="img/ConvoBuilder/ba_transcripts_menu_option.png">
+    <img style="width:500px" src="img/ConvoBuilder/ba_transcripts_menu_option.png" alt="">
 
 3. Use the filtering controls to display the desired transcripts.
 
-    <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_filter.png">
+    <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_filter.png" alt="">
 
     {: .important}
     Currently, Phrase Search is disabled.

@@ -54,7 +54,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 **Full Funnel Overview board**
 
 
-<img class="fancyimage" src="img/outbound_reporting_api_full_funnel_overview.png">
+<img class="fancyimage" src="img/outbound_reporting_api_full_funnel_overview.png" alt="">
 
 
 **What are the limitations**

@@ -22,8 +22,8 @@ A knowledge base search is performed using a specified search method or "mode." 
 
 When the Intents method is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, KnowledgeAI next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final, text-to-text search is performed as a fallback.
 
-<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_ext.png">
-<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_int.png">
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_ext.png" alt="">
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_int.png" alt="">
 
 ### Intents Only method
 

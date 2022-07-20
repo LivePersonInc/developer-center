@@ -21,7 +21,7 @@ The API supports the following methods:
     <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
     <li><a href='#close-conversation'>Close Conversation</a></li>
     <li><a href='#set-sdes'>Set SDEs</a></li>
-    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
+    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>
 </ul>
 
 {: .important}
@@ -35,9 +35,9 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 | Service Domain                   | Third-Party Bots API Domain                      |
 | :------------------------------- | :----------------------------------------------- |
-| z1.bot-connectors.liveperson.net | https://bot-platform-api.fs.liveperson.com/      |
-| z2.bot-connectors.liveperson.net | https://bot-platform-api.emea.fs.liveperson.com/ |
-| z3.bot-connectors.liveperson.net | https://bot-platform-api.apac.fs.liveperson.com/ |
+| z1.bot-connectors.liveperson.net | <https://bot-platform-api.fs.liveperson.com/>      |
+| z2.bot-connectors.liveperson.net | <https://bot-platform-api.emea.fs.liveperson.com/> |
+| z3.bot-connectors.liveperson.net | <https://bot-platform-api.apac.fs.liveperson.com/> |
 
 #### Step 2. Create a Public API Bot User
 
@@ -45,7 +45,7 @@ In order to use Public API you must create a dedicated Public API bot agent/user
 
 Figure 2.1 shows a simple scenario below where a dedicated Public API user is first making a login call and then sending message via Public API to an ongoing conversation connected happening in LP Messaging with a Third-Party bot.
 
-<img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png">
+<img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png" alt="">
 Figure 2.1 Public API simple flow of sending messages command
 
 #### Step 3. Get Bearer Token
@@ -65,7 +65,7 @@ To perform login requests you will need a valid and dedicated Public API bot use
 You should not use the same user that is already assigned to another bot since they would log each other out.
 If the user belongs to a bot that is active and running on Third-Party-Bots the login request will get rejected.
 
-<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png">
+<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png" alt="">
 Figure 3.1 Showing two login methods of a Bot user
 
 #### Bearer Token via Username/Password
@@ -219,7 +219,7 @@ Currently, the user is allowed to carry out following actions using our Public A
     <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
     <li><a href='#close-conversation'>Close Conversation</a></li>
     <li><a href='#set-sdes'>Set SDEs</a></li>
-    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
+    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>
 </ul>
 
 ### Send Messages
@@ -324,8 +324,8 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
       "encodedMetadata": "SGVsbG8gV29ybGQh"
     },
     {
-    	"text" :"this is a private message",
-    	"messageAudience": "AGENTS_AND_MANAGERS"
+     "text" :"this is a private message",
+     "messageAudience": "AGENTS_AND_MANAGERS"
     },
     {
       "structuredContent": {
@@ -685,7 +685,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {bearerToken}' \
   -d '{
-	"ttrType": "URGENT"
+ "ttrType": "URGENT"
 }'
 
 ```

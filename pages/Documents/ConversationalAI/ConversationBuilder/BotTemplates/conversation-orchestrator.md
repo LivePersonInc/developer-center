@@ -27,13 +27,13 @@ This bot template contains global functions brought over from the Global Helper 
 
 ### Included items
 
-#### Dialogs 
+#### Dialogs
 
-* **1 Welcome**: The Welcome dialog greets the user and collects their phone number for use in dynamic routing policies. 
+* **1 Welcome**: The Welcome dialog greets the user and collects their phone number for use in dynamic routing policies.
 * **2 Fallback**: This is displayed when the user enters an utterance that is not recognized.
 * **3 Transfer**: Contains integration tiles to transfer to a different skill or agent based on the result of dynamic routing policies.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png" alt="">
 
 #### Integrations
 
@@ -46,7 +46,7 @@ This bot template contains global functions brought over from the Global Helper 
 
 The important environment related variables are stored in the **Global Functions**, and for most cases this is the only area you will edit.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png" alt="">
 
 Open the bot. On the top navigation click **Global Functions** and edit the following fields:
 
@@ -57,7 +57,7 @@ Open the bot. On the top navigation click **Global Functions** and edit the foll
 
 Click **Save**.
 
-Configure Conversational Cloud and deploy the bot. 
+Configure Conversational Cloud and deploy the bot.
 
 ### Pre/post-process code
 

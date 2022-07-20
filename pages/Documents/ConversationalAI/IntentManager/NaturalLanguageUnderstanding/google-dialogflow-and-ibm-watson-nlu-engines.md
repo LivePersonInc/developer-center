@@ -20,7 +20,7 @@ If, in Intent Manager, you have one or more domains that use a Google Dialogflow
 1. In Google Dialogflow or IBM Watson, delete the model versions.
 2. In Bot Accounts, disable (turn off) the **WatsonAssistant** or **Google DialogFlow** setting on the **Account** Details page. Wait a few seconds, and then re-enable the setting.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/3rdpartyNLU_bugFix.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/3rdpartyNLU_bugFix.png" alt="">
 
 3. In Intent Manager, train the domains to create new model versions.
 
@@ -34,22 +34,22 @@ Contact your LivePerson account administrator to enable your account for 3rd-par
 
 Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you train (described below) the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png" alt="">
 
 ##### IBM Watson
 
 1. Register for or log in to an IBM Cloud account.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png" alt="">
 
 2. Create or access a Watson Assistant resource.
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png" alt="">
 
 3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_create_resource.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_create_resource.png" alt="">
 
 4. View and copy the newly created credentials.
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png" alt="">
 
 ##### Google Dialogflow
 
@@ -90,11 +90,11 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
 4. On the **Intents** page, click **Train** in the upper-right corner.
 5. In the Train dialog, click the "Select NLU Provider Credential" option.
 
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred1.png">
+    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred1.png" alt="">
 
     This changes the option, so you can create a credential instead.
 
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred2.png">
+    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred2.png" alt="">
 
 6. Click "Create a new NLU Provider Credential."
 7. In the Add NLU Provider Credential dialog box, specify the following:
@@ -102,7 +102,7 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
     * **NLU Provider**: Select the 3rd-party NLU engine.
     * **Credentials**: Paste here the credentials that you downloaded when you set up your IBM Watson or Google Dialogflow account (discussed earlier on this page).
 
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png">
+    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png" alt="">
 
 8. Click **Save Credentials**.
 
@@ -112,7 +112,8 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
 
 You must train the 3rd-party NLU domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Test tool to test.
 
-Note the following: 
+Note the following:
+
 * Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
 * You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
@@ -127,13 +128,13 @@ Note the following:
 
 5. Select the NLU provider credential from the list, and click **Train**.
 
-    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
+    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png" alt="">
 
     Note that you'll need to alternate between using your two sets of credentials, as discussed farther below.
 
 6. Wait until the training is completed.
 
-    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png" alt=""> (Refresh icon) in the **Training Status** column.
 
     Once training is completed, you can start testing with the model version in the Test tool.
 
@@ -141,4 +142,4 @@ Note the following:
 
 When you created your 3rd-party service credentials, you created two sets, as discussed above. This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png" alt="">
