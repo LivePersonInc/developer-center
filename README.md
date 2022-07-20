@@ -41,7 +41,7 @@ Examples:
 * A page name `Customizing the Conversational Cloud!` should use the file name `customizing-the-conversational-cloud.md`
 * A document name `Add Agent Widgets` should use a folder with the name of `AddAgentWidgets`
 
-The category name makes for the top most folder in the sidebar.
+The category name is the topmost folder in the sidebar.
 
 ### How to understand the documentsupdated.yaml file
 
@@ -68,10 +68,10 @@ Example of a normal layout:
         - pagename: Overview 
 
 1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
-2. `Add Agent Widgets` is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`. The `Add Agent Widgets` folder only contains one page.
+2. `Add Agent Widgets` is a folder in layer 1 with the `AgentExperience/AddAgentWidgets` path. The `Add Agent Widgets` folder only contains one page.
 3. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md` is the path of the file, and must list all parent folders, excluding the layer 0 `categoryname`.
 4. For the above example, the permalink is `add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`.
-5. If you look at the following document name, `Agent Workspace Widget SDK`, it is still on level 1, with path `AgentExperience/AgentWorkspaceWidgetSDK/`. The files in the folder are all listed below pages until you get to last `pagename`; i.e., the document name `Chat Agent API` is not a folder located inside `Agent Workspace Widget SDK`.
+5. If you look at the document named `Agent Workspace Widget SDK`, it is still on level 1 with the `AgentExperience/AgentWorkspaceWidgetSDK/` path. The files in the folder are all listed below pages until you get to the last `pagename`; i.e., the document name `Chat Agent API` is not a folder located inside `Agent Workspace Widget SDK`.
 
 Example of a subfolder layout:
 
@@ -90,7 +90,7 @@ Example of a subfolder layout:
               - subpagename: Implementing a Web View Integration
               - subpagename: Using LivePerson Functions with a Bot
   
-1. The `pagename` entry `Tutorial & Guides` is actually a folder not a file, because it has subpages.
+1. The `pagename` entry `Tutorial & Guides` is not a file, but a folder, because it has subpages.
 2. In the Markdown file for `Using Meta Intents with Conversation Builder`, the `pagename` must match the `subpagename`.
 3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2. 
 4. The file must include `Conversation Builder` as a `documentname` in the header. 
@@ -124,17 +124,17 @@ Another example:
 
 ### Environments
 
-To update the production and staging environments, create a pull request for master or Staging [sic]. When the pull request is merged a automated release cycle will start and publish those changes in around five minutes.
+To update the production and staging environments, create a pull request for master or Staging [sic]. When the pull request gets merged, an automated release cycle will start and publish those changes in around five minutes.
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 * Staging (built from the `Staging` branch): [https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
 
 ### Updating and creating headers
 
-Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the “---” at the top of each document. It’s technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply. Our headers are usually comprised of the following key/value pairs:
+Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to arrange and define the various documents on the site. It is the text that appears in between the “---” dashes at the top of each document. It’s technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply. Our headers usually include the following key/value pairs:
 
 * `pagename`: This is the name of the page that will appear at the top of the document.
-* `keywords`: This replaces the keywords found in the respective `<meta>` element of the page. Leave it empty, as it’s not currently used.
+* `keywords`: This header replaces the keywords found in the respective `<meta>` element of the page. Leave it empty, as it’s not currently used.
 * `sitesection`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 * `categoryname`: This is the category to which the document’s API belongs (for example, the “Create Users” method belongs to the Users API which is under Contact Center Management).
 * `documentname`: This is the API to which the document belongs.
@@ -142,7 +142,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 * `permalink`: this key defines the link at which the document can be found. The format of this value **must be** as follows; any other value format will cause the sidebar to malfunction:
   - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
-* `indicator`: This key sets the chat or messaging indicator (or both) on a document. It accepts `chat`, `messaging`, or `both` as its values.
+* `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
 
 ## Notes on content and code
@@ -151,16 +151,20 @@ The max width for an image in this repo is 800 pixels.
 
 ## Hiding files
 
-* Add the Files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden). 
+* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden). 
 * Do not include them in the documentsupdated.yaml file.
-* Make sure the `layout` header is set to `hidden-layout`. (This is for search engines not to find it.)
-* Make sure that the headers are set correctly, following the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder.
+* Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
+* Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
 ### Adding new documents to the sidebar
 
-Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
+Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons:
+
+1. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
+2. Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
+3. Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
 
 The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar. 
 
