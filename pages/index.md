@@ -15,7 +15,7 @@ redirect_from:
 <div class="card-container home-container">
   <div class="flex flex-col gap-32">
     <a href="/platform-overview.html" id="success-stories" class="welcome-card">
-      <div href="/platform-overview.html">
+      <div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 23.1547C12 21.9929 11.5386 20.8787 10.7172 20.0571C9.89584 19.2354 8.78178 18.7737 7.62001 18.7733C7.54934 18.7733 7.48667 18.7907 7.41467 18.7947"
@@ -151,7 +151,7 @@ redirect_from:
           stroke-linejoin="round" />
         <path d="M6.5 23H14.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
-        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)"stroke-width="2" stroke-linecap="round"
+        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
       <h3 class="welcome-title h3">Stay Informed</h3>
