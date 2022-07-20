@@ -38,7 +38,7 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "OAuth 2.0."
@@ -77,7 +77,7 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "OAuth 2.0."
@@ -134,15 +134,15 @@ You can convert a trust certificate to the required format using openssl. For ex
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Mutual Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Keys Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks.
+    - **Key Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks.
     - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required.
-    - **Keys Certificate Password**: Optionally enter the password for the keys certificate.
+    - **Key Certificate Password**: Optionally enter the password for the keys certificate.
     - **Trust Certificate Password**: Optionally enter the password for the trust certificate.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
 7. Click **Save**.
@@ -157,7 +157,7 @@ Like the Access Token credential (discussed below), this type of credential isn'
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Basic Authentication."
@@ -177,7 +177,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Access Token."
@@ -198,7 +198,7 @@ While the credential types discussed above support [API integrations](conversati
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Third-party NLU."
