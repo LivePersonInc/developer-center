@@ -31,7 +31,7 @@ With watson there are two ways of authentication that currently our system suppo
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-based-auth.png" alt="">
 
 Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
 
@@ -78,7 +78,7 @@ Following information needs to be completed for LivePerson:
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-based-auth.png" alt="">
 
 Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
 
@@ -128,18 +128,18 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png" alt="">
 
 Figure 1.3 Showing the success case of the valid credentials for UserPass authentication
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-failed.png" alt="">
 
 Figure 1.4 Showing the fail case of the invalid credentials for UserPass authentication
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-success.png" alt="">
 
 Figure 1.5 Showing the success case of the valid credentials for IAM authentication
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/token-connection-failed.png" alt="">
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
@@ -163,7 +163,7 @@ With Watson V2 there are two methods of authentication that are currently suppor
 
 You will be presented with following screen to complete the Vendor Settings in order to add the bot connector using username/password authentication.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-based-auth.png" alt="">
 
 Figure 1.1 Showing the configuration that needs to be filled out when using username/password authentication
 
@@ -205,7 +205,7 @@ You need to fill in the following information:
 
 You will be presented with following screen to complete the Vendor Settings in order to add the bot connector using IAM authentication.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-based-auth.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-based-auth.png" alt="">
 
 Figure 1.2 Showing the configuration that needs to be filled in when using the IAM authentication method.
 
@@ -250,18 +250,18 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 To validate the credentials you provided above, you can now perform a test connection request. Click on the "Test Connection" button to do so. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-connection-success.png" alt="">
 
 Figure 1.3 Showing the success case of the valid credentials for UserPass authentication
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-connection-failed.png" alt="">
 
 Figure 1.4 Showing the fail case of the invalid credentials for UserPass authentication
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-connection-success.png" alt="">
 
 Figure 1.5 Showing the success case of the valid credentials for IAM authentication
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-connection-failed.png" alt="">
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 

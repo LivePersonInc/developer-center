@@ -11,7 +11,7 @@ indicator: both
 ---
 
 ### Messaging Agent SDK upgrade available
-LivePerson empowers external Bot Vendors and Bot Builders to build fully customized bots with LivePerson's Conversational Cloud, leveraging the Messaging Agent SDK for node.js.
+LivePerson empowers external Bot Vendors and Bot Builders to build fully customized bots with LivePerson's Conversational Cloud, leveraging the Messaging Agent SDK for Node.js.
 
 We’re excited to share that we have released a new version of NodeAgent SDK which will improve resilience and stability of your third-party bots. Please upgrade to the [new NodeAgent SDK](https://github.com/LivePersonInc/node-agent-sdk) as soon as possible to realize these improvements.
 

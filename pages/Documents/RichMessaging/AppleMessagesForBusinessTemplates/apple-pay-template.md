@@ -46,11 +46,11 @@ The **body** template will only define how the Apple Pay bubble is displayed in 
 
 *Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on Conversational Cloud)*
 
-<img style="width:250px" src="img/apple_pay_consumer1.png"> <img style="width:250px" src="img/apple_pay_consumer2.png">
+<img style="width:250px" src="img/apple_pay_consumer1.png" alt=""> <img style="width:250px" src="img/apple_pay_consumer2.png" alt="">
 
 *In the interim, consumer completes payment process and receives the reply message bubble with the payment status. Agent views Apple Pay Request in Conversational Cloud Agent Workspace*
 
-<img class="fancyimage" style="width:500px" src="img/apple_pay_agentworkspace2.png">
+<img class="fancyimage" style="width:500px" src="img/apple_pay_agentworkspace2.png" alt="">
 
 #### Request Metadata
 
