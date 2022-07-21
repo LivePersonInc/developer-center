@@ -14,13 +14,15 @@ indicator: messaging
 
 In WhatsApp Business Messages, a Reply Button Message has the following structure:
 
-1. Header (optional)
+1. Image Header (optional)
 2. Title
 3. Subtitle
 4. Footer (optional)
 5. Buttons (between 1 and 3)
 
-**Examples Of WhatsApp Reply Button:**
+**Note** We only support image headers and text headers (Title element).
+
+**Examples of WhatsApp Reply Button**
 
 ![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
 
@@ -28,44 +30,13 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 
 The Reply Button is the container that holds the information that should be displayed by the connector.
 
-#### Properties
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Type of the Container.<br/>
-For Reply Buttons in WhatsApp the type should always be <b>vertical</b>, as it best represents the layout on customer side.</td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>Tag of template view, must be <b>generic</b>.</td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>elements</td>
-    <td>Array of elements/templates that contains the actual content of the Reply Button. The elements must be in the following order:<br/><br/>
-1) <a href="#image">Image</a><br/>
-2) <a href="#title">Title</a><br/>
-3) <a href="#description">Subtitle</a><br/>
-4) <a href="#description">Footer</a><br/>
-5-7) <a href="#button">Button</a><br/><br/>
-The description and at least one button element are required.</td>
-    <td>Array(Element)</td>
-    <td>Y</td>
-  </tr>
-</table>
-
+| Property Name | Description                                   |                  Type | Required |
+|----------------------------------------------------------------------------------------------------|
+| type          | Type of container                               | Enum                  | Y        |
+| tag           | Tag of template view must be **generic**        | Enum                  | Y        |
+| elements      | Array of elements/templates that contains the actual content of the reply button. The elements must be in the following order: <br>  1) Image header <br> 2) Title <br> 3) Subtitle <br> 4) Footer <br> 5) Button <br> The description and at least a button is required.| Array(Element) | Y |
+                  
 #### JSON Representation Card
 
 ```json
@@ -76,39 +47,15 @@ The description and at least one button element are required.</td>
 }
 ```
 
-### Image
+### Image Header
 
-The image that will be displayed at the top of the Reply Button.
+A image can be used as an header and it will be displayed at the top of the Reply Button.
 The image size should be under 5MB.
 
-#### Properties
-
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "image". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#image">image</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>url</td>
-    <td>
-    The URL of the image that will be sent to Facebook.<br/>
-    The domain where the image is being stored must be whitelisted before it can be used.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| ---  | --- | --- | --- |
+| type | Must be "image". Identifies the element as an object of type image.  | Enum | Y |
+| url  |  The URL of the image that will be sent to Facebook. The domain where the image is being stored must be whitelisted before it can be used.  | String | Y |
 
 #### JSON Representation
 
@@ -121,43 +68,16 @@ The image size should be under 5MB.
 
 ### Title
 
-The highlighted headline of the rich card.
+Title is a textual header for the reply message. Since the title is part of the body message, using an image and
+a title (header) at the same time is supported. Furthermore the title length is not limited to the length of header described in
+the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#header-object)
 
-#### Properties
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "title". If missing, the first text element in the template will be set as the card text.  | Enum | Y |
+| text |  The actual text of the headline. The text can not be longer than 1024 characters shared with the subtitle.  | String | Y |
 
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>Must be "title". If missing, the first text element in the template will be set as the card text.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    The actual text of the headline.<br/>
-    The text can not be longer than 1024 characters shared with the subtitle.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
 
 #### JSON Representation
 
@@ -173,82 +93,22 @@ The highlighted headline of the rich card.
 
 The text of the rich card.
 
-#### Properties
-
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-    <tr>
-    <td>tag</td>
-    <td>Must be "sutitle". If missing the first text element in the template will be set as the card text.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    The description text.<br/>
-    The text can not be longer than 1024 characters shared with the title.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "subtitle". If missing the first text element in the template will be set as the card text.  | Enum | Y |
+| text |  The description text. The text can not be longer than 1024 characters shared with the title.  | String | Y |
 
 
 ### Footer
 
 Footer of the card.
 
-#### Properties
-
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "text". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#text">text</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-    <tr>
-    <td>tag</td>
-    <td>Must be "footer".
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>
-    The description text.<br/>
-    The text can not be longer than 60 characters shared with the title.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
+| tag | Must be "footer".  | Enum | Y |
+| text |  The description text. The text can not be longer than 60 characters shared with the title.  | String | Y |
 
 #### JSON Representation
 
@@ -264,44 +124,11 @@ Footer of the card.
 
 A button at the bottom of a rich card.
 
-#### Properties
-
-<table>
-  <thead>
-  <tr>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-    <th>Required</th>
-  </tr>
-  </thead>
-  <tr>
-    <td>type</td>
-    <td>Must be "button". Identifies the element as an object of type <a href="getting-started-with-rich-messaging-introduction.html#button">button</a>.
-    </td>
-    <td>Enum</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>title</td>
-    <td>
-    The text of the button.<br/>
-    The text can not be longer than 20 characters.
-    </td>
-    <td>String</td>
-    <td>Y</td>
-  </tr>
-  <tr>
-    <td>click</td>
-    <td>
-    The click operations that should be executed when the customer clicks the button.<br/>
-    These click operations must contain at least one action. The WhatsApp only supports the
-    <a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a>
-    </td>
-    <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>
-    <td>Y</td>
-  </tr>
-</table>
+| Property Name | Description | Type | Required |
+| --- | --- | --- | --- |
+| type | Must be "button". Identifies the element as an object of type button.  | Enum | Y |
+| title |  The text of the button. Please refer to the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#action-object) for the text length.  | String | Y |
+| click |  The click operations that should be executed when the customer clicks the button. These click operations must contain at least one action. The WhatsApp only supports the publishText  | ClickOperations | Y |
 
 ```json
 {
@@ -363,12 +190,12 @@ A button at the bottom of a rich card.
     },
     {
       "type": "button",
-      "title": "Deliver to local postoffice",
+      "title": "Post office",
       "click": {
         "actions": [  
           {
             "type": "publishText",
-            "text": "Local post office"
+            "text": "Post office"
           }
         ]
       }

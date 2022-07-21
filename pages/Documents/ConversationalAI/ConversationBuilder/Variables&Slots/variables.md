@@ -29,14 +29,24 @@ There are several system variables that store information that's commonly needed
 
 The most common use case for variables is storing consumer responses to [questions](conversation-builder-interactions-questions.html). Frequently, you’ll want to capture what the consumer just said as the value of a variable. You can use `{$userMessage}` to do this, for example:
 
-<img width="700" src="img/ConvoBuilder/storeUserResponse.png">
+<img width="700" src="img/ConvoBuilder/storeUserResponse.png" alt="">
 
 You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 ### Add a variable
 
 1. In the interaction, click **Next Action**, and then click **+ Custom Rule**.
-2. In the window that appears, define the custom rule. To add the variable, click **+ Add Variable**, and then define the variable using the fields provided. These fields are illustrated in the preceding section.
+
+    <img width="600" src="img/ConvoBuilder/var_customrule.png" alt="">
+
+2. In the window that appears, define the custom rule. To add the variable, click **+ Add Variable**, and then define the variable using the fields provided.
+
+    <img width="800" src="img/ConvoBuilder/var_specify.png" alt="">
+
+    For the variable's value, you can specify:
+    * A system variable, for example: `{$userMessage}` or `{$firstname}`. See the list of available system variables farther above on this page.
+    * Another botContext variable, for example: `{$botContext.variableName}`.
+    * A string, for example, the number “1” or the phrase “vip.”
 
 ### Clean variable data
 

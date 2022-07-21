@@ -37,8 +37,6 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
     <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png">
 
     This opens the Bot Logs window, so it is displayed beside the Preview window.
-
-    <img style="width:600px" src="img/ConvoBuilder/debuggingWindow3.png">
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 

@@ -32,7 +32,7 @@ To set up Conversation Assist to recommend bots, you need some prerequisite know
 
 If you intend to build your bots using Conversation Builder, you must be able to use [Conversation Builder](conversation-builder-overview.html) to create and deploy a bot. And if, for utterance matching, you’ll be using intents instead of patterns, you must also be able to use [Intent Manager](intent-manager-overview.html) to create a domain and the intents. For exposure to these applications and tasks, we recommend that you complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series.
 
-If you intend to build your bots using a third-party application, see [here](third-party-bots-getting-started.html) for more info.
+If you intend to build your bots using a third-party application, see [here](third-party-bots-getting-started.html) for more information.
 
 ### High-level workflow
 1. In **Conversation Builder** or the third-party application, create the bots.
@@ -46,11 +46,8 @@ If you intend to build your bots using a third-party application, see [here](thi
 
 For help with creating a third-party bot, see [here](third-party-bots-getting-started.html) for info.
 
-### Step 2: Create the skills and bot users
-Configure Conversational Cloud by creating a skill and a bot user for each bot. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
-
-* Create the skill name and bot user name that make sense for your use case.
-* Be sure to assign the bot skill to the bot user.
+### Step 2: Create the bot users
+Configure Conversational Cloud by creating a bot user for each bot. This is illustrated in the Conversation Assist [tutorial](tutorials-guides-using-conversation-assist-overview.html). Specify a bot user name that make sense for your use case.
 
 ### Step 3: Deploy the bots
 If you've created Conversation Builder bots, then use Conversation Builder to deploy the bots. This is illustrated in the Conversation Builder [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial. When you add the agent connector for the bot, be sure to select to allow Messaging conversations. And after adding the agent connector, be sure to start it to enable the bot to handle traffic.

@@ -1470,7 +1470,7 @@ html body div.container div.text li a.more-btn.active {
 
 .bot-platform .banner-container {
     text-align: center;
-    background: url(/images/background-le-for-bots.png) no-repeat center center / cover;
+    background: url(/img/archive/background-le-for-bots.png) no-repeat center center / cover;
     padding: 96px 0;
 }
 
@@ -1552,7 +1552,7 @@ only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 
     .bot-platform .banner-container {
-        background: url(/images/background-le-for-bots@2x.png) no-repeat center center / cover;
+        background: url(/img/archive/background-le-for-bots@2x.png) no-repeat center center / cover;
     }
 
 }
@@ -1652,7 +1652,7 @@ only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 
     .developmentsummit .banner-container {
-        background: url(/images/background-le-for-bots@2x.png) no-repeat center center / cover;
+        background: url(/img/archive/background-le-for-bots@2x.png) no-repeat center center / cover;
     }
 
 }

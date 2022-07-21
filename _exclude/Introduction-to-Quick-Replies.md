@@ -17,7 +17,7 @@ Many conversations require asking questions with a limited number of possible re
 
 Once a consumer clicks on one of the replies, a pre-rendered message is sent to the conversation without the consumer having to type it out. The quick replies then disappear after having been clicked. This saves the consumer precious time and creates an easy way to enrich the consumer’s experience.
 
-![Quick Replies](images/quick-replies.gif)
+![Quick Replies](img/archive/quick-replies.gif)
 
 One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific Conversational Cloud skill). Because these possible responses are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
 

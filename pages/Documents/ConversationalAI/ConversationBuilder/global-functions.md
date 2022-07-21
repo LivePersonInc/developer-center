@@ -30,6 +30,10 @@ Often, bot developers try to initialize variables just in time, which can someti
 
 Take care when writing JavaScript for global functions. Errors might not be thrown in all, true error cases. So, when you experience erroneous bot behavior, sometimes it can be difficult to diagnose a problematic global function as the root cause.
 
+### Requirements
+
+Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
 ### Global Helper Functions dialog template
 LivePerson offers a Global Helper Functions dialog template that aggregates and makes available many capabilities using global functions. You can import this template into your bot to “add in” the global functions that are included.
 

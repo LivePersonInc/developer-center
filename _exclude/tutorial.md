@@ -50,14 +50,13 @@ This tutorial is designed to familiarize you with the Knowledge Base application
 
     Back in the search view, you should now see your new article, which should look something like this:
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png" alt="">
 
-    The article is inactive, which means it won't be returned in knowledge base searches in Knowledge Base integrations. 
+    The article is inactive, which means it won't be returned in knowledge base searches in Knowledge Base integrations.
 
     Manually added articles are inactive by default because the **Enable Article** setting is turned off by default. This is to give you the opportunity to test the article before enabling it.
 
     For the purposes of this tutorial, the inactive status is fine, as this tutorial doesn't get into use in an Knowledge Base integration. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). For information on how to enable the article, see [here](knowledge-base-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
-
 
 ### Step 3: Train and tune
 
@@ -65,18 +64,18 @@ Let’s test our knowledge base and see how the NLU will return results.
 
 1. In the search view, type something close to your article’s title or intent qualifiers, e.g., “my login doesn't work."
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial5.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial5.png" alt="">
 
     Even though this utterance was not exactly the same as what was added, it still matched the article with a VERY GOOD confidence.
 
 2. Try a different user input, like, “my password is not letting me into my account”.
-    
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial6.png">
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial6.png" alt="">
 
     This is different enough that the NLU engine will return as FAIR PLUS. Generally, in a Knowledge Base integration in a bot, we set the threshold to GOOD, so, in this new example, the article wouldn't be shown to a user. However, we can easily “train” the article to respond to this input by clicking the thumbs-up icon that's beneath the result.
 
-3. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_thumbsUp.png"> (**Thumbs Up** icon).
-    
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_thumbsUp.png" alt=""> (**Thumbs Up** icon).
+
     This adds the utterance to a set of “positive learnings” that are used in the matching.
 
 4. Resubmit the search.
@@ -125,7 +124,7 @@ To use entities within a knowledge base, you'll need to connect the domain to th
 
 1. Exit Intent Builder, and return to Knowledge Base.
 2. Open the knowledge base.
-3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
+3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="">, and select **Knowledge Base Menu**.
 4. In the Settings panel, click **KB Settings**.
 5. Scroll down, and click **More Options**.
 6. In the **Associated Domain for Entity** field, select the name of the domain you just created.
@@ -135,7 +134,7 @@ To use entities within a knowledge base, you'll need to connect the domain to th
 
 In your article, go ahead and replace any word where you want the "credentials" entity to be substituted in, **including** the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them. Things should look like this:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial8.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial8.png" alt="">
 
 {: .important}
 You don't need to enter entities using all capital letters like we've done here, but it does help you to identify the words that are entities.
