@@ -29,7 +29,7 @@ Log into Conversational Cloud and navigate to Campaign Builder > Data Sources > 
 
 In the connector configuration screen, set the following fields:
 
-* Choose from the dropdown ``oAuth 2.0 authentication (implicit)``.
+* Choose from the dropdown ``OAuth 2.0 authentication (implicit)``.
 * **Authentication Endpoint** : ``https://dummy.com``.
 * In the ``JWT Public Key``, type:
 

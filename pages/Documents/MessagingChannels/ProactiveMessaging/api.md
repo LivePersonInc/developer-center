@@ -35,7 +35,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 ### API Specifications
 
-## OAuth 2.0 Authorization 
+## OAuth 2.0 Authorization
+
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive/proactive-show-secrets.png)  
 * The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
@@ -556,7 +557,7 @@ Consider an example response of campaigns API:
 | 'IMAGE_URL_NOT_WHITELISTED'                        | At least one of the consumers had a image link that is not from a whitelisted host for for a rich text campaign. |
 
 <strong>What kind of security, encryption, parameter, failures?</strong>
-The API uses App Jwt Oauth 2.0 authentication.
+The API uses App Jwt OAuth 2.0 authentication.
 
 <strong>Does the API have status call backs? How do we get the status of the message?</strong>
 Proactive Messaging does not have call backs to inform the status. Proactive Messaging provides status of messages through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
