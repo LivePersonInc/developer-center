@@ -1,26 +1,30 @@
-<ul id="mysidebar" class="mysidebar side-width nav fixed sidebarmobileclosed documentslist">
-    <!-- <li class="homeitem folder topfolder active">
+<ul
+  id="mysidebar"
+  class="mysidebar side-width nav fixed sidebarmobileclosed documentslist"
+>
+  <!-- <li class="homeitem folder topfolder active">
     <div class="sidebarimage" style="margin-left:40px;">
     </div>
     <a onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li> -->
-    {% for category in site.data.documentsupdated %} {% if forloop.last == true %}
-    <li class="folder topfolder lowerimage">
-        <a class="highlightlink" href="">
-            <button class="sidebarbutton"><span></span></button>
-            <span> {{ category.categoryname }} </span></a>
-        <ul>
-            {% for document in category.documents %} {% if document.pages %}
-            <li class="folder innerfolder sidebarcategory">
-                <a class="highlightlink" href=""><button class="sidebarbutton innerArrowAdjust"><span></span></button
+  {% for category in site.data.documentsupdated %} {% if forloop.last == true %}
+  <li class="folder topfolder lowerimage">
+    <a class="highlightlink" href="">
+      <span class="sidebarbutton"><span></span></span>
+      <span> {{ category.categoryname }} </span></a
+    >
+    <ul>
+      {% for document in category.documents %} {% if document.pages %}
+      <li class="folder innerfolder sidebarcategory">
+        <a class="highlightlink" href=""
+          ><span class="sidebarbutton innerArrowAdjust"><span></span></span
           ><span> {{ document.documentname }}</span></a
         >
         <ul>
           {% for page in document.pages %} {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a href=""
-              ><button class="sidebarbutton innerArrowAdjust">
-                <span></span></button
+              ><span class="sidebarbutton innerArrowAdjust"> <span></span></span
               ><span>{{ page.pagename }}</span></a
             >
             <ul class="innerList">
@@ -63,22 +67,21 @@
   {% else %}
   <li class="folder topfolder lowerimage">
     <a class="highlightlink" href=""
-      ><button class="sidebarbutton"><span></span></button
+      ><span class="sidebarbutton"><span></span></span
       ><span> {{ category.categoryname }}</span></a
     >
     <ul>
       {% for document in category.documents %} {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
         <a class="highlightlink" href=""
-          ><button class="sidebarbutton innerArrowAdjust"><span></span></button
+          ><span class="sidebarbutton innerArrowAdjust"><span></span></span
           ><span> {{ document.documentname }}</span></a
         >
         <ul>
           {% for page in document.pages %} {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a class="highlightlink" href=""
-              ><button class="sidebarbutton innerArrowAdjust">
-                <span></span></button
+              ><span class="sidebarbutton innerArrowAdjust"> <span></span></span
               ><span>{{ page.pagename }}</span></a
             >
             <ul class="innerList">
@@ -141,11 +144,15 @@
           </svg>
         </span>
       </a>
-            </li>
-            </div>
-            <div class="sidebarbuttoncontainer">
-                <li class="folder topfolder">
-                    <a target="_blank" class="bottombuttons spacebetweenHyperlink" href="https://status.liveperson.com/">Service Status Dashboard
+    </li>
+  </div>
+  <div class="sidebarbuttoncontainer">
+    <li class="folder topfolder">
+      <a
+        target="_blank"
+        class="bottombuttons spacebetweenHyperlink"
+        href="https://status.liveperson.com/"
+        >Service Status Dashboard
         <span style="float: right">
           <svg
             width="11"
@@ -161,6 +168,6 @@
           </svg>
         </span>
       </a>
-                </li>
-            </div>
-        </ul>
+    </li>
+  </div>
+</ul>

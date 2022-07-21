@@ -22,7 +22,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 You will be presented with following screen to complete the Vendor Settings if you select Dialogflow ES.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-configuration-step.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-configuration-step.png" alt="">
 
 Figure 1.1 Dialogflow ES Vendor Step
 
@@ -62,9 +62,9 @@ The parameters are as follows:
     <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
     <td>-----BEGIN PRIVATE KEY-----
 ABabcLe3h4XeslUI7Eowz2sypu72Q9+j1xOEtc9asl37wLac/zo0xy7wNxnDau+x
-    
+
 ...
-        
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         IFRnWV9jafiw2t92CY9mRzqF5puk8iRtMiCRjy3u4L+RHdvYkZPqO9CZUPvq9t0q
         q+J780stgv56BE7TAuIjRPkN+GPcqnm69qQvJdzSPc5dw5ZmM8b5TtIvlipzjU89
@@ -122,10 +122,10 @@ Dialogflow ES has a [limitation on the length of the text it can process](https:
 Any query longer than 256 characters will cause Third-Party Bots to invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a **DIALOGFLOW_CHAR_LIMIT** event.
 
-<img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png">
+<img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png" alt="">
 
 Figure 1.3 Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-<img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png">
+<img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png" alt="">
 
 Figure 1.4 Add a custom response in the **Text response** section.

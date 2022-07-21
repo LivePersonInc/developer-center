@@ -36,11 +36,11 @@ For more details, see below.
 
 You associate a domain with an external knowledge base when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai):
 
-<img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png" alt="">
 
-And you can likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
+And you can likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base):
 
-<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png" alt="">
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 
@@ -48,7 +48,7 @@ Associating the domain gives you access to the domain's intents, so you can asso
 
 After you've added a knowledge base that is associated to a domain, configure the articles so that each is linked to the appropriate intent.
 
-<img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png">
+<img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png" alt="">
 
 You don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content you care about the most, and link those to the relevant articles. This means you can focus on specific content areas in your knowledge base, and manage the content overall with varying levels of effort on your part. The approach gives you flexibility as you maintain the knowledge base over time.
 
@@ -58,7 +58,7 @@ For information on this, see [here](knowledgeai-optimizing-your-content-tuning-a
 
 ### Scoring and thresholds
 
-When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR. 
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
 | If the knowledge base is... | Then... |
 | --- | --- |

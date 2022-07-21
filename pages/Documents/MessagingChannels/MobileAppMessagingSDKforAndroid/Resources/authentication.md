@@ -60,7 +60,7 @@ LPAuthenticationParams().setHostAppJWT("yourJwt")
 
 Once the Authentication key expires, you get notified with a callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired).
 
-To re-connect with a new Authentication key, use [reconnect( LPAuthenticationParams lpAuthenticationParams) ](android-methods.html#reconnect)
+To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
 
 
 {:.important}

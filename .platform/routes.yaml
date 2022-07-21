@@ -11,9 +11,9 @@ https://developers.liveperson.com:
   redirects:
     expires: 1w
     paths:
-      '^/test/images/(.*)':
-        to: 'https://{default}/img/$1'
+      '^/images/(.*)':
+        to: 'https://{default}/img/archive/$1'
         regexp: true
       '^/(free-trial-registration|register-test)':
-        to: 'https://{default}/demo/'
+        to: 'https://www.liveperson.com/demo/'
         regexp: true
