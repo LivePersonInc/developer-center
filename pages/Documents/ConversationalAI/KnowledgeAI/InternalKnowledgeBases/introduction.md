@@ -36,24 +36,26 @@ When adding an internal knowledge base, follow this workflow:
 ### Domain intents versus Knowledge Base intents
 
 #### Domain intents
-When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
+
+When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password.").
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
 
-<img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
+<img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png" alt="">
 
-Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do: 
+Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do:
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png" alt="">
 
 Within the newly created knowledge base, you then link each article to an intent in the domain.
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png" alt="">
 
 With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding-introduction.html) for intent matching:
+
 * LivePerson
 * LivePerson (Legacy)
-* A third-party NLU engine 
+* A third-party NLU engine
 
 Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like Intent Manager's [Intent Analyzer](intent-manager-overview.html).
 
@@ -64,7 +66,7 @@ As of March 5, 2021, you can no longer create a knowledge base that uses Knowled
 
 If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
-<img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png" alt="">
 
 Knowledge Base intents like these are a *legacy feature* that uses the deprecated LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
@@ -83,15 +85,15 @@ An article is either active or inactive. Active articles are returned in knowled
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png" alt="">
 
 In the KnowledgeAI application, you can easily identify an article's current status:
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png" alt="">
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html).
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
 

@@ -18,7 +18,7 @@ Please note that the structured content body layout will not be represented on t
 
 In order to allow brands to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app the brand uses. This will allow the brand to then track how many times a specific iMessage app was sent via a transcript search.
 
-For the structured content body fields descriptions and different layout options please refer to the [structured content guide in our dev community. ](https://developers.liveperson.com/structured-content-templates.html)
+For the structured content body fields descriptions and different layout options please refer to the [structured content guide in our dev community](https://developers.liveperson.com/structured-content-templates.html).
 
 #### Message Metadata
 

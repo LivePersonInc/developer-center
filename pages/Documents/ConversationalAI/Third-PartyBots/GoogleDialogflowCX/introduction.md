@@ -21,7 +21,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard.png" alt="">
 
 Figure 1.1 Dialogflow CX Vendor Step
 
@@ -48,7 +48,7 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Agent ID</td>
-    <td>Dialogflow CX agent id which can be taken from the URL of Dialogflow CX agent console. 
+    <td>Dialogflow CX agent id which can be taken from the URL of Dialogflow CX agent console.
     Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/<b>&lt;Agent ID&gt;</b>
 </td>
 
@@ -75,7 +75,7 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
     <td>-----BEGIN PRIVATE KEY-----
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        BSioVh/nHPX2QX2MKSbue+k=<br /> 
+        BSioVh/nHPX2QX2MKSbue+k=<br />
         -----END PRIVATE KEY-----</td>
   </tr>
   </tbody>
@@ -118,7 +118,7 @@ The config wizard expects each of the pieces of auth data to be copied from the 
 #### Environments
 The Connector supports [Dialogflow CX environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-environments.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-environments.png" alt="">
 
 Figure 1.3 Environments in the Dialogflow CX Console
 
@@ -135,7 +135,7 @@ have provided is working and reachable. You can click on the button "Test Connec
 or fails.
 You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png" alt="">
 
 Figure 1.4 Showing the failure case when testing the connection.
 
@@ -155,12 +155,12 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-   <img style="width:600px" src="img/dialogflowcx/image_7.png">
+   <img style="width:600px" src="img/dialogflowcx/image_7.png" alt="">
 
    Figure 1.5
 
 2. Do not forget to add a custom response in the **Text response** section.
 
-   <img style="width:700px" src="img/dialogflowcx/image_8.png">
+   <img style="width:700px" src="img/dialogflowcx/image_8.png" alt="">
 
    Figure 1.6

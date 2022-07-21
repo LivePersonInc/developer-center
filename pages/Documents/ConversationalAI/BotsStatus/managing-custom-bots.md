@@ -12,13 +12,13 @@ indicator: both
 
 In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page to perform functions on agents (restart, stop, start, etc.).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png" alt="">
 
 Use the filter controls in the upper-left corner to display the desired agents.
 
 The metrics displayed at the top of the page are affected by the **Environment** filter and no others.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png" alt="">
 
 ### Supporting failover
 
@@ -78,7 +78,7 @@ Starting an agent gets the connector running so that new conversations can start
 
 ### Redeploy an agent
 
-Reploying an agent allows you to take an agent connector that's deployed in one environment and redeploy it to a different environment. For example, when you're ready, you can use this capability to take an agent that's deployed in the Demo environment and redeploy it to the Production environment. 
+Reploying an agent allows you to take an agent connector that's deployed in one environment and redeploy it to a different environment. For example, when you're ready, you can use this capability to take an agent that's deployed in the Demo environment and redeploy it to the Production environment.
 
 This capability to switch the environment eliminates the need to delete the agent connector and re-add it for the desired environment.
 
@@ -93,7 +93,7 @@ This capability to switch the environment eliminates the need to delete the agen
 4. Stop the bot if it is currently online.
 5. Select the checkbox for the bot, and then select **Re-deploy Agent** from the **Actions** list.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png" alt="">
 
 6. In the **Environment** drop-down, select the target environment.
 7. Click **Save Settings**.
