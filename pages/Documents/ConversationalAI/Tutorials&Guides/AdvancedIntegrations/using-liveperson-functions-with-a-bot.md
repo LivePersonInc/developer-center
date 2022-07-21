@@ -21,11 +21,11 @@ To enable the use of LivePerson's Function (FaaS) integrations, please contact y
 
 1. Access LivePerson Functions from Conversational Cloud by clicking the menu in the lower-left corner.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/guideFunctions_menuOption.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/guideFunctions_menuOption.png" alt="">
 
 2. Create and configure a function with the custom JavaScript logic that you need for your use case. As an example, the following function takes `item` and `price` from the `input` Object, and, based on the value of price, it decides which sentence to send back to the bot. (This sentence is subsequently displayed in the conversation.)
 
-    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/guideFunctions_exFunction.png">
+    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/guideFunctions_exFunction.png" alt="">
 
 3. Once you’re happy with your function, deploy it.
 
@@ -54,25 +54,25 @@ In this scenario the Transform Result Script is used because the function is sim
 
 You could set the following as Custom Data Fields:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_customDataFields.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_customDataFields.png" alt="">
 
-Then, you could use the `response` within a dialog’s interaction by using the following notation: 
+Then, you could use the `response` within a dialog’s interaction by using the following notation:
 
 `{UnsolicitedCommentFunction.response}`
 
 Here’s a visual summary of what needs to be done within the Integrations tab:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_integrationSettings.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_integrationSettings.png" alt="">
 
 ### Conversation Builder - Configure the dialog
 
 1. Create an interaction of type Integration, and select from the dropdown the function’s integration.
 2. Save the change.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_dialog.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_dialog.png" alt="">
 
 ### Conversation Builder - Preview
 
 This is the end user's experience in a conversation:
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/guideFunctions_preview.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/guideFunctions_preview.png" alt="">

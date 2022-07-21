@@ -11,19 +11,20 @@ indicator: messaging
 
 ### Overview
 
-Use LINE cards to send a message with an image, title, text and multiple buttons with actions. 
+Use LINE cards to send a message with an image, title, text and multiple buttons with actions.
 
-The card contains the following elements: 
+The card contains the following elements:
+
 * Title text
 * Subtitle text
 * Image
 * Up to 4 buttons (LINE limitation) with the following actions:
-    * Link
-    * Publish text 
+  * Link
+  * Publish text
 
-LINE card example: 
+LINE card example:
 
-<img  style="width:350px" src="img/line_sc_card.jpg">
+<img  style="width:350px" src="img/line_sc_card.jpg" alt="">
 
 ### JSON Template Properties
 
@@ -56,7 +57,7 @@ Max: 400 characters</td>
  </tr>
  <tr>
  <td>tag</td>
- <td>Tag of layout view, must be “generic” for LINE rich content templates. 
+ <td>Tag of layout view, must be “generic” for LINE rich content templates.
 
 Within basic element objects, will be “title”/”subtitle”, which will indicate what text should be rendered in each of those elements (the title and subtitle have a default style in LINE). </td>
  <td>Enum</td>
@@ -65,7 +66,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
  <tr>
  <td>elements
 </td>
- <td>Array of elements/layouts. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons	</td>
+ <td>Array of elements/layouts. By using elements in your structured content template, you can send basic elements, such as simple text, images or buttons </td>
  <td>Elements/Layouts</td>
  <td>Y</td>
  </tr>

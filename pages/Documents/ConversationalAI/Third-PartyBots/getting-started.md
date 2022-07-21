@@ -95,11 +95,11 @@ Due to limitations within the Conversational Cloud's permission system, it is no
 
 If you want to enable creating and starting bots for the Agent and Agent Manager profiles, you need to create a new custom Profile, which will derive its base permissions from the Campaign Manager or Admin profiles. Then, make sure to enable the needed permissions for creating and starting bots only while disabling any other permissions. Afterwards, you will need to assign this new Profile to the Agent/Agent Manager who should be able to start/create bots.
 
-<img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png">
+<img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png" alt="">
 
 Minimal set of permissions for creating and starting bots for Campaign Manager Profile
 
-<img style="width:600px" src="img/botconnectordashboard/administrator_bot_permissions.png">
+<img style="width:600px" src="img/botconnectordashboard/administrator_bot_permissions.png" alt="">
 
 Minimal set of permissions for creating and starting bots for Administrator Profile
 
@@ -113,13 +113,13 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in the Conversational Cloud. Choose "Bot" for “User type”. If bot is not available as a user type, contact your LivePerson account manager to enable the feature.
 
-  <img style="width:600px" src="img/ThirdPartyBots/common-create-bot-user.png">
+  <img style="width:600px" src="img/ThirdPartyBots/common-create-bot-user.png" alt="">
 
 {:start="2"}
 
 1. Under login method, choose "API key" and generate a new API key for the user
 
-   <img style="width:600px" src="img/ThirdPartyBots/common-create-api-key.png">
+   <img style="width:600px" src="img/ThirdPartyBots/common-create-api-key.png" alt="">
 
 {:start="3"}
 
@@ -129,7 +129,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Find the API key name you created above the in bot user profile
 
-   <img style="width:400px" src="img/ThirdPartyBots/common-find-api-key.png">
+   <img style="width:400px" src="img/ThirdPartyBots/common-find-api-key.png" alt="">
 
 #### Provision a connector
 
@@ -137,7 +137,7 @@ To enable Third-Party bots, contact your Account Manager to enable the feature i
 
 Upon logging in to Conversational Cloud, you will see the Conversation AI Tab:
 
-<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/conversational_ai_app.png">
+<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/conversational_ai_app.png" alt="">
 
 Follow the steps below to add a new bot.
 
@@ -145,7 +145,7 @@ Follow the steps below to add a new bot.
 
 2. Click “+ Add Bot” in the bot table
 
-   <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
+   <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png" alt="">
 
 3. Choose [Bot Type](third-party-bots-bot-types.html): Decide which type of bot you want to add.
 
