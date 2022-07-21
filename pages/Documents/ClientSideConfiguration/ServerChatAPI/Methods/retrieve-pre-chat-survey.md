@@ -13,9 +13,9 @@ permalink: server-chat-api-methods-retrieve-pre-chat-survey.html
 indicator: chat
 ---
 
-Returns an XML or JSON response with the Pre-Chat survey.
+Returns an XML or JSON response with the pre-chat survey.
 
-*Note: Posting answers for a Pre-Chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html).*
+*Note: Posting answers for a pre-chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html).*
 
 ### Request
 

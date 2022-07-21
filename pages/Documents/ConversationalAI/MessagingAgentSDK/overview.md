@@ -14,7 +14,7 @@ The Messaging Agent SDK for Node.js was built to provide a fully custom way of p
 
 [The code for this SDK is hosted on GitHub](https://github.com/LivePersonInc/node-agent-sdk).
 
-[Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Disclaimer
 

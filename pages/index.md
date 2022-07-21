@@ -81,7 +81,7 @@ redirect_from:
           d="M16 21C15.9011 21 15.8044 21.0293 15.7222 21.0843C15.64 21.1392 15.5759 21.2173 15.5381 21.3087C15.5002 21.4 15.4903 21.5006 15.5096 21.5975C15.5289 21.6945 15.5765 21.7836 15.6464 21.8536C15.7164 21.9235 15.8055 21.9711 15.9025 21.9904C15.9994 22.0097 16.1 21.9998 16.1913 21.9619C16.2827 21.9241 16.3608 21.86 16.4157 21.7778C16.4707 21.6956 16.5 21.5989 16.5 21.5C16.5 21.3674 16.4473 21.2402 16.3536 21.1464C16.2598 21.0527 16.1326 21 16 21Z"
           stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">FAQs & Contact Support</h3>
+      <h3 class="welcome-title h3">FAQs and Contact Support</h3>
       <p class="welcome-content">Get answers to common questions or contact support directly</p>
     </a>
     </div>

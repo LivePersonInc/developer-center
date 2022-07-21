@@ -1213,7 +1213,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Post survey completed - survey dialog & conversation are closed**
+**Notification - Post survey completed - survey dialog and conversation are closed**
 
 Because we have configured in the Bot Studio one survey question only in this example, the conversation will close immediately after it. When it closes, we'll receive the following and lasts messaging notification regarding survey completion and the closure of the conversation.
 

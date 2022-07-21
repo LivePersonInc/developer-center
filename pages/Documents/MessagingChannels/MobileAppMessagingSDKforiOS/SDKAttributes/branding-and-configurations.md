@@ -393,13 +393,13 @@ Conversation separator text and line color.
 Toggle conversation separator view when conversation resolved from agent or consumer.
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 & above
+This Configuration is avaliable on SDK 6.2.0 and above
 
 {:.important}
 Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
 
 {:.notice}
-Setting this property to false will also disable **enableConversationSeparatorTextMessage** & **enableConversationSeparatorLine**
+Setting this property to false will also disable **enableConversationSeparatorTextMessage** and **enableConversationSeparatorLine**
 
 - **Type:** Bool
 - **Default value:** true
@@ -429,7 +429,7 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator L
 Toggle conversation separator line when conversation is auto close
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 & above
+This Configuration is avaliable on SDK 6.2.0 and above
 
 {:.important}
 For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
@@ -1042,7 +1042,7 @@ Ability to set the date picker day cell border width
 - **Available since:** 6.5.0
 
 ##### datePickerCellFont
-Ability to set the date picker day cell font & size
+Ability to set the date picker day cell font and size
 
 - **Type:** UIFont
 - **Default Value:** UIFont.systemFont(ofSize: 17)
@@ -2421,7 +2421,7 @@ Toggle the mode of the scroll to bottom unread message text preview.
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
 
-- Important: As of SDK 5.1 & above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
+- Important: As of SDK 5.1 and above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
 
 - Note: Behavior for SDK version 5.0:
 If  disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed. Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 

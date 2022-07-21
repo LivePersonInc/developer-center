@@ -22,7 +22,7 @@ As part of our open platform, Conversational Cloud gives brands the ability to m
 
 The triggering of an API-based consumer chat window is supported by both monitored and unmonitored flows.
 
-Different types of engagements, funnel reporting, consumer authentication flow (oAuth2.0+OpenId Connect) and engagement attributes are supported as part of the solution.
+Different types of engagements, funnel reporting, consumer authentication flow (OAuth 2.0 and OpenID Connect) and engagement attributes are supported as part of the solution.
 
 ### Flows
 

@@ -59,7 +59,7 @@ iOS (APNS) only:
 
 - **aps** - contains the raw iOS push object.
 
-Android (FCM & Huawei):
+Android (FCM and Huawei):
 
 - **data** - Contains payload and raw message objects.
 - **payload** - Contains backendService, conversationId, originatorId, brandID, badge and sequence.

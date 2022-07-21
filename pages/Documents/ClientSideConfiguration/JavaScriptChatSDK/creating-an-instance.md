@@ -24,7 +24,7 @@ At this point, it is recommended to bind to at least the following methods: onLo
 
 ```javascript
 var myChatObj = new lpTag.taglets.ChatOverRestAPI({
-    // The api key for this site
+    // The API key for this site
     appKey: "12345678945613",
     // The LivePerson site number
     lpNumber: "123456",

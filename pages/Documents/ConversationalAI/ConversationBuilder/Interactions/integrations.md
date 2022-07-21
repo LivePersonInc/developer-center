@@ -453,7 +453,7 @@ You can add a list of available shipping methods. For each shipping method, spec
 {: .important}
 The shipping method fields can be updated dynamically via an API call, i.e., you can specify a botContext or integration variable name in these fields.<br><br>The first shipping method that you add is used as the default method.
 
-**Additional Fields & Payment Capabilities**
+**Additional Fields and Payment Capabilities**
 
 * **Required Billing Fields**: Select the billing contact fields required to process the transaction. Tip: Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
 * **Required Shipping Fields**: Select the shipping contact fields required to fulfill the order. For example, if you need the customer’s email address or phone number, select these.

@@ -56,13 +56,13 @@ If the host app has customized formatting, this formatting gets used instead of 
    lpDateFormat: String?
    ```
 
-* **For a time only, that is, the bubble's timestamp & the off hours time in case of today/tomorrow:**
+* **For a time only, that is, the bubble's timestamp and the off hours time in case of today/tomorrow:**
 
    ```swift
    lpTimeFormat: String?
    ```
 
-* For date & time together, that is, resolve message & the off hours time in case of another date:
+* For date and time together, that is, resolve message and the off hours time in case of another date:
 
    ```swift
    lpDateTimeFormat: String?
@@ -81,7 +81,7 @@ Date off hours messages (not today/tomorrow) use the default LONG date and SHORT
   
    * "Thanks for your message. We will be back online January 12, 2017 at 15:30"*
 
-Define a special date/hour format with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
+Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
 
 ```swift
 lpDateFormat: String?
@@ -100,7 +100,7 @@ Resolve messages use the default SHORT date and SHORT time according to the loca
   
   *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
 
-Define a special date/hour format with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
+Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
 
 ```swift
 lpDateTimeFormat: String?

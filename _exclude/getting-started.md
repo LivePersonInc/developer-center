@@ -155,7 +155,7 @@ There can be only one dialog of type Fallback per bot.
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent.
 
-#### Watch the video - intents & entities
+#### Watch the video - intents and entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>

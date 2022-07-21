@@ -54,7 +54,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 | See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) | [Webhooks](webhooks-overview.html) | N/A |
 | Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid) | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
 | Close conversation | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
-| Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| Send CSAT (Customer Satisfaction) and FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
 
 #### On the **agent** side
 

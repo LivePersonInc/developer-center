@@ -5,7 +5,7 @@ Note: This does NOT operate the same way as co-browse. Whereas on co-browse you 
 
 You can view a live example here:[PV - Page Viewer Widget](https://le-page-viewer.herokuapp.com/index.html)
 
-## Background & Limitations
+## Background and Limitations
 This requires the visitor to be on a page with HTTPS (SSL) to prevent mixed content.
 The page must be accessible from the public without authentication. I.e. this will not work on pages that require a login (unless you are logged in with your own credentials already and the URLs are identical).
 

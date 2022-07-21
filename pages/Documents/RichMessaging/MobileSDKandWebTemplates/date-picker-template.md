@@ -118,7 +118,7 @@ There are two date picker options:
     * Don’t forget to indicate the current day, so that users won’t need to access OS calendar to see what the day is today. The default configurations have the current date outlined.
 
 3. **Show Distinction with Unavailable Dates:**
-    * It’s better to restrict the date selection by making those inactive — by doing that you will help users avoid selecting unavailable dates and end up in zero-results dead ends. The default configurations have those dates in a disabled state.
+    * It’s better to restrict the date selection by making those inactive. By doing that you will help users avoid selecting unavailable dates and end up in zero-results dead ends. The default configurations have those dates in a disabled state.
 
 4. **Date Format and Language**
     * If a date format is provided in the JSON schema, that one will be used on Mobile SDK. If one is NOT provided, the date format will default to MMM dd, yyyy.

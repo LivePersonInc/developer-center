@@ -21,7 +21,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Request URI
 
@@ -138,7 +138,7 @@ You can send the **Campaign ID** and **Enagagement ID** to Conversational Cloud 
 
 <img src="img/ConnectorAPI3.png" alt="connectoroverview">
 
-In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html). This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html), allows you to send Conversational Cloud the user information (`consumerId` OR the `visitorId` & `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples).
+In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html). This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html), allows you to send Conversational Cloud the user information (`consumerId` OR the `visitorId` and `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples).
 
 The connector can then use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 

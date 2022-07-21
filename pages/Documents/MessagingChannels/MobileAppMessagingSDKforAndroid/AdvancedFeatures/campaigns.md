@@ -30,7 +30,7 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 - The SDK must be initialized with the `MonitoringInitParams` object.
 
-### Notes & Best Practices
+### Notes and Best Practices
 
 * To start a conversation with a specific campaign and engagement, provide a `CampaignInfo` object to the `ConversationViewParams` object.
 

@@ -38,7 +38,7 @@ A few things you'll need to get started with this API:
 
 	* appKey=721c180b09eb463d9f3191c41762bb68
 
-4. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+4. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 5. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
 

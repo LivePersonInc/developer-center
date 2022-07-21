@@ -35,7 +35,7 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Create a new conversation
 
@@ -113,7 +113,7 @@ See below a few examples of how to do so.
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 **Note**
 
@@ -244,7 +244,7 @@ This is an example of how to send a message to Conversational Cloud to an open c
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Send a message
 
@@ -289,7 +289,7 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Close a conversation
 
@@ -335,7 +335,7 @@ In order to send an indication that the consumer is typing, the connector will s
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Send Chat State Events - "Consumer is typing"
 
@@ -392,11 +392,11 @@ The following example illustrates how to enable the auto messages feature upon c
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### How to enable AUTO_MESSAGES
 
-##### Create a new conversation & enable the AUTO Messages feature
+##### Create a new conversation and enable the AUTO Messages feature
 
 **Request URI**
 
@@ -469,7 +469,7 @@ The following example illustrates how to enable the auto messages feature upon c
 ]
 ```
 
-#### Send a message & enable the AUTO messages feature.
+#### Send a message and enable the AUTO messages feature.
 
 **Request URI**
 
@@ -521,7 +521,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Create new conversation and send campaign information
 
@@ -599,7 +599,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Create new conversation with skill routing
 
@@ -676,7 +676,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Introduction
 

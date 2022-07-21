@@ -15,7 +15,7 @@ indicator:
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
 
 {: .important}
-At this time, Lex response cards & audio messages are not supported.
+At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 ### Configuration

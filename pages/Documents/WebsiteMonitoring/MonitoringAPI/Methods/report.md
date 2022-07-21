@@ -78,7 +78,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 * For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
-### PUT Request & body entity example
+### PUT Request and body entity example
 
 **Example call URL**
 
