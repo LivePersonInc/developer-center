@@ -21,7 +21,7 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Request URI
 

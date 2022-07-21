@@ -112,7 +112,7 @@ The Options dialogs are offered for a few different channels:
 
 * List picker for Apple Messages for Business
 
-* Simple list with a,b,c, etc., variants for SMS
+* Simple list with a, b, c, etc. variants for SMS
 
 * Text card with buttons OR product gallery for Web
 

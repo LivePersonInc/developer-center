@@ -62,7 +62,7 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
 1. Create the Dynamic Routing bot, and open **Global Functions**.
 
-    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change  two configurations (botAppKey & domainId) as highlighted in the next, few steps.
+    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
 
 2. Retrieve the botAppKey.
 

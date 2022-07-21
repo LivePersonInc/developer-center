@@ -21,7 +21,7 @@ Alternatively, Conversational Cloud also supports the use of key based authentic
 
 In the case of the MCS Toolkit, a simple prompt asks the user to enter their credentials, ensuring that each session is securely authenticated and allowing the user to only need to remember their login and password rather than a set of obscurer keys.
 
-### Messaging Interactions API & Engagement History API
+### Messaging Interactions API and Engagement History API
 
 The [Messaging Interaction (Messaging)](data-messaging-interactions-conversations.html) and [Engagement History (Chat)](data-engagement-history-overview.html) APIs provide data associated with interactions between a consumer and agent (API data depends on a connection having taken place) and includes the conversation history (i.e. transcript) and associated metadata of the engagement (e.g Surveys, Campaign, Device, Source, etc). These APIs were used to access the actual MCS and other data of the interactions in order to display them in the toolkit.
 

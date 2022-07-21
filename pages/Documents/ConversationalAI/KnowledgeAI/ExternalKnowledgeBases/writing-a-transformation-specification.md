@@ -83,7 +83,7 @@ RHS = right-hand side = the output JSON tree
 ]
 ```
 
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
+**Using the “&” wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
 * The first parameter tells the level to go up on the LHS from current node.
 * The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
  

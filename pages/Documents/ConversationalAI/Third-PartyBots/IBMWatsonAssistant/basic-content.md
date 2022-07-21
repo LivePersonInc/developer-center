@@ -233,8 +233,7 @@ two text responses defined that will come sequentially.
 
 #### Defining multiple responses with Watson Native content
 
-Users can define a response with various content types. The following example shows a similar case using **JSON Editor**.
-The response will First send the text. afterwards, it will make a pause for 5 seconds and then finally sends an image.
+Users can define a response with various content types. The following example shows a similar case using **JSON Editor**. The response will first send the text. Afterwards, it will make a pause for 5 seconds and then finally sends an image.
 
 ```json
 {

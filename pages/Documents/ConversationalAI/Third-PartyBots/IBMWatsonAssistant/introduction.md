@@ -12,7 +12,7 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson Assistant Version 1 & 2**.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson Assistant Version 1 and 2**.
 
 {: .notice}
 **IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).

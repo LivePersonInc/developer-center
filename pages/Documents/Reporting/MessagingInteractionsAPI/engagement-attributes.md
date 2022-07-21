@@ -17,7 +17,7 @@ The two versions of this API support Engagement Attributes in different ways:
 
 v1 - will allow to retrieve authenticated engagement attributes only and their attribute type will be alphanumeric.
 
-v2 - will allow to retrieve both authenticated & unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
+v2 - will allow to retrieve both authenticated and unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
 
 ###  customerInfo
 

@@ -91,7 +91,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **Select the features you want to configure:** review the list of default configuration available in the guide ([iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html) / [Android](/android-authentication.html)) and determine what features you’d like to enable and how. [link to place in guide]  [insert video]
 
-* **Branding & Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready. [link to place in guide]
+* **Branding and Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready. [link to place in guide]
 
 * **Customization of messaging behavior:** You can utilize our callbacks ([iOS](consumer-experience-ios-sdk-callbacks-index.html) / [Android](/android-callbacks-index.html)) and APIs ([iOS](consumer-experience-ios-sdk-initialize.html) / [Android](/android-initializeproperties.html)) in order to control or change the default behaviors and actions of the messaging app.  Review the default list and determine if there are actions or flows you’d like to change
 
@@ -121,7 +121,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * IOS:
 
-* Enter timeout & expiration controls:
+* Enter timeout and expiration controls:
 
     * sendingMessageTimeoutInMinutes (60)
 

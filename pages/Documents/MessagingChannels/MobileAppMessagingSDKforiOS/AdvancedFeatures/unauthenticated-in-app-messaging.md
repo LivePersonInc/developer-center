@@ -17,13 +17,13 @@ indicator: messaging
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
 
-* Easier & quicker on-boarding to Conversational Cloud
+* Easier and quicker on-boarding to Conversational Cloud
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 
 * The ability to use Campaigns 
 
-### Related Classes, Parameters & APIs
+### Related Classes, Parameters and APIs
 
 LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (is deprecated as of July 2019)
 
@@ -76,7 +76,7 @@ LPMessaging.instance.showConversation(conversationViewParams, authenticationPara
 
 ```
 
-### Notes & Best Practices
+### Notes and Best Practices
 
 * Brands who wish to use Unauthenticated In-App Messaging must activate Campaigns for Messaging and create a default engagement. For additional information, please follow the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf). In addition, the SDK should be initialized with the ```LPMonitoringInitParams``` object.
 
