@@ -113,7 +113,7 @@ There are several scenarios where private messages sent by bots can be useful:
 
 #### User experiences
 
-- **Human agents**: In an actual conversation with a consumer, a private message appears inline in the conversation area — with a “Private” badge — in the human agent’s view within Conversational Cloud. For an illustration, see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
+- **Human agents**: In an actual conversation with a consumer, a private message appears inline in the conversation area (with a “Private” badge) in the human agent’s view within Conversational Cloud. For an illustration, see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
 - **Consumers**: The consumer never sees private messages.
 
 #### Add a Private Message interaction
