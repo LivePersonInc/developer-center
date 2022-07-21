@@ -27,7 +27,7 @@ In case there is no data available, the response element will contain -1.
 
 | Name | Description | Type | Required? | Notes |
 | --- | --- | --- | --- | --- |
-| v | The version of the API | Numeric | No | Two versions are supported: v1 & v2 (If not provided, will be set to v1 for backward compatibility). <br> **v1**: default version (basic maintenance). <br> **v2**: pagination support (maintained version) |
+| v | The version of the API | Numeric | No | Two versions are supported: v1 and v2 (If not provided, will be set to v1 for backward compatibility). <br> **v1**: default version (basic maintenance). <br> **v2**: pagination support (maintained version) |
 | source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | String | Yes | Source name should be up to 20 characters. <br> Example: LP_AgentUI |
 | fromDate | Query period: Query start date | ISO format. UTC timezone | Yes - conditional | **fromMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
 | fromMillis | Query start date (same as above) in Epoch time format | long - Epoch time | Yes - conditional | **fromDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |

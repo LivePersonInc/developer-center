@@ -15,7 +15,7 @@ The Agent Survey is delivered in a dedicated widget, during the conversation, to
 <br>
 This API allows you to manage the Agent Survey lifecycle, from the beginning of the conversation and until it expires, by getting the agent survey, manage the state and of course, submit or dismiss the survey.
 The agent survey will expired on conversation close after configured timeout.
-This api has two versions: 1.0 & 2.0. In the latest version was added  save state for multiple agents/agent manager. Also header 'x-lp-state-rev' not required for PUT requests from version 2.0
+This api has two versions: 1.0 and 2.0. In the latest version was added  save state for multiple agents/agent manager. Also header 'x-lp-state-rev' not required for PUT requests from version 2.0
 If during submit or dismiss request you received status code 409 that means the Agent Survey state was changed since you get it last time and you need to send get state request in order to update your current state 
 
 ### Getting Started

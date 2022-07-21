@@ -29,7 +29,7 @@ For the purpose of configuring these APIs, we will need the following:
 For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
 
 ```javascript
-// Bearer Token Needed for Messaging Queue Health & Shift Status APIs
+// Bearer Token Needed for Messaging Queue Health and Shift Status APIs
 var bearerToken = botContext.getLPEngagementAttribute("BearerToken");
 botContext.setBotVariable("bearerToken", bearerToken, true, false);
 ```
@@ -81,7 +81,7 @@ botContext.setBotVariable('queueHealthDomain', 'va.data.liveperson.net', true, f
 Prior to calling on the Shift Status API, you'll need to set the skill ID that is being escalated to. This is typically done with a switch statement within a function defined in Global Functions, setting variables based on a user’s intent. An example of this function can be found in our [Simple Router template](conversation-builder-bot-templates-simple-router.html) and is as follows:
 
 ```javascript
-// FILL IN THE APPROPRIATE SKILL & INTENT INFORMATION
+// FILL IN THE APPROPRIATE SKILL AND INTENT INFORMATION
 function transfer(intent){
  var transferMessage = '';
  var skillId = '';

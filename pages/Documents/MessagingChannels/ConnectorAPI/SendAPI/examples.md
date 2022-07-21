@@ -396,7 +396,7 @@ The following example illustrates how to enable the auto messages feature upon c
 
 #### How to enable AUTO_MESSAGES
 
-##### Create a new conversation & enable the AUTO Messages feature
+##### Create a new conversation and enable the AUTO Messages feature
 
 **Request URI**
 
@@ -469,7 +469,7 @@ The following example illustrates how to enable the auto messages feature upon c
 ]
 ```
 
-#### Send a message & enable the AUTO messages feature.
+#### Send a message and enable the AUTO messages feature.
 
 **Request URI**
 

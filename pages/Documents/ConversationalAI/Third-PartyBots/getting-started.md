@@ -160,7 +160,7 @@ Follow the steps below to add a new bot.
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
-- [Watson Assistant V1 & V2](third-party-bots-ibm-watson-assistant-introduction.html)
+- [Watson Assistant V1 and V2](third-party-bots-ibm-watson-assistant-introduction.html)
 
 - [Dialogflow V2/ES](third-party-bots-google-dialogflow-es-introduction.html)
 

@@ -64,7 +64,7 @@ On SDK 5.2.1, the border was introduced as an accessibility element for complian
 
 ### When opening the Conversation Screen I will encounter empty message bubbles
 
-This may happen as the SDK uses a unique Apple key named `identifierForVendor`, this key is an alphanumeric string that uniquely identifies a consumer device to the app’s vendor/brand, the key helps the SDK during the encryption process to create unique identifier names per device & per bundleId to store keys into the Device Keychain.
+This may happen as the SDK uses a unique Apple key named `identifierForVendor`, this key is an alphanumeric string that uniquely identifies a consumer device to the app’s vendor/brand, the key helps the SDK during the encryption process to create unique identifier names per device and per bundleId to store keys into the Device Keychain.
 
 This key’s value can change when installing test builds using Xcode or when installing an app on a device using ad-hoc distribution (e.g. TestFlight, TestFairy, etc.). When this value changes it creates an inconsistency between the value that is provided and the value that is recognized by the SDK, and those empty message bubbles are displayed.
 

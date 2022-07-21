@@ -22,7 +22,7 @@ The Personal Data Deletion API allows brands to comply with the European Union's
 Personal data may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request was made final (explanation regarding when requests are made final can be found below).
 
 {: .important}
-What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: ** LP deleted data **
+What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: “** LP deleted data **”
 
 
 ### Getting Started

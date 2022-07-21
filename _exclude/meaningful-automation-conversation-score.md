@@ -135,7 +135,7 @@ On the main dashboard, click a bot’s MACS to go to the **MACS** page for the b
 
 <img style="width:800px" src="img/ConvoBuilder/macs_page.png" alt="" >
 
-#### The MACS page - Analyze the data & tune the bot
+#### The MACS page - Analyze the data and tune the bot
 
 ##### Display the data
 

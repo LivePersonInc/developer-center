@@ -44,7 +44,7 @@ In order to enable the push proxy feature, you will require the following data a
 
   * Name - max length of 24 characters (only alphabets)
 
-  * Value - max length of 300 characters (allows alphanumeric & special characters : -, _, $, &, @,.,#,*)
+  * Value - max length of 300 characters (allows alphanumeric and special characters : -, _, $, &, @,.,#,*)
 
 --- 
 

@@ -26,7 +26,7 @@ Define which parameters you’d like to use from the SDK in order to connect bet
 	Agent widget - the session ID is called _rtSessionID_
 	Window SDK - the session ID called _sessionID_
 
-	* agent ID & visitor ID
+	* agent ID and visitor ID
 
 * To achieve best results it is important to program the ability for the agent to invite consumers to video chat with a start video button.
 

@@ -10,9 +10,11 @@ indicator: both
 ---
 
 # Deep Dive CLI
+
 Our Functions CLI tool allows you to bring your local setup to Functions development and automate your interactions with the Functions platform. For a more general overview of the CLI, please visit its [Foundations chapter](liveperson-functions-foundations-liveperson-functions-cli.html). The CLI package is open-source and [hosted on GitHub](https://github.com/LivePersonInc/faas-cli/).
 
 ## Login
+
 There are two ways to log in to your Functions account using the CLI. You can use `username` and `password` to sign in or alternatively use a `bearer token`. The latter way is preferred for automated solutions such as a CI pipeline. More information can be found in our [CI/CD guide](liveperson-functions-foundations-liveperson-functions-cli.html#example-ci-setup).
 
 To initialize a login, either use your `lpf login` and follow the command prompt entering `accountId`, `username` and the user's `password` in succession:
@@ -25,8 +27,8 @@ You can sign-out using the `lpf logout` command. There are situations where you 
 
 <img class="fancyimage" alt="Functions: cli logout and delete account data" src="img/functions/functions_cli_logout.gif">
 
+## Install and Initialize
 
-## Install & Initialize
 **Installation** and **updating** the CLI are handled using `npm install -g liveperson-functions-cli`. You can also check for updates by using the `lpf version`. Once the CLI has been installed, you can check out the documentation using `lpf help` or head to our [Github Page](https://github.com/LivePersonInc/faas-cli).
 
 Before developing, debugging, or deploying any function, you will have to *initialize* your environment. This is a mandatory step as it creates all the files for the CLI to work correctly. Use it with an empty folder or an existing repository with `lpf init`.
@@ -95,6 +97,7 @@ The **description** is a mutable string and has similar restrictions to the func
 * Restricted to 100 characters
 
 ## Development
+
 The primary use case for utilizing the CLI for development rather than the Functions UI is the comfort of using your IDE of choice, sharing code between accounts and building custom scripts (e.g. unit-tests, linters) to improve the quality of your code.
 
 The environment variables still fall under the same [restrictions and limitations](liveperson-functions-getting-started-configuration.html#environment-variables) as set by the UI and will be verified during upload to your account:

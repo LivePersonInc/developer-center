@@ -97,7 +97,7 @@ In order to test out routing by intents, you’ll need to deploy the bot that yo
 
 For information on how to deploy bot agents in Conversational Cloud, please see our *Conversation Builder - Getting Started* section [here](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
-#### askMaven & route to appropriate agent
+#### askMaven and route to appropriate agent
 
 Above in the *Getting Intents into the Conversation Context Service* section, you captured the intent from a user after triggering a dialog starter. In that same dialog, follow these steps:
 

@@ -135,7 +135,7 @@ In response you will get the following message:
 
 ### Step 4 - Upload File to Storage
 
-Use the following request and the parameters obtained in steps 1 & 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
+Use the following request and the parameters obtained in steps 1 and 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
 **Note**: file expiration is set to 1 minute by default.
 

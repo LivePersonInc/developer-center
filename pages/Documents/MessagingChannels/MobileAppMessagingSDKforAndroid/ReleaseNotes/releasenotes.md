@@ -2224,7 +2224,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 * SDK uses an old authentication token, even when the consumer is passed a new auth token.
 
-* User conversation system info (OS Type & Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
+* User conversation system info (OS Type and Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
 
 * Unauthenticated consumers passing campaign info cannot connect successfully.
 
@@ -2380,7 +2380,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 **Version 3.2.2 release: September 9th 2018**
 
-This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support & solution teams. This release version does not include new features or behavior changes.
+This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support and solution teams. This release version does not include new features or behavior changes.
 
 #### Environment Requirements
 The SDK’s minimum API is 19 and the target API is 27.
@@ -2401,7 +2401,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 #### Known Issues
 
-The following issues are still being investigated & have been prioritized for a subsequent release based on their frequency of occurrence and severity:
+The following issues are still being investigated and have been prioritized for a subsequent release based on their frequency of occurrence and severity:
 
 1. Audio/Image message fails to be sent, when it is the first message in the conversation.
 
@@ -2447,7 +2447,7 @@ Brands can communicate with their consumers in an unauthenticated manner while b
 
 Unauthenticated messaging allows brands to:
 
-1. Easier & quicker on-boarding to Conversational Cloud
+1. Easier and quicker on-boarding to Conversational Cloud
 
 2. Having pre authentication messaging use cases, for example, assistance with password recovery
 
@@ -3030,7 +3030,7 @@ The below APIs enable brands to use Campaigns for Messaging inside the brand’s
  <tr>
  <td>Added to Liveperson.initialize() →
 InitLivePersonProperties contains new MonitoringInitParams object</td>
- <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities & campaigns should add the required parameters.
+ <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities and campaigns should add the required parameters.
 The SDK can be initialized once without MonitoringInitParams and then have another initialize call using these params.
 </td>
  </tr>
@@ -3328,7 +3328,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 and api 27)
 
 ##### Wrapping Text in Edit Text Box
 

@@ -374,7 +374,7 @@ If you would like to opt in for this additional verification, internal account c
 1. Generate signature value
     1. Generate the Apple Pay payload
     2. Generate SHA1 Hash of the payload from step 1
-    3. Generate the signature, sign the generated hash from step 2 using the secret key & preferred algorithm required during onboarding to opt in to the verification flow
+    3. Generate the signature, sign the generated hash from step 2 using the secret key and preferred algorithm required during onboarding to opt in to the verification flow
 
 2. Add signature to payload
     1. Add “signature” property and the value generated from step 1C to [the original payload](#connectorpaymentrequest-object-properties)

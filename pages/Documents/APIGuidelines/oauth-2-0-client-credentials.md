@@ -9,7 +9,7 @@ indicator: both
 This section describes how to register an OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize machine-to-machine communication.
 
 
-### Step 1: Generate client_id & client_secret:
+### Step 1: Generate client_id and client_secret:
 
 * Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation:
 

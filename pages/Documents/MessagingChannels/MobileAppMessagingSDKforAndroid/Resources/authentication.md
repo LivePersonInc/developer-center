@@ -70,13 +70,13 @@ Errors while trying to connect uses callback: `void onError(TaskType type, Strin
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
 
-* Easier & quicker on-boarding to Conversational Cloud
+* Easier and quicker on-boarding to Conversational Cloud
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 
 * The ability to use Campaigns    
 
-#### Related Classes, Parameters & APIs
+#### Related Classes, Parameters and APIs
 
 The `LPAuthenticationParams` object contains an authentication type which should be passed in the constructor. An empty constructor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
 
@@ -109,13 +109,13 @@ MonitoringInitParams monitoringInitParams = new MonitoringInitParams(monitoringA
 
 LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {...}));
 
-// 2. create & pass LPAuthenticationParams
+// 2. create and pass LPAuthenticationParams
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);
 
 LivePerson.showConversation(activity,lpAuthenticationParams, conversationViewParams);
 ```
 
-#### Notes & Best Practices
+#### Notes and Best Practices
 
 * Brands who wish to use Unauthenticated In-App Messaging must activate Campaigns for Messaging and create a default engagement. For additional information, please follow the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf). In addition, the SDK should be initialized with the ```LPMonitoringInitParams``` object.
 
