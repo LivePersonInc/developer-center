@@ -19,9 +19,7 @@ The Login Service API provides endpoints to manage the User Session in Conversat
 
 
 <div class="important">
-Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
-
-We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
+Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
 </div>
 
 

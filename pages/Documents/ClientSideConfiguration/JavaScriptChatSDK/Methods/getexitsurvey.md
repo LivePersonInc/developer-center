@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-methods-getexitsurvey.html
 indicator: chat
 ---
 
-The Exit survey will be displayed after the chat has ended if one was configured for the account.
+The exit survey will be displayed after the chat has ended if one was configured for the account.
 
 **Notes**:
 

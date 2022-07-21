@@ -18,4 +18,4 @@ Here are a few things you'll need to get started with these APIs:
     * Read only: accountConfigReadOnly
     * Read/Write: accountConfigReadWrite
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou/).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou/).

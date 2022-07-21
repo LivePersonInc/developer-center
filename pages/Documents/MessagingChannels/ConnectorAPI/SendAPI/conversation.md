@@ -21,7 +21,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 	* asyncMessagingEnt
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Request URI
 

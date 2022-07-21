@@ -51,7 +51,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key that is available in the Conversational Cloud API Keys tab.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).  
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).  
 
 4. This API requires backend enablement, please contact your account manager to do so.
 

@@ -45,7 +45,7 @@ You likely used an account number to log into LiveEngage, but, for awareness, yo
 Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
 
 ```javascript
-//LE account number, needed for api calls
+//LE account number, needed for API calls
 var botAccountNumber = botContext.getLPAccountId();
 botContext.setBotVariable('botAccountNumber', botAccountNumber, true, false);
 ```

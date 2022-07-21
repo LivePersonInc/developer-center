@@ -374,7 +374,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -1147,7 +1147,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -2167,7 +2167,7 @@ SDK logging information is not available while the host application is running i
 
 |     API      | Description |
 | ------------ | ------------ |
-| public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
+| public static void setIsDebuggable(boolean isDebuggable) | Use this API to enable/disable the SDK logs. |
 
 Note: SDK logging is disabled by default. To Enable it, use the above method.
 
@@ -3328,7 +3328,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 and api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (API 26 and API 27)
 
 ##### Wrapping Text in Edit Text Box
 

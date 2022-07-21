@@ -30,7 +30,7 @@ A few things you'll need to get started with this API:
 
 	* Use LE GUI to create API key: Administration -> AuditTrail.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

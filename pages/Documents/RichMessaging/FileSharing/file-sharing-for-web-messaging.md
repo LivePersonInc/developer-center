@@ -145,10 +145,9 @@ Upload the file as binary.
 | 401 | Temp URL invalid |
 
 
-**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection)_
+**Upload and download file requests are also available [as a Postman collection](assets/content/Swift.postman_collection).**
 
-
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)_
+[Unfamiliar with Postman?](https://www.getpostman.com/)
 
 ### Step 5 - Publish Message
 

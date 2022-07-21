@@ -24,13 +24,13 @@ This API is based on the REST architecture and supports the HTTPS GET protocol. 
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* msgHist
 
 2. This API requires authorization using a JWT token passed in the authorization header of the request. Please see our [Authentication document](guides-authentication-introduction.html) and [Token creation document](consumer-int-getting-started.html) for more info.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou){:target="_blank"}.
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Use Cases
 
