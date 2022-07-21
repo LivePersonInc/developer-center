@@ -80,7 +80,7 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 
 | Description | Unable to parse delay message due to the invalid body |
 | Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value.  |
-| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message) |
+| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-es-advanced-features.html#sending-pausedelay-message) |
 
 #### dialog-flow-es-invalid-private-text-body
 
@@ -104,19 +104,19 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 
 | Description | Unable to parse private text message due to the invalid body |
 | Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
-| Solutions   | Please check [Sending Private Text Message](third-party-bots-google-dialogflow-cx.html#sending-private-text-message) |
+| Solutions   | Please check [Sending Private Text Message](third-party-bots-google-dialogflow-cx-advanced-features.html#sending-private-text-message) |
 
 #### dialog-flow-cx-invalid-text-with-encoded-metadata-body
 
 | Description | Unable to parse text with encoded metadata due to the invalid body |
 | Reason      | This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or there is something wrong with the encoded metadata body. |
-| Solutions   | Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-cx.html#sending-encoded-metadata) |
+| Solutions   | Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-cx-advanced-features.html#sending-encoded-metadata) |
 
 #### dialog-flow-cx-invalid-delay-body
 
 | Description | Unable to parse delay message due to the invalid body |
 | Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value. |
-| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message) |
+| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx-advanced-features.html#sending-pausedelay-message) |
 
 
 #### watson-assistant-invalid-text-body
