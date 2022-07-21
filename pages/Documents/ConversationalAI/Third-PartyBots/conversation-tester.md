@@ -9,9 +9,9 @@ indicator: both
 
 
 ### Introduction
-By using the Conversation tester, you will be able to test your bot and identify if your bot's response has the right configuration.
+By using the Conversation Tester, you will be able to evaluate the conversational flow of your bot identify issues with any responses sent by the bot.
 The Conversation Tester feature aims to help you to identify possible misconfiguration in your bot. This provides three important components. First, the chat window in which you can start testing your bot. Second, the Logs column in which you will see if your bot response was processed or had an error. And finally, the JSON EDITOR column will help you to identify the error cause.
- 
+
 #### Successful Response
 When you are testing your bot, and you are getting a `Processed` response, it means that the bot configuration is valid and the bot responded with a valid message. See the image below.
 <img style="width:800px" src="img/botconnectordashboard/processed_response.png">
@@ -21,6 +21,15 @@ When you are testing your bot, and no valid response is received from the bot yo
 By hovering on the last alert you will see a tooltip that will give you the possible solutions for your error. See the image below.
  
 <img style="width:800px" src="img/botconnectordashboard/error_response.png">
+
+### Limitations
+
+{: .important}
+The Conversation Tester will only show the direct responses of the connected bot. No configured [Hooks](third-party-bots-hook-configuration.html) or [Public API](third-party-bots-public-api.html) calls will be computed by the Conversation Tester.
+
+{: .important}
+The Medallia Survey vendor is not supported by the Conversation Tester since survey messages on this vendor are exclusively received via the [Public API](third-party-bots-public-api.html).
+
  
 ### Errors
 
@@ -49,409 +58,175 @@ By hovering on the last alert you will see a tooltip that will give you the poss
 | Solutions   |  Change the bot response e.g. to text messages |
 
 
-#### dialog-flow-v2-action-body
+#### dialog-flow-es-action-body
 
 | Description | Unable to parse action due to the invalid body |
 | Reason      | This error happens when the bot has an invalid body and the Google Dialog Flow V2 is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is shown as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.  |
 | Solutions   | Please check [Dialogflow V2 Bot Actions](third-party-bots-google-dialogflow-es-basic-content.html#bot-actions) |
  
-#### dialog-flow-v2-invalid-text-body
+#### dialog-flow-es-invalid-text-body
 
 | Description | Unable to parse text message due to invalid body |
 | Reason      | This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.  |
 | Solutions   |  |
  
-#### dialog-flow-v2-invalid-text-with-encoded-metadata-body
+#### dialog-flow-es-invalid-text-with-encoded-metadata-body
 
 | Description | Unable to parse text with metadata due to the invalid body |
 | Reason      | This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or there is something wrong with the encoded metadata body.  |
 | Solutions   | Please check [Sennding Encoded Metadata](third-party-bots-google-dialogflow-es-advanced-features.html#sending-encoded-metadata) |
  
-#### dialog-flow-v2-invalid-delay-body
+#### dialog-flow-es-invalid-delay-body
 
 | Description | Unable to parse delay message due to the invalid body |
 | Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value.  |
 | Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message) |
 
-#### dialog-flow-v2-invalid-private-text-body
+#### dialog-flow-es-invalid-private-text-body
 
 | Description | Unable to parse private text message due to the invalid body |
 | Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
 | Solutions   | Please check [Sending Private Text Message](third-party-bots-google-dialogflow-es-advanced-features.html#sending-private-text-message) |
 
+#### dialog-flow-cx-invalid-text-body
 
-### DialogFlow CX
- 
-## DialogFlow CX Invalid Action Body
-## Description
-This error happens when the bot has an invalid body and the Google Dialog Flow CX is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is shown as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
+| Description | Unable to parse text message due to invalid body |
+| Reason      | This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.  |
+| Solutions   |  |
 
-## Transfer Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `skill` is the required parameter and it has to be provided as a **String**
-- `agentId` is an optional parameter and if provided the value must be a **String**
+#### dialog-flow-cx-invalid-action-body
 
-## Change TTR Action Error 
-## Description
-This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+| Description | Unable to parse action due to the invalid body |
+| Reason      | This error happens when the bot has an invalid body and the Google Dialog Flow CX is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is shown as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.  |
+| Solutions   | [Dialogflow CX Bot Actions](third-party-bots-google-dialogflow-cx-basic-content.html#bot-actions) |
 
+#### dialog-flow-cx-invalid-private-text-body
 
-## Close Conversation Action Error
-## Description
-For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
+| Description | Unable to parse private text message due to the invalid body |
+| Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
+| Solutions   | Please check [Sending Private Text Message](third-party-bots-google-dialogflow-cx.html#sending-private-text-message) |
 
-## Faas Invocation Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
-- `payload` is a required parameter and it has not being provided as a **Object** 
-- `failOnError` is an optional parameter and it has not being provided as **Boolean**
- 
-#### Error Solution
-Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-cx.html#change-time-to-response-of-conversation)
- 
-## DialogFlow CX Invalid Text Body
-## Description
-This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
- 
-## DialogFlow CX Invalid Structured Content
-## Description
-This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it. It can be a wrong parameter or a value;
- 
-#### Error Solution
-Please check [Sending Rich Content](third-party-bots-google-dialogflow-cx.html#sending-rich-content-structured-content)
- 
-## DialogFlow CX Invalid Text With Encoded Metadata Body
-## Description
-This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or there is something wrong with the encoded metadata body.
- 
-#### Error Solution
-Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-cx.html#sending-encoded-metadata)
- 
-## DialogFlow CX Invalid Delay Body
-## Description
-This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value.
- 
-#### Error Solution
-Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message)
- 
-## Dialog Flow CX Invalid Private Text Body
-## Description
-This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending Private Text Message](third-party-bots-google-dialogflow-cx.html#sending-private-text-message)
- 
-## Dialog Flow CX Invalid AI Vendor Response
-## Description
-This error happens when it was not possible to get any response from the vendor.
- 
-## Dialog Flow CX Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+#### dialog-flow-cx-invalid-text-with-encoded-metadata-body
 
-## Dialog Flow CX No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
- 
-###  Watson Assistant
- 
-## Watson Assistant Invalid Text Body
-## Description
-This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
- 
-#### Error Solution
-Please check [Text](third-party-bots-ibm-watson-assistant.html#text)
- 
- 
-## Watson Assistant Invalid Structured Content
-## Description
-This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it. It can be a wrong parameter or a value;
- 
-#### Error Solution
-Please check [Sending Rich Content](third-party-bots-ibm-watson-assistant.html#sending-rich-content-structured-content)
- 
-## Watson Assistant Invalid Delay Body
-## Description
-This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value.
- 
-#### Error Solution
-Please check [Pause/Delay](third-party-bots-ibm-watson-assistant.html#pausedelay)
- 
-## Watson Assistant Invalid Private Text Body
-## Description
-This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending Private Text Message](third-party-bots-ibm-watson-assistant.html#sending-private-text-message)
- 
-## Watson Assistant Invalid Message Format
-## Description
-This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value.
- 
-#### Error Solution
-Please check [Sending Native Content](third-party-bots-ibm-watson-assistant.html#sending-native-content)
- 
-## Watson Assistant Invalid Image Body
-## Description
-This error happens when the bot's response has an invalid property when trying to send an image. The vendor won’t be able to validate the Watson native content image. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Image](third-party-bots-ibm-watson-assistant.html#image)
- 
- 
-## Watson Assistant Invalid Option Body
-## Description
-This error happens when the bot's response option response type has an invalid body and the vendor is unable to parse it. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [List](third-party-bots-ibm-watson-assistant.html#list)
- 
-## Watson Assistant Invalid Body
-## Description
-This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending Native Content](third-party-bots-ibm-watson-assistant.html#sending-native-content)
- 
-## Watson Assistant Invalid AI Vendor Response
-## Description
-This error happens when there was not possible to get any response from the vendor.
- 
-## Watson Assistant Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+| Description | Unable to parse text with encoded metadata due to the invalid body |
+| Reason      | This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or there is something wrong with the encoded metadata body. |
+| Solutions   | Please check [Sending Encoded Metadata](third-party-bots-google-dialogflow-cx.html#sending-encoded-metadata) |
 
-## Watson Assistant No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
- 
-### Watson Assistant V2
- 
-## Watson Assistant Invalid Text Body
-## Description
-This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
- 
-#### Error Solution
-Please check [Text](third-party-bots-ibm-watson-assistant-version-2.html#text)
- 
-## Watson Assistant Invalid Structured Content
-## Description
-This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it. It can be a wrong parameter or a value;
- 
-#### Error Solution
-Please check [Sending Rich Content](third-party-bots-ibm-watson-assistant-version-2.html#sending-rich-content-structured-content)
- 
-## Watson Assistant Invalid Delay Body
-## Description
-This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value.
- 
-#### Error Solution
-Please check [Pause/Delay](third-party-bots-ibm-watson-assistant-version-2.html#pausedelay)
- 
-## Watson Assistant Invalid Private Text Body
-## Description
-This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
- 
-#### Error Solution
-Please check [Pause/Delay](third-party-bots-ibm-watson-assistant-version-2.html#sending-private-text-message)
- 
-## Watson Assistant Invalid Message Format
-## Description
-This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value.
- 
-#### Error Solution
-Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-version-2.html#sending-native-content)
- 
-## Watson Assistant Invalid Image Body
-## Description
-This error happens when the bot's response has an invalid property when trying to send an image. The vendor won’t be able to validate the Watson native content image. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Image](third-party-bots-ibm-watson-assistant-version-2.html#image)
- 
-## Watson Assistant Invalid Option Body
-## Description
-This error happens when the bot's response option response type has an invalid body and the vendor is unable to parse it. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [List](third-party-bots-ibm-watson-assistant-version-2.html#list)
- 
-## Watson Assistant Invalid Body
-## Description
-This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-version-2.html#sending-native-content)
- 
-## Watson Assistant Invalid AI Vendor Response
-## Description
-This error happens when there was not possible to get any response from the vendor.
- 
-## Watson Assistant Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+#### dialog-flow-cx-invalid-delay-body
 
-## Watson Assistant No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
- 
-
-###  Lex
-## Lex Invalid Action Body
-## Description
-This error happens when the bot has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
-
-## Transfer Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `skill` is the required parameter and it has to be provided as a **String**
-- `agentId` is an optional parameter and if provided the value must be a **String**
-
-## Change TTR Action Error 
-## Description
-This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+| Description | Unable to parse delay message due to the invalid body |
+| Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that there is a wrong delay value. |
+| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-google-dialogflow-cx.html#sending-pausedelay-message) |
 
 
-## Close Conversation Action Error
-## Description
-For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
+#### watson-assistant-invalid-text-body
+| Description |  Unable to parse text message due to invalid body |
+| Reason      |  This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content. |
+| Solutions   |  Please check [Text](third-party-bots-ibm-watson-assistant-basic-content.html#text) |
 
-## Faas Invocation Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
-- `payload` is a required parameter and it has not being provided as a **Object** 
-- `failOnError` is an optional parameter and it has not being provided as **Boolean**
+#### watson-assistant-invalid-delay-body
+| Description | Unable to validate watson native delay due to invalid body |
+| Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. |
+| Solutions   | Please check [Pause/Delay](third-party-bots-ibm-watson-assistant-basic-content.html#pausedelay) |
 
-#### Error Solution
-Please check [Change Time To Response of Conversation](third-party-bots-amazon-lex.html#change-time-to-response-of-conversation)
- 
-## Lex Invalid Text Body
-## Description
-This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
+#### watson-assistant-invalid-private-text-body
 
-#### Error Solution
-Please check [Sending Encoded Metadata](third-party-bots-amazon-lex.html#sending-encoded-metadata)
+| Description | Unable to parse private text message due to the invalid body |
+| Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
+| Solutions   | Please check [Sending Private Text Message](third-party-bots-ibm-watson-assistant-basic-content.html#sending-private-text-message) |
  
-## Lex Invalid Structured Content
-## Description
-This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it. It can be a wrong parameter or a value;
- 
-#### Error Solution
-Please check [Sending Rich Content](third-party-bots-amazon-lex.html#sending-rich-content-structured-content)
- 
- 
-## Lex Invalid Text With Encoded Metadata Body
-## Description
-This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or the is something wrong with the encoded metadata body.
- 
-#### Error Solution
-Please check [Sending Encoded Metadata](third-party-bots-amazon-lex.html#sending-encoded-metadata)
- 
-## Lex Invalid Delay Body
-## Description
-This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value.
- 
-#### Error Solution
-Please check [Sending Pause/Delay Message](third-party-bots-amazon-lex.html#sending-pausedelay-message)
- 
-## Lex Invalid Private Text Body
-## Description
-This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending Pause/Delay Message](third-party-bots-amazon-lex.html#sending-private-text-message)
- 
-## Lex Invalid Message Format
-## Description
-This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value.
- 
-## Lex Invalid JSON
-## Description
-This happens when the bot's response has an invalid JSON and the vendor is unable to parse it. This usually happens when creating a Custom Payload in the bot's response.
- 
-## Lex Invalid AI Vendor Response
-## Description
-This error happens when there was not possible to get any response from the vendor.
- 
-## Lex Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+#### #watson-assistant-message-format
 
-## Lex No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
- 
-###  Microsoft Bot Framework
- 
-## Microsoft Bot Framework Invalid Body
-## Description
-This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Rich Content](third-party-bots-microsoft-bot-framework.html#rich-content-structured-content)
- 
-## Microsoft Bot Framework Invalid AI Vendor Response
-## Description
-This error happens when there was not possible to get any response from the vendor.
- 
-## Microsoft Bot Framework Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+| Description | Unable to validate body because of invalid message format |
+| Reason      | This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value. |
+| Solutions   | Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-basic-content.html#sending-native-content)|
 
-## Microsoft Bot Framework No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
- 
-###  Faas
- 
-## Invalid Action Body
-## Description
-This error happens when the bot has an invalid action body and Faas is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
+#### watson-assistant-invalid-image-body
 
-## Transfer Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `skill` is the required parameter and it has to be provided as a **String**
-- `agentId` is an optional parameter and if provided the value must be a **String**
+| Description | Unable to validate watson native content image due to invalid body |
+| Reason      |  This error happens when the bot's response has an invalid property when trying to send an image. The vendor won’t be able to validate the Watson native content image. It can be a wrong parameter or value.|
+| Solutions   | Please check [Sending Native Image Content](third-party-bots-ibm-watson-assistant-basic-content.html#image) |
 
-## Change TTR Action Error 
-## Description
-This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+#### watson-assistant-invalid-options-body
+| Description | Unable to validate watson native options list due to invalid body |
+| Reason      | This error happens when the bot's response option response type has an invalid body and the vendor is unable to parse it. It can be a wrong parameter or value. |
+| Solutions   | Please check [Sending Native List Content](third-party-bots-ibm-watson-assistant-basic-content.html#list) and [Watson: Response Type option](https://cloud.ibm.com/docs/assistant?topic=assistant-api-dialog-responses#api-dialog-responses-optionå) |
+ 
+#### watson-assistant-invalid-body
+| Description | Unable to validate body because of invalid content |
+| Reason      | This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. |
+| Solutions   | Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-basic-content.html#sending-native-content) |
 
 
-## Close Conversation Action Error
-## Description
-For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
+#### lex-invalid-message-format
 
-## Faas Invocation Action Error
-## Description
-This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
-- `payload` is a required parameter and it has not being provided as a **Object** 
-- `failOnError` is an optional parameter and it has not being provided as **Boolean**
- 
-#### Error Solution
-Please check [Change Time To Response of Conversation](third-party-bots-custom-integration.htmll#change-time-to-response-of-conversation)
- 
-## Faas Invalid Body
-## Description
-This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
- 
-#### Error Solution
-Please check [Sending intent information](third-party-bots-custom-integration.htmll#sending-intent-information)
- 
- 
-## Faas Invalid AI Vendor Response
-## Description
-This error happens when there was not possible to get any response from the vendor.
- 
-## Faas Invalid Parsed Response
-## Description
-This error happens when not parsed messages and actions were found from the vendor.
+| Description | Unable to validate body because of invalid message format |
+| Reason      | This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value. |
+| Solutions   |  |
 
-## Faas No Support for Quick Replies in Chat
-## Description
-Chat connector does not support quick replies.
+#### lex-invalid-json
+
+| Description | Unable to parse body due to bad JSON response |
+| Reason      | This happens when the bot's response has an invalid JSON and the vendor is unable to parse it. This usually happens when creating a Custom Payload in the bot's response. |
+| Solutions   |  |
+
+#### lex-invalid-action-body
+
+| Description | Unable to parse action due to the invalid body |
+| Reason      | This error happens when the bot has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue. |
+| Solutions   | Please check [Sending Native Content](third-party-bots-amazon-lex-basic-content.html#bot-actions) |
+
+#### lex-invalid-text-with-encoded-metadata-body
+
+| Description | Unable to parse text with encoded metadata due to the invalid body |
+| Reason      | This error happens when the bot's configuration has an invalid text message with encoded metadata. It can be that the encodedMetadata property is missing or the is something wrong with the encoded metadata body. |
+| Solutions   | Please check [Sending Encoded Metadata](third-party-bots-amazon-lex-advanced-features.html#sending-text-message-with-encoded-metadata)  |
+
+#### lex-invalid-delay-body
+
+| Description | Unable to parse delay message due to the invalid body |
+| Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. |
+| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-amazon-lex-advanced-features.html#sending-pausedelay-message) |
+
+#### lex-invalid-private-text-body
+
+| Description | Unable to parse private text message due to the invalid body |
+| Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
+| Solutions   | Please check [Sending Pause/Delay Message](third-party-bots-amazon-lex-advanced-features.html#sending-private-text-message) |
+
+#### lex-invalid-text-body
+
+| Description | Unable to parse text message due to invalid body |
+| Reason      | This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content. |
+| Solutions   |  |
+
+
+#### microsoft-bot-framework-invalid-body
+| Description | Unable to validate body because of invalid content |
+| Reason      | This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content. |
+| Solutions   | Please check  [Basic DirectLine Content](third-party-bots-microsoft-direct-line-basic-content.html) |
+
+#### liveperson-functions-invalid-body
+
+| Description | Unable to validate body because of invalid content |
+| Reason      | This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. |
+| Solutions   | Please check [Basic LivePerson Function Content](third-party-bots-liveperson-functions-basic-content.html) |
+
+
+#### liveperson-functions-invalid-action-body
+
+| Description | Unable to parse action due to the invalid body |
+| Reason      | This error happens when the bot has an invalid action body Third-Party Bots is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.  |
+| Solutions   | Please check [Basic LivePerson Function Actions](third-party-bots-liveperson-functions-basic-content.html#bot-actions) |
+
+#### custom-endpoint-invalid-body
+
+| Description | Unable to validate body because of invalid content |
+| Reason      | This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. |
+| Solutions   | Please check [Basic LivePerson Function Content](third-party-bots-custom-endpoint-basic-content.html) |
+
+#### ebot7-invalid-body
+
+| Description | Unable to validate body because of invalid content |
+| Reason      | This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. |
+| Solutions   | Please check [Basic Ebot7 Content](third-party-bots-ebot7-basic-content.html) |
