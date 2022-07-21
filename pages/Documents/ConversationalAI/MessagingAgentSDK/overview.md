@@ -10,7 +10,7 @@ indicator: messaging
 
 ### Overview
 
-The Messaging Agent SDK for node.js was built to provide a fully custom way of programmatically building a bot with LivePerson. This SDK provides access to an [Agent Messaging API](https://developers.liveperson.com/agent-int-api-reference.html) and enables the bot to handle consumer conversations, escalate to a human when needed, and perform all agent actions.
+The Messaging Agent SDK for Node.js was built to provide a fully custom way of programmatically building a bot with LivePerson. This SDK provides access to an [Agent Messaging API](https://developers.liveperson.com/agent-int-api-reference.html) and enables the bot to handle consumer conversations, escalate to a human when needed, and perform all agent actions.
 
 [The code for this SDK is hosted on GitHub](https://github.com/LivePersonInc/node-agent-sdk).
 
