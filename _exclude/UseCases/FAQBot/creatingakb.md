@@ -80,7 +80,7 @@ In the search view, type something close to your article’s title or intent qua
 
 Even though this utterance was not exactly the same as what was added, it still matched the article with a VERY GOOD confidence. Try a few more utterances and see what results you get.
 
-If I try something like "my password is not letting me into my account" this is different enough that it returns as FAIR PLUS. Generally we set the threshold to GOOD so this may not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up <img src="img/faqbot/image_9.png" alt="" style="width:50px"> icon . This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
+If I try something like "my password is not letting me into my account" this is different enough that it returns as FAIR PLUS. Generally we set the threshold to GOOD so this may not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up <img src="img/faqbot/image_9.png" alt="" style="width:50px"> icon. This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
 
 **NOTE**: Keep in mind that when you are training your articles, it is VERY easy to use the thumbs up button. So easy, that you might OVER train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one.
 

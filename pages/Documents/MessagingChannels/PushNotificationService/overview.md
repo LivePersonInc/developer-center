@@ -31,4 +31,4 @@ LivePerson’s push service interfaces directly with Apple’s APNS and Google�
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).

@@ -65,14 +65,14 @@ Custom event logging for this template has been provided by default.
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
 ```
-botContext.logCustomEvent(‘’, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent('', 'Interaction Name', '');
 ```
 
 For questions that a user must respond to, the code can be found under Process User Response:
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
 {: .important}

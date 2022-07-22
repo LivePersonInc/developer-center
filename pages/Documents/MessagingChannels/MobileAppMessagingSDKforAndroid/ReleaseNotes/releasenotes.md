@@ -3680,25 +3680,25 @@ Version 2.8 roll-out: October 3rd 2017
 
 ##### Structured content enablement (GA in SDK)
 
-**Type**:​ Feature
+**Type**: Feature
 
-**Available​ ​to​ ​all​ ​customers?​** ​No - early adopters only
+**Available to all customers?** No - early adopters only
 
 _The beta version was released in v2.7 (for a full description, refer to the v2.7 release notes). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
 The dictionary of template elements can be found [here](structured-content-templates.html).
 
-**What​ ​does​ ​enablement​ ​mean**?
+**What does enablement mean**?
 
 Until rollout is complete, the structured content capability in SDK v2.7 was flagged as a Beta feature. The feature has an enablement toggle in the SDK which was disabled by default. In SDK v2.8, it is enabled by default.
 
 The toggle may be switched on or off as part of the SDK implementation within the host app, however it is highly recommended not to release the SDK in the host app with structured content enabled until end to end flow has been fully tested on the brand’s account.
 
-**In-app​ ​Messaging​ ​SDK​ ​toggle**​ -
+**In-app Messaging SDK toggle** -
 
 * Android - `enable_structured_content`
 
-Related​ ​properties:​ ​Structured content
+Related properties: Structured content
 
 The following additional conditions and configurations are required:
 
@@ -3708,9 +3708,9 @@ The following additional conditions and configurations are required:
 
 ##### Automatic messages for messaging
 
-**Type**:​ Feature
+**Type**: Feature
 
-**Available​ ​to​ ​all​ ​customers**?​ ​No - early adopters only
+**Available to all customers**? No - early adopters only
 
 **Description**
 
@@ -3764,11 +3764,11 @@ The following auto messages are supported:
   * Agent manager joins the conversation
   * The joined agent manager leaves the conversation
 
-**How​ ​to​ ​enable​ ​auto​ ​messages**
+**How to enable auto messages**
 
 Auto messages will be enabled for early adopters upon release. Please contact your account manager for more information.
 
-**IMPORTANT​ ​NOTES**​:
+**IMPORTANT NOTES**:
 
 When auto messages are enabled, they are all enabled by default and all have the default text. It is advised to review them immediately and modify them to suit the brand’s needs. Once auto messages are enabled, the SDK does not show toast messages which were presented in the past.
 
@@ -3790,7 +3790,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-**IMPORTANT​ ​NOTES**​​
+**IMPORTANT NOTES**
 :
 The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
 
@@ -3799,7 +3799,7 @@ The number of unread messages are fetched by the API from the pusher regardless 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
 it will be fetched again with new data.
 
-**Parameters**​:
+**Parameters**:
 
 * conversationQuery: conversationQuery: used to identify the related brand
 
@@ -3807,8 +3807,8 @@ it will be fetched again with new data.
 
 * failure: called once the operation failed
 
-**Related​ ​properties**:​ ​Unread messages badge
-**Related​ ​API**:​ Unread messages badge API
+**Related properties**: Unread messages badge
+**Related API**: Unread messages badge API
 
 The following additional conditions and configurations are required:
 
@@ -3818,11 +3818,11 @@ The following additional conditions and configurations are required:
 
 **Key for items as follows**:
 
-**Backend​ ​update**:​ This feature requires an update to the backend.
-**Backend​ ​enablement**​: This feature requires items to be toggled on in the backend.
-**Backend​ ​configuration**​: This feature requires configuration in the backend.
-**SDK​ ​enablement**:​ This feature requires items to be toggled on in the SDK.
-**SDK​ ​configuration​**: This features requires items to be configured in the SDK.
+**Backend update**: This feature requires an update to the backend.
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+**Backend configuration**: This feature requires configuration in the backend.
+**SDK enablement**: This feature requires items to be toggled on in the SDK.
+**SDK configuration**: This features requires items to be configured in the SDK.
 
 #### New properties
 
@@ -3839,14 +3839,14 @@ The following properties for structured content can now be configured:
 ##### Unread Messages Badge APIs
 
 ```javascript
-public​ ​static​ ​void​ ​getNumUnreadMessages(String​ ​appId,​ ​final​ ​ICallback<Integer,
-Exception>​ ​callback)​ ​{
-​ ​ ​ ​if​ ​(!isValidState())​ ​{
-​ ​ ​ ​ ​ ​ ​ ​callback.onError(new​ ​Exception("SDK​ ​not​ ​initialized"));
-​ ​ ​ ​}​ ​else​ ​{
-​ ​ ​ ​ ​ ​ ​ ​MessagingFactory.getInstance().getController().getUnreadMessagesCount(mBrandId,
-appId,​ ​callback);
-​ ​ ​ ​}
+public static void getNumUnreadMessages(String appId, final ICallback<Integer,
+Exception> callback) {
+   if (!isValidState()) {
+       callback.onError(new Exception("SDK not initialized"));
+   } else {
+       MessagingFactory.getInstance().getController().getUnreadMessagesCount(mBrandId,
+appId, callback);
+   }
 }
 ```
 
@@ -3999,7 +3999,7 @@ Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
-_This feature requires consulting services support. For more information, please refer to the Conversational Cloud ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
+_This feature requires consulting services support. For more information, please refer to the Conversational Cloud [secure form for messaging documentation](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
 
 ![Secure Form](img/releasesecure.png)
 
@@ -4051,7 +4051,7 @@ The following devices are now also supported and/or certified to host our Mobile
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
 
-All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification. In a case the host app decides to show its own custom notification, it can call handlePushMessage() with the ​showNotification​ parameter set to false and will parse and return a PushMessage object. In case the push message is not related to the SDK, it will return null.
+All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification. In a case the host app decides to show its own custom notification, it can call handlePushMessage() with the showNotification parameter set to false and will parse and return a PushMessage object. In case the push message is not related to the SDK, it will return null.
 
 _Note: For the unread messages feature to work correctly, the host app must call this method upon receiving SDK push messages (whether showing a custom notification or not)_.
 
@@ -4095,7 +4095,7 @@ The following API has been deprecated:
 `public static void handlePush(Context context, Bundle data, String brandId, boolean
 showNotification)`
 
-Please use the above ​handlePushMessage()​ method instead.
+Please use the above handlePushMessage() method instead.
 
 #### New properties
 
@@ -4106,104 +4106,104 @@ The following properties of the secure form bubble on the agent side can now be 
 
 Background color of the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_background_color"​>
-@android:color/white​</color>`
+`<color name="agent_bubble_pci_form_invitation_background_color">
+@android:color/white</color>`
 
 Background color of the form invitation button only -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_background_btn_color"​>
-@android:color/white​</color>`
+`<color name="agent_bubble_pci_form_invitation_background_btn_color">
+@android:color/white</color>`
 
 Color of the stroke (border) of the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_stroke_color"​>​ ​@color/lp_gray​</color>`
+`<color name="agent_bubble_pci_form_invitation_stroke_color"> @color/lp_gray</color>`
 
 Color of the text on the button -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_button_text_color"​>
-@color/lp_blue​</color>​`
+`<color name="agent_bubble_pci_form_invitation_button_text_color">
+@color/lp_blue</color>`
 
 Text color on the description in the form invitation bubble -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_description_text_color"​>
-@color/lp_gray​</color>`
+`<color name="agent_bubble_pci_form_invitation_description_text_color">
+@color/lp_gray</color>`
 
 Text color on the title in the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_title_text_color"​>
-@android:color/black​</color>`
+`<color name="agent_bubble_pci_form_invitation_title_text_color">
+@android:color/black</color>`
 
 Color of the icon in the form invitation bubble -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_icon_tint_color"​>
-@color/lp_blue​</color>`
+`<color name="agent_bubble_pci_form_invitation_icon_tint_color">
+@color/lp_blue</color>`
 
 **consumer read status**
 
 Color of the read status indicator in the consumer message status line -
 
-`<color​ ​name=​"​consumer_bubble_read_status_color​"​>​@color/lp_blue​</color>`
+`<color name="consumer_bubble_read_status_color">@color/lp_blue</color>`
 
 Color of the received status indicator in the consumer message status line -
 
-`<color ​name=​"​consumer_bubble_received_status_color​"​>​#cecece​</color>`
+`<color name="consumer_bubble_received_status_color">#cecece</color>`
 
 Color of the sent status indicator in the consumer message status line -
 
-`<color​ ​name=​"​consumer_bubble_sent_status_color​"​>​#cecece​</color>`
+`<color name="consumer_bubble_sent_status_color">#cecece</color>`
 
 Color of the sending status indicator in the consumer message status line -
 
-`<color ​name=​"​consumer_bubble_sending_status_color​"​>​@color/lp_gray​</color>`
+`<color name="consumer_bubble_sending_status_color">@color/lp_gray</color>`
 
 
 #### New strings keys
 
 **Photo Sharing Upload Status**
 
-`<string​ ​name=​"uploading_image"​>​Uploading image...​</string>`
-`<string​ ​name=​"downloading_image"​>​Downloading image...​</string>`
+`<string name="uploading_image">Uploading image...</string>`
+`<string name="downloading_image">Downloading image...</string>`
 
 **Accessibility**
 
-`<string​ ​name=​"lp_accessibility_message_preview_close_description"​>​Close​</string>``
-`<string​ ​name=​"lp_accessibility_scroll_down_indicator_description"​>​scroll
-down​</string>`
+`<string name="lp_accessibility_message_preview_close_description">Close</string>``
+`<string name="lp_accessibility_scroll_down_indicator_description">scroll
+down</string>`
 
 **Connection Status**
 
-`<string​ ​name=​"lp_connection_status_trying_to_connect"​>​Still trying to
-connect…​</string>`
-`<string​ ​name=​"lp_connection_status_no_connection"​>​Offline. Please check your
-connection.​</string>`
+`<string name="lp_connection_status_trying_to_connect">Still trying to
+connect…</string>`
+`<string name="lp_connection_status_no_connection">Offline. Please check your
+connection.</string>`
 
 **PCI**
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_title"​>​Are you sure?​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_title">Are you sure?</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
-form, you will not be able to access it again.​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_description">Once you leave the secure
+form, you will not be able to access it again.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_positive"​>​OK​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_btn_positive">OK</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_negative"​>​STAY​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_btn_negative">STAY</string>`
 
-`<string​ ​name=​"lpmessaging_ui_fill_in_form_text_button"​>​Fill in form​</string>`
+`<string name="lpmessaging_ui_fill_in_form_text_button">Fill in form</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_to_fill_in_message"​>​This is a secure form.
-Information entered here is protected and cannot be accessed once submitted.​</string>`
+`<string name="lpmessaging_ui_secure_form_to_fill_in_message">This is a secure form.
+Information entered here is protected and cannot be accessed once submitted.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_viewed_message"​>​This form has already been
-viewed. Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_viewed_message">This form has already been
+viewed. Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_error_message"​>​There was a problem opening
-this form. Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_error_message">There was a problem opening
+this form. Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_expired_message"​>​Secure form has expired.
-Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_expired_message">Secure form has expired.
+Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_submitted_message"​>​This form has been
-submitted and cannot be reopened for security reasons.​</string>`
+`<string name="lpmessaging_ui_secure_form_submitted_message">This form has been
+submitted and cannot be reopened for security reasons.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
-form, you will not be able to access it again.​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_description">Once you leave the secure
+form, you will not be able to access it again.</string>`

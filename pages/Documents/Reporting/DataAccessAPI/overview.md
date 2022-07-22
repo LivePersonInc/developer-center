@@ -41,7 +41,7 @@ Data Access retention is limited to a 30 days period. The files will be deleted 
 
 A few things you'll need to get started with this API:
 
-1. **There's no need to reterive your domain for this API**. Here are the different domains by geo location:
+1. **There's no need to retrieve your domain for this API**. Here are the different domains by geo location:
 
 	* US accounts: va.da.liveperson.net
 

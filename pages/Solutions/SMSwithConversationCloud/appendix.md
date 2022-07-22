@@ -24,7 +24,7 @@ Friendly names such as *'1(800) New Home*' and vanity shortcodes such like '*Rea
 
 **Re-purposing existing numbers**
 
-It is possible to take an existing 1(800) number or other business number and 'port' the SMS capabilities across to Twilio so that it can be connected to your Conversational Cloud account.  It is recommended that you first look at your telephony reports and logs for that number and determine whether text messages are already being sent to it and the types of messages being sent.  Brands should particularly do this if these messages are not being answered today as many brands begin text-enabling a number that has been published for years, only to find that it receives a high volume of junk or spam messages.  This should be evaluated on a case by case basis as it may be more practical and efficient to purchase a dedicated number.
+It is possible to take an existing 1(800) number or other business number and 'port' the SMS capabilities across to Twilio so that it can be connected to your Conversational Cloud account. It is recommended that you first look at your telephony reports and logs for that number and determine whether text messages are already being sent to it and the types of messages being sent. Brands should particularly do this if these messages are not being answered today as many brands begin text-enabling a number that has been published for years, only to find that it receives a high volume of junk or spam messages. This should be evaluated on a case by case basis as it may be more practical and efficient to purchase a dedicated number.
 
 **Different numbers for skill routing**
 

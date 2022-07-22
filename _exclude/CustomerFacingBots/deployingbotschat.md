@@ -35,7 +35,7 @@ In order to use the Chat Agent API, please follow the steps below:
 
 4. **Log out** using the [Login Service API](agent-logout.html).
 
-You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [C​lick here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
+You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [Click here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
 
 ### Step 3 - Assign your bot to a LiveEngage campaign and manage bot escalations
 
