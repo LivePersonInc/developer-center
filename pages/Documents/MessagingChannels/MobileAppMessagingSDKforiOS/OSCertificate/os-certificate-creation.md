@@ -28,7 +28,7 @@ To manually generate a Certificate, you need a Certificate Signing Request (CSR)
 **Step 1**
 
 - In the Applications folder on your Mac, open the Utilities folder, and launch Keychain Access.
-- Within the Keychain Access dropdown menu, select **Keychain Access** > **Certificate Assistant** > **Request a Certificate from a Certificate Authority**.
+- Within the Keychain Access dropdown menu, select **Keychain Access** → **Certificate Assistant** → **Request a Certificate from a Certificate Authority**.
 
 **Step 2**
 

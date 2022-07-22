@@ -131,13 +131,13 @@ These include the conversation attributes as shown below and [SDEs](conversation
 
 All the above attributes are directly available, and you just need to configure your routing bot correctly to start routing.
 
-The example below shows a policy that transfer to a skill if minutes Since Previous Message > 2.
+The example below shows a policy that transfer to a skill if Minutes Since Previous Message > 2.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attr1.png" alt="">
 
 #### Getting dynamic data using the Conversation Context Service
 
-The [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) provides a way to get data from internal and external data sources. The unique namespace > group > key value structure makes it easy for developers to pass in dynamic attributes that can be leveraged for dynamic routing. The Conversation Context Service can be leveraged in multiple ways depending on where we need to get data from.
+The [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) provides a way to get data from internal and external data sources. The unique namespace → group → key value structure makes it easy for developers to pass in dynamic attributes that can be leveraged for dynamic routing. The Conversation Context Service can be leveraged in multiple ways depending on where we need to get data from.
 
 ##### Collecting data from bots within Conversational Cloud
 

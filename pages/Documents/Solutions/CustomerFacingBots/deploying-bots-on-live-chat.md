@@ -19,7 +19,7 @@ indicator:
 
 If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
-1. Create a user for your bot: Go to the users tab and create a new user > populate the form with the bot information including the name that will display to customers as well as the icon.
+1. Create a user for your bot: Go to the users tab and create a new user; populate the form with the bot information including the name that will display to customers as well as the icon.
 
 2. Create a skill for your bot. From the same users tab, navigate to 'skills’ and create a  new skill. Name the skill as appropriate for the use case of your bot and **ensure it has the word 'bot’ in the skill name.** This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 

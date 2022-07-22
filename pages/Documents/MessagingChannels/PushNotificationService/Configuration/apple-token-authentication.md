@@ -38,7 +38,7 @@ The Key ID is provided by Apple during the creation of the Apple Token Authentic
 
 ### How to create a Token based App on the Conversational Cloud
 
-This information can be added to the Mobile app management section under Campaigns -> Data Sources
+This information can be added to the Mobile app management section under Campaigns → Data Sources.
 
 * On the **Platform** dropdown select **iOS** and enter your **App Name**, then click on the **Create app** button.
 

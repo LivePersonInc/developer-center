@@ -24,7 +24,7 @@ indicator: both
    </div>
    <div id="teaser-banner" class="welcome-card-modified">
       <div  style="display: flex;">
-         <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
+         <p class="teaser-header"> Watch a  quick product overview of LivePerson Platform and its tools</p>
          <img class="play-icon"  src="img/play_icon.svg">
       </div>
    </div>

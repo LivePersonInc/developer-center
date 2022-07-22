@@ -321,7 +321,7 @@ Interference:  Visitor lines text
 
 Place:
 ```
-TrabscriptManager.js -> sendLine
+TrabscriptManager.js → sendLine
 ```
 
 Timing: Before

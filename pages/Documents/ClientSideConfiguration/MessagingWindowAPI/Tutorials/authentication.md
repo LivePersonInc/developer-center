@@ -22,7 +22,7 @@ See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator).
 
 ### Step 1 - Configure the Authentication Connector
-Log into Conversational Cloud and navigate to Campaign Builder > Data Sources > Authentication Server > Configure.
+Log into Conversational Cloud and navigate to Campaign Builder → Data Sources → Authentication Server → Configure.
 
 ![campaigns](img/campaigns.png)
 ![datasources](img/datasources.png)

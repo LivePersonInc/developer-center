@@ -28,7 +28,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* Use LE GUI to create API key: Administration -> AuditTrail.
+	* Use LE GUI to create API key: Administration → AuditTrail.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 

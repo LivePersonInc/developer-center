@@ -77,7 +77,7 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
     * **Intent name**: Small Talk
     * **Intent Display Name**: Small Talk
     * **Intent type**: Meta intent
-    * **Intents > Select intent to add**:
+    * **Intents → Select intent to add**:
         * How are you?
         * I am upset
         * Thank you

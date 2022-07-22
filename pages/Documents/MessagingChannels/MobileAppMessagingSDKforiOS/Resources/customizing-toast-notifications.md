@@ -198,14 +198,13 @@ return toast
 
 **Note**: Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
 
-- **text** -> Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
+- **text**: Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
 
-- **accountID** -> Account Number
+- **accountID**: Account Number
 
-- **isRemote** -> if it is a Push Notification
+- **isRemote**: If it is a Push Notification
 
-You will need to use -> notification.text to populate your Toast UILabel
-
+You will need to use notification.text to populate your Toast UILabel.
 
 ### Step 3: Adding a Gesture Recognizer to Custom Local Push Notification View (Optional)
 

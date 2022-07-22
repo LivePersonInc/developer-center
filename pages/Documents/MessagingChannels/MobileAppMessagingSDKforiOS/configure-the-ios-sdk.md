@@ -335,9 +335,6 @@ Send logs from Conversational Cloud to your app. Logs include different severity
    public func getAllSupportedLanguages() -> [String : String]
    ```
 
-
-
-
 ### LPMessagingSDK Delegates
 
 The SDK uses 2 delegates:
@@ -376,8 +373,6 @@ You should implement and set the **LPMessagingSDKNotificationDelegate**, in orde
    ```swift
    public func isBrandReady(brandID: String) -> Bool
    ```
-
-
 
 ### Message screen
 

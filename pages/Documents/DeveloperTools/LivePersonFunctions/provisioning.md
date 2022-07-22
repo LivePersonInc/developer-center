@@ -156,7 +156,7 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
   <tr>
     <td>agentVep</td>
     <td style="text-align: center; vertical-align: middle;" >Chat Agent API</td>
-    <td style="text-align: center; vertical-align: middle;" > Provides the capabilities of programmatically running agent activities without human intervention.</td>
+    <td style="text-align: center; vertical-align: middle;"> Provides the capabilities of programmatically running agent activities without human intervention.</td>
   </tr>
   <tr>
     <td>accountConfigReadOnly</td>

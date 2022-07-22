@@ -35,7 +35,7 @@ In order to utilize the Monitoring API, you will need, among other parameters, a
 
 **Mobile App in the LE UI**
 
-* Click on Mobile App -> Connect and fill in the details of your application.
+* Click on Mobile App → Connect and fill in the details of your application.
 
 ![Mobile App](img/monitor_start2.png)
 

@@ -200,7 +200,7 @@ Take care when changing the answer text; remember to update the conditions in th
 
 Reordering an answer choice has no impact on its text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
 
-To reorder an answer choice, select it so that it’s in focus, and click the < (Previous) or > (Next) button.
+To reorder an answer choice, select it so that it’s in focus, and click the “<” (Previous) or “>” (Next) button.
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png" alt="">
 
@@ -230,7 +230,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 1. Display Choices As
 2. Choices per Row
-3. Text Only Fallback > List Style for Choices
+3. Text Only Fallback → List Style for Choices
 
 1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
 

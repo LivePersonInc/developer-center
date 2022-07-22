@@ -36,7 +36,7 @@ LP_Messaging_SDK/lp_messaging_sdk - this is a Module that should be added to you
 
 Drag the `lp_messaging_sdk` folder into your project folder OR add it as a module to your project from a different folder.
 
-* File - > New -> Import Module
+* File → New → Import Module
 
 ![Import Module](img/importmodule.png)
 

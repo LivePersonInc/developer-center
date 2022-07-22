@@ -88,7 +88,7 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
     <img src="img/conversationimages/image_16.png" style="height:250px">
 
-3. Now we need to tell the interaction where to go when it matches. click on the Next Step drop down menu and look for Option 1 > billing text. Select it
+3. Now we need to tell the interaction where to go when it matches. click on the Next Step drop down menu and look for Option 1 → billing text. Select it
 
     <img src="img/conversationimages/image_17.png" style="height:200px">
 
@@ -98,7 +98,7 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 6. Perform the same steps as billing. This time use the patterns you created for "account" for the pattern.
 
-7. From the Next Step menu select Option 2 > account text.
+7. From the Next Step menu select Option 2 → account text.
 
     <img src="img/conversationimages/image_18.png" style="height:200px">
 
@@ -106,7 +106,7 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 9. Add a condition and select pattern. This time user "offer" as the pattern.
 
-10. From the Next Step menu select Option 3 > offer text.
+10. From the Next Step menu select Option 3 → offer text.
 
     <img src="img/conversationimages/image_19.png" style="height:200px">
 
@@ -114,10 +114,10 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 12. Add a condition and select pattern. This time user "other" as the pattern.
 
-13. From the Next Step menu select Option 4 > other text. Option 4 is the default escalation.
+13. From the Next Step menu select Option 4 → other text. Option 4 is the default escalation.
 
     <img src="img/conversationimages/image_20.png" style="height:200px">
 
-14. Since we’re already in the Reprompt dialog, if someone says anything NOT in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but _this_ time let’s make our pattern a wildcard * and for the Next Step, select Option 4 > other text. This will escalate the user directly.
+14. Since we’re already in the Reprompt dialog, if someone says anything NOT in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but _this_ time let’s make our pattern a wildcard * and for the Next Step, select Option 4 → other text. This will escalate the user directly.
 
 15. Once you’ve finished, go to the previewer and type "reset" and “hi”. Then try out your router automation. Try the buttons, try typing, try typing something unexpected and see what happens. REMEMBER: this is not connected to LiveEngage so you will not actually be escalating.

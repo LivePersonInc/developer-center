@@ -53,7 +53,7 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 2. “Step 2: Oath Key Setup” – For this part you will need your App Keys from your LivePerson Conversational Cloud account.
    1. Go to the Campaign Builder and search for the link “Data Sources.”
    2. Go to “API” Tab and click “Manage” and then “New.”
-   3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” > “Engagement 		History” and “Administrations” > “Skills” and click “Save.”
+   3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” → “Engagement History” and “Administrations” → “Skills” and click “Save.”
    4. Back to Salesforce: Enter the 4 strings you got into the matching fields on our activation page: Consumer Key, Consumer Secret, Access Token, and Access Token Secret.
 3. “Step 3: Legal Disclaimer” – Read the terms of use and check the “I have read and agree to these terms.”
 4. “Step 4: Activation” – Click “Activate.”
@@ -113,7 +113,7 @@ The SFDC package supplied by LivePerson includes an object named “Chat Transcr
 
 #### **Enabling custom objects**
 
-In order to add a Custom Object to the list of “Available Objects,” you will first need to create a Lookup field for your Custom Object on the “Chat Transcript” object. Only once you create this Lookup field will your Custom Object appear under the “Available Objects” section of this page (The “Chat Transcript” object can be found under the Setup menu, “Create” > “Objects” among all custom objects in your Salesforce org).
+In order to add a Custom Object to the list of “Available Objects,” you will first need to create a Lookup field for your Custom Object on the “Chat Transcript” object. Only once you create this Lookup field will your Custom Object appear under the “Available Objects” section of this page (The “Chat Transcript” object can be found under the Setup menu, “Create” → “Objects” among all custom objects in your Salesforce org).
 
 1. After you enabled a standard or custom object in the Customization Settings, the following should be defined (not all are mandatory, define according to your needs: Field Mapping, Related Lists, and Search Filters).
 2. Exposing the chat/messaging conversation transcript for an object in Salesforce - For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
@@ -537,7 +537,7 @@ These are just a few examples meant to demonstrate how to write these “address
 
 **A:** Please verify the following:
 
-* On the Customization Settings tab, you chose Selected Skills, and that under Advanced Settings > 		Configure Skills, you selected the parameters you want to prepopulate the search for each of them.
+* On the Customization Settings tab, you chose Selected Skills, and that under Advanced Settings → 		Configure Skills, you selected the parameters you want to prepopulate the search for each of them.
 * The parameters you selected to pre-populate with indeed exist for your chat/messaging conversation (use Visitor Info widget to check).
 * Check that “Disable On Load Auto Search” is unchecked in the on the top part of the Customization Settings.
 

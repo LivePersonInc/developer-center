@@ -44,7 +44,7 @@ Now let’s create our first intent for our Billing option.
 
 To try this out, we need to associate this domain with our automation and the intent with the message.
 
-1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
+1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings → More Settings → Entity and select **the specific Domain you created above** and hit Save.
 
 2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings <img class="inlineimage" src="img/conversationimages/image_28.png" /> and instead of using patterns, we are going switch to our new intent.
 

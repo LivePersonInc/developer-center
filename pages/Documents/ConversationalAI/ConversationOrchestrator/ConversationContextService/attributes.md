@@ -15,7 +15,7 @@ Attributes can be used in building routing policies. Please see [Dynamic Routing
 
 Several system attributes are available out of the box from the LivePerson platform. Currently, these attributes are provided in the “conversation” namespace and the “sde” namespace.
 
-To view the list of available attributes, please login to Conversation Orchestrator using your Conversational Cloud credentials, and then navigate to **Conversation Context Service > Conversation or Structured Data Entities (SDE)**.
+To view the list of available attributes, please login to Conversation Orchestrator using your Conversational Cloud credentials, and then navigate to **Conversation Context Service → Conversation or Structured Data Entities (SDE)**.
 
 These attributes can be used in building routing policies.
 
@@ -78,7 +78,7 @@ Static variables are useful for storing constant data or lists that can be used 
 
 **To create a new static variable**
 
-1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service > Custom**.
+1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service → Custom**.
 2. Click the **Add New** button, and select "static."
 
     <img class="fancyimage" width="400" src="img/convorchestrator/co_ccs_static.png" alt="">
@@ -101,7 +101,7 @@ Once you have created a function, you can now use that as an attribute in the Co
 
 **To create a new FaaS attribute**
 
-1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service > Custom**.
+1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service → Custom**.
 2. Click the **Add New** button, and select "function."
 
     <img class="fancyimage" width="400" src="img/convorchestrator/co_ccs_function.png" alt="">
