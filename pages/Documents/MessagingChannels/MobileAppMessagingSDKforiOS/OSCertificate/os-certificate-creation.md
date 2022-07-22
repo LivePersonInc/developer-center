@@ -97,7 +97,7 @@ cp Certificates.p12 key.p12
 openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 ```
 
-- You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step. RSA .pem key (enter a passphrase for the next step - I used “lpsn” as an example)
+- You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step. RSA .pem key (enter a passphrase for the next step — I used “lpsn” as an example)
 
 ```bash
 openssl rsa -in keyWithPassword.pem -out hostkey.pem

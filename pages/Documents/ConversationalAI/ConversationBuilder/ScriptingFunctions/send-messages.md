@@ -79,7 +79,7 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
+| `sendImmediateReply(message)` | message — (string or array) — A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
 
 #### Example
 
@@ -98,7 +98,7 @@ Note that there’s also a Private Message interaction that’s available. For m
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendPrivateMessage(message)` | message (String) - the message to send | None |
+| `sendPrivateMessage(message)` | message (String) — the message to send | None |
 
 #### Example
 

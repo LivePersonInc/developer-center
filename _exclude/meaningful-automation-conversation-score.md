@@ -123,7 +123,7 @@ If you hide MACS data, be aware that this only hides the display of the feature 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/486697904" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-#### MACS on the main dashboard - Identify low-scoring bots
+#### MACS on the main dashboard — Identify low-scoring bots
 
 The main dashboard in Bot Analytics displays each bot’s average MACS (a floating number), for the specified date range. This helps you to understand at a glance which of your bots are high-performing, and which are low-performing and therefore need tuning.
 
@@ -135,7 +135,7 @@ On the main dashboard, click a bot’s MACS to go to the **MACS** page for the b
 
 <img style="width:800px" src="img/ConvoBuilder/macs_page.png" alt="" >
 
-#### The MACS page - Analyze the data and tune the bot
+#### The MACS page — Analyze the data and tune the bot
 
 ##### Display the data
 

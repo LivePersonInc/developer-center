@@ -91,7 +91,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | --- | --- | --- | --- |
 | ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/headphones.jpg> |
 | ADD IMAGE → Item URL  | The URL of the resource to load when the image is clicked. | Optional | <https://www.mysite.com> |
-| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual fall sale! |
+| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones — It’s our annual fall sale! |
 | Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
 
 #### Button settings
@@ -313,7 +313,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 | Reply Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. |  Required. Although required, this field is replaced at run time with the title of the user's selection. | Your selection |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | A great choice! |
 
-#### Interaction Details - Settings
+#### Interaction Details — Settings
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -368,7 +368,7 @@ Response Message settings also provide the text in the header of the actual time
 |---|---|---|---|
 | Event Title  | The title of the calendar meeting.   | Optional  | Technician Visit |
 | Event Identifier   | An ID for the event. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   event123 |
-| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours *60).<br><br>If the offset is negative, use the formula: ((24 - offset in hours)* 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 *60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 - 4)* 60) = **1200**. |
+| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours *60).<br><br>If the offset is negative, use the formula: ((24 — offset in hours)* 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 *60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 – 4)* 60) = **1200**. |
 
 #### Location settings
 

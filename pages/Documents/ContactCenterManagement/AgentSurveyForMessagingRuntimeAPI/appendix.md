@@ -24,7 +24,7 @@ This section contains API details that are common to every API’s resource and 
 
 | Header | Description |
 | :-------- | :------------ |
-| x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+| x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Path Parameters**
 
@@ -48,9 +48,9 @@ This section contains API details that are common to every API’s resource and 
 | name | Agent survey’s unique name | String |  
 | description | The Agent survey’s description | String | 
 | root | The Agent Survey's first question | long | 
-| actualTimeInMinutes | Timeout of the Agent survey - defined in skill or in the survey configuration as fallback | Integer |
+| actualTimeInMinutes | Timeout of the Agent survey — defined in skill or in the survey configuration as fallback | Integer |
 | questions | list of Agent survey questions | List of AgentSurveyResponseQuestions |
-| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object - AgentSurveyContext |
+| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object — AgentSurveyContext |
 
 ### AgentSurveyResponseQuestion definition
 
@@ -60,15 +60,15 @@ This section contains API details that are common to every API’s resource and 
 | orderId | Ordered number, represents the location of the question in the survey |
 | text | Question's text | String |
 | next | The id of the next question in the survey | Long | should be null in case the question contains replies | 
-| nextInOrder| Next question is the next in order question | Boolean | For example - question with orderId 2 followed by question with orderId 3 |
+| nextInOrder| Next question is the next in order question | Boolean | For example — question with orderId 2 followed by question with orderId 3 |
 | required | Is the question is mandatory | boolean | 
 | category | Question's category. Possible values: free_text, radio_button, checkbox, dropdown, number, date | enum |
 | questionDefinition | Question's definition. Possible values: regular_question, conversation_topic, conversation_outcome, engagement_attributes | enum | Submitting a question of type engagement_attributes will generate SDE event| 
 | maxCharacters | Characters limit to an answer | Integer |
-| replies | List of replies associated with this question | Object - AgentSurveyResponseReply  |
+| replies | List of replies associated with this question | Object — AgentSurveyResponseReply  |
 | containsLogic | True if at least two answers directs the agent to different questions in the survey | Boolean |
-| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - EngagementAttribute  | 
-| question State | The state of the question | Object - QuestionState |
+| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object — EngagementAttribute  | 
+| question State | The state of the question | Object — QuestionState |
 
 ### Entity Example
 
@@ -157,7 +157,7 @@ This section contains API details that are common to every API’s resource and 
 | id | Reply ID | Long |
 | text | Reply's text | String |
 | next | The id of the next question in the survey | Long |
-| nextInOrder | Next question is the next in order question | Boolean | For example - question with orderId 2 followed by question with orderId 3 |
+| nextInOrder | Next question is the next in order question | Boolean | For example — question with orderId 2 followed by question with orderId 3 |
 
 ### QuestionState definition
 

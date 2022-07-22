@@ -46,11 +46,11 @@ This document covers the following different scenarios with regards to deploying
 
 2. Login to the Bot Connector Platform by using one of the following URLs:
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
 <div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 
@@ -112,11 +112,11 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 2. Login to the Bot Connector Platform by using one of the following URLs:
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC - https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
 <div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 
@@ -154,11 +154,11 @@ The Google Dialogflow v2.0 connector will be available by mid December. Below ar
 
 2. Login to the Bot Connector Platform by using one of the following URLs
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC - https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
 <div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 

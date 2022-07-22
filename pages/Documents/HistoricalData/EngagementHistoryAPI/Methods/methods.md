@@ -151,14 +151,13 @@ _Start reason_
 
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
-start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
-
+start reason options | Start reason options. |  | 0 - Visitor request, 1 — Transfer (agent transfer), 2 — Transfer failed, 3 — ACD attempt, 4 — ACD no assignment, 5 — Operator assignment, 6 — Skill reassign (skill transfer), 7 — Rep request, 8 — A2A reassign |
 
 _End reason_
 
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
-End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
+End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 — Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
 
 
 _Campaign info_

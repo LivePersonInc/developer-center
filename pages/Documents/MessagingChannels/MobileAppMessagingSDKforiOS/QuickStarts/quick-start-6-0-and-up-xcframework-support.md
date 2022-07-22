@@ -22,8 +22,7 @@ In this Quick Start, we will cover the steps that will get you up and running wi
 **Here are some of the advantages that the new framework provides:** 
 - XCFramework uses Swift Module Interface which lists out all the public APIs of the module in a textual format that behaves like source code. Since they behave like source code, future versions of the Swift Compiler will be able to import the module interfaces created with older versions. This removes the version-lock which is currently in Swift.
 
-- In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework - in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
-
+- In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework — in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
 
 - XCFramework packages all dependencies under all target platforms and architectures into one single bundle. More information about XCFramework can be found [here](https://developer.apple.com/videos/play/wwdc2019/416/), and the Xcode help article can be found [here](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07). 
 
@@ -173,7 +172,7 @@ class DocumentationViewController: UIViewController {
             fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
         }
 
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
         */
@@ -316,7 +315,7 @@ class DocumentationViewController: UIViewController {
             fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
         }
     
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
     
         /*
         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
@@ -462,13 +461,13 @@ This guide will help current users of older versions of the SDK to upgrade to th
 **How to upgrade?**
 
 Before you start, important to note:
-* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version - That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
+* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version. That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
 * The class '**LPMessagingSDK**' has been renamed  '**LPMessaging**'.
 
 
 **Step 1:**
 * Rename **LPMessagingSDK** to **LPMessaging**.
-* Remove of all import statements such as import LPInfra, import LPAMS, import LPMonitoring - keep only: import LPMessagingSDK.
+* Remove of all import statements such as import LPInfra, import LPAMS, import LPMonitoring — keep only: import LPMessagingSDK.
 
 **Step 2:**
 * Replace any class/facade function calls to the new LPMessaging class. Examples:

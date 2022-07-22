@@ -47,7 +47,7 @@ Together with the retrieved domain of the authorization server and the `client_i
 ### API Versioning
 We currently have two versions for token generation.  
 
-**API V1** - This API uses a static private signing key. 
+**API V1** — This API uses a static private signing key. 
 
 Please use the following public key for the JWT signature validation:
 ```jwtPublicKey
@@ -63,7 +63,8 @@ Content-Type: application/x-www-form-urlencoded
 client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
 ``` 
 
-**API V2** - uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
+**API V2** — uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
+
 ```url
 https://{sentinel_service_domain}/sentinel/well-known/jwks
 ```

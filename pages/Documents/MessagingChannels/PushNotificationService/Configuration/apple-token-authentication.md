@@ -18,20 +18,20 @@ Apple Token Based Authentication is a feature that can be self-managed in the Co
 
 In order to enable Apple Token Authentication, you will require the following data and files:
 
-* **App Name** - The app ID used on registration for push from the mobile app. For example: `com.liveperson.myapp`
+* **App Name**: The app ID used on registration for push from the mobile app. For example: `com.liveperson.myapp`
 
-     * Android Registration for Push Method - See SDK’s  [registerLPPusher](android-registerlppusher.html) method.
+     * Android Registration for Push Method: See SDK’s  [registerLPPusher](android-registerlppusher.html) method.
 
-     * IOS Registration for Push - The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](/mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e. `com.mybrand.app-Dev`).
+     * IOS Registration for Push: The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](/mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e. `com.mybrand.app-Dev`).
 
-* **Key File** - p8 file containing Apple Token Key, to obtain your Token Key, see how to [Obtain an Encryption Key and Key ID from Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns).
+* **Key File**: p8 file containing Apple Token Key, to obtain your Token Key, see how to [Obtain an Encryption Key and Key ID from Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns).
 
 {:.important}
 Key File should be an authentication token signing key, specified as a text file (with a .p8 file extension), as downloaded from the Apple Developer Portal.
 
-* **Team ID:** - Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
+* **Team ID:**: Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
 
-* **Key ID:** - A 10-character string with the Key ID.
+* **Key ID:**: A 10-character string with the Key ID.
   
 {:.important}
 The Key ID is provided by Apple during the creation of the Apple Token Authentication.

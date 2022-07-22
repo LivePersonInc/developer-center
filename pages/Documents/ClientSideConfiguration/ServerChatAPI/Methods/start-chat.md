@@ -42,7 +42,7 @@ _For Visitor Authentication flow please collect necessary parameters from the [f
 
 **Body Parameters**
 
-Note that we expect you to send the parameters under the `"request"` key - see the Request Body Example
+Note that we expect you to send the parameters under the `"request"` key — see the Request Body Example.
 
 | Name	| Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |

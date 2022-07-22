@@ -11,7 +11,7 @@ The main functionality of the Transporter is to create reporting tasks. These ta
 
 ### Available Reports
 
-From the REPORTS section in the Navigation bar, select a report from the available catalogue.  You can choose from:
+From the Reports section in the Navigation bar, select a report from the available catalogue.  You can choose from:
 
 * **Messaging Reports**
 

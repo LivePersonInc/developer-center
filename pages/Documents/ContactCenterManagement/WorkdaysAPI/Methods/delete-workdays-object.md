@@ -59,8 +59,9 @@ Delete an existing workday object.
 
 **Response example**
 
-In case delete success - body is empty.<br>
-In case trying to delete an already deleted workdays:
+In case of delete success, the body is empty.
+
+In case of trying to delete an already deleted workdays:
 
 ```json
 {

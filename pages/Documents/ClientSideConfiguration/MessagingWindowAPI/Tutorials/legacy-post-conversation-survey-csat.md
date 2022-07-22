@@ -18,12 +18,12 @@ indicator: messaging
 This topic discusses a legacy solution for CSAT surveys and is made available for the benefit of brands using this solution. **If you're new to CSAT surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
 
 ### Prerequisites
+
 Run the [Conversation Metadata Tutorial](consumer-int-conversation-md.html).
 
-### Step 1 - Find the closed conversation ID and Post Survey
+### Find the closed conversation ID and Post Survey
 
 In the end of the [Conversation Metadata Tutorial](consumer-int-conversation-md.html), you closed the conversation and got notification about it. In order to post CSAT survey, take this conversation id and paste it together with the following request:
-
 
 ```json
 {"kind":"req","id":"AHDJE","type":"cm.UpdateConversationField","body":{"conversationId":"__CONVERSATION_ID__","conversationField":{"field":"CSATRate","csatRate":5,"csatResolutionConfirmation":true,"status":"FILLED"}}}

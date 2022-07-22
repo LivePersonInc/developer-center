@@ -175,7 +175,8 @@ Type 1 (all changes)
     }
 ```
 
-**Response Body - All Changes Query**
+**Response Body — All Changes Query**
+
 ```json
     {
        "revisionsCollection": [

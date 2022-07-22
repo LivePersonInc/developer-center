@@ -131,7 +131,7 @@ In this example we will create and use static attributes. To check if a customer
 
     a. Select the type static
 
-    b. Type a new name for the Attribute - vipPhoneNumberList
+    b. Type a new name for the Attribute — vipPhoneNumberList
 
     c. In the Value, select List type and then copy these values +155555501, +155555502, +155555503. Click Save.
 
@@ -141,7 +141,7 @@ In this example we will create and use static attributes. To check if a customer
 
     a. Select the type static
 
-    b. Type a new name for the Attribute - regularCustomerList
+    b. Type a new name for the Attribute — regularCustomerList
 
     c. In the Value, select List type and then copy these values +155555505, +155555506, +155555507. Click Save.
 
@@ -291,7 +291,7 @@ We will be using the Conversation Context Service to store a phone number, and t
 
 ## Using a LivePerson Function to check VIP Status
 
-In the previous example we checked for the phone number in a static list. Maintaining such a list is obviously cumbersome. We could also use FaaS to check for VIP status - for example a function that calls a CRM backend to check the phone number at run time.
+In the previous example we checked for the phone number in a static list. Maintaining such a list is obviously cumbersome. We could also use FaaS to check for VIP status — for example a function that calls a CRM backend to check the phone number at run time.
 
 1. Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false for whether the phone number is of a VIP customer
 
@@ -321,7 +321,7 @@ In the previous example we checked for the phone number in a static list. Mainta
 
 #### Adding more Context Attributes from a bot
 
-The bot template we used has one basic integration - It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies - for example additional information such as customer name, email, or the NLU intent.
+The bot template we used has one basic integration. It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies — for example, additional information such as customer name, email, or the NLU intent.
 
 Please see [Manage the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) learn about scripting functions inside Conversation Builder.
 

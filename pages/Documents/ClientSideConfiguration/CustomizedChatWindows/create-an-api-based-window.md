@@ -19,16 +19,14 @@ indicator: chat
 * On an unmonitored flow
 	Attach the API-based window to the relevant external engagement.
 
-
-
 **On create campaign flow and after setting up the Engagement you will need to choose or create a window.**
 
-### Step 1 - Create an API-based window
+### Step 1 — Create an API-based window
 **In the window gallery page click the top right “Action” dropdown menu and select “Add API-based window”.**
 
 ![Apibasedwindow1](img/apibasedwindow1.png)
 
-### Step 2 - initialization settings
+### Step 2 — initialization settings
 **Fill in the necessary properties:**
 
 ![Apibasedwindow2](img/apibasedwindow2.png)
@@ -48,7 +46,7 @@ Default value: “window”
 
 [Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call).
 
-### Step 3 - confirmation
+### Step 3 — confirmation
 
 **Save your settings and choose the API-based window you have just created.**
 

@@ -47,7 +47,7 @@ Keep in mind that, while knowledge bases do support URLs for video and audio, Vi
 
 Adding an external knowledge base can take some time, so the KnowledgeAI application gives you the option to save a knowledge base in an incomplete state. This lets you step away from the configuration work and come back to it at a later time.
 
-Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
+Once you start the process of adding the knowledge base — i.e., you provide a name for the knowledge base — if you then click **Cancel**, you are prompted to choose whether to save your work:
 
 <img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png" alt="">
 

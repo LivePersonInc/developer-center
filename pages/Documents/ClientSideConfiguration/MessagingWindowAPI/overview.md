@@ -35,7 +35,7 @@ For complete control over the messaging window look, behavior and implementation
 
 * Offer in-app mobile messaging on an OS not supported by the LivePerson Mobile App Messaging SDKs (IOS/Android)
 
-* Create a messaging window experience that is completely different than the out of the box window Conversational Cloud offers - for example - a window that takes up the entire screen.
+* Create a messaging window experience that is completely different than the out of the box window Conversational Cloud offers — for example, a window that takes up the entire screen.
 
 * Utilize a different platform to manage the user view of the messaging conversation and integrate Conversational Cloud window logic
 

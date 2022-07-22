@@ -31,7 +31,7 @@ In contrast, when a bot developer makes a dialog available as a template that ca
 
 <img style="width:800px" src="img/ConvoBuilder/dialogtemplates_6.png" alt="">
 
-For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required items -- make the dialog available as a dialog template.
+For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog — and ensure that other bot developers import all required items — make the dialog available as a dialog template.
 
 ### Make a dialog available as a template
 

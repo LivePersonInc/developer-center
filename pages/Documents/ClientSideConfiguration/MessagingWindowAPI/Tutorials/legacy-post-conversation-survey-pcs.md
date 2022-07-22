@@ -59,7 +59,7 @@ You should get a shell line.
 
 Make sure that you have closed any previous conversation sessions by clicking `Close conversation` in the Agent Workspace.
 
-### Step 1 - Activate the MULTI_DIALOG feature for your conversation
+### Step 1 — Activate the MULTI_DIALOG feature for your conversation
 
 In order to indicate to Conversational Cloud that your custom window supports multi-dialogs you must provide the “MULTI_DIALOG” feature in the client properties, for example:
 
@@ -83,7 +83,7 @@ Refer to [Client Side Configuration](messaging-window-api-tutorials-client-prope
 LP_PROPS='{"type":".ClientProperties","appId":"webAsync","integrationVersion":"3.0.5","integration":"WEB_SDK","features":["AUTO_MESSAGES","RICH_CONTENT","CO_BROWSE","PHOTO_SHARING","QUICK_REPLIES","MULTI_DIALOG"]}'
 ```
 
-### Step 2 - Retrieve Your Consumer ID
+### Step 2 — Retrieve Your Consumer ID
 
 When you receive messages from the server, you must identify which messages were published by the consumer (in this case, you), and which were published by the agent. To do so, you must know the consumer's `consumerId`. To find out your `consumerId`, refer to the content of the LP_JWT by base64-decoding the middle part of the JWT (between the two periods):
 
@@ -107,7 +107,7 @@ The `sub` property contains your `consumerId`.
 
 **Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
-### Step 3 - Open the WebSocket Connection
+### Step 3 — Open the WebSocket Connection
 
 Remember to include the **Client Properties** set earlier using the following command:
 
@@ -117,7 +117,7 @@ wscat -k 60 -H "Authorization:jwt $LP_JWT" -H "Client-Properties:$LP_PROPS" -c "
 
 Replace the `__LP_ACCOUNT__` with your account ID.
 
-### Step 4 - Subscribe the Consumer to All Relevant Conversations - SubscribeExConversations
+### Step 4 — Subscribe the Consumer to All Relevant Conversations — SubscribeExConversations
 
 In order for the consumer to be notified when any changes occur in any of their relevant conversations (like a bot added to the conversation or a new agent for example) they must be subscribed to these conversations.
 
@@ -158,7 +158,7 @@ Input the following command:
 }
 ```
 
-### Step 5 - Consumer Requests a Conversation
+### Step 5 — Consumer Requests a Conversation
 
 In this step, the consumer will request a new conversation.
 
@@ -192,7 +192,7 @@ In the response you will receive the new conversationId.
 }
 ```
 
-### Step 6 - Agent Sends Messages
+### Step 6 — Agent Sends Messages
 
 In this stage, switch to the Agent-Workspace and accept the ring of the incoming request. Click the blinking `Accept` button.
 
@@ -200,7 +200,7 @@ In this stage, switch to the Agent-Workspace and accept the ring of the incoming
 
 Type a few messages in the Agent Workspace and send them to the consumer.
 
-### Step 7 - Subscribe to Conversation Content
+### Step 7 — Subscribe to Conversation Content
 
 In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the `__YOUR_CONVERSATION_ID__` with the the `conversationId` you got in the response of the previous step, and paste it into the opened WebSocket.
 
@@ -304,7 +304,7 @@ The below are examples for notifications that the consumer might receive after b
 }
 ```
 
-**Agent has stopped typing - chatSate set to ACTIVE**
+**Agent has stopped typing — chatSate set to ACTIVE**
 
 ```json
 {
@@ -330,7 +330,7 @@ The below are examples for notifications that the consumer might receive after b
 }
 ```
 
-### Step 8 - Consumer Sends a Message
+### Step 8 — Consumer Sends a Message
 
 Use the following request to send a message on behalf of the consumer:
 
@@ -437,7 +437,7 @@ Use the following request to send a message on behalf of the consumer:
 }
 ```
 
-### Step 9 - Close the Conversation (The MAIN DIALOG)
+### Step 9 — Close the Conversation (The MAIN DIALOG)
 
 Use the below to close the conversation when necessary by closing the main dialog rather than the entire Conversation container.
 
@@ -624,7 +624,7 @@ Thanks to [Step 4](messaging-window-api-tutorials-legacy-post-conversation-surve
 
 You can see from the above notification that the Conversation now has a new `stage` field. `stage` is a newly added field in the ExConv notification that indicates the Conversation container status (open/closed) (thus indicating whether the entire Conversation, both main dialog and post-survey dialog, has been closed). The old use of the `state` field (which is now being handled by the `stage` field as indicated above) was deprecated and it will now indicate whether the **Main Dialog** is open or closed.
 
-### Step 10 - Re-subscribe to Conversation Content
+### Step 10 — Re-subscribe to Conversation Content
 
 After the dialog change (main dialog closed, post dialog open), the consumer should no longer receive messaging events on the conversation. Therefore, you'll need to subscribe the consumer once again to the new, open post-survey dialog.
 
@@ -641,7 +641,7 @@ After the dialog change (main dialog closed, post dialog open), the consumer sho
 {"kind":"resp","reqId":"2","code":200,"body":{},"type":"GenericSubscribeResponse"}
 ```
 
-**Notification - Should include the Post-Survey (Example)**
+**Notification — should include the Post-Survey (Example)**
 
 ```json
 {
@@ -892,7 +892,7 @@ In LivePerson's unified window the above Post Survey will be rendered as such:
 
 ![post-survey](img/Post_Survey.png)
 
-### Step 11 - Display the Survey in Your Custom Window
+### Step 11 — Display the Survey in Your Custom Window
 
 As you can see from the above notification, the Post Survey is essentially a rich message including text, structured content templates (in this case a quick replies array which consists of eight clickable buttons that trigger actions) in one message.
 
@@ -949,7 +949,7 @@ The design of your post survey, including its quick replies and button styles, i
 
 ![bot-studio-design-button](img/bot_studio_design_button.png)
 
-### Step 12 - Consumer Responds on the Post Survey
+### Step 12 — Consumer Responds on the Post Survey
 
 After the Post Conversation Survey appears on your custom window, the consumer can choose as per the above example one of the quick reply items which are actionable buttons.
 
@@ -1072,7 +1072,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 
 #### Expected Notifications
 
-**Notification - message sent by the consumer**
+**Notification — message sent by the consumer**
 
 ```json
 {
@@ -1101,7 +1101,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Message accepted by the Agent**
+**Notification — message accepted by the Agent**
 
 ```json
 {
@@ -1132,7 +1132,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Agent (survey bot) is composing a message**
+**Notification — agent (survey bot) is composing a message**
 
 ```json
 {
@@ -1158,7 +1158,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Agent (survey bot) has sent a message**
+**Notification — agent (survey bot) has sent a message**
 
 ```json
 {
@@ -1187,7 +1187,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Agent has stopped typing**
+**Notification — agent has stopped typing**
 
 ```json
 {
@@ -1213,13 +1213,13 @@ The Second request is sent to Publish the selected text of the button, again in 
 }
 ```
 
-**Notification - Post survey completed - survey dialog and conversation are closed**
+**Notification — post survey completed — survey dialog and conversation are closed**
 
 Because we have configured in the Bot Studio one survey question only in this example, the conversation will close immediately after it. When it closes, we'll receive the following and lasts messaging notification regarding survey completion and the closure of the conversation.
 
 In case you have configured multiple sequential questions you'll need to repeat [step 11](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-11---display-the-survey-on-your-custom-window) and [step 12](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-12---consumer-responds-on-the-post-survey) per each survey question before you'll get this last notification.
 
-+**Conversation closed - Survey completed**
++**Conversation closed — survey completed**
 
 ```json
 {

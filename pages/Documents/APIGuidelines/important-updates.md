@@ -17,7 +17,7 @@ We’re excited to share that we have released a new version of NodeAgent SDK wh
 
 With the upgrade to the latest version, we recommend auditing your integration to ensure compliance with the [best practices](https://github.com/LivePersonInc/node-agent-sdk/wiki/NodeAgentSDK-Connection-Best-Practices) around managing connections with LivePerson’s Conversational Cloud.
 
-### Messaging/Engagement History API - Adding source name to API calls
+### Messaging/Engagement History API — Adding source name to API calls
 As part of our continuous effort to improve troubleshooting and reporting in the historical and operational APIs, we are planning to require a `source name` parameter as part of any API calls. This will apply for both internal and external calls. 
 
 ### Why do we require a source name in an API call?

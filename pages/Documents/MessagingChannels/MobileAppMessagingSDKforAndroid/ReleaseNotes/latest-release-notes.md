@@ -12,7 +12,7 @@ indicator: messaging
 {% for operatingsystem in site.data.releasenotesandroid %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first == true %}
-<div class="notice">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/mobile-app-messaging-sdk-for-android-latest-release-notes.html&mode=web&css=post-content">subscribe to receive notifications of changes</a>. When we update the Release Notes, you'll get a notification straight to your email of choice.</div>
+<div class="notice">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/mobile-app-messaging-sdk-for-android-latest-release-notes.html&mode=web&css=post-content">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
 
 <h4>SDK version {{ release.releasename }}</h4>
 

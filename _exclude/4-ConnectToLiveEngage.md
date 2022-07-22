@@ -27,7 +27,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 5. Click **Save**.
 
     The Bot skill will be the default skill connected to the bot agent.
-6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
+6. Repeat steps 3–5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
 
@@ -52,7 +52,7 @@ In addition to the skills, you also need user agents, one for the bot and one fo
     * **Skills**: Click this field, and select "Bot" from the list that appears. This is the default bot skill. **Do NOT add additional skills.**
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_2.png">
 4. Click **Save**.
-5. Repeat steps 2 - 4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
+5. Repeat steps 2–4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
 
 #### Assign the bot skill to an engagement
 

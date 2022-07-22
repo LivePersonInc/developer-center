@@ -14,9 +14,8 @@ indicator: messaging
 
 The SDK uses 2 delegates:
 
-1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events
-2. **LPMessagingSDKNotificationDelegate** - for handling push and in app notifications
-
+1. **LPMessagingSDKDelegate**: for lifecycle and connectivity events
+2. **LPMessagingSDKNotificationDelegate**: for handling push and in app notifications
 
 ### LPMessagingSDKDelegate
 
@@ -89,7 +88,7 @@ Called whenever the SDK receives a connection error from the socket.
 
 ###  LPMessagingSDKCSATScoreSubmissionDidFinish(brandID: String, rating: Int)
 
-When a conversation is resolved, a feedback page is presented (CSAT - Customer Satisfaction).
+When a conversation is resolved, a feedback page is presented (CSAT — Customer Satisfaction).
 This delegate method is invoked after the CSAT is submitted. If the user chooses to skip the CSAT, the delegate method is called with score=0.
 
 ###  LPMessagingSDKCSATCustomTitleView(_ brandID: String) -> UIView
@@ -162,8 +161,8 @@ Called when CSAT screen was loaded and presented to consumer
 
 Invoked when the connection state is changed.
 
-* isReady: Bool - Set to true when the SDK is connected and in sync with the server.
-* brandID: String - Brand account number
+* isReady: Bool — Set to true when the SDK is connected and in sync with the server.
+* brandID: String — Brand account number
 
 ###  LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
 

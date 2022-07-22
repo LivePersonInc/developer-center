@@ -44,7 +44,7 @@ A few things you'll need to get started with this API:
 
 ### Use Cases
 
-* Create a chat window experience that is completely different than the out of the box window Conversational Cloud offers - for example - a window that takes up the entire screen.
+* Create a chat window experience that is completely different than the out of the box window Conversational Cloud offers — for example, a window that takes up the entire screen.
 
 * Utilize a different platform to manage the user view of the chat and integrate Conversational Cloud window logic
 

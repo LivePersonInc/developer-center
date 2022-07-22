@@ -52,7 +52,7 @@ As mentioned earlier, the Knowledge Base uses our Natural Language Understanding
 
 2. The Title and the Intent Qualifiers are **intents** and should be **full sentences** eg: "How do I reset my password?"
 
-3. As a rule you should have at LEAST 5 - 8 Intent Qualifiers per article which provide different ways people ask for this article.
+3. As a rule you should have at LEAST 5–8 Intent Qualifiers per article which provide different ways people ask for this article.
 
 4. Tags are used to highlight the key noun in the intent. For instance "How do I reset my password?" would have a tag of “password” and perhaps “reset”.
 

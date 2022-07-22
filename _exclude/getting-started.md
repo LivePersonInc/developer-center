@@ -155,12 +155,12 @@ There can be only one dialog of type Fallback per bot.
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent.
 
-#### Watch the video - intents and entities
+#### Watch the video — intents and entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-#### Watch the video - advanced interactions
+#### Watch the video — advanced interactions
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979606" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
@@ -467,7 +467,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 5. Click **Save**.
 
     The Bot skill will be the default skill connected to the bot agent.
-6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
+6. Repeat steps 3–5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png" alt="">
 

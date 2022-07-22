@@ -1,7 +1,5 @@
 ---
 pagename: Interaction Support
-redirect_from:
-  - 
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -31,7 +29,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | Yes |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | Yes |
 | Universal | Yes | 
@@ -79,7 +77,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | No |
 | Universal | Yes | 
@@ -127,7 +125,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | No |
 | Universal | Yes | 
@@ -199,7 +197,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | No |
 | Universal | Yes | 
@@ -223,7 +221,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | No |
 | Universal | Yes | 
@@ -271,7 +269,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No | 
 | Integration | Yes | 
 | Agent Transfer integration | Yes | 
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
 | File Upload integration | No |
 | Apple Pay integration | No |
 | Universal | Yes | 

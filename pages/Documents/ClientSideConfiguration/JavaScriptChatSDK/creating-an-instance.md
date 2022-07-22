@@ -80,7 +80,7 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 | Type | Value/Properties |
 | :--- | :--- |
 | Function  | An inline function or function pointer. |
-| Object | An object containing properties: <br> - callback - the callback function (Required) <br> - context - the execution context for the function (Optional) |
+| Object | An object containing properties: <br> — callback — the callback function (Required) <br> — context — the execution context for the function (Optional) |
 | Array | An array containing functions, or objects with the above syntax, or both. |
 
 **Examples**

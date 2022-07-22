@@ -26,7 +26,7 @@ This step will guide you through the activation and configuration of the app in 
 #### **Navigating to the Conversational Cloud application in Salesforce**
 
 1. Now that you have installed the Conversational Cloud app in your Salesforce org, you will want to set it up.
-2. Login to Salesforce – click on the application menu in the top right of your screen.
+2. Login to Salesforce — click on the application menu in the top right of your screen.
 3. Make sure you have the Conversational Cloud application selected.
 
 #### **Verifying Clickjack setting is disabled for required Visualforce Pages**
@@ -49,14 +49,14 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 
 {:start="2"}
 
-1. “Step 1: Account Information” – Enter the relevant Account ID.
-2. “Step 2: Oath Key Setup” – For this part you will need your App Keys from your LivePerson Conversational Cloud account.
+1. “Step 1: Account Information” — Enter the relevant Account ID.
+2. “Step 2: Oath Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
    1. Go to the Campaign Builder and search for the link “Data Sources.”
    2. Go to “API” Tab and click “Manage” and then “New.”
    3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” → “Engagement History” and “Administrations” → “Skills” and click “Save.”
    4. Back to Salesforce: Enter the 4 strings you got into the matching fields on our activation page: Consumer Key, Consumer Secret, Access Token, and Access Token Secret.
-3. “Step 3: Legal Disclaimer” – Read the terms of use and check the “I have read and agree to these terms.”
-4. “Step 4: Activation” – Click “Activate.”
+3. “Step 3: Legal Disclaimer” — Read the terms of use and check the “I have read and agree to these terms.”
+4. “Step 4: Activation” — Click “Activate.”
 
 {: .important}
 **Note:** When you click on “Deactivate,” you will disable the use of the widget within the platform and stop all periodic sync processes with your account.
@@ -88,7 +88,7 @@ This section sets out the Salesforce objects for which we would like the widget 
 4. The full list of the ‘Selected skills’ will be shown (The skills you selected from the previous screen).
 5. In order to customize the SFDC widget based on Skills, Click “Edit” next to one of the ‘selected skills’:
    1. Select which objects the relevant Skill can work with in the SFDC widget.
-   2. Select the default widget screen: either a Search Type or New Record page. The default and recommended option is “**People Search**” – the “People Search” shows the agent all the Accounts, Contacts and Leads that answer the search criteria, structured in a convenient tree format.
+   2. Select the default widget screen: either a Search Type or New Record page. The default and recommended option is “**People Search**” — the “People Search” shows the agent all the Accounts, Contacts and Leads that answer the search criteria, structured in a convenient tree format.
    3. If you select a search option as the default page, you can select the relevant search values that should be retrieved. For example, if the default screen selected is “Search Contact” and the selected Search Value is “Pre-Chat Survey Visitor Email”, then once the widget is loading, it will search for any SFDC Contact record which holds an email address matching to the email address filled by the visitor as part of the pre-chat survey. The available values for search represent the list of available LivePerson SDK search values.
 
 {: .notice}
@@ -117,7 +117,7 @@ In order to add a Custom Object to the list of “Available Objects,” you will
 
 1. After you enabled a standard or custom object in the Customization Settings, the following should be defined (not all are mandatory, define according to your needs: Field Mapping, Related Lists, and Search Filters).
 2. Exposing the chat/messaging conversation transcript for an object in Salesforce - For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
-3. Each enabled object will have a link titled “Configure Field Mapping, Related Lists, and Search Filters” – clicking this link will direct you to a page where you can define these settings.
+3. Each enabled object will have a link titled “Configure Field Mapping, Related Lists, and Search Filters” — clicking this link will direct you to a page where you can define these settings.
 
 #### **Field mapping**
 
@@ -128,7 +128,7 @@ These settings allow you to choose which fields of each object will be available
   * Choose a SF Field Name
   * Choose ‘Editability’ mode.
     **Note:** Editability mode may sometimes be enforced according to your SF settings and permissions.
-  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) – See Appendix #1 for advanced instructions on how to set this.
+  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
   * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble
   * Required - Setting the field as mandatory when creating or editing the record.
   * Default Value - Set up a fixed default text value for a field (will be editable by the agent).
@@ -137,7 +137,7 @@ These settings allow you to choose which fields of each object will be available
 #### **Related list config**
 
 * Select one of the values in the “Related List Object Name” picklist.
-* Select from a list of fields you would like to include in your related list – do this by selecting any “Available Fields”, click the “Add” button so that they are moved to the “Selected Fields” side. **Note:** Only the first 4 fields will be shown on the related list.
+* Select from a list of fields you would like to include in your related list — do this by selecting any “Available Fields”, click the “Add” button so that they are moved to the “Selected Fields” side. **Note:** Only the first 4 fields will be shown on the related list.
 * Select one of the values in the “Field to Sort” picklist
 * Select one of the values in the “Number of Records” picklist.
 * Select one of the values in the “Sort Direction” picklist.
@@ -151,9 +151,9 @@ In this section you can define the search filters for the Widget Search Screen. 
 
 * Click “Add Search Filter” to get started.
 * Fill out the following fields to create your new search filter:
-  * “Field Name” – The field that you want to filter by (for example: Account Type, Case Origin, etc.)
-  * Operation – The operator you want to use for filtering (Make sure it fits the field type)
-  * “Value” – The values you want to use. **Note:** When filtering by a lookup field (or record type) – you need to put the SF ID of the relevant value. For example, for a record type “012000000000jdT.”
+  * “Field Name” — The field that you want to filter by (for example: Account Type, Case Origin, etc.)
+  * Operation — The operator you want to use for filtering (Make sure it fits the field type)
+  * “Value” — The values you want to use. **Note:** When filtering by a lookup field (or record type) — you need to put the SF ID of the relevant value. For example, for a record type “012000000000jdT.”
   * Click “Save.”
 
 #### **Account settings**
@@ -285,7 +285,7 @@ You can stand on the Customization Settings tab, copy the first part of the URL 
 
 1. Open the “Advanced settings for LivePerson integration SDK”
    * Define the following URL under ‘In case widget didn't load, display the following link’- ‘[https://login.salesforce.com](https://login.salesforce.com "https://login.salesforce.com")’ (or ‘[https://test.salesforce.com](https://test.salesforce.com "https://test.salesforce.com")’)
-   * “Show link after” – Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he will see the message you defined with the link defined above.
+   * “Show link after” — Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he will see the message you defined with the link defined above.
 
  -->
 
@@ -401,11 +401,11 @@ Now that we created records from the Conversational Cloud, you may view all our 
 
 #### **Looking at your chat transcripts**
 
-1. Login to Salesforce – click on the application menu in the top right of your screen.
+1. Login to Salesforce — click on the application menu in the top right of your screen.
 2. Make sure you have the the "Conversational Cloud" application selected (or any other app in which you’ve included the tab).
 3. Click on the “Chat Transcripts” tab.
 4. Select one of the recently synced chat transcripts by clicking on the “Chat Transcript Name” under the Recent Chat Transcript list.
-5. There you have it – depending on your chat transcript settings, you will see a number of fields populated.
+5. There you have it — depending on your chat transcript settings, you will see a number of fields populated.
 
 In case you are using both chat and messaging within the Conversational Cloud, the field ‘LivePerson SDK API Type’ identifies the specific type of the record (e.g. chat or messaging).
 
@@ -450,7 +450,7 @@ The complete structure of the data in the “Agent Widget SDK,” “Engagement 
 To get one of the standard out-of-the-box pre-chat survey questions the access is easy using the list of predefined values, but you need “Other” for any custom questions you have on that type of survey or others, the address you’ll build will use the Display Name of the question. Below are a few examples.
 
 {: .notice}
-**Note:** If you ever change the text in the Display Name of a survey question in the Conversational Cloud – you have to update this mapping too, otherwise the mapping will stop working.
+**Note:** If you ever change the text in the Display Name of a survey question in the Conversational Cloud — you have to update this mapping too, otherwise the mapping will stop working.
 
 1. For a **custom pre-chat survey question** with the text “What is your Account Number?” use the following:
 

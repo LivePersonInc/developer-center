@@ -16,9 +16,10 @@ indicator: messaging
 This tutorial explains how to start a CoBrowse session on consumer side using the Messaging Window and CoBrowse APIs.
 
 ### Prerequisites
-* This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag.
 
-### Step 1 - Set CoBrowse Feature in Client Properties
+This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag.
+
+### Step 1 — Set CoBrowse Feature in Client Properties
 
 In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you add a ``features`` property to the clientProperties that contain the ``CO_BROWSE`` feature. An example initConnection request that enables CoBrowse would look like this:
 
@@ -43,13 +44,15 @@ In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you
 }
 ```
 
-### Step 2 - Start a conversation and trigger a CoBrowse invitation
+### Step 2 — Start a conversation and trigger a CoBrowse invitation
+
 Start a messaging conversation with an agent by following the steps described in the previous tutorials. The important part is to subscribe to [Conversation Metadata](/consumer-int-conversation-md.html) since the CoBrowse invitation is sent as part of the metadata.
 If your account is set up correctly, you should see the following button inside the Agent Workspace that allows you to send a CoBrowse invitation:
 
 ![agent_invitation](img/agent_cobrowse_invitation.png)
 
-### Step 3 - Handle CoBrowse event on Consumer side
+### Step 3 — Handle CoBrowse event on Consumer side
+
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
@@ -79,7 +82,8 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog is a CoBrowse dialog. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the CoBrowse mode the Agent selected. For CoBrowse, the possible values are ``shared`` for shared CoBrowse, ``view`` for view-only CoBrowse where the agent is able to scroll the visitor's view and ``follow`` for view-only without scroll permissions for the agent.
 
-Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. To ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``. This is an important check because the CoBrowse dialog goes through the following changes of state (and sub-state) for internal integrations to work - such as system messages.
+Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. To ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``. This is an important check because the CoBrowse dialog goes through the following changes of state (and sub-state) for internal integrations to work — such as system messages.
+
 - ``"ACCEPTED"``, which is received when the invitation is accepted by the invitee and when the invitee successfully joins the session. Handling this event is not required.
 - ``"CLOSED"``, see the [last section](#cancelled-invitation-and-expiry).
 
@@ -104,7 +108,8 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
 **Tips for Debugging**: ``lpTag.events.publish`` can fail if the event contains invalid data. It logs errors in the browser console if you have the debug mode of ``lpTag`` enabled (You can enable it when you load your pages with the additional URL parameter ``lpDebug=2`` appended to the URLs). Since the debug logs also contain logs from other irrelevant ``lpTag`` components, you can use keywords like ``event``, ``error`` or ``cobrowse`` in the console filter to narrow them down. An example error you get when you publish an event missing mandatory fields looks like the following: <br/>```13:36:38 Events : Error executing cobrowseOffered eventId: evId_5e=win is undefined LEVEL: ERROR```
 ```
 
-### Step 4 - Accept/Reject CoBrowse invitation
+### Step 4 — Accept/Reject CoBrowse invitation
+
 If the consumer decides to accept the invitation, the following event should be triggered in order to start the CoBrowse session:
 
 ```js

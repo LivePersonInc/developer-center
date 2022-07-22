@@ -423,11 +423,11 @@ messageRawScore | Score of message.  | int
 | ---| ---| ---| ---|
 | sessionId| Session id| alphanumeric| |
 | startTime| Start time| alphanumeric| |
-| startTimeL| Start time | long – epoch time in milliseconds| |
+| startTimeL| Start time | long — epoch time in milliseconds| |
 | endTime| End time| alphanumeric| |
-| endTimeL| End time | long – epoch time in milliseconds| |
+| endTimeL| End time | long — epoch time in milliseconds| |
 | interactiveTime| The time the session became interactive| alphanumeric| |
-| interactiveTimeL| The time the session became interactive | long – epoch time in milliseconds| |
+| interactiveTimeL| The time the session became interactive | long — epoch time in milliseconds| |
 | isInteractive| Is the session interactive| boolean| |
 | endReason| CoBrowse end reason| alphanumeric| |
 | duration| Duration of the CoBrowse session| numeric| |
@@ -542,8 +542,8 @@ _Sdes info_
 Name| Description| Type/Value  | Notes
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------| :---------------------------
 events | The SDEs that were received from the brand. | Container (see [Appendix](messaging-interactions-api-engagement-attributes.html))  |
-originalTimeStamp | Event creation time stamp. | long – epoch time in milliseconds|
-serverTimeStamp | Event processing time stamp. | long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+originalTimeStamp | Event creation time stamp. | long — epoch time in milliseconds|
+serverTimeStamp | Event processing time stamp. | long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 sdeType| Type of SDE.  | enum  |
 
 [Here](messaging-interactions-api-engagement-attributes.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
@@ -552,8 +552,8 @@ sdeType| Type of SDE.  | enum  |
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------------ | :---------
-latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
-configuredResponseTime | Conversation's configured agent response time. | long – epoch time in milliseconds
+latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long — epoch time in milliseconds
+configuredResponseTime | Conversation's configured agent response time. | long — epoch time in milliseconds
 
 _Dialog info_
 
@@ -564,9 +564,9 @@ status | Status of the dialog.         | string  |
 dialogType   | The dialog type.                                | string  | Valid values: "POST_SURVEY", "MAIN".
 dialogChannelType | The dialog channel type.                   | string  |
 startTime | The dialog start time, readable format.| string  |
-startTimeL| The dialog start time, epoch time in milliseconds.| long – epoch time in milliseconds |
+startTimeL| The dialog start time, epoch time in milliseconds.| long — epoch time in milliseconds |
 endTime| The dialog end time, readable format.  | string  |
-endTimeL  | The dialog end time, epoch time in milliseconds.| long – epoch time in milliseconds |
+endTimeL  | The dialog end time, epoch time in milliseconds.| long — epoch time in milliseconds |
 closeReason  | The dialog close reason.| string  |
 closeReasonDescription | The dialog close reason description.  | string  |
 skillId| The skill ID associated with the dialog.  | string  | Default value is "-1"
@@ -622,7 +622,7 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |
+lastUpdateTime| The AC form revision.                          | long — epoch time in milliseconds |
 submittedAnswers| Agent survey questions                       | container |
 
 _Previously Submitted Agent Surveys_
@@ -644,7 +644,7 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
+lastUpdateTime| The AC form revision.                          | long — epoch time in milliseconds |    
 submittedAnswers| Agent survey questions.                      | container  |
 
 _Agent Survey Question_

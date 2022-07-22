@@ -25,10 +25,10 @@ This library requires only an active Conversational Cloud account number.
 
 You're ready to get started with the Messaging Window SDK! The SDK's documentation is maintained on Github and can be found [at this location](https://github.com/LivePersonInc/messaging-window-sdk). It's made up of the following parts:
 
-* [Quick Start](https://github.com/LivePersonInc/messaging-window-sdk#quick-start) - check out the Quick Start guide for a quick look at how to get up and running with the SDK.
+* [Quick Start](https://github.com/LivePersonInc/messaging-window-sdk#quick-start) — check out the Quick Start guide for a quick look at how to get up and running with the SDK.
 
-* [Methods](https://github.com/LivePersonInc/messaging-window-sdk#available-methods) - this section covers the various methods which the SDK offers. These methods allow you to send content to Conversational Cloud, update the conversation state, and more.
+* [Methods](https://github.com/LivePersonInc/messaging-window-sdk#available-methods) — this section covers the various methods which the SDK offers. These methods allow you to send content to Conversational Cloud, update the conversation state, and more.
 
-* [Event Callbacks](https://github.com/LivePersonInc/messaging-window-sdk#event-callbacks) - this section covers the various callbacks which are included in the SDK. These callbacks allow you to "listen" to events within Conversational Cloud, like a message sent or received, and write code which handles the content of these events (for example, grabbing a message's text and rendering it to a page).
+* [Event Callbacks](https://github.com/LivePersonInc/messaging-window-sdk#event-callbacks) — this section covers the various callbacks which are included in the SDK. These callbacks allow you to "listen" to events within Conversational Cloud, like a message sent or received, and write code which handles the content of these events (for example, grabbing a message's text and rendering it to a page).
 
-* [Sample Code](https://github.com/LivePersonInc/messaging-window-sdk#sample-code) - this section contains a simple example of how the SDK might be used to handle and send agent and consumer messages.
+* [Sample Code](https://github.com/LivePersonInc/messaging-window-sdk#sample-code) — this section contains a simple example of how the SDK might be used to handle and send agent and consumer messages.

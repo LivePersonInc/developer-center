@@ -130,7 +130,7 @@ Modify the following values in Global Functions:
 
 This bot template contains multiple [dialog templates](conversation-builder-dialog-templates.html). All dialog templates are designed to work independently of one another and provide specific use case features to your bot.
 
-#### Insurance - Full Package
+#### Insurance — Full Package
 
 All insurance options in one dialog template
 
@@ -147,7 +147,7 @@ Integrations:
 
 * Send_Email
 
-#### Insurance - Auto Package
+#### Insurance — Auto Package
 
 Only the Auto Insurance flow
 
@@ -174,7 +174,7 @@ if (multiIns === 'true') {
 }
 ```
 
-#### Insurance - Home Package
+#### Insurance — Home Package
 
 Only the Home Insurance flow
 
@@ -191,7 +191,7 @@ Global Function modifications:
 
 In Global Functions, `multiIns` is set to 'false' to ensure proper routing in the Pre-Process Code of the `Home_Other` interaction.
 
-#### Insurance - Life Package
+#### Insurance — Life Package
 
 Only the Life Insurance flow
 
