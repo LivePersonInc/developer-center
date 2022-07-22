@@ -128,7 +128,7 @@ From the dialog tabs, select the Reprompt dialog. Click on the small arrow to di
 
 <img src="img/conversationimages/image_14.png" alt="" style="height:250px">
 
-The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel. **The patterns are missing! You need to add them!**
+The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel: **The patterns are missing! You need to add them!**
 
 1. On the User Response panel, click on the Match Type drop down menu and select **Pattern**.
 
@@ -168,7 +168,7 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
     <img src="img/conversationimages/image_20.png" alt="" style="height:200px">
 
-14. Since we’re already in the Reprompt dialog, if someone says anything NOT in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but *this* time let’s make our pattern a wildcard * and for the Next Step, select Option 4 → other text. This will escalate the user directly.
+14. Since we’re already in the Reprompt dialog, if someone says anything _not_ in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but *this* time let’s make our pattern a wildcard * and for the Next Step, select Option 4 → other text. This will escalate the user directly.
 
 15. Once you’ve finished, go to the previewer and type "reset" and “hi”. Then try out your router automation. Try the buttons, try typing, try typing something unexpected and see what happens. REMEMBER: this is not connected to LiveEngage so you will not actually be escalating.
 
@@ -220,7 +220,7 @@ To try this out, we need to associate this domain with our automation and the in
 
     <img src="img/conversationimages/image_30.png" alt="" style="height:150px">
 
-5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents!
+5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents.
 
     <img src="img/conversationimages/image_31.png" alt="" style="height:300px">
 

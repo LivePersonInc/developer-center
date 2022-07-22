@@ -11,7 +11,7 @@ indicator: messaging
 ---
 <br>
 
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe to receive notifications of changes</a>. When we update the Release Notes, you'll get a notification straight to your email of choice.</div>
 
 # Android Messaging SDK - Version 5.11.0
 
@@ -771,7 +771,8 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 New Logging subsystem, which introduces: 
 - Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
 - Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
-Head over [here](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more!
+
+Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more.
 
 ## Auto adjust "Scroll to bottom" button width
 - The width of the "scroll to bottom" button will be auto adjusted based on length of a message text.
@@ -1595,7 +1596,8 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 New Logging subsystem, which introduces: 
 - Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
 - Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
-Head over [here](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more!
+
+Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more.
 
 #### Auto adjust "Scroll to bottom" button width
 - The width of the "scroll to bottom" button will be auto adjusted based on length of a message text.

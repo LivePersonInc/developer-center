@@ -453,7 +453,7 @@ func LPMessagingSDKConversationViewControllerDidDismiss() {
 
 ### Next Steps
 
-Congratulations!  You're all set.  
+Congratulations! You're all set.  
 
 You can now do any of the following:
 

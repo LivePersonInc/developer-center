@@ -78,7 +78,7 @@ From the dialog tabs, select the Reprompt dialog. Click on the small arrow to di
 
 <img src="img/conversationimages/image_14.png" style="height:250px">
 
-The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel. **The patterns are missing! You need to add them!**
+The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel: **The patterns are missing! You need to add them!**
 
 1. On the User Response panel, click on the Match Type drop down menu and select **Pattern**.
 

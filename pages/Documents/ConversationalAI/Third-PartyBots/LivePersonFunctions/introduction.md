@@ -53,7 +53,7 @@ After you successfully implemented and deployed a LivePerson Function, press the
 {: .important}
 You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has succeeded, you're done!
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeeded or failed. If it succeeded, you're done.
 
 The following payload content will be received from the Function during a conversation with the assigned bot.
 

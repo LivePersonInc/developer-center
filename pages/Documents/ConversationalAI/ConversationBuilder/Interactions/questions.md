@@ -91,7 +91,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | --- | --- | --- | --- |
 | ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/headphones.jpg> |
 | ADD IMAGE → Item URL  | The URL of the resource to load when the image is clicked. | Optional | <https://www.mysite.com> |
-| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual, fall sale! |
+| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual fall sale! |
 | Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
 
 #### Button settings

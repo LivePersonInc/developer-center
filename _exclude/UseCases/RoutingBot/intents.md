@@ -56,7 +56,7 @@ To try this out, we need to associate this domain with our automation and the in
 
     <img src="img/conversationimages/image_30.png" style="height:150px">
 
-5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents!
+5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents.
 
     <img src="img/conversationimages/image_31.png" style="height:300px">
 

@@ -69,7 +69,6 @@ JSON-Generating Data Flow Process:
 
 ![DataAccessAPI02](img/Data access-02.png)
 
-
 ### Use Cases
 
 1. Brands that handles multiple contact centers in different regions can now pull the agent activity data per region and review their agents’ utilization. The data contains information on status change the agent has made during his shift. The brand can then integrate the data with specific regional information from their workforce management system.

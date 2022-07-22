@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-logging.html
 indicator: messaging
 ---
 
-The LivePerson Mobile SDK's Logging system has been redesigned in Android SDK 4.4 / 5.2 to bring enhanced customer control and data safety to what we send to the system logs. This new logger brings with it two features, both now located under the `LivePerson.Logging` static class: Precise Logging Level Control and Log Data Masking
+The LivePerson Mobile SDK's Logging system has been redesigned in Android SDK 4.4 / 5.2 to bring enhanced customer control and data safety to what we send to the system logs. This new logger brings with it two features, both now located under the `LivePerson.Logging` static class: Precise Logging Level Control and Log Data Masking.
 
 ## Precise Logging Level Control
 

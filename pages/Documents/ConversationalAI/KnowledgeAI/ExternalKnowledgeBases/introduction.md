@@ -19,7 +19,7 @@ An external knowledge base is one where the content is authored and managed enti
 
 * Salesforce
 * Zendesk
-* Contentful (Check out their [blog post](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/) on integrating!)
+* Contentful (check out their [blog post on integrating](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/))
 
 Within the KnowledgeAI application, an external knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 

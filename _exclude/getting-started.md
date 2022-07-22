@@ -1,7 +1,7 @@
 THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
 
@@ -54,7 +54,7 @@ The first interaction in the Welcome dialog is a *Dialog Starter* interaction th
 
 Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
-Let’s see the interactions in action!
+Let’s see the interactions in action:
 
 1. Click **Preview** in the upper-right corner.
 

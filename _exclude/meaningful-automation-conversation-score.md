@@ -217,7 +217,7 @@ A MACS score is calculated for each leg of a conversation, so you might see a si
 
 ### Sending feedback
 
-Your feedback about this Beta feature is important to us! You can send it to us in the following ways:
+Your feedback about this beta feature is important to us! You can send it to us in the following ways:
 
 * Email questions or feedback to `macs-feedback-LP@liveperson.com`.
 * Send MACS score-related feedback using the **Feedback** widget.

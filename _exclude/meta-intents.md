@@ -166,11 +166,11 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
 7. Follow this integration with a new **Text** statement interaction. Modify the text content to read the integration response variable, `{SmallTalk.article}`.
 
-    <img style="width:700px" src="img/ConvoBuilder/advtutorial/small_talk_integration_2.png" alt="" >
+    <img style="width:700px" src="img/ConvoBuilder/advtutorial/small_talk_integration_2.png" alt="">
 
 8. Test by opening the previewer, resetting your session, and typing in a variety of your small talk phrases. If successful, you will receive different responses for each intent despite the fact that we have a single meta intent that triggers this dialog.
 
-    <img style="width:350px" src="img/ConvoBuilder/advtutorial/small_talk_preview.png" alt="" >
+    <img style="width:350px" src="img/ConvoBuilder/advtutorial/small_talk_preview.png" alt="">
 
     This is successful because, while the meta intent triggers the process, we are sending the user’s message to our knowledge base. Each of the articles within the knowledge base are triggered by individual standard intents. Adding additional small talk phrases simply requires creating new intents, nesting them under the Small Talk meta intent, and creating a corresponding Small Talk KB article. No additional dialogs will be required.
 
