@@ -52,6 +52,13 @@ In general this identifies issues reaching the messaging conversation
 | Reason      | Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime |
 | Solutions   | None |
 
+#### com.liveperson.bot-connectors-worker.error.connector.messaging.malformed-ums-message
+
+| Description | This error happens when a malformed event message is sent to UMS which caused failure. |
+| Reason      | Some reasons that can cause this behavior are: <br/>- The AC features are not correctly enabled for using Third-Party Bots. Example of such case could be that bot tries to send Encoded Metadata in their messages and the AC feature was not enabled by the account. <br/>- Bot response created a malformed event that was sent to UMS in previous request attempts. |
+| Solutions   | Verify if the AC features and the configuration for the account are valid. |
+
+
 ### connector.chat
 In general this identifies issues reaching the chat conversation
 <br/>
