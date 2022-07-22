@@ -21,7 +21,7 @@ indicator: both
 
 ### invoke
 
-▸ **invoke**(`invocations`, `deadline`, `options?`): `Promise`<[`IOrchestratorResponse`](#interface-iorchestratorrespons)[]\>
+▸ **invoke**(`invocations`, `deadline`, `options?`): `Promise`<[`IOrchestratorResponse`](#interface-iorchestratorresponse)[]\>
 
 **`throws`** if "errorStrategy" option is "ExitOnError" and there is an invocation error, it will cancel other requests
 

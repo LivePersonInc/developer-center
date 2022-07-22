@@ -18,7 +18,7 @@ indicator: messaging
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing
 
 {: .important}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Messaging Agent Metrics API provides information about the current state of messaging agents in the contact center. This API exposes different metrics for an overview of the agents’ behavior and performance including: current status, number of open conversations, agent’s skills, load etc.
 
@@ -36,9 +36,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Please use the Engagement History / Messaging Interactions keys.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key. Please use the Engagement History / Messaging Interactions keys.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

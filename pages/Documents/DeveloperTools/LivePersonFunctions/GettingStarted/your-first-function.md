@@ -39,7 +39,7 @@ Let's start setting up your very first function and deploying it to the LivePers
 10. Go ahead and save the modified code by pressing "Save"-button.
 11. During the save process, you will see a short notification that it succeeded. Further, the message next to the "Save"-button now reads "No changes to Save".
 12. Now, you can leave the editor by pressing the "Close"-button.
-13. Head to the [Deployment section](#Deploy) as you finish creating and adjusting your first function.
+13. Head to the [Deployment section](#deploy) as you finish creating and adjusting your first function.
 
 ### Deploy
 
@@ -49,7 +49,7 @@ Let's start setting up your very first function and deploying it to the LivePers
 3. You are shown a short dialogue that displays the code that gets deployed. For now, click on the "Approve & Deploy"-button.
  <img class="fancyimage" alt="Functions: approve deployment" src="img/functions/functions_approve_deployment.png">
 4. Wait until the function status changes to `Productive`. Please be aware that this can take some time.
-5. Head to the [Test section](#Test), as you finish deploying your first function.
+5. Head to the [Test section](#test), as you finish deploying your first function.
 
 ### Test
 
@@ -63,7 +63,7 @@ Let's start setting up your very first function and deploying it to the LivePers
     * In the logs section, you can see an entry with the message reading `I was called by YOURNAME`.
  <img class="fancyimage" alt="Functions: invocation result" src="img/functions/functions_invocation_result.png">
 5. You may now close the testing page by pressing the "Close"-button.
-6. Head to the [Cleanup section](#Cleanup), as you finished testing your first function.
+6. Head to the [Cleanup section](#cleanup), as you finished testing your first function.
 
 ### Cleanup
 

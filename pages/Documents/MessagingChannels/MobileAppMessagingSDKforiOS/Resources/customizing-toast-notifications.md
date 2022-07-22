@@ -145,7 +145,7 @@ label.frame.origin = CGPoint(x: view.frame.origin.x+10, y: view.frame.origin.y+1
 let notificationText = NSAttributedString(string:message, attributes: [
   // Set Text Color for Label
   NSAttributedStringKey.foregroundColor : UIColor.white,
-  // Set Text Font & Size for Label
+  // Set Text Font and Size for Label
   NSAttributedStringKey.font : UIFont(name: "System Font Regular", size: 15.0)!,
   ]
 )
@@ -183,7 +183,7 @@ NSAttributedStringKey.foregroundColor : UIColor.white,
   - To change the Font or Size of the Text shown on the Toast:
 
 ```swift
-// Set Text Font & Size for Label
+// Set Text Font and Size for Label
 NSAttributedStringKey.font : UIFont(name: "System Font Regular", size: 15.0)!,
 ```
 

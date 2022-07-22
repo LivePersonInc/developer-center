@@ -37,9 +37,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key or via login.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key. Temporarily, please utilize the same key as the Engagement History API.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

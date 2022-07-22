@@ -130,6 +130,7 @@ Hides previous chat history until user identify has been verified
 avaliable on SDK 6.0 and above.
 
 ---  
+
 ### Brand
 
 #### brandName  
@@ -353,7 +354,6 @@ Controls text color for hyperlink item on the system messages bubble
 
 ### Conversations
 
-
 #### deleteClosedConversationOlderThanMonths  
 Upon SDK initialization, all closed conversations with an end date older than X months will be deleted from the database. Setting 0 deletes all closed conversations. 
 
@@ -393,13 +393,13 @@ Conversation separator text and line color.
 Toggle conversation separator view when conversation resolved from agent or consumer.
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 & above
+This Configuration is avaliable on SDK 6.2.0 and above
 
 {:.important}
 Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
 
 {:.notice}
-Setting this property to false will also disable **enableConversationSeparatorTextMessage** & **enableConversationSeparatorLine**
+Setting this property to false will also disable **enableConversationSeparatorTextMessage** and **enableConversationSeparatorLine**
 
 - **Type:** Bool
 - **Default value:** true
@@ -429,7 +429,7 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator L
 Toggle conversation separator line when conversation is auto close
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 & above
+This Configuration is avaliable on SDK 6.2.0 and above
 
 {:.important}
 For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
@@ -634,8 +634,7 @@ The regular expression patterns and behavior are based on Perl's regular express
    - **Default value:** "" (Empty String) - no regex
 
 
---- 
-
+---
 
 ### Date and Time
 
@@ -662,8 +661,7 @@ Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'
    - **Type:** String?
    - **Default value:** nil 
 
---- 
-
+---
 
 ### Date Separator
 
@@ -1044,7 +1042,7 @@ Ability to set the date picker day cell border width
 - **Available since:** 6.5.0
 
 ##### datePickerCellFont
-Ability to set the date picker day cell font & size
+Ability to set the date picker day cell font and size
 
 - **Type:** UIFont
 - **Default Value:** UIFont.systemFont(ofSize: 17)
@@ -1430,6 +1428,29 @@ Bool used to allow manual configuration for enabling the SDK to register to LP P
 
    - **Type:** Bool
    - **Default value:**  true
+
+### Menu Options
+
+{: .notice}
+Disabling all elements will prevent the menu from being render.
+
+#### showResolveConversationMenuOption
+- **Description:** Show or hide **Resolve Conversation** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
+
+#### showMarkAsUrgentMenuOption
+- **Description:** Show or hide **Mark as Urgent** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
+
+#### showClearHistoryMenuOption
+- **Description:** Show or hide **Clear History** button on the Conversation Menu.
+- **Type:** Bool
+- **Default Value:** true
+- **Available since:** 6.8.2
 
 ### Navigation
 
@@ -2069,9 +2090,6 @@ Sets text color for text type element on Structured Content
 - **Type:** color
 - **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
 
-    
---- 
-
 ### Surveys Buttons (CSAT and FCR)
 
 #### csatSubmitButtonCornerRadius   
@@ -2212,8 +2230,7 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
    - **Default value:** 1440 
 
 
---- 
-
+---
 
 ### System Messages
 
@@ -2404,7 +2421,7 @@ Toggle the mode of the scroll to bottom unread message text preview.
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
 
-- Important: As of SDK 5.1 & above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
+- Important: As of SDK 5.1 and above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
 
 - Note: Behavior for SDK version 5.0:
 If  disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed. Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
@@ -2925,7 +2942,6 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
    
 - **Type:** UIImage?    
 - **Default value:** nil
-
 
 ---
 

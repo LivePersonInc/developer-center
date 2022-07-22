@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+.home-container {
+    margin-bottom: 1rem;
+}
+
 .home-container .welcome-card {
     width: 100%;
 }

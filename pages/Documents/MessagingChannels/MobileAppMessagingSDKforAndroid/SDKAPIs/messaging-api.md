@@ -19,6 +19,9 @@ indicator: messaging
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
+{:.important}
+Make sure the conversation history is in-sync with server before call this API.
+
 ```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
 ```
@@ -225,7 +228,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 {:.important}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
-This api will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
+This API will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
 
 ```java
 public static void getUnreadMessagesCount(String appId, final ICallback<Integer, Exception> callback)
@@ -284,12 +287,10 @@ public static void hideConversation(Activity activity)
 | :--- | :--- |
 | activity | The calling activity |
 
-**Notes:**
+**Note:**
 
 - Hiding the conversation closes the WebSocket.
 - When using the SDK’s activity, the back button performs the same function.
-
-
 
 **initActivityConversation method** 
 Opens the conversation view in Activity mode.

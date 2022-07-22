@@ -34,11 +34,12 @@ https://API_REQUEST?v=4.0
  |Header|         Description  |
  |:------ |       :--------  |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
- |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
+ |If-Match|  Contains data revision as known by the client [OR] just keep -1. Allows concurrent modification backend verification. |
 
 **Request Body**
 
 `["987654321", "1232455"]`
+ These are latest userIds. Those can be fetched from DB (latest one) [OR] get from  [{get-all-users request}](/users-api-methods-get-all-users.html)
 
 **Path Parameters**
 

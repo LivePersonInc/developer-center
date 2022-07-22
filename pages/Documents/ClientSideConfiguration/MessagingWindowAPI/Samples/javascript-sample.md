@@ -47,6 +47,6 @@ You can close the conversation, and the consumer in the JavaScript window will b
 
 You can fork the codepen and make changes in the code.
 
-The sample code uses sample library that handles the network layer. The sample library can be found [here](https://codepen.io/liveperson/pen/oYyLJr.babel).
+The sample code uses sample library that handles the network layer. The sample library can be found [here](https://codepen.io/liveperson/pen/oYyLJr).
 
 {% include links.html %}

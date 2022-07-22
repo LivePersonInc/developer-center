@@ -16,7 +16,7 @@ indicator: chat
 ### Introduction
 
 {: .notice}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
 
@@ -51,7 +51,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key that is available in the Conversational Cloud API Keys tab.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).  
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).  
 
 4. This API requires backend enablement, please contact your account manager to do so.
 

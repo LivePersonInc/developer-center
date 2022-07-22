@@ -15,7 +15,7 @@ redirect_from:
 <div class="card-container home-container">
   <div class="flex flex-col gap-32">
     <a href="/platform-overview.html" id="success-stories" class="welcome-card">
-      <div href="/platform-overview.html">
+      <div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 23.1547C12 21.9929 11.5386 20.8787 10.7172 20.0571C9.89584 19.2354 8.78178 18.7737 7.62001 18.7733C7.54934 18.7733 7.48667 18.7907 7.41467 18.7947"
@@ -81,7 +81,7 @@ redirect_from:
           d="M16 21C15.9011 21 15.8044 21.0293 15.7222 21.0843C15.64 21.1392 15.5759 21.2173 15.5381 21.3087C15.5002 21.4 15.4903 21.5006 15.5096 21.5975C15.5289 21.6945 15.5765 21.7836 15.6464 21.8536C15.7164 21.9235 15.8055 21.9711 15.9025 21.9904C15.9994 22.0097 16.1 21.9998 16.1913 21.9619C16.2827 21.9241 16.3608 21.86 16.4157 21.7778C16.4707 21.6956 16.5 21.5989 16.5 21.5C16.5 21.3674 16.4473 21.2402 16.3536 21.1464C16.2598 21.0527 16.1326 21 16 21Z"
           stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">FAQs & Contact Support</h3>
+      <h3 class="welcome-title h3">FAQs and Contact Support</h3>
       <p class="welcome-content">Get answers to common questions or contact support directly</p>
     </a>
     </div>
@@ -151,7 +151,7 @@ redirect_from:
           stroke-linejoin="round" />
         <path d="M6.5 23H14.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
-        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)"stroke-width="2" stroke-linecap="round"
+        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
       <h3 class="welcome-title h3">Stay Informed</h3>
@@ -159,7 +159,7 @@ redirect_from:
     </a>
   </div>
 </div>
-<div class="free-trial-container">
+<!-- <div class="free-trial-container">
   <div id="free-trial">
     <div id="free-trial-content-container">
       <h3 class="free-trial-header h3">Excited? Let’s start your free trial today.</h3>
@@ -174,4 +174,4 @@ redirect_from:
       </a>
     </div>
   </div>
-</div>
+</div> -->

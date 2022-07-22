@@ -13,6 +13,7 @@ This deep dive will look into how functions can be managed and configured via ou
 
 {: .notice}
 When you use the LivePerson Functions platform for the first time please make sure that you are using a Conversational Cloud Admin account to ensure that the [provisioning](liveperson-functions-provisioning.html) of the account succeeds.
+
 ### Creation Process
 
 Head to the function management view using the "Lambda" icon in the side panel on the left-hand side to create new functions. Here you can see all available functions on the account and their current state.
@@ -55,8 +56,8 @@ You may choose to create more than one function of the same event if you set dif
 
 {: .important}
 The above example, "[Default]", refers to not selecting any skill, the default behaviour.
-<br />
-#### Second step: Domain Whitelisting
+
+#### Second step: Adding Domains to the Allowlist
 
 When adding a domain to the allowlist, you should always consider some common pitfalls. First, make sure your target domain is not redirecting: If it is, you also need to allowlist any domain that is part of the redirection chain. An easy way to test if your domain redirecting is the following command:
 
@@ -77,13 +78,13 @@ Next, ensure that you allowlisted the correct domain when working with subdomain
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. Be aware that we only support one wildcard in the domain, so `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_whitelist_step.png">
+<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_allowlist_step.png">
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 
 {: .notice}
 Adding a domain might take up to to 5 minutes until being "active"
-<br />
+
 #### Third step: Function Description
 
 In this final step, you will need to provide a name and a description of your function. Names within an account need to be unique.  Provide a meaningful description of what your function does in the "Description" field. 
@@ -162,7 +163,7 @@ For additional information, the debug output will print out any ``console`` comm
 <img class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_output.png">
 
 Once you close the editor, the debugging session will be closed.
-<br />
+
 #### Editor
 
 Our editor is based on [Monaco](https://microsoft.github.io/monaco-editor/), offering you access to a variety of its features. The context menu is most notable, which will provide you with access to snippets, general code suggestions, and context-aware code suggestions.
@@ -189,9 +190,9 @@ We added our snippets to the context service, accessible by typing in `Snippet` 
 
 <img class="fancyimage" alt="Functions: snippets in action" src="img/functions/functions_editor_snippet.gif">
 
-##### Code documentation & Types
+##### Code Documentation and Types
 
-Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#Dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
+Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
 
 Further, that information is also extended to function, parameters, and objects you specify within your code.
 

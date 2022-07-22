@@ -64,7 +64,7 @@ Use the following code template for your engagement. The capitalized portions sh
     <CALL_TO_ACTION>
   </a>
   <a style="position:absolute; top:0px; left:0px; z-index:9999;" href="#" data-LP-event="close">
-    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png">
+    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
   </a>
 </div>
 ```
@@ -101,7 +101,7 @@ Example:
 ```html
 <div>
 <a href="sms://+12062021280;?&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
-<img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png">
+<img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png" alt="">
 </a>
 </div>
 ```
@@ -190,7 +190,7 @@ The goal is to add an additional view within the Conversational Cloud content en
 
 ```html  
 <div>
-  <a style="position:absolute; top:-10px; left:-10px; z-index:9999;" href="#" data-LP-event="close"><img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png"></a>
+  <a style="position:absolute; top:-10px; left:-10px; z-index:9999;" href="#" data-LP-event="close"><img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt=""></a>
     <div id="contact-main">
       <CALL_TO_ACTION>
     </div>
@@ -231,7 +231,7 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 ```html
 <div id="sms-modal" class="modal-centered">
  <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();" >
-   <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png">
+   <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
  </div>
  <div id="contact-main">
    <CALL_TO_ACTION>

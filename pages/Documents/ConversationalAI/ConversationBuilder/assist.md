@@ -46,18 +46,20 @@ Associating a dialog starter with an [intent](intent-manager-key-terms-concepts.
 
 ### Associate a question with an entity
 
-Once you've associated the dialog (or question interaction) with a domain, you can also use Assist to assign [entities](intent-manager-key-terms-concepts.html#entities) to questions. This automatically creates [slots](conversation-builder-variables-slots.html#slots) to store user responses.
+Once you've associated the dialog (or question interaction) with a domain, you can also use Assist to assign [entities](intent-manager-key-terms-concepts.html#entities) to questions. This automatically creates [slots](conversation-builder-variables-slots-slots.html) to store user responses.
 
-<img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity1.png">
+**To associate a question with an entity**
 
-To do this in Assist, search for the entity by entering a user message. This populates the available entities based on the values you've assigned to the entities in [Intent Manager](intent-manager-overview.html).
+1. Search for the entity by entering a consumer message. This populates the **Available Entities** list based on the values you've assigned to the entities in the domain in [Intent Manager](intent-manager-overview.html).
 
-<img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity2.png">
+    <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity1.png">
 
-(If the question is a multiple choice question, Assist will suggest entities based on the option list in the question.)
+    (If the question is a *multiple choice* question, Assist suggests entities based on the option list in the question.)
 
-Select the entity from the suggested, available entities. This associates the entity with the question. It also automatically creates a slot based on the entity, for storing the user message. The slot allows you to store the specific answer that the user sent, which is one of the values of the entity.
+2. Select the entity from the suggested, available entities. This associates the question with the entity. It also automatically creates a slot based on the entity, for storing the consumer’s response. The slot allows you to store the specific answer that the user sent, which is one of the values of the entity.
 
-<img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity3.png">
+    <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity2.png">
+    <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity3.png">
 
-<img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity4.png">
+{: .important}
+For several examples of how slot filling works, see [here](conversation-builder-variables-slots-slots.html). Also, be aware that you can’t use Assist to assign *global entities* to questions; you can only use Assist to assign *custom entities* to questions. To assign a global entity to a question, manually add the rule that creates the slot.

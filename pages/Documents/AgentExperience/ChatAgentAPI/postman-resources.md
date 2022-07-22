@@ -12,8 +12,8 @@ permalink: chat-agent-api-postman-resources.html
 indicator: chat
 ---
 
-**To download the Chat Agent API Postman collection**, [use the following link](assets/content/Chat Agent API collection.postman_collection.json)
+**Download the [Chat Agent API Postman collection](assets/content/Chat Agent API collection.postman_collection.json).**
 
-**To download the Chat Agent API Postman environment**, [use the following link](assets/content/Alpha.postman_environment.json)
+**Download the [Chat Agent API Postman environment](assets/content/Alpha.postman_environment.json).**
 
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)
+[Unfamiliar with Postman?](https://www.getpostman.com/)

@@ -16,10 +16,11 @@ This article introduces concepts and tools for advanced routing. You will benefi
 
 ### Create complex policies using the Expression Editor
 
-The Expression Editor allows you to configure routing policies that require complex evaluations or time-based and date-based criteria. 
+The Expression Editor allows you to configure routing policies that require complex evaluations or time-based and date-based criteria.
 
 **Examples**
-1. Routing VIP consumers to specific agents or skills within business hours 
+
+1. Routing VIP consumers to specific agents or skills within business hours
 2. Routing conversations from certain channels with critical intents during the busiest months or weeks
 3. Joining multiple complex evaluation criteria to arrive at a logical decision for routing
 
@@ -30,11 +31,11 @@ The Expression Editor is only available to brands that are upgraded to Conversat
 
 **Launch the Expression Editor**: Open Conversion Orchestrator, and select **Manage Policies** under the Dynamic Routing module. To view the policy editor, select an existing policy, or click **Add Policy**. Switch to the **Write an expression** tab to view the expression-based editor.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting1.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting1.png" alt="">
 
 **Write expressions**: You can write expressions using logical operators, any SDEs, context variables or conversation attributes.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting2.png" alt="">
 
 The following operations are possible:
 
@@ -66,7 +67,7 @@ namespace.varP == (namespace.varX || namespace.varY)
 
 **Use custom variables and LivePerson Functions**: Add custom variables and LivePerson Functions to extend your use cases.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting3.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting3.png" alt="">
 
 **Remember the following when writing expressions**
 
@@ -84,12 +85,12 @@ namespace.varP == (namespace.varX || namespace.varY)
 
 Use predefined templates to create date-based or time-based routing policies.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting4.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting4.png" alt="">
 
 Add the required template to the editor.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting5.png">
-          
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting5.png" alt="">
+
 Update the template to create your rule.
 
 ##### Time range-based
@@ -121,6 +122,7 @@ You can create time-based routing policies in the following ways:
 | All weekdays in the 4th quarter | isDateRange('10/01/2021', “12/31/2021', 'America/New_York', ['MON','TUE','WED', 'THU','FRI']) |
 
 ##### Combining date and time
+
 Combine date and time to create policies:
 
 | Example | Policy |
@@ -133,7 +135,7 @@ Combine date and time to create policies:
 | --- | --- |
 | VIP customers during work hours on weekdays in the month of September in New York | orchestrator.phoneNumber in custom.VipList<br>and isDateRange('09/01/21', '09/30/21', ‘America/New_York')<br>and isTimeRange('09:00:00', '18:00:00', '‘America/New_York', ['MON','TUE','WED', 'THU','FRI'] )) |
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting6.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting6.png" alt="">
 
 ##### Use the right formats for days and time zones
 
@@ -143,28 +145,30 @@ Combine date and time to create policies:
 Examples: America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, Asia/Saigon, Australia/Adelaide, Australia/Sydney, Australia/Tasmania, Australia/Victoria etc. For the complete list, see [here](https://timezonedb.com/time-zones).
 
 #### Debugging expressions
+
 Use policy logs to debug your policies. For more details, see [here](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html).
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting7.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting7.png" alt="">
 
-#### Nesting multiple expressions for more complex conditions 
+#### Nesting multiple expressions for more complex conditions
 
 Write nested statements to combine multiple logical conditions to arrive at routing decisions. Enclose every block with brackets “( )”.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting8.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting8.png" alt="">
 
 ### Combine other products to power more complex routing use cases
+
 The section dives deep into two, different advanced routing configurations.
 
 #### Dynamic skill fall over routing
 
-**Scenario:** 
+**Scenario:**
 Routing to a different skill if the primary skill is experiencing a high load. The jump from one skill to another should cascade until a skill has available agent capacity. Example: If 80% of agents in a particular skill are busy then fall over to a different skill.
 
 **Solution:**
 This can be solved using a combination of [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), [Context Service](conversation-orchestrator-conversation-context-service-overview.html), [LivePerson Functions](liveperson-functions-overview.html) and the [Queue Health API](operational-realtime-api-methods-queue-health.html). A LivePerson Function can be configured to run every 2-5 mins and update the “average wait time” for every skill into the Context service. Dynamic routing policies can then be configured to check average wait time for every skill and fall over to a different skill as appropriate.
 
-<img width="800" src="img/convorchestrator/co_dr_advrouting9.png">
+<img width="800" src="img/convorchestrator/co_dr_advrouting9.png" alt="">
 
 {: important}
 The above solution can be deployed relatively quickly. However, it does require a few hours of coding effort for the LivePerson function. This method cannot be used to check queue health in real time for every conversation, but we believe that checking the queue every 2-5 mins will help solve this specific use case. Most conversations live much beyond 2-5 mins and queue stats are unlikely to change significantly during this time frame.
@@ -179,7 +183,8 @@ This can be solved using [SDE](engagement-attributes-types-of-engagement-attribu
 
 While SDEs are captured directly for conversations originating from web-engagements, they have to be manually set when conversations originate on other channels such as whatsapp or mobile apps. For this use case a routing bot will check for the customers’s VIP status through a CRM (or relevant application) and then update the SDE value for VIP customers. LivePersons Queue prioritization updates queue priority in real time whenever the SDE is updated. Next SDE based routing policies can be configured on Dynamic Routing to route VIP customers to the appropriate skill.
 
-<img width="800" src="img/convorchestrator/co_dr_advrouting10.png">
+<img width="800" src="img/convorchestrator/co_dr_advrouting10.png" alt="">
 
 #### Other scenarios
+
 The above are just two out of several possible advanced routing scenarios. Please reach out to your account representative if you need help with these use cases, or you need advice on any other advanced routing use case.

@@ -135,7 +135,7 @@ In response you will get the following message:
 
 ### Step 4 - Upload File to Storage
 
-Use the following request and the parameters obtained in steps 1 & 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
+Use the following request and the parameters obtained in steps 1 and 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
 **Note**: file expiration is set to 1 minute by default.
 
@@ -157,10 +157,9 @@ Upload the file as binary.
 | 401 | Temp URL invalid |
 
 
-**Upload and download file requests are also available as a postman collection**. Use the following [link](assets/content/Swift.postman_collection)_
+**Upload and download file requests are also available [as a Postman collection](assets/content/Swift.postman_collection).**
 
-
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)_
+[Unfamiliar with Postman?](https://www.getpostman.com/)
 
 ### Step 5 - Publish Message
 
