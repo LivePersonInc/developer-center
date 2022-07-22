@@ -487,7 +487,7 @@ switch(type){
   case "WKEND_REG_HOURS":
     msg = "Let me connect you to an Agent who can help you.";
     botContext.setBotVariable('transferMessage',msg,true,false);
-    botContext.setTriggerNextMessage('Liveperson Transfer');
+    botContext.setTriggerNextMessage('LivePerson Transfer');
     break;
 
   case "AFTER_HOURS":

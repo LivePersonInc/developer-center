@@ -30,7 +30,7 @@ No, SDK usage of UIWebview was replaced with WkWebView in Mar 2017
 
 ### I upgraded  from SDK version < 6.0 to SDK 6.0+ and noticed that my API is gone
 
-Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs that were only available to serve as bridge API's between one LP SDK framework and another.  If you were using one of these previously available API's, please communicate with your Liveperson Account team to explore the options of using one of the public API’s or to file an enhancement request.
+Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs that were only available to serve as bridge API's between one LP SDK framework and another.  If you were using one of these previously available API's, please communicate with your LivePerson Account team to explore the options of using one of the public API’s or to file an enhancement request.
 
 ### I have link preview enabled but link previews are not being displayed?
 

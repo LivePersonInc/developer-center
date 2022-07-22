@@ -156,7 +156,7 @@ Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search
        implementation "com.google.firebase:firebase-messaging:18.0.0"
 
        testImplementation "junit:junit:4.12"
-       //Liveperson SDK
+       // LivePerson SDK
        implementation project(path: ":lp_messaging_sdk")
        implementation project(path: ":messaging_ui")
        implementation project(path: ":infra")

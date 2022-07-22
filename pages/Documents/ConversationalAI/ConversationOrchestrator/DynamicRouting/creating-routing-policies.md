@@ -187,7 +187,7 @@ You can add custom attributes from the Conversation Context Service interface in
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_customattr1.png" alt="">
 
-These custom attributes can be static or contain a [Liveperson function](liveperson-functions-overview.html).
+These custom attributes can be static or contain a [LivePerson function](liveperson-functions-overview.html).
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_customattr2.png" alt="">
 
@@ -205,9 +205,9 @@ Here we are checking if the user input is in the list.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_staticattr2.png" alt="">
 
-**Liveperson Functions-based custom attributes**
+**LivePerson Functions-based custom attributes**
 
-[LivePerson Functions](liveperson-functions-overview.html) can be used to evaluate custom logic to retrieve dynamic attributes for routing. Below is an example that shows a routing policy that uses a function custom attribute to compare a customer’s VIP status against the data that is retrieved using a Liveperson function.
+[LivePerson Functions](liveperson-functions-overview.html) can be used to evaluate custom logic to retrieve dynamic attributes for routing. Below is an example that shows a routing policy that uses a function custom attribute to compare a customer’s VIP status against the data that is retrieved using a LivePerson function.
 
 **Step 1**: Define the LivePerson Functions-based custom attribute.
 The custom attribute here retrieves the VIP status from a FAAS function that performs some custom logic.

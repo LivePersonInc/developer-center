@@ -21,7 +21,7 @@ When a bot developer imports a single dialog template, the entire unit of workin
 {: .important}
 Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#dialog-types) can be included within a dialog template. Fallback, Disambiguation and other dialog types are not allowed, so plan your template accordingly.
 
-Your published dialog templates are available for import within the organization (account) in which they are created. You can also import additional dialog templates that have been published by Liveperson.
+Your published dialog templates are available for import within the organization (account) in which they are created. You can also import additional dialog templates that have been published by LivePerson.
 
 #### Advantages of dialog templates
 

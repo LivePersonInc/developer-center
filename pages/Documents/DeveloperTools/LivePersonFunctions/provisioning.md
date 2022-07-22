@@ -145,7 +145,7 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
 <tbody>
   <tr>
     <td>faaSGW</td>
-    <td style="text-align: center; vertical-align: middle;" >Liveperson Functions Gateway</td>
+    <td style="text-align: center; vertical-align: middle;">LivePerson Functions Gateway</td>
     <td style="text-align: center; vertical-align: middle;" >Required for Orchestrator FN client in order to invoke other functions.</td>
   </tr> 
   <tr>

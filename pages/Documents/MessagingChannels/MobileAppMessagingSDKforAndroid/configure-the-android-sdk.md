@@ -476,7 +476,7 @@ Add a class to handle LivePerson basic messaging events via BroadcastReceiver an
 
 3. Create a function named `createLivePersonReceiver` to handle the events.  
 
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
+   **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
    Here is an example of a function which handles some LivePerson events:
 
@@ -529,7 +529,7 @@ Upon errors, we send logs including different severity levels of errors and warn
 public static void setIsDebuggable(boolean isDebuggable)
 ```
 
-**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
+**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
 
 
 

@@ -14,7 +14,7 @@ indicator: both
 
 The LiveEngage platform helps orchestrate the flow of messages back and forth between consumers and Agents. Consumers can be on any end-user channel such as SMS, Web, Facebook Messenger and Apple Business chat, and communicate with both Human and Automated (Bot) agents. A bot is an automated conversational agent that performs a specific goal. LiveEngage has several avenues through which our customers can develop and deploy bots:
 
-* BotCentral Platform (Owned by Liveperson, soon to be deprecated by the Conversation Builder)
+* BotCentral Platform (owned by LivePerson, soon to be deprecated by the Conversation Builder)
 
 * Conversation Builder, a LivePerson product (in Beta), which allows customers to build and deploy bots directly within LiveEngage (Support for this channel is coming soon).
 
@@ -34,7 +34,7 @@ This document covers the following different scenarios with regards to deploying
 
 5. Amazon Lex
 
-6. Liveperson Bots & Automation Platform (AKA BotCentral, owned by Liveperson)
+6. LivePerson Bots & Automation Platform (AKA BotCentral, owned by LivePerson)
 
 7. Any Bot Platform (small, medium platforms)
 
@@ -239,7 +239,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
 ### Small / medium niche Bot Platforms
 
-1. Login to Liveperson Bots & Automation Platform by using
+1. Login to LivePerson Bots & Automation Platform by using
 
     * Use [https://platform.botcentralai.com](https://platform.botcentralai.com) for deploying on AWS.
 
