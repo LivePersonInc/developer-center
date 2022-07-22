@@ -58,6 +58,7 @@ In general this identifies issues reaching the chat conversation
 <br/>
 
 ####  com.liveperson.bot-connectors-worker.error.connector.chat.send-message
+
 | Description | A bot message could not be sent to the conversation. |
 | Reason      | The reason for this is mostly wrongly formatted structured content. Another issue could be missing url whitelisting for images. |
 | Solutions   | Please check [structured content](getting-started-with-rich-messaging-introduction.html) |
@@ -261,6 +262,7 @@ These errors indicate issues specific to a certain AI vendor.
 
 
 #### com.liveperson.bot-connectors-worker.error.aivendor.watson.parser.pause.undefined-time
+
 | Description | The provided pause time is not defined. Therefore we don't know what to do. |
 | Reason      | Undefined pause time property. |
 | Solutions   | Double-check the pause time property is provided |

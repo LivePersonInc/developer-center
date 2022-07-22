@@ -120,11 +120,13 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 
 
 #### watson-assistant-invalid-text-body
+
 | Description |  Unable to parse text message due to invalid body |
 | Reason      |  This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content. |
 | Solutions   |  Please check [Text](third-party-bots-ibm-watson-assistant-basic-content.html#text) |
 
 #### watson-assistant-invalid-delay-body
+
 | Description | Unable to validate watson native delay due to invalid body |
 | Reason      | This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. |
 | Solutions   | Please check [Pause/Delay](third-party-bots-ibm-watson-assistant-basic-content.html#pausedelay) |
@@ -148,11 +150,13 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 | Solutions   | Please check [Sending Native Image Content](third-party-bots-ibm-watson-assistant-basic-content.html#image) |
 
 #### watson-assistant-invalid-options-body
+
 | Description | Unable to validate watson native options list due to invalid body |
 | Reason      | This error happens when the bot's response option response type has an invalid body and the vendor is unable to parse it. It can be a wrong parameter or value. |
 | Solutions   | Please check [Sending Native List Content](third-party-bots-ibm-watson-assistant-basic-content.html#list) and [Watson: Response Type option](https://cloud.ibm.com/docs/assistant?topic=assistant-api-dialog-responses#api-dialog-responses-optionå) |
  
 #### watson-assistant-invalid-body
+
 | Description | Unable to validate body because of invalid content |
 | Reason      | This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. |
 | Solutions   | Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-basic-content.html#sending-native-content) |
@@ -202,6 +206,7 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 
 
 #### microsoft-bot-framework-invalid-body
+
 | Description | Unable to validate body because of invalid content |
 | Reason      | This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content. |
 | Solutions   | Please check  [Basic DirectLine Content](third-party-bots-microsoft-direct-line-basic-content.html) |
