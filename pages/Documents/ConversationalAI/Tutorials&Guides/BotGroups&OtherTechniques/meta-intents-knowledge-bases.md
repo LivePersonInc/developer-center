@@ -27,13 +27,13 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 2. From the domain list on the Intent Manager dashboard (home page), select the "LP_Cross-vertical" domain.
 3. Create a meta intent by selecting **Add Intent** and completing with the following:
 
- * Intent name: FAQ
+ * Intent Name: FAQ
  * Intent Display Name: FAQ
- * Intent type: Meta intent
+ * Intent Type: Meta intent
  * Intents > Select intent to add:
-  * ask about shipping or pick up
-  * reset password
-  * cancel account
+    * ask about shipping or pick up
+    * reset password
+    * cancel account
 
  When finished, click **Save**.
  

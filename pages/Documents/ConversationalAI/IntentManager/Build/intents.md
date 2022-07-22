@@ -30,10 +30,10 @@ You can create a domain using an [import file](intent-manager-build-domains.html
 4. On the **Intents** page, click **Add Intent** in the upper-right corner.
 5. Specify the following:
 
-    * **Intent name**: Enter the intent name. To name an intent, use a short phrase that describes the intent. Typically, an intent name has both a verb and a noun (e.g., "report login problem"). A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
-    * **Intent display name**: Enter the display name.
+    * **Intent Name**: Enter the intent name. To name an intent, use a short phrase that describes the intent. Typically, an intent name has both a verb and a noun (e.g., "report login problem"). A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
+    * **Intent Display Name**: Enter the display name.
     * **Description**: Enter a short phrase describing the intent. While this field is optional, it's often useful. Many intent names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
-    * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-manager-key-terms-concepts.html#meta-intents).
+    * **Intent Type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-manager-key-terms-concepts.html#meta-intents).
     * **Training**: Enter as many training phrases as possible. The NLU engine uses training phrases in order to match a user's utterance with an intent. The more training phrases you include, the more likely it is that the NLU engine will accurately match the user's intent. Generally speaking, the phrases should be complete sentences (not long paragraphs, and not keywords). As an example, assume you have a "Check bill" intent. You might add the following training phrases, among others:
         * I want to check the status of my bill
         * Tell me what my bill is
