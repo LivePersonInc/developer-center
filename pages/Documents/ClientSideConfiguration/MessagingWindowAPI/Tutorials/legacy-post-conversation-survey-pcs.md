@@ -943,7 +943,7 @@ Example:
 }
 ```
 
-As you can see from the above you have full control on the style of the button by editing the relevant keys, e.g bold, size, color etc. For more information about the style rules defined for basic elements, refer to [this document](rich-messaging-styling.html).
+As you can see from the above you have full control on the style of the button by editing the relevant keys, e.g. bold, size, color etc. For more information about the style rules defined for basic elements, refer to [this document](rich-messaging-styling.html).
 
 The design of your post survey, including its quick replies and button styles, is fully adjustable via the Bot Studio. Please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) for more information.
 

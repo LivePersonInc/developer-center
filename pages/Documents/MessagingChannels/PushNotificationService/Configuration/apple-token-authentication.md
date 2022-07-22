@@ -22,7 +22,7 @@ In order to enable Apple Token Authentication, you will require the following da
 
      * Android Registration for Push Method - See SDK’s  [registerLPPusher](android-registerlppusher.html) method.
 
-     * IOS Registration for Push - The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](/mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e `com.mybrand.app-Dev`).
+     * IOS Registration for Push - The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](/mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e. `com.mybrand.app-Dev`).
 
 * **Key File** - p8 file containing Apple Token Key, to obtain your Token Key, see how to [Obtain an Encryption Key and Key ID from Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns).
 

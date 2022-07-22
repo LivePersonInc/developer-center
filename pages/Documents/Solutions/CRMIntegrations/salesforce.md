@@ -128,7 +128,7 @@ These settings allow you to choose which fields of each object will be available
   * Choose a SF Field Name
   * Choose ‘Editability’ mode.
     **Note:** Editability mode may sometimes be enforced according to your SF settings and permissions.
-  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc…) – See Appendix #1 for advanced instructions on how to set this.
+  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) – See Appendix #1 for advanced instructions on how to set this.
   * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble
   * Required - Setting the field as mandatory when creating or editing the record.
   * Default Value - Set up a fixed default text value for a field (will be editable by the agent).
@@ -151,7 +151,7 @@ In this section you can define the search filters for the Widget Search Screen. 
 
 * Click “Add Search Filter” to get started.
 * Fill out the following fields to create your new search filter:
-  * “Field Name” – The field that you want to filter by (for example: Account Type, Case Origin, etc…)
+  * “Field Name” – The field that you want to filter by (for example: Account Type, Case Origin, etc.)
   * Operation – The operator you want to use for filtering (Make sure it fits the field type)
   * “Value” – The values you want to use. **Note:** When filtering by a lookup field (or record type) – you need to put the SF ID of the relevant value. For example, for a record type “012000000000jdT.”
   * Click “Save.”

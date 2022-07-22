@@ -17,14 +17,13 @@ permalink: web-tag-hooks-hooks.html
 indicator: both
 ---
 
-## HOOKS
+## Hooks
 
 The `lpTag` handles the interfere of many events that occur on the vistor's webpage by executing a callback.
 
 These tag hooks provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
 
 Below you can find a list of hooks available on a web page by the Web Tag, each organized under a given `eventName`.
-
 
 ### Definition
 

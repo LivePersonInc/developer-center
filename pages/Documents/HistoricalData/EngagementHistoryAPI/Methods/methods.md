@@ -227,7 +227,7 @@ device | The device the visitor used to chat. | alphanumeric | Valid values: "DE
 ipAddress | The visitor’s IP address. | alphanumeric |
 browser | The browser the visitor used to chat. | alphanumeric |
 operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID"
-browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX
+browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g. CHROME or FIREFOX
 
 
 _CoBrowse sessions info_

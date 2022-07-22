@@ -17,7 +17,7 @@ On your Conversational Cloud account, make sure the following features are enabl
 1. Messaging
 2. Authenticated chat
 
-* For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
+* For sources other than Mobile (e.g. Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
 
 **Contact your LivePerson representative in order to enable the features.**
 

@@ -23,7 +23,7 @@ indicator: chat
 
 **On create campaign flow and after setting up the Engagement you will need to choose or create a window.**
 
-### Step 1 - Create an API based window
+### Step 1 - Create an API-based window
 **In the window gallery page click the top right “Action” dropdown menu and select “Add API-based window”.**
 
 ![Apibasedwindow1](img/apibasedwindow1.png)
@@ -49,6 +49,7 @@ Default value: “window”
 [Read more about Javascript’s context](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call).
 
 ### Step 3 - confirmation
-**Save your settings and choose the API Based Window you have just created.**
+
+**Save your settings and choose the API-based window you have just created.**
 
 ![Apibasedwindow3](img/apibasedwindow3.png)

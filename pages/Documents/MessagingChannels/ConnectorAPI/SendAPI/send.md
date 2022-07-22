@@ -109,7 +109,7 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | ChatStateEvent | string | true |
-| ChatState | Chat Status of the consumer | "COMPOSING" - Consumer is typing | String | true | Possible values: **"ACTIVE"** (user is in the chat), **"INACTIVE"** (e.g Consumer navigated away but application is still open), **"GONE"** (e.g Consumer closed the chat application), **"COMPOSING"** (Consumer is typing), **"PAUSE"** (Consumer has stopped typing) |
+| ChatState | Chat Status of the consumer | "COMPOSING" - Consumer is typing | String | true | Possible values: **"ACTIVE"** (user is in the chat), **"INACTIVE"** (e.g. Consumer navigated away but application is still open), **"GONE"** (e.g. Consumer closed the chat application), **"COMPOSING"** (Consumer is typing), **"PAUSE"** (Consumer has stopped typing) |
 
 **Note**: After sending **"chatState":"COMPOSING"**, In order to send an indication that the consumer has stopped typing, an additional message has to be sent with a different **"chatState"** value than **"COMPOSING"**. Otherwise it will keep indicating on the Agent side that the consumer is typing.  
 

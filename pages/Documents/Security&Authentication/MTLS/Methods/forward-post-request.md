@@ -8,7 +8,7 @@ subfoldername: Methods
 permalink: mtls-methods-forward-post-request.html
 ---
 
-The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `POST` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`). 
+The Forward API methods proxies incoming requests to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `POST` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`). 
 
 
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
@@ -25,7 +25,7 @@ When submitting the forward request, the certificate will be fetched according t
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization, **AppKey only API**, **Required**. |
- |LP-service-name|    Contains the service name which has the certificate in Hashicorp-Vault. **Not Required**, Possible options : TEST_SERVICE/IDP/WEBHOOKS |
+ |LP-service-name|    Contains the service name which has the certificate in HashiCorp Vault. **Not Required**, Possible options : TEST_SERVICE/IDP/WEBHOOKS |
  |LP-forward-url|    Contains the desired endpoint url of the client.  **Required**. |
  |LP-authorization-override|    Contains the authorizaion for the desired endpoint url of the client. **Not Required**. |
 

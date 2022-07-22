@@ -49,4 +49,4 @@ A few things you'll need to get started with this API:
 
 * Tracking agent behavior by monitoring agent status updates.
 
-* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g online hours, quantity of closed conversations.
+* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g. online hours, quantity of closed conversations.

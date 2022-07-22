@@ -394,9 +394,9 @@ _Message Status info_
 Name| Description | Type/Value
 :-------------------- | :---------------------------------------------------------- | :---------
 messageId | ID of message. | string
-time| Time the change in message status occurred.  | string
+time| Time the change in message status occurred. | string
 timeL  | Time the change in message status occurred, in long format. | long
-messageDeliveryStatus | The message's delivery status (i.e - sent. accept, read).| string
+messageDeliveryStatus | The message's delivery status (i.e. sent. accept, read).| string
 dialogId  | The ID of the message dialog. | string
 participantId| The ID of the participant sending the message| string
 participantType | The type of participant | string

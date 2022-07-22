@@ -15,10 +15,10 @@ Listed below are all the Release Notes for previous versions of our Mobile App M
 The Latest SDK version are now using the XCFramework format. For more information on XCFramework, see [Apple documentation](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b).
 
 {: .notice}
-SDK versions are not downgrade compatible
+SDK versions are not downgrade-compatible.
 
 {: .notice}
-SDK releases only supports 3 iOS versions, and each SDK release will state with versions it supports as part of the **Environmental Requirements**
+SDK releases only supports 3 iOS versions, and each SDK release will state with versions it supports as part of the **Environmental Requirements**.
 
 <hr/>
 

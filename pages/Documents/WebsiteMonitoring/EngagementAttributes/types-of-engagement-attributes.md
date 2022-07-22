@@ -187,7 +187,7 @@ This information can be used to segment visitors and tailor an experience based 
 | storeZipCode | A store ZIP code the customer is associated with. The ZIP code is mapped to multiple stores in the same geographic area.  | string   | "12205" | false | no |
 | storeNumber  | A specific store number the customer is associated with | string  | "1241"| false| no |
 
-<span style="color:red;font-weight: bold">Please note - storeZipCode and storeNumber ARE NOT supported in an authenticated flow!</span>
+<span style="color:red;font-weight: bold">storeZipCode and storeNumber _are not_ supported in an authenticated flow!</span>
 
 **Customer info SDE JSON example**:
 
