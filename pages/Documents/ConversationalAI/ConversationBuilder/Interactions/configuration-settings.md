@@ -36,7 +36,7 @@ Basic settings are those that are common to all interactions.
     To override this delay, use the [setMessageDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value) scripting function in the Pre-Process code of the interaction.
 
 * **Enable Interaction**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
-* **Fallback Response**: Applicable to questions only. Enter the text to be sent to the user if none of the defined conditions are met.
+* **Message When Response Unrecognized**: Applicable to questions only. Enter the text to be sent to the user if none of the defined conditions are met.
 
 ### Advanced settings
 
