@@ -236,7 +236,7 @@ There is an additional property for Horizontal type only:
 
 Below you will find basic elements, their styling, and their click operations, that are common within all templates.
 
-When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc.
+When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK and Web, Facebook Messenger, Apple Business Chat, etc.
 
 ### Basic Elements
 

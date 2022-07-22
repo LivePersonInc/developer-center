@@ -160,7 +160,7 @@ See also `disableGreetings`, which is farther below.
 **Chat**: No
 
 #### defaultStepupMessage
-The StepUp message sent to the bot when Stepup Authentication happens.
+The Step Up message sent to the bot when [Step Up authentication](conversation-builder-advanced-use-cases.html#step-up-authentication) happens.
 
 **Default value**: \_STEPUP\_<br>
 **Messaging**: Yes<br>
@@ -367,4 +367,4 @@ If you set this true, the bot agent is notified of conversation updates only in 
 ### What's next?
 Once you’ve deployed your bot, you can use [this page](https://developers.liveperson.com/web-messaging/emulator.html) to test the experience in Web messaging at any time. You can also test using the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html).
 
-However, to test in any other messaging channel (Facebook, WhatsApp, etc.), you’ll need to set up that channel. For information on this, see the **Messaging Channels** section in the Knowledge Center.
+However, to test in any other messaging channel (Facebook, WhatsApp, etc.), you’ll need to set up that channel. For information on this, see the **Messaging Channels** section in the [Knowledge Center](https://knowledge.liveperson.com/).

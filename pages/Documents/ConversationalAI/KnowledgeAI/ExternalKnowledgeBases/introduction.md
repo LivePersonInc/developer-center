@@ -49,13 +49,13 @@ Adding an external knowledge base can take some time, so the KnowledgeAI applica
 
 Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
 
-<img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png" alt="">
 
 Click **Yes** to save the knowledge base.
 
 You can find your incomplete external knowledge bases listed along with your other knowledge bases on the dashboard. They're given an "Incomplete" status to indicate the the configuration is incomplete.
 
-<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png" alt="">
 
 A knowledge base is considered no longer "Incomplete" once all required fields are completed for the first time.
 
@@ -64,4 +64,4 @@ Keep in mind that completing the initial setup of a knowledge base, thereby movi
 
 To delete an incomplete knowledge base, click the knowledge base's 3-dot icon (on the right), and select **Delete**.
 
-<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_3.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_3.png" alt="">

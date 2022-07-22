@@ -15,7 +15,7 @@ indicator:
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
 
 {: .important}
-At this time, Lex response cards & audio messages are not supported.
+At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 ### Configuration
@@ -25,7 +25,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide before us
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/lex/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/lex/vendor.png" alt="">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -78,11 +78,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
 
-<img class="fancyimage" style="width:600px" src="img/lex/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/lex/connection-success.png" alt="">
 
 Figure 1.2 Showing the success case of the valid credentials
 
-<img class="fancyimage" style="width:600px" src="img/lex/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/lex/connection-failed.png" alt="">
 
 Figure 1.3 Showing the fail case of the invalid credentials
 

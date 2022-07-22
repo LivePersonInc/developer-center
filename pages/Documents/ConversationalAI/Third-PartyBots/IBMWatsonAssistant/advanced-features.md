@@ -29,7 +29,7 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 3.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
 
-  <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png">
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png" alt="">
   Figure 3.1 Showing options of JSON editor and context editor
 
 {: .important}
@@ -39,7 +39,7 @@ Be careful with the camel-case characters `encodedMetadata` you must provide it 
 
 Sending encoded metadata with the Native Content (Text, Image and Options) is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
 
-  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_context_editor.png">
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_context_editor.png" alt="">
   Figure 3.2 Showing context editor with the encoded metadata.
 
 <br />
@@ -71,7 +71,7 @@ Example response body for `JSON editor`:
 
 Sending encoded metadata with the Native Content is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
 
-  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_with_structured_content.png">
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_with_structured_content.png" alt="">
   Figure 3.3 Showing context editor with the encoded metadata.
 
 <br />
@@ -173,7 +173,7 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png">
+<img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png" alt="">
 Figure 3.4 Showing JSON editor option access via Watson Assistant.
 
 It is possible to send only a private text message response. The example payload of such response is below (also Figure 3.5 `JSON Editor` view):
@@ -194,7 +194,7 @@ It is possible to send only a private text message response. The example payload
 }
 ```
 
-<img class="fancyimage" style="width:800px" src="img/watsonassistant/private_message_response_custom_payload.png">
+<img class="fancyimage" style="width:800px" src="img/watsonassistant/private_message_response_custom_payload.png" alt="">
 Figure 3.5 Showing single private text message definition inside `JSON Editor`
 
 It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
@@ -260,7 +260,7 @@ In **Figure 3.6** below, the **Watson Assistant** JSON response should be mirror
 
 Figure 3.6 Watson Assistant JSON response for invoking LivePerson Function
 
-To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](https://developers.liveperson.com/liveperson-functions-foundations-external-invocation.html#function-uuid)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 
@@ -270,7 +270,7 @@ The bot does not escalate on a failed invocation by default. To enable this, set
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 3.7.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
 Figure 3.7 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
@@ -299,7 +299,7 @@ An example use case of the Rich Content Event (`RichContentEvent`) response sent
 
 We needs to create a intent that should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 3.8 below
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-intent.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-intent.png" alt="">
 Figure 3.8 Intent creation in Watson Assistant console
 
 #### Accessing the RichContentEvent Data in Dialogs
@@ -309,7 +309,7 @@ the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dia
 for accessing the `RichContentEvent` data. The context information that is sent by Third-Party Bots contains in `$lpEvent`.
 An example of accessing `RichContentEvent` from that context variable can be seen in Figure 3.9.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-access-event.png">
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-access-event.png" alt="">
 Figure 3.9 Displaying how to access the Rich Content/Structured Content using Context Variables
 
 Usually a `RichContentEvent` of type map will have following JSON schema:
@@ -347,7 +347,7 @@ Disambiguation is a feature configurable in the Watson Assistant UI. It triggers
 Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
 Disambiguation responses will be renders as `Quick Replies`.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png" alt="">
 Figure 3.10 Configure Watson Disambiguation
 
 ### Prevent Transferring loop behavior

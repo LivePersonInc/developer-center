@@ -61,7 +61,7 @@ Performs a mTLS get request using the configured client certificate + key
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
 | `body?` | `any` |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 
@@ -82,7 +82,7 @@ returned by the endpoint will be ignored and forcefully overridden with undefine
 | :------ | :------ | :------ |
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 
@@ -103,7 +103,7 @@ returned by the endpoint will be ignored and forcefully overridden with undefine
 | :------ | :------ | :------ |
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 
@@ -124,7 +124,7 @@ Performs a mTLS put request using the configured client certificate + key.
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
 | `body?` | `any` |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 
@@ -145,7 +145,7 @@ Performs a mTLS post request using the configured client certificate + key.
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
 | `body?` | `any` |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 
@@ -166,7 +166,7 @@ Performs a mTLS put request using the configured client certificate + key.
 | `url` | `string` |  |
 | `headers?` | [`Header`](#interface-header) |  |
 | `body?` | `any` |  |
-| `options?` | [`MTLSOptions`](#interface-mtlsoption) | Request specific options |
+| `options?` | [`MTLSOptions`](#interface-mtlsoptions) | Request specific options |
 
 #### Returns
 

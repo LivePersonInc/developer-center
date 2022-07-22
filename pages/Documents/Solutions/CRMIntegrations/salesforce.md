@@ -21,7 +21,7 @@ The Conversational Cloud Salesforce Widget will allow SFDC information to be vie
 
 ### **Step #2: Configuring the Conversational Cloud app in Salesforce**
 
-This step will guide you through the activation & configuration of the app in Salesforce.
+This step will guide you through the activation and configuration of the app in Salesforce.
 
 #### **Navigating to the Conversational Cloud application in Salesforce**
 
@@ -88,7 +88,7 @@ This section sets out the Salesforce objects for which we would like the widget 
 4. The full list of the ‘Selected skills’ will be shown (The skills you selected from the previous screen).
 5. In order to customize the SFDC widget based on Skills, Click “Edit” next to one of the ‘selected skills’:
    1. Select which objects the relevant Skill can work with in the SFDC widget.
-   2. Select the default widget screen: either a Search 	Type or New Record page. The default and recommended option is “**People Search**” – the “People Search” shows the agent all the Accounts, Contacts & Leads that answer the search criteria, structured in a convenient tree format.
+   2. Select the default widget screen: either a Search Type or New Record page. The default and recommended option is “**People Search**” – the “People Search” shows the agent all the Accounts, Contacts and Leads that answer the search criteria, structured in a convenient tree format.
    3. If you select a search option as the default page, you can select the relevant search values that should be retrieved. For example, if the default screen selected is “Search Contact” and the selected Search Value is “Pre-Chat Survey Visitor Email”, then once the widget is loading, it will search for any SFDC Contact record which holds an email address matching to the email address filled by the visitor as part of the pre-chat survey. The available values for search represent the list of available LivePerson SDK search values.
 
 {: .notice}

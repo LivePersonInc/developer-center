@@ -24,7 +24,7 @@ This page will offer you a high-level overview of all limitations in place. It s
 ### Function
 
 * Source Code must not exceed 100.000 characters
-* A single functions instance [handles multiple requests](liveperson-functions-foundations-concepts.html#Concurrency)
+* A single functions instance [handles multiple requests](liveperson-functions-foundations-concepts.html#concurrency)
 * Resources of a function instance are limited to 500m units of CPU and 256 MB of RAM
   * Exceeding the resource limit will result in the immediate stopping of the function, failing any request being processed by it
 * Only the last five deployments will be stored

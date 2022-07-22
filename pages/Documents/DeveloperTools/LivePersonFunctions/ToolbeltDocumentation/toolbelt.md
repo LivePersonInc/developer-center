@@ -24,6 +24,9 @@ indicator: both
 - [SFClient](#sfclient)
 - [SecretClient](#secretclient)
 
+{: .important}
+Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
+
 ## Methods
 
 ### ContextServiceClient
@@ -129,7 +132,7 @@ ___
 
 ### SDEUtil
 
-▸ `Static` **SDEUtil**(): [`ISDEUtil`](liveperson-functions-toolbelt-sde-util.html)
+▸ `Static` **SDEUtil**(): [`ISDEUtil`](liveperson-functions-toolbelt-documentation-sde-util.html)
 
 Returns a SDE Util, which can be used to add SDEs and other SDE
 related operations.

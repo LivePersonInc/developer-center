@@ -21,7 +21,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 2. To onboard on Proactive 2.0 API, perform steps as mentioned below
 - Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
     * Click on Settings tab in menu bar.
-    * Click on Enable button to onboard to proactive api.
+    * Click on Enable button to onboard to the Proactive API.
     * Click on show secrets to get app Id and secrets which will be used later to create APP JWT.
 
 ### Proactive 2.0 API Limits
@@ -35,32 +35,33 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 ### API Specifications
 
-## OAuth 2.0 Authorization 
+## OAuth 2.0 Authorization
+
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive/proactive-show-secrets.png)  
 * The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above APP JWT response should be used in the Request Header for Authorization.
 
 ## API Domain
-* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
+* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the the Domain API to identify the zone of the Proactive API which is to be used for an account.
 
 | Method | URI  |
 | :--- | :--- |
-| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/agentVep/baseURI.json?version=1.0|
+| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/baseURI.json?version=1.0|
 
 ```json
 {
-    "service": "agentVep",
+    "service": "sentinel",
     "account": "ACCOUNT_ID",
-    "baseURI": "va.agentvep.liveperson.net"
+    "baseURI": "va.sentinel.liveperson.net"
 }
 ```
 
 | If Sentinel **baseURI** then | Proactive Region | Proactive **API domain** | API Documentation |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **va**.agentvep.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
-| **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **va**.sentinel.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **lo**.sentinel.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **sy**.sentinel.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
 
 ## Campaign API: Example Request and Response
@@ -495,8 +496,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 ### Proactive 2.0 API: Frequently Asked Questions
 
-<strong>Can we share the bot users for proactive 2.0 api with other systems?</strong>
-The bot users should only be used for proactive 2.0 api. The bot users are needed since we need to send messages on behalf of agent to consumers. The bot users session in proactive 2.0 api can break if these bot users are logged in some where else in some other services.
+<strong>Can we share the bot users for proactive 2.0 API with other systems?</strong>
+The bot users should only be used for proactive 2.0 API. The bot users are needed since we need to send messages on behalf of agent to consumers. The bot users session in proactive 2.0 api can break if these bot users are logged in some where else in some other services.
 
 <strong>What is the rate limit for the API?</strong>
 The current rate limit is 10 TPS/second/brand per api.
@@ -505,14 +506,14 @@ The current rate limit is 10 TPS/second/brand per api.
 It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K - R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
 
 <strong>Which channels are supported as of now?</strong>
-- Proactive messaging supports SMS, WA and INAPP channels only. The channel is decided based on templateId in campaigns api request.
+- Proactive messaging supports SMS, WA and INAPP channels only. The channel is decided based on templateId in campaigns API request.
 - Choose templateId="1234567890" for SMS messages and WA templateId for sending WA messages.
 
 <strong>Does Proactive Messaging provide a way to send SMS messages within a certain time window (TCPA compliance)?</strong>
  Proactive Messaging ensures that recipients only receive messages within the time window brands specifies. This time window is calculated based on the recipient phone number. This helps brands adhere to one of the legal requirements for sending SMS texts i.e. SMS can only be sent between 8 am and 9 pm to avoid spamming consumers after business hours.
 
 <strong>Once a campaign is submitted, how soon will these recipients receive the messages?</strong>
-Messages are sent at a rate upto 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
+Messages are sent at a rate up to 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
 <strong>How will batching capability work?</strong>
 A single campaign can have from 1 recipient and not more than 100 recipients. It is recommended to batch recipients in a campaign.
@@ -556,7 +557,7 @@ Consider an example response of campaigns API:
 | 'IMAGE_URL_NOT_WHITELISTED'                        | At least one of the consumers had a image link that is not from a whitelisted host for for a rich text campaign. |
 
 <strong>What kind of security, encryption, parameter, failures?</strong>
-The API uses App Jwt Oauth 2.0 authentication.
+The API uses App Jwt OAuth 2.0 authentication.
 
 <strong>Does the API have status call backs? How do we get the status of the message?</strong>
 Proactive Messaging does not have call backs to inform the status. Proactive Messaging provides status of messages through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
@@ -573,9 +574,9 @@ Proactive Messaging does not have call backs to inform the status. Proactive Mes
 - Proactive Messaging provides the status of messages delivered to recipients through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
 
 <strong>What is the lifespan of the app JWT? When we do need to get a new JWT, do we have to first make the call to LivePerson Domain API in order to get the sentinel service domain, or is that domain consistent enough that we can hard code that in?</strong>
-- An APP JWT expiration time is 1 hour from the time it is created. To get an app JWT from sentinel API, a call to domain api has to be made to get the sentinel api domain. This domain can be cached for some duration. We expect the domain to change in very rare cases. It’s still recommended that cache duration should not be more than 1 day.
+- An APP JWT expiration time is 1 hour from the time it is created. To get an app JWT from sentinel API, a call to domain API has to be made to get the Sentinel API domain. This domain can be cached for some duration. We expect the domain to change in very rare cases. It’s still recommended that cache duration should not be more than 1 day.
 
-- When using app JWT to call Proactive api, a response below indicates the jwt is expired and new app jwt to be obtained from sentinel api.
+- When using app JWT to call the Proactive API, a response below indicates the jwt is expired and new app jwt to be obtained from sentinel api.
 	```json
 	{
 		"code": 0,
@@ -584,20 +585,20 @@ Proactive Messaging does not have call backs to inform the status. Proactive Mes
 	```
 
 <strong>Do we need any other JWT other than APP JWT e.g. Consumer JWT?</strong>
-Proactive Messaging service does not create or consume consumer JWT or other JWT except APP JWT. Proactive Messaging api only consumes AppJwt created from provided clientId and Secret for authentication.
+Proactive Messaging service does not create or consume consumer JWT or other JWT except APP JWT. Proactive Messaging API only consumes AppJwt created from provided clientId and Secret for authentication.
 
 <strong>What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?</strong>
 App Jwt will be consumed as Bearer Token. No other key, secret or token will be consumed by Proactive Messaging api.
 
-<strong>How does proactive 2.0 api provide status of message e.g. success/failure of delivery ?</strong>
-The Proactive 2.0 campaign api is asynchronous meaning that the success and failure of a message to a recipient is noted only when the recipient is picked from the proactive internal queue and a message is sent as per pre configured message rate. The [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) api will provide the status of recipients tied to the campaign created.
+<strong>How does Proactive 2.0 API provide status of message e.g. success/failure of delivery ?</strong>
+The Proactive 2.0 campaign API is asynchronous meaning that the success and failure of a message to a recipient is noted only when the recipient is picked from the proactive internal queue and a message is sent as per pre configured message rate. The [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) will provide the status of recipients tied to the campaign created.
 
 <strong>Of the error cases described above, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry. Which error cases that we could get back from the /campaigns endpoint are retryable and how should we handle a retry to avoid sending duplicate messages to a customer?</strong>
 Proactive Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
 
 <strong>What’s the lookback period?</strong>
-- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive api. 
-- Example: When a message is sent to consumer using Proactive Messaging api and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
+- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive API. 
+- Example: When a message is sent to consumer using Proactive Messaging API and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?</strong>
 - As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am - 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am - 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
@@ -607,7 +608,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong> How do we know which field is optional or required?<strong>
 - Proactive messaging is using industry recommended swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
-- <img src="images/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
+- <img src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
 
 <strong>What are the restrictions on the field in campaign request?<strong>
 
@@ -646,7 +647,7 @@ Below are the limitations:
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
 https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
 <br />Brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below. 
-<img src="images/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+<img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
 Footer and quick reply buttons have static values and do not need any user input while campaign creation. However, call to action buttons can accept variables for Website URL which can be provided during campaign creation.

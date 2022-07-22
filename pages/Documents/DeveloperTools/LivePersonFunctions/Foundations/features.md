@@ -58,7 +58,7 @@ This chapter will highlight some important details about the Secret Store. If yo
 
 Our Secret Store allows you to store any credentials or secrets securely you may use in your function. The creation of secrets happens exclusively via the UI, not the CLI or from a function. Once you create a  secret, you will no longer be able to see its value in cleartext. Only the key will remain visible.
 
-Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed & modified by multiple functions simultaneously.
+Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed and modified by multiple functions simultaneously.
 
 You can only perform the deletion of a secret via the UI. The secret will become unavailable immediately to any functions using it with the deletion. Therefore, you should ensure it is not used anywhere before deleting the secret.
 
@@ -73,7 +73,7 @@ As explained within our [networking foundation](liveperson-functions-foundations
 
 #### Adding a domain to the allowlist
 
-There are two ways for adding a domain to the allowlist. Either during the creation process, which is shown [here](liveperson-functions-getting-started-development-deep-dive-ui.html#second-step-domain-whitelisting) or by heading to the "Settings"-Page and opening the "Domain Whitelist"-Tab (opened by default).
+There are two ways for adding a domain to the allowlist. Either during the creation process, which is shown [here](liveperson-functions-getting-started-development-deep-dive-ui.html#second-step-adding-domains-to-the-allowlist) or by heading to the "Settings"-Page and opening the "Domain Allowlist"-Tab (opened by default).
 
 When adding a domain to the allowlist, you should always look out for common pitfalls. First, make sure your domain is not redirecting because, in this case, you also need to allowlist any domain that is part of the redirection chain. An excellent way to test if your domain is redirecting, if you are not sure, is to leverage the following command:
 
@@ -94,7 +94,7 @@ Next, ensure that you safe list the correct domain when working with subdomains.
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. But you should be aware that we only support one wildcard in the domain, `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_whitelist_add.png">
+<img class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_allowlist_add.png">
 
 Type the domain in the text field and click the "Add"-button. Once it is saved, it will be reflected in the domain list below.
 
@@ -103,6 +103,6 @@ Be aware that adding a domain can take up to 5 minutes until being "active".
 
 #### Removing a domain from the allowlist
 
-Removing a domain allowlist entry is only possible from the "Domain Whitelist"-Tab located inside the "Settings"-Page. Click on the "Bin" icon next to the entry you want to remove.
+Removing a domain allowlist entry is only possible from the "Domain Allowlist"-Tab located inside the "Settings"-Page. Click on the "Bin" icon next to the entry you want to remove.
 
-<img class="fancyimage" alt="Functions: Remove from whitelist" src="img/functions/functions_whitelist_remove.png">
+<img class="fancyimage" alt="Functions: Remove from allowlist" src="img/functions/functions_allowlist_remove.png">

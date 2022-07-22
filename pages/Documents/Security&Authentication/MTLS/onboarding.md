@@ -74,7 +74,7 @@ Now that we have validated and uploaded our certificate, we must map it to the c
 
 In order to create the mapping object, you will need to use the following method.
 
-**Note that this action is performed against ac-common domain, not the mtls service**
+**Note that this action is performed against ac-common domain, not the MTLS service.**
 
 |Method|      URL|  
 |:--------  |:---  |

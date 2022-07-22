@@ -17,14 +17,14 @@ The two versions of this API support Engagement Attributes in different ways:
 
 v1 - will allow to retrieve authenticated engagement attributes only and their attribute type will be alphanumeric.
 
-v2 - will allow to retrieve both authenticated & unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
+v2 - will allow to retrieve both authenticated and unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
 
 ###  customerInfo
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long – epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long – epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event creation time stamp.                | long – epoch time in milliseconds                | 
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType    | Customer type - will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | v1- alphanumeric, v2- double|

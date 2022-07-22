@@ -28,8 +28,8 @@ Note the following about Preview:
 If you've already opened the Preview window and subsquently made changes to the bot while the Preview window is open (i.e., while the current session is active), you'll need to reset the session so that Preview can reflect those changes.
 
 **To reset the session**
-- Click **Reset Session** in the Preview window. Alternatively, enter "reset" and press Enter.
+- Click **Reset** in the Preview window. Alternatively, enter "reset" and press Enter.
 
 {: .important}
-If you've disabled the **Enable Debug** bot setting, the **Reset Session** button is disabled. For information on enabling and disabling debugging commands, see the discussion on the **Enable Debug** setting [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+If you've disabled the **Enable Debug** bot setting, the **Reset** button is disabled. For information on enabling and disabling debugging commands, see the discussion on the **Enable Debug** setting [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 

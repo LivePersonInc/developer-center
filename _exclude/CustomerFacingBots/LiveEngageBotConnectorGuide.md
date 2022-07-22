@@ -67,7 +67,7 @@ This document covers the following different scenarios with regards to deploying
 
 3.  Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service.
 
-4.  Connect Watson Bot (Username & Password)
+4.  Connect Watson Bot (Username and Password)
 
     * Select Watson as AI provider
 

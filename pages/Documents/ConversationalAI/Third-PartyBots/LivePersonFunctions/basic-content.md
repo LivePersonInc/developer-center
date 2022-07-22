@@ -9,7 +9,7 @@ indicator:
 ---
 
 {: .important}
-As the LivePerson functions feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
+As the LivePerson functions feature uses [LivePerson Functions](liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### The Welcome Event
 

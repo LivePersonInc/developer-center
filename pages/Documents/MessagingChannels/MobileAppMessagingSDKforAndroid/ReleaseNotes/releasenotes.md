@@ -13,6 +13,100 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.11.0
+
+**Release date:** July 15, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.11.0 release provides improved accessibility support, bug fixes and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.11.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.3.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# Enhancements
+
+### Allow Consumers to submit CSAT Survey as soon as returned from background
+
+SDK now allows consumers to submit CSAT Survey responses as soon as they return from the background without waiting for the SDK to finish connecting.
+
+### Dynamically update message timestamps
+
+An enhancement has been made to the conversation message bubble to update the message timestamps dynamically, without consumers having to close and reopen the conversation window.
+
+### Accessibility enhancements
+
+Improvements on the TalkBack accessible experience for vision-impaired users.
+
+# Bugs Fixed
+
+- System message does not get displayed in current device language while using real time masking feature.
+- Message bubble padding over 8 dp causes text containing hyperlinks to be clipped.
+
+
+# Android Messaging SDK - Version 5.10.0
+
+**Release date:** May 20, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.10.0 release includes step-up authentication feature and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.10.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.2”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# New Features
+
+### Step Up Authentication
+
+Step up authentication allows brands to let their consumers continue the ongoing unauthenticated conversations after logging in and merging it to the authenticated conversation history. For more information, follow [feature documentation](mobile-app-messaging-sdk-for-android-advanced-features-step-up-authentication.html).
+
+### Custom proactive welcome message for Non-Rich content
+
+With the support of Non-Rich content payloads, brands will be able to send "text" type proactive content messages to their consumers.
+
+# New Attributes
+
+### [lp_enable_timestamps](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_timestamps)
+
+Show or hide the timestamp text of the conversation message bubbles.
+
+### [lp_enable_read_receipts](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_read_receipts)
+
+Show or hide read receipt text of the consumer message bubbles.
+
+### [lp_timestamps_font_size](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_timestamps_font_size)
+
+Update the timestamp text font size of the conversation message bubbles.
+
+### [lp_urgency_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_urgency_menu_item_visible)
+
+Show or hide the "Mark as urgent" context menu option.
+
+### [lp_resolve_conversation_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_resolve_conversation_menu_item_visible)
+
+Show or hide the "Mark as resolved" context menu option.
+
+# Bugs Fixed
+
+- SDK displays a message body instead of message title from payload as a proactive welcome message.
+- A color [configuration](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#consumer_bubble_message_link_text_color) value for links is being ignored from the conversation message containing a text as well as link together.
+- The background color of buttons in horizontal type structured content will overlap over the structured content borders.
+- When using SDK’s clear history feature, an infinite loading spinner will not get reset from the conversation window after history gets cleared.
+- Accessibility only announces the new message but not the number of new messages received.
+
 # Android Messaging SDK - Version 5.9.0
 
 # Overview
@@ -280,7 +374,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -1053,7 +1147,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -2073,7 +2167,7 @@ SDK logging information is not available while the host application is running i
 
 |     API      | Description |
 | ------------ | ------------ |
-| public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
+| public static void setIsDebuggable(boolean isDebuggable) | Use this API to enable/disable the SDK logs. |
 
 Note: SDK logging is disabled by default. To Enable it, use the above method.
 
@@ -2130,7 +2224,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 * SDK uses an old authentication token, even when the consumer is passed a new auth token.
 
-* User conversation system info (OS Type & Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
+* User conversation system info (OS Type and Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
 
 * Unauthenticated consumers passing campaign info cannot connect successfully.
 
@@ -2286,7 +2380,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 **Version 3.2.2 release: September 9th 2018**
 
-This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support & solution teams. This release version does not include new features or behavior changes.
+This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support and solution teams. This release version does not include new features or behavior changes.
 
 #### Environment Requirements
 The SDK’s minimum API is 19 and the target API is 27.
@@ -2307,7 +2401,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 #### Known Issues
 
-The following issues are still being investigated & have been prioritized for a subsequent release based on their frequency of occurrence and severity:
+The following issues are still being investigated and have been prioritized for a subsequent release based on their frequency of occurrence and severity:
 
 1. Audio/Image message fails to be sent, when it is the first message in the conversation.
 
@@ -2353,7 +2447,7 @@ Brands can communicate with their consumers in an unauthenticated manner while b
 
 Unauthenticated messaging allows brands to:
 
-1. Easier & quicker on-boarding to Conversational Cloud
+1. Easier and quicker on-boarding to Conversational Cloud
 
 2. Having pre authentication messaging use cases, for example, assistance with password recovery
 
@@ -2936,7 +3030,7 @@ The below APIs enable brands to use Campaigns for Messaging inside the brand’s
  <tr>
  <td>Added to Liveperson.initialize() →
 InitLivePersonProperties contains new MonitoringInitParams object</td>
- <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities & campaigns should add the required parameters.
+ <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities and campaigns should add the required parameters.
 The SDK can be initialized once without MonitoringInitParams and then have another initialize call using these params.
 </td>
  </tr>
@@ -3234,7 +3328,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (API 26 and API 27)
 
 ##### Wrapping Text in Edit Text Box
 

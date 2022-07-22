@@ -92,7 +92,7 @@ lpTag.hooks.push({
 
 Use case: SDE submit.
 
-Interference:  change / prevent sending SDE data before it's sent to server (push & send flows)
+Interference:  change / prevent sending SDE data before it's sent to server (push and send flows)
 
 Place: TBD
 

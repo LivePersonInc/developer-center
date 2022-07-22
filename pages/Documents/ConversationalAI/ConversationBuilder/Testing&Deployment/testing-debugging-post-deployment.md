@@ -10,6 +10,7 @@ indicator: both
 ---
 
 ### Introduction
+
 As you design and implement a bot, you can use the [Preview](conversation-builder-testing-deployment-previewing.html) and [Bot Logs](conversation-builder-testing-deployment-debugging.html) tools, respectively, to preview the conversational experience and to debug issues. These tools assist you with early testing and debugging, so you can verify the conversational flow is working as expected as you build the bot. Notably, the tools don’t require that you deploy an agent connector for the bot because the conversation doesn’t go through Conversational Cloud. The conversation only flows between the tool and the underlying bot server.
 
 In contrast, the **Conversation Tester** tool is designed for testing and debugging after deployment. You can use the tool to:
@@ -19,7 +20,7 @@ In contrast, the **Conversation Tester** tool is designed for testing and debugg
 
 The Conversation Tester lets you quickly start a conversation and view both the conversation and the debug log side by side.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_main.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_main.png" alt="">
 
 With the Conversation Tester, the conversation travels from the Conversational Cloud Web channel, to Conversational Cloud, to the agent connector, to the bot server, and back again. In short, there is end-to-end testing of the entire flow over the Web.
 
@@ -37,7 +38,7 @@ To use the Conversation Tester, the entire pipeline for messaging must be in pla
 
 You can access the Conversation Tester in two ways:
 
-* From within a custom bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_3_dot_menu.png"> on the menu bar, and select **Conversation Tester**.
+* From within a custom bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_3_dot_menu.png" alt=""> on the menu bar, and select **Conversation Tester**.
 
     This option is available only when the bot has an agent connector (regardless of its status). When you want to test a specific bot, this method is quicker because it automatically starts a conversation with that bot, routing it to the first, associated skill that is found.
 
@@ -48,11 +49,12 @@ You can access the Conversation Tester in two ways:
     Access via this method does also allow you to select a skill by bot, or by skill directly.
 
 ### Start the conversation
+
 Conversational Cloud routes conversations based on skill, so to start a conversation, you need to specify the skill to which to route it.
 
 If you access the Conversation Tester from within a bot, the tool automatically starts a conversation with that bot, routing it to the first, associated skill that is found.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ct_conv_start.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ct_conv_start.png" alt="">
 
 If you access the Conversation Tester from outside of a bot, you'll need to explicitly select the skill and manually start the conversation.
 
@@ -60,11 +62,11 @@ If you access the Conversation Tester from outside of a bot, you'll need to expl
 
 1. Click **New Conversation** in the upper-right corner.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_selectskill1.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_selectskill1.png" alt="">
 
 2. Select the skill. You do this in one of three ways:
- 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_selectskill2.png">
+
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_selectskill2.png" alt="">
 
     * **Select skill**: Select the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is fastest.
 
@@ -78,55 +80,62 @@ If you access the Conversation Tester from outside of a bot, you'll need to expl
 
 Click the debug icon in the lower-left corner of the messaging panel.
 
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_debug_conv.png">
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_debug_conv.png" alt="">
 
 This starts the debugger:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_debugger_start.png">
- 
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_debugger_start.png" alt="">
+
 ### Use the messaging panel
 
 #### Send messages
+
 Once the conversation is started, you can send messages in the messaging panel to direct the conversational flow. This works much like [Preview](conversation-builder-testing-deployment-previewing.html).
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ct_send_msgs.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ct_send_msgs.png" alt="">
 
 #### Close the conversation
+
 To close the current conversation, click the icon at the bottom of the messaging panel.
 
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_close_conv.png">
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_close_conv.png" alt="">
 
 #### Reset the bot
+
 To reset the bot, click the icon at the bottom of the messaging panel. This deletes the bot session, so you can start the conversation flow anew.
 
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_reset_bot.png">
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_reset_bot.png" alt="">
 
 ### Use the debug panel
 
 #### Log debug messages
+
 Keep the **Auto update** setting on if you want to continuously fetch the latest logs based on the conversation.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ct_debug_auto_update.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ct_debug_auto_update.png" alt="">
 
-If you don't need the log, you can turn **Auto update** off, which keeps the connection clean. In this case, you can manually refresh the log by clicking <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_refresh_debug_log.png">.
+If you don't need the log, you can turn **Auto update** off, which keeps the connection clean. In this case, you can manually refresh the log by clicking <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_refresh_debug_log.png" alt="">.
 
 #### Show and hide debug messages
-The debug log can become verbose and long, so it can be helpful to show and hide specific types of messages. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_filter_debug_msgs.png"> and use the available filters to do this.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_debug_filter.png">
+The debug log can become verbose and long, so it can be helpful to show and hide specific types of messages. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ct_filter_debug_msgs.png" alt=""> and use the available filters to do this.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ct_debug_filter.png" alt="">
 
 #### Search the debug log
+
 To search the debug log for a partial word, word, or phrase, enter it in the search box that’s provided.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ct_debug_log_search.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ct_debug_log_search.png" alt="">
 
 #### Copy the user ID
+
 In scenarios where you’re troubleshooting an issue in collaboration with LivePerson Support, you might be asked to provide the user ID for the conversation. There are two ways you can obtain the ID:
 
 * Click the **Copy user ID** button that’s displayed in the messaging window when you start the debugger.
 * Click the **Copy user ID** icon at the bottom of the debugging panel. This too is displayed once you start the debugger.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_copy_user_id.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ct_copy_user_id.png" alt="">
 
 ### Print the most recent user message
 

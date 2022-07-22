@@ -10,10 +10,6 @@ permalink: conversation-assist-faqs.html
 indicator: messaging
 ---
 
-#### Are third-party bots supported?
-
-Yes, contact your LivePerson account representatives to add support.
-
 #### Can I turn off all recommendations?
 Yes, you can turn off recommendations globally. To do this:
 

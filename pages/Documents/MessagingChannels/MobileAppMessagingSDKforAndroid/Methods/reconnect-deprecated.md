@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-reconnect-(deprecated).h
 indicator: messaging
 ---
 
-*This method was deprecated - please use the [reconnect( LPAuthenticationParams) ](android-reconnectfull.html).*
+*This method was deprecated - please use [reconnect(LPAuthenticationParams)](android-reconnectfull.html).*
 
 Reconnect with a new authentication key. When connecting with an authentication key, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
 
