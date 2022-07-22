@@ -209,9 +209,9 @@ You have two options to run the site locally after the first install:
 
 Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons:
 
-1. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
-2. Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
-3. Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
+1. It reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
+2. It increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
+3. It decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
 
 The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar.
 
