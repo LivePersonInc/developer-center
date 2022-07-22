@@ -147,7 +147,30 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
 
 ## Notes on content and code
 
-The max width for an image in this repo is 800 pixels.
+When contributing to this repository, please observe the following:
+
+### Content and punctuation
+
+* Use American English
+* Prefer active voice
+* Try to use language that’s human and personal
+* Keep it brief
+* Use lists (ordered series in numbered lists, unordered series in bulleted lists)
+* In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
+* Use an Oxford comma (“one, two, and three”)
+* Use typographically correct quotation marks (“”)
+* For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
+* Avoid “here” links
+* Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+
+### Code and media
+
+* Be consistent
+* Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
+* Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
+* The maximum width for images in this repository is 800 pixels
+
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
 
 ## Hiding files
 
