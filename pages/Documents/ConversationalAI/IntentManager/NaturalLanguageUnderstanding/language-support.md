@@ -13,7 +13,6 @@ indicator: both
 ### LivePerson NLU engine
 
 The [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) supports:
-* Dutch
 * English
 * French
 * German
@@ -22,7 +21,6 @@ The [LivePerson NLU engine](intent-manager-natural-language-understanding-livepe
 * Japanese
 * Portuguese
 * Spanish
-* Tagalog
 
 ### LivePerson (Legacy) NLU engine
 
