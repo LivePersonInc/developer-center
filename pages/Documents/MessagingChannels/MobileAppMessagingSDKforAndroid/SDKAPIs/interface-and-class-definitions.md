@@ -163,7 +163,7 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 ```java
 public enum LPConversationsHistoryStateToDisplay {
-  OPEN, CLOSE , ALL
+  OPEN, CLOSE, ALL
 }
 
 ``` 

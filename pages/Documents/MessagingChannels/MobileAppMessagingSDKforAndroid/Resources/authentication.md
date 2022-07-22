@@ -20,7 +20,7 @@ indicator: messaging
 
 #### Authentication methods 
 
-If your system implementation involves an authentication step , you can use one of the following methods in order to get the conversation view:
+If your system implementation involves an authentication step, you can use one of the following methods in order to get the conversation view:
 
 ##### Activity mode
 
@@ -80,7 +80,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 The `LPAuthenticationParams` object contains an authentication type which should be passed in the constructor. An empty constructor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
 
-_Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
+_Note: If you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH._
 
 ```java
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);

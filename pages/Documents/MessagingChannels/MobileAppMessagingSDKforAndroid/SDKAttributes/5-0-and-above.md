@@ -1013,9 +1013,8 @@ If true, force dark mode is applied to webView when system dark mode is enabled.
 * **Type:** bool
 * **Default value:** true
 
-
 #### darkMode_SC_QR_override_colors_from_LE
-If false , colors for structured content elements and Quick replies are override from LE in dark theme.
+If false, colors for structured content elements and quick replies are overridden from LE in dark theme.
 
 * **Type:** bool
 * **Default value:** false

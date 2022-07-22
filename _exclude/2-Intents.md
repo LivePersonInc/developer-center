@@ -94,7 +94,7 @@ With the "Billing question" intent configured, let’s return to Conversation Bu
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png" alt="">
 
-7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents.
+7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png">, select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png" alt="">
 

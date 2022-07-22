@@ -14,7 +14,7 @@ order: 20
 indicator: both
 ---
 
-_Note:_ as a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed.
+_Note: As a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed._
 
 ### Request
 

@@ -19,7 +19,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 #### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
-2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
+2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png">, and then click the **Skills** tab.
 3. In the upper-right corner, click **Action > Add**.
 4. On the Add Skill page, specify the following:
     * **Name**: Enter "Bot."

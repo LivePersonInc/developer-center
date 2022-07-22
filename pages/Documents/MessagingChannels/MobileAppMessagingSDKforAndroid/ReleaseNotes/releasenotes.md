@@ -913,12 +913,12 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 
 #### LivePerson Obsoleted functions
 
-* **initialize(final Context context, final String brandId, final InitLivePersonCallBack initCallBack)** , use *initialize(Context context, final InitLivePersonProperties initProperties)* instead
+* **initialize(final Context context, final String brandId, final InitLivePersonCallBack initCallBack)**, use *initialize(Context context, final InitLivePersonProperties initProperties)* instead
 * **showConversation(Activity activity)** and showConversation(Activity activity, String authenticationKey) use *showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
-* **getConversationFragment(String authKey)** , use *getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
-* **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
-* **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
-* **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+* **getConversationFragment(String authKey)**, use *getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
+* **handlePush(Context context, Bundle data, String brandId, boolean showNotification)**, use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
+* **shutDown()**, use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
+* **setUserProfile(String appId, String firstName, String lastName, String phone)**, use *setUserProfile(ConsumerProfile profile)* instead
 
 # Android Messaging SDK - Version 4.10.0
 
@@ -3166,7 +3166,7 @@ The new APIs allows:
  <td>ConversationViewParams -> mHistoryConversationsStateToDisplay</td>
  <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed).
 (mHistoryConversationsStateToDisplay is of type LPConversationsHistoryStateToDisplay ENUM which has the following values:
-OPEN, CLOSE , ALL)</td>
+OPEN, CLOSE, ALL)</td>
  </tr>
  <tr>
  <td>ConversationViewParams -> mHistoryConversationMaxDaysType</td>
@@ -4053,7 +4053,7 @@ The following devices are now also supported and/or certified to host our Mobile
 
 All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification. In a case the host app decides to show its own custom notification, it can call handlePushMessage() with the showNotification parameter set to false and will parse and return a PushMessage object. In case the push message is not related to the SDK, it will return null.
 
-_Note: For the unread messages feature to work correctly, the host app must call this method upon receiving SDK push messages (whether showing a custom notification or not)_.
+_Note: For the unread messages feature to work correctly, the host app must call this method upon receiving SDK push messages (whether showing a custom notification or not)._
 
 **getNumUnreadMessages**
 

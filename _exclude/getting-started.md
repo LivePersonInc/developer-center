@@ -453,7 +453,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 ##### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account.
-2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt=""> , and then click the **Skills** tab.
+2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt="">, and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png" alt="">
 

@@ -96,7 +96,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     For this User Says interaction to match user input, you need to add some patterns.
 
-4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> , and then click **Settings**.
+4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png">, and then click **Settings**.
 
 5. Scroll down to the Patterns section, and add a few patterns like `goodbye`, `bye`, `see ya`, etc.
 
