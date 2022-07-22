@@ -109,7 +109,7 @@ This API exposes closed chats with all their related data (including transcripts
 
 [Documentation](data-data-access-overview.html)
 
-Expose raw data about the agent activity & visitor journey (including engagements and surveys).
+Expose raw data about the agent activity and visitor journey (including engagements and surveys).
 
 | Freshness | Format | Granularity |
 |-----------|--------|-------------|

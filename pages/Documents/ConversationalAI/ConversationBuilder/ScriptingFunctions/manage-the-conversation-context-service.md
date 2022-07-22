@@ -60,7 +60,7 @@ The `isContextApiEnabled` method checks whether the Context API is enabled.
 
 ```javascript
 var success = botContext.isContextApiEnabled();
-botContext.printDebugMessage("context api enabled: " + success);
+botContext.printDebugMessage("context API enabled: " + success);
 ```
 
 ### Register a namespace

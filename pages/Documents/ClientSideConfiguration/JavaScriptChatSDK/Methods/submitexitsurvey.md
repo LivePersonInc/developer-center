@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-methods-submitexitsurvey.html
 indicator: chat
 ---
 
-Submits the Exit survey results to the server. For more information about the Survey Object see [Surveys](consumer-experience-javascript-chat-surveys.html).
+Submits the exit survey results to the server. For more information about the Survey Object see [Surveys](consumer-experience-javascript-chat-surveys.html).
 
 ### Request
 

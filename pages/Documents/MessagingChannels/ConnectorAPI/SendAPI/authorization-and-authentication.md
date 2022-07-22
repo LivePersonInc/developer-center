@@ -69,7 +69,7 @@ Property `aud` defines the audience for whom the token is intended or the servic
 
 	* idp
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Authentication with ConsumerJWS
 

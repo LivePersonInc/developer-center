@@ -26,6 +26,6 @@ Resolve message use default SHORT date and SHORT time according to the locale (d
 <string name="lp_date_time_format"></string>
 ```
 
-With any **date & time format**.
+With any **date and time format**.
 
 **Example:** "MMM d, yyyy hh:mm a", "EEEE dd/mm/yy HH:mm" etc.*

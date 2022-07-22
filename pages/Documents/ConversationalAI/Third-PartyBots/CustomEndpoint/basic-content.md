@@ -8,7 +8,7 @@ permalink: third-party-bots-custom-endpoint-basic-content.html
 indicator:
 ---
 
-This section will describe The responses that are expected to be sent by the
+This section will describe the responses that are expected to be sent by the
 [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
 endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
 [Conversation Tester feature](third-party-bots-conversation-tester.html).

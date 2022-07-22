@@ -30,11 +30,11 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using an API key methodology.
 
-	* [Follow these instructions](create-oauth-1-0-api-keys.html), to create and use an API key.
+	* [Follow the instructions](create-oauth-1-0-api-keys.html), to create and use an API key.
 	
 	* To access this API, the API key must have the appropriate permission for the method. See the documentation page for the method for more details. 
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
 4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
 

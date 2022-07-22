@@ -30,7 +30,7 @@ The benefit is that users wont be able to access information unless they know th
 </div>
 <div class="container-note">
     <div class="important" style="width:91%">
-        <b> Prerequisites </b>  Before you begin, check out the <a  href="/api-guidelines-accessing-liveperson-apis.html" alt="Start free trial"> Accessing LivePerson APIs </a> article to familiarize yourself with our guidelines.
+        <b> Prerequisites </b>  Before you begin, check out the <a  href="/api-guidelines-accessing-liveperson-apis.html" alt="Start free trial">Accessing LivePerson APIs</a> article to familiarize yourself with our guidelines.
     </div>
 </div>
 

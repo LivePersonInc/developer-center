@@ -429,7 +429,7 @@ function sidebarCollapse(url) {
   //if this is the homepage
   if (currentPageTitle == "Let's build the right Conversational AI solutions together") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
-    $(".innerfolder > .active > button").removeClass("clicked")
+    $(".innerfolder > .active > span.sidebarbutton").removeClass("clicked")
     $(".folder ul").slideUp(400, null)
     $(".folder > a").data("expanded", "false")
     $("a").removeClass("active")
@@ -459,8 +459,8 @@ function sidebarCollapse(url) {
       if ($(".activepage").parent().hasClass("innerpageitem")) {
         $(".activepage").parent().addClass("activeitem")
       }
-      $(".innerfolder > .active > button").addClass("clicked")
-      $(".topfolder > .active > button").addClass("clicked")
+      $(".innerfolder > .active > span.sidebarbutton").addClass("clicked")
+      $(".topfolder > .active > span.sidebarbutton").addClass("clicked")
       if (currentPage.parent().hasClass("pageitem")) {
         $(".innerpageitem").removeClass("activeitem")
         currentPage.parent().addClass("activeleaf")
@@ -505,7 +505,7 @@ function allArticlesClick() {
 function sidebarClick() {
   $(".topfolder").on("click", ".highlightlink", function () {
     //if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
-    $("button").removeClass("clicked")
+    $("span.sidebarbutton").removeClass("clicked")
 
     if (!$(this).hasClass("bottombuttons")) {
       var hasExpanded = $(this).data("expanded") == "true"
@@ -513,21 +513,21 @@ function sidebarClick() {
       if (hasExpanded) {
         $(this).next().slideUp(400)
         $(this).data("expanded", "false")
-        $(".topfolder > .active > button").removeClass("clicked")
+        $(".topfolder > .active > span.sidebarbutton").removeClass("clicked")
 
         $(this).removeClass("active")
         $(this).parent().removeClass("active")
 
         //otherwise, open it
       } else {
-        $(".innerfolder > .active > button").removeClass("clicked")
+        $(".innerfolder > .active > span.sidebarbutton").removeClass("clicked")
         $(".folder ul").slideUp(400, null)
         $(".folder > a").data("expanded", "false")
         $(this).next().slideDown(400)
         $(this).data("expanded", "true")
         $(".folder > a").removeClass("active")
         $(this).addClass("active")
-        $(".topfolder > .active > button").addClass("clicked")
+        $(".topfolder > .active > span.sidebarbutton").addClass("clicked")
       }
       return false
     }
@@ -536,7 +536,7 @@ function sidebarClick() {
   $(".innerfolder").on("click", ".highlightlink", function (event) {
     event.preventDefault()
     var hasExpanded = $(this).data("expanded") == "true"
-    var button = $(this).find("button")
+    var button = $(this).find("span.sidebarbutton")
     if (hasExpanded) {
       $(this).next().slideUp(400)
       $(this).data("expanded", "false")

@@ -48,7 +48,7 @@ For more on permissions, see [here](bot-accounts-permissions.html).
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **Intent Manager**.
 
-### Enable intent discovery, optimization & analysis
+### Enable intent discovery, optimization and analysis
 
 Intent Manager’s Intent Discovery, Optimization, and Analysis features are disabled by default for all Intent Manager customers. To enable these features, contact your LivePerson account team.
 

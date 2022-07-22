@@ -60,7 +60,7 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 **Response Body**
 
-Request by skillIds=all & agent id=2 (there is data only for skill=3)
+Request by skillIds=all and agent id=2 (there is data only for skill=3)
 
 ```json
 {
