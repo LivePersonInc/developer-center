@@ -1144,10 +1144,13 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .sidebarbuttoncontainer {
     display: flex;
     flex-direction: column;
+    margin-top: 28px;
+    padding-left: 0;
 }
 
-.sidebarbuttoncontainer:not(:last-child) {
-    margin-top: 28px;
+#mysidebar ul.sidebarbuttoncontainer a.bottombuttons.spacebetweenHyperlink {
+    padding: 0;
+    margin: 0 !important;
 }
 
 .supportbutton {
