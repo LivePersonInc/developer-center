@@ -254,4 +254,4 @@ If you import the dialog template into a bot, do so **before** you begin buildin
 Contains all global helper functions and variables without the demonstration dialogs. 
 
 **Included dialogs:**
-* 00 - Global Functions README
+* 00 — Global Functions README

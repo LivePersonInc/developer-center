@@ -27,4 +27,3 @@ When the conversation screen is displayed, the server connection for messaging w
 | brandId | An account ID |
 | initCallBack | An InitLivePersonCallBack implementation |
 
-

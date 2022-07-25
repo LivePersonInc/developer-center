@@ -21,7 +21,6 @@ Create new status reason for an account. It is possible to create several items 
 | :-------- | :------ |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons |
 
-
 ### Path Parameters
 
 |Parameter | Description | Notes|
@@ -40,7 +39,7 @@ Create new status reason for an account. It is possible to create several items 
 
 The request body is able to accept a single JSON object as shown below, or a JSON array [] of such objects.
 
-**Note**: the order attribute is not mandatory, however you should note the following:
+**Note:** The order attribute is not mandatory, however you should note the following:
 
 1.  If order is not passed and there are multiple items in the request, order assigned by the server is not guaranteed to be the sorting order in the request body.
 
@@ -87,7 +86,6 @@ The request body is able to accept a single JSON object as shown below, or a JSO
 |Header | Description|
 |--- | ---|
 |ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.|
-
 
 **Response Body**
 

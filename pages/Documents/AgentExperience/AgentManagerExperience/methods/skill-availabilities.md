@@ -34,7 +34,7 @@ _filters info_
 |:---- | :---------- | :---------- | :------- | :---|
 |userTypes | Type of the user conducting the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT. 
     
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -45,7 +45,6 @@ Request body - json example:
     }        
 }
 ```
-
 
 ### Response
 
@@ -69,7 +68,7 @@ _skillAvailabilities info_
 | backSoonAgents| The number of back soon agents.| Long |
 | awayAgents| The number of away agents.| Long |
 
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 {

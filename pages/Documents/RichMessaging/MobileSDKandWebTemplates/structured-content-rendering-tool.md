@@ -79,7 +79,7 @@ JsonPollock.init({
 
 **render**
 
-The *render* function renders json into a DOM element.
+The *render* function renders JSON into a DOM element.
 
 ```javascript
 const content = {

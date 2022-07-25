@@ -24,7 +24,7 @@ indicator: both
    </div>
    <div id="teaser-banner" class="welcome-card-modified">
       <div  style="display: flex;">
-         <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
+         <p class="teaser-header"> Watch a  quick product overview of LivePerson Platform and its tools</p>
          <img class="play-icon"  src="img/play_icon.svg">
       </div>
    </div>
@@ -39,7 +39,7 @@ indicator: both
 </div>
 <div class="container-note">
    <div class="important" style="width:90%">
-      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial">register</a> for a free 45-day trial.
+      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html" alt="Register free trial">register</a> for a free 45-day trial.
    </div>
 </div>
 <div class="concierge-bot-header">
@@ -62,7 +62,7 @@ indicator: both
    </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-   <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html">
+   <a class="welcome-card" href="/starting-with-your-concierge-bot.html">
       <img class="container-image" src="img/ic_robot.svg"/>
       <h5 class="getstarted-title">Conversational AI</h5>
       <p class="getstarted-content ">Starting with your Concierge Bot</p>

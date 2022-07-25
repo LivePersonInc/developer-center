@@ -37,7 +37,7 @@ This call should be made when the application does not posses a valid access tok
 | v | API version number | number| Required | Default Value: 1.0 |
 | response_type | The grant type desired by the client  | String| Required | value must be set to "code" |
 | client_id | Installation id provided after application registration (see the Overview for more info)  | String| Required |  |
-| redirect_uri | The client's redirection endpoint. The redirection's end point is provided by the application during the application registration (see the Overview for more info)| String| Optional |Note that according to OAuth 2.0 rfc, if only one redirection endpoint is provided in the application registration, this parameter is optional. However if multiple redirection endpoints were configured in the registration, then this field is **required**|
+| redirect_uri | The client's redirection endpoint. The redirection's end point is provided by the application during the application registration (see the Overview for more info)| String| Optional |Note that according to the OAuth 2.0 RFC, if only one redirection endpoint is provided in the application registration, this parameter is optional. However if multiple redirection endpoints were configured in the registration, then this field is **required**|
 | state | An arbitrary value used by the client to maintain state between the request and callback. You can use this parameter to help your application identify the authorize request and its state when the user returns to the application | String| Optional |  |
 
 ### Response
@@ -51,12 +51,11 @@ This call should be made when the application does not posses a valid access tok
 | 401 | Unauthorized - Bad Authentication (invalid site or application id). |
 | 500 | Internal server error. |
 
-**Note**:
+**Notes:**
 
 In case the user does not have an active session, they will be redirected to the login page in order to authenticate. After they login successfully, they will then be redirected back to the application's redirect_uri with the code from the LivePerson Identity Service and with the `state` parameter (optional). In case the user is already authenticated, they will be redirected directly back to the application redirect_uri, without passing through the login page.
 
-In case the request encountered an error, if account id, client id and redirection URL are valid, the user will be redirected back to
-the application with error and error description parameters.
+In case the request encountered an error, if account id, client id and redirection URL are valid, the user will be redirected back to the application with error and error description parameters.
 
 An example of a successful redirection to application follows below. Note the `code` parameter appended to the URL:
 

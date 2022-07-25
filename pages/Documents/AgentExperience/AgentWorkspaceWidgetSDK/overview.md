@@ -48,7 +48,7 @@ Follow the steps below to integrate the application you developed using the clie
 
 All public properties and methods can be found in the namespace `lpTag.agentSDK`.
 
-**Note**: The project is called the client-SDK as it is the client-side of our SDK. However, since you use it to communicate with the agent, the code you write acknowledges the fact that you are communicating with the Agent Workspace.
+**Note:** The project is called the client-SDK as it is the client-side of our SDK. However, since you use it to communicate with the agent, the code you write acknowledges the fact that you are communicating with the Agent Workspace.
 
 ### Use Cases
 

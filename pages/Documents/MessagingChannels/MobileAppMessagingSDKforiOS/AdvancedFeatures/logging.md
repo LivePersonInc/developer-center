@@ -43,7 +43,7 @@ You can adjust the logging level with the following method:
  LPMessaging.instance.setLoggingLevel( level: LPLoggingLevel)
 ```
 
-**WARNING:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
+**Warning:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
 
 ## Persistence
 

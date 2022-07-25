@@ -23,7 +23,6 @@ In this step, you'll use some basic name features to create some initial views o
 
 ![initialview](img/initialview.png)
 
-
 ### Step 2 - Add enabled features to your AndroidManifest.xml file
 If you have any of these features enabled, you must add the following to your app's AndroidManifest.xml file:
 
@@ -48,9 +47,8 @@ If you have any of these features enabled, you must add the following to your ap
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 3 - Add Liveperson events
+### Step 3 - Add LivePerson events
 In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
-
 
 1. Create a class named **IntentsHandler**.  
 
@@ -85,7 +83,7 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
 3. Create a function named `createLivePersonReceiver` to handle the events.  
 
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
+   **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
    Here is an example of a function which handles some LivePerson events:
 
@@ -187,7 +185,7 @@ private void initOpenConversationButton() {
 #### initActivityConversation
 You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
-**TIP** If the initialization succeeds, the `openActivity` method is called.
+**Tip:** If the initialization succeeds, the `openActivity` method is called.
 
 ```java
 private void  initActivityConversation() {
@@ -234,7 +232,6 @@ private void openActivity() {
    LivePerson.setUserProfile(consumerProfile);
 }
 ```
-
 
 ### Step 5 - Configure push notifications  
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
@@ -347,7 +344,6 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
      Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
 
-
      ```java
      public class FirebaseRegistrationIntentService extends IntentService {
 
@@ -360,14 +356,13 @@ The proprietary SDK notification is only for display purposes, interacting with 
        @Override
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
-            // Register to Liveperson Pusher
+            // Register to LivePerson Pusher
             String account = "12345678"; //Replace with your account id.
             String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
      ```
-
 
    - **NotificationUI** (or choose your own names for these classes): presents and handles the push to the UI.
 

@@ -16,13 +16,11 @@ This API deletes a certificate by account ID and certificate ID.
 |:--------  |:---  |
 |DELETE|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 
-
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
-
 
 **Path Parameters**
 

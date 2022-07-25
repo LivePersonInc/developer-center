@@ -133,7 +133,7 @@ Having previously done our setup, we're able to quickly interpolate the variable
 As seen from the [documentation](shift-status-api-methods-get-shift-status-by-account.html), the result of this call will be an array of JavaScript objects. Each object will have a skill and a corresponding `onShift` status. To ensure that the skill we are escalating to has an agent to receive the call, we'll want to iterate through our array of objects until we can locate the desired skill and check its `onShift` Boolean value. This work will be done within the **Transform Result Script** section of the integration.
 
 ```javascript
-// Retrieve json data and parse
+// Retrieve JSON data and parse
 var shiftStatusData = botContext.getBotVariable('api_Shift_Status');
 var shiftStatusJsonResponse = JSON.parse(shiftStatusData.jsonData);
 var jsonResponse = shiftStatusJsonResponse.api_Shift_Status;

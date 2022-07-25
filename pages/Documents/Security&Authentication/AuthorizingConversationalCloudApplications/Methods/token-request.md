@@ -71,7 +71,6 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 | refresh_token | token to use when requesting an access token refresh via the [refresh method](le-applications-login-methods-refresh-endpoint.html)  |
 | id_token | a JWT asserting the id of the user   |
 
-
 *Note: The `token_type` is an attribute of the `access_token` and its value is always "Bearer"*
 
 **ID Token structure**
@@ -85,7 +84,6 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 | exp | JWT expiration time. value is seconds since EPOC |
 | is_admin| boolean, true if user has admin role |
 | is_lpa| boolean, true if user is LPA ||
-
 
 Example:
 

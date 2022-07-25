@@ -15,8 +15,8 @@ indicator: messaging
 ### API Endpoints
 The API consists of two types of calls:
 
-* Peripheral APIs - Domains Discovery, Token creation, Agent Profile, etc. In most cases these calls are done using REST.
-* Messaging API - In this API, the WebSocket connection should be established.
+* Peripheral APIs: Domains Discovery, Token creation, Agent Profile, etc. In most cases these calls are done using REST.
+* Messaging API: In this API, the WebSocket connection should be established.
 
 ### Messaging API WebSocket Connection
 
@@ -30,10 +30,10 @@ The server will close any idle connection. In order to keep the connection open,
 * For clients that cannot send Ping messages (such as browsers): Utilize the applicative ``GetClock`` request: ```{"kind":"req","id":"1","type":"GetClock"}```.
 
 ###  Error Handling
-Upon disconnection, the client will receive a standard status code as defined by [rfc6455](https://tools.ietf.org/html/rfc6455#section-7.4). Two custom status codes are used by the API:
+Upon disconnection, the client will receive a standard status code as defined by [RFC 6455](https://tools.ietf.org/html/rfc6455#section-7.4). Two custom status codes are used by the API:
 
-* **4401** - A fresh token is required from the customer. When an authenticated connection is used, this code states that the request does not contain the required autorization token, or contains an expired token. This response asks the client to supply a new token from the customer.
-* **4407** - For unauthenticated identities, this status code states that the client should ask the LivePerson IDP service to extend the validity of the current identity.
+* **4401**: A fresh token is required from the customer. When an authenticated connection is used, this code states that the request does not contain the required autorization token, or contains an expired token. This response asks the client to supply a new token from the customer.
+* **4407**: For unauthenticated identities, this status code states that the client should ask the LivePerson IDP service to extend the validity of the current identity.
 
 For any other status code, the client should wait a short period of time and then try to reconnect.
 
@@ -44,9 +44,9 @@ Every message sent by the client or by the server should be serialized to JSON f
 
 Each API message can be one of the following kinds:
 
-* **Request** - A message sent from the client. The server will reply with a response message.
-* **Response** - A message sent by the server in response to a client request message.
-* **Notification** - A message sent from the server to the client, triggered by a server decision. The trigger can be based on a prior ``Subscription`` request made by the client, or on an implicit subscription made by the server.
+* **Request**: A message sent from the client. The server will reply with a response message.
+* **Response**: A message sent by the server in response to a client request message.
+* **Notification**: A message sent from the server to the client, triggered by a server decision. The trigger can be based on a prior ``Subscription`` request made by the client, or on an implicit subscription made by the server.
 
 The kind of message is denoted by the ``kind`` property in the top level of the JSON object, and can be any of the following: ``req``, ``resp``, ``notification``. Below is an example of a request message:
 

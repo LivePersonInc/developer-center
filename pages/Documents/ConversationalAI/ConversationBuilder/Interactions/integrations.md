@@ -70,9 +70,9 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 
 #### How the Knowledge AI search works
 
-* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
-* **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+* **The search phrase**: The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
+* **The search**: When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
+* **The results**: The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
 
@@ -315,7 +315,7 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 ### Dynamic Routing interactions
 
-Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents -- bot or human -- based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents — bot or human — based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
 
 Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code.
 
@@ -343,7 +343,7 @@ A Dynamic Routing interaction does the following:
     * Route to skill
     * Route to agent
 
-    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
+    **Note:** If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
 
 #### Prerequisites
 
@@ -420,8 +420,8 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 | Setting | Description | Required? | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | <https://www.mysite/images/mylogo.jpg> |
-| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | <https://www.mysite/images/mylogo.jpg> |
+| ADD IMAGE → Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
 | Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |

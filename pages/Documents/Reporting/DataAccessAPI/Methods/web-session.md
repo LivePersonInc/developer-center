@@ -12,7 +12,6 @@ permalink: data-access-api-methods-web-session.html
 indicator: chat
 ---
 
-
 Web session retrieves the list of files in zip format of the visitor’s web session data.
 
 This data contains information about the vistor’s web journey. The web session data is calculated from the time the visitor enters the website till the time he leaves it. The data includes geo (country, city etc.), navigation (referrer URL etc.), eligible campaigns, engagement attributes and more.
@@ -979,7 +978,9 @@ The following table describes the information available in the goal achieved dat
 
 ###  Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud.
+
+**Note:** Some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 
@@ -1051,7 +1052,6 @@ Here is a description of the data structure of the existing engagement attribute
 | registrationDate | User’s registration date (in YMDDate format). | Date |
 | storeNumber | The store's number | String |
 | storeZipCode |The store's zip code | String |
-
 
 #### YMDDate
 

@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
 
 ### Introduction
 
@@ -129,7 +129,7 @@ In this example, you will create and use static attributes. To check if a custom
 
 ##### Create the context attributes
 
-1. Open **Conversation Orchestrator** in the Conversational Cloud applications menu, and navigate to **Conversation Context Service > Custom**.
+1. Open **Conversation Orchestrator** in the Conversational Cloud applications menu, and navigate to **Conversation Context Service → Custom**.
 
     <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_comenuitem.png" alt="">
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ccscustom.png" alt="">
@@ -163,7 +163,7 @@ In this example, you will create and use static attributes. To check if a custom
 
 *“If the customer phone number is in the allow list, send them to vipSkill in Conversational Cloud.”*
 
-1. Navigate to **Dynamic Routing > Intent and Context Policies** using the side navigation panel, and click **Add Policy**.
+1. Navigate to **Dynamic Routing → Intent and Context Policies** using the side navigation panel, and click **Add Policy**.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprule.png" alt="">
 
@@ -607,7 +607,7 @@ botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Sto
 
 Now you can create a routing policy to check if the variable: myNamespace.agentSkillRequired is Complaints, and if so, route to the Human_Complaint Skill. Anything else will go to your fallback/default skill Human.
 
-Navigate to **Conversation Orchestrator > Dynamic Routing > Intent & Context Policies**.
+Navigate to **Conversation Orchestrator → Dynamic Routing → Intent & Context Policies**.
 
 <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_comenu.png" alt="">
 

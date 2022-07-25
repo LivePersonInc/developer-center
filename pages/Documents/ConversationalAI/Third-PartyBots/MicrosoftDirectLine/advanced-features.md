@@ -208,7 +208,7 @@ that `encodedMetadata` is written in camel case. An example of the simple text m
 {
   // ...
   "type": "message",
-  "text": "Hi i am sending a text with encoded metadata!!",
+  "text": "Hi I am sending a text with encoded metadata",
   "channelData": {
     "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
   }
@@ -227,7 +227,7 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 {
   // ...
   "type": "message",
-  "text": "Hi i am sending a structured content with encoded metadata!!",
+  "text": "Hi I am sending a structured content with encoded metadata",
   "channelData": {
     "metadata": [
       {

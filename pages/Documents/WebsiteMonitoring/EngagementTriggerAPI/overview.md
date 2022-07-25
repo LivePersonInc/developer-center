@@ -25,9 +25,7 @@ A few things you'll need to get started with this API:
 
 1. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-2. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
-
+2. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 Use cases:
 

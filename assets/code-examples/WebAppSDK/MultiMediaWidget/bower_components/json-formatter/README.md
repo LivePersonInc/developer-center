@@ -32,7 +32,6 @@ JSON Formatter is an AngularJS directive for rendering JSON objects in HTML with
 ## Demo
 See [Examples here](http://mohsenweb.com/json-formatter/demo/demo.html) 
 
-
 ## Browser Support
 All modern browsers are supported. Lowest supported version of Internet Explorer is **IE9**.
 

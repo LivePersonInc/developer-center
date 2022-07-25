@@ -51,7 +51,7 @@ Below is a visual guide for anyone starting the intent discovery process:
 4. As you are reviewing each subcluster, consider each as inspiration for an intent in your taxonomy. Before you convert a subcluster to an intent, verify two things:
 
     * Does the subcluster represent an intent that is not covered in your taxonomy?
-    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy! Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
+    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy. Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
 
 5. To convert a subcluster to an intent, find the subcluster you want to convert and click the “View Details” button. This will take you to the “Messages” view and show you the consumer messages that composed that cluster.
 

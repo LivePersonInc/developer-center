@@ -74,14 +74,14 @@ Custom event logging for this template has been provided by default.
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
 ```
-botContext.logCustomEvent(‘’, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent('', 'Interaction Name', '');
 ```
 
 For questions that a user must respond to, the code can be found under Process User Response:
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
 {: .important}
@@ -130,7 +130,7 @@ Modify the following values in Global Functions:
 
 This bot template contains multiple [dialog templates](conversation-builder-dialog-templates.html). All dialog templates are designed to work independently of one another and provide specific use case features to your bot.
 
-#### Insurance - Full Package
+#### Insurance — Full Package
 
 All insurance options in one dialog template
 
@@ -147,7 +147,7 @@ Integrations:
 
 * Send_Email
 
-#### Insurance - Auto Package
+#### Insurance — Auto Package
 
 Only the Auto Insurance flow
 
@@ -174,7 +174,7 @@ if (multiIns === 'true') {
 }
 ```
 
-#### Insurance - Home Package
+#### Insurance — Home Package
 
 Only the Home Insurance flow
 
@@ -191,7 +191,7 @@ Global Function modifications:
 
 In Global Functions, `multiIns` is set to 'false' to ensure proper routing in the Pre-Process Code of the `Home_Other` interaction.
 
-#### Insurance - Life Package
+#### Insurance — Life Package
 
 Only the Life Insurance flow
 

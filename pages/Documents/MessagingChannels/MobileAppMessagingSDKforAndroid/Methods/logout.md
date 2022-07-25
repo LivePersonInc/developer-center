@@ -35,10 +35,6 @@ In order to unregister from push, it must be called when there is network availa
 | appId | The host app ID. |
 | logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
-
-
-
-
 ### LogoutLivePersonCallback
 
 ```javascript

@@ -190,7 +190,7 @@ If you are supporting a web client and want to show your options as a button til
 
 #### Agent Escalation Integration
 
-If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a Liveperson Agent.
+If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a LivePerson Agent.
 
 In Global Functions, customize the following values:
 

@@ -11,7 +11,6 @@ order: 40
 indicator: both
 ---
 
-
 ### Description
 
 Update an existing status reason.
@@ -21,7 +20,6 @@ Update an existing status reason.
 | Method | URL |
 | :-------- | :------ |
 | PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
-
 
 ### Path Parameters
 

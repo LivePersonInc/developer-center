@@ -63,7 +63,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -92,7 +91,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
 
-
 ### Request Body
 
 <table>
@@ -100,7 +98,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
     <td>N/A</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -115,7 +112,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
 
-
 ### Response Body
 
 <table>
@@ -129,7 +125,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
 }</td>
   </tr>
 </table>
-
 
 <table>
   <tr>

@@ -38,7 +38,7 @@ Before getting started with the IVR API, set up a LiveEngage campaign with an IV
 
 3. Copy the static link, as shown below, if choosing to skip the availability check.
 
-3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ![IVR Guide](img/ivr.png)
 

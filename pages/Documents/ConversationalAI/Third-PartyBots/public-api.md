@@ -268,7 +268,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am text Message",
+    "Hi I am a text message",
     {
       "delay": 4,
       "typing": true
@@ -281,7 +281,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
           "replies": [
             {
               "type": "button",
-              "tooltip": "yes i do",
+              "tooltip": "yes I do",
               "title": "yes",
               "click": {
                 "actions": [
@@ -374,7 +374,7 @@ curl -X POST \
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am a text message",
+    "Hi I am a text message",
     "I am second message"
   ]
 }'
@@ -775,7 +775,7 @@ there could be three states of a command: `waiting` (command execution pending),
       "type": "messages",
       "payload": [
         {
-          "payload": "Hi i am text Message",
+          "payload": "Hi I am a text message",
           "metadata": [],
           "type": "text"
         }

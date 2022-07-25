@@ -84,13 +84,14 @@ Follow this configuration guide: [Consumer Delegation](consumer-delegation-confi
 **4. Configure Dialog**  
 
 Dialog should include an API integration and consumer verification delegation button.  
+
 **Note:** The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.  
 
 ***4.1 add integration***  
 
 Add the integration that requires the consumer access token and make sure the following are applied:
 
-* "Next action" should be using custom rules - one for failure and the other for success.
+* "Next action" should be using custom rules — one for failure and the other for success.
 In case of API failure, route the dialog to the connsumer delegation link.  
 * The following code should be included as a pre-process code for the Integration API.  
 

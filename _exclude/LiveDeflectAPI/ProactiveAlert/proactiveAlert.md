@@ -24,7 +24,6 @@ Outlined below is a sample API call that is used to execute a *SINGLE STEP* outb
 |Content-Type|application/json|
 |Accept|application/json|
 
-
 ### Request Payload
 
 The following information should be provided to LivePerson.
@@ -60,12 +59,12 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>externalCustomerId</td>
-    <td>Brands Customer ID (String) <b>NOTE</b>: Must be passed with externalCustomerIdDescriptor</td>
+    <td>Brands Customer ID (String) <b>Note:</b> Must be passed with externalCustomerIdDescriptor</td>
     <td>False</td>
   </tr>
   <tr>
     <td>externalCustomerIdDescriptor</td>
-    <td>Description of Brands Customer ID (String) <b>NOTE</b>: Must be passed with externalCustomerId</td>
+    <td>Description of Brands Customer ID (String) <b>Note:</b> Must be passed with externalCustomerId</td>
     <td>False</td>
   </tr>
   <tr>
@@ -116,7 +115,6 @@ The following information should be provided to LivePerson.
 </tbody>
 </table>
 
-
 ### Example Request Payload
 
 ```json
@@ -139,12 +137,11 @@ The following information should be provided to LivePerson.
 }
 ```
 
-
 ### Example Response Success
 
 The following information will be returned upon a successful call to LivePerson.
 
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 
@@ -186,13 +183,11 @@ HTTP Response Code - 200 OK
 }
 ```
 
-
 ### Example Request Failure
 
 The following information will be returned upon a failed call to LivePerson.
 
-
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 {
@@ -205,7 +200,7 @@ HTTP Response Code - 200 OK
 
 The following information will be returned upon a failed call to LivePerson.
 
-HTTP Response Code - 400 Bad Request
+HTTP Response Code — 400 Bad Request
 
 ```json
 {
@@ -218,8 +213,7 @@ HTTP Response Code - 400 Bad Request
 
 The following information will be returned upon a failed call to LivePerson when no API keys are passed:
 
-
-HTTP Response Code - 401 Unauthorized
+HTTP Response Code — 401 Unauthorized
 
 ```json
 {
@@ -231,11 +225,10 @@ HTTP Response Code - 401 Unauthorized
 
 The following information will be returned upon a failed call to LivePerson when a previously used *OAuth1* header keys is passed:
 
-
-HTTP Response Code - 401 Unauthorized
+HTTP Response Code — 401 Unauthorized
 
 ```json
 {
-  "error" : “Invalid Nonce - Nonce has been previously used”
+  "error" : “Invalid Nonce — Nonce has been previously used”
 }
 ```

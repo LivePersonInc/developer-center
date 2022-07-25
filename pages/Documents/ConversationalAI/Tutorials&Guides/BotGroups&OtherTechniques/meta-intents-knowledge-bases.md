@@ -30,7 +30,7 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
  * Intent name: FAQ
  * Intent Display Name: FAQ
  * Intent type: Meta intent
- * Intents > Select intent to add:
+ * Intents → Select intent to add:
   * ask about shipping or pick up
   * reset password
   * cancel account

@@ -48,7 +48,7 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 4. Put `https://auth.businesschat.apple.com` in Allowed Origins and Allowed Web Origins
 
-5. On the same screen, go to the bottom and select advanced settings -> Endpoints
+5. On the same screen, go to the bottom and select advanced settings → Endpoints
 
 6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
 
@@ -165,9 +165,7 @@ Please use the metadata template with the relevant fields, as presented in the e
   </tbody>
 </table>
 
-
 ###### `ConnectorAuthenticationRequest` Object Properties
-
 
 <table>
   <thead>
@@ -193,7 +191,6 @@ Please use the metadata template with the relevant fields, as presented in the e
 </table>
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
-
 
 ###### `receivedMessage` Object Properties  
 
@@ -232,7 +229,6 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tr>
   </tbody>
 </table>
-
 
 ###### `replyMessage` Object Properties  
 

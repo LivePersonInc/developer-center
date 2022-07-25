@@ -23,7 +23,7 @@ The Chat Agent API is a REST style API with relation links, and provides the mai
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 In order to use the Chat Agent API, please follow the steps below:
 
@@ -31,8 +31,6 @@ In order to use the Chat Agent API, please follow the steps below:
 2. **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
 3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html).
 4. **Log out** using the [Login Service API](login-getting-started.html).
-
-
 
 ### Use Cases
 

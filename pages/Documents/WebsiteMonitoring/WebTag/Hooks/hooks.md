@@ -17,14 +17,13 @@ permalink: web-tag-hooks-hooks.html
 indicator: both
 ---
 
-## HOOKS
+## Hooks
 
 The `lpTag` handles the interfere of many events that occur on the vistor's webpage by executing a callback.
 
 These tag hooks provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
 
 Below you can find a list of hooks available on a web page by the Web Tag, each organized under a given `eventName`.
-
 
 ### Definition
 
@@ -35,7 +34,6 @@ Below you can find a list of hooks available on a web page by the Web Tag, each 
 **Execute order**:  The hooks will be executed by the order they were “pushed”. 
 
 If param1 was changed on hook1, hook2 will get param1 after the change.
-
 
 ### Valid hook
 ```javascript
@@ -102,7 +100,6 @@ Parameters: TBD
 
 ## Rendering
 
-
 #### NAME: BEFORE_ENG_DISPLAY
 
 Use case: Change engagement state / click target / display / etc.
@@ -114,7 +111,6 @@ Place: rendererStub.js --> engagement.createInstance
 Timing: Before
 
 Parameters: TBD 
-
 
 #### NAME: BEFORE_ENG_CHANNEL_OPEN
 
@@ -132,7 +128,6 @@ Timing: Before
 Parameters: TBD 
 
 ### Unified Window
-
 
 #### NAME: AFTER_GET_SURVEY
 
@@ -206,8 +201,6 @@ Parameters:
    }
 }
 ```
-
-
 
 #### NAME: BEFORE_SUBMIT_SURVEY
 
@@ -321,7 +314,7 @@ Interference:  Visitor lines text
 
 Place:
 ```
-TrabscriptManager.js -> sendLine
+TrabscriptManager.js → sendLine
 ```
 
 Timing: Before

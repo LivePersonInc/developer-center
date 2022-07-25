@@ -75,7 +75,7 @@ Requires two frameworks: Messages framework, MessagesUI framework.
 import UIKit
 import MessageUI
 
-class ViewController: UIViewController, MFMessageComposeViewControllerDelegate , UINavigationControllerDelegate{
+class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate{
 
    override func viewDidLoad() {
        super.viewDidLoad()

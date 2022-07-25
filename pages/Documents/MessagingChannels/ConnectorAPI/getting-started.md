@@ -20,10 +20,9 @@ permalink: connector-api-getting-started.html
 
 2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+3. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
-[comment]: <> (guides-retry-policy.html needs to be updated with Connector API as well)
-
+[comment]: <> TODO: guides-retry-policy.html needs to be updated with Connector API as well
 
 **In order to use the Connector API, please follow the steps below:**
 
@@ -61,7 +60,7 @@ permalink: connector-api-getting-started.html
 
 4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html) to get started.
 
-	**Note**: The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to Conversational Cloud for authorization of the connector and identification of the consumer.
+	**Note:** The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to Conversational Cloud for authorization of the connector and identification of the consumer.
 
 ### App Install Manifest for Connectors
 
@@ -71,7 +70,7 @@ Below, you will find an example of an Application Install Manifest. This JSON fo
 
 * `description` - this is an optional key. Here you can describe your application.
 
-* **Webhooks URL endpoints** - these will be used as URL endpoints for Conversational Cloud to send its notification events to your connector. **Note**: these endpoints must be exposed as HTTPS.
+* **Webhooks URL endpoints** - these will be used as URL endpoints for Conversational Cloud to send its notification events to your connector. **Note:** These endpoints must be exposed as HTTPS.
 
 * `max_retries` - optional key. Use this field to configure the maximum number of retries which our Webhooks service will attempt in case of a failed request. For more information, please see the [Retry Policy](webhooks-retrypolicy.html) page.
 

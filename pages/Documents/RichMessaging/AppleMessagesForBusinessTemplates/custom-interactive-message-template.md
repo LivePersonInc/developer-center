@@ -93,7 +93,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Received Message Properties
 
 <table>
@@ -149,7 +148,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Example Metadata Template
 
 ```json
@@ -182,11 +180,11 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * General recommendation for the URL field is to use an URI encoded data object which will represent the URL
 
-* Please note! The URL should be lean as possible as described in the example above, and should not replace or attempt to act as the app model.
+* Please note: The URL should be lean as possible as described in the example above, and should not replace or attempt to act as the app model.
 
-* The AppID, Extension Bundle ID and Team ID (which are part of the Bid field) must be part of the SC metadata JSON! Without them your iMessage app will not be delivered to the consumer.
+* The AppID, Extension Bundle ID and Team ID (which are part of the Bid field) must be part of the SC metadata JSON. Without them your iMessage app will not be delivered to the consumer.
 
-* RecivedBubble image URL - If consumer does not have the extension installed on device, or if consumer has the extension installed but does not use LiveLayout (set to false) then the recivedBubble will default to the imageURL set in the recievedBubble object.  If imageURL was not added to the SC schema defined, the layout view will be an empty frame! Always include an imageURL!
+* RecivedBubble image URL - If consumer does not have the extension installed on device, or if consumer has the extension installed but does not use LiveLayout (set to false) then the recivedBubble will default to the imageURL set in the recievedBubble object. If imageURL was not added to the SC schema defined, the layout view will be an empty frame: Always include an imageURL!
 
 * ImageURL MUST be whitelisted - to whitelist images for Structured Content contact your Conversational Cloud account representative
 
@@ -204,7 +202,6 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * Character limit - The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
 
-
 ### Reply CIM from Consumer to Agent
 
 {: .important}
@@ -220,8 +217,8 @@ In order to do this, all code is handled from within your Apple iMessage app / e
     ```json
     {
         "lpData": {
-          "interactive" : {
-            "response" : {
+          "interactive": {
+            "response": {
               "text": "YOUR_CUSTOM_TEXT" 
             }
           }

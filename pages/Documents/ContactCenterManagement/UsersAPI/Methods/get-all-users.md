@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 10
 permalink: users-api-methods-get-all-users.html
 
@@ -17,7 +16,7 @@ indicator: both
 
 This API retrieves a list of users for a specific account.
 
-**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+**Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
 ```
 https://API_REQUEST?v=4.0
@@ -34,7 +33,6 @@ https://API_REQUEST?v=4.0
 | Header | Description | Notes|
 |:-------  |:-------------- | :--- |
 |Authorization | Contains token string to allow request authentication and authorization. |
-
 
 **Request Body**
 
@@ -54,7 +52,6 @@ https://API_REQUEST?v=4.0
  | select          | Response field filter expression  | string  | Optional  | Example values: id, name. Default value: all fields  |
 
 ### Response
-
 
 **Response Codes**
 

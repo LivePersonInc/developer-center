@@ -8,7 +8,7 @@ from requests_oauthlib import OAuth1Session
 # Web call needed to discover baseURI needed to call Users API for individual LiveEngage accounts for Accounts:
 # This URL is for app keys that have Read/Write enabled on the API
 # https://api.liveperson.net/api/account/{YOUR ACCOUNT NUMBER}/service/accountConfigReadWrite/baseURI.json?version=1.0
-# This URL is for app keys that have Read Only enabled on the API 
+# This URL is for app keys that have Read Only enabled on the API
 # https://api.liveperson.net/api/account/{YOUR ACCOUNT NUMBER}/service/accountConfigReadOnly/baseURI.json?version=1.0
 # Expected response example:
 #{
@@ -54,8 +54,3 @@ results = json.loads(response.content.decode())
 # For older versions of python you might need to use this line
 #results = json.loads(response.content.decode('utf-8'))
 print(results)
-
-
-
-
-
