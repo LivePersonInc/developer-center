@@ -635,7 +635,7 @@ Success response:
 
 **Make sure that you implement reconnect logic according to [liveperson's retry policy guidelines](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html)**
 
-Will reconnect the socket with the same configurations - will also regenerate token by default.  Use if socket closes unexpectedly or on token revocation.
+Will reconnect the socket with the same configurations — will also regenerate token by default.  Use if socket closes unexpectedly or on token revocation.
 
 Use `skipTokenGeneration = true` if you want to skip the generation of a new token.
 

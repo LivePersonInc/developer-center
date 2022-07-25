@@ -65,11 +65,11 @@ The designation of a domain as primary affects only intent matching as it relate
 
 Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Some examples of common intents are:
 
-* Check order status - “What is the status of my lawn mower order?”
-* Request product price - “How much does the iPhone 11 cost?”
-* Make a payment - “Can I make a payment today for the total amount?”
-* Request a refund - “Hey are you able to give me a refund for this flight that was cancelled?”
-* Reset password - “I forgot my password and I need to reset it.”
+* Check order status: “What is the status of my lawn mower order?”
+* Request product price: “How much does the iPhone 11 cost?”
+* Make a payment: “Can I make a payment today for the total amount?”
+* Request a refund: “Hey are you able to give me a refund for this flight that was cancelled?”
+* Reset password: “I forgot my password and I need to reset it.”
 
 Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers might discuss are product names, service plan names, bills, service and product orders, locations and dates.
 

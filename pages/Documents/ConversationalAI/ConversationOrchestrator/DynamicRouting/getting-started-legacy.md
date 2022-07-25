@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
 
 ### Introduction
 

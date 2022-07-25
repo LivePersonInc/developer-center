@@ -229,6 +229,6 @@ HTTP Response Code — 401 Unauthorized
 
 ```json
 {
-  "error" : “Invalid Nonce - Nonce has been previously used”
+  "error" : “Invalid Nonce — Nonce has been previously used”
 }
 ```

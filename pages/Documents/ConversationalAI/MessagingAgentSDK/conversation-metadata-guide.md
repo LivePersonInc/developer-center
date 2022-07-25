@@ -247,17 +247,17 @@ Structured content identifier metadata is used to both identify a specific "Card
   <tbody>
   <tr>
     <td>Status</td>
-    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Status of the consumer authentication — can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>
     <td>token</td>
-    <td>Token string - will be available only when authentication was successful </td>
+    <td>Token string — will be available only when authentication was successful </td>
     <td>String</td>
   </tr>
   <tr>
     <td>errors</td>
-    <td>Type of authentication error as received from channel - will be available only when authentication failed </td>
+    <td>Type of authentication error as received from channel — will be available only when authentication failed </td>
     <td>Array</td>
   </tr>
   </tbody>
@@ -312,7 +312,7 @@ The bot consumer input analysis information can be passed as metadata on the bot
 
 The reason for escalation as well as the last identified intent can be sent as metadata on the transfer action (updateConversationField method), currently supported only in messaging; this information can be useful to analyze the bot performance, help Agent Managers to monitor the conversation flow and provide context to human agents once a conversation was handed off.
 
-**publishEvent example:**
+**publishEvent example**
 
 ```javascript
 const metadata = [
@@ -355,7 +355,7 @@ agent.publishEvent({
 });
 ```
 
-**Bot escalation example:**
+**Bot escalation example**
 
 ```javascript
 const metadata = [
@@ -422,7 +422,7 @@ agent.updateConversationField({
 
 Upon sending a payment or authorization request to a consumer, it is necessary to listen for a response to confirm the transactions.
 
-**Listen for incoming Apple Authorization response example:**
+**Listen for incoming Apple Authorization response example**
 
 1. Have your bot listen for the "ms.MessagingEventNotification" messaging event notifications callback
 2. Loop through all the incoming changes and look for the correct metadata type
@@ -467,7 +467,7 @@ this.on('ms.MessagingEventNotification', body => {
 {: .important}
 The following capability requires additional Account feature to be configured. Please contact your account team to enable.
 
-***Facebook - Schema***
+***Facebook — Schema***
 
 ```javascript
 const content = {
@@ -501,7 +501,7 @@ const content = {
 };
 ```
 
-**Facebook Public - Consumer to Agent:**
+**Facebook Public — Consumer to Agent**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -533,7 +533,7 @@ const content = {
 };
 ```
 
-**Facebook Public - Agent to Consumer:**
+**Facebook Public — Agent to Consumer**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -554,7 +554,7 @@ const content = {
 };
 ```
 
-**Facebook DM - Consumer to Agent:**
+**Facebook DM — Consumer to Agent**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -579,7 +579,7 @@ const content = {
 };
 ```
 
-**Facebook DM - Agent to Consumer:**
+**Facebook DM — Agent to Consumer**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -600,7 +600,7 @@ const content = {
 };
 ```
 
-**Facebook Public - Consumer to Agent - Identifying Facebook Dark Posts (Ads):**
+**Facebook Public — Consumer to Agent — Identifying Facebook Dark Posts (Ads)**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -638,7 +638,7 @@ const content = {
 };
 ```
 
-***Twitter - Schema***
+***Twitter — Schema***
 
 ```javascript
 const content = {
@@ -672,7 +672,7 @@ const content = {
 {: .important}
 The attribute conversationState.dmChatId refers to the Twitter account where the conversation was initiated on Twitter Connector.
 
-**Twitter Public - Consumer to Agent:**
+**Twitter Public — Consumer to Agent**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -694,7 +694,7 @@ const content = {
 };
 ```
 
-**Twitter Public - Agent to Consumer:**
+**Twitter Public — Agent to Consumer**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -723,7 +723,7 @@ const content = {
 };
 ```
 
-**Replying from a different Twitter account:**
+**Replying from a different Twitter account**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -760,7 +760,7 @@ const content = {
 The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
 
-**Twitter DM - Consumer to Agent**
+**Twitter DM — Consumer to Agent**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -782,7 +782,7 @@ const content = {
 };
 ```
 
-**Twitter DM - Agent to Consumer**
+**Twitter DM — Agent to Consumer**
 
 | Description | Outcome     |
 | :---        |    :----:   |
@@ -812,7 +812,7 @@ A template `ExternalId` can be sent as metadata on the agent message (publishEve
 
 An `ExternalId` for each element click action can also be defined in order to track the number of times a specific action was clicked / selected.
 
-**Messaging Structured content example:**
+**Messaging Structured content example**
 
 ![Structured Content Card](img/sccard.png)
 
