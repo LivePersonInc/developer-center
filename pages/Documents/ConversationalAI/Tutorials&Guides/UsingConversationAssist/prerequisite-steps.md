@@ -105,7 +105,7 @@ Every bot and human agent requires a user profile to be deployed and accessible 
     * **Name**: Booking Bot
     * **Choose login method**: API key
     * **API key**: Generate API key
-    * **Assignment > Assign Profile**: Agent
+    * **Assignment → Assign Profile**: Agent
 
 	Click **Save**.
 
@@ -118,7 +118,7 @@ Every bot and human agent requires a user profile to be deployed and accessible 
     * **Name**: Seating Bot
     * **Choose login method**: API key
     * **API key**: Generate API key
-    * **Assignment > Assign Profile**: Agent
+    * **Assignment → Assign Profile**: Agent
 
 ### Step 4: Import the Conversation Builder bots
 

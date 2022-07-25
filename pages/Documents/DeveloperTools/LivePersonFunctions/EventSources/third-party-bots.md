@@ -54,6 +54,6 @@ These are the errors returned in a bot connector associated with Functions:
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body|This happens if there is no response body provided.|
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook|Indicates that the Faas hook could not be invoked.|
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-faas-request|This indicates an issue during Faas invocation.|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-bot-action|This indicates an issue during the invocation of an additional Liveperson Function.|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.testConnection|This happens when the Liveperson Function is not responding in time or with a bad status .|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.parse-message.malformed-alternative-intents|This indicates a wrong parsing of alternative intents inside the Liveperson Function .|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-bot-action|This indicates an issue during the invocation of an additional LivePerson Function.|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.testConnection|This happens when the LivePerson Function is not responding in time or with a bad status .|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.parse-message.malformed-alternative-intents|This indicates a wrong parsing of alternative intents inside the LivePerson Function .|

@@ -11,7 +11,7 @@ The main functionality of the Transporter is to create reporting tasks. These ta
 
 ### Available Reports
 
-From the REPORTS section in the Navigation bar, select a report from the available catalogue.  You can choose from:
+From the Reports section in the Navigation bar, select a report from the available catalogue.  You can choose from:
 
 * **Messaging Reports**
 
@@ -109,7 +109,7 @@ To download the report to your browser, simply click the download icon.
 
 <div class="important">If you see a lock next to the download icon, this means you have not entered and verified your Private Key during this browsing session.
 <br>
-Whilst your Private Key is not needed to download the encrypted file, if it is not provided, , the file will not be decrypted after download and you will need to decrypt it yourself.</div>
+Whilst your Private Key is not needed to download the encrypted file, if it is not provided, the file will not be decrypted after download and you will need to decrypt it yourself.</div>
 
 ### Limitations
 

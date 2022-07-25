@@ -35,11 +35,11 @@ A few things you'll need to get started with this API:
 
 	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 	
-	* To access this API, the API key must have the `Data > Workforce Management > Agent Activity API` permission.  
+	* To access this API, the API key must have the `Data → Workforce Management → Agent Activity API` permission.  
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html).
 
 ### Use cases
 
@@ -49,4 +49,4 @@ A few things you'll need to get started with this API:
 
 * Tracking agent behavior by monitoring agent status updates.
 
-* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g online hours, quantity of closed conversations.
+* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g. online hours, quantity of closed conversations.

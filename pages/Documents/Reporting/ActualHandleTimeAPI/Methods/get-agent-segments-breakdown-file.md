@@ -25,7 +25,7 @@ This API is not available by default. To enable it please contact your account m
 | Name   | Description                                                                                                                     | Type   | Required? | Default | Notes                                                                                                                                  |
 |--------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|----------------------------------------------------------------------------------------------------------------------------------------|
 | path   | Relative file path as received from the Breakdown API                                                                           | string | Required  |         | Must match the following regex:  ^/year=\d{4}/month=\d{1,2}/day=\d{1,2}/hour=\d{1,2}/accountId=[a-zA-Z0-9]+/[a-zA-Z0-9_.-]+\.json\.gz$ |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters , Must match the following regex: ^[a-zA-Z0-9_]+$  Example: LP_AgentUI                       |
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters, must match the following regex: ^[a-zA-Z0-9_]+$  Example: LP_AgentUI                        |
 
 ### Response
 

@@ -18,7 +18,7 @@ indicator: both
 
 Automatic messages are messages that are triggered automatically during a conversation to inform visitors of the status of the conversation. The messages appear in the selected visitor language to the consumer in the engagement window and to the Agent in their agent workspace.
 
-The Automatic Messages API enables brands to find and modify Automatic Messages, which in turn support and enhance the conversation between Agent and visitor. The API facilitates the  editing of automatic messages into Conversational Cloud e.g. in the case these messages are translated by an external vendor .
+The Automatic Messages API enables brands to find and modify Automatic Messages, which in turn support and enhance the conversation between Agent and visitor. The API facilitates the  editing of automatic messages into Conversational Cloud e.g. in the case these messages are translated by an external vendor.
 
 The API is based on the REST architecture style.
 
@@ -44,4 +44,4 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).

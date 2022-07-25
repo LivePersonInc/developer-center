@@ -61,10 +61,10 @@ closeReason          | The close reason for the main dialog                     
 
 _Conversation participants_
 
-Name                 | Description                                 | Type/Value | Notes
-:------------------- | :-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
-id                   | ID of the participant (Agent or Consumer).  | string     |
-role                 | The role pf the participant .               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
+Name                 | Description                                | Type/Value | Notes
+:------------------- |:-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
+id                   | ID of the participant (Agent or Consumer). | string     |
+role                 | The role of the participant.               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
 
 
 _Conversation csat_

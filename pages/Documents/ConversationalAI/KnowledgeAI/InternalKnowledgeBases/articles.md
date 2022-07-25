@@ -117,10 +117,10 @@ The following table identifies the JSON node for article information that's ofte
 | Title | title |
 | Summary | summary |
 | Detail | detail |
-| Content Links > Content | contentURL |
-| Content Links > Image | imageURL |
-| Content Links > Video | videoURL |
-| Content Links > Audio | audioURL |
+| Content Links → Content | contentURL |
+| Content Links → Image | imageURL |
+| Content Links → Video | videoURL |
+| Content Links → Audio | audioURL |
 
 ### Using entities within a knowledge base (Legacy)
 

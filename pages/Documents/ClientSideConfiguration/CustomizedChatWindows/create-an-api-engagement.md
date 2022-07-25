@@ -11,13 +11,13 @@ order: 3
 indicator: chat
 ---
 
-### Step 1 - Create a New Engagement
+### Step 1 — Create a New Engagement
 
 **On the Campaign Builder page, click "Add engagement" and select the "API" engagement source.**
 
 ![Customized1](img/customized1.png)
 
-### Step 2 - Set engagement settings
+### Step 2 — Set engagement settings
 
 **On the API Engagement Settings page, configure the engagement’s properties. Set the "Conversation type" to "Live chat". Choose whether you would like the engagement to be authenticated or unauthenticated (if you choose authenticated, the engagement will be displayed only to authenticated visitors).**
 
@@ -28,12 +28,12 @@ indicator: chat
 
 ![Customized2](img/customized2.png)
 
-### Step 3 - Set engagement window
+### Step 3 — Set engagement window
 
 **On the engagement window library page, select the API-based Window you created in the previous section of this document (in the screenshot, this is the "API Window 1"). Click "next".**
 
 ![Customized3](img/customized3.png)
 
-### Step 4 - Confirmation
+### Step 4 — Confirmation
 
 **Click 'Next' and complete the remaining steps to set up your engagement.**

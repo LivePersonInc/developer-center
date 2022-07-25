@@ -38,7 +38,7 @@ Conversation Orchestrator is introducing several new capabilities that enable br
 The Conversation Orchestrator is a self-service, low-code/no-code experience for brands to enable or tune Conversation Orchestrator capabilities and features. With Conversation Orchestrator brands can:
 
 1. Manage and use the **Conversation Orchestrator Conversation Context Service**, a repository for brand, session, or customer attributes, including the ability to connect to external data sources (CRM using a FaaS), and use these attributes throughout the customer’s conversation journey or in routing policies.
-2. Author **Dynamic Routing** policies based on attributes (intent, content, session, or AI based inferences) to route to the right human or bot - unlocking highly personalized consumer journeys.
+2. Author **Dynamic Routing** policies based on attributes (intent, content, session, or AI based inferences) to route to the right human or bot — unlocking highly personalized consumer journeys.
 3. Access developer features such as **Next Actions API** for next action or **Conversation Context Service** to customize and integrate Conversation Orchestrator into their decision processes.  
 
 You can start using Conversation Orchestrator by visiting the following links:

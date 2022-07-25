@@ -139,7 +139,7 @@ In scenarios where you’re troubleshooting an issue in collaboration with LiveP
 
 ### Print the most recent user message
 
-To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages -- for example, the consumer's most recent message -- to the debug log. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
+To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages — for example, the consumer's most recent message — to the debug log. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
 
 ### Events glossary
 

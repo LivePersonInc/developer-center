@@ -97,8 +97,8 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "notActionableAndManualSla": 0,
             "unassignedConversationsAndFirstTimeConsumer": 4,
             "avgWaitTimeForAgentAssignment_NewConversation":272,
-            "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
-            "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 200 ,
+            "avgWaitTimeForAgentAssignment_AfterTransfer": 233,
+            "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 200,
             "maxWaitTimeForAgentAssignment": 370,
             "waitTimeForAgentAssignment_50thPercentile":  170,
             "waitTimeForAgentAssignment_90thPercentile": 224
@@ -184,8 +184,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "notActionableAndManualSla": 0,
                                "unassignedConversationsAndFirstTimeConsumer": 0,
                                "avgWaitTimeForAgentAssignment_NewConversation":123,
-                               "avgWaitTimeForAgentAssignment_AfterTransfer": 344 ,
-                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 115 ,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 344,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 115,
                                "maxWaitTimeForAgentAssignment": 555,
                                "waitTimeForAgentAssignment_50thPercentile":  160,
                                "waitTimeForAgentAssignment_90thPercentile": 220                       
@@ -202,8 +202,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                                "notActionableAndManualSla": 0,
                                "unassignedConversationsAndFirstTimeConsumer": 0,
                                "avgWaitTimeForAgentAssignment_NewConversation":12,
-                               "avgWaitTimeForAgentAssignment_AfterTransfer": 34 ,
-                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 12 ,
+                               "avgWaitTimeForAgentAssignment_AfterTransfer": 34,
+                               "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 12,
                                "maxWaitTimeForAgentAssignment": 55,
                                "waitTimeForAgentAssignment_50thPercentile":  16,
                                "waitTimeForAgentAssignment_90thPercentile": 22                                  
@@ -220,8 +220,8 @@ Request by skillIds=12,13 interval=60, timeframe=180
                            "notActionableAndManualSla": 0,
                            "unassignedConversationsAndFirstTimeConsumer": 0,
                            "avgWaitTimeForAgentAssignment_NewConversation":70,
-                           "avgWaitTimeForAgentAssignment_AfterTransfer": 160 ,
-                           "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 62 ,
+                           "avgWaitTimeForAgentAssignment_AfterTransfer": 160,
+                           "avgWaitTimeForAgentAssignment_AfterTransferFromBot": 62,
                            "maxWaitTimeForAgentAssignment": 555,
                            "waitTimeForAgentAssignment_50thPercentile":  99,
                            "waitTimeForAgentAssignment_90thPercentile": 130                              
@@ -371,5 +371,5 @@ Request by skillIds=12,13 interval=60, timeframe=180
 | maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waited in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
-|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue, transferred to another skill or transferred to specific agent.|long|
 |maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waited in the queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|

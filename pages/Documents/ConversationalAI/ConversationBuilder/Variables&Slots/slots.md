@@ -53,7 +53,7 @@ In the multiple choice question, the Pet Type rule's configuration looks like th
 The result is that:
 
 * If the consumer starts off with, “I want to buy a pet,” the multiple choice interaction is sent to the consumer, and the consumer can choose Dog, Cat, or Bird. This fills the slot.
-* If the consumer starts off with, “I want to buy a dog” (or any other recognized pet entity – it does not have to be dog, cat, or bird), then the multiple choice question is **not** sent to the consumer. But the slot is still filled.
+* If the consumer starts off with, “I want to buy a dog” (or any other recognized pet entity — it does not have to be dog, cat, or bird), then the multiple choice question is **not** sent to the consumer. But the slot is still filled.
 
 Either way, when the consumer reaches the text interaction, the slot will have been filled, and the text interaction sends, "So you're looking for a dog. A fine choice!" Or, "So you're looking for a tortoise. A fine choice!"
 

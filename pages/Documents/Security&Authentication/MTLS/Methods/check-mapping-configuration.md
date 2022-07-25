@@ -97,6 +97,6 @@ CertificateMappingParameters object which contains:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| serviceName | Contains the service name which has a corresponding certificate in Hashicorp-Vault. | string |  | |
-| accountId | Account ID which has a corresponding certificate in Hashicorp-Vault. | string |  | |
-| url | Contains the URL which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| serviceName | Contains the service name which has a corresponding certificate in HashiCorp Vault. | string |  | |
+| accountId | Account ID which has a corresponding certificate in HashiCorp Vault. | string |  | |
+| url | Contains the URL which has a corresponding certificate in HashiCorp Vault. | string |  | |

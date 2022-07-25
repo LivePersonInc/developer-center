@@ -20,15 +20,13 @@ a consumer message is sent and bot response is received on an abstract level can
 Figure 2.1 Depicts how a consumer message is sent to Custom Endpoint and a
 response is sent back.
 
-<ol>
-<li>Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)</li>
-<li>CM that was sent to UMS reaches the Third-Party Bot connector</li>
-<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e `www.mybotapi.com/api` in Figure 2.1) </li>
-<li>Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector
-    which parses and validates it</li>
-<li>Third-Party Bot connector sends the bot response to the UMS</li>
-<li>UMS sends the bot response to the consumer</li>
-</ol>
+1. Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)
+2. CM that was sent to UMS reaches the Third-Party Bot connector
+3. Third-Party Bot connector sends CM to the Custom Endpoint service (i.e. `www.mybotapi.com/api` in Figure 2.1)
+4. Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector
+    which parses and validates it
+5. Third-Party Bot connector sends the bot response to the UMS
+6. UMS sends the bot response to the consumer
 
 ### Service Endpoints
 

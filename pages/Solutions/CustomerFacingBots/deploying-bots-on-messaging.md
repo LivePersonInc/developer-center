@@ -39,7 +39,6 @@ A simple bot within Conversational Cloud is one that handles a simple task and d
 The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message.
 
 [Click here](https://github.com/LivePersonInc/node-agent-sdk#running-the-sample-app) for sample code and instructions.
-​
 
 #### Creating an advanced bot
 
@@ -47,7 +46,7 @@ Utilize the methods provided by LivePerson’s Messaging Agent SDK to automate y
 
 The following example demonstrating running a bot using the major API calls.
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
 
 You can also watch this demo video, which will guide you on how to run this example bot:
 
@@ -58,19 +57,19 @@ You can also watch this demo video, which will guide you on how to run this exam
 For enterprise brands, take additional measure to ensure the scalability of your bot to handle large volumes through setting up bot clusters that enable:
 
 
-* Bot Resiliency - If one node crashes, one ​of the other ​clusters ​will reconnect the bot.
+* Bot Resiliency - If one node crashes, one of the other clusters will reconnect the bot.
 
 * Multiple Bots - The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
 
 
-This example demonstrates running a bot on a ​horizontal scalable cluster. It can be used for a few use cases:
+This example demonstrates running a bot on a horizontal scalable cluster. It can be used for a few use cases:
 
-[C​lick here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.
-​
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.
+
 You can also watch the demo video which will guide you through this example bot:
 [https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
 
-​As well as a code review video:
+As well as a code review video:
 [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)
 
 ### Step 4 - Assign your bot to engagements and manage bot escalations

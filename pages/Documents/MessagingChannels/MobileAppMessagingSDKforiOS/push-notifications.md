@@ -80,7 +80,7 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
 
 1. In the Applications folder, launch **Keychain Access**.
 
-2. From the Keychain Access menu, select **Certificate Assistant > Request a Certificate from a Certificate Authority**. 
+2. From the Keychain Access menu, select **Certificate Assistant → Request a Certificate from a Certificate Authority**. 
 
 3. Enter the required information:
 

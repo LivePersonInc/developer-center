@@ -75,7 +75,7 @@ For questions that a user must respond to, the code can be found under Process U
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
 {: .important}

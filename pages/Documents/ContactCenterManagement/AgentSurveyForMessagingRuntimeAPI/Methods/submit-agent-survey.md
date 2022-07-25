@@ -118,7 +118,7 @@ Submit is allowed if the agent survey was not dismissed before.
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Response example**
 

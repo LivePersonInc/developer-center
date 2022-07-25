@@ -16,7 +16,7 @@ The table below outlines all of the data metrics available when using our Data A
   <thead>
     <th>Metric</th>
     <th class="description">Description</th>
-    <th>API - Method</th>
+    <th>API — Method</th>
     <th>Channel</th>
     <th class="analysis">Analysis Type</th>
     <th class="filtered">Filtered By</th>

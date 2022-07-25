@@ -15,7 +15,7 @@ indicator: both
 
 There are four, general categories of interactions:
 
-- **Dialog Starter**: Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction (fallback dialogs work differently). The user starts things off by supplying some user input - a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a dialog starter in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. For more on dialog starters, see [here](conversation-builder-interactions-dialog-starter.html).
+- **Dialog Starter**: Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction (fallback dialogs work differently). The user starts things off by supplying some user input — a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a dialog starter in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. For more on dialog starters, see [here](conversation-builder-interactions-dialog-starter.html).
 
 - **Statements**: Statements simply display information and then execute the next action. They don’t expect or wait for a user response. For more on statements, see [here](conversation-builder-interactions-statements.html).
 
@@ -128,9 +128,9 @@ Patterns can also include wildcards for looser matches. For example, `*home*` wi
 
 The basic operators available for use with pattern matching are:
 
-- Asterisk - Also known as a "wildcard;" matches any character
-- Pipe - Denotes alternates
-- Parentheses - Enclose a group of alternates
+- Asterisk: Also known as a "wildcard;" matches any character
+- Pipe: Denotes alternates
+- Parentheses: Enclose a group of alternates
 
 You can use wildcards and alternates together like this:
 
@@ -189,7 +189,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 #### Line Breaks
 
-CTRL+ENTER - Hold control and hit enter/return.
+CTRL+ENTER: Hold control and hit enter/return.
 
 {: .important}
 This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.

@@ -40,7 +40,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Name**: Getting Started Bot
     * **Choose login method**: API key
     * **Api key**: Generate API key
-    * **Assignment > Assign Profile**: Agent
+    * **Assignment → Assign Profile**: Agent
     * **Skills**: Bot
 
     {: .important}
@@ -106,7 +106,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test.png" alt="">
 
-    Congrats! You’ve successfully deployed your automation to a demo environment.
+    Congratulations! You’ve successfully deployed your automation to a demo environment.
 
 ### What's next?
 

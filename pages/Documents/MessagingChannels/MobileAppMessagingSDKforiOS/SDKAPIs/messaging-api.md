@@ -123,13 +123,6 @@ func getConversationConsumerQuery(_ consumerID: String?, brandID: String, agentT
 | brandID | brandID to request the conversation query for | -- |
 | agentToken | a unique token for agent aka Agent Bearer |  -- |
 
-
-
-
-
-
-
-
 ### getInactiveUserInteractionTimeInterval
 
 Use this API method to get the Inactive time interval in seconds of the user's last touch on screen. This interval applies to scroll/messaging/action menus and any other general action on the conversation screen.
@@ -180,7 +173,6 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, auth
 | authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login.<br><br>-**Implicit Flow**: pass 'jwt' parameter only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 | completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
 | failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
-
 
 ### isRegisteredForPushNotifications
 
@@ -464,7 +456,6 @@ func setUserProfile(_ lpuser: LPUser, brandID: String)
 |[lpuser](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) | object is an instance of LPUser. | Example: let user = LPUser(firstName: "John", lastName: "Doe", profileImageURL: "URL of image", phoneNumber: "555-555555") |
 | brandId  | An account ID | -- |
 
-
 ### showConversation
 
 Use this API method to open the conversation screen.
@@ -541,8 +532,8 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, comp
 | completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
 | failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
 
-
 #### getUnreadMessagesCount(Deprecated)
+
 **This method is deprecated since SDK version 5.2.0.**
 
 *Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#getunreadmessagescount) instead*

@@ -39,4 +39,4 @@ An Android library for managing images and the memory they use.
 | < 3.7.0             | 2.5.2            | 3.9.1            |
 
 {:.important}
-The Picasso dependency was removed from SDK versions 3.7.0 - 4.7.0 and 5.0.0 - 5.5.1 because Picasso version 2.5.2 has a known issue with image rendering on Xperia devices which later got fixed in the latest Picasso versions.
+The Picasso dependency was removed from SDK versions 3.7.0–4.7.0 and 5.0.0–5.5.1, because Picasso version 2.5.2 has a known issue with image rendering on Xperia devices, which got fixed in the latest Picasso versions.

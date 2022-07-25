@@ -30,7 +30,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | :--- | :--- |
 | Channel | SMS <br /> WhatsApp <br /> In-App |
 | Rate throttling | Upto 10 requests per second |
-| Send rate |  SMS - 9** MPS <br /> WhatsApp - 9** MPS <br /> In-App - 9** MPS <br /> <br /> MPS - message per sec <br /> (**Reach Proactive team for higher MPS) |
+| Send rate |  SMS — 9** MPS <br /> WhatsApp — 9** MPS <br /> In-App — 9** MPS <br /> <br /> MPS - message per sec <br /> (**Reach Proactive team for higher MPS) |
 | API recipients batching limit per request | 100** recipients per request <br /> (**Reach Proactive team for increasing recipients per request) |
 
 ### API Specifications
@@ -85,7 +85,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) as mentioned in OAuth 2.0 Authorization section above. | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload - Whatsapp With Rich Template, including customer SDE**
+**Request Body Example — JSON Payload — Whatsapp With Rich Template, including customer SDE**
 
 ```json
 {
@@ -207,7 +207,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
     ]
 }
 ```
-**Request Body Example - JSON Payload - Whatsapp With Rich Template containing header image and buttons**
+**Request Body Example — JSON Payload — Whatsapp With Rich Template containing header image and buttons**
 
 ```json
 {
@@ -254,7 +254,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - SMS channel**
+**Request Body Example — JSON Payload — SMS channel**
 
 ```json
 {
@@ -307,7 +307,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - SMS + Whatsapp (Without Rich Template)**
+**Request Body Example — JSON Payload — SMS + Whatsapp (Without Rich Template)**
 
 ```json
 {
@@ -366,7 +366,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - SMS Multi-Variables (Handoff with SMS multi variables)**
+**Request Body Example — JSON Payload — SMS Multi-Variables (Handoff with SMS multi variables)**
 
 ```json
 {
@@ -409,7 +409,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - New Version - Inapp Handoff**
+**Request Body Example — JSON Payload — New Version — Inapp Handoff**
 
 ```json
 {
@@ -452,7 +452,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example - JSON Payload - Old Version**
+**Request Body Example — JSON Payload — Old Version**
 
 ```json
 {
@@ -503,7 +503,7 @@ The bot users should only be used for proactive 2.0 API. The bot users are neede
 The current rate limit is 10 TPS/second/brand per api.
 
 <strong>What is the daily limit when sending outbound messages?</strong>
-It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K - R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
+It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K – R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
 
 <strong>Which channels are supported as of now?</strong>
 - Proactive messaging supports SMS, WA and INAPP channels only. The channel is decided based on templateId in campaigns API request.
@@ -513,7 +513,7 @@ It depends on the channel. Messaging Channel providers like WhatsApp have certai
  Proactive Messaging ensures that recipients only receive messages within the time window brands specifies. This time window is calculated based on the recipient phone number. This helps brands adhere to one of the legal requirements for sending SMS texts i.e. SMS can only be sent between 8 am and 9 pm to avoid spamming consumers after business hours.
 
 <strong>Once a campaign is submitted, how soon will these recipients receive the messages?</strong>
-Messages are sent at a rate up to 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
+Messages are sent at a rate up to 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 – (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
 <strong>How will batching capability work?</strong>
 A single campaign can have from 1 recipient and not more than 100 recipients. It is recommended to batch recipients in a campaign.
@@ -601,7 +601,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 - Example: When a message is sent to consumer using Proactive Messaging API and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?</strong>
-- As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am - 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am - 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
+- As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am – 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am – 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
 
 <strong>One variable is required for SMS but what happens when more than 1 variable is passed? Will the payload fail, or will it just take the first variable?</strong>
 - Proactive messaging performs strict checking for variables. If more variables are specified than what are required, proactive messaging will mark the recipient failed with error 'TOO_MANY_VARIABLES' which will be part of campaign response.

@@ -25,8 +25,7 @@ GDPR related functionality
 
 ▸ **replaceConversationFiles**(`conversation`, `credentials`, `shouldReplace?`, `replacementFile?`): `Promise`<[`FilesReplaced`](#type-filesreplaced)\>
 
-WARNING: This will remove all files permanently!
-Ask your account manager for permissions.
+**Warning: This will remove all files permanently! Ask your account manager for permissions.**
 
 #### Parameters
 

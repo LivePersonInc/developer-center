@@ -50,7 +50,7 @@ Essentially, pagination involves making multiple *requests* to LivePerson APIs, 
 
 Otherwise, the prerequisites for extracting data from the APIs can be as simple as knowing:
 
-* The method to use: i.e. 'POST’ / 'GET’
+* The method to use: i.e. 'POST' / 'GET'
 
 * The API URL is, including the associated domain for your Conversational Cloud account
 

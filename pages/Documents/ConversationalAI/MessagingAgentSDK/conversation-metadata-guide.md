@@ -290,7 +290,7 @@ Structured content identifier metadata is used to both identify a specific "Card
   </tr>
   <tr>
     <td>replyToId</td>
-    <td>The id of the message which will be used to send a response - from Agent -> Consumer</td>
+    <td>The id of the message which will be used to send a response, from Agent to Consumer</td>
     <td>String</td>
   </tr>
   <tr>

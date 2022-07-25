@@ -172,7 +172,7 @@ class DocumentationViewController: UIViewController {
             fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
         }
 
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         
         /*
          Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
@@ -245,7 +245,7 @@ class DocumentationViewController: UIViewController {
                          monitoringInitParams: nil
                                         error: &error];
     
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
          Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
@@ -453,7 +453,7 @@ func LPMessagingSDKConversationViewControllerDidDismiss() {
 
 ### Next Steps
 
-Congratulations!  You're all set.  
+Congratulations! You're all set.  
 
 You can now do any of the following:
 

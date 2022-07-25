@@ -43,25 +43,25 @@ Note: if you were using the **LPMessagingSDK.instance.registerPushNotifications(
 
   /// Will handle custom behavior if LP Push Notification was touched
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   func LPMessagingSDKNotification(didReceivePushNotification notification: LPNotification) {}
 
   /// Override SDK - In-App Push Notification
   /// Behavior for tapping In-App Notification should be handled, when using a custom view no behavior is added, LPMessagingSDKNotification(notificationTapped) can't be used
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   /// - Returns: Custom View
   func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView {}
 
   /// This method is overridden when using a Custom View for the In-App Notification (LPMessagingSDKNotification(customLocalPushNotificationView)
   /// Add Custom Behavior to LPMessaging Toast View being tapped
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   func LPMessagingSDKNotification(notificationTapped notification: LPNotification) {}
 
   /// This method will hide/show the In-App Push Notification
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   /// - Returns: true for showing Push Notifications/ false for hidding In-App Push Notification
   func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool {}
 
@@ -108,7 +108,7 @@ func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
 }
 ```
 
-_Note: For you to be able to use the method **storyboard.instantiateViewController(withIdentifier:)**, your ViewController needs to have a Storyboard ID on the **Identity Inspector**_
+_Note: For you to be able to use the method **storyboard.instantiateViewController(withIdentifier:)**, your ViewController needs to have a Storyboard ID on the **Identity Inspector**._
 
   <p align="center">
     <img src="https://lpgithub.dev.lprnd.net/storage/user/634/files/211f0c9e-b585-11e7-873f-6ba4178093a7" width="45%" height="45%">
@@ -198,14 +198,13 @@ return toast
 
 **Note**: Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
 
-- **text** -> Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
+- **text**: Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
 
-- **accountID** -> Account Number
+- **accountID**: Account Number
 
-- **isRemote** -> if it is a Push Notification
+- **isRemote**: If it is a Push Notification
 
-You will need to use -> notification.text to populate your Toast UILabel
-
+You will need to use notification.text to populate your Toast UILabel.
 
 ### Step 3: Adding a Gesture Recognizer to Custom Local Push Notification View (Optional)
 
@@ -286,6 +285,6 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 
  - Second, we use **self.window?.viewWithTag(tag:int)** to get our View,
 
- - Third, if our UIView is different from  **nil** , we will remove it from the main view, so when we move the user to the Messaging View Controler the Toast is not there,
+ - Third, if our UIView is different from  **nil**, we will remove it from the main view, so when we move the user to the Messaging View Controler the Toast is not there,
 
  - Last, use the same code we had on the method **LPMessagingSDKNotification(notificationTapped notification:)** to take the user to the Messaging Screen

@@ -10,7 +10,7 @@ indicator:
 
 ### The Welcome Event
 
-The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
+The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual LivePerson product works..
 
 A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends
 their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the

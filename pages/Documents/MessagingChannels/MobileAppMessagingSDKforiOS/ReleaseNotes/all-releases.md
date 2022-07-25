@@ -15,16 +15,16 @@ Listed below are all the Release Notes for previous versions of our Mobile App M
 The Latest SDK version are now using the XCFramework format. For more information on XCFramework, see [Apple documentation](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b).
 
 {: .notice}
-SDK versions are not downgrade compatible
+SDK versions are not downgrade-compatible.
 
 {: .notice}
-SDK releases only supports 3 iOS versions, and each SDK release will state with versions it supports as part of the **Environmental Requirements**
+SDK releases only supports 3 iOS versions, and each SDK release will state with versions it supports as part of the **Environmental Requirements**.
 
 <hr/>
 
 <h3>Regular Release</h3>
 
-A planned and scheduled release with a defined scope that has gone through regression testing and passed by our QA team. This release typically contains prioritized features and customer bugs and may also include internal development and fixes. Note that these releases are always built using the latest version of Swift (N and N - 1).
+A planned and scheduled release with a defined scope that has gone through regression testing and passed by our QA team. This release typically contains prioritized features and customer bugs and may also include internal development and fixes. Note that these releases are always built using the latest version of Swift (N and N – 1).
 
 **These releases are available as** [direct download](https://github.com/LivePersonInc/iOSFrameworks) **and** [cocoapods](https://github.com/LivePersonInc/iOSPodSpecs)
 
