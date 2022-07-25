@@ -2,6 +2,7 @@
 pagename: Introduction
 redirect_from:
   - bot-connectors-ibm-watson-assistant.html
+  - third-party-bots-ibm-watson-assistant.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
