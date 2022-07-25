@@ -191,4 +191,4 @@ Response example for JSON:
 }
 ```
 
-**Note**: Since this resource does not provide a "next" link, you must keep track of the chat event IDs received for each chat session in order to be able to query only new events on every request.
+**Note:** Since this resource does not provide a "next" link, you must keep track of the chat event IDs received for each chat session in order to be able to query only new events on every request.

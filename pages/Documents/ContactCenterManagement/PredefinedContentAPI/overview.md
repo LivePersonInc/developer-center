@@ -24,7 +24,6 @@ The predefined content tool is one which agents rely on to provide quick answers
 
 Building and maintaining a current and comprehensive set of pre-defined content for your agents is crucial for accuracy and efficiency of agent responses.
 
-
 The API is based on the REST architecture style.
 
 [Click here](products-admin-predefined-content.html) to see further guidance and an example of deploying this API.

@@ -29,12 +29,10 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
     <td>lp_messaging_ui_brand_logo </td>
   </tr>
 
-
   <tr>
     <td>Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.  In case you want to define the background color for this avatar, override "agent_avatar_background_color" resource id. </td>
     <td>lp_messaging_ui_ic_agent_avatar</td>
   </tr>
-
 
   <tr>
     <td>Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form).
@@ -42,7 +40,6 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
    </td>
     <td>lpmessaging_ui_secure_form_progress_bar.xml</td>
   </tr>
-
 
   <tr>
     <td>Default progress bar vector drawable for downloading \ uploading an image. It will appear on the image, inside the bubble, until progress is done.  

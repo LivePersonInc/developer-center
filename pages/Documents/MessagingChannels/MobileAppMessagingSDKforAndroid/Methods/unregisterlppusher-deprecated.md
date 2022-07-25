@@ -25,4 +25,3 @@ Unregister from registered push notification service.
 | brandId | The account ID. |
 | appId | The host app ID. |
 
-

@@ -26,40 +26,40 @@ Agent Manager roles will have all Function permission disabled by default, and A
     <th>Permission name </th>
     <th  style="text-align: center; vertical-align: middle;">Agent</th>
     <th  style="text-align: center; vertical-align: middle;">Agent Manager</th>
-    <th  style="text-align: center; vertical-align: middle;" >Campaign Manager</th>
+    <th  style="text-align: center; vertical-align: middle;">Campaign Manager</th>
     <th  style="text-align: center; vertical-align: middle;">Admin</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>FaaS-Admin</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
     <tr>
     <td>FaaS-Developer</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
     <tr>
     <td>FaaS-Invocation</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
   </tbody>
 </table>
 
 If users who do not have an Administrator based role require any Functions-related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account.
 #### Table Legend
-* ❌ : Permission is Not available for the role.
-* 🔒 : Permission is disabled by default but can be enabled.
-* ✅ : Permission is available and enabled.
+* ❌: Permission is Not available for the role.
+* 🔒: Permission is disabled by default but can be enabled.
+* ✅: Permission is available and enabled.
 
 ### Permissions details
 

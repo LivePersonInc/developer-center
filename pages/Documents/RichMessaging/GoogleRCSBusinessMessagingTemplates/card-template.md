@@ -27,7 +27,6 @@ The vertical card contains the following elements:
     * Navigation
     * Publish text
 
-
 The horizontal card contains the following elements:
 
 * Title text

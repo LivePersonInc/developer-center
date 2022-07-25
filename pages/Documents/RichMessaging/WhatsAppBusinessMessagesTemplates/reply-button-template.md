@@ -20,7 +20,7 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 4. Footer (optional)
 5. Buttons (between 1 and 3)
 
-**Note** We only support image headers and text headers (Title element).
+**Note:** We only support image headers and text headers (Title element).
 
 **Examples of WhatsApp Reply Button**
 
@@ -29,7 +29,6 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 ### Reply Button
 
 The Reply Button is the container that holds the information that should be displayed by the connector.
-
 
 | Property Name | Description                                   |                  Type | Required |
 |----------------------------------------------------------------------------------------------------|
@@ -78,7 +77,6 @@ the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premis
 | tag | Must be "title". If missing, the first text element in the template will be set as the card text.  | Enum | Y |
 | text |  The actual text of the headline. The text can not be longer than 1024 characters shared with the subtitle.  | String | Y |
 
-
 #### JSON Representation
 
 ```json
@@ -98,7 +96,6 @@ The text of the rich card.
 | type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
 | tag | Must be "subtitle". If missing the first text element in the template will be set as the card text.  | Enum | Y |
 | text |  The description text. The text can not be longer than 1024 characters shared with the title.  | String | Y |
-
 
 ### Footer
 

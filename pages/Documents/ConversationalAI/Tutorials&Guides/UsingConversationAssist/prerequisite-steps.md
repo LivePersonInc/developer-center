@@ -135,7 +135,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 2. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded. Click **Open**.
 
-    **Note**: If you have completed the previous step of creating the LivePerson domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
+    **Note:** If you have completed the previous step of creating the LivePerson domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
 
 3. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
 4. Click **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
@@ -145,7 +145,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 6. Follow the same process to upload the "Seating Bot" that you downloaded, and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
 
-    **Note**: These bots are for demonstration purposes, so they don't do much beyond serving a dialog to a user based on the intent. No booking or seating functionality is built in. As such, they can be modified to meet your use case.
+    **Note:** These bots are for demonstration purposes, so they don't do much beyond serving a dialog to a user based on the intent. No booking or seating functionality is built in. As such, they can be modified to meet your use case.
 
 ### What's next?
 

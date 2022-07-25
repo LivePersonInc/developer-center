@@ -8,7 +8,6 @@ permalink: apple-messages-for-business-templates-quick-replies-template.html
 indicator: messaging
 ---
 
-
 ### Overview
 
 The [Quick Reply message](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#quick-reply-message) provides a way to receive consumer input to a question/statement by a set of buttons that each contain a title text and/or emojis. 

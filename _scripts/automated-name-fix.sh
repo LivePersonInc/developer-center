@@ -60,11 +60,11 @@ do
             page=${page/$REGEX_APOSTROPHE/"-"}
         done;
     fi
-   
+
 
     # Removes leading spaces
     page="${page#"${page%%[![:space:]]*}"}"
-   
+
     if [[ $page =~ $REGEX_SPACE ]]; then
         while [[ $page =~ $REGEX_SPACE ]]; do
             page=${page/$REGEX_SPACE/"-"}
@@ -113,15 +113,13 @@ done < "$input"
 rm ./_scripts/flieList.txt
 ### This handles folder name updates
 
-
-
 input="./_scripts/newFile.txt"
 while IFS= read -r line
 do
     if [[ "${line}" =~ $REGEX_SPACE ]]; then
         echo "${line}" >> ./_scripts/badFolders.txt
     fi
-    folder=${line##*/} 
+    folder=${line##*/}
     firstLetter="${folder:0:1}"
     if [[ "$firstLetter" =~ [a-z] ]]; then
         echo "${line}" >> ./_scripts/badFolders.txt
@@ -138,13 +136,13 @@ do
     # Get file name
     currentFolder=${line##*/}
     folder=$currentFolder
-    
+
     if [[ $folder =~ $REGEX_BASIC_DASH ]]; then
         while [[ $folder =~ $REGEX_BASIC_DASH ]]; do
             folder=${folder/$REGEX_BASIC_DASH/" "}
         done;
     fi
-    
+
     # Title case
     folder=$( echo "${folder}" | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
     # Remove spaces in the titlecase folder namevariab;e

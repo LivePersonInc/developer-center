@@ -17,9 +17,9 @@ This topic applies if your domain is using the LivePerson engine or a third-part
 
 Training a domain creates a new model version with the results. The process and related info vary depending on which NLU engine the domain uses:
 
-* LivePerson NLU engine - See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
-* Google Dialogflow or IBM Watson NLU engine - See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
-* Your Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
+* LivePerson NLU engine: See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
+* Google Dialogflow or IBM Watson NLU engine: See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
+* Your Rasa-based NLU engine: See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
 
 A new model version created from training isn't activated automatically. See below for info on this.
 

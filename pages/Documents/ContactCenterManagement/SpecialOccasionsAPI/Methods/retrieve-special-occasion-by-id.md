@@ -26,7 +26,6 @@ Get a single special occasion by id.
  |accountId | LP site ID | String  |
  specialOccasionId|special occasion object’s unique id.| String
 
-
 **Request Headers**
 
  |Header | Description| Notes |

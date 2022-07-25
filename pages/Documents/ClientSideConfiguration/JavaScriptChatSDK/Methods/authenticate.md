@@ -16,11 +16,10 @@ indicator: chat
 
 This resource enables consumer SSO with Conversational Cloud.
 
+**Notes:**
 
-**Notes**:
-
-- **Using this resource depends on authenticated engagement parameters.**
-- **In the response for this authentication resource, the following events will be triggered: onAuthentication, onAuthenticationFail.**
+- Using this resource depends on authenticated engagement parameters.
+- In the response for this authentication resource, the following events will be triggered: onAuthentication, onAuthenticationFail.
 
 ### Request
 
@@ -37,7 +36,6 @@ This resource enables consumer SSO with Conversational Cloud.
 | visitorId | The monitored visitor ID in case of a Conversational Cloud account. | string | Optional |
 
 **Sample code**
-
 
 ```javascript
 chat.authenticate({
@@ -59,7 +57,6 @@ chat.authenticate({
 | :--- | :--- | :--- |
 | conversationId | The conversation ID you should pass to requestChat method. | string |
 | participantId | The participant ID you should pass to requestChat method. | string |
-
 
 **Sample response**
 

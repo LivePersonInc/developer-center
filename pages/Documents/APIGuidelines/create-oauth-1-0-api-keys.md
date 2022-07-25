@@ -10,7 +10,6 @@ redirect_from:
     - api-guidelines-create-api-keys.html
 ---
 
-
 ### Create an OAuth 1.0 API key
 
 API keys are security tokens that you use to access Conversational Cloud services. The API key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.

@@ -52,8 +52,8 @@ Each object within the CCS comes with full CRUD (Create, Read, Update, Delete) f
 
 Additionally, the CCS API offers a RESTful interface with methods to access the desired functionality from services other than Conversation Builder.
 
-* [Conversation Context Service - Methods v1](conversation-orchestrator-conversation-context-service-methods-v1.html)
-* [Conversation Context Service - Methods v2](conversation-orchestrator-conversation-context-service-methods-v2.html)
+* [Conversation Context Service — Methods v1](conversation-orchestrator-conversation-context-service-methods-v1.html)
+* [Conversation Context Service — Methods v2](conversation-orchestrator-conversation-context-service-methods-v2.html)
 
 ### API versions
 

@@ -42,7 +42,6 @@ in Figure 4.4.
 {: .important}
 The connector will send any Markdown as provided and not process the text further. 
 
-
 ### Features
 
 Currently Third-Party Bots supports the following features specific to PVA:
@@ -83,9 +82,3 @@ In the following example this is used to send a Close Conversation action.
 
 <img class="fancyimage" alt="Channel Data example" src="img/ThirdPartyBots/microsoft-example-pva-structured-content.png">
 Figure 4.4 Close Conversation as Channel Data in PVA
-
-
-
-
-
-

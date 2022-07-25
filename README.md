@@ -194,7 +194,7 @@ You have two options to run the site locally after the first install:
 
 * **Using Jekyll’s standard commands**. All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
-**Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
+**Note:** changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
 
 ## Hiding files
 

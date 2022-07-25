@@ -204,7 +204,7 @@ Setting a delay in between multiple messages is possible and an example of such 
 ```javascript
 const payload = {
   messages: [
-    "Hi i am a message before delay",
+    "Hi I am a message before delay",
     {
       delay: 5,
       typing: true,
@@ -236,7 +236,7 @@ const payload = {
 };
 ```
 
-**Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 
@@ -402,7 +402,7 @@ function lambda(input, callback) {
       `I received a rich content it contains: ${JSON.stringify(input.content)} `
     );
   } else {
-    payload.messages.push("I am sorry i don't understand. Can you repeat?");
+    payload.messages.push("I am sorry I don't understand. Can you repeat?");
   }
 
   callback(null, payload);

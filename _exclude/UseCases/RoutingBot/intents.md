@@ -96,7 +96,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
     * Add the following to the editor and hit Save: botContext.printDebugMessage(‘Here is my Welcome debug message!’);
 
-    * NOTE: if you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
+    * **Note:** If you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
 
 4. You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
 

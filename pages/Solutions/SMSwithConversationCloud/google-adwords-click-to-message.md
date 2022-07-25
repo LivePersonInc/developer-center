@@ -30,7 +30,6 @@ For brands, creating a presence on the channels used by their consumers is key t
 
 ![All Campaigns](img/adwords.png)
 
-
 ![Extensions](img/adwords1.png)
 
 {:start="3"}
@@ -62,8 +61,6 @@ You’ll need to provide the following information:
     3. See options for adjusting the extension with your own custom scheduling.
 
     4. Click Save, and the extension is ready.
-
-
 
 {:start="5"}
 5. For best practices please see the Google AdWords support page here: [https://support.google.com/adwords/answer/7182126](https://support.google.com/adwords/answer/7182126)

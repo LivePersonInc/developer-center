@@ -18,13 +18,12 @@ When submitting the forward request, the certificate will be fetched according t
  |:--------  |:---  |
  |PUT|  https://[{domain}]/mtls/account/{accountId} |
 
-
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization, **AppKey only API**, **Required**. |
- |LP-service-name|    Contains the service name which has the certificate in HashiCorp Vault. **Not Required**, Possible options : TEST_SERVICE/IDP/WEBHOOKS |
+ |LP-service-name|    Contains the service name which has the certificate in HashiCorp Vault. **Not Required**, Possible options: TEST_SERVICE/IDP/WEBHOOKS |
  |LP-forward-url|    Contains the desired endpoint url of the client.  **Required**. |
  |LP-authorization-override|    Contains the authorizaion for the desired endpoint url of the client. **Not Required**. |
 
@@ -48,8 +47,6 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

@@ -26,16 +26,12 @@ This method receives an engagement ID and returns the engagement information if 
 
 *Example*
 
-
 ```javascript
-
     if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){
        var info =   
             lpTag.taglets.rendererStub.getEngagementInfo(12356454);
     }
-
 ```
-
 
 **Return value**
 

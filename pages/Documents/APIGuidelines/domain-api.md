@@ -71,7 +71,6 @@ JSON Example:
 }
 ```
 
-
 **Optional Response Status Codes**
 
 | Status | Description |

@@ -26,7 +26,6 @@ A few things you'll need to get started with this API:
 
 ### Introduction
 
-
 Conversational Cloud offers messaging windows both for Mobile App Messaging as well as web messaging out of the box.  Brands can customize the window behavior and look and feel completely.
 
 For complete control over the messaging window look, behavior and implementation source, utilized the Messaging Window API to create your window from scratch.

@@ -45,7 +45,6 @@ Top use cases of deflecting calls to mobile chat are for inquiries that are digi
 
 ### Security Information
 
-
 The LivePerson IVR Deflection Solution provides a secure environment for mobile chat between agents and consumers. For more information on how LivePerson protects your private data, refer to the LiveEngage Security Whitepaper, available upon request from your LivePerson Account Manager.
 
 ### SMS Vendors Code Examples
@@ -63,7 +62,6 @@ The following are VXML examples of sending text messages using leading SMS gatew
 4. Send request to the SMS gateway.
 
 5. Disconnect.
-
 
 ### clickatell.com
 

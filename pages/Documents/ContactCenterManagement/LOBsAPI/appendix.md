@@ -8,7 +8,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 
-
 order: 100
 permalink: lobs-api-appendix.html
 
@@ -69,7 +68,6 @@ This section contains API details that are common to every API’s resource and 
       "dateUpdated":"2017-10-26 18:29:22"
     }
 ```
-
 
 ### Data Revisions
 

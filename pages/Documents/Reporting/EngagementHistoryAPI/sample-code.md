@@ -23,4 +23,3 @@ In order to run the example, you will need to update the EngagementHistory.java 
 
 [Please see this example in GitHub](https://github.com/LivePersonInc/developers-community/blob/master/assets/code-examples/APIs/Java-EngagementHistoryAPI/src/main/java/EHAPI.java)
 
-

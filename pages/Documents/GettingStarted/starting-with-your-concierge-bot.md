@@ -6,7 +6,6 @@ permalink: starting-with-your-concierge-bot.html
 indicator: both
 ---
 
-
 ### What is a Concierge Bot?
 
 Your Conversational Cloud free trial account comes preloaded with a Concierge Bot, which is designed to get your brand up and running on our Conversational AI platform quickly. This bot is pre-wired to use our powerful platform components like the Conversation Builder and Conversation Orchestrator. You can use this bot as a starting point to build out more advanced conversational automation.
@@ -15,7 +14,7 @@ This bot provides basic information and contact options to your consumers. If yo
 
 <div class="container-note">
     <div class="important" style="width:100%">
-    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a  target="_blank" href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
+    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
   </div>
 </div>
 
@@ -95,13 +94,13 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                        Connect to a Mobile Channel
                 </a>
               </div>
-              <div class="link-padding" >
+              <div class="link-padding">
                 <a target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html">
                        Continue learning about Conversational AI
                 </a>
               </div>
-              <div class="link-padding" >
-                <a target="_blank" href="/intent-manager-key-terms-concepts.html#intents">
+              <div class="link-padding">
+                <a href="/intent-manager-key-terms-concepts.html#intents">
                        Get started with Intents
                 </a>
               </div>

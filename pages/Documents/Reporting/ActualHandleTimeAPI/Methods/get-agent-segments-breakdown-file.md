@@ -11,8 +11,7 @@ indicator: both
 This method is used to download the files from Get Agent Segment Breakdown API, using the returned path.
 
 {: .notice}
-**Note:**
-This API is not available by default. To enable it please contact your account manager.
+**Note:** This API is not available by default. To enable it please contact your account manager.
 
 ### Request
 

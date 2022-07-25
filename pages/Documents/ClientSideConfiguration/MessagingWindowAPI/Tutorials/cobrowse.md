@@ -158,6 +158,4 @@ A CoBrowse invitation can be cancelled by the agent or expires after 2 minutes i
 }
 ```
 
-
-
 {% include links.html %}

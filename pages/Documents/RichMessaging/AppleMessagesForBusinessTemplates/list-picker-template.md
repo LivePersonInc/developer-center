@@ -38,8 +38,6 @@ Each List Picker template has the following mandatory sections:
 
 3. [List Picker list items](#body---list-picker-items): title, subtitle and an optional image (part of the JSON body)
 
-
-
 The following JSON metadata and body structures are templates for any List Picker object:
 
 #### Metadata JSON template
@@ -66,7 +64,6 @@ The following JSON metadata and body structures are templates for any List Picke
   }
 ]
 ```
-
 
 #### Body JSON Template
 
@@ -178,7 +175,6 @@ The muliple selection property allows the brand to configure which sections will
 | receivedMessage   | Defines how the bubble template will be displayed when a message is received.                 | Object  | Y        |            |
 | replyMessage      | Defines how the bubble will be displayed when a message is sent back by the consumer.       | Object  | Y        |            |
 
-
 #### Received and Reply Message
 
 The Received Message is the first card presented to the consumer, from which they access the list of items to choose from. It consists of an image and actions.
@@ -186,7 +182,6 @@ The Received Message is the first card presented to the consumer, from which the
 The Reply Message is the reply card presented to the consumer after selecting items from the list.
 
 The configuration of the Received and Reply Messages is done via a metadata JSON file.
-
 
 ##### Received and Reply Message Properties
 
@@ -198,7 +193,6 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 | imageURL          | Image to be placed in the List Picker received and reply message template                      | String | N        | JPG and PNG Only <br/> The total image size in the list picker is limited to 0.5MB |
 | secondarySubtitle | Title that is aligned right of the message                                                   | String | Y        |                                                                                    |
 | tertiarySubtitle  | Subtitle that is aligned right of the message                                                | String | Y        |                                                                                    |
-
 
 #### Metadata JSON Example
 
@@ -404,7 +398,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be ‘text’ | Enum   | Y        |            |
 | tag           | Must be “subtitle”                    | String | Y        |            |
 
-**Note: the subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Example
 
@@ -430,7 +424,6 @@ The configuration of the List Picker Item is done as part of the [List Picker Bo
 | type          | Type of template. <br/> Must be ‘horizontal’                                                   | Enum     | Y        |            |
 | elements      | Array of elements: image (optional), title, subtitle and a button. <br/> Must be in that order | Elements | Y        |            |
 
-
 #### List Picker Item Elements Configurations
 
 The List Picker Item elements are based on the basic [Structured Content basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
@@ -446,7 +439,7 @@ Based on the [Structured Content Basic Element Image](structured-content-introdu
 | type          | Type of element. <br/> Must be 'image'                              | Enum   | Y        |            |
 | uri           | Image URL. <br/> Must be whitelisted by a LivePerson representative | String | Y        |            |
 
-**Note: The image section should not use style element**
+**Note:** The image section should not use a style element.
 
 ##### Title Element Properties
 
@@ -467,7 +460,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be 'text' | Enum   | Y        |            |
 | tag           | Must be “subtitle”                  | String | Y        |            |
 
-**Note: The subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Button Element Properties
 
@@ -478,8 +471,7 @@ A button element is required for the representation on the Agent workspace side.
 | type          | Type of element. <br/> Must be 'button'            | Enum | Y        |            |
 | click         | Click operation must use “publishText” type only | Enum | Y        |            |
 
-**Note: The button section should not use style element**
-
+**Note:** The button section should not use a style element.
 
 #### List Picker Item JSON Example
 

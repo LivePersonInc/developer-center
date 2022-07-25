@@ -46,7 +46,6 @@ If your request is throttled in this manner, it is recommended that you provide 
 }
 ```
 
-
 **URL Parameters**
 
 | Name | Description | Type / Value | Required |

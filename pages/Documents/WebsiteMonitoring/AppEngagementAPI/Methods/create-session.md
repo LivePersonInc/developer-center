@@ -143,7 +143,7 @@ Status code: 200 OK (engagement is available)
       "status": "Available",
       "sessionId": "abc",
       "visitorId": "xyz",
-      "pageId" : "4743822558",
+      "pageId": "4743822558",
       "engagementDetails": {
         "campaignId": "3346848610",
         "engagementId": "3562981110",
@@ -163,9 +163,9 @@ Status code: 200 OK (engagement is not available)
 
 ```json
     {
-        "status" : "NotAvailable",
+        "status": "NotAvailable",
         "sessionId": "abc",
         "visitorId": "xyz",
-        "pageId" : "4743822558"
+        "pageId": "4743822558"
     }
 ```

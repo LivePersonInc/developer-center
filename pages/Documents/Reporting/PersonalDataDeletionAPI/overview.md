@@ -24,7 +24,6 @@ Personal data may include full conversation transcripts, hosted files or links s
 {: .important}
 What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: “** LP deleted data **”
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -40,7 +39,6 @@ A few things you'll need to get started with this API:
 {:start="3"}
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-
 ### Deletion Process
 
 Once a deletion request is sent via the API, it will become final and irrevocable after a pre-defined time period (5 days by default). During that time period, it is possible for the brand to cancel the deletion request. This allows the brand to monitor the deletion requests that are issued on their behalf.
@@ -51,7 +49,7 @@ There is a limitation of the number of deletion requests that a brand can issue 
 
 ### Main flows
 
-**Note** : Only closed chats / conversations can be deleted.
+**Note:** Only closed chats / conversations can be deleted.
 
 **Chat**
 

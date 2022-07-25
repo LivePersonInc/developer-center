@@ -53,9 +53,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 
 **Full Funnel Overview board**
 
-
 <img class="fancyimage" src="img/outbound_reporting_api_full_funnel_overview.png" alt="">
-
 
 **What are the limitations**
 
@@ -67,14 +65,13 @@ Outbound Reporting API provides the following data fields. This table explains t
 - The data is persisted in the system for a period of 13 months as per the company retention policy period.
 - The Reporting API data is up to 20 min delayed from the time the messaging events are generated.
 
-
 ### API Specifications
 
 ## OAuth 2.0 Authorization 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive/proactive-show-secrets.png)  
-* The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
-* The access_token retrieved from above APP JWT response should be used in the Request Header for Authorization.
+* The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+* The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
 ### Account Analytics API
 
@@ -238,7 +235,6 @@ Each of the filter options shown above are optional. Regardless of what filter o
 API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable. 
 
 **1. Campaign - analytics API for the campaign**
-
 
 Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Campaign/campaignReport) to go through API spec and to get started.
 
@@ -589,7 +585,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
         "messagestatus": [
             "FAILED", "READ"
         ], 
-        "transactionids" : [
+        "transactionids": [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
     }
@@ -766,7 +762,6 @@ For Proactive Messaging:
 For Connect To Messaging:
 - Sign in to [this url](https://connect-to-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for Connect To Messaging.
 - Click on the user icon at top right corner and see the version.
-
 
 <strong>6. What is a LP data retention policy? And how long data is persisted for Outbound Reporting API?</strong>
 

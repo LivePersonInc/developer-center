@@ -32,7 +32,6 @@ Filter is sent in the POST data (body) with the following JSON structure:
 |----------|-------------|------|------|
 | skillIds | Conversation skill id to determine which agents will be filtered by ability to transfer to skill |    Array`<String>` ||
 
-
 **Response**
 
 JSON Example:

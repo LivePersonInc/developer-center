@@ -131,7 +131,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -195,7 +195,7 @@ This is achieved creating a Custom Payload in your page with the and action obje
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
-1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
+1. Explicit request from visitor to transfer to an agent (e.g., action: transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
    Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.

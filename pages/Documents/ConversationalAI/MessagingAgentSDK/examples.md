@@ -86,7 +86,7 @@ Pre-requisites:
 - A LivePerson Account
 - A user with Agent permissions
 - Application installation id with `ms_survey` capability (ask your LivePerson account representative to create one for you and provide you with the id)
-- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating - not your bot skill (ask your LivePerson account representative to assign it for you)
+- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating — not your bot skill (ask your LivePerson account representative to assign it for you)
 
 To run the [survey bot example](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/survey-bot)
 
@@ -155,11 +155,9 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        node examples/transfer2same-agent-bot/main.js
        ```
 
-
 {: .important}
 The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
-
 
 ### Social Messaging Bot
 

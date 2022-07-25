@@ -32,7 +32,6 @@ Submit is allowed if the agent survey was not dismissed before.
 | skill | skill id | long | Required |
 | v | API version number | String | Required |
 
-
 **Request Headers**
 
 |Header | Description| Notes |

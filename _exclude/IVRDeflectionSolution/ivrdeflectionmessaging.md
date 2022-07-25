@@ -57,7 +57,6 @@ The overall flow looks like the following:
 
 ![IVR Map](img/ivrmap.png)
 
-
 1. Consumer calls customer care and reaches the IVR system. He reaches a certain branch that was selected for deflection, and hears the offer to deflect (e.g. "Instead of waiting on line, you can also connect with us using text messaging. It will allow you to go about your day, with our representative getting in touch with you to update you on your issue. Click 1 to gain back your time and start messaging with us now.")
 
 2. If the consumer accepts the offer, the IVR system will connect to Twilio and trigger the initial SMS message.

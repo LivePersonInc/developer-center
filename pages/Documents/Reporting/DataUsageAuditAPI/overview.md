@@ -17,7 +17,6 @@ The Conversational Cloud Data Usage Audit API retrieves the most up to date info
 
 This API supports the HTTP GET functionality (for data retrieval). All auditing logs are returned in a JSON format, aggregated per account, API type, user id (which accessed the API) and hour.
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -31,8 +30,6 @@ A few things you'll need to get started with this API:
 	* Use LE GUI to create API key: Administration → AuditTrail.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
-
-
 
 ### Use Cases
 

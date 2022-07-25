@@ -19,10 +19,10 @@ This method queues a chat request. It has a number of possible properties that c
 **For consumer Authentication flow please collect the necessary parameters from the [authenticate](consumer-experience-javascript-chat-authenticate.html) method first.**
 The parameters in question are `conversationId`, `participantId`. You will need to add these parameters to the request body for the requestChat method.
 
-**Notes**:
+**Notes:**
 
-- *If you displayed a Pre-chat survey, this is where you submit the answers to that survey.*
-- *In response to a chat starting, the following events will be triggered: onStart, onState, onInfo and onLine (if there are any chat lines).*
+- If you displayed a Pre-chat survey, this is where you submit the answers to that survey.
+- In response to a chat starting, the following events will be triggered: onStart, onState, onInfo and onLine (if there are any chat lines).
 
 ### Request
 
@@ -111,10 +111,10 @@ var failedRequest = chat.requestChat({
 | events    | An object containing an event array of chat events. | object |
 | info  | An info object that contains information for this chat. | object |
 
-**Notes**:
+**Notes:**
 
-- *The event is broken down into onState event and onLine events. For a detailed description of these properties, refer to [onState](consumer-experience-javascript-chat-onstate.html) and [onLine](consumer-experience-javascript-chat-online.html).*
-- *For a description of the info object, see [onInfo](consumer-experience-javascript-chat-oninfo.html).*
+- The event is broken down into onState event and onLine events. For a detailed description of these properties, refer to [onState](consumer-experience-javascript-chat-onstate.html) and [onLine](consumer-experience-javascript-chat-online.html).
+- For a description of the info object, see [onInfo](consumer-experience-javascript-chat-oninfo.html).
 
 **Sample response**
 

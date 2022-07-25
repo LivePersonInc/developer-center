@@ -56,7 +56,6 @@ Filter is sent in the POST data with the following JSON structure.
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
 
-
 **Request Example 1:**
 
 Simple Chat Search by time range
@@ -79,7 +78,6 @@ In the example below, we ask for chats that occurred between the 1st of June and
 Keyword Search: Chat Search by time range and keyword
 
 In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word 'iPad’ within the text available for lookup.
-
 
 ```json
     {
@@ -108,11 +106,9 @@ In the example below, we ask for chats that occurred between the 1st of June and
     }
 ```
 
-
 **Request example 3:**
 
 In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.  
-
 
 ```json
     {
@@ -145,7 +141,6 @@ In this example, we reduce the previous search, and require that the skill match
 Chat Search by time range and MCS.
 
 In this example, we are searching for chats that have a positive MCS.
-
 
 ```json
      {
@@ -496,13 +491,11 @@ Example:
     }
 ```
 
-
 **Request example 5:**
 
 Chat Search by time range and chatMCS.
 
 In this example, we are searching for chats that have mcs between 30 to 60.
-
 
 ```json
      {
@@ -517,7 +510,6 @@ In this example, we are searching for chats that have mcs between 30 to 60.
 ```
 
 ## Response
-
 
 ```json
     {
@@ -914,11 +906,9 @@ In this example, we are searching for chats that have a positive MCS.
     }
 ```
 
-
 ## Response
 
 Example:
-
 
 ```json
    {

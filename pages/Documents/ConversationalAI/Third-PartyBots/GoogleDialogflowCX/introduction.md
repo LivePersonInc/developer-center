@@ -150,6 +150,7 @@ Following guide is going to introduce how to implement functions specifically fo
 
 <div class="notice">
 The Dialogflow CX service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow.
+
 To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ *event*.
 </div>
 

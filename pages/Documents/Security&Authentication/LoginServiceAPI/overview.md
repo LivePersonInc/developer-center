@@ -17,16 +17,13 @@ indicator: both
 <br>
 The Login Service API provides endpoints to manage the User Session in Conversational Cloud, such as User Login, Application Login, Logout and Refresh.  Use this API to log into Conversational Cloud as a *user* with credentials or an *application* with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-
 <div class="important">
 Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
 </div>
 
-
 ### Step 1. Retrieve your domain
 
 Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).  
-
 
 **TIP:** Use the `agentVep` service name to retrieve your domain.
 

@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
 
-
 order: 80
 permalink: agent-groups-api-methods-delete-agent-group.html
 

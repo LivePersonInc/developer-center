@@ -61,7 +61,6 @@ Note that we expect you to send the parameters under the `"request"` key — see
 | conversationId | Conversation Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication|
 | interactionTimeout | Setting the timeout for a user interaction in seconds. [optional] | numeric | |
 
-
 **Survey Body Parameters**
 
 | Name	| Description | Type/Value | Notes |

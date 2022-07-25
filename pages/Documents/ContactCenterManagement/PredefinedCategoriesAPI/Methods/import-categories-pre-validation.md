@@ -56,7 +56,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -77,7 +76,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Request Headers
 
 <table>
@@ -90,7 +88,6 @@ Type: String </td>
     <td>Contains token string to allow request authentication and authorization. See the doc for more details.</td>
   </tr>
 </table>
-
 
 **Request Body**
 
@@ -109,7 +106,6 @@ The request payload contain the csv content as string and a structure for contai
 }</td>
   </tr>
 </table>
-
 
 ### Response Body
 

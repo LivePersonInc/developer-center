@@ -12,7 +12,6 @@ permalink: data-access-api-methods-base-resource.html
 indicator: chat
 ---
 
-
 This is the base resource that retrieves the list of available Data Access Uniform Resource Identifiers (URIs) for an account. A dedicated URI is used as the access point to retrieve each of the four types of Data Access supported data listed above: agent activity, web session, engagement and survey.
 
 ### Request

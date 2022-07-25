@@ -115,7 +115,7 @@ It is possible to send only a single delay response. The example payload of such
 <img class="fancyimage" style="width:800px" src="img/dialogflowcx/delay_response_custom_payload.png" alt="">
 Figure 3.5 showing the Custom Markup message for delay message
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 

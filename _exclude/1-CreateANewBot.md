@@ -25,7 +25,7 @@ This tutorial assumes you have a user account for the LiveEngage and Conversatio
 5. Give the bot a unique name and description, and select "Consumer Facing Bot" for the **Bot Type**.
 6. Click **Create Bot**.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png" alt="" >
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png" alt="">
 
     This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”. The bot also has a Fallback dialog with some fallback text.
 

@@ -83,7 +83,6 @@ This call should upload the image file you have on your disk to LivePerson objec
 
 Reestablish the connection using:
 
-
 ```sh
 wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"
 ```

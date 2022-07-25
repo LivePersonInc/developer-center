@@ -50,7 +50,6 @@ A few things you'll need to get started with this API:
 
 * Control and manage the window resources on your systems
 
-
 Example of an implementation of an embedded customized chat window using this API:
 
 ![JavascriptOverview](img/jsoverview1.png)

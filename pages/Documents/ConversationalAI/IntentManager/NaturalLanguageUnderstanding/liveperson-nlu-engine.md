@@ -56,11 +56,11 @@ The variance in matched intents might also indicate that:
 * There's a potential intent overlap in the taxonomy, or there's a test sample that contains multiple intents.
 * The training samples for different intents lack diversity or distinction.
 
-When working with multiple developers to create an intent domain with a large taxonomy of intents, it is highly likely that duplicate intents will be created over time, or an overlap between intents will develop. For example, “refund - general” and “refund - defective product” overlap, as the former subsumes the latter.
+When working with multiple developers to create an intent domain with a large taxonomy of intents, it is highly likely that duplicate intents will be created over time, or an overlap between intents will develop. For example, “refund — general” and “refund — defective product” overlap, as the former subsumes the latter.
 
 Similarly, it is also likely that a message such as “I’d like to return my phone and get a refund” might be matched with the “refund” intent or the “return product” intent depending on the training, as we currently only return the top scoring matched intent for each prediction, and both are valid matches for the message.
 
-A model might also become confused with a fine-grained taxonomy of intents if the training examples are not carefully curated. The intent “refund - defective product” and “refund - no longer needed” might become problematic if the training samples for both intents are limited and if both share similar patterns starting with “I want to get a refund.”
+A model might also become confused with a fine-grained taxonomy of intents if the training examples are not carefully curated. The intent “refund — defective product” and “refund — no longer needed” might become problematic if the training samples for both intents are limited and if both share similar patterns starting with “I want to get a refund.”
 
 All these factors directly influence the intent matching after retraining. Therefore, it's important to ensure that:
 
@@ -137,7 +137,7 @@ Brands with existing domains using the deprecated LivePerson (Legacy) engine are
     * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
     * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.
 
-#### How entities affect the NLU score - LivePerson (Legacy) engine only
+#### How entities affect the NLU score — LivePerson (Legacy) engine only
 
 When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
 

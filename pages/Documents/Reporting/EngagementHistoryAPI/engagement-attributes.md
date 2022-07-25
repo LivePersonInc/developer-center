@@ -75,8 +75,8 @@ Example:
 | userName | Nickname or username of a consumer. | alphanumeric | |
 | accountName | Name of the company or account. | alphanumeric | |
 | role | Role title of the consumer within their organization. | alphanumeric | |
-| lastPaymentDate | The customer's last payment date. | JSON : {  <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
-| registrationDate | The customer's registration date. | JSON : { <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
+| lastPaymentDate | The customer's last payment date. | JSON: {  <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
+| registrationDate | The customer's registration date. | JSON: { <br> "year": 2011, <br> "month": 3, <br> "day": 21} | This consists of 3 integer fields: Year, month, and day. |
 | companySize | The company size. | alphanumeric | |
 | companyBranch | The branch of the company | alphanumeric | |
 | storeNumber | Customer's specific store number. | alphanumeric | |
@@ -125,7 +125,6 @@ Example:
     }
     }
 ```
-
 
 ###  Lead
 
@@ -203,7 +202,7 @@ Example:
 | surname | Surname. | alphanumeric |
 | gender | Visitor’s gender. | alphanumeric |
 | company | Visitor's company. | alphanumeric |
-| customerAge | Year of birth. For calculating age. | JSON : <br> {"customerAge": <br> {"customerAgeInYears": "34.0", <br> "customerYearOfBirth": "1980",<br>"customerMonthOfBirth": "4",<br>"customerDateOfBirth": "15"}} | |
+| customerAge | Year of birth. For calculating age. | JSON: <br> {"customerAge": <br> {"customerAgeInYears": "34.0", <br> "customerYearOfBirth": "1980",<br>"customerMonthOfBirth": "4",<br>"customerDateOfBirth": "15"}} | |
 | email | Visitor email. | alphanumeric | |
 | phone | Visitor phone number. | alphanumeric | |
 | language | Visitor's language. | alphanumeric | |
@@ -387,7 +386,7 @@ Example:
           "viewedProduct": {
             "serverTimeStamp": "1434394466093",
             "originalTimeStamp": "1440413291351",
-            "currency" : "RUB",
+            "currency": "RUB",
             "products": [
               {
                 "product": {

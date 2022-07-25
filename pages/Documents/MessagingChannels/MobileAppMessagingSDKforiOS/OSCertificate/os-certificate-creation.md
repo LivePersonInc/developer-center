@@ -104,7 +104,7 @@ openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 
 ### Upload into Conversational Cloud
-- Certificate file should be : **dev-cert.pem**
-- Key file should be : **hostkey.pem**
+- Certificate file should be: **dev-cert.pem**
+- Key file should be: **hostkey.pem**
 
 ![uploadCertToLE](img/uploadCertToLE.png)

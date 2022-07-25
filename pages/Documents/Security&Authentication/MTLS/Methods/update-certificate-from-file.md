@@ -16,7 +16,6 @@ This API updates a certificate by uploading a file for specific account ID.
  |:--------  |:---  |
  |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
-
 **Request Headers**
 
  |Header         |Description  |
@@ -54,8 +53,6 @@ VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
-
-
 **Response Body**
 
 for example:
@@ -78,7 +75,6 @@ for example:
    ]
 }
 ```
-
 
 **Entity Structure:**
 

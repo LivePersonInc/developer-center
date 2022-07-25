@@ -43,4 +43,4 @@ _Note: There is a known limitation with the reporting surrounding this API. The 
 
 ### Sample Postman Collection
 
-For a sample postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html).
+For a sample Postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html).

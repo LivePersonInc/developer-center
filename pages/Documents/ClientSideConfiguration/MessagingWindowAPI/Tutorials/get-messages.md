@@ -48,7 +48,7 @@ You will now be able to see the content of the JWT:
 
 The ``sub`` property contains your ``consumerId``.
 
-**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
+**Note:** If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
 ### Step 2 — Create a Conversation
 
@@ -95,7 +95,8 @@ In order to get existing or new messages from the agent side, the consumer shoul
 ```json
 {"kind":"req","id":"22","body":{"fromSeq":0,"dialogId":"__YOUR_CONVERSATION_ID__"},"type":"ms.SubscribeMessagingEvents"}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
+
+**Note:** You can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 In response, you will get a subscription success message:
 

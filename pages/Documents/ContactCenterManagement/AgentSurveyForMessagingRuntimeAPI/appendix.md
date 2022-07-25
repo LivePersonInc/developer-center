@@ -5,7 +5,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
 
-
 order: 100
 permalink: agent-survey-for-messaging-runtime-api-appendix.html
 
@@ -139,7 +138,6 @@ This section contains API details that are common to every API’s resource and 
         }
     }
 ```
-
 
 ### AgentSurveyContext definition
 
