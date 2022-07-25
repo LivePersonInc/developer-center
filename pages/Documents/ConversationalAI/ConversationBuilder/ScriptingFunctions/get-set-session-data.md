@@ -24,8 +24,8 @@ botVariables are strings. Whatever the data type of your input, it will be conve
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getBotVariable(name)` | name (string) – The name for the variable. | The object defined by `name` |
-| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> – The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> – The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> – If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> – If true, the variable persists for 180 days. **Note:** Support for a value of "true" will be deprecated in a future release. Use of the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) is recommended instead.| None |
+| `getBotVariable(name)` | name (string) — The name for the variable. | The object defined by `name` |
+| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> — The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> — The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> — If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> — If true, the variable persists for 180 days. **Note:** Support for a value of "true" will be deprecated in a future release. Use of the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) is recommended instead.| None |
 
 #### Example
 
@@ -66,7 +66,7 @@ Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Trans
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentbyDomain(intentName, domainName)` | *intentName (String)* – The name of the intent <br>*domainName (String)* — The name of the domain | None |
+| `setBotTransferIntentbyDomain(intentName, domainName)` | *intentName (String)* — The name of the intent <br>*domainName (String)* — The name of the domain | None |
 
 #### Example
 
@@ -80,7 +80,7 @@ Use the `setBotTransferIntentId` function to set an intent ID in the Transfer Bo
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentId(value)` | *value (String)* – The intent ID | None |
+| `setBotTransferIntentId(value)` | *value (String)* — The intent ID | None |
 
 #### Example
 
@@ -94,7 +94,7 @@ Use the `setBotTransferUserMessage` function to set a user message in the Transf
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferUserMessage(value)` | *value (String)* – The user message | None |
+| `setBotTransferUserMessage(value)` | *value (String)* — The user message | None |
 
 #### Example
 
@@ -108,7 +108,7 @@ botContext.setBotTransferUserMessage("order status");
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getEnvVariable(name)` | name (string) – The name of the variable. | The object defined by `name` |
+| `getEnvVariable(name)` | name (string) — The name of the variable. | The object defined by `name` |
 
 #### Example
 
@@ -455,7 +455,7 @@ This method is commonly used to provide a different experience or messaging to t
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* – The hours classified by type <br><br> *zoneIdStr (String)* – The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
+| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* — The hours classified by type <br><br> *zoneIdStr (String)* — The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
 
 #### Example
 

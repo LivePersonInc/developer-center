@@ -13,10 +13,12 @@ permalink: javascript-chat-sdk-chat-states.html
 indicator: chat
 ---
 
-This is the list of chat states that are published throughout the lifetime of the chat.  
+This is the list of chat states that are published throughout the lifetime of the chat.
+  
 All chat states are published on the event listeners triggers or you can retrieve the current state by calling the `getState` method. 
 
-Some of the chat states are also published on separate listeners to which you can bind.  
+Some of the chat states are also published on separate listeners to which you can bind.
+
 The states are there to help indicate the state of the chat API.  
  
 The enumeration for the states are exposed via `lpTag.taglets.ChatOverRestAPI.prototype.chatStates`.
