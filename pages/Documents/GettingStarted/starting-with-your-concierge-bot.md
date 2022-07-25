@@ -90,7 +90,7 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
           <div id="LEFeatures" class="header-lp4-external">
             <h3>Next Steps</h3>
               <div class="link-padding" style="margin-top:24px">
-                <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html">
                        Connect to a Mobile Channel
                 </a>
               </div>
