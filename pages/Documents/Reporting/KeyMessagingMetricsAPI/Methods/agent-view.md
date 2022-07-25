@@ -28,7 +28,7 @@ sort| Sort the results based on a given metric in a predefined order. | string  
 offset  | The offset specifies from which record to retrieve the data.  | numeric | Optional | Default is 0.
 limit  | Max amount of agents to be received in the response.  | numeric | Optional | Default is 50.
 
-NOTE: Total supported results is 1000, meaning offset+limit can't exceed 1000
+**Note:** Total supported results is 1000, meaning offset+limit can't exceed 1000.
 
 **BODY Parameters**
 
@@ -50,7 +50,7 @@ _filters info_
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT.
 |effectiveAgentStatus | Current agent availablity.  | Array `<String>`  | Optional | Valid values: ONLINE, OFFLINE, AWAY, BACK_SOON.<br/>OFFLINE agents population will include agents which were logged in within the selected time frame and are currently logged out.<br/>Default value: ["ONLINE","BACK_SOON","AWAY"] 
     
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -180,7 +180,7 @@ agentStatusDuration  | status duration in ms | Long
 agentStatusReasonId |  (NA / away reason id) | String |
 
 
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 

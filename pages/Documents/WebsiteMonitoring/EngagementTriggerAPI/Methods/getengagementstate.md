@@ -44,9 +44,9 @@ The method returns a JSON with the engagement information.
 
 ``json
 {
-  "state" : 0,
-  "desc" : "NA",
-  "engagementId" : 123
+  "state": 0,
+  "desc": "NA",
+  "engagementId": 123
 }
 ```
 

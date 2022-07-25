@@ -27,7 +27,7 @@ Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for 
 
 Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app. 
 
-**Note:**  If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
+**Note:** If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
 
 ```xml
 <application
@@ -594,7 +594,7 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 #### initActivityConversation
 You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
-**TIP** If the initialization succeeds, the `openActivity` method is called.
+**Tip:** If the initialization succeeds, the `openActivity` method is called.
 
 ```java
 private void  initActivityConversation() {

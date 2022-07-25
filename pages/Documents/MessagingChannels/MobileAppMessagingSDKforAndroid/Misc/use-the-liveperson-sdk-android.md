@@ -187,7 +187,7 @@ private void initOpenConversationButton() {
 #### initActivityConversation
 You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
-**TIP** If the initialization succeeds, the `openActivity` method is called.
+**Tip:** If the initialization succeeds, the `openActivity` method is called.
 
 ```java
 private void  initActivityConversation() {

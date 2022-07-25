@@ -49,7 +49,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -65,7 +65,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 | consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 SMS, WA
 ```json
@@ -213,7 +213,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -224,7 +224,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | overrideMessage | string | no | Override the message sent through SMS only. The maximum length is set to 1600 as it is the maximum limit set by Twilio. |
 | overrideSkill | string | no | Overrides the current skill which will be used in routing the messages. If the new skill is not present in handoff, an error will be sent. |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 {
@@ -456,9 +456,9 @@ public class OAuthAuthenticator {
 
 ```
 
-**How to generate <b>Authorization</b> header for APP JWT**
+**How to generate <b>Authorization</b> header for AppJWT**
 
-1. Retrieve the APP_JWT from [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+1. Retrieve the APP_JWT from [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
 2. Insert to <b>Authorization</b> header as Bearer «APP_JWT».
 
 ### Frequently Asked Questions

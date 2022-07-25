@@ -50,7 +50,7 @@ _filters info_
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -61,7 +61,7 @@ Request body - json example:
         },
         "userTypes":["HUMAN"]
     },
-    "groupBy" : "agentGroupId",
+    "groupBy": "agentGroupId",
     "responseSections": [
        "groupBy"
     ],
@@ -141,14 +141,11 @@ _metrics info_
 | queueWaitTime50thPercentile| 50% of the consumers are waiting in the queue this amount of time or less.| Long |
 | queueWaitTime90thPercentile| 90% of the consumers are waiting in the queue this amount of time or less.| Long |
 
-
-
 _all info_ 
 
 Contains list of metrics with their values - same as in _metrics info_
 
-
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 {

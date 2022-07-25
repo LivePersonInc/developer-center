@@ -281,7 +281,7 @@ Based on [Structured Content Basic Element Text](structured-content-introduction
 | type          | Type of the element. <br/>Must be “text” | string | Y        |            |
 | text          | Must be “datePicker”                     | String | Y        |            |
 
-**Note: The text section should not use style element**
+**Note:** The text section should not use a style element.
 
 
 #### Time slot Element Properties
@@ -293,7 +293,7 @@ Based on [Structured Content Basic Element Button](structured-content-introducti
 | type          | Type of the element. <br/>Must be “button”                                            | string | Y        |            |
 | title         | The hour of the time slot. <br/>Only affects non-Apple Messages for Business rendering clients. | String | Y        |            |
 
-**Note: The button section should not use style element**
+**Note:** The button section should not use a style element.
 
 <br/>
 Time Picker button has additional [Click Metadata](structured-content-introduction-to-structured-content.html#element-click-operations) parameters that are specific to Apple Messages for Business:

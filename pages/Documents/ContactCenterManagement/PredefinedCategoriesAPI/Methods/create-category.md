@@ -208,4 +208,4 @@ Type: long number</td>
 
 **Response Body**
 
-Newly created Category json.
+Newly created Category JSON.

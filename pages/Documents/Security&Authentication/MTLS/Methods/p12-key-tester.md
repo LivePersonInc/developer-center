@@ -29,7 +29,7 @@ This method will allow you to test your P12 Key before uploading a certificate a
 
 **Request Body**
 
-form-data body (content-type : multipart/form-data)
+form-data body (content-type: multipart/form-data)
 
 File: The p12 file we want to test.
 

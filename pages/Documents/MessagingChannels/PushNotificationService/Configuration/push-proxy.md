@@ -22,7 +22,7 @@ In order to enable the push proxy feature, you will require the following data a
 
      * Android Registration for Push Method: See SDK’s  [registerLPPusher](android-registerlppusher.html) method.
 
-     * IOS Registration for Push: The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html#registerpushnotifications) method on how to register. **Note** that in debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e. `com.mybrand.app-Dev`).
+     * IOS Registration for Push: The app name is usually the Bundle ID or an alternate ID. See SDK’s [registerPushNotifications](mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html#registerpushnotifications) method on how to register. **Note:** In debug mode, the SDK appends a "-Dev" string to the bundle ID on registration to push. You can either configure a different endpoint for this mode or create a “duplicate” configuration to match the new ID (i.e. `com.mybrand.app-Dev`).
 
 * **End Point URL**: an end URL to be used for the relevant app’s push.
 
@@ -44,7 +44,7 @@ In order to enable the push proxy feature, you will require the following data a
 
   * Name: max length of 24 characters (only alphabets)
 
-  * Value: max length of 300 characters (allows alphanumeric and special characters : -, _, $, &, @,.,#,*)
+  * Value: max length of 300 characters (allows alphanumeric and special characters: -, _, $, &, @,.,#,*)
 
 --- 
 

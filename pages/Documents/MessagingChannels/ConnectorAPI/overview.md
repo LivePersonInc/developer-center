@@ -74,7 +74,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 <br>
 
-**Note** - The Connector API was developed for applications/connectors on the **Consumer** side only. Hence, the consumer side capabilities described above are enabled via the **Messaging SEND API** and **Webhooks** components (which are the building blocks of the Connector API). On the Agent side, the capabilities described above are the ones already provided out of the box by Conversational Cloud and the **Agent Workspace** and that are currently supported by the Connector API. In other words, the Connector API brings new functionality (via the Messaging SEND API and Webhooks) only to the consumer side. On the agent side, it simply supports some of the already existing Conversational Cloud capabilities and allows them to be used in connector applications.
+**Note:** The Connector API was developed for applications/connectors on the **Consumer** side only. Hence, the consumer side capabilities described above are enabled via the **Messaging SEND API** and **Webhooks** components (which are the building blocks of the Connector API). On the Agent side, the capabilities described above are the ones already provided out of the box by Conversational Cloud and the **Agent Workspace** and that are currently supported by the Connector API. In other words, the Connector API brings new functionality (via the Messaging SEND API and Webhooks) only to the consumer side. On the agent side, it simply supports some of the already existing Conversational Cloud capabilities and allows them to be used in connector applications.
 
 ### Use Cases
 
@@ -86,7 +86,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 <img class="zoomimg" src="img/Connector API - Simplified View.svg" alt="connectoroverview">
 
-[comment]: <> (<iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>)
+[comment]: <> <iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
 
 ### Samples
 

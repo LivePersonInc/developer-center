@@ -123,7 +123,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |fcr  | {"start":{"from":1470037448000,"to":1472543048000},"fcr":["yes","no"]}|
 |questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
 |answerText  | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
-|conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
+|conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note:** Search by keywords, summary or engagement attributes
 |agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
 |annotationStates| {"start":{"from":1470037448000,"to":1472543048000},"annotationStates":["OPEN","SUBMITTED","VETTED"]}|
 
@@ -312,7 +312,7 @@ contextData| Contains context information about the consumer's message, includin
 
 Name | Description| Type/Value |
 :----------| :------------------ | :----------|
-rawMetadata | Raw meta data of context information about a consumer message in a json format.| string|
+rawMetadata | Raw meta data of context information about a consumer message in a JSON format.| string|
 structuredMetadata | An array of structured metadata including both context data about a consumer message and an action reason in case of escalation| Array `<StructuredMetadata>`|
 
 *Structured Metadata*
@@ -381,13 +381,13 @@ _Message Rich Content_
 
 Name  | Description  | Type/Value
 :------- | :----------------------------- | :---------
-content  | The json of rich content.| string
+content  | The JSON of rich content.| string
 
 _Message Quick Replies_
 
 Name  | Description  | Type/Value
 :------- | :----------------------------- | :---------
-content  | The json of the quick replies. | string
+content  | The JSON of the quick replies. | string
 
 _Message Status info_
 
@@ -490,7 +490,7 @@ sourceAgentId | The source agent ID.| string
 sourceAgentLoginName| The source agent name. | string
 sourceAgentNickname | The source agent nickname.| string
 sourceAgentFullName | The source agent full name.  | string
-reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
+reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note:** The `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
 contextData| Contains context information about the transfer, including raw and structured metadata.| container| |
 dialogId| The ID of the dialog being transferred.| String
 

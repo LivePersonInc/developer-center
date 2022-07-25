@@ -343,7 +343,7 @@ A Dynamic Routing interaction does the following:
     * Route to skill
     * Route to agent
 
-    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
+    **Note:** If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
 
 #### Prerequisites
 

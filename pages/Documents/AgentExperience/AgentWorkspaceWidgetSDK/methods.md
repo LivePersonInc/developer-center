@@ -201,7 +201,7 @@ Example 2 — 'Write ChatLine' with Quick Replies. Please see [this link](rich-m
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -307,7 +307,7 @@ Example 4 — 'Write StructuredContent' with Quick Replies. Please see [this lin
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [

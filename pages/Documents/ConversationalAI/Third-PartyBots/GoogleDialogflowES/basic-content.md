@@ -78,7 +78,7 @@ Moreover, All domains must be HTTPS secure.
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not Conversational Cloud will receive a blank text response followed by rich content payload.
+**Note:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not Conversational Cloud will receive a blank text response followed by rich content payload.
 
 Example Metadata
 
@@ -142,7 +142,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -206,7 +206,7 @@ This is achieved using the built in "Actions and Parameters" section of the Dial
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
-1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
+1. Explicit request from visitor to transfer to an agent (e.g., action: transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
    Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular agent, skill or default skill.

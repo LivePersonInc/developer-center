@@ -92,7 +92,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | accountid | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 {

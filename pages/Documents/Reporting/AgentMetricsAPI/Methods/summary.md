@@ -33,7 +33,8 @@ sort   | Sort the results in a predefined order.                      | string  
 BODY / POST Parameters
 
 Optional:
-**Note that you must send a valid JSON object as your request body. If you are using none of the below filters send `{}`**
+
+**Note:** You must send a valid JSON object as your request body. If you are using none of the below filters send `{}`.
 
 | Name   |      Description      |  Type/Value |
 |----------|-------------|------|

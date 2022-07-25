@@ -95,12 +95,12 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                        Connect to a Mobile Channel
                 </a>
               </div>
-              <div class="link-padding" >
+              <div class="link-padding">
                 <a target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html">
                        Continue learning about Conversational AI
                 </a>
               </div>
-              <div class="link-padding" >
+              <div class="link-padding">
                 <a target="_blank" href="/intent-manager-key-terms-concepts.html#intents">
                        Get started with Intents
                 </a>

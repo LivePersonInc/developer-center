@@ -127,7 +127,7 @@ Hides previous chat history until user identify has been verified
    - **Default value:** true (enabled)
 
 {: .notice}
-avaliable on SDK 6.0 and above.
+Available in SDK 6.0 and above.
 
 ---  
 
@@ -393,7 +393,7 @@ Conversation separator text and line color.
 Toggle conversation separator view when conversation resolved from agent or consumer.
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 and above
+This configuration is available in SDK 6.2.0 and above.
 
 {:.important}
 Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
@@ -429,7 +429,7 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator L
 Toggle conversation separator line when conversation is auto close
 
 {:.notice}
-This Configuration is avaliable on SDK 6.2.0 and above
+This configuration is available in SDK 6.2.0 and above.
 
 {:.important}
 For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
@@ -1399,7 +1399,8 @@ Country code — when it is not nil, it will be combined with 'language' ("<lang
   
 The combined value has to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
 
-NOTE: the 24/12 Hours time style also will be affected by using the specific Locale when formatting times.
+**Note:** The 24/12 Hours time style also will be affected by using the specific Locale when formatting times.
+
 If no value is provided, the SDK will use the country according to the device's locale.
 
    - **Type:** String?
@@ -1477,7 +1478,8 @@ Status bar style in conversation screen.
    
 #### lpNavigationBarLeftItemImageButton  
 LivePerson Navigation Bar Left Item custom button. 
-NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
+
+**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
 
   **Type:** UIImage?
  
@@ -1493,7 +1495,8 @@ NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
  
 #### lpNavigationBarRightItemImageButton  
 LivePerson Navigation Bar Right Item custom button. 
-NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
+
+**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
 
 **Type:** UIImage?
 
@@ -1524,7 +1527,8 @@ Enable or disable file/photo sharing feature from consumer.
 
 #### maxNumberOfSavedFilesOnDisk 
 Max number of allowed saved files on disk. This refers only to full photo files.
-NOTE: The validation of allowed max number of files will take place when showing and removing conversations.
+
+**Note:** The validation of allowed max number of files will take place when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20 
@@ -1637,7 +1641,8 @@ Color of the loader progress line background.
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
-NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state
+
+**Note:** This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
 
 **Type:** UIImage?
 
@@ -1652,7 +1657,8 @@ NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `came
 
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
-NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state
+
+**Note:** This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
 
 **Type:** UIImage?
 
@@ -1667,7 +1673,8 @@ NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `came
 
 #### photoSharingMenuCameraImage  
 Custom camera image in the photo sharing menu.
-NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
+
+**Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
 **Type:** UIImage?
 
@@ -1683,7 +1690,8 @@ NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` 
 
 #### photoSharingMenuLibraryImage
 Custom Library image in the photo sharing menu.
-NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
+
+**Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
 - **Type:** UIImage?
 
@@ -1697,7 +1705,8 @@ NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` 
 
 #### fileSharingMenuFileImage
 Custom file image in the file sharing menu.
-NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
+
+**Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
 **Type:** UIImage?
 
@@ -1962,8 +1971,10 @@ Send button color in enabled mode in the conversation screen.
 
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
+
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
-NOTE: this property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` — depending on state
+
+**Note:** This property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` — depending on state.
 
 **Type:** UIImage
 
@@ -2419,7 +2430,7 @@ Toggle the mode of the scroll to bottom unread message text preview.
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
 
-- Important: As of SDK 5.1 and above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
+- Important: As of SDK 5.1 and above, this configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
 
 - Note: Behavior for SDK version 5.0:
 If  disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed. Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
@@ -2935,7 +2946,9 @@ When true, user and remote user messages containing one or two emojis will be en
 
 #### customButtonImage 
 Custom button icon image that displays on the navigation bar.
-NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
+
+**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
+
 When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdkcustombuttontapped) callback gets invoked.
    
 - **Type:** UIImage?    

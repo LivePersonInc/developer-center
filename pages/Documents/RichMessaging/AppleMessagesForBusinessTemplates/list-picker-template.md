@@ -404,7 +404,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be ‘text’ | Enum   | Y        |            |
 | tag           | Must be “subtitle”                    | String | Y        |            |
 
-**Note: the subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Example
 
@@ -446,7 +446,7 @@ Based on the [Structured Content Basic Element Image](structured-content-introdu
 | type          | Type of element. <br/> Must be 'image'                              | Enum   | Y        |            |
 | uri           | Image URL. <br/> Must be whitelisted by a LivePerson representative | String | Y        |            |
 
-**Note: The image section should not use style element**
+**Note:** The image section should not use a style element.
 
 ##### Title Element Properties
 
@@ -467,7 +467,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be 'text' | Enum   | Y        |            |
 | tag           | Must be “subtitle”                  | String | Y        |            |
 
-**Note: The subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Button Element Properties
 
@@ -478,7 +478,7 @@ A button element is required for the representation on the Agent workspace side.
 | type          | Type of element. <br/> Must be 'button'            | Enum | Y        |            |
 | click         | Click operation must use “publishText” type only | Enum | Y        |            |
 
-**Note: The button section should not use style element**
+**Note:** The button section should not use a style element.
 
 
 #### List Picker Item JSON Example

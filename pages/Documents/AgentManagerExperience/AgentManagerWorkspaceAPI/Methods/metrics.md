@@ -31,11 +31,7 @@ The API is being used today in the LivePerson Conversational Cloud to display th
 ![](img/amws.png)
 
 
-**Note:**    
-
-This method is subjected to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
-
-
+**Note:** This method is subjected to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
 
 ### Request
 
@@ -74,7 +70,7 @@ _filters info_
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 |includeSubGroups|When this is set to true, any metric retrieved for a specific group will include the total value of the metric on the group level, including its sub-groups. Default value is set to false.|boolean|Optional| 
 
-Request body — json example:
+Request body — JSON example:
 
 ```json
 {
@@ -155,14 +151,11 @@ _metrics info_
 | closedByConsumer| The number of conversations closed by the consumer within the selected timeframe.| Long |
 | autoClosed| The number of conversations automatically closed within the selected timeframe.| Long |
 
-
-
 _all info_ 
 
 Contains list of metrics with their values — same as in _metrics info_.
 
-
-Response DTO — json example:
+Response DTO — JSON example:
 
 ```json
 

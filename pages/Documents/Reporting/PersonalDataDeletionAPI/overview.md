@@ -51,7 +51,7 @@ There is a limitation of the number of deletion requests that a brand can issue 
 
 ### Main flows
 
-**Note** : Only closed chats / conversations can be deleted.
+**Note:** Only closed chats / conversations can be deleted.
 
 **Chat**
 

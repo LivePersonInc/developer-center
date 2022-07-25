@@ -162,8 +162,8 @@ The new property will allow the agent/bot to view the textual representation of 
 ```json
 {
     "lpData": {
-      "interactive" : {
-        "response" : {
+      "interactive": {
+        "response": {
           "text": "<YOUR_CUSTOM_TEXT>"
         }
       }

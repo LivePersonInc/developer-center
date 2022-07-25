@@ -30,7 +30,7 @@ Each event is sent within a notification umbrella. For example, a plain text mes
         "serverTimestamp": 1641916856713,
         "event": {
           "type": "ContentEvent",
-          "message": "sender: Consumer message: 21\n can i get an unlimited data plan\n[16:00:56] timestamp:1641916856685",
+          "message": "sender: Consumer message: 21\n can I get an unlimited data plan\n[16:00:56] timestamp:1641916856685",
           "contentType": "text/plain"
         },
         "conversationId": "4fe52a76-7316-45fe-acf3-482cfb621d9c",

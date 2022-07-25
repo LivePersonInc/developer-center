@@ -22,7 +22,7 @@ There are 2 authenticated connection methods:
  1. with authenticationKey - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
   new LPAuthenticationParams().setAuthKey(yourAuthCode).
 
-_Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+_Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling: lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
  2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
 

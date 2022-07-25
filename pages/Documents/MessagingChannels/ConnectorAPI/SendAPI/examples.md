@@ -52,7 +52,7 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body - JSON payload**
+**Request Body — JSON payload**
 
 ```json
 [
@@ -115,7 +115,7 @@ See below a few examples of how to do so.
 
 2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-**Note**
+**Notes:**
 
 * We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](#campaign-for-messaging-routing).
 
@@ -139,7 +139,7 @@ See below a few examples of how to do so.
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -190,7 +190,7 @@ See below a few examples of how to do so.
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -261,7 +261,7 @@ This is an example of how to send a message to Conversational Cloud to an open c
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 {  
@@ -306,7 +306,7 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 {  
@@ -352,7 +352,7 @@ In order to send an indication that the consumer is typing, the connector will s
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 {  
@@ -369,15 +369,13 @@ In order to send an indication that the consumer is typing, the connector will s
 }
 ```
 
-**Notes**:
-
-In order to show that the consumer has stopped typing it is not sufficient to send another text message. Instead you need to send another payload as above with the _ChatStateEvent_ value in the "type" key. In addition, you will need to pass any other state which is different than `COMPOSING` (it doesn't matter which value you choose, as long as it is not `COMPOSING`) i.e: `ACTIVE`, `INACTIVE`, `GONE`, `PAUSE`.
+**Note:** In order to show that the consumer has stopped typing it is not sufficient to send another text message. Instead you need to send another payload as above with the _ChatStateEvent_ value in the "type" key. In addition, you will need to pass any other state which is different than `COMPOSING` (it doesn't matter which value you choose, as long as it is not `COMPOSING`) i.e: `ACTIVE`, `INACTIVE`, `GONE`, `PAUSE`.
 
 ### How to enable a feature
 
 The following example illustrates how to enable the auto messages feature upon conversation opening. The JSON payload is the same one used to create a new conversation but pay attention to the additional request header.
 
-**Notes**:
+**Notes:**
 
 1. Contact your account team to enable this feature on your account.
 
@@ -419,7 +417,7 @@ The following example illustrates how to enable the auto messages feature upon c
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
 
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 [  
@@ -490,7 +488,7 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 {  
@@ -538,7 +536,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -584,10 +582,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 ]
 ```
 
-**Note**:
-
-For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns).
-
+**Note:** For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns).
 
 ### Direct skill routing
 
@@ -616,7 +611,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -722,8 +717,7 @@ You will need to have an active conversation, along with its converationID, wher
 
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 
-
-**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+**Note:** The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
 
 See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).
 
@@ -740,7 +734,7 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 	{
@@ -776,7 +770,7 @@ Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We
 
 Use the following request and the parameters obtained in step 3 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.
 
 **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
@@ -898,4 +892,4 @@ Use the following request to download the file, using the parameters from the pr
 | :--- | :--- |
 | GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.

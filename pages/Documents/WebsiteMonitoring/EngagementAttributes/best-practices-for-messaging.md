@@ -114,8 +114,7 @@ The table below explains which EAs should be collected and presented in LE UI.
 </tbody>
 </table>
 
-
-**Note:** if you pass the `customerId` parameter of the Customer Info SDE, Conversational Cloud will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
+**Note:** If you pass the `customerId` parameter of the Customer Info SDE, Conversational Cloud will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
 
 ### Monitored Data
 

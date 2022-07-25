@@ -13,7 +13,7 @@ permalink: agent-workspace-widget-sdk-public-model-structure.html
 indicator: both
 ---
 
-**Notes**:
+**Notes:**
 
 - *The structure of the Public Model is subject to change, and may vary in future versions. In addition, data you are attempting to get/bind to may not be present, and so it is not guaranteed that you will receive data.*
 - *This overall structure was originally designed for real-time chat. However, the same structure has also been used in order to support existing widgets for messaging conversations.*
@@ -683,7 +683,8 @@ Structure example:
     "numItems": 1
 }
 ```
-**Note: There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.**
+
+**Note:** There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.
 
 ### SDE.shoppingCart
 
@@ -728,8 +729,9 @@ Structure example:
     "quantityInStock": 5
 }
 ```
-**Note: SDE.viewedProducts does not contain the quantity field**
-**Note: SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields**
+**Note:** SDE.viewedProducts does not contain the quantity field.
+
+**Note:** SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields.
 
 ### SDE.serviceActivity
 

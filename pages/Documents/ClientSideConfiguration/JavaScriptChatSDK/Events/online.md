@@ -16,7 +16,7 @@ indicator: chat
 
 Triggered any time a line is added to the chat. The data here can be a single line or multiple lines.
 
-**Notes**:
+**Notes:**
 
 - Visitor chat lines you sent will also appear here.
 - Lines have a textType property, it is very important to adhere to it when rendering the actual chat line.

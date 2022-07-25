@@ -73,8 +73,8 @@ Outbound Reporting API provides the following data fields. This table explains t
 ## OAuth 2.0 Authorization 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive/proactive-show-secrets.png)  
-* The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
-* The access_token retrieved from above APP JWT response should be used in the Request Header for Authorization.
+* The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+* The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
 ### Account Analytics API
 
@@ -589,7 +589,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
         "messagestatus": [
             "FAILED", "READ"
         ], 
-        "transactionids" : [
+        "transactionids": [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
     }

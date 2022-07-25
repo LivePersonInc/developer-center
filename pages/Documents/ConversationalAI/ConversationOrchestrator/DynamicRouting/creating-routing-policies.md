@@ -257,7 +257,9 @@ Or, dynamically pass the skill id/agent id. Set the drop down in the middle to â
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actions2.png" alt="">
 
-When intending to send a message, just type the required text in the input box. Alternatively, you can also send attributes. **Note**: At this time, you cannot directly send rich messages from Dynamic Routing. If you want to send rich messages, please transfer to a bot that can do this.
+When intending to send a message, just type the required text in the input box. Alternatively, you can also send attributes.
+
+**Note:** At this time, you cannot directly send rich messages from Dynamic Routing. If you want to send rich messages, please transfer to a bot that can do this.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actions3.png" alt="">
 

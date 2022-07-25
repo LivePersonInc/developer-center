@@ -155,8 +155,7 @@ is the value that you set for an option.
 #### Pause/Delay
 
 {: .important}
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action.
-Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node
 will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.6
@@ -418,7 +417,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [

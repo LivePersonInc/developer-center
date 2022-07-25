@@ -63,7 +63,7 @@ For the 'style' property of a reply, please see the [Styling](#Styling) section.
   "replies": [
     {
       "type": "button",
-      "tooltip": "yes i do",
+      "tooltip": "yes I do",
       "title": "yes",
       "click": {
         "actions": [

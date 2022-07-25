@@ -31,7 +31,7 @@ To use this feature with the Control History API, refer to the following [page](
 //Welcome message
 var messageTitle = "Hello Mr.Smith, how may we help you?\n"
 messageTitle.append("To know more about our terms and conditions visit:\n")
-messageTitle.append("https://www.mywebsite.com") // this ability is only avaliable on SDK 6.2.0 and Above
+messageTitle.append("https://www.mywebsite.com") // this ability is only available on SDK 6.2.0 and Above
 
 let welcomeMessageParam = LPWelcomeMessage(message: messageTitle, frequency: .everyConversation)
 

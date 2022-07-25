@@ -484,7 +484,7 @@ The Android Mobile Messaging SDK version 5.5.1 uses:
 
 Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
 
-The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+The notificationType in payload for Huawei device is "huawei". See [Android payload JSON](push-notification-service-tls-authentication.html#payload) for details.
 
 ```java
 public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
@@ -658,7 +658,7 @@ Users using the enhanced Agent Workspace have the ability to share hyperlinks wi
 ### How to enabled
 - KB article: [Hyperlinks overview](https://knowledge.liveperson.com/messaging-channels-rich-conversations-hyperlinks-overview.html)
 - AC feature and site settings to enable:
-  - AC features : Messaging.Agent_Link_Sending
+  - AC features: Messaging.Agent_Link_Sending
   - Site settings: le.agent.messaging.showEnhancedAgentWorkspace = true
 
 Limitations:
@@ -735,7 +735,8 @@ The Android Mobile Messaging SDK version 5.2.0 uses:
 - When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 - This API method uses a threshold mechanism of 10 seconds. If this API is called within 10 seconds from the last request was made, the counter will be returned from SDK cache otherwise a new request to the server will be made to fetch the latest count. 
 
-**Note:** 
+**Notes:**
+
 - This new API is available from SDK version 5.2.0
 - The SDK needs to be initialized before calling this API.
 
@@ -1148,7 +1149,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to `hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -1259,7 +1260,7 @@ The Android Mobile Messaging SDK version 4.7.1 uses:
 
 Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-push-proxy.html) is supported.
 
-The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+The notificationType in payload for Huawei device is "huawei". See [Android payload JSON](push-notification-service-tls-authentication.html#payload) for details.
 
 ```java
 public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
@@ -1450,7 +1451,7 @@ Users using the enhanced Agent Workspace have the ability to share hyperlinks wi
 ### How to enabled
 - KB article: [Hyperlinks overview](https://knowledge.liveperson.com/messaging-channels-rich-conversations-hyperlinks-overview.html)
 - AC feature and site settings to enable:
-  - AC features : Messaging.Agent_Link_Sending
+  - AC features: Messaging.Agent_Link_Sending
   - Site settings: le.agent.messaging.showEnhancedAgentWorkspace = true
 
 Limitations:
@@ -1560,7 +1561,8 @@ The Android Mobile Messaging SDK version 4.4.0 uses:
 - When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 - This API method uses a threshold mechanism of 10 seconds. If this API is called within 10 seconds from the last request was made, the counter will be returned from SDK cache otherwise a new request to the server will be made to fetch the latest count. 
 
-**Note:** 
+**Notes:**
+
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
@@ -2290,7 +2292,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 **How to use**? When JWT expires, the `onTokenExpired()` callback is called. If the screen is in the background the host app should use the new API `updateTokenInBackground()` with new authentication parameters instead of calling r`egisterLPPusher()`.
 
-**Note**: No change in cases where the screen is in foreground - host app should call `reconnect()` to renew the JWT.
+**Note:** No change in cases where the screen is in foreground - host app should call `reconnect()` to renew the JWT.
 
 ##### Code sample
 
@@ -2305,8 +2307,6 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 }
 ```
-
-
 
 # Android Messaging SDK -  Version 3.3.0
 
@@ -3720,7 +3720,7 @@ Automatic Messages (AKA System Messages) are predefined messages about events th
 
 Auto messages are triggered upon specific events that are detected by the system (e.g. the consumer opens a new conversation, the conversation is transferred to another agent, the time to respond is updated, etc.). When the auto messages are sent, they are displayed to the consumer and the agent within the conversation transcript, and they also appear in the conversation’s history both on the consumer’s side and in LE.
 
-**Notes**:
+**Notes:**
 
 * Messages are supported in all Conversational Cloud languages.
 * The content of each message can be edited by the brand.
@@ -3770,7 +3770,7 @@ The following auto messages are supported:
 
 Auto messages will be enabled for early adopters upon release. Please contact your account manager for more information.
 
-**IMPORTANT NOTES**:
+**Notes:**
 
 When auto messages are enabled, they are all enabled by default and all have the default text. It is advised to review them immediately and modify them to suit the brand’s needs. Once auto messages are enabled, the SDK does not show toast messages which were presented in the past.
 
@@ -3792,9 +3792,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-**IMPORTANT NOTES**
-:
-The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
+**Note:** The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
 
 **Getting the unread message badge counter**
 

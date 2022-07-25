@@ -54,7 +54,7 @@ The return value indicates whether the action was completed successfully or not:
 - **True** - All conversations were cleared successfully.
 - **False** - Conversations were not cleared since there is an open conversation.
 
-_**Note: The clearHistory API call will work only if there is currently no active conversation.**_
+**Note:** The clearHistory API call will work only if there is currently no active conversation.
 
 ```java
 public static boolean clearHistory()
@@ -137,7 +137,7 @@ There are 2 authenticated connection methods:
 
 * **HistoryConversationsMaxDays**
 
-    * Possible values: Any Positive Integer (**Default** : -1, **No limit**)
+    * Possible values: Any Positive Integer (**Default**: -1, **No limit**)
 
    ```java
    new ConversationViewParams().setHistoryConversationsMaxDays(20);
@@ -162,7 +162,8 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 This API method uses a threshold mechanism of 10 seconds. If this API is called within 10 seconds from the last request was made, the counter will be returned from SDK cache otherwise a new request to the server will be made to fetch the latest count. 
 
-**Note:** 
+**Notes:**
+
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
@@ -191,7 +192,6 @@ Get the count of unread messages that are not yet received by the consumer's dev
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,it will be fetched again with new data.
-
 
 **Note:** The SDK needs to be initialized before calling this API.
 
@@ -223,7 +223,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise, it will be fetched again with new data.
 
-**Note:** The SDK needs to be initialized before calling this API.
+**Note:** The SDK needs to be initialized before calling this API.
 
 {:.important}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
@@ -287,7 +287,7 @@ public static void hideConversation(Activity activity)
 | :--- | :--- |
 | activity | The calling activity |
 
-**Note:**
+**Notes:**
 
 - Hiding the conversation closes the WebSocket.
 - When using the SDK’s activity, the back button performs the same function.
@@ -297,7 +297,7 @@ Opens the conversation view in Activity mode.
 
 You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
-**TIP** If the initialization succeeds, the `openActivity` method is called.
+**Tip:** If the initialization succeeds, the `openActivity` method is called.
 
 ```java
 private void  initActivityConversation() {
@@ -521,7 +521,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 
 Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
-**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with jwt - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
+**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
 When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
 
@@ -683,7 +683,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
 
 * **HistoryConversationsMaxDays**
 
-    * Possible values: Any Positive Integer (**Default** : -1, **No limit**)
+    * Possible values: Any Positive Integer (**Default**: -1, **No limit**)
 
    ```java
    new ConversationViewParams().setHistoryConversationsMaxDays(20);
@@ -722,7 +722,6 @@ ShutDownLivePersonCallback callback description:
 - **onShutdownFailed()** method is called when the shutdown process failed (for example, shutdown was called when the conversation screen is displayed in the foreground).
 
 **Note:** This does not end the current messaging conversation.
-
 
 ### unregisterLPPusher
 
@@ -827,7 +826,6 @@ The getConversationFragment method creates and returns the conversation fragment
 
 **Note:** This API does not show the actual screen, but only creates the fragment. Your implementation needs to handle when and how to show it.
 
-
 #### getConversationFragment with authentication support (Deprecated)
 
 Same as [getConversationFragment](android-getconversationfrag.html) with the attention of authentication support. You should use this alternative if you know your system implementation involves an authentication step. Usually this means the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified, or your backend isn’t set up with the LivePerson backend, this call will fail.
@@ -886,8 +884,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | appId | The host app ID (e.g. com.liveperson.myApp). |
 | gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
 
-_**Note: If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.**_
-
+**Note:** If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.
 
 #### unregisterLPPusher (deprecated)
 
@@ -914,7 +911,7 @@ Handling the push message allows the host app to do the following:
 - Receive non-messaging related push messages.
 - Handle custom in-app alerts upon an incoming message.
 
-_**Note: Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePushMessage method.**_
+**Note:** Whether the host app fully handles any push messages or partially, any messaging push message should be sent to the SDK using the handlePushMessage method.
 
 ```java
 public static void handlePushMessage(Context context, Bundle data, String brandId, Boolean showNotification)

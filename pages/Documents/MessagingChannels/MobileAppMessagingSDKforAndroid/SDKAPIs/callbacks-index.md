@@ -13,7 +13,7 @@ indicator: messaging
 
 The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. This section details each callback.
 
-_**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#callbacks-interface).
+**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#callbacks-interface).
 
 ### Conversation Events
 #### Conversation Started
@@ -116,7 +116,6 @@ Called when the current conversation gets marked as normal by either the consume
 Called when the assigned agent of the current conversation has changed, or their details are updated. When no agent is associated with the conversation, the callback passes a null value. For example, this happens when an agent returns the consumer to the request queue. 
 
 **Note:** You must check for null value before using the agentData object.
-
 
 > **Intent Action:** 
 >

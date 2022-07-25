@@ -64,17 +64,17 @@ public enum Services {
 
 * **url:** The url we will proxy the request to in runtime (represented by runtime header `LP-forward-url`).
 
-**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+**Note:** You must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked.
 
 #### Actions to take
 
 Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters **(accountId/serviceName/url)** to identify the context (as explained above).
 
-**Note that there is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned**.
+**Note:** There is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned.
 
 In order to create the mapping object, you will need to use the following method.
 
-**Note that this action is performed against ac-common domain, not the MTLS service.**
+**Note:** This action is performed against ac-common domain, not the MTLS service.
 
 |Method|      URL|  
 |:--------  |:---  |

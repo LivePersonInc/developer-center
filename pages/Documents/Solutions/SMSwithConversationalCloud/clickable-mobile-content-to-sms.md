@@ -230,7 +230,7 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 
 ```html
 <div id="sms-modal" class="modal-centered">
- <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();" >
+ <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();">
    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
  </div>
  <div id="contact-main">

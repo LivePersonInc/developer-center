@@ -128,12 +128,12 @@ The following information should be provided to LivePerson.
   </tr>
   <tr>
     <td>externalCustomerIdDescriptor</td>
-    <td>Description of Brands Customer ID (String). <b>NOTE</b>: Must be passed with externalCustomerId</td>
+    <td>Description of Brands Customer ID (String). <b>Note:</b> Must be passed with externalCustomerId</td>
     <td>False</td>
   </tr>
   <tr>
     <td>externalCustomerId</td>
-    <td>Brands Customer ID (String). <b>NOTE</b>: Must be passed with externalCustomerIdDescriptor</td>
+    <td>Brands Customer ID (String). <b>Note:</b> Must be passed with externalCustomerIdDescriptor</td>
     <td>False</td>
   </tr>
 </tbody>

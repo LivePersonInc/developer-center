@@ -56,9 +56,7 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
-
-
+**Note:** When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
 
 ### csatAgentViewHidden (avatar and agent name)
 

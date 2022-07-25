@@ -54,7 +54,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 
 Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
-**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with jwt - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
+**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
 When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
 

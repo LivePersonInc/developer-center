@@ -40,7 +40,7 @@ Create new status reason for an account. It is possible to create several items 
 
 The request body is able to accept a single JSON object as shown below, or a JSON array [] of such objects.
 
-**Note**: the order attribute is not mandatory, however you should note the following:
+**Note:** The order attribute is not mandatory, however you should note the following:
 
 1.  If order is not passed and there are multiple items in the request, order assigned by the server is not guaranteed to be the sorting order in the request body.
 

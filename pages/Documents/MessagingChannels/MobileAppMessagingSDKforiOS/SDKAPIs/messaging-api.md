@@ -107,7 +107,7 @@ func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? 
 | brandID | brandID to request the conversation query for | -- |
 | campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID(mandatory), engagementID(mandatory), contextID(mandatory), sessionID(optional) and visitorID(optional) |  -- |
 
-_**Note: for information about the how to initialize the SDK with MonitoringParams and get the Campaign, click [here](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)**_
+**Note:** For information about the how to initialize the SDK with MonitoringParams and get the Campaign, click [here](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params).
 
 ### getConversationConsumerQuery
 

@@ -16,7 +16,7 @@ redirect_from:
 
 OAuth is often used to manage users' log in to a certain site or application at LivePerson. If a complete logout from **all** LivePerson applications is required, this revocation mechanism should be used during the end-user logout proccess. This revocation request will invalidate the access token.
 
-**Note**: Using this method will invalidate the user's session in all LivePerson applications.
+**Note:** Using this method will invalidate the user's session in all LivePerson applications.
 
 ### Request
 

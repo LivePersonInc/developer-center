@@ -133,7 +133,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 
 2. **Set up instance of LPMessagingSDK** for the accountID provided.
 
-3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a JWT or authentication code from your authentication server. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
 4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
@@ -175,7 +175,7 @@ class DocumentationViewController: UIViewController {
         // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         
         /*
-         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a JWT or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
          
          let authenticationParams = LPAuthenticationParams(authenticationCode: nil,
@@ -184,7 +184,7 @@ class DocumentationViewController: UIViewController {
                                                         certPinningPublicKeys: nil,
                                                            authenticationType: .authenticated)
          
-        let welcomeMessageParam = LPWelcomeMessage(message: "How can i help you today?", 
+        let welcomeMessageParam = LPWelcomeMessage(message: "How can I help you today?", 
                                                  frequency: .FirstTimeConversation)
         
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
@@ -247,7 +247,7 @@ class DocumentationViewController: UIViewController {
     
         // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
-         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a JWT or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
     
     
@@ -259,7 +259,7 @@ class DocumentationViewController: UIViewController {
     
         id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
                                                                                                            campaignInfo:nil];
-        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
+        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may I help you today?"
                                                                                  frequency:MessageFrequencyFirstTimeConversation];
       
         LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
@@ -392,7 +392,7 @@ class DocumentationViewController: UIViewController {
         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
         */
         
-        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
+        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may I help you today?"
                                                                                  frequency:MessageFrequencyFirstTimeConversation];
         
         LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone

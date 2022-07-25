@@ -211,29 +211,29 @@ The functions have access to a set of libraries, which we define in our function
 <thead>
   <tr>
     <th>Dependency Name</th>
-    <th  style="text-align: center; vertical-align: middle;" >Documentation</th>
+    <th  style="text-align: center; vertical-align: middle;">Documentation</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>jsforce</td>
-    <td style="text-align: center; vertical-align: middle;" ><a href="https://jsforce.github.io/">https://jsforce.github.io/</a></td>
+    <td style="text-align: center; vertical-align: middle;"><a href="https://jsforce.github.io/">https://jsforce.github.io/</a></td>
   </tr>
   <tr>
     <td>oauth-1.0a</td>
-    <td style="text-align: center; vertical-align: middle;" ><a href="https://www.npmjs.com/package/oauth-1.0a">https://www.npmjs.com/package/oauth-1.0a</a></td>
+    <td style="text-align: center; vertical-align: middle;"><a href="https://www.npmjs.com/package/oauth-1.0a">https://www.npmjs.com/package/oauth-1.0a</a></td>
   </tr>
   <tr>
     <td>luxon</td>
-    <td style="text-align: center; vertical-align: middle;" ><a href="https://moment.github.io/luxon/#/?id=luxon">https://moment.github.io/luxon/#/?id=luxon</a></td>
+    <td style="text-align: center; vertical-align: middle;"><a href="https://moment.github.io/luxon/#/?id=luxon">https://moment.github.io/luxon/#/?id=luxon</a></td>
   </tr>
   <tr>
     <td>lodash</td>
-    <td style="text-align: center; vertical-align: middle;" ><a href="https://lodash.com/">https://lodash.com/</a></td>
+    <td style="text-align: center; vertical-align: middle;"><a href="https://lodash.com/">https://lodash.com/</a></td>
   </tr>
   <tr>
     <td>lp-faas-toolbelt</td>
-    <td style="text-align: center; vertical-align: middle;" ><a href="https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt">https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt</a></td>
+    <td style="text-align: center; vertical-align: middle;"><a href="https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt">https://developers.liveperson.com/liveperson-functions-foundations-features.html#toolbelt</a></td>
   </tr>
   </tbody>
 </table>

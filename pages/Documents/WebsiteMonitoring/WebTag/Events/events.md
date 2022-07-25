@@ -115,7 +115,7 @@ This event triggers when the chat state is changed.
 *Example:*
 
 ```javascript
-{ "state" : "chatting" } //The current chat state
+{ "state": "chatting" } //The current chat state
 ```
 
 #### conversationInfo
@@ -185,7 +185,7 @@ This event triggers when the state changes to "chatting" to show the engagement 
 
 ```javascript
 {
-    "engagementName" : "Sticky chat button",
+    "engagementName": "Sticky chat button",
     "state": "chatting"
 }
 ```

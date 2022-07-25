@@ -17,7 +17,7 @@ indicator: messaging
 
 Conversational Cloud provides a way for developers and partners that are building a bot using the Messaging Agent SDK to pass or listen for metadata or context information on a conversation. For example, sending metadata with structured content or listening for a metadata response after sending a request (payment, authorization, etc).
 
-_**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)._
+**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat).
 
 The metadata information can be used to achieve the following:
 

@@ -417,7 +417,7 @@ Then click "Create app"
 ```
 
 
-**Note**: After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
+**Note:** After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
 **Change the path of the services according to the classes you just created.**
 

@@ -63,7 +63,7 @@ The [Appendix](products-channels-ivr-deflection-solution-appendix.html) provides
 <prompt>A chat link will be send to <say-as interpret-as="vxml:phone"><value expr="user"/></say-as>. Thank you and good bye.</prompt>
 ```
 
-**Note**: Other SMS providers may use a different method to send SMS text messages.
+**Note:** Other SMS providers may use a different method to send SMS text messages.
 
 ### Impact of the IVR Deflection Solution on Existing Functionality
 

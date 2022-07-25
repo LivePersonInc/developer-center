@@ -58,8 +58,7 @@ _filters info_
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 
-
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -103,7 +102,7 @@ concludedConversations  | Number of conversations that were _concluded_ in the t
 
 
 
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 

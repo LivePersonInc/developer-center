@@ -220,8 +220,8 @@ In order to do this, all code is handled from within your Apple iMessage app / e
     ```json
     {
         "lpData": {
-          "interactive" : {
-            "response" : {
+          "interactive": {
+            "response": {
               "text": "YOUR_CUSTOM_TEXT" 
             }
           }

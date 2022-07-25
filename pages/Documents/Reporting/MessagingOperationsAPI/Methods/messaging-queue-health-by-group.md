@@ -13,7 +13,7 @@ indicator: messaging
 Retrieves the information about the current messaging queue state (and all its related metrics) in the account, skill and agent group level
 
 
-**Note**:
+**Notes:**
 
 1. The messaging queue data is currently not available by default, in order to enable the data flow please contact your account manager.
 

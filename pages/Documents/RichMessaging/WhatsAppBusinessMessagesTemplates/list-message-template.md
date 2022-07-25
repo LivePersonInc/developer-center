@@ -91,7 +91,7 @@ This is generally where the body of the message can be entered.
 | --- | --- | --- | --- |
 | type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
 | tag | Must be "subtitle".  | Enum | Y |
-| text |  The description text. The text can not be longer than 1024 characters <br> **Note:**  This text length is shared with the title length. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
+| text |  The description text. The text can not be longer than 1024 characters <br> **Note:** This text length is shared with the title length. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
 
 
 #### JSON Representation

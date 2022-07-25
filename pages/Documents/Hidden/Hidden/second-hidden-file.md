@@ -24,7 +24,7 @@ This is a hidden file
 The benefit is that users wont be able to access information unless they know the link
 '
 <div class="lp-container">
-    <div class="header-paragraph" >
+    <div class="header-paragraph">
    The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a guide below to learn more.
             </div>
 </div>

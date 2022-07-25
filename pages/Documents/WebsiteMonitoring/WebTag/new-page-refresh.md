@@ -17,7 +17,7 @@ When a new page is triggered call the following method:
 
 ```javascript
 lpTag.newPage(url, {
-  section : [],
+  section: [],
   sdes: [],
   taglets: {
 	  rendererStub:{
@@ -38,7 +38,7 @@ lpTag.newPage(url, {
 | section | array of strings | sections which are active | No |
 | sdes | array of SDE objects | sdes in the new page context | No |
 | taglets | object | configuration that will be passed to the specific taglet names | No |
-| rendererStub | object | `{ divIdsToKeep: {  “DIVID” :  true } }` where “DIVID” should be replaced with the ID of the div who’s button you want to keep during the page refresh. | No |
+| rendererStub | object | `{ divIdsToKeep: {  “DIVID”:  true } }` where “DIVID” should be replaced with the ID of the div who’s button you want to keep during the page refresh. | No |
 | YOURTAGLETNAME | object | add your own specific configuration for your taglet here | No |
 
 #### Example Call

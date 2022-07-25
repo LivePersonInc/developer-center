@@ -54,7 +54,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 | :--- | :--- |
 | The JSON Payload | application/json |
 
-**Notes**:
+**Notes:**
 
 For the JSON payload, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html) to get an example of the accepted payloads.
 
@@ -131,7 +131,9 @@ The next request body example illustrates how to create a conversation and send 
 ]
 ```
 
-The above request is much better as it also includes the user SDEs which will populate the consumer information in Conversational Cloud's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in Conversational Cloud's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}.
+
+**Note:** Not best practice, please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to set up campaigns.
 You can send the **Campaign ID** and **Enagagement ID** to Conversational Cloud in order to route the consumer conversation to the desired skill as designed by the Campaign Builder. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
@@ -142,7 +144,7 @@ In order to retrieve the campaign properties, you need to use the [Monitoring AP
 
 The connector can then use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [{

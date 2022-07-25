@@ -52,7 +52,7 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
     You will need to authorize the header with the pattern “Basic” followed by a space and a base64-encoded string username:password. For example, to authorize demo / p@55w0rd you would need to send
     Basic ZGVtbzpwQDU1dzByZA==
 
-    **Note**: Because base64 is easily decoded, Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL.
+    **Note:** Because base64 is easily decoded, Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL.
 
     This endpoint returns 200 ok with the OAuth2.0 secure token if the username and password are valid.
 
