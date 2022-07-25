@@ -13,7 +13,6 @@ permalink: connector-api-webhooks-webhooks-examples.html
 
 In this page you can refer to some examples of the events notifications received from the Webhooks service in regards to the conversation.
 
-
 ### Consumer created an new conversation
 
 ```json
@@ -49,7 +48,6 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-
 ### Consumer sent a text message
 
 ```json
@@ -77,7 +75,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "ms.MessagingEventNotification"
 }
 ```
-
 
 ### Agent assigned to the conversation
 
@@ -117,7 +114,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "cqm.ExConversationChangeNotification"
 }
 ```
-
 
 ### Agent read the message
 
@@ -178,7 +174,6 @@ In this page you can refer to some examples of the events notifications received
 
 ### Agent has stopped typing but still on the chat window - ACTIVE
 
-
 ```json
 {
  "kind": "notification",
@@ -202,9 +197,7 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-
 ### Agent sent a text messages
-
 
 ```json
 {
@@ -259,7 +252,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "ms.MessagingEventNotification"
 }
 ```
-
 
 #### ms.PublishEvent Properties
 

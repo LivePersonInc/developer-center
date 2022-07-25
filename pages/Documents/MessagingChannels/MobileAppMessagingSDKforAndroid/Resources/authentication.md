@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
 indicator: messaging
 ---
 
-
 ### Authenticated in-app messaging
 
 #### Prerequisites
@@ -33,9 +32,6 @@ LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenti
 ```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
-
-
-
 
 #### Authenticated connection methods
 
@@ -61,7 +57,6 @@ LPAuthenticationParams().setHostAppJWT("yourJwt")
 Once the Authentication key expires, you get notified with a callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired).
 
 To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
-
 
 {:.important}
 Errors while trying to connect uses callback: `void onError(TaskType type, String message);`

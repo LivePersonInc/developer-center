@@ -192,7 +192,6 @@ In this example request and response, we will look at retrieving messaging segme
 
 **Request using the parameters and values**: `agentIds=12,13` and `skillIds=333,444` with `interval=5`, `timeframe=60` and `metrics=avgTimeToResponseFromAgentAssignment`, `avgTimetoFirstAgentMessageFromAgentAssignment_AfterTransfer`, `avgTimetoFirstAgentMessageFromAgentAssignment_NewConversation`
 
-
 ```json
 {
   "metricsByIntervals": [
@@ -378,13 +377,11 @@ In this example request and response, we will look at retrieving messaging segme
     }
   }
 }
-
 ```
 
 **Elements in the Response**
 
 *Note*: All metrics under the hierarchy of `metricsPerAgent` represent the average values for each agent under the interval/aggregation they appear in (or the average/aggregate value of the entire timeframe if no intervals are provided). Metrics under the `metricsTotal` entity will contain the summation of all aggregation/average of the same hierarchy level.
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

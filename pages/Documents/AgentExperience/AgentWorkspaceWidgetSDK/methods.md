@@ -513,7 +513,6 @@ var updateCallback = function(data) {
     }
 };
 
-
 {
 var onSuccess = function(data) {
     // Do something with the returning data
@@ -532,13 +531,11 @@ var onError = function(err) {
         }
     }
 
-
 lpTag.agentSDK.init({notificationCallback: notificationHandler});
 
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
-
 
 ### setConsumerProfile
 

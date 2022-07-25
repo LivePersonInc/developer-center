@@ -170,7 +170,6 @@ Part of the Time Picker Conversational Cloud Structured Content metadata JSON.
 | receivedMessage | Defines how the bubble template will be displayed when a message is received.           | Object | Y        |            |
 | replyMessage    | Defines how the bubble will be displayed when a message is sent back by the consumer. | Object | N        |            |
 
-
 #### Received and Reply messages
 
 The Received Message is the first card presented to the consumer, from which they access the available timeslots to choose from. It consists of an image, title, subtitle and style.
@@ -219,13 +218,11 @@ Part of the Time Picker Conversational Cloud Structured Content metadata JSON. D
 | location      | Enables the brand to add a descriptor to the appointment location, allowing the consumer to immediately see the location once appointment is saved in the calendar | Object | N        |            |
 | title         | Title of the calendar meeting                                                                                                                                      | String | Y        |            |
 
-
 #### Timing Object Properties
 
 | Property Name           | Description                                                                                                                                                                                                                                                                                                                 | Type | Required | Size Limit |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--------- |
 | presentedTimezoneOffset | Time zone offset configuration. Represents the number of minutes from GMT, while specifying the timezone of the event’s location. <br/>If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location | Enum | N        |            |
-
 
 #### Location Object Properties
 
@@ -283,7 +280,6 @@ Based on [Structured Content Basic Element Text](structured-content-introduction
 
 **Note:** The text section should not use a style element.
 
-
 #### Time slot Element Properties
 
 Based on [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) with the following restrictions:
@@ -303,14 +299,12 @@ Time Picker button has additional [Click Metadata](structured-content-introducti
 | type          | Type of the element. <br/>Must be “BusinessEvent”                   | string | Y        |            |
 | timing        | An object describing the start time and the duration of the time slot | Object | Y        |            |
 
-
 **Timing Object Properties**
 
 | Property Name | Description                                                                                                                                                                                           | Type    | Required | Size Limit |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- | :--------- |
 | startTime     | A UTC date string, represented by a valid, future date in ISO-8601 format and specified as absolute GMT +0000 date; for example, 2018-05-26T08:27:55+00:00, 2018-05-26T08:27:55+0000, or 2018-05-26T08:27:55Z | string  | Y        |            |
 | Duration      | An integer representing the duration of the time slot, in seconds                                                                                                                                     | integer | Y        |            |
-
 
 #### Example
 
@@ -387,7 +381,6 @@ Time Picker button has additional [Click Metadata](structured-content-introducti
   }
 ]
 ```
-
 
 #### Time Picker Body
 

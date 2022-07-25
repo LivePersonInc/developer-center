@@ -16,7 +16,6 @@ The Forward API methods proxies incoming requests to the `LP-forward-url` suppli
  |:--------  |:---  |
  |DELETE|  https://[{domain}]/mtls/account/{accountId} |
 
-
 **Request Headers**
 
  |Header         |Description  |
@@ -46,8 +45,6 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

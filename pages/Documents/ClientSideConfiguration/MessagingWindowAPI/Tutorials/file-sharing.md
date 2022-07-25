@@ -157,7 +157,6 @@ Upload the file as binary.
 | 201 | CREATED |
 | 401 | Temp URL invalid |
 
-
 **Upload and download file requests are also available [as a Postman collection](assets/content/Swift.postman_collection).**
 
 [Unfamiliar with Postman?](https://www.getpostman.com/)
@@ -200,7 +199,6 @@ Example message:
 **Request a download URL**:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
-
 
 Request Body Example:
 

@@ -57,7 +57,6 @@ if your Application is running on debug mode (running from Xcode), the **Product
 {:.notice}
 if using an Application downloaded from the App Store, or any other Ad-Hoc distribution service, the **Production** switch should be **ON**. 
 
-
 ### How to get your Apple Team ID
 
 To retrieve your Team ID, follow the next steps:

@@ -145,7 +145,6 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
-
 ### Google Dialog V2.0 Flow
 
 The Google Dialogflow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
@@ -190,7 +189,6 @@ The Google Dialogflow v2.0 connector will be available by mid December. Below ar
     6. Leave API Version unchanged as V2
 
 ![image alt text](img/bot-guide-dialogflow1.png)
-
 
 ### Microsoft Bot Framework (LUIS)
 
@@ -271,8 +269,6 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
     `https://external.botcentralapi.com/connector/{{consumerId}}`
     {% endraw %}
 
-
-
 ### Custom Connectors
 
 Customers can always write their own custom Bot connector using our Messaging Agent SDK and Chat Agent API.  This is mainly for the small, medium niche platforms who want to build connectivity to LiveEngage.
@@ -293,7 +289,6 @@ Customers can always write their own custom Bot connector using our Messaging Ag
   * LivePerson Developer [Documentation](https://developers.liveperson.com/messaging-agent-sdk-overview.html)
 
   * Live GitHub [Messaging SDK & Sample Apps](https://github.com/LivePersonInc/node-agent-sdk)
-
 
 ### FAQS
 

@@ -32,7 +32,6 @@ JSON
 </tbody>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -51,7 +50,6 @@ JSON
   </tr>
 </tbody>
 </table>
-
 
 **Response Codes**
 

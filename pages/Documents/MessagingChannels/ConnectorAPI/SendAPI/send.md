@@ -83,7 +83,6 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 | contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
 | message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
 
-
 **Example Request Body — Consumer is Typing — JSON Payload**
 
 ```json
@@ -147,7 +146,6 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 | Code | Description |
 | :--- | :--- |
 | 200 | OK |
-
 
 **Entity Example**
 

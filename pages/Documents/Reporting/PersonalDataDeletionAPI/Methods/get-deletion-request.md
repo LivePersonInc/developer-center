@@ -55,7 +55,6 @@ This API returns the metadata related to the deletion requests that were submitt
  |requested_by         | The user id who requested to delete     | string|
  |status               | The current status of the deletion request     | string|
 
-
  **Response Example**
 
 Response is in a JSON format.

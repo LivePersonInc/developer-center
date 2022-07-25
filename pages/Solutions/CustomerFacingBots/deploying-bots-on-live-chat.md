@@ -14,7 +14,6 @@ permalink: customer-facing-bots-deploying-bots-on-live-chat.html
 indicator:
 ---
 
-
 ### Step 1 - Set Up Your Conversational Cloud Configuration
 
 If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).

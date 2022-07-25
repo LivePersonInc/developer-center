@@ -87,7 +87,6 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | orderId         | Purchase order ID.| alphanumeric|
 | cart            | Information about the cart status (detailed format - link to cart status)      | container|
 
-
 ### marketingCampaignInfo (Marketing Source)
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
@@ -155,7 +154,6 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | status     | Status of service activity. | int|
 | category        | Category of service activity.   | alphanumeric|
 | serviceId        | Unique service identifier.| alphanumeric|
-
 
 **JSON Example (including engagement attributes)**
 

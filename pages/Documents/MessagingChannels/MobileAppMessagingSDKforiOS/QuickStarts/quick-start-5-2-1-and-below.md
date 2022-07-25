@@ -99,7 +99,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPInfra.framework/frameworks-strip.sh"
    ```
 
-
 ### Step 2: Configure project settings to connect Conversational Cloud SDK
 
 1. Under **Build Settings**, make sure you set **Always Embed Swift Standard Libraries** to **YES**.
@@ -122,7 +121,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    <key>NSMicrophoneUsageDescription</key>
    <string>Microphone Privacy Setting for Conversational Cloud Mobile App Messaging SDK for iOS</string>
    ```
-
 
 ### Step 3: Initialize the LPMessagingSDK
 Before you can show a conversation, you must initialize the Messaging SDK.  
@@ -211,11 +209,9 @@ class DocumentationViewController: UIViewController {
         }
     }
 }
-
 ```
 
 ```objc
-
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 #import <LPAMS/LPAMS.h>
@@ -464,6 +460,4 @@ You can now do any of the following:
 - Configure [Photo sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device.  
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
-
-
 

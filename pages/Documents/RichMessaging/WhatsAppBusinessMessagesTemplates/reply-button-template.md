@@ -30,7 +30,6 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 
 The Reply Button is the container that holds the information that should be displayed by the connector.
 
-
 | Property Name | Description                                   |                  Type | Required |
 |----------------------------------------------------------------------------------------------------|
 | type          | Type of container                               | Enum                  | Y        |
@@ -78,7 +77,6 @@ the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premis
 | tag | Must be "title". If missing, the first text element in the template will be set as the card text.  | Enum | Y |
 | text |  The actual text of the headline. The text can not be longer than 1024 characters shared with the subtitle.  | String | Y |
 
-
 #### JSON Representation
 
 ```json
@@ -98,7 +96,6 @@ The text of the rich card.
 | type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
 | tag | Must be "subtitle". If missing the first text element in the template will be set as the card text.  | Enum | Y |
 | text |  The description text. The text can not be longer than 1024 characters shared with the title.  | String | Y |
-
 
 ### Footer
 

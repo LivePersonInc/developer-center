@@ -115,7 +115,6 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
      Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
 
-
      ```java
      public class FirebaseRegistrationIntentService extends IntentService {
 
@@ -135,7 +134,6 @@ The proprietary SDK notification is only for display purposes, interacting with 
         }
      }
      ```
-
 
    - **NotificationUI** (or choose your own names for these classes): presents and handles the push to the UI.
 

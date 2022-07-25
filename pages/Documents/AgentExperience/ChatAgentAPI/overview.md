@@ -32,8 +32,6 @@ In order to use the Chat Agent API, please follow the steps below:
 3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html).
 4. **Log out** using the [Login Service API](login-getting-started.html).
 
-
-
 ### Use Cases
 
 There are two primary reasons to utilize the Chat Agent API:

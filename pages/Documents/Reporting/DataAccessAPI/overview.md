@@ -36,7 +36,6 @@ The Data Access API retrieves historical data. This API is based on the REST arc
 
 Data Access retention is limited to a 30 days period. The files will be deleted 30 days from the time they were created, in order to meet GDPR regulation. 
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -54,7 +53,6 @@ A few things you'll need to get started with this API:
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).  
 
 4. This API requires backend enablement, please contact your account manager to do so.
-
 
 ### Architecture
 

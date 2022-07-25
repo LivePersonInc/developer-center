@@ -25,9 +25,6 @@ Create new special occasion(s) for an account. It is possible to create several 
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
-
-
-
 **Request Body**
 
 ```json
@@ -73,7 +70,6 @@ The `isDefault` field determines whether a special occasions object is the defau
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String  |
-
 
 ### Response
 

@@ -35,7 +35,6 @@ Get the next sequence of the survey — sequence is a series of question startin
 | seqRoot | questionId, describe the first question in the next sequence | Long | Optional | If seqRoot was not provided and seq=true, the first sequence of the survey will be returned |
 | v | API version number | String | Required |
 
-
 **Request Headers**
 
 |Header | Description| Notes |

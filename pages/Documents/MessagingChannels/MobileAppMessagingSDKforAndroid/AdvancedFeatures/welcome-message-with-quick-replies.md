@@ -12,7 +12,6 @@ indicator: messaging
 
 **Supported versions:** 3.8 and newer
 
-
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
 You can configure the Welcome message as a simple text message with or without quick replies, for example: 
@@ -55,11 +54,9 @@ public MessageOption(@NonNull String displayText, @NonNull String value)
 - **displayText** is the text displayed in the quick reply button.
 - **value** is the content that is sent to the agent. Default value is `displayText` if set to empty String.
 
-
 There are two message frequencies: 
 - **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
 - **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
-
 
 ### Limitations  
 

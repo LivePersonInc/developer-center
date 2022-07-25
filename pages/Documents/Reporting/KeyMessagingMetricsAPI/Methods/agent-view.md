@@ -98,7 +98,6 @@ Request body — JSON example:
 }
 ```
 
-
 ### Response
 
 Name| Description | Type/Value
@@ -179,7 +178,6 @@ agentStatus  | (ONLINE / BACK_SOON / AWAY) | String
 agentStatusDuration  | status duration in ms | Long
 agentStatusReasonId |  (NA / away reason id) | String |
 
-
 Response DTO — JSON example:
 
 ```json
@@ -246,9 +244,5 @@ Response DTO — JSON example:
         }
     ]
 }
-
-
 ```
-
-
 

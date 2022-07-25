@@ -132,8 +132,6 @@ The following monitored data will be added to the Consumer Info widget under Con
 
 6. IP Address (don't forget to take **IP masking** into consideration)
 
-
-
 The monitored data will be collected from the first session. Geo location will be collected from when the conversation first originated, and will not update if the user changes their location during an open conversation.
 
 Both unauthenticated EAs and monitored data will be available to view in the Agent Widget SDK, and through the Messaging Interactions API.
@@ -159,7 +157,6 @@ EAs can be submitted from multiple sources such as the Monitoring API, or throug
 
 In case there is any additional information about the user during the interaction, you may send the same EAs again in order to update the existing data with the new information.
 
-
 **Availablity of EAs**
 
 - All Reported EAs within 12 hours before the Conversation  started, while the conversation is open, and 12 hours after the conversation has closed will be available.
@@ -169,7 +166,6 @@ In case there is any additional information about the user during the interactio
 - EAs will be available through API calls in a matter of seconds.
 
 - EAs will be searchable in the UI up to 2 hours since they were received.
-
 
 **Sending an EA multiple times during a session**
 

@@ -14,7 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-registerlppusher.html
 indicator: messaging
 ---
 
-
 If your system implementation involves an authentication step, use `LPAuthenticationParams`.
 
 There are 2 authenticated connection methods:
@@ -36,7 +35,6 @@ public static void registerLPPusher(String brandId, String appId, String deviceT
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
 
-
 ```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
 ```
@@ -48,7 +46,6 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
-
 
 ### Authenticated (authenticationKey)
 

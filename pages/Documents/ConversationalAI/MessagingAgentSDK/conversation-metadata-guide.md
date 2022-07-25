@@ -89,7 +89,6 @@ Bot response metadata is context information / the bot analysis of the last cons
   </tbody>
 </table>
 
-
 #### Action reason
 
 Action reason metadata describes the reason behind an action that was taken by a bot or a human agent, such as escalation or transfer. This information can be used to both provide information to an agent receiving a conversation that was escalated by a bot as well as analyze the transfer and escalation rate per escalation reason.
@@ -120,7 +119,6 @@ Action reason metadata describes the reason behind an action that was taken by a
    </tr>
   </tbody>
 </table>
-
 
 #### Escalation summary
 
@@ -160,7 +158,6 @@ Escalation summary metadata is a summary of conversation information up to an es
   </tbody>
 </table>
 
-
 **businessCase**
 
 <table>
@@ -187,7 +184,6 @@ Escalation summary metadata is a summary of conversation information up to an es
    </tr>
   </tbody>
 </table>
-
 
 #### Structured content identifier (ExternalId)
 

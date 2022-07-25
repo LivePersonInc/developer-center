@@ -24,7 +24,6 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 3. **Limitation**: in order for the queue data to appear, there must be at least one agent logged in to LE.
 
-
 ### Request
 
 | Method | URL |
@@ -102,7 +101,6 @@ Request by skillIds=12,13 (no interval), timeframe=180
             "maxWaitTimeForAgentAssignment": 370,
             "waitTimeForAgentAssignment_50thPercentile":  170,
             "waitTimeForAgentAssignment_90thPercentile": 224
-
 
         }
     }

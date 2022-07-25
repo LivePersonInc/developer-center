@@ -38,7 +38,6 @@ Success response:
 
 In addition to the response, the ExConversationChangeNotification with the recent conversations (maximum 1001 conversation), fitting the parameters set in the subscription request, will be sent. 
 
-
 ### subscribeAgentsState
 
 This method is used to create a subscription for Agent State updates. An event will be received whenever the bot user's state is updated.

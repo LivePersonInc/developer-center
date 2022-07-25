@@ -32,7 +32,6 @@ See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#su
 LHS = left-hand side = the input JSON tree<br>
 RHS = right-hand side = the output JSON tree
 
-
 ### Examples - Map articles' metadata (external KB with LivePerson AI)
 
 #### Example 1
@@ -206,7 +205,6 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
   "tags" : [ "Profile" ]
 } ]
 ```
-
 
 ### Examples - Map a single article's content (external KB with LivePerson AI)
 
@@ -385,7 +383,6 @@ When fetching a single article, some CMS systems might return an array as per th
   "tags" : [ "Account" ]
 }
 ```
-
 
 ### Examples - Map article suggestions/answers (external KB without LivePerson AI)
 

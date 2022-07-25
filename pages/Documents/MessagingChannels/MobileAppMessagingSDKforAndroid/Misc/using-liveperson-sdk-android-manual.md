@@ -105,14 +105,12 @@ dependencies {
     compile "com.android.support.constraint:constraint-layout:1.0.2"
     compile "com.google.firebase:firebase-messaging:18.0.0"
 
-
     testCompile "junit:junit:4.12"
     // LivePerson SDK
     compile project(path: ":lp_messaging_sdk")
 }
 apply plugin: "com.google.gms.google-services"
 ```
-
 
 {:start="5"}
 5. Make sure you have the following line written in your settings.gradle file:
@@ -248,7 +246,6 @@ protected void onCreate(Bundle savedInstanceState) {
    initOpenConversationButton();
 }
 ```
-
 
 4. **init Button function:**
 
@@ -415,7 +412,6 @@ Then click "Create app"
            </intent-filter>
        </receiver>
 ```
-
 
 **Note:** After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
@@ -649,7 +645,6 @@ private void handlePush(Intent intent) {
    }
 }
 ```
-
 
 You should also add to your messaging activity in order to clear all pushes once the conversation screen has been clicked:
 

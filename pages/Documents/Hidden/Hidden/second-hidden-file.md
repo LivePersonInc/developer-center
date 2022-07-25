@@ -17,8 +17,6 @@ This bot provides basic information and contact options to your consumers. If yo
 
 This is a hidden file
 
-
-
 ### Benefits of Hidden solution
 
 The benefit is that users wont be able to access information unless they know the link

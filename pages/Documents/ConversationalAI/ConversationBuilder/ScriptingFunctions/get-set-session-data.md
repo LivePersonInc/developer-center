@@ -166,7 +166,6 @@ var convId = botContext.getConversationId();
 
 You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots-variables.html#system-variables) to display the conversation ID as text in interactions or post bodies.
 
-
 ### Get LP account ID
 
 The `getLPAccountId` function retrieves the Conversational Cloud account ID for the current conversation.
@@ -195,7 +194,6 @@ When calling engagement attributes, some time is required to retrieve the result
 
 {: .important}
 `previousSkillId` only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current skill ID.
-
 
 #### Example
 
@@ -360,7 +358,6 @@ var nlpTokens = nlpResponse.tokens;
 botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: '+ nlpVerbs + ' and phrases: ' + nlpPhrases + ' and tokens: ' + nlpTokens);
 ```
 
-
 ### Get sentiment
 
 {: .important}
@@ -386,7 +383,6 @@ if(sentiment == "Positive"){
 }
 ```
 
-
 ### Get quick reply payload
 
 `getQuickReplyPayload` is used to access the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc., but the payloads could be color01, color02, color03, etc.
@@ -407,7 +403,6 @@ var payload = botContext.getQuickReplyPayload();
 botContext.sendImmediateReply('Hey you picked option ' + response  +' with a payload of '+ payload);
 ```
 
-
 ### Get disambiguated intent
 
 `getDisambiguatedIntentName` and `getDisambiguatedIntentId` can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
@@ -427,7 +422,6 @@ var intentID = botContext.getDisambiguatedIntentId();
 // display the results...
 botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```
-
 
 ### Get Web View variables
 

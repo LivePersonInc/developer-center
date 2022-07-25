@@ -7,7 +7,6 @@ permalink: third-party-bots-medallia.html
 indicator:
 ---
 
-
 ### Overview
 
 This document outlines the configuration and functionality of bots using **Medallia** as a vendor.
@@ -57,7 +56,6 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tr>
   </tbody>
 </table>
-
 
 ### Limitations
 {: .important}

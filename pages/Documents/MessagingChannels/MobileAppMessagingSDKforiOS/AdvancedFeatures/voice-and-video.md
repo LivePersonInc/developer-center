@@ -172,9 +172,7 @@ Defines border width for Voice & Video Invitation Bubble
 - **Type:** Double
 - **Default value:** 0.0
 
-
 ---
-
 
 #### voiceVideoNavigationBackgroundColor
 Defines background color of Navigation & Tab Bar for Voice & Video SFSafariViewController

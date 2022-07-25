@@ -192,7 +192,6 @@ async function lazyReadSecret() {
     return value;
 }
 
-
 function lambda(input, callback) {
     ...
 

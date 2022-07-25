@@ -12,7 +12,6 @@ permalink: data-access-api-methods-web-session.html
 indicator: chat
 ---
 
-
 Web session retrieves the list of files in zip format of the visitor’s web session data.
 
 This data contains information about the vistor’s web journey. The web session data is calculated from the time the visitor enters the website till the time he leaves it. The data includes geo (country, city etc.), navigation (referrer URL etc.), eligible campaigns, engagement attributes and more.
@@ -1053,7 +1052,6 @@ Here is a description of the data structure of the existing engagement attribute
 | registrationDate | User’s registration date (in YMDDate format). | Date |
 | storeNumber | The store's number | String |
 | storeZipCode |The store's zip code | String |
-
 
 #### YMDDate
 

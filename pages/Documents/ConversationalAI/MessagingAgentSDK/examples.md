@@ -155,11 +155,9 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        node examples/transfer2same-agent-bot/main.js
        ```
 
-
 {: .important}
 The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
-
 
 ### Social Messaging Bot
 

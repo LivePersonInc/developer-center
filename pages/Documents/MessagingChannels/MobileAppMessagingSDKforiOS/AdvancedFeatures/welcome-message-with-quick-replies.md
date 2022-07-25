@@ -62,7 +62,6 @@ LPMessaging.instance.showConversation(conversationViewParams,  authenticationPar
 {: .notice}
 Support for rendering links automatically is available on SDK 6.2.0 and above.
 
-
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
 

@@ -5,7 +5,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 
-
 level-order: 2
 order: 9
 permalink: skills-api-overview.html
@@ -19,7 +18,6 @@ Your agents are trained to help visitors according to your business needs. An ag
 Skills are assigned to agents as well as to engagements.  This creates the 'link’ between the right topic of conversation and the agent best equipped to handle it.
 
 ![SkillsOverivew](img/skillsoverview.png)
-
 
 ### Getting Started
 

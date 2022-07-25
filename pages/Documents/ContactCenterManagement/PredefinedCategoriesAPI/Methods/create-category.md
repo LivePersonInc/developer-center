@@ -59,7 +59,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -83,7 +82,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
 
-
 ### Request Headers
 
 <table>
@@ -96,7 +94,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
     <td>Contains token string to allow request authentication and authorization. See the doc for more details.</td>
   </tr>
 </table>
-
 
 ### Request Body
 
@@ -126,7 +123,6 @@ Single category creation
 }</td>
   </tr>
 </table>
-
 
 For the above body:
 
@@ -159,7 +155,6 @@ Note: order assigned by the server is not guaranteed to be the order in the requ
   </tr>
 </table>
 
-
 For the above body:
 
 * if no categories exist, category A2 is assigned order 1 and the other categories passing null orders are assigned order value of 2,3 randomly.
@@ -187,7 +182,6 @@ Type: long number</td>
   </tr>
 </table>
 
-
 ### Response Headers
 
 <table>
@@ -204,7 +198,6 @@ Type: long number</td>
     <td>URI Location of the newly created resource. This header is included only when the request created single object. </td>
   </tr>
 </table>
-
 
 **Response Body**
 

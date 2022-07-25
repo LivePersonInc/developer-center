@@ -28,7 +28,6 @@ sort| Sort the results in a predefined order. | string  | Optional | Example: st
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
 source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
-
 **BODY/POST Parameters**
 
 #### Note: New capability - partial retrieval of data
@@ -663,7 +662,6 @@ Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 answer | Survey answer text. | string
 answerId | Survey answer ID. | string
-
 
 ```json
 {

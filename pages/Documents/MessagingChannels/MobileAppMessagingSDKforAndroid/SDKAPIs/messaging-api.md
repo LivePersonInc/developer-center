@@ -13,8 +13,6 @@ indicator: messaging
 
 **(Liveperson.java class)** 
 
-
-
 ### checkActiveConversation
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
@@ -43,7 +41,6 @@ public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 | Parameter | Description |
 | :--- | :--- |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
-
 
 ### clearHistory
 
@@ -96,7 +93,6 @@ There are 2 authenticated connection methods:
 
    {:.important}
    **Optional:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)`.
-
 
 2. jwt - new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
 
@@ -180,7 +176,6 @@ public static void getUnreadMessagesCount(String appId, LPAuthenticationParams a
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 | authenticationParams | Authentication parameters |
 
-
 ### getNumUnreadMessages
 
 {:.important}
@@ -198,7 +193,6 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 {:.important}
 To get count of unread messages using this function, all devices must be registered to receive push notifications using the [registerLPPusher](android-registerlppusher.html) function.
 
-
 ```java
 public static void getNumUnreadMessages(String appId, final ICallback<Integer, Exception> callback)
 ```
@@ -208,14 +202,11 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 | appId | The host app ID |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 
-
 ### getUnreadMessagesCount
 
 {:.important}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
-
-
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
 
@@ -239,7 +230,6 @@ public static void getUnreadMessagesCount(String appId, final ICallback<Integer,
 | appId | The host app ID |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 
-
 ### getSDKVersion
 
 Returns the SDK version.
@@ -247,7 +237,6 @@ Returns the SDK version.
 ```java
 public static String getSDKVersion()
 ```
-
 
 ### handlePushMessage
 
@@ -271,9 +260,6 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 <div class="important">
 The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.
 </div>
-
-
-
 
 ### hideConversation
 
@@ -327,8 +313,6 @@ private void  initActivityConversation() {
 }
 ```
 
-
-
 ### initialize (with SDK properties object)
 
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK; all subsequent API calls. Except for the handlePushMessage, assume that the SDK has been initialized.
@@ -345,7 +329,6 @@ public static void initialize (Context context, InitLivePersonProperties initPro
 | :--- | :--- |
 | context | A context from the host app |
 | initProperties | An object with all the properties needed to initialize the SDK |
-
 
 #### initOpenConversationButton
 
@@ -367,8 +350,6 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 });
 }
 ```
-
-
 
 ### logOut
 
@@ -422,7 +403,6 @@ Marks the current conversation as normal.
 public static void markConversationAsNormal()
 ```
 
-
 ### markConversationAsUrgent
 
 Marks the current conversation as urgent.
@@ -465,11 +445,8 @@ initOpenConversationButton();
 }
 ```
 
-
-
 ### openFragmentContainer method 
 Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
-
 
 ### reconnect
 
@@ -516,7 +493,6 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
 
-
 #### Authenticated (authenticationKey)
 
 Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
@@ -547,8 +523,6 @@ Code sample
 
 Pass null or an empty LPAuthenticationParams.
 
-
-
 ### removeCallBack
 
 Removes the registered [LivePersonCallback](android-callbacks-index.html) callback.
@@ -565,7 +539,6 @@ Resolves the current conversation.
 public static void resolveConversation()
 ```
 
-
 ### setCallback
 
 Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#callbacks-interface) for more information.
@@ -578,7 +551,6 @@ public static void setCallback(final LivePersonCallback listener)
 | :--- | :--- |
 | listener | A LivePersonCallback implementation |
 
-
 ### setUserProfile
 
 The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
@@ -590,7 +562,6 @@ public static void setUserProfile(ConsumerProfile profile)
 | Parameter | Description |
 | :--- | :--- |
 | profile | The user’s profile |
-
 
 ### showConversation (with full authentication support)
 
@@ -638,10 +609,7 @@ There are 2 authenticated connection methods:
 {:.important}
 Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
-
-
 **ConversationViewParams:**
-
 
    ```java
    new ConversationViewParams(false);
@@ -701,7 +669,6 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
    | LPAuthenticationParams | authentication params |
    | ConversationViewParams | view params |
 
-
 ### shutDown
 
 ```java
@@ -737,8 +704,6 @@ public static void unregisterLPPusher(String brandId, String appId, ICallback<Vo
 | appId | The host app ID. |
 | unregisteringCompletedCallback | A dual-method callback for handling success and failure results. |
 
-
-
 ### setPushNotificationTapped
 
 Notify SDK that push notification is tapped when scroll behavior for push notification is configured. 
@@ -748,7 +713,6 @@ Call this method before `LivePerson.showConversation(getActivity(), LPAuthentica
 ```java
 public static void setPushNotificationTapped()
 ```
-
 
 ### isPusherRegistered
 
@@ -764,7 +728,6 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 | appId | The host app ID |
 | lpAuthenticationParams | Authentication params |
 | callback | An ICallback implementation |
-
 
 ### Deprecated
 
@@ -867,7 +830,6 @@ public static void setUserProfile(String appId, String firstName, String lastNam
 | lastName | User’s last name |
 | phone | User’s phone |
 
-
 #### registerLPPusher (deprecated)
 
 Register to LPMessagingSDK push notifications
@@ -899,7 +861,6 @@ public static void unregisterLPPusher(String brandId, String appId)
 | brandId | The account ID. |
 | appId | The host app ID. |
 
-
 #### handlePush (Deprecated)
 
 **(Deprecated. Please use the above handlePushMessage() method)**
@@ -923,7 +884,6 @@ public static void handlePushMessage(Context context, Bundle data, String brandI
 | data | A Bundle that contains the message. The bundle should hold a string with key named "message". |
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
-
 
 #### getNumUnreadMessages (Deprecated)
 
@@ -956,6 +916,4 @@ public static void shutDown()
 *Note: This does not end the current messaging conversation.*
 
 <div class="important"> This method must not be called when the conversation screen is displayed.</div>
-
-
 

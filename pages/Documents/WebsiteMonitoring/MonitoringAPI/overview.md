@@ -95,7 +95,6 @@ This API is public. When specifying `appInstallationId` and `accountId`, the API
 
 * **Report SDEs via the API** - if you're already using other LivePerson APIs to build custom solutions, you'd need to work with this API directly to enable communication with those custom solutions.
 
-
 ### Reporting funnel
 
 **Note:** The reporting funnel relies on terms and definitions explained as part of the Report method of this API. Please visit [this link](rt-interactions-monitoring-methods-report.html) for more information on these terms.

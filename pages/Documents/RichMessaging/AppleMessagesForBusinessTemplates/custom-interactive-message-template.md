@@ -93,7 +93,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Received Message Properties
 
 <table>
@@ -149,7 +148,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Example Metadata Template
 
 ```json
@@ -203,7 +201,6 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 * URL characters limit is 64bit - you should create URLs to accommodate this limitation (An option to overcome this limitation is to create a static JSON in an S3 type environment which you can call in the message URL)
 
 * Character limit - The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
-
 
 ### Reply CIM from Consumer to Agent
 

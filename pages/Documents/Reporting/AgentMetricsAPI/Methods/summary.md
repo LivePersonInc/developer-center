@@ -21,7 +21,6 @@ Returns a summary on the current state of the contact center. This includes numb
 |----------|-------------|
 | POST |  https://&lt;domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
 
-
 **URL Parameters**
 
 Name   | Description                                                  | Type/Value | Required | Notes

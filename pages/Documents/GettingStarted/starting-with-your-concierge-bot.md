@@ -6,7 +6,6 @@ permalink: starting-with-your-concierge-bot.html
 indicator: both
 ---
 
-
 ### What is a Concierge Bot?
 
 Your Conversational Cloud free trial account comes preloaded with a Concierge Bot, which is designed to get your brand up and running on our Conversational AI platform quickly. This bot is pre-wired to use our powerful platform components like the Conversation Builder and Conversation Orchestrator. You can use this bot as a starting point to build out more advanced conversational automation.

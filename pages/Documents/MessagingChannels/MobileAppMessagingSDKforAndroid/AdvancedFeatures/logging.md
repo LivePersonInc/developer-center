@@ -114,4 +114,3 @@ Lines already written to the System Logs (logcat) are not affected, only the log
 LivePerson.Logging.clearHistory();
 ```
 
-

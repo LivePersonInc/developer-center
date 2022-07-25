@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 40
 permalink: users-api-methods-update-users.html
 

@@ -34,7 +34,6 @@ The identity function should be implemented on every authenticated page (the Web
           sub: "<REPLACE_WITH_CUSTOMER_IDENTIFICATION>"
       });
   }
-
 ```
 
 **Identity object description**
@@ -196,7 +195,6 @@ LivePerson supports the following claims set, which will be displayed to the age
 |    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC 3339].  |    number    |    -     |
 
 **Standard Claim Set**:
-
 
 |    Name    |    Description | type   |    Appearance in Conversational Cloud   |    Mapping in SDEs    |
 |------------|----------------|--------|-------------------------------|-----------------------|

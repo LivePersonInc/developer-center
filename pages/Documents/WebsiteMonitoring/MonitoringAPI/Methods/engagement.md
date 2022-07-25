@@ -183,8 +183,8 @@ Status code: 200 OK - Resume conversation same session:
     }
   ]
 }
-
 ```
+
 Status code: 200/201 OK - Engagement is unavailable.
 
 **Note:** Because the engagement is unavailable, the `engagementDetails` object does not return:
@@ -197,8 +197,8 @@ Status code: 200/201 OK - Engagement is unavailable.
 }
 ```
 
-Loading Account:
-API version 1.0, Status code 500 Server Error -
+Loading Account: API version 1.0, Status code 500 Server Error
+
 ```json
 {
     "time":1501074704502,
@@ -206,7 +206,9 @@ API version 1.0, Status code 500 Server Error -
     "internalCode":20
 }
 ```
-API version 1.1, Status code 202 Accepted -
+
+API version 1.1, Status code 202 Accepted
+
 ```json
 {
     "time":1501074704502,

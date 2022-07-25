@@ -406,7 +406,6 @@ On-click operations can result from two object types:
 | Actions       | List of actions to execute (Navigate/Link/publish text) | action | N        | 4 actions per element |
 | Metadata      | list of predefined objects to send back to the agent    |        | N        |                       |
 
-
 #### Example
 
 ```json
@@ -509,7 +508,6 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 | :------------ | :---------------------------------------------------------------- | :----- | :------- | :--------- |
 | type          | Type of action. Must be 'publishText'                             | Enum   | Y        |            |
 | text          | The text to display in the transcript once the action was clicked | String | Y        | 5000 chars |
-
 
 ###### Example
 

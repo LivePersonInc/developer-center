@@ -245,7 +245,6 @@ The connector can then use the above properties in the CONVERSATION request body
 | 401 | Unauthorized. Are the headers correct? |
 | 429 | Too many requests, please try again later. |
 
-
 **Response Example**
 
 HTTP Status Code 200

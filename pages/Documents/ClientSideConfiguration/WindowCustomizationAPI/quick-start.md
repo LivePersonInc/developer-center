@@ -9,7 +9,6 @@ indicator: both
 
 You can easily customize the unified window yourself by using these classes and examples. Classes are broken up into "blocks" and "elements". Below, you can find a definitive list of all the classes available for use to customize the window.
 
-
 ### Naming convention
 
 `lpc` — general namespace for the customization classes
@@ -21,8 +20,6 @@ You can easily customize the unified window yourself by using these classes and 
 `modifier` — defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`):
 
 `lpc_block_modifier` or `lpc_block__element_modifier`
-
-
 
 ### Window
 
@@ -84,7 +81,6 @@ Available modifiers:
 .lpc_maximized-header__icon-asset {
 
  }
-
 
 .lpc_maximized-header__menu-button {
 
@@ -225,7 +221,6 @@ Transcript area.
 
 Element entry into transcript.
 
-
 Available modifiers: `agent` `visitor` `system` `visitor-fs` `avatar-shown` `avatar-hidden`.
 
 ```css
@@ -245,7 +240,6 @@ Available modifiers: `agent` `visitor` `system` `visitor-fs` `avatar-shown` `ava
 
 }
 ```
-
 
 ### Message
 

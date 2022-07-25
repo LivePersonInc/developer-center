@@ -24,7 +24,6 @@ Personal data may include full conversation transcripts, hosted files or links s
 {: .important}
 What this document refers to as "deletion" is actually the replacement of specific, personal data with the text: “** LP deleted data **”
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -39,7 +38,6 @@ A few things you'll need to get started with this API:
 
 {:start="3"}
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
-
 
 ### Deletion Process
 

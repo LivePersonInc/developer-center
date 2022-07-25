@@ -29,7 +29,6 @@ Retrieves an Unified Automatic Message by ID for a specific account.
  |Authorization | Contains token string to allow request authentication and authorization. |
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
 
-
 **Path Parameters**
 
  |Parameter|  Description|  Type|  Notes|

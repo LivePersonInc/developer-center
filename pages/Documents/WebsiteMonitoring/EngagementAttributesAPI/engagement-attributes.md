@@ -12,7 +12,6 @@ permalink: engagement-attributes-api-engagement-attributes.html
 indicator: both
 ---
 
-
 ### Request
 
 | Method    | URL |
@@ -60,7 +59,6 @@ _Note_: This API supports OAuth 1.0 and all URLs must be SSL enabled (https).
 https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/current/events?v=1&sid=rty.uio
 
 **Request BODY Example**
-
 
 ```json
     [{

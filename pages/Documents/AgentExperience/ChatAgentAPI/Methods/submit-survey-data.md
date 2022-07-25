@@ -56,4 +56,3 @@ The following parameters can be used in the XML body:
 | :--- | :--- |
 | 200 | OK |
 
-

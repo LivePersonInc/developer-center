@@ -18,7 +18,6 @@ This method will allow you to test your P12 Key before uploading a certificate a
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId}/p12-test/multipart |
 
-
 **Request Headers**
 
  |Header         |Description  |
@@ -58,8 +57,6 @@ Password: the password that matches the supllied file.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

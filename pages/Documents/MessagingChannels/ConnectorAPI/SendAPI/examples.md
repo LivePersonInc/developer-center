@@ -121,7 +121,6 @@ See below a few examples of how to do so.
 
 * The supported SDEs for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
 
-
 #### Examples
 
 ##### Create new conversation and send companyBranch
@@ -232,7 +231,6 @@ See below a few examples of how to do so.
    }
 ]
 ```
-
 
 ### Send a message
 
@@ -383,7 +381,6 @@ The following example illustrates how to enable the auto messages feature upon c
 
 3. Every following request (via the SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](#send-a-message--enable-the-auto-messages-feature) below.
 
-
 #### Getting Started
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
@@ -402,7 +399,6 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-
 **Request Headers**
 
 | Header | Description |
@@ -415,7 +411,6 @@ The following example illustrates how to enable the auto messages feature upon c
 | Header | Description | Example |
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
-
 
 **Request Body — JSON Payload**
 
@@ -505,7 +500,6 @@ The following example illustrates how to enable the auto messages feature upon c
    }
 }
 ```
-
 
 <div class="important"> In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
 
@@ -662,7 +656,6 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |
 
-
 ### File Sharing
 
 #### Getting Started
@@ -676,7 +669,6 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 #### Introduction
 
 The Conversational Cloud Connector API includes a file sharing feature. This feature enables consumers to share files with agents, such as images.
-
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
@@ -694,9 +686,7 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 7. Download file from storage
 
-
 Below, we will examine and explain each stage in detail.
-
 
 #### Step 1 - Enable File Sharing
 
@@ -793,7 +783,6 @@ Upload the file as binary to swift storage.
 | 201 | CREATED |
 | 401 | Temp URL invalid |
 
-
 #### Step 5 Publish Image to Conversation
 
 Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](consumer-int-msg-reqs.html). Event type should be `HostedFile`
@@ -801,7 +790,6 @@ Once the file is saved in storage, publish the file URL along with an optional c
 **Optional thumbnail**
 
 In order to generate a thumbnail you need to convert your image to base64. The output will populate the parameter `imageData`.
-
 
 #### Publish the file to the conversation - Example
 
@@ -844,13 +832,11 @@ In order to generate a thumbnail you need to convert your image to base64. The o
 | 200 | Ok | File was sent to the Agent |
 | 400 | Bad Request | Check your file size and that its is not corrupted |
 
-
 #### Step 6 Request Download URL
 
 **Request a download url**:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
-
 
 Request Body Example:
 
@@ -882,7 +868,6 @@ In response, you will get the URL details:
 ```
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use it in the next request, to download the file.
-
 
 #### Step 7 - Download File From Storage
 

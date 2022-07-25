@@ -24,11 +24,9 @@ Each horizontal can contain the following elements:
 2. Subtitle (optional)
 3. Button (at least 1 is mandatory)
 
-
 **Examples of WhatsApp List Messages**
 
 ![](img/connectors/wa_listmessages.png)
-
 
 ### Top Level Vertical
 
@@ -71,7 +69,6 @@ The highlighted headline of the list message.
 | tag | Must be "title". If missing, the first text element in the template will be set as the card text.  | Enum | Y |
 | text |  Text of the headline  It's length can not be longer than 1024 characters. Note: This length is shared with the subtitle. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
 
-
 #### JSON Representation
 
 ```json
@@ -93,7 +90,6 @@ This is generally where the body of the message can be entered.
 | tag | Must be "subtitle".  | Enum | Y |
 | text |  The description text. The text can not be longer than 1024 characters <br> **Note:** This text length is shared with the title length. This means that to find the real limit of this text you must substract the length of the subtitle when it is set.  | String | Y |
 
-
 #### JSON Representation
 
 ```json
@@ -113,7 +109,6 @@ Footer of the list messages. This is shown below the subtitle or title if the fi
 | type | Must be "text". Identifies the element as an object of type text.  | Enum | Y |
 | tag | Must be "footer".  | Enum | Y |
 | text |  The description text. The text can not be longer than 60 characters.  | String | Y |
-
 
 #### JSON Representation
 
@@ -136,7 +131,6 @@ It can be used to change its name.
 | title |  The text of the button. Please refer to the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#action-object) for the text length.  | String | Y |
 | subtitle |  Description for the button. Please refer to the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premises/reference/messages#action-object) for the text length  | String | Y |
 | click |  The click operations that should be executed when the customer clicks the button. These click operations must contain at least one action. The WhatsApp only supports the publishText  | ClickOperations | Y |
-
 
 ```json
 {

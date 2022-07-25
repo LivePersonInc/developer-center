@@ -87,7 +87,6 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 
 Function:
 
-
 `onLoad: myOnLoad`
 
 or

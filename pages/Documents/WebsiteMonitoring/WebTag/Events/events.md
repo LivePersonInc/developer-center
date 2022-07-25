@@ -89,7 +89,6 @@ This event is triggered when vistor monitoring starts and/or when its state is c
 
 ### Chat Window Events
 
-
 These are chat window related events. Because the customer conversation is contained within the window, the events provided here are related to the lifecycle of a conversation.
 
 {: .important}

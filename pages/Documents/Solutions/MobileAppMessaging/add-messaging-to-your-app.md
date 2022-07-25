@@ -15,7 +15,6 @@ indicator:
 
 When you add messaging to your app, you enable your consumers to communicate with your agents through their channel of choice: Android or iOS.
 
-
 ### Benefits
 * Increased customer satisfaction with an ideal customer experience through an always connected, ongoing conversation.
 
@@ -27,9 +26,7 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 * Optimized for network bandwidth and battery usage.
 
-
 <img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> <img src="img/inapp2.png" style="max-width:230px;max-height:700px;"> <img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
-
 
 ### Prerequisites
 

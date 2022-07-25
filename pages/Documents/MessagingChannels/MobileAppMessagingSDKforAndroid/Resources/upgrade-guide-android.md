@@ -67,7 +67,6 @@ As such if you are upgrading from any version older than 2.7.0, or if you are st
 
 `new ConversationViewParams(boolean readOnlyMode)`
 
-
 - `LivePerson.showConversation()` - [documentation](android-methods.html#showconversation-with-full-authentication-support)
 
 ```java

@@ -84,7 +84,6 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 {: .notice}
 It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
-
 ```javascript
 async function lambda(input, callback) {
   const { Toolbelt } = require("lp-faas-toolbelt");

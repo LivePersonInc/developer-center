@@ -37,7 +37,6 @@ This resource enables consumer SSO with Conversational Cloud.
 
 **Sample code**
 
-
 ```javascript
 chat.authenticate({
     "authChatConnId": 12345,
@@ -58,7 +57,6 @@ chat.authenticate({
 | :--- | :--- | :--- |
 | conversationId | The conversation ID you should pass to requestChat method. | string |
 | participantId | The participant ID you should pass to requestChat method. | string |
-
 
 **Sample response**
 

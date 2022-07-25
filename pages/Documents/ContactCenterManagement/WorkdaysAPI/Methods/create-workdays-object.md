@@ -31,8 +31,6 @@ Create new workday object(s) for an account. It is possible to create several it
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
-
-
 **Request Body**
 
 ```json

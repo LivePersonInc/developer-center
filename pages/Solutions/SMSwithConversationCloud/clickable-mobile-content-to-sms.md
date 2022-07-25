@@ -47,18 +47,6 @@ Use the following code template for your engagement. The capitalized portions sh
 ```html
 <div>
 
-
-
-
-
-
-
-
-
-
-
-
-
   <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>

@@ -49,7 +49,6 @@ To successfully deploy messaging within your mobile app, it’s important to und
 
 6. **Callback behavior.**  Utilize LivePerson’s [Callbacks](consumer-experience-ios-sdk-callbacks-index.html) and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging.   
 
-
 7. **Messaging in multiple languages.** Utilize LivePerson’s default translations or override them with your own text and language adjustments.  Language settings are based on the user’s phone language settings and app language settings. Override all settings and maintain your default language at all times. 
 
 8. **Data Masking.** Determine if you require data masking for potentially sensitive data. If so, choose one of the two masking capabilities and then contact your Account Team or Support to have data masking configured.  

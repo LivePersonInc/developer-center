@@ -37,5 +37,3 @@ Video provides tailored solutions and service for consumers, with their personal
 
 * Identify consumers when verification is needed on personal and secure issues.
 
-
-

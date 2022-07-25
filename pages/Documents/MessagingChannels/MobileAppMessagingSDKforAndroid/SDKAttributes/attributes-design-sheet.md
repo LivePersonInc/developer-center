@@ -12,7 +12,6 @@ permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-attributes-design
 indicator: messaging
 ---
 
-
 <div class="designsheet">
 <table rules="all" class="bigtable">
   <thead>

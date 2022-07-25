@@ -25,8 +25,6 @@ Update existing workday object(s).
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String |
 
-
-
 **Request Body**
 
 ```json

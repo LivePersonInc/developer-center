@@ -8,7 +8,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 
-
 order: 100
 permalink: skills-api-appendix.html
 
@@ -118,9 +117,6 @@ This section contains API details that are common to every API’s resource and 
           ]
         }
 ```
-
-
-
 
 ### Data Revisions
 

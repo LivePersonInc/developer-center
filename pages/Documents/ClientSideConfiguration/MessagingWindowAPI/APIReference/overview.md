@@ -26,7 +26,6 @@ wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_ap
 
 Client properties can be added to the connection URL as query params. The full list of supported client properties can be found [here](consumer-int-client-props.html).
 
-
 Where LP_JWT is your token.
 
 ### Interaction Commands
@@ -229,6 +228,5 @@ If your request is throttled in this manner, it is recommended that you provide 
 ### Other APIs
 
 * [Consumer Token Creation](common-consumer-token-creation.html)
-
 
 {% include links.html %}

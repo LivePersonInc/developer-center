@@ -32,13 +32,11 @@ This API exposes open and closed conversations, including their transcript and r
 
 * The **All Conversations** tab in Conversational Cloud is also built on top of this API.
 
-
 #### Limitations
 
 * Engagement attributes comprised of numbers that contain more than three consecutive digits cannot currently be searched for.
 
 * While the engagement attributes are exposed in near real-time, the ability to search according to them is only available after two hours.
-
 
 ### Agent Metrics API (Messaging only)
 
@@ -79,7 +77,6 @@ This API exposes information about the contact center at the account, skill, and
 * Analyze your contact center performance.
 
 * The **data bar and dashboard** in Conversational Cloud are also built on top of this API.
-
 
 ### Engagement History API (Chat)
 

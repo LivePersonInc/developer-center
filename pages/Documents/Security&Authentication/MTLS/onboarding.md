@@ -117,5 +117,4 @@ If all previous steps were successful, runtime methods can now be used. The runt
 
 * [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of **serviceName/url/siteid** and returns for each triplet whether a certificate is configured for it. Use this method to make sure your certificates are configured properly, **Since mtls is throttle protected this method is used to verify that mTLS is configured for the supplied parameters. The goal of this method is not to submit regular TLS requests through the service (using up bandwidth), even though it is possible.**
 
-
 * [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched. The certificate is fetched using the provided parameters (**accountId/serviceName/url**). The request is then forwarded to the `LP-forward-url` specified. The response will return as if contacting the remote endpoint directly but will be authenticated, its identity confirmed via the certificate.

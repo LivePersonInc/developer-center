@@ -49,8 +49,6 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-
-
 ### Use Cases
 
 * Combine this information with other data source in order to create your own real-time dashboard

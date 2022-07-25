@@ -88,7 +88,6 @@ protected void onNewIntent(Intent intent) {
 }
 ```
 
-
 ### Click on the scroll down indicator
 
 `lp_scroll_when_scroll_down` configures the scroll behavior when tapping on the scroll down indicator. 

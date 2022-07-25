@@ -42,7 +42,6 @@ The proactiveReporting API endpoint should be passed a start and end timestamp i
 </tbody>
 </table>
 
-
 ### Request Payload
 
 The following information should be provided to LivePerson.
@@ -74,7 +73,6 @@ The following information should be provided to LivePerson.
 </tbody>
 </table>
 
-
 ### Example Request Payload
 
 ```json
@@ -84,7 +82,6 @@ The following information should be provided to LivePerson.
   "endTime" :  "1428934401000"
 }
 ```
-
 
 ### Example Response Success
 

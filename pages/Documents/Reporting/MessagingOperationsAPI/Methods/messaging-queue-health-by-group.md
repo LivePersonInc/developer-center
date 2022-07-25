@@ -12,7 +12,6 @@ indicator: messaging
 
 Retrieves the information about the current messaging queue state (and all its related metrics) in the account, skill and agent group level
 
-
 **Notes:**
 
 1. The messaging queue data is currently not available by default, in order to enable the data flow please contact your account manager.
@@ -108,7 +107,6 @@ Request by skillIds=12,13 and allocatedAgentGroupIds=22,33
 **Elements in the Response**
 
 <div class="important">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

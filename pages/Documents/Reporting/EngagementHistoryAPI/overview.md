@@ -33,8 +33,6 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-
-
 ### Use Cases
 
 * Extract all chat transcripts and accompanying data in order to integrate with any 3rd party application or database

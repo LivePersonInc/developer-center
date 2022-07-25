@@ -25,7 +25,6 @@ Using this API, you can enrich your customized real-time dashboard. Here are som
 
 - Track how many conversation have been concluded over time, for a pre-defined skill / agent / group 
 
-
 ### Request
 
 Method | URL
@@ -44,8 +43,6 @@ interval| Time interval in minutes between the points to be returned  | integer 
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
 |metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>transfers<br/>concluded_conversations<br/>closed_conversations<br/>
-
-
 
 ### filters
 _filters info_
@@ -77,7 +74,6 @@ Request body — JSON example:
 }
 ```
 
-
 ### Response
 
 Name| Description | Type/Value
@@ -98,9 +94,6 @@ Name  | Description  | Type/Value
 transfers  | Number of conversations that were _transferred_ in the time interval (aka during the hour before the timestamp value)  | Long
 closedConversations  | Number of conversations that were _closed_ in the time interval  | Long
 concludedConversations  | Number of conversations that were _concluded_ in the time interval. Concluded conversations comprises closed and forwarded conversations  | Long
-
-
-
 
 Response DTO — JSON example:
 
@@ -214,5 +207,4 @@ Response DTO — JSON example:
         }
     ]
 }
-
 ```

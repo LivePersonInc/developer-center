@@ -81,11 +81,11 @@ At least one parameter from the above parameters is required in order to retirve
 |automaticUpdates|Boolean, include automatic updates in the results|Default: false|
 
 Example:
+
 ```json
 {"query" : 
 "{auditData (lpa:true) { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
 }
-
 ```
 
 ### Response
@@ -109,7 +109,6 @@ JSON
 | 401 | Not Authenticated |
 | 403 | Not Authorized |
 | 500 | Internal Server Error |
-
 
 **Response Body**
 

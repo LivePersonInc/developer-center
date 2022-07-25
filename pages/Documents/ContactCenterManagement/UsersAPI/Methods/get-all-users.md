@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 10
 permalink: users-api-methods-get-all-users.html
 
@@ -35,7 +34,6 @@ https://API_REQUEST?v=4.0
 |:-------  |:-------------- | :--- |
 |Authorization | Contains token string to allow request authentication and authorization. |
 
-
 **Request Body**
 
 [Appendix](administration-users-appendix.html) for Entity Structure and Entity Example.
@@ -54,7 +52,6 @@ https://API_REQUEST?v=4.0
  | select          | Response field filter expression  | string  | Optional  | Example values: id, name. Default value: all fields  |
 
 ### Response
-
 
 **Response Codes**
 

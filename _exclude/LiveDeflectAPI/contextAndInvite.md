@@ -185,7 +185,6 @@ HTTP Response Code — 200 OK
 
 The following information will be returned upon a failed call to LivePerson when no API keys are passed:
 
-
 HTTP Response Code - 401 Unauthorized
 
 ```json

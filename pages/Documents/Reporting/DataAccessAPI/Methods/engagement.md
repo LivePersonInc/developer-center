@@ -12,7 +12,6 @@ permalink: data-access-api-methods-engagement.html
 indicator: chat
 ---
 
-
 Engagement retrieves all engagement data in .zip format files. The engagement data consists of information about the different engagements the visitor was involved with. This includes conversation metadata (start/end time, start/end reason etc.), transcript, MCS, transfer information, and more.
 
 ### Request

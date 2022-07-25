@@ -16,14 +16,11 @@ This API gets all certificates from a specific account by account ID.
  |:--------  |:---  |
  |GET|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
-
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
-
-
 
 **Path Parameters**
 
@@ -41,7 +38,6 @@ This API gets all certificates from a specific account by account ID.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 

@@ -179,13 +179,11 @@ Request by skillIds=12,13 interval=60, timeframe=180
         }
     }
 }
-
 ```
 
 **Elements in the Response**
 
 *Note*: All metrics under the hierarchy of `skillsMetrics` represent the average values for each skill under the interval/aggregation they appear in (or the average/aggregate value of the entire timeframe if no intervals are provided). Metrics under the `metricsTotal` entity will contain the summation of all aggregation/average of the same hierarchy level.
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

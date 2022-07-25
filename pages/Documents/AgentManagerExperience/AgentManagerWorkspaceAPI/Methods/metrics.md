@@ -30,7 +30,6 @@ The API is being used today in the LivePerson Conversational Cloud to display th
 
 ![](img/amws.png)
 
-
 **Note:** This method is subjected to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
 
 ### Request
@@ -56,7 +55,6 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>active_conversations<br/>agent_load<br/>human_agent_load<br/>human_online_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value — both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
-
 
 ### filters
 _filters info_
@@ -98,7 +96,6 @@ Request body — JSON example:
     ]
 }
 ```
-
 
 ### Response
 
@@ -202,5 +199,4 @@ Response DTO — JSON example:
         ]
     }
 }
-
 ```

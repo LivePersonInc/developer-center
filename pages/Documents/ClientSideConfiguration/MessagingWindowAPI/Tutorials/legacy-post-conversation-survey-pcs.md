@@ -486,7 +486,6 @@ As we said, we do not actually close the Conversation. We only close the Main Di
 {"kind":"req","id":"2","type":"cm.UpdateConversationField","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"DialogChange","type":"UPDATE","dialog":{"dialogId":"__YOUR_CONVERSATION_ID__","state":"CLOSE","closedCause":"Closed by consumer"}}}}
 ```
 
-
 <div class="important">In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.</div>
 
 Important fields:

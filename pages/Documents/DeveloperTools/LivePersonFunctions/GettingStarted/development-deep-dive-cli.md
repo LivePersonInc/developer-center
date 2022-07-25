@@ -127,7 +127,6 @@ Debugging your function on your local machine can give you valuable information 
 
 <img class="fancyimage" alt="Functions: use cli debugging in vscode" src="img/functions/functions_cli_debugger.gif">
 
-
 You can configure your local account set up to reflect your production account by changing the `settings.json` created during the `lpf init` of your repository. The following properties can be changed:
 
 * **secrets**: An array of key/value pairs that contain `String`-based secrets.

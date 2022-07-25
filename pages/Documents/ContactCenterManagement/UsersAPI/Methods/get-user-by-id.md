@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 20
 permalink: users-api-methods-get-user-by-id.html
 
@@ -52,7 +51,6 @@ https://API_REQUEST?v=4.0
  |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
  | v               | API version number                | double  | Required  | Value should be 4.0                                  |
  | select          | Response field filter expression  | string  | Optional  | Example values: id, name. Default value: all fields  |
-
 
 ### Response
 

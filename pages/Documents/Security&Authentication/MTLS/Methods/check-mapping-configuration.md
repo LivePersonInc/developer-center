@@ -57,8 +57,6 @@ Contains list of `CertificateMappingParamters` objects:
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
-
-
 **Response Body**
 
 **V1 response (default)**

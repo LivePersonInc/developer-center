@@ -19,10 +19,8 @@ indicator: messaging
 **Authentication**
  - Only support authentication mode: Code flow and JWT flow.
 
-
 ### How to configure
 Simply set the attributes for `conversationScrollConfiguration` in the `lpconfig` class. Please follow the instructions for each attributes below. 
-
 
 #### Scroll Options
 
@@ -91,7 +89,6 @@ scenario when a push notification is tapped.
 **Note:** This requires the call `LPMessagingSDK.instance.setPushNotificationTapped()` immediately after it is determined that a push notification was tapped.
 
 Default option: **Bottom**
-
 
 ```swift
 let configurations = LPConfig.defaultConfiguration

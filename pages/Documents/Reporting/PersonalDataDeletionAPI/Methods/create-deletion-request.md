@@ -43,7 +43,6 @@ This API allows a the brand to submit a deletion request via one of the followin
 
  **Request BODY Parameters**
 
-
 All fields are sent in a JSON format
 
 **Note:** Only one of the deletion types which appear below can be sent in a single request with a list of up to 100 unique ids.
@@ -103,7 +102,6 @@ Example 4:
   |500 |  Internal server error|  
 
 **Note:** By default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
-
 
   **Elements in the Response**
 

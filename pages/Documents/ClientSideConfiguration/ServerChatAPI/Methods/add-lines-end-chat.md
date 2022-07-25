@@ -13,7 +13,6 @@ permalink: server-chat-api-methods-add-lines-end-chat.html
 indicator: chat
 ---
 
-
 The URI of the event that was added is returned in the Location header.
 
 ### Request

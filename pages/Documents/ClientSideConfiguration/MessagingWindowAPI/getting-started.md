@@ -65,7 +65,6 @@ Before creating the conversation, log into Conversational Cloud as an agent. In 
 
 To request a new conversation, paste the following message into the connection from the previous step.
 
-
 ```json
 {"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
 ```

@@ -266,8 +266,6 @@ Some of the public model data specified above returns an object or an array of o
 
 Structure example:
 
-
-
 ```json
 {
     "id": "",
@@ -594,7 +592,6 @@ Structure example:
 
 *Note: This is an array in order that that the customer can provide home contact info, work contact info, and other contact info.*
 
-
 ### claimsAndAuthType in unauthenticated case
 
 | Property   | Description            | Type   |
@@ -626,7 +623,6 @@ Structure example:
 ```
 
 *note: This enables to send customer id even for unauthenticated user.*
-
 
 ### SDE.marketingSource
 

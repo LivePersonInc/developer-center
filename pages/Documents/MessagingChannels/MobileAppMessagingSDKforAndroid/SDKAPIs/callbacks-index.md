@@ -37,8 +37,6 @@ Called whenever either the consumer or the agent starts a new conversation.
 |----|----|----|
 | convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the new Conversation, and a null CloseReason. |
 
-
-
 #### Conversation Resolved
 
 Called when the current conversation is marked as resolved by either the consumer or the agent.
@@ -63,12 +61,9 @@ Called when the current conversation is marked as resolved by either the consume
 |----|----|----|
 | convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the resolved Conversation, and a CloseReason describing why the conversation ended. |
 
-
-
 #### Conversation Fragment Closed
 
 Called when the Conversation Fragment is closed (only called when using Fragment Mode).
-
 
 > **Intent Action:** 
 >
@@ -78,12 +73,9 @@ Called when the Conversation Fragment is closed (only called when using Fragment
 >
 > onConversationFragmentClosed() 
 
-
-
 #### Conversation Marked as Urgent
 
 Called when the current conversation gets marked as urgent by either the consumer or the agent.
-
 
 > **Intent Action:** 
 >
@@ -93,12 +85,9 @@ Called when the current conversation gets marked as urgent by either the consume
 >
 > onConversationMarkedAsUrgent()
 
-
-
 #### Conversation Marked as Normal
 
 Called when the current conversation gets marked as normal by either the consumer or the agent.
-
 
 > **Intent Action:** 
 >
@@ -107,8 +96,6 @@ Called when the current conversation gets marked as normal by either the consume
 > **Callback:** 
 >
 > onConversationMarkedAsNormal()
-
-
 
 ### Agent Action Events
 #### Agent details changed
@@ -131,8 +118,6 @@ Called when the assigned agent of the current conversation has changed, or their
 |----|----|----|
 | agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the new (or updated) currently-assigned Agent. |
 
-
-
 #### Agent typing
 
 Called when the assigned agent is typing a message. When there are 2 seconds of idle time, the callback returns false to indicate that the agent stopped typing.
@@ -151,8 +136,6 @@ Called when the assigned agent is typing a message. When there are 2 seconds of 
 |----|----|----|
 | isTyping | boolean | **true** if the Agent is currently typing; **false** if the Agent's keyboard becomes idle. |
 
-
-
 #### Offline Hours Changed
 
 Called when there is a change in agent availability. 
@@ -170,8 +153,6 @@ Called when there is a change in agent availability.
 | Parameter | Type | Description  |
 |----|----|----|
 | isOfflineHoursOn | boolean | **true** if the Agent is in Offline Hours mode; **false** if the Agent returns to an online state. |
-
-
 
 ### User Action Events
 #### User Denied Permission
@@ -196,8 +177,6 @@ Called if the user denied a necessary system permission for the action they trie
 | permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user was attempting to perform. |
 | doNotShowAgainMarked | boolean | **true** if the user directed the Permissions system to never ask again for this permissionType; **false** otherwise. |
 
-
-
 #### User Action On Prevented Permission
 
 **Android version supported:** 6.0 (Marshmallow; API 23) and above
@@ -218,14 +197,11 @@ Called before requiring a permission that the user has not yet accepted. For exa
 |----|----|----|
 | permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user is attempting to perform. |
 
-
-
 #### Agent avatar tapped
 
 Called when the user taps on the agent avatar.
 
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode).
-
 
 > **Intent Action:** 
 >
@@ -240,8 +216,6 @@ The icon is available next to the agent message bubble or on the top of the tool
 | Parameter | Type | Description  |
 |----|----|----|
 | agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the Agent the user tapped on. |
-
-
 
 #### Structured Content Link Clicked
 
@@ -264,8 +238,6 @@ This callback only gets called if the [structured_content_link_as_callback](andr
 |----|----|----|
 | uri | String | A link to the content the user was sent to when they tapped on a piece of Structured Content. |
 
-
-
 ### Survey Events
 #### CSAT Screen Launched
 
@@ -279,8 +251,6 @@ Called when the feedback screen launches.
 >
 > onCsatLaunched()
 
-
-
 #### CSAT Screen Dismissed
 
 Called when the feedback screen gets dismissed with any result, positive or negative. (The user taps the **Submit**, **Skip**, or **Back** buttons.) 
@@ -292,8 +262,6 @@ Called when the feedback screen gets dismissed with any result, positive or nega
 > **Callback:** 
 >
 > onCsatDismissed()
-
-
 
 #### CSAT Screen Submitted
 
@@ -318,8 +286,6 @@ Called when the user taps the **Submit** button on the feedback screen. The onCs
 | conversationId | String | ID of the conversation the survey is rating. |
 | starRating | int | How many stars (out of 5) the user rated this conversation. |
 
-
-
 #### CSAT Screen Skipped
 
 Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed callback is called as well.
@@ -331,8 +297,6 @@ Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed 
 > **Callback:** 
 >
 > onCsatSkipped()
-
-
 
 ### Authentication Events
 #### Token Expired
@@ -347,8 +311,6 @@ Called if the token used in the session has expired and is no longer valid. The 
 >
 > onTokenExpired()
 
-
-
 #### Unauthenticated User Expired
 
 Called if the temporary user authentication used specifically in an Unauthenticated type flow expires.
@@ -360,8 +322,6 @@ Called if the temporary user authentication used specifically in an Unauthentica
 > **Callback:** 
 >
 > onUnauthenticatedUserExpired()
-
-
 
 ### Connection Events
 #### Connection State has Changed
@@ -381,8 +341,6 @@ Called when the connection to the conversation server has been established or di
 | Parameter | Type | Description  |
 |----|----|----|
 | isConnected | boolean | **true** for connected, **false** for disconnected |
-
-
 
 ### Error Events
 #### Multi-Type Error Indication
@@ -421,7 +379,6 @@ Called to indicate that an internal SDK error occurred.
 |----|----|----|
 | lpError | LpError (enum)| The error.   |
 | message | String        | A detailed message on the error. |
-
 
 ### LivePerson Callbacks
 
@@ -476,8 +433,6 @@ public interface LivePersonCallback {
 }
 ```
 
-
-
 ### LivePerson Intents
 #### Intent Actions:  
 
@@ -519,7 +474,6 @@ public interface ILivePersonIntentAction {
 }
 ```
 
-
 #### Intent parameter 'Extras':
 
 ```java
@@ -551,7 +505,6 @@ public interface ILivePersonIntentExtras{
     String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";
 }
 ```
-
 
 ### TaskType enum:
 

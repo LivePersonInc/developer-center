@@ -25,8 +25,6 @@ To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage cam
 
     ![IVR3](img/ivr3.png)
 
-
-
 ### Best Practices for Setting up your IVR
 
 In order to set up your IVR, a scenario must be created by adding a modifying VXML snippet to the IVR decision tree. IVRs support the ability to decide when a scenario is presented to the visitor.

@@ -10,7 +10,6 @@ permalink: mtls-methods-forward-post-request.html
 
 The Forward API methods proxies incoming requests to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `POST` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`). 
 
-
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
 
 ### Request
@@ -18,7 +17,6 @@ When submitting the forward request, the certificate will be fetched according t
  |Method|      URL|  
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId} |
-
 
 **Request Headers**
 
@@ -50,8 +48,6 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

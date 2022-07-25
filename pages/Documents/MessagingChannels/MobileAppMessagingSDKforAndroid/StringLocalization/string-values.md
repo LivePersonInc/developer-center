@@ -165,9 +165,6 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_unread\_message** | (plurals string that contains: "one" and "others"). Used in the unread messages indicator to indicate how many unread messages Example: one or others. |   |
 | **lp\_yesterday** | Yesterday header in conversation. | Yesterday |
 
-
-
-
 ### Masking
 
 | **String name** | **Used in** | **Default value** |

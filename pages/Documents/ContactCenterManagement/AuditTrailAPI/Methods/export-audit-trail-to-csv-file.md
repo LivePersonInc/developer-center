@@ -26,8 +26,6 @@ Exports an account's audit trail to CSV file.
 | :------- | :-------------- |
 |Authorization | Contains token string to allow request authentication and authorization. See the introduction page for more details. |
 
-
-
 **Path Parameters**
 
 |Parameter|  Description|  Type|  Notes|

@@ -24,7 +24,6 @@ Outlined below is a sample API call that is used to execute a *SINGLE STEP* outb
 |Content-Type|application/json|
 |Accept|application/json|
 
-
 ### Request Payload
 
 The following information should be provided to LivePerson.
@@ -116,7 +115,6 @@ The following information should be provided to LivePerson.
 </tbody>
 </table>
 
-
 ### Example Request Payload
 
 ```json
@@ -138,7 +136,6 @@ The following information should be provided to LivePerson.
   "proactiveTemplateVersion":"1"
 }
 ```
-
 
 ### Example Response Success
 
@@ -185,7 +182,6 @@ HTTP Response Code — 200 OK
   }
 }
 ```
-
 
 ### Example Request Failure
 

@@ -11,8 +11,6 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticated-in
 indicator: messaging
 ---
 
-
-
 ### Introduction
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:

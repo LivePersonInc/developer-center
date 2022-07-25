@@ -124,7 +124,6 @@ This method tracks human agent time spent on each segment (from the moment of as
     ]
   }
 }
-
 ```
 
 ### Error Codes

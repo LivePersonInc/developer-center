@@ -61,7 +61,6 @@ This API retrieves a single skill (by ID) for a specific account.
 | :-------  | :-----  |
 | ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
-
 **Response Body**
 
 Please see the [Appendix](administration-skills-appendix.html) for Entity Structure and Entity Example.

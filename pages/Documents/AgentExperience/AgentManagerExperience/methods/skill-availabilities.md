@@ -46,7 +46,6 @@ Request body — JSON example:
 }
 ```
 
-
 ### Response
 
 Name| Description | Type/Value

@@ -12,13 +12,11 @@ The Forward API methods proxies incoming requests to the `LP-forward-url` suppli
 
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
 
-
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
  |GET|  https://[{domain}]/mtls/account/{accountId} |
-
 
 **Request Headers**
 
@@ -50,8 +48,6 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

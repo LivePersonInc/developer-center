@@ -136,7 +136,6 @@ For other role types, the state field will always be populated with ‘ACTIVE’
 
 The API should be used on the new version published (2.1). In case the transfer-to-agent call is triggered from version 2.0 with the described format, the transfer will occur but the one who triggered won't get the notification, since notifications are available only in the new version.
 
-
 Sample code:
 ```javascript
 agent.on('cqm.ExConversationChangeNotification', body => {

@@ -14,14 +14,12 @@ indicator: messaging
 
 Connect To Messaging (C2M) is a product offering from LivePerson allowing brands to offer consumers an option to deflect to messaging when they call into their IVR. C2M API serves as an intermediary between the brand’s IVR System and LivePerson Conversational Cloud, ensuring that the consumer is invited to join a conversation with an agent via eligible messaging channels. Once a consumer responds to a message from that channel, C2M ensures that the conversation is routed to an agent of the appropriate skill specified by the brands.
 
-
 ### Getting Started
 
 1. Onboarding to C2M is a mandatory process before running APIs.
 2. Brand’s system should integrate with two C2M API endpoints, which are <strong><i>Eligibility</i></strong> and <strong><i>Invite</i></strong>. 
   * <strong><i>Eligibility:</i></strong> Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
   * <strong><i>Invite:</i></strong> Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
-
 
 ### API Specifications
 ## C2M Domain
@@ -67,7 +65,8 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 **Request Body Example — JSON Payload**
 
-SMS, WA
+SMS, WA:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -131,10 +130,10 @@ SMS, WA
         }
     }]
 }
-
 ```
 
-WA Rich Template
+WA Rich Template:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -149,7 +148,8 @@ WA Rich Template
 }
 ```
 
-INAPP
+INAPP:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -158,7 +158,6 @@ INAPP
     "ivrNumber": "180000",
     "consumerId": "james"
 }
-
 ```
 
 **Response Body Parameters / Success / HTTP Status Code 200**
@@ -189,7 +188,6 @@ INAPP
     "eligible": true,
     "callId": "b52403dc-b140-45cc-a9ca-d749a39b1b56"
 }
-
 ```
 
 ### Invite API
@@ -453,7 +451,6 @@ public class OAuthAuthenticator {
         return generatedString;
     }
 }
-
 ```
 
 **How to generate <b>Authorization</b> header for AppJWT**

@@ -31,7 +31,6 @@ startFrom    | Conversation started from the given value  | long - epoch time in
 startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
-
 ### Response
 
 **Elements in the Response**
@@ -65,7 +64,6 @@ Name                 | Description                                | Type/Value |
 :------------------- |:-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
 id                   | ID of the participant (Agent or Consumer). | string     |
 role                 | The role of the participant.               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
-
 
 _Conversation csat_
 

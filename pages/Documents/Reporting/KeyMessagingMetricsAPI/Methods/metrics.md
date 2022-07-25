@@ -38,7 +38,6 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
 
-
 ### filters
 _filters info_
 
@@ -78,7 +77,6 @@ Request body — JSON example:
     ]
 }
 ```
-
 
 ### Response
 

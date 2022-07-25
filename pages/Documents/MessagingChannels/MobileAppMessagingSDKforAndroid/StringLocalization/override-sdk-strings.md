@@ -46,4 +46,3 @@ If you want to change the Brand name, when using the SDK on Activity Mode, you'l
 4. Using **Project View**, right-click the values folder you just created and then select **new** → **Values Resource File**.
 5. In the New Values Resources File dialog, type **strings.xml** and click **OK**.
 
-

@@ -12,7 +12,6 @@ permalink: engagement-trigger-api-methods-getengagementstate.html
 indicator: both
 ---
 
-
 This method receives an engagement ID and returns the engagement state if it exists on the page, or an empty object if it does not.
 
 **Syntax**

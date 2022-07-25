@@ -64,7 +64,6 @@ Note: if you were using the **LPMessagingSDK.instance.registerPushNotifications(
   /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   /// - Returns: true for showing Push Notifications/ false for hidding In-App Push Notification
   func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool {}
-
 ```
 
 ### Step 2: Implementing LPMessagingSDK Notification Delegate

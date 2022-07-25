@@ -30,14 +30,12 @@ OAuth is often used to manage users' log in to a certain site or application at 
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | number| Required | Default Value: 1.0 |
 
-
 **Path Parameters**
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | domain | Sentinel hostname | String | Required | |
 | accountid | LivePerson site ID | String | Required | |
-
 
 **Headers**
 
