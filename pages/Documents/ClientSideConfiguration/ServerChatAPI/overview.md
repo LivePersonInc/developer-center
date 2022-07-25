@@ -29,10 +29,9 @@ The Conversational Cloud chat window is based on a browser and will display in a
 {:start="3"}
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
-_Note_ - there is a known limitation with the reporting surrounding this API. The data returned on external engagements (like Abandoned Values or Interactive Chats) will be partial or incorrect. This will be fixed in the future but should be taken into consideration when working with the API currently.
-
+_Note: There is a known limitation with the reporting surrounding this API. The data returned on external engagements (like Abandoned Values or Interactive Chats) will be partial or incorrect. This will be fixed in the future but should be taken into consideration when working with the API currently._
 
 ### Use Cases
 
@@ -44,4 +43,4 @@ _Note_ - there is a known limitation with the reporting surrounding this API. Th
 
 ### Sample Postman Collection
 
-For a sample postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html).
+For a sample Postman collection for the Server Chat API, click [here](consumer-experience-server-chat-sample.html).

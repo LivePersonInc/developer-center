@@ -51,8 +51,6 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-
-
 ### Use cases
 
 * Integrations with WFM  (workforce management) tools such as  NICE IEX and Verint WFM. This provides real-time visibility into the agent status in LE system. This enables the brand to track scheduling adherence  and take early action in order to solve issues.

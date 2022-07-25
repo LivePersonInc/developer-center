@@ -504,7 +504,7 @@ function allArticlesClick() {
 //this function is triggered on click not when the page loads.
 function sidebarClick() {
   $(".topfolder").on("click", ".highlightlink", function () {
-    //if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
+    //if the clicked element is not one of the buttons at the bottom of the sidebar, e.g. "status page"
     $("span.sidebarbutton").removeClass("clicked")
 
     if (!$(this).hasClass("bottombuttons")) {

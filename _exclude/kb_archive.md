@@ -22,7 +22,6 @@ If you're just getting started with knowledge bases and want to try using this t
 
    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat2.png"> 
 
-
 ### Refresh the intents
 
 The intents for every article are stored in a cache that is updated automatically every 5 minutes. But if you've made a recent change to intents--either [Knowledge Base intents or Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents)--and you want to immediately see the result of the changes, you can manually refresh the cache.

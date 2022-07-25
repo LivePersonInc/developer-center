@@ -21,7 +21,6 @@ Currently, LivePerson supports two methods for passing the ID Token: [implicit](
 **LivePerson SDK** ([iOS](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-overview.html), [Android](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-overview.html))  
 This is a LivePerson layer embedded into the customer app (mobile/web). It mediates between the app and the LivePerson Service and provides the interaction conversation UI. This layer calls the mobile app to supply an OAuth 2.0 code whenever the LivePerson Service needs it.
 
-
 ### ID Token Exchange
 
 **ID Token exchange using LivePerson's SDK for native mobile application**  
@@ -29,7 +28,6 @@ To authenticate a user (brand's consumer), the SDK requires an OAuth 2.0 code or
 
 **ID Token exchange using JavaScript for web application**  
 The customer web app is based on an embedded LivePerson's Web-SDK. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
-
 
 **Retrieving ID Token using 'Token Endpoint'**  
 In case using token endpoint which accepts a valid OAuth 2.0 code along with the clientID and secret information, response should include a valid ID Token. The token should contain user unique identifier and additional claims, encoded and signed as a [JWT](https://tools.ietf.org/html/rfc7519). The clientID and secret information are encoded in
@@ -71,7 +69,6 @@ Pragma: no-cache
      K5hoDalrcvRYLSrQAZZKflyuVCyixEoV9GfNQC3_osjzw2PAithfubEEBLuVVk4
      XUVrWOLrLl0nx7RkKU8NXNHq-rvKMzqg"
 }
-
 ```
 
 The id_token in the response is standard JWT and can be translated to the unpacked form. Here is an example of the unpacked id_token:
@@ -88,5 +85,4 @@ The id_token in the response is standard JWT and can be translated to the unpack
 ```
 
 <div class="hide">Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external window page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)</div>
-
 

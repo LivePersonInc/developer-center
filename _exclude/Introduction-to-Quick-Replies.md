@@ -50,7 +50,7 @@ The primary difference between Structured Content and Quick Replies is that, for
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [

@@ -17,7 +17,7 @@ indicator: messaging
 
 You can change strings appearing on the SDK interface by overriding the respective string key.
 
-**Note:**  To create a new locale file, see [Override SDK Strings](/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
+**Note:** To create a new locale file, see [Override SDK Strings](/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
 
 ### Accessibility strings (used by the Accessibility TalkBack)
 
@@ -164,9 +164,6 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_ttr\_message\_with\_timestamp** | Text in TTR snackbar when timestamp is shown. | An agent will respond within the next |
 | **lp\_unread\_message** | (plurals string that contains: "one" and "others"). Used in the unread messages indicator to indicate how many unread messages Example: one or others. |   |
 | **lp\_yesterday** | Yesterday header in conversation. | Yesterday |
-
-
-
 
 ### Masking
 

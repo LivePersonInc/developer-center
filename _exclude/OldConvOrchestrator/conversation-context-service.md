@@ -104,7 +104,7 @@ You will use the namespace value that is returned in the response in all other C
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request POST \
@@ -152,7 +152,7 @@ This will override the value if an existing key is used. If a new key is used th
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request PATCH \
@@ -202,8 +202,9 @@ This will override the value if an existing key is used. If a new key is used th
     </tbody>
 </table>
 
-Example:
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request PATCH \
@@ -243,7 +244,7 @@ curl --request PATCH \
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -281,7 +282,7 @@ This will get all Key/value pairs for all requested properties that are availabl
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request GET \
@@ -383,7 +384,7 @@ curl --request GET \
 
 #### Get all properties within a session
 
-We recommend to use Namespace to group related attributes (KVPs), and use the sessionID to store as a session state variable. You can put anything you want in the sessionId. If you want to put consumer and conversation data in the same namespace, you can as long as the sessionIDs are unique across the two. And it's optional – if omitted, the system will use a default sessionId of `__default__`
+We recommend to use Namespace to group related attributes (KVPs), and use the sessionID to store as a session state variable. You can put anything you want in the sessionId. If you want to put consumer and conversation data in the same namespace, you can as long as the sessionIDs are unique across the two. And it's optional — if omitted, the system will use a default sessionId of `__default__`
 
 <table>
     <thead>
@@ -409,7 +410,7 @@ We recommend to use Namespace to group related attributes (KVPs), and use the se
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -444,11 +445,10 @@ curl --request GET \
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/myCoolMamespace2/properties/{propertyName}   --header 'maven-api-key:  BEnAcoA2p4OTAyMzM1Nxyz'
-
 
 ```
 
@@ -483,7 +483,7 @@ curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/my
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -496,7 +496,6 @@ curl --request PATCH \
  "b": 2,
  "c": 3
 }'
-
 
 ```
 
@@ -521,7 +520,7 @@ curl --request PATCH \
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -554,7 +553,7 @@ Delete sessionID would be used if brands wants to delete a set of session attrib
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -585,7 +584,7 @@ curl --request DELETE \
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request DELETE \
@@ -617,7 +616,7 @@ Delete namespace may be used if brand wants to retire a namespace. This would re
 
 ##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request DELETE \

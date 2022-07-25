@@ -12,7 +12,7 @@ permalink: monitoring-api-methods-report.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
+**Note:** Please make sure the read the [overview](rt-interactions-monitor-api-overview.html) before getting started with this method.
 
 ### Description
 
@@ -76,7 +76,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
    * a hashed/salted email address
 
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### PUT Request and body entity example
 
@@ -101,7 +101,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
         "sub": "identifierForAuth"
     }
  ],
- "pageId" : "4743822558",
+ "pageId": "4743822558",
  "entryPoints":[
    "tel://972737004000",
    "http://www.brand.com",
@@ -130,7 +130,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ImpressionAcceptEvent:
 
-**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
+**Note:** This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
 
 ```json
 {
@@ -149,7 +149,7 @@ ImpressionAcceptEvent:
 
 ImpressionDisplayEvent:
 
-**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
+**Note:** This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
 
 ```json
 {

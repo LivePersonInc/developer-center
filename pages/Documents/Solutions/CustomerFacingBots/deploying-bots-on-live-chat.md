@@ -14,12 +14,11 @@ permalink: customer-facing-bots-deploying-bots-on-live-chat.html
 indicator:
 ---
 
-
 ### Step 1 - Set Up Your Conversational Cloud Configuration
 
 If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
-1. Create a user for your bot: Go to the users tab and create a new user > populate the form with the bot information including the name that will display to customers as well as the icon.
+1. Create a user for your bot: Go to the users tab and create a new user; populate the form with the bot information including the name that will display to customers as well as the icon.
 
 2. Create a skill for your bot. From the same users tab, navigate to 'skills’ and create a  new skill. Name the skill as appropriate for the use case of your bot and **ensure it has the word 'bot’ in the skill name.** This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 
@@ -35,7 +34,7 @@ In order to use the Chat Agent API, please follow the steps below:
 
 4. **Log out** using the [Login Service API](agent-logout.html).
 
-You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [C​lick here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
+You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [Click here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
 
 ### Step 3 - Assign your bot to a Conversational Cloud campaign and manage bot escalations
 

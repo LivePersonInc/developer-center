@@ -17,7 +17,7 @@ OAuth is an open-standard authorization framework that describes how unrelated s
 The following code shows an example that performs a `POST` request with `Authorization Header`.
 
 {: .notice}
-  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
+  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {
@@ -82,8 +82,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
 {: .notice}
-It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
-
+It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {

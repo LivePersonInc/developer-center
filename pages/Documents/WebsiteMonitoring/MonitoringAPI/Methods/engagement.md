@@ -11,7 +11,7 @@ permalink: monitoring-api-methods-engagement.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
+**Note:** Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
 
 ### Description
 
@@ -82,7 +82,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
    * a hashed/salted email address
 
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### POST Request and body entity example
 
@@ -183,20 +183,22 @@ Status code: 200 OK - Resume conversation same session:
     }
   ]
 }
-
 ```
-Status code: 200/201 OK - Engagement is unavailable. **Note**: because the engagement is unavailable, the `engagementDetails` object does not return:
+
+Status code: 200/201 OK - Engagement is unavailable.
+
+**Note:** Because the engagement is unavailable, the `engagementDetails` object does not return:
 
 ```json
 {
      "sessionId": "abc",
      "visitorId": "xyz",
-     "pageId" : "4743822558"
+     "pageId": "4743822558"
 }
 ```
 
-Loading Account:
-API version 1.0, Status code 500 Server Error -
+Loading Account: API version 1.0, Status code 500 Server Error
+
 ```json
 {
     "time":1501074704502,
@@ -204,7 +206,9 @@ API version 1.0, Status code 500 Server Error -
     "internalCode":20
 }
 ```
-API version 1.1, Status code 202 Accepted -
+
+API version 1.1, Status code 202 Accepted
+
 ```json
 {
     "time":1501074704502,

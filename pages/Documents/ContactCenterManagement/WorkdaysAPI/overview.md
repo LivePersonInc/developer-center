@@ -16,9 +16,9 @@ For example, if a skill has a defined time to response of five minutes and a con
 
 It is important to understand that this API creates a "workdays" object which is then assigned to specific skills. If a "workdays" object is not assigned to any skills, it will not affect any consumers. So, for example: two different "workdays" objects can be created. **Object A** defines a regular, US hours business week. **Object B** defines a short, six hour work week. You can then assign Object A to example skills *Support* and *Billing* while assigning Object B to example skill *Sales*. Object A will affect only the skills assigned to it (Support and Billing) and Object B will only affect the skill assigned to it (Sales).
 
-**Note**: the Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
+**Note:** The Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
 
-**Note**: Use the [Skills API](/administration-skills-appendix.html) to set the workingHoursId for the skill.
+**Note:** Use the [Skills API](/administration-skills-appendix.html) to set the workingHoursId for the skill.
 
 ### Use Cases
 
@@ -44,4 +44,4 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).

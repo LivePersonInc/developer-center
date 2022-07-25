@@ -541,7 +541,7 @@ Color code for the markdown hyperlink in the automatic messages.
 
 ---
 
-### Conversation Activity Style - (activity mode only!)
+### Conversation Activity Style (activity mode only!)
 
 #### lp_colorPrimary
 

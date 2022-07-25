@@ -58,17 +58,17 @@ indicator: both
                        Customize Conversational Cloud features
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="/tutorials-guides-getting-started-with-bot-building-overview.html">
                           Leverage intents in your bots
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="/conversation-orchestrator-dynamic-routing-overview.html">
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="https://www.liveperson.com/upgrade/">
                        Learn about your upgrade options and speak with an expert
                 </a>

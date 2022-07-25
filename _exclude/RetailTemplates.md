@@ -35,7 +35,7 @@ Items to Configure:
 
 Included Conversations:
 
-- Welcome Dialog - Top shopper needs to route to.
+- Welcome Dialog — Top shopper needs to route to
 - Fallback Message
 - Escalation Message
 

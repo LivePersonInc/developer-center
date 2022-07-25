@@ -15,7 +15,6 @@ Application keys are security tokens that you use to log into Conversational Clo
 
 If required by an API, create an Application Key and it will be installed automatically upon creation.
 
-
 {:.notice}
 You use the API key when you create bots.
 

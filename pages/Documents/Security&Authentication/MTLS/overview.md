@@ -8,7 +8,7 @@ indicator: both
 permalink: mtls-overview.html
 ---
 
-mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served but currently it requires communication with LivePerson support teams. In the future, self-service features will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
+mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over HashiCorp’s Vault. This solution is intended to be self-served but currently it requires communication with LivePerson support teams. In the future, self-service features will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
 
 ### What is mTLS?
 
@@ -18,9 +18,9 @@ By adopting mTLS, LivePerson is looking to adhere to industry standards and offe
 
 The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication has been achieved.
 
-### What is Hashicorp Vault?
+### What is HashiCorp Vault?
 
-HashiCorp provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. Vault, first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
+[HashiCorp](https://www.hashicorp.com/) provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. [Vault](https://www.vaultproject.io/), first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
 ### Use cases - Why should I use mTLS?
 
@@ -46,9 +46,9 @@ The mTLS "happy flow" includes configuring the service and then invoking it in r
 
 In order for mTLS to work, you'll need to generate a specific mTLS certificate. You can accomplish this by receiving a CSR from our support team, filling out the CSR with the required details and signing the certificate with a 3rd party provider.
 
-Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the mTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
+Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the mTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it in HashiCorp Vault.
 
-Check out the [on-boarding guide](/mtls-onboarding.html) for next steps.
+Check out the [onboarding guide](/mtls-onboarding.html) for next steps.
 
 ### Limitations
 

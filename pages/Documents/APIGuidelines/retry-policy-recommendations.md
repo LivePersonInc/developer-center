@@ -30,7 +30,6 @@ Below you can find LivePerson best practices to handle errors:
 | 429          | Too many requests | Retry after at least 1 second; avoid bursts of requests |
 | 5xx          | Error on server side  | Retry 3 times with 5, 10, 15 second pause between retries |
 
-
 In addition to the table above, in order to make sure the application can recover from more than 3 consecutive failed requests, as in the case of a service incident or a maintenance activity with a few minutes of downtime, another retry should be introduced for login/socket close/etc.
 
 The retry should be with a longer interval than the previous one, for example every 2 minutes or you can use Exponential Backoff. This means that the application waits a short time before the first retry, and then exponentially increases times between each subsequent retry. For example, it may retry the operation after 2 minutes, 4 minutes, 8 minutes, and so on.
@@ -46,7 +45,6 @@ If you receive a `429` response code, this means that your request is being thro
 Some services require you to send periodic requests in order to keep your session alive.
 
 Below you will find the recommended intervals for KeepAlive per product:
-
 
 | Product   |      Method Name      |  KeepAlive interval |
 |:----------|:-------------|:------|

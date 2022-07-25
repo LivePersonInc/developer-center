@@ -107,7 +107,7 @@ Once your keys are generated, your Public Key will be saved to your account, and
 
 <div class="important">If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports - use GPG Suite or GPG4Win to do so.</div>
 
-**Notes about Encryption**:
+**Notes:**
 
 * Keys will be generated with an RSA key size of 2,048 bits (therefore, if you bring your own, they must also be 2,048 bits).
 
@@ -136,4 +136,4 @@ When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-
 Once you have created your keys, enter them into Transporter via the Conversational Cloud section and click create.  Your API keys will be encrypted and stored securely.
 After verifying your keys are valid, you will see the Conversational Cloud setting appear in the table at the bottom of the page - it is now ready for use as your source when you configure your first report.
 
-<div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks! <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>
+<div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>

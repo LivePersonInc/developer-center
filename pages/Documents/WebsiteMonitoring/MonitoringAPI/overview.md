@@ -65,7 +65,7 @@ The "Monitor API" is a **stateful API**. This (server-side) state is the monitor
 
 * HTTP based - All information (both client to server and server to client) will be passed using an HTTP request-response model.
 * HTTPS only - Only **secured** (SSL) requests will be handled.
-* JSON based - All data (both directions) will be passed using a valid JSON. **Note** - clients should not rely on a closed set of attributes since the format is JSON ("Forward Compatibility").
+* JSON based - All data (both directions) will be passed using a valid JSON. **Note:** Clients should not rely on a closed set of attributes since the format is JSON ("Forward Compatibility").
 
 ### Authentication and Authorization
 
@@ -95,10 +95,9 @@ This API is public. When specifying `appInstallationId` and `accountId`, the API
 
 * **Report SDEs via the API** - if you're already using other LivePerson APIs to build custom solutions, you'd need to work with this API directly to enable communication with those custom solutions.
 
-
 ### Reporting funnel
 
-**Note**: the reporting funnel relies on terms and definitions explained as part of the Report method of this API. Please visit [this link](rt-interactions-monitoring-methods-report.html) for more information on these terms.
+**Note:** The reporting funnel relies on terms and definitions explained as part of the Report method of this API. Please visit [this link](rt-interactions-monitoring-methods-report.html) for more information on these terms.
 
 Today, the Analytics Builder offers a set of operational and funnel reports which instill visibility into campaign performance and agent performance against campaign goals. These reports currently cover both Chat and Messaging conversation types from Web sources.
 

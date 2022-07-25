@@ -61,7 +61,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -90,7 +89,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
 
-
 ### Request Headers
 
 <table>
@@ -104,7 +102,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
 
-
 ### Request Body
 
 <table>
@@ -112,7 +109,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
     <td>N/A</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -126,7 +122,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
     <td>This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.</td>
   </tr>
 </table>
-
 
 ### Response Body
 
@@ -151,7 +146,6 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
 </td>
   </tr>
 </table>
-
 
 <table>
   <tr>

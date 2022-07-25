@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
 indicator: messaging
 ---
 
-
 ### Authenticated in-app messaging
 
 #### Prerequisites
@@ -20,7 +19,7 @@ indicator: messaging
 
 #### Authentication methods 
 
-If your system implementation involves an authentication step , you can use one of the following methods in order to get the conversation view:
+If your system implementation involves an authentication step, you can use one of the following methods in order to get the conversation view:
 
 ##### Activity mode
 
@@ -33,9 +32,6 @@ LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenti
 ```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
-
-
-
 
 #### Authenticated connection methods
 
@@ -62,7 +58,6 @@ Once the Authentication key expires, you get notified with a callback / local in
 
 To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
 
-
 {:.important}
 Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
@@ -80,7 +75,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 The `LPAuthenticationParams` object contains an authentication type which should be passed in the constructor. An empty constructor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
 
-_Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
+_Note: If you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH._
 
 ```java
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);

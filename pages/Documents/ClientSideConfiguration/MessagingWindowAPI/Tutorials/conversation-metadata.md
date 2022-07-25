@@ -15,15 +15,16 @@ indicator: messaging
 
 This API exposes another mechanism to enable the client to get conversation metadata. The metadata includes the following:
 
-* Status - Whether the conversation is open or closed.
-* Participants - Whether there are any other participants in the conversation (agents, managers).
+* Status: Whether the conversation is open or closed.
+* Participants: Whether there are any other participants in the conversation (agents, managers).
 
 In order to get the metadata for the existing conversations, the client should subscribe itself to the conversation metadata stream. Upon any change, the client will get a notification about the updated conversation. Using this mechanism, the client is aware of changes done by the agent (close, join, transfer, and more). For clients that do not keep state such as browsers, this mechanism can be helpful for retrieving the current state after connection resstablishment.
 
 ### Prerequisites
+
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
-### Step 1 - Subscribe
+### Step 1 — Subscribe
 
 Open the WebSocket connection using:
 
@@ -53,10 +54,9 @@ You will firstly get a response with the new subscription ID:
 
 You will also get some other messages. Ignore these for now.
 
-### Step 2 - Create a new Conversation
+### Step 2 -— Create a new Conversation
 
 In order to test the subscription, we will create a new conversation using:
-
 
 ```json
 {"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
@@ -94,7 +94,7 @@ In addition to the response for the request, you will get a notification with th
 }
 ```
 
-### Step 3 - Agent accepts the Conversation
+### Step 3 — Agent accepts the Conversation
 
 Now switch to the Agent Workspace and click ``Accept`` to take the conversation. Switch again to the consumer shell. You should see that another notification is displayed. Notice that the ``participantsPId`` property also contains the ID of the ``assigned agent``. This notifies the consumer that an agent has joined the conversation:
 

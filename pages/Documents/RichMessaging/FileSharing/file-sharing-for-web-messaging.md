@@ -70,7 +70,8 @@ In response, you will get a `conversationId` that will be used in the next steps
 
 Use the following request to retrieve an upload URL, specifying the type and size of the file.
 
-**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, and `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+**Note:** The supported file types are `JPG`, `JPEG`, `PNG`, and `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+
 Although file sharing supports uploading file of sizes up to 3MB, we recommend resizing and/or compressing the file to shorten the file processing time (sanitation services, post-processing services, etc.).
 
 See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).
@@ -125,7 +126,7 @@ In response you will get the following message:
 
 Use the following request and the parameters obtained in steps 1 and 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.
 
 #### Upload request
 
@@ -143,7 +144,6 @@ Upload the file as binary.
 | :--- | :--- |
 | 201 | CREATED |
 | 401 | Temp URL invalid |
-
 
 **Upload and download file requests are also available [as a Postman collection](assets/content/Swift.postman_collection).**
 
@@ -188,7 +188,6 @@ Example message:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
 
-
 Request Body Example:
 
 ```json
@@ -224,4 +223,4 @@ Use the following request to download the file, using the parameters from the pr
 | :--- | :--- |
 | GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.

@@ -45,7 +45,7 @@ $(function()
 			}
 
 			start = performance.now();
-			
+
 			$('#files').parse({
 				config: config,
 				before: function(file, inputElem)
@@ -87,8 +87,6 @@ $(function()
 	});
 });
 
-
-
 function buildConfig()
 {
 	return {
@@ -129,14 +127,14 @@ function stepFn(results, parserHandle)
 	rows += results.data.length;
 
 	parser = parserHandle;
-	
+
 	if (pauseChecked)
 	{
 		//console.log(results, results.data[0]);
 		parserHandle.pause();
 		return;
 	}
-	
+
 	if (printStepChecked){
 		//console.log(results, results.data[0]);
   }
@@ -159,7 +157,7 @@ function chunkFn(results, streamer, file)
 	{
 		//console.log("Pausing; " + results.data.length + " rows in chunk; file:", file);
 		streamer.pause();
-		return;
+
 	}
 }
 
@@ -176,7 +174,7 @@ function completeFn()
 			&& arguments[0]
 			&& arguments[0].data)
 		rows = arguments[0].data.length;
-	
+
 	//console.log("Finished input (async). Time:", end-start, arguments);
 	//console.log("Rows:", rows, "Stepped:", stepped, "Chunks:", chunks);
     parseToHtml(arguments[0].data);
@@ -192,7 +190,7 @@ function parseToHtml(obj){
             break;
         }
     }
-    var parsedHtml = 
+    var parsedHtml =
 `<html>
 <head>
     <meta charset="utf-8">
@@ -396,10 +394,10 @@ function parseToHtml(obj){
 
                             if (j == 1){  //J==1 is always the main category
                               parsedHtml += "</ul></li><li class='titles category' id='catTitles'><div class='searchCat' id='searchableText'>"+obj[i][j]+"</div><ul>";
-                            } else{       //Otherwise it's a subcategory              
+                            } else{       //Otherwise it's a subcategory
                               parsedHtml += "</ul></li><li class='titles subcategory' id='subTitles'><div class='searchSub' id='searchableText'>"+obj[i][j]+"</div><ul>";
                             }
-                            
+
                             lastNum = j;
                             break;
                         }
@@ -414,7 +412,7 @@ function parseToHtml(obj){
                     parsedHtml += "<li class='titles response' id='respTitles'><div class='searchResp tooltip' id='searchableText'>"+obj[i][j]+"<div class='item tooltiptext'>"+obj[i][responseNum]+"</div></div></li>";
                     break;
                 }
-                
+
             }
         }
     }
@@ -425,7 +423,7 @@ function parseToHtml(obj){
         parsedHtml += "</ul></li>";
     }
     parsedHtml += "</ul>";
-    parsedHtml += 
+    parsedHtml +=
 `<!--Paste Code Above This Line -->
     <script>
          var SDK = lpTag.agentSDK;

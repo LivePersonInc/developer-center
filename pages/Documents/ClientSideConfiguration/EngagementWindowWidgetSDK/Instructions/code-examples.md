@@ -30,7 +30,6 @@ indicator: both
 
 **'Init’ with 'bind’ (Multiple events)**
 
-
 ```javascript
 {
   }

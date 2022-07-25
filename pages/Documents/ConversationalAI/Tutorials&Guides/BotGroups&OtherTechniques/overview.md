@@ -11,7 +11,7 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 The **Bot Groups & Other Techniques** tutorial series is a continuation of our [Getting Started with Bot Building tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html) and expands on the implementations built within. If you are following along, please make sure you’ve completed the Getting Started series first.
 

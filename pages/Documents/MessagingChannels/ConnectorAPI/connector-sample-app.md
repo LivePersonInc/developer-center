@@ -22,4 +22,3 @@ A running version is deployed [here](https://connector-api.dev.liveperson.net).
 
 The source code is published on Github, you can find it through [this link](https://github.com/LivePersonInc/lp-demo-app-connector-api).
 
-

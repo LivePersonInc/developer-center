@@ -5,7 +5,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 
-
 level-order: 2
 order: 9
 permalink: skills-api-overview.html
@@ -19,7 +18,6 @@ Your agents are trained to help visitors according to your business needs. An ag
 Skills are assigned to agents as well as to engagements.  This creates the 'link’ between the right topic of conversation and the agent best equipped to handle it.
 
 ![SkillsOverivew](img/skillsoverview.png)
-
 
 ### Getting Started
 
@@ -39,9 +37,7 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
-
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases for Skills API
 

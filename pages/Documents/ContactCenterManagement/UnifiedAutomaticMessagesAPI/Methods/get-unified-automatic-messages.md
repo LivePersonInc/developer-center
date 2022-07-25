@@ -29,7 +29,6 @@ Retrieves a list of Unified Automatic Messages for a specific account.
  |Authorization | Contains token string to allow request authentication and authorization. |
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
 
-
 **Path Parameters**
 
  |Parameter|  Description|  Type|  Notes|
@@ -48,7 +47,6 @@ Retrieves a list of Unified Automatic Messages for a specific account.
 | context_id      | Context Id                                                                   | string  | Optional Context id (default is account id for ACCOUNT context)     |
 | context_type    | Context Type                                                                 | string  | Optional request context type (default is ACCOUNT)     |
 | view            | view                                                                         | string  | Optional flag to indicate that the response should include SKILL context data as well     |
-
 
 ### Response
 

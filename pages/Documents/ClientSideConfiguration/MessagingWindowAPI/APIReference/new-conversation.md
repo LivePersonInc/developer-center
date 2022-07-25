@@ -21,5 +21,3 @@ indicator: messaging
     readonly_oneOf = 'root'
     properties=true %}
 
-
-

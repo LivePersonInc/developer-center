@@ -19,7 +19,7 @@ This page will offer you a high-level overview of all limitations in place. It s
   * `*.*.liveperson.com` is not allowed while `*.liveperson.com` is
 * Calls to unallowed domains will be aborted
 * Changes to the allowed domain list can take up to 5 minutes before being reflected
-* Domains need to be valid based on [RFC1035](https://datatracker.ietf.org/doc/html/rfc1035)
+* Domains need to be valid based on [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035)
 
 ### Function
 

@@ -24,7 +24,7 @@ Optionally include a best practice or gotcha note.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
+| `sendImmediateReply(message)` | message — (string or array) — A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
 
 #### Example
 

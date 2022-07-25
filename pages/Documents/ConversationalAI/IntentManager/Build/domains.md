@@ -173,9 +173,9 @@ Training a domain is something that you do if the domain uses the LivePerson eng
 
 Training a domain creates a new model version; for more, see the relevant section for the NLU engine that you're using:
 
-* LivePerson NLU engine - See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
-* Google Dialogflow or IBM Watson NLU engine - See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
-* Your Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
+* LivePerson NLU engine: See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
+* Google Dialogflow or IBM Watson NLU engine: See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
+* Your Rasa-based NLU engine: See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
 
 ### Download a domain
 

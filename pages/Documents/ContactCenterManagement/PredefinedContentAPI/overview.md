@@ -24,7 +24,6 @@ The predefined content tool is one which agents rely on to provide quick answers
 
 Building and maintaining a current and comprehensive set of pre-defined content for your agents is crucial for accuracy and efficiency of agent responses.
 
-
 The API is based on the REST architecture style.
 
 [Click here](products-admin-predefined-content.html) to see further guidance and an example of deploying this API.
@@ -47,9 +46,7 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
-
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 **Tips for creating predefined content**
 
@@ -107,9 +104,9 @@ When you create predefined responses, take into consideration what kind of phras
 
 **Step 1: generate API key for predefined content API with write permissions.**
 
-1. Go to **Campaign Builder** > **Data Sources** > **API**
+1. Go to **Campaign Builder** → **Data Sources** → **API**
 
-2. Click **Manage** > **Add New**
+2. Click **Manage** → **Add New**
 
 3. Create a new key with the Predefined Content (Read, Write) permissions,
 
@@ -132,10 +129,10 @@ _Note: To get the `accountConfigReadWriteDomain` for your account, see the [Gett
 * Select the OAuth 1.0 Authorization type.
 
 	* Copy the keys created on step 1 into the Authorization header section.
-	App key > Consumer Key
-	Secret > Consumer secret
-	Access token > Token
-	Access token secret > Token secret
+	App key → Consumer Key
+	Secret → Consumer secret
+	Access token → Token
+	Access token secret → Token secret
 
 ![Predefined Content 3](img/predefinedcontent3.png)
 

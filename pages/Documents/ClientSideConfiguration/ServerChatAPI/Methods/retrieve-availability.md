@@ -49,10 +49,10 @@ Availability for a specific agent can be requested using the following parameter
 | :--- | :--- | :--- | :--- | :--- |
 | agent | Agent login name, checks for availability of a specific agent. | alphanumeric | Optional| Cannot be used with other parameters. |
 
-**Notes**:
+**Notes:**
 
-- *The calculation of wait time is based on a statistical estimate and might change constantly.*
-- *A maxWaitTime of 0 will return true if there are agents with capacity to immediately accept chats. When maxWaitTime is omitted, the system will return true so long as there are online agents, regardless of the size of the wait queue.*
+- The calculation of wait time is based on a statistical estimate and might change constantly.
+- A maxWaitTime of 0 will return true if there are agents with capacity to immediately accept chats. When maxWaitTime is omitted, the system will return true so long as there are online agents, regardless of the size of the wait queue.
 
 ### Response
 

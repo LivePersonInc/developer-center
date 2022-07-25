@@ -26,7 +26,6 @@ Name   | Description                                                          | 
 conversationId | The id of the conversation to be retrieved. | String    | Required |
 source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
-
 ### Response
 
 **Elements in the Response**
@@ -49,7 +48,6 @@ Name                 | Description                | Type/Value          | Notes
 type                 | The type of the message.   | string              | Valid values: "ContentEvent"
 contentType          | The type of the contnet.   | string              | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
 message              | The message content.       | MessageContent      | The content structure is different per type
-
 
 _message - text/plain_
 
@@ -79,14 +77,12 @@ Name                 | Description                    | Type/Value          | No
 invitationId         | The invitationId of the form   | string              |
 title                | The title of the form          | string              |
 
-
 _event - RichContentEvent_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 type                 | The type of the message.   | string              | Valid values: "RichContentEvent"
 content              | The content of the message.| string              | A JSON representation of the message's rich content
-
 
 _event - AcceptStatusEvent_
 
@@ -273,5 +269,4 @@ role                 | The originator role.       | string              |
         }
     ]
 }
-
 ```

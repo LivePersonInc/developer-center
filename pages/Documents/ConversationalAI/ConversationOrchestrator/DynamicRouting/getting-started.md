@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. For those still using bots based on the older template, see [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead for setup information.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. For those still using bots based on the older template, see [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead for setup information.
 
 ### Introduction
 
@@ -39,7 +39,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
 
 2. In Conversational Cloud, from the dashboard of Conversational AI applications, select **Conversation Builder** to access the application.
 3. Click **New Bot** in the upper-right corner.
-4. From the bot template menu, select the **Conversation Orchestrator > Dynamic Routing Bot** template. Then click **Create Bot**.
+4. From the bot template menu, select the **Conversation Orchestrator → Dynamic Routing Bot** template. Then click **Create Bot**.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_choosetemplate.png" alt="">
 

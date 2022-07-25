@@ -56,7 +56,6 @@ Filter is sent in the POST data with the following JSON structure.
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
 
-
 **Request Example 1:**
 
 Simple Chat Search by time range
@@ -79,7 +78,6 @@ In the example below, we ask for chats that occurred between the 1st of June and
 Keyword Search: Chat Search by time range and keyword
 
 In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word 'iPad’ within the text available for lookup.
-
 
 ```json
     {
@@ -108,11 +106,9 @@ In the example below, we ask for chats that occurred between the 1st of June and
     }
 ```
 
-
 **Request example 3:**
 
 In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.  
-
 
 ```json
     {
@@ -145,7 +141,6 @@ In this example, we reduce the previous search, and require that the skill match
 Chat Search by time range and MCS.
 
 In this example, we are searching for chats that have a positive MCS.
-
 
 ```json
      {
@@ -496,13 +491,11 @@ Example:
     }
 ```
 
-
 **Request example 5:**
 
 Chat Search by time range and chatMCS.
 
 In this example, we are searching for chats that have mcs between 30 to 60.
-
 
 ```json
      {
@@ -517,7 +510,6 @@ In this example, we are searching for chats that have mcs between 30 to 60.
 ```
 
 ## Response
-
 
 ```json
     {
@@ -914,11 +906,9 @@ In this example, we are searching for chats that have a positive MCS.
     }
 ```
 
-
 ## Response
 
 Example:
-
 
 ```json
    {
@@ -1298,10 +1288,10 @@ Example:
 | transcript | Transcript data of the chat. | container | |
 | startReason | Code indicates the reason the chat started. | numeric | |
 | startReasonDesc | Description of reason the chat started. | alphanumeric | |
-| start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
+| start reason options | Start reason options. |  | 0 - Visitor request, 1 — Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
 | endReason | Code indicates the reason the chat ended. | numeric | |
 | endReasonDesc | Description of reason the chat ended. | alphanumeric | |
-| End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
+| End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 — Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
 | mcs | Divides the Meaningful Conversation Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1 |
 | alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
 | chatMCS | Meaningful Conversation Score of the chat.  | int| Range: 0-100. |
@@ -1351,7 +1341,7 @@ Example:
 | ipAddress | The visitor’s IP address. | alphanumeric | |
 | browser | The browser the visitor used to chat. | alphanumeric | |
 | operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
-| browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX |
+| browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g. CHROME or FIREFOX |
 | coBrowseSessions | The CoBrowse data | container | |
 | coBrowseSessionsList | List of CoBrowse sessions | container | |
 | sessionId | CoBrowse session id | alphanumeric | |

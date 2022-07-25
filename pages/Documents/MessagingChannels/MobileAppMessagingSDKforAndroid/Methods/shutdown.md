@@ -31,7 +31,6 @@ ShutDownLivePersonCallback callback description:
 
 *Note: This does not end the current messaging conversation.*
 
-
 ### ShutDownLivePersonCallback
 
 ```javascript

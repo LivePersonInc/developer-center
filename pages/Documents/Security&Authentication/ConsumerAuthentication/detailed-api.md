@@ -34,7 +34,6 @@ The identity function should be implemented on every authenticated page (the Web
           sub: "<REPLACE_WITH_CUSTOMER_IDENTIFICATION>"
       });
   }
-
 ```
 
 **Identity object description**
@@ -103,7 +102,7 @@ redirect_uri=https://liveperson.net
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
-*	The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC2617], based on **client_id:client_secret** provided by the team to identify.
+*	The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC 2617], based on **client_id:client_secret** provided by the team to identify.
 
 _Example: Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW_
 
@@ -137,14 +136,14 @@ Response:
 }
 ```
 
-The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with the following data:
+The id_token is a standard [JSON web token](https://jwt.io/) [RFC 7519], with the following data:
 
 ```json
 {
 "sub": "4255551212",
-"iss" : "https://www.YourBrand.com",
-"exp" : 1446115352,
-"iat" : 1446111752,
+"iss": "https://www.YourBrand.com",
+"exp": 1446115352,
+"iat": 1446111752,
 "extended claims set  - ref: OpenIdConnect token structure"
 }
 ```
@@ -154,10 +153,10 @@ The following table describes the response fields:
 |-------------|------------------|
 |    sub      |    The consumer ID of the authenticated subscriber.       |
 |    iss      |     The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.      |
-|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
-|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
+|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC 3339]     |
+|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC 3339]      |
 
-The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
+The id_token will be signed using RS256 ALG [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
 
 ### Error Response
 
@@ -179,9 +178,9 @@ One of the following errors will be returned:
 
 |    Name                   | Description                                                               |  
 |---------------------------|---------------------------------------------------------------------------|
-|    json_parse_error       |    There was a problem   with the format of the JSON document provided.   |
-|    invalid_code           |    The code provided   is not valid.                                      |
-|    unauthorized_client    |    The token was valid,   but this subscriber is not authorized to use the messaging feature.    Note that this should not be encountered in the production environment,   as the check is performed on the client before the LivePerson SDK is invoked. |
+|    json_parse_error       |    There was a problem with the format of the JSON document provided.   |
+|    invalid_code           |    The code provided is not valid.                                      |
+|    unauthorized_client    |    The token was valid, but this subscriber is not authorized to use the messaging feature.    Note that this should not be encountered in the production environment,   as the check is performed on the client before the LivePerson SDK is invoked. |
 
 ### OpenID Token structure
 
@@ -192,11 +191,10 @@ LivePerson supports the following claims set, which will be displayed to the age
 |    Name    |    Description                                                            |    Type      |    LP_Name    |
 |------------|---------------------------------------------------------------------------|--------------|---------------|
 |    iss     |    The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.  |    string    |    -          |
-|    iat     |    When this JWT was issued by your Service. Seconds from 1970, UTC. See [RFC3339]. |    number     |    -          |
-|    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC3339].  |    number    |    -     |
+|    iat     |    When this JWT was issued by your Service. Seconds from 1970, UTC. See [RFC 3339]. |    number     |    -          |
+|    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC 3339].  |    number    |    -     |
 
 **Standard Claim Set**:
-
 
 |    Name    |    Description | type   |    Appearance in Conversational Cloud   |    Mapping in SDEs    |
 |------------|----------------|--------|-------------------------------|-----------------------|
@@ -213,11 +211,11 @@ LivePerson supports the following claims set, which will be displayed to the age
 ```json
 {
 "sub": "4255551212",
-"iss" : "https://www.YourBrand.com",
-"exp" : 1446115352,
-"iat" : 1446111752,
-"preferred_username" : "JohnDoe",
-"phone_number" : "+1-10-344-3765333"
+"iss": "https://www.YourBrand.com",
+"exp": 1446115352,
+"iat": 1446111752,
+"preferred_username": "JohnDoe",
+"phone_number": "+1-10-344-3765333"
 }
 ```
 
@@ -284,7 +282,7 @@ Example for Mandatory+Standard+Custom Claims JWT:
 *	The JWT should be signed with your RSA private key.
 
 *	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
-    **Note:** for more details on JWKS, please read [this(external)](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens.) aritcle
+    **Note:** For more details on JWKS, please read [this (external) article](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens).
 
 ### Nested JWT
 
@@ -327,7 +325,7 @@ openssl pkcs8 -topk8 -inform pem -in private_idp.pem -outform pem -nocrypt -out 
 
 ```sh
 openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
-(public  key can be found in the file  : public_key_idp.pem)
+(public  key can be found in the file: public_key_idp.pem)
 ```
 
 **Configure the JWT public key on Conversational Cloud UI:**

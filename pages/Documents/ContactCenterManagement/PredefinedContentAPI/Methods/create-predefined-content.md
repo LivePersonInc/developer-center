@@ -38,8 +38,6 @@ Creates new Predefined Content for an account.
 | field_set | Predefined set of fields                  | Comma delimited list of strings                | Optional | Default: summary.Validation fail error code: 400. Non existing field error code: 400 Supported field_set values: <br>• all(id, deleted, enabled, data, categoriesIds, type, hot-key) <br>• summary(id, deleted, enabled, categoriesIds, type, hot-key) |
 | lang      | List of requested content languages       | Comma delimited list of language IDs (en-US,…) | Optional | Default: all languages|
 
-
-
 ### Request Headers
 
 |Header | Description |
