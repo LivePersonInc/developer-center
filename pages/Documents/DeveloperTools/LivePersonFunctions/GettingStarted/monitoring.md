@@ -16,9 +16,9 @@ We will introduce you to all the available monitoring features and tools on this
 First, we will explain how to configure and enable email reporting for your account. Let's go over some basic information and limitations that need to be considered.
 You can only select one active report and its frequency. You can choose from the following frequencies:
 
-* None -> Disables email reporting
-* Daily -> 01:00 **UTC** each day
-* Weekly -> 01:00 **UTC** first day of the week
+* None: Disables email reporting
+* Daily: 01:00 **UTC** each day
+* Weekly: 01:00 **UTC** first day of the week
 
 The data is based on the frequency, e.g. `Weekly` contains the data accumulated over the week while `Daily` only includes information of the last 24 hours. The email report contains the following information.
 

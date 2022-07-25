@@ -27,7 +27,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (is deprecated as of July 2019)
 
-_Note: if you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated_
+_Note: If you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated._
 
 ```swift
 class LPAuthenticationParams: NSObject {

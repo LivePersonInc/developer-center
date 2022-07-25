@@ -9,8 +9,9 @@ permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey.html
 indicator: messaging
 ---
 
-Get the full agent survey configuration <br>
-Get the next sequence of the survey - sequence is a series of question starting from the root question and ending with a question that contains logic 
+Get the full agent survey configuration.
+
+Get the next sequence of the survey — sequence is a series of question starting from the root question and ending with a question that contains logic. 
 
 ### Request
 
@@ -60,7 +61,7 @@ Get the next sequence of the survey - sequence is a series of question starting 
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Response example**
 

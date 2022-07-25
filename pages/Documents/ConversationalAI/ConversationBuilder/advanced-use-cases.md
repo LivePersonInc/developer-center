@@ -51,7 +51,7 @@ Regardless of the message text, it’s important that you catch the Step Up mess
 
 The JavaScript editor within Conversation Builder doesn't natively support encoding to and decoding from Base 64. If you have a case where you need to do so, you can call a FaaS function and use the `crypto` package to encode a value and return it to your bot. Alternatively, using the following code in your Global Functions will give you access to this functionality without having to call outside of Conversation Builder.
 
-Below, we've constructed two new functions -- `encode` and `decode` -- that work the same way as the Window object's `atob` and `btoa` functions:
+Below, we've constructed two new functions — `encode` and `decode` — that work the same way as the Window object's `atob` and `btoa` functions:
 
 ```javascript
 function encode(string) {

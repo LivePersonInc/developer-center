@@ -175,7 +175,7 @@ The new property will allow the agent/bot to view the textual representation of 
 
 1. General recommendation for the URL field is to use an encoded data object which will represent the URL
 
-2. **ImageURL MUST be whitelisted - **Image URLs added in the RecievedMessage must be whitelisted in the structured content image whitelisting area in Site Settings - > messaging.rich.content.valid.urls
+2. **ImageURL MUST be whitelisted** - Image URLs added in the RecievedMessage must be whitelisted in the structured content image whitelisting area in Site Settings → messaging.rich.content.valid.urls.
 
 3. Custom iMessage app response bubble - the connector currently does not capture reply bubble response from the consumer to the iMessage app. However, the transaction that occurred in the iMessage app by the consumer can be captured by the brand and updated in the Agent Widget SDK. (The response will be captured in the LE transcript line in future version).
 

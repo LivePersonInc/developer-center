@@ -40,7 +40,7 @@ You can't change the threshold when using intents, but you *can* do this for the
 
 #### Positive and negative learnings
 
-Q - Why add a positive learning instead of adding an intent qualifier or training phrase?
+Q: Why add a positive learning instead of adding an intent qualifier or training phrase?
 
 Positive learnings are phrases for which you want a match to the article to occur. Negative learnings are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
@@ -64,7 +64,7 @@ You can see an article's positive and negative learnings in the Advanced Setting
 
 ### Preview a knowledge base with a bot
 
-Q - Is this equivalent to preview in CB? Why use one over the other?
+Q: Is this equivalent to preview in CB? Why use one over the other?
 
 If you have a bot that's linked to a knowledge base, you can feed it test user input to see if it matches content as you'd expect.
 
@@ -88,4 +88,4 @@ If you have a bot that's linked to a knowledge base, you can feed it test user i
 
 The Thumbs Up and Thumbs Down icons are so easy to use that they are often misused. Often we see people using Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down.
 
-Try to keep your intent qualifiers or training phrases as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. As mentioned [here](knowledge-base-internal-knowledge-bases-best-practices.html), anything over 10 - 15 intent qualifiers or training phrases might begin to return false positives.
+Try to keep your intent qualifiers or training phrases as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. As mentioned [here](knowledge-base-internal-knowledge-bases-best-practices.html), anything over 10–15 intent qualifiers or training phrases might begin to return false positives.

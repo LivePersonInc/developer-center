@@ -19,7 +19,7 @@ Triggered in response to [requestChat](javascript-chat-sdk-methods-requestchat.h
 **Notes**:
 
 - *See [onInfo](consumer-experience-javascript-chat-oninfo.html) and [onLine](consumer-experience-javascript-chat-online.html) to understand the data in this method.*
-- *It is a best practice to listen to specific events that are a breakdown of this one: [onState](consumer-experience-javascript-chat-onstate.html), [onInfo](consumer-experience-javascript-chat-oninfo.html) , [onLine](consumer-experience-javascript-chat-online.html) and [onStart](consumer-experience-javascript-chat-onstart.html) will provide the same information to deal with in more granular detail.*
+- *It is a best practice to listen to specific events that are a breakdown of this one: [onState](consumer-experience-javascript-chat-onstate.html), [onInfo](consumer-experience-javascript-chat-oninfo.html), [onLine](consumer-experience-javascript-chat-online.html) and [onStart](consumer-experience-javascript-chat-onstart.html) will provide the same information to deal with in more granular detail.*
 
 **Sample Response**
 

@@ -65,7 +65,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 
         Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 
-    **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping -- limiting the content as needed -- the knowledge base will perform better and be easier to tune.
+    **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping — limiting the content as needed — the knowledge base will perform better and be easier to tune.
 
 6. Click **Next**.
 

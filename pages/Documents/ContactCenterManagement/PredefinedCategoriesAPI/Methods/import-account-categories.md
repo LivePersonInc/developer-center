@@ -73,7 +73,7 @@ Type: String </td>
   <tr>
     <td>fileType</td>
     <td>Type of the file (parrent ac type)</td>
-    <td>CANNED_RESPONSE - canned response file type</td>
+    <td>CANNED_RESPONSE — canned response file type</td>
   </tr>
 </table>
 

@@ -235,12 +235,12 @@ Structure example:
 | SDE.shoppingCart                            | Array of shopping cart updates                                                                       | Array of shopping cart updates                                                           | array   |                                                            |
 | SDE.serviceActivity                         | Array of service activity information                                                                | Array of service activity information                                                    | array   |                                                            |
 | SDE.error                                   | Array of visitor errors                                                                              | Array of visitor errors                                                                  | array   |                                                            |
-| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  | deprecated - use 'claimsAndAuthType' instead             |
-| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            |
-| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            |
+| **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  | deprecated — use 'claimsAndAuthType' instead             |
+| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | deprecated — use 'claimsAndAuthType.claims' instead                                            |
+| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | deprecated — use 'claimsAndAuthType.claims' instead                                            |
 | **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                         | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                              |
 | claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                 | Object containing SDEs passed by the IDP on the JWT                                      | object  | deprecates the "authenticatedData" key                |
-| claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                             | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                              |
+| claimsAndAuthType.acr                       | The authentication type ("0" — unauthenticated, "loa1" — authenticated)                             | the authentication type ("0" — unauthenticated, "loa1" — authenticated)                  | object  |                                                              |
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
@@ -324,12 +324,12 @@ Structure example:
   </tr>
   <tr>
     <td>status</td>
-    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Status of the consumer authentication — can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>
     <td>token</td>
-    <td>Token string - will be available only when authentication was successful </td>
+    <td>Token string — will be available only when authentication was successful </td>
     <td>String</td>
   </tr>
   <tr>
@@ -339,7 +339,7 @@ Structure example:
   </tr>
   <tr>
     <td>errors</td>
-    <td>Type of authentication error as received from Apple - will be available only when authentication failed </td>
+    <td>Type of authentication error as received from Apple — will be available only when authentication failed </td>
     <td>Array</td>
   </tr>
   </tbody>
@@ -370,7 +370,7 @@ Structure example:
   <tbody>
   <tr>
     <td>status</td>
-    <td>Status of the consumer payment - can be only true (successful) or false (failed) </td>
+    <td>Status of the consumer payment — can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>
@@ -380,7 +380,7 @@ Structure example:
   </tr>
   <tr>
     <td>errors</td>
-    <td>Type of authentication error as received from Apple - will be available only when payment failed </td>
+    <td>Type of authentication error as received from Apple — will be available only when payment failed </td>
     <td>Array</td>
   </tr>
   </tbody>
@@ -711,9 +711,9 @@ Structure example:
 | category | The product category                             | string |
 | sku      | The product SKU                                  | string |
 | price    | The price of the product                         | string |
-| quantity | Where applicable - the number of identical items | number |
-| statusInStock | Where applicable - the stock status of the product | string |
-| quantityInStock | Where applicable - available quantity of products | string |
+| quantity | Where applicable — the number of identical items | number |
+| statusInStock | Where applicable — the stock status of the product | string |
+| quantityInStock | Where applicable — available quantity of products | string |
 
 Structure example:
 

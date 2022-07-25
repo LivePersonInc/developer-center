@@ -43,7 +43,7 @@ The first interaction in the Welcome dialog is a *User Says* interaction that al
 
 Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
-Let’s see the interactions in action!
+Let’s see the interactions in action:
 
 1. Click the Preview icon <img style="width:35px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> in the lower-right corner.
 
@@ -96,7 +96,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     For this User Says interaction to match user input, you need to add some patterns.
 
-4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> , and then click **Settings**.
+4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png">, and then click **Settings**.
 
 5. Scroll down to the Patterns section, and add a few patterns like `goodbye`, `bye`, `see ya`, etc.
 

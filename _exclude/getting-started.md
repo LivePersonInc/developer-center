@@ -1,7 +1,7 @@
 THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
 
@@ -54,7 +54,7 @@ The first interaction in the Welcome dialog is a *Dialog Starter* interaction th
 
 Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
-Let’s see the interactions in action!
+Let’s see the interactions in action:
 
 1. Click **Preview** in the upper-right corner.
 
@@ -155,12 +155,12 @@ There can be only one dialog of type Fallback per bot.
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent.
 
-#### Watch the video - intents and entities
+#### Watch the video — intents and entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-#### Watch the video - advanced interactions
+#### Watch the video — advanced interactions
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979606" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
@@ -453,7 +453,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 ##### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account.
-2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt=""> , and then click the **Skills** tab.
+2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt="">, and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png" alt="">
 
@@ -467,7 +467,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 5. Click **Save**.
 
     The Bot skill will be the default skill connected to the bot agent.
-6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
+6. Repeat steps 3–5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png" alt="">
 

@@ -36,7 +36,7 @@ LP_Messaging_SDK/lp_messaging_sdk - this is a Module that should be added to you
 
 Drag the `lp_messaging_sdk` folder into your project folder OR add it as a module to your project from a different folder.
 
-* File - > New -> Import Module
+* File → New → Import Module
 
 ![Import Module](img/importmodule.png)
 
@@ -107,7 +107,7 @@ dependencies {
 
 
     testCompile "junit:junit:4.12"
-    //Liveperson SDK
+    // LivePerson SDK
     compile project(path: ":lp_messaging_sdk")
 }
 apply plugin: "com.google.gms.google-services"
@@ -142,7 +142,7 @@ For Photo Sharing (required if enabled):
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 5- Liveperson Events
+### Step 5 - LivePerson Events
 
 1. Intents Handler - In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
 
@@ -576,7 +576,7 @@ public class FirebaseRegistrationIntentService extends IntentService {
   @Override
    protected void onHandleIntent(Intent intent) {
        String token = FirebaseInstanceId.getInstance().getToken();
-       // Register to Liveperson Pusher
+       // Register to LivePerson Pusher
        String account = "12345678"; //Replace with your account id.
        String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
        LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);

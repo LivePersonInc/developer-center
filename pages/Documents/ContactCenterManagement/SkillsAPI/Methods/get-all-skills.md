@@ -41,9 +41,9 @@ This API retrieves a list of skills for a specific account.
 
  **Query Parameters**
  
- | Name            | Description                                                                  | Type    | Notes                                          |
+ | Name            | Description                                                                 | Type    | Notes                                          |
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
- | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: id,deleted,name  |
+ | select          | Response field filter expression.                           | string  | Example values: id, name. Default value: id,deleted,name  |
  
 
 ### Response

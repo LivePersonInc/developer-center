@@ -106,7 +106,7 @@ Request by skillIds=12,13 and overdueConversations=true
             "notActionableAndManualSla": 0,
             "unassignedConversationsAndFirstTimeConsumer": 4,
             "avgWaitTimeForAgentAssignment_NewConversation":272,
-            "avgWaitTimeForAgentAssignment_AfterTransfer": 233 ,
+            "avgWaitTimeForAgentAssignment_AfterTransfer": 233,
             "maxWaitTimeForAgentAssignment": 370,
             "waitTimeForAgentAssignment_50thPercentile":  170,
             "waitTimeForAgentAssignment_90thPercentile": 224,
@@ -143,7 +143,7 @@ Request by skillIds=12,13 and overdueConversations=true
 | maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waiting in queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
-| avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waiting in queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+| avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waiting in queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue, transferred to another skill or  transferred to specific agent.|long|
 | maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waiting in queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|
 | The following metrics present the overdue conversation. It includes conversations that have been created in the last 5 daysConversation. |||
 | overdueConversationsInQueue | The number of overdue conversations that are in the queue. | long |

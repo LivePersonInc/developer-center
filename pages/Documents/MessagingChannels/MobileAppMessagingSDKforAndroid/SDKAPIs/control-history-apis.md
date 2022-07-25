@@ -59,7 +59,7 @@ Using this parameter, brands can decide if to present open conversations, closed
 
 ```java
 public enum LPConversationsHistoryStateToDisplay {
-  OPEN, CLOSE , ALL
+  OPEN, CLOSE, ALL
 }
 ```
 

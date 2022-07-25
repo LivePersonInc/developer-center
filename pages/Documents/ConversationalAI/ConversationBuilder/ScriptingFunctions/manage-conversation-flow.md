@@ -67,7 +67,7 @@ botContext.setAllowMaxTextResponse(true);
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setTriggerNextMessage(messagename)` | messagename (string) – The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
+| `setTriggerNextMessage(messagename)` | messagename (string) — The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
 
 #### Example
 
@@ -88,7 +88,7 @@ if (company == 'LivePerson') {
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. |
+| `evaluateOptions(userResponse, options)` | <em>userResponse</em> — the user's message text<br><br><em>options</em> — array of strings | string: matched option from an array of options. |
 
 #### Example
 

@@ -23,7 +23,7 @@ CCS provides a system to hierarchically organize data using *key-value pairs*. A
 
 <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_namespace.png" alt="">
 
-CCS stores data in key-value pairs and includes developer tools like js-libraries, Liveperson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
+CCS stores data in key-value pairs and includes developer tools like js-libraries, LivePerson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
 
 ### When to use the Conversation Context Service
 

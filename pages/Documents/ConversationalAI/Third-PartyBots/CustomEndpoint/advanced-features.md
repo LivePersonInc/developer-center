@@ -135,7 +135,7 @@ Third-Party Bot Connector can be found at [API Service Specification](https://gi
     {
       "type": "TEXT",
       "data": {
-        "message": "Please wait while i prepare to give you options!"
+        "message": "Please wait while I prepare to give you options!"
       }
     },
     {

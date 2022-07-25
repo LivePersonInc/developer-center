@@ -37,7 +37,7 @@ The table below explains which EAs should be collected and presented in LE UI.
   <tr>
     <td>Visitor Info</td>
     <td>Marketing source</td>
-    <td>Used to obtain information about the marketing source of the visitors, e.g which channel or campaign drove visitors to the website</td>
+    <td>Used to obtain information about the marketing source of the visitors, e.g. which channel or campaign drove visitors to the website</td>
     <td>Usually, when the page loads.</td>
     <td>This information should be sent per session</td>
   </tr>

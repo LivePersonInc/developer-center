@@ -48,7 +48,7 @@ If you have any of these features enabled, you must add the following to your ap
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 3 - Add Liveperson events
+### Step 3 - Add LivePerson events
 In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
 
 
@@ -85,7 +85,7 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
 3. Create a function named `createLivePersonReceiver` to handle the events.  
 
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
+   **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
    Here is an example of a function which handles some LivePerson events:
 
@@ -360,7 +360,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
        @Override
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
-            // Register to Liveperson Pusher
+            // Register to LivePerson Pusher
             String account = "12345678"; //Replace with your account id.
             String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);

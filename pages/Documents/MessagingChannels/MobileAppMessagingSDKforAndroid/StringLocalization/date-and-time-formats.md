@@ -29,7 +29,7 @@ The Android platform provides four default types of date and time formats:
 - [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) is numeric, for example, **12.13.52 or 3:30pm**.
 - [MEDIUM](https://developer.android.com/reference/java/text/DateFormat.html#MEDIUM)  is longer and contains the first three letters of the month, for example, **Jan 12, 1952**.
 - [LONG](https://developer.android.com/reference/java/text/DateFormat.html#LONG) is longer and contains the full month name, for example, **January 12, 1952 or 3:30:32pm**.
-- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL)is the complete time and date, for example, **Tuesday, April 12, 1952 AD or 3:30:42pm PST**.
+- [FULL](https://developer.android.com/reference/java/text/DateFormat.html#FULL) is the complete time and date, for example, **Tuesday, April 12, 1952 AD or 3:30:42pm PST**.
 
 When customizing the date and time format, use the unique resource ID that we've provided for each feature. By default, all these formatting resources are empty to take the default device locale.
 

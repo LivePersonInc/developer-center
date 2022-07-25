@@ -16,7 +16,7 @@ INTRO TO BE ADDED
 
 #### Tags in KB articles
 
-Tags play a very important role in returning accurate results in your knowledge base. Where the training phrases should be intents (e.g., complete sentences), the tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. When an utterance contains these keywords, it will be scored higher. Remember, these should be **words**, not sentences!
+Tags play a very important role in returning accurate results in your knowledge base. Where the training phrases should be intents (e.g., complete sentences), the tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. When an utterance contains these keywords, it will be scored higher. Remember, these should be **words**, not sentences.
 
 Also, if you find yourself needing a large number of tags, you most likely should be using an entity.
 

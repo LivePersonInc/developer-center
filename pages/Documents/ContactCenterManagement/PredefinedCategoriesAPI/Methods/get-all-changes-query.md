@@ -73,7 +73,7 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
 
 **Request Body**
 
-Contains query parameters - a mapping between account id and revision number
+Contains query parameters — a mapping between account id and revision number:
 
 <table>
   <tr>

@@ -47,7 +47,7 @@ The body media type must have one of the following formats:
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
 | chat | Sets the agent’s availability. | string | Valid values: "Online", "Away", "Occupied"
-| chatReasonId           | chat state reason id (represents a reason as configured in the account) voice.                                                                                        | alphanumeric           | Optional - reasonID is currently not retrievable, contact your Account Team if necessary |
+| chatReasonId           | chat state reason id (represents a reason as configured in the account) voice.                                                                                        | alphanumeric           | Optional — reasonID is currently not retrievable, contact your Account Team if necessary |
 
 **Body**
 

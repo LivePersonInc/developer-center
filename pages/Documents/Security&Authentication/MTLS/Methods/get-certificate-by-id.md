@@ -68,5 +68,5 @@ for example:
 | name | A certificate's unique name. | unique string | Required | |
 | displayName    | A certificate's display name.  | string | Required | |
 | siteId | The account ID the certificate is associated with. | string | Required | |
-| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and LivePerson's Data Base and if isn't expired)|
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both HashiCorp Vault and LivePerson's Data Base and if isn't expired)|
 | expirationDate | certificate's expiration date. | string | Not Required | |

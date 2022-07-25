@@ -36,7 +36,7 @@ To help brands navigate security challenges, minimize risk to a brand and its co
 
 **Data Masking**
 
-While Conversational Cloud's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The Conversational Cloud integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)
+While Conversational Cloud's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation. The Conversational Cloud integration with the Twilio framework provides a solution for this in the form of Twilio functions, which can be used to mask sensitive data from the conversation. [Read more about this solution.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)
 
 **System Messages**
 
