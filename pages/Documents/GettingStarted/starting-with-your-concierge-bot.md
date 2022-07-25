@@ -14,7 +14,7 @@ This bot provides basic information and contact options to your consumers. If yo
 
 <div class="container-note">
     <div class="important" style="width:100%">
-    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a  target="_blank" href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
+    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
   </div>
 </div>
 
@@ -100,7 +100,7 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                 </a>
               </div>
               <div class="link-padding">
-                <a target="_blank" href="/intent-manager-key-terms-concepts.html#intents">
+                <a href="/intent-manager-key-terms-concepts.html#intents">
                        Get started with Intents
                 </a>
               </div>

@@ -169,7 +169,7 @@ redirect_from:
       </div>
     </div>
     <div id="free-trial-button-welcome">
-      <a target="_blank" href="https://developers.liveperson.com/register.html">
+      <a href="https://developers.liveperson.com/register.html">
         <button class="create-button">Start Free Trial</button>
       </a>
     </div>

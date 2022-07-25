@@ -29,6 +29,6 @@ In the end of the [Conversation Metadata Tutorial](consumer-int-conversation-md.
 {"kind":"req","id":"AHDJE","type":"cm.UpdateConversationField","body":{"conversationId":"__CONVERSATION_ID__","conversationField":{"field":"CSATRate","csatRate":5,"csatResolutionConfirmation":true,"status":"FILLED"}}}
 ```
 
-**Note:** you can use the message builder (<a href="consumer-int-msg-csat-conv.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
+**Note:** You can use the message builder (<a href="consumer-int-msg-csat-conv.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 {% include links.html %}

@@ -50,17 +50,17 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-reqs.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-reqs.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
 		<td>
-			<a href="consumer-int-msg-resps.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-resps.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- notification -->
 		<td>
-			<a href="consumer-int-msg-notifications.html" target="_blank"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-notifications.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
 		</td>
 	</tr>
 	<tr>
@@ -72,7 +72,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-req-conv.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-req-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
@@ -92,9 +92,9 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-close-conv.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			<a href="consumer-int-msg-csat-conv.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
-			<a href="consumer-int-msg-conv-ttr.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-close-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+			<a href="consumer-int-msg-csat-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-conv-ttr.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
@@ -116,7 +116,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-sub-conv.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-sub-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
@@ -137,7 +137,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-unsub-conv.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+			<a href="consumer-int-msg-unsub-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
@@ -159,7 +159,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		</td>
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-text-cont.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+			<a href="consumer-int-msg-text-cont.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
@@ -178,7 +178,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<td>SubscribeMessagingEvents</td>
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-sub-events.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-sub-events.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
@@ -198,7 +198,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<td>InitConnection</td>
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-init-con.html" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-init-con.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
 		</td>
 
 		<!-- response -->
