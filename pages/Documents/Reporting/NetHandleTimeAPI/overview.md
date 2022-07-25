@@ -10,7 +10,7 @@ indicator: both
 ### Introduction
 
 {:.notice}
-This API is currently in its BETA version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
+This API is currently in its beta version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
 
 {: .important}
 Please use the latest version as it contains the most recent updates and fixes. The newest version will be maintained whereas previous versions will be under low maintenance for backward compatability. 

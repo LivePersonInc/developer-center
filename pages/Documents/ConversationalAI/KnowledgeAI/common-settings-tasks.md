@@ -80,7 +80,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 ### Restore an earlier version of an article
 
-In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
+In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content — that is, the title, the summary, the detail or a content URL — a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
 
 Note the following:
 

@@ -32,7 +32,7 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 | Method | URL | BODY (Json) |
 | :------ | :---- | :---- |
-| POST | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgconversation | `{"timeframe":"<timeframe in minutes>" , "skillIds":"<skillIds>", "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>" , "v":"<version>" }` |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgconversation | `{"timeframe":"<timeframe in minutes>", "skillIds":"<skillIds>", "agentIds":"<comma seperated agent ids list>", "interval":"<interval size in minutes>", "v":"<version>" }` |
 
 * Example:
 

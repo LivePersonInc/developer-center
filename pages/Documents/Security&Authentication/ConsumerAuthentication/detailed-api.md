@@ -137,7 +137,7 @@ Response:
 }
 ```
 
-The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with the following data:
+The id_token is a standard [JSON web token](https://jwt.io/) [RFC 7519], with the following data:
 
 ```json
 {
@@ -157,7 +157,7 @@ The following table describes the response fields:
 |    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
 |    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
 
-The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
+The id_token will be signed using RS256 ALG [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
 
 ### Error Response
 

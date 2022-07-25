@@ -11,7 +11,7 @@ permalink: special-occasions-api-methods-retrieve-special-occasion-by-id.html
 indicator: messaging
 ---
 
-Get a single special occasion by id
+Get a single special occasion by id.
 
 ### Request
 

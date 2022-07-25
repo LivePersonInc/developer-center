@@ -61,7 +61,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
 #### Step 1. Create your branding.xml file and add design attributes
 
-1. In your Android Studio project, right-click your app and select **New > XML > Values XML File**.
+1. In your Android Studio project, right-click your app and select **New → XML → Values XML File**.
 
 2. Add design attributes to your **branding.xml** file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
@@ -476,7 +476,7 @@ Add a class to handle LivePerson basic messaging events via BroadcastReceiver an
 
 3. Create a function named `createLivePersonReceiver` to handle the events.  
 
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
+   **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
    Here is an example of a function which handles some LivePerson events:
 
@@ -529,7 +529,7 @@ Upon errors, we send logs including different severity levels of errors and warn
 public static void setIsDebuggable(boolean isDebuggable)
 ```
 
-**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
+**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
 
 
 

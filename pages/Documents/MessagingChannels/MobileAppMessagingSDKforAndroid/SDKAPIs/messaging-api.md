@@ -137,7 +137,7 @@ There are 2 authenticated connection methods:
 
 * **HistoryConversationsMaxDays**
 
-    * Possible values: Any Positive Integer (**Default** : -1 , **No limit**)
+    * Possible values: Any Positive Integer (**Default** : -1, **No limit**)
 
    ```java
    new ConversationViewParams().setHistoryConversationsMaxDays(20);
@@ -683,7 +683,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
 
 * **HistoryConversationsMaxDays**
 
-    * Possible values: Any Positive Integer (**Default** : -1 , **No limit**)
+    * Possible values: Any Positive Integer (**Default** : -1, **No limit**)
 
    ```java
    new ConversationViewParams().setHistoryConversationsMaxDays(20);

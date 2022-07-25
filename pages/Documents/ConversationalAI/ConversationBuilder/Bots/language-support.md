@@ -22,41 +22,41 @@ In general, specify the same language for the bot and its integrations, i.e., th
 You can select any of the following for the bot language:
 
 * Arabic
-* Chinese (Cantonese) - Hong Kong
-* Chinese (Simplified) - China
-* Chinese (Traditional) - Taiwan
+* Chinese (Cantonese) — Hong Kong
+* Chinese (Simplified) — China
+* Chinese (Traditional) — Taiwan
 * Danish
-* Dutch - Netherlands
+* Dutch — Netherlands
 * English
-* English - Australia
-* English - Canada
-* English - Great Britain
-* English - India
-* English - United States
+* English — Australia
+* English — Canada
+* English — Great Britain
+* English — India
+* English — United States
 * French
-* French - Canada
-* French - France
-* German - Germany
+* French — Canada
+* French — France
+* German — Germany
 * Hebrew
 * Hindi
 * Indonesian
-* Italian - Italy
-* Japanese - Japan
-* Korean - Korea
+* Italian — Italy
+* Japanese — Japan
+* Korean — Korea
 * Norwegian
 * Polish
-* Portuguese - Brazil
-* Portuguese - Portugal
+* Portuguese — Brazil
+* Portuguese — Portugal
 * Romanian
 * Russian
 * Sinhalese
 * Spanish
-* Spanish - Latin America
-* Spanish - Mexico
-* Spanish - Spain
+* Spanish — Latin America
+* Spanish — Mexico
+* Spanish — Spain
 * Swedish
 * Thai
-* Turkish - Turkey
+* Turkish — Turkey
 * Ukranian
 * Urdu
 * Vietnamese

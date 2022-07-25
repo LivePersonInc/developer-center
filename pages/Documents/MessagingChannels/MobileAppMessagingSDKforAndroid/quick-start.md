@@ -43,7 +43,7 @@ repositories {
     mavenCentral()
 }
 ```
-2. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
+2. In your project, locate and double-click **Gradle Scripts → build.gradle (Module: app)**.
    
    ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
@@ -156,7 +156,7 @@ Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search
        implementation "com.google.firebase:firebase-messaging:18.0.0"
 
        testImplementation "junit:junit:4.12"
-       //Liveperson SDK
+       // LivePerson SDK
        implementation project(path: ":lp_messaging_sdk")
        implementation project(path: ":messaging_ui")
        implementation project(path: ":infra")
@@ -462,7 +462,7 @@ Set the desired orientation in your container Activity definition in AndroidMani
 
 ### Next Steps
 
-Congratulations!  You're all set.  
+Congratulations! You're all set.  
 
 You can now do any of the following:
 - [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.  You can also customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 

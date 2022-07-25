@@ -51,7 +51,7 @@ The Conversation Builder lets you easily update and change what your bot says. L
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-4.jpeg" alt="">
 5. Test your changes using <b>Preview</b>.
 
-You can update any other dialog in this bot as you see fit the same way!
+You can update any other dialog in this bot as you see fit.
 
 TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurately represent your hours of operation, removing the <i>‘new user tips’</i> in the <i>‘Open Hours’</i> and <i>‘Fallback’</i> dialogs.
 

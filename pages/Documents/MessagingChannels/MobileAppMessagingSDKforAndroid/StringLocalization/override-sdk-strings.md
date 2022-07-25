@@ -40,10 +40,10 @@ If you want to change the Brand name, when using the SDK on Activity Mode, you'l
 
 ### Create new Localization File
 
-1. Using **Android View**, right-click **res** and select **new** > **Android Resource Directory**.
+1. Using **Android View**, right-click **res** and select **new** → **Android Resource Directory**.
 2. Under **Available qualifiers** of the New Resource Directory window, select **Locale** and move (\>\>) to **Chosen qualifiers**.
 3. Under **Languages**, select the Language or Region and click **OK**.
-4. Using **Project View**, right-click the values folder you just created and then select **new** > **Values Resource File**.
+4. Using **Project View**, right-click the values folder you just created and then select **new** → **Values Resource File**.
 5. In the New Values Resources File dialog, type **strings.xml** and click **OK**.
 
 

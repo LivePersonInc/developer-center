@@ -128,7 +128,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
        @Override
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
-            // Register to Liveperson Pusher
+            // Register to LivePerson Pusher
             String account = "82055668";
             String appID = "com.shaym.sdk28";
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);

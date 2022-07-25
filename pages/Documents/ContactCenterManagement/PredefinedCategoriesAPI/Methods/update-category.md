@@ -70,10 +70,10 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   <tr>
     <td>return</td>
     <td>determine the return policy </td>
-    <td>Default: effected - return only the effected category with the response body
+    <td>Default: effected — return only the effected category with the response body
 Also accepts:
-active - return all active (non-deleted) categories with the response body
-all - return all categories with the response body, including the deleted categories</td>
+active — return all active (non-deleted) categories with the response body
+all — return all categories with the response body, including the deleted categories</td>
   </tr>
 </table>
 

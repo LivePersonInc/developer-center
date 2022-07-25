@@ -47,7 +47,7 @@ We will examine and explain each stage in detail as part of this documentation.
 
 **Note:** If you would like to follow the steps using `bash`, please see the [Prerequisites document](consumer-int-get-msg.html#prerequisites).
 
-### Step 1 - Enable File Sharing
+### Step 1 — Enable File Sharing
 
 In order to enable file sharing on your account, you should first enable the feature itself. Run the following commands, inserting the account admin username and admin password instead of the placeholders below in order to do so:
 
@@ -58,7 +58,7 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 ./set_site_property.sh $LP_BEARER true messaging.file.sharing.enabled
 ```
 
-### Step 2 - Create a Conversation
+### Step 2 — Create a Conversation
 
 You will need to have an active conversation, along with its `converationId`, where the files will be shared. Below, creating a conversation is summarized but please follow the [Messaging Window API](consumer-int-overview.html) documentation if you need any more information. Make sure you have an active conversation and a `conversationId` at hand by the end of this step.
 
@@ -78,7 +78,7 @@ Then, ask to create a new conversation:
 
 In response, you will get a `conversationId` that will be used in the next steps.
 
-### Step 3 - Request Upload URL
+### Step 3 — Request Upload URL
 
 Use the following request to retrieve an upload URL, specifying the type and size of the file.
 
@@ -133,7 +133,7 @@ In response you will get the following message:
 {"kind":"resp","reqId":"3","code":200,"body":{"relativePath":"/v1/AUTH_async-images/qa57221676/8a66a22f-81ee-4447-b92f-78e9c3ecc819.PNG","queryParams":{"temp_url_sig":"6f52625b7f148325071c2518c714109134acd7a3","temp_url_expires":"1474973420"}},"type":"ms.BaseGenerateURLResponse"}
 ```
 
-### Step 4 - Upload File to Storage
+### Step 4 — Upload File to Storage
 
 Use the following request and the parameters obtained in steps 1 and 2 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
@@ -161,7 +161,7 @@ Upload the file as binary.
 
 [Unfamiliar with Postman?](https://www.getpostman.com/)
 
-### Step 5 - Publish Message
+### Step 5 — Publish Message
 
 Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](consumer-int-msg-reqs.html). Event type should be `HostedFile`.
 
@@ -194,7 +194,7 @@ Example message:
 {"kind":"req","id":"22","body":{"dialogId":"__CONVERSATION_ID__","event":{"type":"ContentEvent","message":{"caption":"LivePerson logo","relativePath":"__relative_path__","fileType":"PNG","preview":"data:image/png;base64,<Base64Image>"},"contentType":"hosted/file"}},"type":"ms.PublishEvent"}
 ```
 
-### Step 6 - Request Download URL
+### Step 6 — Request Download URL
 
 **Request a download URL**:
 
@@ -228,7 +228,7 @@ In response, you will get the URL details:
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use it in the next request, to download the file.
 
-### Step 7 - Download File From Storage
+### Step 7 — Download File From Storage
 
 Use the following request to download the file, using the parameters from the previous step.
 

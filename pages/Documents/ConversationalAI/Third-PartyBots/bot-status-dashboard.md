@@ -53,7 +53,7 @@ In section 3 of *Figure 2.1* the user can see different bot states events. The b
 
 The Vendor Interruption state indicates that there is an error reaching the configured AI vendor. In this case the bot will escalate each conversation to the configured failover skill.
 
-In case of a Service Interruption, the bot is not functioning at all. In this state the bot cannot accept new conversations or handle existing conversations. This state indicates problems with Liveperson APIs.
+In case of a Service Interruption, the bot is not functioning at all. In this state the bot cannot accept new conversations or handle existing conversations. This state indicates problems with LivePerson APIs.
 
 Each interruption state event provides a specific error code which can be copied by clicking on the "Copy error details" link as seen in section 3 of *Figure 3.1*.
 

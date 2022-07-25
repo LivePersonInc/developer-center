@@ -62,7 +62,7 @@ This happens if the bot could not transfer the conversation to the desired messa
 
 #### Reasons
 
-Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+Usually, this happens if there is an issue within the LivePerson APIs. Another reason could be that the customer has already closed the conversation.
 
 #### Solutions
 
@@ -76,7 +76,7 @@ This happens if the bot tries to send commands to an already closed conversation
 
 #### Reasons
 
-Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+Usually, this happens if there is an issue within the LivePerson APIs. Another reason could be that the customer has already closed the conversation.
 
 #### Solutions
 
@@ -90,7 +90,7 @@ This happens if the bot tried to send a command to a conversation which is not a
 
 #### Reasons
 
-Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime
+Usually, this happens if there is an issue within the LivePerson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime
 
 #### Solutions
 

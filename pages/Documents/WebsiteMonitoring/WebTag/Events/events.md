@@ -249,7 +249,7 @@ This event is triggered when the flow to display the engagement has started.
 | engagementType | The engagement format. | Numeric | Available values: 0: "Peeling corner", 1: "Overlay", 2: "Toaster", 3: "Slide-out", 5: "Embedded", 6: "Sticky" |
 | contextId | The engagement context ID (engagement impression ID) in the current monitored session. | ALPHA_NUMERIC | |
 | zoneId | Internal. The engagement zone ID. | ALPHA_NUMERIC | |
-| state | The agent's state | Numeric | Available values: 1 - online, 2 – offline, 4 - busy |
+| state | The agent's state | Numeric | Available values: 1 - online, 2 — offline, 4 - busy |
 | confKey | Internal. CampaignId + EngagementId + Revision. | string | |
 | tglName | Internal. The engagement format description. | string | |
 | done | If the configuration has finished loading. | Boolean | |
@@ -275,7 +275,7 @@ This event is triggered when the flow to display the engagement has started.
     "engagementType": 3,//The engagement type
     "contextId": "1",//The context (instance in memory on the backend)
     "zoneId": 471288710, //The zone this is on
-    "state": 2, //The current state of the agents (online, offline, busy) , to set the display state
+    "state": 2, //The current state of the agents (online, offline, busy), to set the display state
     "confKey": "210599710_210600710_18",
     "tglName": "slider" //The taglet that needs to be downloaded
     "done": true, //If the configuration has finished loading
@@ -312,7 +312,7 @@ See [START](#start) event.
     "engagementType": 6,//The engagement type
     "contextId": "2",//The context (instance in memory on the backend)
     "zoneId": 471288510,//The zone this is on
-    "state": 2,//The current state of the agents (online, offline, busy) , to set the display state
+    "state": 2,//The current state of the agents (online, offline, busy), to set the display state
     "confKey": "248955910_248956110_14",
     "tglName": "overlay",//The taglet that was downloaded
     "done": true,//If the configuration has finished loading

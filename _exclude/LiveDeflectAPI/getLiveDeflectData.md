@@ -70,7 +70,7 @@ The following information should be provided to LivePerson.
 
 The following information should be provided to LivePerson.
 
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 {

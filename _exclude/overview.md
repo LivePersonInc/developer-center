@@ -9,7 +9,7 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
 
@@ -43,7 +43,7 @@ It's a best practice to have only one domain enabled for Intent Analyzer at a ti
 
 1. Open Intent Builder, as described [here](intent-builder-overview.html#access-intent-builder).
 2. In the dashboard that lists all domains, select the domain.
-3. In the list of intents in the left panel, click the <img style="width:25px" src="img/ConvoBuilder/icon_enableIntentAnalyzer.png" alt="" > (Enable Intent Analyzer) icon.
+3. In the list of intents in the left panel, click the <img style="width:25px" src="img/ConvoBuilder/icon_enableIntentAnalyzer.png" alt=""> (Enable Intent Analyzer) icon.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_enable.png" alt="" >
 

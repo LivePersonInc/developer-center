@@ -20,7 +20,7 @@ The goal of the following document is to enumerate the different fields controll
 With the addition of Dark Mode supports in iOS 13, we now utilize Apple’s UIUserInterface enum values observed by UIColor objects to update colors based on the selection provided by the OS.  We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations.  
 
 #### What this means for our customers who use our default Attribute configurations? 
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect. We have worked hard on its implementation and hope you enjoy it. 
 
 #### What this means for our customers who use custom attribute configurations? 
 If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuration will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid out in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
@@ -1135,7 +1135,7 @@ Ability to set the date picker’s local to control date formats
 ### Delivery Notifications
 
 #### checkmarkVisibility 
-Checkmark visibility of the following options (type CheckmarksState): SentOnly - Show checkmarks for only Sent messages. SentAndAccepted - Show checkmarks for only Sent and Accepted messages. All - Show checkmarks for Sent, Accepted and Read messages. 
+Checkmark visibility of the following options (type CheckmarksState): SentOnly — Show checkmarks for only Sent messages. SentAndAccepted — Show checkmarks for only Sent and Accepted messages. All — Show checkmarks for Sent, Accepted and Read messages. 
 
    - **Type:** CheckmarksState(Integer Enum)
    - **Default value:** CheckmarksState.All 
@@ -1395,7 +1395,7 @@ The tint color for the progress view on the loading view.
 ### Localization
 
 #### country  
-Country code - when it is not nil, it will be combined with 'language' ("<language>_<country>", for example: en_US) and used instead of device default locale when formatting date and time.
+Country code — when it is not nil, it will be combined with 'language' ("<language>_<country>", for example: en_US) and used instead of device default locale when formatting date and time.
   
 The combined value has to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
 
@@ -1404,8 +1404,6 @@ If no value is provided, the SDK will use the country according to the device's 
 
    - **Type:** String?
    - **Default value:** nil 
-
-
 
 #### Language  
 Language used instead of default device language.
@@ -1639,7 +1637,7 @@ Color of the loader progress line background.
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
-NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` - depending on button state
+NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state
 
 **Type:** UIImage?
 
@@ -1654,7 +1652,7 @@ NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `came
 
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
-NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` - depending on button state
+NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state
 
 **Type:** UIImage?
 
@@ -1965,7 +1963,7 @@ Send button color in enabled mode in the conversation screen.
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
-NOTE: this property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` - depending on state
+NOTE: this property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` — depending on state
 
 **Type:** UIImage
 
@@ -2524,7 +2522,7 @@ Define the remote avatar icon border color.
   
 #### brandAvatarImage  
 Default avatar image for Brand.
-If setting nil - default avatar image will be used with `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor`
+If setting nil — default avatar image will be used with `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor`
 
    - **Type:** UIImage?
    - **Default value:** nil 
@@ -2664,7 +2662,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 
 
 #### remoteUserBubbleLongPressOverlayAlpha
-Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
+Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 – 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
 
 - **Type:** Float    
@@ -2812,7 +2810,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 
 
 #### userBubbleLongPressOverlayAlpha
-Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
+Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 – 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
 
 - **Type:** Float    
 - **Default value:** 0.3
@@ -2857,7 +2855,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 
 #### bubbleEmailLinksRegex
-Regular expression for email hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled
+Regular expression for email hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
    - **Type:** String?    
    - **Default value:** nil
@@ -2865,7 +2863,7 @@ Regular expression for email hyperlinks in users messages (consumer and agent). 
 
 
 #### bubbleUrlLinksRegex
-Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
+Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
    - **Type:** String?  
    - **Default value:** nil
@@ -2873,7 +2871,7 @@ Regular expression for url hyperlinks in users messages (consumer and agent). Th
 
 
 #### bubblePhoneLinksRegex
-Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
+Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
    - **Type:** String?  
    - **Default value:** nil 
