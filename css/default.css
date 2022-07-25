@@ -1141,7 +1141,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
     border-top: 0;
 }
 
-.sidebarbuttoncontainer {
+div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     display: flex;
     flex-direction: column;
     margin-top: 28px;
