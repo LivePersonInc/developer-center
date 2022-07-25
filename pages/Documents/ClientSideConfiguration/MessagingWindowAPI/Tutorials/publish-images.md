@@ -16,9 +16,10 @@ indicator: messaging
 In this tutorial we will publish images to a conversation.
 
 ###  Prerequisites
+
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
-### Step 1 - Enable Image Sharing
+### Step 1 — Enable Image Sharing
 
 In order to publish images in your account, you should first enable the feature. Insert your account admin username and password and type the following:
 
@@ -37,7 +38,7 @@ wget http://www.liveperson.com/sites/default/files/LP_LOGO_1.png
 
 We will further publish this image to the messaging service.
 
-### Step 2 - Create a Conversation
+### Step 2 — Create a Conversation
 
 Open a connection to the messaging service.
 
@@ -53,7 +54,7 @@ Then ask to create a new conversation:
 
 In response, you will get a conversation ID that will be used in the next steps.
 
-### Step 3 - Upload an image
+### Step 3 — Upload an image
 
 Now, ask the service to create an upload URL.
 
@@ -78,7 +79,7 @@ curl -i "https://${LP_SWIFT}$LP_REL_PATH?temp_url_sig=$LP_TUS&temp_url_expires=$
 
 This call should upload the image file you have on your disk to LivePerson object storage.
 
-### Step 4 - Publish the Conversation
+### Step 4 — Publish the Conversation
 
 Reestablish the connection using:
 
@@ -95,7 +96,7 @@ Then publish the image with the ``conversationId`` from Step 2, and the ``relati
 
 **(Not Available yet in production)**: Now log into the Agent Workspace, accept the open conversation, and you should see the image that has been published by the consumer.
 
-### Step 5 - Download the image from the Conversation
+### Step 5 — Download the image from the Conversation
 
 In order to download an image that was published to the conversation, follow these steps.
 

@@ -17,7 +17,7 @@ On your Conversational Cloud account, make sure the following features are enabl
 1. Messaging
 2. Authenticated chat
 
-* For sources other than Mobile (e.g Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
+* For sources other than Mobile (e.g. Twilio, Facebook etc.) you should also enable the Conversation Sources feature.
 
 **Contact your LivePerson representative in order to enable the features.**
 
@@ -35,7 +35,7 @@ In order to utilize the Monitoring API, you will need, among other parameters, a
 
 **Mobile App in the LE UI**
 
-* Click on Mobile App -> Connect and fill in the details of your application.
+* Click on Mobile App → Connect and fill in the details of your application.
 
 ![Mobile App](img/monitor_start2.png)
 

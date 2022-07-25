@@ -14,7 +14,7 @@ indicator: both
 ---
 ### Introduction
 
-When implementing an API based chat windows in non-monitored flow (When the Conversational Cloud Web Tag is not part of the flow), getting the Engagement is within the responsibility of the Chat API Based window Service.
+When implementing an API-based chat window in a non-monitored flow (when the Conversational Cloud Web Tag is not part of the flow), getting the Engagement is within the responsibility of the Chat API Based window Service.
 
 In order to present a "Click to Chat" button with an updated state of availability, you must access the LP Monitoring system to create a visitor session and get an engagement. This call can be made by the [Create Session method](app-engagement-api-methods-create-session.html) of the App Engagement API. _Note_: whenever you call this method, a new visitor will be created in the Visitor List. To avoid creating unnecessary load, it is advisable to use this method sparingly.
 
@@ -30,11 +30,9 @@ A few things you'll need to get started with this API:
 
 	* msdkgw
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
-
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases
 

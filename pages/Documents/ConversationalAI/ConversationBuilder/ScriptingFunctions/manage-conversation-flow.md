@@ -15,10 +15,17 @@ Use the following built-in functions to affect the flow of a conversation.
 
 ### Set message delay value
 
-`setMessageDelay` is used to set a delay for a group of messages such that they appear like a real conversation.
+Use `setMessageDelay` to set a delay for a message, so the conversation appears more human-like. As a best practice, use the function within the Pre-Process code of interaction. Note the following:
 
-{: .important}
-The setMessageDelay() function should be used within the preProcess Code JavaScript.
+* If you use this function in the Pre-Process code, it overrides the value that’s set in the [Interaction Delay setting](conversation-builder-interactions-configuration-settings.html#basic-settings) in the interaction.
+* If you use this function multiple times within your code, only the last instance is applied. In the code below, both Message1 and Message2 have a 5-second delay. Message1 doesn’t have a 3-second delay.
+
+```
+      botContext.setMessageDelay(3000);
+      botContext.sendMessage(“Message1”);
+      botContext.setMessageDelay(5000);
+      botContext.sendMessage(“Message2”);
+```
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -60,7 +67,7 @@ botContext.setAllowMaxTextResponse(true);
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setTriggerNextMessage(messagename)` | messagename (string) – The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
+| `setTriggerNextMessage(messagename)` | messagename (string) — The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
 
 #### Example
 
@@ -81,7 +88,7 @@ if (company == 'LivePerson') {
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. |
+| `evaluateOptions(userResponse, options)` | <em>userResponse</em> — the user's message text<br><br><em>options</em> — array of strings | string: matched option from an array of options. |
 
 #### Example
 
@@ -117,7 +124,7 @@ botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03
 
 `getButtonPayload` is used to retrieve a button’s callback value that is sent to the bot when the consumer selects that button in a question.
 
-By default, when you specify a callback value for a button in a Structured or Button question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice. The latter means you can retrieve the button’s callback value with [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message).
+By default, when you specify a callback value for a button in a Structured or Button question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice. The latter means you can retrieve the button’s callback value with [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-session-data.html#get-current-user-message).
 
 However, in cases where you’re using the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector, the button’s label instead, not the callback value, is displayed to the consumer as their selected choice. In these cases, you need a different way to retrieve the button’s callback value. `getButtonPayload` meets this need.
 

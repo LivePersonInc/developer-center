@@ -19,9 +19,7 @@ The Login Service API provides endpoints to manage the User Session in Conversat
 
 
 <div class="important">
-Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
-
-We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
+Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
 </div>
 
 
@@ -48,6 +46,6 @@ http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?ver
    To login as an application, you must have the <i>User Type - Bot</i> feature activated.  If you do not, contact your account team before proceeding.
    </div>
 
-### Step 3. Create an API key and new Bot
+### Step 3. Create an OAuth 1.0 API key and new Bot
 
 [Refer to our Getting Started guide for more information on creating API keys](common-resources-create-api-keys.html). You'll need the details (like username or app secert) to use the methods of this API mentioned above so make sure to note them.

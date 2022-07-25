@@ -137,7 +137,7 @@ Response:
 }
 ```
 
-The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with the following data:
+The id_token is a standard [JSON web token](https://jwt.io/) [RFC 7519], with the following data:
 
 ```json
 {
@@ -157,7 +157,7 @@ The following table describes the response fields:
 |    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
 |    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
 
-The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
+The id_token will be signed using RS256 ALG [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
 
 ### Error Response
 
@@ -206,7 +206,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 |email        |End-User's preferred e-mail address. Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax. The RP MUST NOT rely upon this value being unique, as discussed in Section 5.7.|string| Personal info (including Email address)| Personalinfo.personalcontact.email|
 |gender        |End-user's gender. Values defined by this specification are female and male. Other values MAY be used when neither of the defined values are applicable|string| Personal info (including Gender)| Personalinfo.gender|
 |preferred_username       |Shorthand name by which the end-user wishes to be referred by at the RP such as janedoe or j.doe. This value MAY be any valid JSON string including special characters such as @, /, or whitespace. The RP MUST NOT rely upon this value being unique.|string| Consumer info (including User Name)| CustomerInfo.username|
-|phone_number      |End-user's preferred telephone number. E.164 [E.164] is RECOMMENDED as the format of this Claim, for example, +1 (425) 555-1212 or +56 (2) 687 2400. If the phone number contains an extension, it is recommended that the extension be represented using the RFC 3966 [RFC3966] extension syntax, for example, +1 (604) 555-1234;ext=5678.|string| Personal info (including Phone number)| PersonalInfo.contacts[].phone|
+|phone_number      |End-user's preferred telephone number. E.164 [E.164] is RECOMMENDED as the format of this Claim, for example, +1 (425) 555-1212 or +56 (2) 687 2400. If the phone number contains an extension, it is recommended that the extension be represented using the RFC 3966 [RFC3966] extension syntax, for example, +1 (604) 555-1234;ext=5678.|string| Consumer info (including IMEI)| CustomerInfo.imei|
 
 **Example for Mandatory+Standard Claims JWT**:
 
@@ -288,14 +288,13 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 ### Nested JWT
 
-A JSON Web Tokens (JWT) can be signed, and then encrypted, to provide confidentiality of the claims. 
+A JSON Web Token (JWT) can be signed, and then encrypted, to provide confidentiality of the claims.
 
-*   We suppport Nested JWT in the pattern of “JWS in JWE”. While it's technically possible to perform the operations in any order to create a nested JWT, senders should first sign the JWT, then encrypt the resulting message.
+* We support nested JWT in the pattern of “JWS in JWE”. While it’s technically possible to perform the operations in any order to create a nested JWT, senders should first sign the JWT, then encrypt the resulting message.
 
-*   If using JWKs Endopint, Nested JWT will contain two 'kid's: 
-    1.  The singed JWT's (JWS) JOSE Header will contain the singing kid that LivePerson will use to retrive public key from customer's JWKs Endopint. 
-    2.  The encrypted JWT's (JWE) JOSE Header will contain encryption kid (that was provided by LivePerson).
-
+* If using JWK’s endpoint, nested JWT will contain two “kids”:
+    1. The signed JWT’s (JWS) JOSE Header will contain the singing kid that LivePerson will use to retrieve the public key from the customer’s JWK’s endpoint.
+    2. The encrypted JWT’s (JWE) JOSE Header will contain an encryption kid (that is provided by LivePerson).
 
 ### If you chose to configure the JWKS Endpoint
 
@@ -333,7 +332,7 @@ openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
 
 **Configure the JWT public key on Conversational Cloud UI:**
 
-1.	Remove the header and tail ( "-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----" )
+1.	Remove the header and tail ("-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----")
 
 Example:
 

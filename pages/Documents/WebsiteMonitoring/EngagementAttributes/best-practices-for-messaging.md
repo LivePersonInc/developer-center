@@ -17,7 +17,7 @@ This feature will display unauthenticated EAs passed in a messaging conversation
 
 EAs will be presented in the Agent Workspace in several areas:
 
-1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Conversations & All Conversations, as well as in the Conversation History widget.
+1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Conversations and All Conversations, as well as in the Conversation History widget.
 
 2. **All Conversations view** - users will be able to search unauthenticated EAs in the All Conversations table, as part of the EAs search.
 
@@ -37,7 +37,7 @@ The table below explains which EAs should be collected and presented in LE UI.
   <tr>
     <td>Visitor Info</td>
     <td>Marketing source</td>
-    <td>Used to obtain information about the marketing source of the visitors, e.g which channel or campaign drove visitors to the website</td>
+    <td>Used to obtain information about the marketing source of the visitors, e.g. which channel or campaign drove visitors to the website</td>
     <td>Usually, when the page loads.</td>
     <td>This information should be sent per session</td>
   </tr>

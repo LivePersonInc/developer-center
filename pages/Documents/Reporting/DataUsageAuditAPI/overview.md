@@ -11,7 +11,7 @@ indicator: both
 ### Introduction
 
 {: .notice}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Data Usage Audit API retrieves the most up to date information available about transcript searches and exports usage via LivePerson's other historical data APIs. This API makes it possible to understand what data were exposed and to which API user.
 
@@ -28,9 +28,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* Use LE GUI to create API key: Administration -> AuditTrail.
+	* Use LE GUI to create API key: Administration → AuditTrail.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 
 

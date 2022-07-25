@@ -28,7 +28,7 @@ A connector is a broker between Conversational Cloud data and a messaging channe
 
 **Why do we need the Connector API?**
 
-Conversational Cloud already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
+Conversational Cloud already provides out of the box connectors to Facebook, Google My Business, Apple Messages for Business, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
 
 **What is the Connector API?**
 
@@ -54,7 +54,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 | See chat state events (COMPOSING (i.e. Agent is typing), ACTIVE, INACTIVE etc.) | [Webhooks](webhooks-overview.html) | N/A |
 | Send conversation metadata - [Structured content identifier metadata](guides-conversation-metadata-guide.html#structured-content-identifier-externalid) | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
 | Close conversation | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
-| Send CSAT (Customer Satisfaction) & FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
+| Send CSAT (Customer Satisfaction) and FCR (First Contact Resolution) ratings | [Messaging SEND API](connector-api-overview.html) | [SEND](sendapi-send.html) |
 
 #### On the **agent** side
 
@@ -80,7 +80,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 **There are two primary reasons to utilize the Connector API**:
 
-1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels whilst using more than one device, e.g a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). A connector developed by a brand would normally be hosted on the brand's servers.
+1. **Brands** - To **create** their own custom connectors. This will enable their consumers to engage with them via many distribution channels whilst using more than one device, e.g. a connector for **WeChat, Twitter, Slack, Snapchat, Viber** etc. Another example would be a connector for an SMS Gateway of their choice (not via Twilio). A connector developed by a brand would normally be hosted on the brand's servers.
 
 2. **Product solutions** - These are connector applications that will be developed by LivePerson. Their functionality is the same as the above use case except that they are developed by LivePerson and not the brand. A connecter developed by LivePerson would normally be hosted on LivePerson servers.
 

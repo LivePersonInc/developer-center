@@ -14,7 +14,7 @@ indicator: messaging
 
 The Google Business Messages (GBM) quick reply message consist of up to 13 Buttons that are attached to a regular text message.
 
-_Example Of GBM Quick Reply Message:_
+_Example of a GBM Quick Reply Message:_
 
 ![GBM Quick Reply Example](img/connectors/gbm_quickreply.png)
 

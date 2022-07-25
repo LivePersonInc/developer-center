@@ -38,21 +38,21 @@ The body media type must have one of the following formats:
 - XML
 - JSON
 
-### Response
-
-**Elements in the response**
-
+**Body Parameters**
 | Name | Description | Type/Value | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| agentTyping | Indicates if the agent is currently typing a response. | string | Required | Default values: "typing", "not-typing", "unknown" |
+| agentTyping | Indicates if the agent is currently typing or not. | string | Required | Valid values: "typing", "not-typing" |
+
+### Response
 
 **Response Codes**
 
 | Code | Response |
 | :--- | :--- |
-| 201 | Created |
+| 200 | Ok |
+| 400 | Bad Request |
 
-Response example for JSON:
+Request body example:
 
 ```json
 {

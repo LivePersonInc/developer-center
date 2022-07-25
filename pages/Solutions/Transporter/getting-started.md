@@ -136,4 +136,4 @@ When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-
 Once you have created your keys, enter them into Transporter via the Conversational Cloud section and click create.  Your API keys will be encrypted and stored securely.
 After verifying your keys are valid, you will see the Conversational Cloud setting appear in the table at the bottom of the page - it is now ready for use as your source when you configure your first report.
 
-<div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks! <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>
+<div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>

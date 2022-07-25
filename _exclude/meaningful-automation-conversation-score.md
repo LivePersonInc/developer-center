@@ -18,17 +18,17 @@ LivePerson is pleased to announce the *Beta release* of the Meaningful Automatio
 
 ### What is MACS?
 
-A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
+A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation.
 
-LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the bot conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
+LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the bot conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example:
 
-* Did the bot understand the consumer’s question? 
-* Was the consumer stuck in an endless loop? 
+* Did the bot understand the consumer’s question?
+* Was the consumer stuck in an endless loop?
 * Did a bad transfer to an agent occur?
 
 Here below is part of a conversation with two types of failure points:
 
-<img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png" alt="" >
 
 A MACS is calculated for each bot conversation based on failure points like these above. The conversation is classified with a MACS 1, 2 or 3 where:
 
@@ -38,11 +38,12 @@ A MACS is calculated for each bot conversation based on failure points like thes
 
 An average score (a floating number) is also calculated for each bot to indicate overall bot performance.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_average_score.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_average_score.png" alt="" >
 
 Scoring like this makes it fast and easy to understand how efficient and fluid a bot conversation was, and a bot’s performance overall. With this knowledge, you can take action and tune your low-performing bots for improved performance.
 
 #### Constraints and caveats
+
 * MACS scoring is only available for the North America region, and only for Messaging, not for Chat.
 * MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS score.
 
@@ -51,10 +52,10 @@ Scoring like this makes it fast and easy to understand how efficient and fluid a
 Other measures can inform you about the quality of conversations, but they do have some shortcomings when it comes to conversations with bots:
 
 * **Post-conversation surveys (PCS)**, **CSAT** and **NPS**: These measures:
-    * Are offered when the conversation is closed, but many bot conversations never reach that point.
-    * Have a low response rate, and when people do respond, they are not a representative sample. Typically, they are more extreme in their feelings about the bot.
-    * Don’t account for abandoned conversations, which is an important type of bot conversation to consider. 
-    * Assess the entire conversation and don’t distinguish whether the agent or the bot caused the consumer’s satisfaction. They also don’t provide any indication of what caused the high or low score.
+  * Are offered when the conversation is closed, but many bot conversations never reach that point.
+  * Have a low response rate, and when people do respond, they are not a representative sample. Typically, they are more extreme in their feelings about the bot.
+  * Don’t account for abandoned conversations, which is an important type of bot conversation to consider.
+  * Assess the entire conversation and don’t distinguish whether the agent or the bot caused the consumer’s satisfaction. They also don’t provide any indication of what caused the high or low score.
 
 * **Meaningful Connection Score (MCS)**: Research has revealed that humans don’t converse with bots like they do with humans: The number of words in each message decreases, and the use of emotional language is minimal. This means that LivePerson’s MCS, which uses natural language to measure the consumer’s sentiment as they message with an agent, isn’t a good indicator of the quality of a conversation with a bot.
 
@@ -99,7 +100,7 @@ MACS has a correlation of ~.7 with human judgment. While this is quite good, exp
 
 ### Display or hide MACS data
 
-MACS is a self-service feature that you can display (turn on) or hide (turn off) at any time. 
+MACS is a self-service feature that you can display (turn on) or hide (turn off) at any time.
 
 {: .important}
 Before turning on MACS, please consult with your LivePerson account representative.
@@ -118,22 +119,23 @@ If you hide MACS data, be aware that this only hides the display of the feature 
 ### Using MACS in Bot Analytics
 
 #### Watch the video
+
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/486697904" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-#### MACS on the main dashboard - Identify low-scoring bots
+#### MACS on the main dashboard — Identify low-scoring bots
 
 The main dashboard in Bot Analytics displays each bot’s average MACS (a floating number), for the specified date range. This helps you to understand at a glance which of your bots are high-performing, and which are low-performing and therefore need tuning.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png" alt="" >
 
 When assessing the scores of your bots, keep in mind that MACS primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
 
 On the main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_page.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_page.png" alt="" >
 
-#### The MACS page - Analyze the data & tune the bot
+#### The MACS page — Analyze the data and tune the bot
 
 ##### Display the data
 
@@ -143,14 +145,14 @@ On the **MACS** page, use the filters to refine the data that’s displayed base
 2. **Date filter**: Specify the date range for the data.
 3. **Score filters**: Toggle these on and off to show and hide the data for a score. These filters are available when you're viewing the **MACS by Conversations** graph (shown below).
 
-<img style="width:800px" src="img/ConvoBuilder/macs_filters.png">
-<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_filters.png" alt="" >
+<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png" alt="" >
 
 Note the following about the filters:
 
 * Your selections affect the whole page, i.e., both of the MACS charts and the table of conversations underneath.
 * Within a filter, an “OR” search is performed. Across the filters, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Around in circles” OR “Bad transfer”)).
-* When you filter the data by **MACS Reason**, only sample conversations that exceed a certain “confidence threshold” that the reason exists are displayed. This threshold is internal to the system and ensures that the quality of the displayed data is good. 
+* When you filter the data by **MACS Reason**, only sample conversations that exceed a certain “confidence threshold” that the reason exists are displayed. This threshold is internal to the system and ensures that the quality of the displayed data is good.
 
 In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1 (Bad). We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
@@ -161,31 +163,31 @@ The list of conversations is a sample of up to 100 bot conversations that meet t
 
 Once you’ve displayed the conversations that you want to review, select one by its ID to display the transcript.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png" alt="" >
 
 Then review the transcript to identify the failure point in the conversation.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_find_failure.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_find_failure.png" alt="" >
 
 ##### Tune the bot
 
 After you’ve identified the failure point in the conversation, click the link for the interaction that is causing the failure.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png" alt="" >
 
 This opens the bot in Conversation Builder and displays that interaction in the dialog editor. You can then tune the bot right at the failure point, for improved performance.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png" alt="" >
 
-#### Searching for a conversation 
+#### Searching for a conversation
 
 If you want to search for a specific conversation—any conversation that falls within the specified date range regardless of whether it appears in the sample—enter its full conversation ID in the search box on the MACS page. It will be displayed in the **Sample Conversations** list regardless of how the other filters are set.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png" alt="" >
 
 When searching for a conversation by its full conversation ID, be aware that conversation IDs are truncated on the MACS page for readability. You can get a conversation's full ID by clicking the truncated ID to open the transcript window. The full ID is displayed at the top.
 
-<img style="width:700px" src="img/ConvoBuilder/macs_conv_id.png">
+<img style="width:700px" src="img/ConvoBuilder/macs_conv_id.png" alt="" >
 
 ### FAQs
 
@@ -195,7 +197,7 @@ On the bot's Overview page, the Conversations metric represents the total number
 
 On the bot’s MACS page, the counts of conversations receiving a MACS 1, 2 and 3 are for closed conversations.
 
-<img style="width:600px" src="img/ConvoBuilder/macs_closed.png">
+<img style="width:600px" src="img/ConvoBuilder/macs_closed.png" alt="" >
 
 Since a MACS isn’t calculated for open conversations, the two metrics can be different at times.
 
@@ -208,14 +210,14 @@ The MACS reasons point towards issues with the bot’s responses. If there are n
 A single conversation can have multiple MACS reasons found within it. So if you filter the results using one MACS reason (or a few), you might see conversations that include those reasons as well as others.
 
 #### One of my conversations has multiple scores assigned to it. Why is this?
-A conversation can have multiple “legs,” where a “leg” in a conversation starts with one agent, and it ends when the conversation is transferred to another agent. Multiple legs of a conversation have the same conversation ID. 
+
+A conversation can have multiple “legs,” where a “leg” in a conversation starts with one agent, and it ends when the conversation is transferred to another agent. Multiple legs of a conversation have the same conversation ID.
 
 A MACS score is calculated for each leg of a conversation, so you might see a single conversation with multiple MACS scores assigned to it.
 
-
 ### Sending feedback
 
-Your feedback about this Beta feature is important to us! You can send it to us in the following ways:
+Your feedback about this beta feature is important to us! You can send it to us in the following ways:
 
 * Email questions or feedback to `macs-feedback-LP@liveperson.com`.
 * Send MACS score-related feedback using the **Feedback** widget.
@@ -227,12 +229,12 @@ LivePerson is interested in hearing your feedback regarding MACS scoring. After 
 
 You can quickly and easily provide this feedback using the **Feedback** widget that's available in the lower-right corner of the screen.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png">
+<img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png" alt="" >
 
 The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did you agree with the score?), and it provides an area where you can explain your rating (If you didn't agree, why?). So we can trace your feedback back to the actual conversation, copy the full conversation ID and paste it into your message, like we've done below.
 
-<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png">
+<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png" alt="" >
 
 The full conversation ID can be found at the top of the transcript window.
 
-<img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png">
+<img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png" alt="" >

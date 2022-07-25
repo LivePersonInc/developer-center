@@ -82,9 +82,9 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
    * a hashed/salted email address
 
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
-### POST Request & body entity example
+### POST Request and body entity example
 
 **Example call URL**
 

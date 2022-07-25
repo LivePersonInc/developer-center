@@ -48,7 +48,7 @@ Also review the [API terms of use](https://policies.liveperson.com/apitou).
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type) function.
 - **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field. 
-- **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id) function.
+- **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-id) function.
 
 ### Request
 
@@ -73,7 +73,7 @@ Use the POST method to set session-scoped variables in the bot runtime.
 | conversationId | The conversation ID | string | Required | |
 | userId | The consumer's user ID | string | Required | |
 | message | The message to send to the bot runtime | string | Optional | If set, this message is posted to the chat client. <br/><br/>To also trigger a dialog starter, this message must match to a Dialog Starter interaction in one of the bot’s dialogs. <br/><br/>If unset, the Web View service only posts the variables. |
-| contextVariables | The key/value pairs that can be passed to the bot platform | object:list of strings | Optional | These key/value pairs can be used in the bot runtime using the [Get Web View Variables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables) JavaScript functions. |
+| contextVariables | The key/value pairs that can be passed to the bot platform | object:list of strings | Optional | These key/value pairs can be used in the bot runtime using the [Get Web View Variables](conversation-builder-scripting-functions-get-set-session-data.html#get-web-view-variables) JavaScript functions. |
 
 #### Example
 
@@ -91,7 +91,7 @@ curl -X POST \
 ```
 
 ### Retrieving the Web View variables
-Use the [Get Web View Variables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables) JavaScript functions to retrieve the variables set via the Web View API from the bot runtime.
+Use the [Get Web View Variables](conversation-builder-scripting-functions-get-set-session-data.html#get-web-view-variables) JavaScript functions to retrieve the variables set via the Web View API from the bot runtime.
 
 ### Example guide
 

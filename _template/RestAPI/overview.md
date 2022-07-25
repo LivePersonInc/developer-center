@@ -34,11 +34,11 @@ A few things you'll need to get started with this API:
 
 	* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 5. If there are any other steps that the user has to perform in order to use your API, include them here. This could include preparing certain parameters (like an account number) or certain datasets (like a timeframe they're interesting in looking at or a list of users to be created).
 

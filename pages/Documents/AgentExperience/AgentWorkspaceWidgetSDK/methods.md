@@ -161,7 +161,7 @@ _Note: The updateCallback must be the same callback provided for the bind._
 
 <div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system</div>
 
-Example 1 - 'Write ChatLine':
+Example 1 — 'Write ChatLine':
 
 ```javascript
 {
@@ -180,7 +180,7 @@ Example 1 - 'Write ChatLine':
 }
 ```
 
-Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+Example 2 — 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
@@ -245,7 +245,7 @@ Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-mes
 }
 ```
 
-Example 3 - 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
+Example 3 — 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
 
 ```javascript
 {
@@ -278,7 +278,7 @@ Example 3 - 'Write StructuredContent'. Please see [this link](structured-content
 }
 ```
 
-Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-overview.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+Example 4 — 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-overview.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
@@ -355,7 +355,7 @@ Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link]
 }
 ```
 
-Example 5 - 'Send Notification':
+Example 5 — 'Send Notification':
 
 ```javascript
 {
@@ -374,7 +374,7 @@ Example 5 - 'Send Notification':
 }
 ```
 
-Example 6 - 'Send File':
+Example 6 — 'Send File':
 
 ```javascript
 {

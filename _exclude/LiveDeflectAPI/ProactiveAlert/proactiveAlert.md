@@ -144,7 +144,7 @@ The following information should be provided to LivePerson.
 
 The following information will be returned upon a successful call to LivePerson.
 
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 
@@ -191,8 +191,7 @@ HTTP Response Code - 200 OK
 
 The following information will be returned upon a failed call to LivePerson.
 
-
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 {
@@ -205,7 +204,7 @@ HTTP Response Code - 200 OK
 
 The following information will be returned upon a failed call to LivePerson.
 
-HTTP Response Code - 400 Bad Request
+HTTP Response Code — 400 Bad Request
 
 ```json
 {
@@ -218,8 +217,7 @@ HTTP Response Code - 400 Bad Request
 
 The following information will be returned upon a failed call to LivePerson when no API keys are passed:
 
-
-HTTP Response Code - 401 Unauthorized
+HTTP Response Code — 401 Unauthorized
 
 ```json
 {
@@ -231,8 +229,7 @@ HTTP Response Code - 401 Unauthorized
 
 The following information will be returned upon a failed call to LivePerson when a previously used *OAuth1* header keys is passed:
 
-
-HTTP Response Code - 401 Unauthorized
+HTTP Response Code — 401 Unauthorized
 
 ```json
 {

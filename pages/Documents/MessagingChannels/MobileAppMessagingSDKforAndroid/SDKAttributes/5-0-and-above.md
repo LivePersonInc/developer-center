@@ -23,7 +23,7 @@ For things like Brand name, which is a string, refer to [string Localization](an
 With the addition of Dark Theme support in Android 10, we now created LP Semantic color attributes to update colors based on the selection provided by the OS. We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations. We support only System-wide setting for black theme.
 
 #### What does this mean for our customers who use our default Attribute configurations?
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it.
 
 #### What this means for our customers who use custom attribute configurations? 
 If you have customized the appearance of the Android SDK by setting your own values for lp color attributes, note that unless you have custom colors set for lp color attribute values in `values-night` folder your custom configuration will not support dark mode and the UI may not appear as expected.
@@ -588,7 +588,7 @@ Color code for the markdown hyperlink in the automatic messages.
 ---   
 
 
-### Conversation Activity Style - (activity mode only!)
+### Conversation Activity Style (activity mode only!)
 
 
 #### lp_colorPrimary
@@ -703,9 +703,20 @@ Define the menu item color when disabled.
 * **Type:** color
 * **Default value:** @color/lp_disabledColor
 
+#### lp_resolve_conversation_menu_item_visible
+Define the visibility of "Mark as resolved" menu item.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_urgency_menu_item_visible
+Define the visibility of "Mark as urgent" menu item.
+
+* **Type:** bool
+* **Default value:** true
 
 #### clear_history_menu_item_visible
-Define the visibility of clear history menu item.
+Define the visibility of "cCear history" menu item.
 
 * **Type:** bool
 * **Default value:** true
@@ -1002,9 +1013,8 @@ If true, force dark mode is applied to webView when system dark mode is enabled.
 * **Type:** bool
 * **Default value:** true
 
-
 #### darkMode_SC_QR_override_colors_from_LE
-If false , colors for structured content elements and Quick replies are override from LE in dark theme.
+If false, colors for structured content elements and quick replies are overridden from LE in dark theme.
 
 * **Type:** bool
 * **Default value:** false
@@ -3779,6 +3789,12 @@ Chat message (agent/consumer) bubble bottom padding.
 &nbsp;
 </div>
 
+#### lp_timestamps_font_size
+Update the timestamp text font size of the conversation message bubbles.
+
+* **Type:** dimen
+* **Default value:** 12sp
+
 
 #### show_agent_typing_in_message_bubble
 
@@ -4420,6 +4436,18 @@ Set the link message text color.
 
 * **Type:** color
 * **Default value:** @color/lp_consumer_action_highLight_color
+
+#### lp_enable_timestamps
+Show or hide the timestamp text of the conversation message bubbles.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_enable_read_receipts
+Show or hide read receipt text of the consumer message bubbles.
+
+* **Type:** bool
+* **Default value:** true
 
 
 ---

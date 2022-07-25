@@ -8,7 +8,7 @@ permalink: third-party-bots-custom-endpoint-basic-content.html
 indicator:
 ---
 
-This section will describe The responses that are expected to be sent by the
+This section will describe the responses that are expected to be sent by the
 [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
 endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
 [Conversation Tester feature](third-party-bots-conversation-tester.html).
@@ -21,7 +21,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
 {: .important}
-If Images are sent in Rich content, then their URLs must be added to a whitelist via internal
+If images are sent in Rich content, their URLs must be added to a whitelist via internal
 LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you
 must add all possible domains to this list manually as wildcards are not supported. Moreover,
 All domains must be HTTPS secure.

@@ -12,7 +12,7 @@ level-order: 6
 order: 1
 indicator: both
 ---
-Authenticated Consumers federates(SSO) your existing consumer authentication to LivePerson's Conversational Cloud platform during conversations. Once authenticated, the conversational cloud assigns a profile that is uniquely identified across the consumer's engagements (cross channels, cross-device, cross-browser). Also, consumer's information can be embedded within the federated token (custom claims) which can later be used for easily making purchases for existing consumers or Facilitating billing and payment conversations, etc… Authenticated customer information gives brands the confidence that each consumer is who they say they are, and that the relevant data for a personal conversation is at the disposal of the agent.
+Authenticated Consumers federates (SSO) your existing consumer authentication to LivePerson's Conversational Cloud platform during conversations. Once authenticated, the conversational cloud assigns a profile that is uniquely identified across the consumer's engagements (cross channels, cross-device, cross-browser). Also, consumer's information can be embedded within the federated token (custom claims) which can later be used for easily making purchases for existing consumers or Facilitating billing and payment conversations, etc. Authenticated customer information gives brands the confidence that each consumer is who they say they are, and that the relevant data for a personal conversation is at the disposal of the agent.
 
 All authenticated customer information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token. This ensures your customers’ data is secured and cannot 
 be manipulated.
@@ -34,7 +34,7 @@ Authenticated customer information increases the security of the communication a
 *	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](http://openid.net/foundation/sponsoring-members/) including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
 
 *   **ID Token**: The ID Token is a security token that contains Claims about the Authentication of an End-User by an Authorization Server when using a Client, and potentially other requested Claims. The ID Token is represented as a JSON Web Token (JWT). [Read more](https://openid.net/specs/openid-connect-core-1_0.html).  
-Currently, LivePerson suppoirts two methods for passing the ID Token: [implicit](https://oauth.net/2/grant-types/implicit/) or [code flow](https://oauth.net/2/grant-types/authorization-code/). 
+Currently, LivePerson supports two methods for passing the ID Token: [implicit](https://oauth.net/2/grant-types/implicit/) or [code flow](https://oauth.net/2/grant-types/authorization-code/). 
 
 *	**OAuth 2.0 code**: In some flows, instead of directly receiving the access_token, the Authentication Server provides a code which can be used only along with other secret information in order to get the access token. This way, the intermediator that passes the OAuth 2.0 code is not able to gain access to the data.
 

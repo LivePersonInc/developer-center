@@ -12,6 +12,11 @@ indicator:
 
 ### Overview
 
+{: .notice}
+Please note Custom Endpoint is only accessible for early adopters. Enabling the use of
+Custom Endpoint integrations require a configuration change and whitelisting done by
+LivePerson. Contact your LivePerson account representative for assistance.
+
 The following document outlines the configuration of the **Custom Endpoint** connector.
 
 The Custom Endpoint feature of Third Party Bots allows brands to provide their REST API

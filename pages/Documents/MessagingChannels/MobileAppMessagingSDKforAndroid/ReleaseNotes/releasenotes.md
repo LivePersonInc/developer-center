@@ -11,7 +11,101 @@ indicator: messaging
 ---
 <br>
 
-<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
+<div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
+
+# Android Messaging SDK - Version 5.11.0
+
+**Release date:** July 15, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.11.0 release provides improved accessibility support, bug fixes and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.11.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.3.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# Enhancements
+
+### Allow Consumers to submit CSAT Survey as soon as returned from background
+
+SDK now allows consumers to submit CSAT Survey responses as soon as they return from the background without waiting for the SDK to finish connecting.
+
+### Dynamically update message timestamps
+
+An enhancement has been made to the conversation message bubble to update the message timestamps dynamically, without consumers having to close and reopen the conversation window.
+
+### Accessibility enhancements
+
+Improvements on the TalkBack accessible experience for vision-impaired users.
+
+# Bugs Fixed
+
+- System message does not get displayed in current device language while using real time masking feature.
+- Message bubble padding over 8 dp causes text containing hyperlinks to be clipped.
+
+
+# Android Messaging SDK - Version 5.10.0
+
+**Release date:** May 20, 2022
+
+# Overview
+Android Mobile Messaging SDK version 5.10.0 release includes step-up authentication feature and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.10.0 uses:
+- Minimum API version 21
+- Compile API version 31
+- Target API version 31
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.2.2”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
+# New Features
+
+### Step Up Authentication
+
+Step up authentication allows brands to let their consumers continue the ongoing unauthenticated conversations after logging in and merging it to the authenticated conversation history. For more information, follow [feature documentation](mobile-app-messaging-sdk-for-android-advanced-features-step-up-authentication.html).
+
+### Custom proactive welcome message for Non-Rich content
+
+With the support of Non-Rich content payloads, brands will be able to send "text" type proactive content messages to their consumers.
+
+# New Attributes
+
+### [lp_enable_timestamps](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_timestamps)
+
+Show or hide the timestamp text of the conversation message bubbles.
+
+### [lp_enable_read_receipts](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_enable_read_receipts)
+
+Show or hide read receipt text of the consumer message bubbles.
+
+### [lp_timestamps_font_size](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_timestamps_font_size)
+
+Update the timestamp text font size of the conversation message bubbles.
+
+### [lp_urgency_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_urgency_menu_item_visible)
+
+Show or hide the "Mark as urgent" context menu option.
+
+### [lp_resolve_conversation_menu_item_visible](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_resolve_conversation_menu_item_visible)
+
+Show or hide the "Mark as resolved" context menu option.
+
+# Bugs Fixed
+
+- SDK displays a message body instead of message title from payload as a proactive welcome message.
+- A color [configuration](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#consumer_bubble_message_link_text_color) value for links is being ignored from the conversation message containing a text as well as link together.
+- The background color of buttons in horizontal type structured content will overlap over the structured content borders.
+- When using SDK’s clear history feature, an infinite loading spinner will not get reset from the conversation window after history gets cleared.
+- Accessibility only announces the new message but not the number of new messages received.
 
 # Android Messaging SDK - Version 5.9.0
 
@@ -280,7 +374,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -677,7 +771,8 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 New Logging subsystem, which introduces: 
 - Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
 - Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
-Head over [here](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more!
+
+Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more.
 
 ## Auto adjust "Scroll to bottom" button width
 - The width of the "scroll to bottom" button will be auto adjusted based on length of a message text.
@@ -819,12 +914,12 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 
 #### LivePerson Obsoleted functions
 
-* **initialize(final Context context, final String brandId, final InitLivePersonCallBack initCallBack)** , use *initialize(Context context, final InitLivePersonProperties initProperties)* instead
+* **initialize(final Context context, final String brandId, final InitLivePersonCallBack initCallBack)**, use *initialize(Context context, final InitLivePersonProperties initProperties)* instead
 * **showConversation(Activity activity)** and showConversation(Activity activity, String authenticationKey) use *showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
-* **getConversationFragment(String authKey)** , use *getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
-* **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
-* **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
-* **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+* **getConversationFragment(String authKey)**, use *getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
+* **handlePush(Context context, Bundle data, String brandId, boolean showNotification)**, use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
+* **shutDown()**, use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
+* **setUserProfile(String appId, String firstName, String lastName, String phone)**, use *setUserProfile(ConsumerProfile profile)* instead
 
 # Android Messaging SDK - Version 4.10.0
 
@@ -1053,7 +1148,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite
@@ -1501,7 +1596,8 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 New Logging subsystem, which introduces: 
 - Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
 - Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
-Head over [here](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more!
+
+Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more.
 
 #### Auto adjust "Scroll to bottom" button width
 - The width of the "scroll to bottom" button will be auto adjusted based on length of a message text.
@@ -2073,7 +2169,7 @@ SDK logging information is not available while the host application is running i
 
 |     API      | Description |
 | ------------ | ------------ |
-| public static void setIsDebuggable(boolean isDebuggable) | Use this api to enable/disable the SDK logs. |
+| public static void setIsDebuggable(boolean isDebuggable) | Use this API to enable/disable the SDK logs. |
 
 Note: SDK logging is disabled by default. To Enable it, use the above method.
 
@@ -2130,7 +2226,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 * SDK uses an old authentication token, even when the consumer is passed a new auth token.
 
-* User conversation system info (OS Type & Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
+* User conversation system info (OS Type and Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
 
 * Unauthenticated consumers passing campaign info cannot connect successfully.
 
@@ -2286,7 +2382,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 **Version 3.2.2 release: September 9th 2018**
 
-This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support & solution teams. This release version does not include new features or behavior changes.
+This release of the Android Mobile App SDK v3.2.2 is primarily focused on assessing critical bugs reported by LivePerson’s support and solution teams. This release version does not include new features or behavior changes.
 
 #### Environment Requirements
 The SDK’s minimum API is 19 and the target API is 27.
@@ -2307,7 +2403,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 #### Known Issues
 
-The following issues are still being investigated & have been prioritized for a subsequent release based on their frequency of occurrence and severity:
+The following issues are still being investigated and have been prioritized for a subsequent release based on their frequency of occurrence and severity:
 
 1. Audio/Image message fails to be sent, when it is the first message in the conversation.
 
@@ -2353,7 +2449,7 @@ Brands can communicate with their consumers in an unauthenticated manner while b
 
 Unauthenticated messaging allows brands to:
 
-1. Easier & quicker on-boarding to Conversational Cloud
+1. Easier and quicker on-boarding to Conversational Cloud
 
 2. Having pre authentication messaging use cases, for example, assistance with password recovery
 
@@ -2936,7 +3032,7 @@ The below APIs enable brands to use Campaigns for Messaging inside the brand’s
  <tr>
  <td>Added to Liveperson.initialize() →
 InitLivePersonProperties contains new MonitoringInitParams object</td>
- <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities & campaigns should add the required parameters.
+ <td>Added new optional MonitoringInitParams object. Brands who wish to use Monitoring capabilities and campaigns should add the required parameters.
 The SDK can be initialized once without MonitoringInitParams and then have another initialize call using these params.
 </td>
  </tr>
@@ -3072,7 +3168,7 @@ The new APIs allows:
  <td>ConversationViewParams -> mHistoryConversationsStateToDisplay</td>
  <td>Allows to control which conversation will be presented when opening the conversation screen, by status (open or closed).
 (mHistoryConversationsStateToDisplay is of type LPConversationsHistoryStateToDisplay ENUM which has the following values:
-OPEN, CLOSE , ALL)</td>
+OPEN, CLOSE, ALL)</td>
  </tr>
  <tr>
  <td>ConversationViewParams -> mHistoryConversationMaxDaysType</td>
@@ -3234,7 +3330,7 @@ should be set to true</td>
 
 ##### Adding Support for Android O
 
-Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (api 26 & api 27)
+Mobile App Messaging SDK v3.1 can be integrated into apps running on Android O (API 26 and API 27)
 
 ##### Wrapping Text in Edit Text Box
 
@@ -3586,25 +3682,25 @@ Version 2.8 roll-out: October 3rd 2017
 
 ##### Structured content enablement (GA in SDK)
 
-**Type**:​ Feature
+**Type**: Feature
 
-**Available​ ​to​ ​all​ ​customers?​** ​No - early adopters only
+**Available to all customers?** No - early adopters only
 
 _The beta version was released in v2.7 (for a full description, refer to the v2.7 release notes). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
 The dictionary of template elements can be found [here](structured-content-templates.html).
 
-**What​ ​does​ ​enablement​ ​mean**?
+**What does enablement mean**?
 
 Until rollout is complete, the structured content capability in SDK v2.7 was flagged as a Beta feature. The feature has an enablement toggle in the SDK which was disabled by default. In SDK v2.8, it is enabled by default.
 
 The toggle may be switched on or off as part of the SDK implementation within the host app, however it is highly recommended not to release the SDK in the host app with structured content enabled until end to end flow has been fully tested on the brand’s account.
 
-**In-app​ ​Messaging​ ​SDK​ ​toggle**​ -
+**In-app Messaging SDK toggle** -
 
 * Android - `enable_structured_content`
 
-Related​ ​properties:​ ​Structured content
+Related properties: Structured content
 
 The following additional conditions and configurations are required:
 
@@ -3614,9 +3710,9 @@ The following additional conditions and configurations are required:
 
 ##### Automatic messages for messaging
 
-**Type**:​ Feature
+**Type**: Feature
 
-**Available​ ​to​ ​all​ ​customers**?​ ​No - early adopters only
+**Available to all customers**? No - early adopters only
 
 **Description**
 
@@ -3670,11 +3766,11 @@ The following auto messages are supported:
   * Agent manager joins the conversation
   * The joined agent manager leaves the conversation
 
-**How​ ​to​ ​enable​ ​auto​ ​messages**
+**How to enable auto messages**
 
 Auto messages will be enabled for early adopters upon release. Please contact your account manager for more information.
 
-**IMPORTANT​ ​NOTES**​:
+**IMPORTANT NOTES**:
 
 When auto messages are enabled, they are all enabled by default and all have the default text. It is advised to review them immediately and modify them to suit the brand’s needs. Once auto messages are enabled, the SDK does not show toast messages which were presented in the past.
 
@@ -3696,7 +3792,7 @@ When there are unread messages waiting for the consumer within the brand app, th
 
 The unread messages number is passed to the SDK through LP Push service with every push.
 
-**IMPORTANT​ ​NOTES**​​
+**IMPORTANT NOTES**
 :
 The number of unread messages are fetched by the API from the pusher regardless of whether it’s registered to the LP push service.
 
@@ -3705,7 +3801,7 @@ The number of unread messages are fetched by the API from the pusher regardless 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,
 it will be fetched again with new data.
 
-**Parameters**​:
+**Parameters**:
 
 * conversationQuery: conversationQuery: used to identify the related brand
 
@@ -3713,8 +3809,8 @@ it will be fetched again with new data.
 
 * failure: called once the operation failed
 
-**Related​ ​properties**:​ ​Unread messages badge
-**Related​ ​API**:​ Unread messages badge API
+**Related properties**: Unread messages badge
+**Related API**: Unread messages badge API
 
 The following additional conditions and configurations are required:
 
@@ -3724,11 +3820,11 @@ The following additional conditions and configurations are required:
 
 **Key for items as follows**:
 
-**Backend​ ​update**:​ This feature requires an update to the backend.
-**Backend​ ​enablement**​: This feature requires items to be toggled on in the backend.
-**Backend​ ​configuration**​: This feature requires configuration in the backend.
-**SDK​ ​enablement**:​ This feature requires items to be toggled on in the SDK.
-**SDK​ ​configuration​**: This features requires items to be configured in the SDK.
+**Backend update**: This feature requires an update to the backend.
+**Backend enablement**: This feature requires items to be toggled on in the backend.
+**Backend configuration**: This feature requires configuration in the backend.
+**SDK enablement**: This feature requires items to be toggled on in the SDK.
+**SDK configuration**: This features requires items to be configured in the SDK.
 
 #### New properties
 
@@ -3745,14 +3841,14 @@ The following properties for structured content can now be configured:
 ##### Unread Messages Badge APIs
 
 ```javascript
-public​ ​static​ ​void​ ​getNumUnreadMessages(String​ ​appId,​ ​final​ ​ICallback<Integer,
-Exception>​ ​callback)​ ​{
-​ ​ ​ ​if​ ​(!isValidState())​ ​{
-​ ​ ​ ​ ​ ​ ​ ​callback.onError(new​ ​Exception("SDK​ ​not​ ​initialized"));
-​ ​ ​ ​}​ ​else​ ​{
-​ ​ ​ ​ ​ ​ ​ ​MessagingFactory.getInstance().getController().getUnreadMessagesCount(mBrandId,
-appId,​ ​callback);
-​ ​ ​ ​}
+public static void getNumUnreadMessages(String appId, final ICallback<Integer,
+Exception> callback) {
+   if (!isValidState()) {
+       callback.onError(new Exception("SDK not initialized"));
+   } else {
+       MessagingFactory.getInstance().getController().getUnreadMessagesCount(mBrandId,
+appId, callback);
+   }
 }
 ```
 
@@ -3905,7 +4001,7 @@ Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
-_This feature requires consulting services support. For more information, please refer to the Conversational Cloud ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
+_This feature requires consulting services support. For more information, please refer to the Conversational Cloud [secure form for messaging documentation](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
 
 ![Secure Form](img/releasesecure.png)
 
@@ -3957,9 +4053,9 @@ The following devices are now also supported and/or certified to host our Mobile
 | brandId | The account ID. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false. |
 
-All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification. In a case the host app decides to show its own custom notification, it can call handlePushMessage() with the ​showNotification​ parameter set to false and will parse and return a PushMessage object. In case the push message is not related to the SDK, it will return null.
+All incoming push messages are received by the host app. The host app can choose to fully handle any push message and display a notification message, or partially handle it and allow the SDK to display the notification. In a case the host app decides to show its own custom notification, it can call handlePushMessage() with the showNotification parameter set to false and will parse and return a PushMessage object. In case the push message is not related to the SDK, it will return null.
 
-_Note: For the unread messages feature to work correctly, the host app must call this method upon receiving SDK push messages (whether showing a custom notification or not)_.
+_Note: For the unread messages feature to work correctly, the host app must call this method upon receiving SDK push messages (whether showing a custom notification or not)._
 
 **getNumUnreadMessages**
 
@@ -4001,7 +4097,7 @@ The following API has been deprecated:
 `public static void handlePush(Context context, Bundle data, String brandId, boolean
 showNotification)`
 
-Please use the above ​handlePushMessage()​ method instead.
+Please use the above handlePushMessage() method instead.
 
 #### New properties
 
@@ -4012,104 +4108,104 @@ The following properties of the secure form bubble on the agent side can now be 
 
 Background color of the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_background_color"​>
-@android:color/white​</color>`
+`<color name="agent_bubble_pci_form_invitation_background_color">
+@android:color/white</color>`
 
 Background color of the form invitation button only -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_background_btn_color"​>
-@android:color/white​</color>`
+`<color name="agent_bubble_pci_form_invitation_background_btn_color">
+@android:color/white</color>`
 
 Color of the stroke (border) of the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_stroke_color"​>​ ​@color/lp_gray​</color>`
+`<color name="agent_bubble_pci_form_invitation_stroke_color"> @color/lp_gray</color>`
 
 Color of the text on the button -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_button_text_color"​>
-@color/lp_blue​</color>​`
+`<color name="agent_bubble_pci_form_invitation_button_text_color">
+@color/lp_blue</color>`
 
 Text color on the description in the form invitation bubble -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_description_text_color"​>
-@color/lp_gray​</color>`
+`<color name="agent_bubble_pci_form_invitation_description_text_color">
+@color/lp_gray</color>`
 
 Text color on the title in the form invitation bubble -
 
-`<color​ ​name=​"agent_bubble_pci_form_invitation_title_text_color"​>
-@android:color/black​</color>`
+`<color name="agent_bubble_pci_form_invitation_title_text_color">
+@android:color/black</color>`
 
 Color of the icon in the form invitation bubble -
 
-`<color ​name=​"agent_bubble_pci_form_invitation_icon_tint_color"​>
-@color/lp_blue​</color>`
+`<color name="agent_bubble_pci_form_invitation_icon_tint_color">
+@color/lp_blue</color>`
 
 **consumer read status**
 
 Color of the read status indicator in the consumer message status line -
 
-`<color​ ​name=​"​consumer_bubble_read_status_color​"​>​@color/lp_blue​</color>`
+`<color name="consumer_bubble_read_status_color">@color/lp_blue</color>`
 
 Color of the received status indicator in the consumer message status line -
 
-`<color ​name=​"​consumer_bubble_received_status_color​"​>​#cecece​</color>`
+`<color name="consumer_bubble_received_status_color">#cecece</color>`
 
 Color of the sent status indicator in the consumer message status line -
 
-`<color​ ​name=​"​consumer_bubble_sent_status_color​"​>​#cecece​</color>`
+`<color name="consumer_bubble_sent_status_color">#cecece</color>`
 
 Color of the sending status indicator in the consumer message status line -
 
-`<color ​name=​"​consumer_bubble_sending_status_color​"​>​@color/lp_gray​</color>`
+`<color name="consumer_bubble_sending_status_color">@color/lp_gray</color>`
 
 
 #### New strings keys
 
 **Photo Sharing Upload Status**
 
-`<string​ ​name=​"uploading_image"​>​Uploading image...​</string>`
-`<string​ ​name=​"downloading_image"​>​Downloading image...​</string>`
+`<string name="uploading_image">Uploading image...</string>`
+`<string name="downloading_image">Downloading image...</string>`
 
 **Accessibility**
 
-`<string​ ​name=​"lp_accessibility_message_preview_close_description"​>​Close​</string>``
-`<string​ ​name=​"lp_accessibility_scroll_down_indicator_description"​>​scroll
-down​</string>`
+`<string name="lp_accessibility_message_preview_close_description">Close</string>``
+`<string name="lp_accessibility_scroll_down_indicator_description">scroll
+down</string>`
 
 **Connection Status**
 
-`<string​ ​name=​"lp_connection_status_trying_to_connect"​>​Still trying to
-connect…​</string>`
-`<string​ ​name=​"lp_connection_status_no_connection"​>​Offline. Please check your
-connection.​</string>`
+`<string name="lp_connection_status_trying_to_connect">Still trying to
+connect…</string>`
+`<string name="lp_connection_status_no_connection">Offline. Please check your
+connection.</string>`
 
 **PCI**
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_title"​>​Are you sure?​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_title">Are you sure?</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
-form, you will not be able to access it again.​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_description">Once you leave the secure
+form, you will not be able to access it again.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_positive"​>​OK​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_btn_positive">OK</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_btn_negative"​>​STAY​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_btn_negative">STAY</string>`
 
-`<string​ ​name=​"lpmessaging_ui_fill_in_form_text_button"​>​Fill in form​</string>`
+`<string name="lpmessaging_ui_fill_in_form_text_button">Fill in form</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_to_fill_in_message"​>​This is a secure form.
-Information entered here is protected and cannot be accessed once submitted.​</string>`
+`<string name="lpmessaging_ui_secure_form_to_fill_in_message">This is a secure form.
+Information entered here is protected and cannot be accessed once submitted.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_viewed_message"​>​This form has already been
-viewed. Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_viewed_message">This form has already been
+viewed. Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_error_message"​>​There was a problem opening
-this form. Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_error_message">There was a problem opening
+this form. Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_expired_message"​>​Secure form has expired.
-Please ask the agent to resend the form.​</string>`
+`<string name="lpmessaging_ui_secure_form_expired_message">Secure form has expired.
+Please ask the agent to resend the form.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_secure_form_submitted_message"​>​This form has been
-submitted and cannot be reopened for security reasons.​</string>`
+`<string name="lpmessaging_ui_secure_form_submitted_message">This form has been
+submitted and cannot be reopened for security reasons.</string>`
 
-`<string​ ​name=​"lpmessaging_ui_pci_leave_dialog_description"​>​Once you leave the secure
-form, you will not be able to access it again.​</string>`
+`<string name="lpmessaging_ui_pci_leave_dialog_description">Once you leave the secure
+form, you will not be able to access it again.</string>`

@@ -28,7 +28,7 @@ There are two, general types of bots:
 ### Configure bot settings
 
 {: .important}
-Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#configuring-the-survey-bots-settings).
+Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#configure-the-survey-bots-settings).
 
 **To configure bot settings**
 1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.

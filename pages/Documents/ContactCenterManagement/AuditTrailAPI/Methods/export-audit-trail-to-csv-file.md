@@ -54,7 +54,7 @@ Exports an account's audit trail to CSV file.
 
 CSV
 
-JSON - for error message
+JSON — for error message
 
 **Response Headers**
 

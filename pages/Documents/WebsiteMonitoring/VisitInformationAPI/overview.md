@@ -29,18 +29,16 @@ A few things you'll need to get started with this API:
 
 	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
-
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use cases
 
 This API can be used to display context information to agents about the session, visitor and engagement in a brand’s built Agent Workspace application, examples are the click to call solution in which the voice agents are not LivePerson users or agents that don’t use Agent Workspace .
 
-Example of how visitor information is displayed to agents within the Agent Worksapce:
+Example of how visitor information is displayed to agents within the Agent Workspace:
 
 ![VisitInformation](img/visitinformation.png)

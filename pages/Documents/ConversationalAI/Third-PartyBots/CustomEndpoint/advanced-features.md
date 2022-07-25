@@ -8,11 +8,11 @@ permalink: third-party-bots-custom-endpoint-advanced-features.html
 indicator:
 ---
 
-This section will describe The responses that are expected to be sent by the
+This section will describe the responses that are expected to be sent by the
 [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
 endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
 [Conversation Tester feature](third-party-bots-conversation-tester.html).
-In the case of Structure Content validation, you can also leverage
+In the case of Structured Content validation, you can also leverage
 [this tool](https://livepersoninc.github.io/json-pollock/editor/).
 
 ### Sending Encoded Metadata
@@ -135,7 +135,7 @@ Third-Party Bot Connector can be found at [API Service Specification](https://gi
     {
       "type": "TEXT",
       "data": {
-        "message": "Please wait while i prepare to give you options!"
+        "message": "Please wait while I prepare to give you options!"
       }
     },
     {
@@ -255,7 +255,7 @@ the LivePerson function while invocation. The invoke response is considered an a
 An example of such a response can be seen in Figure 4.5.
 
 {: .notice}
-Please note we only support **ONE ACTION** per Custom Endpoint service response
+Please note we only support **ONE ACTION** per response
 
 ```json
 {

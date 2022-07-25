@@ -120,7 +120,7 @@ Using this method, you can implement auto-save and assure that the survey displa
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 
 **Entity structure**

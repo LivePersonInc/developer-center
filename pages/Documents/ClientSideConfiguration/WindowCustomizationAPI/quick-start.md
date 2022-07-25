@@ -12,13 +12,13 @@ You can easily customize the unified window yourself by using these classes and 
 
 ### Naming convention
 
-`lpc` - general namespace for the customization classes
+`lpc` — general namespace for the customization classes
 
-`block` - a component of the window
+`block` — a component of the window
 
-`element` - a specific item within a block   
+`element` — a specific item within a block   
 
-`modifier` - defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`):
+`modifier` — defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`):
 
 `lpc_block_modifier` or `lpc_block__element_modifier`
 

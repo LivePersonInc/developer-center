@@ -27,7 +27,7 @@ https://API_REQUEST?v=4.0
 
 | Method|      URL|  
  |:--------  |:---  |
- |DELETE|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users |
+ |DELETE|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users/{userId} |
 
 **Request Headers**
 
@@ -38,14 +38,14 @@ https://API_REQUEST?v=4.0
 
 **Request Body**
 
-`["987654321", "1232455"]`
+Not Required
 
 **Path Parameters**
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID|   String |
- |userId  |User ID   |Positive long number greater than zero|
+ |userId  | User ID, it can be fetched from DB (latest one) [OR] get from [{get-all-users request}](/users-api-methods-get-all-users.html) | Positive long number greater than zero |
  
 **Query Parameters**
 

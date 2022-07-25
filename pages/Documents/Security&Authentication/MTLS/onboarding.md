@@ -30,7 +30,7 @@ A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` 
 
 The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
 
-As part of our MTLS service, we offer a p12 file tester. You can find it [here](mtls-methods-p12-key-tester.html). What this tool does is to test the validity of the p12/pfx file and corresponding password (at this stage without storing the certificate in the Hashicorp Vault).
+As part of our MTLS service, we offer a [p12 file tester](mtls-methods-p12-key-tester.html). What this tool does is to test the validity of the p12/pfx file and corresponding password (at this stage without storing the certificate in [HashiCorp Vault](https://www.vaultproject.io/)).
 
 ### Step 2 - Upload certificate
 
@@ -40,7 +40,7 @@ In this stage we upload a certificate to the our storage. At this point, the cer
 
 Now that your certificate is validated, you can upload it. Once it is uploaded, it can be mapped.
 
-You can upload your certificate by using the following method: [upload certificate](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
+You can upload your certificate by using the following method: [upload certificate](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the HashiCorp Vault entry.
 
 The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step (it can also be fetched later).
 
@@ -74,7 +74,7 @@ Now that we have validated and uploaded our certificate, we must map it to the c
 
 In order to create the mapping object, you will need to use the following method.
 
-**Note that this action is performed against ac-common domain, not the mtls service**
+**Note that this action is performed against ac-common domain, not the MTLS service.**
 
 |Method|      URL|  
 |:--------  |:---  |

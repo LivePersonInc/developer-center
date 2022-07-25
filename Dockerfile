@@ -1,4 +1,4 @@
-FROM ruby:2.5.1
+FROM ruby:3.1.2
 MAINTAINER mrafayaleem@gmail.com
 
 RUN apt-get clean \

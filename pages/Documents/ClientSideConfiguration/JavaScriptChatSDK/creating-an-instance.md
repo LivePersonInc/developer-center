@@ -24,7 +24,7 @@ At this point, it is recommended to bind to at least the following methods: onLo
 
 ```javascript
 var myChatObj = new lpTag.taglets.ChatOverRestAPI({
-    // The api key for this site
+    // The API key for this site
     appKey: "12345678945613",
     // The LivePerson site number
     lpNumber: "123456",
@@ -80,7 +80,7 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 | Type | Value/Properties |
 | :--- | :--- |
 | Function  | An inline function or function pointer. |
-| Object | An object containing properties: <br> - callback - the callback function (Required) <br> - context - the execution context for the function (Optional) |
+| Object | An object containing properties: <br> — callback — the callback function (Required) <br> — context — the execution context for the function (Optional) |
 | Array | An array containing functions, or objects with the above syntax, or both. |
 
 **Examples**

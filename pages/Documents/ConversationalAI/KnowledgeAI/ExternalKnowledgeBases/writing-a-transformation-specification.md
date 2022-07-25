@@ -50,7 +50,7 @@ RHS = right-hand side = the output JSON tree
                 "Account Information",
                 "Information"
             ],
-            "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information.</p>"
+            "body": "<p>For account information, go to Settings → Account → Basic Information.</p>"
         },
         {
             "id": 360048237271,
@@ -83,7 +83,7 @@ RHS = right-hand side = the output JSON tree
 ]
 ```
 
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
+**Using the “&” wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
 * The first parameter tells the level to go up on the LHS from current node.
 * The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
  
@@ -192,7 +192,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
+[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel → selectedCategories index → selectedCategories key →  categoryGroups index → categoryGroups key → results index.
 
 **Transformed output**
 ```JSON
@@ -409,7 +409,7 @@ When fetching a single article, some CMS systems might return an array as per th
       "label_names": [
         "Account"
       ],
-      "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information. </p>"
+      "body": "<p>For account information, go to Settings → Account → Basic Information.</p>"
     }
   ]
 }
@@ -444,7 +444,7 @@ When fetching a single article, some CMS systems might return an array as per th
 }, {
   "title" : "Account Information",
   "tags" : [ "Account" ],
-  "summary" : "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information. </p>",
+  "summary" : "<p>For account information, go to Settings → Account → Basic Information.</p>",
   "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json"
 } ]
 ```
@@ -498,7 +498,7 @@ When fetching a single article, some CMS systems might return an array as per th
 ]
 ```
 
-“[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url -> attributes -> searchRecords index.
+“[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url → attributes → searchRecords index.
 
 **Transformed output**
 ```JSON

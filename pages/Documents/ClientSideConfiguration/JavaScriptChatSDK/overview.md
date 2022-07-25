@@ -38,13 +38,13 @@ A few things you'll need to get started with this API:
 
 	* appKey=721c180b09eb463d9f3191c41762bb68
 
-4. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+4. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-5. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+5. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases
 
-* Create a chat window experience that is completely different than the out of the box window Conversational Cloud offers - for example - a window that takes up the entire screen.
+* Create a chat window experience that is completely different than the out of the box window Conversational Cloud offers — for example, a window that takes up the entire screen.
 
 * Utilize a different platform to manage the user view of the chat and integrate Conversational Cloud window logic
 

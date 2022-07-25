@@ -21,31 +21,28 @@ search: exclude
   <a class="btn btn-primary btn-m active" href="https://connector-api.dev.liveperson.net/" target="_blank"  role="button">Go to Demo Tool</a>
 </div>
 
-### API Endpoints test change
+### API Endpoints Test Change
 
 The API consists of two types of calls:
 
 * [CONVERSATION](sendapi-create.html) - Batch Payload. This API call creates/opens a new conversation and set the consumer profile.
 * [SEND](sendapi-send.html) - One Payload. This API call can be used to send a message and close a conversation or set the consumer profile.
 
-### Connector API connection
+### Connector API Connection
 
-
-####  Authentication & Authorization
+####  Authentication and Authorization
 
 Refer to the [Authorizaztion and Authentication](connector-api-send-api-authorization-and-authentication.html) section to see how you can authorize your connector ([AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) application and identify the consumer ([ConsumerJWS](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) before you can use the API.
 
-
-####  Authorization Tokens expiration times
+####  Authorization Tokens Expiration Times
 
 * The ``AppJWT`` token expires after 60 minutes.
 
 * The ``ConsumerJWS`` never expires.
 
-####  Authorization and authentication Error Handling
+####  Authorization and Authentication Error Handling
 
 * **401 Unauthorized** - Expired/Missing/Invalid ``AppJWT`` Token or Missing/Invalid ``ConsumerJWS``. A fresh AppJWT token is required from the client/connector. This code states that the request does not contain the required authorization token, or contains an expired token. This response asks the client to supply a new token from the client/connector. In case the AppJWT Token is valid and not expired, one can get the same status code if the ConsumerJWS is missing or invalid (e.g, consumer A is trying to access a conversation ID of consumer B).
-
 
 ### Message Format
 

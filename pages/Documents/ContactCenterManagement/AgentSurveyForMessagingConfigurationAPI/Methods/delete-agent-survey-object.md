@@ -55,8 +55,9 @@ Delete an existing agent survey object.
 
 **Response example**
 
-In case delete success - body is empty.<br>
-In case trying to delete an already deleted agent surveys:
+In case of delete success, the body is empty.
+
+In case of trying to delete an already deleted agent surveys:
 
 ```json
 {

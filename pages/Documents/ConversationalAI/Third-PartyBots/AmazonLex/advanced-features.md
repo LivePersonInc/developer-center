@@ -9,7 +9,7 @@ indicator:
 ---
 
 {: .important}
-At this time, Lex response cards & audio messages are not supported.
+At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 ### Sending Encoded Metadata
@@ -27,7 +27,7 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 3.1 below
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_custom_markup.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_custom_markup.png" alt="">
 Figure 3.1
 
 #### Sending Text Message with Encoded Metadata
@@ -50,7 +50,7 @@ An example of the custom payload text message response is below:
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_text.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_text.png" alt="">
 Figure 3.2
 
 #### Sending Rich Content (structured content) with Encoded Metadata
@@ -88,7 +88,7 @@ You need to add another property of `encodedMetadata` with your rich content obj
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png" alt="">
 Figure 3.3
 
 ### Sending Pause/Delay Message
@@ -104,7 +104,7 @@ It is possible to send an event of type "delay" before regular content events an
 
 Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 3.4.
 
-<img class="fancyimage"  src="img/lex/lex_message_delay_message.png">
+<img class="fancyimage"  src="img/lex/lex_message_delay_message.png" alt="">
 Figure 3.4 An example of Message - Delay - Message  configuration in the Amazon lex console's intent editor
 
 it is also possible to send only a single delay response. The example payload of such response is below:
@@ -116,7 +116,7 @@ it is also possible to send only a single delay response. The example payload of
 }
 ```
 
-<img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
+<img class="fancyimage" src="img/lex/delay_response_custom_payload.png" alt="">
 Figure 3.5 showing the Custom Markup message for delay message
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
@@ -139,7 +139,7 @@ Please note private text message will never be shown to the consumer and will be
 
 Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 3.6.
 
-<img class="fancyimage" style="width:600px" src="img/lex/private_message_response_custom_payload.png">
+<img class="fancyimage" style="width:600px" src="img/lex/private_message_response_custom_payload.png" alt="">
 Figure 3.6 An example of transfer action with a simple text message and private text message in the Amazon lex console's intent editor
 
 It is possible to send only a private text message response. The example payload of such response is below:
@@ -158,7 +158,7 @@ During a conversation, it is possible to trigger a LivePerson Function that is d
 The action field needs to be set to **INVOCATION** to instruct the connector to invoke the specified LivePerson Function.
 
 It is also required to provide the **lambdaUuid**, of the function that should be invoked, in `data`.
-To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-foundations-external-invocation.html#function-uuid)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
 
@@ -182,7 +182,7 @@ The bot does not escalate on a failed invocation by default. To enable this, jus
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 3.7.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
 Figure 3.7 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
@@ -310,7 +310,7 @@ After the Amazon Lambda function is deployed now we need to create an intent whi
 of the fulfillment and choose AWS Lambda function. Our deployed lambda function should populate in the list of selections.
 Select the lambda function which in our example case is `botplRichContentEventLamda`. This can be seen in Figure 3.8 below
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_richcontentevent-intent-lamda.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_richcontentevent-intent-lamda.png" alt="">
 Figure 3.8 Sample utterances and Lambda function configuration for `RichContentEvent`
 
 Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to

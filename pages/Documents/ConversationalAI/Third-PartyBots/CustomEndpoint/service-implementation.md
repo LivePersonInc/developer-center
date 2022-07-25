@@ -8,46 +8,33 @@ permalink: third-party-bots-custom-endpoint-service-implementation.html
 indicator:
 ---
 
-### API Service Specification
+### Overview
 
 The Custom Endpoint vendor of Third Party Bots allows brands to build their API that generates
 Bot responses for incoming consumer messages, and connect this to conversations taking place in the
-Conversational Cloud. The basic flow of how a consumer message is sent and bot response is received
-on an abstract level can be seen in Figure 2.1
+Conversational Cloud. This section will describe the general information on what a Custom Endpoint service
+should be implementing to successfully integrate with the Third-Party Bots. The basic flow of how
+a consumer message is sent and bot response is received on an abstract level can be seen in Figure 2.1
 
-<img class="fancyimage" style="width:800px" src="img/customendpoint/message-flow.png">
+<img class="fancyimage" style="width:800px" src="img/customendpoint/message-flow.png" alt="">
 Figure 2.1 Depicts how a consumer message is sent to Custom Endpoint and a
 response is sent back.
 
-<ol>
-<li>Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)</li>
-<li>CM that was sent to UMS reaches the Third-Party Bot connector</li>
-<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e `www.mybotapi.com/api` in Figure 2.1) </li>
-<li>Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector 
-    which parses and validates it</li>
-<li>Third-Party Bot connector sends the bot response to the UMS</li>
-<li>UMS sends the bot response to the consumer</li>
-</ol>
-
-### Service Implementation
-
-This section will describe the general information on what a Custom Endpoint service
-should be implementing to successfully integrate with the Third-Party Bots.
-We have provided a public [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-that contains the [OpenAPI Specification](https://swagger.io/specification). It provides
-detailed information on Request and Response bodies sent or expected by the Third-Party
-Bots.
+1. Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)
+2. CM that was sent to UMS reaches the Third-Party Bot connector
+3. Third-Party Bot connector sends CM to the Custom Endpoint service (i.e. `www.mybotapi.com/api` in Figure 2.1)
+4. Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector
+    which parses and validates it
+5. Third-Party Bot connector sends the bot response to the UMS
+6. UMS sends the bot response to the consumer
 
 ### Service Endpoints
 
-To connect to Third-Party Bots via the Custom Endpoint vendor some service endpoints
-methods must be implemented by brands. Following are the methods defined by the
-[API Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service):
-
-- Get Bot Environments
-- Get Bot State
-- Create Conversation
-- Send Conversation Events
+To connect to Third-Party Bots via the Custom Endpoint vendor few service endpoints
+methods must be implemented by brands that we will explain below. We also have provided
+a public [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
+that contains the [OpenAPI Specification](https://swagger.io/specification). It includes
+detailed information on Request and Response bodies sent or expected by the Third-Party Bots.
 
 #### Get Bot Environments
 
@@ -80,7 +67,7 @@ Figure 2.2 Example response of Get Bot Environments endpoint
 
 #### Get Bot State
 
-A bot can have in Custom Endpoint service following states:
+A bot on a Custom Endpoint service should have one of the following states:
 
 - `online`
 - `offline`
@@ -89,7 +76,7 @@ A bot can have in Custom Endpoint service following states:
 
 This endpoint is called on test connection and while starting a bot. It should
 respond with the bot state and the bot version. Every state besides `online`
-will cause failures.
+is interpreted as a nonhealthy and unreachable bot.
 
 **Endpoint**
 
@@ -125,8 +112,9 @@ and conversation details are provided during the creation of the conversation.
 Please note, [SDES](engagement-attributes-types-of-engagement-attributes.html)
 attributes are **only** collected at the start of a conversation, and [SDES](engagement-attributes-types-of-engagement-attributes.html)
 are **only** collected if the Engagement Attributes configuration is enabled.
-This API endpoint is expected to create a conversation instance for the LivePerson
-conversation against a bot.
+This API endpoint is expected to create a conversation resource that can be
+addressed on the following [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
+call.
 
 {: .important}
 **Please Note** It is the responsibility of the Custom Endpoint service owner to
@@ -186,8 +174,8 @@ Figure 2.4 Example request body of Create Conversation endpoint
 
 #### Send Conversation Events
 
-An Event describes content sent by a brand's consumer in a conversation. This endpoint
-sends bot responses against the received consumer messages. The expected responses
+This endpoint is expected to respond with the actions and messages a bot wants to
+send as a direct response to the received consumer event. The expected responses
 are described in the [Basic Content](third-party-bots-custom-endpoint-basic-content.html)
 and [Advance features](third-party-bots-custom-endpoint-advanced-features.html) sections.
 
@@ -288,15 +276,23 @@ Figure 2.6 Example request body of Rich Content event sent to Send Content Event
 
 ### Authorization and Authentication
 
-Third-Party Bots uses [App-JWT OAuth 2.0](accessing-liveperson-apis.html#oauth-20-app-jwt) authentication
+{: .notice}
+Please note we expect brands to use [OAuth 2.0](oauth-2-0-client-credentials.html) for
+authentication and authorization
+
+Third-Party Bots uses [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
 mechanism for a server to server interaction. Third-Party Bots uses the provided
-`Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate bearer tokens.
+`Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate a JWT.
 More information on the Sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
-Third-Party Bots sends the bearer token inside the `Authorization` on all requests
+Third-Party Bots sends the JWT inside the `Authorization` header on all requests
 to the Custom Endpoint service. The brands need to ensure the request is authorized, e.g.
-if the account the request is coming from is allowed to access the addressed bot
-Custom Endpoint service endpoints.
+if the account the token has been generated on is allowed to access the addressed bot
+resources.
+
+### Error Retry Strategies and Endpoint Timeout
+
+If the service of a Custom Endpoint is temporarily unavailable due to maintenance or if there are changes in the network that cause temporary errors, the Third-Party Bots use strategies to respond to such eventualities. These are described in the [Retry Policy Recommendations](retry-policy-recommendations.html). After three attempts, no further request will be made. Furthermore, the time until a timeout for a single request occurs is 60 seconds.
 
 ### Service Flows
 
@@ -325,11 +321,11 @@ service is called
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
-<img class="fancyimage" src="img/customendpoint/test-connection-flow.png">
+<img class="fancyimage" src="img/customendpoint/test-connection-flow.png" alt="">
 Figure 2.7 showing the happy test connection flow
 
 1. Test Connection Caller calls the Third-party Bots
-2. Third-Party Bots gets Sentinel Bearer by using the credentials provided
+2. Third-Party Bots gets Sentinel bearer token by using the credentials provided
    in vendor configuration
 3. Response from Sentinel API is sent back with the access token that can be used as a bearer
 4. [Get Bot State](third-party-bots-custom-endpoint-service-implementation.html#get-bot-state)
@@ -349,7 +345,7 @@ the sequence diagram of which endpoints in the Custom Endpoint service are calle
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
-<img class="fancyimage" src="img/customendpoint/consumer-message-flow.png">
+<img class="fancyimage" src="img/customendpoint/consumer-message-flow.png" alt="">
 Figure 2.8 showing the happy consumer message flow
 
 1. Consumer Message notification is received by the Third-party Bots from UMS

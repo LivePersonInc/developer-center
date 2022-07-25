@@ -19,7 +19,7 @@ An external knowledge base is one where the content is authored and managed enti
 
 * Salesforce
 * Zendesk
-* Contentful (Check out their [blog post](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/) on integrating!)
+* Contentful (check out their [blog post on integrating](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/))
 
 Within the KnowledgeAI application, an external knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 
@@ -47,15 +47,15 @@ Keep in mind that, while knowledge bases do support URLs for video and audio, Vi
 
 Adding an external knowledge base can take some time, so the KnowledgeAI application gives you the option to save a knowledge base in an incomplete state. This lets you step away from the configuration work and come back to it at a later time.
 
-Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
+Once you start the process of adding the knowledge base — i.e., you provide a name for the knowledge base — if you then click **Cancel**, you are prompted to choose whether to save your work:
 
-<img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png" alt="">
 
 Click **Yes** to save the knowledge base.
 
 You can find your incomplete external knowledge bases listed along with your other knowledge bases on the dashboard. They're given an "Incomplete" status to indicate the the configuration is incomplete.
 
-<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png" alt="">
 
 A knowledge base is considered no longer "Incomplete" once all required fields are completed for the first time.
 
@@ -64,4 +64,4 @@ Keep in mind that completing the initial setup of a knowledge base, thereby movi
 
 To delete an incomplete knowledge base, click the knowledge base's 3-dot icon (on the right), and select **Delete**.
 
-<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_3.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_3.png" alt="">
