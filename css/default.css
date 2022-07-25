@@ -1141,13 +1141,19 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
     border-top: 0;
 }
 
-.sidebarbuttoncontainer {
-    display: flex;
-    flex-direction: column;
+.m-t-2 {
+    margin-top: 28px;
 }
 
-.sidebarbuttoncontainer:not(:last-child) {
-    margin-top: 28px;
+div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#mysidebar ul.sidebarbuttoncontainer a.bottombuttons.spacebetweenHyperlink {
+    padding: 0;
+    margin: 0 !important;
 }
 
 .supportbutton {
