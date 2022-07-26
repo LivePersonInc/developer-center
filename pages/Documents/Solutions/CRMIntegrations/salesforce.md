@@ -289,7 +289,7 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
    * Define the following URL under ‘In case widget didn't load, display the following link’- ‘[https://login.salesforce.com](https://login.salesforce.com "https://login.salesforce.com")’ (or ‘[https://test.salesforce.com](https://test.salesforce.com "https://test.salesforce.com")’)
    * “Show link after” — Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he will see the message you defined with the link defined above.
 
- -->
+-->
 
 **Now you are ready to go, just open the widget on an active chat/messaging conversation.**
 

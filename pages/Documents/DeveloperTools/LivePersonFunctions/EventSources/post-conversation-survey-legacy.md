@@ -25,9 +25,9 @@ This is the Post Conversation Survey flow with Functions integration:
 
 1. Survey Bot listens to *conversation end* events.
 2. If certain conditions occur, the Survey bot will send the survey first question to the conversation:
-    1. If there is a Function deployed on the *Messaging Survey Started* event -->  the associated function will be invoked (if deployed).
+    1. If there is a Function deployed on the *Messaging Survey Started* event, the associated function will be invoked (if deployed).
     2. Survey will listen for survey responses, send more questions and listen to responses.
-3. When the Survey ends on the *Messaging Survey Ended* event --> Survey Bot will invoke the associated function (if deployed).
+3. When the Survey ends on the *Messaging Survey Ended* event, the Survey Bot will invoke the associated function (if deployed).
 
 ### Configuration
 

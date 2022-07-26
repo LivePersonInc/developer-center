@@ -106,7 +106,7 @@ Use case: Change engagement state / click target / display / etc.
 
 Interference:  Change engagement configuration before engagement display.
 
-Place: rendererStub.js --> engagement.createInstance
+Place: rendererStub.js → engagement.createInstance
 
 Timing: Before
 
@@ -120,7 +120,7 @@ Interference:  The flow after engagement click.
 
 Place:
 ```
-baseOffer.js --> click --> _openChannel
+baseOffer.js → click → _openChannel
 ```
 
 Timing: Before

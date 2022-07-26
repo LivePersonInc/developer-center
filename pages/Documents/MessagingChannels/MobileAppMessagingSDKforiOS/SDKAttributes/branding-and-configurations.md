@@ -153,13 +153,9 @@ Custom font name for conversation feed, which affects all messages, timestamps a
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-#### customFontNameNonConversationFeed  
-Custom font name for all non conversation feed controls. Such as: buttons, alerts, banners, menu and external windows.
-Fonts that are not part of the iOS families, must be defined in App's Info.plist.
+#### customFontNameNonConversationFeed
+  
+Custom font name for all non conversation feed controls. Such as: buttons, alerts, banners, menu and external windows. Fonts that are not part of the iOS families, must be defined in App's Info.plist.
 
 <!--    <div style="float: left; width: 35%;height: 69px;">
    <ul>
@@ -178,9 +174,9 @@ Fonts that are not part of the iOS families, must be defined in App's Info.plist
 <!--    <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div> -->
- 
 
-#### customRefreshControllerImagesArray  
+#### customRefreshControllerImagesArray
+  
 Array of images for creating the custom refresh controller. The custom refresh controller will loop the images from the array. 
 It will need two or more images in the array for the loop to take effect.
 

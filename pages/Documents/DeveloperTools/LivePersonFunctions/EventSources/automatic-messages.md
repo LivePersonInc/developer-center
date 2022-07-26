@@ -21,9 +21,9 @@ A function will trigger regardless of the state of the enabled flag of an Automa
 This is the Automatic Messages flow with Functions integration:
 
 1. Automatic Messages listens to conversation events.
-2. If there is an Auto-message configured for the event --> It will send that message to the conversation.
-3. If there is a Function deployed associated with that event -->  The function will be invoked.
-4. After invocation --> Automatic Messages will check the response and will perform one of the following actions based on the callback payload:
+2. If there is an Auto-message configured for the event, it will send that message to the conversation.
+3. If there is a Function deployed associated with that event, the function will be invoked.
+4. After invocation, automatic Messages will check the response and will perform one of the following actions based on the callback payload:
     1. Transfer Conversation to a different Skill.
     2. Transfer Conversation to a different Agent.
     3. Send a message.

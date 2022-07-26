@@ -163,8 +163,8 @@ function displayAllVars(map) {
  
   for each (var i in map.keySet()) {
 
-       botContext.printDebugMessage('Key  ---> ' + i);
-       botContext.printDebugMessage('Value ---> ' + map[i]);
+       botContext.printDebugMessage('Key → ' + i);
+       botContext.printDebugMessage('Value → ' + map[i]);
   }
 }
 ```
