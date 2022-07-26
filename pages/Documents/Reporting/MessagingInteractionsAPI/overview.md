@@ -17,9 +17,10 @@ indicator: messaging
 {: .notice}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
 
-<div class="important">The Messaging Interaction API exposes Open and Closed conversations with <b>near real-time data freshness</b>. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.
-<br><br>
-In addition, SDEs will be available in the response in near real-time, but the ability to search on SDEs is only available after 2 hours. The All Conversations tab in Conversational Cloud is also built on top of this API.</div>
+<div class="important">
+<p>The Messaging Interaction API exposes Open and Closed conversations with <b>near real-time data freshness</b>. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.</p>
+<p>In addition, SDEs will be available in the response in near real-time, but the ability to search on SDEs is only available after 2 hours. The All Conversations tab in Conversational Cloud is also built on top of this API.</p>
+</div>
 
 The Conversational Cloud Messaging Interactions API retrieves the most up to date information available about contact center messaging interactions. This API makes it possible to search, filter and analyze data and transcripts of open and closed conversations.
 

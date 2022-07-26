@@ -257,9 +257,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | brandId | The account Id. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
-<div class="important">
-The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.
-</div>
+<div class="important">The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.</div>
 
 ### hideConversation
 
@@ -365,9 +363,7 @@ Previous conversations will not be displayed automatically until the consumer's 
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="important">
-This method must not be called when the conversation screen is displayed.
-</div>
+<div class="important">This method must not be called when the conversation screen is displayed.</div>
 
 ```java
 public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback)
@@ -915,5 +911,5 @@ public static void shutDown()
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="important"> This method must not be called when the conversation screen is displayed.</div>
+<div class="important">This method must not be called when the conversation screen is displayed.</div>
 

@@ -17,9 +17,7 @@ indicator: both
 <br>
 The Login Service API provides endpoints to manage the User Session in Conversational Cloud, such as User Login, Application Login, Logout and Refresh.  Use this API to log into Conversational Cloud as a *user* with credentials or an *application* with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-<div class="important">
-Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.
-</div>
+<div class="important">Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.</div>
 
 ### Step 1. Retrieve your domain
 
@@ -39,9 +37,7 @@ http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?ver
 
 - **Application** - Provides a way for **applications** to access and manage Conversational Cloud sessions, such as bots, virtual agents, or other apps that need to act as an agent. The Application Login method overcomes both issues detailed in the User Login method (above), such as password expiration or SSO integration. For more details, refer to [Application Login](https://developers.liveperson.com/login-service-api-methods-application-login.html).
 
-   <div class="important">
-   To login as an application, you must have the <i>User Type — Bot</i> feature activated.  If you do not, contact your account team before proceeding.
-   </div>
+   <div class="important">To login as an application, you must have the <i>User Type — Bot</i> feature activated.  If you do not, contact your account team before proceeding.</div>
 
 ### Step 3. Create an OAuth 1.0 API key and new Bot
 

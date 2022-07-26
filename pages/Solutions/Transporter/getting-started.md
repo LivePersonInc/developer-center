@@ -7,11 +7,7 @@ permalink: transporter-getting-started.html
 indicator: Both
 ---
 
-<div class="important">Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login.
-<br>
-<br>
-<b>Please be aware that some elements and usability may change as we finalize this feature.</b>
-</div>
+<div class="important">Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login. <b>Please be aware that some elements and usability may change as we finalize this feature.</b></div>
 
 ### Requirements
 

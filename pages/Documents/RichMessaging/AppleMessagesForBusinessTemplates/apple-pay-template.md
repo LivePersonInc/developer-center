@@ -459,7 +459,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+<div class="important">The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
 ### Limitations
 
