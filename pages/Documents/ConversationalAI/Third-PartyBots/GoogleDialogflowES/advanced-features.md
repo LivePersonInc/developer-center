@@ -8,7 +8,7 @@ permalink: third-party-bots-google-dialogflow-es-advanced-features.html
 indicator:
 ---
 
-### Sending Pause/Delay Messages
+### Sending Pause/Delay Message
 
 It is possible to send a custom payload of type "delay" along regular content and actions.
 This specifies the time the bot will wait before sending the next message.
