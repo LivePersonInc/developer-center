@@ -56,8 +56,8 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | time | Time of this status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
 | sessionId | Agent unique session | number | sessionId is currently missing from the first 2 events. To link these 2 events to a session, you will need to look for the following event, based on its timestamp and where is sequence =2 |
 | sequenceNumber | Sequential number of this status change within the session | number | Login event will always have a sequnceNumber = -1. <br> The system default state after login will always have a sequenceNumber = 1. |
-| statusType | Type of status change | number |{::nomarkdown}<ul> <li>1 - status changed, see `statusSubType`</li> <li>3 - login</li> <li>4 - logout</li> </ul>{:/}|
-| statusSubType | Subtype of status change with `statusType`=1 | number |{::nomarkdown}<ul> <li>1 - offline</li> <li>2 - online</li> <li>3 - occupied</li> <li>4 - away</li> </ul>{:/}|
+| statusType | Type of status change | number |{::nomarkdown}<ul> <li>1 — status changed, see `statusSubType`</li> <li>3 — login</li> <li>4 — logout</li> </ul>{:/}|
+| statusSubType | Subtype of status change with `statusType`=1 | number |{::nomarkdown}<ul> <li>1 — offline</li> <li>2 — online</li> <li>3 — occupied</li> <li>4 — away</li> </ul>{:/}|
 | statusReasonId | Identifier of optional custom reason for the status change | number | -1 if no custom reason was provided by the agent |
 | statusReasonText | Optional custom reason for the status change | string | null if no custom reason was provided by the agent |
 | prevStatusChangeTime | Time of this agent’s previous status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Currently missing from the logout event and from the default status that is set after login |

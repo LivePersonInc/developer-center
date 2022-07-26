@@ -27,7 +27,7 @@ indicator: both
 ![Click to configure the Consumer Identity Provider](img/mgmt_consumer_idp_configure.png)
 
 {:start="4"}
-4. In section #2 - "Define Identity Provider", select the preferred OAuth 2.0 Authentication Type, and then complete the required fields
+4. In section #2 — "Define Identity Provider", select the preferred OAuth 2.0 Authentication Type, and then complete the required fields
 
 ![Select consumer authentication type](img/consumer_idp_select_type.png)
 

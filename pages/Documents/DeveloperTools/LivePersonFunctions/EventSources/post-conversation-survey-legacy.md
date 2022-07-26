@@ -33,11 +33,11 @@ This is the Post Conversation Survey flow with Functions integration:
 
 Your account must have the Post Conversation Survey enabled; please get in touch with your account team to enable the feature.
 
-#### Step 1 - Configure your PCS
+#### Step 1 — Configure your PCS
 
 Follow this guide on configuring a [Post Conversation Survey](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html). If you already have a survey bot configured, make sure you have Functions enabled for your account.
 
-#### Step 2 - Create function
+#### Step 2 — Create function
 
 Create a new function using one of the messaging survey templates. There are the following events:
 
@@ -49,11 +49,11 @@ Currently, you can only create one function of this event type. If multiple type
 {: .important}
 The Survey Bot will not process any callback payload during the invocation.
 
-#### Step 3 - Edit the function
+#### Step 3 — Edit the function
 
 Adjust the code in the template according to your needs by modifying the function. On the right side, you can see an example of the payload (in the sidebar, which you might need to open). If the calling system does not thread the function, the function can return `ok` within the callback. Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
-#### Step 4 - Deploy the function
+#### Step 4 — Deploy the function
 
 Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
 

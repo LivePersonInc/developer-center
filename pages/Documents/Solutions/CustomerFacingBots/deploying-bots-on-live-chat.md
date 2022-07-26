@@ -14,7 +14,7 @@ permalink: customer-facing-bots-deploying-bots-on-live-chat.html
 indicator:
 ---
 
-### Step 1 - Set Up Your Conversational Cloud Configuration
+### Step 1 — Set Up Your Conversational Cloud Configuration
 
 If your brand is using Live Chat — both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
@@ -22,7 +22,7 @@ If your brand is using Live Chat — both desktop and mobile web chats can incor
 
 2. Create a skill for your bot. From the same users tab, navigate to 'skills’ and create a  new skill. Name the skill as appropriate for the use case of your bot and **ensure it has the word 'bot’ in the skill name.** This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 
-### Step 2 - Implement the Chat Agent API
+### Step 2 — Implement the Chat Agent API
 
 In order to use the Chat Agent API, please follow the steps below:
 
@@ -36,7 +36,7 @@ In order to use the Chat Agent API, please follow the steps below:
 
 You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [Click here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
 
-### Step 3 - Assign your bot to a Conversational Cloud campaign and manage bot escalations
+### Step 3 — Assign your bot to a Conversational Cloud campaign and manage bot escalations
 
 **Assign your bot to a Campaign**
 
@@ -53,7 +53,7 @@ Once your bot is created, it must be assigned into a Conversational Cloud campai
 **Manage escalations**
 In cases where your bot will not be able to solve the consumer queries, escalation to a human agent should be determined. Your bot can be coached to perform escalation in several ways: Consumer types “Agent” to escalate, or using your AI and NLP service to perform intent matching for an escalation to the right skill.
 
-### Step 4 - Test your bot
+### Step 4 — Test your bot
 
 Once your bot is connected to an engagement, you can begin to test the bot and see how it behaves as an agent within Conversational Cloud.  Conduct the following tests:
 
@@ -63,7 +63,7 @@ Once your bot is connected to an engagement, you can begin to test the bot and s
 * View the agent list to see that your bot displays
 * Test the escalation to human agent
 
-### Step 5 - Monitor the performance of your bot
+### Step 5 — Monitor the performance of your bot
 
 The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 

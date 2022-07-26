@@ -407,7 +407,7 @@ Name| Description  | Type/Value | Notes
 messageId | ID of message.  | string  |
 time| Time the MCS was calculated.| string  |
 timeL  | Time the MCS was calculated, in long format.  | long |
-mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 - 100.
+mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 – 100.
 messageRawScore | Score of message.  | int
 
 *Conversation CoBrowse Sessions DTO*

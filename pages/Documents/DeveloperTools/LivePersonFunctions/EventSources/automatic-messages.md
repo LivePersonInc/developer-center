@@ -32,14 +32,14 @@ This is the Automatic Messages flow with Functions integration:
 
 ### Configuration
 
-#### Step 1 - Enable Automatic Messages
+#### Step 1 — Enable Automatic Messages
 
 Enable the Automatic Messages feature.
 
 {: .important}
 Your account must have the Automatic Messages permissions enabled; please get in touch with your account team to enable the feature.
 
-#### Step 2 - Create a function
+#### Step 2 — Create a function
 
 Create a new function using one of the following messaging events:
 
@@ -56,12 +56,12 @@ You can select one of the available [templates](liveperson-functions-event-sourc
 
 You can select a Skill or set of Skills. Specifying a Skill can reduce the complexity of the function's code, reducing the number of unnecessary invocations.
 
-#### Step 3 - Edit your Function
+#### Step 3 — Edit your Function
 
 Adjust the code of the template according to your needs. The function can return a series of commands to the trigger.
 Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
-#### Step 4 - Deploy your function
+#### Step 4 — Deploy your function
 
 Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function. At this point, you can also test your function.
 

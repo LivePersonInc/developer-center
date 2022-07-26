@@ -14,13 +14,13 @@ permalink: mobile-app-messaging-sdk-for-android-resources-using-liveperson-sdk-a
 indicator: messaging
 ---
 
-### Step 1 - Creating initial views
+### Step 1 — Creating initial views
 
 * In order to get some basic data from the user, let’s create some initial views on our main activity / an activity of your choosing (more data can be used in order to initialize the SDK, during this guide, we’ll use some basic name features only).
 
 ![initialview](img/initialview.png)
 
-### Step 2 - Downloading and adding the SDK to our project
+### Step 2 — Downloading and adding the SDK to our project
 
 1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK)
 
@@ -44,7 +44,7 @@ And then select the LivePerson SDK module
 
 ![Select Module](img/selectmodule.png)
 
-### Step 3 - Gradle modifications
+### Step 3 — Gradle modifications
 
 1. compileSdkVersion and buildToolsVersion (should be at least Version 23)
 
@@ -119,7 +119,7 @@ apply plugin: "com.google.gms.google-services"
 include ":lp_messaging_sdk"
 ```
 
-### Step 4 - Manifest modifications
+### Step 4 — Manifest modifications
 
 1. Add the following permission to your app’s AndroidManifest.xml file:
 
@@ -140,7 +140,7 @@ For Photo Sharing (required if enabled):
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 5 - LivePerson Events
+### Step 5 — LivePerson Events
 
 1. Intents Handler — In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
 

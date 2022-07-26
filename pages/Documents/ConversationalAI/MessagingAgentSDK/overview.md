@@ -28,13 +28,13 @@ In order to guarantee compatibility with future versions of the API, and to ensu
 
 #### Install
 
-- **Option 1 - npm install (does not include sample apps)**
+- **Option 1 — npm install (does not include sample apps)**
 
    ```sh
    npm i node-agent-sdk --save
    ```
 
-- **Option 2 - Clone this repository (includes sample apps)**
+- **Option 2 — Clone this repository (includes sample apps)**
 
     ```sh
     git clone https://github.com/LivePersonInc/node-agent-sdk.git

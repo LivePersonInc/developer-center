@@ -2328,7 +2328,7 @@ Text color of the banner.
 
 #### ttrBannerOpacityAlpha  
 
-Opacity level of the banner background (values: 0.0 - 1.0).
+Opacity level of the banner background (values: 0.0 – 1.0).
 
 <div style="float: left; width: 35%;height: 51px;">
    <ul>

@@ -10,7 +10,7 @@ permalink: monitoring-api-getting-started.html
 indicator: messaging
 ---
 
-### Step 1 - Configure your Conversational Cloud account
+### Step 1 — Configure your Conversational Cloud account
 
 On your Conversational Cloud account, make sure the following features are enabled:
 
@@ -23,13 +23,13 @@ On your Conversational Cloud account, make sure the following features are enabl
 
 In addition, an authentication server should be configured on the Conversational Cloud account. Refer to the [Authentication Guide — Configuration section](guides-authentication-configuration.html) in the Developer Community for further instructions.
 
-### Step 2 - Login to your Account
+### Step 2 — Login to your Account
 
 * Login to your account and go to Campaign Builder → data sources → conversation sources tab.
 
 ![Data Source](img/monitor_start1.png)
 
-### Step 3 - Create a Mobile App in the Conversational Cloud UI or Develop Your Own Private App
+### Step 3 — Create a Mobile App in the Conversational Cloud UI or Develop Your Own Private App
 
 In order to utilize the Monitoring API, you will need, among other parameters, an `AppInstallationId`. In order to do so, you will first need to create an application, either by using the LE UI to create a Mobile App or by developing your own Private App.
 

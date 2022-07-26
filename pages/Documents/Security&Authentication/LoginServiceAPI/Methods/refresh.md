@@ -57,7 +57,7 @@ Example:
 | 401  | Unauthorized — Bad Authentication (invalid site or agent) |
 | 500 | Internal server error |
 
-<a name="note">*Note*</a>: *In case csrf is invalid, response code is 401 - Unauthorized with the following body:*
+<a name="note">*Note*</a>: *In case csrf is invalid, response code is 401 — Unauthorized with the following body:*
 
 ```json
 {

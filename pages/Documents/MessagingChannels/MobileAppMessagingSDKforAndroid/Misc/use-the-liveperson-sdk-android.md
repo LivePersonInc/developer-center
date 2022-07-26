@@ -17,13 +17,14 @@ indicator: messaging
 ### Prerequisites
 It is important that you have followed the [Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).  If not, make sure to install the LivePerson Mobile App Messaging SDK before proceeding. 
 
-### Step 1 - Create initial views
+### Step 1 — Create initial views
 
 In this step, you'll use some basic name features to create some initial views on our main activity / an activity of your choosing. 
 
 ![initialview](img/initialview.png)
 
-### Step 2 - Add enabled features to your AndroidManifest.xml file
+### Step 2 — Add enabled features to your AndroidManifest.xml file
+
 If you have any of these features enabled, you must add the following to your app's AndroidManifest.xml file:
 
 #### Vibrate on new incoming msg
@@ -47,7 +48,8 @@ If you have any of these features enabled, you must add the following to your ap
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 3 - Add LivePerson events
+### Step 3 — Add LivePerson events
+
 In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
 
 1. Create a class named **IntentsHandler**.  
@@ -124,7 +126,7 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
    For more details about this function, see [Agent Avatar Tapped](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#agent-avatar-tapped).
 
-### Step 4 - Add messaging activity
+### Step 4 — Add messaging activity
 
 In this step, you create a messaging activity that launches the activity session. Here we provide you with a basic initialization of the LivePerson SDK in *Activity mode*.  You can also initialize it in *Fragment mode* and use different features.
 
@@ -233,7 +235,8 @@ private void openActivity() {
 }
 ```
 
-### Step 5 - Configure push notifications  
+### Step 5 — Configure push notifications
+  
 Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 #### Prerequisites

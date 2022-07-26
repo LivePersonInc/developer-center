@@ -280,7 +280,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | 405 | 1005 | Method Not Allowed |
 | 415 | 1015 | Unsupported Media Type |
 | 429 | 1029 | Rate limit hit |
-| 500 | 5000 - 7000 | Internal Server Error |
+| 500 | 5000 – 7000 | Internal Server Error |
 
 ### Details on Authorization
 

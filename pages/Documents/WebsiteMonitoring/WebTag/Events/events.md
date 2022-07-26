@@ -248,7 +248,7 @@ This event is triggered when the flow to display the engagement has started.
 | engagementType | The engagement format. | Numeric | Available values: 0: "Peeling corner", 1: "Overlay", 2: "Toaster", 3: "Slide-out", 5: "Embedded", 6: "Sticky" |
 | contextId | The engagement context ID (engagement impression ID) in the current monitored session. | ALPHA_NUMERIC | |
 | zoneId | Internal. The engagement zone ID. | ALPHA_NUMERIC | |
-| state | The agent's state | Numeric | Available values: 1 - online, 2 — offline, 4 - busy |
+| state | The agent's state | Numeric | Available values: 1 — online, 2 — offline, 4 — busy |
 | confKey | Internal. CampaignId + EngagementId + Revision. | string | |
 | tglName | Internal. The engagement format description. | string | |
 | done | If the configuration has finished loading. | Boolean | |

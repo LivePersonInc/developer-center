@@ -20,17 +20,17 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 #### Step-by-Step Hook creation and deployment guide
 
-##### Step 1 - Create a function
+##### Step 1 — Create a function
 
 Create a new function using the **_Third-Party Bots Error Hook_** **_Third-Party Bots Post Hook_** or **_Third-Party Bots Error Hook_** event.
 
-##### Step 2 - Edit the Function
+##### Step 2 — Edit the Function
 
 Adjust the default code from the function template according to your needs by modifying the function (see below for more information on relevant considerations and code examples). On the right side you can see an example of the payload (in the sidebar, which you might need to open). Please see this document for more information on [developing functions](liveperson-functions-getting-started-development-deep-dive-ui.html#development-of-functions).
 
 Depending on the hook and vendor type the palyoad information differs in content and properties. Take a look at payload information below to align your coding on that properties.
 
-##### Step 3 - Deploy the function
+##### Step 3 — Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) for more information on how to deploy your function. At this point, you can also test your function.
 

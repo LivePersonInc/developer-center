@@ -29,7 +29,7 @@ Please see the representation below.
 
 #### Detailed flow
 
-##### Step 1 - Get the conversation ID
+##### Step 1 — Get the conversation ID
 
 The conversation ID is required for using the Next Actions APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
 
@@ -47,7 +47,8 @@ You can get the Conversational Cloud conversationId with this line of JavaScript
  
 For debugging, you can see the logs by clicking the link **View execution logs in the Firebase console** inside the Dialogflow Fulfillment page.
 
-##### Step 2 - Call the Conversation Context Service APIs
+##### Step 2 — Call the Conversation Context Service APIs
+
 Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
 
 The Conversation Context Service is useful for storing any context information gathered in a bot that you might want to use in a routing policy. For instance, you might want to set the intent detected by a bot and then use it for any routing policy.
@@ -71,7 +72,8 @@ axios.patch(
 {: .important}
 The snippet above uses Context Service V1. For Context Service V2 methods, see [here](conversation-orchestrator-conversation-context-service-methods-v2.html).
  
-##### Step 3 - Call the Next Actions API
+##### Step 3 — Call the Next Actions API
+
 Now that you have the conversation ID, use it to call the Next Actions API as follows:
 
 ```javascript
