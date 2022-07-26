@@ -171,10 +171,6 @@ Custom font name for all non conversation feed controls. Such as: buttons, alert
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### customRefreshControllerImagesArray
   
 Array of images for creating the custom refresh controller. The custom refresh controller will loop the images from the array. 
@@ -194,11 +190,7 @@ It will need two or more images in the array for the loop to take effect.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-#### customRefreshControllerAnimationSpeed  
+#### customRefreshControllerAnimationSpeed 
 Custom refresh controller speed animation define the full images loop time. The smaller the value, the faster the animation.
 
    - **Type:** Float<UIImage>
@@ -239,10 +231,6 @@ Color code for the background of the connection status bar while connecting.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### connectionStatusConnectingTextColor 
 Color code for the text of the connection status bar while connecting.
 
@@ -255,11 +243,6 @@ Color code for the text of the connection status bar while connecting.
    <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
    </figure>
 </div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
- 
 
 #### connectionStatusFailedToConnectBackgroundColor  
 Connection status toast (failed to connect) background color.
@@ -274,10 +257,6 @@ Connection status toast (failed to connect) background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### connectionStatusFailedToConnectTextColor  
 Connection status toast (failed to connect) text color.
 
@@ -289,10 +268,6 @@ Connection status toast (failed to connect) text color.
    <figcaption></figcaption>
    <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 --- 
@@ -310,10 +285,6 @@ Color code for the text of the controller bubble.
    <figcaption></figcaption>
    <img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 ##### controllerBubbleHyperlinkColor
@@ -351,10 +322,6 @@ Conversation separator text and line color.
    <figcaption></figcaption>
    <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### enableConversationSeparator
@@ -424,10 +391,6 @@ Define the conversation Closed label to separator line padding.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### conversationSeparatorFontName 
 Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in the host app's Info.plist.
 
@@ -439,10 +402,6 @@ Custom font name for conversation closed separator. Fonts that are not part of t
    <figcaption></figcaption>
    <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### conversationSeparatorViewBottomPadding  
@@ -458,10 +417,6 @@ Define the conversation separator view bottom padding.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### conversationClosedSeparatorTopPadding 
 Define the conversation Closed Separator Top padding.
 
@@ -473,10 +428,6 @@ Define the conversation Closed Separator Top padding.
    <figcaption></figcaption>
    <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### conversationSeparatorContentViewTopPadding
@@ -624,10 +575,6 @@ Color code for date separator title background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### dateSeparatorTextColor  
 Color code for date separator text color. 
  
@@ -641,10 +588,6 @@ Color code for date separator text color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### dateSeparatorLineBackgroundColor 
 Color code for date separator line background color. 
 
@@ -656,10 +599,6 @@ Color code for date separator line background color.
    <figcaption></figcaption>
    <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### dateSeparatorBackgroundColor  
@@ -1443,10 +1382,6 @@ Photo Sharing menu background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### photosharingMenuButtonsBackgroundColor  
 Photo Sharing menu buttons background color. 
 
@@ -1458,10 +1393,6 @@ Photo Sharing menu buttons background color.
    <figcaption></figcaption>
    <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### photosharingMenuButtonsTintColor  
