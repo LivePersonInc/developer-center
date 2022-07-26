@@ -78,7 +78,7 @@ LPConfig.defaultConfiguration.csatAgentAvatarIconColor
 
 ### csatRatingButtonSelectedColor (stars)
 
-- Always visible - can’t configure its visibility.
+- Always visible — can’t configure its visibility.
 - Stars color is defined by:
 
 ```swift

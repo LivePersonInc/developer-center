@@ -83,7 +83,7 @@ The getConversationFragment method creates and returns the conversation fragment
 
 **LPAuthenticationParams:**
 
-If your system implementation involves an authentication step - pass **LPAuthenticationParams**.
+If your system implementation involves an authentication step — pass **LPAuthenticationParams**.
 
 There are 2 authenticated connection methods:
 
@@ -94,7 +94,7 @@ There are 2 authenticated connection methods:
    {:.important}
    **Optional:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)`.
 
-2. jwt - new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
+2. jwt — new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
 
    **Note:** if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
 
@@ -113,9 +113,9 @@ There are 2 authenticated connection methods:
 * **LPConversationsHistoryStateToDisplay**
 
     * Possible states:
-        * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
-        * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
+        * LPConversationsHistoryStateToDisplay.ALL — Show All Conversations (**Default**)
+        * LPConversationsHistoryStateToDisplay.CLOSE — Shows only closed Conversations
+        * LPConversationsHistoryStateToDisplay.OPEN — Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -253,7 +253,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | Parameter | Description |
 | :--- | :--- |
 | context | A context from the host app. |
-| remoteMessage | A Map that contains the push message. Push service sends RemoteMessage object - To get the map from this object - call remoteMessage.getData().  |
+| remoteMessage | A Map that contains the push message. Push service sends RemoteMessage object — To get the map from this object — call remoteMessage.getData().  |
 | brandId | The account Id. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
@@ -353,7 +353,7 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 
 ### logOut
 
-Logout from the SDK - when all user data should be removed.
+Logout from the SDK — when all user data should be removed.
 
 Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-shutdown.html) and, in addition, deletes all user data (messages and user details) from the device.
 
@@ -452,7 +452,7 @@ Opens the conversation view in Fragment mode. This method starts the FragmentCon
 
 Reconnect with a new LPAuthenticationParams object: that contains String `mAuthKey`, String `mHostAppJWT`, String `mHostAppRedirectUri`.
 When connecting, the connection may be closed once the token is expired. When this happens, the [onTokenExpired](android-callbacks-index.html) callback method is called. In this case, the application needs to obtain a fresh key and reconnect by calling the reconnect method.
-When creating a new LPAuthenticationParams - you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
+When creating a new LPAuthenticationParams — you may call empty constructor and then call setAuthKey() or setHostAppJWT() according to the host parameter
 
 ```java
 public static void reconnect(LPAuthenticationParams lPAuthenticationParams)
@@ -497,7 +497,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 
 Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
-**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
+**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
 When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
 
@@ -579,7 +579,7 @@ There are 2 authenticated connection methods:
 
 * **Authenticated (authenticationKey)** - Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
-   **Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with jwt - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
+   **Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
    When using **[registerLPPusher](#registerlppusher)** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
 
@@ -622,9 +622,9 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
 * **LPConversationsHistoryStateToDisplay**
 
     * Possible states:
-        * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
-        * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
+        * LPConversationsHistoryStateToDisplay.ALL — Show All Conversations (**Default**)
+        * LPConversationsHistoryStateToDisplay.CLOSE — Shows only closed Conversations
+        * LPConversationsHistoryStateToDisplay.OPEN — Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -733,7 +733,7 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 
 #### initialize (deprecated)
 
-*This method was deprecated - please use the [new method](android-initializeproperties.html).*
+*This method was deprecated — please use the [new method](android-initializeproperties.html).*
 
 To allow user interaction, the Messaging Mobile SDK must be initiated. This API initializes the resources required by the SDK. All subsequent API calls, except to the handlePushMessage, assume that the SDK has been initialized.
 When the conversation screen is displayed, the server connection for messaging will be established. If a user session is already active and an additional SDK init call is made, it will be ignored and will not start an additional session.
@@ -887,7 +887,7 @@ public static void handlePushMessage(Context context, Bundle data, String brandI
 
 #### getNumUnreadMessages (Deprecated)
 
-Returns the counter of the unread messages - the number of push messages received. This number is set to 0 when opening the conversation screen.
+Returns the counter of the unread messages — the number of push messages received. This number is set to 0 when opening the conversation screen.
 
 To get updates on the unread messages counter: create a BroadcastReceiver that will listen to the following Action: **LivePerson.ACTION_LP_UPDATE_NUM_UNREAD_MESSAGES_ACTION;**
 

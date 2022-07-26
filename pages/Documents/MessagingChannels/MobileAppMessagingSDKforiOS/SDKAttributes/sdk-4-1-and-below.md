@@ -1118,7 +1118,7 @@ Status bar style in conversation screen.
 
 #### enablePhotoSharing
 
-True - Enables Photo Sharing feature, False - Disables Photo Sharing.
+True — Enables Photo Sharing feature, False — Disables Photo Sharing.
 
 - **Type:** Bool
 - **Default value:**  false

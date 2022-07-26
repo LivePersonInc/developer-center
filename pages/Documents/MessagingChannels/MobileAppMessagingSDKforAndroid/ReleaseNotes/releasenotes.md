@@ -13,7 +13,7 @@ indicator: messaging
 
 <div class="notice">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
 
-# Android Messaging SDK - Version 5.11.0
+# Android Messaging SDK — Version 5.11.0
 
 **Release date:** July 15, 2022
 
@@ -49,7 +49,7 @@ Improvements on the TalkBack accessible experience for vision-impaired users.
 - System message does not get displayed in current device language while using real time masking feature.
 - Message bubble padding over 8 dp causes text containing hyperlinks to be clipped.
 
-# Android Messaging SDK - Version 5.10.0
+# Android Messaging SDK — Version 5.10.0
 
 **Release date:** May 20, 2022
 
@@ -106,7 +106,7 @@ Show or hide the "Mark as resolved" context menu option.
 - When using SDK’s clear history feature, an infinite loading spinner will not get reset from the conversation window after history gets cleared.
 - Accessibility only announces the new message but not the number of new messages received.
 
-# Android Messaging SDK - Version 5.9.0
+# Android Messaging SDK — Version 5.9.0
 
 # Overview
 Android Mobile Messaging SDK version 5.9.0 release includes performance improvements and enhancements.
@@ -134,7 +134,7 @@ The Android Mobile Messaging SDK version 5.9.0 uses:
 <bool name="lp_hide_welcome_message_on_clear_history">false</bool>
 ```
 
-# Android Messaging SDK - Version 5.8.0
+# Android Messaging SDK — Version 5.8.0
 
 **Release date:** October 18, 2021
 
@@ -181,7 +181,7 @@ ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2
 - When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
 - Support markdown hyperlink in controller bot message.
 
-# Android Messaging SDK - Version 5.7.1
+# Android Messaging SDK — Version 5.7.1
 
 **Release date:** September 10, 2021
 
@@ -210,7 +210,7 @@ The Android Mobile Messaging SDK version 5.7.1 uses:
 Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
 The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
-# Android Messaging SDK - Version 5.7.0
+# Android Messaging SDK — Version 5.7.0
 
 **Release date:** July 19, 2021
 
@@ -251,7 +251,7 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
 The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
-# Android Messaging SDK - Version 5.6.0
+# Android Messaging SDK — Version 5.6.0
 
 **Release date:** May 3, 2021
 
@@ -451,7 +451,7 @@ Defines background color for Voice & Video Bubble
 # Enhancements:
 - Accessibility enhancements.
 
-# Android Messaging SDK - Version 5.5.1
+# Android Messaging SDK — Version 5.5.1
 
 **Release date:** February 19, 2021
 
@@ -489,7 +489,7 @@ public static void registerLPPusher(String brandId, String appId, String deviceT
 # Bugs Fixed:
 - Crash on conversation screen.
 
-# Android Messaging SDK - Version 5.5.0
+# Android Messaging SDK — Version 5.5.0
 
 **Release date:** December 11, 2020
 
@@ -535,7 +535,7 @@ Limitation: there will be distortion of background image when keyboard appears.
 - Data masking system message text does not pick up app language.
 - Camera not working the first time request camere permission.
 
-# Android Messaging SDK - Version 5.4.0
+# Android Messaging SDK — Version 5.4.0
 
 **Release date:** October 08, 2020
 
@@ -552,7 +552,7 @@ The Android Mobile Messaging SDK version 5.4.0 uses:
 **(Minimum API version bump to 21. There is a known issue for API 19)**
 
 # New Features:
-## Auto logout - Improve logout options
+## Auto logout — Improve logout options
 
 An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
 
@@ -616,7 +616,7 @@ enum class LpError {
 - [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
 - SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
-# Android Messaging SDK - Version 5.3.0
+# Android Messaging SDK — Version 5.3.0
 
 **Release date:** August 10, 2020
 
@@ -686,13 +686,13 @@ The SDK now performs all encryption through the system Secure Encryption Element
 To take advantage of the new encryption process on existing installations, each Host App instance should call logout() and then log back in after upgrading to this version of the SDK or later.
 
 # Bugs Fixed:
-- Optimized the logout process - logout time has been decreased with this optimization.
+- Optimized the logout process: Logout time has been decreased with this optimization.
 - Fixed a bug that the “Enter” key can’t move the cursor to a new line for some input methods. Provided a configuration `enable_ime_options_action_send` to set the behavior of keyboard action key.
 - Fixed inconsistency of masked PII messages by fetching all closed conversation messages from the history server.
 - Fixed a bug which would report Keystore Exceptions due to use of an old API on devices running Android P.
 - Fixed a bug that attributes `sc_buttonElement_text_color` and `sc_buttonElement_background_color` failed to change the style of structured content button element.
 
-# Android Messaging SDK - Version 5.2.0
+# Android Messaging SDK — Version 5.2.0
 
 **Release date:** May 8, 2020
 
@@ -799,7 +799,7 @@ Enable or disable structured content button border.
 - 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**.
   - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
-# Android Messaging SDK - Version 5.1.1
+# Android Messaging SDK — Version 5.1.1
 
 **Release date:** January 29, 2020
 
@@ -813,7 +813,7 @@ The Android Mobile Messaging SDK version 5.1.1 uses:
 - Target API version 29
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-# Android Messaging SDK - Version 5.1.0
+# Android Messaging SDK — Version 5.1.0
 **Release date:** January 21, 2020
 
 ### Overview
@@ -831,7 +831,7 @@ The Android Mobile Messaging SDK version 5.1.0 uses:
 ### New Features:
 - Consumers can now send Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and PDF (.pdf) documents to Agents.
 - Photo Upload Preview window is now a child fragment of the SDK, rather than a new Activity that must push and pop on the Activity Stack.
-- Scroll Behavior Configuration - clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
+- Scroll Behavior Configuration: Clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
     - `lp_scroll_show_conversation` sets the scrolling behavior for when the SDK window is shown via a call to `showConversation` or `getConversationFragment`.
     - `lp_scroll_when_foreground` sets the scrolling behavior for when the app and SDK are resumed from a background state.
     - `lp_scroll_when_push_notification` sets the scrolling behavior for when the SDK is launched from a tap on a push notification.
@@ -865,7 +865,7 @@ The Android Mobile Messaging SDK version 5.1.0 uses:
 - 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**. 
 - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
-# Android Messaging SDK - Version 5.0.0
+# Android Messaging SDK — Version 5.0.0
 
 **Release Date**: Oct 31, 2019 
 
@@ -900,7 +900,7 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()**, use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)**, use *setUserProfile(ConsumerProfile profile)* instead
 
-# Android Messaging SDK - Version 4.10.0
+# Android Messaging SDK — Version 4.10.0
 
 **Release date:** October 29, 2021
 
@@ -938,7 +938,7 @@ ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2
 - When the conversation comes from background to foreground, instead of always requesting authCode from IDP, SDK will check if it has the token (LP_JWT), then connect to UMS and let UMS do the expiration check. If the token is not available, then request authCode before connecting to UMS.
 - Support markdown hyperlink in controller bot message.
 
-# Android Messaging SDK - Version 4.9.1
+# Android Messaging SDK — Version 4.9.1
 
 **Release date:** September 07, 2021
 
@@ -967,7 +967,7 @@ The Android Mobile Messaging SDK version 4.9.1 uses:
 Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
 The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
-# Android Messaging SDK - Version 4.9.0
+# Android Messaging SDK — Version 4.9.0
 
 **Release date:** July 12, 2021
 
@@ -1009,7 +1009,7 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
 The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
-# Android Messaging SDK - Version 4.8.1
+# Android Messaging SDK — Version 4.8.1
 
 **Release date:** April 26, 2021
 
@@ -1208,7 +1208,7 @@ Defines background color for Voice & Video Bubble
 # Enhancements:
 - Accessibility enhancements.
 
-# Android Messaging SDK - Version 4.7.1
+# Android Messaging SDK — Version 4.7.1
 
 **Release date:** February 19, 2021
 
@@ -1248,7 +1248,7 @@ public static void registerLPPusher(String brandId, String appId, String deviceT
 # Bugs Fixed:
 - Crash on conversation screen.
 
-# Android Messaging SDK - Version 4.7.0
+# Android Messaging SDK — Version 4.7.0
 
 **Release date:** December 11, 2020
 
@@ -1294,7 +1294,7 @@ Limitation: there will be distortion of background image when keyboard appears.
 - Data masking system message text does not pick up app language.
 - Camera not working the first time request camere permission.
 
-# Android Messaging SDK - Version 4.6.1
+# Android Messaging SDK — Version 4.6.1
 
 **Release date:** October 08, 2020
 
@@ -1356,7 +1356,7 @@ enum class LpError {
 # Deprecations:
 The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated. 
 
-# Android Messaging SDK - Version 4.6.0
+# Android Messaging SDK — Version 4.6.0
 
 **Release date:** September 16, 2020
 
@@ -1372,8 +1372,9 @@ The Android Mobile Messaging SDK version 4.6.0 uses:
 
 **(Minimum API version bump to 21. There is a known issue for API 19)**
 
-# New Features:
-## Auto logout - Improve logout options
+# New Features
+
+## Auto logout — Improve logout options
 
 An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
 
@@ -1391,7 +1392,7 @@ Note: Auto logout works only for authenticated users.
 - [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
 - SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
-# Android Messaging SDK - Version 4.5.0
+# Android Messaging SDK — Version 4.5.0
 
 **Release date:** July 31, 2020
 
@@ -1461,12 +1462,12 @@ The SDK now performs all encryption through the system Secure Encryption Element
 To take advantage of the new encryption process on existing installations, each Host App instance should call logout() and then log back in after upgrading to this version of the SDK or later.
 
 # Bugs Fixed:
-- Optimized the logout process - logout time has been decreased with this optimization.
+- Optimized the logout process: Logout time has been decreased with this optimization.
 - Fixed a bug that the “Enter” key can’t move the cursor to a new line for some input methods. Provided a configuration “enable_ime_options_action_send” to set the behavior of keyboard action key.
 - Fixed inconsistency of masked PII messages by fetching all closed conversation messages from the history server.
 - Fixed a bug which would report Keystore Exceptions due to use of an old API on devices running Android P.
 
-# Android Messaging SDK - Version 4.4.2
+# Android Messaging SDK — Version 4.4.2
 
 **Release date:** May 05, 2020
 
@@ -1482,7 +1483,7 @@ The Android Mobile Messaging SDK version 4.4.2 uses:
 
 **(unchanged from version 4.4.1)**
 
-# Android Messaging SDK - Version 4.4.1
+# Android Messaging SDK — Version 4.4.1
 
 **Release date:** April 27, 2020
 
@@ -1498,7 +1499,7 @@ The Android Mobile Messaging SDK version 4.4.1 uses:
 
 **(unchanged from version 4.4.0)**
 
-# Android Messaging SDK - Version 4.4.0
+# Android Messaging SDK — Version 4.4.0
 
 **Release date:** April 23, 2020
 
@@ -1605,7 +1606,7 @@ Enable or disable structured content button border.
 - 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**.
   - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
-# Android Messaging SDK - Version 4.3.2
+# Android Messaging SDK — Version 4.3.2
 
 **Release date:** January 29, 2020
 
@@ -1619,7 +1620,7 @@ The Android Mobile Messaging SDK version 4.3.2 uses:
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-# Android Messaging SDK - Version 4.3.1
+# Android Messaging SDK — Version 4.3.1
 
 **Release date:** January 10, 2020
 
@@ -1633,7 +1634,7 @@ The Android Mobile Messaging SDK version 4.3.1 uses:
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-# Android Messaging SDK - Version 4.3.0
+# Android Messaging SDK — Version 4.3.0
 **Release date:** December 16, 2019
 
 ### Overview
@@ -1651,7 +1652,7 @@ The Android Mobile Messaging SDK version 4.3.0 uses:
 ### New Features:
 - Consumers can now send Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and PDF (.pdf) documents to Agents.
 - Photo Upload Preview window is now a child fragment of the SDK, rather than a new Activity that must push and pop on the Activity Stack.
-- Scroll Behavior Configuration - clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
+- Scroll Behavior Configuration: Clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
     - `lp_scroll_show_conversation` sets the scrolling behavior for when the SDK window is shown via a call to `showConversation` or `getConversationFragment`.
     - `lp_scroll_when_foreground` sets the scrolling behavior for when the app and SDK are resumed from a background state.
     - `lp_scroll_when_push_notification` sets the scrolling behavior for when the SDK is launched from a tap on a push notification.
@@ -1685,7 +1686,7 @@ The Android Mobile Messaging SDK version 4.3.0 uses:
 - 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**.
     - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
-# Android Messaging SDK - Version 4.2.1
+# Android Messaging SDK — Version 4.2.1
 
 **Release date:** September 24, 2019
 
@@ -1699,7 +1700,7 @@ The Android Mobile Messaging SDK version 4.2.1 uses:
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-# Android Messaging SDK - Version 4.2.0
+# Android Messaging SDK — Version 4.2.0
 
 **Release date:** September 16, 2019
 
@@ -1738,7 +1739,7 @@ The Android Mobile Messaging SDK version 4.2.0 uses:
 - Solved a problem where customization attributes were not correctly changing certain message texts
 - Fixed a bug where agents couldn't tell if a user had read their messages if the conversation was closed
 
-# Android Messaging SDK - Version 4.1.0
+# Android Messaging SDK — Version 4.1.0
 
 **Release date:** July 25, 2019
 
@@ -1774,7 +1775,7 @@ The Android Mobile Messaging SDK version 4.1.0 uses:
 - Class `MonitoringParams` was moved from package `com.liveperson.sdk` to `com.liveperson.monitoring.sdk` to better reflect its class associations; updating your `import` statements may be necessary.
 - Interface `EngagementCallbacks` was moved from package `com.liveperson.sdk.callbacks` to `com.liveperson.monitoring.sdk.callbacks` to better reflect its class associations; updating your `import` statements may be necessary.
 
-# Android Messaging SDK - Version 4.0.0
+# Android Messaging SDK — Version 4.0.0
 
 **Release date:** July 8, 2019
 
@@ -1785,7 +1786,7 @@ Built with Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 ### Environmental requirements
 The Android Mobile Messaging SDK version 4.0.0 requires the minimum Android API version 19, SDK is compiled against API 28 and targeted API is 28.
 
-## Android Messaging SDK - Version 3.9.0
+## Android Messaging SDK — Version 3.9.0
 
 **Release date:** June 18, 2019
 
@@ -1944,7 +1945,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html) section of the Dev Community.
 
-# Android Messaging SDK - Version 3.8.1
+# Android Messaging SDK — Version 3.8.1
 
 **Release date:** June 13, 2019
 
@@ -1956,7 +1957,7 @@ The Android Mobile Messaging SDK version 3.8.1 requires the minimum Android API 
 #### Bug fixed
 Reported in SDK 3.8.0 on Android. When the conversation history for an authenticated user has the SUGGESTED_ASSIGNED_AGENT role assigned in it, the app crashed.
 
-# Android Messaging SDK - Version 3.8.0
+# Android Messaging SDK — Version 3.8.0
 
 **Release date:** May 17, 2019
 
@@ -2051,7 +2052,7 @@ You can configure up to 24 quick reply options for the user to chose.
 
 - Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
 
-# Android Messaging SDK - Version 3.7.0
+# Android Messaging SDK — Version 3.7.0
 
 **Release date:** April 1, 2019
 
@@ -2085,7 +2086,7 @@ Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK i
 
 * TalkBack did not announce all elements in Secure Form upon arrival.
 
-# Android Messaging SDK - Version 3.6.1
+# Android Messaging SDK — Version 3.6.1
 
 **Release date:** March 8, 2019
 
@@ -2110,7 +2111,7 @@ Note: SDK logging is disabled by default. To Enable it, use the above method.
 Example:
 `Liveperson.setIsDebuggable(BuildConfig.DEBUG)`
 
-# Android Messaging SDK - Version 3.6.0
+# Android Messaging SDK — Version 3.6.0
 
 **Release date:** February 12, 2019
 
@@ -2142,7 +2143,7 @@ Android Mobile App SDK v3.6 requires the minimum Android API version 19 and targ
 
 * Links and text in agent message truncated on changing chat_bubble_padding to non-default values.
 
-# Android Messaging SDK - Version 3.5.0
+# Android Messaging SDK — Version 3.5.0
 
 Android Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
 
@@ -2162,11 +2163,11 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 * Conversation close event has been added to be triggered when hideConversation() is called.
 
-* Accessibility - When Voiceover was turned on, opened Secure form can read hidden message.
+* Accessibility: When Voiceover was turned on, opened Secure form can read hidden message.
 
 * Multiple "Missing current dialog" appear in the logs after a consumer clears history resulting a slow connection establishment.
 
-# Android Messaging SDK - Version 3.4.0
+# Android Messaging SDK — Version 3.4.0
 
 Android Mobile App SDK v3.4 contains fixes for high priority bugs reported by customers and a new call back for leaving the conversation screen. There is one API change which will be explained in this document.
 
@@ -2188,15 +2189,15 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 * When using unauthenticated messaging and setting the history flag to false, in case the conversation was resolved while the SDK was in the background, the conversation screen will be stuck and the consumer will not be able to start a new conversation.
 
-* Accessibility - When Voiceover was turned on, the Secure Forms ‘X’ button read “Unlabeled Button”.
+* Accessibility: When Voiceover was turned on, the Secure Forms ‘X’ button read “Unlabeled Button”.
 
-* Accessibility - When Voiceover was turned on, messages inside the conversation window read as actionable items.
+* Accessibility: When Voiceover was turned on, messages inside the conversation window read as actionable items.
 
-* Accessibility - When Voiceover was turned on, the Secure Form title was skipped.
+* Accessibility: When Voiceover was turned on, the Secure Form title was skipped.
 
-* Monitoring APIs - SDK was not using the returned VID when querying "getEngagement" request. This might have caused a longer time for getting a response.
+* Monitoring APIs: SDK was not using the returned VID when querying "getEngagement" request. This might have caused a longer time for getting a response.
 
-* Accessibility - When Voiceover was turned on, the talk over tried to read a blank area inside the CSAT field.
+* Accessibility: When Voiceover was turned on, the talk over tried to read a blank area inside the CSAT field.
 
 * During conversation, a "no internet connection" message was displayed but the send button was enabled.
 
@@ -2218,7 +2219,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 
 **How to use**? When JWT expires, the `onTokenExpired()` callback is called. If the screen is in the background the host app should use the new API `updateTokenInBackground()` with new authentication parameters instead of calling r`egisterLPPusher()`.
 
-**Note:** No change in cases where the screen is in foreground - host app should call `reconnect()` to renew the JWT.
+**Note:** No change in cases where the screen is in foreground — host app should call `reconnect()` to renew the JWT.
 
 ##### Code sample
 
@@ -2458,11 +2459,11 @@ The SDK allows Brands to customize the SDK even more, giving a personal touch to
 
 When using Emojis in a conversation:
 
-1. One Emoji - The Emoji will be enlarged to a Extra Large size
+1. One Emoji: The Emoji will be enlarged to a Extra Large size
 
-2. Two Emojis - The Emojis will be enlarged to a Large size
+2. Two Emojis: The Emojis will be enlarged to a Large size
 
-3. More than two Emojis or Emojis with text - The Emojis size will be small
+3. More than two Emojis or Emojis with text: The Emojis size will be small
 
 **Conversation Window Background Image**
 
@@ -2486,12 +2487,12 @@ New registrationCompletedCallback callback parameter will be called back when re
   </tr>
   <tr>
     <td>public static void getEngagement(Context context, @Nullable ArrayList&lt;LPMonitoringIdentity&gt; identities,                            MonitoringParams monitoringParams, EngagementCallback callback)</td>
-    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter - an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
+    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter — an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
   </tr>
   <tr>
     <td>public static void sendSde(Context context, @NonNull ArrayList&lt;LPMonitoringIdentity&gt; identities,
 @NonNull MonitoringParams monitoringParams, SdeCallback callback)</td>
-    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter - an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
+    <td>List&lt;LPMonitoringIdentity&gt; replaced previous consumerId parameter — an array of identity objects of type LpMonitoringIdentity which includes the details of the consumer</td>
   </tr>
   <tr>
     <td>Class LPMonitoringIdentity</td>
@@ -2905,7 +2906,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 #### New functionalities
 
-##### Campaigns for Messaging - Monitoring APIs
+##### Campaigns for Messaging — Monitoring APIs
 
 **Type:** Developer Experience Feature
 
@@ -3161,9 +3162,12 @@ The new parameters may control text, padding of conversation UI elements and mor
  </tr>
  <tr>
  <td>&lt;bool name="show_agent_typing_in_message_bubble"&gt;false&lt;/bool&gt;</td>
- <td>True - the agent-is-typing-indicator will appear in "temporary" bubble. This style is available in both fragment and activity modes.
-False - the agent-is-typing-indicator will appear in the status bar (under the agent name). This style is available only in activity mode.
-This configuration is available as long as the announce_agent_typing configuration is on (set as true).
+ <td>
+   <ul>
+    <li>True — the agent-is-typing-indicator will appear in "temporary" bubble. This style is available in both fragment and activity modes.</li>
+    <li>False — the agent-is-typing-indicator will appear in the status bar (under the agent name). This style is available only in activity mode.</li>
+   </ul>
+   <p>This configuration is available as long as the announce_agent_typing configuration is on (set as true).</p>
 </td>
  <td>false
 </td>
@@ -3453,7 +3457,7 @@ Version 2.9 planned roll-out: November 12th 2017
 
 #### New functionalities
 
-##### Oreo Support - Android API Level Support Update
+##### Oreo Support — Android API Level Support Update
 
 **Type:** Developer Experience Feature
 
@@ -3575,7 +3579,7 @@ Version 2.8 roll-out: October 3rd 2017
 
 **Type**: Feature
 
-**Available to all customers?** No - early adopters only
+**Available to all customers?** No — early adopters only
 
 _The beta version was released in v2.7 (for a full description, refer to the v2.7 release notes). The SDK delivers structured content enablement only; the feature will be made fully productive in October. In v2.8 the feature is enabled by default in the SDK._
 
@@ -3603,7 +3607,7 @@ The following additional conditions and configurations are required:
 
 **Type**: Feature
 
-**Available to all customers**? No - early adopters only
+**Available to all customers**? No — early adopters only
 
 **Description**
 
@@ -3760,7 +3764,7 @@ In order for consumers to enjoy the full brand experience while messaging in-app
 The SDK also supports the use of a brand’s own customized fonts (although these are not certified).
 
 Custom fonts are not supported for Native iOS properties such as:
-* Activity mode - Overflow menu
+* Activity mode — Overflow menu
 * Popup messages
 
 ![Conversation Custom Font](img/CustomFont.png)
@@ -3858,7 +3862,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf)
 
-#### Presence enablement for photo sharing - beta
+#### Presence enablement for photo sharing — beta
 
 Presence enablement for photo sharing provides consumers with the ability to receive notifications while uploading a photo, whether they remain within the app or keep it running in the background. The Web Socket remains open for a maximum of 5 seconds when the app moves to the background. This scenario is also applicable for non photo sharing flows.
 

@@ -28,9 +28,9 @@ indicator: messaging
 
 3. The downloaded package should contain the following item:
 
-LP_Messaging_SDK/lp_messaging_sdk - this is a Module that should be added to your project. This module contains the following:
+LP_Messaging_SDK/lp_messaging_sdk — this is a Module that should be added to your project. This module contains the following:
 
-1. LivePerson.java - Main entry point for the Messaging SDK
+1. LivePerson.java — Main entry point for the Messaging SDK
 
 2. Resources (.aars files)
 
@@ -142,9 +142,9 @@ For Photo Sharing (required if enabled):
 
 ### Step 5 - LivePerson Events
 
-1. Intents Handler - In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
+1. Intents Handler — In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
 
-* **Create a class and name it - IntentsHandler (or any other name of your choosing)**
+* **Create a class and name it “IntentsHandler” (or any other name of your choosing)**
 
 ```java
 public class IntentsHandler {

@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-logout.html
 indicator: messaging
 ---
 
-Logout from the SDK - when all user data should be removed.
+Logout from the SDK — when all user data should be removed.
 
 Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-shutdown.html) and, in addition, deletes all user data (messages and user details) from the device.
 

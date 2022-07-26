@@ -83,13 +83,13 @@ LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAut
 
 ##### Server side configurations (In case needed, should be modified by LivePerson)
 
-* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+* Identity idle time — setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation — it will be closed and a dialog explaining what happened will be presented to the consumer.
 
-* Unauthenticated token expiration - sets the time for the app to validate the token. When the token is expired, it will be refreshed.
+* Unauthenticated token expiration — sets the time for the app to validate the token. When the token is expired, it will be refreshed.
 
 ##### SDK configurations
 
-When an unauthenticated user session expire - the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
+When an unauthenticated user session expire — the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
 
 ```xml
    <string name="lp_new_unauth_user_dialog_title">New Conversation</string>

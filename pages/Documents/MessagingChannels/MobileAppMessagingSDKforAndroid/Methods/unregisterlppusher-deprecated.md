@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher-(depr
 indicator: messaging
 ---
 
-*This method was deprecated - please use the [new method](android-unregisterlppusher.html).*
+*This method was deprecated — please use the [new method](android-unregisterlppusher.html).*
 
 Unregister from registered push notification service. 
 

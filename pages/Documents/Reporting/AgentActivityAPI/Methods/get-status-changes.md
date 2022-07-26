@@ -43,9 +43,9 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | --- | --- | --- | --- |
 | timeframe | | object | |
 | startTime | The start of the requested time frame | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
-| startTimeL | Query start date (same as above) in Epoch time format | long - Epoch time in milliseconds | |
+| startTimeL | Query start date (same as above) in Epoch time format | long — Epoch time in milliseconds | |
 | endTime | The end of the requested time frame | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
-| endTimeL | Query end date (same as above) in Epoch time format | long - Epoch time in milliseconds | |
+| endTimeL | Query end date (same as above) in Epoch time format | long — Epoch time in milliseconds | |
 | agentsInfo | | array | |
 | agentId | Agent's LivePerson ID | number | |
 | employeeId | Agent's employee ID | string | |
@@ -63,7 +63,7 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | prevStatusChangeTime | Time of this agent’s previous status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Currently missing from the logout event and from the default status that is set after login |
 | metadata | Response-related metadata | Object |  |
 | references | An array of links to the pages in the response | Array |  |
-| rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | string | Possible values: <br> self - the link to the same page in the query <br> next - link to the next page of results <br> previous - link to the previous page of results <br>first - link to the first page of the query results <br>last - link to the last page of the query results |
+| rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | string | Possible values: <br> self — the link to the same page in the query <br> next — link to the next page of results <br> previous — link to the previous page of results <br>first — link to the first page of the query results <br>last — link to the last page of the query results |
 | href | Pagination: The specific link for each one of the above values | string | The values: self and first will always be returned whereas the others will be returned if there is more than 1 page in the response |
 
 #### Response Example (V2)

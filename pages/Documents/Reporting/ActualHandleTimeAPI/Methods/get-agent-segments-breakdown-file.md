@@ -34,10 +34,10 @@ This method is used to download the files from Get Agent Segment Breakdown API, 
 | sequence         | Event sequence number                        | string            |       |
 | startReason      | HTU measurement trigger                      | string            |       |
 | endReason        | HTU end reason                               | string            |       |
-| startTimestamp   | HTU start timestamp                          | long - Epoch time |       |
-| endTimestamp     | HTU end timestamp                            | long - Epoch time |       |
+| startTimestamp   | HTU start timestamp                          | long — Epoch time |       |
+| endTimestamp     | HTU end timestamp                            | long — Epoch time |       |
 | handleTimeMillis | Total time in milliseconds from start to end | string            |       |
-| insertTimestamp  | Record insertion time (internal)             | long - Epoch time |       |
+| insertTimestamp  | Record insertion time (internal)             | long — Epoch time |       |
 
 #### sample file content
 
