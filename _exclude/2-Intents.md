@@ -37,9 +37,9 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 7. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
-    * i have a question about my bill
+    * I have a question about my bill
     * can you help me with my bill
-    * i have a bill related question
+    * I have a bill related question
     * my bill is past due
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png" alt="">

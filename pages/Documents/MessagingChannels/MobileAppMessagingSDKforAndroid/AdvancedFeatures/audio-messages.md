@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-audio-messages
 indicator: messaging
 ---
 
-
 Audio Messaging allows a consumer to record, preview, and send audio messages to agents. 
 
 1. Contact your Account Team to activate the feature on the LivePerson server side.
@@ -31,7 +30,6 @@ Audio Messaging allows a consumer to record, preview, and send audio messages to
    ```
 
    By default, the value is **false** (disabled).
-
 
 4. Define the max length of an audio message:
 

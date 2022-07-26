@@ -67,7 +67,6 @@ func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number.  |
 
-
 ### getAllSupportedLanguages
 
 Use this method to get all supported languages as Strings dictionary where:
@@ -107,7 +106,7 @@ func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? 
 | brandID | brandID to request the conversation query for | -- |
 | campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID(mandatory), engagementID(mandatory), contextID(mandatory), sessionID(optional) and visitorID(optional) |  -- |
 
-_**Note: for information about the how to initialize the SDK with MonitoringParams and get the Campaign, click [here](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params)**_
+**Note:** For information about the how to initialize the SDK with MonitoringParams and get the Campaign, click [here](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params).
 
 ### getConversationConsumerQuery
 
@@ -136,7 +135,6 @@ func getInactiveUserInteractionTimeInterval(_ conversationQuery: ConversationPar
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number. |
 
-
 ### getSDKVersion
 
 Use this API to get the current SDK version string.
@@ -144,7 +142,6 @@ Use this API to get the current SDK version string.
 ```swift
 func getSDKVersion() -> String?
 ```
-
 
 ### getUnreadMessagesCount
 
@@ -211,7 +208,6 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 {:.important}
 The proprietary SDK notification is only for display purposes, interacting with it launches the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
-
 ### initialize
 
 The SDK initialization is done only once, inside AppDelegate, and it checks that the SDK has all mandatory preconditions. For example, it can find the bundle file, verify that all the pre-defined configurations are valid, and more.  If any precondition does not get met, the SDK throws an exception and, at this point, you must not do any other call to the SDK.
@@ -258,7 +254,6 @@ The `logout` method conducts the following:
 
 * Cleans running operations (see [destruct](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#destruct)).
 
-
 ```swift
 func logout(unregisterType: LPPusherUnregisterType, 
             completion: @escaping ()->(), 
@@ -274,14 +269,12 @@ func logout(unregisterType: LPPusherUnregisterType,
 {:.important}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
-
 #### LPPusherUnregisterType
 * **All**: unregister for all types of push notification messages
 
 * **None**: do not unregister from the pusher at all
 
 * **Agent**: Unregister only for agent push notification messages. Consumers can still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
-
 
 ### markAsUrgent
 
@@ -326,7 +319,6 @@ func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPar
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations display in the following screens. | Default: sorts the conversations by account number.  |
 | authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login.<br><br>-**Implicit Flow**: pass 'jwt' parameter only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 
-
 ### registerPushNotifications
 
 Use this API method, in AppDelegate, to register to LPMessagingSDK push notifications.
@@ -344,12 +336,10 @@ func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDK
 | alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-Dev" string to the bundle ID.  |
 | authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method registers immediately to Pusher, otherwise the registration is performed when calling showConversation. |
 
-
 **Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number. 
 
 {:.important}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
-
 
 ### removeConversation
 
@@ -359,7 +349,6 @@ Use this API method on the container's [deinit function](https://developer.apple
 
 {:.important}
 Calling this API method from [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear) or [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear) can cause unexpected behavior.
-
 
 ```swift
 func removeConversation(_ conversationQuery: ConversationParamProtocol)
@@ -388,11 +377,9 @@ Use this API method to enable a conversation to be resolved. The API requests th
 func resolveConversation(_ conversation: Conversation, completion: (() -> Void)? = {()})
 ```
 
-
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number.  |
-
 
 ### setLoggingLevel
 
@@ -442,7 +429,6 @@ class func getLogSnapshot(level: LPLoggingLevel) -> [String]
 | :--- | :--- | :--- |
 | enabled | enabled: Is masking PII enabled for the logs. | This is enabled by default for Release builds.|
 
-
 ### setUserProfile
 
 Use this API method to add custom parameters about the user and set them for the messaging agent.
@@ -463,7 +449,6 @@ Use this API method to open the conversation screen.
 {: .important}
 Not available on iOS 12 or below
 
-
 ```swift
 func showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)
 ```
@@ -472,7 +457,6 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 | :--- | :--- | :--- |
 | conversationViewParams | Object type: LPConversationViewParams <br><br>Represents an object to determine conversation mode, filter and container. Such as Container or Window or if ViewOnly. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 | authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. <br><br>- **Implicit Flow**: pass 'jwt' paramater only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
-
 
 ### toggleChatActions
 
@@ -501,7 +485,6 @@ func handleTapForInAppNotification(notification: LPNotification)
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | notification | LPNotification| This is received as part of the [LPMessagingSDKNotificationDelegate](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdknotificationdelegate) |
-
 
 ### Deprecated methods
 
@@ -539,7 +522,6 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, comp
 *Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#getunreadmessagescount) instead*
 
 This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
-
 
 ```swift
 func getUnreadMessagesCount(brandID: String, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:Error)->())
@@ -610,7 +592,6 @@ func logout()
 ```
 
 *This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#logout) instead*
-
 
 ### setPushNotificationTapped
 Notifies the SDK that a push notification was tapped.

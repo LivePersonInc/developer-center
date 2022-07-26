@@ -40,7 +40,6 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 * If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
 
-
 ### Monitoring APIs
 
 The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions.  Monitoring APIs include:
@@ -103,5 +102,4 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 // show conversation using campaignInfo
 LPMessaging.instance.showConversation(conversationViewParam)
 ```
-
 

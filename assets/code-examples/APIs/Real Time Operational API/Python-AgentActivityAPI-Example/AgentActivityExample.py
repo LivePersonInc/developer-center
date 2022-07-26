@@ -42,11 +42,3 @@ results = json.loads(response.content.decode())
 # For older versions of python you might need to use this line
 #results = json.loads(response.content.decode('utf-8'))
 print(results)
-
-
-
-
-
-
-
-

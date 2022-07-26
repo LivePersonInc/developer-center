@@ -107,7 +107,7 @@ Once your keys are generated, your Public Key will be saved to your account, and
 
 <div class="important">If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports - use GPG Suite or GPG4Win to do so.</div>
 
-**Notes about Encryption**:
+**Notes:**
 
 * Keys will be generated with an RSA key size of 2,048 bits (therefore, if you bring your own, they must also be 2,048 bits).
 

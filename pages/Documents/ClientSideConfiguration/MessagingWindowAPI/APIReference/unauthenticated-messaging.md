@@ -11,7 +11,6 @@ indicator: messaging
 
 Conversational Cloud expects to receive a token for every messaging conversation. These tokens identify unique consumers for Conversational Cloud and make sure that all consumers appear with their unique details displayed to the agent once they start a conversation. If you would like to have unauthenticated messaging conversations (where the consumer remains "anonymous"), you will need to provide an "unauthenticated" (not containing any details on the consumer) ID Token to Conversational Cloud. In this tutorial you will learn how to create and use such a token.
 
-
 ### Prerequisites
 
 In order to use unauthenticated tokens, your account must be provisioned by an LPA (LivePerson Administrator) to enable the `Messaging.Un_Auth_Messaging` feature and create an unauthenticated connector (ACR0 Connector). The LPA should supply you with the `CONNECTOR_ID` parameter that is required in the beginning of the flow below.
@@ -30,7 +29,6 @@ docker run --env LP_ACCOUNT=__YOUR_ACCOUNT_ID__ --env LP_CONN_ID=__CONNECTOR_ID_
 LP_EXT_JWT=`curl -X POST -H "Content-Type: application/json" https://$LP_IDP/api/account/$LP_ACCOUNT/anonymous/authorize | jq -r .token`
 ```
 
-
 #### Step 2 — Exchange the Unauthenticated External JWT with an Internal Token
 
 ```sh
@@ -40,7 +38,6 @@ LP_JWT=`curl -X POST -H "Content-Type: application/json" -d '{"id_token" : "'$LP
 #### Step 3 — Create a Conversation
 
 Now you can continue the regular flow for creating conversations as documented in the [Getting Started](consumer-int-getting-started.html#step-3---connect-to-the-messaging-service), inserting the `LP_JWT` parameter you created in the step above for the token required by the normal flow.
-
 
 #### Step 4 — Refresh an External Token
 

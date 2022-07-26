@@ -33,7 +33,7 @@ You can adjust the logging level with the following method:
 LivePerson.Logging.setSDKLoggingLevel(LogLevel.DEBUG);
 ```
 
-**WARNING:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
+**Warning:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
 
 ## Log Data Masking
 
@@ -113,5 +113,4 @@ Lines already written to the System Logs (logcat) are not affected, only the log
 ```java
 LivePerson.Logging.clearHistory();
 ```
-
 

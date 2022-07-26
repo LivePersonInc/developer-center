@@ -39,7 +39,6 @@ When a Quick Reply is tapped, the rest of the replies are dismissed. The agent c
 | itemsPerRow   | Number of items per row | Number | Y        | 8 items    |
 | replies       | A list of replies         | Array  | Y        | 24 items   |
 
-
 ### Quick Reply Element
 
 | Property Name | Description                                                   | Type      | Required | Size Limit |
@@ -63,7 +62,7 @@ For the 'style' property of a reply, please see the [Styling](#Styling) section.
   "replies": [
     {
       "type": "button",
-      "tooltip": "yes i do",
+      "tooltip": "yes I do",
       "title": "yes",
       "click": {
         "actions": [

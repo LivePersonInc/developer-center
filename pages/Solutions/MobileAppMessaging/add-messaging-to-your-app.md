@@ -15,7 +15,6 @@ indicator:
 
 When you add messaging to your app, you enable your consumers to communicate with your agents through their channel of choice: Android or iOS.
 
-
 ### Benefits
 * Increased customer satisfaction with an ideal customer experience through an always connected, ongoing conversation.
 
@@ -27,9 +26,7 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 * Optimized for network bandwidth and battery usage.
 
-
 <img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> <img src="img/inapp2.png" style="max-width:230px;max-height:700px;"> <img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
-
 
 ### Prerequisites
 
@@ -37,7 +34,7 @@ To begin, you need:
 
 * Conversational Cloud account with messaging enabled.
   
-  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
+  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 
 * LivePerson only supports OAuth2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
 
@@ -89,9 +86,13 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Full control over entire window: (iOS -ViewControler mode Android- Fragment mode): Fully control the look, feel and actions including the footer and header of the conversational window.
 
-* **Select the features you want to configure:** review the list of default configuration available in the guide ([iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html) / [Android](/android-authentication.html)) and determine what features you’d like to enable and how. [link to place in guide]  [insert video]
+* **Select the features you want to configure:** review the list of default configuration available in the guide ([iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html) / [Android](/android-authentication.html)) and determine what features you’d like to enable and how.
 
-* **Branding and Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready. [link to place in guide]
+[comment]: <> TODO: Link to place in guide, insert video
+
+* **Branding and Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready.
+
+[comment]: <> TODO: Link to place in guide
 
 * **Customization of messaging behavior:** You can utilize our callbacks ([iOS](consumer-experience-ios-sdk-callbacks-index.html) / [Android](/android-callbacks-index.html)) and APIs ([iOS](consumer-experience-ios-sdk-initialize.html) / [Android](/android-initializeproperties.html)) in order to control or change the default behaviors and actions of the messaging app.  Review the default list and determine if there are actions or flows you’d like to change
 

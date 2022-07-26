@@ -15,7 +15,6 @@ indicator: chat
 
 All surveys follow the same structure and behavior patterns. To avoid duplication for the different survey types, here is a summary of the survey object.
 
-
 **The Survey Object**
 
 | Property | Description | Type | Notes |

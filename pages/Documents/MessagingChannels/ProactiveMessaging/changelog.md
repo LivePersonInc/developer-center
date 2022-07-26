@@ -8,7 +8,6 @@ permalink: proactive-messaging-changelog.html
 indicator: messaging
 ---
 
-
 ### Change Log
 All notable changes to this project will be documented in this file.
  

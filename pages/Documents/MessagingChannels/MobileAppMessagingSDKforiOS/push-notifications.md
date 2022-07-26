@@ -30,7 +30,6 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
 
    - **Background Modes + Remote notifications:** Minimizes the amount of time that elapses between when a user sees a push notification and when your app is able to display the content.
 
-
 2. Pass the user info of a remote push notification to the SDK:
 
    ```swift
@@ -162,8 +161,6 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
    **Tip:** You have a **155** character limit for your Bundle ID.
 
 7. Click **Close**.
-
-
 
 ### Unregister from push notifications
 

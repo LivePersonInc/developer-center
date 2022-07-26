@@ -93,7 +93,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Received Message Properties
 
 <table>
@@ -149,7 +148,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Example Metadata Template
 
 ```json
@@ -204,7 +202,6 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * Character limit - The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
 
-
 ### Reply CIM from Consumer to Agent
 
 {: .important}
@@ -220,8 +217,8 @@ In order to do this, all code is handled from within your Apple iMessage app / e
     ```json
     {
         "lpData": {
-          "interactive" : {
-            "response" : {
+          "interactive": {
+            "response": {
               "text": "YOUR_CUSTOM_TEXT" 
             }
           }

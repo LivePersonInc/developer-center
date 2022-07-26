@@ -115,4 +115,3 @@ Engagement is not available:
 
 Response object gets transferred as parameter to [onEngagement](consumer-experience-javascript-chat-onengagement.html) callback.
 
-

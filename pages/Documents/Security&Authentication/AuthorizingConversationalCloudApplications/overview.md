@@ -33,7 +33,6 @@ The API also provides the identity of the authenticated user for the purpose of 
    "http://{YOURAPPLICATIONDOMAIN}/{CALLBACK_PATH}"
  ]
 }
-
 ```
 
 After finishing the installation, please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.

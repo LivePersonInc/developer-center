@@ -67,7 +67,6 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 | token_type | Always Bearer |
 | refresh_token | token to use when requesting access token refresh  |
 
-
 *Note: The Bearer is the access_token attribute*
 
 Example:
@@ -81,6 +80,5 @@ Example:
 ```
 
 *Note: Response contains refresh token to be used when making a refresh request.*
-
 
 *The current LP Identity service implementation will extend the SSO session as long as the app keeps calling the refresh endpoint. every configured period of time*

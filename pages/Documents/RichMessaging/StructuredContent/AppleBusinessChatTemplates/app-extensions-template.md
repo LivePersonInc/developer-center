@@ -24,7 +24,6 @@ For the structured content body fields descriptions and different layout options
 
 Sending custom interactive messages (custom iMessage app) data dictionary with structured content is supported via the message metadata. The metadata dictionary allows the connector to then indicate to Messages which app extension to use and provides the data to pass into the extension. Through the data dictionary brands can also set and control the visual appearance of the received bubble layout for the interactive message.
 
-
 **Custom iMessage App Metadata Properties**
 
 <table>
@@ -86,7 +85,6 @@ Sending custom interactive messages (custom iMessage app) data dictionary with s
   </tbody>
 </table>
 
-
 **Received Message Object Properties**
 
 <table>
@@ -142,7 +140,6 @@ Sending custom interactive messages (custom iMessage app) data dictionary with s
   </tbody>
 </table>
 
-
 **
 ****Example Metadata JSON:** **[Custom iMessage Ap**p](https://docs.google.com/a/liveperson.com/document/d/1Jcm1l0AHo40qojWWQ0Dpcuq5VvsYSxHDrJVac9xqzTM/edit?usp=sharing)**
 **
@@ -162,8 +159,8 @@ The new property will allow the agent/bot to view the textual representation of 
 ```json
 {
     "lpData": {
-      "interactive" : {
-        "response" : {
+      "interactive": {
+        "response": {
           "text": "<YOUR_CUSTOM_TEXT>"
         }
       }

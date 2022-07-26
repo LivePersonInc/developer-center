@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-csat-behavior.
 indicator: messaging
 ---
 
-
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
 <div class="flex gap-16 flex-col-mobile">
@@ -45,7 +44,6 @@ The CSAT screen includes several content containers:
 
 - [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
 
-
 ### agentView (avatar and agent name)
    
 You can either hide or show the agent avatar.
@@ -59,7 +57,6 @@ You can either hide or show the agent avatar.
 - If no image available, default avatar displays. Its background and tint color can be set accordingly to agent bubble with `lp_messaging_ui_ic_agent_avatar` and [agent_avatar_background_color](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#agent_avatar_background_color).
 
 - If the conversation has assigned agent, the SDK uses the agent’s nickName.
-
 
 ### ratingQuestionView (stars) 
 

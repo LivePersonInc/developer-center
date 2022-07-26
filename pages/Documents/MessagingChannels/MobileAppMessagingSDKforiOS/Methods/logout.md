@@ -22,7 +22,6 @@ This method conducts the following:
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
 
-
 `func logout(unregisterType: LPPusherUnregisterType, 
             completion: @escaping ()->(), 
             failure: @escaping (_ error: Error)->())`

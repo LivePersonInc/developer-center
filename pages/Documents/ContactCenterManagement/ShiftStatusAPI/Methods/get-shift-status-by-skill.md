@@ -32,7 +32,6 @@ This API retrieves a skill entity and displays its current shift status as defin
 | accountId |    LivePerson site ID    |   String  |
 | skillId |    Skill ID    |   String  |
 
-
 ### Response
 
 **Response Codes**
@@ -42,7 +41,6 @@ This API retrieves a skill entity and displays its current shift status as defin
 | 200  | OK                    |
 | 401  | Not Authenticated     |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 

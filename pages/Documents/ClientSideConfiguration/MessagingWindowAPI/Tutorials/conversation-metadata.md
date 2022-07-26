@@ -58,7 +58,6 @@ You will also get some other messages. Ignore these for now.
 
 In order to test the subscription, we will create a new conversation using:
 
-
 ```json
 {"kind":"req","id":1,"type":"cm.ConsumerRequestConversation"}
 ```

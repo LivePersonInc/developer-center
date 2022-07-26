@@ -12,8 +12,7 @@ This method provides a list of file names that contain a breakdown of the Actual
 Using the file list you should be able to pull the content of the files using the [Get Agent Segments Breakdown File](actual-handle-time-api-methods-get-agent-segments-breakdown-file.html) 
 
 {: .notice}
-**Note:**
-This API is not available by default. To enable it please contact your account manager.
+**Note:** This API is not available by default. To enable it please contact your account manager.
 
 ### Request
 

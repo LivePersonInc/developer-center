@@ -129,7 +129,7 @@ These settings allow you to choose which fields of each object will be available
   * Choose ‘Editability’ mode.
     **Note:** Editability mode may sometimes be enforced according to your SF settings and permissions.
   * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
-  * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble
+  * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble.
   * Required - Setting the field as mandatory when creating or editing the record.
   * Default Value - Set up a fixed default text value for a field (will be editable by the agent).
   * Click “Save.” **Note:** You can edit or delete any existing field mapping by clicking on the respective link next to each.
@@ -265,21 +265,23 @@ The “Event Log” includes information about any sync errors that may have occ
 Now that you’ve configured your app in Salesforce, it’s time to go back to the Conversational Cloud and configure the widget within the platform.
 
 1. Click on the 'Night Vision' icon at the top of the page.
-2. Click on 'Agent Workspace Configuration'
-3. Click on the "+" next to the existing widget labels (**Note:** The limit is five widgets)
+2. Click on 'Agent Workspace Configuration'.
+3. Click on the "+" next to the existing widget labels. (**Note:** The limit is five widgets.)
 4. Choose a name for the Widget (you can use "SF.Widget" to have "SF" as the Widget’s label).
 5. Choose 'Double Widget' size.
 6. Enter the Salesforce console and switch it to classic mode.
 7. Select the Customization Settings tab in your Salesforce settings, copy the first part of the URL, and add the "ChatLink" suffix to ensure you're using the correct link.
-8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box. 
+8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box.
   
 ![](/img/salesforce_pastewidget.png)
 
-<!-- <div class="notice">If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this: <br />
-<img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/></div>
+<!-- <div class="notice">
+<p>If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:</p>
+
+<img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
+</div>
    
-Tip:
-You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
+**Tip:** You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
 
 {:start="7"}
 

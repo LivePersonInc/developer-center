@@ -43,8 +43,8 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
     * **Intent name**: Return policy
     * **Training Phrases**:
         * What is your return policy
-        * How do i return something
-        * How do i make a return
+        * How do I return something
+        * How do I make a return
         * What is your policy for making returns
 
     After creating your new intent, finish the article by adding the following summary and clicking **Save**:

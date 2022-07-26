@@ -48,7 +48,6 @@ Currently, LivePerson supports two methods for passing the ID Token: [implicit](
 
 The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#Authentication).
 
-
 ### Prerequisites
 
 The following prerequisites are required to authenticate a consumer:

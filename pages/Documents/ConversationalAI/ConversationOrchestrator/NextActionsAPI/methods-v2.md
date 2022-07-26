@@ -24,7 +24,7 @@ For information on this, see [here](conversation-builder-scripting-functions-ask
 {domain}/{api}?access_token=
 
 Domain URL per environment:
-* AMERICAS : https://z1.context.liveperson.net
+* AMERICAS: https://z1.context.liveperson.net
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 

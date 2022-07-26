@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 50
 permalink: users-api-methods-update-user.html
 
@@ -17,7 +16,7 @@ indicator: both
 
 This API updates a user for a specific account.
 
-**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+**Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
 ```
 https://API_REQUEST?v=4.0

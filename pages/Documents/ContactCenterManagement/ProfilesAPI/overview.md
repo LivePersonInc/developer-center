@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 
-
 level-order: 4
 order: 9
 permalink: profiles-api-overview.html
@@ -19,7 +18,6 @@ indicator: both
 Profiles within Conversational Cloud can be Admin, Agent Manager, Agent, Campaign Manager or customized profile. The profile entity includes name, description, role and permissions. This API allows you to manipulate such profiles, by creating new ones, updating them or simply retrieving information on which profiles are available and their metadata.
 
 ![ProfilesOverview](img/profiles.png)
-
 
 ### Getting Started
 

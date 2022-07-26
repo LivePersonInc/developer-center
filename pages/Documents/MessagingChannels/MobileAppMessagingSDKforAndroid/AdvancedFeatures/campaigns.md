@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-
 Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
 
 Using the Monitoring APIs, brands can:
@@ -78,7 +77,6 @@ Use this API to send engagement attributes (as part of the request body).  As an
 
    - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType 
 
-
 ```java
 // Calling getEngagement and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
 LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new EngagementCallback() {
@@ -93,8 +91,6 @@ LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new 
 			}
 		});
 ```
-
-
 
 #### Initialize SDK with Monitoring
 
@@ -151,9 +147,6 @@ engagementAttriutes.put(lead);
 MonitoringParams monitoringParams = new MonitoringParams("PageId", entryPoints, engagementAttriutes);
 ```
 
-
-
-
 #### sendSde API
 
 Use this API to report engagement attributes (SDEs).  Available parameters include:
@@ -165,7 +158,6 @@ Use this API to report engagement attributes (SDEs).  Available parameters inclu
    - monitoringParams: an instance of LPMonitoringParams that includes an optional Array of Entry Points and an optional dictionary of Engagement Attributes.  An additional optional parameter is PageID, which you use for Page identification for sending events on the current engagement. LPSdeResponse and LPtEngagementResponse received the PageID.
 
    - SdeCallback: operation callback: onSuccess() response with LPSdeResponse that contains pageId, sessionId and visitorId onError() response with the MonitoringErrorType.
-
 
 ```java
 // Sending engagement attributes and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
@@ -181,5 +173,4 @@ LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCal
   }
 });
 ```
-
 

@@ -64,17 +64,17 @@ public enum Services {
 
 * **url:** The url we will proxy the request to in runtime (represented by runtime header `LP-forward-url`).
 
-**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+**Note:** You must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked.
 
 #### Actions to take
 
 Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters **(accountId/serviceName/url)** to identify the context (as explained above).
 
-**Note that there is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned**.
+**Note:** There is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned.
 
 In order to create the mapping object, you will need to use the following method.
 
-**Note that this action is performed against ac-common domain, not the MTLS service.**
+**Note:** This action is performed against ac-common domain, not the MTLS service.
 
 |Method|      URL|  
 |:--------  |:---  |
@@ -116,6 +116,5 @@ If all previous steps were successful, runtime methods can now be used. The runt
 #### Actions to take
 
 * [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of **serviceName/url/siteid** and returns for each triplet whether a certificate is configured for it. Use this method to make sure your certificates are configured properly, **Since mtls is throttle protected this method is used to verify that mTLS is configured for the supplied parameters. The goal of this method is not to submit regular TLS requests through the service (using up bandwidth), even though it is possible.**
-
 
 * [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched. The certificate is fetched using the provided parameters (**accountId/serviceName/url**). The request is then forwarded to the `LP-forward-url` specified. The response will return as if contacting the remote endpoint directly but will be authenticated, its identity confirmed via the certificate.

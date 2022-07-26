@@ -38,7 +38,6 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
 
-
 ### filters
 _filters info_
 
@@ -50,7 +49,7 @@ _filters info_
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -61,7 +60,7 @@ Request body - json example:
         },
         "userTypes":["HUMAN"]
     },
-    "groupBy" : "agentGroupId",
+    "groupBy": "agentGroupId",
     "responseSections": [
        "groupBy"
     ],
@@ -78,7 +77,6 @@ Request body - json example:
     ]
 }
 ```
-
 
 ### Response
 
@@ -141,14 +139,11 @@ _metrics info_
 | queueWaitTime50thPercentile| 50% of the consumers are waiting in the queue this amount of time or less.| Long |
 | queueWaitTime90thPercentile| 90% of the consumers are waiting in the queue this amount of time or less.| Long |
 
-
-
 _all info_ 
 
 Contains list of metrics with their values - same as in _metrics info_
 
-
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 {

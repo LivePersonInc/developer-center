@@ -1,136 +1,301 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      {% include head.html %}
-      <link rel="stylesheet" href="css/events.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-   </head>
-   <body class="bot-platform">
-     <!-- BEGIN LivePerson Monitor. -->
-<script>window.lpTag=window.lpTag||{},"undefined"==typeof window.lpTag._tagCount?(window.lpTag={site:'31991735'||"",section:lpTag.section||"",tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:"1.7.0",_tagCount:1,protocol:"https:",events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0==e?(this._defB=this._defB||[],this._defB.push(t)):1==e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+"//"+(this.ovr&&this.ovr.domain?this.ovr.domain:"lptag.liveperson.net")+"/tag/tag.js?site="+this.site);var a=document.createElement("script");a.setAttribute("charset",e?e:"UTF-8"),i&&a.setAttribute("id",i),a.setAttribute("src",n),document.getElementsByTagName("head").item(0).appendChild(a)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent("onload",function(){t._domReady("domReady")}):(window.addEventListener("DOMContentLoaded",function(){t._domReady("contReady")},!1),window.addEventListener("load",function(){t._domReady("domReady")},!1)),"undefined"==typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger("LPT","DOM_READY",{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;</script>
-<!-- END LivePerson Monitor. -->
-<div id="facebook"></div>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <link rel="stylesheet" href="css/events.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css"
+    />
+  </head>
+  <body class="bot-platform">
+    <!-- BEGIN LivePerson Monitor. -->
+    <!-- TODO(ihaephrati): Roll back to default code -->
+    <script>
+      ;(window.lpTag = window.lpTag || {}),
+        "undefined" == typeof window.lpTag._tagCount
+          ? ((window.lpTag = {
+              site: "31991735" || "",
+              section: lpTag.section || "",
+              tagletSection: lpTag.tagletSection || null,
+              autoStart: lpTag.autoStart !== !1,
+              ovr: lpTag.ovr || {},
+              _v: "1.7.0",
+              _tagCount: 1,
+              protocol: "https:",
+              events: {
+                bind: function (t, e, i) {
+                  lpTag.defer(function () {
+                    lpTag.events.bind(t, e, i)
+                  }, 0)
+                },
+                trigger: function (t, e, i) {
+                  lpTag.defer(function () {
+                    lpTag.events.trigger(t, e, i)
+                  }, 1)
+                },
+              },
+              defer: function (t, e) {
+                0 == e
+                  ? ((this._defB = this._defB || []), this._defB.push(t))
+                  : 1 == e
+                  ? ((this._defT = this._defT || []), this._defT.push(t))
+                  : ((this._defL = this._defL || []), this._defL.push(t))
+              },
+              load: function (t, e, i) {
+                var n = this
+                setTimeout(function () {
+                  n._load(t, e, i)
+                }, 0)
+              },
+              _load: function (t, e, i) {
+                var n = t
+                t ||
+                  (n =
+                    this.protocol +
+                    "//" +
+                    (this.ovr && this.ovr.domain
+                      ? this.ovr.domain
+                      : "lptag.liveperson.net") +
+                    "/tag/tag.js?site=" +
+                    this.site)
+                var a = document.createElement("script")
+                a.setAttribute("charset", e ? e : "UTF-8"),
+                  i && a.setAttribute("id", i),
+                  a.setAttribute("src", n),
+                  document.getElementsByTagName("head").item(0).appendChild(a)
+              },
+              init: function () {
+                ;(this._timing = this._timing || {}),
+                  (this._timing.start = new Date().getTime())
+                var t = this
+                window.attachEvent
+                  ? window.attachEvent("onload", function () {
+                      t._domReady("domReady")
+                    })
+                  : (window.addEventListener(
+                      "DOMContentLoaded",
+                      function () {
+                        t._domReady("contReady")
+                      },
+                      !1
+                    ),
+                    window.addEventListener(
+                      "load",
+                      function () {
+                        t._domReady("domReady")
+                      },
+                      !1
+                    )),
+                  "undefined" == typeof window._lptStop && this.load()
+              },
+              start: function () {
+                this.autoStart = !0
+              },
+              _domReady: function (t) {
+                this.isDom ||
+                  ((this.isDom = !0),
+                  this.events.trigger("LPT", "DOM_READY", { t: t })),
+                  (this._timing[t] = new Date().getTime())
+              },
+              vars: lpTag.vars || [],
+              dbs: lpTag.dbs || [],
+              ctn: lpTag.ctn || [],
+              sdes: lpTag.sdes || [],
+              ev: lpTag.ev || [],
+            }),
+            lpTag.init())
+          : (window.lpTag._tagCount += 1)
+    </script>
+    <!-- END LivePerson Monitor. -->
+    <div id="facebook"></div>
 
-      {% include topnav.html %}
-      <!-- Page Content -->
-      <!-- Page Content -->
-      <div class="pane banner-container">
-         <div class="container">
-            <!-- Content Row -->
-            <div class="row">
-				<div class="col-md-12">
-					<h1>LiveEngage and Bots</h1>
-					<h2>LiveEngage APIs provide bot engineers and enterprises the world’s first scalable bot lifecycle management platform. To start developing your bot with our platform, sign up for a developer account.</h2>
-					<a class="btn orange" href="http://register.liveperson.com/developer/signup">Sign up now and start building!</a>
-				</div>
-               <!-- /.row -->
-            </div>
-         </div>
+    {% include topnav.html %}
+    <!-- Page Content -->
+    <!-- Page Content -->
+    <div class="pane banner-container">
+      <div class="container">
+        <!-- Content Row -->
+        <div class="row">
+          <div class="col-md-12">
+            <h1>LiveEngage and Bots</h1>
+            <h2>
+              LiveEngage APIs provide bot engineers and enterprises the world’s
+              first scalable bot lifecycle management platform. To start
+              developing your bot with our platform, sign up for a developer
+              account.
+            </h2>
+            <a
+              class="btn orange"
+              href="http://register.liveperson.com/developer/signup"
+              >Sign up now and start building!</a
+            >
+          </div>
+          <!-- /.row -->
+        </div>
       </div>
+    </div>
 
-	  <div class="pane section1">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<p>LiveEngage is the first comprehensive platform that enables developers to launch, manage, secure and optimize bots at a massive scale. <br><br> A wide array of APIs and SDKs is now available, enabling bot makers to develop human-like experiences for their bots.</p>
-				</div>
-			</div>
-		</div>
-	  </div>
+    <div class="pane section1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <p>
+              LiveEngage is the first comprehensive platform that enables
+              developers to launch, manage, secure and optimize bots at a
+              massive scale. <br /><br />
+              A wide array of APIs and SDKs is now available, enabling bot
+              makers to develop human-like experiences for their bots.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	  <div class="pane section2">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h2>Develop your bot on top of our platform and enjoy all of the benefits our advanced technology brings:</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5 col-md-offset-1 bot-platform">
-					<ul>
-						<li>Deployment across our messaging channels: SMS, Facebook, Web Messaging & Mobile App Messaging</li>
-						<li>Real time sentiment analysis and reporting</li>
-						<li>Queue management and advanced routing</li>
-					</ul>
-				</div>
-				<div class="col-md-5 bot-platform">
-					<ul>
-						<li>Conversation management, including escalation to human agents and transfer back and forth</li>
-						<li>Secure access to our backend systems via integration engines</li>
-						<li>Detailed analytics and reports on bot performance</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	  </div>
+    <div class="pane section2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h2>
+              Develop your bot on top of our platform and enjoy all of the
+              benefits our advanced technology brings:
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-md-offset-1 bot-platform">
+            <ul>
+              <li>
+                Deployment across our messaging channels: SMS, Facebook, Web
+                Messaging & Mobile App Messaging
+              </li>
+              <li>Real time sentiment analysis and reporting</li>
+              <li>Queue management and advanced routing</li>
+            </ul>
+          </div>
+          <div class="col-md-5 bot-platform">
+            <ul>
+              <li>
+                Conversation management, including escalation to human agents
+                and transfer back and forth
+              </li>
+              <li>
+                Secure access to our backend systems via integration engines
+              </li>
+              <li>Detailed analytics and reports on bot performance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	  <div class="pane section3">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;margin-bottom:24px"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5455956544001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-					<p>As this video shows, our developer community has documentation on the many APIs and SDKs you can use to integrate bots into your workflows with LiveEngage.</p>
-				</div>
-				<div class="col-md-6">
-					<div style="display: block; position: relative; max-width: 100%;"><div style="padding-top: 56.25%;margin-bottom:24px"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-					<p>In LiveEngage, bots are treated as agents, which enables them to become an integral part of a scalable and efficient customer care system. See the video above to learn more!</p>
-				</div>
-			</div>
-		</div>
-	  </div>
+    <div class="pane section3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="display: block; position: relative; max-width: 100%">
+              <div style="padding-top: 56.25%; margin-bottom: 24px">
+                <iframe
+                  src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5455956544001"
+                  allowfullscreen
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    left: 0px;
+                  "
+                ></iframe>
+              </div>
+            </div>
+            <p>
+              As this video shows, our developer community has documentation on
+              the many APIs and SDKs you can use to integrate bots into your
+              workflows with LiveEngage.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div style="display: block; position: relative; max-width: 100%">
+              <div style="padding-top: 56.25%; margin-bottom: 24px">
+                <iframe
+                  src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001"
+                  allowfullscreen
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    left: 0px;
+                  "
+                ></iframe>
+              </div>
+            </div>
+            <p>
+              In LiveEngage, bots are treated as agents, which enables them to
+              become an integral part of a scalable and efficient customer care
+              system. See the video above to learn more!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-      <br>
-      <br>
-      {% include footer.html %}
-      <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-      <script>
+    <br />
+    <br />
+    {% include footer.html %}
+    <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+    <script>
       const search = docsearch({
-      apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
-      indexName: 'liveperson',
-      inputSelector: '.aa-input-search',
-      debug: false,
-      algoliaOptions: {
-        hitsPerPage: 6
-      },
-      autocompleteOptions: {
-        openOnFocus: true
-      }
-      });
-      </script>
+        apiKey: "e386ebed16c8f70de3c914b3ace55ae6",
+        indexName: "liveperson",
+        inputSelector: ".aa-input-search",
+        debug: false,
+        algoliaOptions: {
+          hitsPerPage: 6,
+        },
+        autocompleteOptions: {
+          openOnFocus: true,
+        },
+      })
+    </script>
 
-      <script>
-      var inputElement = document.getElementById("aa-search-input");
-      inputElement.setAttribute("oninput", "onInput(this)");
+    <script>
+      var inputElement = document.getElementById("aa-search-input")
+      inputElement.setAttribute("oninput", "onInput(this)")
       function onInput(el) {
-          setTimeout(function () {
-              if (el && el.value) {
-                  $("body").addClass("search-opened");
-                  $(".search-cancel").css("display","block");
-                  $(".aa-input-icon").css("display", "none");
-              } else {
-                  $("body").removeClass("search-opened");
-                  $(".search-cancel").css("display", "none");
-                  $(".aa-input-icon").css("display","block");
-              }
-          }, 0);
+        setTimeout(function () {
+          if (el && el.value) {
+            $("body").addClass("search-opened")
+            $(".search-cancel").css("display", "block")
+            $(".aa-input-icon").css("display", "none")
+          } else {
+            $("body").removeClass("search-opened")
+            $(".search-cancel").css("display", "none")
+            $(".aa-input-icon").css("display", "block")
+          }
+        }, 0)
+      }
 
-      };
+      $(".search-cancel").click(function () {
+        setTimeout(function () {
+          search.autocomplete.autocomplete.setVal("")
+          search.autocomplete.focus()
+        }, 10)
+        $("body").removeClass("search-opened")
+        $(".search-cancel").css("display", "none")
+        $(".aa-input-icon").css("display", "block")
+      })
+    </script>
+    {% if site.google_analytics %} {% include google_analytics.html %}
+  </body>
 
-          $(".search-cancel").click(function() {
-            setTimeout(function() {
-      	       search.autocomplete.autocomplete.setVal('');
-               search.autocomplete.focus();
-            }, 10);
-            $("body").removeClass("search-opened");
-            $(".search-cancel").css("display","none");
-            $(".aa-input-icon").css("display","block");
-          });
-      </script>
-
-     </body>
-     {% if site.google_analytics %}
-     {% include google_analytics.html %}
-     {% endif %}
-     </html>
+  {% endif %}
+</html>

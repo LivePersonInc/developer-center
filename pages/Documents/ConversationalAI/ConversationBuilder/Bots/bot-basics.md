@@ -91,7 +91,7 @@ Bot settings include:
 
     By default, the setting is enabled (on), so that during bot development you can run the commands. To disable them, manually disable this bot-level setting in each applicable bot.
 
-    **Note**: As mentioned above, if you disable this, you are no longer able to use these standard debugging methods within the Preview tool in Conversation Builder. Therefore, LivePerson strongly recommends that you create separate development and production bots, so you can enable this in the former but disable it in the latter.
+    **Note:** As mentioned above, if you disable this, you are no longer able to use these standard debugging methods within the Preview tool in Conversation Builder. Therefore, LivePerson strongly recommends that you create separate development and production bots, so you can enable this in the former but disable it in the latter.
 
 ### Import a bot
 You can add a bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.

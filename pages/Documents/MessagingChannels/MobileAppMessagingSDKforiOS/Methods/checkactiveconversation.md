@@ -3,7 +3,6 @@ pagename: checkActiveConversation
 redirect_from:
   - consumer-experience-ios-sdk-checkactiveconversation.html
 
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
@@ -27,5 +26,4 @@ Check if there is an active conversation by passing a conversation query.
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
-
 

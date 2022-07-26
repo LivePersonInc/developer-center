@@ -45,7 +45,6 @@ JSON
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -68,7 +67,6 @@ supported fields: any in response body
 https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   </tr>
 </table>
-
 
 **Request Body**
 
@@ -93,7 +91,6 @@ Contains query parameters — a mapping between account id and revision number.
   </tr>
 </table>
 
-
 ### Request Headers
 
 <table>
@@ -107,7 +104,6 @@ Contains query parameters — a mapping between account id and revision number.
   </tr>
 </table>
 
-
 ### Response Headers
 
 <table>
@@ -115,7 +111,6 @@ Contains query parameters — a mapping between account id and revision number.
     <td>N/A</td>
   </tr>
 </table>
-
 
 ### Response Body
 

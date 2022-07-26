@@ -31,7 +31,6 @@ Other solutions might involve extracting the data on a regular basis, performing
 
 The benefit of a completely stateless solution, such as MCS Toolkit, is that no data storage solution is required, and once the data is downloaded to the authenticated user’s browser memory, on-the-fly local filtering is a rapid alternative to having to query a database for the various permutations of analysis that may be required.
 
-
 ### Prerequisites
 
 Developing with the LivePerson APIs requires at least a basic understanding of how to _request_ data from a RESTful API and manage the _response_.

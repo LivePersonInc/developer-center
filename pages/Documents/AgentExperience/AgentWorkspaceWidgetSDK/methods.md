@@ -201,7 +201,7 @@ Example 2 — 'Write ChatLine' with Quick Replies. Please see [this link](rich-m
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -307,7 +307,7 @@ Example 4 — 'Write StructuredContent' with Quick Replies. Please see [this lin
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -513,7 +513,6 @@ var updateCallback = function(data) {
     }
 };
 
-
 {
 var onSuccess = function(data) {
     // Do something with the returning data
@@ -532,13 +531,11 @@ var onError = function(err) {
         }
     }
 
-
 lpTag.agentSDK.init({notificationCallback: notificationHandler});
 
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
-
 
 ### setConsumerProfile
 

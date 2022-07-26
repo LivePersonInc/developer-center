@@ -25,7 +25,6 @@ indicator: chat
 
 **Click next.**
 
-
 ![Customized2](img/customized2.png)
 
 ### Step 3 — Set engagement window

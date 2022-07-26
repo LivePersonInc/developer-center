@@ -8,7 +8,6 @@ indicator: both
 
 This section describes how to register an OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize machine-to-machine communication.
 
-
 ### Step 1: Generate client_id and client_secret:
 
 * Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation:
@@ -37,7 +36,6 @@ You will need to pass your `client_id` and `client_secret` to one of our authori
 * **US:**   va.sentinel.liveperson.net
 
 However, instead of hardcoding the authorization server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
-
 
 ### Step 3: Generate OAuth 2.0 access token
 
@@ -94,7 +92,6 @@ Content-Type: application/json;charset=utf-8
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
 <img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
-
 
 1. In your request-tab under your function click on **Authorization**
 

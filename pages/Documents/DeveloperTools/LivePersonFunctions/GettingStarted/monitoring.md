@@ -52,7 +52,7 @@ The following code will show the JavaScript interface along with examples that s
 ```javascript
     // Message needs to be a string
     // Extras is optional and can be left out
-    // Extras can be any json parsable values like Objects, Numbers or Strings
+    // Extras can be any JSON parsable values like Objects, Numbers or Strings
     console.level(message, extras?);
 
     // An example using the info level and providing extras

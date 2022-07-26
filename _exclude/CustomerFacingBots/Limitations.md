@@ -17,5 +17,3 @@ Bots can work on either chat or messaging (web, in-app, sms or facebook). Curren
 * Structured content will only accommodate bots on Mobile App Messaging or facebook messaging.
 * Structured content is not supported for chat, web messaging or SMS
 
-
-

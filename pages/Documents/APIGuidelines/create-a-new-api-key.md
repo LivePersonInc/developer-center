@@ -15,7 +15,6 @@ Application keys are security tokens that you use to log into Conversational Clo
 
 If required by an API, create an Application Key and it will be installed automatically upon creation.
 
-
 {:.notice}
 You use the API key when you create bots.
 
@@ -25,7 +24,7 @@ You use the API key when you create bots.
 
 3. Open the API tab and click **Add new**.
 
-   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
+   **Tip:** Alternatively, you can click on an existing key to edit its privileges.
 
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 

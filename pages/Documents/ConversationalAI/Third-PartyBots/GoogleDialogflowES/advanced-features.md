@@ -33,8 +33,7 @@ Figure 3.1 Example payload for a delay
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png" alt="">
 Figure 3.2 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action.
-Using this allows the bot to receive a consumer message without visibly responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without visibly responding to the consumer.
 
 ### Sending Private Text Message
 

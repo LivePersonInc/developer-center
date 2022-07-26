@@ -35,8 +35,8 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | userName        | Nickname or username of a consumer. | alphanumeric|
 | accountName     | Name of the company or account.| alphanumeric|
 | role            | Role title of the consumer within their organization. | alphanumeric|
-| lastPaymentDate | The customer's last payment date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
-| registrationDate| The customer's registration date. This consists of 3 integer fields: Year, month, and day. | JSON : { "year": 2011, "month": 3, "day": 21}|
+| lastPaymentDate | The customer's last payment date. This consists of 3 integer fields: Year, month, and day. | JSON: { "year": 2011, "month": 3, "day": 21}|
+| registrationDate| The customer's registration date. This consists of 3 integer fields: Year, month, and day. | JSON: { "year": 2011, "month": 3, "day": 21}|
 | companySize     | The company size. |v1- alphanumeric, v2- int|
 | companyBranch   | The branch of the company. | alphanumeric | |
 | storeZipCode    | The zip code of the store. | alphanumeric|
@@ -86,7 +86,6 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | currency        | Currency code.         | alphanumeric|
 | orderId         | Purchase order ID.| alphanumeric|
 | cart            | Information about the cart status (detailed format - link to cart status)      | container|
-
 
 ### marketingCampaignInfo (Marketing Source)
 
@@ -155,7 +154,6 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | status     | Status of service activity. | int|
 | category        | Category of service activity.   | alphanumeric|
 | serviceId        | Unique service identifier.| alphanumeric|
-
 
 **JSON Example (including engagement attributes)**
 

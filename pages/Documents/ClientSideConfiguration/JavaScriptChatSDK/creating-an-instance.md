@@ -13,9 +13,12 @@ permalink: javascript-chat-sdk-creating-an-instance.html
 indicator: chat
 ---
 
-Creating your instance is the first thing to do when using the SDK.   
-The instance expects a configuration file with an appkey and your lpNumber (LivePerson site ID).   
-Once you create an instance of the API, it retrieves your site's domain and initializes the ability to request data and chat.   
+Creating your instance is the first thing to do when using the SDK.
+   
+The instance expects a configuration file with an appkey and your lpNumber (LivePerson site ID).
+   
+Once you create an instance of the API, it retrieves your site's domain and initializes the ability to request data and chat.
+   
 At this stage you can also bind to the main events that you will be using throughout your chat application.
 
 At this point, it is recommended to bind to at least the following methods: onLoad, onInit, onStart, onState, onStop, and onLine.
@@ -86,7 +89,6 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 **Examples**
 
 Function:
-
 
 `onLoad: myOnLoad`
 

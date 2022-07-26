@@ -21,7 +21,6 @@ Returns a summary on the current state of the contact center. This includes numb
 |----------|-------------|
 | POST |  https://&lt;domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
 
-
 **URL Parameters**
 
 Name   | Description                                                  | Type/Value | Required | Notes
@@ -33,7 +32,8 @@ sort   | Sort the results in a predefined order.                      | string  
 BODY / POST Parameters
 
 Optional:
-**Note that you must send a valid JSON object as your request body. If you are using none of the below filters send `{}`**
+
+**Note:** You must send a valid JSON object as your request body. If you are using none of the below filters send `{}`.
 
 | Name   |      Description      |  Type/Value |
 |----------|-------------|------|

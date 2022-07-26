@@ -105,7 +105,7 @@ You will now be able to see the content of the JWT:
 
 The `sub` property contains your `consumerId`.
 
-**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
+**Note:** If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
 ### Step 3 — Open the WebSocket Connection
 
@@ -162,7 +162,7 @@ Input the following command:
 
 In this step, the consumer will request a new conversation.
 
-**Note**:
+**Notes:**
 
 * Upon Survey creation (in the Bot Studio), a skill must be assigned to the survey. If no skills are assigned then the survey will not be triggered.
 
@@ -207,7 +207,8 @@ In order to get existing or new messages from the agent side, the consumer shoul
 ```json
 {"kind":"req","id":"2","type":"ms.SubscribeMessagingEvents","body":{"dialogId":"__YOUR_CONVERSATION_ID__","conversationId":"__YOUR_CONVERSATION_ID__","fromSeq":0}}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
+
+**Note:** You can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 In response, you will get a subscription success message:
 
@@ -485,7 +486,6 @@ As we said, we do not actually close the Conversation. We only close the Main Di
 {"kind":"req","id":"2","type":"cm.UpdateConversationField","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"DialogChange","type":"UPDATE","dialog":{"dialogId":"__YOUR_CONVERSATION_ID__","state":"CLOSE","closedCause":"Closed by consumer"}}}}
 ```
 
-
 <div class="important">In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.</div>
 
 Important fields:
@@ -496,9 +496,7 @@ Important fields:
 
 * `closedCause`: Describe why the dialog was closed, mainly used by Conversational Cloud and Bots. Use `Closed by consumer` when closing the conversation from the consumer side.
 
-**Note**
-
-In case a dialog was not active for more than a week, the dialog will be closed by the system (autoclose).
+**Note:** In case a dialog was not active for more than a week, the dialog will be closed by the system (autoclose).
 
 **Ok Response Example**
 
@@ -900,9 +898,7 @@ These templates and the quick reply buttons are all part of our Rich Messaging f
 
 ![quick-replies-sc](img/quick_replies_sc.png)
 
-**Note**
-
-To make work with Structured Content easier, LivePerson has also built a renderer that displays this content within our unified window. In order to simulate this display you can use our [Json-Pollock](https://livepersoninc.github.io/json-pollock/editor/) tool that utilizes this renderer. This enables you to test your structured content and rich messages in a sandbox environment before using them.
+**Note:** To make work with Structured Content easier, LivePerson has also built a renderer that displays this content within our unified window. In order to simulate this display you can use our [Json-Pollock](https://livepersoninc.github.io/json-pollock/editor/) tool that utilizes this renderer. This enables you to test your structured content and rich messages in a sandbox environment before using them.
 
 The renderer code is also an open source project and can be forked and used in your code if needed. You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock). For more information about Json-Pollock please refer [to its documentation](structured-content-structured-content-rendering-tool.html).
 
@@ -984,7 +980,7 @@ One request should contain the 'ACTION' (used in conjunction with metadata to re
 }
 ```
 
-**Note**:
+**Notes:**
 
 * The `sequenceList` field matters. Review the notification that includes the Survey, received on [step 11](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-10---re-subscribe-to-conversation-content) and check the sequence number field for the object which includes the 'quickReplies' key. Then, use the same value when making this call under the `sequenceList` key (in this example, it is set to "1").
 

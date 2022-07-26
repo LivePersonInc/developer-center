@@ -14,8 +14,6 @@ The LivePerson SDK provides brands with a secure way to foster connections with 
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and Conversational Cloud.
 
-
-
 ### Prerequisites
 
 - Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
@@ -240,7 +238,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       To re-connect with a new Authentication key, use [`LivePerson.reconnect() API)`](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect)
 
-
       {:.important}
       Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
@@ -250,7 +247,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       String brandID = "53949244";
       String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
      ```
-
 
 3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
 
@@ -265,7 +261,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       ```
 
       The SDK implements the controls on the action bar.
-
 
    * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
 
@@ -309,7 +304,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       }
       ```
 
-
       Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
 
       Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
@@ -336,9 +330,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       }
       ```  
 
-
 4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the Conversational Cloud console.
-
 
    - **Code Flow**
      ```java
@@ -408,10 +400,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
    |onInitSuccess     |Callback that indicates the init process has finished successfully.         |
    |onInitFailed     |Callback that indicates the init process has failed.         |
 
-
-
    **Example implementation:**
-
 
    ```java
    private static final String APP_ID = "com.mybrand.app";
@@ -443,7 +432,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
    {:.notice}
    Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
-
 ### Step 4: Screen orientation
 
 #### Activity mode
@@ -455,10 +443,8 @@ Override in your application's AndroidManifest.xml with the ConversationActivity
   android:screenOrientation="your screen orientation"/>
 ```
 
-
 #### Fragment mode
 Set the desired orientation in your container Activity definition in AndroidManifest.xml. For a list of Activity elements to add to your manifest, see [android:screenOrientation](https://developer.android.com/guide/topics/manifest/activity-element.html#screen).
-
 
 ### Next Steps
 

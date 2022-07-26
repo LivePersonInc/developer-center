@@ -12,7 +12,6 @@ permalink: mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.ht
 indicator: messaging
 ---
 
-
 The Control History APIs allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen. For example, brands can choose to present only the last 180 days of conversation history.  Use these APIs when calling `showConversation`.
 
 You can use these APIs together with `getEngagement` (Monitoring APIs) to determine how to present conversations history according to whether there is an open conversation or not. For example, if there is no open conversation, brands can present a **View conversation history** button that displays only if the closed conversations are from the time specified, for example the last 180 days.
@@ -53,7 +52,6 @@ public class ConversationViewParams{
 }
 ```
 
-
 #### LPConversationsHistoryStateToDisplay
 Using this parameter, brands can decide if to present open conversations, closed conversations or all conversations.
 
@@ -80,8 +78,6 @@ public enum LPConversationHistoryMaxDaysDateType {
   startConversationDate, endConversationDate
 }
 ```
-
-
 
 ### Code Sample
 
@@ -122,5 +118,4 @@ LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(bran
     }
 }));
 ```
-
 

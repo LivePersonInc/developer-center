@@ -42,7 +42,6 @@ botContext.setMessageDelay(2000);
 botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
 ```
 
-
 ### Set allow max text response
 
 By default, a single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. However, you can override this behavior with the `setAllowMaxTextResponse` function so that all text is within a single message.
@@ -59,7 +58,6 @@ Keep in mind the limits of the targeted channel(s), which might take precedence 
 ```javascript
 botContext.setAllowMaxTextResponse(true);
 ```
-
 
 ### Set trigger next message
 

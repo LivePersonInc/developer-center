@@ -192,7 +192,6 @@ In this example request and response, we will look at retrieving messaging segme
 
 **Request using the parameters and values**: `agentIds=12,13` and `skillIds=333,444` with `interval=5`, `timeframe=60` and `metrics=avgTimeToResponseFromAgentAssignment`, `avgTimetoFirstAgentMessageFromAgentAssignment_AfterTransfer`, `avgTimetoFirstAgentMessageFromAgentAssignment_NewConversation`
 
-
 ```json
 {
   "metricsByIntervals": [
@@ -378,13 +377,11 @@ In this example request and response, we will look at retrieving messaging segme
     }
   }
 }
-
 ```
 
 **Elements in the Response**
 
 *Note*: All metrics under the hierarchy of `metricsPerAgent` represent the average values for each agent under the interval/aggregation they appear in (or the average/aggregate value of the entire timeframe if no intervals are provided). Metrics under the `metricsTotal` entity will contain the summation of all aggregation/average of the same hierarchy level.
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |
@@ -395,7 +392,7 @@ In this example request and response, we will look at retrieving messaging segme
 | agent id | When agentIds values provided: The agent ID. | long |
 | skill id | When skillIds values provided: The skill ID. | long |
 | timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element |
-| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example : Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
+| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example: Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
 | totalAgentConversationSegments | The number of times conversations were assigned to an agent. A conversation may be assigned more than once to a given agent. | Long |
 | avgAgentMessagesinAgentSegment | Average number of responses provided by agent during an agent-segment. | Double |
 | avgAgentSegmentDuration | Average duration of an agent-segment. Measured from the time the conversation was assigned to the agent until it was closed or transferred. Attributed to the assigned agent and skill. If there is no data for a specific agent, the metric will represent value of -1. | Long |

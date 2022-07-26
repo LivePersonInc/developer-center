@@ -155,8 +155,7 @@ is the value that you set for an option.
 #### Pause/Delay
 
 {: .important}
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action.
-Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node
 will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.6
@@ -418,7 +417,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -477,18 +476,8 @@ Please note we only support **ONE ACTION** per response
 #### Transfer / Escalations
 
 <div class="notice">
-<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong>
-is the naming convention between each.
-
-All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation,
-the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.
-Further down the line, if any additional functionality is added that can be called by an action from the AI,
-it will follow the same naming convention.
-
-For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore,
-if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name
-with "BOT-" within Conversational Cloud.
-
+<p><strong>Naming conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.</p>
+<p>Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.</p>
 </div>
 
 #### Transfer To Skill

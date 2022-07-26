@@ -17,7 +17,6 @@ This tutorial explains how to start a Voice or Video Call on consumer side using
 ### Important information
 The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands must either set up their own infrastructure or use a 3rd party provider. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.  
 
-
 ### Step 1 — Set required Feature in Client Properties
 
 In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you add a ``features`` property to the clientProperties that contain the ``CO_BROWSE`` feature. An example initConnection request that enables the feature would look like this:
@@ -185,7 +184,6 @@ Error IDs:
 * ``NO_CAMERA_ACCESS`` The application can't access the user's camera
 * ``AGENT_DISCONNECTED`` The agent got disconnected
 
-
 ### Handling hanging-up, cancelled invitation and expiry
 The following ``cqm.ExConversationChangeNotification`` event is triggered when a call ended, an invitation was cancelled by the Agent or in case the invitation expired after 2 minutes:
 
@@ -199,7 +197,5 @@ The following ``cqm.ExConversationChangeNotification`` event is triggered when a
 	}
 }
 ```
-
-
 
 {% include links.html %}

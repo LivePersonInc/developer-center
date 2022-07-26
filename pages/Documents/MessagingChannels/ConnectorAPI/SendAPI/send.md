@@ -54,11 +54,9 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 | :--- | :--- |
 | The JSON Payload | application/json |
 
-**Notes**:
+**Note:** For the JSON payload, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html) to get an example of the accepted payloads. This payload would normally have the _ms.PublishEvent_ type or the _cm.UpdateConversationField_ type.
 
-For the JSON payload, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html) to get an example of the accepted payloads. This payload would normally have the _ms.PublishEvent_ type or the _cm.UpdateConversationField_ type.
-
-**Example Request Body - Send A Message - JSON Payload**
+**Example Request Body — Send A Message — JSON Payload**
 
 ```json
 {  
@@ -85,8 +83,7 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
 | message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
 
-
-**Example Request Body - Consumer is Typing - JSON Payload**
+**Example Request Body — Consumer is Typing — JSON Payload**
 
 ```json
 {  
@@ -111,8 +108,7 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | type | The messaging event type | ChatStateEvent | string | true |
 | ChatState | Chat Status of the consumer | "COMPOSING" - Consumer is typing | String | true | Possible values: **"ACTIVE"** (user is in the chat), **"INACTIVE"** (e.g. Consumer navigated away but application is still open), **"GONE"** (e.g. Consumer closed the chat application), **"COMPOSING"** (Consumer is typing), **"PAUSE"** (Consumer has stopped typing) |
 
-**Note**: After sending **"chatState":"COMPOSING"**, In order to send an indication that the consumer has stopped typing, an additional message has to be sent with a different **"chatState"** value than **"COMPOSING"**. Otherwise it will keep indicating on the Agent side that the consumer is typing.  
-
+**Note:** After sending **"chatState":"COMPOSING"**, In order to send an indication that the consumer has stopped typing, an additional message has to be sent with a different **"chatState"** value than **"COMPOSING"**. Otherwise it will keep indicating on the Agent side that the consumer is typing.  
 
 **Example Request Body - Consumer has accepted the message**
 
@@ -141,8 +137,7 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | status | Acceptance status of the message sent by the Agent to the Consumer | "ACCEPT" | string | true | Possible values: **"ACCEPT"** (message was accepted by the consumer), **"READ"** (message was read by the consumer), **"ACCESS"** (Consumer has accessed the file), **"NACK"** (message not received), **"ACTION"** (used in conjunction with metadata to reply on structured content sent by the Agent) |
 | sequenceList | List of **sequence** values | [2,3] | Array of integers | true |  See [example](webhooks-examples.html#agent-sent-a-text-messages). You can mention more than one sequence number hence the sequence list |   
 
-**Note**: Conversational Cloud assigns a number to every message. That number controls where that message appears in the sequence. In order to refer to a specific message or group of messages, you need to pass their sequence IDs. For example, if you want to "ACCEPT" the first and second message, you will pass the sequenceList as above.
-
+**Note:** Conversational Cloud assigns a number to every message. That number controls where that message appears in the sequence. In order to refer to a specific message or group of messages, you need to pass their sequence IDs. For example, if you want to "ACCEPT" the first and second message, you will pass the sequenceList as above.
 
 ### Response
 
@@ -151,7 +146,6 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | Code | Description |
 | :--- | :--- |
 | 200 | OK |
-
 
 **Entity Example**
 

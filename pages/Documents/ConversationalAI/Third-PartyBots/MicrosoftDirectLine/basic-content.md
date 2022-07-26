@@ -10,9 +10,7 @@ indicator:
 
 ### Introduction
 
-Most of the basic content must be send either via the text property of an activity or via the json object provided on
-the `channelData` property of the activity. Improving support for native content is planned but as of now most of the
-content needs to be provided in the described custom format.
+Most of the basic content must be send either via the text property of an activity or via the JSON object provided on the `channelData` property of the activity. Improving support for native content is planned but as of now most of the content needs to be provided in the described custom format.
 
 ### Structured Content
 
@@ -100,7 +98,7 @@ For detailed information on Quick Replies check out the documentation for the sp
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -192,11 +190,7 @@ Please note we only support **ONE ACTION** per response
 
 This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
 
-<div class="notice">
-<strong>Naming Conventions:</strong> 
-When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the 
-skill matching to work.
-</div>
+<div class="notice"><strong>Naming conventions:</strong> When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the skill matching to work.</div>
 
 #### Transfer To Skill
 
@@ -339,7 +333,7 @@ LivePerson Messaging uses 3 different types of priorities:
 
 The time values of these are defined in the Agent Workspace.
 
-A text message can also be provided simultaneously in the activity json.
+A text message can also be provided simultaneously in the activity JSON.
 
 ```json-doc
 {

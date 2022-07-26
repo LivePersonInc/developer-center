@@ -93,7 +93,6 @@ By default, Conversational Cloud uses the third-party storage solution type for 
 </tbody>
 </table>
 
-
 ### Conversation Data
 
 <table>
@@ -149,7 +148,6 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
-
 ### Login Cookies
 
 <table>
@@ -201,7 +199,6 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
-
 ### CoBrowse cookies
 
 <table>
@@ -220,7 +217,6 @@ Note: We do not currently use this data although we do store it.</td>
   </tr>
 </tbody>
 </table>
-
 
 ### Considerations
 

@@ -35,7 +35,6 @@ Below you can find a list of hooks available on a web page by the Web Tag, each 
 
 If param1 was changed on hook1, hook2 will get param1 after the change.
 
-
 ### Valid hook
 ```javascript
 function _hookCallback_(options){
@@ -101,7 +100,6 @@ Parameters: TBD
 
 ## Rendering
 
-
 #### NAME: BEFORE_ENG_DISPLAY
 
 Use case: Change engagement state / click target / display / etc.
@@ -113,7 +111,6 @@ Place: rendererStub.js --> engagement.createInstance
 Timing: Before
 
 Parameters: TBD 
-
 
 #### NAME: BEFORE_ENG_CHANNEL_OPEN
 
@@ -131,7 +128,6 @@ Timing: Before
 Parameters: TBD 
 
 ### Unified Window
-
 
 #### NAME: AFTER_GET_SURVEY
 
@@ -205,8 +201,6 @@ Parameters:
    }
 }
 ```
-
-
 
 #### NAME: BEFORE_SUBMIT_SURVEY
 

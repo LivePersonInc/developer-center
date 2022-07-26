@@ -31,7 +31,6 @@ Messaging and Chat reports are broken down into the following categories:
 
 In the future, additional reports will be added - have an idea for a report? [Let us know](https://github.com/LivePersonInc/developers-community/issues).
 
-
 ### Create Report Options
 
 After selecting a report, you will need to configure the following report options and then click Create Task.

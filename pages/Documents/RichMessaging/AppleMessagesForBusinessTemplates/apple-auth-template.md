@@ -165,9 +165,7 @@ Please use the metadata template with the relevant fields, as presented in the e
   </tbody>
 </table>
 
-
 ###### `ConnectorAuthenticationRequest` Object Properties
-
 
 <table>
   <thead>
@@ -193,7 +191,6 @@ Please use the metadata template with the relevant fields, as presented in the e
 </table>
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
-
 
 ###### `receivedMessage` Object Properties  
 
@@ -232,7 +229,6 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tr>
   </tbody>
 </table>
-
 
 ###### `replyMessage` Object Properties  
 

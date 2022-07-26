@@ -58,7 +58,6 @@ Similarly for permissions, you can disable these permissions elements by adding:
 <bool name="lp_enable_voice_video_call">true</bool>
 ```
 
-
 ### Branding and Configurations
 
 #### lp_enable_voice_video_call

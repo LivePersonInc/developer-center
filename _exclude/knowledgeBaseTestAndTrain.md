@@ -11,7 +11,6 @@ indicator: both
 
 ### Train a knowledge base
 
-
 **To train a knowledge base**
 
 1. Select the knowledge base.
@@ -36,7 +35,6 @@ Because we want to return the best response to our users, our NLU has a threshol
 You can't change the threshold when using intents, but you *can* do this for the knowledge bases. Because the Knowledge Base is used as an API, you can alter the "threshold" parameter in your specific [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to increase or decrease the desired level of NLU confidence.
 
 #### Search filters
-
 
 #### Positive and negative learnings
 
