@@ -86,7 +86,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 <img class="zoomimg" src="img/Connector API - Simplified View.svg" alt="connectoroverview">
 
-[comment]: <> <iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
+[comment]: <> <iframe src="https://players.brightcove.net/902047215001/default_default/index.html?videoId=5348329763001" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
 
 ### Samples
 
