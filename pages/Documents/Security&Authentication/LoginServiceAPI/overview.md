@@ -25,7 +25,7 @@ Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of U
 
 Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).  
 
-**TIP:** Use the `agentVep` service name to retrieve your domain.
+**Tip:** Use the `agentVep` service name to retrieve your domain.
 
 ```html
 http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0
