@@ -22,7 +22,7 @@ Delete an existing agent survey object.
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
 | accountId | LP site ID | String  |
-| agentSurveyId| Account Config object’s unique id. For multiple deletion, use comma separator between agent survey id's {id1,id2,id3....}| String|
+| agentSurveyId| Account Config object’s unique id. For multiple deletion, use comma separator between agent survey id's {id1,id2,id3…}| String|
 
 **Request Headers**
 

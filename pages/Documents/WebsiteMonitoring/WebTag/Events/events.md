@@ -397,7 +397,7 @@ These are cobrowse-related events, including rendering, display and interactions
 
 #### cobrowseOffered
 
-This event is triggered when ...
+This event is triggered when …
 
 **Event Information**
 

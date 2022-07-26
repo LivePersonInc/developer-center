@@ -4254,7 +4254,7 @@ Appointment Scheduler window text color code for title, date and confirm button 
 * **(Dark Theme) Default value:** #FFFFFF
 
 #### lp_appointment_week_day_title_color
-Color code for week days text: S, M, T, W, ....
+Color code for week days text: S, M, T, W, …
 * **Type:** color
 * **(Light Theme) Default value:** #000000
 * **(Dark Theme) Default value:** #FCFCFD

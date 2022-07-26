@@ -193,12 +193,12 @@ async function lazyReadSecret() {
 }
 
 function lambda(input, callback) {
-    ...
+    …
 
     // Here we are reading the secret
     mySecret = await lazyReadSecret();
 
-    ...
+    …
 }
 ```
 

@@ -88,7 +88,7 @@ const agent = new Agent({
 });
 
 agent.on('connected', () => {
-    console.log(`connected...`);
+    console.log(`connected…`);
 
     // subscribe to all conversations in the account
     agent.subscribeExConversations({

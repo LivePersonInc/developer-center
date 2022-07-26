@@ -48,14 +48,14 @@ async function lambda(input, callback) {
     const request_data = {
       url: 'www.mywebsite.com/request',
       method: 'POST',
-      body: ...,
+      body: …,
     };
 
     const response = await httpClient(request_data.url, {
       method: request_data.method,
       headers: {
         // toHeader() returns the Authorization request header and assigns it to the header using the spread operator
-        ...oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
+        …oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
         'Content-Type': 'application/json',
       },
       body: request_data.body,

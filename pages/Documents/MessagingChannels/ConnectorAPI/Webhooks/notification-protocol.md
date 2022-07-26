@@ -70,7 +70,7 @@ Apart from sending Authentication headers, Webhooks supports [MTLS](/mtls-overvi
 POST <mtlsGateway>/mtls/account/125634 HTTP/1.1
 LP-service-name: WEBHOOKS
 LP-forward-url: https://liveperson.com/endpoint
-Authorization: OAuth <...>
+Authorization: OAuth <…>
 
 {
    "kind":"req",

@@ -102,7 +102,7 @@ When an unauthenticated user session expire — the SDK will notify by presentin
 // 1. Init SDK with Monitoring
 MonitoringInitParams monitoringInitParams = new MonitoringInitParams(monitoringAppInstallId);
 
-LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {...}));
+LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {…}));
 
 // 2. create and pass LPAuthenticationParams
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);

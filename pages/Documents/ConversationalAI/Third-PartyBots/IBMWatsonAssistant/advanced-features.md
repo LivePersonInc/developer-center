@@ -279,7 +279,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 {
   "message": "Some Message",
   "context": {
-    // ... contains some more information about conversation as well
+    // … contains some more information about conversation as well
     "lpEvent": {}, // Holds LP Events
     "lpSdes": {} // Holds SDES
   }

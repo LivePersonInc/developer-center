@@ -29,11 +29,11 @@ _Note: If you pass **authenticationCode** or **jwt** on LPAuthenticationParams i
 
 ```swift
 class LPAuthenticationParams: NSObject {
-    ...
+    …
     var type: LPAuthenticationType = .signup
-    ...
+    …
     init(authenticationCode: String? = nil, jwt: String? = nil, redirectURI: String? = nil, certPinningPublicKeys: [String]? = nil, authenticationType: LPAuthenticationType = .signup)
-    ...
+    …
 }
 ```
 
@@ -61,7 +61,8 @@ do {
     return
 }
 
-....
+…
+
 // 2. Init LPConversationViewParams
 let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: nil, isViewOnly: false)
 
@@ -70,7 +71,7 @@ let authenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: 
 
 // 4. Call showConversation() with LPConversationViewParams and LPAuthenticationParams
 LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
-...
+…
 
 ```
 

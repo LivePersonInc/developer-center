@@ -160,7 +160,7 @@ Errors with the name `FaaSLambdaError` are raised when the invocation fails due 
 ```javascript
 try {
   // invoke here
-  ...
+  …
 } catch (error) {
   /**
    * LivePerson FunctionsLambdaErrors occur when the function fails due to the implementation.

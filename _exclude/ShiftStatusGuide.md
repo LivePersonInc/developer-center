@@ -89,22 +89,22 @@ function transfer(intent){
  // check for which intent
  switch(intent){
    case "billing":
-     transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your billing issue…";
      skillId = '1234567890';
      skillName = intent;
      break;
    case "account":
-     transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your account issue…";
      skillId = '2345678901';
      skillName = intent;
      break;
    case "help":
-     transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
      skillId = '3456789012';
      skillName = intent;
      break;
    default:
-     transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
      skillId = '4567890123';
      skillName = 'default';
      break; 

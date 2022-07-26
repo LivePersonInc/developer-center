@@ -24,7 +24,7 @@ Delete an existing workday object.
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String  |
-|workdayId| Account Config object’s unique id. To delete multiple workdays objects, use comma separator between workday id's {id1,id2,id3....}| String|
+|workdayId| Account Config object’s unique id. To delete multiple workdays objects, use comma separator between workday id's {id1,id2,id3…}| String|
 
 **Request Headers**
 

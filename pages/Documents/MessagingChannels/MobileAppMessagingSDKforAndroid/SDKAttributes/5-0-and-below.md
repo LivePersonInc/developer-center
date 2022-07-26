@@ -4049,7 +4049,7 @@ Appointment Scheduler window text color code for title, date and confirm button 
 
 #### lp_appointment_week_day_title_color
 
-Color code for week days text: S, M, T, W, ....
+Color code for week days text: S, M, T, W, …
 
 * **Type:** color
 * **Default value:** #000000

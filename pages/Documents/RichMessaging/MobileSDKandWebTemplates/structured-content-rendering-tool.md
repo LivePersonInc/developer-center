@@ -55,7 +55,7 @@ Map the JsonPollock path in the RequireJs config, and then:
 
 ```javascript
 require(["JsonPollock"],(jsonPollock) => {
-    ...
+    …
 })
 ```
 
@@ -137,10 +137,10 @@ JsonPollock.unregisterAllActions();
 Prior to the rendering, the JSON object is validated against the JSON template. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
 
 ```javascript
-...
+…
 try {
     const rooEl = JsonPollock.render(json);
-    ...
+    …
 } catch(e) {
 	console.log(e.message);    // error message
 	console.log(e.errors);     // validation errors

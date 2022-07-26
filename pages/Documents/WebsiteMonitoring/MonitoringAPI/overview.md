@@ -82,7 +82,7 @@ This API is public. When specifying `appInstallationId` and `accountId`, the API
 | Status code | Internal code | Description | Notes |
 | :--- | :--- | :--- | :--- |
 | 400 | 33 | illegal API version requested | |
-| 400 | 5 | request data is missing or invalid | request body is not a valid JSON ; input does not meet validation requirements; input cannot be parsed ... |
+| 400 | 5 | request data is missing or invalid | request body is not a valid JSON ; input does not meet validation requirements; input cannot be parsed … |
 | 404 | 37 | invalid visitorId | |
 | 404 | 39 | invalid sessionId | |
 | 404 | 18 | invalid appInstallationId | |

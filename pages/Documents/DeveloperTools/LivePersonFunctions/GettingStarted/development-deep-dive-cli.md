@@ -212,12 +212,12 @@ describe("the function", function () {
 In the last step, you can add the following lines to your `package.json`:
 
 ```json
-...
+…
   "scripts": {
     "test": "node_modules/mocha/bin/mocha index.test.js",
     "publish": "node_modules/mocha/bin/mocha index.test.js && lpf push"
   },
-...
+…
 ```
 
 You can now manually test your function using `yarn test` or use `yarn publish` to force testing before publishing the function on an account.

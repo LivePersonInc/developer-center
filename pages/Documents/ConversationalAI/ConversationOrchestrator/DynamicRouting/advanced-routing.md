@@ -97,7 +97,7 @@ Update the template to create your rule.
 
 The time range template allows you to create policies that can route conversations by time and days of the week. The template takes inputs in the following format:
 
-`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2',...])`
+`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 
@@ -111,7 +111,7 @@ You can create time-based routing policies in the following ways:
 
 The date range template allows you to create policies that can route conversations by date and days of the week.The template takes inputs in the following format:
 
-`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2',...])`
+`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 

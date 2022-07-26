@@ -17,7 +17,7 @@ JSON Formatter is an AngularJS directive for rendering JSON objects in HTML with
   angular
   .module('jsonFormatterApp', [
     'ngCookies',
-    ...
+    …
     'jsonFormatter'
   ])
     

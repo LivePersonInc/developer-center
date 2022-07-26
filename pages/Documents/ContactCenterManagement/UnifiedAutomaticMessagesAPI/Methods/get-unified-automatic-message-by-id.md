@@ -106,8 +106,8 @@ Contexted Response:
 	      "deleted": false,
 	      "skillId": 1,
 	      "enabled": true,
-	      "data": [...],
-	      "attributes": [...]
+	      "data": […],
+	      "attributes": […]
 	    }
 	  },
 	  "ACCOUNT": {
@@ -115,8 +115,8 @@ Contexted Response:
 	      "messageEventId": "TestMessageEventId",
 	      "deleted": false,
 	      "enabled": true,
-	      "data": [...],
-	      "attributes": [...]
+	      "data": […],
+	      "attributes": […]
 	    }
 	  }
 	}

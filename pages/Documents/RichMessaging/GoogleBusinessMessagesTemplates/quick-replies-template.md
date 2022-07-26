@@ -60,7 +60,7 @@ The quick reply container holds all buttons that should be displayed with the me
 {
   "type": "quickReplies",
   "itemsPerRow": 1,
-  "replies": [Button, Button, ...Button]
+  "replies": [Button, Button, …Button]
 }
 ```
 

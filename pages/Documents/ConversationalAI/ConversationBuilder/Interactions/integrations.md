@@ -43,11 +43,11 @@ When an integration interaction is processed, the order of invocation is as foll
 {: .important}
 It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
-In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
+In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction…
 
  <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png" alt="">
 
-...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+…so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
  <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png" alt="">
 
@@ -205,7 +205,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt=""> (Agent Transfer) on the interactions toolbar.
 2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n.
 
-    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent..."
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent…"
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png" alt="">
 
@@ -273,7 +273,7 @@ Some setup of your Conversational Cloud environment is required before using thi
     * **Success Message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     * **Failure Message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
     * **Validation Failure Message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
+    * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file…"
 
 4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="">. In the Integration interaction, select the File integration to invoke (Integration type = File).
 

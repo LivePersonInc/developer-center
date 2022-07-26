@@ -132,8 +132,8 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_feedback\_yesno\_positive\_title** | Positive button text in the feedback dialog. | YES |
 | **lp\_feedback\_yesno\_question** | Yes/No question text in feedback dialog. | Did we solve your issue today? |
 | **lp\_first\_message** | System message before the first conversation. | How can I help you today? |
-| **lp\_is\_typing** | Text in conversation activity when agent is typing. | typing... |
-| **lp\_loading\_message** | Text above the loading icon when loading previous messages. | Loading... |
+| **lp\_is\_typing** | Text in conversation activity when agent is typing. | typing… |
+| **lp\_loading\_message** | Text above the loading icon when loading previous messages. | Loading… |
 | **lp\_mark\_as\_resolved\_dialog\_message** | Resolve conversation confirmation dialog text. | Are you sure this topic is resolved? |
 | **lp\_mark\_as\_resolved\_menu\_text** | "Mark as resolved" string in menu. | Mark as resolved |
 | **lp\_mark\_as\_urgent\_dialog\_header** | Mark as urgent confirmation dialog header. | Are you sure you want to mark this conversation as urgent? |
@@ -151,7 +151,7 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_resend\_failed\_masked\_message** | Toast message displayed when trying to resend a failed masked message. | Message failed to send. Please re-enter message and send again. |
 | **lp\_send** | The "Send" button text. | Send |
 | **lp\_skip** | Feedback dialog toolbar skip button text. | Skip |
-| **lp\_still\_loading\_message** | Message displayed when loading conversation takes longer the usual | Still loading conversation... |
+| **lp\_still\_loading\_message** | Message displayed when loading conversation takes longer the usual | Still loading conversation… |
 | **lp\_today** | Today header in conversation. | Today |
 | **lp\_ttr\_message\_days** | (plurals string that contains: "one" and "others") The one or others strings is concatenated to the lp\_ttr\_message\_with\_timestamp string above according to whether it's single day multiple days. Example: one or others. |   |
 | **lp\_ttr\_message\_hours** | (plurals string that contains: "one" and "others"). The one or others strings is concatenated to the lp\_ttr\_message\_with\_timestamp string above according to whether it's single hour multiple hours. Example: one or others. |   |

@@ -146,7 +146,7 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
     Log.d(TAG, "Got LP intent event with action " + intent.getAction());
     switch (intent.getAction()){
       //handle the relevant actions from LivePersonIntents.ILivePersonIntentAction
-      ...
+      …
     }
   }
 };

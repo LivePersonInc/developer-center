@@ -2197,7 +2197,7 @@ When set to **true**, the TTR notifications show with off hours.  When the auto 
 
 #### ttrShowShiftBanner  
 
-Enable or disable shift toaster ('An agent will respond...’).
+Enable or disable shift toaster ('An agent will respond…’).
 
 - **Type:** Bool
 - **Default value:** true

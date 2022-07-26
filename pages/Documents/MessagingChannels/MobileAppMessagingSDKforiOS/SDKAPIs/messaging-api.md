@@ -72,7 +72,7 @@ func dismissUrgent(_ conversationQuery: ConversationParamProtocol)
 Use this method to get all supported languages as Strings dictionary where:
 
 * **Key** - Locale key
-* **Value** - explicit language name (example: "English", "Portuguese (Brazil)", ...)
+* **Value** - explicit language name (example: "English", "Portuguese (Brazil)", …)
 
 ```swift
 func getAllSupportedLanguages() -> [String : String]

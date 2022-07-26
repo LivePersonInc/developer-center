@@ -31,7 +31,7 @@ This API creates a certificate for a specific account ID.
 [
   {
   	"name":"myCert1",
-  	"p12":[98,121,116,101,115, ...],
+  	"p12":[98,121,116,101,115,…],
   	"password":"paw1"
   }
 ]

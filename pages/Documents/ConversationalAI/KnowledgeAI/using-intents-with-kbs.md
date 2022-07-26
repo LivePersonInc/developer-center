@@ -60,7 +60,7 @@ For information on this, see [here](knowledgeai-optimizing-your-content-tuning-a
 
 When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
-| If the knowledge base is... | Then... |
+| If the knowledge base is… | Then… |
 | --- | --- |
 | an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |

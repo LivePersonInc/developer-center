@@ -31,7 +31,7 @@ Moreover, all domains must be HTTPS secure.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -81,7 +81,7 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -166,7 +166,7 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -207,7 +207,7 @@ The action must be named `TRANSFER` and a skill name must be provided.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "I'll transfer you to a human agent", // an optional message to the customer (can be left empty)
   "channelData": {
@@ -239,7 +239,7 @@ const handoffContext = { skill: "human-expert" };
 
 const payload = {
   text: "I'll transfer you to a human agent",
-  ...EventFactory.createHandoffInitiation(context, handoffContext),
+  …EventFactory.createHandoffInitiation(context, handoffContext),
 };
 ```
 
@@ -259,7 +259,7 @@ The action must be named `TRANSFER` and a skill name alongside agentId must be p
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "I'll transfer you to a certain agent", // an optional message to the customer (can be left empty)
   "channelData": {
@@ -285,7 +285,7 @@ The action must be named `CLOSE_CONVERSATION` in this case.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "", // an optional message to the customer
   "channelData": {
@@ -337,7 +337,7 @@ A text message can also be provided simultaneously in the activity JSON.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
