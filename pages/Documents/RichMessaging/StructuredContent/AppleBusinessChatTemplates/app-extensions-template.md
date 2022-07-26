@@ -174,6 +174,6 @@ The new property will allow the agent/bot to view the textual representation of 
 
 2. **ImageURL MUST be whitelisted** - Image URLs added in the RecievedMessage must be whitelisted in the structured content image whitelisting area in Site Settings → messaging.rich.content.valid.urls.
 
-3. Custom iMessage app response bubble - the connector currently does not capture reply bubble response from the consumer to the iMessage app. However, the transaction that occurred in the iMessage app by the consumer can be captured by the brand and updated in the Agent Widget SDK. (The response will be captured in the LE transcript line in future version).
+3. Custom iMessage app response bubble — the connector currently does not capture reply bubble response from the consumer to the iMessage app. However, the transaction that occurred in the iMessage app by the consumer can be captured by the brand and updated in the Agent Widget SDK. (The response will be captured in the LE transcript line in future version).
 
-4. Reporting - in order to allow brands to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app the brand uses. This will allow the brand to then track how many times a specific iMessage app was sent via a transcript search.
+4. Reporting — in order to allow brands to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app the brand uses. This will allow the brand to then track how many times a specific iMessage app was sent via a transcript search.

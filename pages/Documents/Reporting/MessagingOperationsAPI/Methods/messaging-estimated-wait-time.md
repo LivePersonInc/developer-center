@@ -77,8 +77,8 @@ This is an example response which contains information for two skills, skills=2,
 
 | Code | Response |
 | :----- | :--------- |
-| 200 | OK - Successfully retrieved the data. |
-| 400 | Bad request - Problem with body or query parameters. |
-| 401 | Unauthorized - Bad Authentication. |
-| 403 | Forbidden - Bad Authorization (invalid permissions). |
-| 500 | Internal Server Error - Please try again after the time specified in the response has passed. |
+| 200 | OK — Successfully retrieved the data |
+| 400 | Bad request — Problem with body or query parameters |
+| 401 | Unauthorized — Bad Authentication |
+| 403 | Forbidden — Bad Authorization (invalid permissions) |
+| 500 | Internal Server Error — Please try again after the time specified in the response has passed |

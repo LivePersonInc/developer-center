@@ -39,7 +39,7 @@ if (count > 10) {
       botContext.sendMessage('You have more than 10 items!');
 } else {
   botContext.setBotVariable('Howmanyitems',0,true,false);
-  botContext.sendMessage('Sorry, you do not have any items with you... ');
+  botContext.sendMessage('Sorry, you do not have any items with you… ');
 }
 ```
 
@@ -117,17 +117,17 @@ In the example below, we use `getEnvVariable` to retrieve a string which will pr
 ```javascript
 switch(intent){
 case "billing":
-    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue…";
     skillId = botContext.getEnvVariable('billing');
     skillName = intent;
     break;
 case "account":
-    transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your account issue…";
     skillId = botContext.getEnvVariable('account');
     skillName = intent;
     break;
 case "help":
-    transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
     skillId = botContext.getEnvVariable('help');
     skillName = intent;
     break;  
@@ -419,7 +419,7 @@ botContext.sendImmediateReply('Hey you picked option ' + response  +' with a pay
 var intentName = botContext.getDisambiguatedIntentName() ;
 // get the disambiguated intent ID
 var intentID = botContext.getDisambiguatedIntentId();
-// display the results...
+// display the results…
 botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```
 

@@ -14,7 +14,7 @@ permalink: customer-facing-bots-deploying-bots-on-messaging.html
 indicator:
 ---
 
-### Step 1 - Set Up Your Conversational Cloud Configuration
+### Step 1 — Set Up Your Conversational Cloud Configuration
 
 1. Ensure your Conversational Cloud account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'All Conversations’ list displayed on your workspace).
 
@@ -26,7 +26,7 @@ indicator:
 
 	* Uploading an avatar for your bot is important when looking to achieve a level of transparency with your consumers. Clarifying to your consumers they are messaging with a bot will create a transparent user experience and eliminate miscommunication.  
 
-### Step 2 - Implement the Messaging Agent SDK
+### Step 2 — Implement the Messaging Agent SDK
 
 Our Messaging Agent SDK can be found at [this location](messaging-agent-sdk-overview.html).
 
@@ -52,13 +52,13 @@ You can also watch this demo video, which will guide you on how to run this exam
 
 [https://www.youtube.com/embed/7PVj6nhjG5o](https://www.youtube.com/embed/7PVj6nhjG5o)
 
-### Step 3 - Create backup systems for your bot with Clusters (optional)
+### Step 3 — Create backup systems for your bot with Clusters (optional)
 
 For enterprise brands, take additional measure to ensure the scalability of your bot to handle large volumes through setting up bot clusters that enable:
 
-* Bot Resiliency - If one node crashes, one of the other clusters will reconnect the bot.
+* Bot Resiliency — If one node crashes, one of the other clusters will reconnect the bot.
 
-* Multiple Bots - The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
+* Multiple Bots — The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
 
 This example demonstrates running a bot on a horizontal scalable cluster. It can be used for a few use cases:
 
@@ -70,7 +70,7 @@ You can also watch the demo video which will guide you through this example bot:
 As well as a code review video:
 [https://www.youtube.com/embed/QZiNzkWgPWk](https://www.youtube.com/embed/QZiNzkWgPWk)
 
-### Step 4 - Assign your bot to engagements and manage bot escalations
+### Step 4 — Assign your bot to engagements and manage bot escalations
 
 With Conversational Cloud your bot can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations.
 
@@ -80,7 +80,7 @@ _Please contact your LivePerson representative to complete this task._
 
 To manage bot escalations, you can teach your bot to escalate to a human skill once consumer types "Agent", provide structured menu with escalation option for In-app and Facebook, or use your AI and NLP service to perform Intent matching).  
 
-### Step 5 - Test your bot
+### Step 5 — Test your bot
 
 Once your bot is assigned to an engagement, you can begin to test the bot and see how it behaves as an agent within Conversational Cloud.  Conduct the following tests:
 
@@ -90,11 +90,11 @@ Once your bot is assigned to an engagement, you can begin to test the bot and se
 * View the agent list to see that your bot displays
 * Test the escalation to human agent
 
-### Step 6 - Monitor the performance of your bot
+### Step 6 — Monitor the performance of your bot
 
 The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 
-Best practice - monitor the following statistics on your bot agents:
+Best practice — monitor the following statistics on your bot agents:
 
 * MCS
 * CSAT

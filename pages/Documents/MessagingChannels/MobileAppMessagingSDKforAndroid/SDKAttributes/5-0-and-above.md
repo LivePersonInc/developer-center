@@ -691,7 +691,7 @@ Define the visibility of "cCear history" menu item.
 #### conversation_background (color)
 Define the color code for the entire view background.
 
-In activity mode - Also the color of android:windowBackground.
+In activity mode — also the color of android:windowBackground.
 
 * **Type:** color
 * **Default value:** @color/lp_colorBackground
@@ -1523,7 +1523,8 @@ Define whether or not we should show a real time link preview. A preview while t
 #### link_preview_to_use_more_than_og_tags
 parse only &lt;og:> tags or others as well
 
-false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags
+* false: use &lt;og:title&gt; tags only
+* true: use &lt;og:title&gt; and &lt;title&gt; tags
 
 ---  
 
@@ -1743,7 +1744,7 @@ Defines the color of close icon on enter message view.
 
 ---
 
-### Navigation - Scroll Behavior Configuration
+### Navigation — Scroll Behavior Configuration
 
 #### lp_scroll_show_conversation
 Configures the scroll behavior when open conversation screen from another screen of the app.
@@ -3577,9 +3578,9 @@ Update the timestamp text font size of the conversation message bubbles.
 
 #### show_agent_typing_in_message_bubble
 
-True - the agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
+True: The agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
 
-False - the agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
+False: The agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
 
 Only available as long as the announce_agent_typing configuration is on (set as true).
 
@@ -4253,7 +4254,7 @@ Appointment Scheduler window text color code for title, date and confirm button 
 * **(Dark Theme) Default value:** #FFFFFF
 
 #### lp_appointment_week_day_title_color
-Color code for week days text: S, M, T, W, ....
+Color code for week days text: S, M, T, W, …
 * **Type:** color
 * **(Light Theme) Default value:** #000000
 * **(Dark Theme) Default value:** #FCFCFD

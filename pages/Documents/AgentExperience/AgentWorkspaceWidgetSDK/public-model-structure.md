@@ -810,11 +810,11 @@ Structure example:
 |----------------|--------------------------------------------------|---------|
 | appId          | String representation of the Identification of the application        | string  |
 | appVersion     | The application version, for example in case of mobile it will be the host app version | string  |
-| browser        | String represent the browser. For example: chrome, firefox, etc...    | string  |
+| browser        | String represent the browser. For example: chrome, firefox, etc…    | string  |
 | browserVersion | Detailed version info of the user agent (browser or host-application) | string  |
 | deviceFamily   | For example: personal_computer/tablet/mobile_phone                    | string  |
-| deviceModel    | For example for G3 for LG, iPhone6s for Apple...                      | string  |
-| deviceManufacture| For example LG, HP, Microsoft...                                    | string  |
+| deviceModel    | For example for G3 for LG, iPhone6s for Apple…                      | string  |
+| deviceManufacture| For example LG, HP, Microsoft…                                    | string  |
 | integration    | For example: web_sdk, mobile_sdk, and brand_sdk                       | string  |
 | integrationVersion| String representation of the integration version                   | string  |
 | ipAddress      | String representation of the ip address                               | string  |

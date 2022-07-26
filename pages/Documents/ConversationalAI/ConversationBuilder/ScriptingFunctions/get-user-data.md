@@ -53,7 +53,7 @@ This scripting function isn't commonly used. However, it is used by those curren
 ```javascript
 // get the user’s ID within CB
 var userId = botContext.getUserPlatformId();
-// display the results...
+// display the results…
 botContext.printDebugMessage('The userPlatformId = ' + userId);
 ```
 

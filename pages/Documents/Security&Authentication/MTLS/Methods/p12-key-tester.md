@@ -36,7 +36,7 @@ Password: the password that matches the supllied file.
 
 ```
 {
-  "file":"....."
+  "file":"…"
   "password":"45697"
 }
 ```

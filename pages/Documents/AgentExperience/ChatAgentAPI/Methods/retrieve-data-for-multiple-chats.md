@@ -20,7 +20,7 @@ This method retrieves the events, information and resources of multiple chats. U
 
 | Method | URI |
 | :--- | :--- |
-| GET | Resource is not exposed but can be used with any given valid agent session. {agent-session}/chat?chatSessionKeys=CSK1,CSK2,...&fromEventIds=EID1,EID2,...&v=1&NC=true |
+| GET | Resource is not exposed but can be used with any given valid agent session. {agent-session}/chat?chatSessionKeys=CSK1,CSK2,…&fromEventIds=EID1,EID2,…&v=1&NC=true |
 
 **Request Headers**
 
@@ -41,8 +41,8 @@ The body media type must have one of the following formats:
 
 | Name | Description | Type/Value | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| chatSessionKeys | List of the chat session keys of the chats you wish to retrieve separated by commas (,) | alphanumeric | Required | Example: {agent-session}/chat?chatSessionKeys=CSK1,CSK2,...&v=1 |
-| fromEventIds | List of the last event ids for the chats you wish to retrieve, this will ensure you only get updates for new chat events.  | numeric | | Example: {agent-session}/chat?chatSessionKeys=CSK1,CSK2,...&fromEventIds=EID1,EID2,...&v=1 |
+| chatSessionKeys | List of the chat session keys of the chats you wish to retrieve separated by commas (,) | alphanumeric | Required | Example: {agent-session}/chat?chatSessionKeys=CSK1,CSK2,…&v=1 |
+| fromEventIds | List of the last event ids for the chats you wish to retrieve, this will ensure you only get updates for new chat events.  | numeric | | Example: {agent-session}/chat?chatSessionKeys=CSK1,CSK2,…&fromEventIds=EID1,EID2,…&v=1 |
 
 ### Response
 

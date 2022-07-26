@@ -49,10 +49,10 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead <sup>[1]</sup>|  |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated — use identities instead <sup>[1]</sup>|  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
+| identities.acr | ACR — account config read | string | Required for each identity | supported value: loa1 |
 | identities.sub | The subject for identification | string | Required | |
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
@@ -206,7 +206,7 @@ ImpressionCloseEvent:
 
 #### Response entity examples
 
-Status code: 200 OK - Operation performed successfully:
+Status code: 200 OK — Operation performed successfully:
 
 ```json
 {
@@ -215,7 +215,7 @@ Status code: 200 OK - Operation performed successfully:
   "pageId": "4743822558"
 }
 ```
-Status code: 400 Bad request - Operation failed:
+Status code: 400 Bad request — Operation failed:
 
 ```json
 {
@@ -269,7 +269,7 @@ API version 1.1, Status code 202 Accepted -
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 | 202 | Loading account | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="important"> Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+<div class="important">Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
 
 ### Limitations
 

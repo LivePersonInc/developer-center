@@ -501,7 +501,7 @@ The following example illustrates how to enable the auto messages feature upon c
 }
 ```
 
-<div class="important"> In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
+<div class="important">In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
 
 ### Campaign for messaging Routing
 
@@ -688,7 +688,7 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 Below, we will examine and explain each stage in detail.
 
-#### Step 1 - Enable File Sharing
+#### Step 1 — Enable File Sharing
 
 In order to enable file sharing on your account, you should first enable the feature itself. Run the following commands, inserting the account admin username and admin password instead of the placeholders below:
 
@@ -699,11 +699,11 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 ./set_site_property.sh $LP_BEARER true messaging.file.sharing.enabled
 ```
 
-#### Step 2 - Create a Conversation
+#### Step 2 — Create a Conversation
 
 You will need to have an active conversation, along with its converationID, where the files will be shared. Below, creating a conversation is summarized but please follow the [CONVERSATION API](sendapi-create.html) documentation if you need any more information. Make sure you have an active conversation and a conversationId at hand by the end of this step.
 
-####  Step 3 - Request Upload URL
+#### Step 3 — Request Upload URL
 
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 
@@ -756,7 +756,7 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use them in the next request, to upload the file.
 
-#### Step 4 - Upload File to Storage
+#### Step 4 — Upload File to Storage
 
 Use the following request and the parameters obtained in step 3 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
@@ -791,7 +791,7 @@ Once the file is saved in storage, publish the file URL along with an optional c
 
 In order to generate a thumbnail you need to convert your image to base64. The output will populate the parameter `imageData`.
 
-#### Publish the file to the conversation - Example
+#### Publish the file to the conversation — Example
 
 ```json
 {
@@ -869,7 +869,7 @@ In response, you will get the URL details:
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use it in the next request, to download the file.
 
-#### Step 7 - Download File From Storage
+#### Step 7 — Download File From Storage
 
 Use the following request to download the file, using the parameters from the previous step.
 

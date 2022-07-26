@@ -275,7 +275,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button. 
 
       The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
@@ -306,7 +306,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       Once the CSAT screen is visible, **setFeedBackMode** will be called with **true** value, when the CSAT is not visible anymore (skip/submitted) - **setFeedBackMode** will be called with **false** value.
 
-      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+      Example — how to use **ConversationFragmentCallbacks** (code from the container Activity)
 
       ```java
       class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {

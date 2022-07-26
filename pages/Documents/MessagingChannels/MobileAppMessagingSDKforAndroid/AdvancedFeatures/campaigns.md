@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud — the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
 
 Using the Monitoring APIs, brands can:
 
@@ -82,12 +82,12 @@ Use this API to send engagement attributes (as part of the request body).  As an
 LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new EngagementCallback() {
 			@Override
 			public void onSuccess(@NotNull LPEngagementResponse lpEngagementResponse) {
-				...
+				…
 			}
 
 			@Override
 			public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
-				...
+				…
 			}
 		});
 ```
@@ -103,12 +103,12 @@ LivePerson.initialize(context, new InitLivePersonProperties(brandId, appId, moni
 
   @Override
   public void onInitSucceed() {
-    ...
+    …
   }
 
   @Override
   public void onInitFailed(Exception e) {
-    ...
+    …
   }
 }));
 ```
@@ -164,12 +164,12 @@ Use this API to report engagement attributes (SDEs).  Available parameters inclu
 LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCallback() {
   @Override
   public void onSuccess(@NotNull LPSdeResponse lpSdeResponse) {
-    ...
+    …
   }
 
   @Override
   public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
-    ...
+    …
   }
 });
 ```

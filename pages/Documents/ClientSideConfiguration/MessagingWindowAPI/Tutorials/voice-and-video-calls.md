@@ -36,7 +36,7 @@ In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you
       },
       {
          "type":".ams.headers.ConsumerAuthentication",
-         "jwt":"..."
+         "jwt":"…"
       }
    ]
 }

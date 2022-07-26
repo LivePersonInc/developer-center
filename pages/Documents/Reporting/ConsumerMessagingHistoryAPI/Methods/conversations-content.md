@@ -41,7 +41,7 @@ dialogId             | The dialog Id of this message dialog                     
 event                | Contains message event data.                              | container  | Valid types: ContentEvent, RichContentEvent, AcceptStatusEvent
 originatorMetadata   | Contains metadata regarding the message originator        | container  |
 
-_event - ContentEvent_
+_event — ContentEvent_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
@@ -49,13 +49,13 @@ type                 | The type of the message.   | string              | Valid 
 contentType          | The type of the contnet.   | string              | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
 message              | The message content.       | MessageContent      | The content structure is different per type
 
-_message - text/plain_
+_message — text/plain_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 message              | The text of the message.   | string              | The message field holds the text value.
 
-_message - hosted/file_
+_message — hosted/file_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
@@ -64,27 +64,27 @@ relativePath         | Relative path of the file. | string              |
 fileType             | Type of the file.          | string              | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
 preview              | A preview of the file.     | string              | File thumbnail in base64
 
-_message - forms/secure-submission_
+_message — forms/secure-submission_
 
 Name                 | Description                    | Type/Value          | Notes
 :------------------- | :------------------------------| :-------------------|---------------------------------------------
 invitationId         | The invitationId of the form   | string              |
 
-_message - forms/secure-invitation_
+_message — forms/secure-invitation_
 
 Name                 | Description                    | Type/Value          | Notes
 :------------------- | :------------------------------| :-------------------|---------------------------------------------
 invitationId         | The invitationId of the form   | string              |
 title                | The title of the form          | string              |
 
-_event - RichContentEvent_
+_event — RichContentEvent_
 
 Name                 | Description                | Type/Value          | Notes
 :------------------- | :--------------------------| :-------------------|---------------------------------------------
 type                 | The type of the message.   | string              | Valid values: "RichContentEvent"
 content              | The content of the message.| string              | A JSON representation of the message's rich content
 
-_event - AcceptStatusEvent_
+_event — AcceptStatusEvent_
 
 Name                 | Description                                      | Type/Value   | Notes
 :------------------- | :------------------------------------------------| :----------- | ---------------------------------
@@ -150,7 +150,7 @@ role                 | The originator role.       | string              |
                     "caption": "",
                     "relativePath": "/v1/AUTH_async-images/le79144597/9a8392e5-33d1-4d34-a91e-a00bc9e111c0_uuid_5fe9fa91-e022-4b74-94aa-76a7c6f662d5_07-01-2018_12-45-27-762.JPG",
                     "fileType": "JPG",
-                    "preview": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAAqACAAQAAAABAAAAWqADAAQAAAABAAAAeAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgAeABaAwERAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmd..."
+                    "preview": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAAqACAAQAAAABAAAAWqADAAQAAAABAAAAeAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgAeABaAwERAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmd…"
                 }
             }
         },

@@ -55,9 +55,9 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - request succeeded.  |
-| 400 | Bad request - Problem with body or query parameters. |
-| 500 | Internal server error. |
+| 200 | OK — request succeeded |
+| 400 | Bad request — Problem with body or query parameters |
+| 500 | Internal server error |
 
 **Response Body**
 

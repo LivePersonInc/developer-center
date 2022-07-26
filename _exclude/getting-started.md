@@ -528,7 +528,7 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 5. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (<img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt="">) beneath the Dialog Starter interaction.
 
-6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent…" Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
     <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_at.png" alt="">
 

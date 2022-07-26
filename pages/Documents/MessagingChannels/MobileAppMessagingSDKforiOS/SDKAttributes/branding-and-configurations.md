@@ -23,7 +23,7 @@ With the addition of Dark Mode supports in iOS 13, we now utilize Apple’s UIUs
 If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect. We have worked hard on its implementation and hope you enjoy it. 
 
 #### What this means for our customers who use custom attribute configurations? 
-If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuration will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid out in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
+If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuration will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid out in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 — NSHipster") article from NSHipster. We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
 
 #### What this means for consumers on iOS 12 and below? 
 As is indicated by the code sample below, we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
@@ -153,13 +153,9 @@ Custom font name for conversation feed, which affects all messages, timestamps a
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-#### customFontNameNonConversationFeed  
-Custom font name for all non conversation feed controls. Such as: buttons, alerts, banners, menu and external windows.
-Fonts that are not part of the iOS families, must be defined in App's Info.plist.
+#### customFontNameNonConversationFeed
+  
+Custom font name for all non conversation feed controls. Such as: buttons, alerts, banners, menu and external windows. Fonts that are not part of the iOS families, must be defined in App's Info.plist.
 
 <!--    <div style="float: left; width: 35%;height: 69px;">
    <ul>
@@ -175,12 +171,8 @@ Fonts that are not part of the iOS families, must be defined in App's Info.plist
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
- 
-
-#### customRefreshControllerImagesArray  
+#### customRefreshControllerImagesArray
+  
 Array of images for creating the custom refresh controller. The custom refresh controller will loop the images from the array. 
 It will need two or more images in the array for the loop to take effect.
 
@@ -198,11 +190,7 @@ It will need two or more images in the array for the loop to take effect.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-#### customRefreshControllerAnimationSpeed  
+#### customRefreshControllerAnimationSpeed 
 Custom refresh controller speed animation define the full images loop time. The smaller the value, the faster the animation.
 
    - **Type:** Float<UIImage>
@@ -243,10 +231,6 @@ Color code for the background of the connection status bar while connecting.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### connectionStatusConnectingTextColor 
 Color code for the text of the connection status bar while connecting.
 
@@ -259,11 +243,6 @@ Color code for the text of the connection status bar while connecting.
    <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor"> 
    </figure>
 </div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
- 
 
 #### connectionStatusFailedToConnectBackgroundColor  
 Connection status toast (failed to connect) background color.
@@ -278,10 +257,6 @@ Connection status toast (failed to connect) background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### connectionStatusFailedToConnectTextColor  
 Connection status toast (failed to connect) text color.
 
@@ -293,10 +268,6 @@ Connection status toast (failed to connect) text color.
    <figcaption></figcaption>
    <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 --- 
@@ -314,10 +285,6 @@ Color code for the text of the controller bubble.
    <figcaption></figcaption>
    <img src="img/controllerbubletextcolor.png" alt="controller bubble text color"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 ##### controllerBubbleHyperlinkColor
@@ -355,10 +322,6 @@ Conversation separator text and line color.
    <figcaption></figcaption>
    <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### enableConversationSeparator
@@ -428,10 +391,6 @@ Define the conversation Closed label to separator line padding.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### conversationSeparatorFontName 
 Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in the host app's Info.plist.
 
@@ -443,10 +402,6 @@ Custom font name for conversation closed separator. Fonts that are not part of t
    <figcaption></figcaption>
    <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName"> 
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### conversationSeparatorViewBottomPadding  
@@ -462,10 +417,6 @@ Define the conversation separator view bottom padding.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### conversationClosedSeparatorTopPadding 
 Define the conversation Closed Separator Top padding.
 
@@ -477,10 +428,6 @@ Define the conversation Closed Separator Top padding.
    <figcaption></figcaption>
    <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### conversationSeparatorContentViewTopPadding
@@ -628,10 +575,6 @@ Color code for date separator title background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### dateSeparatorTextColor  
 Color code for date separator text color. 
  
@@ -645,10 +588,6 @@ Color code for date separator text color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### dateSeparatorLineBackgroundColor 
 Color code for date separator line background color. 
 
@@ -660,10 +599,6 @@ Color code for date separator line background color.
    <figcaption></figcaption>
    <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### dateSeparatorBackgroundColor  
@@ -1447,10 +1382,6 @@ Photo Sharing menu background color.
    </figure>
 </div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### photosharingMenuButtonsBackgroundColor  
 Photo Sharing menu buttons background color. 
 
@@ -1462,10 +1393,6 @@ Photo Sharing menu buttons background color.
    <figcaption></figcaption>
    <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
    </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
 </div> -->
 
 #### photosharingMenuButtonsTintColor  
@@ -2025,7 +1952,7 @@ When set to **true**, the TTR notifications show with off hours.  When the auto 
    - **Default value:** true  
 
 #### ttrShowShiftBanner  
-Enable or disable shift toaster ('An agent will respond...’).
+Enable or disable shift toaster ('An agent will respond…’).
 
    - **Type:** Bool
    - **Default value:** true 

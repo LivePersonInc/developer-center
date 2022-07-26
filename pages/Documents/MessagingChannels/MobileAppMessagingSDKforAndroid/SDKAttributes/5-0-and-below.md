@@ -587,7 +587,7 @@ Define the color of menu button and back arrow on toolbar.
 
 Define the color code for the entire view background.
 
-In activity mode - Also the color of android:windowBackground.
+In activity mode — also the color of android:windowBackground.
 
 * **Type:** color
 * **Default value:** white
@@ -1423,7 +1423,8 @@ Define whether or not we should show a real time link preview. A preview while t
 
 parse only &lt;og:> tags or others as well
 
-false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags
+* false: use &lt;og:title&gt; tags only
+* true: use &lt;og:title&gt; and &lt;title&gt; tags
 
 ---  
 
@@ -1576,7 +1577,7 @@ Enable or disable the action button of the keyboard. If enabled, pressing the ac
 
 ---
 
-### Navigation - Scroll Behavior Configuration
+### Navigation — Scroll Behavior Configuration
 
 #### lp_scroll_show_conversation
 
@@ -3431,9 +3432,9 @@ Chat message (agent/consumer) bubble bottom padding.
 
 #### show_agent_typing_in_message_bubble
 
-True - the agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
+True: The agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
 
-False - the agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
+False: The agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
 
 Only available as long as the announce_agent_typing configuration is on (set as true).
 
@@ -4048,7 +4049,7 @@ Appointment Scheduler window text color code for title, date and confirm button 
 
 #### lp_appointment_week_day_title_color
 
-Color code for week days text: S, M, T, W, ....
+Color code for week days text: S, M, T, W, …
 
 * **Type:** color
 * **Default value:** #000000

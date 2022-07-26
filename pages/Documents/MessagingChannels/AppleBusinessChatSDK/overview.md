@@ -59,7 +59,7 @@ Path B:
 
 5. Consumer does not respond to the iMessage app transaction sent to him by the agent, and texts that agent that he still need some time to decide
 6. Agent closes the conversation in Conversational Cloud
-7. After a couple of hours the consumer comes back to the ABC conversation and continues with the purchase flow on the iMessage app interaction - consumer does not message the brand, but only opens the iMessage app in the conversation thread
+7. After a couple of hours the consumer comes back to the ABC conversation and continues with the purchase flow on the iMessage app interaction — consumer does not message the brand, but only opens the iMessage app in the conversation thread
 8. LE Conversation is updated with the transaction items and value via SDEs while the conversation is closed in Conversational Cloud
 9. Agent manager generates a report that looks at the cross session conversation (transaction that reported after conversation closed in LE), to evaluate the correlation between consumer conversations and transactions, and to attribute incremental lift for LE conversation
 

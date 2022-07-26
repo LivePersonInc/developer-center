@@ -77,13 +77,13 @@ The method returns a JSON with the engagement information.
 | confKey | Internal. CampaignId + EngagementId + Revision. | string |
 | contextId  | The engagement context ID (engagement impression ID) in the current monitored session. | ALPHA_NUMERIC |
 | contexts | The engagement and page context ID (impression ID) in the current monitored session.  <br> Example: <br> ```[``` <br> ```{"EngagementContext":{"id": "1"}},``` <br> ```{"pageContext":{"id":"173828"}}``` <br> ```]``` | array of Objects |
-| conversationType | An enum representing the conversation type to be initiated (0 - Chat, 1 - Messaging). | numeric |
+| conversationType | An enum representing the conversation type to be initiated (0 — Chat, 1 — Messaging). | numeric |
 | engagementId | The engagement ID. | ALPHA_NUMERIC |
 | engagementName | The engagement name. | string |
 | engagementRevision | The engagement revision. | numeric |
 | engagementType | The engagement format. Available values: 0: "Peeling corner", 1: "Overlay", 2: "Toaster", 3: "Slide-out", 5: "Embedded", 6: "Sticky" | numeric |
 | instantiated | Internal.  | Boolean |
 | renderingType | Internal.  | numeric |
-| state | The engagement state (defined by the availability of agents within the skill group)*. Available values: 1 - online, 2 - offline | numeric |
+| state | The engagement state (defined by the availability of agents within the skill group)*. Available values: 1 — online, 2 — offline | numeric |
 | tglName | Internal. The engagement format description. | string |
 | zoneId | Internal. The engagement zone ID. | ALPHA_NUMERIC  |

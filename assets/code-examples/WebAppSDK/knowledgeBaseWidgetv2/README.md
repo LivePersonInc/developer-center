@@ -4,7 +4,7 @@ This is an example widget that was created for the SC team that shows how you ca
 
 This widget uses the CollapsibleLists JS library.
 
-You can view a live example here:[SC - Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidgetv2/)
+You can view a live example here: [SC — Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidgetv2/)
 
 ### Contribution 
 

@@ -14,7 +14,7 @@ indicator: chat
 ---
 ### Introduction
 
-This API provides a way to pull data in real-time - only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
+This API provides a way to pull data in real-time — only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
 The data is about the visitor, engagement and session to be used by the agent during the conversation, for example, referrer, engagement attributes, etc.
 
 ### Getting Started

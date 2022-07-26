@@ -24,15 +24,15 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 This returns a list of account domains, the `mtls domain` is under the 'mtlsGateway' value (for va-a, it is `va-a.mtls.liveperson.net` for example). The MTLS documentation might refer to `ac-common` or `Gen2 domain`. These values can be taken from the `accountConfigReadWrite` key in the above request.
 
 {: .notice}
-A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
+A note on Create/Read/Update/Delete usage — Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
 
-### Step 1 - Test Your Certificate
+### Step 1 — Test Your Certificate
 
 The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
 
 As part of our MTLS service, we offer a [p12 file tester](mtls-methods-p12-key-tester.html). What this tool does is to test the validity of the p12/pfx file and corresponding password (at this stage without storing the certificate in [HashiCorp Vault](https://www.vaultproject.io/)).
 
-### Step 2 - Upload certificate
+### Step 2 — Upload certificate
 
 In this stage we upload a certificate to the our storage. At this point, the certificate will not be connected to any **mapping parameters** (see explanation in step 3). It will be created so it can be connected in the next stage.
 
@@ -44,7 +44,7 @@ You can upload your certificate by using the following method: [upload certifica
 
 The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step (it can also be fetched later).
 
-### Step 3 - Create MTLS Mapping object
+### Step 3 — Create MTLS Mapping object
 
 #### Mapping Parameters
 
@@ -109,7 +109,7 @@ Example body (Certificates array):
 
 ```
 
-### Step 4 - Use the runtime
+### Step 4 — Use the runtime
 
 If all previous steps were successful, runtime methods can now be used. The runtime includes mapping and forward methods.
 

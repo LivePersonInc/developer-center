@@ -116,7 +116,7 @@ The SFDC package supplied by LivePerson includes an object named “Chat Transcr
 In order to add a Custom Object to the list of “Available Objects,” you will first need to create a Lookup field for your Custom Object on the “Chat Transcript” object. Only once you create this Lookup field will your Custom Object appear under the “Available Objects” section of this page (The “Chat Transcript” object can be found under the Setup menu, “Create” → “Objects” among all custom objects in your Salesforce org).
 
 1. After you enabled a standard or custom object in the Customization Settings, the following should be defined (not all are mandatory, define according to your needs: Field Mapping, Related Lists, and Search Filters).
-2. Exposing the chat/messaging conversation transcript for an object in Salesforce - For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
+2. Exposing the chat/messaging conversation transcript for an object in Salesforce — For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
 3. Each enabled object will have a link titled “Configure Field Mapping, Related Lists, and Search Filters” — clicking this link will direct you to a page where you can define these settings.
 
 #### **Field mapping**
@@ -128,10 +128,10 @@ These settings allow you to choose which fields of each object will be available
   * Choose a SF Field Name
   * Choose ‘Editability’ mode.
     **Note:** Editability mode may sometimes be enforced according to your SF settings and permissions.
-  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
-  * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble.
-  * Required - Setting the field as mandatory when creating or editing the record.
-  * Default Value - Set up a fixed default text value for a field (will be editable by the agent).
+  * LivePerson Field Name — Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
+  * Include in Overview — within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble.
+  * Required — Setting the field as mandatory when creating or editing the record.
+  * Default Value — Set up a fixed default text value for a field (will be editable by the agent).
   * Click “Save.” **Note:** You can edit or delete any existing field mapping by clicking on the respective link next to each.
 
 #### **Related list config**
@@ -219,7 +219,7 @@ This process is used to preserve data integrity and to make sure the chat/messag
 
 1. **Periodic sync** - captures and update information of the last 6 hours, every 3 hours (8 times a day in total).
 2. **Daily sync** - captures information from the last 48 hours (In order to keep with LivePerson’s Data SLA of up to 24 hours for full data).
-3. **Manual sync** - allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc...).
+3. **Manual sync** - allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc…).
 4. **“Sync Chat” button on the chat transcript record** - allows on-demand sync with LivePerson servers for a specific chat transcript record.
 
    **Note:** These sync processes are one sided, from the Conversational Cloud to Salesforce only, no information is transferred from Salesforce to the Conversational Cloud.
@@ -289,7 +289,7 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
    * Define the following URL under ‘In case widget didn't load, display the following link’- ‘[https://login.salesforce.com](https://login.salesforce.com "https://login.salesforce.com")’ (or ‘[https://test.salesforce.com](https://test.salesforce.com "https://test.salesforce.com")’)
    * “Show link after” — Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he will see the message you defined with the link defined above.
 
- -->
+-->
 
 **Now you are ready to go, just open the widget on an active chat/messaging conversation.**
 
@@ -441,10 +441,10 @@ The complete structure of the data in the “Agent Widget SDK,” “Engagement 
 **Agent Widget SDK Public Data Model** -  
 [https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Engagement History API - Engagement Attributes** -  
+**Engagement History API — Engagement Attributes** -  
 [https://developers.liveperson.com/engagement-history-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Messaging Interactions API - Engagement Attributes** -  
+**Messaging Interactions API — Engagement Attributes** -  
 [https://developers.liveperson.com/messaging-interactions-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
 #### **Survey questions (pre-chat, post-chat, agent)**
@@ -583,7 +583,7 @@ These are just a few examples meant to demonstrate how to write these “address
    1. User was not logged-in to Salesforce with the same browser.
    2. Wrong widget URL in LE: missing “ChatLink” wording.
    3. Wrong widget URL in LE: installed in SandBox but URL refers to production.
-   4. Missing SF configuration - Skill is not associated with an object
+   4. Missing SF configuration: skill is not associated with an object.
 
 ![](/img/salesforce-integration-guide-11.png)
 

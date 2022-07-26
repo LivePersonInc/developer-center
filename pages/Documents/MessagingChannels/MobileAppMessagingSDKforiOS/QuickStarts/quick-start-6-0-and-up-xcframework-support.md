@@ -59,9 +59,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod init
    ```
 
-   <div class="important">
-   The Podfile must be created under your project's folder.
-   </div>
+   <div class="important">The Podfile must be created under your project's folder.</div>
 
 3. Open the Podfile.
 

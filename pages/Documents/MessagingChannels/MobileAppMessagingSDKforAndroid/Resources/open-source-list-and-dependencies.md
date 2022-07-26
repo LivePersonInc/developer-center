@@ -31,11 +31,11 @@ An Android library for managing images and the memory they use.
 | SDK Version         | Picasso Version  | OkHttp Version   |
 |---------------------|------------------|------------------|
 | 5.7.1 onwards       | 2.8              | 4.9.1            |
-| 5.6.0 - 5.7.0       | 2.8              | 3.10.0           |
-| 5.0.0 - 5.5.1       | No dependency    | 3.9.1            |
+| 5.6.0 – 5.7.0       | 2.8              | 3.10.0           |
+| 5.0.0 – 5.5.1       | No dependency    | 3.9.1            |
 | 4.10.0              | 2.71828          | 4.9.1            |
-| 4.8.1 - 4.9.0       | 2.71828          | 3.10.0           |
-| 3.7.0 - 4.7.0       | No dependency    | 3.9.1            |
+| 4.8.1 – 4.9.0       | 2.71828          | 3.10.0           |
+| 3.7.0 – 4.7.0       | No dependency    | 3.9.1            |
 | < 3.7.0             | 2.5.2            | 3.9.1            |
 
 {:.important}

@@ -58,9 +58,9 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - request for access token succeeded.  |
-| 400 | Bad request - Problem with body or query parameters. |
-| 500 | Internal server error. |
+| 200 | OK — request for access token succeeded |
+| 400 | Bad request — Problem with body or query parameters |
+| 500 | Internal server error |
 
 **Response Body**
 

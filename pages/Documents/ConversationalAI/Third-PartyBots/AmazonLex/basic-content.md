@@ -127,7 +127,7 @@ Figure 2.2 Lex Example Rich Content Payload
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_10.png" alt="">
 
-Figure 2.3 - Example in Lex console
+Figure 2.3 — Example in Lex console
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 2.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Lex console.
 
@@ -241,7 +241,7 @@ This option transfers the conversation to the next available agent using the pro
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_8.png" alt="">
 
-Figure 2.5 - Example in Lex console
+Figure 2.5 — Example in Lex console
 
 **Note:** Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
 
@@ -293,7 +293,7 @@ The action field needs to be set to **CLOSE_CONVERSATION**to instruct the connec
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png" alt="">
 
-Figure 2.8 - Example in Lex console
+Figure 2.8 — Example in Lex console
 
 To close the conversation without triggering the post conversation survey use following payload
 
@@ -334,4 +334,4 @@ The time values of these are defined in the Agent Workspace.
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_7.png" alt="">
 
-Figure 2.9 - Example in Lex console
+Figure 2.9 — Example in Lex console

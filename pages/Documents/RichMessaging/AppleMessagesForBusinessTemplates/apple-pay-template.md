@@ -53,7 +53,7 @@ The **body** template will only define how the Apple Pay bubble is displayed in 
 
 #### Request Metadata
 
-**BusinessChatMessage - receivedMessage bubbles**
+**BusinessChatMessage — receivedMessage bubbles**
 
 The `BusinessChatMessage` object holds the received message, which defines how the bubble element will be displayed when a message is received on the consumer’s device. The Apple Pay reply message on the consumer device is not configurable.
 
@@ -202,7 +202,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tr>
     <td>Style</td>
     <td>The Style of the apple pay Rich Message reply bubble. Can be set to icon, small or large. Defaults to icon</td>
-    <td>Enum - icon, small, large</td>
+    <td>Enum — icon, small, large</td>
     <td>N</td>
   </tr>
   <tr>
@@ -282,7 +282,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
+    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud — this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>
@@ -313,7 +313,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>paymentRequest</td>
-    <td>This is where you specify the - apple pay identifiers, line items, total amount, country code, currency code, supported countries, shipping methods</td>
+    <td>This is where you specify the — apple pay identifiers, line items, total amount, country code, currency code, supported countries, shipping methods</td>
     <td>object</td>
     <td>Y</td>
   </tr>
@@ -459,7 +459,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+<div class="important">The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
 ### Limitations
 

@@ -146,7 +146,7 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
     Log.d(TAG, "Got LP intent event with action " + intent.getAction());
     switch (intent.getAction()){
       //handle the relevant actions from LivePersonIntents.ILivePersonIntentAction
-      ...
+      …
     }
   }
 };
@@ -350,7 +350,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
       **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button. 
 
       The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
@@ -381,7 +381,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
       Once the CSAT screen is visible, `setFeedBackMode` is called with **true** value. When the CSAT is not visible anymore (skip/submitted), `setFeedBackMode` calls with **false** value.
 
-      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+      Example — how to use **ConversationFragmentCallbacks** (code from the container Activity)
 
       ```java
       class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {

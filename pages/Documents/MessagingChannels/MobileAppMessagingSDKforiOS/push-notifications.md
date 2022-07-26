@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-push-notifications.html
 indicator: messaging
 ---
 
-Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 For push notifications to work, you must have a physical device and two .pem files for Conversational Cloud. Here, you will set up push notifications in your Xcode project, create your app certificate and key files, and create the required .pem files to implement push notifications.  
 
@@ -56,13 +56,13 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool
    ```
 
-6. Override LPMessagingSDK - In-App Push Notification:
+6. Override LPMessagingSDK — In-App Push Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView
    ```
 
-7. Add custom tap behavior to LPMessagingSDK - In-App Notification:
+7. Add custom tap behavior to LPMessagingSDK — In-App Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(notificationTapped notification: LPNotification)

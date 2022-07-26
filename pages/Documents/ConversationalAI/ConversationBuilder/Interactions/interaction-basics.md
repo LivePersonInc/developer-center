@@ -71,11 +71,11 @@ For information on whitelisting rich media, see [here](conversation-builder-netw
 
 If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-As an example, if you enable URL shortening, a URL like this...
+As an example, if you enable URL shortening, a URL like this…
 
 <http://www.myexample.com/folder1/folder2/veryverylongstringhere.html>
 
-...is shortened to this:
+…is shortened to this:
 
 <http://{abbreviated> domain}/{unique code}
 

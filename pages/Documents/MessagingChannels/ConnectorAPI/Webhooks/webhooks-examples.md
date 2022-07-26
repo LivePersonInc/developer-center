@@ -172,7 +172,7 @@ In this page you can refer to some examples of the events notifications received
 
 **Note:** In order to also get "Consumer is typing" events notifications, the Connector must send a message using the SEND endpoint, which contains the `COMPOSING` ChatStateEvent. See more information in [Send Chat State Events](connector-api-send-api-examples.html#send-chat-state-events).
 
-### Agent has stopped typing but still on the chat window - ACTIVE
+### Agent has stopped typing but still on the chat window — ACTIVE
 
 ```json
 {
@@ -225,7 +225,7 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-### Agent sent another message - Please notice the increased sequence counter
+### Agent sent another message — Please notice the increased sequence counter
 
 ```json
 {

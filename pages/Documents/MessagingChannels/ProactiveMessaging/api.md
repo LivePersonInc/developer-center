@@ -30,7 +30,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | :--- | :--- |
 | Channel | SMS <br /> WhatsApp <br /> In-App |
 | Rate throttling | Upto 10 requests per second |
-| Send rate |  SMS — 9** MPS <br /> WhatsApp — 9** MPS <br /> In-App — 9** MPS <br /> <br /> MPS - message per sec <br /> (**Reach Proactive team for higher MPS) |
+| Send rate |  SMS — 9** MPS <br /> WhatsApp — 9** MPS <br /> In-App — 9** MPS <br /> <br /> MPS — message per sec <br /> (**Reach Proactive team for higher MPS) |
 | API recipients batching limit per request | 100** recipients per request <br /> (**Reach Proactive team for increasing recipients per request) |
 
 ### API Specifications

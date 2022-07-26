@@ -82,7 +82,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **How much control do you want to have over the conversation window?** You can customize the conversations window offered through the SDK in two different levels of control:
 
-    * Customize the window provide by LivePerson: (iOS-Window mode, Android - activity mode) -utilize the Conversational Cloud window and customize the colors, header and options presented to customers.
+    * Customize the window provide by LivePerson: (iOS-Window mode, Android — activity mode) -utilize the Conversational Cloud window and customize the colors, header and options presented to customers.
 
     * Full control over entire window: (iOS -ViewControler mode Android- Fragment mode): Fully control the look, feel and actions including the footer and header of the conversational window.
 
@@ -90,7 +90,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 [comment]: <> TODO: Link to place in guide, insert video
 
-* **Branding and Design**: The messaging configuration will be faster and easier for you if you have the exact design - the look and feel of the messaging experience to match your brand ready.
+* **Branding and Design**: The messaging configuration will be faster and easier for you if you have the exact design — the look and feel of the messaging experience to match your brand ready.
 
 [comment]: <> TODO: Link to place in guide
 
@@ -110,13 +110,13 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Client side masking: The data is masked in the conversation transcript (appear as asterisks) but the Agent can read it.
 
-    * Real time masking - The data is masked for both Client and Agent
+    * Real time masking — The data is masked for both Client and Agent
 
     * Configuration of such masking is conducted via LivePerson.  Please contact your representative for configuration.
 
 * **Accessibility**: Is your app accessible to people with disabilities? Do you want to extend accessibility to your Mobile App Messaging?
 
-    * Not all features available in the SDK support accessibility - you may need to turn off various features in order to be fully compliant.  
+    * Not all features available in the SDK support accessibility — you may need to turn off various features in order to be fully compliant.  
 
     * The following is the list of features that need to be configured in order to be completely accessible:
 

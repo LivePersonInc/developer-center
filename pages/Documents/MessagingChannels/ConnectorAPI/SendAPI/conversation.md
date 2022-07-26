@@ -201,7 +201,7 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- |
-| lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
+| lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {…}<br>}<br>, {<br>"personal": {…}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to Conversational Cloud | "ctmrinfo" / "personal" | string | true |
 | info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info) |
 | socialId | Social Media ID of your choice e.g., FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
@@ -216,7 +216,7 @@ The connector can then use the above properties in the CONVERSATION request body
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / null | string | false |
-| conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
+| conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"…}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
 | campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | Used in conjunction with [campaigns for messaging](https://www.liveperson.com/services/technical-support/about-campaigns) for conversation routing to the right skill |
 | campaignId | The campaignId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint  | "99999" | false |
 | engagementId | The engagementId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "88888" | false |
@@ -228,8 +228,8 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device - important for monitoring and reporting |
-| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device - important for monitoring and reporting |
+| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device — important for monitoring and reporting |
+| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device — important for monitoring and reporting |
 | interactionContextId | contextId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples)
 | type | Type of conversationContext | "SharkContext" | string | false | Always use "SharkContext" when using Monitoring API properties i.e. when using Campaign For Messaging |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | string | false | Check first if the language used here is configured for the engagement in the LE UI |

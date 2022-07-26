@@ -196,7 +196,11 @@ lpabcsdk.abcEventCallback = { event  in
 
 You can set the desired SDEs to express your custom reporting for the event triggered.
 
-**Supported Event Types**: - `newConversation` - Receiving an **incoming (agent to consumer)**, new first time CIM - per conversation. - `secureForm` - Receiving an **incoming (agent to consumer)** secure Form: See the [Secure Form documentation](https://knowledge.liveperson.com/security-regulations-secure-forms-secure-forms-for-messaging-user-guide.html).
+**Supported Event Types**:
+
+- `newConversation`: Receiving an **incoming (agent to consumer)**, new first time CIM — per conversation.
+- `secureForm`: Receiving an **incoming (agent to consumer)** secure form — see the [Secure Form documentation](https://knowledge.liveperson.com/security-regulations-secure-forms-secure-forms-for-messaging-user-guide.html).
+
 Example:
 
 ```swift

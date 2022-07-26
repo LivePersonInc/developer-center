@@ -161,12 +161,12 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
   <tr>
     <td>accountConfigReadOnly</td>
     <td style="text-align: center; vertical-align: middle;">Agent Groups API, Skills API, Users API, LOBs API, Profiles API, Automatic Messages API, Unified Automatic Messages API, Predefined Content API, Predefined Categories API, Agent Status Reason API, Special Occasions API, Workdays API, Audit Trail API</td>
-    <td style="text-align: center; vertical-align: middle;">(Only to retrieve data) Includes a set of different APIs for you LE account management. E.g Predefined Content, Automatic Messages, Workdays... </td>
+    <td style="text-align: center; vertical-align: middle;">(Only to retrieve data) Includes a set of different APIs for you LE account management. E.g Predefined Content, Automatic Messages, Workdays… </td>
   </tr> 
   <tr>
     <td>accountConfigReadWrite</td>
     <td style="text-align: center; vertical-align: middle;">Agent Groups API, Skills API, Users API, LOBs API, Profiles API, Automatic Messages API, Unified Automatic Messages API, Predefined Content API, Predefined Categories API, Agent Status Reason API, Special Occasions API, Workdays API, Audit Trail API</td>
-    <td style="text-align: center; vertical-align: middle;">(Create/retrieve data) Includes a set of different APIs for you LE account management. E.g Predefined Content, Automatic Messages, Workdays...</td>
+    <td style="text-align: center; vertical-align: middle;">(Create/retrieve data) Includes a set of different APIs for you LE account management. E.g Predefined Content, Automatic Messages, Workdays…</td>
   </tr>
   <tr>
     <td>asyncMessaging</td>

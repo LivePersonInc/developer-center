@@ -30,7 +30,7 @@ source | Used to describe the originator of the call. The source name should be 
 
 **BODY/POST Parameters**
 
-#### Note: New capability - partial retrieval of data
+#### Note: New capability — partial retrieval of data
 
 The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the `contentToRetrieve` parameter and specifying the types of content you would like to get i
 
@@ -53,9 +53,9 @@ Filter is sent in the POST data (body) with the following JSON structure.
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|start {from, to} | Conversation's start time range.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-|end {from, to} | Conversation's end time range.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
-|fullDialogEndTime {from,to} | The end time of the conversation including survey closure.  | long - epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|start {from, to} | Conversation's start time range.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|end {from, to} | Conversation's end time range.  | long — epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
+|fullDialogEndTime {from,to} | The end time of the conversation including survey closure.  | long — epoch time in milliseconds. | Optional | Including bounds. From/to value is rounded to the last/next 10 minutes, respectively. The maximum time interval is three months. Larger intervals will be rejected.
 |status  | Latest status of the conversation.| Array `<status>` | Optional | Valid values: "OPEN", "CLOSE"
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
@@ -76,7 +76,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional, with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Agent's response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
 |contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
-|latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
+|latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long — epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
 |invalidFreeTextAnswer | Search only for conversations that contain invalid free text answer. | String  | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
@@ -85,7 +85,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no, 1, 0. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve | String, String| Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
-|selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
+|selectedIntentOnly | When TRUE — only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
 |agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional, with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|  
 |annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN,SUBMITTED,VETTED |
@@ -147,7 +147,7 @@ In order to search for a specific phrase within the messages, summary or engagem
 
 #### General Characterizations
 
-_Field Types - Max number of digits possible
+_Field Types_ — Max number of digits possible
 
 Field Type|Size | Max number of digits:-------- | :----- | :---------------------
 Long| 64 bit |19 digits
@@ -205,7 +205,7 @@ conversationEndTimeL  | Same as above in epoch time. | long |
 fullDialogEndTime  | The close time of the conversation including survey submission. | long | Survey can be submitted or timed-out
 fullDialogEndTimeL  | Same as above in epoch time. | long |
 duration | Time from when the consumer started the conversation until it ended. | long | For open conversations, the duration returned is the time until the time the data was retrieved (in milliseconds).
-closeReason | Reason for closing the conversation - by agent / consumer.  | string  |
+closeReason | Reason for closing the conversation — by agent / consumer.  | string  |
 closeReasonDescription | Additional information regarding the conversation close reason| string  |
 firstConversation | Whether it is the consumer's first conversation.| Boolean |
 csat  | CSAT score of the conversation (as given in the answer). | int  | Range: 1 to 5.
@@ -259,7 +259,7 @@ _Campaign info_
 | engagementSource  | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc.  | alphanumeric  |
 | visitorBehaviorId | ID of the behavioral targeting rule defined for the campaign's engagement (in case engagement id is available).| numeric |
 | visitorBehaviorName  | Name of the behavioral targeting rule defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
-| engagementApplicationId | Engagement's application ID.  | alphanumeric - UUID | The engagement which triggered the conversation
+| engagementApplicationId | Engagement's application ID.  | alphanumeric — UUID | The engagement which triggered the conversation
 | engagementApplicationName  | Engagement's application name.| alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeId| Engagement's application type id | alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeName | Engagement's application type name  | alphanumeric  | The engagement which triggered the conversation
@@ -407,7 +407,7 @@ Name| Description  | Type/Value | Notes
 messageId | ID of message.  | string  |
 time| Time the MCS was calculated.| string  |
 timeL  | Time the MCS was calculated, in long format.  | long |
-mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 - 100.
+mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 – 100.
 messageRawScore | Score of message.  | int
 
 *Conversation CoBrowse Sessions DTO*
@@ -489,7 +489,7 @@ sourceAgentId | The source agent ID.| string
 sourceAgentLoginName| The source agent name. | string
 sourceAgentNickname | The source agent nickname.| string
 sourceAgentFullName | The source agent full name.  | string
-reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note:** The `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
+reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note:** The `reason` property gives you insight into why the conversation was transferred: back2Q — the agent transferred the conversation back to the queue; Agent — the conversation was transferred to a specific agent; SuggestedAgentTimeout — the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue; Skill — the conversation was transferred to a skill; TakeOver — a manager has taken over the conversation.
 contextData| Contains context information about the transfer, including raw and structured metadata.| container| |
 dialogId| The ID of the dialog being transferred.| String
 
@@ -542,7 +542,7 @@ Name| Description| Type/Value  | Notes
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------| :---------------------------
 events | The SDEs that were received from the brand. | Container (see [Appendix](messaging-interactions-api-engagement-attributes.html))  |
 originalTimeStamp | Event creation time stamp. | long — epoch time in milliseconds|
-serverTimeStamp | Event processing time stamp. | long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+serverTimeStamp | Event processing time stamp. | long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 sdeType| Type of SDE.  | enum  |
 
 [Here](messaging-interactions-api-engagement-attributes.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
@@ -585,7 +585,7 @@ Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 intentName | The id of the intent. | string
 intentLabel | A Friendly label of the intent. | string
-confidenceScore | Intent confidence score. | double - up to 3 decimal digits
+confidenceScore | Intent confidence score. | double — up to 3 decimal digits
 versions| Model versions used to generate this intent. |  Array `<IntentAnalyzerVersionDTO>`
 
 _IntentAnalyzerVersion DTO_

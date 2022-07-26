@@ -199,7 +199,7 @@ It is possible to send an event of type "delay" before regular content events an
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
 </ul>
 
-Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Structured Content) can be seen below:
+Setting a delay in between multiple messages is possible and an example of such a case (Message — Delay — Structured Content) can be seen below:
 
 ```javascript
 const payload = {
@@ -254,7 +254,7 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-Setting a private text message between multiple messages (with action) is possible and an example of such a case (Simple Text Message - Private Text Message - Action) can be seen below:
+Setting a private text message between multiple messages (with action) is possible and an example of such a case (Simple Text Message — Private Text Message — Action) can be seen below:
 
 ```javascript
 const payload = {

@@ -49,7 +49,7 @@ _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |

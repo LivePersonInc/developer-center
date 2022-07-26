@@ -43,7 +43,7 @@ _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours.
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours.
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional |
 |agentSkillIds| An array of skill IDs.| Array `<String>`| Optional | The agent's configured skills. This filter impacts the returned agents' population so that only agents which are assigned to the given skills will be returned.

@@ -19,7 +19,7 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total cart value. | alphanumeric |
 | numItems | Number of items. | alphanumeric |
 | quantity | Quantity of the product. | alphanumeric |
@@ -65,9 +65,9 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | customerStatus | Customer status- will be matched against customer status entity name. | alphanumeric | Case insensitive.  |
-| customerType | Customer type - will be matched against customer type entity name.  | alphanumeric | Case insensitive. |
+| customerType | Customer type — will be matched against customer type entity name.  | alphanumeric | Case insensitive. |
 | balance | The current balance of the customer. | | |
 | customerId | The customer ID. | alphanumeric | |
 | socialId | The social ID of your choice: Facebook, Twitter etc. | alphanumeric | |
@@ -131,7 +131,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic | Topic lead. | alphanumeric |
 | value | Value lead. | alphanumeric |
 | leadId | Lead ID. | alphanumeric |
@@ -165,7 +165,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | originatingChannel | Marketing channel. | alphanumeric | 0-Direct, 1-Search, 2-Social, 3-Email, 4-Referral, 5-Paid Search, 6-Display |
 | affiliate | Affiliate name. | alphanumeric | |
 | campaignId | Campaign ID. | alphanumeric | |
@@ -197,7 +197,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | name | Personal name. | alphanumeric  |
 | surname | Surname. | alphanumeric |
 | gender | Visitor’s gender. | alphanumeric |
@@ -250,7 +250,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total purchase value. | alphanumeric |
 | orderId | Unique order ID. | alphanumeric |
 | quantity | Quantity of this product. | alphanumeric |
@@ -297,7 +297,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic | The service topic. | alphanumeric | |
 | status | Activity status | alphanumeric | 0-Complete, 1-In Progress, 2-Approved, 3-cancelled, 4-Not Approved, 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned, 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved |
 | category | Category name. | alphanumeric | |
@@ -331,7 +331,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | contextId | Error context. | alphanumeric |
 | message | Error message. | alphanumeric |
 | code | Error code. | alphanumeric |
@@ -367,7 +367,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | name | Product name. | alphanumeric |
 | category | Product category. | alphanumeric |
 | sku | Product SKU. | alphanumeric |
@@ -411,7 +411,7 @@ Example:
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation time stamp.| long — epoch time in milliseconds|
-|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
+|serverTimeStamp | Event processing time stamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | keywords | Array of keywords searched by the visitor. | `array<alphanumeric>` |
 
 Example:
