@@ -12,7 +12,6 @@ permalink: data-access-api-methods-web-session.html
 indicator: chat
 ---
 
-
 Web session retrieves the list of files in zip format of the visitor’s web session data.
 
 This data contains information about the vistor’s web journey. The web session data is calculated from the time the visitor enters the website till the time he leaves it. The data includes geo (country, city etc.), navigation (referrer URL etc.), eligible campaigns, engagement attributes and more.
@@ -979,7 +978,9 @@ The following table describes the information available in the goal achieved dat
 
 ###  Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud.
+
+**Note:** Some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 
@@ -991,7 +992,7 @@ Engagement attributes are standardized attributes defined by LivePerson that ena
 
 Here is a description of the data structure of the existing engagement attributes in the system:
 
-### Engagement Attribute Type - Purchase (Transaction)
+### Engagement Attribute Type — Purchase (Transaction)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :--------- |
@@ -1023,7 +1024,7 @@ Here is a description of the data structure of the existing engagement attribute
 | sku | Unique product ID identifier in consumer database. | string |
 | price | Product price. | double |
 
-### Engagement Attribute Type - Lead (Lead)
+### Engagement Attribute Type — Lead (Lead)
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :---------- |
@@ -1031,7 +1032,7 @@ Here is a description of the data structure of the existing engagement attribute
 | leadId | Unique system lead identifier. | string |
 | value | Lead value. | double |
 
-### Engagement Attribute Type - Customer Info
+### Engagement Attribute Type — Customer Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :---------- | :---------- |
@@ -1052,7 +1053,6 @@ Here is a description of the data structure of the existing engagement attribute
 | storeNumber | The store's number | String |
 | storeZipCode |The store's zip code | String |
 
-
 #### YMDDate
 
 | Parameter | Description | Type / Value |
@@ -1061,7 +1061,7 @@ Here is a description of the data structure of the existing engagement attribute
 | month | Month representation. | int |
 | day | Day representation. | int |
 
-### Engagement Attribute Type - Personal Info
+### Engagement Attribute Type — Personal Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :------------ |
@@ -1090,7 +1090,7 @@ Here is a description of the data structure of the existing engagement attribute
 | email | Contact email. | string |
 | phone | Contact phone number. | string |
 
-### Engagement Attribute Type - CartStatus (Cart update)
+### Engagement Attribute Type — CartStatus (Cart update)
 
 | Parameter | Description | Type / Value |
 | :-------- | :----------- | :----------- |
@@ -1109,7 +1109,7 @@ Here is a description of the data structure of the existing engagement attribute
 
 See above for [Product](#product) parameters.
 
-### Engagement Attribute Type - ViewedProduct (ViewedProduct)
+### Engagement Attribute Type — ViewedProduct (ViewedProduct)
 
 | Parameter | Description | Type / Value |
 | :------- | :---------- | :----------- |
@@ -1119,7 +1119,7 @@ See above for [Product](#product) parameters.
 
 See above for [Product](#product) parameters.
 
-### Engagement Attribute Type - ServiceActivity (Service Activity)
+### Engagement Attribute Type — ServiceActivity (Service Activity)
 
 | Parameter | Description | Type / Value |
 | :------- | :----------- | :----------- |
@@ -1128,7 +1128,7 @@ See above for [Product](#product) parameters.
 | category | Category of service activity. | string |
 | serviceId | Service unique identifier. | string |
 
-### Engagement Attribute Type - VisitorError (Visitor Error)
+### Engagement Attribute Type — VisitorError (Visitor Error)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :----------- |
@@ -1138,7 +1138,7 @@ See above for [Product](#product) parameters.
 | level | Error severity level. | long |
 | resolved | Indication whether the error was resolved. | boolean |
 
-### Engagement Attribute Type - MarketingCampaignInfo (Marketing Source)
+### Engagement Attribute Type — MarketingCampaignInfo (Marketing Source)
 
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :---------- |

@@ -10,7 +10,7 @@ indicator:
 
 ### The Welcome Event
 
-The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
+The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual LivePerson product works..
 
 A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends
 their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the
@@ -56,7 +56,7 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event.
 
-<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-event.png">
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-event.png" alt="">
 
 Figure 2.1 Configuration of the welcome event
 
@@ -66,7 +66,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 To send Structured Content via Dialogflow ES, send a _custom payload_ option via an intent.
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-structured-content.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-structured-content.png" alt="">
 
 Figure 2.2 Configuration of Structured Content
 
@@ -78,7 +78,7 @@ Moreover, All domains must be HTTPS secure.
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not Conversational Cloud will receive a blank text response followed by rich content payload.
+**Note:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not Conversational Cloud will receive a blank text response followed by rich content payload.
 
 Example Metadata
 
@@ -142,7 +142,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -206,7 +206,7 @@ This is achieved using the built in "Actions and Parameters" section of the Dial
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
-1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
+1. Explicit request from visitor to transfer to an agent (e.g., action: transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
    Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular agent, skill or default skill.
@@ -223,7 +223,7 @@ This option transfers the conversation to the next available agent using the pro
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer.png" alt="">
 Figure 2.5 Configuration for transfer to skill
 
 ##### Transfer to Agent
@@ -236,7 +236,7 @@ This option transfers the conversation to the particular agent matching the prov
 Parameters: `skill` **(Case sensitive)** with value of skill name (case sensitive) in Conversational Cloud.
 `agentId` **(Case sensitive)** with value of agent id in Conversational Cloud.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer-agent.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer-agent.png" alt="">
 Figure 2.6 Configuration for transfer to agent
 
 <br>
@@ -249,7 +249,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-action-close-conversation.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-action-close-conversation.png" alt="">
 Figure 2.7 Configuration for closing a conversation
 
 To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
@@ -266,5 +266,5 @@ LivePerson Messaging uses 3 different types of priorities:
 
 The time values of these are defined in the Agent Workspace.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-ttr.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-ttr.png" alt="">
 Figure 2.8 Configuration for changing the TTR

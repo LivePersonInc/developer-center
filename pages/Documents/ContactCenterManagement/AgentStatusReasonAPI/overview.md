@@ -33,9 +33,9 @@ A few things you'll need to get started with this API:
 
     * **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-    * [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+    * [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### General API Information
 

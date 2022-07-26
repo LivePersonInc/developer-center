@@ -19,7 +19,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within KnowledgeAI.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within KnowledgeAI.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding-introduction.html) to [evaluate the articles](knowledgeai-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base can make use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding-introduction.html) to [evaluate the articles](knowledgeai-search-methods.html) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -36,24 +36,26 @@ When adding an internal knowledge base, follow this workflow:
 ### Domain intents versus Knowledge Base intents
 
 #### Domain intents
-When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
+
+When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password.").
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
 
-<img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
+<img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png" alt="">
 
-Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do: 
+Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do:
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png" alt="">
 
 Within the newly created knowledge base, you then link each article to an intent in the domain.
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png" alt="">
 
 With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding-introduction.html) for intent matching:
+
 * LivePerson
 * LivePerson (Legacy)
-* A third-party NLU engine 
+* A third-party NLU engine
 
 Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like Intent Manager's [Intent Analyzer](intent-manager-overview.html).
 
@@ -64,11 +66,11 @@ As of March 5, 2021, you can no longer create a knowledge base that uses Knowled
 
 If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
-<img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png" alt="">
 
-Knowledge Base intents like these are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
+Knowledge Base intents like these are a *legacy feature* that uses the deprecated LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
-To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
+To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. With Knowledge Base intents, the deprecated legacy engine that's used behind the scenes still works, but it's no longer supported apart from security updates.
 
 ### Languages
 
@@ -83,15 +85,15 @@ An article is either active or inactive. Active articles are returned in knowled
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png" alt="">
 
 In the KnowledgeAI application, you can easily identify an article's current status:
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png" alt="">
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html).
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
 
@@ -100,7 +102,7 @@ For example, you might run a promotion over a holiday that has an associated FAQ
 *Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
 {: .important}
-As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the LivePerson (Legacy) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy"). To take advantage of the benefits of performance and flexibility offered by the LivePerson engine, you are encouraged to convert to the LivePerson engine as soon as possible. **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
+As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the deprecated [LivePerson (Legacy)](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy").
 
 #### How positive and negative learnings work
 

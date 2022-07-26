@@ -17,7 +17,7 @@ permalink: web-tag-hooks-hooks.html
 indicator: both
 ---
 
-## HOOKS
+## Hooks
 
 The `lpTag` handles the interfere of many events that occur on the vistor's webpage by executing a callback.
 
@@ -25,17 +25,15 @@ These tag hooks provide transparency into the lifecycle flows of engagements, em
 
 Below you can find a list of hooks available on a web page by the Web Tag, each organized under a given `eventName`.
 
-
 ### Definition
 
 **Hook callback parameters**: The “hook” function will get always one object:
 
-**Hook callback return  parameters**:  The “hook” function MUST return always one object - if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
+**Hook callback return  parameters**:  The “hook” function MUST return always one object — if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
 
 **Execute order**:  The hooks will be executed by the order they were “pushed”. 
 
 If param1 was changed on hook1, hook2 will get param1 after the change.
-
 
 ### Valid hook
 ```javascript
@@ -92,7 +90,7 @@ lpTag.hooks.push({
 
 Use case: SDE submit.
 
-Interference:  change / prevent sending SDE data before it's sent to server (push & send flows)
+Interference:  change / prevent sending SDE data before it's sent to server (push and send flows)
 
 Place: TBD
 
@@ -102,19 +100,17 @@ Parameters: TBD
 
 ## Rendering
 
-
 #### NAME: BEFORE_ENG_DISPLAY
 
 Use case: Change engagement state / click target / display / etc.
 
 Interference:  Change engagement configuration before engagement display.
 
-Place: rendererStub.js --> engagement.createInstance
+Place: rendererStub.js → engagement.createInstance
 
 Timing: Before
 
 Parameters: TBD 
-
 
 #### NAME: BEFORE_ENG_CHANNEL_OPEN
 
@@ -124,7 +120,7 @@ Interference:  The flow after engagement click.
 
 Place:
 ```
-baseOffer.js --> click --> _openChannel
+baseOffer.js → click → _openChannel
 ```
 
 Timing: Before
@@ -132,7 +128,6 @@ Timing: Before
 Parameters: TBD 
 
 ### Unified Window
-
 
 #### NAME: AFTER_GET_SURVEY
 
@@ -207,8 +202,6 @@ Parameters:
 }
 ```
 
-
-
 #### NAME: BEFORE_SUBMIT_SURVEY
 
 Use case:  Change answers
@@ -266,7 +259,7 @@ Parameters:
    </td>
    <td>Object
    </td>
-   <td>The actual submitted data - changing the surveyData actually affect the submitted data
+   <td>The actual submitted data — changing the surveyData actually affect the submitted data
    </td>
    <td>
      See data structure below
@@ -274,7 +267,7 @@ Parameters:
   </tr>
 </table>
 
-#### Array of Object - Data structure
+#### Array of Object — Data structure
 
 ```json
 [{  
@@ -289,7 +282,7 @@ Parameters:
 }]
 ```
 
-#### surveyData - Data structure
+#### surveyData — Data structure
 
 ```json
 {  
@@ -321,7 +314,7 @@ Interference:  Visitor lines text
 
 Place:
 ```
-TrabscriptManager.js -> sendLine
+TrabscriptManager.js → sendLine
 ```
 
 Timing: Before

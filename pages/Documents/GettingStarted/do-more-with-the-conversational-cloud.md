@@ -13,38 +13,38 @@ indicator: both
 </div>
 <div class="container-note">
     <div class="important" style="width:91%">
-    <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
+    <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide">Getting Started with your Free Trial Account</a> which outlines the first steps to take in the Conversational Cloud.
   </div>
 </div>
 
 <div class="card-container" style="margin-top:40px;">
         <a class="welcome-card"  href="https://knowledge.liveperson.com/getting-started-getting-started-with-intents.html">
-        <img class="container-image" src="img/ic_robot.svg"/>
+        <img class="container-image" src="img/ic_robot.svg" alt=""/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Understand consumer intents</h5>
         </a>
         <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-proactive-messaging.html">
-        <img class="container-image" src="img/ic_Facebook.svg"/>
+        <img class="container-image" src="img/ic_Facebook.svg" alt=""/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Engage with consumers proactively</p>
         </a>
         <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html">
-        <img class="container-image" src="img/ic_Facebook.svg"/>
+        <img class="container-image" src="img/ic_Facebook.svg" alt=""/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Customize your messaging operations</p>
         </a>
         <a class="welcome-card"  href="/tutorials-guides-getting-started-with-bot-building-overview.html">
-        <img class="container-image" src="img/ic_robot.svg"/>
+        <img class="container-image" src="img/ic_robot.svg" alt=""/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Create new bots and dialogs</h5>
         </a>
         <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html">
-        <img class="container-image" src="img/ic_functions.svg"/>
+        <img class="container-image" src="img/ic_functions.svg" alt=""/>
         <h5 class="getstarted-title">FUNCTION AS A SERVICE</h5>
         <h5 class="getstarted-content ">Develop custom behaviors </h5>
         </a>
         <a class="welcome-card" href="/api-guidelines-accessing-liveperson-apis.html">
-        <img class="container-image" src="img/ic_APIs.svg"/>
+        <img class="container-image" src="img/ic_APIs.svg" alt=""/>
         <h5 class="getstarted-title">LIVEPERSON APIS</h5>
         <h5 class="getstarted-content ">Build your own solution</h5>
         </a>
@@ -58,17 +58,17 @@ indicator: both
                        Customize Conversational Cloud features
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="/tutorials-guides-getting-started-with-bot-building-overview.html">
                           Leverage intents in your bots
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="/conversation-orchestrator-dynamic-routing-overview.html">
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>
             </div>
-            <div class="link-padding" >
+            <div class="link-padding">
                 <a  href="https://www.liveperson.com/upgrade/">
                        Learn about your upgrade options and speak with an expert
                 </a>

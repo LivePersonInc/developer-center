@@ -25,7 +25,6 @@ Using this API, you can enrich your customized real-time dashboard. Here are som
 
 - Track how many conversation have been concluded over time, for a pre-defined skill / agent / group 
 
-
 ### Request
 
 Method | URL
@@ -45,21 +44,18 @@ interval| Time interval in minutes between the points to be returned  | integer 
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
 |metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>transfers<br/>concluded_conversations<br/>closed_conversations<br/>
 
-
-
 ### filters
 _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 
-
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -77,7 +73,6 @@ Request body - json example:
     ]
 }
 ```
-
 
 ### Response
 
@@ -100,10 +95,7 @@ transfers  | Number of conversations that were _transferred_ in the time interva
 closedConversations  | Number of conversations that were _closed_ in the time interval  | Long
 concludedConversations  | Number of conversations that were _concluded_ in the time interval. Concluded conversations comprises closed and forwarded conversations  | Long
 
-
-
-
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 
@@ -215,5 +207,4 @@ Response DTO - json example:
         }
     ]
 }
-
 ```

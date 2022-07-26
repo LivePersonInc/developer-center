@@ -57,9 +57,9 @@ Localized keys with the English localization string.
 | clearHistoryConfirmButton | "Clear" |
 | clearHistoryFailureMessage | "Please resolve the conversation first." |
 | clearHistoryMenuTitle | "Clear history" |
-| connectionStatusBarConnecting | "Connecting..." |
+| connectionStatusBarConnecting | "Connecting…" |
 | connectionStatusBarFailedToConnect | "Failed to connect to the server." |
-| connectionStatusBarStillConnecting | "Still connecting..." |
+| connectionStatusBarStillConnecting | "Still connecting…" |
 | conversationAlreadyEnded | "This conversation has already been resolved." |
 | conversationEmptyState | "There are currently no conversations at this time" |
 | conversationEndedByAgent | "Conversation resolved by %@ \n %@" |
@@ -88,7 +88,7 @@ Localized keys with the English localization string.
 | hiMessage | "How can I help you today?" |
 | invalidHyperLinkError | "Link is not valid" |
 | isTyping | "typing…" |
-| loadingHistoryMessages | "Loading..." |
+| loadingHistoryMessages | "Loading…" |
 | markAsEndedConfirmation | "Are you sure this topic is resolved?" |
 | markAsUrgent | "Mark as urgent" |
 | markAsUrgentConfirmation | "Are you sure you want to mark this conversation as urgent?" |

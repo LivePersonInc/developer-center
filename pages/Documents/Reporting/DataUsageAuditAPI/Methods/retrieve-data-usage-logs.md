@@ -50,9 +50,7 @@ All auditing logs are returned in a JSON format, aggregated per account, API typ
 }
 ```
 
-
 **Elements in the Response**
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

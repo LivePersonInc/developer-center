@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
 
-
 order: 50
 permalink: skills-api-methods-update-skills.html
 

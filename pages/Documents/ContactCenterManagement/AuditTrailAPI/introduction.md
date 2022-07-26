@@ -12,7 +12,6 @@ order: 1
 indicator: both
 ---
 
-
 Conversational Cloud's Audit Trail feature is a list of all changes made to individual users, profiles, skills, lines of business or agent groups across the whole account. In the product, this is available for view by account administrators in the audit trail for users. This API allows you to access the Audit Trail information directly and export it using an API request.
 
 An activity log will display which element has been changed, when and by whom, as well as displaying both the old and the updated value of the changed element. Changes can include adding new elements or modifying or deleting existing ones.
@@ -49,7 +48,6 @@ An audit trail is available for the following elements:
 
 * MTLS certification
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
@@ -64,9 +62,9 @@ A few things you'll need to get started with this API:
 
     * **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-    * [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+    * [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Authentication
 

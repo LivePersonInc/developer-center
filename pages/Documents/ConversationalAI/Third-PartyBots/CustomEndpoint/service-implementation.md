@@ -16,19 +16,17 @@ Conversational Cloud. This section will describe the general information on what
 should be implementing to successfully integrate with the Third-Party Bots. The basic flow of how
 a consumer message is sent and bot response is received on an abstract level can be seen in Figure 2.1
 
-<img class="fancyimage" style="width:800px" src="img/customendpoint/message-flow.png">
+<img class="fancyimage" style="width:800px" src="img/customendpoint/message-flow.png" alt="">
 Figure 2.1 Depicts how a consumer message is sent to Custom Endpoint and a
 response is sent back.
 
-<ol>
-<li>Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)</li>
-<li>CM that was sent to UMS reaches the Third-Party Bot connector</li>
-<li>Third-Party Bot connector sends CM to the Custom Endpoint service (i.e `www.mybotapi.com/api` in Figure 2.1) </li>
-<li>Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector 
-    which parses and validates it</li>
-<li>Third-Party Bot connector sends the bot response to the UMS</li>
-<li>UMS sends the bot response to the consumer</li>
-</ol>
+1. Consumer Message (CM) is sent to LivePerson Universal Messaging Service (UMS)
+2. CM that was sent to UMS reaches the Third-Party Bot connector
+3. Third-Party Bot connector sends CM to the Custom Endpoint service (i.e. `www.mybotapi.com/api` in Figure 2.1)
+4. Custom Endpoint service sends Bot Response (BR) back to the Third-Party Bot connector
+    which parses and validates it
+5. Third-Party Bot connector sends the bot response to the UMS
+6. UMS sends the bot response to the consumer
 
 ### Service Endpoints
 
@@ -144,11 +142,11 @@ for the latest endpoint contracts/interfaces.
 {
   "sdes": {
     "authenticatedSdes": {
-      // ...... All SDES from Visitor Information API comes here More Info @ https://developers.liveperson.com/visit-information-api-visit-information.html
+      // All SDES from Visitor Information API comes here — more info: https://developers.liveperson.com/visit-information-api-visit-information.html
 
     },
     "unauthenticatedSdes": {
-      // ...... Unauthenticated SDES
+      // Unauthenticated SDES
     }
   },
   "context": {
@@ -167,7 +165,7 @@ for the latest endpoint contracts/interfaces.
       "consumerId": "abcdefghijklmnopqrstuvwx123456789101112131415mnopqrstuvwxyz0987654321"
     },
     "assignedAgentId": "abc123456-a1b2-34bc-127m-ce1a86c8602a"
-   // .... Conversation Context
+   // Conversation Context
   }
 }
 ```
@@ -218,7 +216,7 @@ Bots can be seen in Figure 2.5
       "dialogId": "608b2868-f686-4b89-891f-497816958cfc",
       "metadata": [],
       "messageAudience": "ALL"
-      // .... RAW LP Content Event properties
+      // RAW LP Content Event properties
     }
   }
 }
@@ -268,7 +266,7 @@ Bots can be seen in Figure 2.6
       "dialogId": "608b2868-f686-4b89-891f-497816958cfc",
       "metadata": [],
       "messageAudience": "ALL"
-      // .... RAW LP Content Event properties
+      // RAW LP Content Event properties
     }
   }
 }
@@ -323,7 +321,7 @@ service is called
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
-<img class="fancyimage" src="img/customendpoint/test-connection-flow.png">
+<img class="fancyimage" src="img/customendpoint/test-connection-flow.png" alt="">
 Figure 2.7 showing the happy test connection flow
 
 1. Test Connection Caller calls the Third-party Bots
@@ -347,7 +345,7 @@ the sequence diagram of which endpoints in the Custom Endpoint service are calle
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
-<img class="fancyimage" src="img/customendpoint/consumer-message-flow.png">
+<img class="fancyimage" src="img/customendpoint/consumer-message-flow.png" alt="">
 Figure 2.8 showing the happy consumer message flow
 
 1. Consumer Message notification is received by the Third-party Bots from UMS

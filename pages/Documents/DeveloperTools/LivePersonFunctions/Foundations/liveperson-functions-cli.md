@@ -39,7 +39,7 @@ All CLI functionality is available through the `lpf` command followed by:
 |`deploy`|Deploys a function on LivePerson Functions. If the passed function is already deployed, it will be redeployed.|
 |`undeploy`|Undeploys a function on LivePerson Functions.|
 |`invoke`|Invokes a function (remote or local).|
-|`debug`|Starts a debug port in the range of 30500 - 31000 for a passed function.|
+|`debug`|Starts a debug port in the range of 30500 – 31000 for a passed function.|
 |`get`|Gets information about the passed domain. Possible domains are deployments, functions and accounts.|
 |`help`|Shows help for the cli and the supported commands.|
 |`autocomplete`|Displays autocomplete instructions (only supports zsh and bash).|

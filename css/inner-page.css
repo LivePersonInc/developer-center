@@ -142,6 +142,13 @@ h4 code.highlighter-rouge {
     margin-top: 7px;
 }
 
+.post-content h4[id] {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
 .post-content table {
     width: 100%;
     max-width: 100%;
@@ -476,6 +483,7 @@ ul.mysidebar.nav .topfolder>a {
     display: flex;
     color: var(--link-color);
     overflow-wrap: break-word;
+    align-items: center;
 }
 
 ul.mysidebar.nav a {

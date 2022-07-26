@@ -199,12 +199,12 @@ It is possible to send an event of type "delay" before regular content events an
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
 </ul>
 
-Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Structured Content) can be seen below:
+Setting a delay in between multiple messages is possible and an example of such a case (Message — Delay — Structured Content) can be seen below:
 
 ```javascript
 const payload = {
   messages: [
-    "Hi i am a message before delay",
+    "Hi I am a message before delay",
     {
       delay: 5,
       typing: true,
@@ -236,7 +236,7 @@ const payload = {
 };
 ```
 
-**Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 
@@ -254,7 +254,7 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-Setting a private text message between multiple messages (with action) is possible and an example of such a case (Simple Text Message - Private Text Message - Action) can be seen below:
+Setting a private text message between multiple messages (with action) is possible and an example of such a case (Simple Text Message — Private Text Message — Action) can be seen below:
 
 ```javascript
 const payload = {
@@ -311,7 +311,7 @@ const payload = {
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
 Figure showing Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In LivePerson functions Bot integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
@@ -402,7 +402,7 @@ function lambda(input, callback) {
       `I received a rich content it contains: ${JSON.stringify(input.content)} `
     );
   } else {
-    payload.messages.push("I am sorry i don't understand. Can you repeat?");
+    payload.messages.push("I am sorry I don't understand. Can you repeat?");
   }
 
   callback(null, payload);

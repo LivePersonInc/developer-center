@@ -67,7 +67,6 @@ As such if you are upgrading from any version older than 2.7.0, or if you are st
 
 `new ConversationViewParams(boolean readOnlyMode)`
 
-
 - `LivePerson.showConversation()` - [documentation](android-methods.html#showconversation-with-full-authentication-support)
 
 ```java
@@ -96,7 +95,7 @@ As such if you are upgrading from any version older than 2.7.0, or if you are st
 
 1. Remove the existing SDK version
 
-    - File > Project Structure > remove lp_messaging_sdk
+    - File → Project Structure → remove lp_messaging_sdk
 
     - delete the lp_messaging_sdk folder from application root
 
@@ -104,6 +103,6 @@ As such if you are upgrading from any version older than 2.7.0, or if you are st
 
 3. Add the new SDK version
 
-    - File > New > Import Module > new lp_messaging_sdk
+    - File → New → Import Module → new lp_messaging_sdk
 
 4. Change deprecated methods, as described above.

@@ -24,7 +24,7 @@ You can override the string localization of any supported language in Conversati
 
 ### Create and localize a strings file and add languages
 
-1. In your app, go to **New file > Strings file > Create**.
+1. In your app, go to **New file → Strings file → Create**.
 
 2. Create a file called **LPLocalizable.strings**.  
 
@@ -44,13 +44,11 @@ You can override the string localization of any supported language in Conversati
 
 ### Attach a strings file to existing languages
 
-
 1. Choose the desired strings file.
 
 2. Open the file inspector.
 
 3. Under **Localizations**, choose the relevant languages.
-
 
 ### Print or get localized keys or supported languages
 

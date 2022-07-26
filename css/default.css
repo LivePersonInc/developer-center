@@ -81,6 +81,10 @@ p {
     gap: 32px;
 }
 
+.gap-16 {
+    gap: 16px;
+}
+
 .side-width {
     width: 320px;
 }
@@ -816,7 +820,7 @@ a.loginText {
     border-radius: 24px;
 }
 
-button.loginButton {
+span.loginButton {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -906,6 +910,10 @@ button.loginButton {
 
 .topfolder>ul>li {
     margin-bottom: 3px;
+}
+
+ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
+    height: 28px;
 }
 
 .innerfolder>ul {
@@ -1133,13 +1141,19 @@ button.loginButton {
     border-top: 0;
 }
 
-.sidebarbuttoncontainer {
-    display: flex;
-    flex-direction: column;
+.m-t-2 {
+    margin-top: 28px;
 }
 
-.sidebarbuttoncontainer:not(:last-child) {
-    margin-top: 28px;
+div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#mysidebar ul.sidebarbuttoncontainer a.bottombuttons.spacebetweenHyperlink {
+    padding: 0;
+    margin: 0 !important;
 }
 
 .supportbutton {
@@ -1282,7 +1296,7 @@ button.loginButton {
     display: inline-flex;
     font-size: 1.5em;
     display: flex;
-    margin-top: 8px;
+    align-items: center;
     padding: 0;
 }
 
@@ -1290,12 +1304,12 @@ button.loginButton {
     outline: 0;
 }
 
-.sidebarbutton span {
+.sidebarbutton>span {
     transition: 0.3s;
     background: #b1b5bc;
 }
 
-.sidebarbutton span:first-of-type {
+.sidebarbutton>span:first-of-type {
     border-top: 7px solid transparent;
     background: var(--body-background);
     border-left: 7px solid var(--link-color);
@@ -1317,6 +1331,11 @@ button.loginButton {
     margin-top: 32px;
     font-family: "Roboto Mono", Monaco, courier, monospace;
     color: var(--widget-text);
+}
+
+/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
+.highlighter-rouge button.nightbtn {
+    display: none;
 }
 
 .mysidebar::-webkit-scrollbar-thumb {
@@ -1700,6 +1719,10 @@ input#csds-button {
 }
 
 @media (max-width: 767px) {
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+
     .logoHeader {
         width: auto;
     }
@@ -1715,7 +1738,7 @@ input#csds-button {
     }
 
     #searchHeader,
-    button.loginButton {
+    span.loginButton {
         display: none;
     }
 

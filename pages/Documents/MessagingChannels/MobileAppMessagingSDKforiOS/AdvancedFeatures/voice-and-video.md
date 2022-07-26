@@ -72,7 +72,7 @@ Defines default background image for End button on Voice & Video Invite
 - **Type:** UIImage
 - **Default value:** nil
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image voiceVideoEndCallButtonType should be set to hangup`
+- **Note:** To enable this image voiceVideoEndCallButtonType should be set to `hangup`
 
 #### voiceVideoJoinCallButtonImage
 Defines default background image for Join button on Voice & Video Invite
@@ -172,9 +172,7 @@ Defines border width for Voice & Video Invitation Bubble
 - **Type:** Double
 - **Default value:** 0.0
 
-
 ---
-
 
 #### voiceVideoNavigationBackgroundColor
 Defines background color of Navigation & Tab Bar for Voice & Video SFSafariViewController

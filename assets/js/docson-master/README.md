@@ -32,7 +32,7 @@ You need to install [Typson](https://github.com/lbovet/typson) by yourself on yo
 
 ## Widget
 
-To include a Docson schema documentations on any page (wiki, ...) without worrying about messing up with javascript libraries and cross-origin issues:
+To include a Docson schema documentations on any page (wiki, …) without worrying about messing up with javascript libraries and cross-origin issues:
 
 * Install Docson somewhere as described above.
 * Place the following `script` tags in the including page, nothing else is needed:

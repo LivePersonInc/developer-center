@@ -89,7 +89,6 @@ This event is triggered when vistor monitoring starts and/or when its state is c
 
 ### Chat Window Events
 
-
 These are chat window related events. Because the customer conversation is contained within the window, the events provided here are related to the lifecycle of a conversation.
 
 {: .important}
@@ -115,7 +114,7 @@ This event triggers when the chat state is changed.
 *Example:*
 
 ```javascript
-{ "state" : "chatting" } //The current chat state
+{ "state": "chatting" } //The current chat state
 ```
 
 #### conversationInfo
@@ -185,7 +184,7 @@ This event triggers when the state changes to "chatting" to show the engagement 
 
 ```javascript
 {
-    "engagementName" : "Sticky chat button",
+    "engagementName": "Sticky chat button",
     "state": "chatting"
 }
 ```
@@ -249,7 +248,7 @@ This event is triggered when the flow to display the engagement has started.
 | engagementType | The engagement format. | Numeric | Available values: 0: "Peeling corner", 1: "Overlay", 2: "Toaster", 3: "Slide-out", 5: "Embedded", 6: "Sticky" |
 | contextId | The engagement context ID (engagement impression ID) in the current monitored session. | ALPHA_NUMERIC | |
 | zoneId | Internal. The engagement zone ID. | ALPHA_NUMERIC | |
-| state | The agent's state | Numeric | Available values: 1 - online, 2 – offline, 4 - busy |
+| state | The agent's state | Numeric | Available values: 1 — online, 2 — offline, 4 — busy |
 | confKey | Internal. CampaignId + EngagementId + Revision. | string | |
 | tglName | Internal. The engagement format description. | string | |
 | done | If the configuration has finished loading. | Boolean | |
@@ -275,7 +274,7 @@ This event is triggered when the flow to display the engagement has started.
     "engagementType": 3,//The engagement type
     "contextId": "1",//The context (instance in memory on the backend)
     "zoneId": 471288710, //The zone this is on
-    "state": 2, //The current state of the agents (online, offline, busy) , to set the display state
+    "state": 2, //The current state of the agents (online, offline, busy), to set the display state
     "confKey": "210599710_210600710_18",
     "tglName": "slider" //The taglet that needs to be downloaded
     "done": true, //If the configuration has finished loading
@@ -312,7 +311,7 @@ See [START](#start) event.
     "engagementType": 6,//The engagement type
     "contextId": "2",//The context (instance in memory on the backend)
     "zoneId": 471288510,//The zone this is on
-    "state": 2,//The current state of the agents (online, offline, busy) , to set the display state
+    "state": 2,//The current state of the agents (online, offline, busy), to set the display state
     "confKey": "248955910_248956110_14",
     "tglName": "overlay",//The taglet that was downloaded
     "done": true,//If the configuration has finished loading
@@ -398,7 +397,7 @@ These are cobrowse-related events, including rendering, display and interactions
 
 #### cobrowseOffered
 
-This event is triggered when ...
+This event is triggered when …
 
 **Event Information**
 

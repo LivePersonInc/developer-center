@@ -8,7 +8,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 
-
 order: 101
 permalink: profiles-api-appendix.html
 
@@ -23,7 +22,6 @@ This section contains API details that are common to every API’s resource and 
 | :--------   | :--- |
 | Update attribute | Cannot update a single requested attribute. Need to add a body full of other attributes and if certain attributes are missing from the body, they will be deleted. |
 
-
 ### Request Headers
 
 | Header        | Description | Notes |
@@ -37,7 +35,6 @@ This section contains API details that are common to every API’s resource and 
 | :------       | :--------   |  :--- |
 | X-LP-Last-Modified | Contains timestamp data of last modified action. | Allows optimization of the backend resources utilization. |
 
-
 ### Query Parameters
 
 | Header   | Description         | Type/Value                       | Required       | Notes |
@@ -45,7 +42,6 @@ This section contains API details that are common to every API’s resource and 
 | v        | API version number  | Double. | v=4.0 | Required |
 | select | Dynamic selection of the response fields | Type: YOGA 'gdata' dialect. Non-existing field: no error, blank in response. Supported fields: Any in response body. **yoga GData dialect builder url: https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI | Optional |
 | include_deleted | Whether or not deleted items in the response are included | Default: false | Optional |
-
 
 ### Path Parameters
 
@@ -68,8 +64,6 @@ This section contains API details that are common to every API’s resource and 
 | permissionPackages | List of permission packages | List of type PermissionsPackageDto | Required | Please see below the [table](administration-profiles-appendix.html#packages-id) that lists all packages, their description and their ID |
 | permissions | Set of all permissions of specific profile | Set of Integers | Required | |
 | isAssignedToLPA | Whether the profile assigned to LPA user or not | Boolean | Required | |
-
-
 
 ### Entity Example
 
@@ -203,9 +197,6 @@ This section contains API details that are common to every API’s resource and 
 | 40019      | View reports in Campaign BI                                    | View reports in the Campaign BI dashboard                        |
 | 40021      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 40028      | Configure Schedule and Special Occasion library items          | View and edit Schedule and Special Occasion library items       |
-
-
-
 
 ### Data Revisions
 

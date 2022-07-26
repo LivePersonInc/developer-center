@@ -160,7 +160,7 @@ See also `disableGreetings`, which is farther below.
 **Chat**: No
 
 #### defaultStepupMessage
-The StepUp message sent to the bot when Stepup Authentication happens.
+The Step Up message sent to the bot when [Step Up authentication](conversation-builder-advanced-use-cases.html#step-up-authentication) happens.
 
 **Default value**: \_STEPUP\_<br>
 **Messaging**: Yes<br>

@@ -13,32 +13,32 @@ indicator: both
 
 The Simple Router template provides an easy framework for the creation of a routing bot.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simplerouter.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simplerouter.png" alt="">
 
 ### Included items
 
 #### Dialogs
 
 - Welcome
-    - Presents the multiple choice interaction to the customer. Each multiple choice response represents a skill.
+  - Presents the multiple choice interaction to the customer. Each multiple choice response represents a skill.
 - Reprompt
-    - The multiple choice interaction responses can be clicked or the customer can also type an answer. In the event that the bot does not understand the customer's response, this dialog will reprompt the welcome dialog.
+  - The multiple choice interaction responses can be clicked or the customer can also type an answer. In the event that the bot does not understand the customer's response, this dialog will reprompt the welcome dialog.
 - No Agents Available
-    - In the event that the customer could not be transferred to a skill, this dialog will trigger.
+  - In the event that the customer could not be transferred to a skill, this dialog will trigger.
 - Escalation
-    - When a user answers the Welcome dialog's multiple choice, this dialog will trigger and begin the transfer process.
+  - When a user answers the Welcome dialog's multiple choice, this dialog will trigger and begin the transfer process.
 
 #### Integrations
 
 - Escalation
-    - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
-    - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
-    
-    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png">
+  - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
+  - In the Integrations area, there should be a pre-configured integration named “Transfer” and “LivePerson Agent Escalation” should be selected in the Integration Type menu.
 
-    - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
-    
-    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_4.png">
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png" alt="">
+
+  - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
+
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_4.png" alt="">
 
 ### Configuration needed
 
@@ -50,7 +50,7 @@ In the Welcome dialog, in the Dialog Starter interaction, click the defined "hi"
 
 In the Multiple Choice interaction, edit each option text for your skills. Then edit the custom rules for the new skills. You will need to edit the Conditions patterns **and** and intent variable value for each. Of course, you should add or remove rules depending on how many skills you plan to route to.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png" alt="">
 
 #### Reprompt dialog
 
@@ -89,7 +89,7 @@ switch(intent){
       skillName = intent;
       break;
     default:
-      transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+      transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
       skillId = '1680373730';
       skillName = 'help';
       break;  
@@ -100,7 +100,7 @@ For each of your skill options:
 
 - Edit the `case` to match the [intent variable values](#welcome-dialog) of your skill names.
 
-- Edit the `transferMessage` to match the name of your skills. 
+- Edit the `transferMessage` to match the name of your skills.
 
 - Edit the `skillId` to match that of your skills. The skill ID is displayed in the URL in Conversational Cloud when you click on an individual skill.
 
@@ -110,6 +110,6 @@ You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-To connect your bot to Conversational Cloud, follow [these instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
+To connect your bot to Conversational Cloud, follow [the instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 Now you can test your routing bot and see how it routes to your skills.

@@ -13,7 +13,6 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file
 indicator: messaging
 ---
 
-
 ### File Sharing from Agent to Consumer:
 Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.
 
@@ -36,7 +35,6 @@ Consumers can share:
 
 {:.important}
    The Android SDK supports opening any supported file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
-
 
 ### Supported formats
 
@@ -77,7 +75,6 @@ Consumers can share:
 ### How photo and file sharing works from agent to consumer
 
 <img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
-
 
 ---
 

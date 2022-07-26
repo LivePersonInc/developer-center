@@ -10,11 +10,11 @@ order: 40
 indicator: messaging
 permalink: connector-api-webhooks-retry-policy.html
 ---
-Webhooks provide two types of retry mechanisms; one based on the number of retries and one based on the time to live of a failed event. Using the first retry mechanism one can specify a number of tries a failed event will be resend. The latter allows one to define the time a failed event will be kept in the retry mechanism. The three main differences between both mechanisms are the recoverable downtime, the ordering guarantee and the recoverable unit. Retry based on numbers does not guarantee the order of events, is only able to cope with an endpoint downtime of max. 2 1/2 minutes, and concentrates on events as recoverable units. On the other hand, retry based on the time to live guarantees the order of events within conversations, can bridge a downtime of up to 3 days and regards conversations as recoverable units. The first retry mechanism is deprecated and will be replaced by the latter one in a future release.
+Webhooks provide two types of retry mechanisms; one based on the number of retries and one based on the time to live of a failed event. Using the first retry mechanism one can specify a number of tries a failed event will be resend. The latter allows one to define the time a failed event will be kept in the retry mechanism. The three main differences between both mechanisms are the recoverable downtime, the ordering guarantee and the recoverable unit. Retry based on numbers does not guarantee the order of events, is only able to cope with an endpoint downtime of max. 150 seconds, and concentrates on events as recoverable units. On the other hand, retry based on the time to live guarantees the order of events within conversations, can bridge a downtime of up to 3 days and regards conversations as recoverable units. The first retry mechanism is deprecated and will be replaced by the latter one in a future release.
 
 ### Retry based on numbers
 
-Retry based on numbers was the first mechanism introduced with Webhooks. For each webhook, one can configure up to 5 retry attempts. Between each attempt, Webhooks will wait for 30 seconds. That is a maximum wait time of 2 1/2 minutes. For example, consider the following configuration:
+Retry based on numbers was the first mechanism introduced with Webhooks. For each webhook, one can configure up to 5 retry attempts. Between each attempt, Webhooks will wait for 30 seconds. That is a maximum wait time of 150 seconds. For example, consider the following configuration:
 
 ```json
 {
@@ -39,9 +39,9 @@ If an event of type `ms.MessagingEventNotification.ContentEvent` fails, it will 
 
 * Applications should consider that data (event) loss is possible. For example, when a failed event is retried, once the retry policy is exhausted (e.g. all the retry attempts fail) the event will be dropped.
 
-* Applications should consider that events order is on best effort basis - i.e. it is not guaranteed. For example, if an event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.
+* Applications should consider that events order is on best effort basis — i.e. it is not guaranteed. For example, if an event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy - resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
 
 ### Retry based on time to live
 
@@ -100,7 +100,7 @@ An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recov
 
 * Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from Conversational Cloud. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period. 
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy - resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
 
 ### Numbers vs. time to live
 

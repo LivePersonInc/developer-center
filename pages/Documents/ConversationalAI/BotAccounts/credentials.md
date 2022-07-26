@@ -122,7 +122,7 @@ A trust certificate is exported from the external system (e.g., Salesforce) to w
 
 When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
 
-**Note**: The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
+**Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 
 You can convert a trust certificate to the required format using openssl. For example, the following commands convert a PEM-format file to DER and then import it into the keystore:
 

@@ -53,4 +53,3 @@ Link to the [appendix](appendixStuff.html) if you'd like to define the response 
 }
 ```
 
-

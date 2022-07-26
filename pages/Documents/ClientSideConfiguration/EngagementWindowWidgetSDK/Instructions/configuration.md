@@ -20,5 +20,5 @@ Widget is configured by the LivePerson account team based on the following prope
   - Widget URL (must be over https)
   - Widget Name (unique)
   - Widget Start State (OFFLINE / PRE_CONVERSATION / PENDING / ACCEPTED(chat only) / IN_QUEUE(messaging only) / INTERACTIVE / POST_CONVERSATION / ENDED)
-  - Messaging {enable: True/False, authenticated:True/False, unauthenticated:True/False}
-  - Chat {enable: True/False, authenticated:True/False, unauthenticated:True/False}
+  - Messaging {enable: True/False, authenticated: True/False, unauthenticated: True/False}
+  - Chat {enable: True/False, authenticated: True/False, unauthenticated: True/False}

@@ -42,9 +42,9 @@ Contains list of `CertificateMappingParamters` objects:
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
 ```
-**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+**Note:** You must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked.
 
-**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+**Note:** You must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked.
 
 ### Response
 
@@ -56,8 +56,6 @@ Contains list of `CertificateMappingParamters` objects:
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 
@@ -97,6 +95,6 @@ CertificateMappingParameters object which contains:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| serviceName | Contains the service name which has a corresponding certificate in Hashicorp-Vault. | string |  | |
-| accountId | Account ID which has a corresponding certificate in Hashicorp-Vault. | string |  | |
-| url | Contains the URL which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| serviceName | Contains the service name which has a corresponding certificate in HashiCorp Vault. | string |  | |
+| accountId | Account ID which has a corresponding certificate in HashiCorp Vault. | string |  | |
+| url | Contains the URL which has a corresponding certificate in HashiCorp Vault. | string |  | |

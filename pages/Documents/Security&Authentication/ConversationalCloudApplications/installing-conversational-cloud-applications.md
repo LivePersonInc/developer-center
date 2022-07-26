@@ -17,7 +17,7 @@ Currently, installation of Conversational Cloud Applications is performed by Liv
 
 Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through Conversational Cloud, but currently the installation process must be followed.
 
-### Conversational Cloud Application Manifest Schema - Parameters
+### Conversational Cloud Application Manifest Schema — Parameters
 
 | Property | Description | Type | Required| Notes|
 |--- | --- | ---| ---| ---|

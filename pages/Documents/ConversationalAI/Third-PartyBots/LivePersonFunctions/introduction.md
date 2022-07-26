@@ -32,15 +32,15 @@ Click on the "Create LivePerson Function" button. This will allow you to impleme
 
 #### Step-by-Step function creation and deployment guide
 
-##### Step 1 - Create a function
+##### Step 1 — Create a function
 
 Create a new function using the **Third-Party Bots Custom Integration** event.
 
-##### Step 2 - Edit the Function
+##### Step 2 — Edit the Function
 
 Adjust the default code from the function template according to your needs by modifying the function (see below for more information on relevant considerations and code examples). On the right side you can see an example of the payload (in the sidebar, which you might need to open). Please see this document for more information on [developing functions](liveperson-functions-getting-started-development-deep-dive-ui.html).
 
-##### Step 3 - Deploy the function
+##### Step 3 — Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-your-first-function.html#deploy) for more information on how to deploy your function. At this point, you can also test your function.
 
@@ -53,7 +53,7 @@ After you successfully implemented and deployed a LivePerson Function, press the
 {: .important}
 You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has succeeded, you're done!
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeeded or failed. If it succeeded, you're done.
 
 The following payload content will be received from the Function during a conversation with the assigned bot.
 

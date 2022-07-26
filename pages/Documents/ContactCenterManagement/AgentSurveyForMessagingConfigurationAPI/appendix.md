@@ -33,7 +33,6 @@ This section contains API details that are common to every API’s resource, met
 | v   | API version        | Double  | Required   |
 | select  | Dynamic selection of the response fields. | YOGA 'gdata' dialect.  | Optional | Validation error: 400 Non-existing field: no error, blank in response. Supported fields: any in response body       |
 
-
 **Path Parameters**
 
  |Parameter | Description|  Type  |Notes |
@@ -52,7 +51,6 @@ This section contains API details that are common to every API’s resource, met
  | deleted | Whether the item is deleted or not | boolean |
  | enabled | Whether the item is enabled or not| boolean |
  | questions | Array of Agent survey questions | Array or questions |
-
 
 **Entity Example**
 
@@ -101,12 +99,12 @@ This section contains API details that are common to every API’s resource, met
 | orderId |  Ordered number, represents the location of the question in the survey |
 | text | Question's text | String |
 | next | ID of the next question in the survey | Long | should be null in case the question contains replies |
-| nextInOrder | True if the next question is in order | Boolean | For example - question with orderId 2 followed by question with orderId 3 |
+| nextInOrder | True if the next question is in order | Boolean | For example, question with orderId 2 followed by question with orderId 3 |
 | required | Is the question is mandatory | boolean |
 | category | Question's category. Possible values: free_text, radio_button, checkbox, dropdown, number, date | enum |
 | questionDefinition | Question's definition. Possible values: regular_question, conversation_topic, conversation_outcome, engagement_attributes | enum |
 | maxCharacters |  Characters limit to an answer | Integer |
-| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - [EngagementAttribute](/agent-survey-for-messaging-runtime-api-appendix.html#engagementAttribute-structure) | Submitting an engagement attribute question will trigger PurchaseEvent/LeadEvent/ServiceActivity event - based on the engagement attribute's type.
+| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object — [EngagementAttribute](/agent-survey-for-messaging-runtime-api-appendix.html#engagementAttribute-structure) | Submitting an engagement attribute question will trigger PurchaseEvent/LeadEvent/ServiceActivity event — based on the engagement attribute's type.
 | replies | Array of replies associated with this question | Array or replies |
 
 **Reply definition**

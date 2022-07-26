@@ -22,7 +22,7 @@ indicator: both
 | Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent. For best practices, see [here](intent-manager-best-practices.html#training-phrases).<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
 | Inference | The process by which a “learned” model attempts to map an incoming message to an intent class. |
-| Unclassified/Undefined | The messages that do belong to an intent class that is defined in the NLU domain. |
+| Unclassified/Undefined | Statements of intent that aren't yet included in the defined set of intents. |
 | Coverage | The percentage of the messages that the intent recognition model would classify as one of the defined intents against the total number of intentful messages. |
 | Overfit | A model is overfitting, when it was trained in such a way to produce highly accurate predictions on its training set, which it has seen during training, but produces much less accurate results on a separate, unseen dataset. |
 | Tokens | The pieces of a message after a message is broken down into its smallest elements. |
@@ -65,11 +65,11 @@ The designation of a domain as primary affects only intent matching as it relate
 
 Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Some examples of common intents are:
 
-* Check order status - “What is the status of my lawn mower order?”
-* Request product price - “How much does the iPhone 11 cost?”
-* Make a payment - “Can I make a payment today for the total amount?”
-* Request a refund - “Hey are you able to give me a refund for this flight that was cancelled?”
-* Reset password - “I forgot my password and I need to reset it.”
+* Check order status: “What is the status of my lawn mower order?”
+* Request product price: “How much does the iPhone 11 cost?”
+* Make a payment: “Can I make a payment today for the total amount?”
+* Request a refund: “Hey are you able to give me a refund for this flight that was cancelled?”
+* Reset password: “I forgot my password and I need to reset it.”
 
 Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers might discuss are product names, service plan names, bills, service and product orders, locations and dates.
 
@@ -95,6 +95,7 @@ To return the best response to consumers, the NLU has a threshold of GOOD. This 
 The scoring breakdown that indicates the NLU’s level of confidence in the match is as follows:
 
 **LivePerson engine**
+
 * VERY GOOD: 75-100% match
 * GOOD: 60-75% match
 * FAIR PLUS: 45-60% match
@@ -102,6 +103,7 @@ The scoring breakdown that indicates the NLU’s level of confidence in the matc
 * POOR: 0-30% match
 
 **LivePerson (Legacy) engine or 3rd-party engine**
+
 * VERY GOOD: 85-100% match
 * GOOD: 70-85% match
 * FAIR PLUS: 65-70% match
@@ -128,10 +130,10 @@ Multi-domain support makes it possible to evaluate each consumer message against
 * Support for more than one language per account
 * Support for multiple lines of business
 * Independently tuned models for specific use cases
-    * Sales and marketing
-    * Churn detection and escalation
-    * Social media monitoring
-    * Specialized bots and automation
+  * Sales and marketing
+  * Churn detection and escalation
+  * Social media monitoring
+  * Specialized bots and automation
 
 ### Meta intents
 
@@ -139,23 +141,20 @@ You might notice as you are working on your intent taxonomy that the number of i
 
 A meta intent is a wrapper that can contain many other standard intents. This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
 
-<img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png">
-<img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png">
+<img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
 
 ### Entities
 
 Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
 
-Entities facilitate the creation and curation of training phrases. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
-
-You can use entities in two places:
-* Training phrases for intents defined in Intent Manager
-* Intent qualifiers for articles defined in [KnowledgeAI](knowledgeai-overview.html)
+Entities facilitate the creation and curation of training phrases. For example, you might create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training phrases, you can replace a specific product name with the entity name PRODUCT. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
 
 {: .important}
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
 
 There are three types of entities:
+
 * Value Set entities
 * Regular Expression entities
 * Global (built-in) entities
@@ -163,30 +162,33 @@ There are three types of entities:
 #### Value Set entities
 
 As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
+
 * football
 * running
 * walking
 
-<img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png">
-
-The LivePerson NLU engine trains the model with as many as 100 Value Set entity combinations, e.g, “I’m interested in SPORTS” yields “I’m interested in football,” “I’m interested in running,” and “I’m interested in walking.” As mentioned earlier, a maximum of one entity per training phrase is used during model training. Unlike Regular Expression entities, Value Set entities aren’t considered at intent prediction time.
+<img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
+
+The LivePerson NLU engine trains the model with as many as 100 Value Set entity combinations, e.g, “I’m interested in SPORTS” yields “I’m interested in football,” “I’m interested in running,” and “I’m interested in walking.” As mentioned earlier, a maximum of one entity per training phrase is used during model training. Unlike Regular Expression entities, Value Set entities aren’t considered at intent prediction time.
 
 #### Regular Expression entities
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
-<img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png">
+<img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
 
 Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression, e.g., "I want to check on my order 757575," the bot detects this and substitutes the ORDER_NO entity into the utterance before predicting the consumer's intent. In general though, Regular Expression entities work much like Value Set entities with this single exception: With Regular Expression entities, the matched string is replaced by the entity just before prediction.
 
 Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
+
 * Flight numbers
 * Order numbers
 * Help Desk ticket numbers
 
 Continuing our `ORDER_NO` example, you might use the entity in the training phrases for an "order status" intent, like so:
+
 * "I want to check on my order ORDER_NO"
 * "What's the status of order ORDER_NO"
 
@@ -194,21 +196,69 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 #### Global entities
 
-Global entities are automatically detected by the system, so you don’t have to add them manually. Global entities include:
+Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t have to add them manually.
 
-* PERSON - Names of people, persons
-* ORGANIZATION - Names of institutions
-* NUMBER - Numbers in a sentence (pure number)
-* MONEY - Numbers with currency ($2000)
-* DURATION - Time periods
-* SET - Group (example month, week)
-* ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
-* DATE - Date-related. Today, tomorrow, or explicit dates, for example, 03/01/2017. This also includes absolute date&timestamps such as "6 p.m. tomorrow."
-* TIME - Time of day, for example, 2PM or 23:00. This also includes times such as "everyday at 8 a.m."
-* PERCENT - A percentage, for example, 100%.
-* LOCATION - Names of locations, e.g., countries or cities, such as Paris.
+Global entities include:
 
-Using the [Assist tool](conversation-builder-assist.html), you can assign global entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
+| Entity | Description | Example |
+| --- | --- | --- |
+| AIRPORT | An airport code | SEATAC<br>LAX<br>DEL |
+| CITY | A city | Paris<br>Los Angeles |
+| COLOR | A color | blue<br>red |
+| COUNTRY | A country | Canada<br>United States |
+| DATE | Dates | today<br>tomorrow<br>03/01/2017<br>Saturday<br>next Wednesday |
+| DURATION | A time period | 2 weeks<br>2 weeks and 3 days<br>half a day<br>fortnight |
+| EMAIL | An email address | jane@myemail.com |
+| MONEY | Numbers with currency | $2000<br>23 dollars<br>fifty bucks<br>ten pounds |
+| ORG | Names of institutions | Nike factory<br>World Health Organization |
+| PERCENT | A percentage | 100%<br>forty percent |
+| PERSON_NAME | Names of persons | John<br>Jane |
+| PHONE | A phone number | 800-555-1212<br>+66 11-222-3344 |
+| POSITION_IN_SERIES | A number used in the context of order | 15th<br>first |
+| POSTAL_CODE | United States postal code | 10001 |
+| QUANTITY | A quantity | 5<br>ten |
+| SET | A group<br>In, "The meeting with Bob is weekly on Tuesdays," PERSON_NAME = Bob, SET = weekly, DATE = Tuesdays | month<br>week<br>every day |
+| STATE | United States state | NY<br>New York |
+| STREET | United States descriptors for street names | Main St.<br>123 Main St. NE<br>123 East-West Highway Apt. 107 |
+| TIME | Time of day | 2 p.m.<br>23:00<br>morning |
+| URL | A URL | https://www.google.com/search?&lt;param&gt; |
+
+**Detection of global entities**
+
+Keep in mind that the detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
+
+* Message: My name is Paris and I live in Paris
+* Entities: PERSON_NAME = Paris, CITY = Paris
+
+* Message: Hi Tuesday, can you arrive at 2pm on Tuesday?
+* Entities: PERSON_NAME = Tuesday, TIME = 2pm, DATE = Tuesday
+
+What's more, the detection of entities is trained on commercial messages, so depending on context, you might get results that you don’t expect:
+
+* Non-commercial message: Washington cherry trees are beautiful this time of year
+* Entities: CITY = Washington
+
+but
+
+* Commercial message: Do you ship this product to Washington?
+* Entities: STATE = Washington
+
+As mentioned above, global entities are detected automatically by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
+
+<img style="width:500px" src="img/ConvoBuilder/im_entities_global1.png" alt="">
+
+If you have defined custom entities within your domain, you’ll see those detected along with the global entities:
+
+<img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png" alt="">
+
+**Using global entities**
+
+In the training phrases of intents, you can use example values of global entities, but don't use the names of global entities:
+
+* **Do** - I want to buy a phone today.
+* **Don't** - I want to buy a phone DATE.
+
+You can also use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
 
 ### Training
 

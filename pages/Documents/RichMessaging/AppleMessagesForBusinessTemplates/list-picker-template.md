@@ -15,16 +15,16 @@ indicator: messaging
 
 [Business Chat List Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
 
-* Define items information - item name, description, image.
-* Item sections - divide your list of items into sections based on the product categories.
-* Multi-selection - Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
-* receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
+* Define items information — item name, description, image.
+* Item sections — divide your list of items into sections based on the product categories.
+* Multi-selection — Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
+* receivedMessage and replyMessage bubbles style structures — define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
 Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
 
 Below is an image example of a Business Chat List Picker with multi-selection turned on:
 
-![Apple Messages for Business List Picker Main](images/abc-listpicker-1.jpg)   ![Apple Messages for Business List Picker list](images/abc-listpicker-2.PNG)
+![Apple Messages for Business List Picker Main](img/archive/abc-listpicker-1.jpg)   ![Apple Messages for Business List Picker list](img/archive/abc-listpicker-2.PNG)
 
 ### Basic Template Overview
 
@@ -37,8 +37,6 @@ Each List Picker template has the following mandatory sections:
 2. [List Picker header](#body---list-picker-header): title and subtitle (part of the JSON body)
 
 3. [List Picker list items](#body---list-picker-items): title, subtitle and an optional image (part of the JSON body)
-
-
 
 The following JSON metadata and body structures are templates for any List Picker object:
 
@@ -66,7 +64,6 @@ The following JSON metadata and body structures are templates for any List Picke
   }
 ]
 ```
-
 
 #### Body JSON Template
 
@@ -163,7 +160,7 @@ The following JSON metadata and body structures are templates for any List Picke
 }
 ```
 
-### Metadata - Business Chat Message
+### Metadata — Business Chat Message
 
 The List Picker Metadata JSON is based on [this JSON template](#metadata-json-template).
 
@@ -178,7 +175,6 @@ The muliple selection property allows the brand to configure which sections will
 | receivedMessage   | Defines how the bubble template will be displayed when a message is received.                 | Object  | Y        |            |
 | replyMessage      | Defines how the bubble will be displayed when a message is sent back by the consumer.       | Object  | Y        |            |
 
-
 #### Received and Reply Message
 
 The Received Message is the first card presented to the consumer, from which they access the list of items to choose from. It consists of an image and actions.
@@ -186,7 +182,6 @@ The Received Message is the first card presented to the consumer, from which the
 The Reply Message is the reply card presented to the consumer after selecting items from the list.
 
 The configuration of the Received and Reply Messages is done via a metadata JSON file.
-
 
 ##### Received and Reply Message Properties
 
@@ -198,7 +193,6 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 | imageURL          | Image to be placed in the List Picker received and reply message template                      | String | N        | JPG and PNG Only <br/> The total image size in the list picker is limited to 0.5MB |
 | secondarySubtitle | Title that is aligned right of the message                                                   | String | Y        |                                                                                    |
 | tertiarySubtitle  | Subtitle that is aligned right of the message                                                | String | Y        |                                                                                    |
-
 
 #### Metadata JSON Example
 
@@ -404,7 +398,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be ‘text’ | Enum   | Y        |            |
 | tag           | Must be “subtitle”                    | String | Y        |            |
 
-**Note: the subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Example
 
@@ -430,7 +424,6 @@ The configuration of the List Picker Item is done as part of the [List Picker Bo
 | type          | Type of template. <br/> Must be ‘horizontal’                                                   | Enum     | Y        |            |
 | elements      | Array of elements: image (optional), title, subtitle and a button. <br/> Must be in that order | Elements | Y        |            |
 
-
 #### List Picker Item Elements Configurations
 
 The List Picker Item elements are based on the basic [Structured Content basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
@@ -446,7 +439,7 @@ Based on the [Structured Content Basic Element Image](structured-content-introdu
 | type          | Type of element. <br/> Must be 'image'                              | Enum   | Y        |            |
 | uri           | Image URL. <br/> Must be whitelisted by a LivePerson representative | String | Y        |            |
 
-**Note: The image section should not use style element**
+**Note:** The image section should not use a style element.
 
 ##### Title Element Properties
 
@@ -467,7 +460,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 | type          | Type of element. <br/> Must be 'text' | Enum   | Y        |            |
 | tag           | Must be “subtitle”                  | String | Y        |            |
 
-**Note: The subtitle section should not use style element**
+**Note:** The subtitle section should not use a style element.
 
 ##### Button Element Properties
 
@@ -478,8 +471,7 @@ A button element is required for the representation on the Agent workspace side.
 | type          | Type of element. <br/> Must be 'button'            | Enum | Y        |            |
 | click         | Click operation must use “publishText” type only | Enum | Y        |            |
 
-**Note: The button section should not use style element**
-
+**Note:** The button section should not use a style element.
 
 #### List Picker Item JSON Example
 

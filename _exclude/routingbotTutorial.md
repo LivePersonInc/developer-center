@@ -42,7 +42,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
 **Before you do anything else**, we need to "Publish" the bot to your Organization. (For those with access to multiple organizations, the bot will default to Private, which is why we want to change it.)
 
-1. Click the gear <img class="inlineimage" src="img/conversationimages/image_4.png" /> icon on the right sidebar and then Bot Settings. Scroll down and click "More Settings".
+1. Click the gear <img class="inlineimage" src="img/conversationimages/image_4.png" alt="" /> icon on the right sidebar and then Bot Settings. Scroll down and click "More Settings".
 
 2. Where it says "Publish Bot" change to the appropriate organization and hit Save.
 
@@ -50,11 +50,11 @@ This step requires that you have a user account for the Conversation Builder pla
 
 ### Testing Your Bot
 
-To quickly test your bot’s functionality, click on the Chat preview button <img class="inlineimage" src="img/conversationimages/image_6.png" /> on the right sidebar and type one of the options (or not, if you want to see how the bot responds to unstructured text). Keep in mind, the Chat preview is not connected to LiveEngage and cannot display the actual transfer to agent. For that you’ll need to connect your bot to LiveEngage and view an interaction with a chat or messaging consumer.
+To quickly test your bot’s functionality, click on the Chat preview button <img class="inlineimage" src="img/conversationimages/image_6.png" alt="" /> on the right sidebar and type one of the options (or not, if you want to see how the bot responds to unstructured text). Keep in mind, the Chat preview is not connected to LiveEngage and cannot display the actual transfer to agent. For that you’ll need to connect your bot to LiveEngage and view an interaction with a chat or messaging consumer.
 
 You may need to type "**reset**" and hit enter. Then type “hi” to trigger the initial Welcome message. **Reset** clears all variables to start fresh.
 
-<img src="img/conversationimages/image_7.png" style="height:500px">
+<img src="img/conversationimages/image_7.png" alt="" style="height:500px">
 
 Select one of the options by clicking on a button or by typing a keyword like **billing**, **account**, **offers** or **help**.
 
@@ -82,7 +82,7 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
     4. Click on this interaction and on the top of the right panel, make sure "USER RESPONSE" is selected. This panel allows you to determine how you want this interaction to react to the user’s next response. For the moment we are using a simple [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) to match the word “billing” (by using the pattern “billing”) which will navigate to the Option 1 dialog and, within it, to the "billing text" interaction which appears in the dropdown. Ultimately, this will trigger the escalation to the Billing skill.
 
-        <img src="img/conversationimages/image_12.png" style="height:500px">
+        <img src="img/conversationimages/image_12.png" alt="" style="height:500px">
 
 2. Let’s add more patterns to make our automation more responsive to the billing option. There are several considerations to take into account when we use patterns (complete information on patterns can be found [here](conversation-builder-overview-conditions.html)). Follow along to understand the details:
 
@@ -122,25 +122,25 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
 ### Modifying The Reprompt
 
-<img src="img/conversationimages/image_13.png" style="height:250px">
+<img src="img/conversationimages/image_13.png" alt="" style="height:250px">
 
 From the dialog tabs, select the Reprompt dialog. Click on the small arrow to display the dialog menu and click Dialog Settings. Note that the **Type** for this dialog is **Fallback**. This means that this dialog will be triggered whenever someone types in something the bot doesn’t understand.
 
-<img src="img/conversationimages/image_14.png" style="height:250px">
+<img src="img/conversationimages/image_14.png" alt="" style="height:250px">
 
-The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel. **The patterns are missing! You need to add them!**
+The Reprompt menu interaction should perform the same function as the Main Menu interaction, in this case. Select it and check the User Response panel: **The patterns are missing! You need to add them!**
 
 1. On the User Response panel, click on the Match Type drop down menu and select **Pattern**.
 
-    <img src="img/conversationimages/image_15.png" style="height:250px">
+    <img src="img/conversationimages/image_15.png" alt="" style="height:250px">
 
 2. click on the New Pattern bubble and add the patterns we created earlier for **billing** and hit enter.
 
-    <img src="img/conversationimages/image_16.png" style="height:250px">
+    <img src="img/conversationimages/image_16.png" alt="" style="height:250px">
 
-3. Now we need to tell the interaction where to go when it matches. click on the Next Step drop down menu and look for Option 1 > billing text. Select it
+3. Now we need to tell the interaction where to go when it matches. click on the Next Step drop down menu and look for Option 1 → billing text. Select it
 
-    <img src="img/conversationimages/image_17.png" style="height:200px">
+    <img src="img/conversationimages/image_17.png" alt="" style="height:200px">
 
 4. Let’s add the conditions for account, offers and other. Click on the **+ Response Match & Actions link.**
 
@@ -148,27 +148,27 @@ The Reprompt menu interaction should perform the same function as the Main Menu 
 
 6. Perform the same steps as billing. This time use the patterns you created for "account" for the pattern.
 
-7. From the Next Step menu select Option 2 > account text.
+7. From the Next Step menu select Option 2 → account text.
 
-    <img src="img/conversationimages/image_18.png" style="height:200px">
+    <img src="img/conversationimages/image_18.png" alt="" style="height:200px">
 
 8. Add another Response Match for Special Offers.
 
 9. Add a condition and select pattern. This time user "offer" as the pattern.
 
-10. From the Next Step menu select Option 3 > offer text.
+10. From the Next Step menu select Option 3 → offer text.
 
-    <img src="img/conversationimages/image_19.png" style="height:200px">
+    <img src="img/conversationimages/image_19.png" alt="" style="height:200px">
 
 11. Add another Response Match for Other.
 
 12. Add a condition and select pattern. This time user "other" as the pattern.
 
-13. From the Next Step menu select Option 4 > other text. Option 4 is the default escalation.
+13. From the Next Step menu select Option 4 → other text. Option 4 is the default escalation.
 
-    <img src="img/conversationimages/image_20.png" style="height:200px">
+    <img src="img/conversationimages/image_20.png" alt="" style="height:200px">
 
-14. Since we’re already in the Reprompt dialog, if someone says anything NOT in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but _this_ time let’s make our pattern a wildcard * and for the Next Step, select Option 4 > other text. This will escalate the user directly.
+14. Since we’re already in the Reprompt dialog, if someone says anything _not_ in out list of options, we don’t want them to get stuck in an infinite loop. Not fun for anyone! So let’s create one last Response Match, but *this* time let’s make our pattern a wildcard * and for the Next Step, select Option 4 → other text. This will escalate the user directly.
 
 15. Once you’ve finished, go to the previewer and type "reset" and “hi”. Then try out your router automation. Try the buttons, try typing, try typing something unexpected and see what happens. REMEMBER: this is not connected to LiveEngage so you will not actually be escalating.
 
@@ -178,17 +178,17 @@ We’ve seen what we can do with patterns thus far. [Intents](conversation-build
 
 Before we make changes to our beautiful template, let's **save the current version** as a backup.
 
-1. Click on the versions icon <img class="inlineimage" src="img/conversationimages/image_21.png" /> on the right sidebar. Then click Save Current Version, give it a name and then hit Save. This backup can now be used to revert to the last known good version of your automation.
+1. Click on the versions icon <img class="inlineimage" src="img/conversationimages/image_21.png" alt="" /> on the right sidebar. Then click Save Current Version, give it a name and then hit Save. This backup can now be used to revert to the last known good version of your automation.
 
-    <img src="img/conversationimages/image_22.png" style="height:250px">
+    <img src="img/conversationimages/image_22.png" alt="" style="height:250px">
 
-2. Exit the Bot Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and select Intent Builder from the drop down menu at the top left.
+2. Exit the Bot Builder <img class="inlineimage" src="img/conversationimages/image_23.png" alt="" /> and select Intent Builder from the drop down menu at the top left.
 
 3. On the [Intent Builder dashboard](conversation-builder-intent-builder-overview.html) click the Add Domain button to create your own new Domain. Domains are groups of intents and entities, usually gathered for use with one brand or bot experience. **Give your domain a unique name** and hit Add Domain.
 
 4. You should now be looking at a blank intent detail view like this:
 
-    <img src="img/conversationimages/image_24.png" style="height:300px">
+    <img src="img/conversationimages/image_24.png" alt="" style="height:300px">
 
 Now let’s create our first intent for our Billing option.
 
@@ -208,21 +208,21 @@ Now let’s create our first intent for our Billing option.
 
 To try this out, we need to associate this domain with our automation and the intent with the message.
 
-1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
+1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" alt="" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" alt="" /> Automation Settings → More Settings → Entity and select **the specific Domain you created above** and hit Save.
 
-2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings <img class="inlineimage" src="img/conversationimages/image_28.png" /> and instead of using patterns, we are going switch to our new intent.
+2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings <img class="inlineimage" src="img/conversationimages/image_28.png" alt="" /> and instead of using patterns, we are going switch to our new intent.
 
 3. In the Match Type drop down menu, select Response Intent.
 
-    <img src="img/conversationimages/image_29.png" style="height:150px">
+    <img src="img/conversationimages/image_29.png" alt="" style="height:150px">
 
 4. Now select the intent you just created for Billing.
 
-    <img src="img/conversationimages/image_30.png" style="height:150px">
+    <img src="img/conversationimages/image_30.png" alt="" style="height:150px">
 
-5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents!
+5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents.
 
-    <img src="img/conversationimages/image_31.png" style="height:300px">
+    <img src="img/conversationimages/image_31.png" alt="" style="height:300px">
 
 ### Adding Entities
 
@@ -232,21 +232,21 @@ If you really want to ramp up the power of your intents, you can add **entities*
 
 2. Add an entity for billing (or whichever works with your intent example) with a number of synonyms and Save.
 
-    <img src="img/conversationimages/image_32.png" style="height:600px">
+    <img src="img/conversationimages/image_32.png" alt="" style="height:600px">
 
 3. Now, within your intent for billing, all of those synonyms will be swapped in any time the entity name is represented (in this case **billing**). So if a user says "I have a question about my payment" it should match due to the entity being matched, since "payment" is included in the "billing" enttiy. You can try this in the intent debugger.
 
-    <img src="img/conversationimages/image_33.png" style="height:500px">
+    <img src="img/conversationimages/image_33.png" alt="" style="height:500px">
 
 ### Your Friend, the Debugger
 
 Before we move on, it’s important to discuss a way to test and troubleshoot your automations, called the Debugger. The debugger will display all of the logs and developer added messages available for your automation. Every instance of your automation (in the previewer, on the web, in SMS, in Facebook Messenger, etc) for every single user, each have their own User ID. See the screenshot below for an example of how to retrieve your User ID.
 
-<img src="img/conversationimages/image_34.png" style="height:200px">
+<img src="img/conversationimages/image_34.png" alt="" style="height:200px">
 
 * To view debugger output, click on the previewer and type "display userid" and copy everything **AFTER** “UserId:”.
 
-* Next, click on the Debugger <img class="inlineimage" src="img/conversationimages/image_4.png" /> icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
+* Next, click on the Debugger <img class="inlineimage" src="img/conversationimages/image_4.png" alt="" /> icon and paste that into the field and hit REFRESH.  You should be seeing the initial logs for your bot. You’ll need to hit refresh to get the latest logs.
 
 #### Add a debug message
 
@@ -267,7 +267,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
 5. Switch to the Debugger and hit Refresh. You should now see your message in the log.
 
-    <img src="img/conversationimages/image_37.png" style="height:100px">
+    <img src="img/conversationimages/image_37.png" alt="" style="height:100px">
 
 6. Add another debug message in one of your Options dialogs (eg: billing, etc). Did it show up?
 
@@ -278,7 +278,7 @@ Because this is a routing bot, its main purpose is to route to a particular skil
 {: .important}
 For the purposes of this tutorial we will NOT be connecting to LiveEngage.
 
-<img src="img/conversationimages/image_38.png" style="height:200px">
+<img src="img/conversationimages/image_38.png" alt="" style="height:200px">
 
 1. Select one of the options dialogs (eg: Billing), select the text interaction with the variable transferMessage being shown.
 

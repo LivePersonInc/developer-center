@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---
 
-Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 ### Prerequisites
 
@@ -115,7 +115,6 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
      Enter your account number as account, and your package name as appID in order to register to the pusher, as shown in the example. Notice the token we are getting from the `FirebaseInstanceId`. This is sent to the LivePerson pusher and integrated into your LivePerson account.
 
-
      ```java
      public class FirebaseRegistrationIntentService extends IntentService {
 
@@ -128,14 +127,13 @@ The proprietary SDK notification is only for display purposes, interacting with 
        @Override
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
-            // Register to Liveperson Pusher
+            // Register to LivePerson Pusher
             String account = "82055668";
             String appID = "com.shaym.sdk28";
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
      ```
-
 
    - **NotificationUI** (or choose your own names for these classes): presents and handles the push to the UI.
 

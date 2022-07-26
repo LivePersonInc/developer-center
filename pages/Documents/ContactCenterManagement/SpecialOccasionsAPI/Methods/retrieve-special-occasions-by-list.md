@@ -11,7 +11,7 @@ permalink: special-occasions-api-methods-retrieve-special-occasions-by-list.html
 indicator: messaging
 ---
 
-Get list of all special occasions of an account
+Get a list of all special occasions of an account.
 
 ### Request
 
@@ -24,7 +24,6 @@ Get list of all special occasions of an account
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String  
-
 
 **Request Headers**
 

@@ -11,18 +11,14 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-step-up-authentica
 indicator: messaging
 ---
 
-
 Step Up authentication allows consumers to continue the ongoing unauthenticated conversations by merging it to the authenticated conversation history after signing in.
-
 
 **Supported versions** 
  - v6.8.0 and higher
 
-
 ### How to enable
 - KB article: [Step Up Authentication Overview](https://knowledge.liveperson.com/step-up-authentication-overview/)
 - Setup account: Please reach out to LivePerson representative to get it activated and configured.
-
 
 ### Notes
 - Step Up task will be processed automatically by SDK.

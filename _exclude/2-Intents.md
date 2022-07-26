@@ -14,7 +14,7 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 
 ### Step 5: Create a Billing intent
 
-Since you’re going to be using intents in this tutorial, you need to leave the Conversation Builder application for a moment. 
+Since you’re going to be using intents in this tutorial, you need to leave the Conversation Builder application for a moment.
 
 1. In the upper-left corner, click **< Bots** beside the bot name to return to the list of bots.
 
@@ -37,14 +37,14 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 7. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
-    * i have a question about my bill
+    * I have a question about my bill
     * can you help me with my bill
-    * i have a bill related question
+    * I have a bill related question
     * my bill is past due
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png" alt="">
 
-    Using the word “bill” in the training phrases is important because you will create an entity named "bill" that the phrases will recognize. 
+    Using the word “bill” in the training phrases is important because you will create an entity named "bill" that the phrases will recognize.
 
 8. Scroll down, and click **Add Intent**.
 
@@ -56,11 +56,11 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 10. Enter an utterance that is close to one of your sentences, like, "I need help with my bill". Then click **Test**.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchverygood.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchverygood.png" alt="">
 
 11. Enter another utterance but use “billing” instead of “bill”, e.g., "I have a billing question".
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchfair.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchfair.png" alt="">
 
     The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill”. You can remedy this by creating an [entity](conversation-builder-intent-builder-entities.html). You do this next.
 
@@ -70,13 +70,13 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 14. Click **Add Entity**.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png" alt="">
 
 15. *Now see how adding an entity can improve the NLU matching*: Click **Intents** in the upper-right corner to return to the Intents tab, select the "Billing question" intent, and use the debugger again. This time re-enter the phrase, "I have a billing question".
 
     Now the result is VERY GOOD, and you can see that the entity @bill was detected as well.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/image_12.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/image_12.png" alt="">
 
 ### Step 6: Link the intent to a Billing dialog
 
@@ -87,26 +87,26 @@ With the "Billing question" intent configured, let’s return to Conversation Bu
 3. Click **Conversation Builder**.
 4. Select the bot you previously created.
 5. Create a new regular dialog named "Billing".
-    
+
     By default, a regular dialog includes a User Says interaction, but it isn't configured yet.
 
     The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
-    
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">
 
-7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents. 
-    
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png">
-    
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png" alt="">
+
+7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png">, select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents.
+
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png" alt="">
+
 8. Select the User Says interaction, enter the phrase "I have a question about my bill" as the sample text, and press Enter.
 
     NLU Assist automatically finds appropriate intents to link to the User Says interaction.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling.png" alt="">
 
 9. In the NLU Assist tool, select the "Billing question" intent that you created to associate it with the Billing dialog and the User Says interaction.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling2.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling2.png" alt="">
 
 ### Step 7: Add response conditions
 
@@ -116,12 +116,12 @@ Now you can begin to build out the Billing dialog.
 
 2. Add a Multiple Choice question that asks, "Do you want a copy of your most recent bill?" Enter "Yes" and "No" as the choices.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/billing_mcq.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/billing_mcq.png" alt="">
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to http://example.com”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
-    
+3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <http://example.com>”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
+
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next step should be to end.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement_end.png">
@@ -134,7 +134,7 @@ Now you can begin to build out the Billing dialog.
 
 6. Add a condition to handle a "yes" response: Click the **+** icon beside **Conditions**. Select "Pattern" from the drop-down list, and enter `(yes|yah|yup)` for the pattern. Then, for **Next Step**, select the "Yes statement."
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png" alt="">
 
 7. Add a condition to handle a "no" response: Click the **+** beside **Response Match & Actions** (at the top of the window) to add a second condition set. Add a condition. Select "Pattern" here too, but this time enter `(no|nope|nah)` for the pattern. And for the **Next Step**, select the "No statement."
 

@@ -26,7 +26,6 @@ Get a single workday object by ID.
  |accountId | LP site ID | String  |
  |workdayId|workday object’s unique id.| String|
 
-
 **Request Headers**
 
 |Header | Description| Notes |

@@ -18,7 +18,7 @@ indicator: messaging
 
 Certificate Pinning allows increased security on top of the commonly used SSL protocol for mobile apps. It assists to prevent certificate hijacks and mitigates implications from compromised certificate authorities. By using Certificate Pinning, apps have an additional validation of the server’s certificate.
 
-In order to use Certificate Pinning , the brand will need to go through an on-boarding process. This process includes setting up the Vanity URL feature, which is a prerequisite to using Certificate Pinning. The on-boarding process includes the following steps:
+In order to use Certificate Pinning, the brand will need to go through an on-boarding process. This process includes setting up the Vanity URL feature, which is a prerequisite to using Certificate Pinning. The on-boarding process includes the following steps:
 
   * Request to use the feature from the account team.
 
@@ -49,7 +49,7 @@ In order to add the feature on Android, please perform the following steps:
 The configuration should be added to the branding.xml file
 
 {:start="2"}
-2. Adding the public keys to the SDK - The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
+2. Adding the public keys to the SDK — The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
 
 Multiple keys can be added, as long as one of the keys will match the returned key, the connection will be initiated.
 
