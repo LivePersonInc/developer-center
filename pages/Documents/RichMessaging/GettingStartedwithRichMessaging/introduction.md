@@ -255,7 +255,7 @@ A simple Button which triggers an Action when clicked.
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. Must be 'button'                                                                                                                       | Enum      | Y        |            |
-| class          | Look and feel of the button. Default is text                                                                                                                       | Enum - text/button     | N        |            |
+| class          | Look and feel of the button. Default is text                                                                                                                       | Enum — text/button     | N        |            |
 | title         | Button title                                                                                                                                            | String    | Y        | 128 chars  |
 | click         | On-click operation (included metadata and/or actions clauses)                                                                                           |           | Y        |            |
 | tooltip       | Button tooltip, used also as aria                                                                                                                       | String    | N        | 256 chars  |
@@ -474,7 +474,7 @@ Each environment can override the URI for their specific needs.
 | :------------ | :--------------------------- | :----- | :------- | :--------- |
 | type          | Type of action. Must be link | Enum   | Y        |            |
 | uri           | The url to open              | String | Y        | 2048 chars |
-| target        | The target attribute specifies where to open the link. Supported by Web Messaging. Default is "blank" | Enum - blank/self | N |  |
+| target        | The target attribute specifies where to open the link. Supported by Web Messaging. Default is "blank" | Enum — blank/self | N |  |
 
 ###### Example
 

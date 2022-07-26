@@ -26,7 +26,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
 | serverTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                | 
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
-| customerType    | Customer type - will be matched against customer type entity name. Case insensitive. | alphanumeric|
+| customerType    | Customer type — will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | v1- alphanumeric, v2- double|
 | currency        | Currency code. | alphanumeric|
 | customerId      | The customer ID. | alphanumeric|
@@ -48,7 +48,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | name            | Personal name.         | alphanumeric|
 | surname         | Surname.               | alphanumeric|
 | gender          | Visitor's gender.      | alphanumeric|
@@ -64,7 +64,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total           | Total cart value.      | double |
 | currency        | Currency code.         | alphanumeric|
 | numItems        | Number of items in cart. | int|
@@ -81,18 +81,18 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total           | Total amount of purchase..      | double |
 | currency        | Currency code.         | alphanumeric|
 | orderId         | Purchase order ID.| alphanumeric|
-| cart            | Information about the cart status (detailed format - link to cart status)      | container|
+| cart            | Information about the cart status (detailed format — link to cart status)      | container|
 
 ### marketingCampaignInfo (Marketing Source)
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | originatingChannel           | Channel which originated the campaign.     | int |
 | affiliate        | Affiliate.        | alphanumeric|
 | campaignId        |Unique identifier of the campaign.| alphanumeric|
@@ -102,7 +102,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | keywords           | Array of the search keywords     | array, alphanumeric |
 
 ### viewedProduct (viewedProduct)
@@ -110,7 +110,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | products        | List of products.   | container |
 | quantity     | Number of products. | int|
 | currency        | Currency code.         | alphanumeric|
@@ -126,7 +126,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | contextId        | Error context ID (from the customer).   | alphanumeric |
 | message     | Error message. | alphanumeric|
 | code        |Error code.    | alphanumeric|
@@ -138,7 +138,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic        | Lead topic.  | alphanumeric |
 | value     | Lead value. | double|
 | currency        | Currency code.    | alphanumeric|
@@ -149,7 +149,7 @@ v2 - will allow to retrieve both authenticated and unauthenticated engagement at
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value - event creation time. If processing occurred, the value is updated to the processing time.
+| serverTimeStamp | Event processing time stamp.                | long — epoch time in milliseconds                | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic        | Topic of service activity.  | alphanumeric |
 | status     | Status of service activity. | int|
 | category        | Category of service activity.   | alphanumeric|

@@ -63,7 +63,7 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of engagements to delete.
 
-**Messaging - Flow #1**
+**Messaging — Flow #1**
 
 This flow is initiated by the consumer requesting for one or all of his conversations to be deleted.
 
@@ -75,7 +75,7 @@ The brand will need to follow the below steps to achieve this:
 
 3. Use the [Create Delete Request](personal-data-deletion-delete-request.html) method with the list of conversations to delete.
 
-**Messaging - Flow #2**
+**Messaging — Flow #2**
 
 This flow is initiated by the consumer requesting for all of his personal data to be deleted.
 

@@ -231,10 +231,10 @@ The following table describes the information that is available for survey data:
 | :------ | :--------- | :-------- |
 | surveys | List of surveys. | array container |
 | id | Unique survey identifier. | long |
-| type | Survey type, can be one of the following: 1- pre-chat, 2 - exit, 3 - agent, 4 — offline. | int |
+| type | Survey type, can be one of the following: 1 — pre-chat, 2 — exit, 3 — agent, 4 — offline. | int |
 | viewTime | The time for which the survey was displayed to the visitor. | long |
 | conversationId | Conversation unique identifier. | string |
-| contents | List of contents of this survey. | SurveyContent - array |
+| contents | List of contents of this survey. | SurveyContent — array |
 
 ###  SurveyContent
 

@@ -158,7 +158,7 @@ The following JSON metadata and body structures are templates for any Time Picke
 }
 ```
 
-### Metadata - Business Chat Message
+### Metadata — Business Chat Message
 
 Part of the Time Picker Conversational Cloud Structured Content metadata JSON.
 
@@ -205,7 +205,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 }
 ```
 
-### Metadata - Business Event
+### Metadata — Business Event
 
 Part of the Time Picker Conversational Cloud Structured Content metadata JSON. Defines the object as a time picker object for Apple Messages for Business. This section includes timing and location properties.
 
@@ -251,7 +251,7 @@ Part of the Time Picker Conversational Cloud Structured Content metadata JSON. D
 }
 ```
 
-### Body - Time Picker Items
+### Body — Time Picker Items
 
 Part of the Time Picker Conversational Cloud Structured Content body JSON, enabling an agent to generate an array of time slots for the consumer’s options.
 
