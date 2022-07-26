@@ -40,11 +40,11 @@ The identity function should be implemented on every authenticated page (the Web
 
 <div class="important">All 3 object keys are mandatory.</div>
 
-* iss - The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
+* iss: The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
 
-* acr - Authentication Context Class Reference based on [NIST-2 (2013)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf), the level of the authentication. Currently, we support the level `loa1` only and thus only it should be used in this context.
+* acr: Authentication Context Class Reference based on [NIST-2 (2013)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf), the level of the authentication. Currently, we support the level `loa1` only and thus only it should be used in this context.
 
-* sub - unique and non-guessable identifier of the consumer as set by the brand on their website. This is used to identify returning users and immediately continue an open conversation (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and moved between consumers).
+* sub: Unique and non-guessable identifier of the consumer as set by the brand on their website. This is used to identify returning users and immediately continue an open conversation (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and moved between consumers).
 
 For more information on these keys, please see the [Monitoring API documentation](https://developers.liveperson.com/monitoring-api-overview.html).
 
@@ -54,9 +54,9 @@ In this use case, it is the brand’s responsibility to set the customer identit
 
 The callback method accepts two parameters:
 
-*	token - a string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only).
+*	token: A string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only).
 
-*	error - any value except null or undefined to describe the error that has occurred
+*	error: Any value except null or undefined to describe the error that has occurred.
 
 The Customer web page method name can be either the default LivePerson method name (lpGetAuthenticationToken), or any specified name which can be accessed by traversing the global scope on the page.
 
@@ -198,7 +198,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 |    Name    |    Description | type   |    Appearance in Conversational Cloud   |    Mapping in SDEs    |
 |------------|----------------|--------|-------------------------------|-----------------------|
-|sub         |Subject - Identifier for the end-user at the Issuer.|string| Consumer info (including Customer ID)| ConsumerInfo.customerID|
+|sub         |Subject — Identifier for the end-user at the Issuer.|string| Consumer info (including Customer ID)| ConsumerInfo.customerID|
 |given_name      |Given name(s) or first name(s) of the end-user. Note that some people may have multiple given names; all can be present, with the names being separated by space characters.|string| Personal info (including Name) | Personalinfo.firstname|
 |family_name        |Surname(s) or last name(s) of the end-user. Note that some people may have multiple family names or no family name; all can be present, with the names being separated by space characters.|string| Personal info (including Name)| Personalinfo.lastname|
 |email        |End-User's preferred e-mail address. Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax. The RP MUST NOT rely upon this value being unique, as discussed in Section 5.7.|string| Personal info (including Email address)| Personalinfo.personalcontact.email|

@@ -31,7 +31,7 @@ Use this method to start a new session and to get an engagement according to the
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | appType | External system type | string | Required | Supported Values: MSDK, EXTERNAL |
-| appDetails | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
+| appDetails | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure — The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | appDetails.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | appDetails.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
 | appDetails.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv6 or IPv4) |
@@ -104,7 +104,7 @@ https://domainToLiveperson/api/account/{accountId}/app/engagement/visitors/{visi
 | 400 | Validation error |
 | 401 | Unauthorized |
 | 404 | Data not found |
-| 500 | Internal server error - If using a test account (or any account that has extremely low volume), when making the getEngagement call, you will get a 500 error with the following error: "{"time":1499263964605,"message":"Loading account: {{accountId}}, vid: {{vid}}","internalCode":20}" This is due to the way our accounts are loaded on the server side. It takes a short period of time for an account with low volume to load in and get a 200 response with the correct engagement. |
+| 500 | Internal server error — If using a test account (or any account that has extremely low volume), when making the getEngagement call, you will get a 500 error with the following error: "{"time":1499263964605,"message":"Loading account: {{accountId}}, vid: {{vid}}","internalCode":20}" This is due to the way our accounts are loaded on the server side. It takes a short period of time for an account with low volume to load in and get a 200 response with the correct engagement. |
 | 503 | The server is temporarily unavailable |
 
 **Retry Policy Recommendation**

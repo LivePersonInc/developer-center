@@ -46,10 +46,10 @@ This call should be made when the application does not posses a valid access tok
 
 | Code | Response |
 | :--- | :--- |
-| 302 | FOUND - redirect to either: a login page, if the user does not already have a session on the device, back to the application with code, back to the application with error code. See Note below for more info|
-| 400 | Bad request - Problem with query parameters. |
-| 401 | Unauthorized - Bad Authentication (invalid site or application id). |
-| 500 | Internal server error. |
+| 302 | FOUND — redirect to either: a login page, if the user does not already have a session on the device, back to the application with code, back to the application with error code. See Note below for more info |
+| 400 | Bad request — Problem with query parameters |
+| 401 | Unauthorized — Bad Authentication (invalid site or application id) |
+| 500 | Internal server error |
 
 **Notes:**
 

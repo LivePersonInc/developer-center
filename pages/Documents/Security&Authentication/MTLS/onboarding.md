@@ -24,7 +24,7 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 This returns a list of account domains, the `mtls domain` is under the 'mtlsGateway' value (for va-a, it is `va-a.mtls.liveperson.net` for example). The MTLS documentation might refer to `ac-common` or `Gen2 domain`. These values can be taken from the `accountConfigReadWrite` key in the above request.
 
 {: .notice}
-A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
+A note on Create/Read/Update/Delete usage — Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
 
 ### Step 1 - Test Your Certificate
 

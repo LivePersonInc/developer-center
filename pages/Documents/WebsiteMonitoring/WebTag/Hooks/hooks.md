@@ -29,7 +29,7 @@ Below you can find a list of hooks available on a web page by the Web Tag, each 
 
 **Hook callback parameters**: The “hook” function will get always one object:
 
-**Hook callback return  parameters**:  The “hook” function MUST return always one object - if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
+**Hook callback return  parameters**:  The “hook” function MUST return always one object — if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
 
 **Execute order**:  The hooks will be executed by the order they were “pushed”. 
 
@@ -259,7 +259,7 @@ Parameters:
    </td>
    <td>Object
    </td>
-   <td>The actual submitted data - changing the surveyData actually affect the submitted data
+   <td>The actual submitted data — changing the surveyData actually affect the submitted data
    </td>
    <td>
      See data structure below
@@ -267,7 +267,7 @@ Parameters:
   </tr>
 </table>
 
-#### Array of Object - Data structure
+#### Array of Object — Data structure
 
 ```json
 [{  
@@ -282,7 +282,7 @@ Parameters:
 }]
 ```
 
-#### surveyData - Data structure
+#### surveyData — Data structure
 
 ```json
 {  

@@ -52,12 +52,12 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead |  |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated — use identities instead |  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | Supported values: "0" for unauth, "loa1" for auth  |
+| identities.acr | ACR — account config read | string | Required for each identity | Supported values: "0" for unauth, "loa1" for auth  |
 | identities.sub | The subject for identification | string | Required | |
-| clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
+| clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure — The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
 | clientProperties.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv4) |
@@ -145,7 +145,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
 
 #### Response entity examples
 
-Status code: 201 Created - Engagement is available, created new session:
+Status code: 201 Created — Engagement is available, created new session:
 
 ```json
 {
@@ -165,7 +165,7 @@ Status code: 201 Created - Engagement is available, created new session:
 }
 ```
 
-Status code: 200 OK - Resume conversation same session:
+Status code: 200 OK — Resume conversation same session:
 
 ```json
 {
@@ -185,7 +185,7 @@ Status code: 200 OK - Resume conversation same session:
 }
 ```
 
-Status code: 200/201 OK - Engagement is unavailable.
+Status code: 200/201 OK — Engagement is unavailable.
 
 **Note:** Because the engagement is unavailable, the `engagementDetails` object does not return:
 

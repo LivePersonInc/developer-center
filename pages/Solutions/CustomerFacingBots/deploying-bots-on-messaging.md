@@ -56,9 +56,9 @@ You can also watch this demo video, which will guide you on how to run this exam
 
 For enterprise brands, take additional measure to ensure the scalability of your bot to handle large volumes through setting up bot clusters that enable:
 
-* Bot Resiliency - If one node crashes, one of the other clusters will reconnect the bot.
+* Bot Resiliency: If one node crashes, one of the other clusters will reconnect the bot.
 
-* Multiple Bots - The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
+* Multiple Bots: The bots will be spread across the cluster’s nodes. If one node fails the other will share its bots. If a new node is added to the cluster it will take some of the bots from other nodes.
 
 This example demonstrates running a bot on a horizontal scalable cluster. It can be used for a few use cases:
 
@@ -94,7 +94,7 @@ Once your bot is assigned to an engagement, you can begin to test the bot and se
 
 The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 
-Best practice - monitor the following statistics on your bot agents:
+Best practice — monitor the following statistics on your bot agents:
 
 * MCS
 * CSAT

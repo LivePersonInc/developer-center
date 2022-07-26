@@ -142,7 +142,7 @@ Both unauthenticated EAs and monitored data will be available to view in the Age
 
 2. EAs submitted more than 12 hours after conversation ended will not be displayed
 
-3. This includes resuming a conversation - if resume was done in the 12 hour time frame from conversation close time, the relevant EAs will be shown
+3. This includes resuming a conversation — if resume was done in the 12 hour time frame from conversation close time, the relevant EAs will be shown
 
 4. Unauthenticated conversations started from different browsers will be treated as separate conversations and will have their own EAs
 

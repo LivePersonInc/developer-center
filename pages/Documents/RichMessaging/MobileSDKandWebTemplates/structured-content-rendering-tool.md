@@ -28,11 +28,11 @@ npm i json-pollock --save
 
 In the `dist` folder you'll find the following files:
 
-`json-pollock.bundle.min.js`  - this script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. It also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see examples below).
+`json-pollock.bundle.min.js`: This script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header — no additional actions are needed from your side. It also supports umd — meaning you can consume it using AMD, CommonJS and as simple script (see examples below).
 
-`json-pollock.min.js` - use this script if you want to handle the import of the styles by yourself. If you use this option. you should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
+`json-pollock.min.js`: Use this script if you want to handle the import of the styles by yourself. If you use this option. You should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
 
-`json-pollock.global.min.js` - this script is the same as `json-pollock.min.js`, however it does not support umd - it only puts JsonPollock on the current `this` (usually the `window` object). Use this in case you inject the package into sites that are not managed by you and you don't know if it uses AMD or not.
+`json-pollock.global.min.js`: This script is the same as `json-pollock.min.js`, however it does not support umd — it only puts JsonPollock on the current `this` (usually the `window` object). Use this in case you inject the package into sites that are not managed by you and you don't know if it uses AMD or not.
 
 ### Examples
 
@@ -69,7 +69,7 @@ const JsonPollock = require("JsonPollock");
 
 **init**
 
-You can call the `init` function if you want to configure JsonPollock - it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
+You can call the `init` function if you want to configure JsonPollock — it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
 
 ```javascript
 JsonPollock.init({

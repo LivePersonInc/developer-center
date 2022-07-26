@@ -21,7 +21,7 @@ On your Conversational Cloud account, make sure the following features are enabl
 
 **Contact your LivePerson representative in order to enable the features.**
 
-In addition, an authentication server should be configured on the Conversational Cloud account. Refer to the [Authentication Guide - Configuration section](guides-authentication-configuration.html) in the Developer Community for further instructions.
+In addition, an authentication server should be configured on the Conversational Cloud account. Refer to the [Authentication Guide — Configuration section](guides-authentication-configuration.html) in the Developer Community for further instructions.
 
 ### Step 2 - Login to your Account
 

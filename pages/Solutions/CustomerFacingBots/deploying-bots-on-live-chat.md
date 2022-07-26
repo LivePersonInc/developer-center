@@ -16,7 +16,7 @@ indicator:
 
 ### Step 1 - Set Up Your Conversational Cloud Configuration
 
-If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
+If your brand is using Live Chat — both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
 1. Create a user for your bot: Go to the users tab and create a new user; populate the form with the bot information including the name that will display to customers as well as the icon.
 
@@ -44,9 +44,9 @@ Once your bot is created, it must be assigned into a Conversational Cloud campai
 
 1. Create a new campaign within Conversational Cloud by navigating to Campaign Builder and click on new campaign.
 
-2. Create a new engagement - this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select 'conversation type - Live Chat’).
+2. Create a new engagement — this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select 'conversation type — Live Chat’).
 
-3. Configure the skill for this engagement via the studio - this should match the skill for your bot
+3. Configure the skill for this engagement via the studio — this should match the skill for your bot
 
 4. Publish your campaign.
 
@@ -67,7 +67,7 @@ Once your bot is connected to an engagement, you can begin to test the bot and s
 
 The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 
-Best practice - monitor the following statistics on your bot agents:
+Best practice — monitor the following statistics on your bot agents:
 
 * MCS
 * CSAT

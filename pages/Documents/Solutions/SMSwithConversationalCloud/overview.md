@@ -12,7 +12,7 @@ order: 1
 root-link: true
 indicator:
 ---
-The Conversational Cloud messaging platform enables brands to provide a continuous connection with consumers, creating the personalized, convenient level of service people expect today - straight to their mobile devices. The Conversational Cloud SMS solution provides brands with multiple entry points for their consumers.
+The Conversational Cloud messaging platform enables brands to provide a continuous connection with consumers, creating the personalized, convenient level of service people expect today — straight to their mobile devices. The Conversational Cloud SMS solution provides brands with multiple entry points for their consumers.
 
 ![IntroKeys](img/introductionkeys.png)
 
@@ -24,17 +24,17 @@ This document is a comprehensive guide for all the Conversational Cloud SMS entr
 
 Brands enjoy the benefits of using the Conversational Cloud SMS messaging solution:
 
-* Scale - manage an SMS program effectively at scale in one platform along with all other messaging channels.
+* Scale — manage an SMS program effectively at scale in one platform along with all other messaging channels.
 
-* Operations - with the Conversational Cloud platform brands can track operations in real time and report on volumes, effectiveness, agent efficiency and much more.
+* Operations — with the Conversational Cloud platform brands can track operations in real time and report on volumes, effectiveness, agent efficiency and much more.
 
-* Higher CSAT - brands see higher satisfaction among their consumers when using messaging as their channel of choice.
+* Higher CSAT — brands see higher satisfaction among their consumers when using messaging as their channel of choice.
 
-* Ease of use - your consumers don’t need to download any additional apps or enable any preferences - they will send and receive messages from the native SMS app that already lives on their mobile.
+* Ease of use — your consumers don’t need to download any additional apps or enable any preferences — they will send and receive messages from the native SMS app that already lives on their mobile.
 
-* Targeting - intelligently target and engage your consumers where they are by using the Conversational Cloud targeting capabilities.
+* Targeting — intelligently target and engage your consumers where they are by using the Conversational Cloud targeting capabilities.
 
-* Expand your reach - engage consumers from multiple entry points in order to reach more consumers than ever.
+* Expand your reach — engage consumers from multiple entry points in order to reach more consumers than ever.
 
 ### Best Practices
 
@@ -44,9 +44,6 @@ There are specific legal considerations that a brand needs to think about when i
 
 For an even more in-depth look at messaging best practices please see:
 
-[Messaging - Best Practice for Agents](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+for+Agents.pdf)
-
-[Messaging - Best Practice Predefined Content](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+Predefined+content.pdf)
-
-[Messaging - Best Practices Blended Accounts](https://docs.google.com/document/d/1L3xuUPw5Zz3bZNX-ymTRZTNsLwKEcWA6ZrdCusKXVHY/edit)
-
+* [Messaging — Best Practice for Agents](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+for+Agents.pdf)
+* [Messaging — Best Practice Predefined Content](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Messaging+Best+Practice+Predefined+content.pdf)
+* [Messaging — Best Practices Blended Accounts](https://docs.google.com/document/d/1L3xuUPw5Zz3bZNX-ymTRZTNsLwKEcWA6ZrdCusKXVHY/edit)

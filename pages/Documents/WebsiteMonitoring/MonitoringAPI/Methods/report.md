@@ -49,10 +49,10 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead <sup>[1]</sup>|  |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated — use identities instead <sup>[1]</sup>|  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1 |
+| identities.acr | ACR — account config read | string | Required for each identity | supported value: loa1 |
 | identities.sub | The subject for identification | string | Required | |
 | engagementAttributes | Array of engagement attributes | string | Required | Supports all engagement-attributes including the impression events (inherited from ImpressionEventBase), see limitations item below |
 | pageId | Page identification for sending events on the current engagement | String | Optional | If not provided a random  pageId will be generated
@@ -206,7 +206,7 @@ ImpressionCloseEvent:
 
 #### Response entity examples
 
-Status code: 200 OK - Operation performed successfully:
+Status code: 200 OK — Operation performed successfully:
 
 ```json
 {
@@ -215,7 +215,7 @@ Status code: 200 OK - Operation performed successfully:
   "pageId": "4743822558"
 }
 ```
-Status code: 400 Bad request - Operation failed:
+Status code: 400 Bad request — Operation failed:
 
 ```json
 {

@@ -64,8 +64,8 @@ client_id=d51186e9-e1a1-421e-8b1d-161ade532012&client_secret=r7ufeqb32ore583r6lj
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - request succeeded.  |
-| 400 | Bad request - Problem with query parameters. |
-| 401 | Unauthorized - Bad Authentication (invalid site or application id). |
-| 500 | Internal server error. |
+| 200 | OK — request succeeded |
+| 400 | Bad request — Problem with query parameters |
+| 401 | Unauthorized — Bad Authentication (invalid site or application id) |
+| 500 | Internal server error |
 

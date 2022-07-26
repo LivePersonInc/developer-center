@@ -77,9 +77,9 @@ The following will explain the steps that the newPage method takes when it is ca
 2. go fetch taglets (passing the already existing ones).
 3. by holding taglets states in memory we know which taglets should be stopped, restart or completely new.
 4. call the taglets lifecycle by that order
-    1. 1st for loop - stop (removed taglets)
-    2. 2nd for loop - init (new taglets)
-    3. 3rd for loop - start / restart (new /existing)
+    1. 1st for loop — stop (removed taglets)
+    2. 2nd for loop — init (new taglets)
+    3. 3rd for loop — start / restart (new /existing)
 5. merge and update taglets state list
 -->
 
