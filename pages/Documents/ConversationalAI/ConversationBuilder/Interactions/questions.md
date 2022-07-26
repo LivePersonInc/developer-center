@@ -214,7 +214,7 @@ Enter the question to send.
 
 #### Button clicks: Sending metadata back to the bot
 
-In a Button question, you can set metadata in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using the [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the **Process User Response** code of the question. For more on this, see the discussion in the section on Structured questions on this page. The info is the same, and the same guidelines and rules apply.
+In a Button question, you can set metadata in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using the [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the **Process User Response** code of the question. For more on this, see the discussion in the [corresponding section on Structured questions](conversation-builder-interactions-questions.html#button-clicks-sending-metadata-back-to-the-bot) on this page. The info is the same, and the same guidelines and rules apply.
 
 ### Quick Reply questions
 
@@ -248,6 +248,10 @@ Configure the following setting in the [interaction's settings](conversation-bui
 | Type  | Always select "Text." <br><br>The "Location" value currently isn't supported. | Required  | Text |
 | Payload | Enter the data to send back to the bot.<br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of this field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. | Optional | Awesome |
 | Image URL | Use this field to specify a small image to be displayed to the left of the Quick Reply title. Typically, this setting isn't used unless the image is an emoji or something of a similar nature. | Optional | <https://www.mysite.com/images/emoji_smile.jpg> |
+
+#### Quick Reply clicks: Sending metadata back to the bot
+
+In a Quick Reply question, you can set metadata in the configuration of a quick reply. During a conversation, when the consumer clicks the quick reply, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using the [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the **Process User Response** code of the question. For more on this, see the discussion in the [corresponding section on Structured questions](conversation-builder-interactions-questions.html#button-clicks-sending-metadata-back-to-the-bot) on this page. The info is the same, and the same guidelines and rules apply.
 
 ### Apple List Picker
 
