@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---
 
-Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 ### Prerequisites
 

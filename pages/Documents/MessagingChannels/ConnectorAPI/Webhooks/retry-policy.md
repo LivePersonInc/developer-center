@@ -39,9 +39,9 @@ If an event of type `ms.MessagingEventNotification.ContentEvent` fails, it will 
 
 * Applications should consider that data (event) loss is possible. For example, when a failed event is retried, once the retry policy is exhausted (e.g. all the retry attempts fail) the event will be dropped.
 
-* Applications should consider that events order is on best effort basis - i.e. it is not guaranteed. For example, if an event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.
+* Applications should consider that events order is on best effort basis — i.e. it is not guaranteed. For example, if an event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy - resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
 
 ### Retry based on time to live
 
@@ -100,7 +100,7 @@ An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recov
 
 * Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from Conversational Cloud. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period. 
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy - resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
 
 ### Numbers vs. time to live
 

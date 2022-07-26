@@ -82,7 +82,7 @@ As much of the functionality of the Service Bot has yet to be constructed, you w
 1. From the Conversation Builder dashboard of bots, click **New Bot** in the upper-right corner.
 2. Select a new **Custom Bot**, click **Next**, and in the resulting Custom Bot form, fill in the following:
     * **Name**: Service Bot
-    * **Bot Language**: English - United States
+    * **Bot Language**: English — United States
     * **Bot Group**: Many bots
 
 	Click **Create Bot** when finished.

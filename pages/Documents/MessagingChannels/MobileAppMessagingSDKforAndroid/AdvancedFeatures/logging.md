@@ -37,7 +37,7 @@ LivePerson.Logging.setSDKLoggingLevel(LogLevel.DEBUG);
 
 ## Log Data Masking
 
-The Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "**\*\*\*\*\*\*\*\***" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs - everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
+The Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "**\*\*\*\*\*\*\*\***" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs — everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
 
 This feature is **Enabled** by default in Release builds, but **Disabled** in Debug builds to preserve log detail.
 

@@ -791,7 +791,7 @@ Once the file is saved in storage, publish the file URL along with an optional c
 
 In order to generate a thumbnail you need to convert your image to base64. The output will populate the parameter `imageData`.
 
-#### Publish the file to the conversation - Example
+#### Publish the file to the conversation — Example
 
 ```json
 {

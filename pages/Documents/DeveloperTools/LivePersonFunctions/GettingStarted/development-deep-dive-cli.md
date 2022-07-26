@@ -174,7 +174,7 @@ In both instances, the `lpf invoke` command will automatically use the **input**
 There are numerous ways to ensure the continuous quality of your function. One of these is creating unit tests for it.
 
 {: .important}
-The CLI will ignore any file that is not the index.js or the config.json - so do not worry about adding your tools
+The CLI will ignore any file that is not the index.js or the config.json — so do not worry about adding your tools
 
 First, we have created this simple function which returns a custom string for a given input:
 

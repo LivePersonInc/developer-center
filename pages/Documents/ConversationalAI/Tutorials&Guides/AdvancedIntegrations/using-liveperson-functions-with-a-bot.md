@@ -17,7 +17,7 @@ Use the [LivePerson Functions integration](conversation-builder-integrations-liv
 
 To enable the use of LivePerson's Function (FaaS) integrations, please contact your LivePerson account representative for assistance.
 
-### LivePerson Functions - Configure the function
+### LivePerson Functions — Configure the function
 
 1. Access LivePerson Functions from Conversational Cloud by clicking the menu in the lower-left corner.
 
@@ -31,7 +31,7 @@ To enable the use of LivePerson's Function (FaaS) integrations, please contact y
 
     You should see the status of the function change from `Modified` to `Productive`.
 
-### Conversation Builder - Configure the integration
+### Conversation Builder — Configure the integration
 
 1. Within Conversational Cloud, open Conversation Builder and click the **Integrations** tab.
 2. Provide a name for the function’s integration. In our example, we'll use `UnsolicitedCommentFunction`.
@@ -64,14 +64,14 @@ Here’s a visual summary of what needs to be done within the Integrations tab:
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_integrationSettings.png" alt="">
 
-### Conversation Builder - Configure the dialog
+### Conversation Builder — Configure the dialog
 
 1. Create an interaction of type Integration, and select from the dropdown the function’s integration.
 2. Save the change.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_dialog.png" alt="">
 
-### Conversation Builder - Preview
+### Conversation Builder — Preview
 
 This is the end user's experience in a conversation:
 

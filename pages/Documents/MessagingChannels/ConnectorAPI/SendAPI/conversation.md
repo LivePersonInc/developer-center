@@ -228,8 +228,8 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device - important for monitoring and reporting |
-| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device - important for monitoring and reporting |
+| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device — important for monitoring and reporting |
+| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device — important for monitoring and reporting |
 | interactionContextId | contextId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples)
 | type | Type of conversationContext | "SharkContext" | string | false | Always use "SharkContext" when using Monitoring API properties i.e. when using Campaign For Messaging |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | string | false | Check first if the language used here is configured for the engagement in the LE UI |

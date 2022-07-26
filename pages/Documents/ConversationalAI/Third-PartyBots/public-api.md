@@ -910,13 +910,13 @@ there could be three states of a command: `waiting` (command execution pending),
 
 | Code | Response                                                             |
 | :--- | :------------------------------------------------------------------- |
-| 200  | OK - request for the given API succeeded.                            |
-| 400  | Bad request - Problem with body or query parameters.                 |
-| 401  | Unauthorized - Invalid bearer token.                                 |
-| 403  | Forbidden - If the request was marked as security risk by Reblaze.   |
-| 404  | Not Found - If the provided conversation Id is invalid or not found. |
-| 409  | Conflict - If the credentials are already used by a bot currently running on Third-Party Bots |
-| 500  | Internal server error.                                               |
+| 200  | OK — request for the given API succeeded                            |
+| 400  | Bad request — Problem with body or query parameters                 |
+| 401  | Unauthorized — Invalid bearer token                                 |
+| 403  | Forbidden — If the request was marked as security risk by Reblaze   |
+| 404  | Not Found — If the provided conversation Id is invalid or not found |
+| 409  | Conflict — If the credentials are already used by a bot currently running on Third-Party Bots |
+| 500  | Internal server error                                               |
 
 ### Limitations
 

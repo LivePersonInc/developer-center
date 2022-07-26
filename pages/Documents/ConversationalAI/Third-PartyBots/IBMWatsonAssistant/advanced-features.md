@@ -197,7 +197,7 @@ It is possible to send only a private text message response. The example payload
 <img class="fancyimage" style="width:800px" src="img/watsonassistant/private_message_response_custom_payload.png" alt="">
 Figure 3.5 Showing single private text message definition inside `JSON Editor`
 
-It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
+It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message — Action) will be as below:
 
 ```json
 {

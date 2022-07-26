@@ -10,9 +10,9 @@ indicator: both
 
 There are three user permissions concerning Functions:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You may create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
-* FaaS-Developer - allowed to manage `lambdas`, read allowlisted domains and read encrypted secrets.
-* FaaS-Invocation - provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
+* FaaS-Admin: allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You may create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
+* FaaS-Developer: allowed to manage `lambdas`, read allowlisted domains and read encrypted secrets.
+* FaaS-Invocation: provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
 
 ### Permissions by role
 {: .important}

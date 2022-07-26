@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud — the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
 
 Using the Monitoring APIs, brands can:
 
