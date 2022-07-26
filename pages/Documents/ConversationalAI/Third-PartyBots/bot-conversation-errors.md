@@ -124,6 +124,13 @@ This identifies issues processing an event in the Third-Party Bots service. Thes
 | Reason      | To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned. |
 | Solutions   | Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html) |
 
+#### com.liveperson.bot-connectors-worker.error.pipes.rate-limiter.rate-limit-hit
+
+| Description | The rate limit was hit for this conversation. Consumer messages might get ignored for a certain cool down period (10 sec). |
+| Reason      | The customer has sent too many messages (4) in a short amount of time (2 sec). |
+| Solutions   | None. This is a precaution measure to prevent consumers from flooding the bot with messages. |
+
+
 
 ### events-queue
 Unhandled processing errors
