@@ -108,7 +108,7 @@ p {
 }
 
 .scroll {
-    box-shadow: 0px 4px 8px var(--box-shadow);
+    box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 #logoHeader {
@@ -129,7 +129,7 @@ svg.sitelogo {
 
 .devLabel {
     flex-shrink: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -351,7 +351,7 @@ code pre {
 }
 
 
-/* 
+/*
 .darken code {
   filter: brightness(280%);
 } */
@@ -410,7 +410,7 @@ code pre {
     background-color: var(--input-search-background) !important;
     width: 100%;
     min-width: 250px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -669,13 +669,13 @@ table tbody td img {
 
 .beforeImportant {
     content: "\\f05a";
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
     color: var(--important-border);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
     font-weight: 900;
-    margin: 0px 10px 10px 0px;
+    margin: 0 10px 10px 0;
     position: relative;
     top: 2px;
 }
@@ -687,7 +687,7 @@ table tbody td img {
 
 .beforeNotice {
     content: "\\f06a";
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
     color: var(--error-border) !important;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -797,7 +797,7 @@ a.loginText {
 .trialButton {
     background-color: var(--secondary-background);
     color: var(--button-text);
-    border: 0px;
+    border: 0;
     /* removed by request */
     display: none;
 }
@@ -1245,7 +1245,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 .jumpToAnchor {
     text-align: right;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     margin-bottom: 12px;
     color: var(--link-color);
     font-style: normal;
@@ -1282,7 +1282,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .externalIconImage {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 4px;
     padding-right: 5px;
 }
@@ -1517,7 +1517,7 @@ a:focus-within:not(.anchorjs-link) {
 
 
 /* .dark #post-content img {
-  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.12))
+  filter: drop-shadow(0px 0 4px rgba(255, 255, 255, 0.12))
     drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
 } */
 
@@ -1535,7 +1535,7 @@ a:focus-within:not(.anchorjs-link) {
     background-position: center center;
     border: 1px solid var(--footer-text);
     box-sizing: border-box;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
 }
 
@@ -1614,7 +1614,7 @@ a:focus-within:not(.anchorjs-link) {
 
 .toggle-title-dark,
 .toggle-title-light {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

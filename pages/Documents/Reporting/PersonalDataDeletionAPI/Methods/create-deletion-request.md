@@ -12,7 +12,7 @@ permalink: personal-data-deletion-api-methods-create-deletion-request.html
 indicator: both
 ---
 
-This API allows a the brand to submit a deletion request via one of the following methods:
+This API allows a brand to submit a deletion request via one of the following methods:
 
 1. Chat Engagement: Deletion of the personal data that is related to specific chat engagement(s) (including transcripts, personally identifiable information (PII), etc.).
 

@@ -45,7 +45,7 @@ body {
 
 .banner-hr{
   background: #5f7ade;
-  margin: 17px 0px 43px 0px;
+  margin: 17px 0 43px;
   width: 53px;
   height: 6px;
   margin-left: auto;
@@ -114,7 +114,7 @@ a.view-all-products::after{
     .home-second-line {
         width: 70%;
         margin-bottom: 16%;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
 }
@@ -251,9 +251,9 @@ img.mockup {
   padding: 30px 61px 40px 40px;
   margin-top: 40px;
   margin-left: 50px;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
 }
 
 .messagingtitle{
@@ -358,9 +358,9 @@ margin-top: 58px;
   background-color: #fff;
   color: black;
   margin-top: 30px;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
 }
 
 .right {

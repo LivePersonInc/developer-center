@@ -16,19 +16,19 @@ Customers supply a valid client key and certificate for a TLS connection (one-wa
 
 ### Request Details
 
-###  Protocol
+### Protocol
 
 HTTPS only.
 
-###  Authorization
+### Authorization
 
 TLS
 
-###  Method
+### Method
 
 Method is **POST**.
 
-###  Payload
+### Payload
 
 Payload differs slightly in iOS and Android:
 

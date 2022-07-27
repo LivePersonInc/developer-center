@@ -190,9 +190,9 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 |    Name    |    Description                                                            |    Type      |    LP_Name    |
 |------------|---------------------------------------------------------------------------|--------------|---------------|
-|    iss     |    The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.  |    string    |    -          |
-|    iat     |    When this JWT was issued by your Service. Seconds from 1970, UTC. See [RFC 3339]. |    number     |    -          |
-|    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC 3339].  |    number    |    -     |
+|    iss     |    The same 'iss' claim value that has been passed in the identity function, identifies the principal that issued the JWT. A case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.  |    string    |    —          |
+|    iat     |    When this JWT was issued by your Service. Seconds from 1970, UTC. See [RFC 3339]. |    number     |    —          |
+|    exp     |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. See [RFC 3339].  |    number    |    —     |
 
 **Standard Claim Set**:
 

@@ -19,7 +19,7 @@ v1 — will allow to retrieve authenticated engagement attributes only and their
 
 v2 — will allow to retrieve both authenticated and unauthenticated engagement attributes and their type will be the defined type for the engagement attribute in question.
 
-###  customerInfo
+### customerInfo
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
@@ -43,7 +43,7 @@ v2 — will allow to retrieve both authenticated and unauthenticated engagement 
 | storeNumber     | The number of the store.| alphanumeric|
 | loginStatus     | Login status. | v1- alphanumeric, v2- int|
 
-###  personalInfo
+### personalInfo
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |

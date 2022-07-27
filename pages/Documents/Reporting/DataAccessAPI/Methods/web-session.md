@@ -735,7 +735,7 @@ JSON Example
     }
 ```
 
-###  GEO
+### GEO
 
 Information about visitor geolocation.
 
@@ -760,7 +760,7 @@ The following table describes the information that is available in the geo data:
 | isp | Internet service provider. | string |
 | countryCode | Country code. | string |
 
-###  Navigation
+### Navigation
 
 Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Web Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here.
 
@@ -781,7 +781,7 @@ The following table describes the information that is available in the navigatio
 | referrerUrl | The URL representation of the last page the visitor visited. | string |
 | sections | A list of the sections/tabs of the page the visitor visited. | string |
 
-###  Session Info
+### Session Info
 
 Information about the visitor’s browsing session.
 
@@ -799,13 +799,13 @@ The following table describes the information that is available in the session i
 | :------ | :--------- | :-------- |
 | sessionStartTime | Visitor session’s start time. | long |
 | userAgent | User agent. | string |
-| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS,LINUX, IOS, ANDROID. | string |
+| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS, LINUX, IOS, ANDROID. | string |
 | deviceFamily | Device type, can be one of the following: NA, DESKTOP, TABLET, MOBILE. | string |
 | siteControlGroup | Site control group, can be one of the following: NA, CONTROL, TEST. | string |
 | search Engine | Search engine. Exist only if the visitor started a session after searching a known search engine. It is extracted from the referrer URL. | string |
 | search EngineKey | Keywords used to search through the search engine prior to the session starting point. It is taken from the referrer URL. | string |
 
-###  EligibilityData
+### EligibilityData
 
 Information about the campaigns that are eligible for the visitor during his session.
 
@@ -909,7 +909,7 @@ The following table describes the information available in the impression data:
 | campaign | Contains information about the campaign. | container |
 | goal | Contains information about the goal. | container |
 
-###  GoalAchieved
+### GoalAchieved
 
 Information about the goals that were achieved during the visitor session.
 
@@ -976,7 +976,7 @@ The following table describes the information available in the goal achieved dat
 | category | Category of service activity. | string |
 | serviceId | Unique service identifier. | string |
 
-###  Engagement Attributes
+### Engagement Attributes
 
 Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud.
 
