@@ -15,7 +15,7 @@ indicator: chat
 ### Introduction
 
 {: .notice}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-data-metrics.html for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Operational Real-Time API provides real-time information about contact center performance.
 
@@ -50,8 +50,6 @@ A few things you'll need to get started with this API:
 	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
-
-
 
 ### Use cases
 

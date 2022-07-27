@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 
-
 level-order: 2
 order: 9
 permalink: lobs-api-overview.html
@@ -36,7 +35,7 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases for LoBs API
 

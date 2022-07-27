@@ -48,7 +48,7 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 - **Choices per Row**: This setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
-- **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Messages for Business or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+- **Text Only Fallback → List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Messages for Business or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
 - **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
 
@@ -89,9 +89,9 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/headphones.jpg> |
-| ADD IMAGE > Item URL  | The URL of the resource to load when the image is clicked. | Optional | <https://www.mysite.com> |
-| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual, fall sale! |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/headphones.jpg> |
+| ADD IMAGE → Item URL  | The URL of the resource to load when the image is clicked. | Optional | <https://www.mysite.com> |
+| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones — It’s our annual fall sale! |
 | Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
 
 #### Button settings
@@ -101,7 +101,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | 10% off all headphones |
 | Action Type  | If you want the button to be a link that takes the consumer to a URL, select **Web URL**. Then enter the URL in the **Callback** field.<br><br>If you want to use the button to send back to the bot a value as the consumer's message, select **Postback** here. Then enter the message to send back as the payload in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer supported. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer supported. | Not applicable | Not applicable |
-| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note:** The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
 | Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL.<br><br>If you select "Postback" for the **Action Type**, this value  should be whatever you want to send back to the bot as the consumer's message. You can enter the value for the button label or a different value (e.g., the number "5" instead of the word "Excellent"). Entering a different value works depending on the channel in use (e.g., there's support in Facebook but not in SMS). Make sure to test and verify on the device or in the application. Entering the same value for both the button label and the callback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Required | <https://www.mysite.com/coupons/headphonesCoupon.html> |
 
 #### Populating a Structured question dynamically
@@ -209,7 +209,7 @@ Enter the question to send.
 | Button Label | The button text to be displayed. Conversational Cloud allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | Sure! |
 | Action Type  | If you want the button to be a link that takes the consumer to a URL, select **Web URL**. Then enter the URL in the **Callback** field.<br><br>If you want to use the button to send back to the bot a value as the consumer's message, select **Postback** here. Then enter the message to send back as the payload in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer supported. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer supported. | Not applicable | Not applicable |
-| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note**: The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in a new window, the current window, or a slideout window. The slideout window "slides out" from the side of the conversation window, which can be an attractive and tightly integrated experience. **Note:** The Slideout option is supported for Web messaging. Additionally, the target URL must be iFrame compatible. Many companies' websites (Google for instance) employ code to prevent their inclusion in an iFrame, so this must be tested. | Required | New Window |
 | Callback | Enter the data to send back to the bot.<br><br>If you select "Web URL" for the **Action Type**, this value should be a URL.<br><br>If you select "Postback" for the **Action Type**, this value should be whatever you want to send back to the bot as the consumer's message. You can enter the value for the button label or a different value (e.g., the number "5" instead of the word "Excellent"). Entering a different value works depending on the channel in use (e.g., there's support in Facebook but not in SMS). Make sure to test and verify on the device or in the application. Entering the same value for both the button label and the callback value will always work. <br><br>If required for your use case, you can use the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector. If you set the field to true, the selected button’s label, not the button’s callback value, is displayed to the consumer as their selected choice. Otherwise, the button’s callback value is displayed instead. | Required | <https://www.surveymonkey.com/mysurvey.html> |
 
 #### Button clicks: Sending metadata back to the bot
@@ -280,8 +280,8 @@ Response Message settings also provide the text in the header of the actual list
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/flowers.jpg> |
-| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/flowers.jpg> |
+| ADD IMAGE → Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. | Required | Beautiful bouquets |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | Select your favorite |
 
@@ -294,9 +294,9 @@ Section and item settings define how to display the sections and individual item
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
 | Section Title | The title of the section. | Required | Birthdays |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/dahlias.jpg> |
-| ADD IMAGE > Image Style | Select "Default." Only this value is supported. | Optional | Default |
-| ADD IMAGE > Identifier  | A unique identifier for the item; this is system-generated. | Not applicable | 32957836-2f95-1e8d-ce4e-aa95e8f844a2 |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/dahlias.jpg> |
+| ADD IMAGE → Image Style | Select "Default." Only this value is supported. | Optional | Default |
+| ADD IMAGE → Identifier  | A unique identifier for the item; this is system-generated. | Not applicable | 32957836-2f95-1e8d-ce4e-aa95e8f844a2 |
 | Item Title | The item’s title. | Required | Mixed dahlias |
 | Item Subtitle | The item’s subtitle. | Optional | Bright and cheery! |
 
@@ -308,12 +308,12 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/flowers.jpg> |
-| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Large |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | <https://www.mysite.com/images/flowers.jpg> |
+| ADD IMAGE → Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Large |
 | Reply Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. |  Required. Although required, this field is replaced at run time with the title of the user's selection. | Your selection |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | A great choice! |
 
-#### Interaction Details - Settings
+#### Interaction Details — Settings
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -357,8 +357,8 @@ Response Message settings also provide the text in the header of the actual time
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | <https://www.mysite/images/clock.jpg> |
-| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
+| ADD IMAGE → Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | <https://www.mysite/images/clock.jpg> |
+| ADD IMAGE → Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
 
@@ -368,7 +368,7 @@ Response Message settings also provide the text in the header of the actual time
 |---|---|---|---|
 | Event Title  | The title of the calendar meeting.   | Optional  | Technician Visit |
 | Event Identifier   | An ID for the event. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   event123 |
-| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours *60).<br><br>If the offset is negative, use the formula: ((24 - offset in hours)* 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 *60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 - 4)* 60) = **1200**. |
+| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours *60).<br><br>If the offset is negative, use the formula: ((24 — offset in hours)* 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 *60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 – 4)* 60) = **1200**. |
 
 #### Location settings
 
@@ -436,8 +436,8 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | <https://www.mysite/images/clock.jpg> |
-| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
+| ADD IMAGE → Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | <https://www.mysite/images/clock.jpg> |
+| ADD IMAGE → Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |
 

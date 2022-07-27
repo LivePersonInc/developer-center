@@ -416,7 +416,7 @@ Response payload example:<br>
 [
    "__default__",
   "mySessionId",
-   ...
+   …
 ]
 ```
 
@@ -444,7 +444,7 @@ Response payload example:<br>
       "key2": "val2",
     }
   },
-  ...
+  …
 ]
 ```
 
@@ -515,7 +515,7 @@ Response payload example:<br>
     "createdAt": "2021-02-26T02:46:38.220Z",
     "ttlSecond": 100
   },
-  ...
+  …
 ]
 ```
 
@@ -542,6 +542,6 @@ Response payload example:<br>
     "createdAt": "2021-02-26T07:42:13.868Z",
     "ttlSecond": 100
   },
-  ...
+  …
 ]
 ```

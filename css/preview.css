@@ -30,7 +30,7 @@ html body .preview-page div.container div.text a {
 }
 
 .preview-page .documents, .preview-page .products, .preview-page .events {
-    margin-top: 0px;
+    margin-top: 0;
     width: 98%;
     padding-top: 24px;
     background-color: inherit;
@@ -58,6 +58,6 @@ html body  .preview-page footer{
    html body .preview {
     position: fixed !important;
     width: 100%;
-    left: 0px;
+    left: 0;
 }
 }

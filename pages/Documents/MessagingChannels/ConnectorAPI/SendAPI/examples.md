@@ -52,7 +52,7 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body - JSON payload**
+**Request Body — JSON payload**
 
 ```json
 [
@@ -115,12 +115,11 @@ See below a few examples of how to do so.
 
 2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-**Note**
+**Notes:**
 
 * We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](#campaign-for-messaging-routing).
 
 * The supported SDEs for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
-
 
 #### Examples
 
@@ -139,7 +138,7 @@ See below a few examples of how to do so.
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -190,7 +189,7 @@ See below a few examples of how to do so.
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -233,7 +232,6 @@ See below a few examples of how to do so.
 ]
 ```
 
-
 ### Send a message
 
 This is an example of how to send a message to Conversational Cloud to an open conversation using the SEND API endpoint. The `conversation ID` is required to address the conversation and it is passed in the JSON payload.
@@ -261,7 +259,7 @@ This is an example of how to send a message to Conversational Cloud to an open c
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 {  
@@ -306,7 +304,7 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 {  
@@ -352,7 +350,7 @@ In order to send an indication that the consumer is typing, the connector will s
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 {  
@@ -369,22 +367,19 @@ In order to send an indication that the consumer is typing, the connector will s
 }
 ```
 
-**Notes**:
-
-In order to show that the consumer has stopped typing it is not sufficient to send another text message. Instead you need to send another payload as above with the _ChatStateEvent_ value in the "type" key. In addition, you will need to pass any other state which is different than `COMPOSING` (it doesn't matter which value you choose, as long as it is not `COMPOSING`) i.e: `ACTIVE` , `INACTIVE`, `GONE`, `PAUSE`.
+**Note:** In order to show that the consumer has stopped typing it is not sufficient to send another text message. Instead you need to send another payload as above with the _ChatStateEvent_ value in the "type" key. In addition, you will need to pass any other state which is different than `COMPOSING` (it doesn't matter which value you choose, as long as it is not `COMPOSING`) i.e: `ACTIVE`, `INACTIVE`, `GONE`, `PAUSE`.
 
 ### How to enable a feature
 
 The following example illustrates how to enable the auto messages feature upon conversation opening. The JSON payload is the same one used to create a new conversation but pay attention to the additional request header.
 
-**Notes**:
+**Notes:**
 
 1. Contact your account team to enable this feature on your account.
 
 2. Upon creating a new conversation (via the CONVERSATION endpoint), make sure you also pass the additional **Client-Properties** request header. See [Example](#create-a-new-conversation--enable-the-auto-messages-feature) below.
 
 3. Every following request (via the SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](#send-a-message--enable-the-auto-messages-feature) below.
-
 
 #### Getting Started
 
@@ -404,7 +399,6 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/messaging/consumer/conversation?v=3 |
 
-
 **Request Headers**
 
 | Header | Description |
@@ -418,8 +412,7 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
-
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 [  
@@ -490,7 +483,7 @@ The following example illustrates how to enable the auto messages feature upon c
 | :--- | :--- | --- |
 | Client-Properties | A JSON string for the client properties which activates AUTO_MESSAGES | { "type": ".ClientProperties", "features": ["AUTO_MESSAGES"] } |
 
-**Request Body - JSON Payload**
+**Request Body — JSON Payload**
 
 ```json
 {  
@@ -508,8 +501,7 @@ The following example illustrates how to enable the auto messages feature upon c
 }
 ```
 
-
-<div class="important"> In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
+<div class="important">In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
 
 ### Campaign for messaging Routing
 
@@ -538,7 +530,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -584,10 +576,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 ]
 ```
 
-**Note**:
-
-For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns).
-
+**Note:** For more information about campaigns, please [click here](https://www.liveperson.com/services/technical-support/about-campaigns).
 
 ### Direct skill routing
 
@@ -616,7 +605,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [  
@@ -667,7 +656,6 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |
 
-
 ### File Sharing
 
 #### Getting Started
@@ -681,7 +669,6 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 #### Introduction
 
 The Conversational Cloud Connector API includes a file sharing feature. This feature enables consumers to share files with agents, such as images.
-
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:
 
@@ -699,11 +686,9 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 7. Download file from storage
 
-
 Below, we will examine and explain each stage in detail.
 
-
-#### Step 1 - Enable File Sharing
+#### Step 1 — Enable File Sharing
 
 In order to enable file sharing on your account, you should first enable the feature itself. Run the following commands, inserting the account admin username and admin password instead of the placeholders below:
 
@@ -714,16 +699,15 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 ./set_site_property.sh $LP_BEARER true messaging.file.sharing.enabled
 ```
 
-#### Step 2 - Create a Conversation
+#### Step 2 — Create a Conversation
 
 You will need to have an active conversation, along with its converationID, where the files will be shared. Below, creating a conversation is summarized but please follow the [CONVERSATION API](sendapi-create.html) documentation if you need any more information. Make sure you have an active conversation and a conversationId at hand by the end of this step.
 
-####  Step 3 - Request Upload URL
+#### Step 3 — Request Upload URL
 
 Use the following request to retrieve an upload url, specifying the type and size of the file.
 
-
-**Note**: The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
+**Note:** The supported file types are `JPG`, `JPEG`, `PNG`, `GIF`. Each file can be up to 3MB and the preview must be under 30KB.
 
 See full documentation for generating temporary upload URL [here](consumer-int-msg-generate-temp-upload-url.html).
 
@@ -740,7 +724,7 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 | Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
 | X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 	{
@@ -772,11 +756,11 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use them in the next request, to upload the file.
 
-#### Step 4 - Upload File to Storage
+#### Step 4 — Upload File to Storage
 
 Use the following request and the parameters obtained in step 3 (`relativePath`, `temp_url_sig`, `temp_url_expires`) to upload the file to storage.
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.
 
 **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
@@ -799,7 +783,6 @@ Upload the file as binary to swift storage.
 | 201 | CREATED |
 | 401 | Temp URL invalid |
 
-
 #### Step 5 Publish Image to Conversation
 
 Once the file is saved in storage, publish the file URL along with an optional caption and thumbnail as a message. See full documentation [here](consumer-int-msg-reqs.html). Event type should be `HostedFile`
@@ -808,8 +791,7 @@ Once the file is saved in storage, publish the file URL along with an optional c
 
 In order to generate a thumbnail you need to convert your image to base64. The output will populate the parameter `imageData`.
 
-
-#### Publish the file to the conversation - Example
+#### Publish the file to the conversation — Example
 
 ```json
 {
@@ -850,13 +832,11 @@ In order to generate a thumbnail you need to convert your image to base64. The o
 | 200 | Ok | File was sent to the Agent |
 | 400 | Bad Request | Check your file size and that its is not corrupted |
 
-
 #### Step 6 Request Download URL
 
 **Request a download url**:
 
 Using the messaging API, request a download url, specifying the relative path of the file. See full documentation [here](consumer-int-msg-generate-temp-download-url.html).
-
 
 Request Body Example:
 
@@ -889,8 +869,7 @@ In response, you will get the URL details:
 
 Extract `relativePath`, `temp_url_sig`, `temp_url_expires` from the response. We'll use it in the next request, to download the file.
 
-
-#### Step 7 - Download File From Storage
+#### Step 7 — Download File From Storage
 
 Use the following request to download the file, using the parameters from the previous step.
 
@@ -898,4 +877,4 @@ Use the following request to download the file, using the parameters from the pr
 | :--- | :--- |
 | GET | https://{swiftDomain}/{relativePath}?temp_url_sig={temp_url_sig}&temp_url_expires={temp_url_expires} |
 
-**Note**: file expiration is set to 1 minute by default.
+**Note:** File expiration is set to 1 minute by default.

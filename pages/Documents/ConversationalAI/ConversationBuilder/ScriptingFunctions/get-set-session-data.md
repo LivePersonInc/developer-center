@@ -24,8 +24,8 @@ botVariables are strings. Whatever the data type of your input, it will be conve
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getBotVariable(name)` | name (string) – The name for the variable. | The object defined by `name` |
-| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> – The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> – The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> – If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> – If true, the variable persists for 180 days. **Note**: Support for a value of "true" will be deprecated in a future release. Use of the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) is recommended instead.| None |
+| `getBotVariable(name)` | name (string) — The name for the variable. | The object defined by `name` |
+| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> — The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> — The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> — If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> — If true, the variable persists for 180 days. **Note:** Support for a value of "true" will be deprecated in a future release. Use of the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) is recommended instead.| None |
 
 #### Example
 
@@ -39,7 +39,7 @@ if (count > 10) {
       botContext.sendMessage('You have more than 10 items!');
 } else {
   botContext.setBotVariable('Howmanyitems',0,true,false);
-  botContext.sendMessage('Sorry, you do not have any items with you... ');
+  botContext.sendMessage('Sorry, you do not have any items with you… ');
 }
 ```
 
@@ -66,7 +66,7 @@ Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Trans
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentbyDomain(intentName, domainName)` | *intentName (String)* – The name of the intent <br>*domainName (String)* - The name of the domain | None |
+| `setBotTransferIntentbyDomain(intentName, domainName)` | *intentName (String)* — The name of the intent <br>*domainName (String)* — The name of the domain | None |
 
 #### Example
 
@@ -80,7 +80,7 @@ Use the `setBotTransferIntentId` function to set an intent ID in the Transfer Bo
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentId(value)` | *value (String)* – The intent ID | None |
+| `setBotTransferIntentId(value)` | *value (String)* — The intent ID | None |
 
 #### Example
 
@@ -94,7 +94,7 @@ Use the `setBotTransferUserMessage` function to set a user message in the Transf
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferUserMessage(value)` | *value (String)* – The user message | None |
+| `setBotTransferUserMessage(value)` | *value (String)* — The user message | None |
 
 #### Example
 
@@ -108,7 +108,7 @@ botContext.setBotTransferUserMessage("order status");
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getEnvVariable(name)` | name (string) – The name of the variable. | The object defined by `name` |
+| `getEnvVariable(name)` | name (string) — The name of the variable. | The object defined by `name` |
 
 #### Example
 
@@ -117,17 +117,17 @@ In the example below, we use `getEnvVariable` to retrieve a string which will pr
 ```javascript
 switch(intent){
 case "billing":
-    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue…";
     skillId = botContext.getEnvVariable('billing');
     skillName = intent;
     break;
 case "account":
-    transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your account issue…";
     skillId = botContext.getEnvVariable('account');
     skillName = intent;
     break;
 case "help":
-    transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+    transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
     skillId = botContext.getEnvVariable('help');
     skillName = intent;
     break;  
@@ -166,7 +166,6 @@ var convId = botContext.getConversationId();
 
 You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots-variables.html#system-variables) to display the conversation ID as text in interactions or post bodies.
 
-
 ### Get LP account ID
 
 The `getLPAccountId` function retrieves the Conversational Cloud account ID for the current conversation.
@@ -191,11 +190,10 @@ When calling engagement attributes, some time is required to retrieve the result
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getLPEngagementAttribute(arg)` | `sharkVisitorId` - The ID of the real-time visitor,<br>`sharkSessionId` - The ID of the session,<br>`sharkContextId` - Conversational Cloud's interactionContextId<br>`campaignId` - The ID of the campaign,<br>`engagementId` - The ID of the engagement,<br>`startTs` - The start time of the engagement,<br>`os` - The consumer's operating system,<br>`appId` - The ID of the app on the consumer's mobile device,<br>`brandId` - The ID of the brand,<br>`BearerToken` - The authentication credential,<br>`currentSkillId` - The ID of the current skill, or <br>`previousSkillId` - The ID of the previous skill<br>`rtSesssionId` - **Chat-specific**; the session ID for the chat engagement<br>`chatSessionKey` - **Chat-specific**; the unique key of the agent session (when the agent talks to the consumer) <br>`agentSessionId` - **Chat-specific**; the agent's login session ID (specific to the agent that's logged in, who can be talking to multiple consumers) | String |
+| `getLPEngagementAttribute(arg)` | `sharkVisitorId` — The ID of the real-time visitor,<br>`sharkSessionId` — The ID of the session,<br>`sharkContextId` — Conversational Cloud's interactionContextId<br>`campaignId` — The ID of the campaign,<br>`engagementId` — The ID of the engagement,<br>`startTs` — The start time of the engagement,<br>`os` — The consumer's operating system,<br>`appId` — The ID of the app on the consumer's mobile device,<br>`brandId` — The ID of the brand,<br>`BearerToken` — The authentication credential,<br>`currentSkillId` — The ID of the current skill, or <br>`previousSkillId` — The ID of the previous skill<br>`rtSesssionId` — **Chat-specific**; the session ID for the chat engagement<br>`chatSessionKey` — **Chat-specific**; the unique key of the agent session (when the agent talks to the consumer) <br>`agentSessionId` — **Chat-specific**; the agent's login session ID (specific to the agent that's logged in, who can be talking to multiple consumers) | String |
 
 {: .important}
 `previousSkillId` only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current skill ID.
-
 
 #### Example
 
@@ -228,7 +226,7 @@ Use the `getMetadata` function to retrieve conversation metadata from the most r
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| getMetadata(metadataEventTypeName) | metadataEventTypeName (String) - The name of the metadata type. For the list of types, see [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). | If the metadata type exists, the JSON list is returned. If it does not, returns null/undefined. |
+| getMetadata(metadataEventTypeName) | metadataEventTypeName (String) — The name of the metadata type. For the list of types, see [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). | If the metadata type exists, the JSON list is returned. If it does not, returns null/undefined. |
 
 #### Example
 ```javascript
@@ -360,7 +358,6 @@ var nlpTokens = nlpResponse.tokens;
 botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: '+ nlpVerbs + ' and phrases: ' + nlpPhrases + ' and tokens: ' + nlpTokens);
 ```
 
-
 ### Get sentiment
 
 {: .important}
@@ -386,7 +383,6 @@ if(sentiment == "Positive"){
 }
 ```
 
-
 ### Get quick reply payload
 
 `getQuickReplyPayload` is used to access the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc., but the payloads could be color01, color02, color03, etc.
@@ -407,7 +403,6 @@ var payload = botContext.getQuickReplyPayload();
 botContext.sendImmediateReply('Hey you picked option ' + response  +' with a payload of '+ payload);
 ```
 
-
 ### Get disambiguated intent
 
 `getDisambiguatedIntentName` and `getDisambiguatedIntentId` can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
@@ -424,10 +419,9 @@ botContext.sendImmediateReply('Hey you picked option ' + response  +' with a pay
 var intentName = botContext.getDisambiguatedIntentName() ;
 // get the disambiguated intent ID
 var intentID = botContext.getDisambiguatedIntentId();
-// display the results...
+// display the results…
 botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```
-
 
 ### Get Web View variables
 
@@ -435,7 +429,7 @@ botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getWebViewVariable(variableName)` | _variableName_ - the name of the variable to retrieve | string |
+| `getWebViewVariable(variableName)` | _variableName_ — the name of the variable to retrieve | string |
 | `getWebViewVariables()` | none | object:list of strings |
 
 #### Example
@@ -461,7 +455,7 @@ This method is commonly used to provide a different experience or messaging to t
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* – The hours classified by type <br><br> *zoneIdStr (String)* – The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
+| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* — The hours classified by type <br><br> *zoneIdStr (String)* — The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
 
 #### Example
 
@@ -487,24 +481,24 @@ switch(type){
   case "WKEND_REG_HOURS":
     msg = "Let me connect you to an Agent who can help you.";
     botContext.setBotVariable('transferMessage',msg,true,false);
-    botContext.setTriggerNextMessage('Liveperson Transfer');
+    botContext.setTriggerNextMessage('LivePerson Transfer');
     break;
 
   case "AFTER_HOURS":
   case "WKEND_AFTER_HOURS":
-    msg = "You have reached us after our business hours. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    msg = "You have reached us after our business hours. We are open 7 days a week; 8AM – 8PM PST Monday through Thursday and 8AM – 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
     botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_THANKS":
-    msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM – 8PM PST Monday through Thursday and 8AM – 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
     botContext.setTriggerNextMessage('No Transfer');
     break;
 
   case "HOLIDAY_XMAS":
-    msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM – 8PM PST Monday through Thursday and 8AM – 5PM PST Friday through Sunday.";
     botContext.setBotVariable('noTransferMessage',msg,true,false);
     botContext.setTriggerNextMessage('No Transfer');
     break;

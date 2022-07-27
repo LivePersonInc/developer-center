@@ -98,4 +98,4 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 {: .important}
 The bot user agents attached to the Development bot are not pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
 
-**Tip**: If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.
+**Tip:** If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.

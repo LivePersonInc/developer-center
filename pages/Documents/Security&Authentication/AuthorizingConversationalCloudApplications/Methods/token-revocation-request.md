@@ -16,7 +16,7 @@ redirect_from:
 
 OAuth is often used to manage users' log in to a certain site or application at LivePerson. If a complete logout from **all** LivePerson applications is required, this revocation mechanism should be used during the end-user logout proccess. This revocation request will invalidate the access token.
 
-**Note**: Using this method will invalidate the user's session in all LivePerson applications.
+**Note:** Using this method will invalidate the user's session in all LivePerson applications.
 
 ### Request
 
@@ -30,14 +30,12 @@ OAuth is often used to manage users' log in to a certain site or application at 
 | :--- | :--- | :--- | :--- | :--- |
 | v | API version number | number| Required | Default Value: 1.0 |
 
-
 **Path Parameters**
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | domain | Sentinel hostname | String | Required | |
 | accountid | LivePerson site ID | String | Required | |
-
 
 **Headers**
 
@@ -66,8 +64,8 @@ client_id=d51186e9-e1a1-421e-8b1d-161ade532012&client_secret=r7ufeqb32ore583r6lj
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - request succeeded.  |
-| 400 | Bad request - Problem with query parameters. |
-| 401 | Unauthorized - Bad Authentication (invalid site or application id). |
-| 500 | Internal server error. |
+| 200 | OK — request succeeded |
+| 400 | Bad request — Problem with query parameters |
+| 401 | Unauthorized — Bad Authentication (invalid site or application id) |
+| 500 | Internal server error |
 

@@ -27,11 +27,11 @@ All Brands who use Proactive Messaging version 2.0 and Connect To Messaging vers
 
 **Why we need this feature**
 
-LivePerson clients who use Proactive Messaging and Connect To Messaging need to have a complete picture of their campaigns and deflections.
-What Message channels are supported in this API:
-SMS - Twilio Messaging Gateway
-INAPP - LivePerson Mobile SDK
-WhatsApp
+LivePerson clients who use Proactive Messaging and Connect To Messaging need to have a complete picture of their campaigns and deflections. What Message channels are supported in this API:
+
+* SMS — Twilio Messaging Gateway
+* INAPP — LivePerson Mobile SDK
+* WhatsApp
 
 **Feature Details**
 
@@ -49,13 +49,11 @@ Outbound Reporting API provides the following data fields. This table explains t
 | 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
 | 10 | CSAT | Average of the CSAT rating score |
 
-*Delivered count for Whatsapp channel - For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by Whatsapp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
+*Delivered count for Whatsapp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by Whatsapp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
 
 **Full Funnel Overview board**
 
-
 <img class="fancyimage" src="img/outbound_reporting_api_full_funnel_overview.png" alt="">
-
 
 **What are the limitations**
 
@@ -67,20 +65,19 @@ Outbound Reporting API provides the following data fields. This table explains t
 - The data is persisted in the system for a period of 13 months as per the company retention policy period.
 - The Reporting API data is up to 20 min delayed from the time the messaging events are generated.
 
-
 ### API Specifications
 
 ## OAuth 2.0 Authorization 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive/proactive-show-secrets.png)  
-* The client_id and client_secret will than be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
-* The access_token retrieved from above APP JWT response should be used in the Request Header for Authorization.
+* The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+* The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
 ### Account Analytics API
 
 API for account level analytics
 
-**1. Account - Get analytics for the given account**
+**1. Account — Get analytics for the given account**
 
 Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Account/get) to go through API spec to get started.
 
@@ -142,7 +139,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-**2. Account - Get analytics for the account with given filters**
+**2. Account — Get analytics for the account with given filters**
 
 Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Account/post) to go through API spec to get started.
 
@@ -237,8 +234,7 @@ Each of the filter options shown above are optional. Regardless of what filter o
 
 API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable. 
 
-**1. Campaign - analytics API for the campaign**
-
+**1. Campaign — analytics API for the campaign**
 
 Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Campaign/campaignReport) to go through API spec and to get started.
 
@@ -300,7 +296,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 }
 ```
 
-**2. Campaign - Get analytics for the given campaign**
+**2. Campaign — Get analytics for the given campaign**
 
 Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Campaign/campaignAnalytics) to go through API spec to get started.
 
@@ -365,7 +361,7 @@ There are two versions of transaction API's.
 | Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
 | Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channels and skills |
 
-**1. Get details for Transactions - Version 1.0** 
+**1. Get details for Transactions — Version 1.0** 
 
 | Method | URI  |
 | :--- | :--- |
@@ -536,7 +532,7 @@ Each of the filter options shown above are optional.
         }
 ```
 
-**2. Get details for Transactions - Version 2.0**
+**2. Get details for Transactions — Version 2.0**
 
 Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Transaction/transactions) to go through API spec to get started.
 
@@ -589,7 +585,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
         "messagestatus": [
             "FAILED", "READ"
         ], 
-        "transactionids" : [
+        "transactionids": [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
     }
@@ -766,7 +762,6 @@ For Proactive Messaging:
 For Connect To Messaging:
 - Sign in to [this url](https://connect-to-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for Connect To Messaging.
 - Click on the user icon at top right corner and see the version.
-
 
 <strong>6. What is a LP data retention policy? And how long data is persisted for Outbound Reporting API?</strong>
 

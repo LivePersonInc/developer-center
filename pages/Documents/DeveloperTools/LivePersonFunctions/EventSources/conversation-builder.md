@@ -17,18 +17,19 @@ The bot can pass event metadata into the function as part of the invocation. Thi
 
 You must have a user account for the Conversational Cloud and Conversation Builder platforms. If that's not the case, reach out to your account manager to create one.
 
-#### Step 1 - Create a new Function
+#### Step 1 — Create a new Function
 
 Create a new function **without event**. There aren't templates for this integration since this is a customizable bot where every payload will be unique to each use case.
 
-#### Step 2 - Edit the Function
+#### Step 2 — Edit the Function
 
 Edit and configure your function with the custom logic that you need for your use cases. See below for an example. Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
-#### Step 3 - Deploy the Function
+#### Step 3 — Deploy the Function
 
 Like any other function, this function must be deployed before it can be used.  Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
-#### Step 4 - Configure the integration in Conversation Builder
+
+#### Step 4 — Configure the integration in Conversation Builder
 
 Please follow this [step by step guide](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html#conversation-builder---configure-the-integration) for configuring you custom integration.
 

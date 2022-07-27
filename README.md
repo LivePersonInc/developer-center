@@ -8,8 +8,8 @@ This repository generates LivePerson’s Developer Center, which can be found at
 
 1. 📡 [Updating the documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
 2. 📝 [Notes on content and code](https://github.com/LivePersonInc/developers-community#notes-on-content-and-code)
-3. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
-4. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+3. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+4. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
 5. 📋 [Template](https://github.com/LivePersonInc/developers-community#template)
 6. 📜 [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
@@ -147,26 +147,30 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
 
 ## Notes on content and code
 
-The max width for an image in this repo is 800 pixels.
+When contributing to this repository, please observe the following:
 
-## Hiding files
+### Content and punctuation
 
-* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden). 
-* Do not include them in the documentsupdated.yaml file.
-* Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
-* Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+* Use American English
+* Prefer active voice
+* Try to use language that’s human and personal
+* Keep it brief
+* Use lists (ordered series in numbered lists, unordered series in bulleted lists)
+* In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
+* Use an Oxford comma (“one, two, and three”)
+* Use typographically correct quotation marks (“”)
+* For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
+* Avoid “here” links
+* Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
 
-**Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
+### Code and media
 
-### Adding new documents to the sidebar
+* Be consistent
+* Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
+* Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
+* The maximum width for images in this repository is 800 pixels
 
-Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons:
-
-1. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
-2. Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
-3. Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
-
-The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar. 
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
 
 ## Building the site locally
 
@@ -190,7 +194,26 @@ You have two options to run the site locally after the first install:
 
 * **Using Jekyll’s standard commands**. All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
-**Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
+**Note:** changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
+
+## Hiding files
+
+* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden).
+* Do not include them in the documentsupdated.yaml file.
+* Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
+* Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+
+**Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
+
+### Adding new documents to the sidebar
+
+Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons:
+
+1. It reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
+2. It increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
+3. It decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
+
+The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar.
 
 ## Template
 

@@ -135,12 +135,12 @@ There are two date picker options:
         * max = min + 150yrs
 
 6. **Provide correct JSON data.**
-    * Verify correct data is being provided in structured content json.
+    * Verify correct data is being provided in structured content JSON.
 
 ### Limitations
 
 * **Error Message displayed when missing data in JSON**
-  * The user is presented with an error message: "Content failed to display", when required data is missing and/or invalid json is provided.
+  * The user is presented with an error message: "Content failed to display", when required data is missing and/or invalid JSON is provided.
 * **Calendar Selection**
   * Multiple date selection is not supported for single Date Picker.
   * Unavailable dates will always be before or after the provided date range.

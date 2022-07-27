@@ -16,10 +16,10 @@ indicator: chat
 
 Sends a chat line to the agent. The response will echo the line sent.
 
-**Notes**:
+**Notes:**
 
-- *This line will also appear in the next onLine event.*
-- *It is recommended to pass in success and error callbacks to his method in order to validate that the line has been sent.*
+- This line will also appear in the next onLine event.
+- It is recommended to pass in success and error callbacks to his method in order to validate that the line has been sent.
 
 ### Request
 

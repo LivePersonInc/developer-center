@@ -60,7 +60,6 @@ There are two ways to classify messages:
 
     <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_1.png" alt="">
 
-
 Here’s a sample spreadsheet of the messages extracted from the Intent Analyzer dashboard. They are all initially labeled as "undefined." Manually go through each message and change the label to the name of your intent. 
 
 <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_2.png" alt="">
@@ -84,7 +83,6 @@ Make sure the definition does not overlap with the definitions of other intents.
 *Overlaps with*: Request for tutorial
 
 *New definition*: Any request for troubleshooting a product issue. **Exclude** any request for instructions. 
-
 
 #### Best Practices for Selecting Training Utterances
 

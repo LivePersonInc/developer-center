@@ -13,9 +13,10 @@ indicator: messaging
 ---
 ### Introduction
 
-The Agent Survey for Messaging, enables brands to categorize, qualify and collect feedback from agents about the conversation. Brands are using this information to optimize their operation: improve campaigns, train agent, reduce the need for transfer etc. <br> 
-The Agent Survey is delivered in a dedicated widget, during the conversation, to drive higher completion rates and provide the agents with the best experience possible.<br>
-<br>
+The Agent Survey for Messaging, enables brands to categorize, qualify and collect feedback from agents about the conversation. Brands are using this information to optimize their operation: improve campaigns, train agent, reduce the need for transfer etc.
+ 
+The Agent Survey is delivered in a dedicated widget, during the conversation, to drive higher completion rates and provide the agents with the best experience possible.
+
 This API allows you to manipulate such Agent Surveys, by creating new ones, updating them or simply retrieving information on which Agent Surveys are available and their metadata.
 
 ### Getting Started
@@ -36,7 +37,7 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases for Agent Survey API
 

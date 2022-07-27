@@ -14,7 +14,7 @@ indicator: messaging
 {:.notice}
 This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
-_**Note**: once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior._
+**Note:** Once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior.
 
 ### Step 0: Adding Push Notifications (Optional)
 
@@ -43,28 +43,27 @@ Note: if you were using the **LPMessagingSDK.instance.registerPushNotifications(
 
   /// Will handle custom behavior if LP Push Notification was touched
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   func LPMessagingSDKNotification(didReceivePushNotification notification: LPNotification) {}
 
   /// Override SDK - In-App Push Notification
   /// Behavior for tapping In-App Notification should be handled, when using a custom view no behavior is added, LPMessagingSDKNotification(notificationTapped) can't be used
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   /// - Returns: Custom View
   func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView {}
 
   /// This method is overridden when using a Custom View for the In-App Notification (LPMessagingSDKNotification(customLocalPushNotificationView)
   /// Add Custom Behavior to LPMessaging Toast View being tapped
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   func LPMessagingSDKNotification(notificationTapped notification: LPNotification) {}
 
   /// This method will hide/show the In-App Push Notification
   ///
-  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID , isRemote: Bool)
+  /// - Parameter notification: LP Notification ( text, user: Agent(firstName, lastName, nickName, profileImageURL, phoneNumber, employeeID, uid), accountID, isRemote: Bool)
   /// - Returns: true for showing Push Notifications/ false for hidding In-App Push Notification
   func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool {}
-
 ```
 
 ### Step 2: Implementing LPMessagingSDK Notification Delegate
@@ -108,7 +107,7 @@ func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
 }
 ```
 
-_Note: For you to be able to use the method **storyboard.instantiateViewController(withIdentifier:)**, your ViewController needs to have a Storyboard ID on the **Identity Inspector**_
+_Note: For you to be able to use the method **storyboard.instantiateViewController(withIdentifier:)**, your ViewController needs to have a Storyboard ID on the **Identity Inspector**._
 
   <p align="center">
     <img src="https://lpgithub.dev.lprnd.net/storage/user/634/files/211f0c9e-b585-11e7-873f-6ba4178093a7" width="45%" height="45%">
@@ -169,7 +168,7 @@ return view
 view.backgroundColor = UIColor(red:0.04, green:0.00, blue:0.00, alpha:0.8)
 ```
 
-**Note**: you can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
+**Note:** You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
 
   - To change the color of the Text shown on the Toast:
 
@@ -178,7 +177,7 @@ view.backgroundColor = UIColor(red:0.04, green:0.00, blue:0.00, alpha:0.8)
 NSAttributedStringKey.foregroundColor : UIColor.white,
 ```
 
-**Note**: you can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
+**Note:** You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
 
   - To change the Font or Size of the Text shown on the Toast:
 
@@ -196,16 +195,15 @@ let toast = Toast().getView(message: notification.text)
 return toast
 ```
 
-**Note**: Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
+**Note:** Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
 
-- **text** -> Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
+- **text**: Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
 
-- **accountID** -> Account Number
+- **accountID**: Account Number
 
-- **isRemote** -> if it is a Push Notification
+- **isRemote**: If it is a Push Notification
 
-You will need to use -> notification.text to populate your Toast UILabel
-
+You will need to use notification.text to populate your Toast UILabel.
 
 ### Step 3: Adding a Gesture Recognizer to Custom Local Push Notification View (Optional)
 
@@ -220,7 +218,7 @@ view.isUserInteractionEnabled = true
 view.tag = 0xDEADBEEF
 ```
 
-**Note:** with this action, we are performing two things: we enable the UIView for user interaction, and we give the UIView a tag so we can reference it later.
+**Note:** With this action, we are performing two things: we enable the UIView for user interaction, and we give the UIView a tag so we can reference it later.
 
 2. On your **AppDelegate** locate the **LPMessagingSDKNotification(customLocalPushNotificationView notification:** method and before your return statement add the following:
 
@@ -235,11 +233,12 @@ gesture.addTarget(self, action: #selector(toastTapped(_:)))
 toast.addGestureRecognizer(gesture)
 ```
 
-**Note:**
-    - First, we create a new UITapGestureRecognizer,
-    - Second, we set the gesture to require two taps to respond,
-    - Third, we add a target action name **toastTapped(_:)**,
-    - Last, we add the gesture to our UIView
+**Notes:**
+
+- First, we create a new UITapGestureRecognizer,
+- Second, we set the gesture to require two taps to respond,
+- Third, we add a target action name **toastTapped(_:)**,
+- Last, we add the gesture to our UIView
 
 At the end your method should look like this:
 
@@ -282,10 +281,10 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 
 **Notes:**
 
- - First, the **@objc** prefix will let this method be used as a **#selector**,
+- First, the **@objc** prefix will let this method be used as a **#selector**,
 
- - Second, we use **self.window?.viewWithTag(tag:int)** to get our View,
+- Second, we use **self.window?.viewWithTag(tag:int)** to get our View,
 
- - Third, if our UIView is different from  **nil** , we will remove it from the main view, so when we move the user to the Messaging View Controler the Toast is not there,
+- Third, if our UIView is different from  **nil**, we will remove it from the main view, so when we move the user to the Messaging View Controler the Toast is not there,
 
- - Last, use the same code we had on the method **LPMessagingSDKNotification(notificationTapped notification:)** to take the user to the Messaging Screen
+- Last, use the same code we had on the method **LPMessagingSDKNotification(notificationTapped notification:)** to take the user to the Messaging Screen

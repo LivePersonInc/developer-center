@@ -22,11 +22,9 @@ Define which parameters you’d like to use from the SDK in order to connect bet
 
 * Collect the following data in runtime from both SDKs:
 
-	* Session ID. Note:
-	Agent widget - the session ID is called _rtSessionID_
-	Window SDK - the session ID called _sessionID_
+	* Session ID. Note: Agent widget — the session ID is called _rtSessionID_; Window SDK — the session ID called _sessionID_
 
-	* agent ID and visitor ID
+	* Agent ID and visitor ID
 
 * To achieve best results it is important to program the ability for the agent to invite consumers to video chat with a start video button.
 
@@ -36,9 +34,9 @@ Define which parameters you’d like to use from the SDK in order to connect bet
 
 Design html elements that will enable your customers to run the video session.
 
-* Invite to video chat - html service that will display in the widget when an agent invites a customer to video chat.  This should include an 'accept’ and 'decline’ capabilities.
+* Invite to video chat — HTML service that will display in the widget when an agent invites a customer to video chat.  This should include an 'accept’ and 'decline’ capabilities.
 
-* End Chat - how will you enable your customers to have control and end the video chat at any moment?
+* End Chat — how will you enable your customers to have control and end the video chat at any moment?
 
 * Invite for group chat (if applicable) - what html elements will allow your customers to add another person to the video?
 

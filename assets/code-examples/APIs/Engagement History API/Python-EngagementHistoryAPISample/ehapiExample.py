@@ -38,7 +38,7 @@ header = ["stime", "etime", "dur", "vID", "eID", "inter", "agent", "skill", "cha
 file = open(outfile, 'w')
 file.write(','.join(header)+ '\n')
 
-#create list of chat text and append to outfile    
+#create list of chat text and append to outfile
 result=[]
 for line in results["interactionHistoryRecords"]:
 	for x in ["info"]:
@@ -63,11 +63,3 @@ file.close()
 
 #print time it took to complete
 print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
-
-
-
-
-

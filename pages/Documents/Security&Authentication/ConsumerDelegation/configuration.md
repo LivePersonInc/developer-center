@@ -20,7 +20,7 @@ Only the following parameters should be defined:
 
 *	OAuth 2.0 Client Secret
 
-* 	JWT Public Key - Set field value to: "CONSUMER_DELEGATION"  
+* 	JWT Public Key — Set field value to: "CONSUMER_DELEGATION"  
 
 To define the OAuth 2.0 delegation:
 
@@ -42,6 +42,4 @@ The brand's Authorization Service should have to register configuration of LiveP
 *	Set required scope for accessing the relevent APIs used by the Bots API Integration
 
 *	Define LivePerson's redirect URI: https://{domain}/callback/{account_id}/redirectCode  
-	**Note:** to retrive your domain, Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name: IDP
-
-
+	**Note:** To retrieve your domain, use the [LivePerson Domain API](agent-domain-domain-api.html) and provide the service name “IDP”.

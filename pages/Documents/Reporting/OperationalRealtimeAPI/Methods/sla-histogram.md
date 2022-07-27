@@ -32,7 +32,7 @@ URL Parameters
 
 | Name | Description | Type / Value |  Required |
 | :------ | :------- | :----------- | :--- |
-| timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time - timeframe. The maximum timeframe value is 1440 minutes (24 hours). | numeric | required |
+| timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time – timeframe. The maximum timeframe value is 1440 minutes (24 hours). | numeric | required |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, SLA will be calculated only for interactions involving agents of the specified skills. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3. <br> To retrieve all skills active for the time period, use skillIds=all. If no skillIds is provided, 'all’ is assumed. | numeric, comma separated, or 'all’ | optional |
 | groupIds | When provided, SLA will be calculated only for interactions involving agents of the specified groups. You can provide one or more agent group IDs. <br> Example: groupIds=4,15,3. <br> To retrieve all agent groups active for the time period, use groupIds=all. If no groupIds is provided, 'all’ is assumed. | numeric, comma separated, or 'all’ | optional |

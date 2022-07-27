@@ -43,11 +43,11 @@ When an integration interaction is processed, the order of invocation is as foll
 {: .important}
 It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
-In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
+In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction…
 
  <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png" alt="">
 
-...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+…so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
  <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png" alt="">
 
@@ -65,14 +65,14 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 
 #### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/682936871" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/682936871" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 #### How the Knowledge AI search works
 
-* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
-* **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+* **The search phrase**: The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
+* **The search**: When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
+* **The results**: The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
 
@@ -205,7 +205,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt=""> (Agent Transfer) on the interactions toolbar.
 2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n.
 
-    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent..."
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent…"
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png" alt="">
 
@@ -273,7 +273,7 @@ Some setup of your Conversational Cloud environment is required before using thi
     * **Success Message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     * **Failure Message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
     * **Validation Failure Message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
+    * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file…"
 
 4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="">. In the Integration interaction, select the File integration to invoke (Integration type = File).
 
@@ -315,7 +315,7 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 ### Dynamic Routing interactions
 
-Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents -- bot or human -- based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents — bot or human — based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
 
 Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code.
 
@@ -343,7 +343,7 @@ A Dynamic Routing interaction does the following:
     * Route to skill
     * Route to agent
 
-    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
+    **Note:** If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
 
 #### Prerequisites
 
@@ -420,8 +420,8 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 | Setting | Description | Required? | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | <https://www.mysite/images/mylogo.jpg> |
-| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | <https://www.mysite/images/mylogo.jpg> |
+| ADD IMAGE → Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
 | Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |
@@ -455,7 +455,7 @@ The shipping method fields can be updated dynamically via an API call, i.e., you
 
 **Additional Fields and Payment Capabilities**
 
-* **Required Billing Fields**: Select the billing contact fields required to process the transaction. Tip: Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
+* **Required Billing Fields**: Select the billing contact fields required to process the transaction. **Tip:** Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
 * **Required Shipping Fields**: Select the shipping contact fields required to fulfill the order. For example, if you need the customer’s email address or phone number, select these.
 * **Merchant Capabilities**: Specify the payment capabilities supported by you as the merchant. You must include “3DS.”
 * **Supported Networks**: Specify one or more of the payment networks supported by you as the merchant.

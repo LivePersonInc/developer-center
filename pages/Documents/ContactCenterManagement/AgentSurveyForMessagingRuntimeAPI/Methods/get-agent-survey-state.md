@@ -32,7 +32,6 @@ Get the survey state that has been saved in previous requests.
 | seq | when seq=true and survey state is null the first sequence will be returned | Boolean | Optional | Default value is true |
 | v | API version number | String | Required |
 
-
 **Request Headers**
 
 |Header | Description| Notes |
@@ -58,7 +57,7 @@ Get the survey state that has been saved in previous requests.
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Response example**
 

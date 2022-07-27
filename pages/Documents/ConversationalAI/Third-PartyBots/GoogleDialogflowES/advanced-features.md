@@ -8,7 +8,7 @@ permalink: third-party-bots-google-dialogflow-es-advanced-features.html
 indicator:
 ---
 
-### Sending Pause/Delay Messages
+### Sending Pause/Delay Message
 
 It is possible to send a custom payload of type "delay" along regular content and actions.
 This specifies the time the bot will wait before sending the next message.
@@ -31,10 +31,9 @@ Figure 3.1 Example payload for a delay
 <br />
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png" alt="">
-Figure 3.2 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+Figure 3.2 An example of Message — Delay — Message configuration in the Dialogflow console's intent editor
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action.
-Using this allows the bot to receive a consumer message without visibly responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without visibly responding to the consumer.
 
 ### Sending Private Text Message
 
@@ -46,13 +45,9 @@ This enables brands to customize messages giving more insight, summarizing actio
 on next actions the handover agent should take.
 
 {: .important}
-Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator
-in the conversation window.
-Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
+Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
-Please note private text message will never be shown to the consumer and will be visible only inside the conversation
-window of agent workspace. The private text message can be added via the Custom Payload response in intent definition
-(as shown in Figure 3.4).
+Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 3.4).
 
 It is possible to send only a private text message response. An example payload is seen below:
 
@@ -74,19 +69,14 @@ There are two properties, `text` and `messageAudience`, which are part of the Cu
 
 <br />
 
-Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 9.1.
+Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message — Private Text Message — Action) can be seen in Figure 9.1.
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-private_message.png" alt="">
 Figure 3.4 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
 
 ### Message Context
 
-Third-Party Bots provides additional message context to Dialogflow ES on the payload property.
-In order to access the payload in Dialogflow ES you need to configure a
-[Fulfillment](https://cloud.google.com/dialogflow/es/docs/fulfillment-overview) and ensure it is actived for the intent
-in question.
-Fulfillments can either be handled with Google Cloud Functions, or an external webhook can be configured. See Figure 3.5 for an
-example using Google Cloud Function.
+Third-Party Bots provides additional message context to Dialogflow ES on the payload property. In order to access the payload in Dialogflow ES you need to configure a [Fulfillment](https://cloud.google.com/dialogflow/es/docs/fulfillment-overview) and ensure it is actived for the intent in question. Fulfillments can either be handled with Google Cloud Functions, or an external webhook can be configured. See Figure 3.5 for an example using Google Cloud Function.
 
 <img class="fancyimage" alt="fulfillment with metadata" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-advanced-features-metadata-code.png" alt="">
 Figure 3.5 Accessing the message context on a Fulfillment
@@ -147,7 +137,7 @@ Figure 3.6 How to access the metadata of a customer message
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 12.1.
 
 <img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
-Figure 3.7 Conversation Type step in creation/modification of bot configuration.
+Figure 3.7 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation.
 Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes.
@@ -183,12 +173,9 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
 </ul>
 
 {: .important}
-Failing to comply with the above validation points will cause the message to be dropped. This feature is only available
-for the messaging conversations not for chat conversations
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending
-encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as
-shown in Figure 3.9 below.
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.9 below.
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata.png" alt="">
 Figure 3.9 Use custom payload for Encoded Metadata
@@ -219,7 +206,6 @@ Figure 3.10 Custom payload of text message with encoded metadata
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-text.png" alt="">
 Figure 3.11 Configuration in the Dialogflow ES Console
-<br/>
 
 #### Sending Rich Content (structured content) with Encoded Metadata
 

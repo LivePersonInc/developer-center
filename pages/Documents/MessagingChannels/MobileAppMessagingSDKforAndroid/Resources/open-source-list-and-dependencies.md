@@ -31,12 +31,12 @@ An Android library for managing images and the memory they use.
 | SDK Version         | Picasso Version  | OkHttp Version   |
 |---------------------|------------------|------------------|
 | 5.7.1 onwards       | 2.8              | 4.9.1            |
-| 5.6.0 - 5.7.0       | 2.8              | 3.10.0           |
-| 5.0.0 - 5.5.1       | No dependency    | 3.9.1            |
+| 5.6.0 – 5.7.0       | 2.8              | 3.10.0           |
+| 5.0.0 – 5.5.1       | No dependency    | 3.9.1            |
 | 4.10.0              | 2.71828          | 4.9.1            |
-| 4.8.1 - 4.9.0       | 2.71828          | 3.10.0           |
-| 3.7.0 - 4.7.0       | No dependency    | 3.9.1            |
+| 4.8.1 – 4.9.0       | 2.71828          | 3.10.0           |
+| 3.7.0 – 4.7.0       | No dependency    | 3.9.1            |
 | < 3.7.0             | 2.5.2            | 3.9.1            |
 
 {:.important}
-The Picasso dependency was removed from SDK versions 3.7.0 - 4.7.0 and 5.0.0 - 5.5.1 because Picasso version 2.5.2 has a known issue with image rendering on Xperia devices which later got fixed in the latest Picasso versions.
+The Picasso dependency was removed from SDK versions 3.7.0–4.7.0 and 5.0.0–5.5.1, because Picasso version 2.5.2 has a known issue with image rendering on Xperia devices, which got fixed in the latest Picasso versions.

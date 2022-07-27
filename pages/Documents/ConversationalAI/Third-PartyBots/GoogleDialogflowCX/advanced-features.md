@@ -21,7 +21,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
 {: .important}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.1 below
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.1 below:
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_encoded_metadata.png" alt="">
 Figure 3.1
@@ -98,10 +98,10 @@ It is possible to send an event of type "delay" before regular content events an
 
 <br />
 
-Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 3.4.
+Setting a delay in between multiple messages is possible and an example of such a case (Message — Delay — Message) can be seen in Figure 3.4.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_message_delay_message.png" alt="">
-Figure 3.4 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+Figure 3.4 An example of Message — Delay — Message configuration in the Dialogflow console's intent editor
 
 It is possible to send only a single delay response. The example payload of such response is below:
 
@@ -113,9 +113,9 @@ It is possible to send only a single delay response. The example payload of such
 ```
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowcx/delay_response_custom_payload.png" alt="">
-Figure 3.5 showing the Custom Markup message for delay message
+Figure 3.5 Showing the Custom Markup message for delay message
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 
@@ -133,7 +133,7 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 3.6.
+Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message — Private Text Message — Action) can be seen in Figure 3.6.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowcx/private_message_response_custom_payload.png" alt="">
 Figure 3.6 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
@@ -170,7 +170,7 @@ Figure 3.7
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 3.8.
 
 <img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
-Figure 3.8 Conversation Type step in creation/modification of bot configuration.
+Figure 3.8 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow CX these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/QueryParameters)). An example of the request body can be seen below:
 
@@ -276,16 +276,13 @@ Example `RichContentEvent` body of a map rich content that will be sent by Third
 
 #### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
 
-After the cloud function has been deployed, it can be added to the fulfillment of the page or your route by enabling WebHook.
-An example of enabling such a WebHook via Google Cloud function can be found in Figure 3.10 Highlighted area. If your function is deployed and active,
-It should populate in the list. Moreover, The Dialogflow CX console allows us to attach Third-Party WebHook calls as well.
-Please note, you need to ensure that, Third-Party Cloud WebHooks should be accessible and respond in the expected Dialogflow CX
-response formate as we have shown in the example of Google Cloud Function above.
+After the cloud function has been deployed, it can be added to the fulfillment of the page or your route by enabling WebHook. An example of enabling such a WebHook via Google Cloud function can be found in Figure 3.10 Highlighted area. If your function is deployed and active, it should populate in the list. Moreover, The Dialogflow CX console allows us to attach Third-Party WebHook calls as well.
+
+Please note, you need to ensure that, Third-Party Cloud WebHooks should be accessible and respond in the expected Dialogflow CX response formate as we have shown in the example of Google Cloud Function above.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-enable-webhook.png" alt="">
-Figure 3.10 Showing a Google Cloud Function named `googleRichContentEventCloudFunction` attached to the fulfillment Response
+Figure 3.10 Showing a Google Cloud Function named `googleRichContentEventCloudFunction` attached to the fulfillment response
 
-Once all of the above steps have been configured then the Dialogflow CX bot will be able to respond to the requests via the cloud function.
-A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
+Once all of the above steps have been configured then the Dialogflow CX bot will be able to respond to the requests via the cloud function. A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/dialogflowcx/dialogflow_cx_richcontent_demo.gif">

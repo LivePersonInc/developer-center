@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
-<head>
+<html lang="en">
+  <head>
     {% include head.html %}
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/inner-page.css">
     <meta name="description" content="LivePerson for Developers. Build on the LivePerson Conversational Cloud with our powerful digital toolbox">
     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
     <meta name="author" content="LivePerson Inc.">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-</head>
-
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+  </head>
+  <body>
     <div class="flex items-center" id="mainHeader">
         <div class="max-width">
             <div class="side-width logoHeader">
@@ -75,7 +74,7 @@
               fill="var(--input-search-icon)"></path>
           </svg>
                 </div>
-                <input type="search" id="aa-search-input" class="aa-input-search" placeholder="What are you looking for?" name="search" autocomplete="on" />
+                <input type="search" id="aa-search-input" class="aa-input-search" placeholder="What are you looking for?" name="search" autocomplete="on">
             </div>
             <div id="loginHeader">
                 <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
@@ -135,7 +134,7 @@
                         </p>
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox">
-                <input class="toggle toggle-accent" type="checkbox" id="checkbox" />
+                <input class="toggle toggle-accent" type="checkbox" id="checkbox">
                 <span class="slider round hover:opacity-80">
                   <span class="toggle-title-light">Light theme</span>
                   <span class="toggle-title-dark">Dark theme</span>
@@ -154,8 +153,8 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
     <script src="js/algolia.js"></script>
-</body>
-
-{% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
-
+    {% if site.google_analytics %}
+      {% include google_analytics.html %}
+    {% endif %}
+  </body>
 </html>

@@ -11,8 +11,6 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticated-in
 indicator: messaging
 ---
 
-
-
 ### Introduction
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
@@ -27,27 +25,27 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (is deprecated as of July 2019)
 
-_Note: if you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated_
+_Note: If you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated._
 
 ```swift
 class LPAuthenticationParams: NSObject {
-    ...
+    …
     var type: LPAuthenticationType = .signup
-    ...
+    …
     init(authenticationCode: String? = nil, jwt: String? = nil, redirectURI: String? = nil, certPinningPublicKeys: [String]? = nil, authenticationType: LPAuthenticationType = .signup)
-    ...
+    …
 }
 ```
 
 #### Server side configurations (In case needed, should be modified by LivePerson)
 
-* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. iF there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+* Identity idle time — setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. iF there's an open conversation — it will be closed and a dialog explaining what happened will be presented to the consumer.
 
-* Unauthenticated token expiration - sets the time for the app to validate the token. When the token is expired, it will be refreshed.
+* Unauthenticated token expiration — sets the time for the app to validate the token. When the token is expired, it will be refreshed.
 
 #### SDK configurations
 
-When an unauthenticated user session expire - the SDK will notify by presenting an alertView to the user. The alertView content can be modified by overriding the following string params:
+When an unauthenticated user session expire — the SDK will notify by presenting an alertView to the user. The alertView content can be modified by overriding the following string params:
 
 * ```"unauthenticatedUserExpiredTitle"``` = "New Conversation";
 * ```"unauthenticatedUserExpiredMessage"``` = "Hi there! As we haven't seen you for a while, we're opening a new conversation for you";
@@ -63,7 +61,8 @@ do {
     return
 }
 
-....
+…
+
 // 2. Init LPConversationViewParams
 let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: nil, isViewOnly: false)
 
@@ -72,7 +71,7 @@ let authenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: 
 
 // 4. Call showConversation() with LPConversationViewParams and LPAuthenticationParams
 LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
-...
+…
 
 ```
 

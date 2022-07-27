@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #005ef4;
   font-size: 14px;
 }
@@ -36,7 +36,7 @@ a:hover {
 }
 
 .greeting-bot-header {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   display: block !important;
   width: 360px;
   white-space: nowrap;
@@ -52,11 +52,11 @@ a:hover {
 .container-content {
   width: 304px;
   height: 128px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   line-height: 32px;
 
   color: #5f617a;
@@ -65,7 +65,7 @@ a:hover {
 .hyperlink-learn {
   width: 98px;
   height: 24px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -86,7 +86,7 @@ a:hover {
 }
 
 .heading-h5 {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -102,7 +102,7 @@ a:hover {
 
 .spotlight-title {
   font-size: 14px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   padding-top: 24px;
   line-height: 24px;
@@ -113,7 +113,7 @@ a:hover {
 
 .hyperlink-container {
   font-size: 14px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   line-height: 24px;
 
@@ -124,7 +124,7 @@ a:hover {
 .spotlight-content {
   font-style: normal;
   font-weight: 500;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.04em;
@@ -185,7 +185,7 @@ a:hover {
 }
 
 .template-greeting-loading {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -202,7 +202,7 @@ a:hover {
   font-size: 16px;
   line-height: 28px;
 
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #ffffff;
   margin-bottom: 16px;
 }
@@ -214,7 +214,7 @@ a:hover {
   font-size: 16px;
   line-height: 28px;
 
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #ffffff;
   margin-bottom: 16px;
 }

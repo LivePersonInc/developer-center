@@ -36,12 +36,11 @@ The Data Access API retrieves historical data. This API is based on the REST arc
 
 Data Access retention is limited to a 30 days period. The files will be deleted 30 days from the time they were created, in order to meet GDPR regulation. 
 
-
 ### Getting Started
 
 A few things you'll need to get started with this API:
 
-1. **There's no need to reterive your domain for this API**. Here are the different domains by geo location:
+1. **There's no need to retrieve your domain for this API**. Here are the different domains by geo location:
 
 	* US accounts: va.da.liveperson.net
 
@@ -55,7 +54,6 @@ A few things you'll need to get started with this API:
 
 4. This API requires backend enablement, please contact your account manager to do so.
 
-
 ### Architecture
 
 ![DataAccessAPI](img/dataaccess.png)
@@ -68,7 +66,6 @@ JSON-Generating Data Flow Process:
 4. A data access job then runs
 
 ![DataAccessAPI02](img/Data access-02.png)
-
 
 ### Use Cases
 

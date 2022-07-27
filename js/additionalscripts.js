@@ -53,10 +53,10 @@ $(document).ready(function () {
   var $title = $(".h1").text()
 
   if (
-    $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
+    $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
     $title.indexOf("Index") != -1
   ) {
-    console.log("Welcome to LivePerson Developers!")
+    console.log("Welcome to the LivePerson developers community!")
   } else {
     $(".breadcrumbs").removeClass("breadhidden")
     $(".suggestbutton").removeClass("suggesthidden")
@@ -70,10 +70,10 @@ $(document).ready(function () {
 function crossBrowserSafariCheck() {
   var isSafari = window.safari !== undefined
   if (isSafari) {
-    console.log("Safari, yeah!")
+    // console.log("Safari, yeah!")
     $(".sidebarbutton").attr("style", "top: -3px")
   } else {
-    console.log("Not in safari")
+    // console.log("Not in Safari")
     $(".sidebarbutton").attr("style", "top: 5px")
   }
 }
@@ -151,7 +151,7 @@ function navigateContent(url) {
       }
 
       if (
-        $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
+        $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
         console.log("Welcome to LivePerson Developers!")
@@ -230,7 +230,7 @@ function navigateContent(url) {
 function handleUniquePages() {
   var is_root = location.pathname == "/"
   var is_getting_started = location.pathname == "/first-steps.html"
-  console.log("checking if is unique page ")
+  // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
   var suggestButton = $("#suggestbutton")
@@ -248,8 +248,9 @@ function handleUniquePages() {
 
     indicatorContainer.css("display", "none")
     if (is_root) {
+      // TODO: Move to index page
       document.getElementById("document-title-h1").innerText =
-        "Let's build the right Conversational AI solutions together"
+        "Let’s build the right Conversational AI solutions together"
     }
   } else {
     console.log("not in  root folder")
@@ -427,7 +428,7 @@ function sidebarCollapse(url) {
   var currentPage = $('a[href="' + modifiedURL + '"]')
   var currentPageTitle = $(currentPage).html()
   //if this is the homepage
-  if (currentPageTitle == "Let's build the right Conversational AI solutions together") {
+  if (currentPageTitle == "Let’s build the right Conversational AI solutions together") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
     $(".innerfolder > .active > span.sidebarbutton").removeClass("clicked")
     $(".folder ul").slideUp(400, null)
@@ -452,7 +453,7 @@ function sidebarCollapse(url) {
     var toOpen = $(".activepage").parents("folder")
     //manipulate the active page's parents to open them, hightlight them, etc.
     if (toOpen) {
-      console.log("TO OPEN active page stuff")
+      // console.log("To open active page stuff")
       $(".activepage").parents().show()
       $(".activepage").parents("ul").prev(".highlightlink").addClass("active")
       $("a.active").data("expanded", "true")
@@ -504,7 +505,7 @@ function allArticlesClick() {
 //this function is triggered on click not when the page loads.
 function sidebarClick() {
   $(".topfolder").on("click", ".highlightlink", function () {
-    //if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
+    //if the clicked element is not one of the buttons at the bottom of the sidebar, e.g. "status page"
     $("span.sidebarbutton").removeClass("clicked")
 
     if (!$(this).hasClass("bottombuttons")) {

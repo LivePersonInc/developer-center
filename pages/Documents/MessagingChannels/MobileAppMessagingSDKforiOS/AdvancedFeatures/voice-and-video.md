@@ -25,7 +25,7 @@ KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-mana
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
-### How to enable:
+### How to enable
 
 ```swift
     LPConfig.defaultConfiguration.enableVoiceVideoCall = true
@@ -34,7 +34,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 {:.notice}
 Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call. 
 
-### Branding and Configurations
+### Branding and configurations
 
 #### enableVoiceVideoCall
 Enables or disables the ability for an Agent to start a voice or video call.
@@ -72,7 +72,7 @@ Defines default background image for End button on Voice & Video Invite
 - **Type:** UIImage
 - **Default value:** nil
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Note:** To enable this image voiceVideoEndCallButtonType should be set to hangup`
+- **Note:** To enable this image voiceVideoEndCallButtonType should be set to `hangup`
 
 #### voiceVideoJoinCallButtonImage
 Defines default background image for Join button on Voice & Video Invite
@@ -172,9 +172,7 @@ Defines border width for Voice & Video Invitation Bubble
 - **Type:** Double
 - **Default value:** 0.0
 
-
 ---
-
 
 #### voiceVideoNavigationBackgroundColor
 Defines background color of Navigation & Tab Bar for Voice & Video SFSafariViewController

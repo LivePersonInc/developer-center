@@ -31,7 +31,7 @@ Domain URL per environment:
 {: .important}
 For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
-### REST API - Save Properties
+### REST API — Save Properties
 
 This API can be used to add new properties or update existing properties. This API requires accountId, namespace, session (optional) and time to live as parameters. This API overwrites existing properties and inserts non-existing properties.
 
@@ -69,7 +69,7 @@ curl -X POST "https://{domain}/v2/context/document/create?access_token={Token}" 
 
 status code = 201
 
-### REST API - Read Properties
+### REST API — Read Properties
 
 #### Retrieve all properties within a namespace
 
@@ -174,7 +174,7 @@ curl -X POST "https://{domain}/v2/context/document/properties?access_token={Toke
 
 status code = 200
 
-### REST API - Delete Properties
+### REST API — Delete Properties
 
 There are three ways to delete properties:
 * By setting the TTL

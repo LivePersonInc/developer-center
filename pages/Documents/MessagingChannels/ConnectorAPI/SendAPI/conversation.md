@@ -54,7 +54,7 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 | :--- | :--- |
 | The JSON Payload | application/json |
 
-**Notes**:
+**Notes:**
 
 For the JSON payload, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html) to get an example of the accepted payloads.
 
@@ -131,7 +131,9 @@ The next request body example illustrates how to create a conversation and send 
 ]
 ```
 
-The above request is much better as it also includes the user SDEs which will populate the consumer information in Conversational Cloud's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in Conversational Cloud's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}.
+
+**Note:** Not best practice, please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to set up campaigns.
 You can send the **Campaign ID** and **Enagagement ID** to Conversational Cloud in order to route the consumer conversation to the desired skill as designed by the Campaign Builder. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
@@ -142,7 +144,7 @@ In order to retrieve the campaign properties, you need to use the [Monitoring AP
 
 The connector can then use the above properties in the CONVERSATION request body payload with the `type` _cm.ConsumerRequestConversation_. See the following example to see how to do so:
 
-**Example Request Body - JSON Payload**
+**Example Request Body — JSON Payload**
 
 ```json
 [{
@@ -199,7 +201,7 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :-- | :--- | :--- | :--- | :--- | :--- |
-| lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {...}<br>}<br>, {<br>"personal": {...}<br>} ] | Array of SDEs  | false |
+| lp_sdes | Array of Personal Info and/or Customer Info SDEs | [ {<br>"ctmrinfo": {…}<br>}<br>, {<br>"personal": {…}<br>} ] | Array of SDEs  | false |
 | type | type of SDEs passed to Conversational Cloud | "ctmrinfo" / "personal" | string | true |
 | info | A list of Customer Info SDEs | {"socialId": "1234567890", "ctype": "vip"} | strings | false | [Click here to see the full list of Customer Info SDEs](engagement-attributes-types.html#customer-info) |
 | socialId | Social Media ID of your choice e.g., FACEBOOK, TWITTER | "John_Facebok1234" | string | false |
@@ -214,7 +216,7 @@ The connector can then use the above properties in the CONVERSATION request body
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / null | string | false |
-| conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
+| conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"…}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
 | campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | Used in conjunction with [campaigns for messaging](https://www.liveperson.com/services/technical-support/about-campaigns) for conversation routing to the right skill |
 | campaignId | The campaignId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint  | "99999" | false |
 | engagementId | The engagementId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "88888" | false |
@@ -226,8 +228,8 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device - important for monitoring and reporting |
-| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device - important for monitoring and reporting |
+| visitorId | visitorId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "A3ZTY3Zjk1MDExZTczYTU4" | string | false | The LivePerson identifier to the current consumer device — important for monitoring and reporting |
+| sessionId | sessionId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "ys2wSqaSRSOJGki7VhEDKQ" | string | false | The LivePerson identifier to the current monitor session of this consumer device — important for monitoring and reporting |
 | interactionContextId | contextId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "2" | string | false | See [Monitoring API Response Entity Example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples)
 | type | Type of conversationContext | "SharkContext" | string | false | Always use "SharkContext" when using Monitoring API properties i.e. when using Campaign For Messaging |
 | lang | The conversation language, according to the IETF (ISO-639-1 and ISO-3166) | "en-US" | string | false | Check first if the language used here is configured for the engagement in the LE UI |
@@ -242,7 +244,6 @@ The connector can then use the above properties in the CONVERSATION request body
 | 400 | The input was invalid, please check. |
 | 401 | Unauthorized. Are the headers correct? |
 | 429 | Too many requests, please try again later. |
-
 
 **Response Example**
 

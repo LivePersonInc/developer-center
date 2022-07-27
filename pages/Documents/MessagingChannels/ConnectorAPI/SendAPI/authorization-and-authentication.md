@@ -79,11 +79,9 @@ The **ConsumerJWS** is the unique identifier of the user (consumer) and used by 
 
 A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
-
 | Method | URI  |
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
-
 
 **Path Parameters**
 
@@ -92,7 +90,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | accountid | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 {
@@ -106,14 +104,12 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | :--- | :--- | :--- | --- |
 | v | The API version | numeric | 1.0 |
 
-
 **Request Headers**
 
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
-
 
 #### Response
 
@@ -122,7 +118,6 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | Code | Description |
 | :--- | :--- |
 | 201 | Created |
-
 
 **Response Example**
 
@@ -158,7 +153,6 @@ The SEND API returns an error response for every authorization or authentication
 | body.details | Details about the error. | *AUTHORIZATION header is not present* | string | See below for the full list of possible values. |
 | body.errorCode | A unique code identifying each possible error response. | *40104* | integer | The first three digits represent the HTTP status code and the last two digits are a changing number. When writing code for error detection and/or recovery, it should rely on the error code as it won't change over time. See below for the full list of possible values. |
 | type | The type of the response. | *.ReqBody$ErrorResp* | string | Always *.ReqBody$ErrorResp* for error response. |
-
 
 #### Response Bodies
 

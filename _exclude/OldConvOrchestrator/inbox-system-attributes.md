@@ -21,4 +21,3 @@ These attributes can be used in building routing policies. To use them in a poli
 
 <img class="fancyimage" width="750" src="img/maven/conversationContextService-inbox.png">
 
-

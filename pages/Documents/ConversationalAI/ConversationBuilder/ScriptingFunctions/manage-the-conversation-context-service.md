@@ -72,8 +72,8 @@ If the namespace already exists, this method does not create an additional one. 
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `registerContextNamespace(namespace)` | namespace (string) – The name of the namespace | Boolean |
-| `registerContextNamespace(namespace, ttl)` | namespace (string) – The name of the namespace<br><br>ttl (long) - "time to live," i.e., how long in seconds that the properties in the namespace are available (3 hours = 10,800 seconds, 1 day = 86,400 seconds, 1 week = 604,800 seconds, etc.). The namespace still exists after the `ttl` expires. If you set the `ttl` and subsequently change it, the new `ttl` only applies to properties added to the namespace after the change; existing properties remain unaffected.  | Boolean |
+| `registerContextNamespace(namespace)` | namespace (string) — The name of the namespace | Boolean |
+| `registerContextNamespace(namespace, ttl)` | namespace (string) — The name of the namespace<br><br>ttl (long) — "time to live," i.e., how long in seconds that the properties in the namespace are available (3 hours = 10,800 seconds, 1 day = 86,400 seconds, 1 week = 604,800 seconds, etc.). The namespace still exists after the `ttl` expires. If you set the `ttl` and subsequently change it, the new `ttl` only applies to properties added to the namespace after the change; existing properties remain unaffected.  | Boolean |
 
 ##### Example
 
@@ -91,7 +91,7 @@ It is not mandatory to delete a previously registered namespace.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `deleteContextNamespace(namespace)` | namespace (string) – The name of the namespace | Boolean |
+| `deleteContextNamespace(namespace)` | namespace (string) — The name of the namespace | Boolean |
 
 ##### Example
 
@@ -163,8 +163,8 @@ function displayAllVars(map) {
  
   for each (var i in map.keySet()) {
 
-       botContext.printDebugMessage('Key  ---> ' + i);
-       botContext.printDebugMessage('Value ---> ' + map[i]);
+       botContext.printDebugMessage('Key → ' + i);
+       botContext.printDebugMessage('Value → ' + map[i]);
   }
 }
 ```

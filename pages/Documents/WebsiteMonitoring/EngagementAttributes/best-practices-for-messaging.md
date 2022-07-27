@@ -37,7 +37,7 @@ The table below explains which EAs should be collected and presented in LE UI.
   <tr>
     <td>Visitor Info</td>
     <td>Marketing source</td>
-    <td>Used to obtain information about the marketing source of the visitors, e.g which channel or campaign drove visitors to the website</td>
+    <td>Used to obtain information about the marketing source of the visitors, e.g. which channel or campaign drove visitors to the website</td>
     <td>Usually, when the page loads.</td>
     <td>This information should be sent per session</td>
   </tr>
@@ -114,8 +114,7 @@ The table below explains which EAs should be collected and presented in LE UI.
 </tbody>
 </table>
 
-
-**Note:** if you pass the `customerId` parameter of the Customer Info SDE, Conversational Cloud will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
+**Note:** If you pass the `customerId` parameter of the Customer Info SDE, Conversational Cloud will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
 
 ### Monitored Data
 
@@ -133,8 +132,6 @@ The following monitored data will be added to the Consumer Info widget under Con
 
 6. IP Address (don't forget to take **IP masking** into consideration)
 
-
-
 The monitored data will be collected from the first session. Geo location will be collected from when the conversation first originated, and will not update if the user changes their location during an open conversation.
 
 Both unauthenticated EAs and monitored data will be available to view in the Agent Widget SDK, and through the Messaging Interactions API.
@@ -145,7 +142,7 @@ Both unauthenticated EAs and monitored data will be available to view in the Age
 
 2. EAs submitted more than 12 hours after conversation ended will not be displayed
 
-3. This includes resuming a conversation - if resume was done in the 12 hour time frame from conversation close time, the relevant EAs will be shown
+3. This includes resuming a conversation — if resume was done in the 12 hour time frame from conversation close time, the relevant EAs will be shown
 
 4. Unauthenticated conversations started from different browsers will be treated as separate conversations and will have their own EAs
 
@@ -160,7 +157,6 @@ EAs can be submitted from multiple sources such as the Monitoring API, or throug
 
 In case there is any additional information about the user during the interaction, you may send the same EAs again in order to update the existing data with the new information.
 
-
 **Availablity of EAs**
 
 - All Reported EAs within 12 hours before the Conversation  started, while the conversation is open, and 12 hours after the conversation has closed will be available.
@@ -170,7 +166,6 @@ In case there is any additional information about the user during the interactio
 - EAs will be available through API calls in a matter of seconds.
 
 - EAs will be searchable in the UI up to 2 hours since they were received.
-
 
 **Sending an EA multiple times during a session**
 

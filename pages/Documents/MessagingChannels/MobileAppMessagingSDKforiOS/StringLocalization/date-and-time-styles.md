@@ -13,7 +13,6 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-date-and-time-st
 indicator: messaging
 ---
 
-
 The iOS platform provides four different default types of date and time styles:
 
 - SHORT is numeric, for example, **12/13/52 or 3:30 PM**.
@@ -29,7 +28,6 @@ You can set a specific 'locale' that is different from the device locale through
 country: String?,  language: String?
 ```
 
-
 ### Bubble timestamp
 
 Bubble timestamps contain only the time in SHORT time format, according to the locale (default or custom) and device setting.
@@ -42,7 +40,6 @@ Override the resource ID with any **time** format, for example, "hh:mm a" or "HH
 ```swift
  lpTimeFormat: String? 
 ```
-
 
 ### Date and time format instead of style
 
@@ -68,7 +65,6 @@ If the host app has customized formatting, this formatting gets used instead of 
    lpDateTimeFormat: String?
    ```
 
-
 ### Date off hours
 
 Date off hours messages (not today/tomorrow) use the default LONG date and SHORT time according to the locale (default or custom) and device setting.
@@ -86,7 +82,6 @@ Define a special date/hour format with any **date and time format**, for example
 ```swift
 lpDateFormat: String?
 ```
-
 
 ### Resolve message
 
@@ -108,7 +103,6 @@ lpDateTimeFormat: String?
 
 **Limitation:** If the formatting changed after the Resolve messages already appear, this change takes no effect. We plan to fix this limitation in future versions.*
 
-
 ### Separator timestamp
 
 Separator timestamps contain only the date in SHORT date format, according to the locale (default or custom) and device setting.
@@ -121,8 +115,6 @@ Override the resource ID with any **date** format, for example, "MMM d, yyyy" or
 lpDateFormat: String?
 ```
 
-
-
 ### Timezone off hours
 
 Off hours can appear in different time zones with this resource ID :
@@ -134,8 +126,6 @@ Off hours can appear in different time zones with this resource ID :
 You can find a list of timezone IDs [here](https://helpspot.readdle.com/calendars/index.php?pg=kb.page&id=588).
 
 **Example**: _"US/Pacific", "Europe/Berlin"._
-
-
 
 ### Today and tomorrow off hours
 
