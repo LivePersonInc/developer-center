@@ -134,13 +134,13 @@ a.view-all-products::after {
 
 @media (max-width: 990px) {
   .home-first-line {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .home-second-line {
     width: 70%;
     margin-bottom: 16%;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 

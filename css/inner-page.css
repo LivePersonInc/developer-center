@@ -331,7 +331,7 @@ div#toc ul li a {
     color: #5896ed;
     display: block;
     overflow-wrap: break-word;
-    padding: 0px;
+    padding: 0;
 }
 
 div#toc ul li a:hover {
@@ -383,7 +383,7 @@ div#toc>ul>li>ul {
 }
 
 div#toc ul li ul li ul {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 
@@ -496,7 +496,7 @@ ul.mysidebar.nav a {
 }
 
 ul.mysidebar li ul li {
-    margin-right: 0px;
+    margin-right: 0;
     margin-top: 10px;
 }
 
@@ -558,7 +558,7 @@ input#metricsSearch {
 
 ul.mysidebar.nav ul li a {
     border-top: none;
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: var(--space4) !important;
     margin-bottom: var(--space4);
     gap: 8px;
@@ -611,7 +611,7 @@ div.sidebarTitle-holder {
 
 .footer-tags {
     display: inline-flex !important;
-    padding: 0px 8px 0px 8px;
+    padding: 0 8px 0 8px;
 }
 
 
@@ -766,8 +766,8 @@ div.sidebarTitle-holder {
 
 pre {
     border: none;
-    border-radius: 0px;
-    padding: 0px 97px var(--space4) 20px;
+    border-radius: 0;
+    padding: 0 97px var(--space4) 20px;
     order: 10;
 }
 
@@ -796,7 +796,7 @@ pre code {
 }
 
 .margin-top-zero {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .margin-top-68 {
@@ -815,7 +815,7 @@ pre code {
   }
 
   div.inside-page-content,
-  .inside-page-content .h2 {} 
+  .inside-page-content .h2 {}
 
 }
 */

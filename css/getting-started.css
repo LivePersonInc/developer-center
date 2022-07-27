@@ -28,7 +28,7 @@
     margin-top: 32px !important;
     margin-left: 32px !important;
     color: #ffffff;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .hyperlink {
@@ -42,7 +42,7 @@
 }
 
 .dots-container {
-    margin: 0px 4px 0px 0px;
+    margin: 0 4px 0 0;
 }
 
 .dots-container:hover {
@@ -94,7 +94,7 @@
 }
 
 .welcome-car-modified:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
 }
 
 .header-lp4 {
