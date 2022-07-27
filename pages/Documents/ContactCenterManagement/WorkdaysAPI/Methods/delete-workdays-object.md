@@ -24,8 +24,7 @@ Delete an existing workday object.
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
 |accountId | LP site ID | String  |
-|workdayId| Account Config object’s unique id. To delete multiple workdays objects, use comma separator between workday id's {id1,id2,id3....}| String|
-
+|workdayId| Account Config object’s unique id. To delete multiple workdays objects, use comma separator between workday id's {id1,id2,id3…}| String|
 
 **Request Headers**
 
@@ -33,8 +32,6 @@ Delete an existing workday object.
 |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 |If-Match	| Contains workday object's current revision number|
-
-
 
 ### Response
 
@@ -59,8 +56,9 @@ Delete an existing workday object.
 
 **Response example**
 
-In case delete success - body is empty.<br>
-In case trying to delete an already deleted workdays:
+In case of delete success, the body is empty.
+
+In case of trying to delete an already deleted workdays:
 
 ```json
 {

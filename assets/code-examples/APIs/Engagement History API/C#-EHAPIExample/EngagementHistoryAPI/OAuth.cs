@@ -280,8 +280,6 @@ namespace EngagementHistoryAPIProject
             return result;
         }
 
-
-
         /// <summary>
         ///   This is an oauth-compliant Url Encoder.  The default .NET
         ///   encoder outputs the percent encoding in lower case.  While this
@@ -345,8 +343,6 @@ namespace EngagementHistoryAPIProject
 
             return sb.ToString().TrimEnd(' ').TrimEnd(',');
         }
-
-
 
         /// <summary>
         ///   Acquire a request token, from the given URI, using the given
@@ -622,8 +618,6 @@ namespace EngagementHistoryAPIProject
             //Tracing.Trace("Sigbase: '{0}'", result);
             return result;
         }
-
-
 
         private HashAlgorithm GetHash()
         {

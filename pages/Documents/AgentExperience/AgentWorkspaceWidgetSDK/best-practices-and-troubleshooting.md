@@ -10,13 +10,13 @@ indicator: both
 
 ### Prefer Using `bind` Over Using `get`
 
-When calling the `get` method, you receive the current state of the data for your widget. The current state might not contain the data you are trying to use and you'll receive an error. When using the `bind` method, your code is called with the data from the widget when it's available, and after every change. Don't forget the behavior for `bind` - each time you get the "newValue", not just the changes. Thus, the `bind` method is preferable, making sure your data stays fresh and comprehensive. The only exception is the chat lines - where each time the callback is called with the new lines only.
+When calling the `get` method, you receive the current state of the data for your widget. The current state might not contain the data you are trying to use and you'll receive an error. When using the `bind` method, your code is called with the data from the widget when it's available, and after every change. Don't forget the behavior for `bind` — each time you get the "newValue", not just the changes. Thus, the `bind` method is preferable, making sure your data stays fresh and comprehensive. The only exception is the chat lines — where each time the callback is called with the new lines only.
 
 If you only wish to receive the data once, you can call `unbind` after receiving the initial data.
 
 ### Be Specific
 
-When calling `bind` (or `get`), it's better to prefer specific child paths rather than generic parent paths (such as "SDE" or "authenticatedData"). The reason is that these parent objects are pseudo objects that we create by combining all the child elements - so if you call `bind` on "SDE", behind the scenes we're binding to every single "SDE" individually and that is less performant.
+When calling `bind` (or `get`), it's better to prefer specific child paths rather than generic parent paths (such as "SDE" or "authenticatedData"). The reason is that these parent objects are pseudo objects that we create by combining all the child elements — so if you call `bind` on "SDE", behind the scenes we're binding to every single "SDE" individually and that is less performant.
 
 ### Troubleshooting
 
@@ -34,7 +34,7 @@ When calling `bind` (or `get`), it's better to prefer specific child paths rathe
 | Possible Cause                                            | Resolution                                                                        |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------|
 | No call to `lpTag.agentSDK.init({});` in the widget code  | You should add it at the beginning of the widget. The SDK won’t work without it   |
-| The data doesn’t exist                                    | If it doesn’t appear in the visit info widget - the data doesn’t exist            |
+| The data doesn’t exist                                    | If it doesn’t appear in the visit info widget — the data doesn’t exist            |
 | Using “get” instead of “bind”                             | We always recommend using “bind” as “get” might run before the data is available  |
 | Error in custom widget code                               | Check console/log for errors and follow-up accordingly                            |
 

@@ -13,7 +13,7 @@ permalink: server-chat-api-methods-retrieve-exit-survey-structure.html
 indicator: chat
 ---
 
-Used to retrieve the Exit survey structure.
+Used to retrieve the exit survey structure.
 
 ### Request
 

@@ -17,7 +17,7 @@ Brands often have static content, such as frequently asked questions, that can b
 
 ### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 ### Step 8: Create the FAQ knowledge base
@@ -43,8 +43,8 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
     * **Intent name**: Return policy
     * **Training Phrases**:
         * What is your return policy
-        * How do i return something
-        * How do i make a return
+        * How do I return something
+        * How do I make a return
         * What is your policy for making returns
 
     After creating your new intent, finish the article by adding the following summary and clicking **Save**:

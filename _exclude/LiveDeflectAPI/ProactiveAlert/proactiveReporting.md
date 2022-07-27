@@ -9,16 +9,13 @@ indicator: both
 ---
 Outlined below is a sample reporting API call that is used to retrieve transactional proactive alert information pertaining to the LiveDeflect middleware solution.
 
-The proactiveReporting API endpoint should be passed a start and end timestamp in epoch milliseconds. Any proactive alert transactions for the Account ID provided between the start & end timestamp will be returned with their current status.
+The proactiveReporting API endpoint should be passed a start and end timestamp in epoch milliseconds. Any proactive alert transactions for the Account ID provided between the start and end timestamp will be returned with their current status.
 
 ### Request Endpoint
-
 
 | Method  |URL |
 | :-------- | :-----|
 | GET | https://[{domain}](/agent-domain-domain-api.html).ivrdeflect.liveperson.net/api/proactiveReporting  |
-
-
 
 ### Request Headers
 
@@ -44,7 +41,6 @@ The proactiveReporting API endpoint should be passed a start and end timestamp i
   </tr>
 </tbody>
 </table>
-
 
 ### Request Payload
 
@@ -77,7 +73,6 @@ The following information should be provided to LivePerson.
 </tbody>
 </table>
 
-
 ### Example Request Payload
 
 ```json
@@ -88,9 +83,8 @@ The following information should be provided to LivePerson.
 }
 ```
 
-
 ### Example Response Success
 
 The following information should be provided to LivePerson.
 
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK

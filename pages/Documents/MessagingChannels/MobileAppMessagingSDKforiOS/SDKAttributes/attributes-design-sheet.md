@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-she
 indicator: messaging
 ---
 
-
 <div class="designsheet">
 <table rules="all" class="bigtable">
   <thead>

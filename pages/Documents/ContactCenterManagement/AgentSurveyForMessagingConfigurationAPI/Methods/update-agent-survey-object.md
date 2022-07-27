@@ -77,7 +77,6 @@ For details on the entity structure, please see the [appendix](/agent-survey-for
 
 The `isDefault` field determines whether a agent survey object is the default for the entire account. Only one object can be set as the default for each account. 
 
-
 ### Response
 
 **Response Codes**

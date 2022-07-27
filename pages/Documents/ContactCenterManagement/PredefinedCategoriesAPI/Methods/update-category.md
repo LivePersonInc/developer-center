@@ -70,13 +70,12 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   <tr>
     <td>return</td>
     <td>determine the return policy </td>
-    <td>Default: effected - return only the effected category with the response body
+    <td>Default: effected — return only the effected category with the response body
 Also accepts:
-active - return all active (non-deleted) categories with the response body
-all - return all categories with the response body, including the deleted categories</td>
+active — return all active (non-deleted) categories with the response body
+all — return all categories with the response body, including the deleted categories</td>
   </tr>
 </table>
-
 
 ### Path Parameters
 
@@ -93,7 +92,6 @@ all - return all categories with the response body, including the deleted catego
 Type: String </td>
   </tr>
 </table>
-
 
 ### Request Headers
 
@@ -116,7 +114,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 Notes**:**
 
 1. Order attribute is mandatory. It is a sequential and consecutive value managed by the server.
@@ -138,7 +135,6 @@ Notes**:**
  }</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -188,7 +184,6 @@ Response body without return policy specified (default = EFFECTED)
  }]</td>
   </tr>
 </table>
-
 
 Response body with return policy ALL/ACTIVE
 

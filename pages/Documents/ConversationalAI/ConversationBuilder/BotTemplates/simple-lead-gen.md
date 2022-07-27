@@ -79,7 +79,7 @@ Modify the following values in Global Functions:
 ### Dialog templates
 This bot template contains a dialog template that allows you to easily copy over the primary data collection flow independently from the bot template.
 
-#### Lead Gen - Data Collection
+#### Lead Gen — Data Collection
 Walks through the process of applying for a home, auto, student or personal loan.
 
 Included dialogs:

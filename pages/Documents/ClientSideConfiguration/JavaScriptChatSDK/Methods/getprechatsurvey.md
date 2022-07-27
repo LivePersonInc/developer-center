@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-methods-getprechatsurvey.html
 indicator: chat
 ---
 
-Retrieves the Pre-chat survey according to the criteria passed.
+Retrieves the pre-chat survey according to the criteria passed.
 
 *Note: For more information on the Survey Object, see [Surveys](consumer-experience-javascript-chat-surveys.html)*.
 

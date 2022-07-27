@@ -12,13 +12,13 @@ indicator: messaging
 
 ### General limitations
 
-* Navigation action - when navigation action button is tapped on Facebook Messenger templates, Google Maps will be displayed in Facebook webview with the structured content coordinates **location** and **not the exact address**. Important to consider this when using the navigation action. (This is currently in planed to be resolved in the next versions of msg-gw-facebook).
+* Navigation action — when navigation action button is tapped on Facebook Messenger templates, Google Maps will be displayed in Facebook webview with the structured content coordinates **location** and **not the exact address**. Important to consider this when using the navigation action. (This is currently in planed to be resolved in the next versions of msg-gw-facebook).
 
-* Generic and Button templates - Facebook "Default action" will not be supported.
+* Generic and Button templates — Facebook "Default action" will not be supported.
 
 * Default message size is limited to 15,000K. Keep this in mind when building large templates.
 
-* Facebook allows various actions within buttons - share user location, share email, and phone number - this is not supported with LivePerson's templates.
+* Facebook allows various actions within buttons — share user location, share email, and phone number — this is not supported with LivePerson's templates.
 
 ### Error conditions
 

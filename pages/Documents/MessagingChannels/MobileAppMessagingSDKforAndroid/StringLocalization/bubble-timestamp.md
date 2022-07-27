@@ -16,8 +16,8 @@ indicator: messaging
 
 Bubbles contains only time in [SHORT](https://developer.android.com/reference/java/text/DateFormat.html#SHORT) time format, according to the locale (default or custom) and to device setting.
 
-- If device is set to 12 hours format : "3:30pm"
-- If device is set to 24 hours format : "15:30"
+- If device is set to 12 hours format: "3:30pm"
+- If device is set to 24 hours format: "15:30"
 - If you wish to configure this time format, override this resource ID:
 
 ```xml

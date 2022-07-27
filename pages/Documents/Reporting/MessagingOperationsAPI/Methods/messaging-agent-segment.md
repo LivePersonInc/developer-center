@@ -24,9 +24,9 @@ The following messages are omitted from the calculations:
 
   - Messages provided by the Controller Bot (system messages)
 
-  - In case of resumed conversations - the first message sent by the agent after resuming a conversation is not included in the averages
+  - In case of resumed conversations — the first message sent by the agent after resuming a conversation is not included in the averages
 
-  - Takeovers - the first message sent by the manager after taking over a conversation is not included in the averages
+  - Takeovers — the first message sent by the manager after taking over a conversation is not included in the averages
 
 ### Request
 
@@ -47,7 +47,7 @@ In this example request and response, we will look at retrieving messaging segme
 | groupIds | When provided, metrics in the response will be filtered by the requested agent's group Ids. When not provided, metrics in the response will be calculated for all groups. You can provide one or more groupIds. <br> Example: groupIds=4444,15333. To retrieve segments from all agent's groups active for the time period, use groupIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
 | interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
 | userType | When provided, metrics in the response will be filtered by the agent's user type (human only, bot only or all). "All" will select both user types. When provided, only segments with the relevant user type will be returned. <br> Example: <br> timeframe=60&userType=human <br> timeframe=60&userType=bot <br> timeframe=60&userType=all | string | optional |
-| source | When provided, metrics in the response will be filtered by the integration source - the source from which the conversation of this segment was started  (for example: Facebook, SMS, Web, App etc.) To retrieve segments from all sources, use source=all, or do not specify this parameter at all.  <br> Example: <br> timeframe=60&source=APP <br> timeframe=60&source=FACEBOOK <br> timeframe=60&source=all | string | optional |
+| source | When provided, metrics in the response will be filtered by the integration source — the source from which the conversation of this segment was started  (for example: Facebook, SMS, Web, App etc.) To retrieve segments from all sources, use source=all, or do not specify this parameter at all.  <br> Example: <br> timeframe=60&source=APP <br> timeframe=60&source=FACEBOOK <br> timeframe=60&source=all | string | optional |
 | metrics | When provided, only those metrics will be presented within the response. To include all metrics within the response, use metrics=all, or do not specify this parameter at all. totalAgentConversationSegments metric will always be displayed, no matter what is indicated in this parameter   <br> Example: <br> timeframe=60&metrics=avgAgentMessagesinAgentSegment <br> timeframe=60&metrics=avgTimetoFirstAgentMessageFromAgentAssignment,interactiveAgentSegments,agentSegmentsWithNonResponsiveConsumers <br> timeframe=60&metrics=all | string, comma separated | optional |
 
 ### Response
@@ -191,7 +191,6 @@ In this example request and response, we will look at retrieving messaging segme
 ```
 
 **Request using the parameters and values**: `agentIds=12,13` and `skillIds=333,444` with `interval=5`, `timeframe=60` and `metrics=avgTimeToResponseFromAgentAssignment`, `avgTimetoFirstAgentMessageFromAgentAssignment_AfterTransfer`, `avgTimetoFirstAgentMessageFromAgentAssignment_NewConversation`
-
 
 ```json
 {
@@ -378,24 +377,22 @@ In this example request and response, we will look at retrieving messaging segme
     }
   }
 }
-
 ```
 
 **Elements in the Response**
 
 *Note*: All metrics under the hierarchy of `metricsPerAgent` represent the average values for each agent under the interval/aggregation they appear in (or the average/aggregate value of the entire timeframe if no intervals are provided). Metrics under the `metricsTotal` entity will contain the summation of all aggregation/average of the same hierarchy level.
 
-
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |
 | metricsPerAgent | When agentIds are provided: An array of agents with their metrics. <br> When interval size is provided: The response will have the metricsPerAgent element under each interval, representing the data for the related interval. <br> There will also be a metricsPerAgent element at the end of the response, representing the data of the whole requested timeframe. <br>If there is no data for a specific agent, it will not be included in the array. <br> If there is no data for any of the agents, this member will have an empty element as value. | element |
-| agentsMetrics | contains an object of metricsPerAgent - representing agents' metrics without skills partition | element |
+| agentsMetrics | contains an object of metricsPerAgent — representing agents' metrics without skills partition | element |
 | metricsPerSkill | When skillIds are provided: An array of skills with their metrics. Under each skill there will be a metricsPerAgent object which has an array of agents with their metrics. The metrics will show values only of segments of the specified skill <br> When interval size is provided: The response will have the skillsMetrics element under each interval, representing the data for the related interval. <br> There will also be a skillsMetrics element at the end of the response, representing the data of the whole requested timeframe. <br>If there is no data for a specific skill, it will not be included in the array. <br> If there is no data for any of the skills, this member will have an empty element as value. | element |
 | metricsTotals | The total metrics for all requested agents.  <br> When interval is provided: Total metrics for all requested intervals.<br> If an agentId or agentIds are requested and there is no data for any of them, this element will still include all of the metrics with the value set to zero. <br> Note: Totals may not add up due to rounding differences. | element |
 | agent id | When agentIds values provided: The agent ID. | long |
 | skill id | When skillIds values provided: The skill ID. | long |
 | timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element |
-| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example : Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
+| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example: Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
 | totalAgentConversationSegments | The number of times conversations were assigned to an agent. A conversation may be assigned more than once to a given agent. | Long |
 | avgAgentMessagesinAgentSegment | Average number of responses provided by agent during an agent-segment. | Double |
 | avgAgentSegmentDuration | Average duration of an agent-segment. Measured from the time the conversation was assigned to the agent until it was closed or transferred. Attributed to the assigned agent and skill. If there is no data for a specific agent, the metric will represent value of -1. | Long |

@@ -2,6 +2,7 @@
 pagename: Introduction
 redirect_from:
   - bot-connectors-ibm-watson-assistant.html
+  - third-party-bots-ibm-watson-assistant.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -12,7 +13,7 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson Assistant Version 1 & 2**.
+The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson Assistant Version 1 and 2**.
 
 {: .notice}
 **IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).
@@ -143,9 +144,7 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
-<div class="notice">
-Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.
-</div>
+<div class="notice">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.</div>
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
 
@@ -265,9 +264,8 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
-<div class="notice">
-Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL
-</div>
+<div class="notice">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL.</div>
+
 Once you are done with the configuration and the connection test succeded, you can save your configuration by pressing on "Done".
 
 **Congratulations!** You have completed the configuration of the Watson Assistant bot.

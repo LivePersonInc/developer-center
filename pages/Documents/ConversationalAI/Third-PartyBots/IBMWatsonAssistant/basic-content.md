@@ -155,8 +155,7 @@ is the value that you set for an option.
 #### Pause/Delay
 
 {: .important}
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action.
-Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node
 will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.6
@@ -168,7 +167,7 @@ Figure 2.6 Response type of Pause is highlighted
 Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the
 conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a
 indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.7).
-This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+This will show a indication like "Agent is typing…" for the amount of time of delay that is set in "Duration".
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png" alt="">
 
@@ -233,8 +232,7 @@ two text responses defined that will come sequentially.
 
 #### Defining multiple responses with Watson Native content
 
-Users can define a response with various content types. The following example shows a similar case using **JSON Editor**.
-The response will First send the text. afterwards, it will make a pause for 5 seconds and then finally sends an image.
+Users can define a response with various content types. The following example shows a similar case using **JSON Editor**. The response will first send the text. Afterwards, it will make a pause for 5 seconds and then finally sends an image.
 
 ```json
 {
@@ -419,7 +417,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -478,18 +476,8 @@ Please note we only support **ONE ACTION** per response
 #### Transfer / Escalations
 
 <div class="notice">
-<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong>
-is the naming convention between each.
-
-All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation,
-the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.
-Further down the line, if any additional functionality is added that can be called by an action from the AI,
-it will follow the same naming convention.
-
-For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore,
-if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name
-with "BOT-" within Conversational Cloud.
-
+<p><strong>Naming conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.</p>
+<p>Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.</p>
 </div>
 
 #### Transfer To Skill

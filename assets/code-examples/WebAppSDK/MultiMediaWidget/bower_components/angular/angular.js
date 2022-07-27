@@ -963,8 +963,6 @@ var csp = function() {
   return (csp.isActive_ = active);
 };
 
-
-
 function concat(array1, array2, index) {
   return array1.concat(slice.call(array2, index));
 }
@@ -3684,8 +3682,6 @@ function annotate(fn, strictDi, name) {
  *
  * @returns {Array.<string>} The names of the services which the function requires.
  */
-
-
 
 
 /**
@@ -8196,7 +8192,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             $rootElement.length -= removeCount - 1;
 
             // If the replaced element is also the jQuery .context then replace it
-            // .context is a deprecated jQuery api, so we should set it only when jQuery set it
+            // .context is a deprecated jQuery API, so we should set it only when jQuery set it
             // http://api.jquery.com/context/
             if ($rootElement.context === firstElementToRemove) {
               $rootElement.context = newNode;
@@ -8310,8 +8306,6 @@ function directiveNormalize(name) {
  *          property to the original name.
  * @param {string} value Value to set the attribute to. The value can be an interpolated string.
  */
-
-
 
 /**
  * Closure compiler type information
@@ -12688,8 +12682,6 @@ function $ParseProvider() {
   var cacheDefault = createMap();
   var cacheExpensive = createMap();
 
-
-
   this.$get = ['$filter', '$sniffer', function($filter, $sniffer) {
     var $parseOptions = {
           csp: $sniffer.csp,
@@ -13843,8 +13835,6 @@ function $RootScopeProvider() {
            scope.name = 'adam';
            scope.$digest();
            expect(scope.counter).toEqual(2);
-
-
 
            // Using a function as a watchExpression
            var food;
@@ -20311,8 +20301,6 @@ var inputDirective = ['$browser', '$sniffer', '$filter', '$parse',
   };
 }];
 
-
-
 var CONSTANT_VALUE_REGEXP = /^(true|false|\d+)$/;
 /**
  * @ngdoc directive
@@ -23823,8 +23811,6 @@ var ngModelOptionsDirective = function() {
   };
 };
 
-
-
 // helper methods
 function addSetValidityMethod(context) {
   var ctrl = context.ctrl,
@@ -25722,8 +25708,6 @@ var selectDirective = ['$compile', '$parse', function($compile,   $parse) {
 
 
       ////////////////////////////
-
-
 
       function setupAsSingle(scope, selectElement, ngModelCtrl, selectCtrl) {
         ngModelCtrl.$render = function() {

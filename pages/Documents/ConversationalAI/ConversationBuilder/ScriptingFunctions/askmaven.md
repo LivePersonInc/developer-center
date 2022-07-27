@@ -19,7 +19,7 @@ Both methods return a String of the JSON response from the askMaven API. For a r
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `askMaven()` | None<br><br>By default, this method is invoked on the current conversation, i.e., it uses the current conversation ID. | JSON response (String) |
-| `askMaven(String conversationId, String consumerId, String groupId)` | *conversationId (String)* - Optional. The conversation ID of the current conversation.<br><br>*consumerId (String)* - Optional. The LivePerson consumer ID for the current conversation.<br><br>*groupId (String)* - Optional. The group ID associated with the session store variable call to set values. If no groupId is specified, then the conversationId will be used to associate with the session store variables. | JSON response (String) |
+| `askMaven(String conversationId, String consumerId, String groupId)` | *conversationId (String)* — Optional. The conversation ID of the current conversation.<br><br>*consumerId (String)* — Optional. The LivePerson consumer ID for the current conversation.<br><br>*groupId (String)* — Optional. The group ID associated with the session store variable call to set values. If no groupId is specified, then the conversationId will be used to associate with the session store variables. | JSON response (String) |
 
 #### Example
 

@@ -15,6 +15,4 @@ indicator: messaging
 <hr/>
 {% endfor %}
 
-
-
 <button onclick="location.href='mobile-app-messaging-sdk-for-ios-all-releases.html'" type="button">back to releases</button> <button onclick="window.scrollTo(0, 0);"> scroll to top </button>

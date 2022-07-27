@@ -24,7 +24,8 @@ KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-mana
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
-### Features and Permissions
+### Features and permissions
+
 Below is the list of features and permissions elements added in the manifest file to support this feature. 
 
 ```xml
@@ -52,14 +53,13 @@ Similarly for permissions, you can disable these permissions elements by adding:
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
 ```
 
-### How to enable:
+### How to enable
 
 ```xml
 <bool name="lp_enable_voice_video_call">true</bool>
 ```
 
-
-### Branding and Configurations
+### Branding and configurations
 
 #### lp_enable_voice_video_call
 Enables or disables the ability for an Agent to start a voice or video call.
@@ -92,7 +92,7 @@ Defines default background image for End button on Voice & Video Invite
 
 - **Type:** drawable
 - **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
-- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+- **Note:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
 
 #### lp_voice_video_join_call_button_image
 Defines default background image for Join button on Voice & Video Invite

@@ -65,7 +65,6 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 <img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
-
   
 
 #### Step 1. Set app permissions
@@ -179,6 +178,5 @@ By default, the value is set to **true**.
    Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
 
    <img src="/img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding-bottom: 20px;">
-
 
 You can find all the related configurations in the [resources ID table](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-sdk-attributes-branding-and-configurations.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.

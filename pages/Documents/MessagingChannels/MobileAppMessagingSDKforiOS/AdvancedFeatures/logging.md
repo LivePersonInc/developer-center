@@ -43,7 +43,7 @@ You can adjust the logging level with the following method:
  LPMessaging.instance.setLoggingLevel( level: LPLoggingLevel)
 ```
 
-**WARNING:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
+**Warning:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
 
 ## Persistence
 
@@ -85,7 +85,7 @@ The logs within the LivePerson Mobile SDK remain until new logs overwrite them (
 ```
 ## Log Data Masking
 
-The LivePerson Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "********" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs - everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the LivePerson Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
+The LivePerson Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "********" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs — everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the LivePerson Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
 
 This feature is **Enabled** by default in Release builds, but **Disabled** in Debug builds to preserve log detail.
 

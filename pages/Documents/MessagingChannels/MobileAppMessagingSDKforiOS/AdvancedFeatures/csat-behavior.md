@@ -34,7 +34,6 @@ You can find all the related configurations in the resources ID table, under Sur
    </div>
 </div>
 
-
 ---   
 
 The CSAT screen includes several content containers:
@@ -45,10 +44,8 @@ The CSAT screen includes several content containers:
 
 * [csatResolutionHidden (yes/no)](#csatresolutionhidden-yesno)
 
-
 ### Custom View Controller Mode requirements
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
-
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
@@ -56,9 +53,7 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
-
-
+**Note:** When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
 
 ### csatAgentViewHidden (avatar and agent name)
 
@@ -83,7 +78,7 @@ LPConfig.defaultConfiguration.csatAgentAvatarIconColor
 
 ### csatRatingButtonSelectedColor (stars)
 
-- Always visible - can’t configure its visibility.
+- Always visible — can’t configure its visibility.
 - Stars color is defined by:
 
 ```swift

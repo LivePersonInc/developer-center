@@ -79,7 +79,7 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
+| `sendImmediateReply(message)` | message — (string or array) — A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
 
 #### Example
 
@@ -94,11 +94,11 @@ botContext.sendImmediateReply('I think you said, ' + response);
 
 Private messages are messages that are visible to all conversation participants *except* the consumer. Use `sendPrivateMessage` to programmatically send a private message at any point in the conversation flow.
 
-Note that there’s also a Private Message interaction that’s available. For more on this, and for example scenarios where you might want to send a private message, see [here](conversation-builder-interactions-statements-to-agent.html#private-messages).
+Note that there’s also a Private Message interaction that’s available. For more on this, and for example scenarios where you might want to send a private message, see [here](conversation-builder-interactions-statements.html#private-message).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendPrivateMessage(message)` | message (String) - the message to send | None |
+| `sendPrivateMessage(message)` | message (String) — the message to send | None |
 
 #### Example
 

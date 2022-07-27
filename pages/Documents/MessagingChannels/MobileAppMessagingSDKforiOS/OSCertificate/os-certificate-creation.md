@@ -28,13 +28,13 @@ To manually generate a Certificate, you need a Certificate Signing Request (CSR)
 **Step 1**
 
 - In the Applications folder on your Mac, open the Utilities folder, and launch Keychain Access.
-- Within the Keychain Access dropdown menu, select **Keychain Access** > **Certificate Assistant** > **Request a Certificate from a Certificate Authority**.
+- Within the Keychain Access dropdown menu, select **Keychain Access** → **Certificate Assistant** → **Request a Certificate from a Certificate Authority**.
 
 **Step 2**
 
 - In the Certificate Information window, enter the following information:
 	- In the User Email Address field, enter your email address.
-	- In the Common Name field, create a name for your private key, for example,John Doe Dev Key.
+	- In the Common Name field, create a name for your private key, for example, John Doe Dev Key.
 	- The CA Email Address field should be left empty.
 	- In the Request is group, select the Saved to disk option.
 
@@ -97,14 +97,14 @@ cp Certificates.p12 key.p12
 openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 ```
 
-- You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step. RSA .pem key (enter a passphrase for the next step - I used “lpsn” as an example)
+- You will be prompted to enter a passphrase for this file. Enter any password and remember it for the next step. RSA .pem key (enter a passphrase for the next step — I used “lpsn” as an example)
 
 ```bash
 openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 
 ### Upload into Conversational Cloud
-- Certificate file should be : **dev-cert.pem**
-- Key file should be : **hostkey.pem**
+- Certificate file should be: **dev-cert.pem**
+- Key file should be: **hostkey.pem**
 
 ![uploadCertToLE](img/uploadCertToLE.png)

@@ -9,7 +9,7 @@ indicator:
 ---
 
 {: .important}
-At this time, Lex response cards & audio messages are not supported.
+At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 {: .important}
@@ -127,11 +127,11 @@ Figure 2.2 Lex Example Rich Content Payload
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_10.png" alt="">
 
-Figure 2.3 - Example in Lex console
+Figure 2.3 — Example in Lex console
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 2.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Lex console.
 
-**NOTE:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
+**Note:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
 ### Sending Quick Replies (Structured Content)
 
@@ -150,7 +150,7 @@ For detailed information on Quick Replies check out the documentation for the sp
       "replies": [
         {
           "type": "button",
-          "tooltip": "yes i do",
+          "tooltip": "yes I do",
           "title": "yes",
           "click": {
             "actions": [
@@ -214,7 +214,7 @@ This is achieved using "Custom Markup" in the Response section of a Lex intent.
 
 Multiple scenarios for transfer/escalations exist triggered by the transfer action object.
 
-1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
+1. Explicit request from visitor to transfer to an agent (e.g., action: transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
    Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
@@ -241,9 +241,9 @@ This option transfers the conversation to the next available agent using the pro
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_8.png" alt="">
 
-Figure 2.5 - Example in Lex console
+Figure 2.5 — Example in Lex console
 
-**NOTE**: Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
+**Note:** Additionally, if the Lex error handling "maximum number of retries" is reached the bot connector will also initiate a “default escalation” transfer action.
 
 <img class="fancyimage" style="width:550px" src="img/lex/image_9.png" alt="">
 
@@ -293,7 +293,7 @@ The action field needs to be set to **CLOSE_CONVERSATION**to instruct the connec
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png" alt="">
 
-Figure 2.8 - Example in Lex console
+Figure 2.8 — Example in Lex console
 
 To close the conversation without triggering the post conversation survey use following payload
 
@@ -334,4 +334,4 @@ The time values of these are defined in the Agent Workspace.
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_7.png" alt="">
 
-Figure 2.9 - Example in Lex console
+Figure 2.9 — Example in Lex console

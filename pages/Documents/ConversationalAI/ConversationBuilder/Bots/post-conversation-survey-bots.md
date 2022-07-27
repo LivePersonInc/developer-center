@@ -149,8 +149,8 @@ In the closed-ended question, every answer choice has two values:
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png" alt="">
 
-* **Text value** - This value is shown to the consumer as the answer choice.
-* **Reporting value** - When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
+* **Text value**: This value is shown to the consumer as the answer choice.
+* **Reporting value**: When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
 
 As you can see from the Acknowledgment checkbox in the image above, changing the **Reporting value** causes answer IDs to be regenerated. Therefore, if you change the **Reporting value**, you'll need to update accordingly any custom reports that are based on answer IDs.
 
@@ -200,7 +200,7 @@ Take care when changing the answer text; remember to update the conditions in th
 
 Reordering an answer choice has no impact on its text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
 
-To reorder an answer choice, select it so that it’s in focus, and click the < (Previous) or > (Next) button.
+To reorder an answer choice, select it so that it’s in focus, and click the “<” (Previous) or “>” (Next) button.
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png" alt="">
 
@@ -230,9 +230,9 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 1. Display Choices As
 2. Choices per Row
-3. Text Only Fallback > List Style for Choices
+3. Text Only Fallback → List Style for Choices
 
-1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
+1 — Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
 
 * **Quick Reply**: Select this to send the answer choices as quick replies in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
 * **Button**: Select this to send the answer choices as buttons in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
@@ -240,9 +240,9 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png" alt="">
 
-2 - The **Choices per Row** setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row in the Web Messaging channel. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows. **Important**: Used in Web messaging only. In all other channels, all choices are on 1 row.
+2 — The **Choices per Row** setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row in the Web Messaging channel. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows. **Important**: Used in Web messaging only. In all other channels, all choices are on 1 row.
 
-3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
+3 — When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format. For the Net Promoter Score (NPS) interaction in specific, we recommend the letter format. The numeric format can confuse consumers because the NPS scores themselves range from 0 to 10 (note they start with zero), but the numeric format starts numbering the options with 1. Since these don’t match, selecting a score can be confusing.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer. In the question, make sure to include information on how to respond (e.g., “type 1 for very bad, 5 for excellent, or something in-between.”).

@@ -8,7 +8,7 @@ permalink: third-party-bots-custom-endpoint-basic-content.html
 indicator:
 ---
 
-This section will describe The responses that are expected to be sent by the
+This section will describe the responses that are expected to be sent by the
 [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
 endpoint of the Custom Endpoint service. To ensure the validity of the response, brands can use our
 [Conversation Tester feature](third-party-bots-conversation-tester.html).
@@ -94,7 +94,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
             "replies": [
               {
                 "type": "button",
-                "tooltip": "yes i do",
+                "tooltip": "yes I do",
                 "title": "yes",
                 "click": {
                   "actions": [{ "type": "publishText", "text": "yep" }],
@@ -169,7 +169,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
     {
       "type": "TEXT",
       "data": {
-        "message": "I am sorry i couldn't help you. I will transfer you"
+        "message": "I am sorry I couldn't help you. I will transfer you"
       }
     },
     {
@@ -212,7 +212,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
     {
       "type": "TEXT",
       "data": {
-        "message": "I am sorry i couldn't help you. I will try to transfer you to our Agent X"
+        "message": "I am sorry I couldn't help you. I will try to transfer you to our Agent X"
       }
     },
     {

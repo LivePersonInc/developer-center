@@ -643,7 +643,7 @@
   AnalysisType: "Campaign Funnel"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "Average number of times a consumer was exposed to each engagement assigned to . specific entry point. example- consumer was exposed to engagement A and engagement B during the same session. This session will contribute +2 to the numerator and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement. Pre-aggregated by Entry Point Summarixing this metric acrss different entry points may not equal a totla number of distinct objects."
+  Description: "Average number of times a consumer was exposed to each engagement assigned to a specific entry point. Example: consumer was exposed to engagement A and engagement B during the same session. This session will contribute +2 to the numerator and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement. Pre-aggregated by Entry Point Summarixing this metric acrss different entry points may not equal a totla number of distinct objects."
   FormulaOptional: "EXPOSURES (ENTRY POINT) / EXPOSED (ENTRY POINT)"
   Metric: "AVG. EXPOSURES (ENTRY POINT)"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"
@@ -811,7 +811,7 @@
   AnalysisType: "Campaign Funnel"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "Number of sessions during which a consumer was offered an engagement assigned to the selected entry point, in any state( pre-aggregated by Entry Point) . Summarizing this metric across different entry points may not equal a total of distinct objects."
+  Description: "Number of sessions during which a consumer was offered an engagement assigned to the selected entry point, in any state (pre-aggregated by Entry Point). Summarizing this metric across different entry points may not equal a total of distinct objects."
   FormulaOptional: ~
   Metric: "EXPOSED (ENTRY POINT)"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"
@@ -891,7 +891,7 @@
   AnalysisType: "Campaign Funnel"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "Number of times each engagement was offered to a consumer. Distinct at the engagement level- if the engagement was displayed multiple times within one session, it will be counted as one exposure( pre aggregated by the Campaign . Summarizing this metric across different campaigns may not equal a total number of distinct objects)."
+  Description: "Number of times each engagement was offered to a consumer. Distinct at the engagement level- if the engagement was displayed multiple times within one session, it will be counted as one exposure( pre aggregated by the Campaign. Summarizing this metric across different campaigns may not equal a total number of distinct objects)."
   FormulaOptional: ~
   Metric: "EXPOSURES (ENTRY POINT)"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"
@@ -899,7 +899,7 @@
   AnalysisType: "Campaign Funnel"
   Channel: Messaging
   Dashboard: "Business Activity for Messaging"
-  Description: "Number of times each engagement was offered to a consumer. Distinct at the engagement level- if the engagement was displayed multiple times within one session, it will be counted as one exposure( pre aggregated by the Campaign . Summarizing this metric across different campaigns may not equal a total number of distinct objects)."
+  Description: "Number of times each engagement was offered to a consumer. Distinct at the engagement level- if the engagement was displayed multiple times within one session, it will be counted as one exposure( pre aggregated by the Campaign. Summarizing this metric across different campaigns may not equal a total number of distinct objects)."
   FormulaOptional: ~
   Metric: "EXPOSURES (LOB)"
   filteredBy: "Date, Initial Device, Goal Type, Group , Source Type"

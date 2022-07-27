@@ -61,8 +61,6 @@ var hasOwn = class2type.hasOwnProperty;
 
 var support = {};
 
-
-
 var
 	// Use the correct document accordingly with window argument (sandbox)
 	document = window.document,
@@ -2605,8 +2603,6 @@ return Sizzle;
 
 })( window );
 
-
-
 jQuery.find = Sizzle;
 jQuery.expr = Sizzle.selectors;
 jQuery.expr[":"] = jQuery.expr.pseudos;
@@ -2615,13 +2611,9 @@ jQuery.text = Sizzle.getText;
 jQuery.isXMLDoc = Sizzle.isXML;
 jQuery.contains = Sizzle.contains;
 
-
-
 var rneedsContext = jQuery.expr.match.needsContext;
 
 var rsingleTag = (/^<(\w+)\s*\/?>(?:<\/\1>|)$/);
-
-
 
 var risSimple = /^.[^:#\[\.,]*$/;
 
@@ -3021,8 +3013,6 @@ jQuery.each({
 	};
 });
 var rnotwhite = (/\S+/g);
-
-
 
 // String to Object options format cache
 var optionsCache = {};
@@ -3456,8 +3446,6 @@ jQuery.ready.promise = function( obj ) {
 jQuery.ready.promise();
 
 
-
-
 // Multifunctional method to get and set values of a collection
 // The value/s can optionally be executed if it's a function
 var access = jQuery.access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
@@ -3702,8 +3690,6 @@ Data.prototype = {
 var data_priv = new Data();
 
 var data_user = new Data();
-
-
 
 //	Implementation Summary
 //
@@ -4019,8 +4005,6 @@ var isHidden = function( elem, el ) {
 
 var rcheckableType = (/^(?:checkbox|radio)$/i);
 
-
-
 (function() {
 	var fragment = document.createDocumentFragment(),
 		div = fragment.appendChild( document.createElement( "div" ) ),
@@ -4046,8 +4030,6 @@ var rcheckableType = (/^(?:checkbox|radio)$/i);
 	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
 })();
 var strundefined = typeof undefined;
-
-
 
 support.focusinBubbles = "onfocusin" in window;
 
@@ -5543,8 +5525,6 @@ var getStyles = function( elem ) {
 		return window.getComputedStyle( elem, null );
 	};
 
-
-
 function curCSS( elem, name, computed ) {
 	var width, minWidth, maxWidth, ret,
 		style = elem.style;
@@ -6256,8 +6236,6 @@ jQuery.fx = Tween.prototype.init;
 
 // Back Compat <1.8 extension point
 jQuery.fx.step = {};
-
-
 
 
 var
@@ -7067,8 +7045,6 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 });
 
 
-
-
 var rfocusable = /^(?:input|select|textarea|button)$/i;
 
 jQuery.fn.extend({
@@ -7155,8 +7131,6 @@ jQuery.each([
 ], function() {
 	jQuery.propFix[ this.toLowerCase() ] = this;
 });
-
-
 
 
 var rclass = /[\t\r\n\f]/g;
@@ -7307,8 +7281,6 @@ jQuery.fn.extend({
 		return false;
 	}
 });
-
-
 
 
 var rreturn = /\r/g;
@@ -7466,8 +7438,6 @@ jQuery.each([ "radio", "checkbox" ], function() {
 });
 
 
-
-
 // Return jQuery for attributes-only inclusion
 
 
@@ -7508,8 +7478,6 @@ jQuery.fn.extend({
 var nonce = jQuery.now();
 
 var rquery = (/\?/);
-
-
 
 // Support: Android 2.3
 // Workaround failure to string-cast null input
@@ -8407,8 +8375,6 @@ jQuery.expr.filters.visible = function( elem ) {
 };
 
 
-
-
 var r20 = /%20/g,
 	rbracket = /\[\]$/,
 	rCRLF = /\r?\n/g,
@@ -8641,8 +8607,6 @@ jQuery.ajaxTransport(function( options ) {
 });
 
 
-
-
 // Install script dataType
 jQuery.ajaxSetup({
 	accepts: {
@@ -8700,8 +8664,6 @@ jQuery.ajaxTransport( "script", function( s ) {
 		};
 	}
 });
-
-
 
 
 var oldCallbacks = [],
@@ -8784,8 +8746,6 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		return "script";
 	}
 });
-
-
 
 
 // data: string of html
@@ -8883,8 +8843,6 @@ jQuery.fn.load = function( url, params, callback ) {
 };
 
 
-
-
 // Attach a bunch of functions for handling common AJAX events
 jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend" ], function( i, type ) {
 	jQuery.fn[ type ] = function( fn ) {
@@ -8893,15 +8851,11 @@ jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSucces
 });
 
 
-
-
 jQuery.expr.filters.animated = function( elem ) {
 	return jQuery.grep(jQuery.timers, function( fn ) {
 		return elem === fn.elem;
 	}).length;
 };
-
-
 
 
 var docElem = window.document.documentElement;
@@ -9147,8 +9101,6 @@ jQuery.fn.size = function() {
 jQuery.fn.andSelf = jQuery.fn.addBack;
 
 
-
-
 // Register as a named AMD module, since jQuery can be concatenated with other
 // files that may use define, but not via a proper concatenation script that
 // understands anonymous AMD modules. A named AMD is safest and most robust
@@ -9167,8 +9119,6 @@ if ( typeof define === "function" && define.amd ) {
 		return jQuery;
 	});
 }
-
-
 
 
 var
@@ -9196,8 +9146,6 @@ jQuery.noConflict = function( deep ) {
 if ( typeof noGlobal === strundefined ) {
 	window.jQuery = window.$ = jQuery;
 }
-
-
 
 
 return jQuery;

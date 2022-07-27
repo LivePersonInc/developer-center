@@ -24,12 +24,12 @@ indicator: messaging
 
 * **Title** has a max of 40 characters 
 * **Subtitle**:
-    * Without image and title - subtitle can be up to 160 chars
-    * With image and title - subtitle can be up to 60 chars
+    * Without image and title — subtitle can be up to 160 chars
+    * With image and title — subtitle can be up to 60 chars
 
 ### Styling limitations
 
- * Fonts, font colors or background color can’t be configured - default LINE font and colors will be used
+ * Fonts, font colors or background color can’t be configured — default LINE font and colors will be used
 
 ### Image limitations
   * Image URL has a limit of 1000 characters.

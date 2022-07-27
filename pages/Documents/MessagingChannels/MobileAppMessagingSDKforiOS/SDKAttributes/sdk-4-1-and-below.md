@@ -525,7 +525,7 @@ A regular expression string that lets you can control which part of the text to 
 The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.
 
 - **Type:** String
-- **Default value:** "" (Empty String) - no regex
+- **Default value:** "" (Empty String) — no regex
 
 #### realTimeMaskingRegex  
 
@@ -534,7 +534,7 @@ A regular expression string that lets you can control which part of the text to 
 The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  
 
 - **Type:** String
-- **Default value:** "" (Empty String) - no regex
+- **Default value:** "" (Empty String) — no regex
 
 ---
 
@@ -747,7 +747,7 @@ Define the Date Separator bottom padding.
 
 #### checkmarkVisibility
 
-Checkmark visibility of the following options (type CheckmarksState): SentOnly - Show checkmarks for only Sent messages. SentAndAccepted - Show checkmarks for only Sent and Accepted messages. All - Show checkmarks for Sent, Accepted and Read messages.
+Checkmark visibility of the following options (type CheckmarksState): SentOnly — Show checkmarks for only Sent messages. SentAndAccepted — Show checkmarks for only Sent and Accepted messages. All — Show checkmarks for Sent, Accepted and Read messages.
 
 - **Type:** CheckmarksState(Integer Enum)
 - **Default value:** CheckmarksState.All
@@ -1118,7 +1118,7 @@ Status bar style in conversation screen.
 
 #### enablePhotoSharing
 
-True - Enables Photo Sharing feature, False - Disables Photo Sharing.
+True — Enables Photo Sharing feature, False — Disables Photo Sharing.
 
 - **Type:** Bool
 - **Default value:**  false
@@ -2197,7 +2197,7 @@ When set to **true**, the TTR notifications show with off hours.  When the auto 
 
 #### ttrShowShiftBanner  
 
-Enable or disable shift toaster ('An agent will respond...’).
+Enable or disable shift toaster ('An agent will respond…’).
 
 - **Type:** Bool
 - **Default value:** true
@@ -2328,7 +2328,7 @@ Text color of the banner.
 
 #### ttrBannerOpacityAlpha  
 
-Opacity level of the banner background (values: 0.0 - 1.0).
+Opacity level of the banner background (values: 0.0 – 1.0).
 
 <div style="float: left; width: 35%;height: 51px;">
    <ul>
@@ -2967,7 +2967,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 
 #### remoteUserBubbleLongPressOverlayAlpha
 
-Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
+Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 – 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
@@ -3297,7 +3297,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 
 #### userBubbleLongPressOverlayAlpha
 
-Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
+Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 – 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
 
 <div style="float: left; width: 35%;height: 150px;">
    <ul>
@@ -3407,21 +3407,21 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 
 #### bubbleEmailLinksRegex
 
-Regular expression for email hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled
+Regular expression for email hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
 - **Type:** String?
 - **Default value:** nil
 
 #### bubbleUrlLinksRegex
 
-Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
+Regular expression for url hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
 - **Type:** String?  
 - **Default value:** nil
 
 #### bubblePhoneLinksRegex
 
-Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
+Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional. If not assigned, the default link detection will be enabled.
 
 - **Type:** String?  
 - **Default value:** nil

@@ -118,7 +118,7 @@ There are two date picker options:
     * Don’t forget to indicate the current day, so that users won’t need to access OS calendar to see what the day is today. The default configurations have the current date outlined.
 
 3. **Show Distinction with Unavailable Dates:**
-    * It’s better to restrict the date selection by making those inactive — by doing that you will help users avoid selecting unavailable dates and end up in zero-results dead ends. The default configurations have those dates in a disabled state.
+    * It’s better to restrict the date selection by making those inactive. By doing that you will help users avoid selecting unavailable dates and end up in zero-results dead ends. The default configurations have those dates in a disabled state.
 
 4. **Date Format and Language**
     * If a date format is provided in the JSON schema, that one will be used on Mobile SDK. If one is NOT provided, the date format will default to MMM dd, yyyy.
@@ -135,12 +135,12 @@ There are two date picker options:
         * max = min + 150yrs
 
 6. **Provide correct JSON data.**
-    * Verify correct data is being provided in structured content json.
+    * Verify correct data is being provided in structured content JSON.
 
 ### Limitations
 
 * **Error Message displayed when missing data in JSON**
-  * The user is presented with an error message: "Content failed to display", when required data is missing and/or invalid json is provided.
+  * The user is presented with an error message: "Content failed to display", when required data is missing and/or invalid JSON is provided.
 * **Calendar Selection**
   * Multiple date selection is not supported for single Date Picker.
   * Unavailable dates will always be before or after the provided date range.

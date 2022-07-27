@@ -26,14 +26,12 @@ Delete an existing special occasion.
 | Authentication | Contains token string to allow request authentication and authorization |
 |If-Match	| Contains special occasion's current revision number|
 
-
 **Path Parameters**
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String|
- specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma separator between special occasion id's {id1,id2,id3....}| String|
-
+ specialoccasionId | Account Config object’s unique id. For multiple deletion, use comma separator between special occasion id's {id1,id2,id3…}| String|
 
 ### Response
 
@@ -58,8 +56,9 @@ Delete an existing special occasion.
 
  **Response example**
 
-In case delete success - body is empty.<br>
-In case trying to delete an already deleted workdays:
+In case of delete success, the body is empty.
+
+In case of trying to delete an already deleted workdays:
 
 ```json
 {

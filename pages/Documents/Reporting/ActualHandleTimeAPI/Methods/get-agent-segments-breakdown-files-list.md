@@ -12,8 +12,7 @@ This method provides a list of file names that contain a breakdown of the Actual
 Using the file list you should be able to pull the content of the files using the [Get Agent Segments Breakdown File](actual-handle-time-api-methods-get-agent-segments-breakdown-file.html) 
 
 {: .notice}
-**Note:**
-This API is not available by default. To enable it please contact your account manager.
+**Note:** This API is not available by default. To enable it please contact your account manager.
 
 ### Request
 
@@ -27,9 +26,9 @@ This API is not available by default. To enable it please contact your account m
 |------------|---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------|---------|----------------------------------------------------------------------------------------------------------------|
 | source     | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string                                                            | Required  |         | Source name should be up to 20 characters. Must match the following regex: ^[a-zA-Z0-9_]+$ Example: LP_AgentUI |
 | from       | Query start date. This parameter indicates what is the earliest time to pull records from (earliest segment close time).        | [[RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional  | 24h     | No more than 1 month in the past                                                                               |
-| fromMillis | Query start date (same as above) in Epoch time format                                                                           | long - Epoch time in milliseconds                                 | Optional  |         | If provided, “from” element should not be provided                                                             |
+| fromMillis | Query start date (same as above) in Epoch time format                                                                           | long — Epoch time in milliseconds                                 | Optional  |         | If provided, “from” element should not be provided                                                             |
 | to         | Query end date. This parameter indicates what is the latest time to pull records (latest segment close time).                   | [[RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional  |         | Maximum 1 week timeframe in a single request                                                                   |
-| toMillis   | Query end date (same as above) in Epoch time format                                                                             | long - Epoch time in milliseconds                                 | Optional  |         | If provided, “to” element should not be provided                                                               |
+| toMillis   | Query end date (same as above) in Epoch time format                                                                             | long — Epoch time in milliseconds                                 | Optional  |         | If provided, “to” element should not be provided                                                               |
 
 ### Response
 
@@ -38,8 +37,8 @@ This API is not available by default. To enable it please contact your account m
 | timeframe     |                                       | object                   |       |
 | startTime     | The start of the requested time frame | ISO format. UTC timezone |       |
 | endTime       | The end of the requested time frame   | ISO format. UTC timezone |       |
-| startTimeL    | The start of the requested time frame | long - Epoch time        |       |
-| endTimeL      | The end of the requested time frame   | long - Epoch time        |       |
+| startTimeL    | The start of the requested time frame | long — Epoch time        |       |
+| endTimeL      | The end of the requested time frame   | long — Epoch time        |       |
 | files         | Container of the breakdown file names | container                |       |
 
 #### Response Example

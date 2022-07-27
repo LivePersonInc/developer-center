@@ -9,6 +9,7 @@
 - categoryname: API Guidelines
   image: api-guidelines
   documents:
+    - documentname: Create a new API Key
     - documentname: Accessing LivePerson APIs
     - documentname: Create OAuth 1.0 API keys
     - documentname: OAuth 2.0 Client Credentials
@@ -409,7 +410,7 @@
           subpages:
             - subpagename: Introduction
             - subpagename: Basic Content
-            - subpagename: Advanced Features        
+            - subpagename: Advanced Features
         - pagename: Microsoft Direct Line
           subpages:
             - subpagename: Introduction
@@ -421,10 +422,10 @@
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
-        - pagename: Medallia   
+        - pagename: Medallia
           subpages:
             - subpagename: Introduction
-        - pagename: Custom Endpoint   
+        - pagename: Custom Endpoint
           subpages:
             - subpagename: Introduction
             - subpagename: Service Implementation
@@ -966,7 +967,7 @@
         - pagename: Methods
           subpages:
             - subpagename: Get Net Handle Time by Skill
-        - pagename: Error Codes      
+        - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:

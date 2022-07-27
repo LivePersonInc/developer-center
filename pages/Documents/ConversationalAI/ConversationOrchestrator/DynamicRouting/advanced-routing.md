@@ -97,7 +97,7 @@ Update the template to create your rule.
 
 The time range template allows you to create policies that can route conversations by time and days of the week. The template takes inputs in the following format:
 
-`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2',...])`
+`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 
@@ -105,13 +105,13 @@ You can create time-based routing policies in the following ways:
 | --- | --- |
 | During work hours in Australia | isTimeRange('09:00:00', '18:00:00', 'Australia/Sydney') |
 | All day every Saturday and Sunday in New York | isTimeRange('00:00:00', '23:59:59', 'America/New_York', ['SAT', 'SUN']) |
-| After hours on weekdays in Los Angeles | not isTimeRange('09:00:00', '18:00:00', 'America/Los_Angeles’, ['MON','TUE','WED', 'THU','FRI']) <br> and <br> not isTimeRange('00:00:00', '23:59:59', 'America/Los_Angeles’, ['SAT','SUN']) |
+| After hours on weekdays in Los Angeles | not isTimeRange('09:00:00', '18:00:00', 'America/Los_Angeles', ['MON','TUE','WED', 'THU','FRI']) <br> and <br> not isTimeRange('00:00:00', '23:59:59', 'America/Los_Angeles', ['SAT','SUN']) |
 
 ##### Date range-based
 
 The date range template allows you to create policies that can route conversations by date and days of the week.The template takes inputs in the following format:
 
-`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2',...])`
+`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 

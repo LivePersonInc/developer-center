@@ -112,7 +112,7 @@ body h1 {
 }
 
 .post-content img {
-    margin: 12px 0px 3px 0px;
+    margin: 12px 0 3px;
     width: auto;
     height: auto;
     max-width: 60%;
@@ -121,7 +121,7 @@ body h1 {
 
 .post-content ol li,
 .post-content ul li {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .pageSummary {
@@ -303,7 +303,7 @@ ul#results-container a:hover {
 }
 
 div#toc ul li {
-    margin: 8px 0px 8px 22px;
+    margin: 8px 0 8px 22px;
     font-size: 90%;
     list-style: square;
 }
@@ -355,7 +355,7 @@ li.dropdownActive a {
 
 .navbar>.container .navbar-brand {
     float: left;
-    margin-left: 0px;
+    margin-left: 0;
     padding: 10px;
 }
 
@@ -445,13 +445,13 @@ a.accordion-collapsed {
 .nav ul {
     padding: 0;
     /*margin: 0 0 0 18px;*/
-    margin: 0px;
+    margin: 0;
 }
 
 .nav {
     /* padding: 4px;*/
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav>li {
@@ -573,7 +573,7 @@ a.accordion-collapsed {
 }
 
 ul#mysidebar {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .nav ul li ul li a {
@@ -811,7 +811,7 @@ a[data-toggle] {
 .summary {
     font-size: 120%;
     color: #808080;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0 20px 0;
     border-left: 5px solid #ED1951;
     padding-left: 10px;
 
@@ -866,7 +866,7 @@ li img {
 
 div#toc ul li ul li {
     list-style-type: none;
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0 0 0;
 }
 
 .tab-content {
@@ -912,7 +912,7 @@ div.tags {
 
 hr {
     background: #999;
-    margin: 15px 0px;
+    margin: 15px 0;
     width: 90%;
 }
 
@@ -948,7 +948,7 @@ a[data-toggle="tooltip"] {
 ol.series li {
     list-style-type: decimal;
     margin-left: 40px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .siteTagline {
@@ -958,7 +958,7 @@ ol.series li {
     font-family: monospace;
     text-align: center;
     line-height: 10px;
-    margin: 20px 0px;
+    margin: 20px 0;
     display: block;
 }
 
@@ -1033,20 +1033,20 @@ table code {
 }
 
 pre {
-    margin: 25px 0px;
+    margin: 25px 0;
 }
 
 #json-box-container pre {
-    margin: 0px;
+    margin: 0;
 }
 
 .video-js {
-    margin: 30px 0px;
+    margin: 30px 0;
 }
 
 video {
     display: block;
-    margin: 30px 0px;
+    margin: 30px 0;
     border: 1px solid #c0c0c0;
 }
 
@@ -1064,7 +1064,7 @@ dd {
 }
 
 .post-content img.inline {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 6px;
 }
 
@@ -1080,7 +1080,7 @@ h2 code,
 h3 code,
 h4 code {
     color: inherit;
-    padding: 0px;
+    padding: 0;
 }
 
 .alert {
@@ -1117,7 +1117,7 @@ span.soft {
     background-color: #f2f1f2;
     font-family: courier;
     font-size: 110%;
-    margin: 20px 0px;
+    margin: 20px 0;
     color: #444;
 }
 
@@ -1129,7 +1129,7 @@ span.soft {
 .formBoundary {
     border: 1px solid gray;
     padding: 15px;
-    margin: 15px 0px;
+    margin: 15px 0;
     background-color: whitesmoke;
 }
 
@@ -1173,7 +1173,7 @@ span.soft {
 
 
 .post-content img {
-    margin: 12px 0px 3px 0px;
+    margin: 12px 0 3px 0;
     width: auto;
     height: auto;
     max-width: 100%;
@@ -1187,7 +1187,7 @@ span.soft {
 
 
 .post-content img {
-    margin: 12px 0px 3px 0px;
+    margin: 12px 0 3px 0;
     width: auto;
     height: auto;
     max-width: 100%;
@@ -1200,7 +1200,7 @@ span.soft {
 
 .videoThumbs img {
     float: left;
-    margin: 15px 15px 15px 0px;
+    margin: 15px 15px 15px 0;
     box-shadow: 2px 2px 1px #f2f1f2;
     border: 1px solid #dedede;
 }
@@ -1269,7 +1269,7 @@ div.results {
 }
 
 .post-list p {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 time {
@@ -1277,7 +1277,7 @@ time {
 }
 
 p.post-meta time {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 span.label.label-default {
@@ -1390,7 +1390,7 @@ div.arrow {
 }
 
 .box1 {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 button.btn.btn-default.btn-lg.modalButton1 {
@@ -1409,7 +1409,7 @@ div.box.box1 {
 
 #userMap .complexArrow {
     font-size: 22px;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 
@@ -1451,8 +1451,8 @@ div.box.box1 {
 }
 
 h4.panel-title {
-    padding-top: 0px;
-    margin-top: 0px;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 html body div.container div.text li a.more-btn {
@@ -1463,8 +1463,6 @@ html body div.container div.text li a.more-btn {
 html body div.container div.text li a.more-btn.active {
     display: block;
 }
-
-
 
 /* Bots platform page */
 

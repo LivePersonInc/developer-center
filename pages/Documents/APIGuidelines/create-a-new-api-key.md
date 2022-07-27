@@ -1,20 +1,16 @@
 ---
 pagename: Create a new API Key
-redirect_from:
-    - guides-gettingstarted.html
 sitesection: Documents
 categoryname: "API Guidelines"
-permalink: retrieve-api-keys-create-a-new-api-key.html
-root-link: true
-level-order: 1
-order: 1
-indicator:
+permalink: create-a-new-api-key.html
+redirect_from:
+  - guides-gettingstarted.html
+  - retrieve-api-keys-create-a-new-api-key.html
 ---
-<br>
+
 Application keys are security tokens that you use to log into Conversational Cloud. The application key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
 
 If required by an API, create an Application Key and it will be installed automatically upon creation.
-
 
 {:.notice}
 You use the API key when you create bots.
@@ -25,7 +21,7 @@ You use the API key when you create bots.
 
 3. Open the API tab and click **Add new**.
 
-   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
+   **Tip:** Alternatively, you can click on an existing key to edit its privileges.
 
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 

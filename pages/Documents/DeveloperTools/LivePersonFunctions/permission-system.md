@@ -10,9 +10,9 @@ indicator: both
 
 There are three user permissions concerning Functions:
 
-* FaaS-Admin - allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You may create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
-* FaaS-Developer - allowed to manage `lambdas`, read allowlisted domains and read encrypted secrets.
-* FaaS-Invocation - provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
+* FaaS-Admin: allowed to read `lambdas`, manage the allowlist for external domains and manage secrets. By default, this permission is set to 'ON' for all admins on the account. It is, however, possible to limit your admin's access as well. You may create a separate permission group for developers you wish to have part of the admin profile permissions and assign them with the necessary permissions by creating a custom profile.
+* FaaS-Developer: allowed to manage `lambdas`, read allowlisted domains and read encrypted secrets.
+* FaaS-Invocation: provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
 
 ### Permissions by role
 {: .important}
@@ -26,40 +26,40 @@ Agent Manager roles will have all Function permission disabled by default, and A
     <th>Permission name </th>
     <th  style="text-align: center; vertical-align: middle;">Agent</th>
     <th  style="text-align: center; vertical-align: middle;">Agent Manager</th>
-    <th  style="text-align: center; vertical-align: middle;" >Campaign Manager</th>
+    <th  style="text-align: center; vertical-align: middle;">Campaign Manager</th>
     <th  style="text-align: center; vertical-align: middle;">Admin</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>FaaS-Admin</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
     <tr>
     <td>FaaS-Developer</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
     <tr>
     <td>FaaS-Invocation</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >🔒</td>
-    <td style="text-align: center; vertical-align: middle;" >❌</td>
-    <td style="text-align: center; vertical-align: middle;" >✅</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">🔒</td>
+    <td style="text-align: center; vertical-align: middle;">❌</td>
+    <td style="text-align: center; vertical-align: middle;">✅</td>
   </tr>
   </tbody>
 </table>
 
 If users who do not have an Administrator based role require any Functions-related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account.
 #### Table Legend
-* ❌ : Permission is Not available for the role.
-* 🔒 : Permission is disabled by default but can be enabled.
-* ✅ : Permission is available and enabled.
+* ❌: Permission is Not available for the role.
+* 🔒: Permission is disabled by default but can be enabled.
+* ✅: Permission is available and enabled.
 
 ### Permissions details
 

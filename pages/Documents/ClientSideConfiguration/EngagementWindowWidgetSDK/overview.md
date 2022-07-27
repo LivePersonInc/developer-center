@@ -30,9 +30,7 @@ Team to configure the widget over the "LP Unified Window" taglet.
 
 In the near future, Widget configuration will be available directly via Conversational Cloud.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
-
-
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Use Cases
 
