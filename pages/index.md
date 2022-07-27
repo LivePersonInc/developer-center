@@ -1,5 +1,5 @@
 ---
-pagename: Conversational AI solutions, together
+pagename: Conversational AI solutions
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
