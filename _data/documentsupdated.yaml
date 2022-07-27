@@ -9,7 +9,6 @@
 - categoryname: API Guidelines
   image: api-guidelines
   documents:
-    - documentname: Create a new API Key
     - documentname: Accessing LivePerson APIs
     - documentname: Create OAuth 1.0 API keys
     - documentname: OAuth 2.0 Client Credentials

@@ -5,9 +5,12 @@ categoryname: "API Guidelines"
 permalink: create-oauth-1-0-api-keys.html
 indicator: both
 redirect_from:
-    - essential-resources-create-api-keys.html
-    - common-resources-create-api-keys.html
-    - api-guidelines-create-api-keys.html
+  - essential-resources-create-api-keys.html
+  - common-resources-create-api-keys.html
+  - api-guidelines-create-api-keys.html
+  - guides-gettingstarted.html
+  - retrieve-api-keys-create-a-new-api-key.html
+  - create-a-new-api-key.html
 ---
 
 ### Create an OAuth 1.0 API key
@@ -67,7 +70,3 @@ The API key best practices correspond to general oAuth1 best practices. For exam
 | **Header Name** | **Authorization** |
 | --- | --- |
 | Header Value | OAuth<br>oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br>oauth_version="1.0",<br>oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br>oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br>oauth_signature_method="HMAC-SHA1", <br>oauth_token="61adad31204a4e6fab68d560f1ffb594", <br>oauth_timestamp="1261039670" <br><br>**Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
-
-<p><br></p>
----
-<p></p>
