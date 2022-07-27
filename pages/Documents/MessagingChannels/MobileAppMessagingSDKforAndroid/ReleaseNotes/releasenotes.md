@@ -23,6 +23,7 @@ Android Mobile Messaging SDK version 5.11.0 release provides improved accessibil
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.11.0 uses:
+
 - Minimum API version 21
 - Compile API version 31
 - Target API version 31
@@ -61,6 +62,7 @@ Android Mobile Messaging SDK version 5.10.0 release includes step-up authenticat
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.10.0 uses:
+
 - Minimum API version 21
 - Compile API version 31
 - Target API version 31
@@ -118,6 +120,7 @@ Android Mobile Messaging SDK version 5.9.0 release includes performance improvem
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.9.0 uses:
+
 - Minimum API version 21
 - Compile API version 31
 - Target API version 31
@@ -152,6 +155,7 @@ Android Mobile Messaging SDK version 5.8.0 release includes Schedule Slot List s
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.8.0 uses:
+
 - Minimum API version 21
 - Compile API version 31
 - Target API version 31
@@ -203,6 +207,7 @@ Android Mobile Messaging SDK version 5.7.1 release includes Rich Content Push No
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.7.1 uses:
+
 - Minimum API version 21
 - Compile API version 30
 - Target API version 30
@@ -235,6 +240,7 @@ Android Mobile Messaging SDK version 5.7.0 release includes Date Picker support 
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.7.0 uses:
+
 - Minimum API version 21
 - Compile API version 30
 - Target API version 30
@@ -528,6 +534,7 @@ Android Mobile Messaging SDK version 5.5.0 release focuses on improvements and b
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 5.5.0 uses:
+
 - Minimum API version 21
 - Compile API version 30
 - Target API version 30
@@ -667,6 +674,7 @@ Android Mobile Messaging SDK version 5.3.0 release provides a new feature to dis
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 5.3.0 uses:
+
 - Minimum API version 19
 - Compile API version 29
 - Target API version 29
@@ -751,6 +759,7 @@ Android Mobile Messaging SDK version 5.2.0 release offers a few new features for
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 5.2.0 uses:
+
 - Minimum API version 19
 - Compile API version 29
 - Target API version 29
@@ -865,6 +874,7 @@ Android Mobile Messaging SDK version 5.1.1 release fixes a bug that might lead t
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 5.1.1 uses:
+
 - Minimum API version 19
 - Compile API version 29
 - Target API version 29
@@ -881,6 +891,7 @@ The Android Mobile Messaging SDK version 5.1.0 release offers a few powerful fea
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 5.1.0 uses:
+
 - Minimum API version 19
 - Compile API version 29
 - Target API version 29
@@ -940,6 +951,7 @@ Android Mobile Messaging SDK version 5.0.0 release provides Android Q support an
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 5.0.0 uses:
+
 - Minimum API version 19
 - Compile API version 29
 - Target API version 29
@@ -1023,6 +1035,7 @@ Android Mobile Messaging SDK version 4.9.1 release includes Rich Content Push No
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 4.9.1 uses:
+
 - Minimum API version 21
 - Compile API version 28
 - Target API version 28
@@ -1056,6 +1069,7 @@ Android Mobile Messaging SDK version 4.9.0 release includes Date Picker support 
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 4.9.0 uses:
+
 - Minimum API version 21
 - Compile API version 28
 - Target API version 28
@@ -1100,6 +1114,7 @@ Android Mobile Messaging SDK version 4.8.1 release includes Voice & Video suppor
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 4.8.1 uses:
+
 - Minimum API version 21
 - Compile API version 28
 - Target API version 28
@@ -1399,6 +1414,7 @@ Android Mobile Messaging SDK version 4.6.1 release includes the change of retry 
 ## Environment requirements
 
 The Android Mobile Messaging SDK version 4.6.1 uses:
+
 - Minimum API version 21
 - Compile API version 28
 - Target API version 28
@@ -1408,7 +1424,7 @@ The Android Mobile Messaging SDK version 4.6.1 uses:
 
 # New callback
 
-## Added following error events and error callback:
+## Added following error events and error callback
 > **Intent Action:** 
 >
 > ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
@@ -1609,6 +1625,7 @@ MobileSDK version 4.4.1 contains a bug fix for a history-loading issue on Unauth
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 4.4.1 uses:
+
 - Minimum API version 19
 - Compile API version 28
 - Target API version 28
@@ -1627,6 +1644,7 @@ Android Mobile Messaging SDK version 4.4.0 release offers a few new features for
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 4.4.0 uses:
+
 - Minimum API version 19
 - Compile API version 28
 - Target API version 28
@@ -1760,6 +1778,7 @@ Android Mobile Messaging SDK version 4.3.1 release focuses on bug fixes around f
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 4.3.1 uses:
+
 - Minimum API version 19
 - Compile API version 28
 - Target API version 28
@@ -1776,6 +1795,7 @@ Android Mobile Messaging SDK version 4.3.0 release offers a few powerful feature
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 4.3.0 uses:
+
 - Minimum API version 19
 - Compile API version 28
 - Target API version 28
@@ -1835,6 +1855,7 @@ Android Mobile Messaging SDK version 4.2.1 release focuses on internal bug fixes
 ### Environment requirements
 
 The Android Mobile Messaging SDK version 4.2.1 uses:
+
 - Minimum API version 19
 - Compile API version 28
 - Target API version 28
