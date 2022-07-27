@@ -47,7 +47,7 @@ When the API receives the `identities` array, it matches the keys to the consume
 
 ### Sample Flow:
 
-1. Your environment (app/connector) sends a request to the [Engagement Resource](rt-interactions-monitoring-methods-engagement.html){:target="blank"}. To the request you can add the following information regarding the consumer's activity within your brand's environment -  `consumerId` or `identities`, entry points, engagement attributes, client properties, et cetera.
+1. Your environment (app/connector) sends a request to the [Engagement Resource](rt-interactions-monitoring-methods-engagement.html){:target="blank"}. To the request you can add the following information regarding the consumer's activity within your brand's environment — `consumerId` or `identities`, entry points, engagement attributes, client properties, et cetera.
 
 2. The monitoring system creates a monitor session for the requesting device and replies with an eligible engagement, including the `visitorId` and a `sessionId` in the response.
 

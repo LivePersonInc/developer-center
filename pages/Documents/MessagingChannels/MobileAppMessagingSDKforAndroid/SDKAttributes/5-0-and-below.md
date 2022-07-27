@@ -1632,7 +1632,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 

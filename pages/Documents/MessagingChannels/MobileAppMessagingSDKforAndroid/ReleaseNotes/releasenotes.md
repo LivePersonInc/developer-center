@@ -557,7 +557,7 @@ The Android Mobile Messaging SDK version 5.4.0 uses:
 An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
 
 ### How to enable
-It’s enabled out of the box -  there’s nothing the brands need to do.
+It’s enabled out of the box — there’s nothing the brands need to do.
 
 Note: Auto logout works only for authenticated users. 
 
@@ -1379,7 +1379,7 @@ The Android Mobile Messaging SDK version 4.6.0 uses:
 An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
 
 ### How to enable
-It’s enabled out of the box -  there’s nothing the brands need to do.
+It’s enabled out of the box — there’s nothing the brands need to do.
 
 Note: Auto logout works only for authenticated users. 
 
@@ -2235,7 +2235,7 @@ When a consumer leaves the conversation screen, the call back `onConversationFra
 }
 ```
 
-# Android Messaging SDK -  Version 3.3.0
+# Android Messaging SDK — Version 3.3.0
 
 Android Mobile App SDK v3.3.0 contains support for the Post Conversation Survey feature, update for Google Map’s API key meta tag and addresses several bugs reported by customers.
 
@@ -2303,7 +2303,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 * In some cases, the assigned agent details are not presented in the CSAT form.
 
-# Android Messaging SDK -  Version 3.2.2
+# Android Messaging SDK — Version 3.2.2
 
 **Version 3.2.2 release: September 9th 2018**
 
@@ -2338,7 +2338,7 @@ The following issues are still being investigated and have been prioritized for 
 
 4. When an expired authentication token is used to register for push notifications, the registration does not complete and OnTokenExpire does not trigger Customers should notify support if they are seeing any increase of frequency or impact from any of the following issues.
 
-# Android Messaging SDK -  Version 3.2
+# Android Messaging SDK — Version 3.2
 
 **Version 3.2 release: July 1st 2018**
 
@@ -2896,7 +2896,7 @@ MonitoringParams monitoringParams, EngagementCallback callback)</td>
 </tbody>
 </table>
 
-# Android Messaging SDK -  Version 3.1
+# Android Messaging SDK — Version 3.1
 
 These are the main feature releases available in the **Mobile App Messaging SDK version 3.1 for Android**.
 
@@ -3447,7 +3447,7 @@ New parameters may control text, padding of conversation UI elements and more.
 
 **SDK configuration**: This features requires items to be configured in the SDK.
 
-# Android Messaging SDK -  Version 2.9
+# Android Messaging SDK — Version 2.9
 
 These are the main feature releases available in the Mobile App Messaging SDK version 2.9 for Android.
 
@@ -3565,7 +3565,7 @@ New parameters may control text, padding of conversation UI elements and more.
  </tbody>
 </table>
 
-# Android Messaging SDK -  version 2.8
+# Android Messaging SDK — version 2.8
 
 These are the main feature releases available in the Mobile App Messaging SDK version 2.8 for Android.
 
@@ -3747,7 +3747,7 @@ appId, callback);
 
 To use this API, the SDK must be after initialization.
 
-# Android Messaging SDK -  version 2.5
+# Android Messaging SDK — version 2.5
 
 These are the main feature releases available in the Mobile App Messaging SDK version 2.5 for Android.
 
@@ -3857,7 +3857,7 @@ The following properties of the secure form bubble on the agent side can now be 
 | string name="custom_font_name_conversation_feed" | The font name for all elements in the conversation feed. | Empty (use the device font) |
 | string name="custom_font_name_non_conversation_feed" | The font name for all elements that are not in the conversation feed. | Empty (use the device font) |
 
-# Android Messaging SDK -  version 2.3
+# Android Messaging SDK — version 2.3
 These are the main feature releases available in the **Mobile App Messaging SDK version 2.3 for Android**.
 
 [Version Specific System Requirements Document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements+v5.6.pdf)
@@ -3901,26 +3901,26 @@ The following devices are now also supported and/or certified to host our Mobile
 |                        | Operating system |                    |               |
 |------------------------|------------------|--------------------|---------------|
 | **Device**                 | **v5.x (Lollipop)**   | **v6.X (Marshmallow)** | **v7.X (Nougat)** |
-| Samsung Galaxy S4      | Supported        | -                  | -             |
-| Samsung Galaxy A5      | Supported        | Certified          | -             |
-| Samsung Galaxy J3      | Certified        | -                  | -             |
-| Samsung Galaxy J5      | -                | Certified          | -             |
-| Samsung Galaxy S6      | -                | -                  | Certified     |
-| Samsung Galaxy S6 edge | -                | -                  | Certified     |
-| Samsung Galaxy S7      | -                | -                  | Certified     |
-| Samsung Galaxy S7 edge | -                | -                  | Certified     |
-| LG V20                 | -                | -                  | Supported     |
-| Sony Xperia X          | -                | Certified          | Supported     |
+| Samsung Galaxy S4      | Supported        | —                  | —             |
+| Samsung Galaxy A5      | Supported        | Certified          | —             |
+| Samsung Galaxy J3      | Certified        | —                  | —             |
+| Samsung Galaxy J5      | —                | Certified          | —             |
+| Samsung Galaxy S6      | —                | —                  | Certified     |
+| Samsung Galaxy S6 edge | —                | —                  | Certified     |
+| Samsung Galaxy S7      | —                | —                  | Certified     |
+| Samsung Galaxy S7 edge | —                | —                  | Certified     |
+| LG V20                 | —                | —                  | Supported     |
+| Sony Xperia X          | —                | Certified          | Supported     |
 
 **Tablet**
 
 |              | Operating System |                 |                    |               |
 |--------------|------------------|-----------------|--------------------|---------------|
 | Device       | V4.4X (KitKat)   | v5.X (Lollipop) | v6.X (Marshmallow) | v7.X (Nougat) |
-| Galaxy Tab A | -                | Supported       | Supported          | -             |
-| Galaxy Tab 3 | Supported        | -               | -                  | -             |
-| Nexus        | Supported        | Supported       | Supported          | -             |
-| HTC          | -                | -               | Supported          | Supported     |
+| Galaxy Tab A | —                | Supported       | Supported          | —             |
+| Galaxy Tab 3 | Supported        | —               | —                  | —             |
+| Nexus        | Supported        | Supported       | Supported          | —             |
+| HTC          | —                | —               | Supported          | Supported     |
 
 #### New APIS
 

@@ -1791,7 +1791,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 Enable or disable the scroll down indicator (shown or invisible).
