@@ -799,7 +799,7 @@ The following table describes the information that is available in the session i
 | :------ | :--------- | :-------- |
 | sessionStartTime | Visitor session’s start time. | long |
 | userAgent | User agent. | string |
-| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS,LINUX, IOS, ANDROID. | string |
+| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS, LINUX, IOS, ANDROID. | string |
 | deviceFamily | Device type, can be one of the following: NA, DESKTOP, TABLET, MOBILE. | string |
 | siteControlGroup | Site control group, can be one of the following: NA, CONTROL, TEST. | string |
 | search Engine | Search engine. Exist only if the visitor started a session after searching a known search engine. It is extracted from the referrer URL. | string |
