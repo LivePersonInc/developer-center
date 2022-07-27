@@ -315,7 +315,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{:.important}
+{: .important}
 Voice & Video capabilities are available only on Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
@@ -780,7 +780,7 @@ The Android Mobile Messaging SDK version 5.2.0 uses:
 - This new API is available from SDK version 5.2.0
 - The SDK needs to be initialized before calling this API.
 
-{:.important}
+{: .important}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 ```java
@@ -1144,7 +1144,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{:.important}
+{: .important}
 Voice & Video capabilities are available only on Android SDK 4.8.1 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
@@ -1665,7 +1665,7 @@ The Android Mobile Messaging SDK version 4.4.0 uses:
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
-{:.important}
+{: .important}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 ```java
@@ -1980,7 +1980,7 @@ Agents can share:
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. They can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
-   {:.important}
+   {: .important}
    The Android SDK supports opening any file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
 
 When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.

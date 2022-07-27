@@ -17,7 +17,7 @@ indicator: messaging
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
-{:.important}
+{: .important}
 Make sure the conversation history is in-sync with server before call this API.
 
 ```java
@@ -91,7 +91,7 @@ There are 2 authenticated connection methods:
 
    **Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
-   {:.important}
+   {: .important}
    **Optional:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)`.
 
 2. jwt — new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
@@ -163,7 +163,7 @@ This API method uses a threshold mechanism of 10 seconds. If this API is called 
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
-{:.important}
+{: .important}
 This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
 
 ```java
@@ -178,7 +178,7 @@ public static void getUnreadMessagesCount(String appId, LPAuthenticationParams a
 
 ### getNumUnreadMessages
 
-{:.important}
+{: .important}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -190,7 +190,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{:.important}
+{: .important}
 To get count of unread messages using this function, all devices must be registered to receive push notifications using the [registerLPPusher](android-registerlppusher.html) function.
 
 ```java
@@ -204,7 +204,7 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 
 ### getUnreadMessagesCount
 
-{:.important}
+{: .important}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -216,7 +216,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{:.important}
+{: .important}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 This API will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
@@ -602,7 +602,7 @@ There are 2 authenticated connection methods:
 
 * **Signup**
 
-{:.important}
+{: .important}
 Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 **ConversationViewParams:**
