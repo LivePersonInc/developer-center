@@ -32,7 +32,7 @@
 }
 
 .hyperlink {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -50,7 +50,7 @@
 }
 
 .getting-started-paragraph {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -69,7 +69,7 @@
 }
 
 .getting-started-h5 {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     width: 640px;
@@ -98,7 +98,7 @@
 }
 
 .header-lp4 {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     flex: 0 50%;
     margin-right: 10%;
@@ -228,7 +228,7 @@
 }
 
 .concierge-bot-header {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

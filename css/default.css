@@ -129,7 +129,7 @@ svg.sitelogo {
 
 .devLabel {
     flex-shrink: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -410,7 +410,7 @@ code pre {
     background-color: var(--input-search-background) !important;
     width: 100%;
     min-width: 250px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1245,7 +1245,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 .jumpToAnchor {
     text-align: right;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     margin-bottom: 12px;
     color: var(--link-color);
     font-style: normal;
@@ -1614,7 +1614,7 @@ a:focus-within:not(.anchorjs-link) {
 
 .toggle-title-dark,
 .toggle-title-light {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

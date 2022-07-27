@@ -180,7 +180,7 @@ pre code {
 }
 
 .post-content table tr td {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -621,7 +621,7 @@ div.sidebarTitle-holder {
     color: var(--breadcrumbs-text);
     background: var(--breadcrumbs-background);
     border-radius: 16px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
