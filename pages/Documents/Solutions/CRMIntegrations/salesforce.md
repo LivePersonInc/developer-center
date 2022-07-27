@@ -480,7 +480,7 @@ Each parameter/sub-section is like a property of the upper section, to which you
 
 These are just a few examples meant to demonstrate how to write these “addresses”, but rest assured, all of these, along with more than 55 (!) other Conversational Cloud parameters are available to you on the predefined list.
 
-1. For a the **Chat Start Time** value:
+1. For a **Chat Start Time** value:
 
 * **LivePerson SDK Field:** `chatInfo.chatStartTime`
 * **LivePerson API Field:** `info.startTime`
