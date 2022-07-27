@@ -20,7 +20,7 @@ indicator: messaging
 
 Android Mobile Messaging SDK version 5.11.0 release provides improved accessibility support, bug fixes and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.11.0 uses:
 - Minimum API version 21
@@ -58,7 +58,7 @@ Improvements on the TalkBack accessible experience for vision-impaired users.
 
 Android Mobile Messaging SDK version 5.10.0 release includes step-up authentication feature and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.10.0 uses:
 - Minimum API version 21
@@ -115,7 +115,7 @@ Show or hide the "Mark as resolved" context menu option.
 
 Android Mobile Messaging SDK version 5.9.0 release includes performance improvements and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.9.0 uses:
 - Minimum API version 21
@@ -149,7 +149,7 @@ The Android Mobile Messaging SDK version 5.9.0 uses:
 
 Android Mobile Messaging SDK version 5.8.0 release includes Schedule Slot List support, Dark Mode for Date Picker, Android 12 support and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.8.0 uses:
 - Minimum API version 21
@@ -200,7 +200,7 @@ ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2
 
 Android Mobile Messaging SDK version 5.7.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.7.1 uses:
 - Minimum API version 21
@@ -232,7 +232,7 @@ Deep links shared via Structured Content for InApp navigation are failing due to
 
 Android Mobile Messaging SDK version 5.7.0 release includes Date Picker support and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.7.0 uses:
 - Minimum API version 21
@@ -275,7 +275,7 @@ The workaround for this issue is to use [structured_content_link_as_callback](mo
 
 Android Mobile Messaging SDK version 5.6.0 release includes Voice & Video support and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.6.0 uses:
 
@@ -483,7 +483,7 @@ Defines background color for Voice & Video Bubble
 
 Android Mobile Messaging SDK version 5.5.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.5.1 uses:
 
@@ -525,7 +525,7 @@ public static void registerLPPusher(String brandId, String appId, String deviceT
 
 Android Mobile Messaging SDK version 5.5.0 release focuses on improvements and bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.5.0 uses:
 - Minimum API version 21
@@ -574,7 +574,7 @@ Limitation: there will be distortion of background image when keyboard appears.
 
 Android Mobile Messaging SDK version 5.4.0 release includes  support  of auto logout with few bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 5.4.0 uses:
 
@@ -664,7 +664,7 @@ enum class LpError {
 
 Android Mobile Messaging SDK version 5.3.0 release provides a new feature to display hyperlink with bug fixes.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 5.3.0 uses:
 - Minimum API version 19
@@ -748,7 +748,7 @@ To take advantage of the new encryption process on existing installations, each 
 
 Android Mobile Messaging SDK version 5.2.0 release offers a few new features for devs and comes with a sizable side of bugfixes.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 5.2.0 uses:
 - Minimum API version 19
@@ -862,7 +862,7 @@ Enable or disable structured content button border.
 
 Android Mobile Messaging SDK version 5.1.1 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 5.1.1 uses:
 - Minimum API version 19
@@ -878,7 +878,7 @@ The Android Mobile Messaging SDK version 5.1.1 uses:
 
 The Android Mobile Messaging SDK version 5.1.0 release offers a few powerful features, improvements on the TalkBack accessible experience for vision-impaired users and bug fixes.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 5.1.0 uses:
 - Minimum API version 19
@@ -937,7 +937,7 @@ The Android Mobile Messaging SDK version 5.1.0 uses:
 
 Android Mobile Messaging SDK version 5.0.0 release provides Android Q support and fixing bugs
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 5.0.0 uses:
 - Minimum API version 19
@@ -977,7 +977,7 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 
 Android Mobile Messaging SDK version 4.10.0 release includes Schedule Slot List support and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.10.0 uses:
 
@@ -1020,7 +1020,7 @@ ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2
 
 Android Mobile Messaging SDK version 4.9.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.9.1 uses:
 - Minimum API version 21
@@ -1053,7 +1053,7 @@ The workaround for this issue is to use [structured_content_link_as_callback](mo
 
 Android Mobile Messaging SDK version 4.9.0 release includes Date Picker support and enhancements.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.9.0 uses:
 - Minimum API version 21
@@ -1097,7 +1097,7 @@ The workaround for this issue is to use [structured_content_link_as_callback](mo
 
 Android Mobile Messaging SDK version 4.8.1 release includes Voice & Video support and enhancements. 
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.8.1 uses:
 - Minimum API version 21
@@ -1302,7 +1302,7 @@ Defines background color for Voice & Video Bubble
 
 Android Mobile Messaging SDK version 4.7.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.7.1 uses:
 
@@ -1346,7 +1346,7 @@ public static void registerLPPusher(String brandId, String appId, String deviceT
 
 Android Mobile Messaging SDK version 4.7.0 release focuses on improvements and bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.7.0 uses:
 
@@ -1396,7 +1396,7 @@ Limitation: there will be distortion of background image when keyboard appears.
 
 Android Mobile Messaging SDK version 4.6.1 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.6.1 uses:
 - Minimum API version 21
@@ -1462,7 +1462,7 @@ The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-
 
 Android Mobile Messaging SDK version 4.6.0 release includes  support  of auto logout with few bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.6.0 uses:
 
@@ -1504,7 +1504,7 @@ Note: Auto logout works only for authenticated users.
 
 Android Mobile Messaging SDK version 4.5.0 release provides a new feature to display hyperlink with bug fixes.
 
-## Environmental requirements
+## Environment requirements
 
 The Android Mobile Messaging SDK version 4.5.0 uses:
 
@@ -1587,7 +1587,7 @@ To take advantage of the new encryption process on existing installations, each 
 
 MobileSDK version 4.4.2 contains a bug fix for an unread message count not being reset on pusher.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.4.2 uses:
 
@@ -1606,7 +1606,7 @@ The Android Mobile Messaging SDK version 4.4.2 uses:
 
 MobileSDK version 4.4.1 contains a bug fix for a history-loading issue on Unauthenticated conversations.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.4.1 uses:
 - Minimum API version 19
@@ -1624,7 +1624,7 @@ The Android Mobile Messaging SDK version 4.4.1 uses:
 
 Android Mobile Messaging SDK version 4.4.0 release offers a few new features for devs and comes with a sizable side of bugfixes.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.4.0 uses:
 - Minimum API version 19
@@ -1740,7 +1740,7 @@ Enable or disable structured content button border.
 
 Android Mobile Messaging SDK version 4.3.2 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.3.2 uses:
 
@@ -1757,7 +1757,7 @@ The Android Mobile Messaging SDK version 4.3.2 uses:
 
 Android Mobile Messaging SDK version 4.3.1 release focuses on bug fixes around file sharing in UnAuth mode.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.3.1 uses:
 - Minimum API version 19
@@ -1773,7 +1773,7 @@ The Android Mobile Messaging SDK version 4.3.1 uses:
 
 Android Mobile Messaging SDK version 4.3.0 release offers a few powerful features and improves on the TalkBack accessible experience for vision-impaired users.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.3.0 uses:
 - Minimum API version 19
@@ -1832,7 +1832,7 @@ The Android Mobile Messaging SDK version 4.3.0 uses:
 
 Android Mobile Messaging SDK version 4.2.1 release focuses on internal bug fixes.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.2.1 uses:
 - Minimum API version 19
@@ -1848,7 +1848,7 @@ The Android Mobile Messaging SDK version 4.2.1 uses:
 
 Android Mobile Messaging SDK version 4.2.0 release focuses on fixing bugs and adding quality-of-life features.
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.2.0 uses:
 
@@ -1892,7 +1892,7 @@ The Android Mobile Messaging SDK version 4.2.0 uses:
 
 Android Mobile Messaging SDK version 4.1.0 primarily provides enhancements to SDK stability and Accessibility tools (TalkBack).
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.1.0 uses:
 
@@ -1935,7 +1935,7 @@ The Android Mobile Messaging SDK version 4.1.0 uses:
 Android Mobile Messaging SDK version 4.0.0 provides Android P support. 
 Built with Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-### Environmental requirements
+### Environment requirements
 
 The Android Mobile Messaging SDK version 4.0.0 requires the minimum Android API version 19, SDK is compiled against API 28 and targeted API is 28.
 
@@ -1943,7 +1943,7 @@ The Android Mobile Messaging SDK version 4.0.0 requires the minimum Android API 
 
 **Release date:** June 18, 2019
 
-#### Environmental requirements
+#### Environment requirements
 
 The Android Mobile Messaging SDK version 3.9 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -2105,7 +2105,7 @@ Other configurations can be found in the [Attributes](mobile-app-messaging-sdk-f
 
 Android Mobile App SDK v3.8.1 fixed one bug.
 
-#### Environmental requirements
+#### Environment requirements
 
 The Android Mobile Messaging SDK version 3.8.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -2119,7 +2119,7 @@ Reported in SDK 3.8.0 on Android. When the conversation history for an authentic
 
 Android Mobile App SDK v3.8.0 introduces a new feature.
 
-#### Environmental requirements
+#### Environment requirements
 
 The Android Mobile Messaging SDK version 3.8 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -2214,7 +2214,7 @@ You can configure up to 24 quick reply options for the user to chose.
 
 Android Mobile App SDK v3.7.0 contains fixes for high priority bugs reported by customers.
 
-#### Environmental requirements
+#### Environment requirements
 
 Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -2248,7 +2248,7 @@ Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK i
 
 Android Mobile App SDK v3.6.1 contains a new API call to enable/disable SDK logs.
 
-#### Environmental requirements
+#### Environment requirements
 
 Android Mobile App SDK v3.6.1 requires the minimum Android API version 19, SDK is compiled against API 26 and targeted API is 27.
 
@@ -2273,7 +2273,7 @@ Example:
 
 Android Mobile App SDK v3.6.0 contains fixes for high priority bugs reported by customers.
 
-#### Environmental requirements
+#### Environment requirements
 
 Android Mobile App SDK v3.6 requires the minimum Android API version 19 and targeted API is 27.
 
@@ -2303,7 +2303,7 @@ Android Mobile App SDK v3.6 requires the minimum Android API version 19 and targ
 
 Android Mobile App SDK v3.5 contains fixes for high priority bugs reported by customers.
 
-#### Environmental requirements
+#### Environment requirements
 
 The SDK’s minimum API is 19 and the target API is 27.
 
@@ -2327,7 +2327,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 Android Mobile App SDK v3.4 contains fixes for high priority bugs reported by customers and a new call back for leaving the conversation screen. There is one API change which will be explained in this document.
 
-#### Environmental requirements
+#### Environment requirements
 
 The SDK’s minimum API is 19 and the target API is 27.
 
