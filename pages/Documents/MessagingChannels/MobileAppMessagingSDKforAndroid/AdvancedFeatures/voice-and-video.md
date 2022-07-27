@@ -24,7 +24,8 @@ KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-mana
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
-### Features and Permissions
+### Features and permissions
+
 Below is the list of features and permissions elements added in the manifest file to support this feature. 
 
 ```xml
@@ -52,13 +53,13 @@ Similarly for permissions, you can disable these permissions elements by adding:
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
 ```
 
-### How to enable:
+### How to enable
 
 ```xml
 <bool name="lp_enable_voice_video_call">true</bool>
 ```
 
-### Branding and Configurations
+### Branding and configurations
 
 #### lp_enable_voice_video_call
 Enables or disables the ability for an Agent to start a voice or video call.

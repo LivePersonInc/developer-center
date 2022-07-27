@@ -18,13 +18,13 @@ Did you know that LivePerson has a Conversational AI forum for builders? Check i
 
 ### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/677425411" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/677425411" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 
 ### What is Conversation Assist?
 
 Conversation Assist offers recommended bots and answers to your human agents inline in their conversations with consumers.
 
-<img width="400" src="img/agentassist/example2.gif" align="left" style="margin: 0px 25px 0px 0px;">
+<img width="400" src="img/agentassist/example2.gif" align="left" style="margin: 0 25px 0 0;">
 
 When your agents take advantage of these just-in-time recommendations, they become more efficient and save time. What's more, their conversational outcomes are improved and more consistent. Conversation Assist can even help to reduce the time to onboard new agents.
 

@@ -60,7 +60,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
 |agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional | Filters only when the provided agent Ids are the <b>Assigned Agent</b> of the conversation. </br>To filter conversations when the provided agent Ids are not the <b>Assigned Agent</b> use userPermissions
-|userPermissions     | An array of roles that were part of the conversation                                | Array `<String>`                  | Optional | Commonly used with agentIds. </br>Possible values: ASSIGNED_AGENT,AGENT, AGENT_MANGER, READER.
+|userPermissions     | An array of roles that were part of the conversation                                | Array `<String>`                  | Optional | Commonly used with agentIds. </br>Possible values: ASSIGNED_AGENT, AGENT, AGENT_MANGER, READER.
 |latestAgentIds| An array of latest agent IDs, represented as numbers.  | Array `<agentID>`| Optional | Filters only conversations whose latest agent appears in the array.
 |agentGroupIds | An array of agent group IDs, represented as numbers.| Array `<agentGroupID>` | Optional |
 |keyword | Specific word or phrase found in the messages of the conversation. | alphanumeric  | Optional |
@@ -72,8 +72,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |source  | Source origin (Facebook, App etc.) from which the conversation was initially opened. | Array `<String>` | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK, Apple Business Chat, WhatsApp Business
 |device  | Type of device from which the conversation was initially opened.| Array `<String>` | Optional | Possible values: DESKTOP, TABLET, MOBILE, NA
 |messageContentTypes | The type of the message  | Array `<String>` | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
-|latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
-|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional, with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
+|latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE, ACTIVE|
+|sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional, with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content), marketingCampaignInfo, lead, purchase, viewedProduct, cartStatus, serviceActivity, visitorError, searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Agent's response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
 |contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long — epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
@@ -88,7 +88,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |selectedIntentOnly | When TRUE — only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
 |agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional, with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|  
-|annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN,SUBMITTED,VETTED |
+|annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN, SUBMITTED, VETTED |
 
 |Name | Description |
 |:------------------ |:------------------------------------------------|
@@ -447,7 +447,7 @@ time  | The time the agent was added to the conversation.| string  |
 timeL | The time the agent was added to the conversation (in long format). | long |
 role  | The agent's role in the conversation- assigned agent, manager etc. | string  |
 userType | The id of the user type, can be one of the following:0, 1, 2 | String  |
-userTypeName| The name of the user type,can be one of the following: System, Human or Bot| String  |
+userTypeName| The name of the user type can be one of the following: System, Human or Bot| String  |
 agentGroupId| Agent's group ID.  | long |
 agentGroupName | The agent's group name.  | string  |
 permission  | Agent's permission in the conversation (READER, ASSIGNED, SUGGESTED_ASSIGNED_AGENT).| string  | Valid values: "reader", "assigned"

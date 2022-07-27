@@ -101,7 +101,7 @@ h4 {
 .form-control:focus {
   border: 1px solid #30a5ff;
   outline: 0;
-  box-shadow: inset 0px 0px 0px 1px #30a5ff;
+  box-shadow: inset 0 0 0 1px #30a5ff;
 }
 
 .navbar-header .navbar-brand {
@@ -125,7 +125,7 @@ button:hover {
 
 a.btn:active,
 button:active {
-  box-shadow: inset 0px 0px 500px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.1);
   opacity: 1;
 }
 
@@ -341,7 +341,7 @@ a.bg-danger:hover {
 }
 
 .panel-footer .input-group {
-  padding: 0px;
+  padding: 0;
   margin: 0 -5px;
 }
 
@@ -414,7 +414,7 @@ a.bg-danger:hover {
 .widget-right {
   text-align: left;
   line-height: 1.6em;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   height: 80px;
   color: #999;
@@ -429,8 +429,8 @@ a.bg-danger:hover {
     width: 100%;
     margin: 0;
     text-align: center;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -440,8 +440,8 @@ a.bg-danger:hover {
   .widget-left {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -544,7 +544,7 @@ a.bg-danger:hover {
   background: #555;
   border: 1px solid #30a5ff;
   outline: 0;
-  box-shadow: inset 0px 0px 0px 1px #30a5ff;
+  box-shadow: inset 0 0 0 1px #30a5ff;
 }
 
 .user-menu {
@@ -594,7 +594,7 @@ a.bg-danger:hover {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #fff;
-    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
   }
   .navbar-header {
     width: 100%;
@@ -658,7 +658,7 @@ a.bg-danger:hover {
 
 .sidebar .attribution {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   padding: 15px;
   text-align: center;
@@ -694,7 +694,7 @@ h1.page-header {
 }
 
 .placeholder h2 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .donut {
@@ -812,7 +812,7 @@ h1.page-header {
 
 .todo-list .checkbox {
   display: inline-block;
-  margin: 0px;
+  margin: 0;
 }
 
 .panel-body input[type="checkbox"]:checked + label {
@@ -907,7 +907,7 @@ a.todo-list-item:focus {
 
 .fixed-table-pagination .pagination {
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .fixed-table-pagination .pagination-detail {
   margin-top: 20px;

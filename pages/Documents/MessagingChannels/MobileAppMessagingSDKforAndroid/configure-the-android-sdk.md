@@ -78,9 +78,9 @@ You can customize the look and feel of the conversation screen with your brandin
 
       If you want to define the background color for this avatar, override `agent_avatar_background_color` resource ID.
 
-   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
-   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
    - [**lpinfra_ui_ic_send_disabled.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpinfra_ui_ic_send_disabledxml) - You can display a different drawable to represent sending a message. Create a drawable file named **lpinfra_ui_ic_send_disabled.xml**, which overrides the SDK's default drawable.
 

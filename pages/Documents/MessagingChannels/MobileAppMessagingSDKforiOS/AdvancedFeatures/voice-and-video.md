@@ -25,7 +25,7 @@ KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-mana
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
-### How to enable:
+### How to enable
 
 ```swift
     LPConfig.defaultConfiguration.enableVoiceVideoCall = true
@@ -34,7 +34,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 {:.notice}
 Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call. 
 
-### Branding and Configurations
+### Branding and configurations
 
 #### enableVoiceVideoCall
 Enables or disables the ability for an Agent to start a voice or video call.

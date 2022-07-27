@@ -1223,9 +1223,9 @@ header .balloon-a {
   -moz-background-clip: padding;
   border-radius: 5px;
   background-clip: padding-box;
-  -webkit-box-shadow: 0px 0px 15px 3px #fff4b0;
-  -moz-box-shadow: 0px 0px 15px 3px #fff4b0;
-  box-shadow: 0px 0px 15px 3px #fff4b0;
+  -webkit-box-shadow: 0 0 15px 3px #fff4b0;
+  -moz-box-shadow: 0 0 15px 3px #fff4b0;
+  box-shadow: 0 0 15px 3px #fff4b0;
 }
 .cke_toolbar.active .cke_toolgroup {
   -webkit-box-shadow: none;

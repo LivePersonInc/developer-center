@@ -268,15 +268,15 @@ function parseToHtml(obj){
             color: #515254;
         }
         li.response {
-            padding: 5px 0px 5px 10px;
+            padding: 5px 0 5px 10px;
             border-top: 1px solid rgba(193, 194, 195, .4);
         }
         li.subcategory {
-            padding: 5px 0px 5px 10px;
+            padding: 5px 0 5px 10px;
             border-top: 1px solid rgba(193, 194, 195, .7);
         }
         li.category {
-            padding: 5px 0px 5px 10px;
+            padding: 5px 0 5px 10px;
             border-top: 1px solid rgba(193, 194, 195, 1);
         }
         .titles {

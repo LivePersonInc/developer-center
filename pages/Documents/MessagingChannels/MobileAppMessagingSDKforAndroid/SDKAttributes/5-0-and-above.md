@@ -1246,7 +1246,7 @@ Defines the color of default progress bar image.
 * **Default value:** @color/lp_progress_bar_color
 
 #### lpmessaging_ui_image_progress_bar.xml
-Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -1791,7 +1791,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 Enable or disable the scroll down indicator (shown or invisible).
@@ -2253,7 +2253,7 @@ Define the font of the pci secure form.
 * **Default value:** No value (use device's default)
 
 #### lpmessaging_ui_secure_form_progress_bar.xml
-Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 

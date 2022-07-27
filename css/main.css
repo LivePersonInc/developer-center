@@ -57,7 +57,7 @@ body {
 
 .container {
   padding-left: 550px;
-  padding-right: 0px;
+  padding-right: 0;
   position: relative;
   display: flex;
   background-color: #f5f7f9;
@@ -439,7 +439,7 @@ pre {
   padding-left: 0;
   /*text-align: right;*/
   position: relative;
-  padding: 5.33333px 0px;
+  padding: 5.33333px 0;
   color: #a4a7ae;
   font-size: 1.1em;
   font-weight: bold;
@@ -596,14 +596,14 @@ body.search-opened #search-container {
 
 #search-container {
   background-color: var(--body-background);
-  box-shadow: var(--box-shadow) 0px 0px 0px 1px;
+  box-shadow: var(--box-shadow) 0 0 0 1px;
   box-sizing: border-box;
   color: var(--title-text);
   display: none;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   height: 853px;
-  left: 0px;
+  left: 0;
   line-height: 20px;
   min-height: 853px;
   position: absolute !important;
@@ -626,7 +626,7 @@ body.search-opened #search-container {
   color: var(--body-background);
   padding: 10px;
   border: none;
-  width: 0px;
+  width: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8em;
   box-sizing: border-box;
@@ -660,7 +660,7 @@ body.search-opened #search-container {
 .aa-input-search:focus {
   width: 240px;
   border-bottom: 1px solid #8a909a;
-  padding: 7px 80px 12px 0px;
+  padding: 7px 80px 12px 0;
   cursor: text;
   opacity: 1;
 }
@@ -933,7 +933,7 @@ ul#results-container li a {
   width: 242px;
 }
 .collapse.out.width {
-  width: 0px;
+  width: 0;
 }
 
 .collapse.in.height {
@@ -1072,7 +1072,7 @@ ul#results-container li a {
     display: none;
   }
   .navbar-collapse .navbar-nav.navbar-left:first-child {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 

@@ -236,7 +236,7 @@ The following table describes the information that is available for survey data:
 | conversationId | Conversation unique identifier. | string |
 | contents | List of contents of this survey. | SurveyContent — array |
 
-###  SurveyContent
+### SurveyContent
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :----------- |

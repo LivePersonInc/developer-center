@@ -43,7 +43,7 @@ body {
 }
 
 .greeting-bot-header {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: bold;
   display: none;
@@ -80,7 +80,7 @@ body {
   margin-left: 56px;
   width: 65px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -174,7 +174,7 @@ body {
 #environment {
   width: 65px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: bold;
   font-style: normal;
@@ -187,7 +187,7 @@ body {
 #username {
   width: 55px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -233,7 +233,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   height: 64px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
@@ -315,7 +315,7 @@ body {
 
 .Authentication-Endpo {
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -356,7 +356,7 @@ body {
 .JS-method-name {
   width: 92px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -370,7 +370,7 @@ body {
 .LPJsMethodName {
   width: 84px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-style: normal;
@@ -385,7 +385,7 @@ body {
 .Token-Endpoint {
   width: 85px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -400,7 +400,7 @@ body {
 .vw-idplivepe {
   /*width: 195px;*/
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-style: normal;
@@ -415,7 +415,7 @@ body {
 .JS-context {
   width: 58px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -429,7 +429,7 @@ body {
 .LPJsContext {
   width: 57px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-style: normal;
@@ -445,7 +445,7 @@ body {
 .JWT {
   width: 131px;
   height: 15px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -459,7 +459,7 @@ body {
 
 #pub-key {
   height: 45px;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-style: normal;
@@ -550,7 +550,7 @@ a {
   font-size: 16px;
   line-height: 28px;
 
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #ffffff;
   margin-bottom: 16px;
 }
@@ -565,7 +565,7 @@ a {
   font-size: 16px;
   line-height: 28px;
 
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   color: #ffffff;
   margin-bottom: 16px;
 }
@@ -578,7 +578,7 @@ a {
 }
 
 .greeting-bot-header {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   display: block !important;
   width: 430px;
   margin: 0 auto 62px auto;
