@@ -1,14 +1,11 @@
 ---
 pagename: Create a new API Key
-redirect_from:
-    - guides-gettingstarted.html
 sitesection: Documents
 categoryname: "API Guidelines"
-permalink: retrieve-api-keys-create-a-new-api-key.html
-root-link: true
-level-order: 1
-order: 1
-indicator:
+permalink: create-a-new-api-key.html
+redirect_from:
+  - guides-gettingstarted.html
+  - retrieve-api-keys-create-a-new-api-key.html
 ---
 
 Application keys are security tokens that you use to log into Conversational Cloud. The application key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
