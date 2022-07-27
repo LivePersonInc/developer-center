@@ -22,7 +22,7 @@ All public properties and methods can be found in the namespace lpTag.LPWidgetSD
 | name | The name of the service. ("LPWidgetSDK") |
 | API | |
 
-###  Examples
+### Examples
 
 **API**
 
@@ -67,7 +67,7 @@ All public properties and methods can be found in the namespace lpTag.LPWidgetSD
 | dispose (callback) | This function is used to dispose\remove the widget from the visitor window. |
 | `getQuery(key <optional>)` | Utility function for getting query parameter values. In case of empty input (ie: key is undefined), object results are returned without filtering parameters. * "widgetName" and  "accountId" Query parameters are passed for every iframe url.
 
-###  Examples
+### Examples
 
 `init (opts <optional>)`
 

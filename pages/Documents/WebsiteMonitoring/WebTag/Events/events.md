@@ -334,7 +334,7 @@ This event is triggered when the engagement has been displayed on the page.
 
 See [START](#start) event.
 
-####  OFFER_CLICK
+#### OFFER_CLICK
 
 This event is triggered when the engagement has been accepted by a user.
 

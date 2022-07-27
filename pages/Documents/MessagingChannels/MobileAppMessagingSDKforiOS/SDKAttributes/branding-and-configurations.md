@@ -1028,7 +1028,7 @@ Color of checkmark indication signs of Distributed messages.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor) 
 
-####  checkmarkSentColor  
+#### checkmarkSentColor  
 Color of checkmark indication signs of Sent messages. 
 
 - **Type:** UIColor
@@ -1413,7 +1413,7 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
-####  cameraButtonDisabledColor  
+#### cameraButtonDisabledColor  
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
 
 - **Type:** UIColor
@@ -1715,7 +1715,7 @@ Send button color in enabled mode in the conversation screen.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#LPColor)
 
-####  sendButtonImage  
+#### sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
@@ -1842,7 +1842,7 @@ Corner radius for (Yes/No) buttons.
 - **Type:** Double
 - **Default value:** 25.0
 
-####  csatSubmitButtonBackgroundColor  
+#### csatSubmitButtonBackgroundColor  
 Background color of the Submit button.  
 
 - **Type:** UIColor

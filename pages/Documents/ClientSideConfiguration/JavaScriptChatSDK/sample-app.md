@@ -47,7 +47,7 @@ Download the Sample App from the following [Github repository](https://github.co
 - An existing Website engagement configured in Conversational Cloud, which refers to the above API-based engagement window.  <br> *Note: This is configured in the Engagement template gallery.*
 - An available user (agent) who is logged into Conversational Cloud.
 
-####  Launch your API-based window in a monitored flow
+#### Launch your API-based window in a monitored flow
 
 1. From the Sample App project, open the "index.html" file in the browser.
 2. Once open in the browser add the following query params `/index.html?site={siteId}&lptag=true`.
@@ -56,7 +56,7 @@ Download the Sample App from the following [Github repository](https://github.co
 
 ### Authenticated users flow
 
-####  Prerequisites for the authentication flow
+#### Prerequisites for the authentication flow
 
 - In our Sample App project there is an example of using [Auth0](https://auth0.com/) with Conversational Cloud authenticated visitors flow.
 - Inside script.js you find two parameters: AUTH0_CLIENT_ID, AUTH0_DOMAIN; fill them with your own data.
