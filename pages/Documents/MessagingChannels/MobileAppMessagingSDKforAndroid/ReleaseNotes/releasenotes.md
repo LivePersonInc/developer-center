@@ -702,7 +702,7 @@ Limitations:
 - “Link Preview” will be disabled if Hyperlink in messaging is enabled.
 - Hyperlink in messaging from consumer to agent is not supported.
 
-# New attribute
+# New attributes
 
 ## [enable_markdown_hyperlink](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#enable_markdown_hyperlink)
 Enable or disable hyperlink support. Agent won’t be able to send hyperlink messages if set to false.
@@ -826,7 +826,7 @@ Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-lo
 ## New User interface to save files on consumer's device
 - When decided to save a file, consumer now can choose a specific folder on their devices, SD card or upload the file to a cloud service such as Google drive.
 
-# New attribute
+# New attributes
 
 ## [structured_content_button_background_enabled](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured_content_button_background_enabled)
 Enable or disable structured content button border.
@@ -1550,7 +1550,7 @@ Limitations:
 - “Link Preview” will be disabled if Hyperlink in messaging is enabled.
 - Hyperlink in messaging from consumer to agent is not supported.
 
-# New attribute
+# New attributes
 
 ## [enable_markdown_hyperlink](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#enable_markdown_hyperlink)
 Enable or disable hyperlink support. Agent won’t be able to send hyperlink messages if set to false.
@@ -1713,7 +1713,7 @@ Head over [to Logging](mobile-app-messaging-sdk-for-android-advanced-features-lo
 #### New User interface to save files on consumer's device
 - When decided to save a file, consumer now can choose a specific folder on their devices, SD card or upload the file to a cloud service such as Google drive.
 
-### New attribute
+### New attributes
 
 #### [structured_content_button_background_enabled](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#structured_content_button_background_enabled)
 Enable or disable structured content button border.

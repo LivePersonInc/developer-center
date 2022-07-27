@@ -1124,7 +1124,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 
 #### lpmessaging_ui_image_progress_bar.xml
 
-Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -2087,7 +2087,7 @@ Define the font of the pci secure form.
 
 #### lpmessaging_ui_secure_form_progress_bar.xml
 
-Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
