@@ -10,7 +10,7 @@ level-order: 1
 order: 1
 indicator:
 ---
-<br>
+
 Application keys are security tokens that you use to log into Conversational Cloud. The application key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
 
 If required by an API, create an Application Key and it will be installed automatically upon creation.
