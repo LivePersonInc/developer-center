@@ -398,7 +398,9 @@ No, this can’t be done. If you’d like to do this, the Dynamic Routing intera
 
 **For Apple Messages for Business only.**
 
-If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. 
+
+The interaction has been developed per Apple's Apple Pay [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#apple-pay-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 
 #### Prerequisite setup steps
 

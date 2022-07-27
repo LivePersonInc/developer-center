@@ -268,7 +268,7 @@ You might want to include a list picker so consumers can select from a list of:
 
 You can create a list picker that displays a static (fixed) list of items that you specify when you create the picker. Or, you can configure the picker so that it gets populated with items dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
-(The interaction has been developed per Apple's List Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker).)
+The interaction has been developed per Apple's List Picker [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#list-picker-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 
 <img style="width:600px" src="img/ConvoBuilder/questions_listPicker5.png" alt="">
 
@@ -343,7 +343,9 @@ Once a user makes their selection in the list picker, the reply is sent back to 
 
 **For Apple Messages for Business only.**
 
-If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment. (The interaction has been developed per Apple's Time Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker).)
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment.
+
+The interaction has been developed per Apple's Time Picker [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#time-picker-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 
 You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
