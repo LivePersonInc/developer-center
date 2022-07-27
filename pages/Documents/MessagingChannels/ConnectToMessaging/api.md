@@ -55,8 +55,8 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | :--- | :--- | :--- |:--- |
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
-| handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA.
+| handoffId | string | yes | C2M handoff Id for the chosen outbound campaign. This is accessible from C2M UI via Agent Console. |
+| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA. |
 | templateVariables | object | no | Key-value pairs of variables for the body template and only applicable for SMS and WA channels. |
 | headerVariables | object | no | Key-value pairs of variables for the header template and only applicable for WA channels. This object is nested inside templateVariables |
 | buttonVariables | object | no | Key-value pairs of variables for the Call-To-Action button template and only applicable for WA channels. This object is nested inside templateVariables |
