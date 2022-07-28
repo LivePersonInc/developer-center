@@ -430,6 +430,10 @@
             - subpagename: Service Implementation
             - subpagename: Basic Content
             - subpagename: Advanced Features
+        - pagename: e-bot7
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
         - pagename: Public API
         - pagename: Hook Configuration
         - pagename: Conversation Tester
