@@ -145,7 +145,7 @@ Having 2 entities match the training phrases can cause a 30% jump in score from 
 
 #### NLU stop words - LivePerson (Legacy) engine only
 
-Stop words are words that are not used by the NLU engine to score an utterance. These words are essentially removed or ignored in the intent matching process. Below is a list of the stop words:
+Stop words are words that are not used by the NLU engine to score an utterance. These words are essentially removed or ignored in the intent matching process. Below is the list of the stop words:
 
 * a
 * about
