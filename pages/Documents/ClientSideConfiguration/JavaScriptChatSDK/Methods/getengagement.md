@@ -28,7 +28,7 @@ Getting engagement details from the server might require few attempts until it b
 | appType | External system type | string | Optional | Validation error: 400 <br> Supported Values: EXTERNAL |
 | appDetails | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string (JSON structure) | Optional | The main purpose is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | appDetails.appVersion | The application version, for example in case of mobile it will be the host app version | string | Optional | |
-| appDetails.deviceFamily | Example: personal_computer/tablet/mobile_phone | string | Optional | Supported values: DESKTOP,TABLET,MOBILE |
+| appDetails.deviceFamily | Example: personal_computer/tablet/mobile_phone | string | Optional | Supported values: DESKTOP, TABLET, MOBILE |
 | appDetails.ipAddress | IP address (V4) | string (IP format XXX.XXX.XXX.XXX) | optional | Validation: real IP address (IPv6 or IPv4) |
 | appDetails.os | Contains the operating system, including version info | string | Optional | Supported values: WINDOWS, MAC_OSX, LINUX, IOS, ANDROID |
 | appDetails.osVersion | The OS version, for example in case of Android it can be 2.4 | string | Optional | |

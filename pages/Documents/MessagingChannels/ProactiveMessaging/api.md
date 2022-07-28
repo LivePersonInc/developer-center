@@ -658,10 +658,10 @@ Message body in WA Rich template is mandatory. Header, footer, buttons are optio
 <strong>What extensions are supported for WA rich template in the header section?</strong>
 
 Allowed extensions for different types of header for a rich template: 
-- 
-- Image:[jpg,png],
-- Document:[pdf],
-- Video:[mp4]
+
+- Image: [jpg,png],
+- Document: [pdf],
+- Video: [mp4]
 
 <strong>Are there any limitations on the URL added for header image/video/document type?</strong>
 

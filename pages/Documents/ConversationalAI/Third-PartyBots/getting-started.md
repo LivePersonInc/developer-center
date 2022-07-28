@@ -176,4 +176,6 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Custom Endpoint (only accessible to early adapters)](third-party-bots-custom-endpoint-introduction.html)
 
+- [e-bot7](third-party-bots-ebot7-introduction.html)
+
 - [Dialogflow V1 (No longer supported)](third-party-bots-google-dialogflow.html)

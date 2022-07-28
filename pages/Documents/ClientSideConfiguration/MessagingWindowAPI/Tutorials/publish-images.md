@@ -15,7 +15,7 @@ indicator: messaging
 
 In this tutorial we will publish images to a conversation.
 
-###  Prerequisites
+### Prerequisites
 
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 

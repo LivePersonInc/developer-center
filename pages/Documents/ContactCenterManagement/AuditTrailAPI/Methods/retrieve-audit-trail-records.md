@@ -72,7 +72,7 @@ At least one parameter from the above parameters is required in order to retirve
 |first|Number of records to return|Default: 50|
 |offset|Offset to start returning records from||
 |orderBy|List of columns to order by|Default: changeTimestamp|
-|orderDirection|List of ordering direction(ASC, DESC), in relevance to orderBy list|Default: DESC|
+|orderDirection|List of ordering direction (ASC, DESC), in relevance to orderBy list|Default: DESC|
 |users|List of users for filtering||
 |componentTypes|List of component types for filtering||
 |language|Language to return the results in|Default: en-US|
