@@ -1,8 +1,8 @@
 ---
-pagename: Create OAuth 1.0 API keys
+pagename: Create API keys
 sitesection: Documents
 categoryname: "API Guidelines"
-permalink: create-oauth-1-0-api-keys.html
+permalink: create-api-keys.html
 indicator: both
 redirect_from:
   - essential-resources-create-api-keys.html
@@ -11,6 +11,7 @@ redirect_from:
   - guides-gettingstarted.html
   - retrieve-api-keys-create-a-new-api-key.html
   - create-a-new-api-key.html
+  - create-oauth-1-0-api-keys.html
 ---
 
 ### Create an OAuth 1.0 API key
