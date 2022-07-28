@@ -2,7 +2,7 @@
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
-This repository generates LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
+This repository hosts LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
 
 ## Table of contents
 
@@ -168,7 +168,8 @@ When contributing to this repository, please observe the following:
 * Be consistent
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
-* The maximum width for images in this repository is 800 pixels
+* To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
+* The maximum (view) width for images in this repository is 800 pixels
 
 You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
 
@@ -217,7 +218,7 @@ The sidebar’s YAML file can be found in the `_data` folder. It’s called `doc
 
 ## Template
 
-See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
+See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to the Developer Experience team *before* starting to write your document so that we can advise on its structure.
 
 ### Algolia
 
