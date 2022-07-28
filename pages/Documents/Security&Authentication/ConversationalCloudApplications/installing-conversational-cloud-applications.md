@@ -59,7 +59,7 @@ Once the application has been installed, the LivePerson resource will send you y
 |design_window | Toggles the ability to add an engagement window | boolean | Yes | |
 |entry_point |  Indicates where to display the engagement which invites consumers to engage with you | array| Yes | supported values: section, url|
 |visitor_behavior | The browsing behavior of visitors which is of interest to you.  | array| Yes | supported values: visited_location, time_on_location, flow, engaged_in_session, about_to_abandon, cart_value, visitor_error, viewed_products, service_activity|
-|target_audience | The visitors you specifically want to target |  string | Yes | supported values: external_referral, search_keywords, ip, platform, geo_location, returning_visitors, marketing_source, customer_type, age,balance, customer_id,gender, store_zip_code, store_number, company_size, registration_date |
+|target_audience | The visitors you specifically want to target |  string | Yes | supported values: external_referral, search_keywords, ip, platform, geo_location, returning_visitors, marketing_source, customer_type, age, balance, customer_id, gender, store_zip_code, store_number, company_size, registration_date |
 |goal |  Indicates what you want to achieve with the engagement | string| Yes |supported values: url, purchase_total, num_of_pages, lead, service_activity |
 |consumer_identity | If the consumer does or doesn't have to be an authenticated user |  array| Yes | The value has to be set to auth. supported values: auth, unauth|
 |language_selection | Indicates the possibility of language selection  |  boolean |Yes ||

@@ -9,7 +9,7 @@ indicator: both
 
 ### Introduction
 
-{:.notice}
+{: .notice}
 This API is currently in its beta version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
 
 {: .important}

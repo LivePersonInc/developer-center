@@ -18,7 +18,6 @@ port: 4000
 
 google_analytics: UA-96175782-1
 
-
 extlinks:
   attributes: {target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
@@ -31,21 +30,18 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
 
-
 algolia:
   application_id: "EICOREWTRW"
   index_name: "devMain"
-  #also index the following html elements
+  # also index the following html elements
   files_to_exclude:
     - _exclude/**/*
     - _exclude/**/**/*
 
-
-# #values for the Algolia plugin
-
+# values for the Algolia plugin
 
 github: [metadata]
-#needed so that Github APIs don't throw a fit
+# needed so that Github APIs don't throw a fit
 
 exclude:
   - .idea/
@@ -86,4 +82,4 @@ Disclaimer: "https://www.liveperson.com/policies/disclaimer"
 TermsofUse: "https://www.liveperson.com/policies/terms-of-use"
 APITermsofUse: "https://www.liveperson.com/policies/apitou"
 PrivacyPolicy: "https://www.liveperson.com/policies/privacy"
-#footer links
+# footer links

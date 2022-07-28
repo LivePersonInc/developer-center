@@ -14,7 +14,7 @@ indicator: chat
 
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into Conversational Cloud. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
-###  CartStatus
+### CartStatus
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -60,7 +60,7 @@ Example:
     }
 ```
 
-###  customerInfo
+### customerInfo
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -126,7 +126,7 @@ Example:
     }
 ```
 
-###  Lead
+### Lead
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -160,7 +160,7 @@ Example:
     }
 ```
 
-###  marketingCampaignInfo
+### marketingCampaignInfo
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -192,7 +192,7 @@ Example:
     }
 ```
 
-###  personalInfo
+### personalInfo
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -245,7 +245,7 @@ Example:
     }
 ```
 
-###  Purchase
+### Purchase
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -292,7 +292,7 @@ Example:
     }
 ```
 
-###  serviceActivity
+### serviceActivity
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -326,7 +326,7 @@ Example:
   }
 ```
 
-###  VisitorError
+### VisitorError
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -362,7 +362,7 @@ Example:
     }
 ```
 
-###  viewedProduct
+### viewedProduct
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |
@@ -406,7 +406,7 @@ Example:
     }
 ```
 
-###  searchContent
+### searchContent
 
 | Name |  Description | Type / Value | Notes |
 | :----- | :------- | :------ | :------ |

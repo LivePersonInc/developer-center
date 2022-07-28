@@ -27,10 +27,10 @@ To use the tool, simply input your account number below and hit the button.
 <table id="csds-result">
 </table>
 
-{:.notice}
+{: .notice}
 The different service names can be found in the relevant documentation for the API you're looking to use. They can be found in each document's Overview page. Service names are *case sensitive*. Please make sure to input serviceName as it is provided in each document's overview.
 
-###  Request
+### Request
 
 The GET method used returns the base URI for the specified account ID and serviceName.
 
@@ -45,7 +45,7 @@ The GET method used returns the base URI for the specified account ID and servic
 | account | LivePerson account ID | string | Required |
 | service | Service name according to the relevant API | string | Required |
 
-###  Response
+### Response
 
 JSON Example:
 

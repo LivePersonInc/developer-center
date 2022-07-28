@@ -62,7 +62,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
 2. Add design attributes to your **branding.xml** file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
-   {:.important}
+   {: .important}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
@@ -78,9 +78,9 @@ You can customize the look and feel of the conversation screen with your brandin
 
       If you want to define the background color for this avatar, override `agent_avatar_background_color` resource ID.
 
-   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
-   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
    - [**lpinfra_ui_ic_send_disabled.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpinfra_ui_ic_send_disabledxml) - You can display a different drawable to represent sending a message. Create a drawable file named **lpinfra_ui_ic_send_disabled.xml**, which overrides the SDK's default drawable.
 
@@ -102,7 +102,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
    - **custom_font_name_non_conversation_feed** - Font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
 
-     {:.important}
+     {: .important}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).
 
 ### Callbacks interface
@@ -152,7 +152,7 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
 };
 ```
 
-{:.important}
+{: .important}
 If you registered for multiple **Intents**, you must filter each one, using a **switch**.
 
 #### Callbacks
@@ -222,7 +222,7 @@ For example:
 
 ### Initialize the SDK with Monitoring Params
 
-{:.important}
+{: .important}
 To get the App key or appInstallationId, a new Conversation Source needs to be added on Conversational Cloud. For more information about it, contact your Account Team.
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
@@ -658,7 +658,7 @@ Pass and display consumer information to agents, and agent information to consum
 public static void setUserProfile(ConsumerProfile profile)
 ```
 
-{:.important}
+{: .important}
 When using SDEs (Authenticated Chat), SDEs have priority and will override the setUserProfile.
 
 #### Get Agent Details:
