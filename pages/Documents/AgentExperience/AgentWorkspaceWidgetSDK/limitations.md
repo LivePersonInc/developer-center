@@ -28,3 +28,5 @@ indicator: both
 - The application must be hosted over SSL, meaning that the URL must start with https.
 
 - Custom widgets should not include Conversational Cloud chat buttons or any other Conversational Cloud objects such as the lpTag.
+
+- Any cookies set inside the iFrame, would be considered as 3rd party cookies. The SameSite=None; Secure; attributes should be added to them so they wouldn’t be blocked.
