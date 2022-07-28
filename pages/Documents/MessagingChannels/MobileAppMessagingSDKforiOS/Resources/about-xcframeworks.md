@@ -20,7 +20,7 @@ In preparation to the XCFramework, we have created some guides to help integrati
 - To manually integrate library into Xcode, see [guide](mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html#option-2-libraries-copy-to-xcode-project)
     - For more information about how to link framework, refer to [apple documentation](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07)
 
-{:.important}
+{: .important}
 XCFramework can be integrated similarly to how we’re used to integrating the .framework format.
 
 ### What do I need to do to consume the XCFramework if I’m already using Cocoapods?
