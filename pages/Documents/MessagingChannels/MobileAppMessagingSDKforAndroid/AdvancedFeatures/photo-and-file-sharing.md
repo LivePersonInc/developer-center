@@ -33,7 +33,7 @@ Consumers can share:
 
 - **Files:** Consumers can also share files with agents, chosen from internal storage, external storage or Google drives. They can also share files in a resolved conversation to resume the conversation with the agent. Consumers can download files through the picker application to a location on their device (internal or external).
 
-{:.important}
+{: .important}
    The Android SDK supports opening any supported file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
 
 ### Supported formats
