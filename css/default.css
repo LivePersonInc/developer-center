@@ -1044,7 +1044,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http,
 .language-gradle,
 .language-css,
-.language-objc {
+.language-objc,
+.language-plaintext,
+.language-text {
     display: flex;
     flex-direction: column;
 }
@@ -1062,7 +1064,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http:before,
 .language-gradle:before,
 .language-css:before,
-.language-objc:before {
+.language-objc:before,
+.language-plaintext:before,
+.language-text:before {
     color: var(--secondary-black);
     text-align: right;
     font-size: 14px;
