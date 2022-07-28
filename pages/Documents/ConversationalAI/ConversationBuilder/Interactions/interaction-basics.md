@@ -69,19 +69,20 @@ For information on whitelisting rich media, see [here](conversation-builder-netw
 
 ### URL shortening
 
-If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+If you have long web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
 As an example, if you enable URL shortening, a URL like this…
 
-<http://www.myexample.com/folder1/folder2/veryverylongstringhere.html>
+<p style="color:#282B33; text-decoration:none;">https://www.myexamplesite.com/account/{$botContext.accountID}/veryverylongstringhere?key1=value1&key2=value2</p>
 
 …is shortened to this:
 
-<http://{abbreviated> domain}/{unique code}
+<p style="color:#282B33; text-decoration:none;">http://{abbreviated domain}/{unique code}</p>
 
-If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <http://www.mysite.com>), the URL isn't shortened.
-
-If you enable URL shortening, the shortened domain must be whitelisted; for more information, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
+Note the following:
+* If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
+* If you enable URL shortening, the shortened domain must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media-and-web-links).
+* To support backwards compatibility, button interactions use URL shortening even though the **Shorten URLs** bot setting is set initially to Off. To disable URL shortening for buttons, enable the bot setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
 
 ### Images
 
