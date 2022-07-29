@@ -1489,7 +1489,7 @@ html body div.container div.text li a.more-btn.active {
 }
 
 .bot-platform h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 48px;
     line-height: 64px;
     font-family: 'roboto slab', arial;
@@ -1510,7 +1510,7 @@ html body div.container div.text li a.more-btn.active {
 }
 
 .bot-platform .orange {
-    color: #ffffff;
+    color: #fff;
     background: #ff720b;
     padding: 14px 26px;
     font-size: 16px;
@@ -1530,7 +1530,7 @@ html body div.container div.text li a.more-btn.active {
 }
 
 .bot-platform .banner-container h2 {
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 32px;
 }
 
@@ -1588,7 +1588,7 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .developmentsummit h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 48px;
     line-height: 64px;
     font-family: 'roboto slab', arial;
@@ -1609,7 +1609,7 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .developmentsummit .orange {
-    color: #ffffff;
+    color: #fff;
     background: #ff720b;
     padding: 14px 26px;
     font-size: 1.5em;
@@ -1630,7 +1630,7 @@ only screen and (min-resolution: 2dppx) {
 }
 
 .developmentsummit .banner-container h2 {
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 32px;
 }
 

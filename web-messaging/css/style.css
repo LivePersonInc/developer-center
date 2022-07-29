@@ -50,7 +50,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.008em;
-  color: #ffffff;
+  color: #fff;
 }
 
 .lp-tips-container {
@@ -72,7 +72,7 @@ body {
   line-height: normal;
 
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   outline: none;
 }
 
@@ -114,14 +114,14 @@ body {
   line-height: normal;
   letter-spacing: 3px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 
 #bottom-divider {
   width: 800px;
   height: 11.6px;
   opacity: 0.1;
-  background-color: #000000;
+  background-color: #000;
   z-index: 2;
   position: relative;
 }
@@ -155,7 +155,7 @@ body {
   line-height: normal;
   letter-spacing: 2.45px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   z-index: 0;
   position: absolute;
 }
@@ -164,7 +164,7 @@ body {
   /*width: 400px;*/
   height: 362px;
   box-shadow: 0 5px 10px 0 rgba(131, 146, 167, 0.2);
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: -20px;
   z-index: 2;
   position: relative;
@@ -181,7 +181,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
 }
 
 #username {
@@ -200,7 +200,7 @@ body {
 #lp-info {
   height: 362px;
   box-shadow: 0 5px 10px 0 rgba(131, 146, 167, 0.2);
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: -20px;
   margin-left: -10px;
   z-index: 2;
@@ -269,7 +269,7 @@ body {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
 }
 
@@ -295,7 +295,7 @@ body {
   font-stretch: normal;
   line-height: 1.33;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
 }
 
 #The-following-config {
@@ -308,7 +308,7 @@ body {
   font-stretch: normal;
   line-height: 1.71;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   margin-bottom: 5px;
 }
@@ -322,7 +322,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   /*text-align: left;*/
   /*margin: 10px 120px 10px -60px;*/
   margin-right: 30px;
@@ -334,7 +334,7 @@ body {
   height: 30px;
   opacity: 0.5;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-bottom: 5px;
 }
 
@@ -348,7 +348,7 @@ body {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #000000;
+  color: #000;
   padding-left: 5px;
   /*padding-top: 5px;*/
 }
@@ -363,7 +363,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   margin-right: 68px;
 }
 
@@ -377,7 +377,7 @@ body {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #000000;
+  color: #000;
   padding-left: 5px;
   padding-top: 5px;
 }
@@ -392,7 +392,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   margin-right: 76px;
 }
@@ -407,7 +407,7 @@ body {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #000000;
+  color: #000;
   padding-left: 5px;
   padding-top: 5px;
 }
@@ -422,7 +422,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   margin-right: 102px;
 }
 
@@ -436,7 +436,7 @@ body {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #000000;
+  color: #000;
   text-align: center;
   padding-left: 5px;
   padding-top: 5px;
@@ -452,7 +452,7 @@ body {
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  color: #ffffff;
+  color: #fff;
   margin-right: 78px;
   /*margin-left: -165px;*/
 }
@@ -466,10 +466,10 @@ body {
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  color: #000000;
+  color: #000;
   text-align: left;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: #fff;
   word-wrap: break-word;
   padding: 5px;
 }
@@ -477,7 +477,7 @@ body {
 #Rectangle-pub {
   opacity: 0.5;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 150px;
 }
 
@@ -493,7 +493,7 @@ body {
   line-height: normal;
   letter-spacing: 2.18px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 
 #modal-close {
@@ -507,7 +507,7 @@ body {
   line-height: normal;
   letter-spacing: 2.45px;
   text-align: right;
-  color: #ffffff;
+  color: #fff;
   z-index: 0;
   position: fixed;
 }
@@ -551,7 +551,7 @@ a {
   line-height: 28px;
 
   font-family: Inter, sans-serif;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 16px;
 }
 
@@ -566,7 +566,7 @@ a {
   line-height: 28px;
 
   font-family: Inter, sans-serif;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 16px;
 }
 
@@ -588,7 +588,7 @@ a {
   line-height: 28px;
   text-align: center;
   letter-spacing: 0.008em;
-  color: #ffffff;
+  color: #fff;
 }
 
 .row {
