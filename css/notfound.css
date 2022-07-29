@@ -16,10 +16,9 @@ body {
   right: 0;
   text-align: center;
   padding: 40px;
-  text-align: center;
   color: #fff;
   border: solid 5px;
-  font-family: "Open Sans", Arial, Helvetica;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 .notfoundbody {
@@ -33,7 +32,7 @@ body {
   right: 0;
   text-align: center;
   color: #fff;
-  font-family: "Open Sans", Arial, Helvetica;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 .notfoundlink{

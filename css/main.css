@@ -834,11 +834,11 @@ body.search-opened #search-container {
 #search-demo-container ul#results-container li {
   width: 95%;
   margin-bottom: 5px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 #search-demo-container ul#results-container li.nolink {
   margin-top: 10px;
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans Semibold", sans-serif;
 }
 ul#results-container li a {
   background-color: initial;

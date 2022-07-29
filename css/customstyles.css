@@ -349,7 +349,7 @@ li.dropdownActive a {
 
 .navbar-inverse .navbar-nav>li>a {
     background-color: transparent;
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans", sans-serif;
     margin-top: 15px;
 }
 
@@ -1335,7 +1335,7 @@ table thead th code.highlighter-rouge {
     width: 100px;
     height: 80px;
     background-color: #f5f5f5;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-size: 12px;
     hyphens: auto;
     float: left;
@@ -1360,7 +1360,7 @@ table thead th code.highlighter-rouge {
 }
 
 h2.userMapTitle {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 #userMap a:hover {
@@ -1492,7 +1492,7 @@ html body div.container div.text li a.more-btn.active {
     color: #fff;
     font-size: 48px;
     line-height: 64px;
-    font-family: 'roboto slab', arial;
+    font-family: 'roboto slab', arial, sans-serif;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 24px;
@@ -1502,7 +1502,7 @@ html body div.container div.text li a.more-btn.active {
     color: #162036;
     font-size: 24px;
     line-height: 32px;
-    font-family: 'open sans', arial;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     margin-top: 0;
     padding-top: 0;
@@ -1521,7 +1521,7 @@ html body div.container div.text li a.more-btn.active {
     color: #162036;
     font-size: 16px;
     line-height: 22px;
-    font-family: 'open sans', arial;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
 }
 
@@ -1591,7 +1591,7 @@ only screen and (min-resolution: 2dppx) {
     color: #fff;
     font-size: 48px;
     line-height: 64px;
-    font-family: 'roboto slab', arial;
+    font-family: 'roboto slab', arial, sans-serif;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 24px;
@@ -1601,7 +1601,7 @@ only screen and (min-resolution: 2dppx) {
     color: #162036;
     font-size: 24px;
     line-height: 32px;
-    font-family: 'open sans', arial;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     margin-top: 0;
     padding-top: 0;
@@ -1621,7 +1621,7 @@ only screen and (min-resolution: 2dppx) {
     color: #162036;
     font-size: 16px;
     line-height: 22px;
-    font-family: 'open sans', arial;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
 }
 
@@ -1701,7 +1701,7 @@ only screen and (min-resolution: 2dppx) {
     color: #162036;
     font-size: 48px;
     line-height: 64px;
-    font-family: 'roboto slab', arial;
+    font-family: 'roboto slab', arial, sans-serif;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 24px;

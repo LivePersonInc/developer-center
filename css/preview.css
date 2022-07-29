@@ -8,12 +8,12 @@ html body .preview-page div.container div.title {
   margin-bottom: 0;
   padding-bottom: 0;
   color:#33c6f4;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 html body .preview-page div.container div.text a {
     margin-bottom: 4px ;
     color: #fff;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 12px;
     text-decoration: none;
     border-top:none;

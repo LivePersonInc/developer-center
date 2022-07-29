@@ -125,7 +125,7 @@ pre code {
 
 .post-content table tr td {
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666;
     line-height: 1.8;
     max-width: 160px;
@@ -137,7 +137,7 @@ pre code {
 }
 
 .post-content table>thead>tr>th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -166,14 +166,14 @@ table>tbody>tr:nth-of-type(even) {
     font-weight: bold;
     vertical-align: inherit;
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666;
     hyphens: none;
     border-right: solid 1px black
 }
 
 .designsheet table tr th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -690,7 +690,7 @@ pre code {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 8px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: #fff;
     font-size: 1.2em;
     padding: 5px 10px 5px 10px;
