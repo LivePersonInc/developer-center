@@ -125,7 +125,7 @@ pre code {
 
 .post-content table tr td {
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666;
     line-height: 1.8;
     max-width: 160px;
@@ -137,7 +137,7 @@ pre code {
 }
 
 .post-content table>thead>tr>th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -166,14 +166,14 @@ table>tbody>tr:nth-of-type(even) {
     font-weight: bold;
     vertical-align: inherit;
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666;
     hyphens: none;
     border-right: solid 1px black
 }
 
 .designsheet table tr th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -347,7 +347,7 @@ ul#mysiderbar li {
 .innerlink {
     color: #4a4a4a;
     font-size: 13px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+    font-family: "Roboto", Arial, sans-serif !important;
     font-weight: 300
 }
 
@@ -383,7 +383,7 @@ ul#mysiderbar li {
 
 ul.mysidebar.nav .topfolder>a {
     display: inline-block;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     color: #f2f1f2;
     overflow-wrap: break-word
@@ -499,7 +499,7 @@ div.sidebarTitle-holder {
     font-size: 12px;
     padding: 2px 4px;
     margin-bottom: -2px;
-    font-family: "Roboto", "Roboto Slab", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", "Roboto Slab", Arial, sans-serif;
     cursor: default;
     height: 20px;
     align-self: center;
@@ -605,7 +605,7 @@ div.sidebarTitle-holder {
 
 .post-content p strong {
     color: #181818;
-    font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif
+    font-family: "Roboto", "Open Sans", Arial, sans-serif
 }
 
 .post-content,
@@ -617,7 +617,7 @@ div.sidebarTitle-holder {
     background-color: #f8f8f8;
     border-color: #5879da;
     color: #4a4a4a;
-    font-family: "Roboto", Arial, Helvetica, sans-serif
+    font-family: "Roboto", Arial, sans-serif
 }
 
 .alert-warning hr {
@@ -625,7 +625,7 @@ div.sidebarTitle-holder {
 }
 
 .alert-warning h2 {
-    font-family: "Roboto", Arial, Helvetica, sans-serif
+    font-family: "Roboto", Arial, sans-serif
 }
 
 .btn-primary.active {
@@ -690,7 +690,7 @@ pre code {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 8px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     color: #fff;
     font-size: 1.2em;
     padding: 5px 10px 5px 10px;
