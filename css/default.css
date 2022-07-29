@@ -556,6 +556,10 @@ table tbody td img {
         max-width: 100%;
         margin: inherit;
     }
+
+    #jumpto {
+        display: none !important;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
