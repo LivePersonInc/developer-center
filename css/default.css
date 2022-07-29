@@ -1044,7 +1044,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http,
 .language-gradle,
 .language-css,
-.language-objc {
+.language-objc,
+.language-plaintext,
+.language-text {
     display: flex;
     flex-direction: column;
 }
@@ -1062,7 +1064,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http:before,
 .language-gradle:before,
 .language-css:before,
-.language-objc:before {
+.language-objc:before,
+.language-plaintext:before,
+.language-text:before {
     color: var(--secondary-black);
     text-align: right;
     font-size: 14px;
@@ -1346,6 +1350,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     margin-top: 32px;
     font-family: "Roboto Mono", Monaco, courier, monospace;
     color: var(--widget-text);
+    overflow-wrap: anywhere;
 }
 
 /* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
