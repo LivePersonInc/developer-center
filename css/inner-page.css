@@ -25,7 +25,6 @@ a:focus-visible {
     display: none;
 }
 
-
 /* this is so the header won't overlap the links */
 
 :target::before {
@@ -38,12 +37,10 @@ a:focus-visible {
 img {
     vertical-align: middle;
     margin: 24px 0;
-    max-width: 800px;
+    max-width: clamp(100px, 100%, 800px);
 }
 
-
 /*inner page css */
-
 
 /* h1[id],
 h2[id],
@@ -104,7 +101,7 @@ h4 code.highlighter-rouge {
 
 .h1 {
     color: var(--title-text);
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -198,7 +195,7 @@ pre code {
     color: var(--body-text);
     font-size: 12px;
     padding: 16px;
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -227,14 +224,14 @@ table>tbody>tr:nth-of-type(odd) {
     font-weight: bold;
     vertical-align: inherit;
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666666;
     hyphens: none;
     border-right: solid 1px black;
 }
 
 .designsheet table tr th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -830,8 +827,8 @@ pre code {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 8px;
-    font-family: Arial;
-    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #fff;
     font-size: 1.2em;
     padding: 5px 10px 5px 10px;
     text-decoration: none;

@@ -204,7 +204,7 @@ html {
 }
 .navigation-a ul li a:hover {
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
 }
 .icon-navigation-a-github:before,
 .icon-navigation-a-github:after {

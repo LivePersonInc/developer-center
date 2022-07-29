@@ -12,7 +12,7 @@
 .json-formatter-row,
 .json-formatter-row a,
 .json-formatter-row a:hover {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 .json-formatter-row .json-formatter-row {
@@ -87,7 +87,7 @@
 .json-formatter-dark.json-formatter-row,
 .json-formatter-dark.json-formatter-row a,
 .json-formatter-dark.json-formatter-row a:hover {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .json-formatter-dark.json-formatter-row .json-formatter-row {
