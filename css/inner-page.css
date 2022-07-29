@@ -25,7 +25,6 @@ a:focus-visible {
     display: none;
 }
 
-
 /* this is so the header won't overlap the links */
 
 :target::before {
@@ -38,12 +37,10 @@ a:focus-visible {
 img {
     vertical-align: middle;
     margin: 24px 0;
-    max-width: 800px;
+    max-width: clamp(100px, 100%, 800px);
 }
 
-
 /*inner page css */
-
 
 /* h1[id],
 h2[id],
