@@ -111,7 +111,7 @@
 }
 
 .header-lp4-external h3 {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -210,7 +210,7 @@
 }
 
 .small-header {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;

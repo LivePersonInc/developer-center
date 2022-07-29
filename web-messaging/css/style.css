@@ -93,7 +93,7 @@ body {
 .Username {
   width: 55px;
   height: 15px;
-  font-family: Space Grotesk, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
@@ -106,7 +106,7 @@ body {
 .Update {
   width: 52px;
   height: 13px;
-  font-family: SFUIText;
+  font-family: SFUIText, sans-serif;
   font-size: 11px;
   font-weight: 900;
   font-style: normal;
@@ -147,7 +147,7 @@ body {
   margin-top: 50px;
   width: 170px;
   height: 11px;
-  font-family: Space Grotesk, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
   font-weight: 900;
   font-style: normal;
@@ -341,7 +341,7 @@ body {
 .vw-lpgithub {
   /*width: 190px;*/
   height: 15px;
-  font-family: Space Grotesk, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-style: normal;
