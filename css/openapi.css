@@ -23,7 +23,7 @@ body {
 }
 
 .title {
-  font-family: "Roboto",Arial,Helvetica,sans-serif !important;
+  font-family: "Roboto",Arial,sans-serif !important;
   font-size: 20px !important;
 }
 
@@ -48,7 +48,7 @@ small {
 pre {
   font-weight: inherit !important;
   color: #fff!important;
-  font-family: "Roboto Slab",Arial,Helvetica,sans-serif !important;
+  font-family: "Roboto Slab",Arial,sans-serif !important;
   padding: 0 0 0 0!important;
   background-color: none !important;
 }
@@ -161,7 +161,7 @@ a.nostyle {
 
 .opblock-summary-path {
   font-size: 14px !important;
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 .opblock-summary-description {

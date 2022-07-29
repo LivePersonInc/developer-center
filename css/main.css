@@ -41,7 +41,7 @@ body {
 }
 
 .header {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin-top: 35px;
   margin-bottom: 15px;
@@ -159,19 +159,19 @@ pre {
 }
 .searchbox__input::-webkit-input-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input::-moz-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input:-ms-input-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input::placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__submit {
   position: absolute;
@@ -423,7 +423,7 @@ pre {
   font-size: 1.125em;
   color: #333333;
   font-weight: bold;
-  font-family: "Roboto Slab", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Arial, sans-serif;
   /*width:60%;*/
 }
 .algolia-docsearch-suggestion--wrapper {
@@ -943,7 +943,7 @@ ul#results-container li a {
 .footer {
   color: var(--body-text);
   display: table;
-  font-family: "Open Sans Semibold", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans Semibold", Arial, sans-serif;
   font-size: 13px;
   text-align: center;
 }
@@ -1021,7 +1021,7 @@ ul#results-container li a {
   padding: 6px 45px;
   display: inline-block !important;
   font-size: 1.2em;
-  font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", "Roboto Slab", Arial, sans-serif;
   font-weight: 600;
   border: 2px solid var(--button-text);
   margin-top: 15px;

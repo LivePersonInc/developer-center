@@ -23,12 +23,12 @@ body {
 }
 .banner .text {
   color: #fff;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   margin-top: 52px;
 }
 .banner .text .first-line{
     font-size:3em;
-    font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+    font-family: "Roboto Slab", Arial, sans-serif;
     color: #fff;
     font-weight: bold;
     margin-bottom: 15px;
@@ -73,14 +73,14 @@ body {
   margin: 54px auto;
 }
 html body div.container div div.title{
-    font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+    font-family: "Roboto Slab", Arial, sans-serif;
     font-size: 1.2em;
     margin-bottom: 10px;
     color: #162036;
 }
 html body div.container div.home-first-line div.text, html body div.container div.home-second-line div.text {
   color: #808080;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.8em;
   margin-bottom: 10px;
   max-width: 90%;
@@ -94,7 +94,7 @@ a.view-all-products {
   border-radius: 50px;
   color: #162036;
   display: table;
-  font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
+  font-family: "Roboto Slab",Arial,sans-serif;
   font-size: 1.2em;
   margin: 0 auto 50px;
   padding: 7px 28px;
@@ -160,14 +160,14 @@ ul > .aa-input-container{
 .ourplatform {
   font-size: 3.333em;
   font-weight: bold;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
 }
 
 .ourplatformdetails{
   float:left;
   font-size: 1.3em;
   width: 250px;
-  font-family: "Open Sans",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6em;
   margin-top: 10px;
 }
@@ -238,7 +238,7 @@ img.mockup {
   width: 420px;
   font-weight: 100;
   margin-left: 100px;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   margin-right: 232px;
 }
 
@@ -297,7 +297,6 @@ img.mockup {
 }
 
 .learnmore{
-  margin-top: 10px;
   display: block;
   text-align: center;
   border-radius: 4px;
@@ -306,7 +305,7 @@ img.mockup {
   padding: 10px 40px 10px 40px;
   background-color: #5f7ade;
   color: #fff;
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   margin: 0 auto;
 }
 
@@ -319,7 +318,7 @@ margin-top: 58px;
 }
 
 .botdetailtitle {
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-weight: bold;
   color: #0c1320;
   font-size: 1.5em;
@@ -328,7 +327,7 @@ margin-top: 58px;
 }
 
 .botdetailtext{
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 500;
   color: #333333;
   font-size: 1.200em;
@@ -383,7 +382,7 @@ margin-top: 58px;
 }
 
 .upperboxtitle{
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.5em;
   color: #0c1320;
   font-weight: bold;
@@ -394,7 +393,7 @@ margin-top: 58px;
 
 .upperboxdetails{
   font-size: 1.200em;
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 500;
   width: 275px;
   display: block;

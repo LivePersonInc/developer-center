@@ -82,7 +82,7 @@ iframe {
 }
 
 html body div.container div div.title {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin-bottom: 10px;
   color: #162036;
@@ -91,7 +91,7 @@ html body div.container div div.title {
 html body div.container div.home-first-line div.text,
 html body div.container div.home-second-line div.text {
   color: #808080;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.8em;
   /*margin-bottom: 10px;*/
   max-width: 90%;
@@ -120,7 +120,7 @@ a.view-all-products {
   border: 1px solid #6d6d6d;
   color: #162036;
   display: table;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin: 0 auto 50px;
   padding: 7px 28px;
@@ -374,7 +374,7 @@ only screen and (min-resolution: 2dppx) {
 
 .thumbnailtitle {
   font-size: 1.575em;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   width: 75%;
   display: inline-block;
   margin-top: 95px;
@@ -389,7 +389,7 @@ only screen and (min-resolution: 2dppx) {
   font-size: 1.2em;
   width: 182px;
   padding: 10px 40px 10px 40px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   border: 2px solid #a1a1a1;
 }
 

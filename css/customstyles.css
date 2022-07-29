@@ -384,7 +384,7 @@ footer .container .row ul li {
     padding-top: 13px;
     color: white;
     font-size: 0.66666em;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     padding-right: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -479,7 +479,7 @@ a.accordion-collapsed {
     text-decoration: none;
     font-size: 1.1em;
     margin: 1px 0;
-    font-family: "Roboto Slab", "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Roboto Slab", "Open Sans", Arial, sans-serif;
     position: relative;
     top: 135px;
     font-weight: bold;
@@ -532,7 +532,7 @@ a.accordion-collapsed {
     padding-left: 11px;
     margin: 1px 0;
     position: relative;
-    font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", "Roboto Slab", Arial, sans-serif;
 }
 
 .nav li>a>span {

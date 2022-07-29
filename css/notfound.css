@@ -18,7 +18,7 @@ body {
   padding: 40px;
   color: #fff;
   border: solid 5px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 .notfoundbody {
@@ -32,7 +32,7 @@ body {
   right: 0;
   text-align: center;
   color: #fff;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 .notfoundlink{
