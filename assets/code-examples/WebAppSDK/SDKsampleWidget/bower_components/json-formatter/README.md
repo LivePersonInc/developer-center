@@ -3,7 +3,7 @@
 
 JSON Formatter is an AngularJS directive for rendering JSON objects in HTML with a **collapsible** navigation.
 
-[![Screebshot](./screenshot.png)](http://mohsenweb.com/json-formatter/demo/demo.html)
+[![Screenshot](./screenshot.png)](http://mohsenweb.com/json-formatter/demo/demo.html)
 
 ## Usage
 

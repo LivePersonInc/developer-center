@@ -269,7 +269,7 @@ Now you can begin to build out the Billing dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes statement" (in the upper-left corner). For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <http://example.com>”. Select "End Interaction" as the next action. Click **Save**.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes statement" (in the upper-left corner). For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <https://example.com>”. Select "End Interaction" as the next action. Click **Save**.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addYesStatement.png" alt="">
 

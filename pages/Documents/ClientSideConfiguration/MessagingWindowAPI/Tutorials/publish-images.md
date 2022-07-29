@@ -33,7 +33,7 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 Now download an example image file to your shell:
 
 ```sh
-wget http://www.liveperson.com/sites/default/files/LP_LOGO_1.png
+wget https://static.liveperson.com/static-assets/2022/02/10094247/logo-light-large.png
 ```
 
 We will further publish this image to the messaging service.

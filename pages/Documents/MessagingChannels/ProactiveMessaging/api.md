@@ -47,7 +47,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 | Method | URI  |
 | :--- | :--- |
-| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/baseURI.json?version=1.0|
+| GET | https://api.liveperson.net/api/account/{ACCOUNT_ID}/service/baseURI.json?version=1.0|
 
 ```json
 {
