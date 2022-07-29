@@ -54,9 +54,9 @@ In this use case, it is the brand’s responsibility to set the customer identit
 
 The callback method accepts two parameters:
 
-*	token: A string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only).
+* token: A string token. Alternatively an object can be provided containing 2 properties: "ssoKey" - a string token, and "redirect_uri" - a string URI (relevant for embedded code flow only).
 
-*	error: Any value except null or undefined to describe the error that has occurred.
+* error: Any value except null or undefined to describe the error that has occurred.
 
 The Customer web page method name can be either the default LivePerson method name (lpGetAuthenticationToken), or any specified name which can be accessed by traversing the global scope on the page.
 
@@ -92,7 +92,7 @@ The Customer web page method name can be either the default LivePerson method na
 
 * The interface is implemented as REST/JSON.  In keeping with the REST specification, the verb is POST, since accessing this API changes the state on the server (is not idempotent).
 
-*	LivePerson will POST the following data using the "application/x-www-form-urlencoded" format:
+* LivePerson will POST the following data using the "application/x-www-form-urlencoded" format:
 
 ```text
 code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c&
@@ -100,9 +100,9 @@ grant_type-authorization_code&
 redirect_uri=https://liveperson.net
 ```
 
-*	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
+* The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
 
-*	The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC 2617], based on **client_id:client_secret** provided by the team to identify.
+* The following HTTP headers are required: header name: “Authorization" The value contains the standard basic authorization header [RFC 2617], based on **client_id:client_secret** provided by the team to identify.
 
 _Example: Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW_
 
@@ -130,9 +130,9 @@ Cache-Control: no-store
 Pragma: no-cache    
 Response:
 {    
-	"access_token"	: "NotApplicabale",
-  	"token_type"		: "Bearer",
-	"id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjU1NTUxMjEyIiwiY29uc3VtZXJfdHlwZSI6ImNvcHBlciIsImlzcyI6Imh0dHBzOi8vd3d3LnQtbW9iaWxlLmNvbSIsImV4cCI6MTQ0NjExNTM1MjAwMCwiaWF0IjoxNDQ2MTExNzUyMDAwfQ.mMERThLDcoW51434sJyOtRUOZZVOVmB_evxTwduJ1Ht1Q78ZZ6ZLqH3tN3idXI7-Qn7WOwej2OI-8vsAENB_7gxxpZFUlQ8dCZFM1o7ZJd5gsXvjHbHgIlnRn1zxonZ5L8pIO8TByTNOgwDp847JyGStyzEZTYKkyOwxB5p96Z8"
+ "access_token" : "NotApplicabale",
+   "token_type"  : "Bearer",
+ "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjU1NTUxMjEyIiwiY29uc3VtZXJfdHlwZSI6ImNvcHBlciIsImlzcyI6Imh0dHBzOi8vd3d3LnQtbW9iaWxlLmNvbSIsImV4cCI6MTQ0NjExNTM1MjAwMCwiaWF0IjoxNDQ2MTExNzUyMDAwfQ.mMERThLDcoW51434sJyOtRUOZZVOVmB_evxTwduJ1Ht1Q78ZZ6ZLqH3tN3idXI7-Qn7WOwej2OI-8vsAENB_7gxxpZFUlQ8dCZFM1o7ZJd5gsXvjHbHgIlnRn1zxonZ5L8pIO8TByTNOgwDp847JyGStyzEZTYKkyOwxB5p96Z8"
 }
 ```
 
@@ -147,6 +147,7 @@ The id_token is a standard [JSON web token](https://jwt.io/) [RFC 7519], with th
 "extended claims set  - ref: OpenIdConnect token structure"
 }
 ```
+
 The following table describes the response fields:
 
 |    Field    |    Description   |
@@ -265,23 +266,23 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 ### OpenID JWT Encryption
 
-*	Encryption ensures that only the addressee will be able to read it (for example the consumer itself won't be able to read the content.)
+* Encryption ensures that only the addressee will be able to read it (for example the consumer itself won't be able to read the content.)
 
-*	In order to encrypt the JWT payload, use a public key supplied by LivePerson.
+* In order to encrypt the JWT payload, use a public key supplied by LivePerson.
 
-*	The key is base64 decoded with X509 key spec.
+* The key is base64 decoded with X509 key spec.
 
-*	The encryption should use RSA algorithm.
+* The encryption should use RSA algorithm.
 
-*	JWE header should include header name “alg" with the value: RSA-OAEP-256.
+* JWE header should include header name “alg" with the value: RSA-OAEP-256.
 
 ### OpenID JWT Signing
 
-*	Signature proves the authenticity of the issuer.
+* Signature proves the authenticity of the issuer.
 
-*	The JWT should be signed with your RSA private key.
+* The JWT should be signed with your RSA private key.
 
-*	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
+* The public key should be base64 encoded with X509 key spec and can _either_ be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
     **Note:** For more details on JWKS, please read [this (external) article](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens).
 
 ### Nested JWT
@@ -306,22 +307,22 @@ A JSON Web Token (JWT) can be signed, and then encrypted, to provide confidentia
 
 Conduct the following three steps to receive private and public keys:
 
-1.	Generate RSA key:
+1. Generate RSA key:
 
 ```sh
 openssl genrsa -out private_idp.pem 2048
 ```
 
 {:start="2"}
-2.	Extract private key:
+2. Extract private key:
 
 ```sh
 openssl pkcs8 -topk8 -inform pem -in private_idp.pem -outform pem -nocrypt -out private_key_idp.pem
-	(private key can be found in the file: private_key_idp.pem)
+ (private key can be found in the file: private_key_idp.pem)
 ```
 
 {:start="3"}
-3.	Extract public key:
+3. Extract public key:
 
 ```sh
 openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
@@ -330,7 +331,7 @@ openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
 
 **Configure the JWT public key on Conversational Cloud UI:**
 
-1.	Remove the header and tail ("-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----")
+1. Remove the header and tail ("-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----")
 
 Example:
 
@@ -347,7 +348,7 @@ OT/vxvJBf+pNrlNqto+dxNwJtSPKUQ0cnugdiI2mzw40HRtyQxzQONyuttdEMzMX
 ```
 
 {:start="2"}
-2.	Wrap text of code to be structured as continuous line (remove any new line char).
+2. Wrap text of code to be structured as continuous line (remove any new line char).
 
 Example:
 
