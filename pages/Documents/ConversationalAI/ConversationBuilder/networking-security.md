@@ -44,8 +44,4 @@ More specifically, refer to Amazon’s **ip-ranges JSON file** that you can acce
 ### Whitelisting rich media and web links
 
 * You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
-* If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), the shortened domain that's applied to *all* URLs must be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
-
-    <img class="fancyimage" style="width:800px" alt="Shorten URLs bot setting in a bot" src="img/ConvoBuilder/bot_shortenURLs.png">
-
 * For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.

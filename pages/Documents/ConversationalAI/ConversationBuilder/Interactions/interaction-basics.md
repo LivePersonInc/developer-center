@@ -79,9 +79,8 @@ As an example, if you enable URL shortening, a URL like this…
 
 <p style="color:#282B33; text-decoration:none;">http://{abbreviated domain}/{unique code}</p>
 
-Note the following:
+Note:
 * If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
-* If you enable URL shortening, the shortened domain must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media-and-web-links).
 * To support backwards compatibility, button interactions use URL shortening even though the **Shorten URLs** bot setting is set initially to Off. To disable URL shortening for buttons, enable the bot setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
 
 ### Images
