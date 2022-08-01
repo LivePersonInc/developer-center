@@ -65,7 +65,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 **Request Body Example — JSON Payload**
 
-SMS, WhatsApp:
+SMS, WA :
 
 ```json
 {
