@@ -45,7 +45,7 @@ When you create a standard dialog, by default it includes a dialog starter inter
 
     <img style="width:800px" alt="The Patterns field on the Patterns and Intent tab in the Interaction Settings" src="img/ConvoBuilder/interactions_dialogStarter8.png">
 
-2. Enter the patterns (text strings) against which to match the consumer input. For more on this, see [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions).
+2. [Enter the patterns](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) (text strings) against which to match the consumer input.
 
     You can also add keywords to exclude. An excluded keyword is a text string that is matched against consumer input in order to *not* trigger the dialog.
 
@@ -57,7 +57,7 @@ When you create a standard dialog, by default it includes a dialog starter inter
 
    <img style="width:700px" alt="The Intent button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter9.png"> 
 
-2. Use the **Assist** tool to associate the dialog starter with a domain. Then associate the dialog starter with an intent. This is discussed [here](conversation-builder-assist.html).
+2. Use the [Assist tool](conversation-builder-assist.html) to associate the dialog starter with a domain. Then associate the dialog starter with an intent.
 
     For some practice with this, try the try the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial.
 
