@@ -471,7 +471,7 @@ agent.publishEvent({
 			"elements": [
 				{
 				 "type": "image",
-					"url": "http://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
+					"url": "https://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
 					"tooltip": "image tooltip",
 					"click": {
 						"actions": [
@@ -507,7 +507,7 @@ agent.publishEvent({
 							{
 									"type": "link",
 									"name": "Add to cart",
-									"uri": "http://www.google.com"
+									"uri": "https://www.google.com/"
 							}
 						]
 					}
@@ -537,7 +537,7 @@ agent.publishEvent({
             "elements": [
                 {
                     "type": "image",
-                    "url": "http://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
+                    "url": "https://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
                     "tooltip": "image tooltip",
                     "click": {
                         "actions": [
@@ -573,7 +573,7 @@ agent.publishEvent({
                             {
                                 "type": "link",
                                 "name": "Add to cart",
-                                "uri": "http://www.google.com"
+                                "uri": "https://www.google.com/"
                             }
                         ]
                     }

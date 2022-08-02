@@ -73,13 +73,13 @@ If you have lengthy web links, you might want to enable the shortening of URLs. 
 
 As an example, if you enable URL shortening, a URL like this…
 
-<http://www.myexample.com/folder1/folder2/veryverylongstringhere.html>
+<https://example.com/folder1/folder2/veryverylongstringhere.html>
 
 …is shortened to this:
 
 <http://{abbreviated> domain}/{unique code}
 
-If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <http://www.mysite.com>), the URL isn't shortened.
+If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <https://www.mysite.com>), the URL isn't shortened.
 
 If you enable URL shortening, the shortened domain must be whitelisted; for more information, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
 

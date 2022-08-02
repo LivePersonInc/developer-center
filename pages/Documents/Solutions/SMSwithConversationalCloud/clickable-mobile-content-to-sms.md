@@ -70,7 +70,7 @@ Use the following code template for your engagement. The capitalized portions sh
   </tr>
   <tr>
     <td>TEXT_MESSAGE_URI_ENCODED</td>
-    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site http://meyerweb.com/eric/tools/dencoder/<br>
+    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use https://meyerweb.com/eric/tools/dencoder/<br>
     Note: separate the number and text with: ;?&</td>
 
   </tr>
