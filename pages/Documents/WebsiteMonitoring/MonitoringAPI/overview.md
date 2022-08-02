@@ -29,7 +29,7 @@ Please view the separate [Getting Started](rt-interactions-monitoring-getting-st
 
 * `consumerId` (deprecated — use identities instead): The brand's identifier for the consumer (e.g, email, phone number or a generated unique id).
 
-* `identities`: In order to target a specific consumer and their engagement, the identity of the consumer must be passed to the API using the `identities` array. The information in this array should match the values assigned to the user when they authenticate on your site. That, upon authentication on your site (and according with the [OpenID RFC](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)), each visitor should be assigned values to the following keys, values which are later passed to the API. Each array consists of 3 keys:
+* `identities`: In order to target a specific consumer and their engagement, the identity of the consumer must be passed to the API using the `identities` array. The information in this array should match the values assigned to the user when they authenticate on your site. That, upon authentication on your site (and according with the [OpenID RFC](https://openid.net/specs/openid-connect-core-1_0.html#IDToken)), each visitor should be assigned values to the following keys, values which are later passed to the API. Each array consists of 3 keys:
 
   * `iss`: Issuer, who identified the consumer — usually the brand.
 

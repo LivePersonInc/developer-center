@@ -64,7 +64,7 @@ Using [Postman](https://www.postman.com/), include the account number and the se
 - Current Queue Health: leDataReporting
 
 For example, the URI for retrieving the Shift Status domain is:
-`http://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
+`https://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
 
 Calls to this URI return an object with a “baseURI” value that you'll want to store to a variable within Global Functions. 
 

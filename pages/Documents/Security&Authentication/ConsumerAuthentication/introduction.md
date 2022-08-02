@@ -31,7 +31,7 @@ Authenticated customer information increases the security of the communication a
 
 *	**OAuth 2.0**: A standard way in which a user (referred to as Resource Owner) of one service (referred to as Resource Server) can delegate access to another service (referred to as Client Application). In this case, the client application is LivePerson service, the resource server is the Authentication Service of the customer, and the user/resource_owner is the customer of the customer (the consumer).
 
-*	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](http://openid.net/foundation/sponsoring-members/) including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
+*	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](https://openid.net/foundation/sponsoring-members/) including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
 
 *   **ID Token**: The ID Token is a security token that contains Claims about the Authentication of an End-User by an Authorization Server when using a Client, and potentially other requested Claims. The ID Token is represented as a JSON Web Token (JWT). [Read more](https://openid.net/specs/openid-connect-core-1_0.html).  
 Currently, LivePerson supports two methods for passing the ID Token: [implicit](https://oauth.net/2/grant-types/implicit/) or [code flow](https://oauth.net/2/grant-types/authorization-code/). 
@@ -40,13 +40,13 @@ Currently, LivePerson supports two methods for passing the ID Token: [implicit](
 
 *	**Code Flow**: An authentication flow in which LivePerson Service gets the authentication assertion directly from the customer authorization server. In OAuth 2.0, this flow is implemented using the OpenID Connect Code Flow. This flow is also called Server-to-Server flow, or simply Server Flow.
 
-*	**Implicit Flow**: In this flow, LivePerson Service does not get the authentication assertion directly from the customer server, but through the user. The assertion is signed by the customer Authorization Service, and optionally encrypted using the LivePerson Service key. In OAuth 2.0, it is implemented using the OpenID Connect [Implicit Flow](http://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth). This flow is also called Client Flow or Envelope Flow.
+*	**Implicit Flow**: In this flow, LivePerson Service does not get the authentication assertion directly from the customer server, but through the user. The assertion is signed by the customer Authorization Service, and optionally encrypted using the LivePerson Service key. In OAuth 2.0, it is implemented using the OpenID Connect [Implicit Flow](https://openid.net/specs/openid-connect-core-1_0.html#ImplicitFlowAuth). This flow is also called Client Flow or Envelope Flow.
 
 ### Principles
 
 **Industry Standards**
 
-The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#Authentication).
+The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](https://openid.net/specs/openid-connect-core-1_0.html#Authentication).
 
 ### Prerequisites
 

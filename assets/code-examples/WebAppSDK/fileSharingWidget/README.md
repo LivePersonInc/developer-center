@@ -1,6 +1,6 @@
 This is an example of widget of how you can use the Web App SDK to send Files through chat, and how you can allow visitors to upload files and have the agents view them. The widget allows for you to send a form to the visitor to allow them to upload the file, and once the file is uploaded the widget will display a link to the file. This widget was built using the Google Drive API.
 
-You can view a live example here:[File Sharing Widget](https://scottwestover.herokuapp.com/liveengageWidgets/fileSharingWidget/)
+You can view a live example here: [File Sharing Widget](https://scottwestover.herokuapp.com/liveengageWidgets/fileSharingWidget/)
 
 ## Background
 This widget was built as a proof of concept in regards to how an agent can share files with a visitor, and how a visitor can upload files using a form.

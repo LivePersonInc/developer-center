@@ -107,19 +107,19 @@ This method tracks human agent time spent on each segment (from the moment of as
     "references": [
       {
         "rel": "self",
-        "href": "http://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=0&limit=2&source=postman&sortType=DATE"
+        "href": "https://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=0&limit=2&source=postman&sortType=DATE"
       },
       {
         "rel": "next",
-        "href": "http://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=2&limit=2&source=postman&sortType=DATE"
+        "href": "https://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=2&limit=2&source=postman&sortType=DATE"
       },
       {
         "rel": "last",
-        "href": "http://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=10568&limit=1&source=postman&sortType=DATE"
+        "href": "https://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=10568&limit=1&source=postman&sortType=DATE"
       },
       {
         "rel": "first",
-        "href": "http://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=0&limit=2&source=postman&sortType=DATE"
+        "href": "https://[domain].liveperson.net/api/account/11111/agent-segments?from=2022-05-13T00:00+03:00&to=2022-05-13T02:00+03:00&offset=0&limit=2&source=postman&sortType=DATE"
       }
     ]
   }
