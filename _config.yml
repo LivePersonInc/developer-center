@@ -29,6 +29,7 @@ plugins:
   # - algoliasearch-jekyll
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-feed
 
 algolia:
   application_id: "EICOREWTRW"
