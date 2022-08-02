@@ -80,7 +80,7 @@ As an example, if you enable URL shortening, a URL like this…
 <p style="color:#282B33; text-decoration:none;">http://{abbreviated domain}/{unique code}</p>
 
 Note:
-* If you enable URL shortening, it’s applied only to URLs that start with http:// or https:// . Additionally, it's applied to all types of URLs (for websites, for images, etc.) in all types of interactions.
+* If you enable URL shortening, it’s applied only to URLs that start with http:// or https:// . Of those, it's applied to all types of URLs (for websites, for images, etc.) in all types of interactions.
 * If the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
 * To support backwards compatibility, button interactions use URL shortening even though the **Shorten URLs** bot setting is set initially to Off. To disable URL shortening for buttons, enable the bot setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
 
