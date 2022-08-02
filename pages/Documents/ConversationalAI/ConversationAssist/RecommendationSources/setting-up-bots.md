@@ -24,7 +24,7 @@ It takes up to 3 hours for changes in Conversation Assist configuration to take 
 ### Supported bot types
 Conversation Assist supports bots created in:
 * Conversation Builder
-* Google Dialogflow ES
+* Google Dialogflow ES and CX
 * IBM Watson Assistant v1 and v2
 
 ### Prerequisite knowledge
