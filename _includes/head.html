@@ -5,7 +5,7 @@
 <!--<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">-->
 <!--<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">-->
 {% if (page.documentname != null) %}
-<title>{{ page.documentname }} - {{ page.pagename }} | {{ site.site_title }}</title>
+<title>{{ page.documentname }} — {{ page.pagename }} | {{ site.site_title }}</title>
 {% else %}
 <title> {{ page.pagename }} | {{ site.site_title }}</title>
 {% endif %}
@@ -28,9 +28,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="{{ "js/jquery.linkunderanim.min.js" }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.8.3/jquery.mark.js"></script>
@@ -39,7 +39,7 @@
 <script src="{{ "js/additionalscripts.js" }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-<link rel="shortcut icon" href="{{ "img/archive/favicon.ico"  }}">
+<link rel="shortcut icon" href="{{ "img/favicon.ico" }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
 <!-- Hotjar Tracking Code for developers.liveperson.com -->
 <script>
