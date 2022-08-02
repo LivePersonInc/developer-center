@@ -24,7 +24,7 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 4. Select the **Entities** page.
 5. In the upper-right corner, click **Add Entity**.
 6. Specify the following:
-    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases. Note that entity names are case-sensitive.
     * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Value Set."
     * **Entity Values**: Enter each entity value.
@@ -44,7 +44,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 4. Select the **Entities** page.
 5. In the upper-right corner, click **Add Entity**.
 6. Specify the following:
-    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases. Note that entity names are case-sensitive.
     * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Regular Expression."
     * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://regex101.com/) apply.
