@@ -36,7 +36,7 @@ The GET method used returns the base URI for the specified account ID and servic
 
 | Method | URL |
 | :--- | :--- |
-| GET | http://api.liveperson.net/api/account/{accountId}/service/{serviceName}/baseURI.json?version=1.0 |
+| GET | https://api.liveperson.net/api/account/{accountId}/service/{serviceName}/baseURI.json?version=1.0 |
 
 **URL Parameters**
 

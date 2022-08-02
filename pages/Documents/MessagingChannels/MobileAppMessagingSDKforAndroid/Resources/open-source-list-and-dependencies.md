@@ -15,8 +15,8 @@ indicator: messaging
 
 | Name                | Site                                                    | License                                                                     |
 |---------------------|---------------------------------------------------------|-----------------------------------------------------------------------------|
-| Picasso             | [http://square.github.io/picasso/](http://square.github.io/picasso/)                        | [http://square.github.io/picasso/#license](http://square.github.io/picasso/#license)                                    |
-| OKHTTP              | [http://square.github.io/okhttp/](http://square.github.io/okhttp/)                         | [https://github.com/square/okhttp/blob/master/LICENSE.txt](https://github.com/square/okhttp/blob/master/LICENSE.txt)                    |
+| Picasso             | [https://square.github.io/picasso/](https://square.github.io/picasso/)                        | [https://square.github.io/picasso/#license](https://square.github.io/picasso/#license)                                    |
+| OKHTTP              | [https://square.github.io/okhttp/](https://square.github.io/okhttp/)                         | [https://github.com/square/okhttp/blob/master/LICENSE.txt](https://github.com/square/okhttp/blob/master/LICENSE.txt)                    |
 
 ### Latest Dependencies
 

@@ -251,7 +251,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
     // Create Entry Points JSON
     JSONArray entryPoints = null;
     try {
-        entryPoints = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
+        entryPoints = new JSONArray("[tel://972737004000, https://www.liveperson.com/, sec://sport, lang://Eng]");
     } catch (JSONException e) {
         Log.e(TAG, "Error Creating Entry Points :: " + e);
     }

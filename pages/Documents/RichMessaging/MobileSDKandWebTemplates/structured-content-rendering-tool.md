@@ -47,7 +47,7 @@ A `script` tag:
 
 Following examples are relevant only for `json-pollock.bundle.min.js` and `json-pollock.min.js`:
 
-Using [RequireJS](http://requirejs.org/):
+Using [RequireJS](https://requirejs.org/):
 
 Map the JsonPollock path in the RequireJs config, and then:
 
@@ -57,7 +57,7 @@ require(["JsonPollock"],(jsonPollock) => {
 })
 ```
 
-Using [CommonJS](http://requirejs.org/docs/commonjs.html):.
+Using [CommonJS](https://requirejs.org/docs/commonjs.html):
 
 ```javascript
 const JsonPollock = require("JsonPollock");
