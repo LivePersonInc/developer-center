@@ -8,7 +8,7 @@ layout: none
     <channel>
         <title>{{ site.title | xml_escape }}</title>
         <description>{{ site.description | xml_escape }}</description>
-        <link>{{ site.url }}/</link>
+        <link>{{ site.url }}</link>
         <atom:link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/rss+xml"/>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -16,7 +16,7 @@ layout: none
         {% for page in site.pages limit:20 %}
         <item>
             <title>{{ page.title | xml_escape }}</title>
-            <description>{{ page.content | xml_escape }}</description>
+            <description><![CDATA[{{ page.content | xml_escape }}]]></description>
             <pubDate>{{ page.date | date_to_rfc822 }}</pubDate>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
