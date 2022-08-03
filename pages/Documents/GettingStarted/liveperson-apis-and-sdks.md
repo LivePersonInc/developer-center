@@ -15,6 +15,8 @@ indicator: both
 | API | Purpose | Notes |
 |---|---|---|
 
+TODO
+
 | [Actual Handle Time API](actual-handle-time-api-overview.html) | Track events within the agent workspace | Beta |
 | [Agent Activity API](agent-activity-api-overview.html) | Track agent adherence on messaging and chat channels | Early adoption |
 | [Agent Groups API](agent-groups-api-overview.html) | Update names of agent groups, update agents’ assignments, update group managers, and synch agent groups | |
@@ -28,12 +30,12 @@ indicator: both
 | [Chat Agent API](chat-agent-api-overview.html) | Run agent activities | |
 | [Connector API](connector-api-overview.html) | Connect common messaging channels | |
 | [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | Retrieve historical conversations data | |
-| [Data Access API](data-access-api-overview.html) | | |
-| [Data Usage Audit API](data-usage-audit-api-overview.html) | | |
-| [Domain API](domain-api.html) | | |
-| [Engagement Attributes API](engagement-attributes-api-overview.html) | | |
-| [Engagement History API](engagement-history-api-overview.html) | | |
-| [Engagement Trigger API](engagement-trigger-api-overview.html) | | |
+| [Data Access API](data-access-api-overview.html) | Access historical raw data | |
+| [Data Usage Audit API](data-usage-audit-api-overview.html) | Retrieve information about transcript searches and exports usage | |
+| [Domain API](domain-api.html) | Retrieve service names and their respective base URIs | |
+| [Engagement Attributes API](engagement-attributes-api-overview.html) | Monitor consumer events such as topic and resolution of conversations | |
+| [Engagement History API](engagement-history-api-overview.html) | Search and filter copies of chat transcripts and related data | |
+| [Engagement Trigger API](engagement-trigger-api-overview.html) | Get information about engagements and interact with them | |
 | [Key Messaging Metrics API](outbound-reporting-api-overview.html) | | |
 | [LOBs API](lobs-api-overview.html) | | |
 | [Login Service API](login-service-api-overview.html) | | |
@@ -63,13 +65,12 @@ indicator: both
 
 | SDK | Purpose | Notes |
 |---|---|---|
-
-| [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html) | | |
-| [Apple Business Chat SDK](apple-business-chat-sdk-overview.html) | | |
-| [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) | | |
-| [JavaScript Chat SDK](javascript-chat-sdk-overview.html) | | |
-| [Messaging Agent SDK](messaging-agent-sdk-overview.html) | | |
-| [Messaging Window SDK](messaging-window-sdk-overview.html) | | |
+| [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html) | Add custom widgets to the Conversational Cloud | |
+| [Apple Business Chat SDK](apple-business-chat-sdk-overview.html) | Implement interactive experience for ABC consumers | |
+| [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) | Add custom widgets to the Engagement Window | |
+| [JavaScript Chat SDK](javascript-chat-sdk-overview.html) | Create a chat window from scratch | |
+| [Messaging Agent SDK](messaging-agent-sdk-overview.html) | Provide access to Agent Messaging API, enable bots to handle consumer conversations, and perform agent actions | |
+| [Messaging Window SDK](messaging-window-sdk-overview.html) | Connect to messaging servers, subscribe to notifications, and manage conversations | |
 | [Mobile App Messaging SDK for Android](mobile-app-messaging-sdk-for-android-overview.html) | | |
 | [Mobile App Messaging SDK for iOS](mobile-app-messaging-sdk-for-ios-overview.html) | | |
-| [Mobile SDK](mobile-sdk-and-web-templates-introduction.html) | | |
+| [Mobile SDK](mobile-sdk-and-web-templates-introduction.html) | Send structured content elements via templates | |
