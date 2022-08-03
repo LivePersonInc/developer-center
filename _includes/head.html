@@ -2,13 +2,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% include tag.html %}
-<!--<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">-->
-<!--<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">-->
 {% if (page.documentname != null) %}
 <title>{{ page.documentname }} — {{ page.pagename }} | {{ site.site_title }}</title>
+<meta property="og:title" content="{{ page.documentname }} — {{ page.pagename }} | {{ site.site_title }}">
 {% else %}
-<title> {{ page.pagename }} | {{ site.site_title }}</title>
+<title>{{ page.pagename }} | {{ site.site_title }}</title>
+<meta property="og:title" content="{{ page.pagename }} | {{ site.site_title }}">
 {% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<!-- <meta property="og:description" name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}"> -->
+<!-- <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}"> -->
+<meta property="og:image" content="https://developers.liveperson.com/img/header-social.jpg">
 <link rel="stylesheet" href="{{ "css/color-rules.css" }}">
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 <link rel="stylesheet" href="{{ "css/welcome.css" }}">
@@ -17,7 +21,7 @@
 <link rel="stylesheet" href="{{ "css/404.css" }}">
 <link rel="stylesheet" href="{{ "css/hamburgers.css" }}">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="{{ "css/modern-business.css" }}">
 <link rel="stylesheet" href="{{ "css/theme-black.css" }}">
 <link rel="stylesheet" href="{{ "css/breadcrumb-style.css" }}">
