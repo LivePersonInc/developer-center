@@ -177,7 +177,7 @@ You’ll find that few pages follow all these rules yet. This is subject to chan
 
 **Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x may generate confusing errors.
 
-If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
+If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](https://mac.install.guide/rubyonrails/) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
 
 Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 

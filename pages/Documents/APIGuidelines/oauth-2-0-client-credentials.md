@@ -8,7 +8,7 @@ indicator: both
 
 This section describes how to register an OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize machine-to-machine communication.
 
-### Step 1: Generate client_id and client_secret:
+### Step 1: Generate client_id and client_secret
 
 * Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation:
 
@@ -25,7 +25,7 @@ This section describes how to register an OAuth 2.0 grant type [Client Credentia
 ```
 The `client_id` and `client_secret` will be given to you after [application registration](connectorapi-getting-started.html).
 
-### Step 2: Retrieve the domain of the authorization server.
+### Step 2: Retrieve the domain of the authorization server
 
 You will need to pass your `client_id` and `client_secret` to one of our authorization servers for authentication. Depending on your account, you can use the following servers (the base domain is: `sentinel`):
 
@@ -43,6 +43,7 @@ Together with the retrieved domain of the authorization server and the `client_i
 "Sentinel", the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request. 
 
 ### API Versioning
+
 We currently have two versions for token generation.  
 
 **API V1** — This API uses a static private signing key. 

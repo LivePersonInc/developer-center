@@ -61,7 +61,7 @@ do {
 }
 
 // 2. APIs
-let entryPoints = ["http://www.liveperson-test.com",
+let entryPoints = ["https://www.liveperson-test.com/",
                    "sec://Food",
                    "lang://De"]
 let engagementAttributes = [

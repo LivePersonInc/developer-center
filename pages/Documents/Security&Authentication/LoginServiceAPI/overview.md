@@ -26,7 +26,7 @@ Before you can choose your login method, you must retrieve your domain using the
 **Tip:** Use the `agentVep` service name to retrieve your domain.
 
 ```html
-http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0
+https://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0
 ```
 
 ### Step 2. Choose your method of login

@@ -3,7 +3,7 @@ This is an example widget of how you can have the chat lines translated to anoth
 
 The widget checks what skill the current chat is assigned to, and it will then translate the visitor chat lines to the correct language. It will also allow you to translate anything the agent types into the corresponding language.
 
-You can view a live example here:[Translate Widget](https://scottwestover.herokuapp.com/liveengageWidgets/translateWidget/)
+You can view a live example here: [Translate Widget](https://scottwestover.herokuapp.com/liveengageWidgets/translateWidget/)
 
 ## Background
 This widget was built as a proof of concept in regards to how we can translate chat inside LiveEngage.

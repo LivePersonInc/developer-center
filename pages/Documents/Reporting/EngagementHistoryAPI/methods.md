@@ -694,7 +694,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                                 "type": "link",
                                 "id": "febf3237-f7d9-44bc-a17f-fc8abdfb0f25",
                                 "name": "add to cart",
-                                "uri": "http://www.google.com"
+                                "uri": "https://www.google.com/"
                             }]
                         }
                     }, {
@@ -746,7 +746,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                             "actions": [{
                                 "type": "link",
                                 "id": "15ffab70-de0e-42df-9576-290c2249aa24",
-                                "uri": "http://www.google.com",
+                                "uri": "https://www.google.com/",
                                 "name": "open browser"
                             }]
                         }

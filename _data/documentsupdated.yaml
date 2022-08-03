@@ -11,7 +11,7 @@
   image: api-guidelines
   documents:
     - documentname: Accessing LivePerson APIs
-    - documentname: Create OAuth 1.0 API keys
+    - documentname: OAuth 1.0 API keys
     - documentname: OAuth 2.0 Client Credentials
     - documentname: Domain API
     - documentname: Data APIs
