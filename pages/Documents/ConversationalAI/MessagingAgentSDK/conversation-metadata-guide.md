@@ -847,7 +847,7 @@ const content = {
 			"actions": [{
 				"type": "link",
 				"name": "Add to cart",
-				"uri": "http://www.example.com"
+				"uri": "https://www.example.com/"
 			}]
 		}
 	}, {
@@ -864,7 +864,7 @@ const content = {
 				"actions": [{
 					"type": "link",
 					"name": "Buy",
-					"uri": "http://www.example.com"
+					"uri": "https://www.example.com/"
 				}]
 			}
 		}, {
@@ -879,7 +879,7 @@ const content = {
 				"actions": [{
 					"type": "link",
 					"name": "Buy",
-					"uri": "http://www.example.com"
+					"uri": "https://www.example.com/"
 				}]
 			}
 		}]

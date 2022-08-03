@@ -104,7 +104,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
  "pageId": "4743822558",
  "entryPoints":[
    "tel://972737004000",
-   "http://www.brand.com",
+   "https://www.brand.com",
    "sec://Sport",
    "lang://English"
  ],

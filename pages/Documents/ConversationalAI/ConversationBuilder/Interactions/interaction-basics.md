@@ -176,15 +176,15 @@ You can use the following subset of HTML tags:
 - `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-- `<a href="http://example.com/test.jpg">click here</a>`
-- `<a href="http://example.com/1$2324%342523">click here</a>`
+- `<a href="https://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/1$2324%342523">click here</a>`
 - `<a href=”tel:+123456789”>phone</a>`
 - `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
 - `<a href="javascript: alert(’test’)">click here</a>`
-- `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
-- `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+- `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 

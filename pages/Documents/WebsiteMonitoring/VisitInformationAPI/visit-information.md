@@ -404,7 +404,7 @@ See [JSON Example](#json-example).
         {
           "referrer": null,
           "pageBasic": {
-            "url": "http://testFile.com",
+            "url": "https://testfile.com",
             "startTime": 1475675316326,
             "referrer": null,
             "title": "Test Page",
@@ -420,7 +420,7 @@ See [JSON Example](#json-example).
           "timeOnPage": 21482,
           "id": "1899669462",
           "pageLoaded": true,
-          "url": "testFile.com"
+          "url": "testfile.com"
         }
       ],
       "events": [

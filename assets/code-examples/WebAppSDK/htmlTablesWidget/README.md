@@ -1,7 +1,7 @@
 # HTML Table Widget
 This is an example widget of how you can send HTML tables through chat, and style them by using on page CSS. By using the on page CSS, it allows for the client to customize the look of the tables and have them match the branding of their chat window.
 
-You can view a live example here:[HTML Table Widget](https://scottwestover.herokuapp.com/liveengageWidgets/JCrewWidget/)
+You can view a live example here: [HTML Table Widget](https://scottwestover.herokuapp.com/liveengageWidgets/JCrewWidget/)
 
 ## Background
 This widget was built as a proof of concept for a client that needed to be able to send an HTML table through chat. Originally the client was copying table information from an Excel spreadsheet, but when this was pasted into chat, it would lose all of its formatting. 

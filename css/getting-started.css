@@ -27,7 +27,7 @@
     flex: 2;
     margin-top: 32px !important;
     margin-left: 32px !important;
-    color: #ffffff;
+    color: #fff;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -111,7 +111,7 @@
 }
 
 .header-lp4-external h3 {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -210,7 +210,7 @@
 }
 
 .small-header {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
