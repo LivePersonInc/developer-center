@@ -18,16 +18,16 @@ indicator: both
 | [Actual Handle Time API](actual-handle-time-api-overview.html) | Track events within the agent workspace | Beta |
 | [Agent Activity API](agent-activity-api-overview.html) | Track agent adherence on messaging and chat channels | Early adoption |
 | [Agent Groups API](agent-groups-api-overview.html) | Update names of agent groups, update agents’ assignments, update group managers, and synch agent groups | |
-| [Agent Metrics API](agent-metrics-api-overview.html) | Provides information about state of messaging agents | |
-| [Agent Status Reason API](agent-status-reason-api-overview.html) | | |
-| [Agent Survey For Messaging Configuration API](agent-survey-for-messaging-configuration-api-overview.html) | | |
-| [Agent Survey For Messaging Runtime API](agent-survey-for-messaging-runtime-api-overview.html) | | |
-| [App Engagement API](app-engagement-api-overview.html) | | |
-| [Audit Trail API](audit-trail-api-introduction.html) | | |
-| [Automatic Messages API](automatic-messages-api-overview.html) | | |
-| [Chat Agent API](chat-agent-api-overview.html) | | |
-| [Connector API](connector-api-overview.html) | | |
-| [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | | |
+| [Agent Metrics API](agent-metrics-api-overview.html) | Provide information about state of messaging agents | |
+| [Agent Status Reason API](agent-status-reason-api-overview.html) | Add additional away statuses and reasons | |
+| [Agent Survey For Messaging Configuration API](agent-survey-for-messaging-configuration-api-overview.html) | Manage Agent Surveys | |
+| [Agent Survey For Messaging Runtime API](agent-survey-for-messaging-runtime-api-overview.html) | Manage the Agent Survey lifecycle | |
+| [App Engagement API](app-engagement-api-overview.html) | Check eligibility and availability of engagements | |
+| [Audit Trail API](audit-trail-api-introduction.html) | List changes made to users, profiles, skills, lines of business, or agent groups | |
+| [Automatic Messages API](automatic-messages-api-overview.html) | Retrieve and modify Automatic Messages | |
+| [Chat Agent API](chat-agent-api-overview.html) | Run agent activities | |
+| [Connector API](connector-api-overview.html) | Connect common messaging channels | |
+| [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | Retrieve historical conversations data | |
 | [Data Access API](data-access-api-overview.html) | | |
 | [Data Usage Audit API](data-usage-audit-api-overview.html) | | |
 | [Domain API](domain-api.html) | | |
