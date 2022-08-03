@@ -40,7 +40,7 @@ Brands enjoy the benefits of using the Conversational Cloud SMS messaging soluti
 
 For best practices and considerations regarding security and architecture please see the [Conversational Cloud Out-of-the-Box Connectors Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Out+of+the+box+connectors+overview.pdf) and review the SMS section.
 
-There are specific legal considerations that a brand needs to think about when implementing SMS. For full details please reference this [Best Practice for Complying with Text Messaging Regulations](http://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Best+Practices+for+Complying+with+Text+Messaging+Regulations.pdf).
+There are specific legal considerations that a brand needs to think about when implementing SMS. For full details please reference this [Best Practice for Complying with Text Messaging Regulations](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Best+Practices+for+Complying+with+Text+Messaging+Regulations.pdf).
 
 For an even more in-depth look at messaging best practices please see:
 

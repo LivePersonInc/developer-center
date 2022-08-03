@@ -157,7 +157,7 @@ DEPENDENCIES
   jekyll (~> 3.9.2)
   jekyll-algolia
   jekyll-assets
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   jekyll-gzip
   jekyll-redirect-from
   jekyll-sitemap

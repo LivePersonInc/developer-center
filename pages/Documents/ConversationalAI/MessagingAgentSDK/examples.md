@@ -14,7 +14,7 @@ Here are a few sample bots which demonstrate some of the use cases that can be a
 
 2. You must be able to configure an agent in your Conversational Cloud account.
 
-3. You must have the latest version of Node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
+3. You must have the latest version of Node.js installed on your machine. Here's a guide on how to do so: [Mac](https://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](https://blog.teamtreehouse.com/install-node-js-npm-windows).
 
 ### Greeting Bot
 

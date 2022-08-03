@@ -295,7 +295,7 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_8.png" alt="">
 
-You can find both your account SID and auth token in the[Twilio Console](https://www.twilio.com/console) after[signing up for a free Twilio trial account](http://twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
+You can find both your account SID and auth token in the[Twilio Console](https://www.twilio.com/console) after[signing up for a free Twilio trial account](https://www.twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
 
 ##### How to generate a Bearer Token
 

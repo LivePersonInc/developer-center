@@ -3,7 +3,7 @@ This is an example widget that was created for a client that shows how to pull i
 
 This widget uses Munchkin and thus requires a Munchkin id as well as a Marketo form id. These two values currently need to be hardcoded into the code. 
 
-You can view a live example here:[Marketo Example Widget 3](https://marketo-integration.herokuapp.com/index.html)
+You can view a live example here: [Marketo Example Widget 3](https://marketo-integration.herokuapp.com/index.html)
 
 ### Contribution 
 Thank you Muktheshwar Saraf for lending some tools to use as a base for this widget.
