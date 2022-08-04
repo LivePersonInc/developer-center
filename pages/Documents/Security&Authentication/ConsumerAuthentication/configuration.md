@@ -13,7 +13,7 @@ indicator: both
 
 ### Consumer Identity Provider
 
-#### To define the OAuth 2.0 authentication:
+#### To define the OAuth 2.0 authentication
 
 1.	In Conversational Cloud, go to [Management Console](https://knowledge.liveperson.com/admin-settings-management-console-overview.html)
 

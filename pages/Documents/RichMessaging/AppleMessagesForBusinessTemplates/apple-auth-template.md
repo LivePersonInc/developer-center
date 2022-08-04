@@ -109,7 +109,7 @@ The requestIdentifier and responseEncryptionKey is optional, but the responseEnc
 
 Please use the metadata template with the relevant fields, as presented in the example below:
 
-##### Metadata Template Example:
+##### Metadata Template Example
 
 ```json
 [
@@ -310,7 +310,7 @@ If reading the auth response in an Agent Widget, you **must** initially send a p
 
 The authentication response metadata is contextual information about the consumer authentication response status. This information should be used to validate the authentication status of the consumer, as well as to report the auth response token back to the OAuth service in order to validate user identity.
 
-##### Example Conversational Metadata response:
+##### Example Conversational Metadata response
 
 **Success example response**:
 
