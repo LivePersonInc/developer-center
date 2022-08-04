@@ -728,11 +728,6 @@ div.sidebarTitle-holder {
     font-weight: bold;
 }
 
-.post-content,
-.post-content * {
-    overflow-wrap: break-word;
-}
-
 .post-content a:not(.welcome-card) {
     text-decoration: underline;
 }
