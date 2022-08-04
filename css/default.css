@@ -1813,13 +1813,6 @@ input#csds-button {
     }
 
     /* sidebar hamburger effect */
-    .defaultcontent {
-        margin: 0 auto;
-        display: block;
-        height: 100%;
-
-    }
-
     #defaultsidebar {
         height: 100%;
         position: fixed;
