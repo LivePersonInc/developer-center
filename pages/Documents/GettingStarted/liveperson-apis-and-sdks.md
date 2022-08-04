@@ -31,6 +31,7 @@ indicator: both
 | [Engagement Attributes API](engagement-attributes-api-overview.html) | Monitor consumer events such as topic and resolution of conversations |
 | [Engagement History API](engagement-history-api-overview.html) | Search and filter copies of chat transcripts and related data |
 | [Engagement Trigger API](engagement-trigger-api-overview.html) | Get information about engagements and interact with them |
+| [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) | Retrieve CSV files for test reports |
 | Key Messaging Metrics API | [→ Outbound Reporting API](outbound-reporting-api-overview.html) |
 | [LOBs API](lobs-api-overview.html) | Manage Lines of Business |
 | [Login Service API](login-service-api-overview.html) | Manage user sessions |
@@ -50,6 +51,7 @@ indicator: both
 | [Shift Status API](shift-status-api-overview.html) | Check whether skills are currently in an active shift |
 | [Skills API](skills-api-overview.html) | Manage skills |
 | [Special Occasions API](special-occasions-api-overview.html) | Configure exceptions to hours of operation |
+| [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api) | Retrieve IDs and test report names of domains |
 | [Unified Automatic Messages API](unified-automatic-messages-api-overview.html) | Find and modify Unified Automatic Messages |
 | [Users API](users-api-overview.html) | Manage users, update user information and assignments |
 | [Visit Information API](visit-information-api-overview.html) | Retrieve information about session, visitor, and engagement in a brand’s Agent Workspace |
