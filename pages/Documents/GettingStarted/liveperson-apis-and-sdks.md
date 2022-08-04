@@ -8,8 +8,6 @@ indicator: both
 
 [comment]: <> TODO: Regularly confirm page accuracy
 
-# LivePerson APIs and SDKs
-
 ## APIs
 
 | API | Purpose | Notes |
