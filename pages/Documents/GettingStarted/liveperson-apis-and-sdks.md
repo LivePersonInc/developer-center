@@ -14,7 +14,7 @@ indicator: both
 |---|---|
 | [Actual Handle Time API](actual-handle-time-api-overview.html) (beta) | Track events within the agent workspace |
 | [Agent Activity API](agent-activity-api-overview.html) (early adoption) | Track agent adherence on messaging and chat channels |
-| [Agent Groups API](agent-groups-api-overview.html) | Update names of agent groups, update agents’ assignments, update group managers, and synch agent groups |
+| [Agent Groups API](agent-groups-api-overview.html) | Update names of agent groups, update agents’ assignments, update group managers, and sync agent groups |
 | [Agent Metrics API](agent-metrics-api-overview.html) | Provide information about state of messaging agents |
 | [Agent Status Reason API](agent-status-reason-api-overview.html) | Add additional away statuses and reasons |
 | [Agent Survey For Messaging Configuration API](agent-survey-for-messaging-configuration-api-overview.html) | Manage Agent Surveys |
