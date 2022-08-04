@@ -36,16 +36,16 @@ TODO
 | [Engagement Attributes API](engagement-attributes-api-overview.html) | Monitor consumer events such as topic and resolution of conversations | |
 | [Engagement History API](engagement-history-api-overview.html) | Search and filter copies of chat transcripts and related data | |
 | [Engagement Trigger API](engagement-trigger-api-overview.html) | Get information about engagements and interact with them | |
-| [Key Messaging Metrics API](outbound-reporting-api-overview.html) | | |
-| [LOBs API](lobs-api-overview.html) | | |
-| [Login Service API](login-service-api-overview.html) | | |
-| [Messaging Interactions API](messaging-interactions-api-overview.html) | | |
+| Key Messaging Metrics API | [→ Outbound Reporting API](outbound-reporting-api-overview.html) | |
+| [LOBs API](lobs-api-overview.html) | Manage Lines of Business | |
+| [Login Service API](login-service-api-overview.html) | Manage user sessions | |
+| [Messaging Interactions API](messaging-interactions-api-overview.html) | Retrieves most up-to-date information about messaging interactions | |
 | [Messaging Operations API](messaging-operations-api-overview.html) | | |
 | [Messaging Window API](messaging-window-api-overview.html) | | |
 | [Monitoring API](monitoring-api-overview.html) | | |
 | [Net Handle Time API](net-handle-time-api-overview.html) | | |
 | [Operational Realtime API](operational-realtime-api-overview.html) | | |
-| [Outbound Reporting API](outbound-reporting-api-overview.html) | | |
+| [Outbound Reporting API](outbound-reporting-api-overview.html) | Provide summary of messages and deflections sent | |
 | [Personal Data Deletion API](personal-data-deletion-api-overview.html) | | |
 | [Predefined Categories API](predefined-categories-api-introduction.html) | | |
 | [Predefined Content API](predefined-content-api-overview.html) | | |
