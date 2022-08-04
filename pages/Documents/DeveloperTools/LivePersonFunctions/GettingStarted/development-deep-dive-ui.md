@@ -29,7 +29,6 @@ A function can behold the following states:
 
 To create a new function, press the "Create a Function"-button displayed next to the header of the functions table.
 
-<br/>
 #### First step: Coding Details
 
 On the first page of the "Create a new function"-assistant, you can set basic information for the function: the runtime version, the event to respond to, skills attached to this function, a template and access to external domains.  The editor on the right side will always show you the initial code generated based on your selections.

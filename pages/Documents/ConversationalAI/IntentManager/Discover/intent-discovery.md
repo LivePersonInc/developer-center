@@ -123,6 +123,7 @@ You can also export the utterances using the “Export table to CSV” as a spre
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_intent_discovery3h.png">
 
 ### Step 4: Train your new model
+
 Now that you have discovered some intents and found the training data for those intents, you’re ready to train your model. You should train your model at regular intervals as you add new intents and training data. Typically we advise training a new model at the end of every session of work. This will allow you to see the results of your changes the next time you revisit the model. To train a new model, [follow these steps](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 ### Split an intent
