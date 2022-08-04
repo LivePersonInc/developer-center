@@ -40,17 +40,17 @@ TODO
 | [LOBs API](lobs-api-overview.html) | Manage Lines of Business | |
 | [Login Service API](login-service-api-overview.html) | Manage user sessions | |
 | [Messaging Interactions API](messaging-interactions-api-overview.html) | Retrieves most up-to-date information about messaging interactions | |
-| [Messaging Operations API](messaging-operations-api-overview.html) | | |
-| [Messaging Window API](messaging-window-api-overview.html) | | |
-| [Monitoring API](monitoring-api-overview.html) | | |
-| [Net Handle Time API](net-handle-time-api-overview.html) | | |
-| [Operational Realtime API](operational-realtime-api-overview.html) | | |
+| [Messaging Operations API](messaging-operations-api-overview.html) | Extract call center information on account, skill, and agent level | |
+| [Messaging Window API](messaging-window-api-overview.html) | Control messaging window look, behavior, and implementation source | |
+| [Monitoring API](monitoring-api-overview.html) | Enable consumer monitoring and engagement flows | |
+| [Net Handle Time API](net-handle-time-api-overview.html) | Calculate agent headcount | Beta |
+| [Operational Realtime API](operational-realtime-api-overview.html) | Provides real-time information about contact center performance | |
 | [Outbound Reporting API](outbound-reporting-api-overview.html) | Provide summary of messages and deflections sent | |
-| [Personal Data Deletion API](personal-data-deletion-api-overview.html) | | |
-| [Predefined Categories API](predefined-categories-api-introduction.html) | | |
-| [Predefined Content API](predefined-content-api-overview.html) | | |
-| [Profiles API](profiles-api-overview.html) | | |
-| [Send API](connector-api-send-api-overview.html) | | |
+| [Personal Data Deletion API](personal-data-deletion-api-overview.html) | Delete personal data (e.g., to comply with regulations like the GDPR) | |
+| [Predefined Categories API](predefined-categories-api-introduction.html) | Group and manage predefined categories | |
+| [Predefined Content API](predefined-content-api-overview.html) | Find, create, modify, and delete predefined content items | |
+| [Profiles API](profiles-api-overview.html) | Manage Admin, Agent Manager, Agent, Campaign Manager, or customized profiles | |
+| [Send API](connector-api-send-api-overview.html) | Handles communication between Connector and Conversational Cloud | |
 | [Server Chat API](server-chat-api-overview.html) | | |
 | [Shift Status API](shift-status-api-overview.html) | | |
 | [Skills API](skills-api-overview.html) | | |
