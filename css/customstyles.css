@@ -124,6 +124,11 @@ body h1 {
     margin: 10px 0;
 }
 
+.post-content li img,
+.inlineimage {
+    margin: 0;
+}
+
 .pageSummary {
     font-size: 13px;
     display: block;
