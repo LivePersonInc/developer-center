@@ -12,7 +12,7 @@ indicator: both
 ---
 
 {: .important}
-**Customize your POC:** This guide is meant to walk through building a working example of the Conversation Assist capabilities within 30 minutes. The provided examples and starter resources are intentionally simple to move through the process quickly. Keep an eye out for "Customize your POC" sections like this one for indications as to where you can further develop and customize your implementation of a Conversation Assist proof-of-concept to fit your specific needs.
+**Customize your POC:** This guide walks through building a working example of the Conversation Assist capabilities within 30 minutes. The provided examples and starter resources are intentionally simple to move through the process quickly. Keep an eye out for "Customize your POC" sections like this one for indications as to where you can further develop and customize your implementation of a Conversation Assist proof-of-concept to fit your specific needs.
 
 This section walks through the steps that are necessary to complete before configuring Conversation Assist. These steps include the creation of the following:
 
