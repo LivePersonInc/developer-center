@@ -24,13 +24,13 @@ Use this Quick Start guide to get you up and running with a project powered by L
 The Mobile SDK currently supports only Native Android (Java / Kotlin) implementations. If you use other core frameworks, languages, or development setups, please check with LivePerson support for advice before attempting these steps. 
 
 ### Step 1: Install the Messaging SDK into your project
+
 You can install the Mobile App Messaging SDK using a couple of different methods:
 
 * [Automatically add the SDK files using Gradle](#option-1-automatically-add-the-sdk-files-using-gradle)
 
 * [Manually copy the SDK files to your project](#option-2-manually-copying-the-sdk-files-to-your-project)
 
-<br/>
 #### Option 1: Automatically add the SDK files using Gradle
 
 You can use Gradle, an automation tool, to scale your projects effortlessly. 

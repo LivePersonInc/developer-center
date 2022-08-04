@@ -36,7 +36,7 @@ Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs tha
 
 If markdownHyperlinkFromAgent is enabled, link preview won’t be displayed.
 
-### While updating the SDK, my Structure Content is now showing a border on the buttons:
+### While updating the SDK, my Structure Content is now showing a border on the buttons
 
 On SDK 5.2.1, the border was introduced as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
 

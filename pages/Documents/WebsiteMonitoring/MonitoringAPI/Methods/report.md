@@ -126,7 +126,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 }
 ```
 
-#### Examples for engagement attributes to report impression events:
+#### Examples for engagement attributes to report impression events
 
 ImpressionAcceptEvent:
 

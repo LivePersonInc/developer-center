@@ -390,7 +390,7 @@ If you are looking to receive and share the payment response with a **human agen
 
 Apple Pay response metadata is contextual information about the consumer payment status and details. You will receive the payment response inside the `requestIdentifier` parameter that was sent with the initial request. This `requestIdentifier` parameter should then be used to allow the bot to validate the payment against your payment backend.
 
-##### Successful payment response example:
+##### Successful payment response example
 
 ```json
 {  
@@ -400,7 +400,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 }
 ```
 
-##### Failed payment response example:
+##### Failed payment response example
 
 ```json
 {  
