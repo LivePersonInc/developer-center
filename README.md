@@ -1,4 +1,4 @@
-# LivePerson Developers community and website
+# LivePerson’s developer center and community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
@@ -6,12 +6,12 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 
 ## Table of contents
 
-1. 📡 [Updating the documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
-2. 📝 [Notes on content and code](https://github.com/LivePersonInc/developers-community#notes-on-content-and-code)
-3. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
-4. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
-5. 📋 [Template](https://github.com/LivePersonInc/developers-community#template)
-6. 📜 [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+1. 📡 [Updating the documentation](#updating-the-documentation)
+2. 📝 [Notes on content and code](#notes-on-content-and-code)
+3. 🔨 [Building the site locally](#building-the-site-locally)
+4. 👻 [Hiding files](#hiding-files)
+5. 📋 [Template](#template)
+6. 📜 [Licensing](#licensing)
 
 ## Updating the documentation
 
@@ -199,10 +199,10 @@ Changes that alter site navigation or other changes that change the site as a wh
 
 ## Hiding files
 
-* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden).
+* Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
 * Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
-* Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+* Follow the header structure of [`blank.md`](/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
