@@ -8,7 +8,7 @@ indicator: both
 
 [comment]: <> TODO: Regularly confirm page accuracy
 
-## APIs
+### APIs
 
 | API | Purpose |
 |---|---|
@@ -56,7 +56,7 @@ indicator: both
 | [Window Customization API](window-customization-api-overview.html) | Customize the look and feel of the web engagement window |
 | [Workdays API](workdays-api-overview.html) | Configure hours of operation for specific days, and assign them to specific skills |
 
-## SDKs
+### SDKs
 
 | SDK | Purpose |
 |---|---|
