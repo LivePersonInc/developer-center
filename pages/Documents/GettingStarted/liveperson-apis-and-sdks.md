@@ -25,6 +25,7 @@ indicator: both
 | [Chat Agent API](chat-agent-api-overview.html) | Run agent activities |
 | [Connector API](connector-api-overview.html) | Connect common messaging channels |
 | [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | Retrieve historical conversations data |
+| [Conversation Context Service API](conversation-orchestrator-conversation-context-service-overview.html) | Guide contextual continuity, context-based dynamic, and human-bot tango |
 | [Data Access API](data-access-api-overview.html) | Access historical raw data |
 | [Data Usage Audit API](data-usage-audit-api-overview.html) | Retrieve information about transcript searches and exports usage |
 | [Domain API](domain-api.html) | Retrieve service names and their respective base URIs |
@@ -40,6 +41,7 @@ indicator: both
 | [Messaging Window API](messaging-window-api-overview.html) | Control messaging window look, behavior, and implementation source |
 | [Monitoring API](monitoring-api-overview.html) | Enable consumer monitoring and engagement flows |
 | [Net Handle Time API](net-handle-time-api-overview.html) (beta) | Calculate agent headcount |
+| [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) | Retrieve next best action (route to skill, send a response, etc.) for a bot or app |
 | [Operational Realtime API](operational-realtime-api-overview.html) | Provides real-time information about contact center performance |
 | [Outbound Reporting API](outbound-reporting-api-overview.html) | Provide summary of messages and deflections sent |
 | [Personal Data Deletion API](personal-data-deletion-api-overview.html) | Delete personal data (e.g., to comply with regulations like the GDPR) |
