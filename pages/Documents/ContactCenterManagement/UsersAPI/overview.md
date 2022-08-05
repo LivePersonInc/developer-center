@@ -60,4 +60,4 @@ A few things you'll need to get started with this API:
 
 * Automatically add new agent users to the system
 
-* Synchronize  any HR or staffing system users to Conversational Cloud
+* Synchronize any HR or staffing system users to Conversational Cloud
