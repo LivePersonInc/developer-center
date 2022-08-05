@@ -139,9 +139,8 @@ img.card-container {
 
 .create-button {
     background: #ededfa;
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
-    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     border-radius: 24px;

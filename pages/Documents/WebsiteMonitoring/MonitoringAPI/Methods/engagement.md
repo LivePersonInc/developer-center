@@ -116,7 +116,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
  ],
  "entryPoints":[
    "tel://972737004000",
-   "http://www.liveperson.com",
+   "https://www.liveperson.com/",
    "sec://Sport",
    "lang://English"
  ],

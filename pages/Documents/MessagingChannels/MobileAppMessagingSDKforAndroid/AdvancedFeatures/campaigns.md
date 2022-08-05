@@ -126,7 +126,7 @@ identityList.add(monitoringIdentity);
 
 // Creating entryPoints object
 JSONArray entryPoints = new JSONArray();
-entryPoints.put("http://www.liveperson-test.com");
+entryPoints.put("https://www.liveperson-test.com/");
 entryPoints.put("sec://Food");
 entryPoints.put("lang://De");
 

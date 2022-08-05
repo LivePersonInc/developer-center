@@ -54,9 +54,9 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Name | Datatype | Required | Definition |
 | :--- | :--- | :--- |:--- |
 | skill | string | yes | Engagement skill |
-| consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
-| handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA.
+| consumerPhoneNumber | string | yes | Consumer’s phone number (E.164 format with leading "+") |
+| handoffId | string | yes | C2M handoff Id for the chosen outbound campaign. This is accessible from C2M UI via Agent Console. |
+| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA. |
 | templateVariables | object | no | Key-value pairs of variables for the body template and only applicable for SMS and WA channels. |
 | headerVariables | object | no | Key-value pairs of variables for the header template and only applicable for WA channels. This object is nested inside templateVariables |
 | buttonVariables | object | no | Key-value pairs of variables for the Call-To-Action button template and only applicable for WA channels. This object is nested inside templateVariables |
@@ -65,8 +65,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 **Request Body Example — JSON Payload**
 
-SMS, WA:
-
+SMS, Whatsapp, Google RCS
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -132,7 +131,7 @@ SMS, WA:
 }
 ```
 
-WA Rich Template:
+Whatsapp Rich Template:
 
 ```json
 {
@@ -148,8 +147,21 @@ WA Rich Template:
 }
 ```
 
-INAPP:
+Google RCS Rich Card:
+```json
+{
+    "consumerPhoneNumber": "+12061234567",
+    "handoffId": "H123456789",
+    "templateVariables": {
+        "1": "John Doe",
+        "2": "New York",
+        "3": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"
+    },
+    "skill": "support",
+}
+```
 
+INAPP:
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -470,7 +482,7 @@ We recommend a request be retried (3 attempts with exponential retry with delay 
 
 <strong>3. Which channels are supported as of now?</strong>
 
-C2M supports SMS-Twilio, WA, and INAPP channels.
+C2M supports SMS-Twilio, WhatsApp, Apple Business Chat, Google RCS and INAPP channels.
 
 <strong>4. Is there a throughput limitation for the data that gets passed from Twilio to LP?</strong>
 

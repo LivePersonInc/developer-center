@@ -33,7 +33,7 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 
 *Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*
 
-{:.notice}
+{: .notice}
 When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
 
 ### sendSde

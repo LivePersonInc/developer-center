@@ -46,7 +46,8 @@ agentParticipantsActive, consumerParticipants, transfers, interactions,
 messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
 ```
 
-#### Note:
+#### Note
+
 Every content type must be passed in **'contentToRetrieve'** parameter in order to be retrieved, **including the default types**. List of **'contentToRetrieve'** valid data types are found under **'contentToRetrieve'** in the following filters part.
 
 Filter is sent in the POST data (body) with the following JSON structure.

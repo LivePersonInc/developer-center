@@ -12,7 +12,7 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
 
