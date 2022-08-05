@@ -1827,7 +1827,7 @@ input#csds-button {
         padding-top: 115px;
         transform: translateX(-315px);
         transition: transform 250ms ease-in-out;
-        z-index: 999;
+        z-index: 99;
     }
 
     .defaultwrapper input[type="checkbox"].openSidebarMenu:checked~#defaultsidebar {
