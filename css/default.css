@@ -517,6 +517,11 @@ table tbody td img {
     width: 100%;
 }
 
+td {
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
 .mobilefeaturestable {
     display: none;
 }
