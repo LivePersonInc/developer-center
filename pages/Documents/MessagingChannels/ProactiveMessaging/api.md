@@ -64,6 +64,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | **sy**.sentinel.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
 ## Campaign API: Example Request and Response
+
 * Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) to go through API spec and use example here to get started.
 
 | Method | URI  |
@@ -489,6 +490,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 ```
 
 ## Reporting API: Example Request and Response
+
 * Refer [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) to get the status of messages.
 
 ### Proactive 2.0 API: Frequently Asked Questions

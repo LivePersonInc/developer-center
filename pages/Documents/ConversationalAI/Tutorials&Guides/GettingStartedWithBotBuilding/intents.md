@@ -90,6 +90,7 @@ With the "Make Payment" intent configured, let’s return to Conversation Builde
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_assoc.png" alt="">
 
 ### Step 7: Add custom rules
+
 Now you can begin to build out the Make Payment dialog.
 
 1. Add a Text statement that says, “Sure, I can help with that."
