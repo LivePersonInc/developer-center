@@ -103,7 +103,7 @@ img.card-container {
 #success-stories {
     background-repeat: no-repeat;
     background-position: center;
-    background: var(--card-bg-background), url("img/welcomebanner.png");
+    background: var(--card-bg-background), url("/img/welcomebanner.png");
     border: 2px solid #eeeff1;
     background-size: cover;
 }
