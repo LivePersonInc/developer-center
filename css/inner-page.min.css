@@ -130,7 +130,6 @@ pre code {
     line-height: 1.8;
     max-width: 160px;
     height: 50px;
-    hyphens: none;
     border-right: solid 1px #fff;
     padding: 21px 25.5px 21px 23px;
     vertical-align: inherit
@@ -168,7 +167,6 @@ table>tbody>tr:nth-of-type(even) {
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
     color: #666;
-    hyphens: none;
     border-right: solid 1px black
 }
 
