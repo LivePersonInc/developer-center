@@ -1818,6 +1818,18 @@ input#csds-button {
     }
 
     /* sidebar hamburger effect */
+    .spinner,
+    .sidebarIconToggle,
+    input[type=checkbox].openSidebarMenu,
+    .horizontal,
+    .diagonal.part-1,
+    .diagonal.part-2,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-1,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-2,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
+        transition: var(--nav-transition);
+    }
+
     #defaultsidebar {
         height: 100%;
         position: fixed;
@@ -1835,12 +1847,10 @@ input#csds-button {
     }
 
     input[type=checkbox].openSidebarMenu {
-        transition: var(--nav-transition);
         display: none;
     }
 
     .sidebarIconToggle {
-        transition: var(--nav-transition);
         cursor: pointer;
         height: 100%;
         width: 100%;
@@ -1854,7 +1864,6 @@ input#csds-button {
     }
 
     .spinner {
-        transition: var(--nav-transition);
         position: absolute;
         height: 3px;
         width: 100%;
@@ -1866,23 +1875,19 @@ input#csds-button {
     .diagonal.part-2 {
         position: relative;
         float: left;
-        transition: var(--nav-transition);
         margin-top: 3px;
     }
 
     input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
-        transition: var(--nav-transition);
         opacity: 0;
     }
 
     input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-1 {
-        transition: var(--nav-transition);
         transform: rotate(135deg);
         margin-top: 8px;
     }
 
     input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-2 {
-        transition: var(--nav-transition);
         transform: rotate(-135deg);
         margin-top: -9px;
     }
