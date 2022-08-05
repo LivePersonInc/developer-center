@@ -43,7 +43,7 @@ You can install Conversational Cloud Mobile App Messaging SDK for iOS using a co
 
 <div class="important">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
 
-#### *Option 1: Automatically using CocoaPods*
+#### Option 1: Automatically using CocoaPods
 
 You can use CocoaPods, a dependency manager for Swift and Objective-C projects, to scale your projects elegantly. It provides a standard format for managing external libraries.
 
@@ -86,7 +86,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod update
    ```
 
-#### *Option 2: Manually copying the libraries to your Xcode Project*
+#### Option 2: Manually copying the libraries to your Xcode Project
 
 1. [Download](https://github.com/LivePersonInc/iOSFrameworks) the SDK package.
 
@@ -122,6 +122,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    ```
 
 ### Step 3: Initialize the LPMessagingSDK
+
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
 1. **Set up your account information.** 
@@ -445,7 +446,7 @@ You can now do any of the following:
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
 
-### Upgrading from older SDK versions to 6.0:
+### Upgrading from older SDK versions to 6.0
 
 This guide will help current users of older versions of the SDK to upgrade to the new SDK 6.0 and upwards.  
 

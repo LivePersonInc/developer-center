@@ -117,7 +117,7 @@ LivePersonIntents class provides several methods that help get the data out of t
 
 We provide an `IntentFilter` that contains all the intent Actions in `LivePersonIntents.getIntentFilterForAllEvents()` to register. Remember, these Intents are local only and must by registered through `LocalBroadcastManager`.
 
-##### Register `BroadcastReceiver` for all Intents:
+##### Register `BroadcastReceiver` for all Intents
 
 ```java
 LocalBroadcastManager.getInstance(
@@ -125,7 +125,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-##### Register `BroadcastReceiver` for a specific set of Intents:
+##### Register `BroadcastReceiver` for a specific set of Intents
 
 ```java
 IntentFilter filter = new IntentFilter();
@@ -137,7 +137,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-##### Catch the Broadcast:
+##### Catch the Broadcast
 
 ```java
 BroadcastReceiver <your receiver> = new BroadcastReceiver(){
@@ -157,13 +157,13 @@ If you registered for multiple **Intents**, you must filter each one, using a **
 
 #### Callbacks
 
-##### Register the callback call:
+##### Register the callback call
 
 ```java
 public static void setCallback(final LivePersonCallback listener)
 ```
 
-##### Remove a callback call:
+##### Remove a callback call
 
 ```java
 public static void removeCallBack()
@@ -175,7 +175,7 @@ For more details, see the [Android Callbacks Index](android-callbacks-index.html
 
 During the course of the conversation, consumers can take several actions such as Mark as urgent to receive a faster service, or Resolve conversation to let your agents know they have received their answers.
 
-#### LivePerson API:
+#### LivePerson API
 
 ```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
@@ -189,7 +189,7 @@ public static boolean clearHistory()
 
 For more details, see the [Android Methods](android-methods.html).
 
-#### Callbacks:
+#### Callbacks
 
 ```java
 void onConversationStarted(LPConversationData convData);
@@ -251,7 +251,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
     // Create Entry Points JSON
     JSONArray entryPoints = null;
     try {
-        entryPoints = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
+        entryPoints = new JSONArray("[tel://972737004000, https://www.liveperson.com/, sec://sport, lang://Eng]");
     } catch (JSONException e) {
         Log.e(TAG, "Error Creating Entry Points :: " + e);
     }
@@ -633,7 +633,7 @@ The SDK handles its own obfuscation and all its dependencies according to ProGua
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, typing indication, etc.
 
-#### LivePerson callbacks:
+#### LivePerson callbacks
 
 ```java
 void onAgentTyping(boolean isTyping);
@@ -652,7 +652,7 @@ For the full list of Callbacks, see the [Android Callbacks Index](android-callba
 
 Pass and display consumer information to agents, and agent information to consumers. See more information about each method, see [setUserProfile](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setuserprofile) and [checkAgentID](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#checkagentid)
 
-#### Set the User Profile (Not an SDE):
+#### Set the User Profile (Not an SDE)
 
 ```java
 public static void setUserProfile(ConsumerProfile profile)
@@ -661,7 +661,7 @@ public static void setUserProfile(ConsumerProfile profile)
 {: .important}
 When using SDEs (Authenticated Chat), SDEs have priority and will override the setUserProfile.
 
-#### Get Agent Details:
+#### Get Agent Details
 
 ```java
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)

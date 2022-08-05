@@ -288,7 +288,8 @@ code pre {
     flex: 3;
 }
 
-.defaultcontent h3, .defaultcontent h4 {
+.defaultcontent h3,
+.defaultcontent h4 {
     display: flex;
     align-items: center;
 }
@@ -556,6 +557,10 @@ table tbody td img {
         max-width: 100%;
         margin: inherit;
     }
+
+    #jumpto {
+        display: none !important;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
@@ -713,10 +718,6 @@ table tbody td img {
     top: 2px;
 }
 
-.important p:not(:first-child) {
-    margin-left: -25px;
-}
-
 .notice {
     border-left-color: var(--error-border);
     border-radius: 4px;
@@ -757,10 +758,6 @@ table tbody td img {
     margin-right: 5px;
     position: relative;
     top: 1px;
-}
-
-.important p:not(:first-child) {
-    margin-left: -25px;
 }
 
 .solutionslist {
@@ -1044,7 +1041,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http,
 .language-gradle,
 .language-css,
-.language-objc {
+.language-objc,
+div.language-plaintext,
+.language-text {
     display: flex;
     flex-direction: column;
 }
@@ -1062,7 +1061,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http:before,
 .language-gradle:before,
 .language-css:before,
-.language-objc:before {
+.language-objc:before,
+.language-plaintext:before,
+.language-text:before {
     color: var(--secondary-black);
     text-align: right;
     font-size: 14px;
@@ -1346,6 +1347,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     margin-top: 32px;
     font-family: "Roboto Mono", Monaco, courier, monospace;
     color: var(--widget-text);
+    overflow-wrap: anywhere;
 }
 
 /* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */

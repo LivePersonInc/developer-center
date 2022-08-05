@@ -770,7 +770,7 @@ h1.page-header {
 .open .dropdown-toggle.datepicker table tr td.active:hover,
 .open .dropdown-toggle.datepicker table tr td.active.disabled,
 .open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
-  color: #ffffff;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
   border-color: #285e8e;
 }

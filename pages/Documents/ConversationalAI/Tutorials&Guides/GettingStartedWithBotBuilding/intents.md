@@ -90,6 +90,7 @@ With the "Make Payment" intent configured, let’s return to Conversation Builde
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_assoc.png" alt="">
 
 ### Step 7: Add custom rules
+
 Now you can begin to build out the Make Payment dialog.
 
 1. Add a Text statement that says, “Sure, I can help with that."
@@ -99,7 +100,7 @@ Now you can begin to build out the Make Payment dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "Great! To pay your bill, please go to our billing portal at http://example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "Great! To pay your bill, please go to our billing portal at example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules2.png" alt="">
 

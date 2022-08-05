@@ -18,7 +18,7 @@ indicator:
 Consumers prefer to message rather than call brands.  However, in some cases, a higher touch interaction such as a video call can help to make the conversation more effective.  
 <iframe src="https://www.youtube.com/embed/wV9ecP0n7d4" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
 
-### Benefits of using video chat:
+### Benefits of using video chat
 
 * **Solve issues, the first time around**: video gives agents the best tools for achieving first contact resolution and reducing wait time and average hold time. 
 
@@ -26,7 +26,7 @@ Consumers prefer to message rather than call brands.  However, in some cases, a 
 
 * **Flexibility in meeting consumer needs**: consumers expect to have the flexibility to do all types of communication in one place over chat. Now brands can meet their customer’s expectations by providing them with chat and video all within one place, achieving the complete digital experience.
 
-### Use cases:
+### Use cases
 
 * Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem. 
 

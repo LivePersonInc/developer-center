@@ -311,10 +311,10 @@ Because the number of sessions can be quite large, the API supports pagination. 
 ##### Pagination examples
 
 ```
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
 ```
 
 <table>
