@@ -221,7 +221,7 @@ The icon is available next to the agent message bubble or on the top of the tool
 
 Called when a structured content control with Link action gets clicked.  
 
-{:.important}
+{: .important}
 This callback only gets called if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to **true**.
 
 > **Intent Action:** 
@@ -434,7 +434,8 @@ public interface LivePersonCallback {
 ```
 
 ### LivePerson Intents
-#### Intent Actions:  
+
+#### Intent Actions  
 
 ```java
 public interface ILivePersonIntentAction {
@@ -474,7 +475,7 @@ public interface ILivePersonIntentAction {
 }
 ```
 
-#### Intent parameter 'Extras':
+#### Intent parameter 'Extras'
 
 ```java
 public interface ILivePersonIntentExtras{
@@ -506,7 +507,7 @@ public interface ILivePersonIntentExtras{
 }
 ```
 
-### TaskType enum:
+### TaskType enum
 
 ```java
 /**
@@ -533,7 +534,7 @@ enum TaskType {
 | USER_EXPIRED        | The user's authentication has expired. |
 | CLOSING_SOCKET      | A request has timed out while trying to reach a server, and as a result we are closing our socket. |
 
-### LpError enum:
+### LpError enum
 
 ```java
 enum class LpError {

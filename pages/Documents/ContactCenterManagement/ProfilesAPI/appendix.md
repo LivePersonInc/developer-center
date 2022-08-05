@@ -16,7 +16,7 @@ indicator: both
 
 This section contains API details that are common to every API’s resource and action.
 
-### Considerations:
+### Considerations
 
 | Title | Description |
 | :--------   | :--- |
@@ -134,7 +134,7 @@ This section contains API details that are common to every API’s resource and 
 | 10037 | Conversation Builder: Bot Builder | Grants the user full privileges in Conversation Builder for creating bots and related resources (versions, releases, integrations, global functions, etc.). For more details, see [here](bot-accounts-permissions.html). |
 | 10038      | Configure messaging agent survey on skill   | Allow admins to assign skills to agent survey, as well as override agent survey timeout |
 | 10040 | Conversation Builder: API Credentials Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage credentials. If you grant this, also grant Bot Builder Lite (10041) and API Developer (10043). |
-| 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials,and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
+| 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials, and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
 | 10042 | Conversation Builder: Import/Export Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only export and import bots and knowledge bases. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 10043 | Conversation Builder: API Developer | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage integrations. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |

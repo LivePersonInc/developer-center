@@ -73,13 +73,13 @@ If you have lengthy web links, you might want to enable the shortening of URLs. 
 
 As an example, if you enable URL shortening, a URL like this…
 
-<http://www.myexample.com/folder1/folder2/veryverylongstringhere.html>
+<https://example.com/folder1/folder2/veryverylongstringhere.html>
 
 …is shortened to this:
 
 <http://{abbreviated> domain}/{unique code}
 
-If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <http://www.mysite.com>), the URL isn't shortened.
+If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <https://www.mysite.com>), the URL isn't shortened.
 
 If you enable URL shortening, the shortened domain must be whitelisted; for more information, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
 
@@ -175,15 +175,15 @@ You can use the following subset of HTML tags:
 - `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-- `<a href="http://example.com/test.jpg">click here</a>`
-- `<a href="http://example.com/1$2324%342523">click here</a>`
+- `<a href="https://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/1$2324%342523">click here</a>`
 - `<a href=”tel:+123456789”>phone</a>`
 - `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
 - `<a href="javascript: alert(’test’)">click here</a>`
-- `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
-- `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+- `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 

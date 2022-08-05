@@ -88,7 +88,7 @@ body {
 
 #registerForm input {
   border: solid 1px #d6d6d6;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 22px;
   margin-bottom: 16px;
   padding: 7px 10px;
@@ -97,7 +97,7 @@ body {
 
 #region {
   border: solid 1px #d6d6d6;
-  background-color: #ffffff;
+  background-color: #fff;
   height: 40px;
   margin-bottom: 16px;
   font-size: 14px;
@@ -211,7 +211,7 @@ input:-moz-placeholder { /* Firefox 18- */
 #registerButton span {
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 
 #loader {

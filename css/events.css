@@ -82,7 +82,7 @@ iframe {
 }
 
 html body div.container div div.title {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin-bottom: 10px;
   color: #162036;
@@ -91,7 +91,7 @@ html body div.container div div.title {
 html body div.container div.home-first-line div.text,
 html body div.container div.home-second-line div.text {
   color: #808080;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 0.8em;
   /*margin-bottom: 10px;*/
   max-width: 90%;
@@ -120,7 +120,7 @@ a.view-all-products {
   border: 1px solid #6d6d6d;
   color: #162036;
   display: table;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin: 0 auto 50px;
   padding: 7px 28px;
@@ -134,13 +134,13 @@ a.view-all-products::after {
 
 @media (max-width: 990px) {
   .home-first-line {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .home-second-line {
     width: 70%;
     margin-bottom: 16%;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -222,7 +222,7 @@ a.view-all-products::after {
 }
 
 .developmentsummit h1 {
-  color: #ffffff;
+  color: #fff;
   font-size: 48px;
   line-height: 64px;
   font-family: "roboto slab", arial;
@@ -235,7 +235,7 @@ a.view-all-products::after {
   color: #162036;
   font-size: 24px;
   line-height: 32px;
-  font-family: "open sans", arial;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   margin-top: 0;
   padding-top: 0;
@@ -243,7 +243,7 @@ a.view-all-products::after {
 }
 
 .developmentsummit .orange {
-  color: #ffffff;
+  color: #fff;
   background: #ff720b;
   padding: 14px 26px;
   font-size: 1.5em;
@@ -255,7 +255,7 @@ a.view-all-products::after {
   color: #162036;
   font-size: 16px;
   line-height: 22px;
-  font-family: "open sans", arial;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
 
@@ -264,7 +264,7 @@ a.view-all-products::after {
 }
 
 .developmentsummit .banner-container h2 {
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 32px;
 }
 
@@ -374,7 +374,7 @@ only screen and (min-resolution: 2dppx) {
 
 .thumbnailtitle {
   font-size: 1.575em;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   width: 75%;
   display: inline-block;
   margin-top: 95px;
@@ -389,7 +389,7 @@ only screen and (min-resolution: 2dppx) {
   font-size: 1.2em;
   width: 182px;
   padding: 10px 40px 10px 40px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   border: 2px solid #a1a1a1;
 }
 

@@ -2,7 +2,7 @@
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
-This repository generates LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
+This repository hosts LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
 
 ## Table of contents
 
@@ -168,33 +168,34 @@ When contributing to this repository, please observe the following:
 * Be consistent
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
-* The maximum width for images in this repository is 800 pixels
+* To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
+* The maximum (view) width for images in this repository is 800 pixels
 
 You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
 
 ## Building the site locally
 
-**Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
+**Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x may generate confusing errors.
 
-If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
+If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](https://mac.install.guide/rubyonrails/) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
 
 Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 
 ### First time install
 
 1. Run `npm install`
-2. Run `npm run serve`
-3. Navigate to http://localhost:4000/ (or the port you chose) to access the site
+2. Run `bundle install`
 
-### Serving the site after the first install
+### Start-up
 
-You have two options to run the site locally after the first install:
+3. Run `npm run serve`
+4. Navigate to http://localhost:4000/ (or the port you chose) to access the site
 
-* **Using gulp.js**. [Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks. By simply typing in `gulp` in your command line, it takes care of all the build commands needed to serve the site. It also watches the root directory and will automatically refresh your browser once any changes were built. Gulp and its dependencies are installed locally in the project, so there’s no further installation needed from your end.
+### Notes
 
-* **Using Jekyll’s standard commands**. All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
+To use Jekyll’s standard commands, all you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
-**Note:** changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
+Changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, kill the build and run `bundle exec jekyll serve` without the suffix. (This is also true for gulp: You will need to kill your gulp instance and then run the Jekyll command.)
 
 ## Hiding files
 
@@ -217,7 +218,7 @@ The sidebar’s YAML file can be found in the `_data` folder. It’s called `doc
 
 ## Template
 
-See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
+See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to the Developer Experience team *before* starting to write your document so that we can advise on its structure.
 
 ### Algolia
 

@@ -86,7 +86,7 @@ Open the Agent Workspace and click the ``Accept`` button. The conversation will 
 Close the conversation.
 
 ### Further Testing
-You can try changing the external JWT properties using a JWT encoder, for example ([jwt.io](http://jwt.io)). Use the ``RS256`` algorithm with the following keys:
+You can try changing the external JWT properties using a JWT encoder, for example ([jwt.io](https://jwt.io/)). Use the ``RS256`` algorithm with the following keys:
 
 ```
 -----BEGIN PUBLIC KEY-----

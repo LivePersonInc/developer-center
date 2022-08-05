@@ -1,6 +1,6 @@
 # C# — Engagement History API Example
 
-This is a basic example of how to connect to the Engagement History API in C# by using a 3rd party OAuth Class from http://cropperplugins.codeplex.com/SourceControl/latest#Cropper.Plugins/OAuth1.0/OAuth.cs. In order to run this example you will need to update the EngagementHistoryAPI.cs file with your Engagement History API credentials.
+This is a basic example of how to connect to the Engagement History API in C# by using [a 3rd party OAuth Class](http://cropperplugins.codeplex.com/SourceControl/latest#Cropper.Plugins/OAuth1.0/OAuth.cs). In order to run this example you will need to update the EngagementHistoryAPI.cs file with your Engagement History API credentials.
 
 # Java — Engagement History API Program
 

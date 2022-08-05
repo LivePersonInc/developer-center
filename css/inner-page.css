@@ -25,7 +25,6 @@ a:focus-visible {
     display: none;
 }
 
-
 /* this is so the header won't overlap the links */
 
 :target::before {
@@ -38,12 +37,10 @@ a:focus-visible {
 img {
     vertical-align: middle;
     margin: 24px 0;
-    max-width: 800px;
+    max-width: clamp(100px, 100%, 800px);
 }
 
-
 /*inner page css */
-
 
 /* h1[id],
 h2[id],
@@ -104,7 +101,7 @@ h4 code.highlighter-rouge {
 
 .h1 {
     color: var(--title-text);
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -180,7 +177,7 @@ pre code {
 }
 
 .post-content table tr td {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -198,7 +195,7 @@ pre code {
     color: var(--body-text);
     font-size: 12px;
     padding: 16px;
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -227,14 +224,14 @@ table>tbody>tr:nth-of-type(odd) {
     font-weight: bold;
     vertical-align: inherit;
     font-size: 12px;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     color: #666666;
     hyphens: none;
     border-right: solid 1px black;
 }
 
 .designsheet table tr th {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     color: #4a4a4a;
     font-size: 14px;
@@ -331,7 +328,7 @@ div#toc ul li a {
     color: #5896ed;
     display: block;
     overflow-wrap: break-word;
-    padding: 0px;
+    padding: 0;
 }
 
 div#toc ul li a:hover {
@@ -383,7 +380,7 @@ div#toc>ul>li>ul {
 }
 
 div#toc ul li ul li ul {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 
@@ -496,7 +493,7 @@ ul.mysidebar.nav a {
 }
 
 ul.mysidebar li ul li {
-    margin-right: 0px;
+    margin-right: 0;
     margin-top: 10px;
 }
 
@@ -558,7 +555,7 @@ input#metricsSearch {
 
 ul.mysidebar.nav ul li a {
     border-top: none;
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: var(--space4) !important;
     margin-bottom: var(--space4);
     gap: 8px;
@@ -611,7 +608,7 @@ div.sidebarTitle-holder {
 
 .footer-tags {
     display: inline-flex !important;
-    padding: 0px 8px 0px 8px;
+    padding: 0 8px 0 8px;
 }
 
 
@@ -621,7 +618,7 @@ div.sidebarTitle-holder {
     color: var(--breadcrumbs-text);
     background: var(--breadcrumbs-background);
     border-radius: 16px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -731,11 +728,6 @@ div.sidebarTitle-holder {
     font-weight: bold;
 }
 
-.post-content,
-.post-content * {
-    overflow-wrap: break-word;
-}
-
 .post-content a:not(.welcome-card) {
     text-decoration: underline;
 }
@@ -766,8 +758,8 @@ div.sidebarTitle-holder {
 
 pre {
     border: none;
-    border-radius: 0px;
-    padding: 0px 97px var(--space4) 20px;
+    border-radius: 0;
+    padding: 0 97px var(--space4) 20px;
     order: 10;
 }
 
@@ -796,7 +788,7 @@ pre code {
 }
 
 .margin-top-zero {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .margin-top-68 {
@@ -815,7 +807,7 @@ pre code {
   }
 
   div.inside-page-content,
-  .inside-page-content .h2 {} 
+  .inside-page-content .h2 {}
 
 }
 */
@@ -830,8 +822,8 @@ pre code {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 8px;
-    font-family: Arial;
-    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #fff;
     font-size: 1.2em;
     padding: 5px 10px 5px 10px;
     text-decoration: none;

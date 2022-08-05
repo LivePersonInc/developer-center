@@ -217,10 +217,10 @@ This process is used to preserve data integrity and to make sure the chat/messag
 
 **The sync process includes 4 sync options:**
 
-1. **Periodic sync** - captures and update information of the last 6 hours, every 3 hours (8 times a day in total).
-2. **Daily sync** - captures information from the last 48 hours (In order to keep with LivePerson’s Data SLA of up to 24 hours for full data).
-3. **Manual sync** - allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc…).
-4. **“Sync Chat” button on the chat transcript record** - allows on-demand sync with LivePerson servers for a specific chat transcript record.
+1. **Periodic sync**: Captures and update information of the last 6 hours, every 3 hours (8 times a day in total).
+2. **Daily sync**: Captures information from the last 48 hours (In order to keep with LivePerson’s Data SLA of up to 24 hours for full data).
+3. **Manual sync**: Allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc…).
+4. **“Sync Chat” button on the chat transcript record**: allows on-demand sync with LivePerson servers for a specific chat transcript record.
 
    **Note:** These sync processes are one sided, from the Conversational Cloud to Salesforce only, no information is transferred from Salesforce to the Conversational Cloud.
 
@@ -438,14 +438,11 @@ The equivalent fields needed for messaging are ‘LivePerson Msg SDK Field’ an
 
 The complete structure of the data in the “Agent Widget SDK,” “Engagement History API,” and “Messaging Interactions API” is described in their own documents which update all the time and you can find through the Connection Panel on your LivePerson Conversational Cloud account, or in our Developer Center:
 
-**Agent Widget SDK Public Data Model** -  
-[https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Agent Widget SDK Public Data Model**: [https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Engagement History API — Engagement Attributes** -  
-[https://developers.liveperson.com/engagement-history-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Engagement History API — Engagement Attributes**: [https://developers.liveperson.com/engagement-history-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Messaging Interactions API — Engagement Attributes** -  
-[https://developers.liveperson.com/messaging-interactions-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Messaging Interactions API — Engagement Attributes**: [https://developers.liveperson.com/messaging-interactions-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
 #### **Survey questions (pre-chat, post-chat, agent)**
 
@@ -483,7 +480,7 @@ Each parameter/sub-section is like a property of the upper section, to which you
 
 These are just a few examples meant to demonstrate how to write these “addresses”, but rest assured, all of these, along with more than 55 (!) other Conversational Cloud parameters are available to you on the predefined list.
 
-1. For a the **Chat Start Time** value:
+1. For a **Chat Start Time** value:
 
 * **LivePerson SDK Field:** `chatInfo.chatStartTime`
 * **LivePerson API Field:** `info.startTime`

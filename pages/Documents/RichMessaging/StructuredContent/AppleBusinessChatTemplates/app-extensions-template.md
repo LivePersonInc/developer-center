@@ -168,7 +168,7 @@ The new property will allow the agent/bot to view the textual representation of 
 }
 ```
 
-### Some Notes About Custom iMessage App Support via Structured Content:
+### Notes About Custom iMessage App Support via Structured Content
 
 1. General recommendation for the URL field is to use an encoded data object which will represent the URL
 
