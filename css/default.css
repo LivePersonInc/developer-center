@@ -28,7 +28,6 @@
     --navbar-padding: 24px 0;
 }
 
-*,
 * {
     margin: 0;
 }
@@ -516,6 +515,11 @@ table {
 
 table tbody td img {
     width: 100%;
+}
+
+td {
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .mobilefeaturestable {
