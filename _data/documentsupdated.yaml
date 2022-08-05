@@ -5,6 +5,7 @@
     - documentname: Do More with the Conversational Cloud
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
+    - documentname: LivePerson APIs and SDKs
 
 - categoryname: API Guidelines
   image: api-guidelines

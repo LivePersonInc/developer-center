@@ -288,7 +288,8 @@ code pre {
     flex: 3;
 }
 
-.defaultcontent h3, .defaultcontent h4 {
+.defaultcontent h3,
+.defaultcontent h4 {
     display: flex;
     align-items: center;
 }
@@ -717,10 +718,6 @@ table tbody td img {
     top: 2px;
 }
 
-.important p:not(:first-child) {
-    margin-left: -25px;
-}
-
 .notice {
     border-left-color: var(--error-border);
     border-radius: 4px;
@@ -761,10 +758,6 @@ table tbody td img {
     margin-right: 5px;
     position: relative;
     top: 1px;
-}
-
-.important p:not(:first-child) {
-    margin-left: -25px;
 }
 
 .solutionslist {
@@ -1049,7 +1042,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-gradle,
 .language-css,
 .language-objc,
-.language-plaintext,
+div.language-plaintext,
 .language-text {
     display: flex;
     flex-direction: column;
