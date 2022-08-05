@@ -40,7 +40,7 @@
     font-weight: bold;
     line-height: 40px;
     color: var(--cta-text);
-    letter-spacing: 0.008em;
+    letter-spacing: .008em;
 }
 
 .container-image {

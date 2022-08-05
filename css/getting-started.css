@@ -106,7 +106,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
     color: var(--link-color);
 }
 
@@ -195,7 +195,7 @@
     font-size: 40px !important;
     font-weight: 400 !important;
     margin-bottom: 2%;
-    opacity: 0.8 !important;
+    opacity: .8 !important;
 }
 
 .close:hover,

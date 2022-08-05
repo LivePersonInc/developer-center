@@ -48,7 +48,7 @@ pre {
   font-weight: inherit !important;
   color: #fff!important;
   font-family: "Roboto Slab",Arial,sans-serif !important;
-  padding: 0 0 0 0!important;
+  padding: 0 !important;
   background-color: none !important;
 }
 
@@ -70,7 +70,7 @@ pre.base-url {
 }
 
 .swagger-ui .opblock-tag {
-  padding: 0 0 0 0;
+  padding: 0;
   display: flex;
   font-family: "Roboto", Arial, sans-serif !important;
   margin-bottom: 15px;

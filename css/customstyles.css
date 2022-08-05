@@ -245,8 +245,7 @@ p.post-meta {
 }
 
 .entry-date {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.71429;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -283,7 +282,7 @@ ul#results-container a:hover {
     padding: .5em;
     margin-left: 20px;
     width: 20em;
-    font-size: 0.8em;
+    font-size: .8em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -380,7 +379,7 @@ footer .container .row ul {
 footer .container .row ul li {
     padding-top: 13px;
     color: white;
-    font-size: 0.66666em;
+    font-size: .66666em;
     font-family: "Open Sans", Arial, sans-serif;
     padding-right: 5px;
     padding-left: 5px;
@@ -562,7 +561,7 @@ a.accordion-collapsed {
 }
 
 .nav>li>a {
-    font-size: 0.933em;
+    font-size: .933em;
     line-height: 20px;
     padding: 4px 10px;
 }

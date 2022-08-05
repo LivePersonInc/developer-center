@@ -1,3 +1,5 @@
+/* TODO: Check why not minified, and different from “source” file */
+
 article,
 aside,
 details,
@@ -49,7 +51,7 @@ a:hover {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: .67em 0;
 }
 
 abbr[title] {
@@ -127,7 +129,7 @@ figure {
 fieldset {
     border: 1px solid silver;
     margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    padding: .35em .625em .75em;
 }
 
 legend {
@@ -239,7 +241,7 @@ table {
         max-width: 100% !important;
     }
     @page {
-        margin: 2cm 0.5cm;
+        margin: 2cm .5cm;
     }
     p,
     h2,
@@ -2008,7 +2010,7 @@ textarea.input-lg {
 fieldset[disabled] .btn {
     cursor: not-allowed;
     pointer-events: none;
-    opacity: 0.65;
+    opacity: .65;
     filter: alpha(opacity=65);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -4776,7 +4778,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 .label {
     display: inline;
-    padding: 0.2em 0.6em 0.3em;
+    padding: .2em .6em .3em;
     font-size: 75%;
     font-weight: 700;
     line-height: 1;
@@ -4784,7 +4786,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: 0.25em;
+    border-radius: .25em;
 }
 
 .label[href]:hover,
@@ -5101,7 +5103,7 @@ a.thumbnail:focus {
 
 .progress-bar {
     float: left;
-    width: 0%;
+    width: 0;
     height: 100%;
     font-size: 12px;
     color: #fff;
@@ -5541,7 +5543,7 @@ a.list-group-item:focus {
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
-    opacity: 0.2;
+    opacity: .2;
     filter: alpha(opacity=20);
 }
 
@@ -5550,7 +5552,7 @@ a.list-group-item:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: .5;
     filter: alpha(opacity=50);
 }
 
@@ -5636,7 +5638,7 @@ body.modal-open,
 }
 
 .modal-backdrop.in {
-    opacity: 0.5;
+    opacity: .5;
     filter: alpha(opacity=50);
 }
 
@@ -5726,7 +5728,7 @@ body.modal-open,
 }
 
 .tooltip.in {
-    opacity: 0.9;
+    opacity: .9;
     filter: alpha(opacity=90);
 }
 
@@ -6034,7 +6036,7 @@ body.modal-open,
     left: 0;
     bottom: 0;
     width: 15%;
-    opacity: 0.5;
+    opacity: .5;
     filter: alpha(opacity=50);
     font-size: 20px;
     color: #fff;
@@ -6066,7 +6068,7 @@ body.modal-open,
 .carousel-control:focus {
     color: #fff;
     text-decoration: none;
-    opacity: 0.9;
+    opacity: .9;
     filter: alpha(opacity=90);
 }
 

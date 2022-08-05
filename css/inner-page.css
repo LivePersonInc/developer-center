@@ -132,7 +132,7 @@ h4 code.highlighter-rouge {
 .h4 {
     color: var(--title-text);
     font-family: "Space Grotesk", sans-serif;
-    font-size: 0.86em;
+    font-size: .86em;
     font-weight: 600;
     margin-bottom: var(--space4);
     margin-top: 7px;
@@ -649,7 +649,7 @@ div.sidebarTitle-holder {
     padding-right: 1em;
     padding-left: 0;
     color: var(--link-color);
-    font-size: 0.8em;
+    font-size: .8em;
     font-weight: bold;
     text-decoration: none;
     font-family: "FontAwesome";

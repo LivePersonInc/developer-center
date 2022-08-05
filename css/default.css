@@ -133,7 +133,7 @@ svg.sitelogo {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    letter-spacing: 0.008em;
+    letter-spacing: .008em;
     color: var(--link-color);
 }
 
@@ -272,7 +272,7 @@ code pre {
     background-color: var(--body-background);
     display: flex;
     padding-top: var(--space8);
-    margin-right: 0% !important;
+    margin-right: 0 !important;
     min-width: 310px;
     padding-bottom: var(--space8);
     flex-direction: column;
@@ -376,7 +376,7 @@ code pre {
 }
 
 .darken .daybtn {
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .darken .codebtn {
@@ -482,7 +482,7 @@ code pre {
 }
 
 input.aa-input-search.aa-hint {
-    background: none 0% 0% / auto repeat scroll padding-box border-box var(--body-background) !important;
+    background: none 0 0 / auto repeat scroll padding-box border-box var(--body-background) !important;
 }
 
 input#aa-search-input {
@@ -501,7 +501,7 @@ input#aa-search-input {
 .showcase img {
     margin: 0 auto;
     display: block;
-    box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px 3px rgba(0, 0, 0, .1);
 }
 
 table {
@@ -1306,7 +1306,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .sidebarbutton>span {
-    transition: 0.3s;
+    transition: .3s;
     background: #b1b5bc;
 }
 
@@ -1575,7 +1575,7 @@ a:focus-within:not(.anchorjs-link) {
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .theme-switch-wrapper .slider:before {
@@ -1584,7 +1584,7 @@ a:focus-within:not(.anchorjs-link) {
     height: 18px;
     left: 3px;
     position: absolute;
-    transition: 0.4s;
+    transition: .4s;
     width: 18px;
     background: var(--card-background);
     border: 1px solid rgba(255, 255, 255, 0.15);

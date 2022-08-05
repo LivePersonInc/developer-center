@@ -45,7 +45,7 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 
 .printSubtitle {
     font-size: 19pt;
-    color: #cccccc !important;
+    color: #ccc !important;
     line-height: 22pt;
     letter-spacing: -.5px;
     margin-bottom:20px;
