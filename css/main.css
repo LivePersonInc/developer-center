@@ -295,7 +295,6 @@ pre {
   text-align: left;
   height: auto;
   position: relative;
-  background: transparent;
   border: none;
   z-index: 1;
   max-width: 1280px !important;
@@ -303,12 +302,10 @@ pre {
   /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 2px 3px 0 rgba(0, 0, 0, .1)*/
   background-color: #162036;
   /*border: 2px solid rgba(228, 228, 228, 0.6);*/
-
   font-family: "Open Sans", sans-serif;
   width: 100%;
   margin-top: 10px;
   /*font-size: 11px;*/
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .ds-dropdown-menu:before {
@@ -436,7 +433,6 @@ pre {
   float: left;
   width: 30%;
   display: none;
-  padding-left: 0;
   /*text-align: right;*/
   position: relative;
   padding: 5.33333px 0;
@@ -631,7 +627,6 @@ body.search-opened #search-container {
   font-size: 0.8em;
   box-sizing: border-box;
   background-color: transparent;
-  margin-top: 2.5%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -710,7 +705,6 @@ body.search-opened #search-container {
   right: -120px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  fill: var(--body-text);
   border-radius: 50%;
   display: none;
   fill: transparent;

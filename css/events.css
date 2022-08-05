@@ -107,7 +107,6 @@ html body div.container div.home-second-line div.text {
   max-width: 800px;
   font-size: 1em;
   text-align: left;
-  margin-top: 10px;
   margin: auto;
 }
 
@@ -211,7 +210,7 @@ a.view-all-products::after {
   position: relative;
   margin: 0 auto;
   width: 149px;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 50px;
@@ -225,7 +224,7 @@ a.view-all-products::after {
   color: #fff;
   font-size: 48px;
   line-height: 64px;
-  font-family: "roboto slab", arial;
+  font-family: "roboto slab", arial, sans-serif;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 24px;
@@ -333,7 +332,7 @@ only screen and (min-resolution: 2dppx) {
   color: #162036;
   font-size: 48px;
   line-height: 64px;
-  font-family: "roboto slab", arial;
+  font-family: "roboto slab", arial, sans-serif;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 24px;

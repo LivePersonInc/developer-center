@@ -1,5 +1,3 @@
-
-
 .bodygrey {
   background-color: #f2f1f2;
 }
@@ -35,7 +33,6 @@
   margin-bottom: 18px;
   display: flex;
 }
-
 
 .documentbox img{
   width: 60px;
@@ -86,7 +83,6 @@
 .linklist {
   flex: 1;
 }
-
 
 .usecasebox {
   width: 24%;
@@ -203,9 +199,8 @@
   margin-bottom: 20px;
 }
 
-.solutionsbox{
+.solutionsbox {
   background-color: #fff;
-  margin-bottom: 20px;
   font-family: "Open Sans", Helvetica, sans-serif;
   margin: 10px;
   flex: 1;
@@ -233,7 +228,7 @@
   height: 160px;
 }
 
-.solutionstext{
+.solutionstext {
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -282,7 +277,6 @@
 .solutionsrow a:focus {
   text-decoration: none;
 }
-
 
 @media (max-width: 425px) {
 

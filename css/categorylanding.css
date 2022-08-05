@@ -205,7 +205,6 @@ img.mockup {
 
 .sectionbot{
   color: #fff;
-  height: 250px;
   margin-top: 170px;
   margin-bottom: 180px;
   height: 564px;
@@ -224,7 +223,6 @@ img.mockup {
 .sectionchat{
   background-color: rgba(88, 121, 218, 0.80);
   color: #fff;
-  height: 250px;
   margin-top: 170px;
   margin-bottom: 180px;
   height: 564px;
@@ -345,7 +343,6 @@ margin-top: 58px;
   margin-top: -120px;
 }
 
-
 .navbar {
   max-height: 60px;
   border-color: transparent;
@@ -439,18 +436,9 @@ margin-top: 58px;
     height: 720px;
   }
 
-.sectionbot .row {
-  display: none;
-}
-
-.sectionmessaging .row {
-  display:none;
-}
-
-.sectionchat .row{
-  display: none;
-}
-
+.sectionbot .row,
+.sectionmessaging .row,
+.sectionchat .row,
 .section1{
   display: none;
 }
