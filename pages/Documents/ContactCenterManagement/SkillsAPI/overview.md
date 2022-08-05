@@ -45,4 +45,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete skills
 
-* Synch skills within Conversational Cloud with your internal HR or staffing systems.
+* Sync skills within Conversational Cloud with your internal HR or staffing systems.
