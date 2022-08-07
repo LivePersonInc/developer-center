@@ -119,6 +119,9 @@
                             </a>
                         </div>
                     </div>
+                    <div class="article-meta">
+                            <p>Updated {{ page.last_modified_at | date: '%B %d' }}</p>
+                    </div>
                 </div>
                 {% endif %} {{ content | extlinks }}
 

@@ -30,6 +30,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-last-modified-at
 
 algolia:
   application_id: "EICOREWTRW"
