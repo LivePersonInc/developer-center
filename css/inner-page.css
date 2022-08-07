@@ -682,6 +682,12 @@ div.sidebarTitle-holder {
     box-shadow: none;
 }
 
+.post-content li img,
+.inlineimage,
+.post-content p img {
+    margin: 0;
+}
+
 .post-content .zoomimg {
     transition: transform 0.2s;
 }
