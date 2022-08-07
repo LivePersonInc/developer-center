@@ -15,7 +15,7 @@ indicator: both
 
 This section contains API details that are common to every API’s resource and action.
 
-### Considerations:
+### Considerations
 
 | Title | Description |
 | :--------   | :--- |

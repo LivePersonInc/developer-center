@@ -65,8 +65,6 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 <img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
-  
-
 #### Step 1. Set app permissions
 
 1. Set the photo library privacy settings:
@@ -105,7 +103,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### Step 2. Enable or disable flags within the SDK's LPConfig.swift for file and photo sharing.
 
-#### Update the boolean value for file/photo sharing feature from agents to consumers to desired setting:
+Update the boolean value for file/photo sharing feature from agents to consumers to desired setting:
 
    ```swift
    LPConfig.defaultConfiguration.fileSharingFromAgent
@@ -113,7 +111,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 By default, the value is set to **true**.
 
-#### Update the boolean value for file/photo sharing feature from consumers to agents to desired setting:
+Update the boolean value for file/photo sharing feature from consumers to agents to desired setting:
 
    ```swift
    LPConfig.defaultConfiguration.fileSharingFromConsumer
@@ -121,7 +119,7 @@ By default, the value is set to **true**.
 
    By default, the value is set to **false**.
 
-#### Contact your Account Team to have the features enabled on your account.
+Contact your Account Team to have the features enabled on your account.
 
 ### Step 3. Change the settings
 

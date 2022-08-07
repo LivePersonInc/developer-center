@@ -43,4 +43,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete LoBs
 
-* Synch LoBs within Conversational Cloud with your internal HR or staffing systems.
+* Sync LoBs within Conversational Cloud with your internal HR or staffing systems.

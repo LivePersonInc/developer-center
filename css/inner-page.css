@@ -186,7 +186,6 @@ pre code {
     line-height: 1.8;
     max-width: 160px;
     min-height: 50px;
-    hyphens: none;
     padding: 16px;
 }
 
@@ -226,7 +225,6 @@ table>tbody>tr:nth-of-type(odd) {
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
     color: #666666;
-    hyphens: none;
     border-right: solid 1px black;
 }
 
@@ -726,11 +724,6 @@ div.sidebarTitle-holder {
 
 .post-content p strong {
     font-weight: bold;
-}
-
-.post-content,
-.post-content * {
-    overflow-wrap: break-word;
 }
 
 .post-content a:not(.welcome-card) {

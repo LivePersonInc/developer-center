@@ -103,6 +103,6 @@ The brand will need to follow the below steps to achieve this:
 
 The tickets themselves will not be deleted but rather the metadata which links the tickets to the requesting consumer, such as ticket message (email) headers, UDEs (legacy SDEs) and ticket contact info, will be masked. Attachments in the relevant tickets will be deleted.
 
-### Limitations:
+### Limitations
 
 This API is not meant for massive deletion of data. There is an internal mechanism which will protect the system from misuse of the API.
