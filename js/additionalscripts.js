@@ -60,6 +60,7 @@ $(document).ready(function () {
   } else {
     $(".breadcrumbs").removeClass("breadhidden")
     $(".suggestbutton").removeClass("suggesthidden")
+    $(".article-meta").removeClass("hidden")
   }
   removeTitleFirstSteps()
   $(".theme-switch-wrapper #checkbox").click(function () {
@@ -147,6 +148,7 @@ function navigateContent(url) {
         } else {
           $(".breadcrumbs").removeClass("breadhidden")
           $(".suggestbutton").removeClass("suggesthidden")
+          $(".article-meta").removeClass("hidden")
         }
       }
 
@@ -158,6 +160,7 @@ function navigateContent(url) {
       } else {
         $(".breadcrumbs").removeClass("breadhidden")
         $(".suggestbutton").removeClass("suggesthidden")
+        $(".article-meta").removeClass("hidden")
       }
       removeTitleFirstSteps()
       //add anchor links to all h3 titles. See respective functions below for what they do.
