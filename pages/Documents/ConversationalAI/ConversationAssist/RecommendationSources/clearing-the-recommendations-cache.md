@@ -25,7 +25,7 @@ Clear the recommendations cache whenever you make any changes that alter what is
 {: .notice}
 If you don’t clear the cache when appropriate, your agents might not receive the right recommendations.
 
-### Clear the recommendations cache**
+### Clear the recommendations cache
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
 2. Scroll down to **Invalidate recommended action cache**, and click **Invalidate cache**.
