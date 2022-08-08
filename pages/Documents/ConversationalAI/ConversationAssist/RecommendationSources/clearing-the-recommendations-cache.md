@@ -9,6 +9,8 @@ permalink: conversation-assist-recommendation-sources-clearing-the-recommendatio
 indicator: messaging
 ---
 
+### Introduction
+
 To enhance performance, bots and answers that have been offered as recommendations are stored in memory for 24 hours. For example, if the consumer asks, *“What’s my balance?”* triggering article A, article B, and bot X to be offered as recommendations, this “utterance-recommendations pair” is stored in memory. If the same question is asked again, the system uses the same recommendations.
 
 Clear the recommendations cache whenever you make any changes that alter what is recommended. For example, clear the cache if you:
@@ -23,7 +25,7 @@ Clear the recommendations cache whenever you make any changes that alter what is
 {: .notice}
 If you don’t clear the cache when appropriate, your agents might not receive the right recommendations.
 
-**To clear the recommendations cache**
+### Clear the recommendations cache**
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
 2. Scroll down to **Invalidate recommended action cache**, and click **Invalidate cache**.
