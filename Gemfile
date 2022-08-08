@@ -16,5 +16,6 @@ group :jekyll_plugins do
    gem 'nokogiri', '>= 1.10.4'
    gem 'html-proofer'
    gem 'jekyll-sitemap'
+   gem 'jekyll-last-modified-at'
    gem 'whenever', require: false
 end
