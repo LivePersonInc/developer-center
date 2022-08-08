@@ -121,7 +121,7 @@ Error Response entity:
 
 ```json
     {
-      "time" : "Long",
+      "time": "Long",
       "message": "String" [Optional],
       "internalCode": "Integer"
     }

@@ -11,7 +11,7 @@ The main functionality of the Transporter is to create reporting tasks. These ta
 
 ### Available Reports
 
-From the REPORTS section in the Navigation bar, select a report from the available catalogue.  You can choose from:
+From the Reports section in the Navigation bar, select a report from the available catalogue.  You can choose from:
 
 * **Messaging Reports**
 
@@ -29,8 +29,7 @@ Messaging and Chat reports are broken down into the following categories:
 
 **Admin type reports** can provide a recurrent list of Skills, Agents and Agent Groups.
 
-In the future, additional reports will be added - have an idea for a report? [Let us know](https://github.com/LivePersonInc/developers-community/issues).
-
+In the future, additional reports will be added — have an idea for a report? [Let us know](https://github.com/LivePersonInc/developers-community/issues).
 
 ### Create Report Options
 
@@ -48,7 +47,7 @@ After selecting a report, you will need to configure the following report option
 
 	* For interval, also choose the time frequency to run (timeframe will include the same amount of time as the time frequency selected).
 
-* **Delay**: in some cases, API source data may be delayed in its completeness - where data completeness is strictly important, choose an option to delay the report from executing, to make sure you receive complete data. For example, you may select:
+* **Delay**: in some cases, API source data may be delayed in its completeness — where data completeness is strictly important, choose an option to delay the report from executing, to make sure you receive complete data. For example, you may select:
 
 `Daily at 12:00am with a delay of 6 hours`
 
@@ -58,23 +57,23 @@ In this case, your report will run at 6:00 AM each day and include the data from
 
 * **Destination**: See below.
 
-For some reports, you may also have the option to select additional report parameters - if this option exists, it will be presented to you on the report creation screen.
+For some reports, you may also have the option to select additional report parameters — if this option exists, it will be presented to you on the report creation screen.
 
-After all options are completed, you can click **Create task** to save the task - it will begin running at the next scheduled time.
+After all options are completed, you can click **Create task** to save the task — it will begin running at the next scheduled time.
 
 ### Task Destinations
 
-1. LP Cloud - secure storage on LP servers (provided for you).
+1. LP Cloud — secure storage on LP servers (provided for you)
 
-2. SFTP - securely deliver to your own SFTP server (you provide restricted user/pass).
+2. SFTP — securely deliver to your own SFTP server (you provide restricted user/pass)
 
-3. Amazon - AWS S3 bucket storage (you provide IAM keys).
+3. Amazon — AWS S3 bucket storage (you provide IAM keys)
 
-4. Google - Google Cloud Storage (you provide IAM keys).
+4. Google — Google Cloud Storage (you provide IAM keys)
 
 #### LP Cloud
 
-This option allows you to securely save files to our existing LP servers - to retrieve files saved here, you must login to Transporter and download the completed reports from the HISTORY section - files saved to this destination will automatically be removed after 28 days.
+This option allows you to securely save files to our existing LP servers — to retrieve files saved here, you must login to Transporter and download the completed reports from the HISTORY section — files saved to this destination will automatically be removed after 28 days.
 
 #### SFTP
 
@@ -91,7 +90,7 @@ Securely upload files to your AWS S3 or Google Cloud Storage bucket.
 After you have selected your options, your report will be created and will run at the next scheduled time according to the frequency you selected.
 You can edit an existing report from either the TASKS section in the Navigation bar, or from where you created the report. Find the task you’d like to edit and click the pencil icon.
 
-The interface will show that you are currently editing the task - update any of the available options and click Update task. In addition to editing the task, you may also:
+The interface will show that you are currently editing the task — update any of the available options and click Update task. In addition to editing the task, you may also:
 
 * Disable the task using the toggle switch.
 
@@ -107,12 +106,10 @@ After a report task has completed, you can view the history from the HISTORY sec
 
 To download the report to your browser, simply click the download icon.
 
-<div class="important">If you see a lock next to the download icon, this means you have not entered and verified your Private Key during this browsing session.
-<br>
-Whilst your Private Key is not needed to download the encrypted file, if it is not provided, , the file will not be decrypted after download and you will need to decrypt it yourself.</div>
+<div class="important">If you see a lock next to the download icon, this means you have not entered and verified your Private Key during this browsing session. Whilst your Private Key is not needed to download the encrypted file, if it is not provided, the file will not be decrypted after download and you will need to decrypt it yourself.</div>
 
 ### Limitations
 
-1. Files sent to Amazon, Google, or SFTP will be encrypted - it is up to the user to decrypt these files with their Private Key (there are many options to decrypt using PGP/GPG software).
+1. Files sent to Amazon, Google, or SFTP will be encrypted — it is up to the user to decrypt these files with their Private Key (there are many options to decrypt using PGP/GPG software).
 
-2. Each account is limited by a maximum number of tasks - speak to your account manager to discuss task limitation options.
+2. Each account is limited by a maximum number of tasks — speak to your account manager to discuss task limitation options.

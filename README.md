@@ -2,14 +2,14 @@
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
-This repository generates LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
+This repository hosts LivePerson’s Developer Center, which can be found at [developers.liveperson.com](https://developers.liveperson.com/). The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we’ll respond as soon as possible.
 
 ## Table of contents
 
 1. 📡 [Updating the documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
 2. 📝 [Notes on content and code](https://github.com/LivePersonInc/developers-community#notes-on-content-and-code)
-3. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
-4. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+3. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+4. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
 5. 📋 [Template](https://github.com/LivePersonInc/developers-community#template)
 6. 📜 [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
@@ -147,11 +147,59 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
 
 ## Notes on content and code
 
-The max width for an image in this repo is 800 pixels.
+When contributing to this repository, please observe the following:
+
+### Content and punctuation
+
+* Use American English
+* Prefer active voice
+* Try to use language that’s human and personal
+* Keep it brief
+* Use lists (ordered series in numbered lists, unordered series in bulleted lists)
+* In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
+* Use an Oxford comma (“one, two, and three”)
+* Use typographically correct quotation marks (“”)
+* For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
+* Avoid “here” links
+* Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+
+### Code and media
+
+* Be consistent
+* Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
+* Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
+* To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
+* The maximum (view) width for images in this repository is 800 pixels
+
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
+
+## Building the site locally
+
+**Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x may generate confusing errors.
+
+If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](https://mac.install.guide/rubyonrails/) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
+
+Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
+
+### First time install
+
+1. Run `npm install`
+2. Run `bundle install`
+
+### Start-up
+
+3. Run `npm run serve`
+4. Navigate to http://localhost:4000/ (or the port you chose) to access the site
+
+### Notes
+
+To use Jekyll’s standard commands, all you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
+
+Changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, kill the build and run `bundle exec jekyll serve` without the suffix. (This is also true for gulp: You will need to kill your gulp instance and then run the Jekyll command.)
 
 ## Hiding files
 
-* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden). 
+* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
 * Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
 * Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
@@ -162,39 +210,15 @@ The max width for an image in this repo is 800 pixels.
 
 Once you’ve created a new document, you’ll need to have it manually added. We chose a manual process for the sidebar for a few reasons:
 
-1. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
-2. Second, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
-3. Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
+1. It reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA).
+2. It increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options).
+3. It decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time- and resource-consuming).
 
-The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar. 
-
-## Building the site locally
-
-**Important:** This repository currently requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
-
-If you have not done so, install Ruby. Here’s a helpful guide on [how to best do that on macOS](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, as you don’t need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/). Another good resource is [Jekyll’s installation guide](https://jekyllrb.com/docs/installation/macos/), with the only difference being to have `chruby` point to a different version of Ruby (like 2.7.6).
-
-Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
-
-### First time install
-
-1. Run `npm install`
-2. Run `npm run serve`
-3. Navigate to http://localhost:4000/ (or the port you chose) to access the site
-
-### Serving the site after the first install
-
-You have two options to run the site locally after the first install:
-
-* **Using gulp.js**. [Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks. By simply typing in `gulp` in your command line, it takes care of all the build commands needed to serve the site. It also watches the root directory and will automatically refresh your browser once any changes were built. Gulp and its dependencies are installed locally in the project, so there’s no further installation needed from your end.
-
-* **Using Jekyll’s standard commands**. All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit “save”). When `--incremental` is used, Jekyll won’t rebuild the entire site on every save, only the affected sections. If you’d like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
-
-**Note**: changes that alter site navigation or other changes that change the site as a whole might not show up when using `--incremental`. If that occurs, simply “kill” the build and run `bundle exec jekyll serve` without the suffix. **This is also true for gulp: you will need to kill your gulp instance and then run the direct Jekyll command**.
+The sidebar’s YAML file can be found in the `_data` folder. It’s called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file’s header (see above). Please make sure the Markdown file created contains its `pagename`, `documentname`, `categoryname`, and `permalink` in its header. The Markdown file might need more information depending on where it will need to be in the sidebar.
 
 ## Template
 
-See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
+See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to the Developer Experience team *before* starting to write your document so that we can advise on its structure.
 
 ### Algolia
 

@@ -10,7 +10,7 @@ indicator: both
 
 This method provides the Net Handle Time (NHT) at a skill level. The API  retrieves up to 9 weeks of information.
 
-{:.notice}
+{: .notice}
 Some metrics are calculated only in 60-minute intervals.
 These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
@@ -27,12 +27,12 @@ In case there is no data available, the response element will contain -1.
 
 | Name | Description | Type | Required? | Notes |
 | --- | --- | --- | --- | --- |
-| v | The version of the API | Numeric | No | Two versions are supported: v1 & v2 (If not provided, will be set to v1 for backward compatibility). <br> **v1**: default version (basic maintenance). <br> **v2**: pagination support (maintained version) |
+| v | The version of the API | Numeric | No | Two versions are supported: v1 and v2 (If not provided, will be set to v1 for backward compatibility). <br> **v1**: default version (basic maintenance). <br> **v2**: pagination support (maintained version) |
 | source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | String | Yes | Source name should be up to 20 characters. <br> Example: LP_AgentUI |
-| fromDate | Query period: Query start date | ISO format. UTC timezone | Yes - conditional | **fromMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
-| fromMillis | Query start date (same as above) in Epoch time format | long - Epoch time | Yes - conditional | **fromDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
-| toDate | Query period: Query end date | ISO format. UTC timezone | Yes - conditional | **toMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
-| toMillis | Query end date (same as above) in Epoch time format | long - Epoch time | Yes - conditional | **toDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| fromDate | Query period: Query start date | ISO format. UTC timezone | Yes — conditional | **fromMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| fromMillis | Query start date (same as above) in Epoch time format | long — Epoch time | Yes — conditional | **fromDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| toDate | Query period: Query end date | ISO format. UTC timezone | Yes — conditional | **toMillis must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
+| toMillis | Query end date (same as above) in Epoch time format | long — Epoch time | Yes — conditional | **toDate must not be provided**. <br> The query period will be limited to 1 week. <br> example format: 2021-07-05T05:00:00 |
 | interval | Interval size in minutes. When provided, the returned data will be aggregated by intervals of the requested size. <br> The buckets will be rounded to the closest rounded time (e.g. 11:00, 11:15, 11:30) | Numeric | No | Available intervals: 15/30/60. <br> Default: 60 |
 | skillIds | When provided, will return the information for the specific skills. Can be more than 1 skill | String | No | If not provided all skills will be returned. |
 | limit | limits the number of skills per page | Numeric | Optional | Default = 10, Maximum = 10 |
@@ -43,15 +43,15 @@ In case there is no data available, the response element will contain -1.
 | Property Name | Description | Type | Notes |
 | --- | --- | --- | --- |
 | fromDate | The requested start date | ISO format. UTC timezone | |
-| fromMillis | Query start date (same as above) in Epoch time format | Long - Epoch time | |
+| fromMillis | Query start date (same as above) in Epoch time format | Long — Epoch time | |
 | toDate | The requested end date | ISO format. UTC timezone | |
-| toMillis | Query end date (same as above) in Epoch time format | Long - Epoch time | |
+| toMillis | Query end date (same as above) in Epoch time format | Long — Epoch time | |
 | Interval | The requested interval | Integer | |
 | skillInfo | Skill information container | Array of objects | |
 | skillId | The skill Id | Long | |
 | metricsByIntervals | Contains a summary of the requested metrics by intervals | Container only | |
 | timestamp | Interval start time (human-readable format)  | ISO format. UTC timezone | |
-| epochTimestamp | Interval start time (epoch format) | Long - Epoch time | |
+| epochTimestamp | Interval start time (epoch format) | Long — Epoch time | |
 | arrivals | Segments arrived to the queue/skill of all types (new conversation, back2Q, transfer to skill) in the interval | Integer | |
 | AvgTimeInQueue | The average time a segment waits in the queue before assignment to an agent | Double | |
 | totalAgentSegmentDuration | Total time of all closed segments ending by any means within the interval | Long | |

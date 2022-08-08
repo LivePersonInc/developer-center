@@ -24,4 +24,3 @@ Unregister from registered push notification service.
 | appId | The host app ID. |
 | unregisteringCompletedCallback | A dual-method callback for handling success and failure results. |
 
-

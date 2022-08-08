@@ -40,9 +40,9 @@ to the Viber user.
     <td>type</td>
     <td>Types of basic elements supported by Structured Content framework.
 
-If using Viber Cards - type of header element should always be set to "vertical".
+If using Viber Cards — type of header element should always be set to "vertical".
 
-If using Viber Carousels - type of header element will always be “carousel”</td>
+If using Viber Carousels — type of header element will always be “carousel”</td>
 <td>Enum</td>
 <td>Y</td>
   </tr>

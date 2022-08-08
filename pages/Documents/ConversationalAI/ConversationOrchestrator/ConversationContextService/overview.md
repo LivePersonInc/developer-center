@@ -23,7 +23,7 @@ CCS provides a system to hierarchically organize data using *key-value pairs*. A
 
 <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_namespace.png" alt="">
 
-CCS stores data in key-value pairs and includes developer tools like js-libraries, Liveperson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
+CCS stores data in key-value pairs and includes developer tools like js-libraries, LivePerson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
 
 ### When to use the Conversation Context Service
 
@@ -52,8 +52,8 @@ Each object within the CCS comes with full CRUD (Create, Read, Update, Delete) f
 
 Additionally, the CCS API offers a RESTful interface with methods to access the desired functionality from services other than Conversation Builder.
 
-* [Conversation Context Service - Methods v1](conversation-orchestrator-conversation-context-service-methods-v1.html)
-* [Conversation Context Service - Methods v2](conversation-orchestrator-conversation-context-service-methods-v2.html)
+* [Conversation Context Service — Methods v1](conversation-orchestrator-conversation-context-service-methods-v1.html)
+* [Conversation Context Service — Methods v2](conversation-orchestrator-conversation-context-service-methods-v2.html)
 
 ### API versions
 

@@ -17,7 +17,7 @@ OAuth is an open-standard authorization framework that describes how unrelated s
 The following code shows an example that performs a `POST` request with `Authorization Header`.
 
 {: .notice}
-  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
+  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {
@@ -48,14 +48,14 @@ async function lambda(input, callback) {
     const request_data = {
       url: 'www.mywebsite.com/request',
       method: 'POST',
-      body: ...,
+      body: …,
     };
 
     const response = await httpClient(request_data.url, {
       method: request_data.method,
       headers: {
         // toHeader() returns the Authorization request header and assigns it to the header using the spread operator
-        ...oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
+        …oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
         'Content-Type': 'application/json',
       },
       body: request_data.body,
@@ -82,8 +82,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
 {: .notice}
-It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
-
+It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {

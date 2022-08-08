@@ -60,7 +60,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -85,14 +84,13 @@ https://github.com/skyscreamer/yoga/wiki/Using-the-Selector-Builder-GUI</td>
   <tr>
     <td>return</td>
     <td>determine the return policy </td>
-    <td>Default: none - return the active revision with no response body. 'order’ attribute is not maintained by the server
+    <td>Default: none — return the active revision with no response body. 'order’ attribute is not maintained by the server
 Also accepts:
-active - return all active (non-deleted) categories with the response body
-all - return all categories with the response body, including the deleted categories
+active — return all active (non-deleted) categories with the response body
+all — return all categories with the response body, including the deleted categories
 On both 'active’ and 'all’ the 'order’ attribute is maintained by the server</td>
   </tr>
 </table>
-
 
 ### Request Headers
 
@@ -115,15 +113,13 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
   </tr>
 </table>
 
-
 **Request Body**
 
 <table>
   <tr>
-    <td>['12345’,’67890’]</td>
+    <td>['12345','67890']</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -137,7 +133,6 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
     <td>This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value. after the operation</td>
   </tr>
 </table>
-
 
 **Response Body**
 
@@ -176,7 +171,6 @@ Response body with return policy ACTIVE
  }]</td>
   </tr>
 </table>
-
 
 Response body with return policy ALL
 

@@ -32,7 +32,7 @@ The Simple Router template provides an easy framework for the creation of a rout
 
 - Escalation
   - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
-  - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
+  - In the Integrations area, there should be a pre-configured integration named “Transfer” and “LivePerson Agent Escalation” should be selected in the Integration Type menu.
 
     <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png" alt="">
 
@@ -89,7 +89,7 @@ switch(intent){
       skillName = intent;
       break;
     default:
-      transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+      transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
       skillId = '1680373730';
       skillName = 'help';
       break;  
@@ -110,6 +110,6 @@ You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-To connect your bot to Conversational Cloud, follow [these instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
+To connect your bot to Conversational Cloud, follow [the instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 Now you can test your routing bot and see how it routes to your skills.

@@ -47,18 +47,6 @@ Use the following code template for your engagement. The capitalized portions sh
 ```html
 <div>
 
-
-
-
-
-
-
-
-
-
-
-
-
   <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>
@@ -82,7 +70,7 @@ Use the following code template for your engagement. The capitalized portions sh
   </tr>
   <tr>
     <td>TEXT_MESSAGE_URI_ENCODED</td>
-    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site http://meyerweb.com/eric/tools/dencoder/<br>
+    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use https://meyerweb.com/eric/tools/dencoder/<br>
     Note: separate the number and text with: ;?&</td>
 
   </tr>
@@ -190,7 +178,7 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 
 ```html
 <div id="sms-modal" class="modal-centered">
- <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();" >
+ <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();">
    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
  </div>
  <div id="contact-main">

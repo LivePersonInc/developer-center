@@ -112,7 +112,7 @@ The Options dialogs are offered for a few different channels:
 
 * List picker for Apple Messages for Business
 
-* Simple list with a,b,c, etc., variants for SMS
+* Simple list with a, b, c, etc. variants for SMS
 
 * Text card with buttons OR product gallery for Web
 
@@ -190,7 +190,7 @@ If you are supporting a web client and want to show your options as a button til
 
 #### Agent Escalation Integration
 
-If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a Liveperson Agent.
+If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a LivePerson Agent.
 
 In Global Functions, customize the following values:
 
@@ -295,7 +295,7 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_8.png" alt="">
 
-You can find both your account SID and auth token in the[Twilio Console](https://www.twilio.com/console) after[signing up for a free Twilio trial account](http://twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
+You can find both your account SID and auth token in the[Twilio Console](https://www.twilio.com/console) after[signing up for a free Twilio trial account](https://www.twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
 
 ##### How to generate a Bearer Token
 

@@ -22,7 +22,7 @@ The event detail is optional. Keep the event detail short, as it can't be more t
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail - </em>string; any **optional** detail | Void |
+| `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message — </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail — </em>string; any **optional** detail | Void |
 
 #### Example
 In this example, we set the user message to the current user message and name the event “Invoice API”.
@@ -46,7 +46,7 @@ Logged debug messages are displayed in the [bot's logs](conversation-builder-tes
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `printDebugMessage(message)` | message (string) – A message to print to the debug logs | None |
+| `printDebugMessage(message)` | message (string) — A message to print to the debug logs | None |
 
 #### Example
 

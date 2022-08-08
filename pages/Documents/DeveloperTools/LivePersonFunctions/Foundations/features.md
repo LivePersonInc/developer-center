@@ -58,7 +58,7 @@ This chapter will highlight some important details about the Secret Store. If yo
 
 Our Secret Store allows you to store any credentials or secrets securely you may use in your function. The creation of secrets happens exclusively via the UI, not the CLI or from a function. Once you create a  secret, you will no longer be able to see its value in cleartext. Only the key will remain visible.
 
-Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed & modified by multiple functions simultaneously.
+Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed and modified by multiple functions simultaneously.
 
 You can only perform the deletion of a secret via the UI. The secret will become unavailable immediately to any functions using it with the deletion. Therefore, you should ensure it is not used anywhere before deleting the secret.
 
@@ -83,11 +83,11 @@ When adding a domain to the allowlist, you should always look out for common pit
 
 Example:
 
-The following example shows that when calling `http://google.com`, a redirection to `http://www.google.com/` is performed.
+The following example shows that when calling `http://google.com`, a redirection to `https://www.google.com/` is performed.
 
 ```sh
     $ curl -v -L http://google.com 2>&1 | grep -i "^< location:"
-    < Location: http://www.google.com/
+    < Location: https://www.google.com/
 ```
 
 Next, ensure that you safe list the correct domain when working with subdomains. Let's say you are visiting `https://www.liveperson.com` and therefore allowlisted `liveperson.com`. Then, you fell into a trap because `www.` is a subdomain. Instead, the correct domain to allowlist would be `www.liveperson.com` or `*.liveperson.com`.

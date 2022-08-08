@@ -16,9 +16,11 @@ indicator: messaging
 In order to show the agent which messages were accepted by the consumer device and which were read by the consumer, the client should publish read/accept receipts. The same events are published by the agent side and may be displayed to the consumer. In this tutorial we will see how to publish these events.
 
 ### Prerequisites
+
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
-### Step 1 - Create a Conversation
+### Step 1 — Create a Conversation
+
 Open the WebSocket connection using:
 
 ```sh
@@ -45,7 +47,8 @@ In response, you will get the ID of the new conversation.
 }
 ```
 
-### Step 2 - Agent sends Messages
+### Step 2 — Agent sends Messages
+
 Switch to the Agent Workspace and click ``Accept`` to take the conversation.
 
 ![agent-ring](img/ring.png)
@@ -78,7 +81,8 @@ Switch again to the consumer API shell and to the open WebSocket connection. In 
 
 You should see the text you type is displayed in the Agent Workspace in the ``message`` field. In this message, find the ``dialogId`` and the ``sequence`` fields.
 
-### Step 3 - Publish Accept and Read Events
+### Step 3 — Publish Accept and Read Events
+
 We will now publish an ``accept`` receipt for this message.
 
 Type the following request to the WebSocket connection while substituting the __DIALOG_ID__ and the __SEQUENCE__ with the values from the above message.

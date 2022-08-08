@@ -27,12 +27,12 @@
     flex: 2;
     margin-top: 32px !important;
     margin-left: 32px !important;
-    color: #ffffff;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .hyperlink {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -42,7 +42,7 @@
 }
 
 .dots-container {
-    margin: 0px 4px 0px 0px;
+    margin: 0 4px 0 0;
 }
 
 .dots-container:hover {
@@ -50,7 +50,7 @@
 }
 
 .getting-started-paragraph {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -69,7 +69,7 @@
 }
 
 .getting-started-h5 {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     width: 640px;
@@ -82,7 +82,7 @@
 }
 
 #teaser-banner {
-    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("img/Img_video_overview.png");
+    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("/img/Img_video_overview.png");
     cursor: pointer;
 }
 
@@ -94,11 +94,11 @@
 }
 
 .welcome-car-modified:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
 }
 
 .header-lp4 {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 20px;
     flex: 0 50%;
     margin-right: 10%;
@@ -106,12 +106,12 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
     color: var(--link-color);
 }
 
 .header-lp4-external h3 {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -148,9 +148,7 @@
     margin-top: 48px;
 }
 
-
 /* MODAL STUFF BELOW */
-
 
 /* The Modal (background) */
 
@@ -176,7 +174,6 @@
     /* Black w/ opacity */
 }
 
-
 /* Modal Content */
 
 .modal-content {
@@ -189,7 +186,6 @@
     height: 94%;
 }
 
-
 /* The Close Button */
 
 .close {
@@ -199,7 +195,7 @@
     font-size: 40px !important;
     font-weight: 400 !important;
     margin-bottom: 2%;
-    opacity: 0.8 !important;
+    opacity: .8 !important;
 }
 
 .close:hover,
@@ -210,7 +206,7 @@
 }
 
 .small-header {
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -228,7 +224,7 @@
 }
 
 .concierge-bot-header {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

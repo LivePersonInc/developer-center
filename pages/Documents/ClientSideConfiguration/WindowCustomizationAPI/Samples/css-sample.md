@@ -33,7 +33,7 @@ The below is an example of a full CSS file making use of the CSS classes reserve
 .lpc_desktop.lpc_window_maximized,
 .lpc_desktop.lpc_window_minimized {
     width: 350px !important;
-    border: none!important;
+    border: none !important;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2) !important;
     overflow: hidden;
 }

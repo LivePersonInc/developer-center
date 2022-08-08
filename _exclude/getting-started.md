@@ -1,7 +1,7 @@
 THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
 
@@ -19,7 +19,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 #### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321978379" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321978379" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 #### Prerequisite steps
@@ -54,7 +54,7 @@ The first interaction in the Welcome dialog is a *Dialog Starter* interaction th
 
 Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
-Let’s see the interactions in action!
+Let’s see the interactions in action:
 
 1. Click **Preview** in the upper-right corner.
 
@@ -155,14 +155,14 @@ There can be only one dialog of type Fallback per bot.
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent.
 
-#### Watch the video - intents & entities
+#### Watch the video — intents and entities
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
-#### Watch the video - advanced interactions
+#### Watch the video — advanced interactions
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979606" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979606" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 #### Step 5: Create a Billing intent
@@ -187,9 +187,9 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 6. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
-    * i have a question about my bill
+    * I have a question about my bill
     * can you help me with my bill
-    * i have a bill related question
+    * I have a bill related question
     * my bill is past due
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/addIntent1.png" alt="">
@@ -269,7 +269,7 @@ Now you can begin to build out the Billing dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes statement" (in the upper-left corner). For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <http://example.com>”. Select "End Interaction" as the next action. Click **Save**.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes statement" (in the upper-left corner). For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <https://example.com>”. Select "End Interaction" as the next action. Click **Save**.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addYesStatement.png" alt="">
 
@@ -324,7 +324,7 @@ This tutorial uses an example API that returns random balance data when given an
 
 #### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979952" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979952" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 #### Step 8: Create an account balance API integration
@@ -453,7 +453,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 ##### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account.
-2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt=""> , and then click the **Skills** tab.
+2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png" alt="">, and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png" alt="">
 
@@ -467,7 +467,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 5. Click **Save**.
 
     The Bot skill will be the default skill connected to the bot agent.
-6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
+6. Repeat steps 3–5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png" alt="">
 
@@ -528,7 +528,7 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 5. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (<img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt="">) beneath the Dialog Starter interaction.
 
-6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent…" Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
     <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_at.png" alt="">
 

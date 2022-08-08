@@ -38,7 +38,6 @@ var channel = botContext.getUserChannel();
 botContext.printDebugMessage("channel used by the user is: " + channel);
 ```
 
-
 ### Get user platform ID
 
 `getUserPlatformId` is used to get the user’s unique ID that's valid only within the Conversation Builder bot platform. This is the ID by which the bot identifies the user.
@@ -54,14 +53,13 @@ This scripting function isn't commonly used. However, it is used by those curren
 ```javascript
 // get the user’s ID within CB
 var userId = botContext.getUserPlatformId();
-// display the results...
+// display the results…
 botContext.printDebugMessage('The userPlatformId = ' + userId);
 ```
 
 ### Get authenticated customer info
 
 `getLPUserPersonalInfo` and `getLPCustomerInfo` return authenticated customer information. You can attempt to see if either method returns true or not.  If the visitor is authenticated (typically they would set personal or customer info being logged in), you can access the Personal Info or Customer Info object array.
-
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

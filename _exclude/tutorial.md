@@ -35,7 +35,7 @@ This tutorial is designed to familiarize you with the Knowledge Base application
         * `I can't remember my password`
         * `I am locked out of my account`
 
-    * **Summary**: Enter the following brief message to be sent to the user: `Try the steps in the "Forgot Account ID" section of the <a href="http://www.mycompany.com/username">Sign-in troubleshooting</a> article to recover your account credentials.`
+    * **Summary**: Enter the following brief message to be sent to the user: `Try the steps in the "Forgot Account ID" section of the <a href="https://www.mycompany.com/username">Sign-in troubleshooting</a> article to recover your account credentials.`
 
         You can include web links in the summary, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
 

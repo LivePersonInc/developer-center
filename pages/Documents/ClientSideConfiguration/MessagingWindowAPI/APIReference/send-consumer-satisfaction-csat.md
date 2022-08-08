@@ -14,7 +14,6 @@ permalink: messaging-window-api-api-reference-send-consumer-satisfaction-csat.ht
 indicator: messaging
 ---
 
-
 {% include msgtype.html title='Request' type='req' %}
 {% include json.html name = "req_editor"
         schemaFile='assets/schema/ws/consumerRequests.json'

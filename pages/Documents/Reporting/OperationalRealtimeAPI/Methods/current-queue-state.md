@@ -13,9 +13,10 @@ indicator: chat
 ---
 
 Retrieves the current queue state related metrics at the skill level:
-•   Current queue size
-•   Current available slots
-•   Current max wait time in queue in milliseconds (version 2 and above)
+
+* Current queue size
+* Current available slots
+* Current max wait time in queue in milliseconds (version 2 and above)
 
 *Note*: These methods are subject to Rate-Limiting policies. This means that the maximum number of concurrent requests is limited on the server side. As most incoming requests are measured in seconds, the likelihood of your requests actually encountering an issue is rare; however, if you do encounter a limit, you can expect to receive a 429 status code in an error response from the server.
 
@@ -34,7 +35,7 @@ You can request queue state data using the following parameters:
 | Name | Description | Type / Value | Required |
 | :------ | :------------- | :-------------- | :--- |
 | v | Version of API, for example, v=1. | numeric | required |
-| skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, the default will be 'skillIds=all’, and metrics on the response will be calculated by all skills with queue state data. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3 . To retrieve all skills active for the time period use skillIds=all (same as default if not provided). | numeric, comma separated | optional |
+| skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, the default will be 'skillIds=all', and metrics on the response will be calculated by all skills with queue state data. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3. To retrieve all skills active for the time period use skillIds=all (same as default if not provided). | numeric, comma separated | optional |
 
 ### Response
 

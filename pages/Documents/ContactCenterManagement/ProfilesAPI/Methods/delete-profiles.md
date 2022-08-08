@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
 
-
 order: 70
 permalink: profiles-api-methods-delete-profiles.html
 
@@ -28,7 +27,6 @@ This API deletes profiles from a specific account.
 | Header       |  Description |
  |:--------    |  :------------- |
  |Authorization | Contains token string to allow request authentication and authorization. |
-
 
 **Request Body**
 

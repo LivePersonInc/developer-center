@@ -72,7 +72,7 @@ If you're adding a domain that will use your own Rasa-based engine as the NLU pr
     * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-manager-natural-language-understanding-introduction.html).
     * **Language**: Select the language of the domain.
     * **Import method**: If you're going to add intents and entities manually, select "Manual." If you're going to import them from a file, select "Import."
-    * **Import intents & entities from**: If you selected "Import" as the import method, now select the type of import file involved: CSV or Google Sheet. Then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
+    * **Import intents and entities from**: If you selected "Import" as the import method, now select the type of import file involved: CSV or Google Sheet. Then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
         **Google sheets**: A Google sheet must be public, i.e., with no file restrictions in place. Moreover, it must contain 100 or fewer columns (intents and entities combined); otherwise, the import fails. If your domain is larger and you have more columns than this, use a CSV file instead.
 
@@ -173,9 +173,9 @@ Training a domain is something that you do if the domain uses the LivePerson eng
 
 Training a domain creates a new model version; for more, see the relevant section for the NLU engine that you're using:
 
-* LivePerson NLU engine - See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
-* Google Dialogflow or IBM Watson NLU engine - See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
-* Your Rasa-based NLU engine - See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
+* LivePerson NLU engine: See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
+* Google Dialogflow or IBM Watson NLU engine: See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
+* Your Rasa-based NLU engine: See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
 
 ### Download a domain
 

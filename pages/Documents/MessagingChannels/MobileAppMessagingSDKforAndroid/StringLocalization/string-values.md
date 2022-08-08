@@ -17,7 +17,7 @@ indicator: messaging
 
 You can change strings appearing on the SDK interface by overriding the respective string key.
 
-**Note:**  To create a new locale file, see [Override SDK Strings](/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
+**Note:** To create a new locale file, see [Override SDK Strings](/mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html#create-new-localization-file).
 
 ### Accessibility strings (used by the Accessibility TalkBack)
 
@@ -84,11 +84,11 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lpmessaging\_ui\_pci\_leave\_dialog\_description** | Body message of the PCI dialog before leaving unfilled form. | Once you leave the secure form, you will not be able to access it again. |
 | **lpmessaging\_ui\_pci\_leave\_dialog\_title** | Title of the PCI dialog before leaving unfilled form. | Are you sure? |
 | **lpmessaging\_ui\_secure\_form\_consumer\_submitted\_message** | Consumer-Submission bubble confirming form submission | I have submitted the %s form |
-| **lpmessaging\_ui\_secure\_form\_error\_message** | PCI form bubble message - state error | There was a problem opening this form. Please ask the agent to resend the form. |
-| **lpmessaging\_ui\_secure\_form\_expired\_message** | PCI form bubble message - state expired | Secure form has expired. Please ask the agent to resend the form. |
-| **lpmessaging\_ui\_secure\_form\_submitted\_message** | PCI form bubble message - state submitted | This form has been submitted and cannot be reopened for security reasons. |
+| **lpmessaging\_ui\_secure\_form\_error\_message** | PCI form bubble message — state error | There was a problem opening this form. Please ask the agent to resend the form. |
+| **lpmessaging\_ui\_secure\_form\_expired\_message** | PCI form bubble message — state expired | Secure form has expired. Please ask the agent to resend the form. |
+| **lpmessaging\_ui\_secure\_form\_submitted\_message** | PCI form bubble message — state submitted | This form has been submitted and cannot be reopened for security reasons. |
 | **lpmessaging\_ui\_secure\_form\_to\_fill\_in\_message** | PCI form bubble message | This is a secure form. Information entered here is protected and cannot be accessed once submitted. |
-| **lpmessaging\_ui\_secure\_form\_viewed\_message** | PCI form bubble message - state viewed (not filled and can't be filled) | This form has already been viewed. Please ask the agent to resend the form. |
+| **lpmessaging\_ui\_secure\_form\_viewed\_message** | PCI form bubble message — state viewed (not filled and can't be filled) | This form has already been viewed. Please ask the agent to resend the form. |
 
 ### General
 
@@ -104,9 +104,9 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_connection\_status\_failed\_to\_connect** | Connection bar text when could not connect to the messaging server | Failed to connect to the server. |
 | **lp\_connection\_status\_no\_connection** | Connection bar text when there is no internet connection on the device | Offline. Please check your connection. |
 | **lp\_connection\_status\_trying\_to\_connect** | Connection bar text when the connection is longer than 5 seconds | Still trying to connect… |
-| **lp\_conversation\_ended\_by\_agent\_no\_name** | Message when the conversation was resolved when we don't have the agent name. %1$s - time | Conversation resolved by Agent \n %1$s |
-| **lp\_conversation\_ended\_by\_agent\_with\_name** | Message when the conversation was resolved when we have an agent name. %1$s - agent name %2$s - time | Conversation resolved by %1$s \n %2$s |
-| **lp\_conversation\_ended\_by\_you** | Message when the conversation was resolved by the client. %1$s - time | Conversation resolved by You \n %1$s |
+| **lp\_conversation\_ended\_by\_agent\_no\_name** | Message when the conversation was resolved when we don't have the agent name. %1$s — time | Conversation resolved by Agent \n %1$s |
+| **lp\_conversation\_ended\_by\_agent\_with\_name** | Message when the conversation was resolved when we have an agent name. %1$s — agent name %2$s — time | Conversation resolved by %1$s \n %2$s |
+| **lp\_conversation\_ended\_by\_you** | Message when the conversation was resolved by the client. %1$s — time | Conversation resolved by You \n %1$s |
 | **lp\_date\_time\_format** | Date and time format to be used instead of the standard format | No Value |
 | **lp\_dismiss\_as\_urgent\_menu\_text** | Dismiss urgent menu text. | Dismiss urgent |
 | **lp\_dismiss\_as\_urgent\_two\_lines** | "Dismiss urgent" string in menu and snack bar. | Dismiss urgent |
@@ -132,8 +132,8 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_feedback\_yesno\_positive\_title** | Positive button text in the feedback dialog. | YES |
 | **lp\_feedback\_yesno\_question** | Yes/No question text in feedback dialog. | Did we solve your issue today? |
 | **lp\_first\_message** | System message before the first conversation. | How can I help you today? |
-| **lp\_is\_typing** | Text in conversation activity when agent is typing. | typing... |
-| **lp\_loading\_message** | Text above the loading icon when loading previous messages. | Loading... |
+| **lp\_is\_typing** | Text in conversation activity when agent is typing. | typing… |
+| **lp\_loading\_message** | Text above the loading icon when loading previous messages. | Loading… |
 | **lp\_mark\_as\_resolved\_dialog\_message** | Resolve conversation confirmation dialog text. | Are you sure this topic is resolved? |
 | **lp\_mark\_as\_resolved\_menu\_text** | "Mark as resolved" string in menu. | Mark as resolved |
 | **lp\_mark\_as\_urgent\_dialog\_header** | Mark as urgent confirmation dialog header. | Are you sure you want to mark this conversation as urgent? |
@@ -144,29 +144,26 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_message\_time\_now** | Message timestamp for the latest messages ("Now"). | Now |
 | **lp\_message\_time\_now\_with\_state** | Message timestamp for the latest messages that has a sending state ("now"). | Now |
 | **lp\_new\_messages** | Notification message displayed when there are multiple push messages. | new messages |
-| **lp\_no\_action\_not\_available\_toast\_message** | A toast message when the required action is not available (e.g. Mark as urgent when there is no active conversation). | Action not available - no open conversation |
+| **lp\_no\_action\_not\_available\_toast\_message** | A toast message when the required action is not available (e.g. Mark as urgent when there is no active conversation). | Action not available — no open conversation |
 | **lp\_no\_network\_toast\_message** | A toast message when there is no network. | No internet connection. Please check your connection and try again. |
 | **lp\_ok** | Confirmation dialog OK button. | OK |
 | **lp\_resend\_failed\_conversation\_closed** | Toast message displayed when trying to resend a failed message when conversation is already closed. | This conversation has already been resolved. |
 | **lp\_resend\_failed\_masked\_message** | Toast message displayed when trying to resend a failed masked message. | Message failed to send. Please re-enter message and send again. |
 | **lp\_send** | The "Send" button text. | Send |
 | **lp\_skip** | Feedback dialog toolbar skip button text. | Skip |
-| **lp\_still\_loading\_message** | Message displayed when loading conversation takes longer the usual | Still loading conversation... |
+| **lp\_still\_loading\_message** | Message displayed when loading conversation takes longer the usual | Still loading conversation… |
 | **lp\_today** | Today header in conversation. | Today |
 | **lp\_ttr\_message\_days** | (plurals string that contains: "one" and "others") The one or others strings is concatenated to the lp\_ttr\_message\_with\_timestamp string above according to whether it's single day multiple days. Example: one or others. |   |
 | **lp\_ttr\_message\_hours** | (plurals string that contains: "one" and "others"). The one or others strings is concatenated to the lp\_ttr\_message\_with\_timestamp string above according to whether it's single hour multiple hours. Example: one or others. |   |
 | **lp\_ttr\_message\_minutes** | (plurals string that contains: "one" and "others") The one or others strings is concatenated to the lp\_ttr\_message\_with\_timestamp string above according to whether it's single minute multiple minutes. Example |   |
 | **lp\_ttr\_message\_no\_timestamp** | Text in TTR snackbar when timestamp is not shown. | An agent will respond shortly |
-| **lp\_ttr\_message\_off\_hours\_message** | Message to show when the online hours is more than 2 days from now. includes 1 param: %1$s - for the full date (MMM dd, yyyy hh:mm a) | Thanks for your message. We will be back online at %1$s |
+| **lp\_ttr\_message\_off\_hours\_message** | Message to show when the online hours is more than 2 days from now. includes 1 param: %1$s — for the full date (MMM dd, yyyy hh:mm a) | Thanks for your message. We will be back online at %1$s |
 | **lp\_ttr\_message\_off\_hours\_message\_today** | A snackbar content when the agent is in off hours and TTR is sometime today | Thanks for your message. We will be back online today at %1$s |
 | **lp\_ttr\_message\_off\_hours\_message\_tomorrow** | A snackbar content when the agent is in off hours and TTR is sometime tomorrow | Thanks for your message. We will be back online tomorrow at %1$s |
 | **lp\_ttr\_message\_off\_hours\_time\_zone\_id** | Represents Java timezone ID that is used in the off hours message. For a full list of the available IDs, use the "Aliases" from here. | US/Pacific |
 | **lp\_ttr\_message\_with\_timestamp** | Text in TTR snackbar when timestamp is shown. | An agent will respond within the next |
 | **lp\_unread\_message** | (plurals string that contains: "one" and "others"). Used in the unread messages indicator to indicate how many unread messages Example: one or others. |   |
 | **lp\_yesterday** | Yesterday header in conversation. | Yesterday |
-
-
-
 
 ### Masking
 

@@ -10,7 +10,7 @@ indicator: both
 
 This integration will allow you to see and create your Zendesk Contact tickets right from within Conversational Cloud. It will also record all Conversational Cloud transcripts in Zendesk so all your customer interactions are in one place.
 
-<div class="inntertext configlink"><a href="assets/CRM_Widget_Zendesk_Admin_Guide_2019_v2.pdf" target="_blank">Click here</a> for the Zendesk Widget Integration Guide!</div>
+<div class="inntertext configlink"><a href="assets/CRM_Widget_Zendesk_Admin_Guide_2019_v2.pdf" target="_blank">Click here</a> for the Zendesk Widget Integration Guide.</div>
 
 <hr class="solutionshr" />
 

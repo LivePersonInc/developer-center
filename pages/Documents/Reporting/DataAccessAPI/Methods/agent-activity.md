@@ -268,10 +268,10 @@ The following table describes the information that is available in the agent act
 | Parameter | Description | Type / Value |
 | :------- | :------------ | :--------- |
 |agentID | Unique agent identifier. | long |
-| type | Type of event generated the session, can be one of the following: <br>-1 - Unknown,<br> 1 - Chat, <br>3- Login, <br>4 – Logout. | long |
-| state | Agent’s status, can be one of the following: <br>-1 - Unknown, <br>0 - Irrelevant,<br> 1 - Offline, <br>2 - Online, <br>3 - Back Soon, <br>4 – Away. | long |
+| type | Type of event generated the session, can be one of the following: <br>-1 — Unknown,<br> 1 — Chat, <br>3 — Login, <br>4 — Logout. | long |
+| state | Agent’s status, can be one of the following: <br>-1 — Unknown, <br>0 — Irrelevant,<br> 1 — Offline, <br>2 — Online, <br>3 — Back Soon, <br>4 — Away. | long |
 | timestamp | Time for the state change in UTC. | long |
-| prevState | The previous agent’s status, can be one of the following: <br>-1 - Unknown, <br>0 - Irrelevant, <br>1 - Offline,<br> 2 - Online, <br>3 - Back Soon, <br>4 – Away. | long |
+| prevState | The previous agent’s status, can be one of the following: <br>-1 — Unknown, <br>0 — Irrelevant, <br>1 — Offline,<br>2 — Online, <br>3 — Back Soon, <br>4 — Away. | long |
 | agentEmployeeId | Agent’s employee ID. | long |
 | agentUserName | Agent’s user name. | string |
 | agentNickName | Agent’s nickname. | string |

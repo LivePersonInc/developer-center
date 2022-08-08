@@ -3,7 +3,7 @@ This is an example of widget of how you can use the Web App SDK to send html cod
 
 This widget was built using Angular.
 
-You can view a live example here:[Multi-Media Widget](https://scottwestover.herokuapp.com/liveengageWidgets/MultiMediaWidget/)
+You can view a live example here: [Multi-Media Widget](https://scottwestover.herokuapp.com/liveengageWidgets/MultiMediaWidget/)
 
 ## Background
 This widget was built as a proof of concept in regards to how we can send HTML, images, and share files in LiveEngage by using the Web App SDK. To build the widget, I decided to use Google Drive for the file sharing because it is free and their APIs have a high qouta.

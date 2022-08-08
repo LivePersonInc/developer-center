@@ -16,14 +16,14 @@ This is a tutorial series that's cumulative in nature. To start from the beginni
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
 <!--
-### Watch the video - Intents & entities
+### Watch the video — Intents & entities
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/441795640" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/441795640" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
-### Watch the video - Advanced interactions
+### Watch the video — Advanced interactions
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/464652923" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/464652923" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 -->
 
@@ -90,6 +90,7 @@ With the "Make Payment" intent configured, let’s return to Conversation Builde
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_assoc.png" alt="">
 
 ### Step 7: Add custom rules
+
 Now you can begin to build out the Make Payment dialog.
 
 1. Add a Text statement that says, “Sure, I can help with that."
@@ -99,7 +100,7 @@ Now you can begin to build out the Make Payment dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "Great! To pay your bill, please go to our billing portal at http://example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "Great! To pay your bill, please go to our billing portal at example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules2.png" alt="">
 

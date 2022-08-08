@@ -145,6 +145,6 @@ if (transferType) {
 }
 ```
 
-### Using the Conversation Context Service & Dynamic Routing
+### Using the Conversation Context Service and Dynamic Routing
 
 This bot template is designed for use within the [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html#using-the-conversation-orchestrator-bot-template) guide of our Conversation Orchestrator Dynamic Routing documentation. For details on configuring Conversation Orchestrator to work with this bot template, please follow along with that guide.

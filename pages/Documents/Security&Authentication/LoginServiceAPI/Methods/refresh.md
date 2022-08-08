@@ -14,7 +14,7 @@ order: 20
 indicator: both
 ---
 
-_Note:_ as a Best Practice recommendation, it is best to call this method every three to five minutes to make sure the Login Service stays refreshed.
+_Note: It is best to call this method every 3–5 minutes to make sure the Login Service stays refreshed._
 
 ### Request
 
@@ -39,7 +39,7 @@ _Note:_ as a Best Practice recommendation, it is best to call this method every 
 
 | Parameter | Description |
 | :--- | :--- |
-| csrf | CSRF - Taken from the Login response body. |
+| csrf | CSRF — Taken from the Login response body |
 
 Example:
 
@@ -53,11 +53,11 @@ Example:
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK with empty body (see [note](#note)). |
-| 401  | Unauthorized - Bad Authentication (invalid site or agent). |
+| 200 | OK with empty body (see [note](#note)) |
+| 401  | Unauthorized — Bad Authentication (invalid site or agent) |
 | 500 | Internal server error |
 
-<a name="note">*Note*</a>: *In case csrf is invalid, response code is 401 - Unauthorized with the following body:*
+<a name="note">*Note*</a>: *In case csrf is invalid, response code is 401 — Unauthorized with the following body:*
 
 ```json
 {

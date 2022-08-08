@@ -4,6 +4,5 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 permalink: messaging-channels-capabilities-comparison.html
 indicator: messaging
+redirect_to: https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html/
 ---
-
-<div class="important">This table has moved! It can now be found on our Knowledge Center, at <a href="https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html">this location</a>.</div>

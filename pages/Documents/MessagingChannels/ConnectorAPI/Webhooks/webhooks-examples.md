@@ -13,7 +13,6 @@ permalink: connector-api-webhooks-webhooks-examples.html
 
 In this page you can refer to some examples of the events notifications received from the Webhooks service in regards to the conversation.
 
-
 ### Consumer created an new conversation
 
 ```json
@@ -49,7 +48,6 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-
 ### Consumer sent a text message
 
 ```json
@@ -77,7 +75,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "ms.MessagingEventNotification"
 }
 ```
-
 
 ### Agent assigned to the conversation
 
@@ -117,7 +114,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "cqm.ExConversationChangeNotification"
 }
 ```
-
 
 ### Agent read the message
 
@@ -174,11 +170,9 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-**Note**: In order to get also "Consumer is typing" events notifications the Connector must send LiceEngage using the SEND enpoint a message that contains the `COMPOSING` ChatStateEvent. See more information in [here](connector-api-send-api-examples.html#send-chat-state-events)
+**Note:** In order to also get "Consumer is typing" events notifications, the Connector must send a message using the SEND endpoint, which contains the `COMPOSING` ChatStateEvent. See more information in [Send Chat State Events](connector-api-send-api-examples.html#send-chat-state-events).
 
-
-### Agent has stopped typing but still on the chat window - ACTIVE
-
+### Agent has stopped typing but still on the chat window — ACTIVE
 
 ```json
 {
@@ -203,9 +197,7 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-
 ### Agent sent a text messages
-
 
 ```json
 {
@@ -233,7 +225,7 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-### Agent sent another message - Please notice the increased sequence counter
+### Agent sent another message — Please notice the increased sequence counter
 
 ```json
 {
@@ -260,7 +252,6 @@ In this page you can refer to some examples of the events notifications received
  "type": "ms.MessagingEventNotification"
 }
 ```
-
 
 #### ms.PublishEvent Properties
 

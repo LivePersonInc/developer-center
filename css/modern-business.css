@@ -20,7 +20,7 @@ body {
 }
 
 .img-hover:hover {
-    opacity: 0.8;
+    opacity: .8;
 }
 
 /* Home Page Carousel */

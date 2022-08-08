@@ -31,7 +31,7 @@ To use this feature with the Control History API, refer to the following [page](
 //Welcome message
 var messageTitle = "Hello Mr.Smith, how may we help you?\n"
 messageTitle.append("To know more about our terms and conditions visit:\n")
-messageTitle.append("https://www.mywebsite.com") //this ability is only avaliable on SDK 6.2.0 & Above
+messageTitle.append("https://www.mywebsite.com") // this ability is only available on SDK 6.2.0 and Above
 
 let welcomeMessageParam = LPWelcomeMessage(message: messageTitle, frequency: .everyConversation)
 
@@ -61,7 +61,6 @@ LPMessaging.instance.showConversation(conversationViewParams,  authenticationPar
 
 {: .notice}
 Support for rendering links automatically is available on SDK 6.2.0 and above.
-
 
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  

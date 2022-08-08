@@ -195,7 +195,7 @@ Alternatively you can provide the ca-cert as part of the clientTLS config.
 
 - `Optional` **json**: `boolean`
 
-Set this flag to true, to automatically stringify body + set correct content header and parse response to json.
+Set this flag to true, to automatically stringify body + set correct content header and parse response to JSON.
 
 - `Optional` **timeout**: `number`
 

@@ -62,16 +62,16 @@ In the Summary and Detail fields of an article in an [internal knowledge base](k
 
 Examples of valid anchor tags:
 
-* `<a href="http://example.com/test.jpg">click here</a>`
-* `<a href="http://example.com/1$2324%342523">click here</a>`
+* `<a href="https://example.com/test.jpg">click here</a>`
+* `<a href="https://example.com/1$2324%342523">click here</a>`
 * `<a href=”tel:+123456789”>phone</a>`
 * `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
 
 * `<a href="javascript: alert(’test’)">click here</a>`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
+* `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+* `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
 {: .important}
 If you're using an [external knowledge base](knowledgeai-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
@@ -80,7 +80,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 ### Restore an earlier version of an article
 
-In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
+In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content — that is, the title, the summary, the detail or a content URL — a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
 
 Note the following:
 

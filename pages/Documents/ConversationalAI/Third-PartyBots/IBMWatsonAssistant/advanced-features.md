@@ -27,7 +27,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
 {: .important}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 3.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor (Figure 3.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png" alt="">
   Figure 3.1 Showing options of JSON editor and context editor
@@ -197,7 +197,7 @@ It is possible to send only a private text message response. The example payload
 <img class="fancyimage" style="width:800px" src="img/watsonassistant/private_message_response_custom_payload.png" alt="">
 Figure 3.5 Showing single private text message definition inside `JSON Editor`
 
-It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
+It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message — Action) will be as below:
 
 ```json
 {
@@ -279,7 +279,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 {
   "message": "Some Message",
   "context": {
-    // ... contains some more information about conversation as well
+    // … contains some more information about conversation as well
     "lpEvent": {}, // Holds LP Events
     "lpSdes": {} // Holds SDES
   }

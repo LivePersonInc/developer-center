@@ -58,11 +58,11 @@ When an intent triggers a dialog starter, the intent name is automatically saved
 When working with larger domains, assigning individual dialogs to each intent can be difficult to scale. By using the Conversation Orchestrator bot template, bot developers can manually call the analyze intent API and save the intent name to the default namespace, enabling routing to any intent-based skill in the account.
 
 {: .important}
-This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of Liveperson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
+This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of LivePerson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
 
 1. Create the Dynamic Routing bot, and open **Global Functions**.
 
-    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change  two configurations (botAppKey & domainId) as highlighted in the next, few steps.
+    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
 
 2. Retrieve the botAppKey.
 

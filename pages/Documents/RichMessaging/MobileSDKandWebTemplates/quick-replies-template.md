@@ -39,7 +39,6 @@ When a Quick Reply is tapped, the rest of the replies are dismissed. The agent c
 | itemsPerRow   | Number of items per row | Number | Y        | 8 items    |
 | replies       | A list of replies         | Array  | Y        | 24 items   |
 
-
 ### Quick Reply Element
 
 | Property Name | Description                                                   | Type      | Required | Size Limit |
@@ -63,7 +62,7 @@ For the 'style' property of a reply, please see the [Styling](#Styling) section.
   "replies": [
     {
       "type": "button",
-      "tooltip": "yes i do",
+      "tooltip": "yes I do",
       "title": "yes",
       "click": {
         "actions": [
@@ -122,11 +121,11 @@ Additional styling configuration is available for Mobile SDK: [Android](/mobile-
 | :--------------- | :------------------------------------- | :------------------------ |
 | bold             | Whether the text is bold or not        | Boolean                   |
 | italic           | Whether the text is in italics or not  | Boolean                   |
-| color            | Defines the element's color               | String - hex color        |
-| border-color     | Defines the element's border color    | String - hex color        |
+| color            | Defines the element's color               | String — hex color        |
+| border-color     | Defines the element's border color    | String — hex color        |
 | border-radius    | Defines the element's border-radius | Number                    |
-| background-color | Defines the element's background color | String - hex color        |
-| size             | Defines the element's size             | Enum - small/medium/large |
+| background-color | Defines the element's background color | String — hex color        |
+| size             | Defines the element's size             | Enum — small/medium/large |
 
 #### Example
 
@@ -148,7 +147,7 @@ Additional styling configuration is available for Mobile SDK: [Android](/mobile-
 
 2. Use Quick Replies to prompt for specific next steps, or use them as answers for surveys or conversational forms.
 
-3. Use short texts in the reply's content - be brief and precise.
+3. Use short texts in the reply's content — be brief and precise.
 
 4. If you wish the agent to be able to follow the consumer's clicks, we recommend adding a `publishText` click-event to each reply. The publish-text click-event will add a message to the transcript on behalf of the consumer, which will be available for the agent to follow and record for later use.
 

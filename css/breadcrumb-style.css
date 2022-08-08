@@ -1,10 +1,10 @@
 /* from Twitter Bootstrap */
 
 .breadcrumb {
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
-    border-radius: 0.25rem;
+    border-radius: .25rem;
     background-color: transparent;
 }
 
@@ -20,8 +20,8 @@
 
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
-    /*padding-right: 0.5rem;*/
-    /*padding-left: 0.5rem;*/
+    /*padding-right: .5rem;*/
+    /*padding-left: .5rem;*/
     color: var(--grey-button-icons);
     content: "/";
 }
@@ -36,16 +36,14 @@
 
 .breadcrumb-item.active {}
 
-
 /*if you already use Twitter, you do not need these css lines above, cause they already in Twitter Bootstrap */
-
 
 /* Additions: imgage integration */
 
 .breadcrumbs {
     padding-left: 0;
     background-color: var(--body-text);
-    border-radius: 0.25rem;
+    border-radius: .25rem;
 }
 
 .breadcrumbs::after {
@@ -63,7 +61,7 @@
 }
 
 .breadcrumbs .breadcrumb-item {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -94,8 +92,8 @@
 
 .breadcrumbs .icon:after {
     display: inline-block;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
     color: var(--body-text);
     content: "/";
 }
@@ -105,6 +103,6 @@
 }
 
 .breadcrumbs .icon svg {
-    height: 0.7rem;
-    width: 0.7rem;
+    height: .7rem;
+    width: .7rem;
 }

@@ -20,7 +20,6 @@ This API enables a conversation to be resolved. The API will request the server 
 
 `public class func resolveConversationForConversationQuery(_ conversationQuery: ConversationParamProtocol, completion: (() -> Void)? = {()})`
 
-
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |

@@ -12,7 +12,7 @@ indicator: both
 LivePerson Functions may listen to Conversation Cloud events or are directly linked to conversational bots. Functions will start reacting to events once they are successfully deployed until they do not have an effect.
 
 {: .notice}
-The number of functions connected to a specific event is restricted and seen in the tables below.
+The number of functions connected to a specific event is restricted, and documented in the tables below.
 
 ### Event Integrations
 

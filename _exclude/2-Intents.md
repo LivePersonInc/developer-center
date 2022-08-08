@@ -37,9 +37,9 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 7. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
-    * i have a question about my bill
+    * I have a question about my bill
     * can you help me with my bill
-    * i have a bill related question
+    * I have a bill related question
     * my bill is past due
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png" alt="">
@@ -94,7 +94,7 @@ With the "Billing question" intent configured, let’s return to Conversation Bu
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png" alt="">
 
-7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents.
+7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png">, select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png" alt="">
 
@@ -120,7 +120,7 @@ Now you can begin to build out the Billing dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <http://example.com>”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
+3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to <https://example.com>”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
 
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next step should be to end.
 
