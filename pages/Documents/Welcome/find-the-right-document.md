@@ -9,7 +9,7 @@ permalink: getting-started-with-conversational-cloud-apis-find-the-right-documen
 indicator: both
 ---
 
-If you don't have a specific use case in mind, simply browse the site to find out more about our API capabilities and features. The LivePerson Developers site is comprised of the following sections:
+If you don't have a specific use case in mind, simply browse the site to find out more about our API capabilities and features. The LivePerson Developer Center is comprised of the following sections:
 
 * **Guides** - this section includes general guides to using our APIs and SDKs. These work across all of our APIs, except where otherwise mentioned. In this section you can find documents on topics like Authentication, how to retrieve API keys, using Engagement Attributes and more.
 
