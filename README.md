@@ -1,4 +1,4 @@
-# LivePerson’s developer center and community
+# LivePerson’s Developer Center and Community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
