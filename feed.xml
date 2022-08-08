@@ -17,6 +17,7 @@ layout: none
         <item>
             <title>{{ page.title | xml_escape }}</title>
             <description><![CDATA[{{ page.content | xml_escape }}]]></description>
+            <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
             <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
