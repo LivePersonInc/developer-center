@@ -10,14 +10,15 @@ layout: none
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}</link>
         <atom:link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <generator>Jekyll v{{ jekyll.version }}</generator>
         {% for page in site.pages limit:20 %}
         <item>
             <title>{{ page.title | xml_escape }}</title>
             <description><![CDATA[{{ page.content | xml_escape }}]]></description>
-            <pubDate>{{ page.date | date_to_rfc822 }}</pubDate>
+            <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+            <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
             {% for tag in page.tags %}

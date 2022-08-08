@@ -125,6 +125,15 @@
                             </a>
                         </div>
                     </div>
+                    <div class="article-meta">
+                        {% assign currentYear = "now" | date:"%Y" %}
+                        {% assign articleUpdatedYear = page.last_modified_at | date: '%Y' %}
+                        {% if articleUpdatedYear == currentYear %}
+                        <p>Updated {{ page.last_modified_at | date: '%B %d' }} </p>
+                        {% else %}
+                        <p>Updated {{ page.last_modified_at | date: '%B %d %Y' }}</p>
+                        {% endif %}
+                    </div>
                 </div>
                 {% endif %} {{ content | extlinks }}
 
