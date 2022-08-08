@@ -42,7 +42,7 @@ html body {
 
 body {
     padding-top: 0 !important;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 b,
@@ -133,7 +133,7 @@ svg.sitelogo {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    letter-spacing: 0.008em;
+    letter-spacing: .008em;
     color: var(--link-color);
 }
 
@@ -259,7 +259,6 @@ code pre {
     right: 16px;
 }
 
-
 /* .searchimage img {
   height: 24px;
   right: -35px;
@@ -284,7 +283,7 @@ code pre {
     background-color: var(--body-background);
     display: flex;
     padding-top: var(--space8);
-    margin-right: 0% !important;
+    margin-right: 0 !important;
     min-width: 310px;
     padding-bottom: var(--space8);
     flex-direction: column;
@@ -337,7 +336,6 @@ code pre {
     align-self: flex-end;
     width: 35px;
     padding-top: 9px;
-    order: 1;
     border: 0;
     color: var(--grey-button-icons);
     background-color: transparent;
@@ -351,7 +349,6 @@ code pre {
     align-self: flex-end;
     width: 85px;
     padding-top: 10px;
-    order: 1;
     color: var(--grey-button-icons);
     border: 0;
     background-color: transparent;
@@ -376,7 +373,6 @@ code pre {
     color: var(--button-text-secondary);
 }
 
-
 /*
 .darken code {
   filter: brightness(280%);
@@ -391,7 +387,7 @@ code pre {
 }
 
 .darken .daybtn {
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .darken .codebtn {
@@ -450,7 +446,7 @@ code pre {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -458,7 +454,7 @@ code pre {
 }
 
 #aa-search-input::-moz-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -467,7 +463,7 @@ code pre {
 }
 
 #aa-search-input:-ms-input-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -476,7 +472,7 @@ code pre {
 }
 
 #aa-search-input:-moz-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: var(--input-search);
@@ -497,7 +493,7 @@ code pre {
 }
 
 input.aa-input-search.aa-hint {
-    background: none 0% 0% / auto repeat scroll padding-box border-box var(--body-background) !important;
+    background: none 0 0 / auto repeat scroll padding-box border-box var(--body-background) !important;
 }
 
 input#aa-search-input {
@@ -516,7 +512,7 @@ input#aa-search-input {
 .showcase img {
     margin: 0 auto;
     display: block;
-    box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px 3px rgba(0, 0, 0, .1);
 }
 
 table {
@@ -645,7 +641,7 @@ td {
     font-size: 14px;
     padding: 10px;
     border-radius: 3px;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     margin-top: 9px;
     margin-left: -8.1px;
 }
@@ -709,7 +705,6 @@ td {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
     margin: 0 10px 10px 0;
     position: relative;
     top: 2px;
@@ -727,7 +722,6 @@ td {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
     margin-right: 10px;
     position: relative;
     top: 2px;
@@ -759,7 +753,7 @@ td {
     font-size: 14px;
     line-height: 1.71;
     color: #4a4a4a;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     padding-left: 15px;
 }
 
@@ -769,7 +763,6 @@ td {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
     margin-right: 5px;
     position: relative;
     top: 1px;
@@ -848,7 +841,7 @@ a.loginText {
 }
 
 span.loginButton {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -857,7 +850,7 @@ span.loginButton {
 
 .documentsbutton {
     flex: 1;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     margin-right: 50px;
     display: flex;
@@ -875,7 +868,7 @@ span.loginButton {
 
 .solutionsbutton {
     flex: 1;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -943,18 +936,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
     height: 28px;
 }
 
-.innerfolder>ul {
-    padding-left: 0;
-}
-
-.innerfolder>li {
-    padding-left: 0;
-}
-
-.subfolder>ul {
-    padding-left: 0;
-}
-
+.innerfolder>ul,
+.innerfolder>li,
+.subfolder>ul,
 .subfolder>li {
     padding-left: 0;
 }
@@ -996,7 +980,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 
 .documentslist,
 .solutionslist .innerlink {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     padding-left: 19px;
     margin-bottom: 2px;
     list-style: none;
@@ -1034,7 +1018,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 }
 
 .homeitem>a {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     color: var(--body-text) !important;
 }
@@ -1190,7 +1174,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 .supportbutton {
     padding: 10px;
     margin-left: 39px;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -1202,13 +1186,13 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .supportbutton span {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     color: #f2f1f2;
 }
 
 .defaultbutton {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -1254,7 +1238,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #anchorlist a {
     /* color: var(--secondary-black); */
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1289,9 +1273,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     display: none;
 }
 
-
-/*
- make sure background is white */
+/* make sure background is white */
 
 .highlightlink {
     background-color: var(--body-background) !important;
@@ -1324,7 +1306,6 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     width: 16px;
     height: 16px;
     border: 0;
-    display: inline-flex;
     font-size: 1.5em;
     display: flex;
     align-items: center;
@@ -1336,7 +1317,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .sidebarbutton>span {
-    transition: 0.3s;
+    transition: .3s;
     background: #b1b5bc;
 }
 
@@ -1549,12 +1530,10 @@ a:focus-within:not(.anchorjs-link) {
     border: 2px dashed var(--post-link-hover) !important;
 }
 
-
 /* .dark #post-content img {
   filter: drop-shadow(0px 0 4px rgba(255, 255, 255, 0.12))
     drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
 } */
-
 
 /* toggle switch  */
 
@@ -1589,7 +1568,6 @@ a:focus-within:not(.anchorjs-link) {
 
 .theme-switch-wrapper .theme-switch {
     display: inline-block;
-    height: var(--space8);
     position: relative;
     width: 48px;
     height: 24px;
@@ -1610,7 +1588,7 @@ a:focus-within:not(.anchorjs-link) {
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .theme-switch-wrapper .slider:before {
@@ -1619,7 +1597,7 @@ a:focus-within:not(.anchorjs-link) {
     height: 18px;
     left: 3px;
     position: absolute;
-    transition: 0.4s;
+    transition: .4s;
     width: 18px;
     background: var(--card-background);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1678,7 +1656,6 @@ a:focus-within:not(.anchorjs-link) {
 .theme-switch-wrapper input:checked+.slider .toggle-title-light {
     display: none;
 }
-
 
 /* toggle end */
 

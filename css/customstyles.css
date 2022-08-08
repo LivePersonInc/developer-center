@@ -77,7 +77,6 @@ body {
     color: #5bc0de;
 }
 
-
 .gi-2x {
     font-size: 2em;
 }
@@ -93,7 +92,6 @@ body {
 .gi-5x {
     font-size: 5em;
 }
-
 
 /* make room for the nav bar */
 h1[id],
@@ -212,7 +210,6 @@ table th[class*="col-"] {
     float: none;
 }
 
-
 table td:first-child {
     width: 150px;
     /*font-weight:bold;*/
@@ -225,7 +222,6 @@ table.boldFirstColumn td:first-child {
 table tr td {
     hyphens: auto;
 }
-
 
 p.external a {
     text-align: right;
@@ -244,8 +240,7 @@ p.post-meta {
 }
 
 .entry-date {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.71429;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -266,7 +261,6 @@ p.post-meta {
     display: none;
 }
 
-
 ul#results-container a {
     background-color: transparent;
 }
@@ -274,7 +268,6 @@ ul#results-container a {
 ul#results-container a:hover {
     color: black;
 }
-
 
 #search-demo-container a:hover {
     color: black;
@@ -284,7 +277,7 @@ ul#results-container a:hover {
     padding: .5em;
     margin-left: 20px;
     width: 20em;
-    font-size: 0.8em;
+    font-size: .8em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -341,11 +334,9 @@ li.dropdownActive a {
     font-weight: bold;
 }
 
-
 .post-content a.fa-rss {
     color: orange;
 }
-
 
 .navbar-inverse .navbar-nav>li>a {
     background-color: transparent;
@@ -383,7 +374,7 @@ footer .container .row ul {
 footer .container .row ul li {
     padding-top: 13px;
     color: white;
-    font-size: 0.66666em;
+    font-size: .66666em;
     font-family: "Open Sans", Arial, sans-serif;
     padding-right: 5px;
     padding-left: 5px;
@@ -522,7 +513,6 @@ a.accordion-collapsed {
     }
 }
 
-
 .updates {
     color: #5879da !important;
     display: block;
@@ -540,7 +530,6 @@ a.accordion-collapsed {
     font-size: 19px;
     font-weight: bolder;
 }
-
 
 .nav li>a>span:after {
     content: '\25be';
@@ -567,7 +556,7 @@ a.accordion-collapsed {
 }
 
 .nav>li>a {
-    font-size: 0.933em;
+    font-size: .933em;
     line-height: 20px;
     padding: 4px 10px;
 }
@@ -586,7 +575,6 @@ ul#mysidebar {
     padding-left: 20px;
     background-color: whitesmoke !important;
 }
-
 
 .nav ul li a {
     /* background-color: #FAFAFA;*/
@@ -658,11 +646,9 @@ img.screenshotSmall {
     max-width: 300px;
 }
 
-
 dl dt p {
     margin-left: 20px;
 }
-
 
 dl dd {
     margin-top: 10px;
@@ -691,7 +677,6 @@ figcaption {
 .preference {
     color: red;
 }
-
 
 table.dataTable thead {
     background-color: #444;
@@ -821,7 +806,6 @@ a[data-toggle] {
     content: "Summary: ";
     font-weight: bold;
 }
-
 
 a.fa.fa-envelope-o.mailto {
     font-weight: 600;
@@ -965,7 +949,7 @@ ol.series li {
 .versionTagline {
     text-align: center;
     margin-bottom: 20px;
-    font-family: courier;
+    font-family: courier, monospace;
     /*font-color: silver;*/
     color: #444;
     display: block;
@@ -1012,7 +996,6 @@ table code {
     background-color: transparent;
 }
 
-
 table p {
     margin-top: 12px;
     margin-bottom: 12px;
@@ -1024,7 +1007,7 @@ table code {
     /* css-3 */
     white-space: -moz-pre-wrap;
     /* Mozilla, since 1999 */
-    white-space: -pre-wrap;
+    white-space: pre-wrap;
     /* Opera 4-6 */
     white-space: -o-pre-wrap;
     /* Opera 7 */
@@ -1049,7 +1032,6 @@ video {
     margin: 30px 0;
     border: 1px solid #c0c0c0;
 }
-
 
 p.required,
 p.dataType {
@@ -1115,14 +1097,14 @@ span.soft {
 .endpoint {
     padding: 15px;
     background-color: #f2f1f2;
-    font-family: courier;
+    font-family: courier, monospace;
     font-size: 110%;
     margin: 20px 0;
     color: #444;
 }
 
 .parameter {
-    font-family: courier;
+    font-family: courier, monospace;
     color: red !important;
 }
 
@@ -1137,7 +1119,6 @@ span.soft {
 .navbar-collapse .navbar-nav.navbar-left:first-child {
     margin-left: 60px;
 }
-
 
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
@@ -1171,7 +1152,6 @@ span.soft {
     max-height: 100%;
 }
 
-
 .post-content img {
     margin: 12px 0 3px 0;
     width: auto;
@@ -1184,7 +1164,6 @@ span.soft {
     max-width: 100%;
     max-height: 100%;
 }
-
 
 .post-content img {
     margin: 12px 0 3px 0;
@@ -1204,7 +1183,6 @@ span.soft {
     box-shadow: 2px 2px 1px #f2f1f2;
     border: 1px solid #dedede;
 }
-
 
 @media only screen and (min-width: 900px) {
     .col-md-9 img {
@@ -1292,7 +1270,6 @@ span.label.label-primary {
     background-color: white
 }
 
-
 .nav li.active>a.subfoldersTitle {
     background-color: whitesmoke;
     font-weight: bold;
@@ -1327,7 +1304,6 @@ table thead th code.highlighter-rouge {
     background-color: transparent;
 }
 
-
 .box {
     padding: 10px;
     border: 1px solid #888;
@@ -1339,7 +1315,6 @@ table thead th code.highlighter-rouge {
     font-size: 12px;
     hyphens: auto;
     float: left;
-    font-size: 12px;
 }
 
 .box:hover {
@@ -1383,7 +1358,6 @@ div.arrow {
     clear: both;
 }
 
-
 #userMap div.arrow {
     position: relative;
     top: 30px;
@@ -1412,7 +1386,6 @@ div.box.box1 {
     margin: 0 10px;
 }
 
-
 #userMap .btn-lg .active {
     background-color: #d6f5d6;
 }
@@ -1422,7 +1395,7 @@ div.box.box1 {
     /* css-3 */
     white-space: -moz-pre-wrap;
     /* Mozilla, since 1999 */
-    white-space: -pre-wrap;
+    white-space: pre-wrap;
     /* Opera 4-6 */
     white-space: -o-pre-wrap;
     /* Opera 7 */
