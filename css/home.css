@@ -53,3 +53,7 @@
     font-size: 16px;
     color: #4a4a4a;
 }
+
+.article-meta {
+    display: none;
+}
