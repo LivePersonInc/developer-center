@@ -49,7 +49,7 @@ html body .preview-page div .more-btn{
 }
 
 .preview-page .container.products, .preview-page .container.documents {
-  padding-left: 0%;
+  padding-left: 0;
 }
 html body  .preview-page footer{
     display: none;
