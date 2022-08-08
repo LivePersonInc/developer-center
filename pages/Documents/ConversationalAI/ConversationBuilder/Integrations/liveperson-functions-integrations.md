@@ -9,6 +9,8 @@ permalink: conversation-builder-integrations-liveperson-functions-integrations.h
 indicator: both
 ---
 
+### Introduction
+
 Use the LivePerson Functions integration to invoke a function (lambda) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a LivePerson Functions integration.
 
 {: .important}

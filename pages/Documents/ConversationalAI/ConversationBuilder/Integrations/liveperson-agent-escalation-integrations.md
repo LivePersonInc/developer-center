@@ -9,6 +9,8 @@ permalink: conversation-builder-integrations-liveperson-agent-escalation-integra
 indicator: both
 ---
 
+### Introduction
+
 You can use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
 {: .important}
@@ -17,9 +19,7 @@ There are two ways to implement an escalation: You can add an [Agent Transfer in
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
-### Add a LivePerson Agent Escalation 
-
-**To add a LivePerson Agent Escalation integration**
+### Add a LivePerson Agent Escalation
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):

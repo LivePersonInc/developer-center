@@ -9,6 +9,8 @@ permalink: conversation-builder-integrations-file-integrations.html
 indicator: both
 ---
 
+### Introduction
+
 File integrations support the ability of consumers to upload files that you require.
 
 In a dialog, a [File Upload](conversation-builder-interactions-integrations.html#file-upload-interactions) interaction begins the upload process. It's immediately followed with an [Integration](conversation-builder-interactions-integrations.html#integration-interactions) interaction that invokes a *File integration* in particular (Integration type = File). It's the File integration that uploads the file to your external file share.
@@ -16,7 +18,7 @@ In a dialog, a [File Upload](conversation-builder-interactions-integrations.html
 {: .important}
 The response body of an API request via a File integration can’t be retrieved like it can for one via an API integration. Instead, use the [getFileCaption](conversation-builder-scripting-functions-get-integration-data.html#get-file-name) function to retrieve the filename of the original file that’s uploaded, and use [getFileType](conversation-builder-scripting-functions-get-integration-data.html#get-file-type) function to retrieve the file’s type.
 
-**To add a File integration**
+### Add a File integration
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):

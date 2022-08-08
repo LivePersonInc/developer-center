@@ -57,10 +57,6 @@ Use a Knowledge AI interaction in a bot when you want to search a knowledge base
 
 ![Carousel](img/ConvoBuilder/knowledge_ai.gif)
 
-A common use case for the Knowledge AI interaction is within a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
-
-Alternatively, you might have an FAQ bot that is driven by a knowledge base full of articles.
-
 Powering bots with intelligent answers can increase containment: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
 
 #### Watch the video
@@ -111,6 +107,12 @@ With this layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
+
+#### Best practices
+
+When integrating answers from KnowledgeAI into a bot, carefully consider where in the bot flow it’s best to do this. You want the consumer’s utterance to be answered by the right, topically relevant knowledge base, at the right time. For example, in a bot that can handle billing tasks and questions, plug in a “Billing questions” knowledge base. This kind of contextual approach is more focused, so it generally yields a high answer rate.
+
+In contrast, strategies that are less targeted can yield a lower answer rate. For example, plugging a *general purpose* knowledge base into the [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is an option, but it could yield a low answer rate.
 
 #### Add a Knowledge AI interaction
 

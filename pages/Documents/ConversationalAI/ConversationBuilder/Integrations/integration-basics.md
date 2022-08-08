@@ -16,6 +16,7 @@ Conversation Builder allows users to configure API integrations that are invoked
 
 The Conversation Builder [templates](conversation-builder-templates-overview.html) include common integrations. For example, the [Simple FAQ](conversation-builder-templates-simple-faq.html) template includes a Knowledge Base integration.
 
+{: .important}
 Want some practice with integrations? The [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html) provides a walkthrough of adding one. You'll need to complete the Dialogs and Patterns tutorial and the Intents tutorial first, as they build on each other.
 
 ### Integration types

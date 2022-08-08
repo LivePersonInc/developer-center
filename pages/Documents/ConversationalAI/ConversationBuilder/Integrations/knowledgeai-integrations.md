@@ -11,6 +11,8 @@ permalink: conversation-builder-integrations-knowledgeai-integrations.html
 indicator: both
 ---
 
+### Introduction
+
 {: .important}
 KnowledgeAI integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a KnowledgeAI integration.
 
@@ -21,7 +23,7 @@ One use case for this type of integration is within a fallback dialog, to funnel
 {: .important}
 The Simple FAQ bot template provides a bot that answers users' questions by connecting to a knowledge base. For details, see [here](conversation-builder-templates-simple-faq.html).
 
-**To add a KnowledgeAI integration**
+### Add a KnowledgeAI integration
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):
@@ -41,3 +43,9 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 3. Click **Save**.
+
+### Best practices
+
+When integrating answers from KnowledgeAI into a bot, carefully consider where in the bot flow it’s best to do this. You want the consumer’s utterance to be answered by the right, topically relevant knowledge base, at the right time. For example, in a bot that can handle billing tasks and questions, plug in a “Billing questions” knowledge base. This kind of contextual approach is more focused, so it generally yields a high answer rate.
+
+In contrast, strategies that are less targeted can yield a lower answer rate. For example, plugging a *general purpose* knowledge base into the Fallback dialog is an option, but it could yield a low answer rate.
