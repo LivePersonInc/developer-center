@@ -56,7 +56,7 @@ $(document).ready(function () {
     $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
     $title.indexOf("Index") != -1
   ) {
-    console.log("Welcome to the LivePerson developers community!")
+    console.log("Welcome to the LivePerson Developer Center")
   } else {
     $(".breadcrumbs").removeClass("breadhidden")
     $(".suggestbutton").removeClass("suggesthidden")
@@ -156,7 +156,7 @@ function navigateContent(url) {
         $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
-        console.log("Welcome to LivePerson Developers!")
+        console.log("Welcome to the LivePerson Developer Center")
       } else {
         $(".breadcrumbs").removeClass("breadhidden")
         $(".suggestbutton").removeClass("suggesthidden")
