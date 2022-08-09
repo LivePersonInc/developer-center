@@ -1751,7 +1751,8 @@ input#csds-button {
     }
 
     #searchHeader,
-    span.loginButton {
+    span.loginButton,
+    #loginHeader {
         display: none;
     }
 
