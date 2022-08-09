@@ -18,13 +18,13 @@ Conversation Builder's permission model is built on Conversational Cloud’s. Yo
 
 As an example, in Conversational Cloud, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB — All Permissions," as we've done below.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions2.png">
+<img class="fancyimage" alt="top of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions2.png">
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions3.png">
+<img class="fancyimage" alt="bottom of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions3.png">
 
 You can then assign this profile to users like so:
 
-<img class="fancyimage" style="width:650px" src="img/ConvoBuilder/permissions4.png">
+<img class="fancyimage" alt="Adding a profile to the Assignment field on the Edit user page" style="width:650px" src="img/ConvoBuilder/permissions4.png">
 
 As shown above, a profile contains a set of permissions. Conversation Builder supports two categories of permissions:
 
@@ -107,7 +107,7 @@ This "lite" permission is just like the Bot Builder permission with the followin
 
 Use one or more add-on permissions (below) along with this permission, as per your requirements. This allows you to selectively enable access to specific functions. For example, if you want to provide a bot developer with access to API integrations, grant the Bot Builder Lite and API Developer permissions, as shown below.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions1.png">
+<img class="fancyimage" alt="List of Conversation Builder add-on permissions in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions1.png">
 
 #### Add-on permissions
 
