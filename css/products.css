@@ -22,7 +22,7 @@ html body div.container.products div.sub-title {
   color: #808080;
   font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
-  font-size: 0.866em;
+  font-size: .866em;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
@@ -32,7 +32,7 @@ html body div.container.products div.sub-title {
 
 html body div.container.products div.text{
     margin-bottom: 80px;
-    font-size: 0.866em;
+    font-size: .866em;
     font-family: "Open Sans", Arial, sans-serif;
 }
 html body div.container.products div.text a{

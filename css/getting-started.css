@@ -82,7 +82,7 @@
 }
 
 #teaser-banner {
-    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("img/Img_video_overview.png");
+    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("/img/Img_video_overview.png");
     cursor: pointer;
 }
 
@@ -106,7 +106,7 @@
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px;
     color: var(--link-color);
 }
 
@@ -148,9 +148,7 @@
     margin-top: 48px;
 }
 
-
 /* MODAL STUFF BELOW */
-
 
 /* The Modal (background) */
 
@@ -176,7 +174,6 @@
     /* Black w/ opacity */
 }
 
-
 /* Modal Content */
 
 .modal-content {
@@ -189,7 +186,6 @@
     height: 94%;
 }
 
-
 /* The Close Button */
 
 .close {
@@ -199,7 +195,7 @@
     font-size: 40px !important;
     font-weight: 400 !important;
     margin-bottom: 2%;
-    opacity: 0.8 !important;
+    opacity: .8 !important;
 }
 
 .close:hover,
