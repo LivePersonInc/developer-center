@@ -18,8 +18,8 @@ indicator: both
 | Domain | A list of intents and entities; these can be matched to consumer training phrases (utterances) with an intent-recognition model. |
 | Prebuilt domain | A prebuilt domain is a starting point for you to get going with intents. The intent-recognition model is filled with predefined intents that have been trained and activated for your convenience. The model has been developed using aggregated and anonymized data from several brands. While a prebuilt domain is functional, you’ll need to customize it for your specific needs to get the best performance. |
 | Entity | Any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. |
-| NLU | NLU stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. For more, see [here](intent-manager-natural-language-understanding-introduction.html). |
-| Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent. For best practices, see [here](intent-manager-best-practices.html#training-phrases).<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
+| NLU | [NLU](intent-manager-natural-language-understanding-introduction.html) stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. |
+| Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent.<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
 | Inference | The process by which a “learned” model attempts to map an incoming message to an intent class. |
 | Unclassified/Undefined | Statements of intent that aren't yet included in the defined set of intents. |
@@ -74,7 +74,7 @@ Consumers often request an action or information from a brand. These consumer re
 Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers might discuss are product names, service plan names, bills, service and product orders, locations and dates.
 
 {: .important}
-For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For best practices, see [here](intent-manager-best-practices.html#intents).
+For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
 
 #### Intent versus non-intent example
 
@@ -141,8 +141,8 @@ You might notice as you are working on your intent taxonomy that the number of i
 
 A meta intent is a wrapper that can contain many other standard intents. This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
 
-<img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
-<img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
+<img style="width:600px" alt="Illustration of how several intents funnel into a meta intent" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
+<img style="width:800px" alt="The details of an example intent" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
 
 ### Entities
 
@@ -167,7 +167,7 @@ As their name suggests, Value Set entities are those that have a defined set of 
 * running
 * walking
 
-<img style="width:400px" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
+<img style="width:400px" alt="An example of a Value Set entity" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
@@ -177,7 +177,7 @@ The LivePerson NLU engine trains the model with as many as 100 Value Set entity 
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
-<img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
+<img style="width:800px" alt="An example of a Regular Expression entity" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
 
 Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression, e.g., "I want to check on my order 757575," the bot detects this and substitutes the ORDER_NO entity into the utterance before predicting the consumer's intent. In general though, Regular Expression entities work much like Value Set entities with this single exception: With Regular Expression entities, the matched string is replaced by the entity just before prediction.
 
@@ -245,11 +245,11 @@ but
 
 As mentioned above, global entities are detected automatically by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
 
-<img style="width:500px" src="img/ConvoBuilder/im_entities_global1.png" alt="">
+<img style="width:500px" alt="The Test User Input tool detecting three entities in an utterance" src="img/ConvoBuilder/im_entities_global1.png" alt="">
 
 If you have defined custom entities within your domain, you’ll see those detected along with the global entities:
 
-<img style="width:800px" src="img/ConvoBuilder/im_entities_global2.png" alt="">
+<img style="width:800px" alt="The Test User Input tool detecting a custom Value Set entity" src="img/ConvoBuilder/im_entities_global2.png" alt="">
 
 **Using global entities**
 
@@ -258,7 +258,7 @@ In the training phrases of intents, you can use example values of global entitie
 * **Do** - I want to buy a phone today.
 * **Don't** - I want to buy a phone DATE.
 
-You can also use global entities to manually create slot variables within the rules of interactions. For more on slots, including an example of this, see [here](conversation-builder-variables-slots-slots.html).
+You can also use global entities to manually create [slot variables](conversation-builder-variables-slots-slots.html) within the rules of interactions.
 
 ### Training
 

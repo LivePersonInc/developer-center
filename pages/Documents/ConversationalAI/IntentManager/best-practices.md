@@ -11,7 +11,7 @@ indicator: both
 
 To increase the quality of your intent matches, follow the best practices below.
 
-For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
+Also follow the [best practices for training and tuning NLU](conversation-builder-best-practices-train-tune-nlu.html).
 
 ### Number of intents
 Intent Manager requires a minimum of 5 intents and 15 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
