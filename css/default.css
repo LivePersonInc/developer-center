@@ -60,7 +60,7 @@ p {
     cursor: pointer;
 }
 
-.nav>li {
+.nav>li:not(.mobile-sign-in) {
     display: flex !important;
     flex-wrap: wrap;
 }
@@ -1888,6 +1888,10 @@ input#csds-button {
 
     input#openSidebarMenu,
     .sidebarIconToggle {
+        display: none;
+    }
+
+    .mysidebar>li.mobile-sign-in {
         display: none;
     }
 }
