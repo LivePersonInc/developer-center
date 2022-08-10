@@ -14,7 +14,7 @@ This bot provides basic information and contact options to your consumers. If yo
 
 <div class="container-note">
     <div class="important" style="width:100%">
-    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
+    <b>Prerequisites:</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration">here</a>.
   </div>
 </div>
 

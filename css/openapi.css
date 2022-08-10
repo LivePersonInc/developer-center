@@ -23,7 +23,7 @@ body {
 }
 
 .title {
-  font-family: "Roboto",Arial,sans-serif !important;
+  font-family: "Roboto", Arial, sans-serif !important;
   font-size: 20px !important;
 }
 
@@ -34,7 +34,6 @@ body {
 .swagger-ui .opblock .opblock-summary {
   padding: 0 !important;
 }
-
 
 .swagger-ui .opblock .opblock-summary-method {
   border-radius: 0 !important;
@@ -49,7 +48,7 @@ pre {
   font-weight: inherit !important;
   color: #fff!important;
   font-family: "Roboto Slab",Arial,sans-serif !important;
-  padding: 0 0 0 0!important;
+  padding: 0 !important;
   background-color: none !important;
 }
 
@@ -71,9 +70,9 @@ pre.base-url {
 }
 
 .swagger-ui .opblock-tag {
-  padding: 0 0 0 0;
+  padding: 0;
   display: flex;
-  font-family: "Roboto",Arial !important ;
+  font-family: "Roboto", Arial, sans-serif !important;
   margin-bottom: 15px;
   margin-top: -49px;
 }
@@ -90,7 +89,7 @@ pre.base-url {
 
 .swagger-ui table thead tr th {
   color: #ffffff !important;
-  font-family: "Roboto",Arial !important ;
+  font-family: "Roboto", Arial, sans-serif !important;
   background-color: #162036;
 }
 
@@ -172,7 +171,7 @@ a.nostyle {
 
 .swagger-ui .opblock .opblock-summary-method {
   font-weight: 200;
-  font-family: "Roboto",Arial !important ;
+  font-family: "Roboto", Arial, sans-serif !important;
 }
 
 .swagger-ui .opblock.opblock-post .opblock-summary-method {

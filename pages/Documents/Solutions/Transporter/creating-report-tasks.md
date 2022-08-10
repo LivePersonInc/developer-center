@@ -29,7 +29,7 @@ Messaging and Chat reports are broken down into the following categories:
 
 **Admin type reports** can provide a recurrent list of Skills, Agents and Agent Groups.
 
-In the future, additional reports will be added — have an idea for a report? [Let us know](https://github.com/LivePersonInc/developers-community/issues).
+In the future, additional reports will be added — have an idea for a report? [Let us know](https://github.com/LivePersonInc/developer-center/issues).
 
 ### Create Report Options
 

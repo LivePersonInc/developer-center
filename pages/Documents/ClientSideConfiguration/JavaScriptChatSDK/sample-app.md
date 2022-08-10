@@ -18,7 +18,7 @@ This sample app includes information on how to work with the SDK. There are two 
 - [Unmonitored Flow](#unmonitored-flow)
 - [Monitored Flow](#monitored-flow)
 
-Download the Sample App from the following [Github repository](https://github.com/LivePersonInc/chat-js-sdk-sample-app).
+Download the Sample App from the following [GitHub repository](https://github.com/LivePersonInc/chat-js-sdk-sample-app).
 
 ### Unmonitored flow
 
