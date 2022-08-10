@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  // TODO: Refactor and de-duplicate this script!
+
   var url = window.location.href
   $(window).scroll(function () {
     $("#mainHeader").css(
