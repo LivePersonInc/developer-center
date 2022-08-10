@@ -29,7 +29,7 @@ You can sign-out using the `lpf logout` command. There are situations where you 
 
 ## Install and Initialize
 
-**Installation** and **updating** the CLI are handled using `npm install -g liveperson-functions-cli`. You can also check for updates by using the `lpf version`. Once the CLI has been installed, you can check out the documentation using `lpf help` or head to our [Github Page](https://github.com/LivePersonInc/faas-cli).
+**Installation** and **updating** the CLI are handled using `npm install -g liveperson-functions-cli`. You can also check for updates by using the `lpf version`. Once the CLI has been installed, you can check out the documentation using `lpf help` or head to our [GitHub Page](https://github.com/LivePersonInc/faas-cli).
 
 Before developing, debugging, or deploying any function, you will have to *initialize* your environment. This is a mandatory step as it creates all the files for the CLI to work correctly. Use it with an empty folder or an existing repository with `lpf init`.
 

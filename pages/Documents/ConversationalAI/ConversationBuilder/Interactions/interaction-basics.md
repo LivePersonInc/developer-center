@@ -56,7 +56,7 @@ There are four, general categories of interactions:
 
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
 
-*For details on constraints like this*, see the best practices information that's found [here](https://developers.liveperson.com/facebook-messenger-templates-best-practices.html) in the Rich Messaging section of this LivePerson developers' site, and refer to the [Messaging channels](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) section in the LivePerson Knowledge Center.
+For details on constraints like this, refer to [Rich Messaging best practices](facebook-messenger-templates-best-practices.html) as well as the [Messaging channels section](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) in the LivePerson Knowledge Center.
 
 {: .important}
 Your bot implementation should meet Conversational Cloud requirements and those of the specific channels in use.

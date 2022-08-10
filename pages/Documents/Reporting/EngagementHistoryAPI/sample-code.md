@@ -17,9 +17,9 @@ In order to run the example, you will need to update the EngagementHistory.java 
 
 ### Sample 1
 
-[Please see this example in GitHub](https://github.com/LivePersonInc/developers-community/blob/master/assets/code-examples/APIs/Java-EngagementHistoryAPI/src/main/java/EngagementHistory.java)
+[Please see this example in GitHub](https://github.com/LivePersonInc/developer-center/blob/master/assets/code-examples/APIs/Java-EngagementHistoryAPI/src/main/java/EngagementHistory.java)
 
 ### Sample 2
 
-[Please see this example in GitHub](https://github.com/LivePersonInc/developers-community/blob/master/assets/code-examples/APIs/Java-EngagementHistoryAPI/src/main/java/EHAPI.java)
+[Please see this example in GitHub](https://github.com/LivePersonInc/developer-center/blob/master/assets/code-examples/APIs/Java-EngagementHistoryAPI/src/main/java/EHAPI.java)
 
