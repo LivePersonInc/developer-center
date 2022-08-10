@@ -1809,6 +1809,10 @@ input#csds-button {
     }
 
     /* sidebar hamburger effect */
+    input:focus+label.sidebarIconToggle {
+        border: 2px dashed var(--post-link-hover) !important;
+    }
+
     #defaultsidebar {
         height: 100%;
         position: fixed;
@@ -1826,7 +1830,9 @@ input#csds-button {
     }
 
     input[type=checkbox].openSidebarMenu {
-        display: none;
+        position: absolute;
+        right: 35px;
+        top: 38px
     }
 
     .sidebarIconToggle {
