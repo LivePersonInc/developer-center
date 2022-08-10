@@ -1,7 +1,5 @@
 ---
 pagename: Interaction Support
-redirect_from:
-  - 
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -13,26 +11,26 @@ indicator: both
 
 Interaction support varies by channel. Use this page to understand whether an interaction is supported in a channel of interest.
 
-### Apple Business Chat
+### Apple Messages for Business
 
 | Interaction | Supported? |
 | --- | --- |
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | Yes |
-| Multiple choice question | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
 | Button question | No |
-| Quick Reply question | No |
+| Quick Reply question | Yes |
 | List Picker question | Yes |
 | Time Picker question | Yes |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | Yes |
 | Universal | Yes | 
 | survey interactions | Yes |
@@ -44,9 +42,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | No |
 | Text question | Yes |
 | Structured question | Yes |
@@ -57,8 +54,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Facebook
@@ -68,9 +66,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No (Not supported by Conversational Cloud) |
-| Video statement | No (Not supported by Conversational Cloud) |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -80,9 +77,10 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Google RCS
@@ -92,9 +90,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | Yes |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -105,32 +102,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
-| survey interactions | Yes |
-
-### Instagram
-
-| Interaction | Supported? |
-| --- | --- |
-| Dialog Starter | Yes |
-| Text statement | Yes |
-| Image statement | Yes |
-| Audio statement | No |
-| Video statement | No |
-| Apple rich link | No |
-| Multiple choice question | No |
-| Text question | Yes |
-| Structured question | No |
-| Button question | No |
-| Quick Reply question | Yes |
-| List Picker question | No |
-| Time Picker question | No |
-| Integration | Yes |
-| Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
-| Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### LINE
@@ -140,9 +114,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | No |
 | Text question | Yes |
 | Structured question | No |
@@ -152,9 +125,10 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Messaging Window API
@@ -164,10 +138,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
-| Multiple choice question | Yes |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | No |
 | Text question | Yes |
 | Structured question | Yes |
 | Button question | Yes |
@@ -177,8 +150,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Mobile app messaging
@@ -188,9 +162,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -201,8 +174,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### SMS
@@ -212,10 +186,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
-| Multiple choice question | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
 | Button question | No |
@@ -224,9 +197,10 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Twitter Direct Messages
@@ -236,10 +210,9 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | No  |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
-| Multiple choice question | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | No |
 | Button question | No |
@@ -248,9 +221,10 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |
 
 ### Web messaging
@@ -260,9 +234,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Dialog Starter | Yes |
 | Text statement | Yes |
 | Image statement | Yes |
-| Audio statement | No |
-| Video statement | No |
 | Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
 | Multiple choice question | Yes |
 | Text question | Yes |
 | Structured question | Yes |
@@ -273,6 +246,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
+| File Upload integration | Yes |
 | Apple Pay integration | No |
 | Universal | Yes | 
 | survey interactions | Yes |
@@ -283,20 +257,20 @@ Interaction support varies by channel. Use this page to understand whether an in
 | --- | --- |
 | Dialog Starter | Yes |
 | Text statement | Yes |
-| Image statement | No |
-| Audio statement | No | 
-| Video statement | No | 
+| Image statement | No | 
 | Apple rich link | No |
-| Multiple choice question | No | 
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes | 
 | Text question | Yes | 
-| Structured question | No | 
+| Structured question | Yes | 
 | Button question | No | 
 | Quick Reply question | No |
 | List Picker question | No | 
 | Time Picker question | No | 
 | Integration | Yes | 
 | Agent Transfer integration | Yes | 
-| Knowledge AI integration | Yes - Simple/Custom answer layout only |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
 | Apple Pay integration | No |
-| Universal | No | 
+| Universal | Yes | 
 | survey interactions | Yes |

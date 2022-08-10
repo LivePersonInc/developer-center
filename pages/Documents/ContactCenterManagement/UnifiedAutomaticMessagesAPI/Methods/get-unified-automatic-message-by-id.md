@@ -29,7 +29,6 @@ Retrieves an Unified Automatic Message by ID for a specific account.
  |Authorization | Contains token string to allow request authentication and authorization. |
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
 
-
 **Path Parameters**
 
  |Parameter|  Description|  Type|  Notes|
@@ -51,9 +50,7 @@ Retrieves an Unified Automatic Message by ID for a specific account.
 | view            | view                                                                         | string  | Optional flag to indicate that the response should include SKILL context data as well     |
 | merge_data      | lag to indicate whether the data should be merge                             | Boolean | Optional flag to indicate whether the data should be merge with the default values, when false only override will be return. Default value is true.     |
 
-**NOTE**: if view=BY_CONTEXT, context parameters are irrelevant.
-
-
+**Note:** If view=BY_CONTEXT, context parameters are irrelevant.
 
 ### Response
 
@@ -109,8 +106,8 @@ Contexted Response:
 	      "deleted": false,
 	      "skillId": 1,
 	      "enabled": true,
-	      "data": [...],
-	      "attributes": [...]
+	      "data": […],
+	      "attributes": […]
 	    }
 	  },
 	  "ACCOUNT": {
@@ -118,8 +115,8 @@ Contexted Response:
 	      "messageEventId": "TestMessageEventId",
 	      "deleted": false,
 	      "enabled": true,
-	      "data": [...],
-	      "attributes": [...]
+	      "data": […],
+	      "attributes": […]
 	    }
 	  }
 	}

@@ -25,7 +25,7 @@ The Agent Activity API provides an historical raw data solution to track agent a
 
 The API allows its consumer to track the agent login and logout hours, and also the state changes during the login hours, including predefined custom states as defined by the brand.
 
-**Note**: At this point, away states are not calculated based upon productive and non-productive away status.
+**Note:** At this point, away states are not calculated based upon productive and non-productive away status.
 
 The API is based on HTTPS GET functionality, and all data is returned in a JSON format.
 
@@ -39,13 +39,13 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using an API key methodology.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 	
-	* To access this API, the API key must have the `Data > Workforce Management > Agent Activity API` permission.  
+	* To access this API, the API key must have the `Data → Workforce Management → Agent Activity API` permission.  
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html).
 
 ### Use cases
 
@@ -55,4 +55,4 @@ A few things you'll need to get started with this API:
 
 * Tracking agent behavior by monitoring agent status updates.
 
-* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g online hours, quantity of closed conversations.
+* Tracking and assessing agent and team productivity and correlating against other productivity metrics (e.g. online hours, quantity of closed conversations.

@@ -10,11 +10,11 @@ indicator: messaging
 
 ### Overview
 
-The Messaging Agent SDK for node.js was built to provide a fully custom way of programmatically building a bot with LivePerson. This SDK provides access to an [Agent Messaging API](https://developers.liveperson.com/agent-int-api-reference.html) and enables the bot to handle consumer conversations, escalate to a human when needed, and perform all agent actions.
+The Messaging Agent SDK for Node.js was built to provide a fully custom way of programmatically building a bot with LivePerson. This SDK provides access to an [Agent Messaging API](https://developers.liveperson.com/agent-int-api-reference.html) and enables the bot to handle consumer conversations, escalate to a human when needed, and perform all agent actions.
 
 [The code for this SDK is hosted on GitHub](https://github.com/LivePersonInc/node-agent-sdk).
 
-[Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Disclaimer
 
@@ -28,13 +28,13 @@ In order to guarantee compatibility with future versions of the API, and to ensu
 
 #### Install
 
-- **Option 1 - npm install (does not include sample apps)**
+- **Option 1 — npm install (does not include sample apps)**
 
    ```sh
    npm i node-agent-sdk --save
    ```
 
-- **Option 2 - Clone this repository (includes sample apps)**
+- **Option 2 — Clone this repository (includes sample apps)**
 
     ```sh
     git clone https://github.com/LivePersonInc/node-agent-sdk.git
@@ -88,7 +88,7 @@ const agent = new Agent({
 });
 
 agent.on('connected', () => {
-    console.log(`connected...`);
+    console.log(`connected…`);
 
     // subscribe to all conversations in the account
     agent.subscribeExConversations({
@@ -104,7 +104,7 @@ agent.on('cqm.ExConversationChangeNotification', notificationBody => {
 })
 ```
 
-#### Run it:
+#### Run it
 
 ###### Unix Shell
 

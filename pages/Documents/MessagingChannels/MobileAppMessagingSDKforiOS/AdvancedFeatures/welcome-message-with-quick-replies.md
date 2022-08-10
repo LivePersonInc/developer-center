@@ -22,13 +22,16 @@ You can configure the Welcome message as a simple text message with or without q
 
 A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace. 
 
+{: .important}
+To use this feature with the Control History API, refer to the following [page](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html#optional-code-sample-to-enable-welcome-message)
+
 ### How to enable
 
 ```swift
 //Welcome message
 var messageTitle = "Hello Mr.Smith, how may we help you?\n"
 messageTitle.append("To know more about our terms and conditions visit:\n")
-messageTitle.append("https://www.mywebsite.com") //this ability is only avaliable on SDK 6.2.0 & Above
+messageTitle.append("https://www.mywebsite.com") // this ability is only available on SDK 6.2.0 and Above
 
 let welcomeMessageParam = LPWelcomeMessage(message: messageTitle, frequency: .everyConversation)
 
@@ -57,11 +60,7 @@ LPMessaging.instance.showConversation(conversationViewParams,  authenticationPar
 ```
 
 {: .notice}
-Support for rendering links automatically is avaliable on SDK 6.2.0 and above.
-
-{: .notice}
-Currently this feature is not fully compatible with the [Control History APIs](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html).
-
+Support for rendering links automatically is available on SDK 6.2.0 and above.
 
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  

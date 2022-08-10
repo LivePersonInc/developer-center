@@ -35,34 +35,34 @@ The functions are designed to simplify the use of pre/post process code. All fun
 
 ##### Retrieving user message and intent
 
-[getUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message): Retrieves the most recent message sent to the bot.
+[getUserMessage](conversation-builder-scripting-functions-get-set-session-data.html#get-current-user-message): Retrieves the most recent message sent to the bot.
 ```javascript
 function getUserMessage(){return botContext.getCurrentUserMessage();}
 ```
 
-[getIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent): Retrieves the name of the most recent intent matched to a dialog starter.
+[getIntent](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent): Retrieves the name of the most recent intent matched to a dialog starter.
 ```javascript
 function getIntent(){return botContext.getDialogStarterIntent();}
 ```
 
 ##### Getting and setting variables
 
-[setBotVar](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable): Sets a value to a session scoped bot variable.
+[setBotVar](conversation-builder-scripting-functions-get-set-session-data.html#get-and-set-bot-variable): Sets a value to a session scoped bot variable.
 ```javascript
 function setBotVar(arg,val){botContext.setBotVariable(arg, val, true, false);}
 ```
 
-[getBotVar](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable): Retrieves the value of a bot variable.
+[getBotVar](conversation-builder-scripting-functions-get-set-session-data.html#get-and-set-bot-variable): Retrieves the value of a bot variable.
 ```javascript
 function getBotVar(arg){return botContext.getBotVariable(arg);}
 ```
 
-[getWebVar](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables): Retrieves the value of a Web View variable.
+[getWebVar](conversation-builder-scripting-functions-get-set-session-data.html#get-web-view-variables): Retrieves the value of a Web View variable.
 ```javascript
 function getWebVar(arg){return botContext.getWebViewVariable(arg);}
 ```
 
-[getEnvVar](conversation-builder-scripting-functions-get-set-contextual-data.html#get-environment-variable): Retrieves the value of an environment variable.
+[getEnvVar](conversation-builder-scripting-functions-get-set-session-data.html#get-environment-variable): Retrieves the value of an environment variable.
 ```javascript
 function getEnvVar(arg){return botContext.getEnvVariable(arg);}
 ```
@@ -211,7 +211,7 @@ Automatically establishes frequently used values as bot variables. Includes LP E
    defaultSkillId: "",
    defaultSkillName: "",
    firstInteraction: 'WELCOME',
-   transferMessage: 'Stand by!, transferring...',
+   transferMessage: 'Stand by!, transferring…',
    contextNameSpace: 'testNamespace',
    errorThreshold: 2,
    errorCount: 0,
@@ -254,4 +254,4 @@ If you import the dialog template into a bot, do so **before** you begin buildin
 Contains all global helper functions and variables without the demonstration dialogs. 
 
 **Included dialogs:**
-* 00 - Global Functions README
+* 00 — Global Functions README

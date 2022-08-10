@@ -20,9 +20,9 @@ In order to use this functionality, the customer must provide LivePerson with a 
 
 LivePerson will decrypt the original encrypted data using LP keys and re-encrypt it using the customer public key by using the following algorithm:
 
-1. Symmetric encryption - AES-256
+1. Symmetric encryption — AES-256
 
-2. Digest - SHA-512
+2. Digest — SHA-512
 
 3. Compressed
 
@@ -34,7 +34,7 @@ The customer will receive the Data Access files in the usual JSON format and wil
 
 * pgp --version
 	
-	* Verify you are using pgp 1.4.10 or higher
+	* Verify you are using PGP 1.4.10 or higher
 
 * pgp --gen-key -a
 
@@ -48,6 +48,6 @@ The customer will receive the Data Access files in the usual JSON format and wil
 
 	* Enter passphrase
 
-* Verify your pgp is configured to avoid SHA-1
+* Verify your PGP is configured to avoid SHA-1
 
 Once the key is created, please contact LivePerson support and pass it to them. They will need to validate it, to make sure it meets LivePerson security standards.

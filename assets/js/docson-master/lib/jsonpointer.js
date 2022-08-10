@@ -4,8 +4,6 @@
  * @see http://tools.ietf.org/html/rfc6901
  */
 
-
-
 ;(function() {
   'use strict';
 
@@ -276,7 +274,7 @@
     // token evaluation is not possible.
     // This is the expected situation and so we won't throw an error,
     // undefined value is perfectly suitable here.
-    return;
+
   }
 
 

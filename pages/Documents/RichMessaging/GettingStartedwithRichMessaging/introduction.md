@@ -236,7 +236,7 @@ There is an additional property for Horizontal type only:
 
 Below you will find basic elements, their styling, and their click operations, that are common within all templates.
 
-When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK & Web, Facebook Messenger, Apple Business Chat, etc.
+When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK and Web, Facebook Messenger, Apple Business Chat, etc.
 
 ### Basic Elements
 
@@ -255,7 +255,7 @@ A simple Button which triggers an Action when clicked.
 | Property Name | Description                                                                                                                                             | Type      | Required | Size Limit |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------- | :--------- |
 | type          | Type of element. Must be 'button'                                                                                                                       | Enum      | Y        |            |
-| class          | Look and feel of the button. Default is text                                                                                                                       | Enum - text/button     | N        |            |
+| class          | Look and feel of the button. Default is text                                                                                                                       | Enum — text/button     | N        |            |
 | title         | Button title                                                                                                                                            | String    | Y        | 128 chars  |
 | click         | On-click operation (included metadata and/or actions clauses)                                                                                           |           | Y        |            |
 | tooltip       | Button tooltip, used also as aria                                                                                                                       | String    | N        | 256 chars  |
@@ -306,7 +306,7 @@ For the 'click' property, please see the [Click Operations](#element-click-opera
 
 For the 'style' property, please see the [Rich Messaging Basic Elements Styling](#element-styling) section.
 
-**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
+**Note:** Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
 
 ##### Example
 
@@ -406,7 +406,6 @@ On-click operations can result from two object types:
 | Actions       | List of actions to execute (Navigate/Link/publish text) | action | N        | 4 actions per element |
 | Metadata      | list of predefined objects to send back to the agent    |        | N        |                       |
 
-
 #### Example
 
 ```json
@@ -430,7 +429,7 @@ On-click operations can result from two object types:
 
 Actions are a list of applicative actions that will run on the consumer side and will help them to achieve some kind of an operation. For instance: navigate with a third party navigation app to a predefined place.
 
-**Note**: Only button, image and map objects can receive the actions property.
+**Note:** Only button, image and map objects can receive the actions property.
 
 Types of actions supported by the platform:
 
@@ -475,7 +474,7 @@ Each environment can override the URI for their specific needs.
 | :------------ | :--------------------------- | :----- | :------- | :--------- |
 | type          | Type of action. Must be link | Enum   | Y        |            |
 | uri           | The url to open              | String | Y        | 2048 chars |
-| target        | The target attribute specifies where to open the link. Supported by Web Messaging. Default is "blank" | Enum - blank/self | N |  |
+| target        | The target attribute specifies where to open the link. Supported by Web Messaging. Default is "blank" | Enum — blank/self | N |  |
 
 ###### Example
 
@@ -510,7 +509,6 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 | type          | Type of action. Must be 'publishText'                             | Enum   | Y        |            |
 | text          | The text to display in the transcript once the action was clicked | String | Y        | 5000 chars |
 
-
 ###### Example
 
 ```json
@@ -530,7 +528,7 @@ This is important for reporting on consumer interactions with the template, as w
 
 You can see an example in the [Messaging Agent SDK](https://github.com/LivePersonInc/node-agent-sdk#example-sending-rich-content-structured-content) by searching for “ExternalID”.
 
-**Note:** when using our APIs to communicate as a consumer (for example, by using the Messaging Window API or the Connector API), metadata should always be added to an action. This is so that our services have an indication that an element was clicked. The metadata should be sent as part of 'AcceptStatusEvent' with the assigned status of 'ACTION'. For more information on 'AcceptStatusEvent' and its status property, please see the [Messaging Window API](agent-int-api-reference.html).
+**Note:** When using our APIs to communicate as a consumer (for example, by using the Messaging Window API or the Connector API), metadata should always be added to an action. This is so that our services have an indication that an element was clicked. The metadata should be sent as part of 'AcceptStatusEvent' with the assigned status of 'ACTION'. For more information on 'AcceptStatusEvent' and its status property, please see the [Messaging Window API](agent-int-api-reference.html).
 
 If the type of action is 'publishText' (see above for an example), the metadata should be attached to the 'ContentEvent' as well.
 This is so that a certain text which is published is associated with the click which sent it.

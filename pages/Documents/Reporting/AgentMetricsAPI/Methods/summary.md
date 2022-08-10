@@ -21,7 +21,6 @@ Returns a summary on the current state of the contact center. This includes numb
 |----------|-------------|
 | POST |  https://&lt;domain>/messaging_history/api/account/{accountID}/agent-view/summary   |
 
-
 **URL Parameters**
 
 Name   | Description                                                  | Type/Value | Required | Notes
@@ -33,14 +32,15 @@ sort   | Sort the results in a predefined order.                      | string  
 BODY / POST Parameters
 
 Optional:
-**Note that you must send a valid JSON object as your request body. If you are using none of the below filters send `{}`**
+
+**Note:** You must send a valid JSON object as your request body. If you are using none of the below filters send `{}`.
 
 | Name   |      Description      |  Type/Value |
 |----------|-------------|------|
 | status |  List of Agent's statuses to be filtered   | Array`<String>`|
-| agentIds |  List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned   | Array`<String>`|
-| skillIds|  List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state.   | Array`<String>`|
-| agentGroupIds|  List of agent group ids - when provided, data will be returned for the agents that are member of the specified agent groups who are in logged in state.   | Array`<String>`|
+| agentIds |  List of agent ids — when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned   | Array`<String>`|
+| skillIds|  List of skill ids — when provided, data will be returned for the agents with the specified skills who are in logged in state.   | Array`<String>`|
+| agentGroupIds|  List of agent group ids — when provided, data will be returned for the agents that are member of the specified agent groups who are in logged in state.   | Array`<String>`|
 
 **Response**
 

@@ -32,7 +32,7 @@ In the **Intent Summary** pie chart, check both the classified vs. unclassified 
 Intent discovery is the task of finding new intents to add to your current taxonomy. This is useful to expand your model’s coverage. Make sure to consider any existing intents (i.e., a starter pack) as you begin this process since you do not want to create an intent that will overlap with one of the existing intents in name or function.
 
 {: .important}
-Sometimes it’s better to use the keyword filter in Intent Analyzer instead of creating an intent, depending on your goal. For instance, if you want to see which intents are being impacted by a devastating event like a wildfire, you could use a list of keywords such as “fire,” “smoke,” “air quality,” “evacuation,” etc., and from there, you can check the graphs in Intent Analyzer to see how often the keywords are occurring per intent as well as other useful metrics like the total number of utterances that contain one of the keywords.
+Sometimes it’s better to use the keyword filter instead of creating an intent, depending on your goal. For instance, if you want to see which intents are being impacted by a devastating event like a wildfire, you could use a list of keywords such as “fire,” “smoke,” “air quality,” “evacuation,” etc., and from there, you can check the graphs to see how often the keywords are occurring per intent as well as other useful metrics like the total number of utterances that contain one of the keywords.
 
 Below is a visual guide for anyone starting the intent discovery process:
 
@@ -51,7 +51,7 @@ Below is a visual guide for anyone starting the intent discovery process:
 4. As you are reviewing each subcluster, consider each as inspiration for an intent in your taxonomy. Before you convert a subcluster to an intent, verify two things:
 
     * Does the subcluster represent an intent that is not covered in your taxonomy?
-    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy! Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
+    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy. Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
 
 5. To convert a subcluster to an intent, find the subcluster you want to convert and click the “View Details” button. This will take you to the “Messages” view and show you the consumer messages that composed that cluster.
 
@@ -123,8 +123,15 @@ You can also export the utterances using the “Export table to CSV” as a spre
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_intent_discovery3h.png">
 
 ### Step 4: Train your new model
-Now that you have discovered some intents and found the training data for those intents, you’re ready to train your model. You should train your model at regular intervals as you add new intents and training data. Typically we advise training a new model at the end of every session of work on Intent Analyzer or Intent Builder. This will allow you to see the results of your changes the next time you revisit the model. To train a new model, [follow these steps](intent-manager-build-domains.html#train-a-liveperson-domain).
+
+Now that you have discovered some intents and found the training data for those intents, you’re ready to train your model. You should train your model at regular intervals as you add new intents and training data. Typically we advise training a new model at the end of every session of work. This will allow you to see the results of your changes the next time you revisit the model. To train a new model, [follow these steps](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 ### Split an intent
 
-Sometimes an intent is too broad and all encompassing. This can cause an intent to be less actionable and have poor accuracy. A simple way to fix this issue is to split the broad intent into smaller intents. An example of this is splitting the intent ask about credit limit from the Financial Services industry into three smaller intents: increase credit limit, decrease credit limit, and request credit limit information. The most important thing to remember is that the new, smaller intents should cover the same conversational space as the original broader intent. Do not give definitions to the new, smaller intents that go beyond the scope of the original broad intent’s definition. To split an intent into smaller intents, first delete the original, broad intent in Intent Builder. Then, gather the messages for the smaller intents just as you typically would for a new intent, and train a new model.
+Sometimes an intent is too broad and all encompassing. This can cause an intent to be less actionable and have poor accuracy. A simple way to fix this issue is to split the broad intent into smaller intents. An example of this is splitting the intent "Ask about credit limit" from the Financial Services industry into three smaller intents:
+
+* Increase credit limit
+* Decrease credit limit
+* Request credit limit information
+
+The most important thing to remember is that the new, smaller intents should cover the same conversational space as the original broader intent. Do not give definitions to the new, smaller intents that go beyond the scope of the original broad intent’s definition. To split an intent into smaller intents, first delete the original, broad intent. Then, gather the messages for the smaller intents just as you typically would for a new intent, and train a new model.

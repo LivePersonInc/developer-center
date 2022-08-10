@@ -33,7 +33,6 @@ This method simulates a mouse click on an engagement. For example, a virtual age
 
 *Example*
 
-
 ```javascript
 
     if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){

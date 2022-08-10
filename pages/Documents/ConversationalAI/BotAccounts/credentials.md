@@ -100,7 +100,7 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 
 Depending on the configuration of the resource, you might need to manually reauthorize an existing credential. For example, if you've defined the expiry of the access token, but you haven't defined a refresh token (to refresh the access token when needed), you'll need to manually reauthorize the credential when the access token expires. In general, a configuration like that isn't recommended so that things can be automated as much as possible. However, you can manually reauthorize whenever you need:
 
-- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
+- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
 
     <img class="fancyimage" style="width:125px" src="img/ConvoBuilder/creds_oauth2_img6.png">
 
@@ -122,7 +122,7 @@ A trust certificate is exported from the external system (e.g., Salesforce) to w
 
 When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
 
-**Note**: The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
+**Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 
 You can convert a trust certificate to the required format using openssl. For example, the following commands convert a PEM-format file to DER and then import it into the keystore:
 
@@ -201,7 +201,7 @@ While the credential types discussed above support [API integrations](conversati
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
-    - **Authentication Type**: Select "Fire API."
+    - **Authentication Type**: Select "Third-party NLU."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     - **NLU Provider**: Select the NLU provider.
@@ -210,7 +210,7 @@ While the credential types discussed above support [API integrations](conversati
 
 ### Delete a credential
 
-Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of Fire API credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
+Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of third-party NLU credentials, by a domain. If the credential is in use, you'll need to reconfigure the bots or domains as appropriate.
 
 **To delete a credential**
 

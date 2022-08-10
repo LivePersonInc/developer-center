@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
 
-
 order: 80
 permalink: skills-api-methods-delete-skill.html
 

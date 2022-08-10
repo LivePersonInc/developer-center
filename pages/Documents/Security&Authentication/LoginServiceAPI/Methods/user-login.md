@@ -50,10 +50,10 @@ Example:
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - Successfully logged in (see note). |
-| 400 | Bad request - Problem with body or query parameters. |
-| 401  | Unauthorized - Bad Authentication (invalid site or agent). |
-| 500 | Internal server error. |
+| 200 | OK — Successfully logged in (see note) |
+| 400 | Bad request — Problem with body or query parameters |
+| 401  | Unauthorized — Bad Authentication (invalid site or agent) |
+| 500 | Internal server error |
 
 **Response cookies**
 

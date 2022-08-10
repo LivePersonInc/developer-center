@@ -16,13 +16,11 @@ This API gets a certificate by account ID and certificate ID.
 |:--------  |:---  |
 |GET|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 
-
 **Request Headers**
 
 |Header         |Description  |
 |:------|        :--------  |
 |Authorization|    Contains token string to allow request authentication and authorization.  |
-
 
 **Path Parameters**
 
@@ -41,7 +39,6 @@ This API gets a certificate by account ID and certificate ID.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 
@@ -68,5 +65,5 @@ for example:
 | name | A certificate's unique name. | unique string | Required | |
 | displayName    | A certificate's display name.  | string | Required | |
 | siteId | The account ID the certificate is associated with. | string | Required | |
-| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and LivePerson's Data Base and if isn't expired)|
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both HashiCorp Vault and LivePerson's Data Base and if isn't expired)|
 | expirationDate | certificate's expiration date. | string | Not Required | |

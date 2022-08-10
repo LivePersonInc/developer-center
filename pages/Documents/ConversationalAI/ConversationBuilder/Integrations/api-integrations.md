@@ -18,19 +18,31 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 
 ### Add an API integration
 
-**To add an API integration**
-
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **API**.
     - **Method**: Select the type of HTTP request method.
-    - **URL**: Enter the request target, the URL.
+    - **URL**: Enter the request target, the URL. You might want to pass variable values via the URL, like so:
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/integrations_api_url.png">
+
     - **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable. The bot will automatically enhance the request based on the credential's type and data.
-    - **Request Headers**: Add any message headers to include in the request.
-    - **Request Parameters**: Add the request parameters to pass in the URL’s query string.
-    - **Post Body**: Enter the payload to send.
+    - **Request Headers — Use default headers**: When this toggle is on, the following request headers are included automatically in the API request:
+        * Accept: application/json;charset=UTF-8
+        * Content-Type: application/json;charset=UTF-8
+        
+        Since these headers are commonly used, the toggle is on by default as a convenience. However, you can use different values if required by your API: Just turn off the toggle, and add the headers manually as key/value pairs.
+    - **Request Headers — key/value pairs**: Add any message headers to include in the request.
+    - **Request Parameters**: Add the request parameters to pass in the URL’s query string. It's more common to pass variable values as key/value pairs added here:
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_request_parameters.png">
+
+    - **Post Body**: Enter the payload to send. You can also pass variable values using the post body, by writing them in JSON here:
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_post_body.png">
+
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 3. Click **Save**.
@@ -44,7 +56,10 @@ When implementing API integrations, follow these security best practices:
 * **API**: Your brand’s API should be designed according to security standards. For example, at a minimum, use an authentication mechanism. Also provide support for other best practices, such as protecting the API from high volume and bursts in traffic.
 * **API response handling**: For security and privacy reasons, you must not log returned customer data using the JavaScript API or store the data in permanent variables.
 
-### Disabling the predefined request header fields
+### Disabling the predefined request header fields (legacy)
+
+{: .important}
+This section discusses a legacy approach to disabling the predefined request headers in an API integration. The approach requires a bit of JavaScript code. But there's a simpler way: In the API integration, simply disable the **Use default headers** toggle. For more on this toggle, see "Add an API integration" farther above.
 
 As a convenience, the following request header fields are predefined for an API integration:
 

@@ -12,7 +12,6 @@ indicator: messaging
 Save the agent survey state. This will save the state without producing FormSubmitEvent <br>
 Using this method, you can implement auto-save and assure that the survey display will not change upon page refresh. 
 
-
 ### Request
 
 | Method | URL |
@@ -33,7 +32,6 @@ Using this method, you can implement auto-save and assure that the survey displa
 | skill | skill id | long | Required |
 | seqRoot | questionId, describe the first question in the next sequence | Long | Optional | provides the ability to get the next sequence upon save |
 | v | API version number | String | Required |
-
 
 **Request Headers**
 
@@ -120,8 +118,7 @@ Using this method, you can implement auto-save and assure that the survey displa
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
-
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Entity structure**
 

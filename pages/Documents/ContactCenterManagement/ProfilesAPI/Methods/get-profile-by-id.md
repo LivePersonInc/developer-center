@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
 
-
 order: 20
 permalink: profiles-api-methods-get-profile-by-id.html
 

@@ -58,7 +58,7 @@ For carousels, type should always be <b>carousel</b>.</td>
   "elements": [
    RichCard,
    RichCard,
-   ...
+   …
    Rich Card
   ]
 }

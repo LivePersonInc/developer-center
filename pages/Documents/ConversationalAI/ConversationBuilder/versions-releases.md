@@ -27,13 +27,17 @@ Any time you might be making large changes to the functionality of a bot, there 
 
 **To save a version**
 
-1. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
+1. Open the bot.
+2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
-    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/versions1.png">
+    <img class="fancyimage" width="800" src="img/ConvoBuilder/bestPractices/versions1.png">
 
-2. In the Versions window, click **Save Current Version**.
-3. In the dialog that appears, enter a version name if desired, and click **Save**. If you don't enter a name, the current date and time is used.
+3. In the Versions window, click **Save Current Version**.
+4. In the dialog that appears, specify the following:
+    * **Version Name**: Enter a version name or number. If you don't enter a name, the current date and time is used.
+    * **Description**: Briefly explain what's changed in the version. While this info is optional, it can be helpful when debugging later.
+5. Click **Save**.
 
 ### Restore a previous version 
 
@@ -42,8 +46,13 @@ A "restore" completely overwrites your existing bot with the selected, previous 
 
 **To restore a previous version**
 
-1. Move your mouse over the version you want to restore, and click the **Restore** button that appears.
-2. In the Restore Version dialog box, enable the provided controls to verify the name and version of the bot you want to restore, and then click **Proceed**.
+1. Open the bot.
+2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
+
+    This displays the list of versions of the bot.
+
+3. Move your mouse over the version you want to restore, and click the **Restore** button that appears.
+4. In the Restore Version dialog box, enable the provided controls to verify the name and version of the bot you want to restore, and then click **Proceed**.
 
 ### Create a release
 
@@ -76,7 +85,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     This opens the new bot.
 
-8. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
+8. In the new Production bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
 
     Note the **Upgrade** button. If this button isn't enabled, your account needs a configuration change made by LivePerson; contact your administrator for assistance.
 
@@ -87,6 +96,6 @@ Once your bot has been deployed, it is live and available to your customers. Bec
     At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version of the Production bot has been created.
 
 {: .important}
-The bot user agents attached to the Development bot are **not** pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
+The bot user agents attached to the Development bot are not pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
 
-**Tip**: If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.
+**Tip:** If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.

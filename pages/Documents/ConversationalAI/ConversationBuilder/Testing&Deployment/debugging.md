@@ -15,6 +15,8 @@ First, if you're encountering unexpected behavior, always check the Bot Logs win
 
 Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
 
+To get the User ID during a bot conversation, type "display userid".
+
 Here's a visual overview of the Bot Logs window:
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/debuggingWindow.png">
@@ -35,14 +37,12 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
     <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png">
 
     This opens the Bot Logs window, so it is displayed beside the Preview window.
-
-    <img style="width:600px" src="img/ConvoBuilder/debuggingWindow3.png">
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 
 ### Print the most recent user message
 
-To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages -- for example, the consumer's most recent message -- to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
+To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages — for example, the consumer's most recent message — to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
 
 ### Events glossary
 

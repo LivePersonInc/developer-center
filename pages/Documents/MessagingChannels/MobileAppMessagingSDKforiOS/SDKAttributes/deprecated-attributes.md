@@ -15,7 +15,7 @@ Listed below are attributes that have been deprecated. These keys should no long
 
 In order to configure different string for this key, see String localization in SDK.
 
-{:.notice}
+{: .notice}
 By default, these keys are configured with Localization keys values, and are sensitive to any language changes.  These keys must be reconfigured each time a language is changed.*
 
 | Attribute name | Type | Description | Replacement |
@@ -30,3 +30,4 @@ By default, these keys are configured with Localization keys values, and are sen
 | sendButtonDisabledTextColor | UIColor | Send button color in disabled mode in the conversation screen. | Use sendButtonDisabledColor.
 | sendButtonEnabledTextColor | UIColor | Send button color in enabled mode in the conversation screen | Use sendButtonEnabledColor.
 | editTextUnderlineColor | UIColor | User text underline color | Underline is not used any more. To change background color of TextView container use inputTextViewContainerBackgroundColor.
+| maxPreviousConversationsToPresent | UInt |Number of conversations to show. | Configuration has been remove, this property is now part of the Control History API via the historyConversationsMaxDays parameter.

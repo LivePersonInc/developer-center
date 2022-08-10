@@ -179,13 +179,11 @@ Request by skillIds=12,13 interval=60, timeframe=180
         }
     }
 }
-
 ```
 
 **Elements in the Response**
 
 *Note*: All metrics under the hierarchy of `skillsMetrics` represent the average values for each skill under the interval/aggregation they appear in (or the average/aggregate value of the entire timeframe if no intervals are provided). Metrics under the `metricsTotal` entity will contain the summation of all aggregation/average of the same hierarchy level.
-
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |
@@ -193,7 +191,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested intervals.<br> If a skillId or SkillIds are requested and there is no data for any of them, this element will still include all of the metrics with the value set to zero. <br> Note: Totals may not add up due to rounding differences. | element |
 | skill id | When skillIds values provided: The skill ID. | long |
 | timeframeSummary | When interval is provided in the request, this entity will contain data for the entire timeframe, similar to the response when requesting with no intervals. <br> Note that the averages values for the entire timeframe will NOT be equal to the summation of totals under each interval. | element |
-| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example : Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
+| timestamp | When interval size is provided in the request, the response will be partitioned by intervals. The timestamp is the UTC timestamp in milliseconds representing the start time of the interval. <br> Example: Interval size: 10 min. Interval start and end time: 18/01/2018 08:25:32 - 18/01/2018 08:35:32. Timestamp: 1516263932000. <br> Intervals are not rounded, and will be determined by the time the request was made. <br> Example: Request was made at current time (now): 8:51:55, with interval=60 and timeframe=120 parameters specified. <br> The response will contain two intervals, latest representing data from 7:51:55-8:51:55 (timestamp of 7:51:55), and the earliest representing data from 6:51:55-7:51:55 (timestamp of 6:51:55). | long |
 | totalSkillConversationSegments | Total number of skill-segments. May be larger than the number of conversations assigned to the skill as a conversation may include more than one skill segment. | Long |
 | skillSegmentsAbandonedByConsumers | Number of times consumers abandoned a conversation during the last skill-segment. An abandoned segment ends with the consumer closing the conversation with no response sent from the agent. | Long |
 | skillSegmentsAbandonedByConsumersInQueue |Number of times consumers abandoned a conversation while in queue, waiting to be assigned to an agent. Measured for the last skill-segment of a conversation, for conversations closed by consumers. | Long |

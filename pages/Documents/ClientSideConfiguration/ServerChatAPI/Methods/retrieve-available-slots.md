@@ -47,10 +47,10 @@ Availability for a specific agent can be requested using the following parameter
 | :--- | :--- | :--- |  :--- |
 | agent | Agent login name, calculates the number of available slots for a specific agent. | alphanumeric | Cannot be used with other parameters. |
 
-**Notes**:
+**Notes:**
 
-- *The calculation of wait time is based on a statistical estimate and might constantly change.*
-- *When the number of available slots is unlimited the response is -1.*
+- The calculation of wait time is based on a statistical estimate and might constantly change.
+- When the number of available slots is unlimited the response is -1.
 
 ### Response
 

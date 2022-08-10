@@ -1,5 +1,3 @@
-
-
 .bodygrey {
   background-color: #f2f1f2;
 }
@@ -28,14 +26,13 @@
   height: 340px;
   width: 890px;
   background-color: #fff;
-  -webkit-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
-  box-shadow: -2px 21px 55px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
   margin: 0 auto;
   margin-bottom: 18px;
   display: flex;
 }
-
 
 .documentbox img{
   width: 60px;
@@ -59,7 +56,7 @@
 
 .documentboxtitletext {
   flex: 1;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   color: #0c1320;
   font-size: 26px;
   margin-top: 62px;
@@ -67,7 +64,7 @@
 }
 
 .documentboxinfo {
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   color: #333333;
   font-size: 16px;
   margin-left: 32px;
@@ -79,14 +76,13 @@
   display: flex;
   line-height: 2.8;
   background-color: #ECF1FF;
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   margin: 18px 18px 18px 10px;
 }
 
 .linklist {
   flex: 1;
 }
-
 
 .usecasebox {
   width: 24%;
@@ -97,12 +93,12 @@
 }
 
 .usecasebox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
-  box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
+  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
+  box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
   transition-delay: .1s;
   transform: translate(0, -4px);
@@ -144,7 +140,7 @@
 }
 
 .usecasetitle {
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   color: #333333;
   font-size: 1.625em;
   float:left;
@@ -152,7 +148,7 @@
 
 .usecaseinner {
   display: inline-block;
-  font-family: "Open Sans",Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 1em;
   font-weight: 100;
   margin-bottom: 30px;
@@ -203,9 +199,8 @@
   margin-bottom: 20px;
 }
 
-.solutionsbox{
+.solutionsbox {
   background-color: #fff;
-  margin-bottom: 20px;
   font-family: "Open Sans", Helvetica, sans-serif;
   margin: 10px;
   flex: 1;
@@ -216,12 +211,12 @@
 }
 
 .solutionsbox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
-  box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px,
-  rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
+  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
+  box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
+  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
   transition-delay: .1s;
   transform: translate(0, -4px);
@@ -233,7 +228,7 @@
   height: 160px;
 }
 
-.solutionstext{
+.solutionstext {
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -242,7 +237,7 @@
 }
 
 .solutionstitle {
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   color: #333333;
   font-size: 1.625em;
 }
@@ -258,7 +253,7 @@
 }
 
 .solutionsinner {
-    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 1em;
     font-weight: 100;
     margin-bottom: 30px;
@@ -282,7 +277,6 @@
 .solutionsrow a:focus {
   text-decoration: none;
 }
-
 
 @media (max-width: 425px) {
 

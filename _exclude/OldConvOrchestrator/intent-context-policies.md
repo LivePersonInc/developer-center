@@ -54,7 +54,6 @@ Conditions can compare both named attributes as well as constant values:
 1. **Attributes**: Attributes can be used with their qualified names, for example **custom.vipList** above
 2. **Constants**: use the value directly with a number or string, for example time in minutes **1440** in above
 
-
 Conversation Orchestrator will support the following conditional operators:
 
 * `EQUAL` 
@@ -65,7 +64,6 @@ Conversation Orchestrator will support the following conditional operators:
 * `GREATER_THAN_OR_EQUAL`
 * `CONTAINS`
 * `IS_IN`
-
 
 #### Actions
 
@@ -99,9 +97,6 @@ To route to skills, you will need the SkillIds used by Conversational Cloud. To 
 
 3. Save the zip file and then open Skills.csv 
 4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.
-
-
-
 
 The following list of actions will be supported:
 

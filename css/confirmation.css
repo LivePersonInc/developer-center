@@ -75,7 +75,7 @@ body {
 }
 
 #confirmationTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 300;
   color: #ff720b;
@@ -86,7 +86,7 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
   margin-top: 32px;
 }
 
@@ -94,7 +94,7 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
   margin-top: 32px;
 }
 
@@ -102,7 +102,7 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  color: #666666;
+  color: #666;
 }
 
 #loginButton {
@@ -118,10 +118,10 @@ body {
 }
 
 #loginButton span {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 
 #secondPanel {
@@ -133,7 +133,7 @@ body {
 }
 
 #secondTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 300;
   color: #fff;
@@ -163,7 +163,7 @@ body {
 
 .confirmCard:last-child{
   margin-right: 0;
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .cardImage {
@@ -192,7 +192,7 @@ body {
 }
 
 .cardTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 300;
   color: #162036;
@@ -202,7 +202,7 @@ body {
 .cardInnerText {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 13px;
-  color: #666666;
+  color: #666;
   padding-right: 15px;
 }
 
@@ -259,7 +259,7 @@ body {
 }
 
 #thirdTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 300;
   color: #162036;
@@ -277,7 +277,7 @@ body {
 }
 
 .subjectColumn {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 18px;
   color: #162036;
   flex: 1
@@ -288,7 +288,7 @@ body {
 }
 
 .faqDivider {
-  border: solid 2px #dddddd;
+  border: solid 2px #ddd;
 }
 
 .answerRow {
@@ -303,13 +303,13 @@ body {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #666666;
+  color: #666;
 }
 
 .answerContent {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 13px;
-  color: #666666;
+  color: #666;
 }
 
 #confirmationFooter {
@@ -323,7 +323,7 @@ body {
   display: flex;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 12px;
-  color: #666666;
+  color: #666;
 }
 
 #footerText a {
@@ -335,7 +335,7 @@ body {
   content: "\2022";
   margin-left: 5px;
   margin-right: 5px;
-  color: #666666;
+  color: #666;
 }
 
 .inlineImage {
@@ -477,7 +477,7 @@ body {
     content: "";
     margin-left: 5px;
     margin-right: 5px;
-    color: #666666;
+    color: #666;
   }
 
   .footerbottomspan {

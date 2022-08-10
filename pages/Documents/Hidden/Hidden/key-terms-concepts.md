@@ -15,23 +15,23 @@ Throughout the Bot Analytics application, valuable metrics are provided, giving 
 
 ### Containment of bot conversations
 
-#### Bot disengaged
+#### Bot failure
 This metric is the number of conversations where the consumer was left hanging past the [bot session timeout](conversation-builder-bots-bot-basics.html#configure-bot-settings) because the bot never responded to their last message.
 
 A bot can become disengaged for a variety of reasons. For example, there might be a long delay in the response from a call to a third-party system.
 
 The system calculates this metric as follows:
 
-`# Bot Disengaged = (Bot session has timed out) AND (Conversation isn’t closed) AND (Conversation isn’t transferred) AND (Last message is from the consumer)`
+`# Bot failure = (Bot session has timed out) AND (Conversation isn’t closed) AND (Conversation isn’t transferred) AND (Last message is from the consumer)`
 
-#### Consumer disengaged
+#### Consumer drop-off
 This metric is the number of conversations where the bot was left hanging past the [bot session timeout](conversation-builder-bots-bot-basics.html#configure-bot-settings) because the consumer never responded to its last message.
 
 The system calculates this metric as follows:
 
-`# Consumer Disengaged = (Bot session has timed out) AND (Conversation isn’t closed) AND (Conversation isn’t transferred) AND (Last message is from the bot but isn’t a form of “bye”)`
+`# Consumer Drop-off = (Bot session has timed out) AND (Conversation isn’t closed) AND (Conversation isn’t transferred) AND (Last message is from the bot but isn’t a form of “bye”)`
 
-Be aware that this metric can include conversations where the consumer’s need was resolved. For example, consider the scenario where the consumer asks a question, and the bot sends a response, such as a link to an FAQ or a product listing. In this case, the consumer might not respond to the bot’s last message because their need was resolved. The system still considers such a conversation as one where the consumer disengaged.
+Be aware that this metric can include conversations where the consumer’s need was resolved. For example, consider the scenario where the consumer asks a question, and the bot sends a response, such as a link to an FAQ or a product listing. In this case, the consumer might not respond to the bot’s last message because their need was resolved. The system still considers such a conversation as one where the consumer dropped off.
 
 #### Transfers
 Previously called “Escalations”. This metric is the total number of conversations intentionally or unintentionally (auto escalated) transferred to a human agent.
@@ -51,11 +51,11 @@ This metric is the number of conversations transferred from the bot to a human a
 This metric doesn’t include bot-to-bot transfers [performed within a bot group](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) but does include bot-to-bot transfers to a specific skill.
 
 #### Bot contained
-This metric is the number of conversations that were received and handled by the bot, where the conversation was never transferred to a human agent, and where neither the bot nor the consumer disengaged.
+This metric is the number of conversations that were received and handled by the bot, where the conversation was never transferred to a human agent, the bot didn't fail, and the consumer didn't drop off.
 
 The system calculates this metric as follows:
 
-`# Contained = # Total Conversations - (# Intended Transfers + # Unintended Transfers + # Bot Disengaged + # Consumer Disengaged)`
+`# Contained = # Total Conversations - (# Intended Transfers + # Unintended Transfers + # Bot Failure + # Consumer Drop-Off)`
 
 ### Quality of bot conversations
 

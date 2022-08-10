@@ -86,7 +86,7 @@ The very basic structured content elements that can contain either/or elements, 
           },
           {
             "type": "link",
-            "uri" : "https://www.google.com"
+            "uri": "https://www.google.com"
           }
         ]
       }

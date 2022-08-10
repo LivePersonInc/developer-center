@@ -5,12 +5,14 @@
     - documentname: Do More with the Conversational Cloud
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
+    - documentname: LivePerson APIs and SDKs
 
 - categoryname: API Guidelines
   image: api-guidelines
   documents:
     - documentname: Accessing LivePerson APIs
-    - documentname: Create API keys
+    - documentname: OAuth 1.0 API keys
+    - documentname: OAuth 2.0 Client Credentials
     - documentname: Domain API
     - documentname: Data APIs
     - documentname: API Data Metrics
@@ -139,12 +141,12 @@
           subpages:
             - subpagename: Implementing a Web View Integration
             - subpagename: Using LivePerson Functions with a Bot
-        - pagename: Using Agent Assist
+        - pagename: Using Conversation Assist
           subpages:
             - subpagename: Overview
             - subpagename: Prerequisite Steps
-            - subpagename: Configure Agent Assist
-            - subpagename: Test Agent Assist
+            - subpagename: Configure Conversation Assist
+            - subpagename: Test Conversation Assist
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
@@ -160,6 +162,7 @@
         - pagename: Bot Workspace
         - pagename: Bots
           subpages:
+            - subpagename: Language Support
             - subpagename: Custom Bots
             - subpagename: Post-Conversation Survey Bots
             - subpagename: Bot Basics
@@ -179,6 +182,7 @@
             - subpagename: Store Locator
             - subpagename: Travel Notification
             - subpagename: Conversation Orchestrator
+        - pagename: Bot Examples & More
         - pagename: Dialogs
           subpages:
             - subpagename: Dialog Basics
@@ -202,6 +206,11 @@
             - subpagename: Troubleshooting
         - pagename: Assist
         - pagename: Variables & Slots
+          subpages:
+            - subpagename: The Basics
+            - subpagename: Variables
+            - subpagename: Slots
+        - pagename: System Patterns
         - pagename: Integrations
           subpages:
             - subpagename: Integration Basics
@@ -221,7 +230,7 @@
           subpages:
             - subpagename: Introduction
             - subpagename: Functions List
-            - subpagename: Get & Set Contextual Data
+            - subpagename: Get & Set Session Data
             - subpagename: Get User Data
             - subpagename: Get Integration Data
             - subpagename: Send Messages
@@ -242,20 +251,25 @@
             - subpagename: Apple Pay
         - pagename: Advanced Use Cases
         - pagename: Networking & Security
+    - documentname: Conversation Assist
+      pages:
+        - pagename: Overview
+        - pagename: Recommendation Sources
+          subpages:
+            - subpagename: Setting Up Bots
+            - subpagename: Setting Up Knowledge Bases
+            - subpagename: Configuring Settings
+            - subpagename: Clearing the Recommendations Cache
+        - pagename: Testing
+        - pagename: Agent Experience
+        - pagename: Best Practices
+        - pagename: Troubleshooting
+        - pagename: Reports
+        - pagename: FAQs
     - documentname: Conversation Orchestrator
       pages:
         - pagename: Overview
         - pagename: Before You Begin
-        - pagename: Agent Assist
-          subpages:
-            - subpagename: Overview
-            - subpagename: Setting Up Bot Recommendations
-            - subpagename: Setting Up Knowledge Base Recommendations
-            - subpagename: Testing
-            - subpagename: Agent Experience
-            - subpagename: Best Practices
-            - subpagename: Troubleshooting
-            - subpagename: FAQs
         - pagename: Conversation Context Service
           subpages:
             - subpagename: Overview
@@ -286,6 +300,11 @@
       pages:
         - pagename: Overview
         - pagename: Key Terms & Concepts
+        - pagename: Getting Started
+        - pagename: Workflows
+        - pagename: Best Practices
+        - pagename: FAQs
+        - pagename: Dashboard
         - pagename: Natural Language Understanding
           subpages:
             - subpagename: Introduction
@@ -293,9 +312,6 @@
             - subpagename: LivePerson NLU Engine
             - subpagename: Google Dialogflow and IBM Watson NLU Engines
             - subpagename: Brand's Rasa-Based NLU Engine
-        - pagename: Dashboard
-        - pagename: Getting Started
-        - pagename: Best Practices
         - pagename: Discover
           subpages:
             - subpagename: Intent Discovery
@@ -306,6 +322,7 @@
             - subpagename: Intents
             - subpagename: Meta Intents
             - subpagename: Entities
+            - subpagename: Versions
             - subpagename: Test a Single Utterance
             - subpagename: Test with the Model Tester
         - pagename: Optimize
@@ -313,8 +330,8 @@
           subpages:
             - subpagename: Basic Tasks
             - subpagename: Intent Trends
+            - subpagename: Intent Details
             - subpagename: Conversation Details
-        - pagename: FAQs
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -322,6 +339,7 @@
     - documentname: KnowledgeAI
       pages:
         - pagename: Overview
+        - pagename: Language Support
         - pagename: External Knowledge Bases
           subpages:
             - subpagename: Introduction
@@ -343,6 +361,8 @@
           subpages:
             - subpagename: Tuning a Knowledge Base
             - subpagename: Optimizing via Dashboard Analysis
+            - subpagename: Evaluating Consumer Queries
+        - pagename: Search Methods
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status
@@ -369,8 +389,7 @@
     - documentname: Third-Party Bots
       pages:
         - pagename: Getting Started
-        - pagename: Bot Status Dashboard
-        - pagename: Bot Conversation Errors
+        - pagename: Bot Types
         - pagename: Google Dialogflow
         - pagename: Google Dialogflow ES
           subpages:
@@ -378,20 +397,49 @@
             - subpagename: Basic Content
             - subpagename: Advanced Features
         - pagename: Google Dialogflow CX
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: IBM Watson Assistant
-        - pagename: IBM Watson Assistant Version 2
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: Amazon Lex
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
         - pagename: Microsoft Direct Line
           subpages:
             - subpagename: Introduction
             - subpagename: Basic Content
             - subpagename: Advanced Features
             - subpagename: PVA
-        - pagename: Custom Integration
-        - pagename: Hook Configuration
+        - pagename: LivePerson Functions
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
+        - pagename: Medallia
+          subpages:
+            - subpagename: Introduction
+        - pagename: Custom Endpoint
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Service Implementation
+            - subpagename: Basic Content
+            - subpagename: Advanced Features
+        - pagename: e-bot7
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Basic Content
         - pagename: Public API
+        - pagename: Hook Configuration
         - pagename: Conversation Tester
-
+        - pagename: Bot Status Dashboard
+        - pagename: Bot Conversation Errors
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
@@ -755,47 +803,46 @@
     - documentname: LivePerson Functions
       pages:
         - pagename: Overview
+        - pagename: Provisioning
         - pagename: Getting Started
-        - pagename: Developing with FaaS
           subpages:
-            - subpagename: Overview
-            - subpagename: Events & Templates
-            - subpagename: Function Connectivity
-            - subpagename: Whitelisting Domains
-            - subpagename: Toolbelt
-            - subpagename: Snippets
-            - subpagename: Storing Secrets
-            - subpagename: Data Storage
-            - subpagename: Debugger
-            - subpagename: Common Examples
-            - subpagename: Best Practices
-            - subpagename: Limitations & Restrictions
-        - pagename: "Command Line Interface (CLI)"
-        - pagename: Deployment
-        - pagename: Monitoring
+            - subpagename: Your First Function
+            - subpagename: Development Deep Dive (UI)
+            - subpagename: Development Deep Dive (CLI)
+            - subpagename: Configuration
+            - subpagename: Monitoring
+        - pagename: Foundations
           subpages:
-            - subpagename: Activities
-            - subpagename: Deployment History
-            - subpagename: Logs
-            - subpagename: Metrics
-            - subpagename: Email Reporting
-        - pagename: Scheduled Invocations
-        - pagename: External Invocations
-          subpages:
-            - subpagename: Overview
-            - subpagename: Client Credentials
-            - subpagename: Authorization Code
+            - subpagename: Concepts
+            - subpagename: Features
+            - subpagename: Networking
+            - subpagename: External Invocation
             - subpagename: Error Codes
-            - subpagename: Java Client
-            - subpagename: JavaScript Client
-        - pagename: Integrations
+            - subpagename: Limitations
+            - subpagename: Best Practices
+            - subpagename: LivePerson Functions CLI
+        - pagename: Toolbelt Documentation
           subpages:
-            - subpagename: Post Chat Survey Transcripts
-            - subpagename: Messaging Conversations
-            - subpagename: Messaging Conversation Survey
-            - subpagename: Conversational AI
+            - subpagename: Toolbelt
+            - subpagename: FaaS Context Service Client
+            - subpagename: LP Client
+            - subpagename: MTLS Client
+            - subpagename: Secret Client
+            - subpagename: Orchestrator Client
+            - subpagename: Conversation Util
+            - subpagename: GDPR Util
+            - subpagename: SDE Util
+        - pagename: Event Sources
+          subpages:
+            - subpagename: Overview
+            - subpagename: Automatic Messages
+            - subpagename: Post Conversation Survey (Legacy)
             - subpagename: Conversational Commands
-
+            - subpagename: Third-Party Bots
+            - subpagename: Chat Post Survey
+            - subpagename: Conversation Builder
+        - pagename: Permission System
+        - pagename: Examples
 - categoryname: Reporting
   image: historical-data
   documents:
@@ -909,7 +956,22 @@
           subpages:
             - subpagename: Get Status Changes
         - pagename: Error Codes
-
+    - documentname: Actual Handle Time API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Segments
+        - pagename: Error Codes
+    - documentname: Net Handle Time API
+      basedomain: https://{domain}/operations/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Net Handle Time by Skill
+        - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -960,6 +1022,7 @@
             - subpagename: Logging
             - subpagename: Voice and Video
             - subpagename: Proactive and IVR Deflection to App Messaging
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -996,7 +1059,6 @@
         - pagename: Push Notifications
         - pagename: Quick Starts
           subpages:
-            - subpagename: Quick Start 5.2.1 and below
             - subpagename: Quick Start - 6.0 and up (XCFramework support)
         - pagename: Advanced Features
           subpages:
@@ -1011,6 +1073,7 @@
             - subpagename: Unauthenticated In-App Messaging
             - subpagename: Voice and Video
             - subpagename: Welcome Message with Quick Replies
+            - subpagename: Step Up Authentication
         - pagename: SDK APIs
           subpages:
             - subpagename: Messaging API
@@ -1021,9 +1084,8 @@
         - pagename: SDK Attributes
           subpages:
             - subpagename: Attributes Design Sheet
+            - subpagename: Branding and Configurations
             - subpagename: Deprecated Attributes
-            - subpagename: SDK 5.0 and above
-            - subpagename: SDK 4.1 and below
         - pagename: String Localization
           subpages:
             - subpagename: Localization Keys
@@ -1081,10 +1143,11 @@
         - pagename: Complex Layout
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
-    - documentname: Apple Business Chat Templates
+    - documentname: Apple Messages For Business Templates
       pages:
         - pagename: Introduction
         - pagename: List Picker Template
+        - pagename: Quick Replies Template
         - pagename: Time Picker Template
         - pagename: Apple Pay Template
         - pagename: Apple Auth Template
@@ -1124,6 +1187,14 @@
       pages:
         - pagename: Introduction
         - pagename: Reply Button Template
+        - pagename: List Message Template
+    - documentname: Viber Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
 - categoryname: "Security & Authentication"
   image: security-authentication
   documents:

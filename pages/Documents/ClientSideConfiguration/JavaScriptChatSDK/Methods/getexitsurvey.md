@@ -14,12 +14,12 @@ permalink: javascript-chat-sdk-methods-getexitsurvey.html
 indicator: chat
 ---
 
-The Exit survey will be displayed after the chat has ended if one was configured for the account.
+The exit survey will be displayed after the chat has ended if one was configured for the account.
 
-**Notes**:
+**Notes:**
 
-- *For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
-- *To submit this survey use the [submitExitSurvey](consumer-experience-javascript-chat-submitexitsurvey.html) method.*
+- For more information on the Survey object, see [Surveys](consumer-experience-javascript-chat-surveys.html).
+- To submit this survey use the [submitExitSurvey](consumer-experience-javascript-chat-submitexitsurvey.html) method.
 
 ### Request
 

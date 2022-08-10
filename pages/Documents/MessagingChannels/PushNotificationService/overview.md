@@ -13,7 +13,7 @@ root-link: true
 indicator: messaging
 ---
 
-*Note* - the push service is available only for customers using the Mobile App Messaging SDK, for [iOS](consumer-experience-ios-sdk-overview.html) or [Android](android-overview.html).
+*Note:* the push service is available only for customers using the Mobile App Messaging SDK, for [iOS](consumer-experience-ios-sdk-overview.html) or [Android](android-overview.html).
 
 ### Introduction
 
@@ -29,6 +29,6 @@ LivePerson’s push service interfaces directly with Apple’s APNS and Google�
 
 	* pusher
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).

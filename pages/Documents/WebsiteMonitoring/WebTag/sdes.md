@@ -59,7 +59,7 @@ If using on page load, make sure the function exists. Falling back to `lpTag.sde
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `lpTag.sdes.send(data,fun)` | data (optional): can be `undefined`, one sde object, or an array of sde objects, fun (optional): can be `undefined`, this will be executed when the request to send SDE comes back (in case of error - fn will be called only on next successfull call or never in case of permanent error) | None |
+| `lpTag.sdes.send(data,fun)` | data (optional): can be `undefined`, one sde object, or an array of sde objects, fun (optional): can be `undefined`, this will be executed when the request to send SDE comes back (in case of error — fn will be called only on next successfull call or never in case of permanent error) | None |
 
 #### Example
 
@@ -96,5 +96,4 @@ This function returns the actual object and not a clone. Any tempering with the 
 ```javascript
 lpTag.sdes.get("prodView");
 ```
-
 

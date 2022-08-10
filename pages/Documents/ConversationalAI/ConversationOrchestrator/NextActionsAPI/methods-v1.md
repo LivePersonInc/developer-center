@@ -24,13 +24,12 @@ For information on this, see [here](conversation-builder-scripting-functions-ask
 
 ### REST API
 Every API call to the Conversation Context Service requires the following auth headers to be accepted:  
-
-* content-Type : application/json  
-* maven-api-key : {YOUR API KEY}
+* content-Type: application/json  
+* maven-api-key: {YOUR API KEY}
 
 Base URL per environment:
 
-* AMERICAS : https://z1.askmaven.liveperson.net
+* AMERICAS: https://z1.askmaven.liveperson.net
 * EMEA: https://z2.askmaven.liveperson.net
 * APAC: https://z3.askmaven.liveperson.net
 
@@ -60,7 +59,7 @@ N/A
 
 ##### Request example
 ```bash
-curl -X GET "http://{domain}/v1/account/{accountId}/next-actions?conversationId=myconversationId&consumerId=myconsumerId&groupId=mygroupId" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "https://{domain}/v1/account/{accountId}/next-actions?conversationId=myconversationId&consumerId=myconsumerId&groupId=mygroupId" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 ##### Response example

@@ -55,7 +55,6 @@ You can call the Conversation Context Service API by setting up an [Integration]
 
 <img class="fancyimage" width="500" src="img/maven/Call Session Store APIs from CB.png">
 
-
 #### Call Recommendation APIs
 
 Recommendation APIs can be used in a Conversation Builder bot using [Integrations](conversation-builder-integrations-integration-basics.html).

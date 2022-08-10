@@ -1,7 +1,7 @@
-topnav_title: LivePerson Developers
+topnav_title: LivePerson Developer Center
 # this appears on the top navigation bar next to the home button
 
-site_title: LivePerson Developers
+site_title: LivePerson Developer Center
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: LivePerson
@@ -18,9 +18,8 @@ port: 4000
 
 google_analytics: UA-96175782-1
 
-
 extlinks:
-  attributes: {alt: "LivePerson Knowledge Center", target: _blank, onclick: "linkclick(event, this)"}
+  attributes: {target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
 
 url: https://developers.liveperson.com
@@ -30,22 +29,21 @@ plugins:
   # - algoliasearch-jekyll
   - jekyll-redirect-from
   - jekyll-sitemap
-
+  - jekyll-feed
+  - jekyll-last-modified-at
 
 algolia:
   application_id: "EICOREWTRW"
   index_name: "devMain"
-  #also index the following html elements
+  # also index the following html elements
   files_to_exclude:
     - _exclude/**/*
     - _exclude/**/**/*
 
-
-# #values for the Algolia plugin
-
+# values for the Algolia plugin
 
 github: [metadata]
-#needed so that Github APIs don't throw a fit
+# needed so that GitHub APIs don't throw a fit
 
 exclude:
   - .idea/
@@ -78,16 +76,12 @@ defaults:
       comments: true
       search: true
 
-description: "LivePerson Developers is the main repository for documentation of LivePerson APIs and SDKs."
+description: "The LivePerson Developer Center is the main hub for documentation of LivePerson APIs and SDKs."
 # the description is used in the feed.xml file
-
-
-
-
 
 Copyright: "https://www.liveperson.com/policies/copyright"
 Disclaimer: "https://www.liveperson.com/policies/disclaimer"
 TermsofUse: "https://www.liveperson.com/policies/terms-of-use"
 APITermsofUse: "https://www.liveperson.com/policies/apitou"
 PrivacyPolicy: "https://www.liveperson.com/policies/privacy"
-#footer links
+# footer links
