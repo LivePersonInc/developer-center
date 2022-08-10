@@ -53,7 +53,7 @@ $(document).ready(function () {
   var $title = $(".h1").text()
 
   if (
-    $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
+    $title.indexOf("Let’s build Conversational AI solutions together") != -1 ||
     $title.indexOf("Index") != -1
   ) {
     console.log("Welcome to the LivePerson Developer Center")
@@ -153,7 +153,7 @@ function navigateContent(url) {
       }
 
       if (
-        $title.indexOf("Let’s build the right Conversational AI solutions together") != -1 ||
+        $title.indexOf("Let’s build Conversational AI solutions together") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
         console.log("Welcome to the LivePerson Developer Center")
@@ -253,7 +253,7 @@ function handleUniquePages() {
     if (is_root) {
       // TODO: Move to index page
       document.getElementById("document-title-h1").innerText =
-        "Let’s build the right Conversational AI solutions together"
+        "Let’s build Conversational AI solutions together"
     }
   } else {
     console.log("not in  root folder")
@@ -431,7 +431,7 @@ function sidebarCollapse(url) {
   var currentPage = $('a[href="' + modifiedURL + '"]')
   var currentPageTitle = $(currentPage).html()
   //if this is the homepage
-  if (currentPageTitle == "Let’s build the right Conversational AI solutions together") {
+  if (currentPageTitle == "Let’s build Conversational AI solutions together") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
     $(".innerfolder > .active > span.sidebarbutton").removeClass("clicked")
     $(".folder ul").slideUp(400, null)
