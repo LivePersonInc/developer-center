@@ -80,7 +80,7 @@ A horizontal representation of 2-10 Structured Content cards of the same busines
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "http://www.google.com"
+                "uri": "https://www.google.com/"
               }
             ]
           }
@@ -145,7 +145,7 @@ A horizontal representation of 2-10 Structured Content cards of the same busines
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "http://www.google.com"
+                "uri": "https://www.google.com/"
               }
             ]
           }
@@ -199,7 +199,7 @@ A horizontal representation of 2-10 Structured Content cards of the same busines
               {
                 "type": "link",
                 "name": "Add to cart",
-                "uri": "http://www.google.com"
+                "uri": "https://www.google.com/"
               }
             ]
           }

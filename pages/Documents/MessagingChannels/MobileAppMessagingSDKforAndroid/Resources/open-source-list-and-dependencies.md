@@ -15,8 +15,8 @@ indicator: messaging
 
 | Name                | Site                                                    | License                                                                     |
 |---------------------|---------------------------------------------------------|-----------------------------------------------------------------------------|
-| Picasso             | [http://square.github.io/picasso/](http://square.github.io/picasso/)                        | [http://square.github.io/picasso/#license](http://square.github.io/picasso/#license)                                    |
-| OKHTTP              | [http://square.github.io/okhttp/](http://square.github.io/okhttp/)                         | [https://github.com/square/okhttp/blob/master/LICENSE.txt](https://github.com/square/okhttp/blob/master/LICENSE.txt)                    |
+| Picasso             | [https://square.github.io/picasso/](https://square.github.io/picasso/)                        | [https://square.github.io/picasso/#license](https://square.github.io/picasso/#license)                                    |
+| OKHTTP              | [https://square.github.io/okhttp/](https://square.github.io/okhttp/)                         | [https://github.com/square/okhttp/blob/master/LICENSE.txt](https://github.com/square/okhttp/blob/master/LICENSE.txt)                    |
 
 ### Latest Dependencies
 
@@ -38,5 +38,5 @@ An Android library for managing images and the memory they use.
 | 3.7.0 – 4.7.0       | No dependency    | 3.9.1            |
 | < 3.7.0             | 2.5.2            | 3.9.1            |
 
-{:.important}
+{: .important}
 The Picasso dependency was removed from SDK versions 3.7.0–4.7.0 and 5.0.0–5.5.1, because Picasso version 2.5.2 has a known issue with image rendering on Xperia devices, which got fixed in the latest Picasso versions.

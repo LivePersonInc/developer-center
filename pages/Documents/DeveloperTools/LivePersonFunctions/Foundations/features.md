@@ -83,11 +83,11 @@ When adding a domain to the allowlist, you should always look out for common pit
 
 Example:
 
-The following example shows that when calling `http://google.com`, a redirection to `http://www.google.com/` is performed.
+The following example shows that when calling `http://google.com`, a redirection to `https://www.google.com/` is performed.
 
 ```sh
     $ curl -v -L http://google.com 2>&1 | grep -i "^< location:"
-    < Location: http://www.google.com/
+    < Location: https://www.google.com/
 ```
 
 Next, ensure that you safe list the correct domain when working with subdomains. Let's say you are visiting `https://www.liveperson.com` and therefore allowlisted `liveperson.com`. Then, you fell into a trap because `www.` is a subdomain. Instead, the correct domain to allowlist would be `www.liveperson.com` or `*.liveperson.com`.

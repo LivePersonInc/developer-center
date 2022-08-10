@@ -64,7 +64,7 @@ In general this identifies issues reaching the chat conversation
 <br/>
 <br/>
 
-####  com.liveperson.bot-connectors-worker.error.connector.chat.send-message
+#### com.liveperson.bot-connectors-worker.error.connector.chat.send-message
 
 | Description | A bot message could not be sent to the conversation. |
 | Reason      | The reason for this is mostly wrongly formatted structured content. Another issue could be missing url whitelisting for images. |

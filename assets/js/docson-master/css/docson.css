@@ -312,10 +312,10 @@
 
 @media all and (min-width: 20px) and (max-width: 500px) {
     .docson .property-name {
-        min-width: 0px;
+        min-width: 0;
     }
     .docson .signature-type {
-        min-width: 0px;
+        min-width: 0;
     }
     .docson .source {
         width: 100%;
@@ -348,7 +348,7 @@
 }
 
 .docson .desc th {
-    padding: 0px;
+    padding: 0;
     font-size: 80%;
     font-weight: normal;
     background: rgba(231, 231, 231, 0.5);
@@ -366,25 +366,25 @@
 
 .docson .desc h1 {
     font-size: 120%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 3px;
 }
 
 .docson .desc h2 {
     font-size: 115%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 3px;
 }
 
 .docson .desc h3 {
     font-size: 110%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 3px;
 }
 
 .docson .desc h4 {
     font-size: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 3px;
 }
 
@@ -394,21 +394,21 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     padding: 4px;
-    margin: 3px 0px;
+    margin: 3px 0;
 }
 
 .docson .desc ul {
     padding-left: 16px;
-    margin: 3px 0px;
+    margin: 3px 0;
 }
 
 .docson .desc ol {
     padding-left: 16px;
-    margin: 3px 0px;
+    margin: 3px 0;
 }
 
 .docson .desc blockquote {
-    margin: 3px 0px 3px 10px;
+    margin: 3px 0 3px 10px;
     padding-left: 6px;
     border-left: 1px solid lightgray;
 }

@@ -252,7 +252,7 @@ Example payload:
                       {
                         "type": "link",
                         "name": "Add to cart",
-                        "uri": "http://www.google.com"
+                        "uri": "https://www.google.com/"
                       }
                     ]
                   }

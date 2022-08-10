@@ -104,7 +104,7 @@ agent.on('cqm.ExConversationChangeNotification', notificationBody => {
 })
 ```
 
-#### Run it:
+#### Run it
 
 ###### Unix Shell
 

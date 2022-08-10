@@ -26,9 +26,9 @@
     --space25: calc(25 * var(--space-unit));
     /*  100px */
     --navbar-padding: 24px 0;
+    --nav-transition: all .2s ease-in-out;
 }
 
-*,
 * {
     margin: 0;
 }
@@ -43,7 +43,7 @@ html body {
 
 body {
     padding-top: 0 !important;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 b,
@@ -60,7 +60,7 @@ p {
     cursor: pointer;
 }
 
-.nav>li {
+.nav>li:not(.mobile-sign-in) {
     display: flex !important;
     flex-wrap: wrap;
 }
@@ -108,7 +108,7 @@ p {
 }
 
 .scroll {
-    box-shadow: 0px 4px 8px var(--box-shadow);
+    box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 #logoHeader {
@@ -129,12 +129,12 @@ svg.sitelogo {
 
 .devLabel {
     flex-shrink: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    letter-spacing: 0.008em;
+    letter-spacing: .008em;
     color: var(--link-color);
 }
 
@@ -171,7 +171,7 @@ code pre {
 .indicator-container {
     display: flex;
     gap: 4px;
-    padding-bottom: var(--space8);
+    padding-bottom: var(--space4);
 }
 
 .documenttitlecontainer {
@@ -192,6 +192,17 @@ code pre {
 
 .indicator-container {
     gap: 8px;
+}
+
+.article-meta {
+    display: flex;
+}
+
+.article-meta p {
+    margin-bottom: var(--space8);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--footer-text)
 }
 
 .suggestbutton {
@@ -249,7 +260,6 @@ code pre {
     right: 16px;
 }
 
-
 /* .searchimage img {
   height: 24px;
   right: -35px;
@@ -274,7 +284,7 @@ code pre {
     background-color: var(--body-background);
     display: flex;
     padding-top: var(--space8);
-    margin-right: 0% !important;
+    margin-right: 0 !important;
     min-width: 310px;
     padding-bottom: var(--space8);
     flex-direction: column;
@@ -286,6 +296,22 @@ code pre {
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
+}
+
+.defaultcontent h3,
+.defaultcontent h4 {
+    display: flex;
+    align-items: center;
+}
+
+.defaultcontent a.anchorjs-link {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 21px;
+    height: 22px;
+    display: inline-flex;
+    margin-left: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='.9' fill='%235d80ea'%3E%3Cpath d='M19.798 2.162a4 4 0 0 1 0 5.657l-2.829 2.828a3.991 3.991 0 0 1-3.052 1.165.5.5 0 1 1 .055-.998 2.992 2.992 0 0 0 2.29-.874l2.829-2.828a3 3 0 0 0-4.243-4.243L12.02 5.697a2.992 2.992 0 0 0-.874 2.29.5.5 0 0 1-.999.056 3.991 3.991 0 0 1 1.166-3.053l2.828-2.828a4 4 0 0 1 5.657 0ZM2.121 19.838a4 4 0 0 1 0-5.657l2.829-2.828a3.991 3.991 0 0 1 3.053-1.165.5.5 0 1 1-.056.998 2.992 2.992 0 0 0-2.29.874l-2.829 2.828a3 3 0 0 0 4.243 4.243l2.828-2.828c.63-.629.92-1.466.874-2.29a.5.5 0 1 1 .999-.056 3.992 3.992 0 0 1-1.165 3.053l-2.829 2.828a4 4 0 0 1-5.657 0Z'/%3E%3Cpath d='M6.717 14.535a.5.5 0 1 0 .708.707l7.778-7.778a.5.5 0 1 0-.707-.707l-7.779 7.778Z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .searchHighlight {
@@ -311,7 +337,6 @@ code pre {
     align-self: flex-end;
     width: 35px;
     padding-top: 9px;
-    order: 1;
     border: 0;
     color: var(--grey-button-icons);
     background-color: transparent;
@@ -325,7 +350,6 @@ code pre {
     align-self: flex-end;
     width: 85px;
     padding-top: 10px;
-    order: 1;
     color: var(--grey-button-icons);
     border: 0;
     background-color: transparent;
@@ -350,8 +374,7 @@ code pre {
     color: var(--button-text-secondary);
 }
 
-
-/* 
+/*
 .darken code {
   filter: brightness(280%);
 } */
@@ -365,7 +388,7 @@ code pre {
 }
 
 .darken .daybtn {
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .darken .codebtn {
@@ -410,7 +433,7 @@ code pre {
     background-color: var(--input-search-background) !important;
     width: 100%;
     min-width: 250px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -424,7 +447,7 @@ code pre {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -432,7 +455,7 @@ code pre {
 }
 
 #aa-search-input::-moz-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -441,7 +464,7 @@ code pre {
 }
 
 #aa-search-input:-ms-input-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -450,7 +473,7 @@ code pre {
 }
 
 #aa-search-input:-moz-placeholder {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: var(--input-search);
@@ -471,7 +494,7 @@ code pre {
 }
 
 input.aa-input-search.aa-hint {
-    background: none 0% 0% / auto repeat scroll padding-box border-box var(--body-background) !important;
+    background: none 0 0 / auto repeat scroll padding-box border-box var(--body-background) !important;
 }
 
 input#aa-search-input {
@@ -490,7 +513,7 @@ input#aa-search-input {
 .showcase img {
     margin: 0 auto;
     display: block;
-    box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 9px 3px rgba(0, 0, 0, .1);
 }
 
 table {
@@ -500,6 +523,11 @@ table {
 
 table tbody td img {
     width: 100%;
+}
+
+td {
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .mobilefeaturestable {
@@ -541,6 +569,10 @@ table tbody td img {
         max-width: 100%;
         margin: inherit;
     }
+
+    #jumpto {
+        display: none !important;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
@@ -560,6 +592,7 @@ table tbody td img {
     .side-width:not(.logoHeader) {
         width: 100%;
     }
+
 }
 
 #featurestable {
@@ -610,7 +643,7 @@ table tbody td img {
     font-size: 14px;
     padding: 10px;
     border-radius: 3px;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     margin-top: 9px;
     margin-left: -8.1px;
 }
@@ -669,13 +702,12 @@ table tbody td img {
 
 .beforeImportant {
     content: "\\f05a";
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
     color: var(--important-border);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
-    margin: 0px 10px 10px 0px;
+    margin: 0 10px 10px 0;
     position: relative;
     top: 2px;
 }
@@ -687,19 +719,14 @@ table tbody td img {
 
 .beforeNotice {
     content: "\\f06a";
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0 0 4px;
     color: var(--error-border) !important;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
     margin-right: 10px;
     position: relative;
     top: 2px;
-}
-
-.important p:not(:first-child) {
-    margin-left: -25px;
 }
 
 .notice {
@@ -728,7 +755,7 @@ table tbody td img {
     font-size: 14px;
     line-height: 1.71;
     color: #4a4a4a;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     padding-left: 15px;
 }
 
@@ -738,14 +765,9 @@ table tbody td img {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    font-weight: 900;
     margin-right: 5px;
     position: relative;
     top: 1px;
-}
-
-.important p:not(:first-child) {
-    margin-left: -25px;
 }
 
 .solutionslist {
@@ -797,7 +819,7 @@ a.loginText {
 .trialButton {
     background-color: var(--secondary-background);
     color: var(--button-text);
-    border: 0px;
+    border: 0;
     /* removed by request */
     display: none;
 }
@@ -821,7 +843,7 @@ a.loginText {
 }
 
 span.loginButton {
-    font-family: 'Inter';
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -830,7 +852,7 @@ span.loginButton {
 
 .documentsbutton {
     flex: 1;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     margin-right: 50px;
     display: flex;
@@ -848,7 +870,7 @@ span.loginButton {
 
 .solutionsbutton {
     flex: 1;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -916,18 +938,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
     height: 28px;
 }
 
-.innerfolder>ul {
-    padding-left: 0;
-}
-
-.innerfolder>li {
-    padding-left: 0;
-}
-
-.subfolder>ul {
-    padding-left: 0;
-}
-
+.innerfolder>ul,
+.innerfolder>li,
+.subfolder>ul,
 .subfolder>li {
     padding-left: 0;
 }
@@ -969,7 +982,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 
 .documentslist,
 .solutionslist .innerlink {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     padding-left: 19px;
     margin-bottom: 2px;
     list-style: none;
@@ -1007,7 +1020,7 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 }
 
 .homeitem>a {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     color: var(--body-text) !important;
 }
@@ -1029,7 +1042,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http,
 .language-gradle,
 .language-css,
-.language-objc {
+.language-objc,
+div.language-plaintext,
+.language-text {
     display: flex;
     flex-direction: column;
 }
@@ -1047,7 +1062,9 @@ ul.mysidebar li.folder.innerfolder.sidebarcategory .sidebarbutton {
 .language-http:before,
 .language-gradle:before,
 .language-css:before,
-.language-objc:before {
+.language-objc:before,
+.language-plaintext:before,
+.language-text:before {
     color: var(--secondary-black);
     text-align: right;
     font-size: 14px;
@@ -1159,7 +1176,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 .supportbutton {
     padding: 10px;
     margin-left: 39px;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -1171,13 +1188,13 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .supportbutton span {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     color: #f2f1f2;
 }
 
 .defaultbutton {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -1223,7 +1240,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #anchorlist a {
     /* color: var(--secondary-black); */
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1245,7 +1262,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 .jumpToAnchor {
     text-align: right;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     margin-bottom: 12px;
     color: var(--link-color);
     font-style: normal;
@@ -1258,9 +1275,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     display: none;
 }
 
-
-/*
- make sure background is white */
+/* make sure background is white */
 
 .highlightlink {
     background-color: var(--body-background) !important;
@@ -1282,7 +1297,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .externalIconImage {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 4px;
     padding-right: 5px;
 }
@@ -1293,7 +1308,6 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     width: 16px;
     height: 16px;
     border: 0;
-    display: inline-flex;
     font-size: 1.5em;
     display: flex;
     align-items: center;
@@ -1305,7 +1319,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .sidebarbutton>span {
-    transition: 0.3s;
+    transition: .3s;
     background: #b1b5bc;
 }
 
@@ -1331,6 +1345,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
     margin-top: 32px;
     font-family: "Roboto Mono", Monaco, courier, monospace;
     color: var(--widget-text);
+    overflow-wrap: anywhere;
 }
 
 /* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
@@ -1505,6 +1520,8 @@ img.fancyimage {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 a:focus-visible {
@@ -1515,12 +1532,10 @@ a:focus-within:not(.anchorjs-link) {
     border: 2px dashed var(--post-link-hover) !important;
 }
 
-
 /* .dark #post-content img {
-  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.12))
+  filter: drop-shadow(0px 0 4px rgba(255, 255, 255, 0.12))
     drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
 } */
-
 
 /* toggle switch  */
 
@@ -1535,7 +1550,7 @@ a:focus-within:not(.anchorjs-link) {
     background-position: center center;
     border: 1px solid var(--footer-text);
     box-sizing: border-box;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
 }
 
@@ -1555,7 +1570,6 @@ a:focus-within:not(.anchorjs-link) {
 
 .theme-switch-wrapper .theme-switch {
     display: inline-block;
-    height: var(--space8);
     position: relative;
     width: 48px;
     height: 24px;
@@ -1576,7 +1590,7 @@ a:focus-within:not(.anchorjs-link) {
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .theme-switch-wrapper .slider:before {
@@ -1585,7 +1599,7 @@ a:focus-within:not(.anchorjs-link) {
     height: 18px;
     left: 3px;
     position: absolute;
-    transition: 0.4s;
+    transition: .4s;
     width: 18px;
     background: var(--card-background);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1614,7 +1628,7 @@ a:focus-within:not(.anchorjs-link) {
 
 .toggle-title-dark,
 .toggle-title-light {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -1644,7 +1658,6 @@ a:focus-within:not(.anchorjs-link) {
 .theme-switch-wrapper input:checked+.slider .toggle-title-light {
     display: none;
 }
-
 
 /* toggle end */
 
@@ -1738,7 +1751,8 @@ input#csds-button {
     }
 
     #searchHeader,
-    span.loginButton {
+    span.loginButton,
+    #loginHeader {
         display: none;
     }
 
@@ -1792,6 +1806,99 @@ input#csds-button {
 
     .mobile-logo {
         display: flex;
+    }
+
+    /* sidebar hamburger effect */
+    input:focus+label.sidebarIconToggle {
+        border: 2px dashed var(--post-link-hover) !important;
+    }
+
+    #defaultsidebar {
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        padding-top: 115px;
+        transform: translateX(-315px);
+        transition: transform 250ms ease-in-out;
+        z-index: 99;
+    }
+
+    .defaultwrapper input[type="checkbox"].openSidebarMenu:checked~#defaultsidebar {
+        transform: translateX(0);
+    }
+
+    input[type=checkbox].openSidebarMenu {
+        position: absolute;
+        right: 35px;
+        top: 38px
+    }
+
+    .sidebarIconToggle {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        height: 22px;
+        width: 22px;
+        margin-bottom: 0;
+        position: fixed;
+        right: 35px;
+        top: 38px;
+        z-index: 999;
+    }
+
+    .sidebarIconToggle .spinner {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: var(--title-text);
+    }
+
+    .sidebarIconToggle .horizontal,
+    .sidebarIconToggle .diagonal.part-1,
+    .sidebarIconToggle .diagonal.part-2 {
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
+        opacity: 0;
+    }
+
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-1 {
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-2 {
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+
+    .spinner,
+    .sidebarIconToggle,
+    input[type=checkbox].openSidebarMenu,
+    .horizontal,
+    .diagonal.part-1,
+    .diagonal.part-2,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-1,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-2,
+    input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
+        transition: var(--nav-transition);
+    }
+}
+
+@media (min-width: 768px) {
+
+    input#openSidebarMenu,
+    .sidebarIconToggle {
+        display: none;
+    }
+
+    .mysidebar>li.mobile-sign-in {
+        display: none;
     }
 }
 
