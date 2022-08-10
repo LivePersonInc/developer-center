@@ -191,9 +191,9 @@ function navigateContent(url) {
       var selected = $('a[href*="' + url + '"]')
       if (selected.hasClass("uniqueAnchor")) {
         // do  nothing // dont append the active page
-        console.log("selected is the unique anchor on getting started page")
+        // console.log("selected is the unique anchor on getting started page")
       } else {
-        console.log("Remove active class in navigate content")
+        // console.log("Remove active class in navigate content")
 
         $(".folder").removeClass("active")
         $(".innerlink").removeClass("active")
@@ -214,7 +214,7 @@ function navigateContent(url) {
         }
         //jump to top when page loads
         if (window.location.hash == "") {
-          console.log(window.location.hash)
+          // console.log(window.location.hash)
           window.scrollTo(0, 0)
         }
         if (/Mobi|Android/i.test(navigator.userAgent) == true) {
@@ -256,7 +256,7 @@ function handleUniquePages() {
         "Let’s build Conversational AI solutions together"
     }
   } else {
-    console.log("not in  root folder")
+    // console.log("not in root folder")
     jumpto.css("flex", "1")
     jumpto.css("display", "flex")
     sidebar.css("margin-right", "6%")
@@ -441,9 +441,9 @@ function sidebarCollapse(url) {
   }
   var selected = $('a[href*="' + url + '"]')
   if (selected.hasClass("uniqueAnchor")) {
-    console.log(
+    /* console.log(
       "selected is the unique anchor on getting started page in topen"
-    )
+    ) */
   } else {
     $("a").removeClass("activepage")
 
@@ -564,7 +564,7 @@ function breadClick(event) {
   var targetLink = breadSidebar
     .find("span:contains('" + breadText + "')")
     .trigger("click")
-  console.log(targetLink)
+  // console.log(targetLink)
 }
 
 //a function to make sure the page's title is updated on load
@@ -670,7 +670,7 @@ function capabilitiesSearch() {
   var $title = $(".h1").text()
   if ($title.indexOf("Rich Messaging Channel Capabilities") > -1) {
     // Declare variables
-    console.log("run")
+    // console.log("run")
     var input, filter, table, tr, categorytr, td, i
     input = document.getElementById("capabilitiesSearch")
     table = document.getElementById("featurestable")
@@ -727,13 +727,13 @@ function scrollToHash() {
     if (window.location.hash && window.location.hash != "#top") {
       var hash = window.location.hash
       var linkScroll = $('a[href*="' + hash + '"]')
-      console.log(linkScroll)
+      // console.log(linkScroll)
       if (linkScroll.length > 1) {
         var linkOffset = $(linkScroll[0]).offset().top
       } else {
         var linkOffset = $(linkScroll).offset().top
       }
-      console.log(linkOffset)
+      // console.log(linkOffset)
       $("body, html").animate(
         {
           scrollTop: linkOffset - 120,
