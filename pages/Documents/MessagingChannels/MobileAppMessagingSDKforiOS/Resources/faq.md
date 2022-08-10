@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Where can I find the latest versions of the SDK Libraries
 
-Githubs:
+GitHubs:
 - [XCFramework](https://github.com/LivePersonInc/iOSFrameworks)
 - [SampleApp + XCFramework](https://github.com/LP-Messaging/iOS-Messaging-SDK)
 - [Cocoapods](https://github.com/LivePersonInc/iOSPodSpecs)
@@ -36,7 +36,7 @@ Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs tha
 
 If markdownHyperlinkFromAgent is enabled, link preview won’t be displayed.
 
-### While updating the SDK, my Structure Content is now showing a border on the buttons:
+### While updating the SDK, my Structure Content is now showing a border on the buttons
 
 On SDK 5.2.1, the border was introduced as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
 
@@ -72,7 +72,7 @@ As Apple mentioned in their article:
 
 “The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”. 
 
-{:.important}
+{: .important}
 For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
 
 ### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.

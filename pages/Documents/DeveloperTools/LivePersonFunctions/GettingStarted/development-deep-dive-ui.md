@@ -29,7 +29,6 @@ A function can behold the following states:
 
 To create a new function, press the "Create a Function"-button displayed next to the header of the functions table.
 
-<br/>
 #### First step: Coding Details
 
 On the first page of the "Create a new function"-assistant, you can set basic information for the function: the runtime version, the event to respond to, skills attached to this function, a template and access to external domains.  The editor on the right side will always show you the initial code generated based on your selections.
@@ -67,11 +66,11 @@ When adding a domain to the allowlist, you should always consider some common pi
 
 Example:
 
-The following example shows that when calling `http://google.com`, a redirection to `http://www.google.com/` is performed.
+The following example shows that when calling `http://google.com`, a redirection to `https://www.google.com/` is performed.
 
 ```sh
     $ curl -v -L http://google.com 2>&1 | grep -i "^< location:"
-    < Location: http://www.google.com/
+    < Location: https://www.google.com/
 ```
 
 Next, ensure that you allowlisted the correct domain when working with subdomains. Let's say you are visiting `https://www.liveperson.com` and therefore allowlisted `liveperson.com`. `www.liveperson.com` is a subdomain of `liveperson.com` so this will not work with your allowlist entry. Instead, the correct domain to allowlist would be `www.liveperson.com` or `*.liveperson.com`.

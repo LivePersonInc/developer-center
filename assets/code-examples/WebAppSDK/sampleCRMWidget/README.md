@@ -1,7 +1,7 @@
 # Sample CRM Widget
 This is an example Node.js widget that uses the pre chat survey information to see if a lead exists in a database, and then displays that leads information. This widget uses the mongodb that is available from mongolab.
 
-You can view a live example here:[Sample CRM Widget](https://rocky-garden-8809.herokuapp.com/helloworld)
+You can view a live example here: [Sample CRM Widget](https://rocky-garden-8809.herokuapp.com/helloworld)
 
 ## Background
 This widget was built as a proof of concept in regards to how we could pull information from a CRM based on the pre chat survey information. 

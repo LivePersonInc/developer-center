@@ -247,7 +247,7 @@ The following table describes the information that is available for engagement d
 | :--------- | :-------------- | :------------ |
 | engagements | List of conversation / content entities. | array container |
 
-###  Conversation
+### Conversation
 
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :----------- |
@@ -274,7 +274,7 @@ The following table describes the information that is available for engagement d
 | queueStartTime | Time when visitor requested to start conversation. | long |
 | queueEndTime | Time when visitor connected to an agent. | long |
 
-###  Message
+### Message
 
 | Parameter | Description | Type / Value |
 | :------- | :----------- | :---------- |
@@ -291,21 +291,21 @@ The following table describes the information that is available for engagement d
 | linkData | Contains information about link data. | Container — LinkData |
 | mcs | Contains information about MCS of the message. | Container — MCS |
 
-###  CampaignData
+### CampaignData
 
 | Parameter | Description | Type / Value |
 | :--------- | :------------- | :-------------- |
 | campaignId | Unique campaign identifier. | long |
 | campaignEngagementId | Unique campaign engagement identifier. | long |
 
-###  FileData (relevant for messaging — not supported)
+### FileData (relevant for messaging — not supported)
 
 | Parameter | Description | Type / Value |
 | :--------- | :------------- | :----------- |
 | caption | Optional explanatory text attached to the file | string |
 | fileType | Type of file. Supported types: JPG, PNG, GIF, TXT, PDF | string |
 
-###  LinkData (relevant for messaging — not supported)
+### LinkData (relevant for messaging — not supported)
 
 | Parameter | Description | Type / Value |
 | :-------- | :------------ | :------------ |
@@ -313,7 +313,7 @@ The following table describes the information that is available for engagement d
 | fileType | Type of file, supported types: JPG, PNG, GIF, TXT, PDF. | string |
 | caption | Optional free text attached to the file. | string |
 
-###  Transfer
+### Transfer
 
 | Parameter | Description | Type / Value |
 | :-------- | :------------- | :------------ |

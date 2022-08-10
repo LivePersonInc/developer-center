@@ -18,7 +18,7 @@ The purpose of the overview is to give potential users of the API a general idea
 
 The API overview begins with an introduction to the main functionalities of the API. This section should cover the main components of the API, the primary goal it is trying to achieve, and any context needed to understand the API. Such context, for example, could include whether the API relies on or enables other LivePerson services, external third-party data or any other general context needed to understand how the API works.
 
-This section should also include any prerequisites that are needed to start working with the API. Is knowledge of a specific (non-generic) coding library required (like OpenGL for example)? Are certain data points required(like special unique identifiers or third-party authentication)? Are there LiveEngage configurations which must take place before the API can be used (like permissions)?
+This section should also include any prerequisites that are needed to start working with the API. Is knowledge of a specific (non-generic) coding library required (like OpenGL for example)? Are certain data points required (like special unique identifiers or third-party authentication)? Are there LiveEngage configurations which must take place before the API can be used (like permissions)?
 
 ### Getting started
 

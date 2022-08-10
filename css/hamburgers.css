@@ -17,7 +17,7 @@
   text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: 20px 70px 0px 20px;
+  margin: 20px 70px 0 20px;
   overflow: visible; }
   .hamburger:hover {
     opacity: 0.7; }

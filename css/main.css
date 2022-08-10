@@ -41,7 +41,7 @@ body {
 }
 
 .header {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, sans-serif;
   font-size: 1.2em;
   margin-top: 35px;
   margin-bottom: 15px;
@@ -57,7 +57,7 @@ body {
 
 .container {
   padding-left: 550px;
-  padding-right: 0px;
+  padding-right: 0;
   position: relative;
   display: flex;
   background-color: #f5f7f9;
@@ -159,19 +159,19 @@ pre {
 }
 .searchbox__input::-webkit-input-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input::-moz-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input:-ms-input-placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__input::placeholder {
   color: #8a909a;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 .searchbox__submit {
   position: absolute;
@@ -295,7 +295,6 @@ pre {
   text-align: left;
   height: auto;
   position: relative;
-  background: transparent;
   border: none;
   z-index: 1;
   max-width: 1280px !important;
@@ -303,12 +302,10 @@ pre {
   /*box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 2px 3px 0 rgba(0, 0, 0, .1)*/
   background-color: #162036;
   /*border: 2px solid rgba(228, 228, 228, 0.6);*/
-
   font-family: "Open Sans", sans-serif;
   width: 100%;
   margin-top: 10px;
   /*font-size: 11px;*/
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .ds-dropdown-menu:before {
@@ -375,7 +372,7 @@ pre {
   /*color: #174d8c;*/
   /*background: rgba(143, 187, 237, .1);*/
   box-shadow: inset 0 -2px 0 0 rgba(69, 142, 225, 0.8);
-  padding: 0.1em 0.05em;
+  padding: .1em .05em;
 }
 .algolia-docsearch-suggestion--category-header
   .algolia-docsearch-suggestion--category-header-lvl0
@@ -423,7 +420,7 @@ pre {
   font-size: 1.125em;
   color: #333333;
   font-weight: bold;
-  font-family: "Roboto Slab", "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", "Open Sans", Arial, sans-serif;
   /*width:60%;*/
 }
 .algolia-docsearch-suggestion--wrapper {
@@ -436,10 +433,9 @@ pre {
   float: left;
   width: 30%;
   display: none;
-  padding-left: 0;
   /*text-align: right;*/
   position: relative;
-  padding: 5.33333px 0px;
+  padding: 5.33333px 0;
   color: #a4a7ae;
   font-size: 1.1em;
   font-weight: bold;
@@ -526,8 +522,8 @@ pre {
 }
 .suggestion-layout-simple .algolia-docsearch-suggestion--category-header-lvl0,
 .suggestion-layout-simple .algolia-docsearch-suggestion--category-header-lvl1 {
-  opacity: 0.6;
-  font-size: 0.85em;
+  opacity: .6;
+  font-size: .85em;
 }
 .suggestion-layout-simple
   .algolia-docsearch-suggestion--category-header-lvl1:before {
@@ -551,7 +547,7 @@ pre {
 .suggestion-layout-simple .algolia-docsearch-suggestion--title {
   margin: 0;
   color: #458ee1;
-  font-size: 0.9em;
+  font-size: .9em;
   font-weight: 400;
 }
 .suggestion-layout-simple .algolia-docsearch-suggestion--title:before {
@@ -566,8 +562,8 @@ pre {
   line-height: 1.4em;
   padding: 5.33333px 8px;
   background: #f8f8f8;
-  font-size: 0.85em;
-  opacity: 0.8;
+  font-size: .85em;
+  opacity: .8;
 }
 .suggestion-layout-simple
   .algolia-docsearch-suggestion--text
@@ -596,14 +592,14 @@ body.search-opened #search-container {
 
 #search-container {
   background-color: var(--body-background);
-  box-shadow: var(--box-shadow) 0px 0px 0px 1px;
+  box-shadow: var(--box-shadow) 0 0 0 1px;
   box-sizing: border-box;
   color: var(--title-text);
   display: none;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   height: 853px;
-  left: 0px;
+  left: 0;
   line-height: 20px;
   min-height: 853px;
   position: absolute !important;
@@ -626,12 +622,11 @@ body.search-opened #search-container {
   color: var(--body-background);
   padding: 10px;
   border: none;
-  width: 0px;
+  width: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.8em;
+  font-size: .8em;
   box-sizing: border-box;
   background-color: transparent;
-  margin-top: 2.5%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -660,7 +655,7 @@ body.search-opened #search-container {
 .aa-input-search:focus {
   width: 240px;
   border-bottom: 1px solid #8a909a;
-  padding: 7px 80px 12px 0px;
+  padding: 7px 80px 12px 0;
   cursor: text;
   opacity: 1;
 }
@@ -710,7 +705,6 @@ body.search-opened #search-container {
   right: -120px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  fill: var(--body-text);
   border-radius: 50%;
   display: none;
   fill: transparent;
@@ -805,7 +799,7 @@ body.search-opened #search-container {
   border-color: transparent;
   color: var(--body-background);
   float: left;
-  font-size: 0.9em;
+  font-size: .9em;
   margin-left: 0;
   margin-top: 12px;
   width: 15.5em;
@@ -826,7 +820,7 @@ body.search-opened #search-container {
   right: 10px;
   width: 255px;
   background-color: var(--body-background);
-  font-size: 0.666em;
+  font-size: .666em;
   display: none;
   padding-left: 10px;
 }
@@ -834,11 +828,11 @@ body.search-opened #search-container {
 #search-demo-container ul#results-container li {
   width: 95%;
   margin-bottom: 5px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 #search-demo-container ul#results-container li.nolink {
   margin-top: 10px;
-  font-family: "Open Sans Semibold";
+  font-family: "Open Sans Semibold", sans-serif;
 }
 ul#results-container li a {
   background-color: initial;
@@ -860,7 +854,7 @@ ul#results-container li a {
   content: 'x';
   float:right;
   margin-right: 8px;
-  font-size: 0.75em;
+  font-size: .75em;
   color:#808080;
 }*/
 
@@ -933,7 +927,7 @@ ul#results-container li a {
   width: 242px;
 }
 .collapse.out.width {
-  width: 0px;
+  width: 0;
 }
 
 .collapse.in.height {
@@ -943,7 +937,7 @@ ul#results-container li a {
 .footer {
   color: var(--body-text);
   display: table;
-  font-family: "Open Sans Semibold", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans Semibold", Arial, sans-serif;
   font-size: 13px;
   text-align: center;
 }
@@ -988,7 +982,7 @@ ul#results-container li a {
     border-color: transparent;
     color: var(--body-background);
     float: right;
-    font-size: 0.9em;
+    font-size: .9em;
     margin-top: 7px;
     width: 0;
 
@@ -1021,7 +1015,7 @@ ul#results-container li a {
   padding: 6px 45px;
   display: inline-block !important;
   font-size: 1.2em;
-  font-family: "Open Sans", "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", "Roboto Slab", Arial, sans-serif;
   font-weight: 600;
   border: 2px solid var(--button-text);
   margin-top: 15px;
@@ -1072,7 +1066,7 @@ ul#results-container li a {
     display: none;
   }
   .navbar-collapse .navbar-nav.navbar-left:first-child {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 

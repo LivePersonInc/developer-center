@@ -327,13 +327,13 @@ Conversation separator text and line color.
 #### enableConversationSeparator
 Toggle conversation separator view when conversation resolved from agent or consumer.
 
-{:.notice}
+{: .notice}
 This configuration is available in SDK 6.2.0 and above.
 
-{:.important}
+{: .important}
 Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
 
-{:.notice}
+{: .notice}
 Setting this property to false will also disable **enableConversationSeparatorTextMessage** and **enableConversationSeparatorLine**
 
 - **Type:** Bool
@@ -342,7 +342,7 @@ Setting this property to false will also disable **enableConversationSeparatorTe
 #### enableConversationSeparatorTextMessage 
 Toggle conversation separator text message when conversation resolved from agent or consumer.
 
-{:.notice}
+{: .notice}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Text won't be displayed even if this property is enable
 
 - **Type:** Bool
@@ -351,7 +351,7 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator T
 #### enableConversationSeparatorLine 
 Toggle conversation separator line when conversation resolved from agent or consumer.
 
-{:.notice}
+{: .notice}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed even if this property is enable
 
 - **Type:** Bool
@@ -360,13 +360,13 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator L
 #### enableConversationSeparatorLineOnAutoClose 
 Toggle conversation separator line when conversation is auto close
 
-{:.notice}
+{: .notice}
 This configuration is available in SDK 6.2.0 and above.
 
-{:.important}
+{: .important}
 For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
 
-{:.notice}
+{: .notice}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed for Auto Close Conversations even if this property is enable.
 
 - **Type:** Bool
@@ -1028,7 +1028,7 @@ Color of checkmark indication signs of Distributed messages.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor) 
 
-####  checkmarkSentColor  
+#### checkmarkSentColor  
 Color of checkmark indication signs of Sent messages. 
 
 - **Type:** UIColor
@@ -1064,7 +1064,7 @@ Examples: TimeToRespond notification, local notification, etc.
 
 ### Domains
 
-{:.notice}
+{: .notice}
 Overriding this values with incorrect domains will create connection issues on the LPMessagingSDK (e.g. "Failed to connect to server" banner)
 
 #### csdsDomain
@@ -1413,7 +1413,7 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
-####  cameraButtonDisabledColor  
+#### cameraButtonDisabledColor  
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
 
 - **Type:** UIColor
@@ -1715,7 +1715,7 @@ Send button color in enabled mode in the conversation screen.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#LPColor)
 
-####  sendButtonImage  
+#### sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
@@ -1842,7 +1842,7 @@ Corner radius for (Yes/No) buttons.
 - **Type:** Double
 - **Default value:** 25.0
 
-####  csatSubmitButtonBackgroundColor  
+#### csatSubmitButtonBackgroundColor  
 Background color of the Submit button.  
 
 - **Type:** UIColor

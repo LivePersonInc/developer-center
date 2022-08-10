@@ -26,7 +26,7 @@
 }
 
 .header-label {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     color: var(--body-text);
@@ -35,12 +35,12 @@
 .success-stories-header {
     font-size: 24px;
     max-width: 418px;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: bold;
     line-height: 40px;
     color: var(--cta-text);
-    letter-spacing: 0.008em;
+    letter-spacing: .008em;
 }
 
 .container-image {
@@ -82,13 +82,13 @@ img.card-container {
 }
 
 .welcome-title.parent:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
 }
 
 .card-container .welcome-card .welcome-content {
     color: var(--body-text);
     margin-bottom: 0;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -103,7 +103,7 @@ img.card-container {
 #success-stories {
     background-repeat: no-repeat;
     background-position: center;
-    background: var(--card-bg-background), url("img/welcomebanner.png");
+    background: var(--card-bg-background), url("/img/welcomebanner.png");
     border: 2px solid #eeeff1;
     background-size: cover;
 }
@@ -139,9 +139,8 @@ img.card-container {
 
 .create-button {
     background: #ededfa;
-    font-family: Space Grotesk;
+    font-family: "Space Grotesk", sans-serif;
     font-style: normal;
-    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     border-radius: 24px;
@@ -162,7 +161,7 @@ img.card-container {
 }
 
 .free-trial-label {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     color: var(--cta-text);
     display: flex;
     align-items: center;

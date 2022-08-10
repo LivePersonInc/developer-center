@@ -52,7 +52,7 @@ Check out the [onboarding guide](/mtls-onboarding.html) for next steps.
 
 ### Limitations
 
-#### Technical limitations:
+#### Technical limitations
 
 * The P12 key (private + public) must be Java compliant. The created key must use supported algorithms and key strength. To test your P12 key, please use the [P12 Key Tester](p12-key-tester.html) resource included in this API.
 

@@ -137,7 +137,7 @@ The Medallia Survey vendor is not supported by the Conversation Tester since sur
 | Reason      | This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value. |
 | Solutions   | Please check [Sending Private Text Message](third-party-bots-ibm-watson-assistant-basic-content.html#sending-private-text-message) |
 
-#### #watson-assistant-message-format
+#### watson-assistant-message-format
 
 | Description | Unable to validate body because of invalid message format |
 | Reason      | This error happens when the bot's response has an invalid value in its message and the vendor is unable to parse it. It can be an unknown type or a wrong value. |

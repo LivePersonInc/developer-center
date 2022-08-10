@@ -13,7 +13,7 @@
     <div class="flex items-center" id="mainHeader">
         <div class="max-width">
             <div class="side-width logoHeader">
-                <a href="/" class="flex items-center">
+                <a href="/" class="flex items-center" tabindex="1">
                     <!-- logo desktop -->
                     <svg class="desktop-logo" width="271" height="28" viewBox="0 0 271 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -89,6 +89,12 @@
     </div>
     <div class="flex max-width">
         <div class="defaultwrapper" id="defaultwrapper">
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" tabindex="2">
+        <label for="openSidebarMenu" class="sidebarIconToggle" aria-hidden="true">
+          <div class="spinner diagonal part-1"></div>
+          <div class="spinner horizontal"></div>
+          <div class="spinner diagonal part-2"></div>
+        </label>
             <div id="defaultsidebar" class="defaultsidebar">
                 {% include sidebar.html %}
             </div>
@@ -113,11 +119,20 @@
                         {% endif %}
 
                         <div class="suggestbutton" id="suggestbutton">
-                            <a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}" target="_blank">
+                            <a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developer-center/edit/master/pages' }}" target="_blank">
                                 <i class="far fa-edit"></i>
                                 <span>Suggest changes</span>
                             </a>
                         </div>
+                    </div>
+                    <div class="article-meta hidden">
+                        {% assign currentYear = "now" | date:"%Y" %}
+                        {% assign articleUpdatedYear = page.last_modified_at | date: '%Y' %}
+                        {% if articleUpdatedYear == currentYear %}
+                        <p>Updated {{ page.last_modified_at | date: '%B %d' }} </p>
+                        {% else %}
+                        <p>Updated {{ page.last_modified_at | date: '%B %d %Y' }}</p>
+                        {% endif %}
                     </div>
                 </div>
                 {% endif %} {{ content | extlinks }}

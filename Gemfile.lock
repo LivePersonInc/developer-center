@@ -32,7 +32,7 @@ GEM
     ffi (1.15.5)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    html-proofer (4.2.0)
+    html-proofer (4.3.2)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogiri (~> 1.13)
@@ -82,6 +82,9 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gzip (2.5.1)
       jekyll (>= 3.0, < 5.0)
+    jekyll-last-modified-at (1.3.0)
+      jekyll (>= 3.7, < 5.0)
+      posix-spawn (~> 0.3.9)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sanity (1.6.0)
@@ -116,6 +119,7 @@ GEM
     parallel (1.22.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    posix-spawn (0.3.15)
     progressbar (1.11.0)
     public_suffix (4.0.7)
     racc (1.6.0)
@@ -157,8 +161,9 @@ DEPENDENCIES
   jekyll (~> 3.9.2)
   jekyll-algolia
   jekyll-assets
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   jekyll-gzip
+  jekyll-last-modified-at
   jekyll-redirect-from
   jekyll-sitemap
   kramdown-parser-gfm

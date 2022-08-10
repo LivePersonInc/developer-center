@@ -12,7 +12,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-{:.important}
+{: .important}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
 ---
@@ -1124,7 +1124,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 
 #### lpmessaging_ui_image_progress_bar.xml
 
-Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -1632,7 +1632,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 
@@ -2087,7 +2087,7 @@ Define the font of the pci secure form.
 
 #### lpmessaging_ui_secure_form_progress_bar.xml
 
-Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -2621,7 +2621,7 @@ Defines whether to show the feedback dialog.
 
 Define if the agent’s name and avatar are visible on top of feedback dialog.
 
-{:.notice}
+{: .notice}
 If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2646,7 +2646,7 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
-{:.notice}
+{: .notice}
 If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2832,7 +2832,7 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
-{:.important}
+{: .important}
 When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
 
 #### show_timestamp_in_ttr_notification
@@ -3456,7 +3456,7 @@ Only available as long as the announce_agent_typing configuration is on (set as 
 &nbsp;
 </div>
 
-{:.important}
+{: .important}
 If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
 
 #### agent_bubble_link_preview_background_stroke_color

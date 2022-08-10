@@ -5,11 +5,11 @@
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
 <title>{% if page.homepage == true %} {{site.homepage_title}} {% elsif page.title %}{{ page.title }}{% endif %}  | {{ site.site_title }}</title>
 
-
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/modern-business.css" | prepend: site.baseurl | prepend: site.url }}">
+<!-- TODO: Switch to (and test) lavish-bootstrap.min.css -->
 <link rel="stylesheet" href="{{ "/css/lavish-bootstrap.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="stylesheet" href="{{ "/css/theme-green.css" | prepend: site.baseurl | prepend: site.url }}">
@@ -27,5 +27,3 @@
         return "{{site.print_title}} User Guide";
     });
 </script>
-
-

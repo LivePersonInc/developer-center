@@ -1,7 +1,7 @@
 # Marketo Example Widget
 This is an example Node.js widget of how you can integrate with Marketo by using the prechat survey information to see if a lead exisits in the lead database, and to show how you can create a lead in the lead database. This widget uses the Marketo REST API to connect with the Marketo database.
 
-You can view a live example here:[Marketo Create Lead Widget](https://powerful-ravine-2208.herokuapp.com)
+You can view a live example here: [Marketo Create Lead Widget](https://powerful-ravine-2208.herokuapp.com)
 
 ## Background
 This widget was built as a proof of concept in regards to how we can create a lead in Marketo based off the pre chat survey, and how we can see lead information if that lead already exists in Marketo.

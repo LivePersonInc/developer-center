@@ -17,10 +17,12 @@ Step Up authentication allows consumers to continue the ongoing unauthenticated 
  - v5.10.0 and higher
 
 ### How to enable
+
 - KB article: [Step Up Authentication Overview](https://knowledge.liveperson.com/step-up-authentication-overview/)
 - Setup account: Please reach out to LivePerson representative to get it activated and configured.
 
 ### Notes
+
 - To enable Step Up authentication, make sure to set performStepUp flag to true.
 - SDK will trigger onError(LpError lpError, String message) callback when an error occurred while performing Step Up by LpError.STEP_UP_FAILURE enum.
 
