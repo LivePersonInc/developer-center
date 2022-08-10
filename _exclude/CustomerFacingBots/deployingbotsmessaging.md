@@ -43,7 +43,7 @@ Utilize the methods provided by LivePerson’s Messaging Agent SDK to automate y
 
 The following example demonstrating running a bot using the major API calls.
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on Github.
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/agent-bot) to review the full code repository on GitHub.
 
 You can also watch this demo video, which will guide you on how to run this example bot:
 
@@ -59,7 +59,7 @@ For enterprise brands, take additional measure to ensure the scalability of your
 
 This example demonstrates running a bot on a horizontal scalable cluster. It can be used for a few use cases:
 
-[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on Github.
+[Click here](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/cluster) to review the full code repository on GitHub.
 
 You can also watch the demo video which will guide you through this example bot:
 [https://www.youtube.com/embed/4FgZa87sDho](https://www.youtube.com/embed/4FgZa87sDho)
