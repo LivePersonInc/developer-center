@@ -42,14 +42,18 @@
 
 .gettingstartedtitle {
     font-size: 18px;
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     color: #5879da;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 .gettingstartedsummary {
-    font-family: "Inter", sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     color: #4a4a4a;
+}
+
+.article-meta {
+    display: none;
 }

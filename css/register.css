@@ -103,7 +103,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
-  color: #666666;
+  color: #666;
   text-indent: 5px;
   -webkit-appearance: initial;
   -webkit-padding-start: 9px;
@@ -123,34 +123,34 @@ select {
 
 #passwordReq {
   font-size: 14px;
-  color: #666666;
+  color: #666;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
-  color: #666666;
+  color: #666;
 }
 input::-moz-placeholder { /* Firefox 19+ */
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
-  color: #666666;
+  color: #666;
 }
 
 input:-ms-input-placeholder { /* IE 10+ */
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
-  color: #666666;
+  color: #666;
 }
 
 input:-moz-placeholder { /* Firefox 18- */
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
-  color: #666666;
+  color: #666;
 }
 
 #formContainer hr {
@@ -158,7 +158,6 @@ input:-moz-placeholder { /* Firefox 18- */
   border-left: 1px solid #d6d6d6;
   width: 1px;
 }
-
 
 #captchaContainer {
   flex: 1;
@@ -201,7 +200,7 @@ input:-moz-placeholder { /* Firefox 18- */
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .activeButton {
@@ -233,7 +232,6 @@ input:-moz-placeholder { /* Firefox 18- */
 
 #checkboxContainer span {
 }
-
 
 .conditionButton {
   display: none;

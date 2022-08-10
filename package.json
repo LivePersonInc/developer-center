@@ -1,6 +1,6 @@
 {
-  "name": "developers-community",
-  "description": "LivePerson’s Developers Community",
+  "name": "developer-center",
+  "description": "LivePerson’s Developer Center and Community",
   "version": "1.0.0",
   "dependencies": {
     "axios": "^0.27.2",
@@ -15,7 +15,7 @@
     "lodash.template": ">=4.5.0",
     "object-path": ">=0.11.5",
     "socket.io": ">=4.5.1",
-    "yargs-parser": ">=21.0.1"
+    "yargs-parser": ">=21.1.1"
   },
   "devDependencies": {
     "@j9t/imagemin-guard": "^3.2.8",
@@ -35,9 +35,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LivePersonInc/developers-community.git"
+    "url": "git+https://github.com/LivePersonInc/developer-center.git"
   },
   "author": "LivePerson",
   "license": "ISC",
-  "homepage": "https://github.com/LivePersonInc/developers-community#readme"
+  "homepage": "https://github.com/LivePersonInc/developer-center#readme"
 }
