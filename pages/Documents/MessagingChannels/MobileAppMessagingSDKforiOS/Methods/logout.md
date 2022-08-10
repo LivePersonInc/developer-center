@@ -26,9 +26,7 @@ This method conducts the following:
 `func logout(unregisterType: LPPusherUnregisterType, 
             completion: @escaping ()->(), 
             failure: @escaping (_ error: Error)->())`
-
-*Note: This does not end the current messaging conversation.
-
+            
 **Important: This method must not be called when the conversation screen is displayed.**
 
 
