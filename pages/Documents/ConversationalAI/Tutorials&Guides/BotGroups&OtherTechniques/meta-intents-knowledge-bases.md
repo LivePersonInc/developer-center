@@ -11,7 +11,7 @@ indicator: both
 ---
 
 {: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html).
+This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. As opposed to creating individual interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. To best work within the Collaborative Bot Group structure, we will create an FAQ meta intent to capture all FAQ questions and present them to our user within the **Service Bot**.
 

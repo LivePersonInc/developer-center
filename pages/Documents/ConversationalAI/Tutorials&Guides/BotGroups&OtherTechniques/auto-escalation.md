@@ -11,7 +11,7 @@ indicator: both
 ---
 
 {: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html).
+This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 Every bot should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold was crossed. Now, Conversation Builder provides a special dialog type which takes care of all this for you without having to write any code.
 
