@@ -434,6 +434,14 @@ ul#mysiderbar li {
     padding-left: 11px;
 }
 
+.mysidebar>li.mobile-sign-in {
+    padding: 0;
+}
+
+.mysidebar>li.mobile-sign-in a.loginText:hover {
+    background: #fff;
+}
+
 .pageitem>a {
     color: var(--link-color);
 }
