@@ -43,7 +43,7 @@ algolia:
 # values for the Algolia plugin
 
 github: [metadata]
-# needed so that Github APIs don't throw a fit
+# needed so that GitHub APIs don't throw a fit
 
 exclude:
   - .idea/
