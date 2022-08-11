@@ -14,6 +14,8 @@ permalink: push-notification-service-configuration-push-proxy.html
 indicator: messaging
 ---
 
+![](img/pusher/PushProxyFlow.png)
+
 Push proxy is a feature that can be self-managed in the Conversational Cloud console.
 
 In order to enable the push proxy feature, you will require the following data and files:
@@ -30,17 +32,24 @@ In order to enable the push proxy feature, you will require the following data a
 
 ### Optional configurations
 
-* **Authorization**: HTTP Basic Authentication (BA) header.
+#### Basic Auth
+
+* HTTP Basic Authentication (BA) header.
 
     * Username. _Example_:  Alibaba.
 
     * Password. _Example_: opensesame.
 
+
+#### Mutual TLS ([TLS Authentication](../tls-authentication.md))
+
 * **Key**: TLS Key file. _Example_: mybrandpushKey.pem
 
 * **Certificate**: TLS certification file. _Example_: mybrandpushCrt.pem
 
-* **Custom Headers**: Custom HTTP header set by the Brand (up to 4 custom headers)
+#### Custom HTTP Headers
+
+* HTTP header set by the Brand (up to 4 custom headers)
 
   * Name: max length of 24 characters (only alphabets)
 
