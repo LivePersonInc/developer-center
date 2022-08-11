@@ -14,7 +14,7 @@ permalink: push-notification-service-configuration-push-proxy.html
 indicator: messaging
 ---
 
-![](img/pusher/PushProxyFlow.png)
+<img src="/img/pusher/PushProxyFlow.png" alt="Push Proxy Outbound Flow" style="width: 800px;padding: 20px;">
 
 Push proxy is a feature that can be self-managed in the Conversational Cloud console.
 
@@ -41,7 +41,7 @@ In order to enable the push proxy feature, you will require the following data a
     * Password. _Example_: opensesame.
 
 
-#### Mutual TLS ([TLS Authentication](../tls-authentication.md))
+#### Mutual TLS ([TLS Authentication](push-notification-service-tls-authentication.html))
 
 * **Key**: TLS Key file. _Example_: mybrandpushKey.pem
 
