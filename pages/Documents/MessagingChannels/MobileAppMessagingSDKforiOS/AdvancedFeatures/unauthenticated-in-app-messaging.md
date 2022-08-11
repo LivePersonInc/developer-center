@@ -27,6 +27,8 @@ LPAuthenticationParams contains an authentication type, you can either set it or
 
 _Note: If you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated._
 
+_Note: Signup is only used in code snippet for discovery purposes. Please use .unauthenticated type referenced further down within the examples for actual implementation_
+
 ```swift
 class LPAuthenticationParams: NSObject {
     …
