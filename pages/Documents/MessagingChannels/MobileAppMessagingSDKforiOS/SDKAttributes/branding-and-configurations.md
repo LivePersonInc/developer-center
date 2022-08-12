@@ -2192,7 +2192,7 @@ Input TextView top border color default clear color.
 Input TextView placeholder text color. 
 
 - **Type:** UIColor  
-- **Default value:**  nil
+- **Default value:** nil
 
 --- 
 
