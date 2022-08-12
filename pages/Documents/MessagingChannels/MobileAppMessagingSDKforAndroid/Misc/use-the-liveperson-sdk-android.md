@@ -195,7 +195,7 @@ private void  initActivityConversation() {
     LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
         @Override
         public void onInitSucceed() {
-            // you can't register pusher before initialization
+            // You can't register pusher before initialization
             handlePusherRegistration(MainActivity.this);
             runOnUiThread(new Runnable() {
                 @Override
@@ -320,7 +320,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
          @Override
         public void onMessageReceived(RemoteMessage remoteMessage) {
-                  // TODO(developer): Handle FCM messages here.
+            // TODO(developer): Handle FCM messages here.
             Log.d(TAG, "From: " + remoteMessage.getFrom());
             // Check if message contains a data payload.
             if (remoteMessage.getData().size() > 0) {
@@ -330,7 +330,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
                 String account = "12345678";
                 PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
-                //Code snippet to add push UI notification
+                // Code snippet to add push UI notification
                 if (message != null){
                     NotificationUI.showNotification(this, message);
                 }
@@ -360,8 +360,8 @@ The proprietary SDK notification is only for display purposes, interacting with 
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
             // Register to LivePerson Pusher
-            String account = "12345678"; //Replace with your account id.
-            String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
+            String account = "12345678"; // Replace with your account id.
+            String appID = "com.liveperson.sampleapp"; // Replace with your applicationId.
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
@@ -497,7 +497,7 @@ To handle a scenario when a push message is clicked, you need to implement a pus
     ```java
     private void handlePush(Intent intent) {
       boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
-      //Check if we came from Push Notification
+      // Check if we came from Push Notification
       if (isFromPush) {
           clearPushNotifications();
           if (LivePerson.isValidState()){
