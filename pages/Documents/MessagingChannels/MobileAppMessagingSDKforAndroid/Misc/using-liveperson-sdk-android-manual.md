@@ -284,7 +284,7 @@ private void  initActivityConversation() {
      LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
          @Override
          public void onInitSucceed() {
-             // You can"t register pusher before initialization
+             // You can’t register pusher before initialization
              handlePusherRegistration(MainActivity.this);
              runOnUiThread(new Runnable() {
                  @Override
@@ -309,7 +309,7 @@ private void  initActivityConversation() {
 {:start="6"}
 6. **The openActivity function**
 
-Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren"t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
+Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren’t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
 
 ```java
 private void openActivity() {
