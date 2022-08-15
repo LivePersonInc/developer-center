@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-Users within Conversational Cloud can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
+Users within Conversational Cloud can be agents, agent managers, administrators, or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill, and other important user information.
 
 **Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
@@ -54,9 +54,9 @@ A few things you'll need to get started with this API:
 
 ### Use Cases for Users API
 
-* Automatically update user information such as profile picture, email, nickname or password
+* Automatically update user information such as profile picture, email, nickname, or password
 
-* Automatically update user assignments such as skills, max concurrent chats or max open messaging conversations
+* Automatically update user assignments such as skills, max concurrent chats, or max open messaging conversations
 
 * Automatically add new agent users to the system
 
