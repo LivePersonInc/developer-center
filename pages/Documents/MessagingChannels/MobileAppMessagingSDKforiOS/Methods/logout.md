@@ -21,10 +21,14 @@ This method conducts the following:
 * Unregisters from the push notification service based on unregister Type provided.
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
+* Note: This does not end the current messaging conversation.
 
 `func logout(unregisterType: LPPusherUnregisterType, 
             completion: @escaping ()->(), 
             failure: @escaping (_ error: Error)->())`
+            
+**Important: This method must not be called when the conversation screen is displayed.**
+
 
 #### LPPusherUnregisterType
 * **All**: unregister for all types of push notification messages

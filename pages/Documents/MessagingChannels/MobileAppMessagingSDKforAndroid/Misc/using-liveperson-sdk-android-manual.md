@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
    private Button startConvBtn;
  // Brand login details
    private final String brandID = "82055668";
-// Project’s package
+ // Project’s package
    private final String appID = "com.shaym.sdk28";
  // Intent Handler
    private IntentsHandler mIntentsHandler;
@@ -284,7 +284,7 @@ private void  initActivityConversation() {
      LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
          @Override
          public void onInitSucceed() {
-             // you can"t register pusher before initialization
+             // You can’t register pusher before initialization
              handlePusherRegistration(MainActivity.this);
              runOnUiThread(new Runnable() {
                  @Override
@@ -309,7 +309,7 @@ private void  initActivityConversation() {
 {:start="6"}
 6. **The openActivity function**
 
-Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren"t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
+Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren’t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
 
 ```java
 private void openActivity() {
@@ -573,8 +573,8 @@ public class FirebaseRegistrationIntentService extends IntentService {
    protected void onHandleIntent(Intent intent) {
        String token = FirebaseInstanceId.getInstance().getToken();
        // Register to LivePerson Pusher
-       String account = "12345678"; //Replace with your account id.
-       String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
+       String account = "12345678"; // Replace with your account id.
+       String appID = "com.liveperson.sampleapp"; // Replace with your applicationId.
        LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
    }
 }
@@ -593,17 +593,17 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 ```java
    @Override
    public void onMessageReceived(RemoteMessage remoteMessage) {
-             // TODO(developer): Handle FCM messages here.
+       // TODO(developer): Handle FCM messages here.
        Log.d(TAG, "From: " + remoteMessage.getFrom());
        // Check if message contains a data payload.
        if (remoteMessage.getData().size() > 0) {
            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
            // Send the data into the SDK
-           String account = "12345678"; //Replace with your account id.
+           String account = "12345678"; // Replace with your account id.
            PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
-           //Code snippet to add push UI notification
+           // Code snippet to add push UI notification
            if (message != null){
                NotificationUI.showNotification(this, message);
            }
@@ -634,7 +634,7 @@ Then, add the following function into the messaging activity. This will check if
 ```java
 private void handlePush(Intent intent) {
    boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
-   //Check if we came from Push Notification
+   // Check if we came from Push Notification
    if (isFromPush) {
        clearPushNotifications();
                if (LivePerson.isValidState()){
