@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-Users within Conversational Cloud can be agents, agent managers, administrators, or campaign managers. For brands with large number of agents, the user list may need to be updated on a regular basis. The user entity includes name, picture URL, password, skill, and other important user information.
+Users within the Conversational Cloud can be agents, agent managers, administrators, or campaign managers. For brands with many agents, the user list may need to be updated regularly. The user entity includes name, picture URL, password, skill, and other important user information.
 
 **Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
