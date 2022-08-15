@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-Users within Conversational Cloud can be agents, agent managers, administrators, or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill, and other important user information.
+Users within Conversational Cloud can be agents, agent managers, administrators, or campaign managers. For brands with large number of agents, the user list may need to be updated on a regular basis. The user entity includes name, picture URL, password, skill, and other important user information.
 
 **Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
@@ -43,7 +43,7 @@ A few things you'll need to get started with this API:
 		{: .important}
 	For the Users API, select the Administration category and check Users
 
-		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.  
+		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.
 
 		{: .important}
 	When registering an OAuth 2.0 application for using the Users API, use the 'users.read' and 'users.write' scopes
