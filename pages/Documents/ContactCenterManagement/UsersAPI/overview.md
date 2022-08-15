@@ -54,7 +54,7 @@ A few things you'll need to get started with this API:
 
 ### Use Cases for Users API
 
-* Automatically update user information such as profile picture, e-mail, nickname or password
+* Automatically update user information such as profile picture, email, nickname or password
 
 * Automatically update user assignments such as skills, max concurrent chats or max open messaging conversations
 
