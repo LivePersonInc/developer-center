@@ -110,7 +110,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Client side masking: The data is masked in the conversation transcript (appear as asterisks) but the Agent can read it.
 
-    * Real time masking — The data is masked for both Client and Agent
+    * Real time masking: The data is masked for both Client and Agent
 
     * Configuration of such masking is conducted via LivePerson.  Please contact your representative for configuration.
 

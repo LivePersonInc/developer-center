@@ -73,12 +73,12 @@ Example front-end usage can be found below. In this example, we call the Badge N
 
 ```javascript
 $.get('https://messagingfailover.herokuapp.com/helpers/msghist/' + lpTag.site + '/' + jwt_decode(token).sub + '/unreadByConsumer',
-	function(data){
-		console.log(data);
-		if(data.unreadByConsumer){
-			//display badge
-		  document.getElementById("new-messages-notification").style.display="table";
-		}
+  function(data){
+    console.log(data);
+    if(data.unreadByConsumer){
+      //display badge
+      document.getElementById("new-messages-notification").style.display="table";
+    }
 });
 ```
 
