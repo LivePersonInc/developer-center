@@ -32,7 +32,7 @@ GEM
     ffi (1.15.5)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    html-proofer (4.3.2)
+    html-proofer (4.4.0)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogiri (~> 1.13)
