@@ -36,6 +36,7 @@ class LPAuthenticationParams: NSObject {
     …
 }
 ```
+_Note: Signup should only be used as shown above for discovery purposes. Please use .unauthenticated type in implementation. Further information is below._
 
 #### Server side configurations (In case needed, should be modified by LivePerson)
 
