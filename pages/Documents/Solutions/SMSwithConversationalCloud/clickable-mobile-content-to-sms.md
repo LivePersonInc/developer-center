@@ -99,13 +99,10 @@ In order to ensure that responses from a brand are received by the consumer in t
 
 Notice the use of:
 
-·  	The + sign
-
-·  	The country code: 1
-
-·  	Brackets around the area code (000)
-
-·  	Dash between the final two number groups 000-0000
+* The + sign
+* The country code: 1
+* Brackets around the area code (000)
+* Dash between the final two number groups 000-0000
 
 #### Step 3: Create an Entry Point
 
@@ -151,10 +148,10 @@ As well on the consumer end, the following JavaScript onclick trigger needs to b
 
 ```html
 <script>
- 	$(document).on('click', "#contact-main", function(){
-      	$('#contact-main').hide();
-      	$('#agreement').show();
- 	});
+  $(document).on('click', "#contact-main", function(){
+    $('#contact-main').hide();
+    $('#agreement').show();
+  });
 </script>
 ```
 
@@ -166,12 +163,12 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 
 ```css
 .modal-centered{
- 	width:250px;
- 	height:200px;
- 	position:absolute;
- 	left:50%;
- 	top:50%;
- 	margin:-100px 0 0 -125px;
+  width:250px;
+  height:200px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-100px 0 0 -125px;
 }
 ```
 
