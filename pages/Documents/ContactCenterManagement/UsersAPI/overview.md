@@ -41,7 +41,7 @@ A few things you'll need to get started with this API:
 		* **OAuth 1.0 App Keys** — [follow the instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
 		
 		{: .important}
-	For the Users API, select the Admisintration category and check Users
+	For the Users API, select the Administration category and check Users
 
 		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.  
 
