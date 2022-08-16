@@ -498,7 +498,7 @@ Yes, it does. See details [here](outbound-reporting-api-overview.html).
 
 <strong>7. How do we know which field is optional or required?</strong>
 
-Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
+Refer to each API's <strong>Request Body Parameters</strong> or [Swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
 
 <strong>8. What's the restriction on request body parameters?</strong>
 
