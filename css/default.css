@@ -1230,12 +1230,11 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #anchorlist {
-    margin-top: 90px;
+    margin-top: 70px;
     text-align: left;
     position: fixed;
     max-height: 360px;
     overflow-wrap: anywhere;
-    overflow-y: scroll;
 }
 
 #anchorlist a {
