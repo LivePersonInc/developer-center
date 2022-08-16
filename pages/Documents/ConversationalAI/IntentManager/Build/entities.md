@@ -14,7 +14,7 @@ indicator: both
 
 ### What's an entity?
 
-For an explanation of an entity, see [here](intent-manager-key-terms-concepts.html#entities).
+An [entity]((intent-manager-key-terms-concepts.html#entities)) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
 
 ### Add a Value Set entity
 
@@ -58,14 +58,14 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 Use the **Bulk Add** or **Bulk Edit** features, respectively, to add or edit a set of entity values in bulk.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit1.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit1.png" alt="Bulk Edit link on Entity Details page">
 
 When you click the link, all of the values are placed into a single field. This means you can make changes to all or some of them in bulk. For example, you can:
 
 * Insert a number of additional values at the top or bottom. This is handy if you have the values in a separate file. You can quickly copy them and paste them in.
 * Select a number of values and delete them all at once. This is faster than doing so one by one.
 
-<img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png" alt="">
+<img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png" alt="Example of all entity values in a single field">
 
 {: .important}
 To save your changes, click the **Update Entity** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
@@ -90,6 +90,6 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. Select the **Entities** page.
 5. In the left panel, select the entity.
-6. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png" alt=""> (3-dot icon), and select **Delete**.
+6. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png" alt="Three-dot icon"> (3-dot icon), and select **Delete**.
 7. In the confirmation dialog, click **Yes**.
 8. Train the domain so that the deletion is reflected in a new model version.

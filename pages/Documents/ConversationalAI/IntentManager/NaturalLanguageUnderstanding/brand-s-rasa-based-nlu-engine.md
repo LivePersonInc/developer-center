@@ -26,9 +26,9 @@ Your Rasa implementation must conform to the schemas at the links above.
 ### Connect the NLU engine
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. Add a domain as described [here](intent-manager-build-domains.html#add-a-domain-manually-or-using-an-import-file). When you do this, you need to provide some information specifically about your Rasa solution:
+2. [Add a domain](intent-manager-build-domains.html#add-a-domain-manually-or-using-an-import-file). When you do this, you need to provide some information specifically about your Rasa solution:
 
-    <img style="width:600px" src="img/ConvoBuilder/rasa1.png">
+    <img style="width:600px" alt="Rasa-specific info when adding a domain" src="img/ConvoBuilder/rasa1.png">
 
     * **NLU Provider**: Select “Brand's Rasa,” to indicate that you’re using a custom solution that you deployed.
     * **Rasa Host URL**: Enter the base URL for your Rasa training and prediction endpoints.
@@ -36,7 +36,7 @@ Your Rasa implementation must conform to the schemas at the links above.
 
         Select “Custom” if you’re using an authentication type other than TokenAuth or JWT. When you select “Custom,” you can enter the authentication type (e.g., “Bearer”) in the field below, although this isn’t required.
 
-        <img style="width:600px" src="img/ConvoBuilder/rasa2.png">
+        <img style="width:600px" alt="Fields available when using a Custom authentication type" src="img/ConvoBuilder/rasa2.png">
         
         In the Authorization header of a request, the custom authentication type that you entered is used as the prefix denoting the token type (e.g., if the type is “Bearer,” the header’s value is “Bearer &lt;tokenValue&gt;”). If you don’t enter a custom authentication type, the token alone is sent (e.g., the header’s value is simply “&lt;tokenValue&gt;”).
 
@@ -69,7 +69,7 @@ Note the following:
 
     (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
 
-    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img class="inlineimage" alt="Refresh icon" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
 ### Testing constraints
 

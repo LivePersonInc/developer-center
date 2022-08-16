@@ -15,10 +15,10 @@ indicator: both
 
 You can use the **Test User Input** tool to test how a single utterance performs against an intent or the domain. The tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the tool, you can quickly and easily test that phrase to see how it behaves.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug3.png" alt="">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug3.png" alt="Test User Input tool showing a matched intent">
 
 {: .important}
-If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
+If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more, see [this explanation](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 #### To test a single utterance for intent detection
 
@@ -33,15 +33,15 @@ If the domain uses the LivePerson engine for NLU, on occasion you might notice a
 
     **Model version**: Select the trained model version test. You can select from all existing versions.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png" alt="Default state of the Test User Input tool for detecting matched intents">
 
 5. Click **Test**.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png" alt="">
+    The search results show matched intents and their [confidence scores](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
+
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png" alt="Matched intent results for an example utterance">
 
     If you searched in the domain, you can select a result to see a more detailed breakdown.
-
-    For details on the intent scoring, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
 
     After reviewing the results, if the score isn't where you want it, you can refine the training phrases.
 
@@ -66,3 +66,5 @@ If the domain uses the LivePerson engine for NLU, on occasion you might notice a
     The **SUMMARY** tab shows the custom and global entities that were recognized. The **DETAILS** tab shows more info on recognition, including the confidence score for global entities. Custom entities are either recognized with 100% confidence or not, so no confidence score is shown for these.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities3.png" alt="Details tab showing the recognition info for detected entities">
+
+    If the results for custom entities aren't what you expect, update the defined entity. If the results for global entities aren't what you expect, provide this feedback to your LivePerson representative.

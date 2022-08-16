@@ -91,11 +91,11 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
     (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
 
-    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png" alt="">
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png" alt="Intents page with the Train button in the upper-right corner">
 
-    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png" alt="">
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png" alt="Versions page showing a version with a status of In Progress">
 
-    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png" alt=""> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png" alt="Refresh icon"> (Refresh icon) in the **Training Status** column.
 
 ### Still using LivePerson (Legacy) NLU?
 
@@ -119,7 +119,7 @@ Key characteristics of the legacy engine include:
 * If you have more than 5 intents and more than 15 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
   * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
-  * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledgeai-internal-knowledge-bases-best-practices.html).
+  * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see [these best practices](knowledgeai-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained.
 
 #### Convert a LivePerson (Legacy) domain to LivePerson
@@ -134,7 +134,7 @@ Brands with existing domains using the deprecated LivePerson (Legacy) engine are
 3. Update the intents:
 
     * Provide at least 5 intents.
-    * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
+    * Provide at least 15 training phrases per intent. If needed, you can [generate similar training phrases](intent-manager-build-intents.html#generate-training-phrases).
     * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover-intent-discovery.html) to enrich your training set.
 
 #### How entities affect the NLU score — LivePerson (Legacy) engine only

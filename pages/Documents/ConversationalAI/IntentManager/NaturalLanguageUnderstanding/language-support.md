@@ -72,7 +72,7 @@ Available with [Google Dialogflow](intent-manager-natural-language-understanding
 
 ### Brand's Rasa-based NLU engine
 
-Language support depends on which version of Rasa you’ve implemented. For more information, see [https://rasa.com/docs/rasa/language-support/](https://rasa.com/docs/rasa/language-support/).
+Language support depends on which version of Rasa you’ve implemented. For more information, see [Rasa's info on language support](https://rasa.com/docs/rasa/language-support/).
 
 ### Related topics
 * [Language Support](conversation-builder-bots-language-support.html) (Conversation Builder bots)
