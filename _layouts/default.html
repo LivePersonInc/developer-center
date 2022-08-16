@@ -92,7 +92,8 @@
                     <div class="article-meta hidden">
                         {% assign currentYear = "now" | date:"%Y" %}
                         {% assign articleUpdatedYear = page.last_modified_at | date: '%Y' %}
-                        {% if articleUpdatedYear == currentYear %}
+                        <!-- if this is the current year, don't show the year -->
+                        {% if currentYear == articleUpdatedYear %}
                         <p>Updated {{ page.last_modified_at | date: '%B %d' }} </p>
                         {% else %}
                         <p>Updated {{ page.last_modified_at | date: '%B %d %Y' }}</p>
