@@ -1231,10 +1231,10 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #anchorlist {
   margin-top: 70px;
-  text-align: left;
-  position: fixed;
-  max-height: 360px;
   overflow-wrap: anywhere;
+  padding-bottom: 70px;
+  position: sticky;
+  top: 130px;
 }
 
 #anchorlist a {

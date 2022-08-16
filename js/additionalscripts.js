@@ -260,7 +260,7 @@ function handleUniquePages() {
   } else {
     // console.log("not in root folder")
     jumpto.css("flex", "1")
-    jumpto.css("display", "flex")
+    // jumpto.css("display", "flex")
     sidebar.css("margin-right", "6%")
     suggestButton.css("display", "flex")
     indicatorContainer.css("display", "flex")
