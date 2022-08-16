@@ -43,7 +43,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **External Knowledge Base**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_3.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_3.png" alt="Add a Knowledge Base window, where you specify the source name">
 
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
@@ -52,7 +52,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Language**: Select the language of the content. Make an accurate selection here; this helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 4. Click **Next**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png" alt="Add a Knowledge Base window, where you specify how to get the content metadata">
 
 5. Define the request to fetch your content's metadata. The request should return a list of articles, and each article must contain a title and unique identifier. You can optionally retrieve tags and a category as well. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method.
@@ -69,7 +69,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 
 6. Click **Next**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png" alt="Add a Knowledge Base window, where you specify how to get the content">
 
 7. Define the request for the on-demand retrieval of a single article. To pass the unique identifier of the article to retrieve, you must use the {externalArticleId} placeholder that's provided as per your CMS' API contract: in the URL, in the request parameters, or in the post body.
 
@@ -99,7 +99,7 @@ An intent can't be used more than once, i.e., in more than one article.
 2. Use the **Articles** page to find the article, and select it.
 3. Use the **Intent** dropdown to select the name of the intent to associate with the article. From this dropdown, you can also create the intent on-the-fly if needed.
 
-    <img style="width:700px" src="img/ConvoBuilder/kb_cms_associate_article.png" alt="">
+    <img style="width:700px" src="img/ConvoBuilder/kb_cms_associate_article.png" alt="The Intent dropdown on the Article Configuration window">
 
 ### Sync with the CMS
 
@@ -118,4 +118,4 @@ For details on sync operations, check the knowledge base’s Change History page
 1. Open the knowledge base.
 2. Click **Settings** in the upper-left corner.
 3. Scroll down and expand **More Options**.
-4. Scroll down to **Sync Articles**, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_sync_with_cms.png" alt="">.
+4. Scroll down to **Sync Articles**, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_sync_with_cms.png" alt="Sync icon">.

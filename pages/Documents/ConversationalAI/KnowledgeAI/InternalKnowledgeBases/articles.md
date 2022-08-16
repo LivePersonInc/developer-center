@@ -16,7 +16,7 @@ indicator: both
 
 An article is a focused piece of content (a message) on a single topic that you want to serve to consumers.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png" alt="An example of two articles in a list">
 
 **To add an article to an internal knowledge base**
 
@@ -47,7 +47,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings0.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings0.png" alt="Content Links settings">
 
 Details on how to set this up follow below.
 
@@ -55,7 +55,7 @@ Details on how to set this up follow below.
 
 First, in the **Advanced Settings** of the article, enter the URLs to send **(1)**.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png" alt="Entering the URL in the Content field and entering the image in the Image field">
 
 {: .important}
 The remainder of this information below is for the benefit of bot developers using a KnowledgeAI integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a KnowledgeAI integration, namely, use of the [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
@@ -68,7 +68,7 @@ Verify that the appropriate knowledge base is selected **(2)**, and then add cus
 
 The "article" custom data field is added automatically when you add the Knowledge Base integration, but in this step you need to manually add additional custom data fields for the content links. For the values, specify the paths to the URL nodes in the JSON, like we've done in the image below.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png" alt="A well-configured KnowledgeAI integration">
 
 {: .important}
 For the names of the JSON nodes for the content links, see the JSON reference farther below in this topic.
@@ -77,15 +77,15 @@ For the names of the JSON nodes for the content links, see the JSON reference fa
 
 Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [this section](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
 
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png" alt="">
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png" alt="">
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png" alt="">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png" alt="An example of an FAQ Search integration">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png" alt="The interactions that send the result, i.e., the article's image and content">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png" alt="The interaction that sends the result, i.e., the content URL and the interaction that sends a message when no results are found">
 
 #### Preview the conversation
 
 Use Conversation Builder's Preview tool to preview the conversation and verify the content is returned and rendered as you expect.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png" alt="">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png" alt="The conversation with the consumer as it renders in the Preview tool">
 
 #### Useful techniques
 
@@ -93,7 +93,7 @@ Continuing our example, we've added some JavaScript so that, if there's a conten
 
 To accomplish this, in the Display Article interaction, we've configured the next action to be "End Interaction." Then, we've added some Post-Process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png" alt="Example post-process code">
 
 ### Enable or disable an article
 
@@ -171,11 +171,11 @@ In your articles, replace any word where you want the "CREDENTIALS" entity to be
 
 Assume we have a knowledge base using Knowledge Base intents and an existing article with the following content:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png" alt="The configuration of an example article that doesn't make use of entities">
 
 Our article when taking advantage of entities would result in the following:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png" alt="The configuration of an example article that makes use of entities">
 
 Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
 

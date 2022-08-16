@@ -21,7 +21,7 @@ After you've added your content and linked it to intents, tune the knowledge bas
 1. Open the knowledge base, and click **Articles** in the menu in the upper-left corner.
 2. In the **Answer Tester** on the right, specify the following:
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png" alt="">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png" alt="The default state of the Answer Tester">
 
     * **Question**: Enter the consumer utterance for which you want to find matching articles.
     * **Search mode**: Select the [type of search](knowledgeai-search-methods.html) to perform.
@@ -32,12 +32,12 @@ After you've added your content and linked it to intents, tune the knowledge bas
 3. Click **Get Answers**.
 4. Review the results under **Matched Answers**.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test2.png" alt="">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test2.png" alt="The results of an example test using the Answer Tester">
 
 5. You can click on an article title to see the article, and toggle between this and its JSON.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test3.png" alt="">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test4.png" alt="">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test5.png" alt="">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test3.png" alt="The inital view of the matched answers">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test4.png" alt="The view of the Article tab after you select a result">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test5.png" alt="The view of the JSON tab after you select a result">
 
 6. Based on the results, adjust the training phrases for the intents in the associated domain if needed.
