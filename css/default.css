@@ -1232,9 +1232,6 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 #anchorlist {
   margin-top: 70px;
   overflow-wrap: anywhere;
-  padding-bottom: 70px;
-  position: sticky;
-  top: 130px;
 }
 
 #anchorlist a {
