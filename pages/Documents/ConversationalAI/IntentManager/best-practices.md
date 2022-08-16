@@ -46,14 +46,6 @@ Currently, you can only pull a maximum of 500 messages at a time. If you classif
 * Verify each training phrase is a clear match to its named intent, and remove it if not.
 * Don’t use more than one entity per training phrase.
 
-### Entities
-Use a maximum of one custom [entity](intent-manager-key-terms-concepts.html#entities) per training phrase, as only a single entity is used when the model is trained.
-
-Don't use the names of global entities in training phrases. However, you can use example values of global entities. For example:
-
-* **Do** - I want to buy a phone today.
-* **Don't** - I want to buy a phone DATE.
-
 ### Model coverage
 Intent discovery is the task of finding new intents to add to your current taxonomy. This task is useful to expand the model’s coverage. [Intent discovery](intent-manager-discover-intent-discovery.html) is accomplished under “Discover.”
 

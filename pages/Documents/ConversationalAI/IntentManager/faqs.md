@@ -84,9 +84,6 @@ The Starter Packs are supposed to be the start rather than the end of a customer
 | Telecommunications | 46% | 64% |
 | Insurance | 78% | 68% |
 
-#### What are entities and how should they be used?
-Currently, the [LP NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) uses [entities](intent-manager-key-terms-concepts.html#entities) to facilitate the creation and curation of training sentences. For example, you may create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training sentences, you can replace a specific product name with the entity name PRODUCT. Using entities will help you extend your training sentences like a “template” onto all products and will prevent your model from focusing too much on certain product names during training.
-
 #### Should I create intents to capture common ways that customers state affirmative (yes, yes please, sure, I would like that…) and negative (no, no thank you, not at this time, I don’t think so…)?
 It is rarely advised to create an affirmative/negative intent for a conversation, as the intent is but an affirmation or negation of the intent contained in the preceding agent question. Hence, the affirmatives/negatives could envelope a variety of intents. Our model currently does not process the preceding context when rendering a prediction on a particular consumer message. 
 

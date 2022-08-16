@@ -17,7 +17,7 @@ indicator: both
 | Statement of intent (SOI) | A consumer message that contains an intent. |
 | Domain | A list of intents and entities; these can be matched to consumer training phrases (utterances) with an intent-recognition model. |
 | Prebuilt domain | A prebuilt domain is a starting point for you to get going with intents. The intent-recognition model is filled with predefined intents that have been trained and activated for your convenience. The model has been developed using aggregated and anonymized data from several brands. While a prebuilt domain is functional, you’ll need to customize it for your specific needs to get the best performance. |
-| Entity | Any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. |
+| Entity | Any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots. |
 | NLU | [NLU](intent-manager-natural-language-understanding-introduction.html) stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. |
 | Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent.<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
 | Training | The process by which the model learns to differentiate which examples belong to each intent class. |
@@ -148,10 +148,7 @@ A meta intent is a wrapper that can contain many other standard intents. This fu
 
 Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
 
-Entities facilitate the creation and curation of training phrases. For example, you might create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training phrases, you can replace a specific product name with the entity name PRODUCT. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
-
-{: .important}
-Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
+Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots. A slot is a special &mdash; and powerful &mdash; type of variable that brings dynamic, fluid behavior to storing consumer input. See [these examples](conversation-builder-variables-slots-slots.html) on automatically detecting entities within Question interactions and storing the entity values in slots. The examples demonstrate how this can pre-populate consumer answers to questions and thereby streamline the data collection process significantly.
 
 There are three types of entities:
 
@@ -171,15 +168,11 @@ As their name suggests, Value Set entities are those that have a defined set of 
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
-The LivePerson NLU engine trains the model with as many as 100 Value Set entity combinations, e.g, “I’m interested in SPORTS” yields “I’m interested in football,” “I’m interested in running,” and “I’m interested in walking.” As mentioned earlier, a maximum of one entity per training phrase is used during model training. Unlike Regular Expression entities, Value Set entities aren’t considered at intent prediction time.
-
 #### Regular Expression entities
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
 <img style="width:800px" alt="An example of a Regular Expression entity" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
-
-Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression, e.g., "I want to check on my order 757575," the bot detects this and substitutes the ORDER_NO entity into the utterance before predicting the consumer's intent. In general though, Regular Expression entities work much like Value Set entities with this single exception: With Regular Expression entities, the matched string is replaced by the entity just before prediction.
 
 Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
 
@@ -187,16 +180,11 @@ Use a Regular Expression entity in situations where the entity's possible values
 * Order numbers
 * Help Desk ticket numbers
 
-Continuing our `ORDER_NO` example, you might use the entity in the training phrases for an "order status" intent, like so:
-
-* "I want to check on my order ORDER_NO"
-* "What's the status of order ORDER_NO"
-
 Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 #### Global entities
 
-Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t have to add them manually.
+Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t need to add them manually in Intent Manager.
 
 Global entities include:
 
@@ -225,7 +213,7 @@ Global entities include:
 
 **Detection of global entities**
 
-Keep in mind that the detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
+The detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
 
 * Message: My name is Paris and I live in Paris
 * Entities: PERSON_NAME = Paris, CITY = Paris
@@ -250,15 +238,6 @@ As mentioned above, global entities are detected automatically by the system. Yo
 If you have defined custom entities within your domain, you’ll see those detected along with the global entities:
 
 <img style="width:800px" alt="The Test User Input tool detecting a custom Value Set entity" src="img/ConvoBuilder/im_entities_global2.png" alt="">
-
-**Using global entities**
-
-In the training phrases of intents, you can use example values of global entities, but don't use the names of global entities:
-
-* **Do** - I want to buy a phone today.
-* **Don't** - I want to buy a phone DATE.
-
-You can also use global entities to manually create [slot variables](conversation-builder-variables-slots-slots.html) within the rules of interactions.
 
 ### Training
 
