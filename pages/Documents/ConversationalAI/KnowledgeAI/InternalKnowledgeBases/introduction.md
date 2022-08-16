@@ -57,7 +57,7 @@ With Domain intents like these, you can use any of the following [NLU engines](i
 * LivePerson (Legacy)
 * A third-party NLU engine
 
-Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like Intent Manager's [Intent Analyzer](intent-manager-overview.html).
+Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, in bots, in the [Analyze](intent-manager-overview.html) features in Intent Manager, and so on.
 
 #### Knowledge Base intents
 
@@ -71,12 +71,6 @@ If you created your knowledge base before March 5, 2021, you might have chosen *
 Knowledge Base intents like these are a *legacy feature* that uses the deprecated LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
 To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. With Knowledge Base intents, the deprecated legacy engine that's used behind the scenes still works, but it's no longer supported apart from security updates.
-
-### Languages
-
-#### Working with special language characters
-
-If you need to support special language characters (e.g., ö, ü, ß), and you’re creating an internal knowledge base by importing a CSV file, ensure the import file is saved as a UTF-8 encoded CSV file beforehand.
 
 ### Active versus inactive articles
 

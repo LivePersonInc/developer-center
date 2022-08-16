@@ -49,7 +49,7 @@ Or, how about this scenario?
 
     <img style="width:600px" src="img/ConvoBuilder/kai_csq5.png" alt="">
 
-    (In this flow and in others, similar training phrases can be automatically generated. This capability uses an Intent Manager feature behind the scenes, and there are some limitations that apply. For info on these, see the notes [here](intent-manager-build-intents.html#generate-training-phrases).)
+    (In this flow and in others, [similar training phrases can be automatically generated](intent-manager-build-intents.html#generate-training-phrases). This capability uses an Intent Manager feature behind the scenes, and there are some limitations that apply.)
 
 ### Who is the view for?
 

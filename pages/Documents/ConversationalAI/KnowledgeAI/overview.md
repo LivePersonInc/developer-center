@@ -17,8 +17,7 @@ Did you know that LivePerson has a Conversational AI forum for builders? [Check 
 ### Introduction
 KnowledgeAI unifies and leverages your brand’s content to provide fast answers to common questions and issues, and effectively automate consumer conversations at scale. Using KnowledgeAI, you can ingest and transform your existing content into messaging-ready answers and seamlessly answer consumer questions in rich, automated conversations.
 
-{: .important}
-For an in-depth introduction to KnowledgeAI, see [here](https://knowledge.liveperson.com/ai-bots-automation-knowledgeai-with-agent-assist.html) in our Knowledge Center.
+Looking for more? Check out [this in-depth introduction](https://knowledge.liveperson.com/ai-bots-automation-knowledgeai-with-agent-assist.html) in our Knowledge Center.
 
 ### Knowledge bases
 
@@ -65,4 +64,4 @@ If you’re starting a knowledge base from scratch, and you prefer to work direc
 
 ### Getting started
 
-If you're just beginning with KnowledgeAI, we recommend the Getting Started tutorial series [here](tutorials-guides-getting-started-with-bot-building-overview.html). For some exposure to KnowledgeAI, make sure to continue on to the more advanced tutorial series [here](tutorials-guides-bot-groups-other-techniques-overview.html). The second series builds on the first.
+If you're just beginning with KnowledgeAI, we recommend the [Getting Started tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html). For some exposure to KnowledgeAI, make sure to continue on to the [advanced tutorial series](tutorials-guides-bot-groups-other-techniques-overview.html). The second series builds on the first.

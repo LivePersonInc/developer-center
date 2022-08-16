@@ -54,18 +54,16 @@ You don’t need to link your articles to intents right away, as the **Intent** 
 
 ### Tune a knowledge base
 
-For information on this, see [here](knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html).
+For info on this, see [this section](knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html).
 
 ### Scoring and thresholds
 
-When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it [scores the articles based on the confidence level](intent-manager-key-terms-concepts.html#confidence-score-and-threshold) of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
 | If the knowledge base is… | Then… |
 | --- | --- |
 | an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
-
-For these confidence score breakdowns, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
 
 When you implement a knowledge base search within a bot via a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.

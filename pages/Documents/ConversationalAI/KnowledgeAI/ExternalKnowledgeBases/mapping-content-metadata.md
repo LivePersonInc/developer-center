@@ -54,7 +54,7 @@ When [adding an external knowledge base with LivePerson AI](knowledgeai-external
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-**Tip:** For information on how to send article content to consumers, see [here](knowledgeai-sending-content-to-consumers-and-agents.html).
+**Tip:** For information on how to send article content to consumers, see [this topic](knowledgeai-sending-content-to-consumers-and-agents.html).
 
 When [adding an external knowledge base without LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
 
@@ -80,7 +80,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_7.png" alt="">
 
-2. In the **Transformation Spec** editor (left panel), adjust or write the Jolt transformation spec using the examples and guidance [here](knowledgeai-external-knowledge-bases-writing-a-transformation-specification.html).
+2. In the **Transformation Spec** editor (left panel), adjust or write the Jolt transformation spec using the [examples and guidance](knowledgeai-external-knowledge-bases-writing-a-transformation-specification.html).
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_1.png" alt="">
 

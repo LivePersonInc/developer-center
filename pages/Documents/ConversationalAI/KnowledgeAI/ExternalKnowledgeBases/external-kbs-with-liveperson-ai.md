@@ -63,7 +63,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
 
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, [map the returned articles' metadata data model (schema) to the LivePerson KnowledgeAI data model](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 
     **Note:** Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping — limiting the content as needed — the knowledge base will perform better and be easier to tune.
 
@@ -83,7 +83,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes.
     * **Transformation Spec**: Here again, if you were able to select your **Content Provider** in Step 3 above, a default spec is provided. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
 
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, [map the single article’s content data model (schema) to the LivePerson KnowledgeAI data model](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent
