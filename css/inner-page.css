@@ -876,7 +876,9 @@ iframe {
 @media (min-width: 767px) {
     ul.mysidebar.nav {
         height: 100vh;
+        padding-bottom: var(--space10);
     }
+
 }
 
 @media (max-width: 767px) {

@@ -62,7 +62,7 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 {:start="2"}
 
 1. “Step 1: Account Information” — Enter the relevant Account ID.
-2. “Step 2: Oath Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
+2. “Step 2: OAuth Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
    1. Go to the Campaign Builder and search for the link “Data Sources.”
    2. Go to “API” Tab and click “Manage” and then “New.”
    3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” → “Engagement History” and “Administrations” → “Skills” and click “Save.”

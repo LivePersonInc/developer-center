@@ -6,8 +6,6 @@ permalink: liveperson-apis-and-sdks.html
 indicator: both
 ---
 
-[comment]: <> TODO: Regularly confirm page accuracy
-
 ### APIs
 
 | API | Purpose |
@@ -23,6 +21,7 @@ indicator: both
 | [Audit Trail API](audit-trail-api-introduction.html) | List changes made to users, profiles, skills, lines of business, or agent groups |
 | [Automatic Messages API](automatic-messages-api-overview.html) | Retrieve and modify Automatic Messages |
 | [Chat Agent API](chat-agent-api-overview.html) | Run agent activities |
+| [Connect To Messaging API](connect-to-messaging-api.html) | Deflect to messaging when calling into IVR |
 | [Connector API](connector-api-overview.html) | Connect common messaging channels |
 | [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | Retrieve historical conversations data |
 | [Conversation Context Service API](conversation-orchestrator-conversation-context-service-overview.html) | Guide contextual continuity, context-based dynamic, and human-bot tango |
@@ -47,8 +46,9 @@ indicator: both
 | [Personal Data Deletion API](personal-data-deletion-api-overview.html) | Delete personal data (e.g., to comply with regulations like the GDPR) |
 | [Predefined Categories API](predefined-categories-api-introduction.html) | Group and manage predefined categories |
 | [Predefined Content API](predefined-content-api-overview.html) | Find, create, modify, and delete predefined content items |
+| [Proactive Messaging API](proactive-messaging-api.html) | Send outbound messages to consumers and route responses from consumers into the Conversational Cloud |
 | [Profiles API](profiles-api-overview.html) | Manage Admin, Agent Manager, Agent, Campaign Manager, or customized profiles |
-| [Send API](connector-api-send-api-overview.html) | Handles communication between Connector and Conversational Cloud |
+| [Send API](connector-api-send-api-overview.html) | Handles communication between Connector and the Conversational Cloud |
 | [Server Chat API](server-chat-api-overview.html) | Incorporate Conversational Cloud chat window into desktop or mobile applications |
 | [Shift Status API](shift-status-api-overview.html) | Check whether skills are currently in an active shift |
 | [Skills API](skills-api-overview.html) | Manage skills |
