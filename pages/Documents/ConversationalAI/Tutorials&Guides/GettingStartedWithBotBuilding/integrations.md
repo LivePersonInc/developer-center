@@ -34,11 +34,11 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png" alt=""> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png" alt="Assist icon"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the ‚ÄúLP_Cross-vertical‚Äù domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integr_order_status.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integr_order_status.png" alt="Associating the check order status intent with the dialog starter in the Order Status dialog">
 
 4. Add a new Text Statement to acknowledge the user's intent. Add the text, "Let‚Äôs find your order."
 
@@ -53,7 +53,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     Still in the rule, capture the user‚Äôs order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, and enter `{$userMessage}` for its value.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png" alt="Adding a rule to capture the user's order number">
 
     {: .important}
     `{$userMessage}` is just one of many system [variables](conversation-builder-variables-slots-variables.html) you can use in your interactions.
@@ -83,7 +83,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
     | orderStatus | {$.api_OrderStatus.orderStatus} |
     | image | {$.api_OrderStatus.image} |
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png" alt="The Integration Settings window">
 
 3. Click **Save**.
 
@@ -94,7 +94,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     From the dropdown, select your newly created OrderStatus API Integration.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/orderstatus_integr.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/orderstatus_integr.png" alt="The Integration interaction added to the dialog">
 
 3. To display our returned API data, select a new **Structured** interaction.
 
@@ -107,7 +107,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     Click ‚ÄúADD IMAGE‚Äù and in the **Image URL** field, add `{OrderStatus.image}`.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png" alt="The configured Structured interaction">
 
     {: .important}
     While images show properly in Preview, deployed bots need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
@@ -122,7 +122,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
 7. Verify that you are successfully receiving order information that is displayed with a user‚Äôs name, order status, and image.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png" alt="">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png" alt="Previewing the conversation">
 
     Congratulations! You now understand the basics of integrations and variables.
 
