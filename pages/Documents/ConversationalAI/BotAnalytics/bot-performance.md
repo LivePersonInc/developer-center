@@ -12,19 +12,19 @@ indicator: both
 ### Introduction
 Clicking a bot name on the main dashboard takes you to the bot’s **Overview** page. This provides a summary of the bot’s performance.
 
-<img style="width:800px" src="img/ConvoBuilder/ba_bot_overview.png">
+<img style="width:800px" src="img/ConvoBuilder/ba_bot_overview.png" alt="The Overview page for a bot">
 
 ### Date range and time zone
 In any bot-level view, the date range for the displayed data is shown in the upper-right corner.
 
-<img style="width:500px" src="img/ConvoBuilder/ba_date_filter_bot.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_date_filter_bot.png" alt="Date range filter">
 
 You can use this date filter to show the data for any 60-day date range within the last 13 months. You can also use the date filter to change the time zone in use.
 
 ### Views and measures
 From the **Overview**, you can access additional views for more detailed information. A few, important views are accessible directly from the menu bar; the rest are accessible from the dropdown menu.
 
-<img style="width:500px" src="img/ConvoBuilder/ba_views.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_views.png" alt="The Bot Analytics views that are accessible from the menu bar">
 
 Use the views to understand the bot's performance, for example:
 
@@ -66,7 +66,7 @@ Some measures that are useful to assess while monitoring and improving your bots
 ### Download data
 All bot views except the **Overview** and the **MACS** view, let you download the results to a CSV file. Click the **Download** icon in the upper-right corner.
 
-<img style="width:400px" src="img/ConvoBuilder/ba_download.png">
+<img style="width:400px" src="img/ConvoBuilder/ba_download.png" alt="Download icon">
 
 You can query for and download data for any 60-day time period in the last 13 months. If you need to download at one time the data for a longer time period, use [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
 
