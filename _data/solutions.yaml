@@ -1,5 +1,3 @@
-
-
 - solutionname: Mobile App Messaging
   image: mobile-app-messaging
   documents:
@@ -38,7 +36,6 @@
     - documentname: Technical Description
     - documentname: Deployment Steps
     - documentname: Additional Options
-
 
 - solutionname: Video Chat
   image: video-chat

@@ -12,7 +12,8 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatApp and Inapp. And it supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA. 
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatApp and Inapp. And it supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA.
+
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
@@ -621,7 +622,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong>Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?</strong>
 
-- As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am – 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am – 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
+- As indicated in the Swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am – 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am – 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
 
 <strong>One variable is required for SMS but what happens when more than 1 variable is passed? Will the payload fail, or will it just take the first variable?</strong>
 
@@ -629,7 +630,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong>How do we know which field is optional or required?</strong>
 
-- Proactive messaging is using industry recommended swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
+- Proactive messaging is using industry recommended Swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
 - <img src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
 
 <strong>What are the restrictions on the field in campaign request?</strong>
@@ -668,14 +669,14 @@ Allowed extensions for different types of header for a rich template:
 <strong>Are there any limitations on the URL added for header image/video/document type?</strong>
 
 Below are the limitations:
+
 - URL provided for header (image/video/document) should be publicly accessible
 - Only https urls are supported
 - Before sending WhatsApp rich messages using a template with header of type image/video/document, get the Root domain/URL whitelisted in Proactive UI.
-<br />
- For example; if the brand wants to send images from upload.wikimedia.org like: 
-https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
-https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
-<br />Brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below. 
+
+For example; if the brand wants to send images from upload.wikimedia.org like 
+https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg or https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg, the brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below.
+ 
 <img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>

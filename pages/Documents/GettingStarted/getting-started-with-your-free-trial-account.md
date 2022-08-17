@@ -34,7 +34,7 @@ indicator: both
       About your Free Trial Account
    </div>
    <div class="convo-cloud-paragraph">
-      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building"> here </a>.
+      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building">here</a>.
    </div>
 </div>
 <div class="container-note">

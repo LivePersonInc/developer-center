@@ -163,6 +163,10 @@ When contributing to this repository, please observe the following:
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
 
+#### APIs and SDKs
+
+If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
+
 ### Code and media
 
 * Be consistent
@@ -171,7 +175,7 @@ When contributing to this repository, please observe the following:
 * To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
 * The maximum (view) width for images in this repository is 800 pixels
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
 
 ## Building the site locally
 

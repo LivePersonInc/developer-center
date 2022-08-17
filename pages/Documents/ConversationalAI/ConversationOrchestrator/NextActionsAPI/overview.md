@@ -39,7 +39,7 @@ A typical use case for using the Next Actions API is to get a routing decision t
 v2 of the Conversation Orchestrator APIs was released in July 2021. The new version applies to both the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the Next Actions API. v2 has the following additional benefits:
 
 * Higher scalability
-* Improved Better data security through OAuth2.0 authorization mechanism
+* Improved data security through OAuth 2.0 authorization mechanism
 * Visibility into Dynamic Routing [policy execution logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html)
 * Better APIs i.e. update multiple context variables in a single call
 * Better data security through improved encryption

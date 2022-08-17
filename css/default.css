@@ -1227,11 +1227,14 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #jumpto {
   flex: 1;
+  padding-bottom: var(--space10);
 }
 
 #anchorlist {
   margin-top: 70px;
   overflow-wrap: anywhere;
+  position: sticky;
+  top: 140px;
 }
 
 #anchorlist a {
