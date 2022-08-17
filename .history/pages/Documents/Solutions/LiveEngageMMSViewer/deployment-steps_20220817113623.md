@@ -11,9 +11,6 @@ order: 30
 indicator:
 ---
 
-{: .deprecated}
-This information is outdated.
-
 1. Within your Twilio account, navigate to All Products and Services → Runtime → Functions. Keep track of the Your Domain field on this page.
 
 2. Click through to Functions and Add New by clicking the Plus (+) button.
