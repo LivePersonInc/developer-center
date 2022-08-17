@@ -1,0 +1,7 @@
+---
+layout: none
+---
+User-agent: *
+Disallow: /free-trial-registration/
+
+Sitemap: {{ site.url }}/sitemap.xml
