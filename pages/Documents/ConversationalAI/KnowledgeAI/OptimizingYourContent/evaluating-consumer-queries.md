@@ -23,7 +23,7 @@ These are great questions that the Consumer Queries view helps to answer. The vi
 * The questions (*“How do I cancel an order?”*) and other intentful messages (*“I want to cancel an order”*) sent by your consumers and used in knowledge base searches to find answers
 * The answers returned in response (when answers were, indeed, returned)
 
-<img style="width:800px" src="img/ConvoBuilder/kai_csq1.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/kai_csq1.png" alt="Example of the Consumer Queries page">
 
 Use the view to evaluate both answered and unanswered queries. Both vantage points help you to audit your content and improve the answer quality.
 
@@ -32,22 +32,22 @@ Consider this scenario:
 1. You use the Consumer Queries view to **review the questions** your consumers are asking.
 2. In checking out the **unanswered queries** in particular, you **discover a trend**. There’s a question that’s asked frequently.
 
-    <img style="width:400px" src="img/ConvoBuilder/kai_csq2.png" alt="">
+    <img style="width:400px" src="img/ConvoBuilder/kai_csq2.png" alt="An example of an unanswered question">
 
 3. Right within the view, you act. You **quickly add an article**, tying it to an intent that you also create on-the-fly using the unanswered query.
 
-    <img style="width:700px" src="img/ConvoBuilder/kai_csq3.png" alt="">
+    <img style="width:700px" src="img/ConvoBuilder/kai_csq3.png" alt="Using the Consumer Queries view to add an article to answer a question">
 
 Or, how about this scenario?
 
 1. This time, you’re checking out the **answered queries**.
 2. You see a consumer query that was answered with the **wrong article**.
 
-    <img style="width:400px" src="img/ConvoBuilder/kai_csq4.png" alt="">
+    <img style="width:400px" src="img/ConvoBuilder/kai_csq4.png" alt="An example of an answered question">
 
 3. Right within the view, you fix this. You **add the query as a training phrase** to the correct intent to improve its intent matching.
 
-    <img style="width:600px" src="img/ConvoBuilder/kai_csq5.png" alt="">
+    <img style="width:600px" src="img/ConvoBuilder/kai_csq5.png" alt="Using the Consumer Queries view to add the consumer query as a  training phrase to the associated intent">
 
     (In this flow and in others, [similar training phrases can be automatically generated](intent-manager-build-intents.html#generate-training-phrases). This capability uses an Intent Manager feature behind the scenes, and there are some limitations that apply.)
 
@@ -71,7 +71,7 @@ Depending on your organization, this might not be the person who implemented you
 
 Initially, the Consumer Queries view shows you a lot of data. So, the first step is to refine the view, so you can focus on what you want: a particular knowledge base, a time frame, etc. Use the available filters to accomplish this.
 
-<img style="width:800px" src="img/ConvoBuilder/kai_csq6.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/kai_csq6.png" alt="Various controls that let you refine the view">
 
 1. Select a specific knowledge base here.
 2. Use this to display the data for unanswered queries, answered queries, or both.
@@ -92,11 +92,11 @@ Unanswered queries are those where the knowledge base was searched for an answer
 2. Review an unanswered consumer query.
     Initially, the query is displayed like this:
 
-    <img style="width:400px" src="img/ConvoBuilder/kai_csq7.png" alt="">
+    <img style="width:400px" src="img/ConvoBuilder/kai_csq7.png" alt="An example of an unanswered query">
 
     You can click the down arrow at the bottom of the card to show more information:
 
-    <img style="width:400px" src="img/ConvoBuilder/kai_csq8.png" alt="">
+    <img style="width:400px" src="img/ConvoBuilder/kai_csq8.png" alt="The expanded view of the unanswered query">
 
 3. Decide if and how you want to take action:
     * **Add answer**: Select this if you want to add an answer for the query. This takes you through a guided flow: If you don’t have an existing article that’s suitable to respond to the query, you can create one. And if there is a suitable article, you can add the query as a training phrase to the article’s intent, or add an intent if none exists.
@@ -106,7 +106,7 @@ Unanswered queries are those where the knowledge base was searched for an answer
 
     **Don’t answer** dismisses the query: It simply removes the card from the view to get it out of your way. The card still counts in your  “Reviewed” total though. And if you turn on the **Reviewed** slider, you can see the card again.
 
-    <img style="width:800px" src="img/ConvoBuilder/kai_csq9.png" alt="">
+    <img style="width:800px" src="img/ConvoBuilder/kai_csq9.png" alt="The Reviewed indicator and toggle for showing the queries tht you've already reviewed">
 
 4. Repeat this process for other unanswered queries.
 
@@ -125,18 +125,18 @@ Even answered queries can provide opportunities for tuning.
 2. Review an answered consumer query.
     Initially, the query is displayed like this:
 
-    <img style="width:500px" src="img/ConvoBuilder/kai_csq10.png" alt="">
+    <img style="width:500px" src="img/ConvoBuilder/kai_csq10.png" alt="An example of an answered query">
 
     You can click the down arrow at the bottom of the card to show more information:
 
-    <img style="width:400px" src="img/ConvoBuilder/kai_csq11.png" alt="">
+    <img style="width:400px" src="img/ConvoBuilder/kai_csq11.png" alt="The expanded view of an answered query">
 
 3. Evaluate the answer to the query, and then mark the answer with a thumbs up or down:
-    * <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kai_csq12.png" alt=""> = Good = This means the answer was the right one, and the associated article has good content. Selecting this marks the answer as “Good,” and marks the card as “Reviewed.” This informs LivePerson’s underlying models. We value this feedback and use it to enhance our models.
-    * <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kai_csq13.png" alt=""> = Bad = The answer was the wrong one, or the associated article has inadequate content. This too informs LivePerson’s underlying models.
+    * <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kai_csq12.png" alt="Thumbs up icon for Good"> = Good = This means the answer was the right one, and the associated article has good content. Selecting this marks the answer as “Good,” and marks the card as “Reviewed.” This informs LivePerson’s underlying models. We value this feedback and use it to enhance our models.
+    * <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kai_csq13.png" alt="Thumbs down icon for Bad"> = Bad = The answer was the wrong one, or the associated article has inadequate content. This too informs LivePerson’s underlying models.
 4. If you marked the answer as bad, specify why, and click **Next**.
 
-    <img style="width:700px" src="img/ConvoBuilder/kai_csq14.png" alt="">
+    <img style="width:700px" src="img/ConvoBuilder/kai_csq14.png" alt="The Mark query as bad window where you specify why it was bad">
 
     The reason you marked the query as bad determines what happens next:
     * **Wrong content served**: This takes you through a guided flow, right within the view. You’re prompted to find the right article for the query, and to add the query as a training phrase to the article’s intent. If the article doesn’t have an associated intent, you’re prompted to associate an existing one or to create one.
@@ -147,7 +147,7 @@ Even answered queries can provide opportunities for tuning.
 
 To quickly run a test on an answered query, select the **Run test** option.
 
-<img style="width:600px" src="img/ConvoBuilder/kai_csq15.png" alt="">
+<img style="width:600px" src="img/ConvoBuilder/kai_csq15.png" alt="The menu option for Run Test">
 
 This takes you to the **Test** tab and populates the **Question** field with the consumer query (among other answer criteria), so you can test its performance.
 
@@ -167,7 +167,7 @@ Additionally, be aware that currently this feature is only available for interna
 
 Yes, if you expand a consumer query, you can see the ID of the associated conversation and the search criteria that was applied when performing the search of the knowledge base:
 
-<img style="width:400px" src="img/ConvoBuilder/kai_csq16.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/kai_csq16.png" alt="The Conversation ID and Search criteria fields on a consumer query card">
 
 The conversation ID is shown to support additional research, as you might want to look deeper into the context of the query. In Bot Analytics, you can use the conversation ID to display the complete transcript of the conversation.
 
@@ -183,4 +183,4 @@ Within Consumer Queries, at the end of a guided flow, you’re reminded to train
 
 Yes, there’s a download icon for this purpose.
 
-<img style="width:400px" src="img/ConvoBuilder/kai_csq17.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/kai_csq17.png" alt="The Download icon for downloading query-and-answer info">
