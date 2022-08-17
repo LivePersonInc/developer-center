@@ -1228,6 +1228,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 #jumpto {
   flex: 1;
   padding-bottom: var(--space10);
+  min-width: 13vw;
 }
 
 #anchorlist {
