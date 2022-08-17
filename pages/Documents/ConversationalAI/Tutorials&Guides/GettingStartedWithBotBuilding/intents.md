@@ -11,7 +11,7 @@ indicator: both
 ---
 
 {: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
@@ -35,7 +35,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 2. Click **Intent Manager**.
 
-    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. (Learn more about [Intent Manager](intent-manager-overview.html).)
 
     Now let’s create a domain.
 

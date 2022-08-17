@@ -54,7 +54,7 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
     <img style="width:800px" src="img/agentassisttutorial/kblist2.png" alt="">
 
-    For the purpose of this tutorial, we're relying on the default values for several settings, e.g., the **Max # of recommendations** to offer at any one time. You can read about these settings [here](conversation-assist-recommendation-sources-configuring-settings.html).
+    For the purpose of this tutorial, we're relying on the default values for several [settings](conversation-assist-recommendation-sources-configuring-settings.html), e.g., the **Max # of recommendations** to offer at any one time.
 
 {: .important}
 **Customize your POC:** If you built out additional resources in previous steps, make sure to turn on those resources too. Depending on the number of resources, it might be useful to increase the number of recommendations that you display to your agents when they are in a conversation.

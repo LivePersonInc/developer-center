@@ -37,7 +37,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 
 6. Examine the Welcome dialog, which is displayed by default. 
 
-    (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
+    (Learn about the different parts of the [workspace](conversation-builder-bot-workspace.html) in Conversation Builder.)
 
 ### Step 2: Test the Welcome dialog
 
@@ -45,7 +45,7 @@ With the bot created, let’s see how to make it respond to user utterances.
 
 The first interaction in the Welcome dialog is a Dialog Starter interaction that allows us to match a user’s utterance using patterns or intents. Following that is a Text Statement interaction that displays some text ("Hi there! Thanks for coming!") to the user.
 
-Statement interactions (e.g., Text, Image) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
+Statement interactions (e.g., Text, Image) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (Learn more about [interactions](conversation-builder-interactions-interaction-basics.html).)
 
 Let’s see the interactions in action!
 

@@ -146,6 +146,6 @@ botContext.setBotVariable('visitor_color', visitor_color, true, false);
 botContext.setBotVariable('visitor_swallow', visitor_swallow, true, false);
 ```
 
-An end-to-end demo can be found [here](https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/index.html). Simply type “web view” to trigger the appropriate dialog. Click the link to access the form, fill it in, and then submit the form. The bot will then respond, confirming that the form was filled.
+There's an [end-to-end demo](https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/index.html). Simply type “web view” to trigger the appropriate dialog. Click the link to access the form, fill it in, and then submit the form. The bot will then respond, confirming that the form was filled.
 
 <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/guideWebView_chat.png" alt="">

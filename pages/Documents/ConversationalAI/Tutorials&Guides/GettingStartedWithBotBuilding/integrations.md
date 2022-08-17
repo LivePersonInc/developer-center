@@ -11,7 +11,7 @@ indicator: both
 ---
 
 {: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 Many use cases require integration with an API to send and receive data. Following the "make payment" use case, in this tutorial you add an integration to check a user’s account balance.
 
@@ -56,7 +56,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png" alt="">
 
     {: .important}
-    `{$userMessage}` is just one of many system variables you can use in your interactions. For the complete list, and for more on variables, see [here](conversation-builder-variables-slots-variables.html).
+    `{$userMessage}` is just one of many system [variables](conversation-builder-variables-slots-variables.html) you can use in your interactions.
 
     Click **Save**.
 
@@ -101,7 +101,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
     In the Structured Question title section, add `{OrderStatus.name}`.
 
     {: .important}
-    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [here](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).)
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [this section](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
