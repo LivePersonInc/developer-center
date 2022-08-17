@@ -1225,8 +1225,9 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   color: #fff;
 }
 
+/* todo disable important */
 #jumpto {
-  flex: 1;
+  flex: 1 !important;
   padding-bottom: var(--space10);
 }
 

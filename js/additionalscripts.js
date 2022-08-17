@@ -245,7 +245,6 @@ function handleUniquePages() {
   var titleContainer = $("#documentTitleContainer")
 
   if (is_root || is_getting_started) {
-    jumpto.css("flex", "0")
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
