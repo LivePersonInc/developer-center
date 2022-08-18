@@ -101,10 +101,11 @@
                 </a>
               </div>
             </div>
+                       {% if page.last_modified %}
             <div class="article-meta hidden">
-              {% if page.last_modified %} {% assign currentYear = "now" |
-              date:"%Y" %} {% assign articleUpdatedYear = page.last_modified |
-              date: '%Y' %} {% assign createdYear = page.date | date: '%Y' %}
+              {% assign currentYear = "now" | date:"%Y" %} {% assign
+              articleUpdatedYear = page.last_modified | date: '%Y' %} {% assign
+              createdYear = page.date | date: '%Y' %}
               <div class="flex gap-8">
                 {% if createdYear == currentYear %}
                 <!-- show post creation date -->
@@ -139,8 +140,9 @@
                   >
                 </p>
               </div>
-              {% endif %} {% endif %}
+              {% endif %}
             </div>
+            {% endif %} 
           </div>
           {% endif %} {{ content | extlinks }}
 
