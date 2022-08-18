@@ -185,12 +185,12 @@ If you have not done so, install Ruby. Here’s a helpful guide on [how to best 
 
 Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 
-### First time installation
+### Install
 
 1. Run `npm install`
 2. Run `bundle install`
 
-### Launch application
+### Launch
 
 3. Run `npm run serve`
 4. Navigate to http://localhost:4000/ (or the port you chose) to access the site
