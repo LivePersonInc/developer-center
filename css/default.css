@@ -85,6 +85,10 @@ p {
   gap: 16px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
 .side-width {
   width: 320px;
 }

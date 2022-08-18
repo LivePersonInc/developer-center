@@ -52,94 +52,135 @@
         </div>
     </div>
     <div class="flex max-width">
-        <div class="defaultwrapper" id="defaultwrapper">
-        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" tabindex="2">
-        <label for="openSidebarMenu" class="sidebarIconToggle" aria-hidden="true">
+      <div class="defaultwrapper" id="defaultwrapper">
+        <input
+          type="checkbox"
+          class="openSidebarMenu"
+          id="openSidebarMenu"
+          tabindex="2">
+        <label
+          for="openSidebarMenu"
+          class="sidebarIconToggle"
+          aria-hidden="true">
           <div class="spinner diagonal part-1"></div>
           <div class="spinner horizontal"></div>
           <div class="spinner diagonal part-2"></div>
         </label>
-            <div id="defaultsidebar" class="defaultsidebar">
-                {% include sidebar.html %}
-            </div>
-            <div id="defaultcontent" class="defaultcontent">
-                {% if page.pagename %}
-
-                <div class="documenttitlecontainer" id="documenttitlecontainer">
-                    {% include nav-breadcrumbs.html %}
-
-                    <div class="documenttitle">
-                        <div id="documentTitleContainer" class="titlecontainer">
-                            <div id="document-title-h1" class='h1'>{{ page.pagename }}</div>
-                        </div>
-                    </div>
-                    <div class="indicator-container" id="indicator-container">
-                        {% if page.indicator != null and page.indicator =="both" or page.indicator =="chat" %}
-
-                        <div class="indicator chat">Chat</div>
-                        {% endif %} {% if page.indicator != null and page.indicator =="both" or page.indicator =="messaging" %}
-
-                        <div class="indicator messaging">Messaging</div>
-                        {% endif %}
-
-                        <div class="suggestbutton" id="suggestbutton">
-                            <a href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developer-center/edit/master/pages' }}" target="_blank">
-                                <i class="far fa-edit"></i>
-                                <span>Suggest changes</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="article-meta hidden">
-                    {% if page.last_modified %}
-                        {% assign currentYear = "now" | date:"%Y" %}
-                            {% assign articleUpdatedYear = page.last_modified | date: '%Y' %}
-                            {% if articleUpdatedYear == currentYear %}
-                            <div class="flex gap-16">
-                            <!-- show post creation date -->
-                            <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d" }}</time></p>
-                            <!-- show last updated date -->
-                            <p> Updated: <time datetime="{{ page.last_modified | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified | date: "%b %-d" }}</time></p>
-                            </div>
-                            {% else %}
-                            <div class="flex gap-16">
-                            <!-- show post creation date -->
-                            <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-                            <!-- show last updated date -->
-                            <p> Updated: <time datetime="{{ page.last_modified | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified | date: "%b %-d, %Y" }}</time></p>
-                            </div>
-                        {% endif %}
-                    {% endif %}
-                    </div>
-                </div>
-                {% endif %} {{ content | extlinks }}
-
-                <div id="defaultfooter" class="defaultfooter">
-                    <div class="flex flex-col">
-                        <p>© {{"now" | date:"%Y" }} LivePerson Inc. All Rights Reserved
-                            <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank">
-                                <span class="footer-tags"> Copyright </span>
-                            </a>
-                            <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank">
-                                <span class="footer-tags">Terms of Use </span>
-                            </a>
-                        </p>
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                <input class="toggle toggle-accent" type="checkbox" id="checkbox">
-                <span class="slider round hover:opacity-80">
-                  <span class="toggle-title-light">Light theme</span>
-                  <span class="toggle-title-dark">Dark theme</span>
-                </span>
-              </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="jumpto">
-                <div id="anchorlist"></div>
-            </div>
-            <!-- /.container -->
+        <div id="defaultsidebar" class="defaultsidebar">
+          {% include sidebar.html %}
         </div>
+        <div id="defaultcontent" class="defaultcontent">
+          {% if page.pagename %}
+
+          <div class="documenttitlecontainer" id="documenttitlecontainer">
+            {% include nav-breadcrumbs.html %}
+
+            <div class="documenttitle">
+              <div id="documentTitleContainer" class="titlecontainer">
+                <div id="document-title-h1" class="h1">{{ page.pagename }}</div>
+              </div>
+            </div>
+            <div class="indicator-container" id="indicator-container">
+              {% if page.indicator != null and page.indicator =="both" or
+              page.indicator =="chat" %}
+
+              <div class="indicator chat">Chat</div>
+              {% endif %} {% if page.indicator != null and page.indicator
+              =="both" or page.indicator =="messaging" %}
+
+              <div class="indicator messaging">Messaging</div>
+              {% endif %}
+
+              <div class="suggestbutton" id="suggestbutton">
+                <a
+                  href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developer-center/edit/master/pages' }}"
+                  target="_blank"
+                >
+                  <i class="far fa-edit"></i>
+                  <span>Suggest changes</span>
+                </a>
+              </div>
+            </div>
+            <div class="article-meta hidden">
+              {% if page.last_modified %} {% assign currentYear = "now" |
+              date:"%Y" %} {% assign articleUpdatedYear = page.last_modified |
+              date: '%Y' %} {% assign createdYear = page.date | date: '%Y' %}
+              <div class="flex gap-8">
+                {% if createdYear == currentYear %}
+                <!-- show post creation date -->
+                <p>
+                  <time datetime="{{ page.date | date_to_xmlschema }}"
+                    >{{ page.date | date: "%b %-d" }}</time
+                  >
+                </p>
+                {% else %}
+                <p>
+                  <time datetime="{{ page.date | date_to_xmlschema }}"
+                    >{{ page.date | date: "%b %-d, %Y" }}</time
+                  >
+                </p>
+                {% endif %} {% if articleUpdatedYear == currentYear %}
+                <!-- show last updated date -->
+                <p>
+                  Updated:
+                  <time
+                    datetime="{{ page.last_modified | date_to_xmlschema }}"
+                    itemprop="dateModified"
+                    >{{ page.last_modified | date: "%b %-d" }}</time
+                  >
+                </p>
+                {% else %}
+                <p>
+                  Updated:
+                  <time
+                    datetime="{{ page.last_modified | date_to_xmlschema }}"
+                    itemprop="dateModified"
+                    >{{ page.last_modified | date: "%b %-d, %Y" }}</time
+                  >
+                </p>
+              </div>
+              {% endif %} {% endif %}
+            </div>
+          </div>
+          {% endif %} {{ content | extlinks }}
+
+          <div id="defaultfooter" class="defaultfooter">
+            <div class="flex flex-col">
+              <p>
+                © {{"now" | date:"%Y" }} LivePerson Inc. All Rights Reserved
+                <a
+                  href="https://www.liveperson.com/policies/copyright"
+                  class="termsUseHighlight"
+                  target="_blank">
+                  <span class="footer-tags"> Copyright </span>
+                </a>
+                <a
+                  href="https://www.liveperson.com/policies/apitou"
+                  class="termsUseHighlight"
+                  target="_blank">
+                  <span class="footer-tags">Terms of Use </span>
+                </a>
+              </p>
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input
+                    class="toggle toggle-accent"
+                    type="checkbox"
+                    id="checkbox">
+                  <span class="slider round hover:opacity-80">
+                    <span class="toggle-title-light">Light theme</span>
+                    <span class="toggle-title-dark">Dark theme</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="jumpto">
+          <div id="anchorlist"></div>
+        </div>
+        <!-- /.container -->
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
