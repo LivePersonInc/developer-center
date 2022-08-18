@@ -32,7 +32,7 @@ botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'AP
 ```
 
 {: .important}
-For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
+See also [this step-by-step, example guide](conversation-builder-best-practices-custom-event-logging.html) on implementing custom event logging.<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
 ### Print debug message
 

@@ -50,7 +50,7 @@ if(isApiExecutionSuccessful){
 ```
 
 {: .important}
-You can also define rules in an interaction based on the result of an API integration; for information on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+You can also [define rules in an interaction based on the result of an API integration](conversation-builder-interactions-integrations.html#integration-interactions).
 
 ### Get API integration status code
 

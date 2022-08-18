@@ -42,4 +42,4 @@ LivePerson recommends that before you create a bot, you set up the [domains](int
 7. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
 8. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
-    For a Development-to-Production release workflow, see [here](conversation-builder-versions-releases.html).
+    See [this Development-to-Production release workflow](conversation-builder-versions-releases.html).

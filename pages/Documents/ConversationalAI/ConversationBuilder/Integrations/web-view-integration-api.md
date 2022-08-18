@@ -25,7 +25,7 @@ The Web View API can be used by the external system to:
 Don’t use this API to post Personally Identifiable Information (PII) or Payment Card Industry (PCI) data because the data is not masked.
 
 {: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before using this API. For details, see [here](conversation-builder-networking-security.html).
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before using this API.
 
 ### Getting started
 
@@ -95,4 +95,4 @@ Use the [Get Web View Variables](conversation-builder-scripting-functions-get-se
 
 ### Example guide
 
-For a step-by-step, example guide that uses this API, see [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).
+See [this step-by-step, example guide](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) that uses this API.

@@ -11,14 +11,14 @@ indicator: both
 
 Integration interactions make programmatic calls to retrieve or post data to external systems and/or to perform actions. They perform their work and then execute the next action.
 
-If an integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. For information on how to display variable data in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
+If an integration retrieves data, that data can be stored in custom fields, so you can [use it in subsequent interactions](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
 Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner.
 
 ### Integration interactions
 
 {: .important}
-Before you can add an Integration interaction, you need to create the integration itself. For details on this, see [here](conversation-builder-integrations-integration-basics.html#integration-types).
+Before you can add an Integration interaction, you need to [create the integration](conversation-builder-integrations-integration-basics.html#integration-types) itself.
 
 **To add an Integration interaction**
 
@@ -67,7 +67,7 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 #### How the Knowledge AI search works
 
 * **The search phrase**: The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search**: When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
+* **The search**: When performing the search, the [search mode](knowledgeai-search-methods.html) is always “Intents.” This cannot be changed.
 * **The results**: The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
@@ -80,7 +80,7 @@ The first two options are *rendered automatically*, and each uses a particular l
 
 If you require control over the article content and layout that's used, you can choose to use a custom answer layout instead of auto rendering. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
 
-Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
+Select an answer layout based on the target channels and your requirements. (See [this topic](conversation-builder-interactions-interaction-support.html) on interaction support.
 
 #### The "Auto render, rich" answer layout
 
@@ -124,19 +124,19 @@ In contrast, strategies that are less targeted can yield a lower answer rate. Fo
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon).
 4. On the Basic tab, specify the following:
     * **Message When Results Not Found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. If you don't want this message to be sent, enter "BLANK_MESSAGE".
-5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
+5. Review the rest of the [basic settings](conversation-builder-interactions-configuration-settings.html#basic-settings), and make any changes desired.
 6. Switch to the Advanced tab, and specify the following:
 
     <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png" alt="">
 
-    * **Min Confidence Score for Answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
+    * **Min Confidence Score for Answers**: Select the [minimum score](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
     * **Max Number of Answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Answer Layout**: Select "Auto render, rich," "Auto render, plain," or "No auto rendering" based on your requirements. These layout options are discussed farther above.
     * **Link Text for Content URL**: This setting is available when you select an "auto rendering" option for the **Answer Layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the "Auto render, rich" layout is used, and when the "Auto render, plain" layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the "Auto render, plain" layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
-    * **Default Image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer Layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Default Image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer Layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to [whitelist the image URL](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
     * **Response Data Variable**: This setting is available only when you select "No auto rendering" for the **Answer Layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
 8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer Layout** setting, you’ll also need to add the interactions that display the answers.
@@ -195,10 +195,10 @@ Use an Agent Transfer interaction in a dialog when you want to transfer a conver
 For some practice with this interaction type, complete the [Escalate to an Agent tutorial](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html).
 
 {: .important}
-There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
+There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed right here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
 
 {: .important}
-Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
+Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more info.
 
 #### Add an Agent Transfer interaction
 
@@ -225,7 +225,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 4. Click **Save**.
 
 {: .important}
-If, given your use case, you need to prevent context switching from occurring during the transfer (e.g., messages are sent after the transfer that shouldn't be), you can do this as described [here](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching).
+If, given your use case, you need to [prevent context switching](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching) from occurring during the transfer (e.g., messages are sent after the transfer that shouldn't be), you can do so.
 
 #### Best practices
 
@@ -256,7 +256,7 @@ File Upload interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
+When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [this section](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html) in our Knowledge Center.)
 
 {: .important}
 Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
@@ -317,13 +317,13 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 ### Dynamic Routing interactions
 
-Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents — bot or human — based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+[Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) is the intelligent routing of consumer conversations to the most qualified agents — bot or human — based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications.
 
 Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code.
 
 {: .important}
 The Dynamic Routing interaction is only available to brands who log in with single sign-on via Conversational Cloud. It isn’t available if you log into Conversation Builder directly. <br><br>
-This section provides basic information on Conversation Builder’s Dynamic Routing interaction. For detailed information on using this interaction, see the Conversation Orchestrator getting started documentation that’s [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+This section provides basic information on Conversation Builder’s Dynamic Routing interaction. For detailed information on using this interaction, see the [Conversation Orchestrator getting started documentation](conversation-orchestrator-dynamic-routing-getting-started.html).
 
 #### How the interaction works
 
@@ -349,7 +349,7 @@ A Dynamic Routing interaction does the following:
 
 #### Prerequisites
 
-Before using the Dynamic Routing interaction, make sure that Conversation Orchestrator’s Conversation Context Service is enabled for your account, as described [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started). If your account is relatively new, it’s likely that this was done automatically for you by LivePerson when your account was set up. However, brands with older accounts will need to enable this manually.
+Before using the Dynamic Routing interaction, make sure that Conversation Orchestrator’s [Conversation Context Service is enabled for your account](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started). If your account is relatively new, it’s likely that this was done automatically for you by LivePerson when your account was set up. However, brands with older accounts will need to enable this manually.
 
 Enabling the Conversation Context Service for your account is necessary because when the Dynamic Routing interaction performs the `askMaven` call, the CCS is used to store and pass some information.
 
@@ -359,7 +359,7 @@ Enabling the Conversation Context Service for your account is necessary because 
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png" alt="">
 
-2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can define and prioritize your routing policies if you haven’t done so already. For help with this step, see [here](conversation-orchestrator-dynamic-routing-managing-routing-policies.html).
+2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can [define and prioritize your routing policies](conversation-orchestrator-dynamic-routing-managing-routing-policies.html) if you haven’t done so already.
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon).
 4. On the **Basic** tab, specify the following:
 
@@ -376,7 +376,7 @@ Enabling the Conversation Context Service for your account is necessary because 
 
 #### Using the Dynamic Routing bot
 
-If you are setting up a new routing or concierge bot, it might be helpful to use the Dynamic Routing bot. The bot already includes the Dynamic Routing interactions and additional, out-of-the-box functionality, such as routing by intent. For more on this, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+If you are setting up a new routing or concierge bot, it might be helpful to [use the Dynamic Routing bot](conversation-orchestrator-dynamic-routing-getting-started.html). The bot already includes the Dynamic Routing interactions and additional, out-of-the-box functionality, such as routing by intent.
 
 #### FAQs
 
@@ -394,7 +394,7 @@ As mentioned above, the end result of this interaction is always a transfer. Cus
 
 **Can I alter the behavior of the askMaven call that’s performed by the Dynamic Routing interaction?**
 
-No, this can’t be done. If you’d like to do this, the Dynamic Routing interaction isn’t the best solution. Use one of the more manual methods described [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html).
+No, this can’t be done. If you’d like to do this, the Dynamic Routing interaction isn’t the best solution. Use one of the [more manual methods](conversation-orchestrator-dynamic-routing-getting-started-legacy.html).
 
 ### Apple Pay interactions
 
@@ -406,9 +406,9 @@ The interaction has been developed per Apple's Apple Pay [specifications](https:
 
 #### Prerequisite setup steps
 
-1. Review and follow LivePerson’s Apple Messages for Business setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
-2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. These steps are covered [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple’s developer site. Contact your LivePerson representative for help with this if needed.
-3. Implement your own merchant session endpoint, which is discussed [here](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session) on Apple’s developer site.
+1. Review and follow [LivePerson’s Apple Messages for Business setup guide](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
+2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. For more info on these steps, see [this section](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple's developer site. Contact your LivePerson representative for help with this if needed.
+3. [Implement your own merchant session endpoint](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session).
 
 Once this setup is completed, you can add the Apple Pay integration to your bot and configure it as described below.
 
@@ -442,7 +442,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 * **Country**: Your two-letter ISO 3166 country code as a merchant.
 * **Currency**: The three-letter ISO 4217 currency code for the payment.
 * **Merchant Session**: A unique token representing the transaction between the consumer and you as the merchant. This token is used by Apple to confirm that the pay session was created by a valid merchant and that it is being used within the time bounds allowed by Apple. Create an integration that points to your merchant session endpoint, and provide the response received from the endpoint here. You can specify a botContext or integration variable name.
-* **Account Signature**: This field allows for the account signature to be generated and added as a part of the request, for extra validation. The field stores a signed hash of the merchant session payload. The hash is sent as a part of the structured content request to the connector, which validates it and rejects it if invalid. You can enter an alphanumeric string or specify a botContext or integration variable name. This field is optional and only needed for accounts using this sign/validate flow. For more on the Apple Pay signature flow, see [here](apple-business-chat-templates-apple-pay-template.html#apple-pay-signature-flow). Note that opting in to this additional verification requires some internal account configuration; please contact your LivePerson representative for help with setting this up.
+* **Account Signature**: This field allows for the account signature to be generated and added as a part of the request, for extra validation. The field stores a signed hash of the merchant session payload. The hash is sent as a part of the structured content request to the connector, which validates it and rejects it if invalid. You can enter an alphanumeric string or specify a botContext or integration variable name. This field is optional and only needed for accounts using this [sign/validate flow from Apple](apple-business-chat-templates-apple-pay-template.html#apple-pay-signature-flow). Note that opting in to this additional verification requires some internal account configuration; please contact your LivePerson representative for help with setting this up.
 * **Request Identifier**: This field stores the unique identifier representing the merchant session request. The request identifier is a consistent ID throughout the lifetime of the pay session, and it’s used by LivePerson APIs and services to track the pay session from start to finish. You can enter an alphanumeric string or specify a botContext or integration variable name.
 
 **Shipping Methods**
@@ -476,4 +476,4 @@ The optional endpoint URLs are for receiving and managing any updates a customer
 * **Fallback URL**: A URL that opens in a web browser so the customer can complete the purchase if their device is unable to make payments using Apple Pay.
 * **Order Tracking URL**: Called by Apple Messages for Business after completing the order; provides you with an opportunity to update the order information in your system.
 
-For more on these endpoints, see [here](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on the Apple developer site.
+For more on these endpoints, see [this topic](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on Apple developer's site.

@@ -22,7 +22,7 @@ Use a post-conversation survey bot to measure bot/agent and skill performance an
 
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png" alt="">
 
-For a more in-depth introduction to surveys and survey metrics, see [here](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
+See also this [in-depth introduction to surveys and survey metrics](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
 
 {: .important}
 To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.
@@ -270,7 +270,7 @@ You can use only a subset of the standard interaction types in the Survey dialog
 1. Open the survey bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt=""> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
 3. Configure the survey bot settings as needed; these are described below.
-4. Configured other bot settings as needed; these are described [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+4. [Configured other bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) as needed.
 5. Click **Save**.
 
 Survey bot settings include:
@@ -280,7 +280,7 @@ Survey bot settings include:
 * **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 * **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 * **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
-* **Session Expired Message**: Enable this to customize the message to the consumer that's proactively sent when the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is proactively sent instead of a custom message. The default message is, "The survey has expired. Thank you for your time." (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+* **Session Expired Message**: Enable this to customize the message to the consumer that's proactively sent when the session expires. You can customize the message to suit your requirements. If you disable this setting, the default message is proactively sent instead of a custom message. The default message is, "The survey has expired. Thank you for your time." (See also the [Session Length setting](conversation-builder-bots-bot-basics.html#configure-bot-settings), a related setting that's displayed for all bots.)
 
 ### Add support for emailed transcripts
 

@@ -18,7 +18,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 
 #### LivePerson Cloud
 
-If your implementation is hosted in LivePerson Cloud, you can find all details on whitelisting [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
+If your implementation is hosted in LivePerson Cloud, you can find all details on whitelisting in [this section](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
 
 #### AWS
 

@@ -37,13 +37,13 @@ When the user enters anything but a well-formed email address, this yields a con
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png" alt="">
 
-For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
+For more information on the "No Match" match type and other match types that can be used in conditions, see [this section](conversation-builder-interactions-configuration-next-action.html#conditions).
 
 ### Step Up authentication
 
-You can use Step Up authentication to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication. For more on this, see [here](https://knowledge.liveperson.com/step-up-authentication-overview/) in the Knowledge Center.
+You can use [Step Up authentication](https://knowledge.liveperson.com/step-up-authentication-overview/) to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication.
 
-Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can change it as desired (more on this [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage)).
+Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can [change it](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage) as desired.
 
 Regardless of the message text, it’s important that you catch the Step Up message in the bot’s flow and handle it: Use it to start the authenticated workflow. If you don’t catch the message, a fallback message is sent to the consumer.
 
@@ -101,4 +101,4 @@ Once created, you can call both functions as needed from the Pre-Process and Pos
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png" alt="">
 
-Both functions were adapted from a polyfill located [here](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).
+Both functions were adapted from [this polyfill](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).

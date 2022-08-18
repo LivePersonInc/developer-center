@@ -44,7 +44,7 @@ By default, an Auto Escalation dialog includes a Yes/No multiple choice question
 
 <img style="width:900px" src="img/ConvoBuilder/dialogs_autoEscalate3.png">
 
-If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
+If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For info on configuring Agent Transfer interactions, see [this section](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 
 When you create the dialog, you configure two important settings that you might want to change afterward:
 
@@ -53,7 +53,7 @@ When you create the dialog, you configure two important settings that you might 
 
 ### Best practices
 
-For information on best practices when using Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions). This includes information on how to handle transfer failures and more.
+See [these best practices](conversation-builder-interactions-integrations.html#agent-transfer-interactions) for using Agent Transfer interactions. They include info on how to handle transfer failures and more.
 
 ### FAQs
 

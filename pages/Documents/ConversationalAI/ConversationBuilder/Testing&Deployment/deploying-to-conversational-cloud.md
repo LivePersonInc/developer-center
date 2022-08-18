@@ -23,7 +23,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 #### Prerequisite steps
 
 {: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding agent connectors. For details, see [here](conversation-builder-networking-security.html).
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before adding agent connectors.
 
 Before you can deploy a bot, you must complete the following, pre-requisite steps in Conversational Cloud:
 
@@ -129,7 +129,7 @@ If a connector enters an Offline status, which is an error status, click **Detai
 * **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user created by you, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
-For status descriptions, see [here](bots-status-overview.html#statuses).
+For status descriptions, see [this section](bots-status-overview.html#statuses).
 
 ### Custom configuration fields
 
@@ -194,21 +194,21 @@ If this field is unset or you set this field to false, the selected button’s c
 **Chat**: No
 
 #### escalateOnStuckConversation
-If this is true, and if the bot is stuck, the conversation is transferred to a specific skill. This transfer is only done as a final measure after other strategies, if enabled, are tried and found to be unsuccessful. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If this is true, and if the bot is stuck, the conversation is transferred to a specific skill. This transfer is only done as a final measure after other strategies, if enabled, are tried and found to be unsuccessful. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
  
 #### escalationMessageOnStuckConversation
-If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: I’m having some trouble. Let me connect you with an agent.<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### escalationSkillIdOnStuckConversation
-If the conversation is transferred to a skill because the bot is stuck, this is the ID of the appropriate skill to which to transfer the conversation. Used in conjunction with `escalateOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If the conversation is transferred to a skill because the bot is stuck, this is the ID of the appropriate skill to which to transfer the conversation. Used in conjunction with `escalateOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 If you don’t set this field, the transfer will not occur.
 
@@ -253,7 +253,7 @@ You can customize this per your requirements; for example, to use a 3-second win
 **Chat**: No
 
 #### messageResendMaxRetries
-This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
  Note that this number represents the total tries, not the retries alone. Examples: 
 
@@ -295,14 +295,14 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 **Chat**: No
 
 #### userNotificationMessageOnStuckConversation
-If the bot’s context is reset (the conversation starts anew) because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If the bot’s context is reset (the conversation starts anew) because the bot is stuck, the consumer is asked to resend their original query. This is the message to send to the consumer in this case. Used in conjunction with `userRetryOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: I’m sorry. Something went wrong, so let’s start fresh. Could you restate your question in a few words?<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
 #### userRetryOnStuckConversation
-If this is true, and if the bot is stuck, the bot’s context is reset (the conversation starts anew), and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. Please see the best practice discussion [here](conversation-builder-best-practices-resolve-stuck-conversations.html).
+If this is true, and if the bot is stuck, the bot’s context is reset (the conversation starts anew), and the consumer is asked to resend their original query. Used in conjunction with `userNotificationMessageOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
 **Default value**: null<br>
 **Messaging**: Yes<br>

@@ -11,7 +11,7 @@ permalink: conversation-builder-bot-templates-simple-faq.html
 indicator: both
 ---
 
-The Simple FAQ template provides a bot that answers users' questions by connecting to a knowledge base. This bot assumes you have already created a knowledge base. If you haven’t created one yet, you can [import this CSV template](https://static-assets.fs.liveperson.com/csbs/Retail_FAQ_KB.csv) to get started and then [please review](conversation-builder-knowledge-base.html) this information on using knowledge bases.
+The Simple FAQ template provides a bot that answers users' questions by connecting to a knowledge base. This bot assumes you have already created a knowledge base. If you haven’t created one yet, you can [import this CSV template](https://static-assets.fs.liveperson.com/csbs/Retail_FAQ_KB.csv) to get started and then [please review this information](conversation-builder-knowledge-base.html) on using knowledge bases.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_faq_simple_image_0.png" alt="">
 
@@ -46,7 +46,7 @@ The FAQ Search dialog handles calling the Knowledge Base integration and display
 #### FAQ integration
 
 {: .important}
-You will need to [create an internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base) **before** setting up this integration.
+You will need to [create an internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base) **before** setting up this [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html).
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "Knowledge Base" should be selected as the **Integration Type**.
 
@@ -60,9 +60,6 @@ All of the additional parameters are configured for you.
 
 <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/template_faq_simple_image_3.png" alt="">
 
-{: .important}
-For detailed information on adding a KnowledgeAI integration, see [here](conversation-builder-integrations-knowledgeai-integrations.html).
-
 #### Test your bot
 
 Once you’ve got it all setup, try it out by using the Preview to make sure your articles are returning, and, if not, the fail message is displaying properly.
@@ -73,4 +70,4 @@ To connect your bot to Conversational Cloud, follow [the instructions](conversat
 
 Now you can test your FAQ bot and see how it answers your questions.
 
-[Here](conversation-builder-best-practices-train-tune-nlu.html) are some best practices on training and tuning your knowledge base.
+There are some [best practices](conversation-builder-best-practices-train-tune-nlu.html) on training and tuning your knowledge base.

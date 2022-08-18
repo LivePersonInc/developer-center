@@ -15,9 +15,6 @@ With a question, you can take the user’s response, evaluate it against a condi
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots-variables.html), making them available for future use.
 
-{: .important}
-For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
-
 ### Multiple choice questions
 
 Multiple choice questions let the consumer select an answer from a list of choices.
@@ -79,7 +76,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 Like with any question, a structured question expects and waits for the user response before executing the next action.
 
 {: .important}
-Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
+Structured questions aren't supported on all channels. Be sure to [verify the channel's support](conversation-builder-interactions-interaction-support.html) before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
 
 <img style="width:600px" src="img/ConvoBuilder/questions_structured2.png" alt="">
 
@@ -106,7 +103,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 
 #### Populating a Structured question dynamically
 
-You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an API integration. For more information, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
+You can populate the tiles with static information, or they can be dynamically populated during run time, for example, [using data received from an API integration](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 <img style="width:300px" src="img/ConvoBuilder/questions_structured3.png" alt="">
 
@@ -127,7 +124,7 @@ There are many use cases where this capability can be useful. Here are a few:
 
     <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata1.png" alt="">
 
-3. Select the type of metadata to add; you can add any of the types described [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). In the Conversation Builder UI, the available choices are named by metadata type.
+3. Select the type of metadata to add; you can add any of the types described in [this section](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). In the Conversation Builder UI, the available choices are named by metadata type.
 
     <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata2.png" alt="">
 
@@ -135,7 +132,7 @@ There are many use cases where this capability can be useful. Here are a few:
 
     <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata3.png" alt="">
 
-    When writing the JSON, ensure it’s well-formed and conforms to the format discussed [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). You can reference botContext variables as well as the custom data fields in API integrations. In our example below, we’re referencing the latter.
+    When writing the JSON, ensure it’s well-formed and conforms to the [proper format](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). You can reference botContext variables as well as the custom data fields in API integrations. In our example below, we’re referencing the latter.
 
     <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata4.png" alt="">
 
@@ -179,7 +176,7 @@ if (metadata && metadata.id) {
 ```
 
 {: .important}
-Need help understanding custom data fields in API integrations? See [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+Need help understanding custom data fields in API integrations? See [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 #### Notes on Structured questions
 
@@ -226,7 +223,7 @@ And the chips disappear once the consumer selects one:
 
 <img style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png" alt="">
 
-Details vary by channel. For example, Apple Messages for Business does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
+Details vary by channel. For example, Apple Messages for Business does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult these [guidelines and best practices](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
 
 <img style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png" alt="">
 
@@ -325,7 +322,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 #### Populating a list picker dynamically
 
-Values for many of the settings above can be static, but they can also be populated dynamically at runtime. For example, if the list picker is for selecting items from a product catalog, you’ll likely want to retrieve and use the item information from the catalog. For more information, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
+Values for many of the settings above can be static, but they can also be [populated dynamically at runtime](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). For example, if the list picker is for selecting items from a product catalog, you’ll likely want to retrieve and use the item information from the catalog.
 
 #### Scrolling and sorting
 
@@ -417,7 +414,7 @@ As mentioned earlier, a time picker can be populated dynamically during run time
 
 <img style="width:600px" src="img/ConvoBuilder/questions_timePicker11.png" alt="">
 
-We can then reference this custom data field in the **Variable Date & Time** field in the time picker, using the following notation (i.e., with `{apiName.variableName}` as discussed [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions)):
+We can then reference this custom data field in the **Variable Date & Time** field in the time picker, using the following [notation](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) (i.e., with `{apiName.variableName}`):
 
 <img style="width:300px" src="img/ConvoBuilder/questions_timePicker10.png" alt="">
 
@@ -427,12 +424,9 @@ Since the API response defines the date and time together in the received payloa
 
 `2020-04-30T13:30+0000`
 
-Additionally, all start dates and times must be defined **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the data.
+Additionally, all start dates and times must be defined **in GMT**, so depending on the [data received from the API call](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields), you might need to do some preprocessing to convert the data.
 
 The Duration field can't be populated dynamically; you must manually specify this value.
-
-{: .important}
-For more on processing API results with custom data fields, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 #### Reply Message settings
 

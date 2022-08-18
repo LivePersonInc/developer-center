@@ -20,9 +20,6 @@ Build automated conversation flows once, and run them on every messaging channel
 ### Identify and resolve bot failure points with MACS
 Our [Meaningful Automated Conversation Score](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) (MACS) is the first measurement of how much friction consumers experience in automated conversations. This built-in analysis assesses how well bots are helping with customer queries, highlights common points of failure like poor routing, and helps you quickly move to bot tuning in Conversation Builder.
 
-{: .important}
-For more on MACS, see [here](https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html) in our Knowledge Center.
-
 ### Access Conversation Builder
 
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
@@ -30,4 +27,4 @@ For more on MACS, see [here](https://knowledge.liveperson.com/ai-bots-automation
 
 ### Getting started
 
-If you're just beginning with Conversation Builder, we recommend the Getting Started tutorial series [here](tutorials-guides-getting-started-with-bot-building-overview.html).
+If you're just beginning with Conversation Builder, we recommend the [Getting Started tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html).

@@ -31,9 +31,9 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
     - **Function Headers**: Add the necessary data in key/value pairs to pass into the request via the header.
     - **Function Payload**: Enter the payload to pass into the function.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialogs. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
-    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
+    - **Custom Data Fields**: Add [the fields](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields) that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields.
 3. Click **Save**.
 
 ### Example guide
 
-For a step-by-step, example guide that uses this integration, see [here](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html).
+See [this step-by-step, example guide](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html) that uses this integration.

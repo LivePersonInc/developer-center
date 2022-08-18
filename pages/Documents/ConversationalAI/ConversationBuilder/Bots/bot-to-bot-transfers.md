@@ -138,7 +138,7 @@ The system follows the same NLU selection process as with every bot, just expand
 There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, [create a bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function. You could then further organize them based on environment.
 
 #### Can I keep bot collaboration disabled and use bot groups only as a mechanism for grouping my bots?
-Yes, this is perfectly fine. For information on creating a group for this purpose, see [here](conversation-builder-bots-bot-groups.html#create-a-bot-group-only-to-group-bots).
+Yes, this is perfectly fine. You can [create a bot group for this purpose](conversation-builder-bots-bot-groups.html#create-a-bot-group-only-to-group-bots).
 
 #### I currently have a routing bot that transfers control to other bots based on user intents. How will bot groups help in my case?
 

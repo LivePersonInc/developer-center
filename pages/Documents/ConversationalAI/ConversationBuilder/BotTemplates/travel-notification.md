@@ -16,7 +16,7 @@ The Travel Notifications template allows an authenticated user to report their f
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
 {: .important}
-This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png">
 
@@ -60,7 +60,7 @@ For the date captures, we allow a certain number of attempts before we escalate 
 ```
 
 #### Analytics
-Custom event logging for this template has been provided by default.
+[Custom event logging](conversation-builder-scripting-functions-log-debug.html#log-custom-event) for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
@@ -77,8 +77,6 @@ botContext.logCustomEvent(response, 'Interaction Name', '');
 
 {: .important}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
-
-For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
 #### Global Function customization
 Click **Global Functions** to access all the global functions and variables to be configured.

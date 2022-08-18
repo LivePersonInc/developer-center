@@ -16,7 +16,9 @@ This topic provides a guide for implementing custom event logging to provide a m
 
 ### Custom Events
 
-Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. Details on the structure of the scripting function can be found [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event). Custom events are more flexible than our default analytics, allowing you to specify when and what data is captured for analytic or tracking purposes. We'll cover where to access and how to read these captured events later in this guide, but to start let’s look at our bot and write some custom events.
+Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. See [these details](conversation-builder-scripting-functions-log-debug.html#log-custom-event) on the structure of the scripting function. 
+
+Custom events are more flexible than our default analytics, allowing you to specify when and what data is captured for analytic or tracking purposes. We'll cover where to access and how to read these captured events later in this guide, but to start let’s look at our bot and write some custom events.
 
 ### Bot Configuration
 

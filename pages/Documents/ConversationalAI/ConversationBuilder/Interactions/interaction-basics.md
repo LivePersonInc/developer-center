@@ -15,15 +15,18 @@ indicator: both
 
 There are four, general categories of interactions:
 
-- **Dialog Starter**: Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction (fallback dialogs work differently). The user starts things off by supplying some user input — a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a dialog starter in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. For more on dialog starters, see [here](conversation-builder-interactions-dialog-starter.html).
+- **Dialog Starter**: [Dialog Starter](conversation-builder-interactions-dialog-starter.html) interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction (fallback dialogs work differently). The user starts things off by supplying some user input — a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a dialog starter in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
 
-- **Statements**: Statements simply display information and then execute the next action. They don’t expect or wait for a user response. For more on statements, see [here](conversation-builder-interactions-statements.html).
+- **Statements**: [Statements](conversation-builder-interactions-statements.html) simply display information and then execute the next action. They don’t expect or wait for a user response.
 
-- **Questions**: Questions present information to the user (a text-based question, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action. In a question interaction, you can define conditions that evaluate the user’s response against a set of criteria. If a condition is met, its next action is then performed. For example, if the user enters a valid email address, then an email could be sent. For more on questions, see [here](conversation-builder-interactions-questions.html).
+- **Questions**: [Questions](conversation-builder-interactions-questions.html) present information to the user (a text-based question, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action. In a question interaction, you can define conditions that evaluate the user’s response against a set of criteria. If a condition is met, its next action is then performed. For example, if the user enters a valid email address, then an email could be sent.
 
-- **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
+- **Integrations**: [Integrations](conversation-builder-interactions-integrations.html) make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner.
 
-- **Code**: Code interactions are for creating custom logic or displaying a custom bot response. For more on code interactions, see [here](conversation-builder-interactions-code.html).
+- **Code**: [Code](conversation-builder-interactions-code.html) interactions are for creating custom logic or displaying a custom bot response.
+
+### Interaction support
+See [this topic](conversation-builder-interactions-interaction-support.html).
 
 ### Order of operations
 
@@ -59,13 +62,11 @@ One of the goals and challenges in developing interactions is creating a unified
 For details on constraints like this, refer to [Rich Messaging best practices](facebook-messenger-templates-best-practices.html) as well as the [Messaging channels section](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) in the LivePerson Knowledge Center.
 
 {: .important}
-Your bot implementation should meet Conversational Cloud requirements and those of the specific channels in use.
-
-For information on which interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
+Your bot implementation should meet Conversational Cloud requirements and [those of the specific channels in use](conversation-builder-interactions-interaction-support.html).
 
 ### Whitelisting
 
-For information on whitelisting rich media, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
+For info on whitelisting rich media, see [this section](conversation-builder-networking-security.html#whitelisting-rich-media).
 
 ### URL shortening
 
@@ -88,12 +89,12 @@ Note:
 
 As long as the image is whitelisted (discussed above), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
 
-The Apple developers' site provides some good, general guidelines regarding resolution, size, optimization, and more; you can find this [here](https://developer.apple.com/design/human-interface-guidelines/business-chat/interactive-messages/about-interactive-messages/#images).
+The [Apple developers' site](https://developer.apple.com/design/human-interface-guidelines/business-chat/interactive-messages/about-interactive-messages/#images) provides some good, general guidelines regarding resolution, size, optimization, and more.
 
 ### Add an interaction
 
 {: .important}
-When selecting an interaction to add, make sure it's supported by the channel you will be using. For a listing of which channels support which interactions, see [here](conversation-builder-interactions-interaction-support.html).
+When selecting an interaction to add, [make sure it's supported by the channel you will be using](conversation-builder-interactions-interaction-support.html).
 
 **To add a new interaction to the end of the dialog**
 
@@ -163,7 +164,7 @@ When defining a [condition](conversation-builder-interactions-configuration-next
 
 ### Use variables and slots in interactions
 
-For information on this, see [here](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).
+For info on this, see [this section](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).
 
 ### Format text
 
@@ -301,4 +302,4 @@ After you delete an interaction, verify that the interaction flow isn't broken a
 
 ### Troubleshooting
 
-For troubleshooting help when working with interactions, see [here](conversation-builder-interactions-troubleshooting.html).
+See [this section](conversation-builder-interactions-troubleshooting.html).

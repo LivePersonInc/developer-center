@@ -22,12 +22,12 @@ For example, if you have a bot that has both a Sandbox and Production version, 9
 Conversation Builder includes a number of environment variables that you can use to take advantage of associated bot behaviors:
 
 #### Variables for customizing disambiguation
-You can use these environment variables to customize how disambiguation works; for details, see [here](conversation-builder-dialogs-disambiguation-dialogs.html#customization-points).
+You can use these environment variables to [customize how disambiguation works](conversation-builder-dialogs-disambiguation-dialogs.html#customization-points):
 - `system_groupConsecutiveIntentRanksInDisambiguation`
 - `system_useIntentsOnlyWithDialogStartersInDisambiguation`
 
 #### Variables for preventing consumer interruptions
-These environment variables work together to prevent consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-consumer-interruptions.html).
+These environment variables work together to [prevent consumer interruptions while the bot is responding to the consumer](conversation-builder-best-practices-prevent-consumer-interruptions.html):
 - `system_handleIntermediateUserMessage`
 - `system_intermediateBotMessage`
 - `system_intermediateBotResponseTimeout`

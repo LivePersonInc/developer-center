@@ -60,12 +60,12 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * The <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt=""> icon makes available more options:
 
-  * **Bot Settings** (see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings))
+  * **Bot Settings** (see [this section](conversation-builder-bots-bot-basics.html#configure-bot-settings))
   * **Bot Change History**
   * **Bot Compare**
   * **Visualize**
-  * **Releases** (see [here](conversation-builder-versions-releases.html))
-  * **Versions** (see [here](conversation-builder-versions-releases.html))
+  * **Releases** (see [this topic](conversation-builder-versions-releases.html))
+  * **Versions** (see [this topic](conversation-builder-versions-releases.html))
 
 In the upper-right corner, there are a few more options:
 

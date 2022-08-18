@@ -16,7 +16,7 @@ API Integrations allow Conversation Builder to perform some action or access the
 For practice at using an API integration, try the [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
 
 {: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).<br><br>An API integration call times out in 20 seconds; within that time, the integration attempts 3 retries. This isn’t configurable.
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before adding an API integration.<br><br>An API integration call times out in 20 seconds; within that time, the integration attempts 3 retries. This isn’t configurable.
 
 ### Add an API integration
 
@@ -46,7 +46,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_post_body.png">
 
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
-    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
+    - **Custom Data Fields**: Add [the fields](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields) that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields.
 3. Click **Save**.
 
 ### Security best practices
@@ -54,7 +54,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 When implementing API integrations, follow these security best practices:
 
 * **URLs** and **URL parameters**: HTTPS and HTTP are supported. Don’t send credentials or sensitive data in the parameters.
-* **Credentials**: Use a secure form of authentication and authorization. OAuth is recommended, but for a comparative list of credential types, see [here](bot-accounts-credentials.html#credential-types-authentication-types).
+* **Credentials**: Use a secure form of authentication and authorization. OAuth is recommended, but for a comparative list of credential types, see [this section](bot-accounts-credentials.html#credential-types-authentication-types).
 * **API**: Your brand’s API should be designed according to security standards. For example, at a minimum, use an authentication mechanism. Also provide support for other best practices, such as protecting the API from high volume and bursts in traffic.
 * **API response handling**: For security and privacy reasons, you must not log returned customer data using the JavaScript API or store the data in permanent variables.
 
@@ -78,7 +78,7 @@ To disable them for the current session, use:
 
 ### Handling API responses
 
-In the [Integration interaction](conversation-builder-interactions-integrations.html#integration-interactions) that invokes the API, you can define custom rules based on the result of the API call, i.e., its success or failure. This is done using the "API Result" match type, as described [here](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration).
+In the [Integration interaction](conversation-builder-interactions-integrations.html#integration-interactions) that invokes the API, you can define custom rules based on the result of the API call, i.e., its success or failure. [This is done using the "API Result" match type](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration).
 
 In the case of a failure response (a returned status code other than 200 or 201), the bot sends a default error message of, "Sorry, I could not find anything for that." To override this message and send a different one, define a custom rule based on a failure result, as mentioned above.
 

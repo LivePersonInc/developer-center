@@ -11,21 +11,15 @@ indicator: both
 
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
-{: .important}
-For information on which statement interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
-
 ### Text
 
 Text statements display the text provided, for example:
 
 <img style="width:300px" src="img/ConvoBuilder/statements_text.png" alt="">
 
-Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
+Text statements can [display dynamic values through the use of variables](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
 ### Image
-
-{: .important}
-For information on which channels support image statements, see [here](conversation-builder-interactions-interaction-support.html).
 
 Image statements display a single image.
 
@@ -56,7 +50,7 @@ If your business uses Apple’s Messages for Business service to chat with consu
 
 <img style="width:450px" src="img/ConvoBuilder/statements_richLink.png" alt="">
 
-Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Messages for Business, the consumer would have to tap the “Tap to Load” message to load the content. But with an Apple rich link, the content is displayed directly. (The interaction has been developed per Apple's Rich Link specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
+Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Messages for Business, the consumer would have to tap the “Tap to Load” message to load the content. But with an Apple rich link, the content is displayed directly. (The interaction has been developed per [Apple's Rich Link specifications](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
 
 <img style="width:500px" src="img/ConvoBuilder/statements_richLink2.png" alt="">
 
@@ -87,7 +81,7 @@ You can populate the statement with static information, or it can be populated d
 
 Private messages are messages that are visible to all conversation participants *except* the consumer.
 
-Human agents can send private messages within a conversation. This allows agents to privately seek guidance from managers. In turn, it also allows managers to provide that guidance privately. More on this [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
+Human agents can send private messages within a conversation. This allows agents to privately seek guidance from managers. In turn, it also allows managers to provide that guidance privately. More on this [in our Knowledge Center](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
 
 Bots can send private messages too. You can design a bot to send a private message at any time in the conversation flow. Typically though, you'll want to do this just before a transfer to a human agent.
 
@@ -113,13 +107,13 @@ There are several scenarios where private messages sent by bots can be useful:
 
 #### User experiences
 
-- **Human agents**: In an actual conversation with a consumer, a private message appears inline in the conversation area (with a “Private” badge) in the human agent’s view within Conversational Cloud. For an illustration, see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/).
+- **Human agents**: In an actual conversation with a consumer, a private message [appears inline in the conversation area](https://knowledge.liveperson.com/contact-center-management-messaging-operations-private-messages-overview.html/) (with a “Private” badge) in the human agent’s view within Conversational Cloud.
 - **Consumers**: The consumer never sees private messages.
 
 #### Add a Private Message interaction
 
 1. Add the interaction.
-2. Enter the message to send. Essentially, the interaction is a Statement interaction that isn’t sent to the consumer. So, the guidelines for other Statement interactions apply: You can enter plain and formatted text; see [here](conversation-builder-interactions-interaction-basics.html#format-text) for supported HTML. You can also enter botContext variables and environment variables.
+2. Enter the message to send. Essentially, the interaction is a Statement interaction that isn’t sent to the consumer. So, the guidelines for other Statement interactions apply: You can enter plain and [formatted text](conversation-builder-interactions-interaction-basics.html#format-text). You can also enter botContext variables and environment variables.
 
     <img style="width:600px" src="img/ConvoBuilder/statements_privatemsg4.png" alt="">
 
@@ -127,7 +121,7 @@ There are several scenarios where private messages sent by bots can be useful:
 
 **Can I use a private message to send contextual info from one bot to another?**
 
-No, in a bot-to-bot transfer, you should transfer contextual info as discussed [here](conversation-builder-bots-bot-to-bot-transfers.html).
+No, in a bot-to-bot transfer, you should transfer contextual info as discussed in [this section](conversation-builder-bots-bot-to-bot-transfers.html).
 
 **Can I see private messages within the Preview tool in Conversation Builder?**
 

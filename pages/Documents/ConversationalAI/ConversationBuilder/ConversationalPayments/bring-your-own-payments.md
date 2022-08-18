@@ -40,6 +40,6 @@ In the Web channel, the payment form is displayed in a non-intrusive, slide-out 
 In a BYOP implementation, the consumer’s credit card information is never stored in LivePerson’s environment. The payment form is hosted in your secure environment. The bot simply fetches the form and presents it to the consumer. The data entered by the consumer is submitted directly to your system.
 
 ### Setup
-BYOP’s Callback Service is implemented using our [external Web form integrations API](conversation-builder-integrations-web-view-integration-api.html). See [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) for a detailed tutorial.
+BYOP’s Callback Service is implemented using our [external Web form integrations API](conversation-builder-integrations-web-view-integration-api.html). Learn more with [this detailed tutorial](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).
 
 **Implementation tip**: The slide-out window shown farther above is achieved using the “Slideout” option in the button settings of a [Structured](conversation-builder-interactions-questions.html#structured-questions) or [Button](conversation-builder-interactions-questions.html#button-questions) question. Take advantage of this option (in the **Target** setting in specific). It affords a tightly integrated and attractive consumer experience; therefore, it’s often preferred in a cCommerce scenario.

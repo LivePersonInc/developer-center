@@ -23,7 +23,7 @@ The following example flow can happen with this template:
 5. Bot transfers the conversation to a skill or agent based on the policy outcome.
 
 {: .important}
-This bot template contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+This bot template contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 ### Included items
 

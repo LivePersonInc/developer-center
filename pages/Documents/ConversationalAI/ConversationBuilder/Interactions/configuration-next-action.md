@@ -29,8 +29,8 @@ When specifying the next action, you can select from the following options:
 * *Next Interaction*: Directs the flow to the next interaction in the dialog.
 * *Current Interaction*: Repeats the current interaction.
 * *End Interaction*: Stops the flow within the dialog.
-* *Close Conversation*: Closes the conversation but **doesn't** trigger a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
-* *Close Dialog*: Closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
+* *[Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation)*: Closes the conversation but **doesn't** trigger a post-conversation survey.
+* *[Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog)*: Closes the conversation and triggers a post-conversation survey.
 * *{interaction name}*: Directs the flow to the interaction with the specified name.
 
 Next Action options depend on the given interaction; only suitable options are available. For example, "Current Interaction" is only available for Question interactions, and "Close Conversation" isn't available for Dialog Starter interactions.
@@ -104,9 +104,9 @@ In the rule, there's a condition that determines if the user's response matches 
 
 Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following match types:
 
-* **Response Intent**: This triggers the Next Action when the user input matches the selected [intent](intent-manager-key-terms-concepts.html#intents). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
+* **Response Intent**: This triggers the Next Action when the user input matches the selected [intent](intent-manager-key-terms-concepts.html#intents). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. See [this example of usage](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
 * **Regular Expression**: This triggers the Next Action when the user input matches the RegEx that you specify. All standard [Regex rules](https://regex101.com/) apply. Take advantage of the [hint feature](conversation-builder-interactions-interaction-basics.html#advanced-patterns-with-regular-expressions) that's available.
-* **Pattern**: This triggers the Next Action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching. Take advantage of the [pattern library](conversation-builder-interactions-interaction-basics.html#popular-patterns) that's available.
+* **Pattern**: This triggers the Next Action when the user input matches the [pattern](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) that you specify. Take advantage of the [pattern library](conversation-builder-interactions-interaction-basics.html#popular-patterns) that's available.
 * **Exact Value**: This triggers the Next Action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 * **Evaluate Options**: Available for multiple choice questions only. This triggers the Next Action when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the interaction's settings).
 
@@ -132,8 +132,6 @@ Like in the example above, when you define a condition (in a rule) in a question
 
 #### Conditions in integration interactions
 
-You can define a condition (in a rule) in an integration interaction to direct the dialog flow based on the result of the API integration call. This is a best practice that's recommended by LivePerson.
+You can define a condition (in a rule) in an integration interaction to [direct the dialog flow based on the result of the API integration call](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration). This is a best practice that's recommended by LivePerson.
 
 <img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions3.png" alt="">
-
-For more on doing this, see the discussion on integration interactions [here](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration).

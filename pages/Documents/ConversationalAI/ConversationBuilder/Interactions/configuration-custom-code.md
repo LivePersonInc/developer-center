@@ -46,4 +46,4 @@ There are three tabs for adding code:
 Use the desired tab to add the code. You can use the built-in [scripting functions](conversation-builder-scripting-functions-functions-list.html) to access variables and manipulate data.
 
 {: .important}
-For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+For info on the order of operations (i.e., which code is run when), see [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).

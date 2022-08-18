@@ -60,7 +60,7 @@ With the exception that you enter JSON code instead of interaction data, a Unive
 
 #### Templates
 
-There are templates available [here](https://github.com/LivePersonInc/ConversationBuilder-Samples/tree/main/universal-tile-templates) for various channels. Use these to get up and running quickly.
+There are [templates](https://github.com/LivePersonInc/ConversationBuilder-Samples/tree/main/universal-tile-templates) available for various channels. Use these to get up and running quickly.
 
 #### JSON validation
 
