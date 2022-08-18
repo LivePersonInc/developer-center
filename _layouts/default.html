@@ -90,13 +90,25 @@
                         </div>
                     </div>
                     <div class="article-meta hidden">
+                    {% if page.last_modified %}
                         {% assign currentYear = "now" | date:"%Y" %}
-                        {% assign articleUpdatedYear = page.last_modified_at | date: '%Y' %}
-                        {% if articleUpdatedYear == currentYear %}
-                        <p>Updated {{ page.last_modified_at | date: '%B %d' }} </p>
-                        {% else %}
-                        <p>Updated {{ page.last_modified_at | date: '%B %d %Y' }}</p>
+                            {% assign articleUpdatedYear = page.last_modified | date: '%Y' %}
+                            {% if articleUpdatedYear == currentYear %}
+                            <div class="flex gap-16">
+                            <!-- show post creation date -->
+                            <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d" }}</time></p>
+                            <!-- show last updated date -->
+                            <p> Updated: <time datetime="{{ page.last_modified | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified | date: "%b %-d" }}</time></p>
+                            </div>
+                            {% else %}
+                            <div class="flex gap-16">
+                            <!-- show post creation date -->
+                            <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+                            <!-- show last updated date -->
+                            <p> Updated: <time datetime="{{ page.last_modified | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified | date: "%b %-d, %Y" }}</time></p>
+                            </div>
                         {% endif %}
+                    {% endif %}
                     </div>
                 </div>
                 {% endif %} {{ content | extlinks }}
