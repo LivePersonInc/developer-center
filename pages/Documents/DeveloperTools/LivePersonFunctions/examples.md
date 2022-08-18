@@ -131,7 +131,7 @@ async function lambda(input, callback) {
 
 Clients use the Refresh Token grant type to exchange a refresh token for an access token when the access token has expired. We recommend refreshing the token using a scheduled function. Refreshed details are written back to the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client) for further usage in other functions.
 
-<img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth2 Refresh Token" class="fancyimage"/>
+<img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth 2.0 Refresh Token" class="fancyimage"/>
 
 The following reduced code snippet shows how to obtain the refresh and access token.
 

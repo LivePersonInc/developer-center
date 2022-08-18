@@ -70,13 +70,12 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    Add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name to YOUR target name:
 
    ```ruby
-   source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-   platform :ios, '9.0'
-   use_frameworks!
+    platform :ios, '13.0'
+    use_frameworks!
 
-   target '<Your Target Name>' do  
-      pod 'LPMessagingSDK'
-   end
+    target '<target name>' do  
+        pod 'LPMessagingSDK', :source => "https://github.com/LivePersonInc/iOSPodSpecs.git" 
+    end
    ```
 
 4. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:

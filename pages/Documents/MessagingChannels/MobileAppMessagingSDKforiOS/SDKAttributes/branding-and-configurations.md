@@ -2188,6 +2188,12 @@ Input TextView top border color default clear color.
 - **Type:** UIColor  
 - **Default value:** [`LPColor.lpClear`](#LPColor)
 
+#### inputTextViewPlaceholderColor  
+Input TextView placeholder text color. 
+
+- **Type:** UIColor  
+- **Default value:** nil
+
 --- 
 
 ### User's Bubble

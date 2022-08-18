@@ -735,9 +735,9 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 Following authentication and authorization are supported by reporting API
 
-Oauth2.0 (Recommended)
-Oauth1.0
-LE Bearer Token
+* OAuth 2.0 (Recommended)
+* OAuth 1.0
+* LE Bearer Token
 
 - For OAuth 2.0, refer to [this document](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)
 - For OAuth 1.0, refer to [this document Step 8](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html), Keys will be provided separately

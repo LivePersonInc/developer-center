@@ -14,6 +14,6 @@ https://developers.liveperson.com:
       '^/images/(.*)':
         to: 'https://{default}/img/archive/$1'
         regexp: true
-      '^/(free-trial-registration|register-test)':
+      '^/(register-test)':
         to: 'https://www.liveperson.com/demo/'
         regexp: true
