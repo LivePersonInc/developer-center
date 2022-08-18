@@ -140,10 +140,10 @@ You can convert a trust certificate to the required format using openssl. For ex
     - **Authentication Type**: Select "Mutual Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Key Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks.
-    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required.
-    - **Key Certificate Password**: Optionally enter the password for the keys certificate.
-    - **Trust Certificate Password**: Optionally enter the password for the trust certificate.
+    - **Key Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks. Note that the UI doesn’t verify that the uploaded certificate and keys are working; you must verify externally that they’re current and valid.
+    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required. Note that the UI doesn’t verify that the uploaded certificate and keys are working; you must verify externally that they’re current and valid.
+    - **Key Certificate Password**: This is an optional field, but if the keys certificate requires a password, you must enter it here.
+    - **Trust Certificate Password**: This is an optional field, but if the trust certificate requires a password, you must enter it here.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
 7. Click **Save**.
 
