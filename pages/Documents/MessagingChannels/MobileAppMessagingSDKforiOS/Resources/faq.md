@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Where can I find the latest versions of the SDK Libraries
 
-Githubs:
+GitHubs:
 - [XCFramework](https://github.com/LivePersonInc/iOSFrameworks)
 - [SampleApp + XCFramework](https://github.com/LP-Messaging/iOS-Messaging-SDK)
 - [Cocoapods](https://github.com/LivePersonInc/iOSPodSpecs)

@@ -68,7 +68,7 @@ info:
     for the subscription request.
     
 #externalDocs:
-#  description: Find out how to create Github repo for your OpenAPI spec.
+#  description: Find out how to create GitHub repo for your OpenAPI spec.
 #  url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   - name: infra
