@@ -33,20 +33,20 @@ This bot template contains global functions brought over from the [Global Helper
 * **2 Fallback**: This is displayed when the user enters an utterance that is not recognized.
 * **3 Transfer**: Contains integration tiles to transfer to a different skill or agent based on the result of dynamic routing policies.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png" alt="The Welcome dialog in a bot created from the Conversation Orchestrator bot template">
 
 #### Integrations
 
 * **TRANSFER_TO_AGENT**: Performs a transfer to a Conversational Cloud agent and skill. Agent ID, Skill Name, and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
 * **TRANSFER_TO_SKILL**: Performs a transfer to a Conversational Cloud skill. Skill Name and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png" alt="The Integration Settings page for the Transfer to Agent configuration">
 
 ### Configuration needed
 
 The important environment related variables are stored in the **Global Functions**, and for most cases this is the only area you will edit.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png" alt="The initConversation function on the Global Functions page in the bot">
 
 Open the bot. On the top navigation click **Global Functions** and edit the following fields:
 

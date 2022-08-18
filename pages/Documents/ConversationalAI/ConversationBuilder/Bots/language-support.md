@@ -12,7 +12,7 @@ indicator: both
 
 When you [create a Conversation Builder bot](conversation-builder-bots-custom-bots.html#create-a-custom-bot), you specify its bot language:
 
-<img class="fancyimage" alt="Specify bot language" style="width:600px" src="img/ConvoBuilder/cb_botlanguage.png">
+<img class="fancyimage" alt="Specify bot language" style="width:600px" src="img/ConvoBuilder/cb_botlanguage.png" alt="The Custom Bot window for creating a custom bot, with a callout to the Bot Language setting in specific">
 
 Select the language based on how you'll train the bot: If you will use an intent domain, you must select the language of the domain that will be associated with the bot. For example, if the intent domain uses English, select "English" for the bot language. If these languages don't match, errors during NLU processing will occur. Alternatively, if the bot will use only pattern matching, you can select or enter any language for the bot language.
 

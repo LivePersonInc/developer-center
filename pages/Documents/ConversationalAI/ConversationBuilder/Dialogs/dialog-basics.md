@@ -18,11 +18,11 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 There are several types of dialogs:
 
-- <img class="inlineimage" style="width:30px" alt="Icon for standard dialog" src="img/ConvoBuilder/icon_dialog_standard.png"> **Dialog (Standard)**: [Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match.
-- <img class="inlineimage" style="width:30px" alt="Icon for fallback dialog" src="img/ConvoBuilder/icon_dialog_fallback.png"> **Fallback**: The [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is triggered when the bot doesn't recognize the consumer's message.
-- <img class="inlineimage" style="width:30px" alt="Icon for disambiguation dialog" src="img/ConvoBuilder/icon_dialog_disambiguation.png"> **Disambiguation**: The [disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html) is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed.
-- <img class="inlineimage" style="width:30px" alt="Icon for auto escalation dialog" src="img/ConvoBuilder/icon_dialog_autoescalation.png"> **Auto Escalation**: The [Auto Escalation dialog](conversation-builder-dialogs-auto-escalation-dialogs.html) frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred.
-* <img class="inlineimage" style="width:30px" alt="Icon for survey dialog" src="img/ConvoBuilder/icon_dialog_survey.png"> **Survey**: Survey dialogs can only be created in [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). Use a survey dialog to define a survey.
+- <img class="inlineimage" style="width:30px" alt="Icon for standard dialog" src="img/ConvoBuilder/icon_dialog_standard.png" alt="Icon for standard or regular dialog type"> **Dialog (Standard)**: [Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match.
+- <img class="inlineimage" style="width:30px" alt="Icon for fallback dialog" src="img/ConvoBuilder/icon_dialog_fallback.png" alt="Icon for fallback dialog type"> **Fallback**: The [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is triggered when the bot doesn't recognize the consumer's message.
+- <img class="inlineimage" style="width:30px" alt="Icon for disambiguation dialog" src="img/ConvoBuilder/icon_dialog_disambiguation.png" alt="Icon for disambiguation dialog type"> **Disambiguation**: The [disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html) is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed.
+- <img class="inlineimage" style="width:30px" alt="Icon for auto escalation dialog" src="img/ConvoBuilder/icon_dialog_autoescalation.png" alt="Icon for auto escalation dialog type"> **Auto Escalation**: The [Auto Escalation dialog](conversation-builder-dialogs-auto-escalation-dialogs.html) frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred.
+* <img class="inlineimage" style="width:30px" alt="Icon for survey dialog" src="img/ConvoBuilder/icon_dialog_survey.png" alt="Icon for survey dialog type"> **Survey**: Survey dialogs can only be created in [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). Use a survey dialog to define a survey.
 
 ### Dialog templates
 
@@ -36,7 +36,7 @@ Every time a consumer enters a new utterance in a conversation, there’s a chan
 
 You can see this context switching occurring in the following conversation:
 
-<img style="width:550px" src="img/ConvoBuilder/contextSwitching2.png" alt="">
+<img style="width:550px" src="img/ConvoBuilder/contextSwitching2.png" alt="An example of a conversation where context switching is taking place">
 
 Your ability to redirect or restrict context switching depends on whether the consumer is responding to an open-ended statement or a question.
 
@@ -79,7 +79,7 @@ When you import dialogs, consider and address any dependencies across the dialog
 3. In the Add Dialog window, select the **From Existing Bots** tab.
 4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png" alt="Selecting a dialog to import on the From Existing Bots tab in the Add Dialog window">
 
 5. Click **Next**, and then **Save**.
 
@@ -104,7 +104,7 @@ During the operation:
 
 **To duplicate a dialog**
 
-1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt=""> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt="Three-dot icon"> (3-dot icon) beside the dialog's name.
 2. Select **Duplicate Dialog**.
 
     The dialog is duplicated. At this point, you might want to rename the copy. It is given a standard name based on the element name and bot name.
@@ -126,11 +126,11 @@ During the operation:
 
 To close the current dialog, set the interaction's Next Action to "Close Dialog."
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeDialog.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeDialog.png" alt="A Text statement where the Next Action is Close Dialog">
 
 Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeDialog.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeDialog.png" alt="A Text statement that uses the special string LP_CLOSEDIALOG to close the dialog">
 
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
@@ -141,11 +141,11 @@ These methods for closing the dialog **do** trigger a post-conversation [survey]
 
 To close the current conversation, set the interaction's Next Action to "Close Conversation."
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeConv.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeConv.png" alt="A Text statement where the Next Action is Close Conversation">
 
 Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeConversation.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeConversation.png" alt="A Text statement that uses the special string LP_CLOSECONVERSATION to close the conversation">
 
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
@@ -156,9 +156,9 @@ These methods for closing the conversation **don't** trigger a post-conversation
 
 **To configure dialog settings**
 
-1. In the dialogs panel on the left, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt=""> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt="Three-dot icon"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png" alt="">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png" alt="The Dialog Settings menu option">
 
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
@@ -177,7 +177,7 @@ Dialog settings include:
 
 **To disable or enable a dialog**
 
-1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt=""> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt="Three-dot icon"> (3-dot icon) beside the dialog's name.
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
 4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
@@ -189,6 +189,6 @@ Deleting a dialog is a non-recoverable action, so be certain about doing so befo
 
 **To delete a dialog**
 
-1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt=""> (3-dot icon) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png" alt="Three-dot icon"> (3-dot icon) beside the dialog's name.
 2. Select **Delete Dialog**.
 3. In the confirmation dialog, click **Yes**.

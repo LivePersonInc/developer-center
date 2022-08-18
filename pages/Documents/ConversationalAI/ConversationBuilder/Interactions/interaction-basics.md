@@ -112,11 +112,11 @@ When selecting an interaction to add, [make sure it's supported by the channel y
 
 If you name your interactions **(1)**, it's easier to see and understand a dialog's flow **(2)**.
 
-<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactionName1.png" alt="">
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactionName1.png" alt="A view of the dialog editor showing two interactions with names, and how this makes things easy to read in the dialogs panel on the left">
 
 - To name an interaction, replace the text in the upper-left corner of the interaction tile.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactionName2.png" alt="">
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactionName2.png" alt="An indicator of how and where to rename an interaction">
 
 The name must be unique with respect to all interactions in the bot.
 
@@ -146,21 +146,21 @@ When the bot detects a match to a defined pattern, the dialog starter configured
 
 When you're specifying a pattern in a [dialog starter](conversation-builder-interactions-dialog-starter.html) or in a [condition](conversation-builder-interactions-configuration-next-action.html#conditions) in a custom rule, you'll see a library that's available.
 
-<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_pattern_library_1.png" alt="">
+<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_pattern_library_1.png" alt="The Library link that's available for adding popular patterns">
 
 The library contains a list of popular patterns. Click **Add** to append a set of patterns to the current list.
 
-<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactions_pattern_library_2.png" alt="">
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactions_pattern_library_2.png" alt="A view of the patterns that are in the library, and the Add button to use to add a set of patterns">
 
 #### Advanced patterns with Regular Expressions
 
 If you need more advanced operators, you can use [regular expressions](https://regex101.com/) with pattern matching.
 
-<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png" alt="">
+<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png" alt="Entering a RegEx pattern in a condition in a custom rule">
 
 When defining a [condition](conversation-builder-interactions-configuration-next-action.html#conditions) using a regular expression, click **Hint** to view and quickly copy commonly used regular expressions.
 
-<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/regex_hint_2.png" alt="">
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/regex_hint_2.png" alt="The RegEx library that you can use to quickly copy and add common RegEx patterns">
 
 ### Use variables and slots in interactions
 
@@ -206,9 +206,9 @@ Add the following special tag inline inside your text interaction to force a bre
 
     `tag::breakWithDelay=1000`
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint1.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint1.png" alt="Using breakWithDelay in a Text statement">
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint2.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint2.png" alt="How the usage of breakWithDelay is rendered to the consumer">
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
@@ -221,18 +221,18 @@ Use comments to quickly explain things. They are particularly helpful when you w
 
 Comments are displayed at the bottom of the interaction like so:
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments2.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments2.png" alt="Example comments in an interaction">
 
 #### To add a comment to an interaction
 
 1. Select the interaction.
 2. Enter the comment in the field provided at the bottom of the interaction, and press Enter. You can enter only text; HTML tags are not allowed.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments1.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interactions_comments1.png" alt="Adding comments to an interaction">
 
     In a comment, a maximum of 240 characters is allowed. If you go over this limit, you are notified:
 
-    <img style="width:700px" src="img/ConvoBuilder/interactions_comments5.png" alt="">
+    <img style="width:700px" src="img/ConvoBuilder/interactions_comments5.png" alt="The warning you see when your comment exceeds the maximum number of characters allowed">
 
 #### To show or hide comments
 
@@ -240,11 +240,11 @@ When you select an interaction, if it has a comment, the comment is always shown
 
 However, you can toggle on and off the display of comments in the other interactions in the dialog. To do this, use the **Comments** slider at the top of the dialog.
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_comments3.png" alt="">
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments3.png" alt="The toggle to use to show and hide comments">
 
 When comments are hidden throughout the dialog, you’ll see a small icon in the lower-left corner of an interaction to let you know that a comment exists for the interaction.
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_comments4.png" alt="">
+<img style="width:600px" src="img/ConvoBuilder/interactions_comments4.png" alt="The small indicator you see when a comment exists for an interaction but the comment is in a hidden state">
 
 ### Save changes
 
@@ -253,7 +253,7 @@ Some but not all changes are automatically saved after you make them. As a gener
 **To save changes to an interaction**
 
 1. Select the interaction.
-2. Click the <img style="width:25px" src="img/ConvoBuilder/icon_save_int.png" alt=""> (Save) icon in the upper-right corner.
+2. Click the <img style="width:25px" src="img/ConvoBuilder/icon_save_int.png" alt="Save icon"> (Save) icon in the upper-right corner.
 
 ### Move an interaction
 
@@ -275,7 +275,7 @@ You can duplicate any type of interaction except a Dialog Starter interaction. A
 **To duplicate an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png" alt=""> in its upper-right corner, and click **Duplicate**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png" alt="Three-dot icon"> in its upper-right corner, and click **Duplicate**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
 3. Change the name of the copy as appropriate.
 
 ### Disable an interaction
@@ -284,7 +284,7 @@ A disabled interaction is ignored in a dialog flow. Consider disabling an intera
 
 **To disable an interaction**
 
-1. Select the interaction, click the <img style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings) icon in its upper-right corner.
+1. Select the interaction, click the <img style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings) icon in its upper-right corner.
 2. On the Basic tab, click the **Interaction Enabled** slider to turn it to the off position.
 
 ### Delete an interaction
@@ -297,7 +297,7 @@ After you delete an interaction, verify that the interaction flow isn't broken a
 **To delete an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png" alt=""> in its upper-right corner, and click **Delete**.
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png" alt="Three-dot icon"> in its upper-right corner, and click **Delete**.
 3. Click **Continue** to confirm the deletion.
 
 ### Troubleshooting
