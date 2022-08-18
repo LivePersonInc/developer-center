@@ -298,12 +298,6 @@ code pre {
   flex: 3;
 }
 
-.defaultcontent h3,
-.defaultcontent h4 {
-  display: flex;
-  align-items: center;
-}
-
 .defaultcontent a.anchorjs-link {
   background-repeat: no-repeat;
   background-position: center;
