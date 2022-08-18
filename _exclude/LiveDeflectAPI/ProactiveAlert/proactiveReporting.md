@@ -29,7 +29,7 @@ The proactiveReporting API endpoint should be passed a start and end timestamp i
 <tbody>
   <tr>
     <td>Authorization</td>
-    <td>Oauth {{Credentials}}</td>
+    <td>OAuth {{Credentials}}</td>
   </tr>
   <tr>
     <td>Content-Type</td>

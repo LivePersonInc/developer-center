@@ -23,13 +23,13 @@ Yes, you can do this per recommendation source. To do this:
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
 2. Click **Recommendations Sources** from the menu at the top.
 3. Click the **Knowledge Bases** tab or the **Bots** tab, as appropriate.
-4. Beside the source, click the <img style="width:25px" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+4. Beside the source, click the <img style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
 5. In the **Manage recommendation source** dialog, change the Status to “OFF.”
 6. Click **Save**.
 
 #### Why aren’t my knowledge bases discovered?
 
-There are a few reasons why this might be the case. For more, see [here](conversation-assist-troubleshooting.html#knowledge-bases) in *Troubleshooting*.
+There are a few reasons why this might be the case. For more, see our [troubleshooting info](conversation-assist-troubleshooting.html#knowledge-bases).
 
 #### Why aren’t my knowledge base answers formatted?
 
@@ -46,7 +46,7 @@ Currently, the denominator is incorrect. It reflects only the recommendations th
 To make recommendations, Conversation Assist analyzes the available bots and knowledge base articles that match the consumer’s intent, and it finds the best ones. The recommendations are made by choosing those ranked highest by relevance score.
 
 {: .important}
-No bot or answer recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 3 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
+No bot or answer recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 24 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
 
 The rules for how the recommendations are made and ordered are as follows:
 

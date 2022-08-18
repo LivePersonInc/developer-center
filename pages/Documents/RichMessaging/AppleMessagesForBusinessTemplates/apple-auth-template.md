@@ -26,7 +26,7 @@ See the message flow below:
 
 ### Setup
 
-1. Supply your private OAuth2 service details in your Apple management area (register.apple.com).
+1. Supply your private OAuth 2.0 service details in your Apple management area (register.apple.com).
 
 The required details include:
 
@@ -36,9 +36,9 @@ The required details include:
 
 * Client Identifier
 
-#### Instructions on how to create a free OAuth2 service using [auth0](https://auth0.com/)
+#### Instructions on how to create a free OAuth 2.0 service using [auth0](https://auth0.com/)
 
-If you do not yet have an OAuth2 service or if you need a test service, follow the instructions below:
+If you do not yet have an OAuth 2.0 service or if you need a test service, follow the instructions below:
 
 1. Create a [auth0 account](https://auth0.com/)
 
@@ -86,7 +86,7 @@ The **body** template will only define how the Apple Auth bubble is displayed in
 
 ![](img/apple_auth_consumer1.png)
 
-**Consumer fills out form from OAuth2 provider**
+**Consumer fills out form from OAuth 2.0 provider**
 
 ![](img/apple_auth_consumer2.png)
 

@@ -41,17 +41,6 @@ img {
 
 /*inner page css */
 
-/* h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id],
-dt[id] {
-  margin-bottom: 4px;
-  padding-top: 0;
-} */
-
 h2[id] {
     color: var(--title-text);
     font-family: "Space Grotesk", sans-serif;
@@ -71,6 +60,8 @@ h3[id] {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: var(--space-unit);
+    /* TODO: review use of hyphens */
+    hyphens: auto;
 }
 
 h4[id] {
@@ -876,7 +867,9 @@ iframe {
 @media (min-width: 767px) {
     ul.mysidebar.nav {
         height: 100vh;
+        padding-bottom: var(--space10);
     }
+
 }
 
 @media (max-width: 767px) {
