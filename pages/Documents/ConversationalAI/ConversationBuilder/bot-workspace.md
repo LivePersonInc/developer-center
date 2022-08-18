@@ -15,7 +15,7 @@ indicator: both
 
 The Conversation Builder application is the primary workspace for designing a bot.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace.png" alt="">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace.png" alt="The dialog editor in the Conversation Builder application">
 
 A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basics.html) that each contain one or more [interactions](conversation-builder-interactions-interaction-basics.html). In the image above of the Dialogs view in Conversation Builder, note the following:
 
@@ -30,17 +30,17 @@ Conversation Builder supports the creation of bots for all the Conversational Cl
 
 When you first open a bot, you are taken to the **Dialogs** view. Use this view to make changes to the bot's [dialogs](conversation-builder-dialogs-dialog-basics.html) and the [interactions](conversation-builder-interactions-interaction-basics.html) within them.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_dialogEditor.png" alt="">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_dialogEditor.png" alt="The dialog editor in the Conversation Builder application">
 
 In the left panel in the Dialogs view, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog name, interaction name, or interaction content.
 
-<img class="fancyimage" style="width:250px" src="img/ConvoBuilder/botWorkspace_dialogsPanel.png" alt="">
+<img class="fancyimage" style="width:250px" src="img/ConvoBuilder/botWorkspace_dialogsPanel.png" alt="The dialogs panel on the left in the dialog editor">
 
 ### The interactions toolbar
 
 The interactions toolbar is located on the right side in the Dialogs view.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_interactionsToolbar.png" alt="">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_interactionsToolbar.png" alt="The interactions palette on the right in the dialog editor">
 
 The toolbar contains tools for adding different [types of interactions](conversation-builder-interactions-interaction-basics.html#interaction-categories) to the dialog that's currently open in the dialog editor in the center of the screen.
 
@@ -58,7 +58,7 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html) the bot to a Conversational Cloud environment.
 
-* The <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt=""> icon makes available more options:
+* The <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> icon makes available more options:
 
   * **Bot Settings** (see [this section](conversation-builder-bots-bot-basics.html#configure-bot-settings))
   * **Bot Change History**

@@ -29,7 +29,7 @@ You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import
 
 In contrast, when a bot developer makes a dialog available as a template that can be imported, they must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the template is imported.
 
-<img style="width:800px" src="img/ConvoBuilder/dialogtemplates_6.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/dialogtemplates_6.png" alt="A comparison list of what gets imported when you import a dialog versus import a dialog template">
 
 For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog — and ensure that other bot developers import all required items — make the dialog available as a dialog template.
 
@@ -39,7 +39,7 @@ A dialog that is made available as a template functions just like it would if it
 
 Once you make a dialog available as a template, the dialog can no longer be [imported as a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog). It can only be imported as a dialog template.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/dialogtemplates_1.png" alt="">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/dialogtemplates_1.png" alt="The Add Dialog options, showing an X through the From Existing Bots option">
 
 There are two reasons for this constraint:
 
@@ -49,11 +49,11 @@ There are two reasons for this constraint:
 **To make a dialog available as a dialog template**
 
 1. Open the bot.
-2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt=""> beside the dialog name, and select **Dialog Settings**.
+2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> beside the dialog name, and select **Dialog Settings**.
 3. On the Dialog Settings page, expand **More Settings**.
 4. Scroll down to **Make Available as a Dialog Template**, and click **+ Add Template Definition**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/dialogtemplates_2.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/dialogtemplates_2.png" alt="The Add Template Definition window">
 
     The dialog itself is automatically made a part of the template definition, but you need to specify other dependencies. *Take care when specifying the dependencies. Successful use of the dialog template by other bot developers depends on whether all needed items (other dialogs, environment variables, etc.) are included.*
 
@@ -78,7 +78,7 @@ There are two reasons for this constraint:
     <br>
     In the Dialogs panel, you now see an indicator that the dialog has a template definition, either in Draft or Published status:
 
-    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png" alt="">
+    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png" alt="The Draft and Published indicators that are shown beside dialogs in the dialogs panel">
 
 {: .important}
 If you subsequently change the dialog in a way that impacts the template definition, remember to update the template definition accordingly.
@@ -93,14 +93,14 @@ Once you publish a dialog template, there is no way to unpublish it. Delete the 
 **To publish a dialog template**
 
 1. Open the bot.
-2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt=""> beside the dialog name, and select **Dialog Settings**.
+2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> beside the dialog name, and select **Dialog Settings**.
 3. On the Dialog Settings page, expand **More Settings**.
 4. Scroll down to **Make Available as a Dialog Template**, and click **+ Update Template Definition**.
 5. In the Update Template Definition window, click **Publish** in the lower-right corner.
 
     In the Dialogs panel, you now see an indicator that the dialog's dialog template is published:
 
-    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png" alt="">
+    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png" alt="The Draft and Published indicators that are shown beside dialogs in the dialogs panel">
 
 ### Delete a dialog template
 
@@ -109,10 +109,10 @@ Deleting a dialog template has no impact on the dialog itself. The process delet
 **To delete a dialog template**
 
 1. Open the bot.
-2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt=""> beside the dialog name, and select **Dialog Settings**.
+2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> beside the dialog name, and select **Dialog Settings**.
 3. On the Dialog Settings page, expand **More Settings**.
 4. Scroll down to **Make Available as Dialog Template**, and click **Update Template Definition**.
-5. Scroll down, click **More Settings**, and beside **Delete Template Definition** click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt=""> (Delete).
+5. Scroll down, click **More Settings**, and beside **Delete Template Definition** click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="Delete icon"> (Delete).
 6. In the confirmation dialog, click **Yes**.
 
 ### Import a dialog template
@@ -142,12 +142,12 @@ Keep in mind that importing a dialog template often can involve importing many d
 3. In the Add Dialog window, select the **From Dialog Templates** tab.
 4. Browse and/or search to find and select the dialog template to import. You can select only a single dialog template. You can select from the dialog templates defined in the bots and bot templates to which you have access in your organization.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_4.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_4.png" alt="The From Dialog Templates tab in the Add Dialog window, where you can select a dialog template to import">
 
 5. Select the dialog template, and click **Next**.
 6. Review the list of associated items (other dialogs, domains, environment variables, global functions) that will be imported as a part of the dialog template. These are the items that the bot developer who created the template has specified as required by the dialog.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_5.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_5.png" alt="The view or list of what will be copied into the bot, for example, dialogs, domains, integrations, and more">
 
 7. Click **Save**.
 

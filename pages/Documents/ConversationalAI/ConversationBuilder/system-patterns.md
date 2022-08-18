@@ -39,7 +39,7 @@ In unauthenticated bot conversations, you can use this command to set the consum
 
     `SET_USER_PROFILE | {"firstName" : "{$botContext.firstName}", "lastName" : "{$botContext.lastName}"}`
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/system_patterns1.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/system_patterns1.png" alt="An example of using SET_USER_PROFILE in a Text statement">
 
     Once the bot invokes this interaction, the consumer’s name will appear in the list of conversations within Conversational Cloud.
 
