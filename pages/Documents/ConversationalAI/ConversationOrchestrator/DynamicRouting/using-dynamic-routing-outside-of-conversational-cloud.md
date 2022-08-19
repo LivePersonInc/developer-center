@@ -11,7 +11,7 @@ indicator: messaging
 ---
 
 {: .important}
-This topic assumes you are familiar with linking third-party bots to Conversational Cloud. If you aren't, we strongly suggest that you read the documentation [here](third-party-bots-getting-started.html).
+This topic assumes you are familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversational Cloud.
 
 ### Introduction
 Once your third-party bot is ready, you can [set up routing policies](conversation-orchestrator-dynamic-routing-creating-routing-policies.html) on Dynamic Routing and leverage the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
@@ -70,11 +70,11 @@ axios.patch(
 ```
 
 {: .important}
-The snippet above uses Context Service V1. For Context Service V2 methods, see [here](conversation-orchestrator-conversation-context-service-methods-v2.html).
+The snippet above uses Context Service V1. For Context Service V2 methods, see [this topic](conversation-orchestrator-conversation-context-service-methods-v2.html).
  
 ##### Step 3 — Call the Next Actions API
 
-Now that you have the conversation ID, use it to call the Next Actions API as follows:
+Now that you have the conversation ID, use it to call the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) as follows:
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
@@ -94,6 +94,4 @@ axios.get(
 ```
 
 {: .important}
-The snippet above uses Next Actions V1. For Next Actions V2 methods, see [here](conversation-orchestrator-next-actions-api-methods-v2.html). 
- 
-For more information on using the Next Actions API, see [here](conversation-orchestrator-next-actions-api-overview.html).
+The snippet above uses Next Actions V1. For Next Actions V2 methods, see [this topic](conversation-orchestrator-next-actions-api-methods-v2.html). 

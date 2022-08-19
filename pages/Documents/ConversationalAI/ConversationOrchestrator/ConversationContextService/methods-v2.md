@@ -16,20 +16,18 @@ There are two ways to manage properties in the Conversation Context Service (CCS
 * A Javascript function wraps the REST API for easy use within Conversational Cloud. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-For information on this, see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
+See [this topic](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
 
 ### REST APIs overview
 
-The APIs can be called as shown below. Every API call requires the secure token
+The APIs can be called as shown below. Every API call requires the [secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2)
+
 {domain}/{api}?access_token=<Token> 
 
 Domain URL per environment:
 * AMERICAS : https://z1.ccs.liveperson.net/
 * EMEA: https://z2.ccs.liveperson.net/
 * APAC: https://z3.ccs.liveperson.net/
-
-{: .important}
-For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 ### REST API — Save Properties
 

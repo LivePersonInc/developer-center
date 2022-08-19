@@ -22,7 +22,7 @@ v2 was released in July 2021. This newer version applies to both the Conversatio
 
 Within this Conversation Orchestrator section of the Developer Center, please refer to the v1 or v2 documentation as appropriate for your case.
 
-You can know you are on v2 if you see OAuth 2.0 authentication on the API Authorization page, as discussed [here](conversation-orchestrator-api-authorization.html).
+You can know you are on v2 if you see OAuth 2.0 authentication on the [API Authorization](conversation-orchestrator-api-authorization.html) page.
 
 ### Upgrade to v2 APIs
 

@@ -37,7 +37,7 @@ There are two ways to accomplish intent-based routing:
 * If you have many intents and corresponding skills, enable intent routing in the Conversation Orchestrator bot.
 
 {: .important}
-Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access an older version of this topic [here](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
+Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access [an older version of this topic](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
 
 #### Routing by intent using the dialog starter approach
 
@@ -62,7 +62,7 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
 1. Create the Dynamic Routing bot, and open **Global Functions**.
 
-    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
+    Create a new bot using the **Dynamic Routing Bot** by following the steps in [this topic](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
 
 2. Retrieve the botAppKey.
 
@@ -128,9 +128,9 @@ The policy creation flow is identical for both approaches:
 
 5. Test your policy.
 
-    You can test your setup on the web client emulator. For details on this, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+    You can [test your setup on the web client emulator](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
 
-    Alternatively, to test, you can deploy the bot and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+    Alternatively, to test, you can [deploy the bot and connect it to a campaign that’s linked to the production/staging channel of your choice](conversation-orchestrator-dynamic-routing-getting-started.html).
 
     Follow these steps once you have configured your testing setup:
 
