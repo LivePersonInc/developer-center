@@ -1,6 +1,6 @@
 // let reader = new FileReader();
 let solution = require('./solutions.json');
-let solution_path = "pages/Solutions/MMS/additionaloptions.md";
+let solution_path = "pages/Documents/Solutions/MMS/additionaloptions.md";
 // import { convertToExpectedFolderName, fileExists, convertToExpectedFileName } from './common_functions.js'
 const commonMethods = require('./common_functions.js');
 //import CommonMethods from './common_functions';
@@ -11,7 +11,7 @@ let errorCounter = 0;
 (function () {
     solution.forEach(item => {
         // TODO use file reader to see if folder exists
-        solution_path = "pages/Solutions/";
+        solution_path = "pages/Documents/Solutions/";
         solution_path += commonMethods.convertToExpectedFolderName(item.solutionname) + '/';
         // console.log('Solution path updated :', solution_path)
         if (fs.existsSync(solution_path) && item.documents) {
@@ -67,7 +67,7 @@ let errorCounter = 0;
                 }
             })
         } else {
-            console.log(`Folder Name:${commonMethods.convertToExpectedFolderName(item.solutionname)} in pages/Solutions/ doesn't exist or is not named properly. \n`);
+            console.log(`Folder Name:${commonMethods.convertToExpectedFolderName(item.solutionname)} in pages/Documents/Solutions/ doesn't exist or is not named properly. \n`);
             errorCounter++;
         }
     })
