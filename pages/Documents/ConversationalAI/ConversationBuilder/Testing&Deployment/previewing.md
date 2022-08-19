@@ -11,7 +11,7 @@ indicator: both
 
 The Preview tool is a web client that's designed to provide a full preview of the conversational experience as you design, develop and test the bot.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/preview.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/preview.png" alt="An example of conversation in the Preview tool">
 
 Note the following about Preview:
 
