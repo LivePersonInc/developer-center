@@ -120,6 +120,7 @@ Clicking on an individual activity within the activity stream will bring you to 
 <img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
 
 ### Invocation Histogram
+
 The invocation histogram allows you to better understand how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
 
 Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
