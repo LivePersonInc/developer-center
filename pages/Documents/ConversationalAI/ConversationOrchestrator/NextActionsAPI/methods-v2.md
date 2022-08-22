@@ -12,11 +12,11 @@ indicator: messaging
 
 There are two ways to use the Next Actions functionality:
 
-* The REST API can directly access policies. A primary use case for this is to retrieve policy routing decisions when using external, third-party bots, such as Watson or DialogFlow. For more information on integrating your third-party bots with Conversational Cloud, see [here](third-party-bots-getting-started.html).
+* The REST API can directly access policies. A primary use case for this is to retrieve policy routing decisions when using [external, third-party bots](third-party-bots-getting-started.html), such as Watson or DialogFlow.
 * A JavaScript function wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-For information on this, see [here](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
+See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
 
@@ -29,7 +29,7 @@ Domain URL per environment:
 * APAC: https://z3.context.liveperson.net
 
 {: .important}
-For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
+See also the [discussion on generating the secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 #### Get Next Actions
 Gets a routing decision based on Conversation Orchestrator configured policies.

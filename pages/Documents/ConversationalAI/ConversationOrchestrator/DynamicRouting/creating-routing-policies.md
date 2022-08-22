@@ -84,7 +84,7 @@ Here you pick SeattleEmployeeSkill from the available list of skills. Make sure 
 
 #### Step 7: Deploy and test
 
-You can test your setup on the web client emulator. For details, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+You can test your setup on the [web client emulator](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
 
 Alternatively, to test, you can deploy the bot, and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, please refer to [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html).
 
@@ -239,7 +239,7 @@ The chosen operator automatically determines the data type of the value. For exa
 
 ### Complex conditions including time-based criteria
 
-Dynamic routing includes an Expression Editor that allows you to configure advanced routing policies using nested conditions, logical operators and time-based functions. For more details, see [here](conversation-orchestrator-dynamic-routing-advanced-routing.html).
+Dynamic routing includes an Expression Editor that allows you to configure [advanced routing policies](conversation-orchestrator-dynamic-routing-advanced-routing.html) using nested conditions, logical operators and time-based functions.
 
 ### More about actions
 
