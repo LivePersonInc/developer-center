@@ -16,9 +16,9 @@ a[href]::after {
     content: " (page " target-counter(attr(href), page) ")"
 }
 
-a[href^="http:"]::after, a[href^="https:"]::after {
+/* a[href^="http:"]::after, a[href^="https:"]::after {
     content: " (" attr(href) ")";
-}
+} */
 
 a[href] {
     color: blue !important;
