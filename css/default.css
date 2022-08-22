@@ -85,6 +85,10 @@ p {
   gap: 16px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
 .side-width {
   width: 320px;
 }
@@ -419,7 +423,7 @@ code pre {
 }
 
 .breadhidden {
-  display: none;
+  display: none !important;
 }
 
 #aa-search-input {
