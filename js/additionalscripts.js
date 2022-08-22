@@ -557,7 +557,7 @@ function sidebarClick() {
   })
 }
 
-function breadClick(event) {
+/* function breadClick(event) {
   event.preventDefault()
   let breadText = $(this).innerHTML
   var breadSidebar = $("#defaultsidebar")
@@ -565,7 +565,7 @@ function breadClick(event) {
     .find("span:contains('" + breadText + "')")
     .trigger("click")
   // console.log(targetLink)
-}
+} */
 
 //a function to make sure the page's title is updated on load
 function replaceTitle() {

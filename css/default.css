@@ -85,6 +85,10 @@ p {
   gap: 16px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
 .side-width {
   width: 320px;
 }
@@ -298,12 +302,6 @@ code pre {
   flex: 3;
 }
 
-.defaultcontent h3,
-.defaultcontent h4 {
-  display: flex;
-  align-items: center;
-}
-
 .defaultcontent a.anchorjs-link {
   background-repeat: no-repeat;
   background-position: center;
@@ -425,7 +423,7 @@ code pre {
 }
 
 .breadhidden {
-  display: none;
+  display: none !important;
 }
 
 #aa-search-input {
