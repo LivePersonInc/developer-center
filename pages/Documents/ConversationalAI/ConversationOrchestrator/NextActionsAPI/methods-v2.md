@@ -16,7 +16,7 @@ There are two ways to use the Next Actions functionality:
 * A JavaScript function wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-See [this topic](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
+See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
 
@@ -29,7 +29,7 @@ Domain URL per environment:
 * APAC: https://z3.context.liveperson.net
 
 {: .important}
-For information on generating the secure token, see [this section](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
+See also the [discussion on generating the secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 #### Get Next Actions
 Gets a routing decision based on Conversation Orchestrator configured policies.

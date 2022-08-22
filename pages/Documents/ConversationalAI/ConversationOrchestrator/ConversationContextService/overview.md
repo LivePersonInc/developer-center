@@ -80,4 +80,4 @@ v2 of the Conversation Orchestrator APIs was released in July 2021. The new vers
 All accounts will gradually be migrated from v1 to v2 starting July 2021. Please talk to your LivePerson account executive if you want to be moved to v2 sooner. The v1 APIs will be deprecated on December 31, 2022. Please refer to the [v1](conversation-orchestrator-conversation-context-service-methods-v1.html) or [v2](conversation-orchestrator-conversation-context-service-methods-v2.html) documentation as appropriate for your case.
 
 {: .important}
-You can know you are on v2 if you see OAuth 2.0 authentication on the [API Authorization](conversation-orchestrator-api-authorization.html) page.
+To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application, and consult the discussion on [API Authorization](conversation-orchestrator-api-authorization.html).

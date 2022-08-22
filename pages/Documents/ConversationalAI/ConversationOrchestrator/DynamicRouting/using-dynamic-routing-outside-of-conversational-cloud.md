@@ -70,7 +70,7 @@ axios.patch(
 ```
 
 {: .important}
-The snippet above uses Context Service V1. For Context Service V2 methods, see [this topic](conversation-orchestrator-conversation-context-service-methods-v2.html).
+The snippet above uses Context Service v1. For Context Service v2 methods, see the [discussion on v2 methods](conversation-orchestrator-conversation-context-service-methods-v2.html).
  
 ##### Step 3 — Call the Next Actions API
 
@@ -94,4 +94,4 @@ axios.get(
 ```
 
 {: .important}
-The snippet above uses Next Actions V1. For Next Actions V2 methods, see [this topic](conversation-orchestrator-next-actions-api-methods-v2.html). 
+The snippet above uses Next Actions v1. For Next Actions v2 methods, see the [discussion on v2 methods](conversation-orchestrator-next-actions-api-methods-v2.html). 

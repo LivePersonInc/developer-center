@@ -119,7 +119,7 @@ Conversation Builder is already integrated with the Conversation Context Service
 5. Save the skill and agent ids to be used with policy.
 
 {: .important}
-For some practice at creating skills, users, and campaigns, see [this tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
+For some practice at creating skills, users, and campaigns, see the[tutorial on deploying a bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 #### Create a simple policy using static context attributes
 
@@ -304,7 +304,7 @@ Add parameters to this function by selecting “attribute”, and then typing my
 
 The bot template that you used has one basic integration: It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies, for example, additional information such as customer name, email, or the NLU intent.
 
-To learn about scripting functions inside Conversation Builder, see [this topic](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
+Conversation Builder offers [scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 **To add additional context**
 
@@ -663,7 +663,7 @@ Now test a conversation that doesn’t trigger the complaint routing.
 
 ### Using Conversation Orchestrator outside of Conversational Cloud
 
-This section of the documentation assumes that you are already familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversation Cloud.
+This section of the documentation assumes that you are already familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversational Cloud.
 
 Once your third-party bot is ready, you can set up routing policies on Dynamic Routing and leverage the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
 

@@ -50,4 +50,4 @@ All accounts will gradually be migrated from v1 to v2 starting July 2021. Please
 You can know you are on v2 if you see OAuth 2.0 authentication on the [API Authorization](conversation-orchestrator-api-authorization.html).
 
 ### Getting started
-To generate credentials for using the API, see [this topic](conversation-orchestrator-api-authorization.html).
+See the [discussion on generating credentials for using the API](conversation-orchestrator-api-authorization.html).

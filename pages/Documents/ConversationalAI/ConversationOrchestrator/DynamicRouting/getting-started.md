@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. If you're still using bots based on the older template, see [this topic](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead for setup information.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. If you're still using bots based on the older template, see [this setup info](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead.
 
 ### Introduction
 
@@ -18,7 +18,7 @@ To get started, you need to direct traffic to a routing bot. Your setup is diffe
 
 * Use the Conversation Orchestrator Dynamic Routing bot if you are setting up routing for the first time, or if you don’t mind setting up a new routing or concierge bot. This template comes pre-wired with hooks to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). The Conversation Orchestrator bot also comes with out-of-the-box intent-based and channel-based routing. *This is the easiest way to get started.*
 * If you already have a functional routing bot in Conversational Cloud, and you don’t want to move that logic to a new bot, you’ll need to manually add the Dynamic Routing interaction. Please note the Conversation Orchestrator Dynamic Routing bot includes additional benefits like automatic support for intent-based routing. If you use your own routing bot, you won’t automatically get this feature.
-* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform such as Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform the routing. This is discussed in more detail in [this topic](conversation-orchestrator-dynamic-routing-using-dynamic-routing-outside-of-conversational-cloud.html).
+* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform such as Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform the routing. This is discussed in more detail in the [discussion on using Dynamic Routing outside of Conversational Cloud](conversation-orchestrator-dynamic-routing-using-dynamic-routing-outside-of-conversational-cloud.html).
 
 The first two options above are further discussed in this topic.
 

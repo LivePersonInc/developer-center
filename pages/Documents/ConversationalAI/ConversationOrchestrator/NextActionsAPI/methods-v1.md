@@ -20,7 +20,7 @@ There are two ways to use the Next Actions functionality:
 * A JavaScript function that wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-See [this topic](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
+See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
 Every API call to the Conversation Context Service requires the following auth headers to be accepted:  
