@@ -55,7 +55,7 @@ If the domain uses the LivePerson engine for NLU, on occasion you might notice a
 
     **User text**: Enter the consumer utterance to test.
 
-    **Model version**: Skip this. While you need to have a trained model version in order to test, the model version you use is irrelevant.
+    **Model version**: Skip this, as the saved entities are always used, both within the tool and by other applications (e.g., Conversation Builder). While you need to have a trained intent model in order to test, the entity configuration is not a part of the model versioning.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities1.png" alt="Default state of the Test User Input tool for testing entity detection">
 
