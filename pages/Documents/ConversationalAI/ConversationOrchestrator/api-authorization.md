@@ -12,7 +12,7 @@ indicator: messaging
 Server-to-server authentication is required to use Conversation Orchestrator APIs, including the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism differs between version 1 (v1) and version 2 (v2).
 
 {: .important}
-To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
+There are some [differences between v1 and v2](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
 
 ### API Authorization for v1
 
