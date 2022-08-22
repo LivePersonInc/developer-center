@@ -21,7 +21,19 @@ CCS is a cloud-based repository for storing and retrieving session state attribu
 
 CCS provides a system to hierarchically organize data using *key-value pairs*. At the top of the hierarchy, brands can have multiple *namespaces* to specify sections based on different business use cases. Typically, namespaces group together related attributes, such as customer information or reporting dashboard data for your account. Brands can define as many attributes as needed within their namespace, and they can further organize and structure these attributes under session IDs within the namespace.
 
-<img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_namespace.png" alt="">
+```
+{ Namespace
+
+  <Group-related attributes, e.g., customer info>
+  
+  { Session ID
+  
+  <Identifier to group KVPs, e.g., a session ID>
+  
+    { Key-Value Pairs
+    
+    <Attributes, e.g., customer name, email>
+```
 
 CCS stores data in key-value pairs and includes developer tools like js-libraries, LivePerson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
 
