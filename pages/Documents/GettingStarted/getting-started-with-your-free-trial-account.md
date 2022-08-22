@@ -7,7 +7,10 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
+date: 2019-01-30 00:00:00 +0000
+last_modified: 2022-03-25 00:00:00 +0000
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
    <div class="modal-content">
