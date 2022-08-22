@@ -1913,3 +1913,18 @@ input#csds-button {
     font-size: 17px;
   }
 }
+
+@media print {
+
+  #mainHeader {
+    position: static;
+  }
+
+  div[id^="LPMcontainer"],
+  .breadcrumbs,
+  .theme-switch-wrapper,
+  #cookie-notice {
+    display: none;
+  }
+
+}
