@@ -92,7 +92,7 @@ Content-Type: application/json;charset=utf-8
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developer-center/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-<img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
+<!-- <img src="img/faas-postman.png" alt="Postman" style="width:100%;"/> -->
 
 1. In your request-tab under your function click on **Authorization**
 
@@ -102,7 +102,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 4. In the appearing dialog fill out the form:
 
-![](img/faas-token-client-credentials.png)
+<!-- ![](img/faas-token-client-credentials.png) -->
 
   1. **Token Name**: The name of the token.
 
