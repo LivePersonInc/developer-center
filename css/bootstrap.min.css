@@ -199,7 +199,7 @@ th {
   a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  /* a[href]:after {
     content: " (" attr(href) ")";
   }
   abbr[title]:after {
@@ -208,7 +208,7 @@ th {
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
-  }
+  } */
   blockquote,
   pre {
     border: 1px solid #999;
