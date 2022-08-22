@@ -423,7 +423,7 @@ code pre {
 }
 
 .breadhidden {
-  display: none;
+  display: none !important;
 }
 
 #aa-search-input {
