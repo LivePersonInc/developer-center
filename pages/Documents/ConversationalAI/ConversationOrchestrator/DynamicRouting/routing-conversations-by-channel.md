@@ -42,9 +42,9 @@ You can create policies to recognize a consumer's channel: Web, Facebook Messeng
 
 5. Launch a messaging conversation from the respective channel and test the flow.
 
-    If you are routing based on “web-channel”, You can test your setup on the web client emulator. For details, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+    If you are routing based on “web-channel”, You can [test your setup on the web client emulator](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
 
-    Alternatively, you can deploy the bot and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+    Alternatively, you can [deploy the bot and connect it to a campaign that’s linked to the production/staging channel of your choice](conversation-orchestrator-dynamic-routing-getting-started.html).
 
 6. Follow these steps once you have messaging set up.
 
