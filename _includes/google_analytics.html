@@ -1,13 +1,9 @@
 <!-- the google_analytics_id gets auto inserted from the config file -->
 {% if site.google_analytics %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script src="https://www.googletagmanager.com/gtag/js?id=UA-277946-54" async></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-	gtag('config', 'UA-277946-54');
-</script>
-{% endif %}
+<script
+  src="https://www.googletagmanager.com/gtag/js?id=UA-277946-54"
+  async
+></script>
+
+{%- include cookie-consent.html -%} {% endif %}

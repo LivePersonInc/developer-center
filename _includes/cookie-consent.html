@@ -1,0 +1,124 @@
+<!-- Cookies consent -->
+<style>
+  #cookie-notice {
+    display: none;
+    line-height: 40px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 20px;
+    text-align: center;
+    border: 1px solid var(--card-border);
+    background-color: var(--input-search-background);
+    color: var(--body-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #cookie-notice p {
+    margin: 0;
+  }
+  #cookie-notice a {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: #337ab7;
+    text-decoration: none;
+  }
+  #cookie-notice a.btn {
+    min-width: 26px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    outline: none;
+    padding: 12px 40px;
+    gap: 2px;
+    border: 1px solid var(--body-text);
+    border-radius: 24px;
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: var(--body-text);
+  }
+  #cookie-notice a.btn:hover {
+    background-color: var(--post-link-hover);
+    color: var(--button-text);
+    border: 1px solid var(--post-link-hover);
+  }
+  .btn-primary {
+    background: darkgreen;
+  }
+  @media (max-width: 767px) {
+    #cookie-notice p {
+      display: block;
+      padding-top: 3px;
+      margin-bottom: 1rem;
+    }
+
+    #cookie-notice a {
+      position: relative;
+      bottom: 4px;
+    }
+  }
+</style>
+
+<div id="cookie-notice">
+  <p>
+    Cookies help us deliver a better site experience. By using our site, you
+    agree to our use of cookies.
+  </p>
+  <a id="cookie-notice-accept" class="btn">I agree</a>
+</div>
+
+<script>
+  function createCookie(name, value, days) {
+    var expires = ""
+    if (days) {
+      var date = new Date()
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+      expires = "; expires=" + date.toUTCString()
+    }
+    document.cookie = name + "=" + value + expires + "; path=/"
+  }
+  function readCookie(name) {
+    var nameEQ = name + "="
+    var ca = document.cookie.split(";")
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i]
+      while (c.charAt(0) == " ") c = c.substring(1, c.length)
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
+  }
+  function eraseCookie(name) {
+    createCookie(name, "", -1)
+  }
+  if (readCookie("cookie-notice-dismissed") == "true") {
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+    gtag("config", "UA-277946-54")
+  } else {
+    document.getElementById("cookie-notice").style.display = "flex"
+  }
+  document
+    .getElementById("cookie-notice-accept")
+    .addEventListener("click", function () {
+      createCookie("cookie-notice-dismissed", "true", 31)
+      document.getElementById("cookie-notice").style.display = "none"
+      location.reload()
+    })
+</script>
+<!-- End Cookies consent -->
