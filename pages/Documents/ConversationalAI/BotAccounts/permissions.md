@@ -18,9 +18,9 @@ Conversation Builder's permission model is built on Conversational Cloud’s. Yo
 
 As an example, in Conversational Cloud, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB — All Permissions," as we've done below.
 
-<img class="fancyimage" alt="top of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions2.png">
+<img class="fancyimage" alt="Top of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions2.png">
 
-<img class="fancyimage" alt="bottom of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions3.png">
+<img class="fancyimage" alt="Bottom of Edit Profile page in Conversational Cloud" style="width:700px" src="img/ConvoBuilder/permissions3.png">
 
 You can then assign this profile to users like so:
 

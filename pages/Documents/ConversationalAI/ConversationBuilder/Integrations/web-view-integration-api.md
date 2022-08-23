@@ -95,4 +95,4 @@ Use the [Get Web View Variables](conversation-builder-scripting-functions-get-se
 
 ### Example guide
 
-See [this step-by-step, example guide](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) that uses this API.
+See [this step-by-step guide](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) that uses this API.

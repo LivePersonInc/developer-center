@@ -79,7 +79,7 @@ The **Interactions to review** chart displays the top eight, most used interacti
 
 The **Issue types** chart displays the distribution of issues types that were found in conversations within the specified date range. The issue types are potential friction points (failure points) detected in conversations; they affect the conversation’s MACS.
 
-Use these issues types to understand how the consumer’s experience was impeded and to discover bot tuning opportunities. For possible fixes, see [this topic](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html#how-is-macs-calculated) in the Knowledge Center.
+Use these issues types to understand how the consumer’s experience was impeded and to discover bot tuning opportunities. [Learn about possible fixes](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html#how-is-macs-calculated) in the Knowledge Center.
 
 <img style="width:500px" src="img/ConvoBuilder/macs_chart_issuetypes.png" alt="The Issue types chart">
 
@@ -127,7 +127,7 @@ The conversations in the list are distributed across the selected scores, so, fo
 
 From here, you can also search for a specific conversation: Enter its full conversation ID in the search box. The conversation will be displayed in the **Conversations** list regardless of how the other filters are set.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_conv_search.png" alt="The Search box above the Conversations list that lets you search for conversations by conversation ID">
+<img style="width:800px" src="img/ConvoBuilder/macs_conv_search.png" alt="The search box above the Conversations list that lets you search for conversations by conversation ID">
 
 ### Reviewing a transcript
 

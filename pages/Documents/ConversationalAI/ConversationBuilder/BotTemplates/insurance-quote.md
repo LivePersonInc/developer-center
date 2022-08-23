@@ -93,7 +93,7 @@ Click **Global Functions** to access all the global functions and variables to b
 
 You’ll want to customize the `setAutoTemplate`, `setHomeTemplate`, `setLifeTemplate` and `getEmailBody` functions within Global Functions to reflect your branding and voice.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf1.png" alt="Some example functions that you will will want to customize on the Global Functions page in the bot">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf1.png" alt="Some example functions that you will want to customize on the Global Functions page in the bot">
 
 #### Send Email integration
 

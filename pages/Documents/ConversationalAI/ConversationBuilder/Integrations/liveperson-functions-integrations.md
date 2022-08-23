@@ -18,8 +18,6 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
 
 ### Add a LivePerson Functions integration
 
-**To add a LivePerson Functions integration**
-
 1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings:
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
@@ -36,4 +34,4 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
 
 ### Example guide
 
-See [this step-by-step, example guide](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html) that uses this integration.
+See [this step-by-step guide](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html) that uses this integration.

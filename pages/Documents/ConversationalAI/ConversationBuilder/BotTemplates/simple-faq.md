@@ -70,4 +70,4 @@ To connect your bot to Conversational Cloud, follow [the instructions](conversat
 
 Now you can test your FAQ bot and see how it answers your questions.
 
-There are some [best practices](conversation-builder-best-practices-train-tune-nlu.html) on training and tuning your knowledge base.
+There are [best practices](conversation-builder-best-practices-train-tune-nlu.html) on training and tuning your knowledge base.
