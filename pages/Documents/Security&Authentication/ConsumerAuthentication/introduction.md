@@ -3,6 +3,7 @@ pagename: Introduction
 redirect_from:
   - authentication-introduction.html
   - guides-authentication-introduction.html
+  - mobile-sdk-and-web-authentication-introduction.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication

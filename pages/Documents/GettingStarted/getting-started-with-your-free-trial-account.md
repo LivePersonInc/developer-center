@@ -7,7 +7,10 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
+date: 2019-01-30 00:00:00 +0000
+last_modified: 2022-03-25 00:00:00 +0000
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
    <div class="modal-content">
@@ -34,7 +37,7 @@ indicator: both
       About your Free Trial Account
    </div>
    <div class="convo-cloud-paragraph">
-      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building"> here </a>.
+      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building">here</a>.
    </div>
 </div>
 <div class="container-note">

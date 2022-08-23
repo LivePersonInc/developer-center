@@ -8,6 +8,18 @@ permalink: crm-integrations-salesforce.html
 indicator: both
 ---
 
+<!-- TODO: Use the following as content for the page, or remove:
+
+<div class="important">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>
+
+This integration will allow you to see and create your Salesforce Contact, Lead, Account and Opportunity record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Salesforce. Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
+
+Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce, by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads. Through the Conversational Cloud Salesforce integration, agents can utilize the workspace to conduct all conversations with customers, and get instant access to pertinent information without having to open a separate browser window to manually check the Salesforce record. Agents can also search through records using the field from pre-chat surveys and/or through the widget.
+
+Furthermore, agents have the ability to easily create records in Salesforce as part of the conversation (leads, opportunities, accounts, cases) and store the conversation transcript and additional info in the CRM after the engagement.
+
+-->
+
 The Conversational Cloud Salesforce Widget will allow SFDC information to be viewed inside the platform, as well as enabling records to be created and chat/messaging transcripts to be attached to them. In addition, the app will include back-end setup that will allow the SFDC admin to customize the default settings for their organization. This guide sets out the steps to install, configure, and start working with the Conversational Cloud app for Salesforce.
 
 **Please note:** The information in this guide refers to both chat and messaging, unless otherwise indicated.
@@ -50,7 +62,7 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 {:start="2"}
 
 1. “Step 1: Account Information” — Enter the relevant Account ID.
-2. “Step 2: Oath Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
+2. “Step 2: OAuth Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
    1. Go to the Campaign Builder and search for the link “Data Sources.”
    2. Go to “API” Tab and click “Manage” and then “New.”
    3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” → “Engagement History” and “Administrations” → “Skills” and click “Save.”

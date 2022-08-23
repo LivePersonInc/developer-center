@@ -245,7 +245,6 @@ function handleUniquePages() {
   var titleContainer = $("#documentTitleContainer")
 
   if (is_root || is_getting_started) {
-    jumpto.css("flex", "0")
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
@@ -259,8 +258,7 @@ function handleUniquePages() {
     }
   } else {
     // console.log("not in root folder")
-    jumpto.css("flex", "1")
-    jumpto.css("display", "flex")
+    jumpto.css("display", "block")
     sidebar.css("margin-right", "6%")
     suggestButton.css("display", "flex")
     indicatorContainer.css("display", "flex")
@@ -559,7 +557,7 @@ function sidebarClick() {
   })
 }
 
-function breadClick(event) {
+/* function breadClick(event) {
   event.preventDefault()
   let breadText = $(this).innerHTML
   var breadSidebar = $("#defaultsidebar")
@@ -567,7 +565,7 @@ function breadClick(event) {
     .find("span:contains('" + breadText + "')")
     .trigger("click")
   // console.log(targetLink)
-}
+} */
 
 //a function to make sure the page's title is updated on load
 function replaceTitle() {

@@ -5,20 +5,19 @@ layout: none
 
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>{{ site.title | xml_escape }}</title>
+<channel>
+<title>{{ site.site_title | xml_escape }}</title>
         <description>{{ site.description | xml_escape }}</description>
         <link>{{ site.url }}</link>
         <atom:link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-        <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <generator>Jekyll v{{ jekyll.version }}</generator>
         {% for page in site.pages limit:20 %}
         <item>
-            <title>{{ page.title | xml_escape }}</title>
+            <title>{{ page.pagename | xml_escape }}</title>
             <description><![CDATA[{{ page.content | xml_escape }}]]></description>
-            <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-            <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+            <pubDate>{{ site.date | date_to_rfc822 }}</pubDate>
+            <lastmod>{{ site.last_modified | date: '%Y-%m-%d' }}</lastmod>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
             {% for tag in page.tags %}
@@ -29,5 +28,5 @@ layout: none
             {% endfor %}
         </item>
         {% endfor %}
-    </channel>
+</channel>
 </rss>
