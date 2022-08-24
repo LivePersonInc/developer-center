@@ -120,7 +120,7 @@ In case 2 above—-moving or copying a bot to a different environment (that is, 
 **To export a bot**
 1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
-3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png" alt="Export Bot icon">.
+3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png" alt="Export Bot">.
 4. Follow the browser prompts to access and save the JSON file to a location of your choice.
 
 ### Delete a bot
@@ -132,7 +132,7 @@ If you want to delete a bot that is deployed, first stop the bot, un-deploy it, 
 **To delete a bot**
 1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
-3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="Delete Bot icon">.
+3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="">.
 4. In the confirmation dialog:
     1. If you want to delete all the logs and analytics data for the bot, select the checkbox.
     2. Click **Proceed**.

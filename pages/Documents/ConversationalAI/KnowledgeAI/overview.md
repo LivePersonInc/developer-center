@@ -59,7 +59,7 @@ If you’re starting a knowledge base from scratch, and you prefer to work direc
 
 ### Access KnowledgeAI
 
-1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" alt="Bot icon" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" alt="Conversational AI bot" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **KnowledgeAI**.
 
 ### Getting started

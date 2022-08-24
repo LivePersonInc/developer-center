@@ -104,7 +104,7 @@ To close the current conversation, click the icon at the bottom of the messaging
 
 To reset the bot, click the icon at the bottom of the messaging panel. This deletes the bot session, so you can start the conversation flow anew.
 
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_reset_bot.png" alt="The Reset Bot icon at the bottom of the messaging panel">
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_reset_bot.png" alt="Reset Bot at the bottom of the messaging panel">
 
 ### Use the debug panel
 

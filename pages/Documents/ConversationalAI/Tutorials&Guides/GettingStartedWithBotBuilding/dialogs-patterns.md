@@ -24,7 +24,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 ### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png" alt="Bot icon"> icon.
+2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png" alt="Conversational AI bot"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click the orange **Next** arrow.
 5. Give the bot a unique name (e.g., Getting Started Bot) and a description, and click **Create Bot**.

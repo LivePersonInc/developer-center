@@ -43,7 +43,7 @@ In order for a user to access Intent Manager, they must be assigned a profile th
 
 ### Access Intent Manager
 
-1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" alt="Bot icon" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" alt="Conversational AI bot" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **Intent Manager**.
 
 ### Enable intent discovery, optimization and analysis

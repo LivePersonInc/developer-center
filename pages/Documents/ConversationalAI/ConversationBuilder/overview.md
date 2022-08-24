@@ -22,7 +22,7 @@ Our [Meaningful Automated Conversation Score](https://knowledge.liveperson.com/d
 
 ### Access Conversation Builder
 
-1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt="Bot icon"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt="Conversational AI bot"> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Builder**.
 
 ### Getting started
