@@ -44,7 +44,6 @@ Currently, you can only pull a maximum of 500 messages at a time. If you classif
         * Please reset my password.
         * Can you reset my password?
 * Verify each training phrase is a clear match to its named intent, and remove it if not.
-* Don’t use more than one entity per training phrase.
 
 ### Model coverage
 Intent discovery is the task of finding new intents to add to your current taxonomy. This task is useful to expand the model’s coverage. [Intent discovery](intent-manager-discover-intent-discovery.html) is accomplished under “Discover.”
