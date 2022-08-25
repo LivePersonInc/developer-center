@@ -43,16 +43,16 @@ Audio statements currently aren't supported by Conversational Cloud.
 Video statements currently aren't supported by Conversational Cloud. As an alternative, use a Text statement that includes the video URL as a link.
 
 ### Apple Rich Links
-**For Apple Business Chat only.**
+**For Apple Messages for Business only.**
 
 {: .important}
 Use of Apple rich links for video is not supported at this time.
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
 
 <img style="width:450px" src="img/ConvoBuilder/statements_richLink.png">
 
-Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Business Chat, the consumer would have to tap the “Tap to Load” message to load the content. But with an Apple rich link, the content is displayed directly. (The interaction has been developed per Apple's Rich Link specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
+Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Messages for Business, the consumer would have to tap the “Tap to Load” message to load the content. But with an Apple rich link, the content is displayed directly. (The interaction has been developed per Apple's Rich Link specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
 
 <img style="width:500px" src="img/ConvoBuilder/statements_richLink2.png">
 

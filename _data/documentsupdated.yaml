@@ -890,7 +890,7 @@
       - subpagename: Authentication
       - subpagename: Open Source List
       - subpagename: Upgrade Guide - iOS
-  - documentname: Apple Business Chat SDK
+  - documentname: Apple Messages for Business SDK
     pages:
     - pagename: Overview
     - pagename: Installation
@@ -924,7 +924,7 @@
         - pagename: Complex Layout
         - pagename: Limitations
         - pagename: Structured Content Rendering Tool
-    - documentname: Apple Business Chat Templates
+    - documentname: Apple Messages for Business Templates
       pages:
         - pagename: Introduction
         - pagename: List Picker Template
@@ -963,7 +963,7 @@
     - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
-    - documentname: Apple Business Chat Authentication
+    - documentname: Apple Messages for Business Authentication
       pages:
         - pagename: Overview
     - documentname: Mobile SDK and Web Authentication

@@ -2,18 +2,18 @@
 pagename: Time Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-timepicker.html
-  - structured-content-apple-business-chat-templates-time-picker-template.html
+  - structured-content-apple-messages-for-business-templates-time-picker-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-time-picker-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-time-picker-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-[Business Chat Time Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
+[Messages for Business Time Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
 
 The following capabilities are supported:
 
@@ -27,19 +27,19 @@ The following capabilities are supported:
 
 By Using the using metadata properties, the brand can also define the received and reply bubble structures.
 
-Below is an example image of a Business Chat time picker:
+Below is an example image of a Messages for Business time picker:
 
-![Apple Business Chat Time Picker Main](images/abc-timepicker-1.jpg)   ![Apple Business Chat Time Picker list](images/abc-timepicker-2.PNG)
+![Apple Messages for Business Time Picker Main](images/abc-timepicker-1.jpg)   ![Apple Messages for Business Time Picker list](images/abc-timepicker-2.PNG)
 
 ### Basic Template Overview
 
-In order to comply with the Apple Business Chat JSON structure, the below Conversational Cloud structured content JSON structure must be applied to any Time Picker template.
+In order to comply with the Apple Messages for Business JSON structure, the below Conversational Cloud structured content JSON structure must be applied to any Time Picker template.
 
 Each Time Picker template has the following mandatory sections:
 
-1. [Business Event](#metadata---business-event) (part of the metadata JSON): defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
+1. [Business Event](#metadata---business-event) (part of the metadata JSON): defines the object as a time picker object for Apple Messages for Business. This section includes timing and location properties.
 
-2. [Business Chat Message](#metadata---business-chat-message) (part of the metadata JSON): defines the received and reply messages.
+2. [Messages for Business Message](#metadata---business-chat-message) (part of the metadata JSON): defines the received and reply messages.
 
 3. [Time Picker Items](#body---time-picker-items) (part of the JSON body): defines the dates available and the time slots for selection as part of the Time Picker.
 
@@ -158,7 +158,7 @@ The following JSON metadata and body structures are templates for any Time Picke
 }
 ```
 
-### Metadata - Business Chat Message
+### Metadata - Messages for Business Message
 
 Part of the Time Picker Conversational Cloud Structured Content metadata JSON.
 
@@ -208,7 +208,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 
 ### Metadata - Business Event
 
-Part of the Time Picker Conversational Cloud Structured Content metadata JSON. Defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
+Part of the Time Picker Conversational Cloud Structured Content metadata JSON. Defines the object as a time picker object for Apple Messages for Business. This section includes timing and location properties.
 
 #### Properties
 
@@ -234,7 +234,7 @@ Part of the Time Picker Conversational Cloud Structured Content metadata JSON. D
 | title         | Location name                                                                                                                                 | String | N        |            |
 | la            | A double representing the latitude of the location                                                                                            | double | N        |            |
 | lo            | A double representing the longitude of the location                                                                                           | double | N        |            |
-| radios        | A double representing the location radius, in meters. <br/>Business Chat ignores this property when latitude and longitude are missing or empty. | double | N        |            |
+| radios        | A double representing the location radius, in meters. <br/>Messages for Business ignores this property when latitude and longitude are missing or empty. | double | N        |            |
 
 #### Example
 
@@ -291,12 +291,12 @@ Based on [Structured Content Basic Element Button](structured-content-introducti
 | Property Name | Description                                                                             | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------------------------------------------------------- | :----- | :------- | :--------- |
 | type          | Type of the element. <br/>Must be “button”                                            | string | Y        |            |
-| title         | The hour of the time slot. <br/>Only affects non-Apple Business Chat rendering clients. | String | Y        |            |
+| title         | The hour of the time slot. <br/>Only affects non-Apple Messages for Business rendering clients. | String | Y        |            |
 
 **Note: The button section should not use style element**
 
 <br/>
-Time Picker button has additional [Click Metadata](structured-content-introduction-to-structured-content.html#element-click-operations) parameters that are specific to Apple Business Chat:
+Time Picker button has additional [Click Metadata](structured-content-introduction-to-structured-content.html#element-click-operations) parameters that are specific to Apple Messages for Business:
 
 | Property Name | Description                                                           | Type   | Required | Size Limit |
 | :------------ | :-------------------------------------------------------------------- | :----- | :------- | :--------- |

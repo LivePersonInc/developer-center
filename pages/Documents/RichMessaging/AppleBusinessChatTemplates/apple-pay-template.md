@@ -1,19 +1,19 @@
 ---
 pagename: Apple Pay Template
 redirect_from:
-  - payment-apple-business-chat-template.html
-  - payment-apple-business-chat-apple-pay.html
+  - payment-apple-messages-for-business-template.html
+  - payment-apple-messages-for-business-apple-pay.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-apple-pay-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-apple-pay-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-The Apple Business Chat messaging channel now supports a new Rich Message type that allows you to submit payment requests to consumers using **Apple Pay**. The consumers can then respond to the payment request using their preferred Apple Pay payment methods.
+The Apple Messages for Business messaging channel now supports a new Rich Message type that allows you to submit payment requests to consumers using **Apple Pay**. The consumers can then respond to the payment request using their preferred Apple Pay payment methods.
 
 See the general message flow below:
 
@@ -173,13 +173,13 @@ To edit the `ConnectorPaymentRequest` and `BusinessChatMessage` metadata templat
   <tbody>
   <tr>
     <td>BusinessChatMessage</td>
-    <td>Represents the Business Chat bubbles view objects  </td>
+    <td>Represents the Messages for Business bubbles view objects  </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>ConnectorPaymentRequest</td>
-    <td>Represents a Business Chat apple pay request </td>
+    <td>Represents a Messages for Business apple pay request </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
@@ -283,7 +283,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
+    <td>A UUID for the request. Messages for Business includes the identifier in its response to Conversational Cloud - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>
@@ -363,7 +363,7 @@ A very simple, basic structured content template for Apple Pay would be an image
 
 {: .important}
 
-The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions. In the Request Metadata payload, there is a "signature" property that you can include. This signature is set on the account level. The Apple Business Chat connector takes the signature value that you sent and validates that with the signature attached to your account. If the validation fails, agents will see a red warning icon in the conversation window next to the message.
+The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions. In the Request Metadata payload, there is a "signature" property that you can include. This signature is set on the account level. The Apple Messages for Business connector takes the signature value that you sent and validates that with the signature attached to your account. If the validation fails, agents will see a red warning icon in the conversation window next to the message.
 
 The signature flow is optional, and provides an extra layer of security before sending the payment request to Apple.
 

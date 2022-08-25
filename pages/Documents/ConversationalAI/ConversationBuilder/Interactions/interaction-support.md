@@ -42,7 +42,7 @@ N/A = Not Available
 
 N/A = Not Available
 
-| | Apple Business Chat | SMS | Google RCS |
+| | Apple Messages for Business | SMS | Google RCS |
 | ---- | ---- | ---- | ---- |
 | Interaction type: | | | |
 | Dialog Starter | Yes | Yes | Yes |

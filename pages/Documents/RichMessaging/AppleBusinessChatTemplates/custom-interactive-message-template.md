@@ -3,14 +3,14 @@ pagename: Custom Interactive Message Template
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-custom-interactive-message-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-custom-interactive-message-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-The Custom Interactive Message (CIM) Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
+The Custom Interactive Message (CIM) Template for App Messages for Business allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
 Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device. 
 
@@ -190,7 +190,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * ImageURL MUST be whitelisted - to whitelist images for Structured Content contact your Conversational Cloud account representative
 
-* SessionIdentifier - Any interactive message that is sent to ABC has a UUID - either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more. 
+* SessionIdentifier - Any interactive message that is sent to Apple Messages for Business has a UUID - either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more. 
 
 * Images placed in the image used in imageURL field should be whitelisted in account Houston - Site Setting messaging.rich.content.valid.urls
 
@@ -208,7 +208,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 ### Reply CIM from Consumer to Agent
 
 {: .important}
-For an easier way to recieve a reply message from the consumer, implement the [ABC SDK](apple-business-chat-sdk-overview.html) and follow the steps seen [here](apple-business-chat-sdk-implementation.html#reply-cim-from-consumer-to-agent)
+For an easier way to recieve a reply message from the consumer, implement the [Apple Messages for Business SDK](apple-messages-for-business-sdk-overview.html) and follow the steps seen [here](apple-messages-for-business-sdk-implementation.html#reply-cim-from-consumer-to-agent)
 
 An agent can recieve back from the consumer a Custom Interactive Message with a textual context. This text can be displayed to the agent in the Agent Workspace.
 

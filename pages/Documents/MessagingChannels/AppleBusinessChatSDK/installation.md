@@ -4,8 +4,8 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-documentname: Apple Business Chat SDK
-permalink: apple-business-chat-sdk-installation.html
+documentname: Apple Messages for Business SDK
+permalink: apple-messages-for-business-sdk-installation.html
 indicator: messaging
 ---
 
@@ -19,7 +19,7 @@ indicator: messaging
 
 ### Apple and LivePerson Configuration
 
-1. Make sure you have an Apple Business Chat business ID.
+1. Make sure you have an Apple Messages for Business business ID.
 2. Contact your LivePerson account representative to enable this SDK on the backend server.
 
 ### SDK Installation in XCode
@@ -76,7 +76,7 @@ Add the LPABCSDK pod to integrate it into your Xcode project. Make sure you chan
     {: .important}
     Your app group id should be the same across all implementing targets.
 
-3. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
+3. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-messages-for-business-sdk-implementation.html#initializing-the-sdk).
 
  
 4. In the iMessage app/extension's `MessagesViewController` class, please make sure to override the following two methods:

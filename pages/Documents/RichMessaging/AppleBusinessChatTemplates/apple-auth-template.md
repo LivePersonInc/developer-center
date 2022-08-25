@@ -3,18 +3,18 @@ pagename: Apple Auth Template
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-apple-auth-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-apple-auth-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-The Apple Business Chat messaging channel now allows you to send an authentication request to consumers (only from iOS 12 onwards) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/password credentials which can be validated against the OAuth 2.0 provider.
+The Apple Messages for Business messaging channel now allows you to send an authentication request to consumers (only from iOS 12 onwards) using an OAuth 2.0 provider. The consumers then respond to the authentication request with their user/password credentials which can be validated against the OAuth 2.0 provider.
 
 See the message flow below:
 
-<img style="width:800px" src="img/apple_auth.png" alt="apple business chat authentication flow">
+<img style="width:800px" src="img/apple_auth.png" alt="apple Messages for Business authentication flow">
 
 1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth feature.
 
@@ -58,7 +58,7 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 Before the agent or bot sends an authentication request to a consumer, they will need to know if the consumer device is compatible (that is, using iOS 12 or newer) with Apple Auth.
 
-In an Apple Business Chat Conversation, the messaging channel will automatically send an authenticated "role" engagement attribute to Conversational Cloud:
+In an Apple Messages for Business Conversation, the messaging channel will automatically send an authenticated "role" engagement attribute to Conversational Cloud:
 
 * If consumer Apple device supports authentication, this attribute's value will be: "Apple Authentication supported".
 
@@ -152,13 +152,13 @@ Please use the metadata template with the relevant fields, as presented in the e
   <tbody>
   <tr>
     <td>BusinessChatMessage</td>
-    <td>Represents the Business Chat bubbles view objects  </td>
+    <td>Represents the Messages for Business bubbles view objects  </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>ConnectorAuthenticationRequest</td>
-    <td>Represents a Business Chat authentication request </td>
+    <td>Represents a Messages for Business authentication request </td>
     <td>Object</td>
     <td>N</td>
   </tr>
@@ -395,4 +395,4 @@ The authentication response metadata is contextual information about the consume
 
 ### Limitations
 
-* Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
+* Updating the Apple Messages for Business authentication status visually in the LiveEngage UI is planned.

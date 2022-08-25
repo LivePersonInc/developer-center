@@ -21,7 +21,7 @@ Returns the platform channel the user is currently communicating on. This functi
 * lp_inapp (for In-app SDK)
 * lp_whatsapp (for WhatsApp)
 * lp_rcs (for RCS)
-* lp_abc (for Apple Business Chat)
+* lp_abc (for Apple Messages for Business)
 * twilio_sms (for Twilio SMS)
 * lp_fb (for Facebook)
 

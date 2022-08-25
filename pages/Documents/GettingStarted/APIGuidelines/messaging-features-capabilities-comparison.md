@@ -15,7 +15,7 @@ redirect_from:
     <th></th>
     <th>Mobile App Messaging</th>
     <th>Web Messaging</th>
-    <th>Apple Business chat</th>
+    <th>Apple Messages for Business</th>
     <th>SMS</th>
     <th>Facebook</th>
     <th>WhatsApp</th>

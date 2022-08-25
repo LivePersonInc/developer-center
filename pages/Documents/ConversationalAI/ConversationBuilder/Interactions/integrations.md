@@ -113,7 +113,7 @@ If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the
 ### File Upload interactions
 
 {: .important}
-File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
+File Upload interactions are available for Web Messaging, Apple Messages for Business, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 

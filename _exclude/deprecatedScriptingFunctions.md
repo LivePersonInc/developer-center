@@ -84,7 +84,7 @@ Returns the type of platform that the user is currently communicating on. This f
 * SMS
 * INAPP (for In-app SDK)
 * FACEBOOK
-* ABC (for Apple Business Chat)
+* ABC (for Apple Messages for Business)
 * RCS
 * WHATSAPP
 

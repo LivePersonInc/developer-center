@@ -2,37 +2,37 @@
 pagename: List Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-listpicker.html
-  - structured-content-apple-business-chat-templates-list-picker-template.html
+  - structured-content-apple-messages-for-business-templates-list-picker-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
-documentname: Apple Business Chat Templates
-permalink: apple-business-chat-templates-list-picker-template.html
+documentname: Apple Messages for Business Templates
+permalink: apple-messages-for-business-templates-list-picker-template.html
 indicator: messaging
 ---
 
 ### Overview
 
-[Business Chat List Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
+[Messages for Business List Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
 
 * Define items information - item name, description, image.
 * Item sections - divide your list of items into sections based on the product categories.
 * Multi-selection - Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
-* receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
+* receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Messages for Business thread, and replied to.
 
 Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
 
-Below is an image example of a Business Chat List Picker with multi-selection turned on:
+Below is an image example of a Messages for Business List Picker with multi-selection turned on:
 
-![Apple Business Chat List Picker Main](images/abc-listpicker-1.jpg)   ![Apple Business Chat List Picker list](images/abc-listpicker-2.PNG)
+![Apple Messages for Business List Picker Main](images/abc-listpicker-1.jpg)   ![Apple Messages for Business List Picker list](images/abc-listpicker-2.PNG)
 
 ### Basic Template Overview
 
-In order to comply with the Apple Business Chat JSON structure, the below Conversational Cloud structured content template must be applied.
+In order to comply with the Apple Messages for Business JSON structure, the below Conversational Cloud structured content template must be applied.
 
 Each List Picker template has the following mandatory sections:
 
-1. [Business Chat Message](#metadata---business-chat-message): multi selection, Received bubble, Reply bubbles (part of the metadata JSON
+1. [Messages for Business Message](#metadata---business-chat-message): multi selection, Received bubble, Reply bubbles (part of the metadata JSON
 
 2. [List Picker header](#body---list-picker-header): title and subtitle (part of the JSON body)
 
@@ -163,7 +163,7 @@ The following JSON metadata and body structures are templates for any List Picke
 }
 ```
 
-### Metadata - Business Chat Message
+### Metadata - Messages for Business Message
 
 The List Picker Metadata JSON is based on [this JSON template](#metadata-json-template).
 

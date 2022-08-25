@@ -4,7 +4,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Link Previews
-permalink: link-previews-apple-business-chat-template.html
+permalink: link-previews-apple-messages-for-business-template.html
 indicator: messaging
 ---
 
