@@ -149,7 +149,7 @@ And the chips disappear once the consumer selects one:
 
 <img style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png">
 
-Details vary by channel. For example, Apple Messages for Business does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
+Details vary by channel and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
 
 <img style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png">
 
