@@ -12,7 +12,7 @@ indicator: messaging
 Server-to-server authentication is required to use Conversation Orchestrator APIs, including the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism differs between version 1 (v1) and version 2 (v2).
 
 {: .important}
-To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
+There are some [differences between v1 and v2](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
 
 ### API Authorization for v1
 
@@ -40,7 +40,7 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
     * **Credentials for using the v2 APIs in your code**: This section has a user ID and password that you can use to generate your secure access token. Please see the next step for details.
     * **API key for v1 APIs**: Users who have been upgraded to v2 will have access to the v1 API key until December 31, 2022.
 
-2. **Generate your OAuth2.0 secure access token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure access token through the login endpoint:
+2. **Generate your OAuth 2.0 secure access token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure access token through the login endpoint:
 
     **<https://{domain}/v2/authenticate/login>**
 
@@ -54,9 +54,9 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
 
     **Note:** Because base64 is easily decoded, Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL.
 
-    This endpoint returns 200 ok with the OAuth2.0 secure token if the username and password are valid.
+    This endpoint returns 200 ok with the OAuth 2.0 secure token if the username and password are valid.
 
-3. **Use the OAuth2.0 secure token in your API calls**: Pass the token in the authorization header while making API calls.
+3. **Use the OAuth 2.0 secure token in your API calls**: Pass the token in the authorization header while making API calls.
 
 Example:
 

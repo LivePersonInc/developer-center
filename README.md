@@ -1,4 +1,4 @@
-# LivePerson Developers community and website
+# LivePerson’s Developer Center and Community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
 
@@ -6,12 +6,12 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 
 ## Table of contents
 
-1. 📡 [Updating the documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
-2. 📝 [Notes on content and code](https://github.com/LivePersonInc/developers-community#notes-on-content-and-code)
-3. 🔨 [Building the site locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
-4. 👻 [Hiding files](https://github.com/LivePersonInc/developers-community#hiding-files)
-5. 📋 [Template](https://github.com/LivePersonInc/developers-community#template)
-6. 📜 [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+1. 📡 [Updating the documentation](#updating-the-documentation)
+2. 📝 [Notes on content and code](#notes-on-content-and-code)
+3. 🔨 [Building the site locally](#building-the-site-locally)
+4. 👻 [Hiding files](#hiding-files)
+5. 📋 [Template](#template)
+6. 📜 [Licensing](#licensing)
 
 ## Updating the documentation
 
@@ -158,10 +158,14 @@ When contributing to this repository, please observe the following:
 * Use lists (ordered series in numbered lists, unordered series in bulleted lists)
 * In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
 * Use an Oxford comma (“one, two, and three”)
-* Use typographically correct quotation marks (“”)
+* Use typographically correct quotation marks (“”) ([keyboard shortcuts](https://chrisbracco.com/curly-quotes/))
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+
+#### APIs and SDKs
+
+If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
 
 ### Code and media
 
@@ -171,7 +175,7 @@ When contributing to this repository, please observe the following:
 * To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
 * The maximum (view) width for images in this repository is 800 pixels
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
 
 ## Building the site locally
 
@@ -181,12 +185,12 @@ If you have not done so, install Ruby. Here’s a helpful guide on [how to best 
 
 Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 
-### First time install
+### Install
 
 1. Run `npm install`
 2. Run `bundle install`
 
-### Start-up
+### Launch
 
 3. Run `npm run serve`
 4. Navigate to http://localhost:4000/ (or the port you chose) to access the site
@@ -199,10 +203,10 @@ Changes that alter site navigation or other changes that change the site as a wh
 
 ## Hiding files
 
-* Add the files to the [Hidden/Hidden folder](https://github.com/LivePersonInc/developers-community/tree/Staging/pages/Documents/Hidden/Hidden).
+* Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
 * Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
-* Follow the header structure of [`blank.md`](https://github.com/LivePersonInc/developers-community/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+* Follow the header structure of [`blank.md`](/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 

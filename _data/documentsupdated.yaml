@@ -259,6 +259,7 @@
             - subpagename: Setting Up Bots
             - subpagename: Setting Up Knowledge Bases
             - subpagename: Configuring Settings
+            - subpagename: Clearing the Recommendations Cache
         - pagename: Testing
         - pagename: Agent Experience
         - pagename: Best Practices

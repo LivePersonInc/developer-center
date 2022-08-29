@@ -36,7 +36,7 @@ To begin, you need:
   
   <div class="notice">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 
-* LivePerson only supports OAuth2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
+* LivePerson only supports OAuth 2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
 
 * iOS native app with:
 
@@ -110,7 +110,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Client side masking: The data is masked in the conversation transcript (appear as asterisks) but the Agent can read it.
 
-    * Real time masking — The data is masked for both Client and Agent
+    * Real time masking: The data is masked for both Client and Agent
 
     * Configuration of such masking is conducted via LivePerson.  Please contact your representative for configuration.
 

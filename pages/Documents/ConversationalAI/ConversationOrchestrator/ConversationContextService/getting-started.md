@@ -45,4 +45,4 @@ Since the TTL set on the session has a higher priority than the TTL set on the n
 
 ### API authorization
 
-To start using the API, you’ll need to authenticate; for details, see [here](conversation-orchestrator-api-authorization.html).
+To start using the API, you’ll need to [authenticate](conversation-orchestrator-api-authorization.html).

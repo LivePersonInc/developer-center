@@ -95,7 +95,7 @@ Once an intent has been saved to the [Conversation Context Service](conversation
 
 In order to test out routing by intents, you’ll need to deploy the bot that you are capturing the intent in. This is due to the fact that we are saving the intent to the Conversation Scoping of the Conversation Context Service, and only deployed bots will have a conversation ID associated with them. Additionally, you’ll need to have a bot that is deployed using a skill selected in Step 5 from the “Creating policies using intents” section above.
 
-For information on how to deploy bot agents in Conversational Cloud, please see our *Conversation Builder — Getting Started* section [here](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
+For information on how to deploy bot agents in Conversational Cloud, please see Conversation Builder's [tutorial on deploying a bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 #### askMaven and route to appropriate agent
 
@@ -138,7 +138,7 @@ Once saved, click the setting wheel for the Agent Transfer integration. Navigate
 
 <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_intsettings.png" alt="">
 
-Lastly, navigate to our messaging test page [here](https://developers.liveperson.com/web-messaging/emulator.html). Enter your account information, open the engagement for your bot, and trigger the dialog by entering an utterance that will match the intent. If successful, the bot will transfer the user to the correct bot to handle their request.
+Lastly, navigate to our [messaging test page](https://developers.liveperson.com/web-messaging/emulator.html). Enter your account information, open the engagement for your bot, and trigger the dialog by entering an utterance that will match the intent. If successful, the bot will transfer the user to the correct bot to handle their request.
 
 <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_prodbot.png" alt="">
 

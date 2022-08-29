@@ -18,7 +18,7 @@ There are two ways to manage properties in the Conversation Context Service (CCS
 
 ### JavaScript wrapper
 
-For information on this, see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
+See the [discussion on scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
 
 ### REST APIs overview
 

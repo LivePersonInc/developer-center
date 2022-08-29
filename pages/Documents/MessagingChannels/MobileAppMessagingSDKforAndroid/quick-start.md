@@ -43,7 +43,7 @@ repositories {
 ```
 2. In your project, locate and double-click **Gradle Scripts → build.gradle (Module: app)**.
    
-   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
+   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developer-center/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
 3. In the **dependencies** section, add:
    ```java

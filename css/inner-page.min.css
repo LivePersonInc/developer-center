@@ -1,3 +1,5 @@
+/* TODO: Check why not minified, and different from “source” file */
+
 a:focus {
     outline: none !important;
     text-decoration: none !important
@@ -644,7 +646,7 @@ pre code {
     display: inline-block;
     margin: 0 auto;
     text-align: center;
-    font-family: Roboto Slab;
+    font-family: "Roboto Slab", Arial, sans-serif;
     top: 45%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);

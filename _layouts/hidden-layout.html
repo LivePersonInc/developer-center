@@ -4,7 +4,7 @@
   {% include head.html %}
   <link rel="stylesheet" href="{{ "css/search.css" }}">
   <link rel="stylesheet" href="css/inner-page.css">
-  <meta name="description" content="LivePerson for Developers. Build on the LivePerson Conversational Cloud with our powerful digital toolbox">
+  <meta name="description" content="LivePerson for developers: Build on the LivePerson Conversational Cloud with our powerful digital toolbox">
   <meta name="keywords"
     content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
   <meta name="author" content="LivePerson Inc.">
@@ -58,18 +58,18 @@
           <div class="indicator messaging">Messaging</div>
           {% endif %}
           <div class="suggestbutton" id="suggestbutton"><a
-              href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}"
+              href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developer-center/edit/master/pages' }}"
               target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
         </div>
 
       </div>
       {% endif %}
       <div class="post-content" itemprop="articleBody">
-      
+
         {% if page.summary %}
         <div class="summary">{{page.summary}}</div>
         {% endif %}
-      
+
         {{ content }}
       </div>
     </div>

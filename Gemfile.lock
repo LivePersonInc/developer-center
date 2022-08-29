@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.8)
+    activesupport (5.2.8.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -32,7 +32,7 @@ GEM
     ffi (1.15.5)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    html-proofer (4.2.0)
+    html-proofer (4.4.0)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogiri (~> 1.13)
@@ -107,7 +107,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_portile2 (2.8.0)
-    minitest (5.15.0)
+    minitest (5.16.2)
     nokogiri (1.13.8)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -125,7 +125,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
-    rouge (3.29.0)
+    rouge (3.30.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -168,4 +168,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   2.2.11
+   2.3.17
