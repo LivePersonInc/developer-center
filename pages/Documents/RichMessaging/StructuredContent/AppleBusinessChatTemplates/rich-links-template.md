@@ -26,7 +26,7 @@ Brands will be able to adjust the preview content to their desired experience vi
 
 ![image alt text](img/link_preview_abc1.png)
 
-### Example JSON:
+### Example JSON
 
 Only SC body is needed for Rich Link.
 

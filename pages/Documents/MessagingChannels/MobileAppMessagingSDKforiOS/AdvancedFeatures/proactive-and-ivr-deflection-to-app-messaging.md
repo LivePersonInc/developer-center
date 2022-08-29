@@ -19,7 +19,7 @@ To integrate Proactive or IVR Deflection to App messaging, brands must follow th
 - Processing InApp Notifications for Proactive and IVR Deflection messages is only supported when using the default In App Notification provided by the LPMessagingSDK.
 - When using Custom InApp Notifications, Host App has to call `handleTapForInAppNotification` to notify the SDK an InApp Notification was tapped.
 
-### Send Push Notification in logout state (new Logout API):
+### Send Push Notification in logout state (new Logout API)
 
 Consumers can now receive push notifications even in logged out state. SDK has introduced new enum configurations to let brands decide If they want consumers to receive notifications when logged out.
 Brands can choose either of the following configurations to unregister user from pusher:

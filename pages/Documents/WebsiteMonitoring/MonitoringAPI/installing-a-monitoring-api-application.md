@@ -18,7 +18,7 @@ In order to install a new application on your Conversational Cloud account you n
 
 Once the installations is done, a new `app-installation-id` will be generated and provided to you by your account team. You may then use it to access the Monitoring API methods.
 
-### When creating a new application on your account please consider the following:
+### When creating a new application on your account please consider the following
 
 * After installing an application, its name (determined by the `client-name` key you populated in the schema) will show up as a possible source for newly created engagements. This is used to distinguish between engagements and to accurately report on usage of the application.
 

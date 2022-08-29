@@ -28,7 +28,6 @@
     --navbar-padding: 24px 0;
 }
 
-*,
 * {
     margin: 0;
 }
@@ -518,6 +517,11 @@ table tbody td img {
     width: 100%;
 }
 
+td {
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
 .mobilefeaturestable {
     display: none;
 }
@@ -718,10 +722,6 @@ table tbody td img {
     top: 2px;
 }
 
-.important p:not(:first-child) {
-    margin-left: -25px;
-}
-
 .notice {
     border-left-color: var(--error-border);
     border-radius: 4px;
@@ -762,10 +762,6 @@ table tbody td img {
     margin-right: 5px;
     position: relative;
     top: 1px;
-}
-
-.important p:not(:first-child) {
-    margin-left: -25px;
 }
 
 .solutionslist {

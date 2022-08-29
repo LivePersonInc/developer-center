@@ -57,12 +57,13 @@ function hookCallback(options){
 }
 ```
  
-
 ### Limitations
+
 *   The customers need to make sure to integrate properly and to not cause bugs / edge cases
 *   Hooks will not be executed on external window. In the future when taglet “scope” will be supported, hooks will be supported only if the hook is inside a site taglet.
 
-### Register to hook:
+### Register to hook
+
 ```javascript
 lpTag.hooks = lpTag.hooks || [];
 
@@ -82,7 +83,8 @@ lpTag.hooks.push({
   }
 });
 ```
-## Places:
+
+## Places
 
 ### SMT
 

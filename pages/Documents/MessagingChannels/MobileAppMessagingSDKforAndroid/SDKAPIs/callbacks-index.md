@@ -434,7 +434,8 @@ public interface LivePersonCallback {
 ```
 
 ### LivePerson Intents
-#### Intent Actions:  
+
+#### Intent Actions  
 
 ```java
 public interface ILivePersonIntentAction {
@@ -474,7 +475,7 @@ public interface ILivePersonIntentAction {
 }
 ```
 
-#### Intent parameter 'Extras':
+#### Intent parameter 'Extras'
 
 ```java
 public interface ILivePersonIntentExtras{
@@ -506,7 +507,7 @@ public interface ILivePersonIntentExtras{
 }
 ```
 
-### TaskType enum:
+### TaskType enum
 
 ```java
 /**
@@ -533,7 +534,7 @@ enum TaskType {
 | USER_EXPIRED        | The user's authentication has expired. |
 | CLOSING_SOCKET      | A request has timed out while trying to reach a server, and as a result we are closing our socket. |
 
-### LpError enum:
+### LpError enum
 
 ```java
 enum class LpError {

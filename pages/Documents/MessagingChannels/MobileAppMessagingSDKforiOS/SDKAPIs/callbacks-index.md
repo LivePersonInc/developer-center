@@ -172,6 +172,7 @@ Called when an off hours state changes.
 Called when the conversation ViewController is dismissed (both for window mode and viewController mode).
 
 ### LPMessagingSDKCertPinningFailed(_ error: NSError)
+
 Called when the Cert pinning mechanism failed. The server trust was successfully evaluated but did not contain any of the configured public keys pins or the server trust's evaluation failed because the server's certificate chain is not trusted.
 
 ### LPMessagingSDKPushRegistrationDidFinish()
@@ -180,6 +181,7 @@ Called when the SDK registration for the LP Pusher service has succeeded.
 Pusher is the service that is responsible for Remote Push Notifications routing and delivering from and to APNS.
 
 ### LPMessagingSDKPushRegistrationDidFail(_ error: NSError)
+
 Called when the SDK registration for LP Pusher service has failed with an error.
 
 Pusher is the service that is responsible for Remote Push Notifications routing and delivering from and to APNS.
@@ -222,6 +224,7 @@ func LPMessagingSDKNotification(customLocalPushNotificationView notification: LP
 ```
 
 ### LPMessagingSDKNotification(notificationTapped notification: LPNotification)
+
 Called when tapping a local notification message bar when a remote push notification received. You should implement this delegate method if you wish to navigate and show the conversation screen.
 
 ```swift
