@@ -255,7 +255,7 @@ The handling of free text answers works in a survey bot just like it does in a c
 
 In the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png" alt="The Fallback Response field in the Advanced settings of a survey interaction">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png" alt="The Message When Response Unrecognized field in the Advanced settings of a survey interaction">
 
 You can customize the default fallback responses in the survey interactions.
 
