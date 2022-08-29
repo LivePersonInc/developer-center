@@ -158,7 +158,7 @@ When contributing to this repository, please observe the following:
 * Use lists (ordered series in numbered lists, unordered series in bulleted lists)
 * In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
 * Use an Oxford comma (“one, two, and three”)
-* Use typographically correct quotation marks (“”)
+* Use typographically correct quotation marks (“”) ([keyboard shortcuts](https://chrisbracco.com/curly-quotes/))
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
