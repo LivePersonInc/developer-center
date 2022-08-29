@@ -65,6 +65,10 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 {: .important}
 While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in automatic, bot-to-bot transfers.
 
+#### Limitations
+
+There are some [limitations related to disambiguation](conversation-builder-dialogs-disambiguation-dialogs.html#limitations).
+
 #### Best practices
 
 For bot groups that are collaborative (the Collaboration setting is enabled):

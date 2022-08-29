@@ -29,10 +29,6 @@ When a disambiguation dialog is used, the bot presents the best matches to the c
 
 As an example, suppose the consumer enters "I lost my" and presses enter by mistake. The intent in this case isn't clear and might yield multiple, close matches. For example, it might mean a lost card or even a bereavement situation. Using a disambiguation dialog to clarify the consumer's intent means you can quickly address the correct issue.
 
-#### Limitations
-
-You can use a disambiguation dialog to disambiguate intents if you’re using the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html). It doesn’t work with third-party NLU engines because they always return a single intent match, not multiple intent matches.
-
 ### How a bot triggers a disambiguation dialog
 
 A disambiguation dialog is triggered when the bot matches the consumer's message to **multiple intents with a Fair Plus score**. Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
@@ -71,6 +67,11 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
     You can add any number of interactions to the dialog. For example, you might want to add an [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 
     To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-session-data.html#get-disambiguated-intent).
+
+### Limitations
+
+* **NLU engine**: You can use a disambiguation dialog to disambiguate intents if you’re using the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html). It doesn’t work with third-party NLU engines because they always return a single intent match, not multiple intent matches.
+* **Bot groups**: Disambiguation is supported within a bot itself, but not across the bots within the group. For example, assume you have a Savings Account bot that handles basic tasks for saving accounts. The consumer sends a related message that matches multiple intents in the bot. If the Savings Account bot has a Disambiguation dialog, it is triggered. However, if the consumer were to ask a question about their checking account, the Savings Account bot couldn’t handle the request. It would then automatically check within its group for a bot that can. At this step, disambiguation is never triggered, neither within nor across the other bots in the group. If the Savings Account bot discovers a capable bot, transfer of the conversation to the best match happens automatically.
 
 ### Customization points
 
