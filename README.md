@@ -144,6 +144,8 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
+* `date_published`: This adds the date when it was published. `date_published: 2019/01/30` needs to be added manually
+* `date_updated`: Last modified date added. Here's an example: `date_updated: 2022/01/30`
 
 ## Notes on content and code
 
