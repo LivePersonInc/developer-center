@@ -8,6 +8,7 @@ redirect_from:
   - api-guidelines-important-updates.html
   - important-updates.html
 indicator: both
+# date_published: 2022/08/04
 ---
 
 ### APIs
