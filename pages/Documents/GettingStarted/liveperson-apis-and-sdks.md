@@ -3,6 +3,10 @@ pagename: LivePerson APIs and SDKs
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: liveperson-apis-and-sdks.html
+redirect_from:
+  - essential-resources-messaging-features-capabilities-comparison.html
+  - api-guidelines-important-updates.html
+  - important-updates.html
 indicator: both
 ---
 
