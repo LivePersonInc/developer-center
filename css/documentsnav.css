@@ -9,9 +9,8 @@
 }
 
 .container.documents {
-    padding-left: 10%;
-    /*padding-bottom: 24%;*/
-    vertical-align: top;
+  padding-left: 10%;
+  vertical-align: top;
 }
 
 .documentscontainer {
@@ -65,7 +64,7 @@
 
 .documentboxinfo {
   font-family: "Open Sans", Arial, sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 16px;
   margin-left: 32px;
   padding-right: 10px;
@@ -141,7 +140,7 @@
 
 .usecasetitle {
   font-family: "Roboto Slab", Arial, sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1.625em;
   float:left;
 }
@@ -155,7 +154,7 @@
   float:left;
   clear: both;
   width: 85%;
-  color: #333333;
+  color: #333;
 }
 
 .boximage {
@@ -174,11 +173,13 @@
 }
 
 @media (max-width: 425px) {
+
   .usecasebox {
-    float:right;
+    float: right;
     margin-right: 22%;
     width: 81%;
   }
+
 }
 
 .documentlast {
@@ -238,7 +239,7 @@
 
 .solutionstitle {
   font-family: "Roboto Slab", Arial, sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1.625em;
 }
 
@@ -253,12 +254,12 @@
 }
 
 .solutionsinner {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1em;
-    font-weight: 100;
-    margin-bottom: 30px;
-    width: 85%;
-    color: #333333;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 30px;
+  width: 85%;
+  color: #333;
 }
 
 .solutionsbottomrow {
@@ -280,20 +281,22 @@
 
 @media (max-width: 425px) {
 
-.solutionscontainer {
+  .solutionscontainer {
   width: 100%;
-}
+  }
 
-.solutionsrow {
-  display:block;
-}
+  .solutionsrow {
+  display: block;
+  }
 
-.solutionstext {
+  .solutionstext {
   display: block;
   text-align: center;
-}
+  }
 
-.solutionstext .banner-hr {
+  .solutionstext .banner-hr {
   margin-left: auto;
   margin-right: auto;
+  }
+
 }

@@ -1,4 +1,4 @@
-/* TODO: Check why not minified, and different from “source” file */
+/* TODO: Rename to lavish-bootstrap.css */
 
 article,
 aside,
@@ -214,7 +214,7 @@ table {
     a:visited {
         text-decoration: underline;
     }
-    /* a[href]:after {
+    a[href]:after {
         content: " (" attr(href) ")";
     }
     abbr[title]:after {
@@ -224,7 +224,7 @@ table {
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
         content: "";
-    } */
+    }
     pre,
     blockquote {
         border: 1px solid #999;
