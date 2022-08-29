@@ -4,8 +4,8 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: customizing-the-conversational-cloud.html
 indicator: both
-date_published: 2019-01-30-
-date_updated: 2022-07-25-
+date_published: 2019/01/30
+date_updated: 2022/07/25
 ---
 
 <div class="lp-container">
