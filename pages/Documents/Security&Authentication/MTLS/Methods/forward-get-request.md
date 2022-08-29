@@ -12,20 +12,18 @@ The Forward API methods proxies incoming requests to the `LP-forward-url` suppli
 
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
 
-
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
  |GET|  https://[{domain}]/mtls/account/{accountId} |
 
-
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization, **AppKey only API**, **Required**. |
- |LP-service-name|    Contains the service name which has the certificate in HashiCorp Vault. **Not Required**, Possible options : TEST_SERVICE/IDP/WEBHOOKS |
+ |LP-service-name|    Contains the service name which has the certificate in HashiCorp Vault. **Not Required**, Possible options: TEST_SERVICE/IDP/WEBHOOKS |
  |LP-forward-url|    Contains the desired endpoint url of the client, **Required**  |
  |LP-authorization-override|    Contains the authorizaion for the desired endpoint url of the client. **Not Required**. |
  |LP-stop-if-certificate-not-found| If the service was unable to match the certificate to the supplied parameters, this parameter controls the behavior. If true, the service will not forward the request (instead will return INTERNAL_SERVER_ERROR with the reason). **Default value is false (proxy request even if certificate not found). Not Required**. |
@@ -50,8 +48,6 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 

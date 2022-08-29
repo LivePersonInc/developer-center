@@ -41,7 +41,7 @@ namespace EngagementHistoryAPIProject
     ///     all include the oauth_ prefix, so ..  oauth_token,
     ///     oauth_timestamp, and so on.  You set these via a string indexer.
     ///     If the instance of the class is called oauth, then to set
-    ///     the oauth_token parameter, you use oath["token"] in C#.
+    ///     the oauth_token parameter, you use oauth["token"] in C#.
     ///   </para>
     ///   <para>
     ///     This class automatically sets many of the required oauth parameters;
@@ -280,8 +280,6 @@ namespace EngagementHistoryAPIProject
             return result;
         }
 
-
-
         /// <summary>
         ///   This is an oauth-compliant Url Encoder.  The default .NET
         ///   encoder outputs the percent encoding in lower case.  While this
@@ -345,8 +343,6 @@ namespace EngagementHistoryAPIProject
 
             return sb.ToString().TrimEnd(' ').TrimEnd(',');
         }
-
-
 
         /// <summary>
         ///   Acquire a request token, from the given URI, using the given
@@ -622,8 +618,6 @@ namespace EngagementHistoryAPIProject
             //Tracing.Trace("Sigbase: '{0}'", result);
             return result;
         }
-
-
 
         private HashAlgorithm GetHash()
         {

@@ -32,8 +32,6 @@ In the near future, Widget configuration will be available directly via Conversa
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-
-
 ### Use Cases
 
 * Add HTML alongside the chat conversation to display to the customer at timely moments. For example, show special offers while customer is waiting for agent to answer

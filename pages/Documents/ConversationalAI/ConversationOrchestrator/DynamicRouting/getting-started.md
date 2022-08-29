@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. For those still using bots based on the older template, see [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead for setup information.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. If you're still using bots based on the older template, see [this setup info](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead.
 
 ### Introduction
 
@@ -18,7 +18,7 @@ To get started, you need to direct traffic to a routing bot. Your setup is diffe
 
 * Use the Conversation Orchestrator Dynamic Routing bot if you are setting up routing for the first time, or if you don’t mind setting up a new routing or concierge bot. This template comes pre-wired with hooks to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). The Conversation Orchestrator bot also comes with out-of-the-box intent-based and channel-based routing. *This is the easiest way to get started.*
 * If you already have a functional routing bot in Conversational Cloud, and you don’t want to move that logic to a new bot, you’ll need to manually add the Dynamic Routing interaction. Please note the Conversation Orchestrator Dynamic Routing bot includes additional benefits like automatic support for intent-based routing. If you use your own routing bot, you won’t automatically get this feature.
-* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform such as Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform the routing. This is discussed in more detail [here](conversation-orchestrator-dynamic-routing-using-dynamic-routing-outside-of-conversational-cloud.html).
+* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform such as Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform the routing. This is discussed in more detail in the [discussion on using Dynamic Routing outside of Conversational Cloud](conversation-orchestrator-dynamic-routing-using-dynamic-routing-outside-of-conversational-cloud.html).
 
 The first two options above are further discussed in this topic.
 
@@ -54,7 +54,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_renamebot.png" alt="">
 
 6. **Move the interaction**: Dynamic Routing is triggered based on where the interaction is placed. The interaction can be dragged and dropped at different places based on where the routing needs to happen.
-7. **Create routing policies**: Create routing policies by clicking **Manage routing policies** on the Dynamic Routing interaction. This takes you to the Manage Policies page in Conversation Orchestrator, where you can create your policies. To learn about policies, see [here](conversation-orchestrator-dynamic-routing-creating-routing-policies.html).
+7. **Create routing policies**: Create [routing policies](conversation-orchestrator-dynamic-routing-creating-routing-policies.html) by clicking **Manage routing policies** on the Dynamic Routing interaction. This takes you to the Manage Policies page in Conversation Orchestrator, where you can create your policies.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_dynroutingtile.png" alt="">
 

@@ -14,7 +14,7 @@ indicator: chat
 ---
 ### Introduction
 
-This API provides a way to pull data in real-time - only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
+This API provides a way to pull data in real-time — only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
 The data is about the visitor, engagement and session to be used by the agent during the conversation, for example, referrer, engagement attributes, etc.
 
 ### Getting Started
@@ -37,7 +37,7 @@ A few things you'll need to get started with this API:
 
 ### Use cases
 
-This API can be used to display context information to agents about the session, visitor and engagement in a brand’s built Agent Workspace application, examples are the click to call solution in which the voice agents are not LivePerson users or agents that don’t use Agent Workspace .
+This API can be used to display context information to agents about the session, visitor and engagement in a brand’s built Agent Workspace application. Examples include the click-to-call solution in which voice agents are not LivePerson users, or agents that don’t use Agent Workspace.
 
 Example of how visitor information is displayed to agents within the Agent Workspace:
 

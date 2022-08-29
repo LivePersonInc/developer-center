@@ -34,5 +34,4 @@ This object can be used as part of the websocket headers, or as part of the ``In
 	startval = '{"deviceFamily":"DESKTOP","os":"WINDOWS","browser":"","appId":"","appVersion":"","deviceModel":"","deviceManufacture":"","timeZone":"","browserVersion":"","integrationVersion":"","integration":"WEB_SDK","osName":"","osVersion":""}'
 	properties = true %}
 
-
 {% include links.html %}

@@ -43,7 +43,7 @@ The cart value and/or the products in the cart can be used to target visitors. F
 | total | Total cart value | double  | 11.7 | true | no |
 | currency | currenct of the total cart value | string  | USD | false | no |
 | numItems | Number of items in cart | integer  | 6 | true | no |
-| products | array of items in cart | array of Products objects  | [ {<br>"product":{...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | false | no |
+| products | array of items in cart | array of Products objects  | [ {<br>"product":{…},<br>"quantity": 2<br>}<br>, {<br>"product": {…},<br>"quantity": 1<br>} ] | false | no |
 
 **Products Object**:
 
@@ -92,13 +92,13 @@ This Engagement Attribute is used to track any money transaction, purchase of it
 | total | Total transaction value | double  | 11.7 | false | no |
 | currency | Currency of the total transaction value | string  | USD | false | no |
 | orderId | Unique order or receipt ID | string  | "orderId123" | false | no |
-| cart | Cart details | Cart object  | {<br>"numItems": 6,<br>"products":<br>[ {... },<br>{...}]<br>} | false | no |
+| cart | Cart details | Cart object  | {<br>"numItems": 6,<br>"products":<br>[ {… },<br>{…}]<br>} | false | no |
 
 **Cart Object**
 
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
-| products | Array of Items in cart | array of Products objects  | [ {<br>"product": {...},<br>"quantity": 2<br>}<br>, {<br>"product": {...},<br>"quantity": 1<br>} ] | true | no |
+| products | Array of Items in cart | array of Products objects  | [ {<br>"product": {…},<br>"quantity": 2<br>}<br>, {<br>"product": {…},<br>"quantity": 1<br>} ] | true | no |
 | numItems | Number of items in cart | integer  | 6 | false | no |
 
 **Transaction SDE JSON example**:
@@ -135,7 +135,7 @@ This information can be used to target visitors. For example, you can offer prod
 |------|--------------|-------|---------------|------------|--------|
 | type | The event name ("prodView")  | string | "prodView" | true | no |
 | currency | Currency of the viewed products | string  | USD | false | no |
-| products | Array of items in cart | array of Products objects  | [ {<br>"product": {...}<br>}<br>, {<br>"product": {...}<br>} ] | false | no |
+| products | Array of items in cart | array of Products objects  | [ {<br>"product": {…}<br>}<br>, {<br>"product": {…}<br>} ] | false | no |
 
 **Viewed Product SDE JSON example**:
 
@@ -281,7 +281,7 @@ Age object:
 | Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
 |------|--------------|-------|---------------|------------|--------|
 | age | Visitor’s age  | integer | 47 | false | yes |
-| year | Visitor’s year of birth **Note**: This parameter is mandatory if the visitor’s age needs to be calculated. | integer  | "1969" | false |yes |
+| year | Visitor’s year of birth — **Note:** This parameter is mandatory if the visitor’s age needs to be calculated. | integer  | "1969" | false |yes |
 | month | Visitor's month of birth | integer  | 2 | false |yes |
 | day | Visitor's day of birth | integer  | 12 | false |yes |
 
@@ -445,7 +445,7 @@ Error object:
 
 #### Searched content
 
-**Note**: This SDE cannot be reported from Mobile due to internal server limitations.
+**Note:** This SDE cannot be reported from Mobile due to internal server limitations.
 
 This Engagement Attribute is used to to report on content that was searched by consumers on the brand’s website such as FAQ and different articles or products.
 

@@ -52,7 +52,7 @@ The following code will show the JavaScript interface along with examples that s
 ```javascript
     // Message needs to be a string
     // Extras is optional and can be left out
-    // Extras can be any json parsable values like Objects, Numbers or Strings
+    // Extras can be any JSON parsable values like Objects, Numbers or Strings
     console.level(message, extras?);
 
     // An example using the info level and providing extras
@@ -118,3 +118,13 @@ All activities will be stored for roughly two months and can be reviewed in this
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
 <img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
+
+### Invocation Histogram
+
+The invocation histogram allows you to better understand how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
+
+Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
+
+The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the x-axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
+
+<img alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">

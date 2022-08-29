@@ -101,7 +101,7 @@ In your bot, you might have some dialogs that start with dialog starters and oth
 
 **Example 2**: Assume you set things to show 3 intents for disambiguation, and you set this variable to *true*. The system then matches 2 intents that have dialog starters but 1 that doesn't. In this case, disambiguation occurs because multiple intents (2) still must be clarified by the consumer. But if 2 of the 3 matched intents didn't have dialog starters, disambiguation would not occur. The consumer would be directed to the only dialog that has a dialog starter.
 
-**Notes**: This variable is set to false by default to provide you with a full view into all the intents that are being evaluated, matched, and shown to the user. Decide whether to keep or change the default value: If you keep this set to false, as mentioned earlier, you should handle an intent without a dialog starter by adding a Response Match condition inside the disambiguation dialog. Otherwise, set this variable to true to exclude intents without dialog starters.
+**Note:** This variable is set to false by default to provide you with a full view into all the intents that are being evaluated, matched, and shown to the user. Decide whether to keep or change the default value: If you keep this set to false, as mentioned earlier, you should handle an intent without a dialog starter by adding a Response Match condition inside the disambiguation dialog. Otherwise, set this variable to true to exclude intents without dialog starters.
 
 ### FAQs
 

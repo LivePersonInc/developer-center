@@ -5,7 +5,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 
-
 level-order: 2
 order: 9
 permalink: skills-api-overview.html
@@ -19,7 +18,6 @@ Your agents are trained to help visitors according to your business needs. An ag
 Skills are assigned to agents as well as to engagements.  This creates the 'link’ between the right topic of conversation and the agent best equipped to handle it.
 
 ![SkillsOverivew](img/skillsoverview.png)
-
 
 ### Getting Started
 
@@ -47,4 +45,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete skills
 
-* Synch skills within Conversational Cloud with your internal HR or staffing systems.
+* Sync skills within Conversational Cloud with your internal HR or staffing systems.

@@ -39,7 +39,7 @@ N/A
 
 **Request Body**
 
-Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/).
+Contains a JSON object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](https://graphql.org/).
 
 ```json
 {"query" : 
@@ -72,7 +72,7 @@ At least one parameter from the above parameters is required in order to retirve
 |first|Number of records to return|Default: 50|
 |offset|Offset to start returning records from||
 |orderBy|List of columns to order by|Default: changeTimestamp|
-|orderDirection|List of ordering direction(ASC, DESC), in relevance to orderBy list|Default: DESC|
+|orderDirection|List of ordering direction (ASC, DESC), in relevance to orderBy list|Default: DESC|
 |users|List of users for filtering||
 |componentTypes|List of component types for filtering||
 |language|Language to return the results in|Default: en-US|
@@ -81,11 +81,11 @@ At least one parameter from the above parameters is required in order to retirve
 |automaticUpdates|Boolean, include automatic updates in the results|Default: false|
 
 Example:
+
 ```json
 {"query" : 
 "{auditData (lpa:true) { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
 }
-
 ```
 
 ### Response
@@ -109,7 +109,6 @@ JSON
 | 401 | Not Authenticated |
 | 403 | Not Authorized |
 | 500 | Internal Server Error |
-
 
 **Response Body**
 

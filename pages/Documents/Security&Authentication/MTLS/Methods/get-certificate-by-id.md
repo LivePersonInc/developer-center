@@ -16,13 +16,11 @@ This API gets a certificate by account ID and certificate ID.
 |:--------  |:---  |
 |GET|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 
-
 **Request Headers**
 
 |Header         |Description  |
 |:------|        :--------  |
 |Authorization|    Contains token string to allow request authentication and authorization.  |
-
 
 **Path Parameters**
 
@@ -41,7 +39,6 @@ This API gets a certificate by account ID and certificate ID.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 

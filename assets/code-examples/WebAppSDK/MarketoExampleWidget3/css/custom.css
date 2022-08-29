@@ -13,16 +13,16 @@ button{
 }
 
 .list-group-item{
-    font-size: 14px;    
+    font-size: 14px;
     cursor:pointer;
     overflow:hidden;
     border-top: 1px solid rgba(193, 194, 195, 1);
-    border-bottom: 0px !important;
-    border-left: 0px !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
 }
 
 .list-group-item .parent{
-    border-radius: 0px !important;
+    border-radius: 0 !important;
 }
 
 .list-group-item:hover{
@@ -47,7 +47,7 @@ button{
 }
 
 .list-group-item-heading{
-    font-size: 13px;    
+    font-size: 13px;
     line-height: normal;
     font-weight: bold;
     color: #515254;

@@ -11,7 +11,6 @@ permalink: customer-facing-bots-deploying-bots-on-live-chat.html
 indicator:
 ---
 
-
 ### Step 1 — Set Up Your LiveEngage Configuration
 
 If your brand is using Live Chat — both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
@@ -32,7 +31,7 @@ In order to use the Chat Agent API, please follow the steps below:
 
 4. **Log out** using the [Login Service API](agent-logout.html).
 
-You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API. [Click here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
+You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API. [Click here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on GitHub.
 
 ### Step 3 — Assign your bot to a LiveEngage campaign and manage bot escalations
 

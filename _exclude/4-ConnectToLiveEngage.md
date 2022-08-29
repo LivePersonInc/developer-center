@@ -90,7 +90,7 @@ In this step, you set up an [integration](conversation-builder-integrations-live
 
         (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
 
-    * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+    * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent…" Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
 5. Click **Save**.
 

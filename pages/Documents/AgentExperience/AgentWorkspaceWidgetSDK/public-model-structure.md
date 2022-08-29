@@ -13,7 +13,7 @@ permalink: agent-workspace-widget-sdk-public-model-structure.html
 indicator: both
 ---
 
-**Notes**:
+**Notes:**
 
 - *The structure of the Public Model is subject to change, and may vary in future versions. In addition, data you are attempting to get/bind to may not be present, and so it is not guaranteed that you will receive data.*
 - *This overall structure was originally designed for real-time chat. However, the same structure has also been used in order to support existing widgets for messaging conversations.*
@@ -265,8 +265,6 @@ Some of the public model data specified above returns an object or an array of o
 | [clientProperties](agent-workspace-sdk-public-model.html#clientproperties)| Object containing client properties                                                                 | object |                                                  |
 
 Structure example:
-
-
 
 ```json
 {
@@ -594,7 +592,6 @@ Structure example:
 
 *Note: This is an array in order that that the customer can provide home contact info, work contact info, and other contact info.*
 
-
 ### claimsAndAuthType in unauthenticated case
 
 | Property   | Description            | Type   |
@@ -626,7 +623,6 @@ Structure example:
 ```
 
 *note: This enables to send customer id even for unauthenticated user.*
-
 
 ### SDE.marketingSource
 
@@ -683,7 +679,8 @@ Structure example:
     "numItems": 1
 }
 ```
-**Note: There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.**
+
+**Note:** There's currently a known issue with numItems. This key currently displays as null regardless of the number you pass it.
 
 ### SDE.shoppingCart
 
@@ -728,8 +725,9 @@ Structure example:
     "quantityInStock": 5
 }
 ```
-**Note: SDE.viewedProducts does not contain the quantity field**
-**Note: SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields**
+**Note:** SDE.viewedProducts does not contain the quantity field.
+
+**Note:** SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields.
 
 ### SDE.serviceActivity
 
@@ -812,11 +810,11 @@ Structure example:
 |----------------|--------------------------------------------------|---------|
 | appId          | String representation of the Identification of the application        | string  |
 | appVersion     | The application version, for example in case of mobile it will be the host app version | string  |
-| browser        | String represent the browser. For example: chrome, firefox, etc...    | string  |
+| browser        | String represent the browser. For example: chrome, firefox, etc…    | string  |
 | browserVersion | Detailed version info of the user agent (browser or host-application) | string  |
 | deviceFamily   | For example: personal_computer/tablet/mobile_phone                    | string  |
-| deviceModel    | For example for G3 for LG, iPhone6s for Apple...                      | string  |
-| deviceManufacture| For example LG, HP, Microsoft...                                    | string  |
+| deviceModel    | For example for G3 for LG, iPhone6s for Apple…                      | string  |
+| deviceManufacture| For example LG, HP, Microsoft…                                    | string  |
 | integration    | For example: web_sdk, mobile_sdk, and brand_sdk                       | string  |
 | integrationVersion| String representation of the integration version                   | string  |
 | ipAddress      | String representation of the ip address                               | string  |

@@ -16,11 +16,13 @@ There are two ways to manage properties in the Conversation Context Service (CCS
 * A Javascript function wraps the REST API for easy use within Conversational Cloud. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-For information on this, see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
+
+See the [discussion on scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
 
 ### REST APIs overview
 
-The APIs can be called as shown below. Every API call requires the secure token
+The APIs can be called as shown below. Every API call requires the [secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2):
+
 {domain}/{api}?access_token=<Token> 
 
 Domain URL per environment:
@@ -28,10 +30,7 @@ Domain URL per environment:
 * EMEA: https://z2.ccs.liveperson.net/
 * APAC: https://z3.ccs.liveperson.net/
 
-{: .important}
-For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
-
-### REST API - Save Properties
+### REST API — Save Properties
 
 This API can be used to add new properties or update existing properties. This API requires accountId, namespace, session (optional) and time to live as parameters. This API overwrites existing properties and inserts non-existing properties.
 
@@ -69,7 +68,7 @@ curl -X POST "https://{domain}/v2/context/document/create?access_token={Token}" 
 
 status code = 201
 
-### REST API - Read Properties
+### REST API — Read Properties
 
 #### Retrieve all properties within a namespace
 
@@ -174,7 +173,7 @@ curl -X POST "https://{domain}/v2/context/document/properties?access_token={Toke
 
 status code = 200
 
-### REST API - Delete Properties
+### REST API — Delete Properties
 
 There are three ways to delete properties:
 * By setting the TTL

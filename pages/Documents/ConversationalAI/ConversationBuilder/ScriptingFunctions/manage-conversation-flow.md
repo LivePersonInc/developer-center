@@ -38,10 +38,9 @@ In the below example, we send three messages to the user with a delay of 2000 mi
 ```javascript
 // setting a delay of 2000 for each message……
 botContext.setMessageDelay(2000);
-//  sending message to user...
+//  sending message to user…
 botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
 ```
-
 
 ### Set allow max text response
 
@@ -59,7 +58,6 @@ Keep in mind the limits of the targeted channel(s), which might take precedence 
 ```javascript
 botContext.setAllowMaxTextResponse(true);
 ```
-
 
 ### Set trigger next message
 

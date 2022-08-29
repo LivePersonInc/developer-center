@@ -33,7 +33,6 @@ This section contains API details that are common to every API’s resource, met
 | v   | API version        | Double  | Required   |
 | select  | Dynamic selection of the response fields. | YOGA 'gdata' dialect.  | Optional | Validation error: 400 Non-existing field: no error, blank in response. Supported fields: any in response body       |
 
-
 **Path Parameters**
 
  |Parameter | Description|  Type  |Notes |
@@ -52,7 +51,6 @@ This section contains API details that are common to every API’s resource, met
  | deleted | Whether the item is deleted or not | boolean |
  | enabled | Whether the item is enabled or not| boolean |
  | questions | Array of Agent survey questions | Array or questions |
-
 
 **Entity Example**
 

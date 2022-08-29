@@ -25,7 +25,6 @@ Get a list of all special occasions of an account.
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String  
 
-
 **Request Headers**
 
  |Header | Description| Notes |

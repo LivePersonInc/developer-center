@@ -28,7 +28,7 @@ sort| Sort the results based on a given metric in a predefined order. | string  
 offset  | The offset specifies from which record to retrieve the data.  | numeric | Optional | Default is 0.
 limit  | Max amount of agents to be received in the response.  | numeric | Optional | Default is 50.
 
-NOTE: Total supported results is 1000, meaning offset+limit can't exceed 1000
+**Note:** Total supported results is 1000, meaning offset+limit can't exceed 1000.
 
 **BODY Parameters**
 
@@ -43,14 +43,14 @@ _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours.
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours.
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional |
 |agentSkillIds| An array of skill IDs.| Array `<String>`| Optional | The agent's configured skills. This filter impacts the returned agents' population so that only agents which are assigned to the given skills will be returned.
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT.
 |effectiveAgentStatus | Current agent availablity.  | Array `<String>`  | Optional | Valid values: ONLINE, OFFLINE, AWAY, BACK_SOON.<br/>OFFLINE agents population will include agents which were logged in within the selected time frame and are currently logged out.<br/>Default value: ["ONLINE","BACK_SOON","AWAY"] 
     
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -97,7 +97,6 @@ Request body - json example:
     ]
 }
 ```
-
 
 ### Response
 
@@ -179,8 +178,7 @@ agentStatus  | (ONLINE / BACK_SOON / AWAY) | String
 agentStatusDuration  | status duration in ms | Long
 agentStatusReasonId |  (NA / away reason id) | String |
 
-
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 
@@ -246,9 +244,5 @@ Response DTO - json example:
         }
     ]
 }
-
-
 ```
-
-
 

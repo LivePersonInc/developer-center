@@ -60,7 +60,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -93,7 +92,6 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
   </tr>
 </table>
 
-
 ### Request Headers
 
 <table>
@@ -115,7 +113,6 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
   </tr>
 </table>
 
-
 **Request Body**
 
 <table>
@@ -123,7 +120,6 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
     <td>['12345','67890']</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -137,7 +133,6 @@ On both 'active’ and 'all’ the 'order’ attribute is maintained by the serv
     <td>This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value. after the operation</td>
   </tr>
 </table>
-
 
 **Response Body**
 
@@ -176,7 +171,6 @@ Response body with return policy ACTIVE
  }]</td>
   </tr>
 </table>
-
 
 Response body with return policy ALL
 

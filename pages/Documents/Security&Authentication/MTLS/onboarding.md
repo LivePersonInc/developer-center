@@ -24,15 +24,15 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 This returns a list of account domains, the `mtls domain` is under the 'mtlsGateway' value (for va-a, it is `va-a.mtls.liveperson.net` for example). The MTLS documentation might refer to `ac-common` or `Gen2 domain`. These values can be taken from the `accountConfigReadWrite` key in the above request.
 
 {: .notice}
-A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
+A note on Create/Read/Update/Delete usage — Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
 
-### Step 1 - Test Your Certificate
+### Step 1 — Test Your Certificate
 
 The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
 
 As part of our MTLS service, we offer a [p12 file tester](mtls-methods-p12-key-tester.html). What this tool does is to test the validity of the p12/pfx file and corresponding password (at this stage without storing the certificate in [HashiCorp Vault](https://www.vaultproject.io/)).
 
-### Step 2 - Upload certificate
+### Step 2 — Upload certificate
 
 In this stage we upload a certificate to the our storage. At this point, the certificate will not be connected to any **mapping parameters** (see explanation in step 3). It will be created so it can be connected in the next stage.
 
@@ -44,7 +44,7 @@ You can upload your certificate by using the following method: [upload certifica
 
 The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step (it can also be fetched later).
 
-### Step 3 - Create MTLS Mapping object
+### Step 3 — Create MTLS Mapping object
 
 #### Mapping Parameters
 
@@ -64,17 +64,17 @@ public enum Services {
 
 * **url:** The url we will proxy the request to in runtime (represented by runtime header `LP-forward-url`).
 
-**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+**Note:** You must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked.
 
 #### Actions to take
 
 Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters **(accountId/serviceName/url)** to identify the context (as explained above).
 
-**Note that there is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned**.
+**Note:** There is a per account duplication constraint that checks both name and the key (unique accountId/serviceName/url triplets). When trying to create an entry that already exists, an informative error will be returned.
 
 In order to create the mapping object, you will need to use the following method.
 
-**Note that this action is performed against ac-common domain, not the MTLS service.**
+**Note:** This action is performed against ac-common domain, not the MTLS service.
 
 |Method|      URL|  
 |:--------  |:---  |
@@ -109,13 +109,12 @@ Example body (Certificates array):
 
 ```
 
-### Step 4 - Use the runtime
+### Step 4 — Use the runtime
 
 If all previous steps were successful, runtime methods can now be used. The runtime includes mapping and forward methods.
 
 #### Actions to take
 
 * [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of **serviceName/url/siteid** and returns for each triplet whether a certificate is configured for it. Use this method to make sure your certificates are configured properly, **Since mtls is throttle protected this method is used to verify that mTLS is configured for the supplied parameters. The goal of this method is not to submit regular TLS requests through the service (using up bandwidth), even though it is possible.**
-
 
 * [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched. The certificate is fetched using the provided parameters (**accountId/serviceName/url**). The request is then forwarded to the `LP-forward-url` specified. The response will return as if contacting the remote endpoint directly but will be authenticated, its identity confirmed via the certificate.

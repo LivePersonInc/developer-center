@@ -20,9 +20,9 @@ In order to use this functionality, the customer must provide LivePerson with a 
 
 LivePerson will decrypt the original encrypted data using LP keys and re-encrypt it using the customer public key by using the following algorithm:
 
-1. Symmetric encryption - AES-256
+1. Symmetric encryption — AES-256
 
-2. Digest - SHA-512
+2. Digest — SHA-512
 
 3. Compressed
 

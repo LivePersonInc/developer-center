@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 
-
 level-order: 2
 order: 9
 permalink: lobs-api-overview.html
@@ -44,4 +43,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete LoBs
 
-* Synch LoBs within Conversational Cloud with your internal HR or staffing systems.
+* Sync LoBs within Conversational Cloud with your internal HR or staffing systems.

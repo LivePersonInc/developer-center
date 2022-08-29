@@ -14,11 +14,11 @@ As mentioned in the Overview and Methods, in order to access the Monitoring API 
 
 In order to install a new application on your Conversational Cloud account you need to submit a general application schema to your account team. They will handle the installation for you. You can follow [this guide](/guides-le-applications-installing.html) to learn more about the schema which you must submit and how to submit it. 
 
-**Note: within this schema the only key which you need to populate in order to install the Monitoring API is the `client_name`**. This field determines the application name which will be displayed on your Conversational Cloud site and Conversational Cloud reporting systems.
+**Note:** Within this schema the only key which you need to populate in order to install the Monitoring API is the `client_name`. This field determines the application name which will be displayed on your Conversational Cloud site and Conversational Cloud reporting systems.
 
 Once the installations is done, a new `app-installation-id` will be generated and provided to you by your account team. You may then use it to access the Monitoring API methods.
 
-### When creating a new application on your account please consider the following:
+### When creating a new application on your account please consider the following
 
 * After installing an application, its name (determined by the `client-name` key you populated in the schema) will show up as a possible source for newly created engagements. This is used to distinguish between engagements and to accurately report on usage of the application.
 

@@ -12,15 +12,15 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
 
 Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Examples of common intents include:
 
-* Check order status - “What is the status of my lawn mower order?”
-* Make a payment - “Can I make a payment today for the total amount?”
-* Reset password - “I forgot my password and I need to reset it.”
+* Check order status: “What is the status of my lawn mower order?”
+* Make a payment: “Can I make a payment today for the total amount?”
+* Reset password: “I forgot my password and I need to reset it.”
 
 **Intent Manager** is a suite of tools for intent modeling and management. You can use it to:
 

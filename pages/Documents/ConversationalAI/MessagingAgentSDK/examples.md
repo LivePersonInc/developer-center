@@ -14,7 +14,7 @@ Here are a few sample bots which demonstrate some of the use cases that can be a
 
 2. You must be able to configure an agent in your Conversational Cloud account.
 
-3. You must have the latest version of Node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
+3. You must have the latest version of Node.js installed on your machine. Here's a guide on how to do so: [Mac](https://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](https://blog.teamtreehouse.com/install-node-js-npm-windows).
 
 ### Greeting Bot
 
@@ -86,7 +86,7 @@ Pre-requisites:
 - A LivePerson Account
 - A user with Agent permissions
 - Application installation id with `ms_survey` capability (ask your LivePerson account representative to create one for you and provide you with the id)
-- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating - not your bot skill (ask your LivePerson account representative to assign it for you)
+- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating — not your bot skill (ask your LivePerson account representative to assign it for you)
 
 To run the [survey bot example](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/survey-bot)
 
@@ -155,11 +155,9 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        node examples/transfer2same-agent-bot/main.js
        ```
 
-
 {: .important}
 The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
-
 
 ### Social Messaging Bot
 

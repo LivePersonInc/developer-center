@@ -311,10 +311,10 @@ Because the number of sessions can be quite large, the API supports pagination. 
 ##### Pagination examples
 
 ```
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
 ```
 
 <table>
@@ -450,7 +450,6 @@ Note: The accountId and API key in these examples are fake — please replace it
 ```bash
 curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/myCoolMamespace2/properties/{propertyName}   --header 'maven-api-key:  BEnAcoA2p4OTAyMzM1Nxyz'
 
-
 ```
 
 #### Update multiple properties within a session group
@@ -497,7 +496,6 @@ curl --request PATCH \
  "b": 2,
  "c": 3
 }'
-
 
 ```
 

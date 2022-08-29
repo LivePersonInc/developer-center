@@ -12,7 +12,8 @@ order: 90
 permalink: messaging-window-api-samples-javascript-sample.html
 indicator: messaging
 ---
-**Note**: This document is subject to change without notice.
+
+**Note:** This document is subject to change without notice.
 
 This sample demonstrates the usage of the messaging API from browser JavaScript code.
 

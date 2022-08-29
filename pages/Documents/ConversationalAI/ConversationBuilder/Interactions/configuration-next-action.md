@@ -88,7 +88,7 @@ For information on the match types mentioned above, see *Conditions*, which is d
 
 ### Conditions
 
-Conditions are "if..., then..." statements that, when combined with pattern matching, intents and entities, deliver a powerful flow control engine for the bot.
+Conditions are "if…, then…" statements that, when combined with pattern matching, intents and entities, deliver a powerful flow control engine for the bot.
 
 #### Conditions in question interactions
 

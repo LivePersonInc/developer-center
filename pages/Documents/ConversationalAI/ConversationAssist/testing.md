@@ -10,9 +10,10 @@ permalink: conversation-assist-testing.html
 indicator: messaging
 ---
 
-**Tip:** Before testing recommendations, verify that your bots and knowledge bases work in isolation.
+### Tip
+Before testing recommendations, verify that your bots and knowledge bases work in isolation.
 
-**To test recommendations**
+### Test recommendations
 
 1. Create a test skill, and assign it to your bot and/or knowledge base.
 2. [Start a new messaging conversation](https://developers.liveperson.io/web-messaging/) from the consumer side.
@@ -23,11 +24,11 @@ indicator: messaging
 
     In this example below, the consumer is asking about canceling an order.
 
-    <img width="550" src="img/agentassist/test1.png">
+    <img width="550" alt="Two recommendations being offered inline in the conversation" src="img/agentassist/test1.png">
 
 5. Click a recommendation to expand the box and view more information about it.
 
-    <img width="550" src="img/agentassist/test2.png">
+    <img width="550" alt="The expanded view of offered recommendations, which shows more details" src="img/agentassist/test2.png">
 
 6. Test [using the recommendations](conversation-assist-agent-experience.html), i.e., use the bot or the article.
 

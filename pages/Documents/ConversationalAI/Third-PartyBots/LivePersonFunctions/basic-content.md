@@ -82,7 +82,7 @@ To provide some more information and context alongside the messages to the consu
 
 ```javascript
 const payload = {
-  messages: ["Hi i am an intent information example"],
+  messages: ["Hi I am an intent information example"],
   context: {
     intentId: "intent-info-example",
     intentName: "Intent information example.",
@@ -203,7 +203,7 @@ const payload = {
           replies: [
             {
               type: "button",
-              tooltip: "yes i do",
+              tooltip: "yes I do",
               title: "yes",
               click: {
                 actions: [

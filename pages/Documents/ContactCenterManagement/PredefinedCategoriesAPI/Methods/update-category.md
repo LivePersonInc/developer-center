@@ -77,7 +77,6 @@ all — return all categories with the response body, including the deleted cate
   </tr>
 </table>
 
-
 ### Path Parameters
 
 <table>
@@ -93,7 +92,6 @@ all — return all categories with the response body, including the deleted cate
 Type: String </td>
   </tr>
 </table>
-
 
 ### Request Headers
 
@@ -116,7 +114,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 Notes**:**
 
 1. Order attribute is mandatory. It is a sequential and consecutive value managed by the server.
@@ -138,7 +135,6 @@ Notes**:**
  }</td>
   </tr>
 </table>
-
 
 ### Response Headers
 
@@ -188,7 +184,6 @@ Response body without return policy specified (default = EFFECTED)
  }]</td>
   </tr>
 </table>
-
 
 Response body with return policy ALL/ACTIVE
 

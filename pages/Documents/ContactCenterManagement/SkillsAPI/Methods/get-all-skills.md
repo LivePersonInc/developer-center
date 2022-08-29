@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
 
-
 order: 10
 permalink: skills-api-methods-get-all-skills.html
 
@@ -62,7 +61,6 @@ This API retrieves a list of skills for a specific account.
  |Header  |Description |
 | :-------  | :-----  |
 | ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. | 
-
 
 **Response Body**
 

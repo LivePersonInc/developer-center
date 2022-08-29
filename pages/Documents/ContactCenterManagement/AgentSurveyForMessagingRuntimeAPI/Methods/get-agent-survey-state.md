@@ -32,7 +32,6 @@ Get the survey state that has been saved in previous requests.
 | seq | when seq=true and survey state is null the first sequence will be returned | Boolean | Optional | Default value is true |
 | v | API version number | String | Required |
 
-
 **Request Headers**
 
 |Header | Description| Notes |

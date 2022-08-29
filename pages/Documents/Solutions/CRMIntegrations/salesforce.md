@@ -8,6 +8,18 @@ permalink: crm-integrations-salesforce.html
 indicator: both
 ---
 
+<!-- TODO: Use the following as content for the page, or remove:
+
+<div class="important">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>
+
+This integration will allow you to see and create your Salesforce Contact, Lead, Account and Opportunity record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Salesforce. Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
+
+Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce, by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads. Through the Conversational Cloud Salesforce integration, agents can utilize the workspace to conduct all conversations with customers, and get instant access to pertinent information without having to open a separate browser window to manually check the Salesforce record. Agents can also search through records using the field from pre-chat surveys and/or through the widget.
+
+Furthermore, agents have the ability to easily create records in Salesforce as part of the conversation (leads, opportunities, accounts, cases) and store the conversation transcript and additional info in the CRM after the engagement.
+
+-->
+
 The Conversational Cloud Salesforce Widget will allow SFDC information to be viewed inside the platform, as well as enabling records to be created and chat/messaging transcripts to be attached to them. In addition, the app will include back-end setup that will allow the SFDC admin to customize the default settings for their organization. This guide sets out the steps to install, configure, and start working with the Conversational Cloud app for Salesforce.
 
 **Please note:** The information in this guide refers to both chat and messaging, unless otherwise indicated.
@@ -50,7 +62,7 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 {:start="2"}
 
 1. “Step 1: Account Information” — Enter the relevant Account ID.
-2. “Step 2: Oath Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
+2. “Step 2: OAuth Key Setup” — For this part you will need your App Keys from your LivePerson Conversational Cloud account.
    1. Go to the Campaign Builder and search for the link “Data Sources.”
    2. Go to “API” Tab and click “Manage” and then “New.”
    3. Fill in the App Name: “SFDC Integration,” Developer:“LivePerson” and then make sure to select the following APIs on the list: “Data” → “Engagement History” and “Administrations” → “Skills” and click “Save.”
@@ -116,7 +128,7 @@ The SFDC package supplied by LivePerson includes an object named “Chat Transcr
 In order to add a Custom Object to the list of “Available Objects,” you will first need to create a Lookup field for your Custom Object on the “Chat Transcript” object. Only once you create this Lookup field will your Custom Object appear under the “Available Objects” section of this page (The “Chat Transcript” object can be found under the Setup menu, “Create” → “Objects” among all custom objects in your Salesforce org).
 
 1. After you enabled a standard or custom object in the Customization Settings, the following should be defined (not all are mandatory, define according to your needs: Field Mapping, Related Lists, and Search Filters).
-2. Exposing the chat/messaging conversation transcript for an object in Salesforce - For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
+2. Exposing the chat/messaging conversation transcript for an object in Salesforce — For each object you want to use, and choose to enable for the widget, if you would like to see the related Chat Transcript on that object’s records in Salesforce, you need to add the chat/messaging conversation transcript related list using Salesforce layout editor for all the Salesforce layouts you want to include it on.
 3. Each enabled object will have a link titled “Configure Field Mapping, Related Lists, and Search Filters” — clicking this link will direct you to a page where you can define these settings.
 
 #### **Field mapping**
@@ -128,10 +140,10 @@ These settings allow you to choose which fields of each object will be available
   * Choose a SF Field Name
   * Choose ‘Editability’ mode.
     **Note:** Editability mode may sometimes be enforced according to your SF settings and permissions.
-  * LivePerson Field Name - Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
-  * Include in Overview - within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble
-  * Required - Setting the field as mandatory when creating or editing the record.
-  * Default Value - Set up a fixed default text value for a field (will be editable by the agent).
+  * LivePerson Field Name — Choose a LP value only if you want this field to be prepopulated with one. Choose “Other" to manually configure a specific LP Value not included in the list (pre-chat survey, post-chat survey, extra SDEs, etc.) — See Appendix #1 for advanced instructions on how to set this.
+  * Include in Overview — within the Choose this is you want the field to appear in the bubble widget (The bubble appears when clicking ‘i’ next to the Account/Contact from the main Search screen of the widget). **Note:** Only the first 5 fields will be shown in the bubble.
+  * Required — Setting the field as mandatory when creating or editing the record.
+  * Default Value — Set up a fixed default text value for a field (will be editable by the agent).
   * Click “Save.” **Note:** You can edit or delete any existing field mapping by clicking on the respective link next to each.
 
 #### **Related list config**
@@ -217,10 +229,10 @@ This process is used to preserve data integrity and to make sure the chat/messag
 
 **The sync process includes 4 sync options:**
 
-1. **Periodic sync** - captures and update information of the last 6 hours, every 3 hours (8 times a day in total).
-2. **Daily sync** - captures information from the last 48 hours (In order to keep with LivePerson’s Data SLA of up to 24 hours for full data).
-3. **Manual sync** - allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc...).
-4. **“Sync Chat” button on the chat transcript record** - allows on-demand sync with LivePerson servers for a specific chat transcript record.
+1. **Periodic sync**: Captures and update information of the last 6 hours, every 3 hours (8 times a day in total).
+2. **Daily sync**: Captures information from the last 48 hours (In order to keep with LivePerson’s Data SLA of up to 24 hours for full data).
+3. **Manual sync**: Allows the admin to choose a past period of time to manually sync into Salesforce (Due to various reasons: server issues, agent wasn’t logged in, errors etc…).
+4. **“Sync Chat” button on the chat transcript record**: allows on-demand sync with LivePerson servers for a specific chat transcript record.
 
    **Note:** These sync processes are one sided, from the Conversational Cloud to Salesforce only, no information is transferred from Salesforce to the Conversational Cloud.
 
@@ -265,21 +277,23 @@ The “Event Log” includes information about any sync errors that may have occ
 Now that you’ve configured your app in Salesforce, it’s time to go back to the Conversational Cloud and configure the widget within the platform.
 
 1. Click on the 'Night Vision' icon at the top of the page.
-2. Click on 'Agent Workspace Configuration'
-3. Click on the "+" next to the existing widget labels (**Note:** The limit is five widgets)
+2. Click on 'Agent Workspace Configuration'.
+3. Click on the "+" next to the existing widget labels. (**Note:** The limit is five widgets.)
 4. Choose a name for the Widget (you can use "SF.Widget" to have "SF" as the Widget’s label).
 5. Choose 'Double Widget' size.
 6. Enter the Salesforce console and switch it to classic mode.
 7. Select the Customization Settings tab in your Salesforce settings, copy the first part of the URL, and add the "ChatLink" suffix to ensure you're using the correct link.
-8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box. 
+8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box.
   
 ![](/img/salesforce_pastewidget.png)
 
-<!-- <div class="notice">If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this: <br />
-<img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/></div>
+<!-- <div class="notice">
+<p>If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:</p>
+
+<img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
+</div>
    
-Tip:
-You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
+**Tip:** You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
 
 {:start="7"}
 
@@ -287,7 +301,7 @@ You can stand on the Customization Settings tab, copy the first part of the URL 
    * Define the following URL under ‘In case widget didn't load, display the following link’- ‘[https://login.salesforce.com](https://login.salesforce.com "https://login.salesforce.com")’ (or ‘[https://test.salesforce.com](https://test.salesforce.com "https://test.salesforce.com")’)
    * “Show link after” — Define 30 seconds, this means that if the agent is not logged in to SF, after 30 seconds he will see the message you defined with the link defined above.
 
- -->
+-->
 
 **Now you are ready to go, just open the widget on an active chat/messaging conversation.**
 
@@ -436,14 +450,11 @@ The equivalent fields needed for messaging are ‘LivePerson Msg SDK Field’ an
 
 The complete structure of the data in the “Agent Widget SDK,” “Engagement History API,” and “Messaging Interactions API” is described in their own documents which update all the time and you can find through the Connection Panel on your LivePerson Conversational Cloud account, or in our Developer Center:
 
-**Agent Widget SDK Public Data Model** -  
-[https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Agent Widget SDK Public Data Model**: [https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Engagement History API - Engagement Attributes** -  
-[https://developers.liveperson.com/engagement-history-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Engagement History API — Engagement Attributes**: [https://developers.liveperson.com/engagement-history-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
-**Messaging Interactions API - Engagement Attributes** -  
-[https://developers.liveperson.com/messaging-interactions-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
+**Messaging Interactions API — Engagement Attributes**: [https://developers.liveperson.com/messaging-interactions-api-engagement-attributes.html](https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html "https://developers.liveperson.com/agent-workspace-widget-sdk-public-model-structure.html")
 
 #### **Survey questions (pre-chat, post-chat, agent)**
 
@@ -481,7 +492,7 @@ Each parameter/sub-section is like a property of the upper section, to which you
 
 These are just a few examples meant to demonstrate how to write these “addresses”, but rest assured, all of these, along with more than 55 (!) other Conversational Cloud parameters are available to you on the predefined list.
 
-1. For a the **Chat Start Time** value:
+1. For a **Chat Start Time** value:
 
 * **LivePerson SDK Field:** `chatInfo.chatStartTime`
 * **LivePerson API Field:** `info.startTime`
@@ -581,7 +592,7 @@ These are just a few examples meant to demonstrate how to write these “address
    1. User was not logged-in to Salesforce with the same browser.
    2. Wrong widget URL in LE: missing “ChatLink” wording.
    3. Wrong widget URL in LE: installed in SandBox but URL refers to production.
-   4. Missing SF configuration - Skill is not associated with an object
+   4. Missing SF configuration: skill is not associated with an object.
 
 ![](/img/salesforce-integration-guide-11.png)
 

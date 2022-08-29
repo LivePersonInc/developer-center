@@ -12,7 +12,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-{:.important}
+{: .important}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
 ---
@@ -587,7 +587,7 @@ Define the color of menu button and back arrow on toolbar.
 
 Define the color code for the entire view background.
 
-In activity mode - Also the color of android:windowBackground.
+In activity mode — also the color of android:windowBackground.
 
 * **Type:** color
 * **Default value:** white
@@ -1124,7 +1124,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 
 #### lpmessaging_ui_image_progress_bar.xml
 
-Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -1423,7 +1423,8 @@ Define whether or not we should show a real time link preview. A preview while t
 
 parse only &lt;og:> tags or others as well
 
-false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags
+* false: use &lt;og:title&gt; tags only
+* true: use &lt;og:title&gt; and &lt;title&gt; tags
 
 ---  
 
@@ -1576,7 +1577,7 @@ Enable or disable the action button of the keyboard. If enabled, pressing the ac
 
 ---
 
-### Navigation - Scroll Behavior Configuration
+### Navigation — Scroll Behavior Configuration
 
 #### lp_scroll_show_conversation
 
@@ -1631,7 +1632,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 
@@ -2086,7 +2087,7 @@ Define the font of the pci secure form.
 
 #### lpmessaging_ui_secure_form_progress_bar.xml
 
-Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -2620,7 +2621,7 @@ Defines whether to show the feedback dialog.
 
 Define if the agent’s name and avatar are visible on top of feedback dialog.
 
-{:.notice}
+{: .notice}
 If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2645,7 +2646,7 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
-{:.notice}
+{: .notice}
 If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2831,7 +2832,7 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
-{:.important}
+{: .important}
 When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
 
 #### show_timestamp_in_ttr_notification
@@ -3431,9 +3432,9 @@ Chat message (agent/consumer) bubble bottom padding.
 
 #### show_agent_typing_in_message_bubble
 
-True - the agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
+True: The agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
 
-False - the agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
+False: The agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
 
 Only available as long as the announce_agent_typing configuration is on (set as true).
 
@@ -3455,7 +3456,7 @@ Only available as long as the announce_agent_typing configuration is on (set as 
 &nbsp;
 </div>
 
-{:.important}
+{: .important}
 If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
 
 #### agent_bubble_link_preview_background_stroke_color
@@ -4048,7 +4049,7 @@ Appointment Scheduler window text color code for title, date and confirm button 
 
 #### lp_appointment_week_day_title_color
 
-Color code for week days text: S, M, T, W, ....
+Color code for week days text: S, M, T, W, …
 
 * **Type:** color
 * **Default value:** #000000

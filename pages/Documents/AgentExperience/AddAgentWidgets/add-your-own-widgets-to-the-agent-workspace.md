@@ -94,4 +94,4 @@ Your new widget will now be displayed as an additional icon next to the existing
 
 * **Automatic focus management may be problematic:** Applications with focus stealing can cause issues in the user interface of the Agent Workspace.
 
-**Note**: To integrate with your **Salesforce** application, open a ticket to Salesforce support and request the removal of the X-Frame option from your organization’s Salesforce pages. This will allow you to open Salesforce in the widget. Agents must log into Salesforce in a separate browser tab (or through SSO) prior to accepting chats.
+**Note:** To integrate with your **Salesforce** application, open a ticket to Salesforce support and request the removal of the X-Frame option from your organization’s Salesforce pages. This will allow you to open Salesforce in the widget. Agents must log into Salesforce in a separate browser tab (or through SSO) prior to accepting chats.

@@ -94,7 +94,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
             "replies": [
               {
                 "type": "button",
-                "tooltip": "yes i do",
+                "tooltip": "yes I do",
                 "title": "yes",
                 "click": {
                   "actions": [{ "type": "publishText", "text": "yep" }],
@@ -169,7 +169,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
     {
       "type": "TEXT",
       "data": {
-        "message": "I am sorry i couldn't help you. I will transfer you"
+        "message": "I am sorry I couldn't help you. I will transfer you"
       }
     },
     {
@@ -212,7 +212,7 @@ by Third-Party Bot Connector can be found at [API Service Specification](https:/
     {
       "type": "TEXT",
       "data": {
-        "message": "I am sorry i couldn't help you. I will try to transfer you to our Agent X"
+        "message": "I am sorry I couldn't help you. I will try to transfer you to our Agent X"
       }
     },
     {

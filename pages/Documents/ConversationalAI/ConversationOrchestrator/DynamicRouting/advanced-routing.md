@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-This article introduces concepts and tools for advanced routing. You will benefit from this topic if your routing requires complex evaluations, time-based or date-based criteria, dynamic queue prioritization and more. Before reading further, familiarize yourself with the basics [here](conversation-orchestrator-dynamic-routing-creating-routing-policies.html) first.
+This article introduces concepts and tools for advanced routing. You will benefit from this topic if your routing requires complex evaluations, time-based or date-based criteria, dynamic queue prioritization and more. Before reading further, familiarize yourself with [the basics](conversation-orchestrator-dynamic-routing-creating-routing-policies.html) first.
 
 ### Create complex policies using the Expression Editor
 
@@ -79,7 +79,7 @@ namespace.varP == (namespace.varX || namespace.varY)
     `custom.VIP_FAAS == true`<br>
     `conversation.minutesSincePreviousMessage < 2`
 
-**Debugging expressions**: Use the policy logs to debug both complex and simple policies. For more details, see [here](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html).
+**Debugging expressions**: Use the [policy logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html) to debug both complex and simple policies.
 
 #### Routing by time range, day of the week or date range
 
@@ -97,7 +97,7 @@ Update the template to create your rule.
 
 The time range template allows you to create policies that can route conversations by time and days of the week. The template takes inputs in the following format:
 
-`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2',...])`
+`isTimeRange('Start time in hh:mm:ss', 'End time in hh:mm:ss', 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 
@@ -111,7 +111,7 @@ You can create time-based routing policies in the following ways:
 
 The date range template allows you to create policies that can route conversations by date and days of the week.The template takes inputs in the following format:
 
-`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2',...])`
+`isDateRange('Start Date in mm/dd/yy', 'End Date in mm/dd/yy, 'Time Zone', ['Day1', 'Day2', …])`
 
 You can create time-based routing policies in the following ways:
 
@@ -141,12 +141,11 @@ Combine date and time to create policies:
 
 **Days**: Days provided should match ‘MON’, ‘TUE’, ‘WED’, ‘THU’, ‘FRI’, ‘SAT’,’ SUN’
 
-**Time zones**: Universal Time Zone database name should be used.
-Examples: America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, Asia/Saigon, Australia/Adelaide, Australia/Sydney, Australia/Tasmania, Australia/Victoria etc. For the complete list, see [here](https://timezonedb.com/time-zones).
+**Time zones**: [Universal Time Zone database name](https://timezonedb.com/time-zones) should be used. Examples: America/New_York, America/Nipigon, America/Nome, America/Noronha, America/North_Dakota/Beulah, Asia/Saigon, Australia/Adelaide, Australia/Sydney, Australia/Tasmania, Australia/Victoria, etc.
 
 #### Debugging expressions
 
-Use policy logs to debug your policies. For more details, see [here](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html).
+Use [policy logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html) to debug your policies.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting7.png" alt="">
 

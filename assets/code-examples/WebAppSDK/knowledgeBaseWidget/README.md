@@ -3,7 +3,7 @@ This is an example widget that shows how you can have a knowledge base of inform
 
 This widget uses the CollapsibleLists JS library.
 
-You can view a live example here:[Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidget/)
+You can view a live example here: [Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidget/)
 
 ## Background
 This widget was built as a proof of concept for a client that required that their canned responses keep the same folder strucure they had in legacy. Currently in LiveEngage, the pre-defined content does not allow for sub folders to be created, and you are limited to 100 main categories.

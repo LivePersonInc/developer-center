@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
 
-
 order: 60
 permalink: agent-groups-api-methods-update-agent-group.html
 

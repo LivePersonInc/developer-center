@@ -56,7 +56,7 @@ There are four, general categories of interactions:
 
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, Conversational Cloud allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
 
-*For details on constraints like this*, see the best practices information that's found [here](https://developers.liveperson.com/facebook-messenger-templates-best-practices.html) in the Rich Messaging section of this LivePerson developers' site, and refer to the [Messaging channels](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) section in the LivePerson Knowledge Center.
+For details on constraints like this, refer to [Rich Messaging best practices](facebook-messenger-templates-best-practices.html) as well as the [Messaging channels section](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) in the LivePerson Knowledge Center.
 
 {: .important}
 Your bot implementation should meet Conversational Cloud requirements and those of the specific channels in use.
@@ -71,15 +71,15 @@ For information on whitelisting rich media, see [here](conversation-builder-netw
 
 If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-As an example, if you enable URL shortening, a URL like this...
+As an example, if you enable URL shortening, a URL like this…
 
-<http://www.myexample.com/folder1/folder2/veryverylongstringhere.html>
+<https://example.com/folder1/folder2/veryverylongstringhere.html>
 
-...is shortened to this:
+…is shortened to this:
 
 <http://{abbreviated> domain}/{unique code}
 
-If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <http://www.mysite.com>), the URL isn't shortened.
+If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., <https://www.mysite.com>), the URL isn't shortened.
 
 If you enable URL shortening, the shortened domain must be whitelisted; for more information, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
 
@@ -175,15 +175,15 @@ You can use the following subset of HTML tags:
 - `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-- `<a href="http://example.com/test.jpg">click here</a>`
-- `<a href="http://example.com/1$2324%342523">click here</a>`
+- `<a href="https://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/1$2324%342523">click here</a>`
 - `<a href=”tel:+123456789”>phone</a>`
 - `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
 - `<a href="javascript: alert(’test’)">click here</a>`
-- `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
-- `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
+- `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+- `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 

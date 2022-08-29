@@ -43,8 +43,8 @@ The body media type must have one of the following formats:
  |:---|  :---|  :---|  :--- |
  |text|  Add a line of text to the visitor.|   alphanumeric|  Required|
  |textType|  The type of message and its proper UI representation.|  plain/html/rich-content| |
- |subType|  THe subtype of the message|  string|  Optional - valid value "ONLY_TO_REP"(=visible to agents only)
- |json | The JSON payload for the structured content template, as shown [here](structured-content-templates.html) | JSON | |
+ |subType|  THe subtype of the message|  string|  Optional — valid value "ONLY_TO_REP"(=visible to agents only)
+ |json | The JSON payload for the structured content template, [as shown](structured-content-templates.html) | JSON | |
 
 Request body examples:
 

@@ -1118,7 +1118,7 @@ Status bar style in conversation screen.
 
 #### enablePhotoSharing
 
-True - Enables Photo Sharing feature, False - Disables Photo Sharing.
+True — Enables Photo Sharing feature, False — Disables Photo Sharing.
 
 - **Type:** Bool
 - **Default value:**  false
@@ -2197,7 +2197,7 @@ When set to **true**, the TTR notifications show with off hours.  When the auto 
 
 #### ttrShowShiftBanner  
 
-Enable or disable shift toaster ('An agent will respond...’).
+Enable or disable shift toaster ('An agent will respond…’).
 
 - **Type:** Bool
 - **Default value:** true
@@ -2328,7 +2328,7 @@ Text color of the banner.
 
 #### ttrBannerOpacityAlpha  
 
-Opacity level of the banner background (values: 0.0 - 1.0).
+Opacity level of the banner background (values: 0.0 – 1.0).
 
 <div style="float: left; width: 35%;height: 51px;">
    <ul>

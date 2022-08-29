@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 
-
 order: 101
 permalink: users-api-appendix.html
 
@@ -16,7 +15,7 @@ indicator: both
 
 This section contains API details that are common to every API’s resource and action.
 
-### Considerations:
+### Considerations
 
 | Title | Description |
 | :--------   | :--- |
@@ -95,8 +94,6 @@ This section contains API details that are common to every API’s resource and 
 | allowedAppKeys | The API user's application keys | string | Required (for API user) |  
 | lobIds | The user’s LOB IDs | array of numbers | Optional |  ||
 
-
-
 ### Entity Example
 
 ```json
@@ -139,7 +136,6 @@ This section contains API details that are common to every API’s resource and 
 
     }  
 ```
-
 
 ### Data Revisions
 

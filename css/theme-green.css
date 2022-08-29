@@ -4,7 +4,6 @@
     font-size:16px;
 }
 
-
 h3 {color: #E50E51; }
 h4 {color: #808080; }
 
@@ -48,7 +47,7 @@ a[data-toggle="tooltip"] {
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #5b893c;
-    color: #ffffff;
+    color: #fff;
 }
 
 /* not sure if using this ...*/
@@ -57,7 +56,7 @@ a[data-toggle="tooltip"] {
 }
 
 .btn-primary {
-    color: #ffffff;
+    color: #fff;
     background-color: #5b893c;
     border-color: #5b893c;
 }

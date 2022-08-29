@@ -59,7 +59,6 @@ Example for JSON:
     "chat" : "Online"
     }
 }
-
 ```
 
 ### Response

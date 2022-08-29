@@ -29,12 +29,11 @@ Below you can find a list of hooks available on a web page by the Web Tag, each 
 
 **Hook callback parameters**: The “hook” function will get always one object:
 
-**Hook callback return  parameters**:  The “hook” function MUST return always one object - if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
+**Hook callback return  parameters**:  The “hook” function MUST return always one object — if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
 
 **Execute order**:  The hooks will be executed by the order they were “pushed”. 
 
 If param1 was changed on hook1, hook2 will get param1 after the change.
-
 
 ### Valid hook
 ```javascript
@@ -58,12 +57,13 @@ function hookCallback(options){
 }
 ```
  
-
 ### Limitations
+
 *   The customers need to make sure to integrate properly and to not cause bugs / edge cases
 *   Hooks will not be executed on external window. In the future when taglet “scope” will be supported, hooks will be supported only if the hook is inside a site taglet.
 
-### Register to hook:
+### Register to hook
+
 ```javascript
 lpTag.hooks = lpTag.hooks || [];
 
@@ -83,7 +83,8 @@ lpTag.hooks.push({
   }
 });
 ```
-## Places:
+
+## Places
 
 ### SMT
 
@@ -101,19 +102,17 @@ Parameters: TBD
 
 ## Rendering
 
-
 #### NAME: BEFORE_ENG_DISPLAY
 
 Use case: Change engagement state / click target / display / etc.
 
 Interference:  Change engagement configuration before engagement display.
 
-Place: rendererStub.js --> engagement.createInstance
+Place: rendererStub.js → engagement.createInstance
 
 Timing: Before
 
 Parameters: TBD 
-
 
 #### NAME: BEFORE_ENG_CHANNEL_OPEN
 
@@ -123,7 +122,7 @@ Interference:  The flow after engagement click.
 
 Place:
 ```
-baseOffer.js --> click --> _openChannel
+baseOffer.js → click → _openChannel
 ```
 
 Timing: Before
@@ -131,7 +130,6 @@ Timing: Before
 Parameters: TBD 
 
 ### Unified Window
-
 
 #### NAME: AFTER_GET_SURVEY
 
@@ -206,8 +204,6 @@ Parameters:
 }
 ```
 
-
-
 #### NAME: BEFORE_SUBMIT_SURVEY
 
 Use case:  Change answers
@@ -265,7 +261,7 @@ Parameters:
    </td>
    <td>Object
    </td>
-   <td>The actual submitted data - changing the surveyData actually affect the submitted data
+   <td>The actual submitted data — changing the surveyData actually affect the submitted data
    </td>
    <td>
      See data structure below
@@ -273,7 +269,7 @@ Parameters:
   </tr>
 </table>
 
-#### Array of Object - Data structure
+#### Array of Object — Data structure
 
 ```json
 [{  
@@ -288,7 +284,7 @@ Parameters:
 }]
 ```
 
-#### surveyData - Data structure
+#### surveyData — Data structure
 
 ```json
 {  

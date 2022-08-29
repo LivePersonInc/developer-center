@@ -268,7 +268,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am text Message",
+    "Hi I am a text message",
     {
       "delay": 4,
       "typing": true
@@ -281,7 +281,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
           "replies": [
             {
               "type": "button",
-              "tooltip": "yes i do",
+              "tooltip": "yes I do",
               "title": "yes",
               "click": {
                 "actions": [
@@ -374,7 +374,7 @@ curl -X POST \
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am a text message",
+    "Hi I am a text message",
     "I am second message"
   ]
 }'
@@ -775,7 +775,7 @@ there could be three states of a command: `waiting` (command execution pending),
       "type": "messages",
       "payload": [
         {
-          "payload": "Hi i am text Message",
+          "payload": "Hi I am a text message",
           "metadata": [],
           "type": "text"
         }
@@ -910,15 +910,15 @@ there could be three states of a command: `waiting` (command execution pending),
 
 | Code | Response                                                             |
 | :--- | :------------------------------------------------------------------- |
-| 200  | OK - request for the given API succeeded.                            |
-| 400  | Bad request - Problem with body or query parameters.                 |
-| 401  | Unauthorized - Invalid bearer token.                                 |
-| 403  | Forbidden - If the request was marked as security risk by Reblaze.   |
-| 404  | Not Found - If the provided conversation Id is invalid or not found. |
-| 409  | Conflict - If the credentials are already used by a bot currently running on Third-Party Bots |
-| 500  | Internal server error.                                               |
+| 200  | OK — request for the given API succeeded                            |
+| 400  | Bad request — Problem with body or query parameters                 |
+| 401  | Unauthorized — Invalid bearer token                                 |
+| 403  | Forbidden — If the request was marked as security risk by Reblaze   |
+| 404  | Not Found — If the provided conversation Id is invalid or not found |
+| 409  | Conflict — If the credentials are already used by a bot currently running on Third-Party Bots |
+| 500  | Internal server error                                               |
 
 ### Limitations
 
-- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 - Forbidden) the reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
+- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 — Forbidden) the reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
 - Our Public API only retains a maximum of last 200 commands **per bot/agent**. Thus, there could be a possibility that an ongoing conversation will not be able to fetch the commands due to this max. commands retention policy.

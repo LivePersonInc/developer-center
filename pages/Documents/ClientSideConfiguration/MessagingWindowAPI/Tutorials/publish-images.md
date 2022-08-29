@@ -15,7 +15,7 @@ indicator: messaging
 
 In this tutorial we will publish images to a conversation.
 
-###  Prerequisites
+### Prerequisites
 
 See [Prerequisites](consumer-int-get-msg.html#prerequisites).
 
@@ -33,7 +33,7 @@ LP_BEARER=`curl -c cookies -X POST -H "Content-Type: application/json" -H "Accep
 Now download an example image file to your shell:
 
 ```sh
-wget http://www.liveperson.com/sites/default/files/LP_LOGO_1.png
+wget https://static.liveperson.com/static-assets/2022/02/10094247/logo-light-large.png
 ```
 
 We will further publish this image to the messaging service.
@@ -82,7 +82,6 @@ This call should upload the image file you have on your disk to LivePerson objec
 ### Step 4 — Publish the Conversation
 
 Reestablish the connection using:
-
 
 ```sh
 wscat -k 60 -H "Authorization:jwt $LP_JWT" -c "wss://$LP_ASYNCMESSAGINGENT/ws_api/account/$LP_ACCOUNT/messaging/consumer?v=3"

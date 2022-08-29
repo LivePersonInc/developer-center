@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  // TODO: Refactor and de-duplicate this script!
+
   var url = window.location.href
   $(window).scroll(function () {
     $("#mainHeader").css(
@@ -53,13 +55,14 @@ $(document).ready(function () {
   var $title = $(".h1").text()
 
   if (
-    $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
+    $title.indexOf("Let’s build Conversational AI solutions together") != -1 ||
     $title.indexOf("Index") != -1
   ) {
-    console.log("Welcome to LivePerson Developers!")
+    console.log("Welcome to the LivePerson Developer Center")
   } else {
     $(".breadcrumbs").removeClass("breadhidden")
     $(".suggestbutton").removeClass("suggesthidden")
+    $(".article-meta").removeClass("hidden")
   }
   removeTitleFirstSteps()
   $(".theme-switch-wrapper #checkbox").click(function () {
@@ -70,10 +73,10 @@ $(document).ready(function () {
 function crossBrowserSafariCheck() {
   var isSafari = window.safari !== undefined
   if (isSafari) {
-    console.log("Safari, yeah!")
+    // console.log("Safari, yeah!")
     $(".sidebarbutton").attr("style", "top: -3px")
   } else {
-    console.log("Not in safari")
+    // console.log("Not in Safari")
     $(".sidebarbutton").attr("style", "top: 5px")
   }
 }
@@ -147,17 +150,19 @@ function navigateContent(url) {
         } else {
           $(".breadcrumbs").removeClass("breadhidden")
           $(".suggestbutton").removeClass("suggesthidden")
+          $(".article-meta").removeClass("hidden")
         }
       }
 
       if (
-        $title.indexOf("Let's build the right Conversational AI solutions together") != -1 ||
+        $title.indexOf("Let’s build Conversational AI solutions together") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
-        console.log("Welcome to LivePerson Developers!")
+        console.log("Welcome to the LivePerson Developer Center")
       } else {
         $(".breadcrumbs").removeClass("breadhidden")
         $(".suggestbutton").removeClass("suggesthidden")
+        $(".article-meta").removeClass("hidden")
       }
       removeTitleFirstSteps()
       //add anchor links to all h3 titles. See respective functions below for what they do.
@@ -188,9 +193,9 @@ function navigateContent(url) {
       var selected = $('a[href*="' + url + '"]')
       if (selected.hasClass("uniqueAnchor")) {
         // do  nothing // dont append the active page
-        console.log("selected is the unique anchor on getting started page")
+        // console.log("selected is the unique anchor on getting started page")
       } else {
-        console.log("Remove active class in navigate content")
+        // console.log("Remove active class in navigate content")
 
         $(".folder").removeClass("active")
         $(".innerlink").removeClass("active")
@@ -211,7 +216,7 @@ function navigateContent(url) {
         }
         //jump to top when page loads
         if (window.location.hash == "") {
-          console.log(window.location.hash)
+          // console.log(window.location.hash)
           window.scrollTo(0, 0)
         }
         if (/Mobi|Android/i.test(navigator.userAgent) == true) {
@@ -230,7 +235,7 @@ function navigateContent(url) {
 function handleUniquePages() {
   var is_root = location.pathname == "/"
   var is_getting_started = location.pathname == "/first-steps.html"
-  console.log("checking if is unique page ")
+  // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
   var suggestButton = $("#suggestbutton")
@@ -240,7 +245,6 @@ function handleUniquePages() {
   var titleContainer = $("#documentTitleContainer")
 
   if (is_root || is_getting_started) {
-    jumpto.css("flex", "0")
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
@@ -248,13 +252,13 @@ function handleUniquePages() {
 
     indicatorContainer.css("display", "none")
     if (is_root) {
+      // TODO: Move to index page
       document.getElementById("document-title-h1").innerText =
-        "Let's build the right Conversational AI solutions together"
+        "Let’s build Conversational AI solutions together"
     }
   } else {
-    console.log("not in  root folder")
-    jumpto.css("flex", "1")
-    jumpto.css("display", "flex")
+    // console.log("not in root folder")
+    jumpto.css("display", "block")
     sidebar.css("margin-right", "6%")
     suggestButton.css("display", "flex")
     indicatorContainer.css("display", "flex")
@@ -427,7 +431,7 @@ function sidebarCollapse(url) {
   var currentPage = $('a[href="' + modifiedURL + '"]')
   var currentPageTitle = $(currentPage).html()
   //if this is the homepage
-  if (currentPageTitle == "Let's build the right Conversational AI solutions together") {
+  if (currentPageTitle == "Let’s build Conversational AI solutions together") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
     $(".innerfolder > .active > span.sidebarbutton").removeClass("clicked")
     $(".folder ul").slideUp(400, null)
@@ -437,9 +441,9 @@ function sidebarCollapse(url) {
   }
   var selected = $('a[href*="' + url + '"]')
   if (selected.hasClass("uniqueAnchor")) {
-    console.log(
+    /* console.log(
       "selected is the unique anchor on getting started page in topen"
-    )
+    ) */
   } else {
     $("a").removeClass("activepage")
 
@@ -452,7 +456,7 @@ function sidebarCollapse(url) {
     var toOpen = $(".activepage").parents("folder")
     //manipulate the active page's parents to open them, hightlight them, etc.
     if (toOpen) {
-      console.log("TO OPEN active page stuff")
+      // console.log("To open active page stuff")
       $(".activepage").parents().show()
       $(".activepage").parents("ul").prev(".highlightlink").addClass("active")
       $("a.active").data("expanded", "true")
@@ -553,15 +557,15 @@ function sidebarClick() {
   })
 }
 
-function breadClick(event) {
+/* function breadClick(event) {
   event.preventDefault()
   let breadText = $(this).innerHTML
   var breadSidebar = $("#defaultsidebar")
   var targetLink = breadSidebar
     .find("span:contains('" + breadText + "')")
     .trigger("click")
-  console.log(targetLink)
-}
+  // console.log(targetLink)
+} */
 
 //a function to make sure the page's title is updated on load
 function replaceTitle() {
@@ -666,7 +670,7 @@ function capabilitiesSearch() {
   var $title = $(".h1").text()
   if ($title.indexOf("Rich Messaging Channel Capabilities") > -1) {
     // Declare variables
-    console.log("run")
+    // console.log("run")
     var input, filter, table, tr, categorytr, td, i
     input = document.getElementById("capabilitiesSearch")
     table = document.getElementById("featurestable")
@@ -723,13 +727,13 @@ function scrollToHash() {
     if (window.location.hash && window.location.hash != "#top") {
       var hash = window.location.hash
       var linkScroll = $('a[href*="' + hash + '"]')
-      console.log(linkScroll)
+      // console.log(linkScroll)
       if (linkScroll.length > 1) {
         var linkOffset = $(linkScroll[0]).offset().top
       } else {
         var linkOffset = $(linkScroll).offset().top
       }
-      console.log(linkOffset)
+      // console.log(linkOffset)
       $("body, html").animate(
         {
           scrollTop: linkOffset - 120,

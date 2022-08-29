@@ -35,7 +35,7 @@ This data shows you how well KnowledgeAI is supporting automated consumer conver
 
     A common use case is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. Alternatively, you might want to add an FAQ bot that is driven by a knowledge base full of articles.
 
-    **Tip**: You can easily add KnowledgeAI to a bot by using the [KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
+    **Tip:** You can easily add KnowledgeAI to a bot by using the [KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
 
 * **If you see this**: A low rate or a large gap between “with knowledge queries” and “with answers”
 * **This means**: Knowledge base searches are happening, but few answers are being found.

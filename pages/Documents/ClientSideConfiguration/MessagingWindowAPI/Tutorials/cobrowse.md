@@ -38,7 +38,7 @@ In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you
       },
       {
          "type":".ams.headers.ConsumerAuthentication",
-         "jwt":"..."
+         "jwt":"…"
       }
    ]
 }
@@ -56,7 +56,7 @@ If your account is set up correctly, you should see the following button inside 
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
-...
+…
 {
     "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
@@ -76,7 +76,7 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
     "creationTs": 1502893041905,
     "metaDataLastUpdateTs": 1502893041905
 }
-...
+…
 
 ```
 
@@ -157,7 +157,5 @@ A CoBrowse invitation can be cancelled by the agent or expires after 2 minutes i
 	}
 }
 ```
-
-
 
 {% include links.html %}

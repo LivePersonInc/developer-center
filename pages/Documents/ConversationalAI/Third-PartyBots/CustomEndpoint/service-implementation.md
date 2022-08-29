@@ -142,11 +142,11 @@ for the latest endpoint contracts/interfaces.
 {
   "sdes": {
     "authenticatedSdes": {
-      // ...... All SDES from Visitor Information API comes here More Info @ https://developers.liveperson.com/visit-information-api-visit-information.html
+      // All SDES from Visitor Information API comes here — more info: https://developers.liveperson.com/visit-information-api-visit-information.html
 
     },
     "unauthenticatedSdes": {
-      // ...... Unauthenticated SDES
+      // Unauthenticated SDES
     }
   },
   "context": {
@@ -165,7 +165,7 @@ for the latest endpoint contracts/interfaces.
       "consumerId": "abcdefghijklmnopqrstuvwx123456789101112131415mnopqrstuvwxyz0987654321"
     },
     "assignedAgentId": "abc123456-a1b2-34bc-127m-ce1a86c8602a"
-   // .... Conversation Context
+   // Conversation Context
   }
 }
 ```
@@ -216,7 +216,7 @@ Bots can be seen in Figure 2.5
       "dialogId": "608b2868-f686-4b89-891f-497816958cfc",
       "metadata": [],
       "messageAudience": "ALL"
-      // .... RAW LP Content Event properties
+      // RAW LP Content Event properties
     }
   }
 }
@@ -266,7 +266,7 @@ Bots can be seen in Figure 2.6
       "dialogId": "608b2868-f686-4b89-891f-497816958cfc",
       "metadata": [],
       "messageAudience": "ALL"
-      // .... RAW LP Content Event properties
+      // RAW LP Content Event properties
     }
   }
 }

@@ -8,7 +8,6 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 
-
 level-order: 3
 order: 9
 permalink: agent-groups-api-overview.html
@@ -46,7 +45,6 @@ A few things you'll need to get started with this API:
 
 4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
-
 ### Use Cases for the Agent Groups API
 
 * Automatically update names of agent groups
@@ -55,4 +53,4 @@ A few things you'll need to get started with this API:
 
 * Update or change group managers
 
-* Synch agents groups within Conversational Cloud with your internal HR or staffing systems.
+* Sync agents groups within Conversational Cloud with your internal HR or staffing systems.

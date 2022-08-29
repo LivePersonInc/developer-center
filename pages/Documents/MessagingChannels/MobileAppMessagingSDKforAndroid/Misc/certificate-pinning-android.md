@@ -49,7 +49,7 @@ In order to add the feature on Android, please perform the following steps:
 The configuration should be added to the branding.xml file
 
 {:start="2"}
-2. Adding the public keys to the SDK - The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
+2. Adding the public keys to the SDK — The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
 
 Multiple keys can be added, as long as one of the keys will match the returned key, the connection will be initiated.
 

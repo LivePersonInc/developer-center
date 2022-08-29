@@ -28,7 +28,7 @@ LivePerson has found through research that consumer effort is a key determiner i
 
 Here below is part of a conversation with two types of failure points:
 
-<img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png" alt="">
 
 A MACS is calculated for each bot conversation based on failure points like these above. The conversation is classified with a MACS 1, 2 or 3 where:
 
@@ -38,7 +38,7 @@ A MACS is calculated for each bot conversation based on failure points like thes
 
 An average score (a floating number) is also calculated for each bot to indicate overall bot performance.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_average_score.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_average_score.png" alt="">
 
 Scoring like this makes it fast and easy to understand how efficient and fluid a bot conversation was, and a bot’s performance overall. With this knowledge, you can take action and tune your low-performing bots for improved performance.
 
@@ -120,20 +120,20 @@ If you hide MACS data, be aware that this only hides the display of the feature 
 
 #### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/486697904" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/486697904" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 #### MACS on the main dashboard — Identify low-scoring bots
 
 The main dashboard in Bot Analytics displays each bot’s average MACS (a floating number), for the specified date range. This helps you to understand at a glance which of your bots are high-performing, and which are low-performing and therefore need tuning.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png" alt="">
 
 When assessing the scores of your bots, keep in mind that MACS primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
 
 On the main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_page.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_page.png" alt="">
 
 #### The MACS page — Analyze the data and tune the bot
 
@@ -145,8 +145,8 @@ On the **MACS** page, use the filters to refine the data that’s displayed base
 2. **Date filter**: Specify the date range for the data.
 3. **Score filters**: Toggle these on and off to show and hide the data for a score. These filters are available when you're viewing the **MACS by Conversations** graph (shown below).
 
-<img style="width:800px" src="img/ConvoBuilder/macs_filters.png" alt="" >
-<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_filters.png" alt="">
+<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png" alt="">
 
 Note the following about the filters:
 
@@ -163,31 +163,31 @@ The list of conversations is a sample of up to 100 bot conversations that meet t
 
 Once you’ve displayed the conversations that you want to review, select one by its ID to display the transcript.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png" alt="">
 
 Then review the transcript to identify the failure point in the conversation.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_find_failure.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_find_failure.png" alt="">
 
 ##### Tune the bot
 
 After you’ve identified the failure point in the conversation, click the link for the interaction that is causing the failure.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png" alt="">
 
 This opens the bot in Conversation Builder and displays that interaction in the dialog editor. You can then tune the bot right at the failure point, for improved performance.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png" alt="">
 
 #### Searching for a conversation
 
 If you want to search for a specific conversation—any conversation that falls within the specified date range regardless of whether it appears in the sample—enter its full conversation ID in the search box on the MACS page. It will be displayed in the **Sample Conversations** list regardless of how the other filters are set.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png" alt="">
 
 When searching for a conversation by its full conversation ID, be aware that conversation IDs are truncated on the MACS page for readability. You can get a conversation's full ID by clicking the truncated ID to open the transcript window. The full ID is displayed at the top.
 
-<img style="width:700px" src="img/ConvoBuilder/macs_conv_id.png" alt="" >
+<img style="width:700px" src="img/ConvoBuilder/macs_conv_id.png" alt="">
 
 ### FAQs
 
@@ -197,7 +197,7 @@ On the bot's Overview page, the Conversations metric represents the total number
 
 On the bot’s MACS page, the counts of conversations receiving a MACS 1, 2 and 3 are for closed conversations.
 
-<img style="width:600px" src="img/ConvoBuilder/macs_closed.png" alt="" >
+<img style="width:600px" src="img/ConvoBuilder/macs_closed.png" alt="">
 
 Since a MACS isn’t calculated for open conversations, the two metrics can be different at times.
 
@@ -229,12 +229,12 @@ LivePerson is interested in hearing your feedback regarding MACS scoring. After 
 
 You can quickly and easily provide this feedback using the **Feedback** widget that's available in the lower-right corner of the screen.
 
-<img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png" alt="" >
+<img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png" alt="">
 
 The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did you agree with the score?), and it provides an area where you can explain your rating (If you didn't agree, why?). So we can trace your feedback back to the actual conversation, copy the full conversation ID and paste it into your message, like we've done below.
 
-<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png" alt="" >
+<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png" alt="">
 
 The full conversation ID can be found at the top of the transcript window.
 
-<img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png" alt="" >
+<img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png" alt="">

@@ -22,7 +22,7 @@ The optimal flow looks like this: the client authenticates the server (just like
 
 [HashiCorp](https://www.hashicorp.com/) provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. [Vault](https://www.vaultproject.io/), first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
-### Use cases - Why should I use mTLS?
+### Use cases — Why should I use mTLS?
 
 Our mTLS methods allow you to add an additional layer of security to all communications between yourself, LivePerson, and your customers. You should use these methods to create mTLS certified conversations which provide this added layer of security.
 
@@ -52,7 +52,7 @@ Check out the [onboarding guide](/mtls-onboarding.html) for next steps.
 
 ### Limitations
 
-#### Technical limitations:
+#### Technical limitations
 
 * The P12 key (private + public) must be Java compliant. The created key must use supported algorithms and key strength. To test your P12 key, please use the [P12 Key Tester](p12-key-tester.html) resource included in this API.
 

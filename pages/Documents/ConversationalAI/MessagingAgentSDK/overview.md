@@ -28,13 +28,13 @@ In order to guarantee compatibility with future versions of the API, and to ensu
 
 #### Install
 
-- **Option 1 - npm install (does not include sample apps)**
+- **Option 1 — npm install (does not include sample apps)**
 
    ```sh
    npm i node-agent-sdk --save
    ```
 
-- **Option 2 - Clone this repository (includes sample apps)**
+- **Option 2 — Clone this repository (includes sample apps)**
 
     ```sh
     git clone https://github.com/LivePersonInc/node-agent-sdk.git
@@ -46,12 +46,12 @@ In order to guarantee compatibility with future versions of the API, and to ensu
 ```javascript
 new Agent({
     accountId: String,  // required
-    username: String,  // required for username/password authentication and OAuth1 authentication
+    username: String,  // required for username/password authentication and OAuth 1.0 authentication
     password: String,  // required for username/password authentication
-    appKey: String, // required for OAuth1 authentication
-    secret: String, // required for OAuth1 authentication
-    accessToken: String, // required for OAuth1 authentication
-    accessTokenSecret: String, // required for OAuth1 authentication
+    appKey: String, // required for OAuth 1.0 authentication
+    secret: String, // required for OAuth 1.0 authentication
+    accessToken: String, // required for OAuth 1.0 authentication
+    accessTokenSecret: String, // required for OAuth 1.0 authentication
     token: String, // required for token authentication
     userId: String, // required for token authentication
     assertion: String, // required for SAML authentication
@@ -68,7 +68,7 @@ The Agent Messaging SDK support the following authentication methods:
 - Username and password as `username` and `password`
 - Bearer token as `token` with user id as `userId`
 - SAML assertion as `assertion`
-- OAuth1 with `username`, `appkey`, `secret`, `accessToken`, and `accessTokenSecret`
+- OAuth 1.0 with `username`, `appkey`, `secret`, `accessToken`, and `accessTokenSecret`
 
 #### agentId
 
@@ -88,7 +88,7 @@ const agent = new Agent({
 });
 
 agent.on('connected', () => {
-    console.log(`connected...`);
+    console.log(`connected…`);
 
     // subscribe to all conversations in the account
     agent.subscribeExConversations({
@@ -104,7 +104,7 @@ agent.on('cqm.ExConversationChangeNotification', notificationBody => {
 })
 ```
 
-#### Run it:
+#### Run it
 
 ###### Unix Shell
 

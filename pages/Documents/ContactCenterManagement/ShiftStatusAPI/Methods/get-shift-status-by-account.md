@@ -40,7 +40,6 @@ This API retrieves a list of skills for a specific account and displays the curr
 | 401  | Not Authenticated     |
 | 500  | Internal Server Error |
 
-
 **Response Body**
 
 ### Entity Structure

@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
 indicator: messaging
 ---
 
-
 ### Authenticated in-app messaging
 
 #### Prerequisites
@@ -33,9 +32,6 @@ LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenti
 ```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
-
-
-
 
 #### Authenticated connection methods
 
@@ -62,8 +58,7 @@ Once the Authentication key expires, you get notified with a callback / local in
 
 To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
 
-
-{:.important}
+{: .important}
 Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
 ### Unauthenticated in-app messaging
@@ -88,13 +83,13 @@ LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAut
 
 ##### Server side configurations (In case needed, should be modified by LivePerson)
 
-* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+* Identity idle time — setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation — it will be closed and a dialog explaining what happened will be presented to the consumer.
 
-* Unauthenticated token expiration - sets the time for the app to validate the token. When the token is expired, it will be refreshed.
+* Unauthenticated token expiration — sets the time for the app to validate the token. When the token is expired, it will be refreshed.
 
 ##### SDK configurations
 
-When an unauthenticated user session expire - the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
+When an unauthenticated user session expire — the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
 
 ```xml
    <string name="lp_new_unauth_user_dialog_title">New Conversation</string>
@@ -107,7 +102,7 @@ When an unauthenticated user session expire - the SDK will notify by presenting 
 // 1. Init SDK with Monitoring
 MonitoringInitParams monitoringInitParams = new MonitoringInitParams(monitoringAppInstallId);
 
-LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {...}));
+LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {…}));
 
 // 2. create and pass LPAuthenticationParams
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);

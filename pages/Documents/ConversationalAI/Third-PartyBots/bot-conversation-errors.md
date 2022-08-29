@@ -64,7 +64,7 @@ In general this identifies issues reaching the chat conversation
 <br/>
 <br/>
 
-####  com.liveperson.bot-connectors-worker.error.connector.chat.send-message
+#### com.liveperson.bot-connectors-worker.error.connector.chat.send-message
 
 | Description | A bot message could not be sent to the conversation. |
 | Reason      | The reason for this is mostly wrongly formatted structured content. Another issue could be missing url whitelisting for images. |
@@ -123,6 +123,13 @@ This identifies issues processing an event in the Third-Party Bots service. Thes
 | Description | The bot does not accept new conversation anymore and instead error escalates them. |
 | Reason      | To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned. |
 | Solutions   | Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html) |
+
+#### com.liveperson.bot-connectors-worker.error.pipes.rate-limiter.rate-limit-hit
+
+| Description | The rate limit was hit for this conversation. Consumer messages might get ignored for a certain cool down period (10 sec). |
+| Reason      | The customer has sent too many messages (4) in a short amount of time (2 sec). |
+| Solutions   | None. This is a precaution measure to prevent consumers from flooding the bot with messages. |
+
 
 
 ### events-queue

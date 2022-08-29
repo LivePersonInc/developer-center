@@ -17,14 +17,15 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{:.important}
+{: .important}
 Voice & Video capabilities are available only on Android SDK 4.8.1 and above, Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-live-chat-cobrowse-for-live-chat.html)
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
-### Features and Permissions
+### Features and permissions
+
 Below is the list of features and permissions elements added in the manifest file to support this feature. 
 
 ```xml
@@ -52,14 +53,13 @@ Similarly for permissions, you can disable these permissions elements by adding:
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
 ```
 
-### How to enable:
+### How to enable
 
 ```xml
 <bool name="lp_enable_voice_video_call">true</bool>
 ```
 
-
-### Branding and Configurations
+### Branding and configurations
 
 #### lp_enable_voice_video_call
 Enables or disables the ability for an Agent to start a voice or video call.

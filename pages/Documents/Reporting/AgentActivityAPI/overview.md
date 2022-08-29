@@ -19,7 +19,7 @@ The Agent Activity API provides an historical raw data solution to track agent a
 
 The API allows its consumer to track the agent login and logout hours, and also the state changes during the login hours, including predefined custom states as defined by the brand.
 
-**Note**: At this point, away states are not calculated based upon productive and non-productive away status.
+**Note:** At this point, away states are not calculated based upon productive and non-productive away status.
 
 The API is based on HTTPS GET functionality, and all data is returned in a JSON format.
 

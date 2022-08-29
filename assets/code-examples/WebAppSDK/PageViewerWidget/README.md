@@ -19,7 +19,7 @@ Currently the tooltip on the copy button has a slight bug where it might not app
 * 
 * Host the widget on your servers (or use the live demo provided)
 * Login to LiveEngage as an admin
-* Go to Night Vision (icon next to your name at the far top-right) > Agent Workspace > "+" > Add a new widget
+* Go to Night Vision (icon next to your name at the far top-right) > Agent Workspace > "+"> Add a new widget
 * Enter URL for widget from your servers (or use this [URL of the demo](https://le-page-viewer.herokuapp.com/index.html))
 * Start a chat with a visitor
 * You should now be able to see the page they are on
@@ -30,4 +30,4 @@ Joshua Espinosa
 
 Email: jespinosa@liveperson.com
 
-Github: https://github.com/Hauuguu
+GitHub: https://github.com/Hauuguu

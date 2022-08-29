@@ -89,7 +89,7 @@ switch(intent){
       skillName = intent;
       break;
     default:
-      transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+      transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
       skillId = '1680373730';
       skillName = 'help';
       break;  

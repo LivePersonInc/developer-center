@@ -18,7 +18,6 @@ This API updates a certificate for a specific account id.
  |:--------  |:---  |
  |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
-
 **Request Headers**
 
  |Header         |Description  |
@@ -37,7 +36,7 @@ This API updates a certificate for a specific account id.
   }
 ]
 ```
-{:.notice}
+{: .notice}
 The body is a byte array input of the p12 file.
 
 **Path Parameters**
@@ -56,8 +55,6 @@ The body is a byte array input of the p12 file.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
 
 **Response Body**
 
@@ -81,7 +78,6 @@ for example:
    ]
 }
 ```
-
 
 **Entity Structure:**
 

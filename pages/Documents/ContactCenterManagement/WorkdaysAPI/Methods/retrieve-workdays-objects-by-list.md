@@ -25,7 +25,6 @@ Get a list of all workday objects of an account.
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String|
 
-
 ### Request Headers
 
 |Header | Description| Notes |

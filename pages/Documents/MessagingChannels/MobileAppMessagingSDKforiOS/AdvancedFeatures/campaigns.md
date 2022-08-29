@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud — the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
 
 Use the Monitoring APIs to:
 
@@ -40,7 +40,6 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 * If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
 
-
 ### Monitoring APIs
 
 The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions.  Monitoring APIs include:
@@ -62,7 +61,7 @@ do {
 }
 
 // 2. APIs
-let entryPoints = ["http://www.liveperson-test.com",
+let entryPoints = ["https://www.liveperson-test.com/",
                    "sec://Food",
                    "lang://De"]
 let engagementAttributes = [
@@ -103,5 +102,4 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 // show conversation using campaignInfo
 LPMessaging.instance.showConversation(conversationViewParam)
 ```
-
 

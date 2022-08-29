@@ -154,12 +154,12 @@ _Note: The updateCallback must be the same callback provided for the bind._
 
 |Command |Description |Const |Payload |
 |:--- |:--- |:--- |:--- |
-| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {...}} <br><br> quickReplies is optional. |
-| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, quickReplies: {...}, metadata: [...]} <br><br> quickReplies and metadata are optional |
+| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {…}} <br><br> quickReplies is optional. |
+| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {…}, quickReplies: {…}, metadata: […]} <br><br> quickReplies and metadata are optional |
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
-| "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {...//File or Blob}, name: "name_of_file.png"} |
+| "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {…//File or Blob}, name: "name_of_file.png"} |
 
-<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system</div>
+<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system.</div>
 
 Example 1 — 'Write ChatLine':
 
@@ -201,7 +201,7 @@ Example 2 — 'Write ChatLine' with Quick Replies. Please see [this link](rich-m
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -307,7 +307,7 @@ Example 4 — 'Write StructuredContent' with Quick Replies. Please see [this lin
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -513,7 +513,6 @@ var updateCallback = function(data) {
     }
 };
 
-
 {
 var onSuccess = function(data) {
     // Do something with the returning data
@@ -532,13 +531,11 @@ var onError = function(err) {
         }
     }
 
-
 lpTag.agentSDK.init({notificationCallback: notificationHandler});
 
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
-
 
 ### setConsumerProfile
 

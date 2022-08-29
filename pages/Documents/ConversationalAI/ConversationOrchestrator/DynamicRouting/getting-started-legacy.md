@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you [switch to the newer template](conversation-orchestrator-dynamic-routing-getting-started.html), which is much simpler. This legacy topic remains available for those who still have bots based on the older template.
 
 ### Introduction
 
@@ -119,7 +119,7 @@ Conversation Builder is already integrated with the Conversation Context Service
 5. Save the skill and agent ids to be used with policy.
 
 {: .important}
-For some practice at creating skills, users, and campaigns, see [here](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
+For some practice at creating skills, users, and campaigns, see the[tutorial on deploying a bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 #### Create a simple policy using static context attributes
 
@@ -229,7 +229,7 @@ In the previous example we used Static attributes for everything. While this is 
 
 ##### Create the context attributes
 
-You will be using the Conversation Context Service to store a phone number, and then use it in a policy. The Conversation Builder bot template you set up earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service. To learn more about the Conversation Context Service, see [here](conversation-orchestrator-conversation-context-service-overview.html).
+You will be using the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to store a phone number, and then use it in a policy. The Conversation Builder bot template you set up earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service.
 
 ##### Create the policies
 
@@ -279,7 +279,7 @@ In the previous example, you checked for the phone number in a static list. Main
 Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false based on whether the phone number is for a VIP customer. The function can internally call a CRM backend to check this status.
 
 {: .important}
-Creating and deploying a LivePerson function (FaaS function) is beyond the scope of this topic and hence not covered in this topic. For information on this, see [here](liveperson-functions-overview.html).
+Creating and deploying a [LivePerson function](liveperson-functions-overview.html) (FaaS function) is beyond the scope of this topic and hence not covered in this topic.
 
 With the function created and deployed, now add a custom attribute of type “function” in Conversation Orchestrator.
 
@@ -304,7 +304,7 @@ Add parameters to this function by selecting “attribute”, and then typing my
 
 The bot template that you used has one basic integration: It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies, for example, additional information such as customer name, email, or the NLU intent.
 
-Please see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) to learn about scripting functions inside Conversation Builder.
+Conversation Builder offers [scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 **To add additional context**
 
@@ -663,7 +663,7 @@ Now test a conversation that doesn’t trigger the complaint routing.
 
 ### Using Conversation Orchestrator outside of Conversational Cloud
 
-This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If you aren't, we strongly suggest that you read the documentation [here](third-party-bots-getting-started.html).
+This section of the documentation assumes that you are already familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversational Cloud.
 
 Once your third-party bot is ready, you can set up routing policies on Dynamic Routing and leverage the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
 
@@ -677,7 +677,7 @@ High-level flow:
 2. Set the routing variable in the Conversation Context Service.
 3. Call the Next Actions API with the conversation ID.
 
-##### Step 1 - Get the conversation ID
+##### Step 1 — Get the conversation ID
 
 The conversation ID is required for using the Next Actions APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
 
@@ -697,7 +697,7 @@ request.body.session.substring(request.body.session.lastIndexOf("/") + 1);
 
 For debugging, you can see the logs by clicking the link **View execution logs in the Firebase console** inside the Dialogflow Fulfillment page.
 
-##### Step 2 - Call the Conversation Context Service APIs
+##### Step 2 — Call the Conversation Context Service APIs
 
 Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
 
@@ -719,9 +719,9 @@ axios.patch(
 );
 ```
 
-##### Step 3 - Call the Next Actions API
+##### Step 3 — Call the Next Actions API
 
-Now that you have the conversation ID, use it to call the Next Actions API as follows:
+Now that you have the conversation ID, use it to call the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) as follows:
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
@@ -739,5 +739,3 @@ axios.get(
    }
 });
 ```
-
-For more information on using the Next Actions API, see [here](conversation-orchestrator-next-actions-api-overview.html).

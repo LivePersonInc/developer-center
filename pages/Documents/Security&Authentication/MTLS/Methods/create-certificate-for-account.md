@@ -19,7 +19,6 @@ This API creates a certificate for a specific account ID.
 |:--------  |:---  |
 |POST|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
-
 **Request Headers**
 
 |Header         |Description  |
@@ -32,7 +31,7 @@ This API creates a certificate for a specific account ID.
 [
   {
   	"name":"myCert1",
-  	"p12":[98,121,116,101,115, ...],
+  	"p12":[98,121,116,101,115,…],
   	"password":"paw1"
   }
 ]
@@ -54,7 +53,6 @@ This API creates a certificate for a specific account ID.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 

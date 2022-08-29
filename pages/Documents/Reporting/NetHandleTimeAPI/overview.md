@@ -9,7 +9,7 @@ indicator: both
 
 ### Introduction
 
-{:.notice}
+{: .notice}
 This API is currently in its beta version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
 
 {: .important}
@@ -18,7 +18,6 @@ Please use the latest version as it contains the most recent updates and fixes. 
 Net Handle Time (NHT) is a metric produced by a heuristic calculation, which is designed to provide an approximation of the average human agent's effort time to service a single consumer interaction (agent segment) across a skill in a one-hour interval.
 
 Net Handle time uses agent-handled agent segments, login time, agent load, and the number of messages sent to consumers to create this heuristic. This can then be inserted into workforce management calculations in place of the voice metric ‘Average Handle Time’ to ascertain the required human agent headcount per hourly interval.
-
 
 ### Getting started
 

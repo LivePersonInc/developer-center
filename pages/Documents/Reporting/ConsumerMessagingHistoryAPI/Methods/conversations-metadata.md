@@ -23,14 +23,13 @@ This method retrieves a list of a consumer's conversations' metadata. The retrie
 
 Name   | Description                                                          | Type/Value | Required | Notes
 :----- | :------------------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-offset | The offset specifies from which record to retrieve the conversation. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus,the next request will be specified with offset 20.
+offset | The offset specifies from which record to retrieve the conversation. | numeric    | Optional | Default is 0\. Example: Of 100 records, the first 20 have already been retrieved. Thus, the next request will be specified with offset 20.
 limit  | Max amount of conversations to be received in the response.          | numeric    | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                              | string     | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
-state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Example: state=close,archive. Default value - archive
-startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
-startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
+state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Example: state=close,archive. Default value — archive
+startFrom    | Conversation started from the given value  | long — epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
+startTo      | Conversation started up to the given value | long — epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
-
 
 ### Response
 
@@ -65,7 +64,6 @@ Name                 | Description                                | Type/Value |
 :------------------- |:-------------------------------------------| :--------- | :------------------------------------------------------------------------------------------------------------
 id                   | ID of the participant (Agent or Consumer). | string     |
 role                 | The role of the participant.               | string     | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
-
 
 _Conversation csat_
 

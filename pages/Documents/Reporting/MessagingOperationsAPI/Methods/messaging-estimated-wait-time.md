@@ -16,7 +16,7 @@ indicator: messaging
 
 This method returns the current average wait time in queue, per requested skill. The estimated wait time is the time from a consumer's first message until an agent is assigned to the conversation. This method can help you to better manage your operations and monitor your service level across all skills on an account. Messaging estimated wait time is calculated every 10 seconds, therefore new data will only be available every 10 seconds.
 
-**Notes**:
+**Notes:**
 
 1. The Estimated Wait Time API is currently not available by default, in order to enable the data flow for this API please contact your account manager.
 
@@ -77,8 +77,8 @@ This is an example response which contains information for two skills, skills=2,
 
 | Code | Response |
 | :----- | :--------- |
-| 200 | OK - Successfully retrieved the data. |
-| 400 | Bad request - Problem with body or query parameters. |
-| 401 | Unauthorized - Bad Authentication. |
-| 403 | Forbidden - Bad Authorization (invalid permissions). |
-| 500 | Internal Server Error - Please try again after the time specified in the response has passed. |
+| 200 | OK — Successfully retrieved the data |
+| 400 | Bad request — Problem with body or query parameters |
+| 401 | Unauthorized — Bad Authentication |
+| 403 | Forbidden — Bad Authorization (invalid permissions) |
+| 500 | Internal Server Error — Please try again after the time specified in the response has passed |
