@@ -7,6 +7,7 @@ redirect_from:
   - structured-content-introduction-to-structured-content.html
   - rich-messaging-styling.html
   - getting-started-with-rich-messaging-basic-elements-button.html
+  - getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
@@ -558,3 +559,5 @@ Each basic element can have specific style rules defined for it, controlling how
 	"size": "small"
 }
 ```
+
+For a list of Rich Messaging capabilities for each channel, browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
