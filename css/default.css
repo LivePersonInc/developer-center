@@ -1,10 +1,7 @@
 :root {
   --max-width: 1616px;
-  /*  1616px */
   --header-padding: 0;
-  /*  size */
   --space-unit: 4px;
-  /*  4px */
   --space2: calc(2 * var(--space-unit));
   /*  8px */
   --space3: calc(3 * var(--space-unit));
@@ -158,6 +155,7 @@ svg.sitelogo {
 #loginHeader {
   display: flex;
   justify-content: flex-end;
+  gap: 24px;
 }
 
 a #loginHeader {
@@ -264,13 +262,6 @@ code pre {
   right: 16px;
 }
 
-/* .searchimage img {
-  height: 24px;
-  right: -35px;
-  position: relative;
-  top: -12px;
-} */
-
 .searchimage svg {
   right: 0;
   position: relative;
@@ -371,11 +362,6 @@ code pre {
   background-color: transparent !important;
   color: var(--button-text-secondary);
 }
-
-/*
-.darken code {
-  filter: brightness(280%);
-} */
 
 .darken code span::selection {
   background-color: var(--sky-blue);
@@ -538,6 +524,7 @@ td {
 }
 
 @media (max-width: 1024px) {
+
   .flex-col-ipad {
     flex-direction: column-reverse;
     gap: 24px;
@@ -571,16 +558,20 @@ td {
   #jumpto {
     display: none !important;
   }
+
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
+
   .max-width {
     padding-left: var(--space8);
     padding-right: var(--space8);
   }
+
 }
 
 @media (max-width: 768px) {
+
   .max-width {
     padding-left: 0;
     padding-right: 0;
@@ -810,6 +801,8 @@ a.loginText {
   color: var(--link-color-hover);
 }
 
+/* TODO: Remove trial button (check on HTML and JavaScript mentions, too) */
+
 .trialButton:hover {
   background-color: var(--hover-electric-blue);
 }
@@ -818,12 +811,7 @@ a.loginText {
   background-color: var(--secondary-background);
   color: var(--button-text);
   border: 0;
-  /* removed by request */
   display: none;
-}
-
-#loginHeader {
-  gap: 24px;
 }
 
 .trialButton {
@@ -1082,11 +1070,11 @@ div.language-plaintext,
 }
 
 .language-objc:before {
-  content: "OBJECTIVE-C";
+  content: "Objective-C";
 }
 
 .language-swift:before {
-  content: "SWIFT";
+  content: "Swift";
 }
 
 .language-css:before {
@@ -1107,11 +1095,11 @@ div.language-plaintext,
 }
 
 .language-java:before {
-  content: "JAVA";
+  content: "Java";
 }
 
 .language-gradle:before {
-  content: "GRADLE";
+  content: "Gradle";
 }
 
 .language-javascript:before {
@@ -1123,7 +1111,7 @@ div.language-plaintext,
 }
 
 .language-ruby:before {
-  content: "RUBY";
+  content: "Ruby";
 }
 
 .language-xml:before {
@@ -1223,9 +1211,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   color: #fff;
 }
 
-/* todo disable important */
 #jumpto {
-  flex: 1 !important;
+  flex: 1 !important; /* TODO: Disable “important” */
   padding-bottom: var(--space10);
 }
 
@@ -1237,7 +1224,6 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #anchorlist a {
-  /* color: var(--secondary-black); */
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1273,10 +1259,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   display: none;
 }
 
-/* make sure background is white */
-
 .highlightlink {
-  background-color: var(--body-background) !important;
+  background-color: var(--body-background) !important; /* Make sure background is white */
   color: var(--link-color) !important;
   font-weight: bold;
 }
@@ -1346,7 +1330,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   overflow-wrap: anywhere;
 }
 
-/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
+/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden (DX-33) */
 .highlighter-rouge button.nightbtn {
   display: none;
 }
@@ -1530,12 +1514,7 @@ a:focus-within:not(.anchorjs-link) {
   border: 2px dashed var(--post-link-hover) !important;
 }
 
-/* .dark #post-content img {
-  filter: drop-shadow(0px 0 4px rgba(255, 255, 255, 0.12))
-  drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
-} */
-
-/* toggle switch  */
+/* Toggle switch  */
 
 .dark {
   background-color: var(--body-background);
@@ -1631,7 +1610,6 @@ a:focus-within:not(.anchorjs-link) {
   font-weight: 600;
   font-size: 14px;
   line-height: 28px;
-  display: flex;
   align-items: center;
   color: var(--footer-text);
   position: absolute;
@@ -1657,7 +1635,7 @@ a:focus-within:not(.anchorjs-link) {
   display: none;
 }
 
-/* toggle end */
+/* Toggle end */
 
 .apiLink {
   cursor: pointer;
@@ -1730,6 +1708,7 @@ input#csds-button {
 }
 
 @media (max-width: 767px) {
+
   .flex-col-mobile {
     flex-direction: column;
   }
@@ -1775,7 +1754,6 @@ input#csds-button {
     display: none !important;
   }
 
-  /* home */
   .header-label {
     width: 100%;
     flex: initial;
@@ -1806,7 +1784,7 @@ input#csds-button {
     display: flex;
   }
 
-  /* sidebar hamburger effect */
+  /* Sidebar hamburger effect */
   input:focus+label.sidebarIconToggle {
     border: 2px dashed var(--post-link-hover) !important;
   }
@@ -1835,8 +1813,6 @@ input#csds-button {
 
   .sidebarIconToggle {
     cursor: pointer;
-    height: 100%;
-    width: 100%;
     height: 22px;
     width: 22px;
     margin-bottom: 0;
@@ -1886,6 +1862,7 @@ input#csds-button {
   input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
     transition: var(--nav-transition);
   }
+
 }
 
 @media (min-width: 768px) {
@@ -1898,20 +1875,25 @@ input#csds-button {
   .mysidebar>li.mobile-sign-in {
     display: none;
   }
+
 }
 
 @media (max-width: 500px) {
+
   div#loginHeader {
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 2px;
   }
+
 }
 
 @media (min-width: 1921px) {
+
   html {
     font-size: 17px;
   }
+
 }
 
 @media print {
