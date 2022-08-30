@@ -133,6 +133,7 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
+        "scope": ["email","profile"],
         "responseEncryptionKey": "Insert Your Public Key Here"
       }
     }
