@@ -134,8 +134,8 @@ Request Body Example
 | LETagContextId | LiveEnagage context Id | alphanumeric | Taken from the Engagement response |
 | LETagVisitorId | LiveEnagage visitor Id | alphanumeric | Taken from the Engagement response |
 | engagementId | The ID of the engagement.   | numeric | Taken from the Engagement response |
-| ssoKey | An oAuth2.0 'code flow' token or 'implicit' JWT by oAuth2.0 RFC | alphanumeric | Provided by customer's IDP |
-| redirectUri | redirectURI parameter by oAuth2.0 RFC | alphanumeric | optional |
+| ssoKey | An OAuth 2.0 'code flow' token or 'implicit' JWT by OAuth 2.0 RFC | alphanumeric | Provided by customer's IDP |
+| redirectUri | redirectURI parameter by OAuth 2.0 RFC | alphanumeric | optional |
 
 Request Body Example
 
