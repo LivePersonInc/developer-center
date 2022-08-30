@@ -49,6 +49,6 @@ The solution is based on OAuth 2.0 industry standard, Using the Code Flow. The f
 
 The following prerequisites are required to delegate access:
 
-* oAuth2.0 authorization server that supports Code flow.
+* OAuth 2.0 authorization server that supports Code flow.
 
-* The oAuth2.0 authorization server must return a valid access token.
+* The OAuth 2.0 authorization server must return a valid access token.

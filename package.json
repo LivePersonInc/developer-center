@@ -8,7 +8,7 @@
     "gulp": "^4.0.2",
     "gulp-shell": "^0.8.0",
     "http-proxy": ">=1.18.1",
-    "ini": ">=3.0.0",
+    "ini": ">=3.0.1",
     "jquery": ">=3.6.1",
     "jquery-highlight": "^3.5.0",
     "lodash": "^4.17.21",

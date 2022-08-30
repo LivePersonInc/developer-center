@@ -18,7 +18,6 @@
     - documentname: API Data Metrics
     - documentname: Engagement Attributes
     - documentname: Analytics Builder Data Metrics
-    - documentname: Important Updates
     - documentname: Retry Policy Recommendations
 
 - categoryname: Agent Experience
@@ -1129,7 +1128,6 @@
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-        - pagename: Rich Messaging Channel Capabilities
     - documentname: Mobile SDK and Web Templates
       pages:
         - pagename: Introduction
