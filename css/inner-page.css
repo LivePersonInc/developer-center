@@ -24,8 +24,7 @@ a:focus-visible {
     display: none;
 }
 
-/* this is so the header won't overlap the links */
-
+/* This is so the header won’t overlap the links */
 :target::before {
     content: "";
     display: block;
@@ -39,7 +38,7 @@ img {
     max-width: clamp(100px, 100%, 800px);
 }
 
-/*inner page css */
+/* Inner-page css */
 
 h2[id] {
     color: var(--title-text);
@@ -158,7 +157,7 @@ pre code {
 
 .post-content table td:first-child {
     width: unset;
-    /*max-width: 150px;*/
+    /* max-width: 150px; */
     font-weight: bold;
 }
 
@@ -187,13 +186,6 @@ pre code {
     font-size: 18px;
     line-height: 28px;
 }
-
-/*
-table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
-  border-top: 1px solid #d6d6d6;
-
-}
-*/
 
 table>thead>tr>th {
     border-bottom: none;
@@ -265,13 +257,12 @@ td .darken {
     color: var(--widget-text) !important;
 }
 
-/*toc nav bar */
+/* TOC nav bar */
 
 div#toc {
     background-color: #f2f1f2;
     display: none;
     margin-top: 14px;
-    /*min-width: 300px;*/
     position: absolute;
     z-index: 1;
 }
@@ -366,9 +357,9 @@ div#toc ul li ul li ul {
     padding-left: 0;
 }
 
-/*end toc nav bar */
+/* End TOC nav bar */
 
-/*left nav bar - new sticky */
+/* Left nav bar — new sticky */
 
 ul.mysidebar.nav {
     text-decoration: none;
@@ -600,7 +591,7 @@ div.sidebarTitle-holder {
     padding: 0 8px 0 8px;
 }
 
-/*CSS for general styling of Chat/Messaging Indicator*/
+/* CSS for general styling of Chat/Messaging Indicator */
 
 .indicator {
     color: var(--breadcrumbs-text);
@@ -761,8 +752,7 @@ pre code {
     margin-top: var(--space4);
 }
 
-/*not active page */
-
+/* Not active page */
 #not-available {
     border: solid #162036 1px;
     padding: 40px 20px;
@@ -789,21 +779,6 @@ pre code {
     margin-top: 68px;
     position: initial !important;
 }
-
-/* @media (max-width: 1190px) {
-  div.sidebarTitle {
-    margin-top: 68px;
-  }
-
-  div.sidebarTitle-holder {
-    display: none !important;
-  }
-
-  div.inside-page-content,
-  .inside-page-content .h2 {}
-
-}
-*/
 
 .contactusBtn {
     background: #3498db;
@@ -832,7 +807,7 @@ pre code {
     text-decoration: none;
 }
 
-/** VisualPing Styling Begin
+/** Visualping Styling Begin
    This div contains the iframe and is set to be responsive
    Edit the max-with to suit your needs
    **/
@@ -848,7 +823,7 @@ pre code {
     display: none;
 }
 
-/**Position of the iframe inside the reponsive div **/
+/** Position of the iframe inside the reponsive div **/
 
 .visualping-container iframe {
     position: absolute;
@@ -858,7 +833,7 @@ pre code {
     height: 100%;
 }
 
-/** hides the ugly borders **/
+/** Hides the ugly borders **/
 
 iframe {
     border: 0;
@@ -874,7 +849,7 @@ iframe {
 
 @media (max-width: 767px) {
 
-    /* the div containing the iframe is responsive */
+    /* The div containing the iframe is responsive */
     .visualping-container {
         -webkit-box-sizing: inherit;
         -moz-box-sizing: inherit;
@@ -899,7 +874,7 @@ iframe {
     }
 }
 
-/*visualping ends*/
+/* Visualping ends */
 
 .solutionshr {
     width: 100%;

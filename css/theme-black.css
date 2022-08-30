@@ -12,16 +12,6 @@ h4 {color: #808080; }
     color: white;
 }
 
-/*my changes */
-
-.nav > li > a:hover {
-    /*background-color: #248ec2;*/
-}
-
-div.navbar-collapse .dropdown-menu > li > a:hover {
-    /*background-color: #347DBE;*/
-}
-/*end my change */
 .nav li.thirdlevel > a {
     background-color: #FAFAFA !important;
     color: #248EC2;
@@ -48,7 +38,7 @@ a[data-toggle="tooltip"] {
     color: #fff;
 }
 
-/* not sure if using this ...*/
+/* TODO: Confirm if used and needed */
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: #248ec2 !important;
 }

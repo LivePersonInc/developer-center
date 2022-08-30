@@ -1,4 +1,4 @@
-/* from Twitter Bootstrap */
+/* From Twitter Bootstrap */
 
 .breadcrumb {
   padding: .75rem 1rem;
@@ -20,8 +20,6 @@
 
 .breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
-  /*padding-right: .5rem;
-  padding-left: .5rem;*/
   color: var(--grey-button-icons);
   content: "/";
 }
@@ -36,9 +34,9 @@
 
 /* .breadcrumb-item.active {} */
 
-/*if you already use Twitter, you do not need these css lines above, cause they already in Twitter Bootstrap */
+/* If you already use Twitter, you do not need these CSS lines above, because they’re already in Twitter Bootstrap */
 
-/* Additions: imgage integration */
+/* Additions: image integration */
 
 .breadcrumbs {
   padding-left: 0;
@@ -66,16 +64,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  /* color: var(--link-color); */
 }
-
-/* .no-after {
-  color: var(--body-text) !important;
-}
-
-.dark .breadcrumbs .breadcrumb-item {
-  color: var(--link-color);
-} */
 
 .breadcrumbs .breadcrumb-item:after {
   display: inline-block;
@@ -94,7 +83,6 @@
   display: inline-block;
   padding-right: .5rem;
   padding-left: .5rem;
-  /* color: var(--body-text); */
   content: "/";
 }
 
