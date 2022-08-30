@@ -9,7 +9,7 @@
     "gulp-shell": "^0.8.0",
     "http-proxy": ">=1.18.1",
     "ini": ">=3.0.0",
-    "jquery": ">=3.5.0",
+    "jquery": ">=3.6.1",
     "jquery-highlight": "^3.5.0",
     "lodash": "^4.17.21",
     "lodash.template": ">=4.5.0",
