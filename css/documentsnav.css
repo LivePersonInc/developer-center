@@ -25,8 +25,6 @@
   height: 340px;
   width: 890px;
   background-color: #fff;
-  -webkit-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
   box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
   margin: 0 auto;
   margin-bottom: 18px;
@@ -92,10 +90,6 @@
 }
 
 .usecasebox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
   rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
@@ -212,10 +206,6 @@
 }
 
 .solutionsbox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
   rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
