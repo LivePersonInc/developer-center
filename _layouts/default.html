@@ -101,23 +101,25 @@
                 </a>
               </div>
             </div>
-            {% if page.last_modified %}
+            {% if page.date_updated %}
             <div class="article-meta hidden">
               {% assign currentYear = "now" | date:"%Y" %} {% assign
-              articleUpdatedYear = page.last_modified | date: '%Y' %} {% assign
-              createdYear = page.date | date: '%Y' %}
+              articleUpdatedYear = page.date_updated | date: '%Y' %} {% assign
+              createdYear = page.date_published | date: '%Y' %}
               <div class="flex gap-8">
                 {% if createdYear == currentYear %}
                 <!-- show post creation date -->
                 <p>
-                  <time datetime="{{ page.date | date_to_xmlschema }}"
-                    >{{ page.date | date: "%b %-d" }}</time
+                  Published:
+                  <time datetime="{{ page.date_published | date_to_xmlschema }}"
+                    >{{ page.date_published | date: "%b %-d" }}</time
                   >
                 </p>
                 {% else %}
                 <p>
-                  <time datetime="{{ page.date | date_to_xmlschema }}"
-                    >{{ page.date | date: "%b %-d, %Y" }}</time
+                  Published:
+                  <time datetime="{{ page.date_published | date_to_xmlschema }}"
+                    >{{ page.date_published | date: "%b %-d, %Y" }}</time
                   >
                 </p>
                 {% endif %} {% if articleUpdatedYear == currentYear %}
@@ -125,18 +127,18 @@
                 <p>
                   Updated:
                   <time
-                    datetime="{{ page.last_modified | date_to_xmlschema }}"
+                    datetime="{{ page.date_updated | date_to_xmlschema }}"
                     itemprop="dateModified"
-                    >{{ page.last_modified | date: "%b %-d" }}</time
+                    >{{ page.date_updated | date: "%b %-d" }}</time
                   >
                 </p>
                 {% else %}
                 <p>
                   Updated:
                   <time
-                    datetime="{{ page.last_modified | date_to_xmlschema }}"
+                    datetime="{{ page.date_updated | date_to_xmlschema }}"
                     itemprop="dateModified"
-                    >{{ page.last_modified | date: "%b %-d, %Y" }}</time
+                    >{{ page.date_updated | date: "%b %-d, %Y" }}</time
                   >
                 </p>
               </div>

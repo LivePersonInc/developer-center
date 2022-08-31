@@ -16,8 +16,8 @@ layout: none
         <item>
             <title>{{ page.pagename | xml_escape }}</title>
             <description><![CDATA[{{ page.content | xml_escape }}]]></description>
-            <pubDate>{{ site.date | date_to_rfc822 }}</pubDate>
-            <lastmod>{{ site.last_modified | date: '%Y-%m-%d' }}</lastmod>
+            <pubDate>{{ site.date_published | date_to_rfc822 }}</pubDate>
+            <lastmod>{{ site.date_updated | date: '%Y-%m-%d' }}</lastmod>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
             {% for tag in page.tags %}
