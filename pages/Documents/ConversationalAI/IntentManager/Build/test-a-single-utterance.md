@@ -11,6 +11,9 @@ permalink: intent-manager-build-test-a-single-utterance.html
 indicator: both
 ---
 
+{. important}
+Test intents on the **Intents** tab and test entities on the **Entities** tab. You can't use either tab to test both.
+
 ### Test intent detection
 
 You can use the **Test User Input** tool to test how a single utterance performs against an intent or the domain. The tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the tool, you can quickly and easily test that phrase to see how it behaves.
