@@ -15,8 +15,9 @@ indicator:
 
 ### Overview
 
-Consumers prefer to message rather than call brands.  However, in some cases, a higher touch interaction such as a video call can help to make the conversation more effective.  
-<iframe src="https://www.youtube.com/embed/wV9ecP0n7d4" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
+Consumers prefer to message rather than call brands. However, in some cases, a higher touch interaction such as a video call can help to make the conversation more effective.
+
+<!-- <iframe src="https://www.youtube.com/embed/wV9ecP0n7d4" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe> -->
 
 ### Benefits of using video chat
 
@@ -31,7 +32,7 @@ Consumers prefer to message rather than call brands.  However, in some cases, a 
 * Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem. 
 
 * Provide your VIP customers with concierge, premium treatment. 
-Video provides tailored solutions and service for consumers, with their personal choices kept on priority.  
+Video provides tailored solutions and service for consumers, with their personal choices kept on priority.
 
 * Replace in-person meetings such as consultations or long application process with real-time assistance and in-store experience.
 
