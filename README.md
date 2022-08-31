@@ -144,6 +144,8 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
+* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
+* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
 
 ## Notes on content and code
 
@@ -158,7 +160,7 @@ When contributing to this repository, please observe the following:
 * Use lists (ordered series in numbered lists, unordered series in bulleted lists)
 * In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
 * Use an Oxford comma (“one, two, and three”)
-* Use typographically correct quotation marks (“”)
+* Use typographically correct quotation marks (“”) ([keyboard shortcuts](https://chrisbracco.com/curly-quotes/))
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed

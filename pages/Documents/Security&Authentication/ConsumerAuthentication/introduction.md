@@ -53,9 +53,9 @@ The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. F
 
 The following prerequisites are required to authenticate a consumer:
 
-*	oAuth2.0 authorization server that supports Implicit flow and Code flow.
+*	OAuth 2.0 authorization server that supports Implicit flow and Code flow.
 
-*   The oAuth2.0 authorization server must return a valid (OpenID Connect) id_token.
+*   The OAuth 2.0 authorization server must return a valid (OpenID Connect) id_token.
 
 **_For mobile app implementation_:**
 
