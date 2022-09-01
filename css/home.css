@@ -24,10 +24,7 @@
   background-repeat: no-repeat;
   background-position: 17px 30px;
   background-size: 36px 36px;
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
-  transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 
 .gettingstartedrow a:hover {

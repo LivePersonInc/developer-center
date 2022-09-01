@@ -883,9 +883,6 @@ span.loginButton {
   width: 0;
   height: 2px;
   background: #f2f1f2;
-  -webkit-transition: width 250ms ease-in-out;
-  -moz-transition: width 250ms ease-in-out;
-  -o-transition: width 250ms ease-in-out;
   transition: width 250ms ease-in-out;
 }
 
@@ -901,9 +898,6 @@ span.loginButton {
   width: 0;
   height: 2px;
   background: #f2f1f2;
-  -webkit-transition: width 250ms ease-in-out;
-  -moz-transition: width 250ms ease-in-out;
-  -o-transition: width 250ms ease-in-out;
   transition: width 250ms ease-in-out;
 }
 

@@ -273,13 +273,11 @@ pre {
 @-webkit-keyframes a {
 
   0% {
-    -webkit-transform: translate3d(-20%, 0, 0);
     transform: translate3d(-20%, 0, 0);
     opacity: 0;
   }
 
   to {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
@@ -289,13 +287,11 @@ pre {
 @keyframes a {
 
   0% {
-    -webkit-transform: translate3d(-20%, 0, 0);
     transform: translate3d(-20%, 0, 0);
     opacity: 0;
   }
 
   to {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
@@ -349,7 +345,6 @@ pre {
   top: -7px;
   border-top: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   border-radius: 2px;
 }
@@ -729,7 +724,6 @@ body.search-opened #search-container {
   position: absolute;
   top: 76%;
   right: -120px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   fill: var(--body-background);
 }
@@ -744,7 +738,6 @@ body.search-opened #search-container {
   position: absolute;
   top: 55%;
   right: -120px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   border-radius: 50%;
   display: none;
@@ -760,7 +753,6 @@ body.search-opened #search-container {
   padding: 12px;
   border-top: 1px solid rgba(228, 228, 228, 0.6);
   cursor: pointer;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,7 +797,6 @@ body.search-opened #search-container {
   position: absolute;
   top: 50%;
   right: 16px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   fill: var(--body-background);
   visibility: hidden;
@@ -950,18 +941,12 @@ ul#results-container li a {
 .collapse.height {
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -moz-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 
 .collapse.width {
   width: 0;
   overflow: hidden;
-  -webkit-transition: width 0.35s ease;
-  -moz-transition: width 0.35s ease;
-  -o-transition: width 0.35s ease;
   transition: width 0.35s ease;
 }
 
