@@ -1,10 +1,7 @@
 :root {
   --max-width: 1616px;
-  /*  1616px */
   --header-padding: 0;
-  /*  size */
   --space-unit: 4px;
-  /*  4px */
   --space2: calc(2 * var(--space-unit));
   /*  8px */
   --space3: calc(3 * var(--space-unit));
@@ -158,6 +155,7 @@ svg.sitelogo {
 #loginHeader {
   display: flex;
   justify-content: flex-end;
+  gap: 24px;
 }
 
 a #loginHeader {
@@ -165,7 +163,7 @@ a #loginHeader {
 }
 
 code pre {
-  font-family: "Roboto Mono", Monaco, courier, monospace !important;
+  font-family: 'Roboto Mono', Monaco, courier, monospace !important;
 }
 
 .far {
@@ -264,13 +262,6 @@ code pre {
   right: 16px;
 }
 
-/* .searchimage img {
-  height: 24px;
-  right: -35px;
-  position: relative;
-  top: -12px;
-} */
-
 .searchimage svg {
   right: 0;
   position: relative;
@@ -309,7 +300,7 @@ code pre {
   height: 22px;
   display: inline-flex;
   margin-left: 12px;
-  background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='.9' fill='%235d80ea'%3E%3Cpath d='M19.798 2.162a4 4 0 0 1 0 5.657l-2.829 2.828a3.991 3.991 0 0 1-3.052 1.165.5.5 0 1 1 .055-.998 2.992 2.992 0 0 0 2.29-.874l2.829-2.828a3 3 0 0 0-4.243-4.243L12.02 5.697a2.992 2.992 0 0 0-.874 2.29.5.5 0 0 1-.999.056 3.991 3.991 0 0 1 1.166-3.053l2.828-2.828a4 4 0 0 1 5.657 0ZM2.121 19.838a4 4 0 0 1 0-5.657l2.829-2.828a3.991 3.991 0 0 1 3.053-1.165.5.5 0 1 1-.056.998 2.992 2.992 0 0 0-2.29.874l-2.829 2.828a3 3 0 0 0 4.243 4.243l2.828-2.828c.63-.629.92-1.466.874-2.29a.5.5 0 1 1 .999-.056 3.992 3.992 0 0 1-1.165 3.053l-2.829 2.828a4 4 0 0 1-5.657 0Z'/%3E%3Cpath d='M6.717 14.535a.5.5 0 1 0 .708.707l7.778-7.778a.5.5 0 1 0-.707-.707l-7.779 7.778Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml,%3Csvg width='21' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='.9' fill='%235d80ea'%3E%3Cpath d='M19.798 2.162a4 4 0 0 1 0 5.657l-2.829 2.828a3.991 3.991 0 0 1-3.052 1.165.5.5 0 1 1 .055-.998 2.992 2.992 0 0 0 2.29-.874l2.829-2.828a3 3 0 0 0-4.243-4.243L12.02 5.697a2.992 2.992 0 0 0-.874 2.29.5.5 0 0 1-.999.056 3.991 3.991 0 0 1 1.166-3.053l2.828-2.828a4 4 0 0 1 5.657 0ZM2.121 19.838a4 4 0 0 1 0-5.657l2.829-2.828a3.991 3.991 0 0 1 3.053-1.165.5.5 0 1 1-.056.998 2.992 2.992 0 0 0-2.29.874l-2.829 2.828a3 3 0 0 0 4.243 4.243l2.828-2.828c.63-.629.92-1.466.874-2.29a.5.5 0 1 1 .999-.056 3.992 3.992 0 0 1-1.165 3.053l-2.829 2.828a4 4 0 0 1-5.657 0Z'/%3E%3Cpath d='M6.717 14.535a.5.5 0 1 0 .708.707l7.778-7.778a.5.5 0 1 0-.707-.707l-7.779 7.778Z'/%3E%3C/g%3E%3C/svg%3E');
 }
 
 .welcome-title.h3 a.anchorjs-link {
@@ -375,11 +366,6 @@ code pre {
   background-color: transparent !important;
   color: var(--button-text-secondary);
 }
-
-/*
-.darken code {
-  filter: brightness(280%);
-} */
 
 .darken code span::selection {
   background-color: var(--sky-blue);
@@ -542,6 +528,7 @@ td {
 }
 
 @media (max-width: 1024px) {
+
   .flex-col-ipad {
     flex-direction: column-reverse;
     gap: 24px;
@@ -575,16 +562,20 @@ td {
   #jumpto {
     display: none !important;
   }
+
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
+
   .max-width {
     padding-left: var(--space8);
     padding-right: var(--space8);
   }
+
 }
 
 @media (max-width: 768px) {
+
   .max-width {
     padding-left: 0;
     padding-right: 0;
@@ -651,7 +642,7 @@ td {
 }
 
 .tooltipinfo::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   bottom: 65%;
   left: -9px;
@@ -703,10 +694,10 @@ td {
 }
 
 .beforeImportant {
-  content: "\\f05a";
+  content: '\\f05a';
   border-radius: 4px 0 0 4px;
   color: var(--important-border);
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 18px;
   margin: 0 10px 10px 0;
@@ -720,10 +711,10 @@ td {
 }
 
 .beforeNotice {
-  content: "\\f06a";
+  content: '\\f06a';
   border-radius: 4px 0 0 4px;
   color: var(--error-border) !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 18px;
   margin-right: 10px;
@@ -762,9 +753,9 @@ td {
 }
 
 .deprecated::before {
-  content: "\f071";
+  content: '\f071';
   color: #000;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 18px;
   margin-right: 5px;
@@ -814,6 +805,8 @@ a.loginText {
   color: var(--link-color-hover);
 }
 
+/* TODO: Remove trial button (check on HTML and JavaScript mentions, too) */
+
 .trialButton:hover {
   background-color: var(--hover-electric-blue);
 }
@@ -822,12 +815,7 @@ a.loginText {
   background-color: var(--secondary-background);
   color: var(--button-text);
   border: 0;
-  /* removed by request */
   display: none;
-}
-
-#loginHeader {
-  gap: 24px;
 }
 
 .trialButton {
@@ -888,16 +876,13 @@ span.loginButton {
 }
 
 .underline:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
   background: #f2f1f2;
-  -webkit-transition: width 250ms ease-in-out;
-  -moz-transition: width 250ms ease-in-out;
-  -o-transition: width 250ms ease-in-out;
   transition: width 250ms ease-in-out;
 }
 
@@ -906,16 +891,13 @@ span.loginButton {
 }
 
 .solutionsunderline:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 180px;
   width: 0;
   height: 2px;
   background: #f2f1f2;
-  -webkit-transition: width 250ms ease-in-out;
-  -moz-transition: width 250ms ease-in-out;
-  -o-transition: width 250ms ease-in-out;
   transition: width 250ms ease-in-out;
 }
 
@@ -1086,56 +1068,56 @@ div.language-plaintext,
 }
 
 .language-objc:before {
-  content: "OBJECTIVE-C";
+  content: 'Objective-C';
 }
 
 .language-swift:before {
-  content: "SWIFT";
+  content: 'Swift';
 }
 
 .language-css:before {
-  content: "CSS";
+  content: 'CSS';
 }
 
 .language-json:before,
 .language-json-doc:before {
-  content: "JSON";
+  content: 'JSON';
 }
 
 .language-html:before {
-  content: "HTML";
+  content: 'HTML';
 }
 
 .language-http:before {
-  content: "HTTP";
+  content: 'HTTP';
 }
 
 .language-java:before {
-  content: "JAVA";
+  content: 'Java';
 }
 
 .language-gradle:before {
-  content: "GRADLE";
+  content: 'Gradle';
 }
 
 .language-javascript:before {
-  content: "JavaScript";
+  content: 'JavaScript';
 }
 
 .language-sh:before {
-  content: "SH";
+  content: 'SH';
 }
 
 .language-ruby:before {
-  content: "RUBY";
+  content: 'Ruby';
 }
 
 .language-xml:before {
-  content: "XML";
+  content: 'XML';
 }
 
 .language-bash:before {
-  content: "Bash";
+  content: 'Bash';
 }
 
 .documenttitle {
@@ -1227,9 +1209,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   color: #fff;
 }
 
-/* todo disable important */
 #jumpto {
-  flex: 1 !important;
+  flex: 1 !important; /* TODO: Disable “important” */
   padding-bottom: var(--space10);
 }
 
@@ -1241,7 +1222,6 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #anchorlist a {
-  /* color: var(--secondary-black); */
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1277,10 +1257,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   display: none;
 }
 
-/* make sure background is white */
-
 .highlightlink {
-  background-color: var(--body-background) !important;
+  background-color: var(--body-background) !important; /* Make sure background is white */
   color: var(--link-color) !important;
   font-weight: bold;
 }
@@ -1345,12 +1323,12 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   background-color: var(--footer-background);
   margin-bottom: 32px;
   margin-top: 32px;
-  font-family: "Roboto Mono", Monaco, courier, monospace;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
   color: var(--widget-text);
   overflow-wrap: anywhere;
 }
 
-/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden. Issue=DX-33 */
+/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden (DX-33) */
 .highlighter-rouge button.nightbtn {
   display: none;
 }
@@ -1534,12 +1512,7 @@ a:focus-within:not(.anchorjs-link) {
   border: 2px dashed var(--post-link-hover) !important;
 }
 
-/* .dark #post-content img {
-  filter: drop-shadow(0px 0 4px rgba(255, 255, 255, 0.12))
-  drop-shadow(0px 3px 16px rgba(255, 255, 255, 0.14));
-} */
-
-/* toggle switch  */
+/* Toggle switch  */
 
 .dark {
   background-color: var(--body-background);
@@ -1597,7 +1570,7 @@ a:focus-within:not(.anchorjs-link) {
 
 .theme-switch-wrapper .slider:before {
   bottom: 2px;
-  content: "";
+  content: '';
   height: 18px;
   left: 3px;
   position: absolute;
@@ -1635,7 +1608,6 @@ a:focus-within:not(.anchorjs-link) {
   font-weight: 600;
   font-size: 14px;
   line-height: 28px;
-  display: flex;
   align-items: center;
   color: var(--footer-text);
   position: absolute;
@@ -1661,7 +1633,7 @@ a:focus-within:not(.anchorjs-link) {
   display: none;
 }
 
-/* toggle end */
+/* Toggle end */
 
 .apiLink {
   cursor: pointer;
@@ -1734,6 +1706,7 @@ input#csds-button {
 }
 
 @media (max-width: 767px) {
+
   .flex-col-mobile {
     flex-direction: column;
   }
@@ -1779,7 +1752,6 @@ input#csds-button {
     display: none !important;
   }
 
-  /* home */
   .header-label {
     width: 100%;
     flex: initial;
@@ -1810,7 +1782,7 @@ input#csds-button {
     display: flex;
   }
 
-  /* sidebar hamburger effect */
+  /* Sidebar hamburger effect */
   input:focus+label.sidebarIconToggle {
     border: 2px dashed var(--post-link-hover) !important;
   }
@@ -1827,7 +1799,7 @@ input#csds-button {
     z-index: 99;
   }
 
-  .defaultwrapper input[type="checkbox"].openSidebarMenu:checked~#defaultsidebar {
+  .defaultwrapper input[type='checkbox'].openSidebarMenu:checked~#defaultsidebar {
     transform: translateX(0);
   }
 
@@ -1839,8 +1811,6 @@ input#csds-button {
 
   .sidebarIconToggle {
     cursor: pointer;
-    height: 100%;
-    width: 100%;
     height: 22px;
     width: 22px;
     margin-bottom: 0;
@@ -1890,6 +1860,7 @@ input#csds-button {
   input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
     transition: var(--nav-transition);
   }
+
 }
 
 @media (min-width: 768px) {
@@ -1902,20 +1873,25 @@ input#csds-button {
   .mysidebar>li.mobile-sign-in {
     display: none;
   }
+
 }
 
 @media (max-width: 500px) {
+
   div#loginHeader {
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 2px;
   }
+
 }
 
 @media (min-width: 1921px) {
+
   html {
     font-size: 17px;
   }
+
 }
 
 @media print {
@@ -1924,7 +1900,7 @@ input#csds-button {
     position: static;
   }
 
-  div[id^="LPMcontainer"],
+  div[id^='LPMcontainer'],
   .breadcrumbs,
   .theme-switch-wrapper,
   #cookie-notice {
