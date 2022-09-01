@@ -101,8 +101,8 @@
                 </a>
               </div>
             </div>
-            {% if page.date_updated %}
-            <div class="article-meta hidden">
+            <div class="article-meta gap-8 hidden">
+              {% if page.date_updated %}
               <div class="flex gap-8">
                 <!-- show post creation date -->
                 <p>
@@ -112,12 +112,23 @@
                 <!-- show last updated date -->
                 <p>
                   Updated:
-                  <time
-                    datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
+                  <time datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
+                </p>
+              </div>
+              {% endif %} 
+              {% assign words = content | number_of_words %}
+              <div class="flex gap-8">
+                <p>
+                  Reading Time: 
+                  {% assign words = content | number_of_words %}
+                  {% if words < 360 %}
+                    1 min
+                  {% else %}
+                    {{ words | divided_by:180 }} mins
+                  {% endif %}
                 </p>
               </div>
             </div>
-            {% endif %} 
           </div>
           {% endif %} {{ content | extlinks }}
 
