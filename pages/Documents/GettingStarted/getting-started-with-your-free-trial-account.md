@@ -8,7 +8,6 @@ categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
 date_published: 2019/01/30
-date_updated: 2022/03/25
 ---
 
 <!-- The Modal -->
