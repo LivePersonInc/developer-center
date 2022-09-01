@@ -9,7 +9,7 @@
 }
 
 .breadcrumb::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -21,7 +21,7 @@
 .breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
   color: var(--grey-button-icons);
-  content: "/";
+  content: '/';
 }
 
 .breadcrumb-item+.breadcrumb-item:hover::before {
@@ -45,7 +45,7 @@
 }
 
 .breadcrumbs::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -72,7 +72,7 @@
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  content: "\\";
+  content: '\\';
   padding-right: 8px;
   padding-left: 8px;
   color: var(--body-text);
@@ -83,7 +83,7 @@
   display: inline-block;
   padding-right: .5rem;
   padding-left: .5rem;
-  content: "/";
+  content: '/';
 }
 
 .breadcrumbs .icon {

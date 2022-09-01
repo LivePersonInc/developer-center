@@ -46,7 +46,7 @@ span.documentContainer {
 }
 
 span.searchcontentcontainer {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   overflow-wrap: break-word;
   font-size: 14px;
   font-weight: normal;
@@ -62,7 +62,7 @@ span.searchcontentcontainer {
 
 .aa-empty {
   font-size: 21px;
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   text-decoration: none;
   color: var(--link-color);
   font-weight: bold;

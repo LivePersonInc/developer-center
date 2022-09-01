@@ -53,7 +53,7 @@
 
 .documentboxtitletext {
   flex: 1;
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   color: #0c1320;
   font-size: 26px;
   margin-top: 62px;
@@ -61,7 +61,7 @@
 }
 
 .documentboxinfo {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   color: #333;
   font-size: 16px;
   margin-left: 32px;
@@ -73,7 +73,7 @@
   display: flex;
   line-height: 2.8;
   background-color: #ECF1FF;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 18px 18px 18px 10px;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .usecasetitle {
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   color: #333;
   font-size: 1.625em;
   float:left;
@@ -141,7 +141,7 @@
 
 .usecaseinner {
   display: inline-block;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1em;
   font-weight: 100;
   margin-bottom: 30px;
@@ -196,7 +196,7 @@
 
 .solutionsbox {
   background-color: #fff;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   margin: 10px;
   flex: 1;
 }
@@ -228,7 +228,7 @@
 }
 
 .solutionstitle {
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   color: #333;
   font-size: 1.625em;
 }
@@ -244,7 +244,7 @@
 }
 
 .solutionsinner {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1em;
   font-weight: 100;
   margin-bottom: 30px;

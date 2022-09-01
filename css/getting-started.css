@@ -82,7 +82,7 @@
 }
 
 #teaser-banner {
-  background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url("/img/Img_video_overview.png");
+  background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%), url('/img/Img_video_overview.png');
   cursor: pointer;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .header-lp4-external h3 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -136,7 +136,7 @@
 }
 
 .link-padding a:before {
-  content: "-";
+  content: '-';
   position: absolute;
   left: -12px;
   color: var(--body-text)
@@ -204,7 +204,7 @@
 }
 
 .small-header {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;

@@ -26,7 +26,7 @@ a:focus-visible {
 
 /* This is so the header won’t overlap the links */
 :target::before {
-  content: "";
+  content: '';
   display: block;
   height: 120px;
   margin: -120px 0 0;
@@ -42,7 +42,7 @@ img {
 
 h2[id] {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -52,7 +52,7 @@ h2[id] {
 }
 
 h3[id] {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--title-text);
   font-style: normal;
   font-weight: bold;
@@ -64,7 +64,7 @@ h3[id] {
 }
 
 h4[id] {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--title-text);
   font-size: 15px;
   font-weight: 600;
@@ -74,7 +74,7 @@ h4[id] {
 }
 
 h5[id] {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -90,7 +90,7 @@ h4 code.highlighter-rouge {
 
 .h1 {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -100,7 +100,7 @@ h4 code.highlighter-rouge {
 
 .h2 {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -110,7 +110,7 @@ h4 code.highlighter-rouge {
 
 .h3 {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -121,7 +121,7 @@ h4 code.highlighter-rouge {
 
 .h4 {
   color: var(--title-text);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: .86em;
   font-weight: 600;
   margin-bottom: var(--space4);
@@ -148,7 +148,7 @@ h4 code.highlighter-rouge {
 
 pre code {
   font-size: 12px !important;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .bigtable {
@@ -179,7 +179,7 @@ pre code {
 .post-content table>thead>tr>th {
   color: var(--body-text);
   padding: 16px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -200,13 +200,13 @@ table>tbody>tr:nth-of-type(odd) {
   font-weight: bold;
   vertical-align: inherit;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #666;
   border-right: solid 1px black;
 }
 
 .designsheet table tr th {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   color: #4a4a4a;
   font-size: 14px;
@@ -340,7 +340,7 @@ div#toc ul li a.anchorjs-link {
 }
 
 div#toc ul li ul li::before {
-  content: "";
+  content: '';
 }
 
 div#toc ul li ul li a {
@@ -578,7 +578,7 @@ div.sidebarTitle-holder {
   visibility: hidden;
   margin-top: 50px;
   position: relative;
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
 }
 
 .side-bar {
@@ -618,7 +618,7 @@ div.sidebarTitle-holder {
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-  content: "";
+  content: '';
 }
 
 .breadcrumbs .breadcrumb-item {
@@ -626,11 +626,11 @@ div.sidebarTitle-holder {
 }
 
 .breadcrumbs .breadcrumb-item.clicked::after {
-  content: "\f077";
+  content: '\f077';
 }
 
 .breadcrumbs .breadcrumb-item.no-after::after {
-  content: "";
+  content: '';
 }
 
 .breadcrumbs .breadcrumb-item span.down-arrow {
@@ -641,7 +641,7 @@ div.sidebarTitle-holder {
   font-size: .8em;
   font-weight: bold;
   text-decoration: none;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   width: 10px;
   height: 10px;
 }
@@ -759,7 +759,7 @@ pre code {
   display: inline-block;
   margin: 0 auto;
   text-align: center;
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   top: 45%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);

@@ -103,7 +103,7 @@ img.card-container {
 #success-stories {
   background-repeat: no-repeat;
   background-position: center;
-  background: var(--card-bg-background), url("/img/welcomebanner.png");
+  background: var(--card-bg-background), url('/img/welcomebanner.png');
   border: 2px solid #eeeff1;
   background-size: cover;
 }
@@ -139,7 +139,7 @@ img.card-container {
 
 .create-button {
   background: #ededfa;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
