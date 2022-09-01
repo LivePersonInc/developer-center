@@ -842,6 +842,7 @@
             - subpagename: Conversation Builder
         - pagename: Permission System
         - pagename: Examples
+        - pagename: Release Notes
 - categoryname: Reporting
   image: historical-data
   documents:
