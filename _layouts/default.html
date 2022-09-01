@@ -116,23 +116,18 @@
                 </p>
               </div>
               {% endif %} 
-              <!-- Show Reading Time -->
+              <!-- Show Reading Time only if it's more than one minute read -->
               {% assign words = content | number_of_words %}
+              {% if words > 360 %}
               <div class="flex gap-8">
                 <p>
-                  Reading Time: 
-                  {% assign words = content | number_of_words %}
-                  {% if words < 360 %}
-                    1 min
-                  {% else %}
-                    {{ words | divided_by:180 }} mins
-                  {% endif %}
+                  Reading Time:  {{ words | divided_by:180 }} mins
                 </p>
               </div>
+              {% endif %}
             </div>
           </div>
           {% endif %} {{ content | extlinks }}
-
           <div id="defaultfooter" class="defaultfooter">
             <div class="flex flex-col">
               <p>
