@@ -1,173 +1,173 @@
 .welcome-card {
-    width: 47%;
-    flex-grow: 1;
-    padding: var(--space8);
-    background: var(--card-background);
-    margin-bottom: 0;
-    border: 2px solid var(--card-border);
-    box-sizing: border-box;
-    border-radius: 0;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
+  width: 47%;
+  flex-grow: 1;
+  padding: var(--space8);
+  background: var(--card-background);
+  margin-bottom: 0;
+  border: 2px solid var(--card-border);
+  box-sizing: border-box;
+  border-radius: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-container {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .home-container .welcome-card {
-    width: 100%;
+  width: 100%;
 }
 
 .welcome-card:hover {
-    outline: 2px solid var(--card-border);
+  outline: 2px solid var(--card-border);
 }
 
 .header-label {
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: var(--body-text);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--body-text);
 }
 
 .success-stories-header {
-    font-size: 24px;
-    max-width: 418px;
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 40px;
-    color: var(--cta-text);
-    letter-spacing: .008em;
+  font-size: 24px;
+  max-width: 418px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 40px;
+  color: var(--cta-text);
+  letter-spacing: .008em;
 }
 
 .container-image {
-    margin: 0 0 var(--space4) 0;
+  margin: 0 0 var(--space4) 0;
 }
 
 .card-container {
-    display: flex;
-    margin-top: var(--space8);
-    width: 100%;
-    gap: 32px;
+  display: flex;
+  margin-top: var(--space8);
+  width: 100%;
+  gap: 32px;
 }
 
 .card-container:not(.home-container) {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 img.card-container {
-    margin-top: 24px;
-    margin-bottom: var(--space4);
+  margin-top: 24px;
+  margin-bottom: var(--space4);
 }
 
 .card-container .welcome-card .welcome-title {
-    color: var(--card-text);
-    margin: 0;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+  color: var(--card-text);
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .card-container #success-stories .welcome-title {
-    color: var(--text-invert);
+  color: var(--text-invert);
 }
 
 .card-container #success-stories .welcome-content,
 .card-container #success-stories {
-    color: var(--text-invert);
+  color: var(--text-invert);
 }
 
 .welcome-title.parent:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
 }
 
 .card-container .welcome-card .welcome-content {
-    color: var(--body-text);
-    margin-bottom: 0;
-    font-family: Inter, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 4px;
+  color: var(--body-text);
+  margin-bottom: 0;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 4px;
 }
 
 .card-container .welcome-card {
-    color: var(--body-text);
+  color: var(--body-text);
 }
 
 #success-stories {
-    background-repeat: no-repeat;
-    background-position: center;
-    background: var(--card-bg-background), url("/img/welcomebanner.png");
-    border: 2px solid #eeeff1;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: var(--card-bg-background), url("/img/welcomebanner.png");
+  border: 2px solid #eeeff1;
+  background-size: cover;
 }
 
 #free-trial {
-    display: flex;
-    width: 100%;
-    border-radius: 0;
+  display: flex;
+  width: 100%;
+  border-radius: 0;
 }
 
 #free-trial-button-welcome {
-    flex: 1;
-    display: flex;
-    padding-right: 24px;
-    justify-content: flex-end;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  padding-right: 24px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .free-trial-container {
-    display: flex;
-    width: 100%;
-    margin-top: var(--space8);
-    padding: var(--space8);
-    flex-wrap: wrap;
-    background: url(../img/free-trial-banner.jpg);
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  width: 100%;
+  margin-top: var(--space8);
+  padding: var(--space8);
+  flex-wrap: wrap;
+  background: url(../img/free-trial-banner.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 #free-trial-content-container {
-    flex: 3;
+  flex: 3;
 }
 
 .create-button {
-    background: #ededfa;
-    font-family: "Space Grotesk", sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    border-radius: 24px;
-    text-align: center;
-    padding: 12px 32px;
-    font-weight: bold;
-    color: #000;
-    border: none;
+  background: #ededfa;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 24px;
+  text-align: center;
+  padding: 12px 32px;
+  font-weight: bold;
+  color: #000;
+  border: none;
 }
 
 .create-button:hover {
-    background: #fcfcfc;
+  background: #fcfcfc;
 }
 
 .free-trial-container #free-trial .free-trial-header {
-    margin: 0 0 4px 0;
-    color: var(--button-text);
+  margin: 0 0 4px 0;
+  color: var(--button-text);
 }
 
 .free-trial-label {
-    font-family: Inter, sans-serif;
-    color: var(--cta-text);
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
+  font-family: Inter, sans-serif;
+  color: var(--cta-text);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 div#success-stories p.free-trial-label img.dots-container {
-    margin: 0 10px 0 0;
+  margin: 0 10px 0 0;
 }
