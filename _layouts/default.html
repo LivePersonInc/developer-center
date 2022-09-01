@@ -103,46 +103,19 @@
             </div>
             {% if page.date_updated %}
             <div class="article-meta hidden">
-              {% assign currentYear = "now" | date:"%Y" %} {% assign
-              articleUpdatedYear = page.date_updated | date: '%Y' %} {% assign
-              createdYear = page.date_published | date: '%Y' %}
               <div class="flex gap-8">
-                {% if createdYear == currentYear %}
                 <!-- show post creation date -->
                 <p>
                   Published:
-                  <time datetime="{{ page.date_published | date_to_xmlschema }}"
-                    >{{ page.date_published | date: "%b %-d" }}</time
-                  >
+                  <time datetime="{{ page.date_published | date_to_xmlschema }}">{{ page.date_published | date: "%b %-d, %Y" }}</time>
                 </p>
-                {% else %}
-                <p>
-                  Published:
-                  <time datetime="{{ page.date_published | date_to_xmlschema }}"
-                    >{{ page.date_published | date: "%b %-d, %Y" }}</time
-                  >
-                </p>
-                {% endif %} {% if articleUpdatedYear == currentYear %}
                 <!-- show last updated date -->
                 <p>
                   Updated:
                   <time
-                    datetime="{{ page.date_updated | date_to_xmlschema }}"
-                    itemprop="dateModified"
-                    >{{ page.date_updated | date: "%b %-d" }}</time
-                  >
-                </p>
-                {% else %}
-                <p>
-                  Updated:
-                  <time
-                    datetime="{{ page.date_updated | date_to_xmlschema }}"
-                    itemprop="dateModified"
-                    >{{ page.date_updated | date: "%b %-d, %Y" }}</time
-                  >
+                    datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
                 </p>
               </div>
-              {% endif %}
             </div>
             {% endif %} 
           </div>
