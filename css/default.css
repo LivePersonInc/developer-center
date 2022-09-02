@@ -1218,8 +1218,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #jumpto {
-  /* TODO: Disable “important” */
-  flex: 1 !important;
+  flex: 1 !important; /* TODO: Disable “important” */
   padding-bottom: var(--space10);
 }
 
@@ -1267,8 +1266,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .highlightlink {
-  background-color: var(--body-background) !important;
-  /* Make sure background is white */
+  background-color: var(--body-background) !important; /* Make sure background is white */
   color: var(--link-color) !important;
   font-weight: bold;
 }
