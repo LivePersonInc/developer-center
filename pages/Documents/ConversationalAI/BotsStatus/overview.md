@@ -9,7 +9,7 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 Use the Bots Status application to check the status of all your bots from a single location, and to help to resolve issues. 
 
@@ -25,7 +25,7 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 **To access the Bot Status application**
 
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Bots Status**.
+2. In the [Conversational AI dashboard](platform-overview.html), click **Bots Status**.
 
 ### Dashboard
 

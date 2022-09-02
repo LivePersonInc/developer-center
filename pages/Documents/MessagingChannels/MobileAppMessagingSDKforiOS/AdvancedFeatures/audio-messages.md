@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-audio-messages.htm
 indicator: messaging
 ---
 
-
 Audio Messaging allows consumers to send audio messages to agents. 
 
 1. Contact your Account Team to activate the feature on the LivePerson server side.

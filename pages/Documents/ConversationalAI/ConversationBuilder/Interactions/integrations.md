@@ -22,10 +22,10 @@ Before you can add an Integration interaction, you need to create the integratio
 
 **To add an Integration interaction**
 
-1. Select the interaction just above where you want to add the integration, and click <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> (Integration) on the interactions toolbar.
+1. Select the interaction just above where you want to add the integration, and click <img style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt=""> (Integration) on the interactions toolbar.
 2. In the interaction, select the name of the integration to invoke.
 
-    <img style="width:550px" src="img/ConvoBuilder/integrations_api.png">
+    <img style="width:550px" src="img/ConvoBuilder/integrations_api.png" alt="">
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
@@ -43,13 +43,13 @@ When an integration interaction is processed, the order of invocation is as foll
 {: .important}
 It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
-In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
+In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction…
 
- <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png">
+ <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png" alt="">
 
-...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+…so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
- <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
+ <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png" alt="">
 
 ### Knowledge AI interactions
 
@@ -63,17 +63,22 @@ Alternatively, you might have an FAQ bot that is driven by a knowledge base full
 
 Powering bots with intelligent answers can increase containment: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
 
+#### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/682936871" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
+<br>
+
 #### How the Knowledge AI search works
 
-* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-using-intents-with-kbs.html#search-modes).
-* **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+* **The search phrase**: The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
+* **The search**: When performing the search, the search mode is always “Intents.” This cannot be changed. For information on this search mode, see [here](knowledgeai-search-methods.html).
+* **The results**: The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
 
 When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, i.e., one of these:
 
-<img style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png">
+<img style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png" alt="">
 
 The first two options are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
@@ -85,7 +90,7 @@ Select an answer layout based on the target channels and your requirements. For 
 
 This layout looks like this:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png" alt="">
 
 With this layout:
 
@@ -96,11 +101,11 @@ With this layout:
 
 This layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png" alt="">
 
 On all other channels, it looks like this:
 
-<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png">
+<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png" alt="">
 
 With this layout:
 
@@ -109,30 +114,30 @@ With this layout:
 
 #### Add a Knowledge AI interaction
 
-1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png"> (Knowledge AI) on the interactions toolbar.
+1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png" alt=""> (Knowledge AI) on the interactions toolbar.
 2. In the interaction, select the knowledge base to search.
 
-    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png">
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png" alt="">
 
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon).
 4. On the Basic tab, specify the following:
-    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below). If you don't want this message to be sent, enter "BLANK_MESSAGE".
+    * **Message When Results Not Found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. If you don't want this message to be sent, enter "BLANK_MESSAGE".
 5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
 6. Switch to the Advanced tab, and specify the following:
 
-    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png">
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png" alt="">
 
-    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
+    * **Min Confidence Score for Answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
 
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
-    * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
-    * **Answer layout**: Select "Auto render, rich," "Auto render, plain," or "No auto rendering" based on your requirements. These layout options are discussed farther above.
-    * **Link text for content URL**: This setting is available when you select an "auto rendering" option for the **Answer layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the "Auto render, rich" layout is used, and when the "Auto render, plain" layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the "Auto render, plain" layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
-    * **Default image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
-    * **Response data variable**: This setting is available only when you select "No auto rendering" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
+    * **Max Number of Answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Answer Layout**: Select "Auto render, rich," "Auto render, plain," or "No auto rendering" based on your requirements. These layout options are discussed farther above.
+    * **Link Text for Content URL**: This setting is available when you select an "auto rendering" option for the **Answer Layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the "Auto render, rich" layout is used, and when the "Auto render, plain" layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the "Auto render, plain" layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
+    * **Default Image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer Layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Response Data Variable**: This setting is available only when you select "No auto rendering" for the **Answer Layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
-8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer Layout** setting, you’ll also need to add the interactions that display the answers.
 
 {: .important}
 You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated KnowledgeAI integration.
@@ -151,7 +156,7 @@ To display a single, best result, use the syntax below, where "variableName" is 
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png" alt="">
 
 To iterate over and display multiple results, use the syntax below in a similar manner:
 
@@ -163,21 +168,23 @@ To iterate over and display multiple results, use the syntax below in a similar 
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png" alt="">
 
 #### Direct the conversation flow based on the result
 
 By default, a Knowledge AI interaction includes two custom rules: one rule for when the knowledge base search returns an answer and the other rule for when the search doesn’t.
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png" alt="">
 
 Within each rule, the condition specifies the particular search result, either "Found" or "Not Found."
 
-<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png">
+<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png" alt="">
 
 Configure the **Next Action** for each of these rules based on the direction in which the conversation should flow in each case.
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png" alt="">
+
+If you delete the **Match Not Found** rule, then when a search is performed and no answer is found, the fallback message is sent ("Sorry, I could not find anything for that."). However, if you've configured the **Message when results not found** setting in the interaction, then that message is sent instead.
 
 ### Agent Transfer interactions
 
@@ -195,18 +202,18 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
 **To add an Agent Transfer interaction**
 
-1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> (Agent Transfer) on the interactions toolbar.
-2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n. 
+1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt=""> (Agent Transfer) on the interactions toolbar.
+2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n.
 
-    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent..."
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent…"
 
-    <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png">
+    <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png" alt="">
 
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon).
 4. Select the **Advanced** tab, and specify the following:
 
-    * **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
-    
+    * **Agent ID**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
+
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
         When the transfer is attempted, the Agent Skill Id is evaluated; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes (e.g., the chat server becomes overloaded and drops the message), an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
@@ -243,7 +250,7 @@ If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the
 ### File Upload interactions
 
 {: .important}
-File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
+File Upload interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
@@ -254,23 +261,23 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 **To add a File Upload interaction**
 
-1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
+1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png" alt=""> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
 
-    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png">
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png" alt="">
 
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
-3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
-    - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
-    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
-    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
-    - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    - **In progress message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
+3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
+    * **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
+    * **Success Message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
+    * **Failure Message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
+    * **Validation Failure Message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
+    * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file…"
 
-4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png">. In the Integration interaction, select the File integration to invoke (Integration type = File).
-    
-    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
+4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="">. In the Integration interaction, select the File integration to invoke (Integration type = File).
+
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png" alt="">
 
     The File integration handles upload of the file from Conversational Cloud to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
@@ -278,9 +285,9 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 #### Notes on File Upload interactions
 
-- The uploaded file can’t be over 5 MB.
-- File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will only be advised of success or failure, respectively, once the process is completed or has failed.
-- The File Upload interaction can't be tested using the Preview window.
+* The uploaded file can’t be over 5 MB.
+* File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will only be advised of success or failure, respectively, once the process is completed or has failed.
+* The File Upload interaction can't be tested using the Preview window.
 
 #### Customization points
 
@@ -308,9 +315,9 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 ### Dynamic Routing interactions
 
-Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents -- bot or human -- based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents — bot or human — based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
 
-Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code. 
+Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code.
 
 {: .important}
 The Dynamic Routing interaction is only available to brands who log in with single sign-on via Conversational Cloud. It isn’t available if you log into Conversation Builder directly. <br><br>
@@ -336,7 +343,7 @@ A Dynamic Routing interaction does the following:
     * Route to skill
     * Route to agent
 
-    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
+    **Note:** If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
 
 #### Prerequisites
 
@@ -346,20 +353,20 @@ Enabling the Conversation Context Service for your account is necessary because 
 
 #### Add a Dynamic Routing interaction
 
-1. Select the interaction just above where you want to perform the dynamic routing, and click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png"> (Dynamic Routing) on the interactions toolbar.
+1. Select the interaction just above where you want to perform the dynamic routing, and click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png" alt=""> (Dynamic Routing) on the interactions toolbar.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png" alt="">
 
-2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can define and prioritize your routing policies if you haven’t done so already. For help with this step, see [here](conversation-orchestrator-dynamic-routing-managing-routing-policies.html). 
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can define and prioritize your routing policies if you haven’t done so already. For help with this step, see [here](conversation-orchestrator-dynamic-routing-managing-routing-policies.html).
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt=""> (Settings icon).
 4. On the **Basic** tab, specify the following:
 
-    * **Fallback skill id**: If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value. If this setting isn’t set, the conversation flow continues to the next action in the dialog.
-    * **Fallback skill name**: Enter the name of the agent skill that you specified in the **Fallback skill id** setting. Entering the name provides you with something display-friendly and “readable” by which to readily understand which skill is being used (since the skill ID is a number).
+    * **Fallback Skill ID**: If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value. If this setting isn’t set, the conversation flow continues to the next action in the dialog.
+    * **Fallback Skill Name**: Enter the name of the agent skill that you specified in the **Fallback Skill ID** setting. Entering the name provides you with something display-friendly and “readable” by which to readily understand which skill is being used (since the skill ID is a number).
 
 5. Select the **Advanced** tab, and specify the following:
 
-    * **Escalation message**: This is the message to send to the consumer before transferring the conversation as determined by the next actions, for example, “Hold on while I connect you with a suitable agent who can assist you.” You can enter static text, use a variable, or both. If you need to insert a new line, use an escape character like so: \\\\n.
+    * **Escalation Message**: This is the message to send to the consumer before transferring the conversation as determined by the next actions, for example, “Hold on while I connect you with a suitable agent who can assist you.” You can enter static text, use a variable, or both. If you need to insert a new line, use an escape character like so: \\\\n.
 
 6. Click **Save**.
 
@@ -387,16 +394,15 @@ As mentioned above, the end result of this interaction is always a transfer. Cus
 
 No, this can’t be done. If you’d like to do this, the Dynamic Routing interaction isn’t the best solution. Use one of the more manual methods described [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html).
 
-
 ### Apple Pay interactions
 
-**For Apple Business Chat only.**
+**For Apple Messages for Business only.**
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
 
 #### Prerequisite setup steps
 
-1. Review and follow LivePerson’s Apple Business Chat setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
+1. Review and follow LivePerson’s Apple Messages for Business setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
 2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. These steps are covered [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple’s developer site. Contact your LivePerson representative for help with this if needed.
 3. Implement your own merchant session endpoint, which is discussed [here](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session) on Apple’s developer site.
 
@@ -404,18 +410,18 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 #### Interaction configuration
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png" alt="">
 <br>
-<img style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png">
+<img style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png" alt="">
 <br>
-<img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png">
+<img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png" alt="">
 
 ##### Tile settings
 
 | Setting | Description | Required? | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://www.mysite/images/mylogo.jpg |
-| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| ADD IMAGE → Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | <https://www.mysite/images/mylogo.jpg> |
+| ADD IMAGE → Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
 | Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |
@@ -423,7 +429,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 ##### Advanced interaction settings
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png" alt="">
 
 **Merchant Information**
 
@@ -447,16 +453,16 @@ You can add a list of available shipping methods. For each shipping method, spec
 {: .important}
 The shipping method fields can be updated dynamically via an API call, i.e., you can specify a botContext or integration variable name in these fields.<br><br>The first shipping method that you add is used as the default method.
 
-**Additional Fields & Payment Capabilities**
+**Additional Fields and Payment Capabilities**
 
-* **Required Billing Fields**: Select the billing contact fields required to process the transaction. Tip: Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
+* **Required Billing Fields**: Select the billing contact fields required to process the transaction. **Tip:** Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
 * **Required Shipping Fields**: Select the shipping contact fields required to fulfill the order. For example, if you need the customer’s email address or phone number, select these.
 * **Merchant Capabilities**: Specify the payment capabilities supported by you as the merchant. You must include “3DS.”
 * **Supported Networks**: Specify one or more of the payment networks supported by you as the merchant.
 
 **Endpoint URLs**
 
-Only the **Payment Gateway URL** is required. This URL is called by Apple Pay to process the payment through the payment provider. 
+Only the **Payment Gateway URL** is required. This URL is called by Apple Pay to process the payment through the payment provider.
 
 The optional endpoint URLs are for receiving and managing any updates a customer might make before confirming the payment. These include:
 
@@ -464,6 +470,6 @@ The optional endpoint URLs are for receiving and managing any updates a customer
 * **Shipping Method Update URL**: Called by Apple Pay when the customer changes the shipping method.
 * **Shipping Contact Update URL**: Called by Apple Pay when the customer changes their shipping address information.
 * **Fallback URL**: A URL that opens in a web browser so the customer can complete the purchase if their device is unable to make payments using Apple Pay.
-* **Order Tracking URL**: Called by Apple Business Chat after completing the order; provides you with an opportunity to update the order information in your system.
+* **Order Tracking URL**: Called by Apple Messages for Business after completing the order; provides you with an opportunity to update the order information in your system.
 
 For more on these endpoints, see [here](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on the Apple developer site.

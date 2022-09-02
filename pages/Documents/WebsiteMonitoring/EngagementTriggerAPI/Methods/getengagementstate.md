@@ -12,7 +12,6 @@ permalink: engagement-trigger-api-methods-getengagementstate.html
 indicator: both
 ---
 
-
 This method receives an engagement ID and returns the engagement state if it exists on the page, or an empty object if it does not.
 
 **Syntax**
@@ -44,9 +43,9 @@ The method returns a JSON with the engagement information.
 
 ``json
 {
-  "state" : 0,
-  "desc" : "NA",
-  "engagementId" : 123
+  "state": 0,
+  "desc": "NA",
+  "engagementId": 123
 }
 ```
 
@@ -54,6 +53,6 @@ The method returns a JSON with the engagement information.
 
 | Name | Description | Type / Value |
 | :--- | :--- | :--- |
-| state  | The engagement state (defined by the availability of agents within the skill group). Available value: 0 - NA, 1 - online, 2 - offline | numeric |
+| state  | The engagement state (defined by the availability of agents within the skill group). Available value: 0 — NA, 1 — online, 2 — offline | numeric |
 | desc | State description (matching ENUM state): "NA", "online", "offline" | string |
 | engagementId | The engagement ID. | ALPHA_NUMERIC |

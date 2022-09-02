@@ -22,5 +22,3 @@ The setUserProfile API takes custom parameters about the consumer as an input an
 | :--- | :--- |
 | profile | The user’s profile |
 
-
-

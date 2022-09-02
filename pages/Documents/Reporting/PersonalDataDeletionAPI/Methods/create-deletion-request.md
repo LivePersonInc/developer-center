@@ -12,15 +12,15 @@ permalink: personal-data-deletion-api-methods-create-deletion-request.html
 indicator: both
 ---
 
-This API allows a the brand to submit a deletion request via one of the following methods:
+This API allows a brand to submit a deletion request via one of the following methods:
 
-1. Chat Engagement - deletion of the personal data that is related to specific chat engagement(s) (including transcripts, personally identifiable information (PII), etc.).
+1. Chat Engagement: Deletion of the personal data that is related to specific chat engagement(s) (including transcripts, personally identifiable information (PII), etc.).
 
-2. Messaging Conversation - deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
+2. Messaging Conversation: Deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
 
-3. consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). **Note**: in other APIs, the `consumerId` is referred to as `visitorId` (for example, the [Engagement History API](engagement-history-api-methods.html)). You can use that `visitorId` as part of this request to identify the specific visitor for which you'd like to request data deletion.
+3. consumerId: Deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). **Note:** In other APIs, the `consumerId` is referred to as `visitorId` (for example, the [Engagement History API](engagement-history-api-methods.html)). You can use that `visitorId` as part of this request to identify the specific visitor for which you'd like to request data deletion.
 
-4. ticketId - deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
+4. ticketId: Deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
 
 ### Request
 
@@ -43,10 +43,9 @@ This API allows a the brand to submit a deletion request via one of the followin
 
  **Request BODY Parameters**
 
-
 All fields are sent in a JSON format
 
-**Note**: Only one of the deletion types which appear below can be sent in a single request with a list of up to 100 unique ids.
+**Note:** Only one of the deletion types which appear below can be sent in a single request with a list of up to 100 unique ids.
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
@@ -102,8 +101,7 @@ Example 4:
   |429 |  Requests threshold for current month was reached|
   |500 |  Internal server error|  
 
-**Note**: by default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
-
+**Note:** By default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
 
   **Elements in the Response**
 

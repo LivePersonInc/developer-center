@@ -30,15 +30,15 @@ indicator: messaging
 
 ### Styling
 
-* Fonts can’t be configured - default Viber font will be used
+* Fonts can’t be configured — default Viber font will be used
 
 ### Sizing
 
-* Viber Card Images sizes - - It is recommend that you provide the highest resolution for the image without going over the 500kb limit.  Images are the set to **fit** the container
+* Viber Card Images sizes — It is recommend that you provide the highest resolution for the image without going over the 500kb limit. Images are the set to **fit** the container.
     * Only JPG and PNG are supported
 
 ### Error conditions
 
 * Agent or bot will receive an error when trying to send Viber Structured Content elements with the following character limitations:
-    * If  button text exceeds 25 characters
+    * If button text exceeds 25 characters
     * If structured content map element is applied

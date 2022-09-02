@@ -39,7 +39,6 @@ enum ConversationQueryType: String {
 }
 ```
 
-
 ### LPAuthenticationParams
 
 ```swift
@@ -61,7 +60,6 @@ enum LPAuthenticationType: Int {
 }
 ```
 
-
 ### LPCampaignInfo
 
 ```swift
@@ -73,7 +71,6 @@ class LPCampaignInfo: NSObject {
     var contextId: String
 }
 ```
-
 
 ### LPConversationCloseReason
 
@@ -96,8 +93,6 @@ class LPConversationHistoryControlParam: NSObject {
 }
 ```
 
-
-
 ### LPConversationHistoryMaxDaysDateType
 
 ```swift
@@ -115,7 +110,6 @@ enum LPConversationsHistoryStateToDisplay: Int {
     case close
 }
 ```
-
 
 ### LPConversationViewParams
 
@@ -151,7 +145,6 @@ class : NSObject {
 }
 ```
 
-
 ### LPLog
 
 ```swift
@@ -164,14 +157,12 @@ class LPLog: NSObject {
 }
 ```
 
-
 ### LPMonitoringInitParams
 ```swift
 class : NSObject {
     var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
 }
 ```
-
 
 ### LPMonitoringParams
 ```swift
@@ -181,7 +172,6 @@ class : NSObject {
     var pageId: String? // PageID to send the SDEs for
 }
 ```
-
 
 ### LPNotification
 

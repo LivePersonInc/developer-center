@@ -30,8 +30,7 @@ All future dates found in this documentation reflect approximations for upcoming
 
 2. Scan for files according to the request's parameters (reduce probability of timeout).
 
-3. In  Web Session, add to impression section controlGroup field ( a new field that will be added to the schema - version 1.0.0.35)
-
+3. In  Web Session, add to impression section controlGroup field (a new field that will be added to the schema — version 1.0.0.35)
 
 ### June 18th, 2017
 

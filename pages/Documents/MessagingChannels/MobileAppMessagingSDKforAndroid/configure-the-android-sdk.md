@@ -20,14 +20,13 @@ indicator: messaging
 
 You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
 
-
 ### Android Automatic Restore
 
 Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If enabled on an App, when reinstalling the application, all stored data gets restored to the device. For more details, see [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
 
 Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app. 
 
-**Note:**  If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
+**Note:** If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
 
 ```xml
 <application
@@ -53,19 +52,17 @@ Currently, the Mobile App Messaging SDK for Android does not support Automatic R
    android:fullBackupContent="@xml/lp_backup_rules"
    ```
 
-
-
 ### Branding
 
 You can customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file.
 
 #### Step 1. Create your branding.xml file and add design attributes
 
-1. In your Android Studio project, right-click your app and select **New > XML > Values XML File**.
+1. In your Android Studio project, right-click your app and select **New → XML → Values XML File**.
 
 2. Add design attributes to your **branding.xml** file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
-   {:.important}
+   {: .important}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
@@ -81,11 +78,9 @@ You can customize the look and feel of the conversation screen with your brandin
 
       If you want to define the background color for this avatar, override `agent_avatar_background_color` resource ID.
 
+   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
-   - [**lpmessaging_ui_secure_form_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_secure_form_progress_barxml)- Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
-
-
-   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
+   - [**lpmessaging_ui_image_progress_bar.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpmessaging_ui_image_progress_barxml) - Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
    - [**lpinfra_ui_ic_send_disabled.xml**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lpinfra_ui_ic_send_disabledxml) - You can display a different drawable to represent sending a message. Create a drawable file named **lpinfra_ui_ic_send_disabled.xml**, which overrides the SDK's default drawable.
 
@@ -107,9 +102,8 @@ You can customize the look and feel of the conversation screen with your brandin
 
    - **custom_font_name_non_conversation_feed** - Font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
 
-     {:.important}
+     {: .important}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).
-
 
 ### Callbacks interface
 
@@ -121,10 +115,9 @@ When using local intents, you can register for all Actions or to a specific Acti
 
 LivePersonIntents class provides several methods that help get the data out of the intent, without dealing with the Extras. For a full list of all possible Intents, see the [Android Callbacks Index](android-callbacks-index.html#livepersonintents).
 
-
 We provide an `IntentFilter` that contains all the intent Actions in `LivePersonIntents.getIntentFilterForAllEvents()` to register. Remember, these Intents are local only and must by registered through `LocalBroadcastManager`.
 
-##### Register `BroadcastReceiver` for all Intents:
+##### Register `BroadcastReceiver` for all Intents
 
 ```java
 LocalBroadcastManager.getInstance(
@@ -132,7 +125,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-##### Register `BroadcastReceiver` for a specific set of Intents:
+##### Register `BroadcastReceiver` for a specific set of Intents
 
 ```java
 IntentFilter filter = new IntentFilter();
@@ -144,9 +137,7 @@ LocalBroadcastManager.getInstance(
 );
 ```
 
-##### Catch the Broadcast:
-
-
+##### Catch the Broadcast
 
 ```java
 BroadcastReceiver <your receiver> = new BroadcastReceiver(){
@@ -155,24 +146,24 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
     Log.d(TAG, "Got LP intent event with action " + intent.getAction());
     switch (intent.getAction()){
       //handle the relevant actions from LivePersonIntents.ILivePersonIntentAction
-      ...
+      …
     }
   }
 };
 ```
 
-{:.important}
+{: .important}
 If you registered for multiple **Intents**, you must filter each one, using a **switch**.
 
 #### Callbacks
 
-##### Register the callback call:
+##### Register the callback call
 
 ```java
 public static void setCallback(final LivePersonCallback listener)
 ```
 
-##### Remove a callback call:
+##### Remove a callback call
 
 ```java
 public static void removeCallBack()
@@ -180,12 +171,11 @@ public static void removeCallBack()
 
 For more details, see the [Android Callbacks Index](android-callbacks-index.html).
 
-
 ### Conversations Lifecycle
 
 During the course of the conversation, consumers can take several actions such as Mark as urgent to receive a faster service, or Resolve conversation to let your agents know they have received their answers.
 
-#### LivePerson API:
+#### LivePerson API
 
 ```java
 public static void checkActiveConversation(final ICallback<Boolean, Exception> callback)
@@ -199,7 +189,7 @@ public static boolean clearHistory()
 
 For more details, see the [Android Methods](android-methods.html).
 
-#### Callbacks:
+#### Callbacks
 
 ```java
 void onConversationStarted(LPConversationData convData);
@@ -208,7 +198,6 @@ void onConnectionChanged(boolean isConnected);
 ```
 
 For more details, see the [Android Callbacks Index](android-callbacks-index.html#livepersoncallback).
-
 
 ### Google Maps Key
 
@@ -231,12 +220,10 @@ For example:
   tools:replace = "value" />
 ```
 
-
 ### Initialize the SDK with Monitoring Params
 
-{:.important}
+{: .important}
 To get the App key or appInstallationId, a new Conversation Source needs to be added on Conversational Cloud. For more information about it, contact your Account Team.
-
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
 
@@ -264,7 +251,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
     // Create Entry Points JSON
     JSONArray entryPoints = null;
     try {
-        entryPoints = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
+        entryPoints = new JSONArray("[tel://972737004000, https://www.liveperson.com/, sec://sport, lang://Eng]");
     } catch (JSONException e) {
         Log.e(TAG, "Error Creating Entry Points :: " + e);
     }
@@ -351,7 +338,6 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
       The SDK implements the controls on the action bar.
 
-
    * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
 
       **Note:** Make sure the init process finished successfully.   Call from the onInitSucceed callback.
@@ -364,7 +350,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
       **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-   * **Fragment mode - Handle CSAT (feedback)**  - Implements notifications of the CSAT screen state (**visible**/**invisible**).  For example, you can show a different title on the toolbar or show a close CSAT button. 
+   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button. 
 
       The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
@@ -393,10 +379,9 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
       }
       ```
 
-
       Once the CSAT screen is visible, `setFeedBackMode` is called with **true** value. When the CSAT is not visible anymore (skip/submitted), `setFeedBackMode` calls with **false** value.
 
-      Example - how to use **ConversationFragmentCallbacks** (code from the container Activity)
+      Example — how to use **ConversationFragmentCallbacks** (code from the container Activity)
 
       ```java
       class ContainerActivity extends FragmentActivity implements ConversationFragmentCallbacks {
@@ -420,7 +405,6 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
       }
       ```  
 
-
 6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
 
    ```java
@@ -435,13 +419,8 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    ```
    For more details, see the [logOut](android-logout.html) method.
 
-
-
-
-
 ### LivePerson events
 Add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
-
 
 1. Create a class named **IntentsHandler**.  
 
@@ -476,7 +455,7 @@ Add a class to handle LivePerson basic messaging events via BroadcastReceiver an
 
 3. Create a function named `createLivePersonReceiver` to handle the events.  
 
-   **Note:** Here we provide you with a wide example of handling most events. For more information, see [Liveperson events](android-callbacks-index.html).
+   **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
    Here is an example of a function which handles some LivePerson events:
 
@@ -517,8 +496,6 @@ Add a class to handle LivePerson basic messaging events via BroadcastReceiver an
 
    For more details about this function, see [Agent Avatar Tapped](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#agent-avatar-tapped).
 
-
-
 ### Logs and Info
 
 Upon errors, we send logs including different severity levels of errors and warnings.
@@ -529,9 +506,7 @@ Upon errors, we send logs including different severity levels of errors and warn
 public static void setIsDebuggable(boolean isDebuggable)
 ```
 
-**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
-
-
+**Example:** Liveperson.setIsDebuggable(BuildConfig.DEBUG)
 
 ### Messaging activity
 
@@ -594,7 +569,7 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 #### initActivityConversation
 You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
 
-**TIP** If the initialization succeeds, the `openActivity` method is called.
+**Tip:** If the initialization succeeds, the `openActivity` method is called.
 
 ```java
 private void  initActivityConversation() {
@@ -654,13 +629,11 @@ The SDK handles its own obfuscation and all its dependencies according to ProGua
 }
 ```
 
-
-
 ### UI
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, typing indication, etc.
 
-#### LivePerson callbacks:
+#### LivePerson callbacks
 
 ```java
 void onAgentTyping(boolean isTyping);
@@ -679,16 +652,16 @@ For the full list of Callbacks, see the [Android Callbacks Index](android-callba
 
 Pass and display consumer information to agents, and agent information to consumers. See more information about each method, see [setUserProfile](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setuserprofile) and [checkAgentID](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#checkagentid)
 
-#### Set the User Profile (Not an SDE):
+#### Set the User Profile (Not an SDE)
 
 ```java
 public static void setUserProfile(ConsumerProfile profile)
 ```
 
-{:.important}
+{: .important}
 When using SDEs (Authenticated Chat), SDEs have priority and will override the setUserProfile.
 
-#### Get Agent Details:
+#### Get Agent Details
 
 ```java
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)

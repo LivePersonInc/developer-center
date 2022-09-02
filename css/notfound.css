@@ -1,4 +1,5 @@
 /* Styling for 404 page */
+
 body {
   background-color: #162036;
 }
@@ -16,10 +17,9 @@ body {
   right: 0;
   text-align: center;
   padding: 40px;
-  text-align: center;
-  color: #ffffff;
+  color: #fff;
   border: solid 5px;
-  font-family: "Open Sans", Arial, Helvetica;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .notfoundbody {
@@ -32,8 +32,8 @@ body {
   bottom: 0;
   right: 0;
   text-align: center;
-  color: #ffffff;
-  font-family: "Open Sans", Arial, Helvetica;
+  color: #fff;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .notfoundlink{
@@ -47,7 +47,6 @@ body {
   text-align: center;
 }
 
-
 strong {
   color: #162036;
 }
@@ -57,13 +56,17 @@ a {
 }
 
 @media only screen and (max-width: 480px){
+
   .notfoundbody {
     display: none;
   }
+
   .notfoundtitle {
     font-size: 7em
   }
+
   .notfoundlink {
     font-size: 1.4em
   }
+
 }

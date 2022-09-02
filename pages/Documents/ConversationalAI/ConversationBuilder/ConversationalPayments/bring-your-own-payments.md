@@ -11,9 +11,9 @@ indicator: both
 ---
 
 ### Introduction
-Payments are an important part of eCommerce transactions, and it’s likely that you’ve been using one or more, well-tested payment systems as a part of your eCommerce operations for a long time. As you move from eCommerce to cCommerce (Conversational Commerce), it’s natural for you to want to leverage these payment systems (PayPal, WePay, Stripe, Square, etc.)  and related integrations in which you’ve invested. For example, you might have a complex checkout flow that you want to reuse, or a loyalty program that you want to continue. To help with the transition from eCommerce to cCommerce and to meet this need, Liveperson offers a feature known as “Bring Your Own Payments” or BYOP.
+Payments are an important part of eCommerce transactions, and it’s likely that you’ve been using one or more, well-tested payment systems as a part of your eCommerce operations for a long time. As you move from eCommerce to cCommerce (Conversational Commerce), it’s natural for you to want to leverage these payment systems (PayPal, WePay, Stripe, Square, etc.)  and related integrations in which you’ve invested. For example, you might have a complex checkout flow that you want to reuse, or a loyalty program that you want to continue. To help with the transition from eCommerce to cCommerce and to meet this need, LivePerson offers a feature known as “Bring Your Own Payments” or BYOP.
 
-BYOP is a simple integration feature that connects your existing payment system to Liveperson’s Conversational AI within the conversational flow.
+BYOP is a simple integration feature that connects your existing payment system to LivePerson’s Conversational AI within the conversational flow.
 
 ### The consumer experience
 With BYOP, the consumer’s cCommerce experience is similar to that in eCommerce transactions.

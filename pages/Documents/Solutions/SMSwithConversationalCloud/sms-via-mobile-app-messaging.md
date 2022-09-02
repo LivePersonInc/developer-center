@@ -54,11 +54,11 @@ Button showSMSbutton = (Button) findViewById(R.id.SMSbutton);
 showSMSbutton.setOnClickListener(new View.OnClickListener() {
   @Override
   public void onClick(View view) {
-      Intent smsIntent = new Intent(android.content.Intent.ACTION_VIEW);
-      smsIntent.setType("vnd.android-dir/mms-sms");
-      smsIntent.putExtra("address", "5551234567");
-      smsIntent.putExtra("sms_body", "Testing hello 123");
-      startActivity(Intent.createChooser(smsIntent, "SMS:"));
+    Intent smsIntent = new Intent(android.content.Intent.ACTION_VIEW);
+    smsIntent.setType("vnd.android-dir/mms-sms");
+    smsIntent.putExtra("address", "5551234567");
+    smsIntent.putExtra("sms_body", "Testing hello 123");
+    startActivity(Intent.createChooser(smsIntent, "SMS:"));
   }
 });
 ```
@@ -75,48 +75,45 @@ Requires two frameworks: Messages framework, MessagesUI framework.
 import UIKit
 import MessageUI
 
-class ViewController: UIViewController, MFMessageComposeViewControllerDelegate , UINavigationControllerDelegate{
+class ViewController: UIViewController, MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate{
 
-   override func viewDidLoad() {
-       super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
 
-   }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    sendMessage()
+  }
 
-   override func viewDidAppear(_ animated: Bool) {
-       super.viewDidAppear(animated)
-       sendMessage()
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 
-   }
+  func sendMessage() {
+    if MFMessageComposeViewController.canSendText(){
+       let messageVC = MFMessageComposeViewController()
+       messageVC.delegate = self
+       messageVC.body = "Enter a message";
+       messageVC.recipients = ["Enter tel-nr"]
+       messageVC.messageComposeDelegate = self;
 
-   override func didReceiveMemoryWarning() {
-       super.didReceiveMemoryWarning()
+       self.present(messageVC, animated: false, completion: nil)
+    }
+  }
 
-   }
-
-   func sendMessage() {
-       if MFMessageComposeViewController.canSendText(){
-           let messageVC = MFMessageComposeViewController()
-           messageVC.delegate = self
-           messageVC.body = "Enter a message";
-           messageVC.recipients = ["Enter tel-nr"]
-           messageVC.messageComposeDelegate = self;
-
-           self.present(messageVC, animated: false, completion: nil)
-       }
-   }
-
-   func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-       switch (result) {
-       case .cancelled:
-           print("Message was cancelled")
-           self.dismiss(animated: true, completion: nil)
-       case.failed:
-           print("Message failed")
-           self.dismiss(animated: true, completion: nil)
-       case .sent:
-           print("Message was sent")
-           self.dismiss(animated: true, completion: nil)
-       }
-   }
+  func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+    switch (result) {
+    case .cancelled:
+       print("Message was cancelled")
+       self.dismiss(animated: true, completion: nil)
+    case.failed:
+       print("Message failed")
+       self.dismiss(animated: true, completion: nil)
+    case .sent:
+       print("Message was sent")
+       self.dismiss(animated: true, completion: nil)
+    }
+  }
 }
 ```

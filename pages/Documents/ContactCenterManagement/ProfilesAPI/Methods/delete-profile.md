@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
 
-
 order: 80
 permalink: profiles-api-methods-delete-profile.html
 

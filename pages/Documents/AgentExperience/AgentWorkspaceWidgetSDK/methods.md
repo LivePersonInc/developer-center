@@ -154,14 +154,14 @@ _Note: The updateCallback must be the same callback provided for the bind._
 
 |Command |Description |Const |Payload |
 |:--- |:--- |:--- |:--- |
-| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {...}} <br><br> quickReplies is optional. |
-| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, quickReplies: {...}, metadata: [...]} <br><br> quickReplies and metadata are optional |
+| "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {…}} <br><br> quickReplies is optional. |
+| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {…}, quickReplies: {…}, metadata: […]} <br><br> quickReplies and metadata are optional |
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
-| "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {...//File or Blob}, name: "name_of_file.png"} |
+| "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {…//File or Blob}, name: "name_of_file.png"} |
 
-<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system</div>
+<div class="important">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system.</div>
 
-Example 1 - 'Write ChatLine':
+Example 1 — 'Write ChatLine':
 
 ```javascript
 {
@@ -180,7 +180,7 @@ Example 1 - 'Write ChatLine':
 }
 ```
 
-Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+Example 2 — 'Write ChatLine' with Quick Replies. Please see [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
@@ -201,7 +201,7 @@ Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-mes
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -245,7 +245,7 @@ Example 2 - 'Write ChatLine' with Quick Replies. Please see [this link](rich-mes
 }
 ```
 
-Example 3 - 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
+Example 3 — 'Write StructuredContent'. Please see [this link](structured-content-templates.html) for the Structured Content JSON schema:
 
 ```javascript
 {
@@ -278,7 +278,7 @@ Example 3 - 'Write StructuredContent'. Please see [this link](structured-content
 }
 ```
 
-Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-overview.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
+Example 4 — 'Write StructuredContent' with Quick Replies. Please see [this link](rich-messaging-structured-content-overview.html) for the Structured Content JSON schema, and [this link](rich-messaging-quick-replies-overview.html) for the Quick Replies JSON schema:
 
 ```javascript
 {
@@ -307,7 +307,7 @@ Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link]
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -355,7 +355,7 @@ Example 4 - 'Write StructuredContent' with Quick Replies. Please see [this link]
 }
 ```
 
-Example 5 - 'Send Notification':
+Example 5 — 'Send Notification':
 
 ```javascript
 {
@@ -374,7 +374,7 @@ Example 5 - 'Send Notification':
 }
 ```
 
-Example 6 - 'Send File':
+Example 6 — 'Send File':
 
 ```javascript
 {
@@ -513,7 +513,6 @@ var updateCallback = function(data) {
     }
 };
 
-
 {
 var onSuccess = function(data) {
     // Do something with the returning data
@@ -532,13 +531,11 @@ var onError = function(err) {
         }
     }
 
-
 lpTag.agentSDK.init({notificationCallback: notificationHandler});
 
 lpTag.agentSDK.get('city', onSuccess, onError);
 };
 ```
-
 
 ### setConsumerProfile
 

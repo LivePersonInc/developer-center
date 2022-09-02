@@ -33,8 +33,8 @@ Retrieves a list of Predefined Content items from a specific account.
 | Name            | Description                                                                  | Type    | Notes                                          |
 |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
 | v               | API version                                                                  | Double  | Required, Default value: 2.0 Validation fail error code: 400  |
-| fields          | Response property type to include in the response entity.                    | Boolean | Deprecated - use select                        |
-| field_set       | Alias of response property types to include in the response entity.          | Boolean | Deprecated - use select                        |
+| fields          | Response property type to include in the response entity.                    | Boolean | Deprecated — use select                        |
+| field_set       | Alias of response property types to include in the response entity.          | Boolean | Deprecated — use select                        |
 | include_deleted | Flag indicating whether deleted entities should be returned in the response. | Boolean | Valid values: True/False. Default value: False |
 | sanitize_data   | Flag indicating whether the text should be sanitized (Antisamy).             | Boolean | Valid values: True/False. Default value: False |
 | lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |

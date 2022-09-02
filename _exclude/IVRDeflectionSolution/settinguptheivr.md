@@ -25,8 +25,6 @@ To start using the **IVR Deflection Solution for Chat**, set up a LiveEngage cam
 
     ![IVR3](img/ivr3.png)
 
-
-
 ### Best Practices for Setting up your IVR
 
 In order to set up your IVR, a scenario must be created by adding a modifying VXML snippet to the IVR decision tree. IVRs support the ability to decide when a scenario is presented to the visitor.
@@ -63,7 +61,7 @@ The [Appendix](products-channels-ivr-deflection-solution-appendix.html) provides
 <prompt>A chat link will be send to <say-as interpret-as="vxml:phone"><value expr="user"/></say-as>. Thank you and good bye.</prompt>
 ```
 
-**Note**: Other SMS providers may use a different method to send SMS text messages.
+**Note:** Other SMS providers may use a different method to send SMS text messages.
 
 ### Impact of the IVR Deflection Solution on Existing Functionality
 

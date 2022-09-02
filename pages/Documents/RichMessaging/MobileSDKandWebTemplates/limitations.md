@@ -11,7 +11,6 @@ permalink: mobile-sdk-and-web-templates-limitations.html
 indicator: both
 ---
 
-
 ### Maps
 
 Both the web window (visitor side) and the workspace (agent side) do not show map by user-specific location but instead shows a static snapshot, the default map view defined.

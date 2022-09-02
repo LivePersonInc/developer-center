@@ -22,11 +22,9 @@ In this Quick Start, we will cover the steps that will get you up and running wi
 **Here are some of the advantages that the new framework provides:** 
 - XCFramework uses Swift Module Interface which lists out all the public APIs of the module in a textual format that behaves like source code. Since they behave like source code, future versions of the Swift Compiler will be able to import the module interfaces created with older versions. This removes the version-lock which is currently in Swift.
 
-- In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework - in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
-
+- In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework — in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
 
 - XCFramework packages all dependencies under all target platforms and architectures into one single bundle. More information about XCFramework can be found [here](https://developer.apple.com/videos/play/wwdc2019/416/), and the Xcode help article can be found [here](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07). 
-
 
 ### Prerequisites
 
@@ -45,7 +43,7 @@ You can install Conversational Cloud Mobile App Messaging SDK for iOS using a co
 
 <div class="important">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
 
-#### *Option 1: Automatically using CocoaPods*
+#### Option 1: Automatically using CocoaPods
 
 You can use CocoaPods, a dependency manager for Swift and Objective-C projects, to scale your projects elegantly. It provides a standard format for managing external libraries.
 
@@ -61,9 +59,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod init
    ```
 
-   <div class="important">
-   The Podfile must be created under your project's folder.
-   </div>
+   <div class="important">The Podfile must be created under your project's folder.</div>
 
 3. Open the Podfile.
 
@@ -74,13 +70,12 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    Add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name to YOUR target name:
 
    ```ruby
-   source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-   platform :ios, '9.0'
-   use_frameworks!
+    platform :ios, '13.0'
+    use_frameworks!
 
-   target '<Your Target Name>' do  
-      pod 'LPMessagingSDK'
-   end
+    target '<target name>' do  
+        pod 'LPMessagingSDK', :source => "https://github.com/LivePersonInc/iOSPodSpecs.git" 
+    end
    ```
 
 4. In your project folder, install the dependencies for your project and then upgrade to the latest SDK:
@@ -90,7 +85,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod update
    ```
 
-#### *Option 2: Manually copying the libraries to your Xcode Project*
+#### Option 2: Manually copying the libraries to your Xcode Project
 
 1. [Download](https://github.com/LivePersonInc/iOSFrameworks) the SDK package.
 
@@ -101,7 +96,6 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
    1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  
-
 
 ### Step 2: Configure project settings to connect Conversational Cloud SDK
 
@@ -126,8 +120,8 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    <string>Microphone Privacy Setting for Conversational Cloud Mobile App Messaging SDK for iOS</string>
    ```
 
-
 ### Step 3: Initialize the LPMessagingSDK
+
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
 1. **Set up your account information.** 
@@ -136,7 +130,7 @@ Before you can show a conversation, you must initialize the Messaging SDK.
 
 2. **Set up instance of LPMessagingSDK** for the accountID provided.
 
-3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a jwt or authentication code from your authentication server.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a JWT or authentication code from your authentication server. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
 4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
 
@@ -173,9 +167,9 @@ class DocumentationViewController: UIViewController {
             fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
         }
 
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
         /*
-        Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+        Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a JWT or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
         */
         let authenticationParams = LPAuthenticationParams(authenticationCode: nil,
                                                                          jwt: jwt,
@@ -183,7 +177,7 @@ class DocumentationViewController: UIViewController {
                                                        certPinningPublicKeys: nil,
                                                           authenticationType: .authenticated)
          
-        let welcomeMessageParam = LPWelcomeMessage(message: "How can i help you today?", frequency: .FirstTimeConversation)
+        let welcomeMessageParam = LPWelcomeMessage(message: "How can I help you today?", frequency: .FirstTimeConversation)
         
         let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
         
@@ -209,11 +203,9 @@ class DocumentationViewController: UIViewController {
         }
     }
 }
-
 ```
 
 ```objc
-
 #import "DocumentationViewController.h"
 #import <LPMessagingSDK/LPMessagingSDK.h>
 
@@ -244,9 +236,8 @@ NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdG
     #pragma mark Show LPMessagingSDK View Stack and Conversation View Controller.
 
     /*
-     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a JWT or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
      */
-
 
     LPAuthenticationParams *authenticationParams = [[LPAuthenticationParams alloc] initWithAuthenticationCode:nil
                                                                                                           jwt:jwt
@@ -256,7 +247,7 @@ NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdG
 
     id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery:accountID
                                                                                                        campaignInfo:nil];
-    LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
+    LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may I help you today?"
                                                                              frequency:MessageFrequencyFirstTimeConversation];
                                                                                   
     LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
@@ -316,7 +307,7 @@ class DocumentationViewController: UIViewController {
             fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
         }
     
-        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
     
         /*
         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
@@ -328,7 +319,6 @@ class DocumentationViewController: UIViewController {
         containerViewController: nil, isViewOnly: false, conversationHistoryControlParam: historyControlParam, welcomeMessage: welcomeMessage)
         LPMessaging.instance.showConversation(conversationViewParams)
     }
-
 
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
         
@@ -379,7 +369,7 @@ class DocumentationViewController: UIViewController {
         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
         */
         
-        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage: @"How may i help you today?"
+        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage: @"How may I help you today?"
                                                                                  frequency: MessageFrequencyFirstTimeConversation];
         
         LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
@@ -443,7 +433,7 @@ func LPMessagingSDKConversationViewControllerDidDismiss() {
 
 ### Next Steps
 
-Congratulations!  You're all set.  
+Congratulations! You're all set.  
 
 You can now do any of the following:
 
@@ -455,20 +445,19 @@ You can now do any of the following:
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
 
-### Upgrading from older SDK versions to 6.0:
+### Upgrading from older SDK versions to 6.0
 
 This guide will help current users of older versions of the SDK to upgrade to the new SDK 6.0 and upwards.  
 
 **How to upgrade?**
 
 Before you start, important to note:
-* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version - That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
+* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version. That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
 * The class '**LPMessagingSDK**' has been renamed  '**LPMessaging**'.
-
 
 **Step 1:**
 * Rename **LPMessagingSDK** to **LPMessaging**.
-* Remove of all import statements such as import LPInfra, import LPAMS, import LPMonitoring - keep only: import LPMessagingSDK.
+* Remove of all import statements such as import LPInfra, import LPAMS, import LPMonitoring — keep only: import LPMessagingSDK.
 
 **Step 2:**
 * Replace any class/facade function calls to the new LPMessaging class. Examples:

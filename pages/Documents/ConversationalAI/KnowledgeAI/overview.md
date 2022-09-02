@@ -12,7 +12,7 @@ indicator: both
 ---
 
 {: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
 KnowledgeAI unifies and leverages your brand’s content to provide fast answers to common questions and issues, and effectively automate consumer conversations at scale. Using KnowledgeAI, you can ingest and transform your existing content into messaging-ready answers and seamlessly answer consumer questions in rich, automated conversations.
@@ -44,7 +44,7 @@ If you have a CMS with well-curated content that you want to leverage in bot con
 
 * Salesforce
 * Zendesk
-* Contentful (Check out their [blog post](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/) on integrating!)
+* Contentful (check out their [blog post on integrating](https://www.contentful.com/blog/2021/10/20/integrating-contentful-liveperson-knowledgebase/))
 
 #### Google sheets
 If your tool of choice is a simple Google sheet, you can [add an internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html) and link the sheet to it. Once you add the knowledge base using the sheet, you can follow one of two workflows:
@@ -61,7 +61,7 @@ If you’re starting a knowledge base from scratch, and you prefer to work direc
 ### Access KnowledgeAI
 
 1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **KnowledgeAI**.
+2. In the [Conversational AI dashboard](platform-overview.html), click **KnowledgeAI**.
 
 ### Getting started
 

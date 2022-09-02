@@ -30,7 +30,6 @@ indicator: both
 
 **'Init’ with 'bind’ (Multiple events)**
 
-
 ```javascript
 {
   }
@@ -100,7 +99,7 @@ function _onEvent(eventData) {
     </head>
     <body>
     <h1>Test Widget</h1>
-    <script type="text/javascript">
+    <script>
       (function () {
           var lpWidgetSDK,
               widgetSDKAPI = lpTag.LPWidgetSDK.API;

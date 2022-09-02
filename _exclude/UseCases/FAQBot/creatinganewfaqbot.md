@@ -71,7 +71,6 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 </tbody>
 </table>
 
-
 * **Custom Data Fields:**
 
 <table>
@@ -88,7 +87,6 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
   </tr>
 </tbody>
 </table>
-
 
 After you have reviewed, and tweaked, hit Save
 

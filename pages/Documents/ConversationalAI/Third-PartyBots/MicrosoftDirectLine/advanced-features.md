@@ -15,7 +15,7 @@ This delay will be added before a message or action provided in this activity wi
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -71,7 +71,7 @@ properties. An example of such case is below:
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "This is a private text",
   "channelData": {
@@ -113,7 +113,7 @@ property (further information about `channelData` can be found
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "Some Conversation Text",
   "channelData": {
@@ -144,7 +144,7 @@ The array in the multiMessage property can contain the objects identified by the
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -206,9 +206,9 @@ that `encodedMetadata` is written in camel case. An example of the simple text m
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
-  "text": "Hi i am sending a text with encoded metadata!!",
+  "text": "Hi I am sending a text with encoded metadata",
   "channelData": {
     "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
   }
@@ -225,9 +225,9 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
-  "text": "Hi i am sending a structured content with encoded metadata!!",
+  "text": "Hi I am sending a structured content with encoded metadata",
   "channelData": {
     "metadata": [
       {
@@ -284,10 +284,10 @@ For sending Encoded Metadata with multiple responses one must provide an additio
         "encodedMetadata": "ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=",
         "value": {
           "metadata": [
-            // ... Some structured content metadata
+            // … Some structured content metadata
           ],
           "structuredContent": {
-            // ... Some structured content object
+            // … Some structured content object
           }
         }
       }
@@ -306,7 +306,7 @@ During a conversation, it is possible to trigger a LivePerson Function that is d
 
 To invoke a LivePerson Function, we utilize the `channelData` `action-parameter` as we did for the above examples and add the `lambdaUid` of the LivePerson Function.
 
-To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-foundations-external-invocation.html#function-uuid)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 
@@ -358,7 +358,7 @@ property (further information about `channelData` can be found
       "lpEvent": {
         "event": {
           "type": "RichContentEvent"
-          // ...
+          // …
           // More properties will be populated in this object depending on type of rich content is received
         }
       },

@@ -30,7 +30,6 @@ POST       | https://[{domain}](/agent-domain-domain-api.html)/messaging_history
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
-
 | Name            | Description                | Type/Value | Required |  Notes |
 | :---------      | :---------------           | :----------| :--------|  :-----|
 | conversationId | ID of the conversation to search    | string | Optional (conditional) | Optional if 'conversationIds' was provided

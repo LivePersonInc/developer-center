@@ -26,7 +26,7 @@ You should get a shell line.
 
 Make sure that you have closed any previous conversation sessions by clicking ``Close conversation`` in the Agent Workspace.
 
-### Step 1 - Find Your Consumer ID
+### Step 1 — Find Your Consumer ID
 
 When you get messages from the server, you must identify which messages were published by you, and which were published by the agent. To do so, you must know your ``consumerId``. To find out your ``consumerId``, refer to the content of the LP_JWT by base64-decoding the middle part of the JWT (between the two periods):
 
@@ -48,9 +48,10 @@ You will now be able to see the content of the JWT:
 
 The ``sub`` property contains your ``consumerId``.
 
-**Note**: If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
+**Note:** If you encounter issues when using the shell ``base64`` command, you can use online tools such as [base64decode.org](https://www.base64decode.org/).
 
-### Step 2 - Create a Conversation
+### Step 2 — Create a Conversation
+
 Open the WebSocket connection using the following:
 
 ```sh
@@ -79,21 +80,23 @@ In response, you will get the ID of the new conversation.
 
 Write down the ``conversationId`` from the response. We will need it in the next steps.
 
-### Step 3 - Agent sends Messages
+### Step 3 — Agent Sends Messages
+
 In this stage, switch to the Agent Workspace from Step 1, and accept the ring of the incoming request. Click the blinking ``Accept`` button.
 
 ![agent-ring](img/ring.png)
 
 Type a few messages in the Agent Workspace.
 
-### Step 4 - Subscribe to Conversation Content
+### Step 4 — Subscribe to Conversation Content
 
 In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the ``__YOUR_CONVERSATION_ID__`` with the ``consersationId`` you got in the response in the previous step, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":"22","body":{"fromSeq":0,"dialogId":"__YOUR_CONVERSATION_ID__"},"type":"ms.SubscribeMessagingEvents"}
 ```
-**Note**: you can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
+
+**Note:** You can use the message builder (<a href="consumer-int-msg-sub-events.html"><i class="fa fa-magic" aria-hidden="true"></i></a>) to build the above message.
 
 In response, you will get a subscription success message:
 

@@ -18,7 +18,7 @@ The integration allows you to transfer information directly from the Visit Info 
 
 In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey into the application to pre-populate specific fields.
 
-The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Conversation History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
+The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) — Visit Info, Predefined Content, Page Navigation, Agent Survey, and Conversation History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
 
 ![AgentWorkspaceScreenshot](img/agentworkspacewidget1.png)
 
@@ -94,4 +94,4 @@ Your new widget will now be displayed as an additional icon next to the existing
 
 * **Automatic focus management may be problematic:** Applications with focus stealing can cause issues in the user interface of the Agent Workspace.
 
-**Note**: To integrate with your **Salesforce** application, open a ticket to Salesforce support and request the removal of the X-Frame option from your organization’s Salesforce pages. This will allow you to open Salesforce in the widget. Agents must log into Salesforce in a separate browser tab (or through SSO) prior to accepting chats.
+**Note:** To integrate with your **Salesforce** application, open a ticket to Salesforce support and request the removal of the X-Frame option from your organization’s Salesforce pages. This will allow you to open Salesforce in the widget. Agents must log into Salesforce in a separate browser tab (or through SSO) prior to accepting chats.

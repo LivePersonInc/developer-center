@@ -30,7 +30,7 @@ Deletes Predefined Content items from a specific account.
 
 **Request Body**
 
-`['12345’,’67890’]`
+`['12345','67890']`
 
 **Path Parameters**
 

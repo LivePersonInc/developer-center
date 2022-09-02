@@ -55,9 +55,9 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK - request succeeded.  |
-| 400 | Bad request - Problem with body or query parameters. |
-| 500 | Internal server error. |
+| 200 | OK — request succeeded |
+| 400 | Bad request — Problem with body or query parameters |
+| 500 | Internal server error |
 
 **Response Body**
 
@@ -66,7 +66,6 @@ client_id=xyz&client_secret=yqr&grant_type=refresh_token&refresh_token=SplxlOBeZ
 | access_token | token to use as authorization when interacting with LE services  |
 | token_type | Always Bearer |
 | refresh_token | token to use when requesting access token refresh  |
-
 
 *Note: The Bearer is the access_token attribute*
 
@@ -81,6 +80,5 @@ Example:
 ```
 
 *Note: Response contains refresh token to be used when making a refresh request.*
-
 
 *The current LP Identity service implementation will extend the SSO session as long as the app keeps calling the refresh endpoint. every configured period of time*

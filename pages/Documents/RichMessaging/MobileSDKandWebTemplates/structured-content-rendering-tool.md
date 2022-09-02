@@ -12,15 +12,11 @@ permalink: mobile-sdk-and-web-templates-structured-content-rendering-tool.html
 indicator: both
 ---
 
-The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html).
-
-You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock).
+The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock). In addition to the Json-Pollock library, the [Rich Content Validation](https://github.com/LivePersonInc/rich-content-validator) library can be used for validating rich content across different channels. 
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
 
-<div class="important">
-The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.
-</div>
+<div class="important">The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.</div>
 
 ### Installation
 
@@ -30,11 +26,11 @@ npm i json-pollock --save
 
 In the `dist` folder you'll find the following files:
 
-`json-pollock.bundle.min.js`  - this script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header - no additional actions are needed from your side. It also supports umd - meaning you can consume it using AMD, CommonJS and as simple script (see examples below).
+`json-pollock.bundle.min.js`: This script bundle contains both package and styles. Once you import it into your code it will inject the needed styles into your page header — no additional actions are needed from your side. It also supports umd — meaning you can consume it using AMD, CommonJS and as simple script (see examples below).
 
-`json-pollock.min.js` - use this script if you want to handle the import of the styles by yourself. If you use this option. you should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
+`json-pollock.min.js`: Use this script if you want to handle the import of the styles by yourself. If you use this option. You should also take care to link `json-pollock.min.css` to your web page. Also supports umd.
 
-`json-pollock.global.min.js` - this script is the same as `json-pollock.min.js`, however it does not support umd - it only puts JsonPollock on the current `this` (usually the `window` object). Use this in case you inject the package into sites that are not managed by you and you don't know if it uses AMD or not.
+`json-pollock.global.min.js`: This script is the same as `json-pollock.min.js`, however it does not support umd — it only puts JsonPollock on the current `this` (usually the `window` object). Use this in case you inject the package into sites that are not managed by you and you don't know if it uses AMD or not.
 
 ### Examples
 
@@ -51,17 +47,17 @@ A `script` tag:
 
 Following examples are relevant only for `json-pollock.bundle.min.js` and `json-pollock.min.js`:
 
-Using [RequireJS](http://requirejs.org/):
+Using [RequireJS](https://requirejs.org/):
 
 Map the JsonPollock path in the RequireJs config, and then:
 
 ```javascript
 require(["JsonPollock"],(jsonPollock) => {
-    ...
+    …
 })
 ```
 
-Using [CommonJS](http://requirejs.org/docs/commonjs.html):.
+Using [CommonJS](https://requirejs.org/docs/commonjs.html):
 
 ```javascript
 const JsonPollock = require("JsonPollock");
@@ -71,7 +67,7 @@ const JsonPollock = require("JsonPollock");
 
 **init**
 
-You can call the `init` function if you want to configure JsonPollock - it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
+You can call the `init` function if you want to configure JsonPollock — it is not mandatory; if you don't call it, JsonPollock will be initialized with defaults.
 
 ```javascript
 JsonPollock.init({
@@ -81,7 +77,7 @@ JsonPollock.init({
 
 **render**
 
-The *render* function renders json into a DOM element.
+The *render* function renders JSON into a DOM element.
 
 ```javascript
 const content = {
@@ -139,10 +135,10 @@ JsonPollock.unregisterAllActions();
 Prior to the rendering, the JSON object is validated against the JSON template. If it fails to validate, the error object will also include an *errors* property that will hold the validation errors.
 
 ```javascript
-...
+…
 try {
     const rooEl = JsonPollock.render(json);
-    ...
+    …
 } catch(e) {
 	console.log(e.message);    // error message
 	console.log(e.errors);     // validation errors

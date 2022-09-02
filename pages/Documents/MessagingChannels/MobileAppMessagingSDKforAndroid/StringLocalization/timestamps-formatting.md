@@ -29,12 +29,12 @@ We define 3 configurable formatting resources:
 ```xml
 <string name="lp_date_format"></string>
 ```
-- For time only (bubble’s timestamp & off hours time in case of today/tomorrow):
+- For time only (bubble’s timestamp and off hours time in case of today/tomorrow):
 
 ```xml
 <string name="lp_time_format"></string>
 ```
-- For date & time together (resolve message & off hours time in case of other date):
+- For date and time together (resolve message and off hours time in case of other date):
 
 ```xml
 <string name="lp_date_time_format"></string>

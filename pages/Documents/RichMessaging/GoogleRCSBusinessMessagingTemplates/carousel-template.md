@@ -42,9 +42,9 @@ The RCS carousel is a horizontally scrollable carousel of up to 10 vertical rich
     <td>type</td>
     <td>Types of basic elements supported by Structured Content framework.
 
-If using RCS Cards - type of header element should always be set to "vertical" or “horizontal,” per the wanted user experience.
+If using RCS Cards — type of header element should always be set to "vertical" or “horizontal,” per the wanted user experience.
 
-If using RCS Carousels - type of header element will always be “carousel”</td>
+If using RCS Carousels — type of header element will always be “carousel”</td>
     <td>Enum</td>
     <td>Y</td>
   </tr>
@@ -96,7 +96,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
   <tr>
     <td>size</td>
     <td>Defines the element size. Will always be set to ‘large’ in RCS cards and carousels.</td>
-    <td>Enum - small/medium/large</td>
+    <td>Enum — small/medium/large</td>
     <td>N</td>
   </tr>
   <tr>

@@ -12,7 +12,7 @@ redirect_from:
 <br>
 LivePerson offers a variety of Data APIs that are available for our customers to use in order to retrieve their contact center’s information. Each API has its own specific attributes and can be used for different use cases. The purpose of this document is to give an overview of the different APIs and when they should both be used; for more detailed information on how to use them, please see each API's documentation.
 
-**Note**: not all APIs work with both Messaging and Chat; the type of interactions that a certain API works with is listed next to its title. In addition, the **Personal Data Deletion API** is not covered in this document since it functions differently than the rest of the Data APIs. Please see [its documentation](/personal-data-deletion-overview.html) for more info.
+**Note:** Not all APIs work with both Messaging and Chat; the type of interactions that a certain API works with is listed next to its title. In addition, the **Personal Data Deletion API** is not covered in this document since it functions differently than the rest of the Data APIs. Please see [its documentation](/personal-data-deletion-overview.html) for more info.
 
 ### Messaging Interactions API (Messaging only)
 
@@ -32,13 +32,11 @@ This API exposes open and closed conversations, including their transcript and r
 
 * The **All Conversations** tab in Conversational Cloud is also built on top of this API.
 
-
 #### Limitations
 
 * Engagement attributes comprised of numbers that contain more than three consecutive digits cannot currently be searched for.
 
 * While the engagement attributes are exposed in near real-time, the ability to search according to them is only available after two hours.
-
 
 ### Agent Metrics API (Messaging only)
 
@@ -80,7 +78,6 @@ This API exposes information about the contact center at the account, skill, and
 
 * The **data bar and dashboard** in Conversational Cloud are also built on top of this API.
 
-
 ### Engagement History API (Chat)
 
 [Documentation](data-engagement-history-overview.html)
@@ -109,7 +106,7 @@ This API exposes closed chats with all their related data (including transcripts
 
 [Documentation](data-data-access-overview.html)
 
-Expose raw data about the agent activity & visitor journey (including engagements and surveys).
+Expose raw data about the agent activity and visitor journey (including engagements and surveys).
 
 | Freshness | Format | Granularity |
 |-----------|--------|-------------|

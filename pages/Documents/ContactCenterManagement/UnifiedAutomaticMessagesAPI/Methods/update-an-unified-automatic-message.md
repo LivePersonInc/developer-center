@@ -28,7 +28,6 @@ Updates an existing Unified Automatic Message for a specific account.
  |:----------|  :--------------|  :--------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
 
-
 **Query Parameters**
 
 | Name            | Description                                                                  | Type    | Notes                                          |
@@ -47,7 +46,6 @@ Updates an existing Unified Automatic Message for a specific account.
  |Authorization | Contains token string to allow request authentication and authorization. |
 | If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. |
 | Content-Type | application/json |
-
 
 **Request Body**
 

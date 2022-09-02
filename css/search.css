@@ -8,8 +8,7 @@
   margin-right: 0 !important;
   overflow-y: auto;
   background: var(--body-background);
-
-  box-shadow: 0px 8px 16px rgba(129, 130, 153, 0.64);
+  box-shadow: 0 8px 16px rgba(129, 130, 153, 0.64);
   border-radius: 4px;
 }
 
@@ -37,7 +36,7 @@
 
 .searchtitle {
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: Inter, sans-serif;
 }
 
 span.documentContainer {
@@ -47,7 +46,7 @@ span.documentContainer {
 }
 
 span.searchcontentcontainer {
-  font-family: "Roboto", Arial;
+  font-family: 'Space Grotesk', sans-serif;
   overflow-wrap: break-word;
   font-size: 14px;
   font-weight: normal;
@@ -63,7 +62,7 @@ span.searchcontentcontainer {
 
 .aa-empty {
   font-size: 21px;
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   text-decoration: none;
   color: var(--link-color);
   font-weight: bold;

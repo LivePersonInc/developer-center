@@ -68,7 +68,7 @@ Response example:
 }
 ```
 
-**Notes**:
+**Notes:**
 
 * The calculation of wait time is based on a statistical estimate and may change constantly.
 

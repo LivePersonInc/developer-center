@@ -13,6 +13,21 @@ indicator: both
 
 You can add custom code to an interaction. The code can be executed before the interaction runs, after the user has responded to the interaction, or after the interaction runs.
 
+### Requirements
+
+Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
+### Custom code indicator
+An interaction that contains custom code displays a green dot:
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator.png">
+
+Check for this to understand at a glance whether there's code in the Pre-Process Code, Process User Response code, or Post-Process Code in the interaction.
+
+You'll also see this green dot next to the name of any code tab that contains custom code:
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator2.png">
+
 ### Access the Custom Code panel
 
 1. Select the interaction.
@@ -24,20 +39,11 @@ You can add custom code to an interaction. The code can be executed before the i
 
 There are three tabs for adding code:
 
-* Process User Response
 * Pre-Process Code
 * Post-Process Code
+* Process User Response
 
 Use the desired tab to add the code. You can use the built-in [scripting functions](conversation-builder-scripting-functions-functions-list.html) to access variables and manipulate data.
 
-### Pre-Process Code
-
-Use this area to add JavaScript code that executes before the interaction runs. This can be useful for any kind of processing you want to do before executing the interaction.
-
-### Process User Response
-
-Use this area to add JavaScript code that executes after the user has responded to the interaction. This code can be used in place of the response conditions, or in conjunction with them after a successful match.
-
-### Post-Process Code
-
-Use this area to add JavaScript code that executes after the interaction runs. This can be useful for any kind of processing you want to do after executing the interaction.
+{: .important}
+For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).

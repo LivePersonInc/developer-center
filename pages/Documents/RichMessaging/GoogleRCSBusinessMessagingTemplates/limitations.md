@@ -13,7 +13,7 @@ indicator: messaging
 ### General limitations
 
 * A rich card can contain any or all of the supported elements: image, title, subtitle, buttons. However, it **must contain at least an image** or title to be valid.
-* Google RCS Business Messaging allows consumers to perform various actions using button actions - share user location, dial phone number, add to calendar, payment request  - *these actions are not currently supported  by LivePerson's templates.*
+* Google RCS Business Messaging allows consumers to perform various actions using button actions — share user location, dial phone number, add to calendar, payment request — *these actions are not currently supported  by LivePerson's templates.*
 
 ### Element limitations
 
@@ -27,13 +27,13 @@ indicator: messaging
 
 ### Styling
 
-* Fonts can’t be configured - default Google font will be used
+* Fonts can’t be configured — default Google font will be used
 * Colors of fonts are taken by default from the profile branding color that the brand has configured
 * Colors of brand messages displayed on the consumer messenger are taken by default from the profile branding color that the brand has configured
 
 ### Sizing
 
-* RCS Card Images sizes - RCS card images are available in three heights: short, medium, tall. In structured content, the card will be set by default to medium (Height of 168 DP).
+* RCS Card Images sizes — RCS card images are available in three heights: short, medium, tall. In structured content, the card will be set by default to medium (Height of 168 DP).
     * Google recommends that when sharing a vertical image (horizontal card), the optimal resolution for the image is 764 x 1024 (3:4 ratio).
     * Google recommends that when sharing a horizontal image (vertical card), the optimal resolution for the image is 1440x720 (3:4 ratio).
     * Google recommends the image file size should not exceed 2MB.

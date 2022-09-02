@@ -24,6 +24,4 @@ indicator: both
 
 7. 	The Bot present is using the access token to perform the opreation with the Brand's API and respond to the consumer.
 
-
-Add a squence diagram here.
-
+[comment]: <> Add a sequence diagram

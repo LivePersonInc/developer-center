@@ -11,8 +11,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-
-Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud — the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences in order to achieve their business goals, such as increasing sales or generating leads.
 
 Using the Monitoring APIs, brands can:
 
@@ -30,7 +29,7 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 - The SDK must be initialized with the `MonitoringInitParams` object.
 
-### Notes & Best Practices
+### Notes and Best Practices
 
 * To start a conversation with a specific campaign and engagement, provide a `CampaignInfo` object to the `ConversationViewParams` object.
 
@@ -78,23 +77,20 @@ Use this API to send engagement attributes (as part of the request body).  As an
 
    - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType 
 
-
 ```java
 // Calling getEngagement and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
 LivepersonMonitoring.getEngagement(context, identityList, monitoringParams, new EngagementCallback() {
 			@Override
 			public void onSuccess(@NotNull LPEngagementResponse lpEngagementResponse) {
-				...
+				…
 			}
 
 			@Override
 			public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
-				...
+				…
 			}
 		});
 ```
-
-
 
 #### Initialize SDK with Monitoring
 
@@ -107,12 +103,12 @@ LivePerson.initialize(context, new InitLivePersonProperties(brandId, appId, moni
 
   @Override
   public void onInitSucceed() {
-    ...
+    …
   }
 
   @Override
   public void onInitFailed(Exception e) {
-    ...
+    …
   }
 }));
 ```
@@ -130,7 +126,7 @@ identityList.add(monitoringIdentity);
 
 // Creating entryPoints object
 JSONArray entryPoints = new JSONArray();
-entryPoints.put("http://www.liveperson-test.com");
+entryPoints.put("https://www.liveperson-test.com/");
 entryPoints.put("sec://Food");
 entryPoints.put("lang://De");
 
@@ -151,9 +147,6 @@ engagementAttriutes.put(lead);
 MonitoringParams monitoringParams = new MonitoringParams("PageId", entryPoints, engagementAttriutes);
 ```
 
-
-
-
 #### sendSde API
 
 Use this API to report engagement attributes (SDEs).  Available parameters include:
@@ -166,20 +159,18 @@ Use this API to report engagement attributes (SDEs).  Available parameters inclu
 
    - SdeCallback: operation callback: onSuccess() response with LPSdeResponse that contains pageId, sessionId and visitorId onError() response with the MonitoringErrorType.
 
-
 ```java
 // Sending engagement attributes and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
 LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCallback() {
   @Override
   public void onSuccess(@NotNull LPSdeResponse lpSdeResponse) {
-    ...
+    …
   }
 
   @Override
   public void onError(@NotNull MonitoringErrorType errorType, @Nullable Exception exception) {
-    ...
+    …
   }
 });
 ```
-
 

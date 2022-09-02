@@ -14,13 +14,13 @@ permalink: mobile-app-messaging-sdk-for-android-resources-using-liveperson-sdk-a
 indicator: messaging
 ---
 
-### Step 1 - Creating initial views
+### Step 1 — Creating initial views
 
 * In order to get some basic data from the user, let’s create some initial views on our main activity / an activity of your choosing (more data can be used in order to initialize the SDK, during this guide, we’ll use some basic name features only).
 
 ![initialview](img/initialview.png)
 
-### Step 2 - Downloading and adding the SDK to our project
+### Step 2 — Downloading and adding the SDK to our project
 
 1. Download the latest Messaging SDK from the following link: [SDK Repository](https://github.com/LP-Messaging/Android-Messaging-SDK)
 
@@ -28,15 +28,15 @@ indicator: messaging
 
 3. The downloaded package should contain the following item:
 
-LP_Messaging_SDK/lp_messaging_sdk - this is a Module that should be added to your project. This module contains the following:
+LP_Messaging_SDK/lp_messaging_sdk — this is a Module that should be added to your project. This module contains the following:
 
-1. LivePerson.java - Main entry point for the Messaging SDK
+1. LivePerson.java — Main entry point for the Messaging SDK
 
 2. Resources (.aars files)
 
 Drag the `lp_messaging_sdk` folder into your project folder OR add it as a module to your project from a different folder.
 
-* File - > New -> Import Module
+* File → New → Import Module
 
 ![Import Module](img/importmodule.png)
 
@@ -44,7 +44,7 @@ And then select the LivePerson SDK module
 
 ![Select Module](img/selectmodule.png)
 
-### Step 3 - Gradle modifications
+### Step 3 — Gradle modifications
 
 1. compileSdkVersion and buildToolsVersion (should be at least Version 23)
 
@@ -105,14 +105,12 @@ dependencies {
     compile "com.android.support.constraint:constraint-layout:1.0.2"
     compile "com.google.firebase:firebase-messaging:18.0.0"
 
-
     testCompile "junit:junit:4.12"
-    //Liveperson SDK
+    // LivePerson SDK
     compile project(path: ":lp_messaging_sdk")
 }
 apply plugin: "com.google.gms.google-services"
 ```
-
 
 {:start="5"}
 5. Make sure you have the following line written in your settings.gradle file:
@@ -121,7 +119,7 @@ apply plugin: "com.google.gms.google-services"
 include ":lp_messaging_sdk"
 ```
 
-### Step 4 - Manifest modifications
+### Step 4 — Manifest modifications
 
 1. Add the following permission to your app’s AndroidManifest.xml file:
 
@@ -142,11 +140,11 @@ For Photo Sharing (required if enabled):
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
 
-### Step 5- Liveperson Events
+### Step 5 — LivePerson Events
 
-1. Intents Handler - In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
+1. Intents Handler — In order to listen to LivePerson basic messaging events (via BroadcastReceiver) and respond via callback accordingly, we will have to add a class that will handle those events.
 
-* **Create a class and name it - IntentsHandler (or any other name of your choosing)**
+* **Create a class and name it “IntentsHandler” (or any other name of your choosing)**
 
 ```java
 public class IntentsHandler {
@@ -226,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
    private Button startConvBtn;
  // Brand login details
    private final String brandID = "82055668";
-// Project’s package
+ // Project’s package
    private final String appID = "com.shaym.sdk28";
  // Intent Handler
    private IntentsHandler mIntentsHandler;
@@ -248,7 +246,6 @@ protected void onCreate(Bundle savedInstanceState) {
    initOpenConversationButton();
 }
 ```
-
 
 4. **init Button function:**
 
@@ -287,7 +284,7 @@ private void  initActivityConversation() {
      LivePerson.initialize(MainActivity.this, new InitLivePersonProperties(brandID, appID, new InitLivePersonCallBack() {
          @Override
          public void onInitSucceed() {
-             // you can"t register pusher before initialization
+             // You can’t register pusher before initialization
              handlePusherRegistration(MainActivity.this);
              runOnUiThread(new Runnable() {
                  @Override
@@ -312,7 +309,7 @@ private void  initActivityConversation() {
 {:start="6"}
 6. **The openActivity function**
 
-Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren"t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
+Here is where we use LivePerson SDK’s `showConversation` method. In this example, we aren’t using an authentication parameter, though you can definitely use one if needed (using the `setPhoneNumber` field).
 
 ```java
 private void openActivity() {
@@ -332,7 +329,7 @@ private void openActivity() {
 
 ![Firebase Config](img/firebase1.png)
 
-1. Enter [Google Firebase console ](https://firebase.google.com/)
+1. Enter [Google Firebase console](https://firebase.google.com/)
 
 2. Enter your app’s package name and click on ‘Register App’
 
@@ -416,8 +413,7 @@ Then click "Create app"
        </receiver>
 ```
 
-
-**Note**: After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
+**Note:** After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
 **Change the path of the services according to the classes you just created.**
 
@@ -576,9 +572,9 @@ public class FirebaseRegistrationIntentService extends IntentService {
   @Override
    protected void onHandleIntent(Intent intent) {
        String token = FirebaseInstanceId.getInstance().getToken();
-       // Register to Liveperson Pusher
-       String account = "12345678"; //Replace with your account id.
-       String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
+       // Register to LivePerson Pusher
+       String account = "12345678"; // Replace with your account id.
+       String appID = "com.liveperson.sampleapp"; // Replace with your applicationId.
        LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
    }
 }
@@ -597,17 +593,17 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 ```java
    @Override
    public void onMessageReceived(RemoteMessage remoteMessage) {
-             // TODO(developer): Handle FCM messages here.
+       // TODO(developer): Handle FCM messages here.
        Log.d(TAG, "From: " + remoteMessage.getFrom());
        // Check if message contains a data payload.
        if (remoteMessage.getData().size() > 0) {
            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
            // Send the data into the SDK
-           String account = "12345678"; //Replace with your account id.
+           String account = "12345678"; // Replace with your account id.
            PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
-           //Code snippet to add push UI notification
+           // Code snippet to add push UI notification
            if (message != null){
                NotificationUI.showNotification(this, message);
            }
@@ -638,7 +634,7 @@ Then, add the following function into the messaging activity. This will check if
 ```java
 private void handlePush(Intent intent) {
    boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
-   //Check if we came from Push Notification
+   // Check if we came from Push Notification
    if (isFromPush) {
        clearPushNotifications();
                if (LivePerson.isValidState()){
@@ -649,7 +645,6 @@ private void handlePush(Intent intent) {
    }
 }
 ```
-
 
 You should also add to your messaging activity in order to clear all pushes once the conversation screen has been clicked:
 

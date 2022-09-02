@@ -13,7 +13,7 @@ indicator: messaging
 
 The SDK is provided with a sample application called "SampleApp" that demonstrate the use of the SDK in a host app.
 
-###  Project structure explained
+### Project structure explained
 
 **MainActivity class**
 

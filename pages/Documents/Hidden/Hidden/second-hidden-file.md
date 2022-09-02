@@ -17,20 +17,18 @@ This bot provides basic information and contact options to your consumers. If yo
 
 This is a hidden file
 
-
-
 ### Benefits of Hidden solution
 
 The benefit is that users wont be able to access information unless they know the link
 '
 <div class="lp-container">
-    <div class="header-paragraph" >
+    <div class="header-paragraph">
    The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a guide below to learn more.
             </div>
 </div>
 <div class="container-note">
     <div class="important" style="width:91%">
-        <b> Prerequisites </b>  Before you begin, check out the <a  href="/api-guidelines-accessing-liveperson-apis.html" alt="Start free trial"> Accessing LivePerson APIs </a> article to familiarize yourself with our guidelines.
+        <b> Prerequisites </b>  Before you begin, check out the <a  href="/api-guidelines-accessing-liveperson-apis.html" alt="Start free trial">Accessing LivePerson APIs</a> article to familiarize yourself with our guidelines.
     </div>
 </div>
 

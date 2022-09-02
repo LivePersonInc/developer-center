@@ -39,7 +39,7 @@ Filter is sent in the POST data with the following JSON structure.
 
 | Name | Description | Type / Value | Required | Notes |
 | :---- | :------- | :--------- | :--- | :--- |
-| start {from, to} | Chat timeframe. | long - epoch time in milliseconds. | Required | From/to value is rounded to the last/next round 10 minutes respectively. The maximum time interval is one month. Larger intervals will be rejected. The limitation applies when searching by specific visitor ID, engagement ID. |
+| start {from, to} | Chat timeframe. | long — epoch time in milliseconds. | Required | From/to value is rounded to the last/next round 10 minutes respectively. The maximum time interval is one month. Larger intervals will be rejected. The limitation applies when searching by specific visitor ID, engagement ID. |
 | keyword_search_area | Area of keyword lookup. | | Required | Valid values: chatLine, surveyAnswer, surveyQuestion, visitorInfo, ea.purchase, ea.viewedProduct, ea.cartStatus, ea.serviceActivity, ea.visitorError, ea.lead, ea.customerInfo, ea.marketingCampaignInfo, ea.personalInfo, mcs |
 | skillIds | An array of skill IDs represented as numbers. | `Array<skillID>` | Optional | |
 | agentIds | An array of agent IDs represented as numbers. | `Array<agentID>` | Optional | |
@@ -55,7 +55,6 @@ Filter is sent in the POST data with the following JSON structure.
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
-
 
 **Request Example 1:**
 
@@ -79,7 +78,6 @@ In the example below, we ask for chats that occurred between the 1st of June and
 Keyword Search: Chat Search by time range and keyword
 
 In the example below, we ask for chats that occurred between the 1st of June and the 30th of June 2015, which contain the word 'iPad’ within the text available for lookup.
-
 
 ```json
     {
@@ -108,11 +106,9 @@ In the example below, we ask for chats that occurred between the 1st of June and
     }
 ```
 
-
 **Request example 3:**
 
 In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.  
-
 
 ```json
     {
@@ -145,7 +141,6 @@ In this example, we reduce the previous search, and require that the skill match
 Chat Search by time range and MCS.
 
 In this example, we are searching for chats that have a positive MCS.
-
 
 ```json
      {
@@ -496,13 +491,11 @@ Example:
     }
 ```
 
-
 **Request example 5:**
 
 Chat Search by time range and chatMCS.
 
 In this example, we are searching for chats that have mcs between 30 to 60.
-
 
 ```json
      {
@@ -517,7 +510,6 @@ In this example, we are searching for chats that have mcs between 30 to 60.
 ```
 
 ## Response
-
 
 ```json
     {
@@ -702,7 +694,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                                 "type": "link",
                                 "id": "febf3237-f7d9-44bc-a17f-fc8abdfb0f25",
                                 "name": "add to cart",
-                                "uri": "http://www.google.com"
+                                "uri": "https://www.google.com/"
                             }]
                         }
                     }, {
@@ -754,7 +746,7 @@ In this example, we are searching for chats that have mcs between 30 to 60.
                             "actions": [{
                                 "type": "link",
                                 "id": "15ffab70-de0e-42df-9576-290c2249aa24",
-                                "uri": "http://www.google.com",
+                                "uri": "https://www.google.com/",
                                 "name": "open browser"
                             }]
                         }
@@ -914,11 +906,9 @@ In this example, we are searching for chats that have a positive MCS.
     }
 ```
 
-
 ## Response
 
 Example:
-
 
 ```json
    {
@@ -1272,11 +1262,11 @@ Example:
 | engagementId | Real-time Session ID that represents the chat. | alphanumeric (256) | This Id is the accountID combined with the real time ID. |
 | sharkEngagementId | *ID for internal use only* | alphanumeric (256) | |
 | chatRequestedTime | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
-| chatRequestedTimeL | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | long - numeric | |
+| chatRequestedTimeL | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | long — numeric | |
 | startTime | Engagement start time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
-| startTimeL | Engagement start time (in UTC) | long - numeric | |
+| startTimeL | Engagement start time (in UTC) | long — numeric | |
 | endTime | Engagement end time | alphanumeric  | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone |
-| endTimeL | Engagement end time (in UTC) | long - numeric | |
+| endTimeL | Engagement end time (in UTC) | long — numeric | |
 | duration | Measurement of the duration of the engagement (in seconds). Amount of time the visitor is connected to an agent until the Engagement Window is closed. | numeric | |
 | visitorId | Visitor ID. | alphanumeric (256) | |
 | visitorName | The visitor’s name. | alphanumeric | |
@@ -1298,15 +1288,15 @@ Example:
 | transcript | Transcript data of the chat. | container | |
 | startReason | Code indicates the reason the chat started. | numeric | |
 | startReasonDesc | Description of reason the chat started. | alphanumeric | |
-| start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
+| start reason options | Start reason options. |  | 0 — Visitor request, 1 — Transfer (agent transfer), 2 — Transfer failed, 3 — ACD attempt, 4 — ACD no assignment, 5 — Operator assignment, 6 — Skill reassign (skill transfer), 7 — Rep request, 8 — A2A reassign |
 | endReason | Code indicates the reason the chat ended. | numeric | |
 | endReasonDesc | Description of reason the chat ended. | alphanumeric | |
-| End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
+| End reason options | End reason options. | | 101 — Transfer — rep stopped chat (rep transferred chat to another rep), 106 — Transfer — Reassignment to skill (rep transferred chat to skill, 201 — Rep stopped chat, 202 — Rep disconnected, 205 — Visitor disconnected, 208 — Visitor was no longer in chat, 210 — Visitor closed chat |
 | mcs | Divides the Meaningful Conversation Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1 |
 | alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
 | chatMCS | Meaningful Conversation Score of the chat.  | int| Range: 0-100. |
 | chatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred. |
-| isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data. |
+| isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true — use the same method with EngagementId parameter in order to retrieve the full chat data. |
 | ended | Indicates whether the chat has ended | Boolean | The API returns only ended chats. |
 | chatStartUrl | The page’s URL from which the chat started. | alphanumeric | |
 | chatStartPage | The page’s title from which the chat started. | alphanumeric | |
@@ -1333,7 +1323,7 @@ Example:
 | by | Name of the visitor or the agent’s nickname. | alphanumeric | |
 | source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system" |
 | lineSeq | Sequence of line in that chat | alphanumeric |  |
-| subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
+| subType | Visibility of line — to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP" |
 | cannedAnswerType | Type of canned answer (Predefined Content). | numeric | 0: is not canned answer, positive number: canned answer's id, negative number: canned answer's id that was changed. |
 | agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0. |
 | lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
@@ -1351,7 +1341,7 @@ Example:
 | ipAddress | The visitor’s IP address. | alphanumeric | |
 | browser | The browser the visitor used to chat. | alphanumeric | |
 | operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID" |
-| browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX |
+| browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g. CHROME or FIREFOX |
 | coBrowseSessions | The CoBrowse data | container | |
 | coBrowseSessionsList | List of CoBrowse sessions | container | |
 | sessionId | CoBrowse session id | alphanumeric | |

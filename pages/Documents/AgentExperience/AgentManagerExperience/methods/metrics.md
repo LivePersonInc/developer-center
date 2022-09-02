@@ -31,12 +31,7 @@ The API is being used today in the LivePerson Conversational Cloud to display th
 
 ![](amws.png)
 
-
-**Note:**    
-
-This method is subject to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
-
-
+**Note:** This method is subject to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
 
 ### Request
 
@@ -59,23 +54,22 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
 |metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>agent_load<br/>human_agent_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots
-|responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
+|responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value — both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
-
 
 ### filters
 _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long - epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 |includeSubGroups|When this is set to true, any metric retrieved for a specific group will include the total value of the metric on the group level, including its sub-groups. Default value is set to false.|boolean|Optional| 
 
-Request body - json example:
+Request body — JSON example:
 
 ```json
 {
@@ -103,7 +97,6 @@ Request body - json example:
     ]
 }
 ```
-
 
 ### Response
 
@@ -155,14 +148,11 @@ _metrics info_
 | closedByConsumer| The number of conversations closed by the consumer within the selected timeframe.| Long |
 | autoClosed| The number of conversations automatically closed within the selected timeframe.| Long |
 
-
-
 _all info_ 
 
-Contains list of metrics with their values - same as in _metrics info_
+Contains list of metrics with their values — same as in _metrics info_
 
-
-Response DTO - json example:
+Response DTO — JSON example:
 
 ```json
 
@@ -209,7 +199,5 @@ Response DTO - json example:
         ]
     }
 }
-
 ```
-
 
