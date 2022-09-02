@@ -10,7 +10,8 @@ subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
-**(LivepersonMonitoring.java class)**
+
+## LivepersonMonitoring.java class
 
 **Note:** If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params). Once initialization is completed (`onInitSucceed`), you can call LivePerson methods.
 
