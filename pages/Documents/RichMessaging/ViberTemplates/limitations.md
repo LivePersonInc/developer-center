@@ -21,7 +21,12 @@ indicator: messaging
 ### Character limitations
 
 * Button text can contain up to 25 characters
-* Viber has a character limit of 250 characters for the title and subtitle
+* Viber has a character limit for the title and subtitle which is based on how many button elements are set. The more action buttons that are used, the less space the text button has to consume so text will be shortened with ellipses.
+  * title, subtitle, (4 to 0) buttons ~25 to 250 characters
+  * image, title, subtitle, 1 buttons ~150 characters 
+  * image, title, subtitle, 2 buttons ~100 characters
+  * image, title, subtitle, 3 buttons ~50 characters
+  * image, title, subtitle, 4 buttons ~25 characters
 
 ### Styling
 
