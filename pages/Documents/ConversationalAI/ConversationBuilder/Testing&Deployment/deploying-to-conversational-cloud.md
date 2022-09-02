@@ -308,7 +308,7 @@ If this is true, and if the bot is stuck, the bot’s context is reset (the conv
 **Messaging**: Yes<br>
 **Chat**: No
 
-**Custom configuration fields for Manager bots**
+### Custom configuration fields for Manager bots
 
 The following custom configuration fields are intended for use with Manager bots:
 
