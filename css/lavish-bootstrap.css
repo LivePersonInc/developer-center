@@ -536,12 +536,13 @@ ol {
   margin-bottom: 10px;
 }
 
-ul ul,
+/* TODO: Confirm no ill effects; if working fine and if this style sheet is being kept in use, consider re-enabling this rule and overwriting it in default.css */
+/* ul ul,
 ol ul,
 ul ol,
 ol ol {
   margin-bottom: 0;
-}
+} */
 
 .list-unstyled {
   padding-left: 0;
