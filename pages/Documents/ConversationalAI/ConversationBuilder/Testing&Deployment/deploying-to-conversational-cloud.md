@@ -310,15 +310,6 @@ If this is true, and if the bot is stuck, the bot’s context is reset (the conv
 
 ### Custom configuration fields for Manager bots only
 
-The following custom configuration fields are intended for use with Manager bots:
-
-* filterPatterns
-* ignoreAcceptStatusEvent
-* ignoreSubscribeMessagingEvents
-* subscribeToMainDialogOnly
-
-See below for details on these.
-
 #### filterPatterns
 
 For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
