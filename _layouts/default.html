@@ -118,12 +118,12 @@
                 </p>
                 {% endif %} 
               </div>
-              <!-- Show Reading Time only if it's more than one minute read -->
+              <!-- Show Read Time only if it's more than one minute read -->
               {% assign words = content | number_of_words %}
               {% if words > 360 %}
               <div class="flex gap-8">
                 <p>
-                  Reading Time:  {{ words | divided_by:180 }} mins
+                  Read Time:  {{ words | divided_by:180 }} mins
                 </p>
               </div>
               {% endif %}

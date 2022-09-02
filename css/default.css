@@ -1218,8 +1218,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #jumpto {
-  flex: 1 !important;
   /* TODO: Disable “important” */
+  flex: 1 !important;
   padding-bottom: var(--space10);
 }
 
