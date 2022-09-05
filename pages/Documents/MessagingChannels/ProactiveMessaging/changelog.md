@@ -22,4 +22,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 #### Security — in case of vulnerabilities
 #### [v2.36] — 2021-06-04
 
-Started maintaining the change logs.
+<!-- TODO: do we need this text below? -->
+<!-- Started maintaining the change logs. -->
