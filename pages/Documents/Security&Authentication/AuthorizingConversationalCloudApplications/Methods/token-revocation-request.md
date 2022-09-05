@@ -48,8 +48,8 @@ OAuth is often used to manage users' log in to a certain site or application at 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | token | refresh token that was supplied in the application previous token or refresh request | String| Required |  |
-| client_id | Application oAuth2.0 client_id. provided after application registration | String| Required |  |
-| client_secret | Application oAuth2.0 secret provided after application registration | String| Required |  |
+| client_id | Application OAuth 2.0 client_id. provided after application registration | String| Required |  |
+| client_secret | Application OAuth 2.0 secret provided after application registration | String| Required |  |
 
 **Example**:
 

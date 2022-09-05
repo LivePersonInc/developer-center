@@ -133,6 +133,7 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
+        "scope": "Insert Your scope here. Ex.['email','profile']",
         "responseEncryptionKey": "Insert Your Public Key Here"
       }
     }
@@ -160,7 +161,7 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>ConnectorAuthenticationRequest</td>
     <td>Represents a Business Chat authentication request </td>
     <td>Object</td>
-    <td>N</td>
+    <td>Y</td>
   </tr>
   </tbody>
 </table>
@@ -186,6 +187,12 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>responseEncryptionKey is a public key which will be used to encrypt the oauth2 token. In order to decrypt the token you should have the corresponding private key to decrypt the token. If this is not sent, LivePerson will supply a public key for you. In order to view the auth response in the agent widget you must supply your own key.</td>
     <td>string</td>
     <td>N</td>
+  </tr>
+   <tr>
+    <td>apple.oauth2.scope</td>
+    <td>An array of scope items that specifies the scope of the request, gives the exact fields of data that the authentication service provides to client requesting the authentication.</td>
+    <td>Array&lt;string&gt;</td>
+    <td>Y</td>
   </tr>
   </tbody>
 </table>

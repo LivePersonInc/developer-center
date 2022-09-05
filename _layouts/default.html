@@ -46,7 +46,7 @@
                     <span class="loginButton">Sign in</span>
                 </a>
                 <!-- <a target="_blank" href="register.html" class="trialText">
-                    <button class="trialButton">Free trial</button>
+                  <button class="trialButton">Free trial</button>
                 </a> -->
             </div>
         </div>
@@ -101,51 +101,35 @@
                 </a>
               </div>
             </div>
-            {% if page.last_modified %}
-            <div class="article-meta hidden">
-              {% assign currentYear = "now" | date:"%Y" %} {% assign
-              articleUpdatedYear = page.last_modified | date: '%Y' %} {% assign
-              createdYear = page.date | date: '%Y' %}
+            <div class="article-meta gap-8 hidden">
               <div class="flex gap-8">
-                {% if createdYear == currentYear %}
+                {% if page.date_published %}
                 <!-- show post creation date -->
                 <p>
-                  <time datetime="{{ page.date | date_to_xmlschema }}"
-                    >{{ page.date | date: "%b %-d" }}</time
-                  >
+                  Published:
+                  <time datetime="{{ page.date_published | date_to_xmlschema }}">{{ page.date_published | date: "%b %-d, %Y" }}</time>
                 </p>
-                {% else %}
-                <p>
-                  <time datetime="{{ page.date | date_to_xmlschema }}"
-                    >{{ page.date | date: "%b %-d, %Y" }}</time
-                  >
-                </p>
-                {% endif %} {% if articleUpdatedYear == currentYear %}
+                {% endif %} 
                 <!-- show last updated date -->
+                {% if page.date_updated %}
                 <p>
                   Updated:
-                  <time
-                    datetime="{{ page.last_modified | date_to_xmlschema }}"
-                    itemprop="dateModified"
-                    >{{ page.last_modified | date: "%b %-d" }}</time
-                  >
+                  <time datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
                 </p>
-                {% else %}
+                {% endif %} 
+              </div>
+              <!-- Show read time only if it's more than one minute read -->
+              {% assign words = content | number_of_words %}
+              {% if words > 360 %}
+              <div class="flex gap-8">
                 <p>
-                  Updated:
-                  <time
-                    datetime="{{ page.last_modified | date_to_xmlschema }}"
-                    itemprop="dateModified"
-                    >{{ page.last_modified | date: "%b %-d, %Y" }}</time
-                  >
+                  Read time: {{ words | divided_by:180 }} mins
                 </p>
               </div>
               {% endif %}
             </div>
-            {% endif %} 
           </div>
           {% endif %} {{ content | extlinks }}
-
           <div id="defaultfooter" class="defaultfooter">
             <div class="flex flex-col">
               <p>

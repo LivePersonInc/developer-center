@@ -18,7 +18,6 @@
     - documentname: API Data Metrics
     - documentname: Engagement Attributes
     - documentname: Analytics Builder Data Metrics
-    - documentname: Important Updates
     - documentname: Retry Policy Recommendations
 
 - categoryname: Agent Experience
@@ -996,7 +995,6 @@
             - subpagename: Notification Protocol
             - subpagename: Retry Policy
             - subpagename: Disclaimers
-            - subpagename: Troubleshooting
             - subpagename: Webhooks Examples
     # - documentname: IVR Engagement API
     #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
@@ -1129,7 +1127,6 @@
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-        - pagename: Rich Messaging Channel Capabilities
     - documentname: Mobile SDK and Web Templates
       pages:
         - pagename: Introduction

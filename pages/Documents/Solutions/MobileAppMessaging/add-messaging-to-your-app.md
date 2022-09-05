@@ -72,7 +72,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Determine if you will place messaging in authenticated areas of your app?
 
-    * LivePerson only supports oAuth2.0 authentication.  Ensure you have the setup to support this.  For more information, please see Authentication using oAuth2.0
+    * LivePerson only supports OAuth 2.0 authentication. Ensure you have the setup to support this.  For more information, please see Authentication using OAuth 2.0
 
 * **Push notifications**: For your messaging to be effective, you must determine how you’d like the push notifications to work.
 
