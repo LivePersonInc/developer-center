@@ -21,6 +21,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 #### Fixed — for bug fixes
 #### Security — in case of vulnerabilities
 #### [v2.36] — 2021-06-04
-
-<!-- TODO: do we need this text below? -->
-<!-- Started maintaining the change logs. -->
