@@ -1,3 +1,5 @@
+ruby File.read('.ruby-version').strip
+
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 3.9.2'
