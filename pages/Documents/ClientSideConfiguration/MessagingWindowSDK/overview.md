@@ -8,7 +8,7 @@ indicator: messaging
 ---
 
 {: .deprecated}
-No longer maintained.
+This SDK is no longer maintained.
 
 <div class="important">In depth documentation for this SDK, including a code sample, can be found <a href="https://github.com/LivePersonInc/messaging-window-sdk">on GitHub</a>.</div>
 
