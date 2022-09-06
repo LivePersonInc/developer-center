@@ -45,9 +45,9 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
     **<https://{domain}/v2/authenticate/login>**
 
     Domain URL per environment:
-    * AMERICAS : <https://z1.context.liveperson.net>
-    * EMEA: <https://z2.context.liveperson.net>
-    * APAC: <https://z3.context.liveperson.net>
+    * AMERICAS : <https://z1.ccs.liveperson.net/v2/authenticate/login>
+    * EMEA: <https://z2.ccs.liveperson.net/v2/authenticate/login>
+    * APAC: <https://z3.ccs.liveperson.net/v2/authenticate/login>
 
     You will need to authorize the header with the pattern “Basic” followed by a space and a base64-encoded string username:password. For example, to authorize demo / p@55w0rd you would need to send
     Basic ZGVtbzpwQDU1dzByZA==
