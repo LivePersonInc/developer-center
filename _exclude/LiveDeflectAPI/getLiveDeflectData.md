@@ -7,7 +7,7 @@ permalink: livedeflect-api-getlivedeflectdata.html
 indicator: both
 ---
 
-Outlined below is a sample reporting API call that is used to retrieve transactional deflection information pertaining to the LiveDeflect middleware into LiveEngage. The getLiveDeflectData API endpoint should be passed a start and end timestamp in epoch milliseconds. Any deflection transactions for the Account ID provided between the start & end timestamp will be returned with their current status.
+Outlined below is a sample reporting API call that is used to retrieve transactional deflection information pertaining to the LiveDeflect middleware into LiveEngage. The getLiveDeflectData API endpoint should be passed a start and end timestamp in epoch milliseconds. Any deflection transactions for the Account ID provided between the start and end timestamp will be returned with their current status.
 
 ### Request
 
@@ -70,7 +70,7 @@ The following information should be provided to LivePerson.
 
 The following information should be provided to LivePerson.
 
-HTTP Response Code - 200 OK
+HTTP Response Code — 200 OK
 
 ```json
 {

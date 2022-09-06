@@ -14,7 +14,7 @@ Here are a few sample bots which demonstrate some of the use cases that can be a
 
 2. You must be able to configure an agent in your Conversational Cloud account.
 
-3. You must have the latest version of node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
+3. You must have the latest version of Node.js installed on your machine. Here's a guide on how to do so: [Mac](https://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](https://blog.teamtreehouse.com/install-node-js-npm-windows).
 
 ### Greeting Bot
 
@@ -86,7 +86,7 @@ Pre-requisites:
 - A LivePerson Account
 - A user with Agent permissions
 - Application installation id with `ms_survey` capability (ask your LivePerson account representative to create one for you and provide you with the id)
-- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating - not your bot skill (ask your LivePerson account representative to assign it for you)
+- Assign your application installation id to a specific skill(s) that if the conversation ends on your bot will start operating — not your bot skill (ask your LivePerson account representative to assign it for you)
 
 To run the [survey bot example](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/survey-bot)
 
@@ -153,6 +153,42 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        set LP_USER=BotUserName 
        set LP_PASS=b0tpa55word 
        node examples/transfer2same-agent-bot/main.js
+       ```
+
+{: .important}
+The connector on back-end will use the fields replyFromAccountId.
+The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
+
+### Social Messaging Bot
+
+The agent bot is an example SDK implementation in which the bot accepts incoming social messaging conversations as the assigned agent. It listens for messages from the consumer and upon receipt marks them as read and echos them back to the consumer.  This example [extends the Agent class](#extending-the-agent-class).
+
+See [example explanation](https://livepersoninc.github.io/node-agent-sdk/social-bot.html)
+
+Pre-requisites:
+- A LivePerson Account with Messaging & Social Messaging
+- A LivePerson Account with Feature "Sent_Consumer_Message_Metadata" enabled
+- A user with Agent permissions
+- [Social Messaging](https://knowledge.liveperson.com/messaging-channels-social-messaging-social-messaging-overview.html) configured on your LivePerson account
+
+To run the [agent bot example](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/social-bot)
+
+- Provide the following `env` variables:
+    - `LP_ACCOUNT` - Your LivePerson account ID
+    - `LP_USER` - Your LivePerson agent username
+    - `LP_PASS` - Your LivePerson agent password
+
+- Run:
+    - Unix Shell
+        ```sh
+       LP_ACCOUNT=1234567 LP_USER=BotUserName LP_PASS=b0tpa55word node examples/social-bot/main.js
+        ```
+    - Windows Shell
+       ```sh
+       set LP_ACCOUNT=1234567 
+       set LP_USER=BotUserName 
+       set LP_PASS=b0tpa55word 
+       node examples/social-bot/main.js
        ```
 
 ### Bot Cluster

@@ -27,49 +27,31 @@ To solve this problem, you can create a rule with a [No Match condition](convers
 
 In our example below, the No Match condition directs the flow to the current interaction in order to repeat it. This interaction is a question that asks for the consumer's email address.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png" alt="">
 
 Our example dialog flow now looks like this:
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png" alt="">
 
 When the user enters anything but a well-formed email address, this yields a conversation that looks like the following, where the email address question is repeated:
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png" alt="">
 
 For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
-### Block consumer interruptions
+### Step Up authentication
 
-One bot scenario that is typical is to have the bot present several text interactions containing information, with small delays between each interaction (to aid accessibility issues). After the interactions are sent in sequence, the bot then asks the consumer a question to decide the next step in the conversation flow.
+You can use Step Up authentication to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication. For more on this, see [here](https://knowledge.liveperson.com/step-up-authentication-overview/) in the Knowledge Center.
 
-The problem that can occur in this scenario is that there's nothing to prevent the consumer from typing an utterance while the bot is sending the sequence of messages. When this happens, the utterance is processed for matching intents and patterns, which means it can "jump" the consumer to an upcoming question in the current dialog, to another dialog, or result in a fallback response.
+Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can change it as desired (more on this [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage)).
 
-To solve this problem where the consumer interrupts the bot with "intermediate" messages, you can use a set of specific environment variables that work together to catch and ignore all consumer utterances until the next question is reached. 
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/bp_ignoreMessages1.png">
-
-**To implement this solution**
-
-1. [Add an environment](conversation-builder-environment-variables.html#add-environment-variables) that stores a set of environment variables for the bot. If the bot is already linked to an existing environment, skip this step and append the variables to the existing environment.
-2. In the environment, add the following system [environment variables](conversation-builder-environment-variables.html):
-    * `system_handleIntermediateUserMessage` - Set this to true.
-    * `system_intermediateBotMessage` - Specify a value.
-    * `system_intermediateBotResponseTimeout` - Specify a value.
-    
-    | Environment variable name | Description | Type | Example | 
-    |----|----|----|----|
-    | system_handleIntermediateUserMessage | Enables the behavior to catch and ignore "interrupt" messages by the consumer. | Boolean | true |
-    | system_intermediateBotMessage | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. | string | Please wait...we are still responding to your last message. |
-    | system_intermediateBotResponseTimeout | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. | string | 15000 |
-
-3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn't already linked.
+Regardless of the message text, it’s important that you catch the Step Up message in the bot’s flow and handle it: Use it to start the authenticated workflow. If you don’t catch the message, a fallback message is sent to the consumer.
 
 ### Base 64 encoding
 
 The JavaScript editor within Conversation Builder doesn't natively support encoding to and decoding from Base 64. If you have a case where you need to do so, you can call a FaaS function and use the `crypto` package to encode a value and return it to your bot. Alternatively, using the following code in your Global Functions will give you access to this functionality without having to call outside of Conversation Builder.
 
-Below, we've constructed two new functions -- `encode` and `decode` -- that work the same way as the Window object's `atob` and `btoa` functions:
+Below, we've constructed two new functions — `encode` and `decode` — that work the same way as the Window object's `atob` and `btoa` functions:
 
 ```javascript
 function encode(string) {
@@ -115,8 +97,8 @@ function decode(string) {
 
 Once created, you can call both functions as needed from the Pre-Process and Post-Process code editors.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png" alt="">
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png" alt="">
 
 Both functions were adapted from a polyfill located [here](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).

@@ -15,7 +15,7 @@ indicator: both
 
 This API authorizes users for your application. This is needed so that your application can interact with Conversational Cloud on behalf of your users in a secure and authorized way. The application should be installed in the context of your account.
 
-This API provides standard oauth 2.0 endpoints to receive and refresh access tokens. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749) for more information.
+This API provides standard OAuth 2.0 endpoints to receive and refresh access tokens. Please see the [OAuth 2.0 RFC reference](https://tools.ietf.org/html/rfc6749) for more information.
 
 The API also provides the identity of the authenticated user for the purpose of personalization.
 
@@ -33,7 +33,6 @@ The API also provides the identity of the authenticated user for the purpose of 
    "http://{YOURAPPLICATIONDOMAIN}/{CALLBACK_PATH}"
  ]
 }
-
 ```
 
 After finishing the installation, please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.

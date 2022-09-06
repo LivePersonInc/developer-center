@@ -14,7 +14,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-{:.important}
+{: .important}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
 ---
@@ -23,7 +23,7 @@ For things like Brand name, which is a string, refer to [string Localization](an
 With the addition of Dark Theme support in Android 10, we now created LP Semantic color attributes to update colors based on the selection provided by the OS. We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations. We support only System-wide setting for black theme.
 
 #### What does this mean for our customers who use our default Attribute configurations?
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it.
 
 #### What this means for our customers who use custom attribute configurations? 
 If you have customized the appearance of the Android SDK by setting your own values for lp color attributes, note that unless you have custom colors set for lp color attribute values in `values-night` folder your custom configuration will not support dark mode and the UI may not appear as expected.
@@ -66,7 +66,6 @@ For all your custom color and style configurations, you are able to use specific
 
 ---
 
-
 ### Accessibility
 
 #### snackbar_duration_for_accessibility
@@ -77,21 +76,18 @@ Number of milliseconds to show the TTR snackbar if the accessibility TalkBack op
 
 Note: This value was previously named `snachbar_duration_for_accessibility`, and its spelling has since been corrected.
 
-
 #### announce_agent_typing
 Announce when the agent is typing. This is applicable only in Activity mode.
 
 * **Type:** bool
 * **Default value:** true
 
-
 ---
-
 
 ### Agent Assignment
 
 #### send_agent_profile_updates_when_conversation_closed
-When set to **true** the callback [LivePersonCallback](lp_messaging_ui_brand_logo) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active.
+When set to **true** the callback [LivePersonCallback](/android-callbacks-index.html#liveperson-callbacks) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active.
 
 * **Type:** bool  
 * **Default value:** true
@@ -122,7 +118,6 @@ Maximum number of voice files stored on the device.
 
 ### Avatars
 
-
 #### avatar_margin_leading
 Defines the remote avatar leading spacing (from the left edge to the avatar).
 
@@ -144,8 +139,6 @@ Defines the remote avatar leading spacing (from the left edge to the avatar).
 &nbsp;
 </div>
 
-
-
 #### avatar_margin_trailing
 Defines the remote avatar Trailing spacing (from the avatar to the bubble).
 
@@ -166,7 +159,6 @@ Defines the remote avatar Trailing spacing (from the avatar to the bubble).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 ---  
 
@@ -195,7 +187,6 @@ The configuration to change the Brand name / Agent name text color in the header
 
 #### brand_bubble_stroke_width
 Int number for the outline width.
-
 
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
@@ -235,7 +226,6 @@ Color code for the outline color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### brand_bubble_message_text_color
 Color code for the text of the brand bubble.
@@ -279,8 +269,6 @@ Color code for links in the text of the brand bubble.
 &nbsp;
 </div>
 
-
-
 #### brand_bubble_timestamp_text_color
 Color code for the timestamp of the brand bubble.
 
@@ -301,7 +289,6 @@ Color code for the timestamp of the brand bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### brand_bubble_background_color
 Color code for the background of the brand bubble.
@@ -429,7 +416,6 @@ Brand's welcome message bubble bottom padding.
 &nbsp;
 </div>
 
-
 #### custom_font_name_conversation_feed
 The font name for all conversation feed’s element.
 
@@ -444,10 +430,7 @@ The font name for all elements that are not in the conversation feed.
 * **Default value:** Empty (use the device font)
 * **Example:** customFont.ttf
 
-
-
 ---  
-
 
 ### Connection status bar
 
@@ -473,7 +456,6 @@ Define the color of status bar background color while trying to connect.
 &nbsp;
 </div>
 
-
 #### connection_status_not_connected_bg_color
 Define the color of status bar background color when connection is unavailable.
 
@@ -496,7 +478,6 @@ Define the color of status bar background color when connection is unavailable.
 &nbsp;
 </div>
 
-
 #### connection_status_connecting_text_color
 Define the color of status bar text color while trying to connect.
 
@@ -504,7 +485,7 @@ Define the color of status bar text color while trying to connect.
    <ul>
       <li><b>Type:</b> color</li>
        <li><b>(Light Theme) Default value:</b> #46474A</li>
-       <li><b>(Dark Theme) Default value:</b> #CC000000</li>
+       <li><b>(Dark Theme) Default value:</b> #F2F5F5F5</li>
    </ul>
 </div>
 
@@ -518,7 +499,6 @@ Define the color of status bar text color while trying to connect.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### connection_status_not_connected_text_color
 Define the color of status bar text color when connection is unavailable.
@@ -542,7 +522,6 @@ Define the color of status bar text color when connection is unavailable.
 &nbsp;
 </div>
 
-
 ---  
 
 ### Controller Message
@@ -564,15 +543,30 @@ Color code for the text of the automatic messages.
    </figure>
 </div>
 
+#### controller_message_markdown_hyperlink_text_color
+Color code for the markdown hyperlink in the automatic messages.
+
+<div style="float: left; width: 50%;height: 73px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/controller_message_markdown_hyperlink_text_color.png" alt="hyperlinkautomaticmessagecoller">
+   </figure>
+</div>
+
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
 
 ---   
 
-
-### Conversation Activity Style - (activity mode only!)
-
+### Conversation Activity Style (activity mode only!)
 
 #### lp_colorPrimary
 Define the primary color of the activity.
@@ -580,15 +574,11 @@ Define the primary color of the activity.
 * **Type:** color
 * **Default value:** android:colorPrimary
 
-
-
 #### lp_colorPrimaryDark
 Define the primary dark color of the activity.
 
 * **Type:** color
 * **Default value:** android:colorPrimaryDark
-
-
 
 #### lp_textColorSecondary
 Define the color of menu button and back arrow on toolbar.
@@ -617,19 +607,16 @@ Define the toolbar color of conversation screen.
 * **Type:** color
 * **Default value:** @color/lp_colorPrimary
 
-
 #### conversation_toolbar_isTyping_color
 Define the color of agent typing indicator on conversation toolbar.
 
 * **Type:** color
 * **Default value:** #9B9B9B
 
-
 #### feedback_toolbar_background
 Define the toolbar color of feedback screen.
 * **Type:** color
 * **Default value:** @color/lp_colorPrimary
-
 
 #### feedback_toolbar_textColor
 Define the text color on feedback toolbar.
@@ -637,13 +624,11 @@ Define the text color on feedback toolbar.
 * **Type:** color
 * **Default value:** @color/lp_colorOnPrimary
 
-
 #### captionPreview_toolbar_textColor
 Define the text color on caption preview toolbar.
 
 * **Type:** color
 * **Default value:** @color/lp_colorOnPrimary
-
 
 #### captionPreview_toolbar_background
 Define the tool bar color of caption preview screen.
@@ -651,13 +636,11 @@ Define the tool bar color of caption preview screen.
 * **Type:** color
 * **Default value:** @color/lp_colorPrimary
 
-
 #### pci_form_toolbar_background
 Define the toolbar color of PCI form screen.
 
 * **Type:** color
 * **Default value:** @color/lp_colorPrimary
-
 
 #### pci_form_toolbar_textColor
 Define the text color on PCI form toolbar.
@@ -665,13 +648,11 @@ Define the text color on PCI form toolbar.
 * **Type:** color
 * **Default value:** @color/lp_colorOnPrimary
 
-
 #### lp_menu_item_background
 Define the background color of toolbar menu.
 
 * **Type:** color
 * **Default value:** @color/lp_colorPrimary
-
 
 #### lp_menu_item_enabled_textColor
 Define the menu item color when enabled.
@@ -679,16 +660,26 @@ Define the menu item color when enabled.
 * **Type:** color
 * **Default value:** @color/lp_colorOnPrimary
 
-
 #### lp_menu_item_disabled_textColor
 Define the menu item color when disabled.
 
 * **Type:** color
 * **Default value:** @color/lp_disabledColor
 
+#### lp_resolve_conversation_menu_item_visible
+Define the visibility of "Mark as resolved" menu item.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_urgency_menu_item_visible
+Define the visibility of "Mark as urgent" menu item.
+
+* **Type:** bool
+* **Default value:** true
 
 #### clear_history_menu_item_visible
-Define the visibility of clear history menu item.
+Define the visibility of "cCear history" menu item.
 
 * **Type:** bool
 * **Default value:** true
@@ -700,17 +691,17 @@ Define the visibility of clear history menu item.
 #### conversation_background (color)
 Define the color code for the entire view background.
 
-In activity mode - Also the color of android:windowBackground.
+In activity mode — also the color of android:windowBackground.
 
 * **Type:** color
 * **Default value:** @color/lp_colorBackground
 
-
 #### conversation_background (image)
-Sets the conversation background image (applicable on Activity mode only).
+Sets the conversation background image.
+
+If using Fragment mode, the minimum SDK version supports this configuration is v5.5.0.
 
 **Type:** drawable
-
 
 #### lp_caption_preview_fragment_background_color
 Define the background color of caption preview screen when sending a file.
@@ -734,7 +725,6 @@ Define the background color of caption preview screen when sending a file.
 &nbsp;
 </div>
 
-
 #### bubble_system_resolved_text_size
 Conversation resolved message text size.
 
@@ -755,7 +745,6 @@ Conversation resolved message text size.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### bubble_system_resolved_padding
 Conversation resolved message padding.
@@ -778,7 +767,6 @@ Conversation resolved message padding.
 &nbsp;
 </div>
 
-
 #### bubble_system_resolved_line_spacing
 Conversation resolved message line spacing.
 
@@ -799,7 +787,6 @@ Conversation resolved message line spacing.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### enable_conversation_resolved_message
 Enable or disable the conversation resolved message.
@@ -822,7 +809,6 @@ Enable or disable the conversation resolved message.
 &nbsp;
 </div>
 
-
 #### enable_conversation_resolved_separator
 Enable or disable separators between conversations.
 
@@ -843,7 +829,6 @@ Enable or disable separators between conversations.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### conversation_separator_text_color
 Color code for the conversation resolved message and separator.
@@ -866,13 +851,17 @@ Color code for the conversation resolved message and separator.
 &nbsp;
 </div>
 
-
 #### lp_hide_ui_until_auth
 Define if SDK shows conversation until pass authentication check.
 
 * **Type:** bool
 * **Default value:** true
 
+#### lp_hide_welcome_message_on_clear_history
+Define to hide welcome message on clearing a history.
+
+* **Type:** bool
+* **Default value:** false
 
 #### empty_history_view_text_color
 Define the text color of empty history view.
@@ -919,7 +908,6 @@ Defines whether to enable or disable client side only masking. False by default.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### enable_real_time_masking
 Defines whether to enable or disable real time masking.
@@ -976,9 +964,8 @@ If true, force dark mode is applied to webView when system dark mode is enabled.
 * **Type:** bool
 * **Default value:** true
 
-
 #### darkMode_SC_QR_override_colors_from_LE
-If false , colors for structured content elements and Quick replies are override from LE in dark theme.
+If false, colors for structured content elements and quick replies are overridden from LE in dark theme.
 
 * **Type:** bool
 * **Default value:** false
@@ -1005,13 +992,11 @@ Define date-time format.
 * **Type:** string
 * **Default value:** No value
 
-
 #### message_status_numeric_timestamp_only
 When false (default), time stamps displays information relative to when sent/distributed/read, for example, '5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
 
 * **Type:** bool
 * **Default value:** false
-
 
 #### sendingMessageTimeoutInMinutes
 Define timeout for automatic resending pending message before moving it to failed.
@@ -1020,7 +1005,6 @@ Define timeout for automatic resending pending message before moving it to faile
 * **Default value:** 60
 
 ---  
-
 
 ### Date Separator
 
@@ -1087,7 +1071,6 @@ Font text size for the Date Separator.
 &nbsp;
 </div>
 
-
 #### sticky_timestamp_margin_top
 Top margin spacing of the Date Separator.
 
@@ -1108,7 +1091,6 @@ Top margin spacing of the Date Separator.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### enter_message_top_separator_color
 Top border color for the Input TextView.
@@ -1131,8 +1113,6 @@ Top border color for the Input TextView.
 &nbsp;
 </div>
 
-
-
 #### enter_message_divider_visible
 Enable (visible) or disable (hidden) the Enter Message edit text divider.
 
@@ -1153,7 +1133,6 @@ Enable (visible) or disable (hidden) the Enter Message edit text divider.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### bubble_system_resolved_text_size
 Defines the Resolved system message text size.
@@ -1176,7 +1155,6 @@ Defines the Resolved system message text size.
 &nbsp;
 </div>
 
-
 #### bubble_system_resolved_padding
 Defines the Resolved system message padding.
 
@@ -1197,8 +1175,6 @@ Defines the Resolved system message padding.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### bubble_system_resolved_line_spacing
 Defines the Resolved system message line spacing.
@@ -1221,8 +1197,6 @@ Defines the Resolved system message line spacing.
 &nbsp;
 </div>
 
-
-
 #### bubble_system_resolved_separator_padding_bottom
 Defines the Resolved system message Separator padding.
 
@@ -1243,7 +1217,6 @@ Defines the Resolved system message Separator padding.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### lp_progress_bar_image
 Defines the Progress bar image. If empty, the default Progress bar appears.
@@ -1272,10 +1245,8 @@ Defines the color of default progress bar image.
 * **Type:** color
 * **Default value:** @color/lp_progress_bar_color
 
-
 #### lpmessaging_ui_image_progress_bar.xml
-Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
-
+Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
@@ -1287,7 +1258,6 @@ For each message, there are three indicators available: Message sent, Message re
 You can customize the indicators according to your needs, by using a number between 1 and 3.
 
 **Type:** integer
-
 
 <div style="float: left; width: 50%;height: 220px;">
    <ul>
@@ -1308,7 +1278,6 @@ You can customize the indicators according to your needs, by using a number betw
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### message_receive_text
 If you set the resource [message_receive_icons](#message_receive_icons) to **0**, you can specify what texts appear for each state.
@@ -1337,7 +1306,6 @@ If you set the resource [message_receive_icons](#message_receive_icons) to **0**
 &nbsp;
 </div>
 
-
 #### clear_history_show_confirm_dialog
 Define if to show confirm dialog before clearing history or not.
 
@@ -1360,13 +1328,11 @@ Enable or disable vibrate upon receiving messages from agent while conversation 
 * **Type:** bool
 * **Default value:** false
 
-
 #### contextual_menu_on_toolbar
 Enable multiple message copy menu over the app toolbar. If true, when long pressing a message on chat it will select the message and enable a context menu over the toolbar, enabling the user to copy multiple messages. If false, long pressing a message will display a copy popup menu.
 
 * **Type:** bool
 * **Default value:** true
-
 
 #### bubble_selected_background_color
 Define the background color of item when it’s selected to be copied (if multiple message copy is enabled).
@@ -1389,20 +1355,17 @@ Define the background color of item when it’s selected to be copied (if multip
 &nbsp;
 </div>
 
-
 #### encryptionVersion
 Defines the encryption version to use. Currently available version 1 only.
 
 * **Type:** integer
 * **Default value:** 1 (encrypted)
 
-
 #### csds_url
 For vanity URL purposes.
 
 * **Type:** string
 * **Default value:** adminlogin.liveperson.net
-
 
 #### idp_num_history_conversation
 Defines the number of recent conversations (including messages) to fetch from the server when loading more conversations. Only for authenticated account.
@@ -1454,7 +1417,6 @@ To display an image instead of text, set the `use_send_image_button` boolean to 
 #### lpmessaging_ui_ic_gallery.xml
 You can replace the existing Gallery image button. Create a drawable file named **lpmessaging_ui_ic_gallery.xml**, which overrides the SDK's default drawable.
 
-
 <div style="float: left; width: 50%;height: 82px;">
    <ul>
       <li><b>Type:</b> color</li>
@@ -1472,8 +1434,6 @@ You can replace the existing Gallery image button. Create a drawable file named 
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### lpmessaging_ui_ic_camera.xml
 You can replace the existing Library image button. Create a drawable file named **lpmessaging_ui_ic_camera.xml**, which overrides the SDK's default drawable.
@@ -1496,8 +1456,6 @@ You can replace the existing Library image button. Create a drawable file named 
 &nbsp;
 </div>
 
-
-
 #### lpinfra_ui_ic_attach.xml
 You can replace the existing Attach image. Create a drawable file named **lpinfra_ui_ic_attach.xml**, which overrides the SDK's default drawable.
 
@@ -1518,8 +1476,6 @@ You can replace the existing Attach image. Create a drawable file named **lpinfr
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### lpinfra_ui_ic_close.xml
 You can replace the existing Close image. Create a drawable file named **lpinfra_ui_ic_close.xml**, which overrides the SDK's default drawable.
@@ -1552,13 +1508,11 @@ Enable or disable link preview feature
 * **Type:** bool
 * **Default value:** true
 
-
 #### link_preview_use_big_picture
 Define which configuration to show when sending / receiving s link (big / small picture).
 
 * **Type:** bool
 * **Default value:** true
-
 
 #### link_preview_enable_real_time_preview
 Define whether or not we should show a real time link preview. A preview while the consumer is typing an url.
@@ -1566,15 +1520,13 @@ Define whether or not we should show a real time link preview. A preview while t
 * **Type:** bool
 * **Default value:** true
 
-
 #### link_preview_to_use_more_than_og_tags
 parse only &lt;og:> tags or others as well
 
-false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title&gt; tags
-
+* false: use &lt;og:title&gt; tags only
+* true: use &lt;og:title&gt; and &lt;title&gt; tags
 
 ---  
-
 
 ### Message Edit Text
 
@@ -1605,7 +1557,6 @@ Color code for the Enter Message control underline color.
 &nbsp;
 </div>
 
-
 #### lp_enter_msg_text
 Define the input message text color.
 
@@ -1627,7 +1578,6 @@ Define the input message text color.
 &nbsp;
 </div>
 
-
 #### lp_enter_msg_hint
 Define the input message hint color.
 
@@ -1648,7 +1598,6 @@ Define the input message hint color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### lp_send_button_text_enable
 Define the color of the send button when it’s enabled.
@@ -1674,7 +1623,6 @@ Define the color of the send button when it’s enabled.
 &nbsp;
 </div>
 
-
 #### lp_send_button_text_disable
 Define the color of the send button when it’s disabled.
 
@@ -1699,7 +1647,6 @@ Define the color of the send button when it’s disabled.
 &nbsp;
 </div>
 
-
 #### use_send_image_button
 Use an icon for the send button instead of "Send" text.
 
@@ -1721,13 +1668,11 @@ Use an icon for the send button instead of "Send" text.
 &nbsp;
 </div>
 
-
 #### enable_ime_options_action_send
 Enable or disable the action button of the keyboard. If enabled, pressing the action button will send a message. Multi line messages are not supported if enabled.
 
 * **Type:** bool
 * **Default value:** false
-
 
 #### lp_voice_record_button_color
 Defines the color of record button on enter message view.
@@ -1735,13 +1680,11 @@ Defines the color of record button on enter message view.
 * **Type:** color
 * **Default value:** @android:color/darker_gray
 
-
 #### lp_voice_stop_button_color
 Defines the color of stop recording button on enter message view.
 
 * **Type:** color
 * **Default value:** @android:color/darker_gray
-
 
 #### lp_voice_replay_button_color
 Defines the color of replay button on enter message view.
@@ -1749,13 +1692,11 @@ Defines the color of replay button on enter message view.
 * **Type:** color
 * **Default value:** @android:color/darker_gray
 
-
 #### lp_voice_trash_button_color
 Defines the color of trash button on enter message view.
 
 * **Type:** color
 * **Default value:** @android:color/darker_gray
-
 
 #### enter_message_url_preview_bubble
 Defines the background color url preview on top of enter message view.
@@ -1769,13 +1710,11 @@ Defines the stroke color of url preview on top of enter message view.
 * **Type:** color
 * **Default value:** @color/lp_linkPreviewColor
 
-
 #### enter_msg_url_preview_close_icon_color
 Defines the color of close url preview icon color.
 
 * **Type:** color
 * **Default value:** @color/lp_textColorSecondary
-
 
 #### enter_msg_url_preview_title
 Defines the color of url preview title.
@@ -1783,13 +1722,11 @@ Defines the color of url preview title.
 * **Type:** color
 * **Default value:** @color/lp_colorOnSurface
 
-
 #### enter_msg_url_preview_description
 Defines the color of url preview description.
 
 * **Type:** color
 * **Default value:** @color/lp_colorOnSurface
-
 
 #### lp_file_attach_icon_clip_color
 Defines the color of attach icon on enter message view.
@@ -1797,7 +1734,6 @@ Defines the color of attach icon on enter message view.
 * **Type:** color
 * **(Light Theme)Default value:** #FF767678
 * **(Dark Theme)Default value:** @android:color/darker_gray
-
 
 #### lp_file_close_icon_clip_color
 Defines the color of close icon on enter message view.
@@ -1808,7 +1744,7 @@ Defines the color of close icon on enter message view.
 
 ---
 
-### Navigation - Scroll Behavior Configuration
+### Navigation — Scroll Behavior Configuration
 
 #### lp_scroll_show_conversation
 Configures the scroll behavior when open conversation screen from another screen of the app.
@@ -1822,7 +1758,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_foreground
-Configures the scroll behavior when bring conversaton screen to foreground from background.
+Configures the scroll behavior when bring conversation screen to foreground from background.
 
 - **Type:** string
 - **Default value:** LastPosition
@@ -1833,7 +1769,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_push_notification
-Configures the scroll behavior when open conversaton screen by tapping on push notification.
+Configures the scroll behavior when open conversation screen by tapping on push notification.
 
 - **Type:** string
 - **Default value:** Bottom
@@ -1855,7 +1791,7 @@ Available options:
 
 ---  
 
-### Navigation -  Scroll down indicator
+### Navigation — Scroll down indicator
 
 #### scroll_down_indicator_enabled
 Enable or disable the scroll down indicator (shown or invisible).
@@ -1877,7 +1813,6 @@ Enable or disable the scroll down indicator (shown or invisible).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### scroll_down_indicator_unread_summary_enabled
 Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
@@ -1905,7 +1840,6 @@ The scroll to bottom button width is dynamic and will be auto adjusted based on 
 &nbsp;
 </div>
 
-
 #### scroll_down_indicator_unread_counter_text_color
 Color of the unread messages counter text color.
 
@@ -1926,7 +1860,6 @@ Color of the unread messages counter text color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### scroll_down_indicator_unread_summary_text_color
 Color of the unread message summary (preview) text color.
@@ -1949,7 +1882,6 @@ Color of the unread message summary (preview) text color.
 &nbsp;
 </div>
 
-
 #### scroll_down_indicator_unread_counter_stroke_color
 Color of the unread messages counter stroke color.
 
@@ -1970,7 +1902,6 @@ Color of the unread messages counter stroke color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### scroll_down_indicator_unread_counter_stroke_width
 Dimension of the unread messages counter stroke width.
@@ -1993,7 +1924,6 @@ Dimension of the unread messages counter stroke width.
 &nbsp;
 </div>
 
-
 #### scroll_down_indicator_unread_counter_solid_color
 Color of the unread messages counter solid color.
 
@@ -2014,7 +1944,6 @@ Color of the unread messages counter solid color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### scroll_down_indicator_background_color
 Color of the scroll down background color.
@@ -2039,7 +1968,6 @@ Color of the scroll down background color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### scroll_down_indicator_arrow_down_color
 Color of the image arrow scrolling down.
@@ -2107,13 +2035,9 @@ Corner radius of the unread messages counter inside the scroll down indicator.
 &nbsp;
 </div>
 
-
 ---  
 
-
-
 ### Photo and File Sharing
-
 
 #### enable_photo_sharing
 Enable or disable the photo sharing feature.
@@ -2121,13 +2045,11 @@ Enable or disable the photo sharing feature.
 * **Type:** bool
 * **Default value:** false
 
-
 #### max_number_stored_images
 Define the max number of images that will be stored locally.
 
 * **Type:** integer
 * **Default value:** 20
-
 
 #### max_number_stored_documents
 Define the max number of documents that will be stored locally.
@@ -2135,13 +2057,11 @@ Define the max number of documents that will be stored locally.
 * **Type:** integer
 * **Default value:** 20
 
-
 #### full_image_compression_rate
 Define the image compression rate (percentage).
 
 * **Type:** integer
 * **Default value:** 50
-
 
 #### thumbnail_longer_dimension_resize
 Define the size of the thumbnail image longer dimension after resizing it (pixels).
@@ -2149,20 +2069,17 @@ Define the size of the thumbnail image longer dimension after resizing it (pixel
 * **Type:** integer
 * **Default value:** 100
 
-
 #### full_image_longer_dimension_resize
 Define the size of the full image longer dimension after resizing it (pixels).
 
 * **Type:** integer
 * **Default value:** 800
 
-
 #### max_image_size_kb
 Define the maximum image size in KB that can be uploaded.
 
 * **Type:** integer
 * **Default value:** 3000
-
 
 #### attachment_menu_item_background_color
 Define the background color of the items in the attachment menu.
@@ -2185,7 +2102,6 @@ Define the background color of the items in the attachment menu.
 &nbsp;
 </div>
 
-
 #### lp_attachment_menu_background_color
 Define the background color of the attachment menu.
 
@@ -2206,7 +2122,6 @@ Define the background color of the attachment menu.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### lp_attachment_menu_item_text_color
 Define the items’ text color in the attachment menu.
@@ -2229,7 +2144,6 @@ Define the items’ text color in the attachment menu.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### lp_attachment_menu_item_icon_color
 Define the items’ icon color in the attachment menu.
@@ -2258,7 +2172,6 @@ Define the color of attachment menu background
 
 * **Type:** color
 * **Default value:** @color/lp_colorSurface
-
 
 ---   
 
@@ -2323,10 +2236,7 @@ Quick Replies button stroke color.
 * **Type:** color
 * **Default value:** @color/lp_agent_message_bubble_color
 
-
-
 ---  
-
 
 ### Secure Form
 
@@ -2336,22 +2246,18 @@ Define if to hide logo inside the pci secure form web view.
 * **Type:** bool
 * **Default value:** false
 
-
 #### pci_form_font_name
 Define the font of the pci secure form.
 
 * **Type:** string
 * **Default value:** No value (use device's default)
 
-
 #### lpmessaging_ui_secure_form_progress_bar.xml
-Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To Override this resource, create a vector drawable under the android drawable folder with the same resource name.
-
+Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
 ---  
 
 ### Survey screen
-
 
 #### csatSurveyExpirationInMinutes
 Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it does not present to the user.
@@ -2380,7 +2286,6 @@ Background color for the feedback dialog.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_title_question
 Title color for the feedback dialog.
 
@@ -2401,8 +2306,6 @@ Title color for the feedback dialog.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_star
 Start color for the feedback dialog.
@@ -2425,8 +2328,6 @@ Start color for the feedback dialog.
 &nbsp;
 </div>
 
-
-
 #### feedback_fragment_rate_text
 Rating title color for the feedback dialog.
 
@@ -2447,9 +2348,6 @@ Rating title color for the feedback dialog.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
-
 
 #### feedback_fragment_title_yesno
 Yes and no color for the feedback dialog.
@@ -2472,8 +2370,6 @@ Yes and no color for the feedback dialog.
 &nbsp;
 </div>
 
-
-
 #### feedback_fragment_yesno_btn_selected_background
 Background color of the yes or no selected in the feedback dialog.
 
@@ -2494,8 +2390,6 @@ Background color of the yes or no selected in the feedback dialog.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_yesno_btn_default_background
 Default background of the yes and no of the feedback dialog.
@@ -2518,7 +2412,6 @@ Default background of the yes and no of the feedback dialog.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_yesno_btn_text_selected
 Text color for the yes/no buttons when selected in the feedback dialog.
 
@@ -2539,8 +2432,6 @@ Text color for the yes/no buttons when selected in the feedback dialog.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_yesno_btn_text_default
 Feedback dialog yes/no text color when in default.
@@ -2563,8 +2454,6 @@ Feedback dialog yes/no text color when in default.
 &nbsp;
 </div>
 
-
-
 #### feedback_fragment_yesno_btn_stroke_default
 Feedback dialog yes/no stroke color when in default.
 
@@ -2585,7 +2474,6 @@ Feedback dialog yes/no stroke color when in default.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### feedback_fragment_yesno_btn_stroke_selected
 Feedback dialog yes/no stroke color when selected.
@@ -2608,7 +2496,6 @@ Feedback dialog yes/no stroke color when selected.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_yesno_btn_stroke_width_default
 Feedback dialog yes/no stroke width size when in default.
 
@@ -2629,8 +2516,6 @@ Feedback dialog yes/no stroke width size when in default.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_yesno_btn_stroke_width_selected
 Feedback dialog yes/no stroke width size when in selected.
@@ -2653,7 +2538,6 @@ Feedback dialog yes/no stroke width size when in selected.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_submit_message
 Feedback dialog submit message text color.
 
@@ -2674,8 +2558,6 @@ Feedback dialog submit message text color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_submit_btn_enabled
 Feedback dialog submit button color when enabled.
@@ -2698,7 +2580,6 @@ Feedback dialog submit button color when enabled.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_submit_btn_text_enabled
 Feedback dialog submit button text color when enabled.
 
@@ -2719,8 +2600,6 @@ Feedback dialog submit button text color when enabled.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### feedback_fragment_submit_btn_disabled
 Feedback dialog submit button color when disabled.
@@ -2743,8 +2622,6 @@ Feedback dialog submit button color when disabled.
 &nbsp;
 </div>
 
-
-
 #### feedback_fragment_submit_btn_text_disabled
 Feedback dialog submit button text color when disabled.
 
@@ -2765,7 +2642,6 @@ Feedback dialog submit button text color when disabled.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### feedback_fragment_submit_btn_stroke_enabled
 Feedback dialog submit button stroke color when enabled.
@@ -2788,7 +2664,6 @@ Feedback dialog submit button stroke color when enabled.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_submit_btn_stroke_disabled
 Feedback dialog submit button stroke color when disabled.
 
@@ -2809,7 +2684,6 @@ Feedback dialog submit button stroke color when disabled.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### feedback_fragment_submit_btn_stroke_width_enabled
 Feedback dialog submit button stroke width size when enabled.
@@ -2832,7 +2706,6 @@ Feedback dialog submit button stroke width size when enabled.
 &nbsp;
 </div>
 
-
 #### feedback_fragment_submit_btn_stroke_width_disabled
 Feedback dialog submit button stroke width size when disabled.
 
@@ -2853,7 +2726,6 @@ Feedback dialog submit button stroke width size when disabled.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### feedback_fragment_agent_details_name
 Define the color of the agent name on agent details section in feedback dialog.Visible only if [show_agent_details_csat](#show_agent_details_csat) is set to **true**.
@@ -2876,7 +2748,6 @@ Define the color of the agent name on agent details section in feedback dialog.V
 &nbsp;
 </div>
 
-
 #### feedback_fragment_submitted_thank_you_text_color
 Feedback dialog thank you message text color when when feedback is submitted
 
@@ -2898,7 +2769,6 @@ Feedback dialog thank you message text color when when feedback is submitted
 &nbsp;
 </div>
 
-
 #### show_feedback
 Defines whether to show the feedback dialog.
 
@@ -2912,7 +2782,7 @@ Defines whether to show the feedback dialog.
 #### show_agent_details_csat
 Define if the agent’s name and avatar are visible on top of feedback dialog.
 
-{:.notice}
+{: .notice}
 If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2933,13 +2803,10 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 &nbsp;
 </div>
 
-
-
 #### show_yes_no_question
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
-
-{:.notice}
+{: .notice}
 If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2959,7 +2826,6 @@ If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### show_csat_thank_you
 Define if "thank you" screen will appear after submitting the survey.
@@ -2992,13 +2858,9 @@ Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimen
 &nbsp;
 </div>
 
-
-
-
 ---   
 
 ### Structured Content
-
 
 #### enable_structured_content
 Enable or disable structured content feature.
@@ -3006,13 +2868,11 @@ Enable or disable structured content feature.
 * **Type:** bool
 * **Default value:** false
 
-
 #### structured_content_border_color
 Color code for the structured content bubble outline color.
 
 * **Type:** color
 * **Default value:** @color/lp_agent_message_bubble_color
-
 
 #### structured_content_border_width
 Integer in dp for the bubble stroke width of the structured content bubble.
@@ -3020,13 +2880,11 @@ Integer in dp for the bubble stroke width of the structured content bubble.
 * **Type:** dimen
 * **Default value:** 1dp
 
-
-#### structured_content_map_zoom&
+#### structured_content_map_zoom
 Integer that defines the zoom level of the structured content map view. For more details, see [Google map API](https://developers.google.com/maps/documentation/android-api/views#zoom).
 
 * **Type:** integer
 * **Default value:** 18
-
 
 #### structured_content_link_as_callback
 Set the Structured Content link as a callback (true) instead of a deep link intent (false).
@@ -3034,13 +2892,11 @@ Set the Structured Content link as a callback (true) instead of a deep link inte
 * **Type:** bool
 * **Default value:** false (deep link intent)
 
-
 #### lp_google_maps_key
 Set the host app's Google Map key to enable map views in Structured Content.
 
 * **Type:** string
 * **Default value:** no value
-
 
 #### structured_content_background_color
 The color of the background of structured content elements.
@@ -3048,13 +2904,11 @@ The color of the background of structured content elements.
 * **Type:** color
 * **Default value:** @color/lp_transparent
 
-
 #### structured_content_bottom_right_radius
 Configuration for bottom right corner radius of structured content card.
 
 * **Type:** dimen
 * **Default value:** 5dp
-
 
 #### structured_content_top_left_radius
 Configuration for top left corner radius of structured content card.
@@ -3062,13 +2916,11 @@ Configuration for top left corner radius of structured content card.
 * **Type:** dimen
 * **Default value:** 5dp
 
-
 #### structured_content_top_right_radius
 Configuration for top right corner radius of structured content card.
 
 * **Type:** dimen
 * **Default value:** 5dp
-
 
 #### structured_content_bottom_left_radius
 Configuration for bottom left corner radius of structured content card.
@@ -3076,26 +2928,22 @@ Configuration for bottom left corner radius of structured content card.
 * **Type:** dimen
 * **Default value:** 5dp
 
-
 #### structured_content_button_background_enabled
 Enable or disable structured content button border.
 
 * **Type:** bool
 * **Default value:** true
 
-
 #### structured_content_button_no_text_lines
-Configuration to fit number of text lines in sc button element.
+Configuration to fit number of text lines in structured content button element.
 
 * **Type:** integer
 * **Default value:** 1
-
 
 #### sc_buttonElement_text_color
 The color of text elements in structured content.
 * **Type:** color
 * **Default value:** @color/lp_consumer_action_highLight_color
-
 
 #### sc_buttonElement_background_color
 The color of button in button elements in structured content.
@@ -3103,20 +2951,17 @@ The color of button in button elements in structured content.
 * **Type:** color
 * **Default value:** @color/lp_colorSurface
 
-
 #### sc_textElement_text_color
 The color of text in text elements in structured content.
 
 * **Type:** color
 * **Default value:** @color/lp_onAgentMessage_bubble_color
 
-
 #### sc_textElement_background_color
 The color of the background of structured content text elements.
 
 * **Type:** color
 * **Default value:** @color/lp_transparent
-
 
 ---  
 
@@ -3153,6 +2998,9 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
+{: .important}
+When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
+
 #### show_timestamp_in_ttr_notification
 When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed.
 
@@ -3164,7 +3012,6 @@ Set the duration that the TTR snackbar will be visible (ms).
 
 * **Type:** integer
 * **Default value:** 3000
-
 
 #### ttrFirstTimeDelaySeconds
 Set the time in seconds before the first the TTR snackbar will be displayed.
@@ -3184,11 +3031,9 @@ Define the frequency of the TTR (time to response) messages.
 * **Type:** integer
 * **Default value:** 8
 
-
 ---  
 
 ### Unread Messages
-
 
 #### unread_indicator_bubble_enable
 Toggle the mode of the unread_indicator_bubble_enable.
@@ -3219,7 +3064,6 @@ Enable or disable the unread message indicator (shown or invisible) - true by de
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### unread_indicator_bubble_background_color
 Color code for the background of the unread messages bubble.
@@ -3267,7 +3111,6 @@ Int number for the outline width.
 &nbsp;
 </div>
 
-
 #### agent_bubble_stroke_color
 Color code for the outline color.
 
@@ -3288,7 +3131,6 @@ Color code for the outline color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_message_text_color
 Color code for the text of the agent bubble.
@@ -3311,7 +3153,6 @@ Color code for the text of the agent bubble.
 &nbsp;
 </div>
 
-
 #### agent_bubble_message_link_text_color
 Color code for links in the text of the agent bubble.
 
@@ -3332,7 +3173,6 @@ Color code for links in the text of the agent bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_timestamp_text_color
 Color code for the timestamp of the agent bubble.
@@ -3355,7 +3195,6 @@ Color code for the timestamp of the agent bubble.
 &nbsp;
 </div>
 
-
 #### agent_bubble_background_color
 Color code for the background of the agent bubble.
 
@@ -3376,7 +3215,6 @@ Color code for the background of the agent bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_avatar_background_color
 Color code for the background of the agent default avatar next to the bubble.
@@ -3399,7 +3237,6 @@ Color code for the background of the agent default avatar next to the bubble.
 &nbsp;
 </div>
 
-
 #### agent_avatar_icon_color
 Color code for the agent default icon in the avatar next to the bubble.
 
@@ -3421,12 +3258,10 @@ Color code for the agent default icon in the avatar next to the bubble.
 &nbsp;
 </div>
 
-
 #### lp_messaging_ui_ic_agent_avatar
 Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.
 
 If you want to define the background color for this avatar, override [agent_avatar_background_color](#agent_avatar_background_color) resource ID.
-
 
 #### lp_messaging_ui_brand_logo
 Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned.
@@ -3434,7 +3269,6 @@ Default brand avatar on the avatar next to brand bubble (the first brand message
 If you want to define the background color for this avatar, override [brand_logo_background_color](#brand_logo_background_color) resource ID. Only relevant for bubble brand’s avatar.
 
 Background color of the agent avatar on action bar is [agent_avatar_background_color](#agent_avatar_background_color).
-
 
 #### agent_bubble_link_preview_background_color
 Color code for the background of the agent bubble when url is presented.
@@ -3457,7 +3291,6 @@ Color code for the background of the agent bubble when url is presented.
 &nbsp;
 </div>
 
-
 #### agent_bubble_link_preview_title_text_color
 Color code for the background of the agent title text color when url is presented.
 
@@ -3478,7 +3311,6 @@ Color code for the background of the agent title text color when url is presente
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_link_preview_description_text_color
 Color code for the background of the agent description text color when url is presented.
@@ -3501,7 +3333,6 @@ Color code for the background of the agent description text color when url is pr
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_background_color
 background color of the form invitation bubble
 
@@ -3522,7 +3353,6 @@ background color of the form invitation bubble
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_pci_form_invitation_background_btn_color
 background color of the form invitation button only
@@ -3545,7 +3375,6 @@ background color of the form invitation button only
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_stroke_color
 color of the stroke (border) of the form invitation bubble.
 
@@ -3566,7 +3395,6 @@ color of the stroke (border) of the form invitation bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_pci_form_invitation_button_text_color
 color of the text on PCI form invitation bubble button
@@ -3589,7 +3417,6 @@ color of the text on PCI form invitation bubble button
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_description_text_color
 Text color on the description in the PCI form invitation bubble.
 
@@ -3610,7 +3437,6 @@ Text color on the description in the PCI form invitation bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### agent_bubble_pci_form_invitation_title_text_color
 text color on the title in the PCI form invitation bubble.
@@ -3633,7 +3459,6 @@ text color on the title in the PCI form invitation bubble.
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_icon_tint_color
 color of the icon in the PCI form invitation bubble.
 
@@ -3655,13 +3480,11 @@ color of the icon in the PCI form invitation bubble.
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_progressBar_color
 color of progress bar
 
 * **Type:** color
 * **Default value:** @color/lp_progress_bar_color
-
 
 #### chat_bubble_padding_right
 Chat message (agent/consumer) bubble right padding.
@@ -3684,7 +3507,6 @@ Chat message (agent/consumer) bubble right padding.
 &nbsp;
 </div>
 
-
 #### chat_bubble_padding_left
 Chat message (agent/consumer) bubble left padding.
 
@@ -3705,7 +3527,6 @@ Chat message (agent/consumer) bubble left padding.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### chat_bubble_padding_top
 Chat message (agent/consumer) bubble top padding.
@@ -3728,7 +3549,6 @@ Chat message (agent/consumer) bubble top padding.
 &nbsp;
 </div>
 
-
 #### chat_bubble_padding_bottom
 Chat message (agent/consumer) bubble bottom padding.
 
@@ -3750,12 +3570,17 @@ Chat message (agent/consumer) bubble bottom padding.
 &nbsp;
 </div>
 
+#### lp_timestamps_font_size
+Update the timestamp text font size of the conversation message bubbles.
+
+* **Type:** dimen
+* **Default value:** 12sp
 
 #### show_agent_typing_in_message_bubble
 
-True - the agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
+True: The agent-is-typing-indicator appears in "temporary" bubble and the style is available in both fragment and activity modes.
 
-False - the agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
+False: The agent-is-typing-indicator appears in the status bar (under the agent name) and the style is available only in activity mode.
 
 Only available as long as the announce_agent_typing configuration is on (set as true).
 
@@ -3773,14 +3598,12 @@ Only available as long as the announce_agent_typing configuration is on (set as 
    </figure>
 </div>
 
-
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
 
-{:.important}
+{: .important}
 If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
-
 
 #### agent_bubble_link_preview_background_stroke_color
 The border color of the link preview bubble sent by the agent.
@@ -3815,7 +3638,6 @@ integer in dp for the bubble stroke width of the consumer bubble.
 &nbsp;
 </div>
 
-
 #### consumer_bubble_message_text_color
 Color code for the text of the consumer bubble.
 
@@ -3836,7 +3658,6 @@ Color code for the text of the consumer bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### consumer_bubble_message_link_text_color
 Color code for links in the text of the consumer bubble.
@@ -3859,7 +3680,6 @@ Color code for links in the text of the consumer bubble.
 &nbsp;
 </div>
 
-
 #### consumer_bubble_timestamp_text_color
 Color code for the timestamp of the consumer bubble.
 
@@ -3880,7 +3700,6 @@ Color code for the timestamp of the consumer bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### consumer_bubble_background_color
 Color code for the background of the consumer bubble.
@@ -3903,7 +3722,6 @@ Color code for the background of the consumer bubble.
 &nbsp;
 </div>
 
-
 #### consumer_bubble_state_text_color
 Color code for state text next to the consumer bubble.
 
@@ -3924,7 +3742,6 @@ Color code for state text next to the consumer bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### consumer_bubble_stroke_color
 Color code for the stroke of the consumer bubble.
@@ -3947,7 +3764,6 @@ Color code for the stroke of the consumer bubble.
 &nbsp;
 </div>
 
-
 #### consumer_bubble_link_preview_background_color
 Color code for the background of the consumer bubble when url is presented.
 
@@ -3968,7 +3784,6 @@ Color code for the background of the consumer bubble when url is presented.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### consumer_bubble_link_preview_title_text_color
 Color code for the background of the consumer title text color when url is presented.
@@ -3991,7 +3806,6 @@ Color code for the background of the consumer title text color when url is prese
 &nbsp;
 </div>
 
-
 #### consumer_bubble_link_preview_description_text_color
 Color code for the background of the consumer description text color when url is presented.
 
@@ -4012,7 +3826,6 @@ Color code for the background of the consumer description text color when url is
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### consumer_bubble_read_status_color
 Color code for the read status icon (if enable).
@@ -4035,8 +3848,6 @@ Color code for the read status icon (if enable).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### consumer_bubble_received_status_color
 Color code for the received status icon (if enable).
@@ -4080,7 +3891,6 @@ Color code for the sent status icon (if enable).
 &nbsp;
 </div>
 
-
 #### consumer_bubble_sending_status_color
 Color code for the sending status icon (if enable).
 
@@ -4102,13 +3912,11 @@ Color code for the sending status icon (if enable).
 &nbsp;
 </div>
 
-
 #### consumer_bubble_link_preview_background_stroke_color
 The border color of the link preview bubble sent by the consumer.
 
 * **Type:** color
 * **Default value:** @color/lp_linkPreviewColor
-
 
 #### consumer_bubble_link_preview_background_stroke_width
 The border width of the link preview bubble sent by the consumer.
@@ -4116,13 +3924,11 @@ The border width of the link preview bubble sent by the consumer.
 * **Type:** dimen
 * **Default value:** 1dp
 
-
 #### consumer_bubble_voice_play_button_color
 Color code for audio play button icon.
 
 * **Type:** color
 * **Default value:** #EDEDED
-
 
 #### consumer_bubble_voice_pause_button_color
 Color code for audio pause button.
@@ -4130,13 +3936,11 @@ Color code for audio pause button.
 * **Type:** color
 * **Default value:** #EDEDED
 
-
 #### consumer_bubble_voice_download_button_color
 Color code for audio download button.
 
 * **Type:** color
 * **Default value:** #EDEDED
-
 
 #### consumer_bubble_voice_progressBar_tint
 Color code for playing audio progress tint.
@@ -4144,13 +3948,11 @@ Color code for playing audio progress tint.
 * **Type:** color
 * **Default value:** @color/lp_progress_bar_color
 
-
 #### consumer_bubble_voice_downloading_progress
 Color code for audio download progress spinner.
 
 * **Type:** color
 * **Default value:** @color/lp_progress_bar_color
-
 
 #### consumer_bubble_voice_duration_textView_color
 Color of audio limit in text view.
@@ -4179,7 +3981,6 @@ Corner radius of bottom left consumer bubbles (on the right side).
 &nbsp;
 </div>
 
-
 #### end_bubble_top_left_radius
 Corner radius of top left consumer bubbles (on the right side).
 
@@ -4200,7 +4001,6 @@ Corner radius of top left consumer bubbles (on the right side).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### end_bubble_top_right_radius
 Corner radius of top right consumer bubbles (on the right side).
@@ -4223,7 +4023,6 @@ Corner radius of top right consumer bubbles (on the right side).
 &nbsp;
 </div>
 
-
 #### end_bubble_bottom_right_radius
 Corner radius of bottom right consumer bubbles (on the right side).
 
@@ -4244,7 +4043,6 @@ Corner radius of bottom right consumer bubbles (on the right side).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### start_bubble_bottom_left_radius
 Corner radius of the bottom left agent/brand bubbles (on the left side).
@@ -4267,8 +4065,6 @@ Corner radius of the bottom left agent/brand bubbles (on the left side).
 &nbsp;
 </div>
 
-
-
 #### start_bubble_top_left_radius
 Corner radius of the top left agent/brand bubbles (on the left side).
 
@@ -4289,8 +4085,6 @@ Corner radius of the top left agent/brand bubbles (on the left side).
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-
 
 #### start_bubble_top_right_radius
 Corner radius of the top right agent/brand bubbles (on the left side).
@@ -4313,8 +4107,6 @@ Corner radius of the top right agent/brand bubbles (on the left side).
 &nbsp;
 </div>
 
-
-
 #### start_bubble_bottom_right_radius
 Corner radius of the bottom right agent/brand bubbles (on the left side).
 
@@ -4336,7 +4128,6 @@ Corner radius of the bottom right agent/brand bubbles (on the left side).
 &nbsp;
 </div>
 
-
 #### unread_indicator_bubble_radius
 Corner radius of the unread messages bubble.
 
@@ -4357,7 +4148,6 @@ Corner radius of the unread messages bubble.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
 
 #### enable_markdown_hyperlink
 Enable or disable hyperlink support. Agent won’t be able to send hyperlink messages if set to false.
@@ -4392,6 +4182,17 @@ Set the link message text color.
 * **Type:** color
 * **Default value:** @color/lp_consumer_action_highLight_color
 
+#### lp_enable_timestamps
+Show or hide the timestamp text of the conversation message bubbles.
+
+* **Type:** bool
+* **Default value:** true
+
+#### lp_enable_read_receipts
+Show or hide read receipt text of the consumer message bubbles.
+
+* **Type:** bool
+* **Default value:** true
 
 ---
 
@@ -4402,7 +4203,6 @@ Background color of alert dialog.
 
 * **Type:** color
 * **Default value:** @color/lp_colorSurface
-
 
 #### lp_alert_dialog_accentColor
 Color of alert dialog buttons.
@@ -4427,17 +4227,136 @@ Action mode background color.
 * **Type:** color
 * **Default value:** @color/lp_colorOnSurface
 
-
 #### lp_action_mode_menuText_color
 
 * **Type:** color
 * **Default value:** @color/lp_textColorSecondary
 
-
 #### lp_action_mode_closeBtn_color
 
 * **Type:** color
 * **Default value:** @color/lp_textColorSecondary
+
+---
+
+### Schedule Slot List
+
+#### lp_appointment_header_background_color
+Appointment Scheduler window header background color.
+* **Type:** color
+* **(Light Theme) Default value:** #0363AD
+* **(Dark Theme) Default value:** #2E2E2E
+
+#### lp_appointment_header_text_color
+Appointment Scheduler window text color code for title, date and confirm button (enabled) on header.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #FFFFFF
+
+#### lp_appointment_week_day_title_color
+Color code for week days text: S, M, T, W, …
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FCFCFD
+
+#### lp_appointment_week_date_text_color
+Color code for week date text color
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_week_day_active_text_color
+Color code for an active calendar day where appointments are available.
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FCFCFD
+
+#### lp_appointment_week_day_inactive_text_color
+Color code for an in-active calendar day where appointments are not available.
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_disabled_confirm_btn_color
+Color code for Confirm button (disabled) when no appointment is selected.
+* **Type:** color
+* **(Light Theme) Default value:** #ADBACC
+* **(Dark Theme) Default value:** #ADBACC
+
+#### lp_appointment_scheduler_background_color
+Color code for background color of scheduler window.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #000000
+
+#### lp_appointment_selected_background_color
+Color code for curretnly selected appointment slot.
+* **Type:** color
+* **(Light Theme) Default value:** #0363AD
+* **(Dark Theme) Default value:** #BA86FC
+
+#### lp_appointment_title_text_color
+Color code for an appointment's title and description for un-selected slots.
+* **Type:** color
+* **(Light Theme) Default value:** #DE000000
+* **(Dark Theme) Default value:** #DEFFFFFF
+
+#### lp_appointment_selected_title_text_color
+Color code for an appointment's title and description when slot is currently selected.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #DE000000
+
+#### lp_appointment_time_text_color
+Color code for an appointment's time for un-selected slots.
+* **Type:** color
+* **(Light Theme) Default value:** #000000
+* **(Dark Theme) Default value:** #FFFFFF
+
+#### lp_appointment_selected_time_text_color
+Color code for an appointment's time when slot is currently selected.
+* **Type:** color
+* **(Light Theme) Default value:** #FFFFFF
+* **(Dark Theme) Default value:** #000000
+
+#### lp_appointment_header_date_format
+Configuration to set date format of a header date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** EEE, MMM d
+
+#### lp_appointment_week_date_format
+Configuration to set date format of a current week's date on the appointment scheduler window.
+* **Type:** String
+* **Default value:** MMMM yyyy
+
+#### lp_appointment_time_format
+Configuration to set time format of all appointment slots.
+* **Type:** String
+* **Default value:** hh:mm aaa
+
+---
+
+### Proactive and IVR Deflection to App Messaging
+
+#### show_outbound_in_app_message
+- This configuration allows brands that want to display the outbound message in the in-app conversation interface to consumers even after they discard or ignore the message notification.
+- In case the consumer did not tap on the push notification to navigate to the in-app conversation, this configuration can be set to true if the brand wants to display the outbound message to the consumer even in the case that the look back period has expired. If set to false, the outbound message will not be displayed to consumers once they navigate to the in-app conversation screen from the app.
+
+#### PushUnregisterType
+Brands can choose either of the following configurations to unregister user from pusher:
+
+```java
+enum class PushUnregisterType {
+    NONE,
+    ALL,
+    AGENT
+}
+```
+_NONE:_ Do not unregister from pusher at all. Consumer will receive push notifications from both agent as well as outbound notification.
+
+_ALL (Default):_ Unregister/remove consumer from pusher. No push notifications will be sent if the consumer is logged out.
+
+_AGENT:_ Unregister only for agent push notification messages. Consumers will still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
 
 ---
 

@@ -1,7 +1,5 @@
 ---
 pagename: Interaction Support
-redirect_from:
-  - 
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -13,102 +11,266 @@ indicator: both
 
 Interaction support varies by channel. Use this page to understand whether an interaction is supported in a channel of interest.
 
-### Messaging applications
+### Apple Messages for Business
 
-N/A = Not Available
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | Yes |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | Yes |
+| List Picker question | Yes |
+| Time Picker question | Yes |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | Yes |
+| Universal | Yes | 
+| survey interactions | Yes |
 
-| | Mobile App Messaging | Web Messaging |
-| ---- | ---- | ---- |
-| Interaction type: | | |
-| Dialog Starter | Yes | Yes |
-| Text statement | Yes | Yes |
-| Image statement | N/A | Yes |
-| Audio statement | N/A | N/A |
-| Video statement | N/A | N/A |
-| Apple rich link | N/A | N/A |
-| Multiple choice question | Yes | Yes |
-| Text question | Yes | Yes |
-| Structured question | Yes | Yes |
-| Button question | Yes | Yes |
-| Quick Reply question | Yes | Yes |
-| List Picker question | N/A | N/A |
-| Time Picker question | N/A | N/A |
-| Integration | Yes | Yes |
-| Agent Transfer integration | Yes | Yes|
-| Apple Pay integration | N/A | N/A |
-| survey interactions (NPS, FCR, CSAT) | Yes | Yes |
+### Connector API
 
-### SMS-related applications
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | No |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
 
-N/A = Not Available
+### Facebook
 
-| | Apple Messages for Business | SMS | Google RCS |
-| ---- | ---- | ---- | ---- |
-| Interaction type: | | | |
-| Dialog Starter | Yes | Yes | Yes |
-| Text statement | Yes | Yes | Yes |
-| Image statement | N/A | N/A | Yes |
-| Audio statement | N/A | N/A | N/A |
-| Video statement | N/A | N/A | N/A |
-| Apple rich link | Yes | N/A | N/A |
-| Multiple choice question | N/A | N/A | Yes |
-| Text question | Yes | Yes | Yes |
-| Structured question | N/A | N/A | Yes |
-| Button question | N/A | N/A | Yes |
-| Quick Reply question | N/A | N/A | Yes |
-| List Picker question | Yes | N/A | N/A |
-| Time Picker question | Yes | N/A | N/A |
-| Integration | Yes | Yes | Yes |
-| Agent Transfer integration | Yes | Yes | Yes |
-| Apple Pay integration | Yes | N/A | N/A |
-| survey interactions (NPS, FCR, CSAT) | Yes | Yes | Yes |
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
 
-### Instant messaging applications
+### Google RCS
 
-N/A = Not Available
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | Yes |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
 
-| | Facebook | WhatsApp | LINE |
-| ---- | ---- | ---- | ---- |
-| Interaction type: | | | |
-| Dialog Starter | Yes | Yes | Yes |
-| Text statement | Yes | Yes | Yes |
-| Image statement | N/A | N/A | N/A |
-| Audio statement | N/A (Not supported by Live Engage) | N/A | N/A |
-| Video statement | N/A (Not supported by Live Engage) | N/A | N/A |
-| Apple rich link | N/A | N/A | N/A |
-| Multiple choice question | Yes | N/A | N/A |
-| Text question | Yes | Yes | Yes |
-| Structured question | Yes | N/A | N/A |
-| Button question | Yes | N/A | N/A |
-| Quick Reply question | Yes | N/A | N/A |
-| List Picker question | N/A | N/A | N/A |
-| Time Picker question | N/A | N/A | N/A |
-| Integration | Yes | Yes | Yes |
-| Agent Transfer integration | Yes | Yes | Yes |
-| Apple Pay integration | N/A | N/A | N/A |
-| survey interactions (NPS, FCR, CSAT) | Yes | Yes | Yes |
+### LINE
 
-### APIs
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | No |
+| Text question | Yes |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | No |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
 
-N/A = Not Available
+### Messaging Window API
 
-| | Messaging Window API | Connector API |
-| ---- | ---- | ---- |
-| Interaction type: | | |
-| Dialog Starter | Yes | Yes |
-| Text statement | Yes | Yes |
-| Image statement | N/A | N/A |
-| Audio statement | N/A | N/A |
-| Video statement | N/A | N/A |
-| Apple rich link | N/A | N/A |
-| Multiple choice question | Yes | N/A |
-| Text question | Yes | Yes |
-| Structured question | Yes | Yes |
-| Button question | Yes | Yes |
-| Quick Reply question | Yes | Yes |
-| List Picker question | N/A | N/A |
-| Time Picker question | N/A | N/A |
-| Integration | Yes | Yes |
-| Agent Transfer integration | Yes | Yes |
-| Apple Pay integration | N/A | N/A |
-| survey interactions (NPS, FCR, CSAT) | Yes | Yes |
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | No |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
+
+### Mobile app messaging
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
+
+### SMS
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | No |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
+
+### Twitter Direct Messages
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No  |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | No |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
+
+### Web messaging
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | Yes |
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes |
+| Text question | Yes |
+| Structured question | Yes |
+| Button question | Yes |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Knowledge AI integration | Yes |
+| File Upload integration | Yes |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |
+
+### WhatsApp
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | No | 
+| Apple rich link | No |
+| Private message | Not applicable; not sent to consumer |
+| Multiple choice question | Yes | 
+| Text question | Yes | 
+| Structured question | Yes | 
+| Button question | No | 
+| Quick Reply question | No |
+| List Picker question | No | 
+| Time Picker question | No | 
+| Integration | Yes | 
+| Agent Transfer integration | Yes | 
+| Knowledge AI integration | Yes — Simple/Custom answer layout only |
+| File Upload integration | No |
+| Apple Pay integration | No |
+| Universal | Yes | 
+| survey interactions | Yes |

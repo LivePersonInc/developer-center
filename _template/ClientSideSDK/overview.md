@@ -18,7 +18,7 @@ The purpose of the overview is to give potential users of the API a general idea
 
 The API overview begins with an introduction to the main functionalities of the API. This section should cover the main components of the API, the primary goal it is trying to achieve, and any context needed to understand the API. Such context, for example, could include whether the API relies on or enables other LivePerson services, external third-party data or any other general context needed to understand how the API works.
 
-This section should also include any prerequisites that are needed to start working with the API. Is knowledge of a specific (non-generic) coding library required (like OpenGL for example)? Are certain data points required(like special unique identifiers or third-party authentication)? Are there LiveEngage configurations which must take place before the API can be used (like permissions)?
+This section should also include any prerequisites that are needed to start working with the API. Is knowledge of a specific (non-generic) coding library required (like OpenGL for example)? Are certain data points required (like special unique identifiers or third-party authentication)? Are there LiveEngage configurations which must take place before the API can be used (like permissions)?
 
 ### Getting started
 
@@ -34,11 +34,11 @@ A few things you'll need to get started with this API:
 
 	* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 5. If there are any other steps that the user has to perform in order to use your API, include them here. This could include preparing certain parameters (like an account number) or certain datasets (like a timeframe they're interesting in looking at or a list of users to be created).
 

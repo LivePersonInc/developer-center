@@ -11,32 +11,32 @@ indicator: both
 The following documentation outlines the configuration for a bot connector using LivePerson Functions to modify vendor payloads, repsonses and read out errors.
 
 {: .important}
-As the Hook feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
+As the Hook feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting up LivePerson Functions and its permissions.
 
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
+See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 #### Step-by-Step Hook creation and deployment guide
 
-##### Step 1 - Create a function
+##### Step 1 — Create a function
 
 Create a new function using the **_Third-Party Bots Error Hook_** **_Third-Party Bots Post Hook_** or **_Third-Party Bots Error Hook_** event.
 
-##### Step 2 - Edit the Function
+##### Step 2 — Edit the Function
 
-Adjust the default code from the function template according to your needs by modifying the function (see below for more information on relevant considerations and code examples). On the right side you can see an example of the payload (in the sidebar, which you might need to open). Please see this document for more information on [developing functions](liveperson-functions-development-overview.html).
+Adjust the default code from the function template according to your needs by modifying the function (see below for more information on relevant considerations and code examples). On the right side you can see an example of the payload (in the sidebar, which you might need to open). Please see this document for more information on [developing functions](liveperson-functions-getting-started-development-deep-dive-ui.html#development-of-functions).
 
 Depending on the hook and vendor type the palyoad information differs in content and properties. Take a look at payload information below to align your coding on that properties.
 
-##### Step 3 - Deploy the function
+##### Step 3 — Deploy the function
 
-Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
+Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) for more information on how to deploy your function. At this point, you can also test your function.
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
-#### Last Steps in Third Party Bots
+#### Last Steps in Third-Party Bots
 
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
@@ -140,6 +140,18 @@ The following payload content will be recieved from the Function when an error i
     <td>>WatsonAssistantV2</td>
     <td>Defines the vendor response </td>
   </tr>
+    <tr>
+    <td>dfCxrequest</td>
+    <td>Object</td>
+    <td>DialogflowCX</td>
+    <td>Defines the vendor payload </td>
+  </tr>
+    <tr>
+    <td>dialogflowcx</td>
+    <td>Object</td>
+    <td>DialogflowCX</td>
+    <td>Defines the vendor response </td>
+  </tr>
   </tbody>
 </table>
 
@@ -149,7 +161,9 @@ The Prehook Lambda gets invoked on every message the customer sends. It allows t
 
 Example Payloads:
 
-###### DialogflowV2
+##### DialogflowV2
+
+###### Example payload
 
 ```json
 {
@@ -173,7 +187,22 @@ Example Payloads:
 }
 ```
 
-###### Custom Integration
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryInput } = payload;
+
+if (queryInput.text && queryInput.text.text) {
+  queryInput.text.text += "preHook";
+}
+
+return callback(null, payload);
+```
+
+##### Custom Integration
+
+###### Request payload
 
 ```json
 {
@@ -186,7 +215,21 @@ Example Payloads:
 }
 ```
 
-###### Lex
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+
+if (payload.message) {
+  payload.message += "preHook";
+}
+
+return callback(null, payload);
+```
+
+##### Lex
+
+###### Request payload
 
 ```json
 {
@@ -201,7 +244,19 @@ Example Payloads:
 }
 ```
 
-###### Microsoft
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.inputText) {
+  payload.inputText += "preHook";
+}
+return callback(null, payload);
+```
+
+##### Microsoft
+
+###### Request payload
 
 ```json
 {
@@ -219,7 +274,19 @@ Example Payloads:
 }
 ```
 
-###### WatsonV1
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.text) {
+  payload.text += "preHook";
+}
+return callback(null, payload);
+```
+
+##### Watson
+
+###### Request payload
 
 ```json
 {
@@ -244,13 +311,62 @@ Example Payloads:
 }
 ```
 
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.message) {
+  payload.message += "preHook";
+}
+return callback(null, payload);
+```
+
+##### DialogflowCX
+
+###### Example payload
+
+```json
+{
+  "session": "us-central1-dialogflow.googleapis.com/projects/projectid/locations/us-central1/agents/agentid",
+  "queryInput": {
+    "text": { "text": "customer message", "languageCode": "en" }
+  },
+  "queryParams": {
+    "payload": {
+      "fields": {
+        "lpEvent": {
+          "kind": "structValue",
+          "structValue": {
+            "fields": {}
+          }
+        },
+        "lpSdes": { "kind": "structValue", "structValue": { "fields": {} } }
+      }
+    }
+  }
+}
+```
+
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryInput } = payload;
+
+if (queryInput.text && queryInput.text.text) {
+  queryInput.text.text += "preHook";
+}
+
+return callback(null, payload);
+```
+
 #### Post Hook
 
 The Posthook Lambda gets invoked on every message the customer sends. It allows to modify or expand the response of the payload. Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
 
-Example Responses:
+##### DialogflowV2
 
-###### DialogflowV2
+###### Request payload
 
 ```json
 {
@@ -314,13 +430,42 @@ Example Responses:
 }
 ```
 
-###### Custom Integration
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryResult } = payload;
+if (
+  queryResult &&
+  queryResult.fulfillmentMessages &&
+  queryResult.fulfillmentMessages[0].text.text[0] === "Hi there"
+) {
+  queryResult.fulfillmentMessages[0].text.text[0] += "postHook";
+}
+return callback(null, payload);
+```
+
+##### Custom Integration via Faas
+
+###### Request payload
 
 ```json
 { "context": {}, "messages": ["customer message"] }
 ```
 
-###### Lex
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.messages && payload.messages[0]) {
+  payload.messages[0] += " edited by postHook";
+}
+return callback(null, payload);
+```
+
+##### Amazon Lex
+
+###### Request payload
 
 ```json
 {
@@ -335,7 +480,19 @@ Example Responses:
 }
 ```
 
-###### Microsoft
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.message) {
+  payload.message = "Changed text by postHook";
+}
+return callback(null, payload);
+```
+
+##### Microsoft Bot Framework
+
+###### Request payload
 
 ```json
 {
@@ -351,7 +508,19 @@ Example Responses:
 }
 ```
 
-###### WatsonV1
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload && payload[0].text) {
+  payload[0].text += "postHook changed this message";
+}
+return callback(null, payload);
+```
+
+##### Watson
+
+###### Request payload
 
 ```json
 {
@@ -390,4 +559,84 @@ Example Responses:
     }
   ]
 }
+```
+
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.output && payload.output.generic[0].text === "Hi there") {
+  payload.output.generic[0].text += "postHook";
+}
+return callback(null, payload);
+```
+
+##### DialogflowCX
+
+###### Request payload
+
+```json
+{
+  "responseId": "c85d5898-917d-4a6e-a16a-184f29f89ab3-ssabshsdf",
+  "queryResult": {
+    "responseMessages": [
+      {
+        "text": {
+          "text": ["Hi there!"],
+          "allowPlaybackInterruption": false
+        },
+        "message": "text"
+      }
+    ],
+    "webhookPayloads": [],
+    "webhookStatuses": [],
+    "languageCode": "en",
+    "parameters": null,
+    "intent": {
+      "trainingPhrases": [],
+      "parameters": [],
+      "labels": {},
+      "name": "projects/dialogflow-cx/locations/us-central1/agents/83-b2f2-369089/intents/99130578",
+      "displayName": "",
+      "priority": 0,
+      "isFallback": false,
+      "description": ""
+    },
+    "intentDetectionConfidence": 1,
+    "match": {
+      "intent": {
+        "trainingPhrases": [],
+        "parameters": [],
+        "labels": {},
+        "name": "projects/dialogflow-cx/locations/us-central1/agents/83-b2f2-369089/intents/99130578",
+        "displayName": "",
+        "priority": 0,
+        "isFallback": false,
+        "description": ""
+      },
+      "parameters": null,
+      "resolvedInput": "",
+      "matchType": "INTENT",
+      "confidence": 1,
+      "event": ""
+    },
+    "text": "hi",
+    "query": "text"
+  }
+}
+```
+
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryResult } = payload;
+if (
+  queryResult &&
+  queryResult.responseMessages &&
+  queryResult.responseMessages[0].text.text[0] === "Hi there"
+) {
+  queryResult.responseMessages[0].text.text[0] += "postHook";
+}
+return callback(null, payload);
 ```

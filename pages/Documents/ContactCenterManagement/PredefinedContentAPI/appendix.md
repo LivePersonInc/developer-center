@@ -39,7 +39,7 @@ This section contains API details that are common to every API’s resource and 
 | field_set| Predefined set of fields| Comma delimited list of strings| Optional | Default: summary Validation fail error code: 400.Non existing field error code: 400.Supported field_set values: 1. all(id, deleted, enabled, data, categoriesIds, type, hot-key)  2. summary(id, deleted, enabled, categoriesIds, type, hot-key) |
 | include_deleted | Whether or not deleted items in the response are included | Boolean| Optional | Default: False|
 | sanitize_data   | Whether to sanitize any HTML messages| Boolean| Optional | Default: False|
-| lang| List of requested content languages| Comma delimited list of language IDs (en-US,…) | Optional | Default: all languages|
+| lang| List of requested content languages| Comma delimited list of language IDs (en-US, …) | Optional | Default: all languages|
 
 **Path Parameters**
 
@@ -67,7 +67,7 @@ This section contains API details that are common to every API’s resource and 
 | attributes.*.name  | Name of an attribute.| string| Required |
 | attributes.*.value | Value of an attribute.| string| Required |
 | categoriesIds| Categories assigned to this object.| array of numbers| Optional |
-| skillsIds| Skill assigned to this object| array of numbers| Optional |
+| skillsIds| Skill assigned to this object| array of longs| Optional |
 | lobIds| lob assigned to this object| array of numbers| Optional |
 
 ### Entity Example

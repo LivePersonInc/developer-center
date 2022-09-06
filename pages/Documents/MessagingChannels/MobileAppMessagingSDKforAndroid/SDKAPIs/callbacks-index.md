@@ -13,7 +13,7 @@ indicator: messaging
 
 The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. This section details each callback.
 
-_**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](android-callbacks-interface.html)._
+**Note:** There are 2 ways to register to LivePerson events. For more information, click [here](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#callbacks-interface).
 
 ### Conversation Events
 #### Conversation Started
@@ -36,8 +36,6 @@ Called whenever either the consumer or the agent starts a new conversation.
 | Parameter | Type | Description  |
 |----|----|----|
 | convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the new Conversation, and a null CloseReason. |
-
-
 
 #### Conversation Resolved
 
@@ -63,12 +61,9 @@ Called when the current conversation is marked as resolved by either the consume
 |----|----|----|
 | convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the resolved Conversation, and a CloseReason describing why the conversation ended. |
 
-
-
 #### Conversation Fragment Closed
 
 Called when the Conversation Fragment is closed (only called when using Fragment Mode).
-
 
 > **Intent Action:** 
 >
@@ -78,12 +73,9 @@ Called when the Conversation Fragment is closed (only called when using Fragment
 >
 > onConversationFragmentClosed() 
 
-
-
 #### Conversation Marked as Urgent
 
 Called when the current conversation gets marked as urgent by either the consumer or the agent.
-
 
 > **Intent Action:** 
 >
@@ -93,12 +85,9 @@ Called when the current conversation gets marked as urgent by either the consume
 >
 > onConversationMarkedAsUrgent()
 
-
-
 #### Conversation Marked as Normal
 
 Called when the current conversation gets marked as normal by either the consumer or the agent.
-
 
 > **Intent Action:** 
 >
@@ -108,15 +97,12 @@ Called when the current conversation gets marked as normal by either the consume
 >
 > onConversationMarkedAsNormal()
 
-
-
 ### Agent Action Events
 #### Agent details changed
 
 Called when the assigned agent of the current conversation has changed, or their details are updated. When no agent is associated with the conversation, the callback passes a null value. For example, this happens when an agent returns the consumer to the request queue. 
 
 **Note:** You must check for null value before using the agentData object.
-
 
 > **Intent Action:** 
 >
@@ -131,8 +117,6 @@ Called when the assigned agent of the current conversation has changed, or their
 | Parameter | Type | Description  |
 |----|----|----|
 | agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the new (or updated) currently-assigned Agent. |
-
-
 
 #### Agent typing
 
@@ -152,8 +136,6 @@ Called when the assigned agent is typing a message. When there are 2 seconds of 
 |----|----|----|
 | isTyping | boolean | **true** if the Agent is currently typing; **false** if the Agent's keyboard becomes idle. |
 
-
-
 #### Offline Hours Changed
 
 Called when there is a change in agent availability. 
@@ -171,8 +153,6 @@ Called when there is a change in agent availability.
 | Parameter | Type | Description  |
 |----|----|----|
 | isOfflineHoursOn | boolean | **true** if the Agent is in Offline Hours mode; **false** if the Agent returns to an online state. |
-
-
 
 ### User Action Events
 #### User Denied Permission
@@ -197,8 +177,6 @@ Called if the user denied a necessary system permission for the action they trie
 | permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user was attempting to perform. |
 | doNotShowAgainMarked | boolean | **true** if the user directed the Permissions system to never ask again for this permissionType; **false** otherwise. |
 
-
-
 #### User Action On Prevented Permission
 
 **Android version supported:** 6.0 (Marshmallow; API 23) and above
@@ -219,14 +197,11 @@ Called before requiring a permission that the user has not yet accepted. For exa
 |----|----|----|
 | permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user is attempting to perform. |
 
-
-
 #### Agent avatar tapped
 
 Called when the user taps on the agent avatar.
 
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode).
-
 
 > **Intent Action:** 
 >
@@ -242,13 +217,11 @@ The icon is available next to the agent message bubble or on the top of the tool
 |----|----|----|
 | agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the Agent the user tapped on. |
 
-
-
 #### Structured Content Link Clicked
 
 Called when a structured content control with Link action gets clicked.  
 
-{:.important}
+{: .important}
 This callback only gets called if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to **true**.
 
 > **Intent Action:** 
@@ -265,8 +238,6 @@ This callback only gets called if the [structured_content_link_as_callback](andr
 |----|----|----|
 | uri | String | A link to the content the user was sent to when they tapped on a piece of Structured Content. |
 
-
-
 ### Survey Events
 #### CSAT Screen Launched
 
@@ -280,8 +251,6 @@ Called when the feedback screen launches.
 >
 > onCsatLaunched()
 
-
-
 #### CSAT Screen Dismissed
 
 Called when the feedback screen gets dismissed with any result, positive or negative. (The user taps the **Submit**, **Skip**, or **Back** buttons.) 
@@ -293,8 +262,6 @@ Called when the feedback screen gets dismissed with any result, positive or nega
 > **Callback:** 
 >
 > onCsatDismissed()
-
-
 
 #### CSAT Screen Submitted
 
@@ -319,8 +286,6 @@ Called when the user taps the **Submit** button on the feedback screen. The onCs
 | conversationId | String | ID of the conversation the survey is rating. |
 | starRating | int | How many stars (out of 5) the user rated this conversation. |
 
-
-
 #### CSAT Screen Skipped
 
 Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed callback is called as well.
@@ -332,8 +297,6 @@ Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed 
 > **Callback:** 
 >
 > onCsatSkipped()
-
-
 
 ### Authentication Events
 #### Token Expired
@@ -348,8 +311,6 @@ Called if the token used in the session has expired and is no longer valid. The 
 >
 > onTokenExpired()
 
-
-
 #### Unauthenticated User Expired
 
 Called if the temporary user authentication used specifically in an Unauthenticated type flow expires.
@@ -361,8 +322,6 @@ Called if the temporary user authentication used specifically in an Unauthentica
 > **Callback:** 
 >
 > onUnauthenticatedUserExpired()
-
-
 
 ### Connection Events
 #### Connection State has Changed
@@ -383,8 +342,6 @@ Called when the connection to the conversation server has been established or di
 |----|----|----|
 | isConnected | boolean | **true** for connected, **false** for disconnected |
 
-
-
 ### Error Events
 #### Multi-Type Error Indication
 
@@ -394,6 +351,7 @@ Called to indicate that an internal SDK error occurred.
 >
 > ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION
 >
+> - Deprecated since September 28, 2020.
 > - To get the type param from the Intent, use LivePersonIntents.getOnErrorTaskType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
@@ -406,7 +364,21 @@ Called to indicate that an internal SDK error occurred.
 | type      | TaskType (enum) | The category or type of error. |
 | message   | String          | A detailed message on the error. |
 
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
 
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
 
 ### LivePerson Callbacks
 
@@ -455,14 +427,15 @@ public interface LivePersonCallback {
     void onConnectionChanged(boolean isConnected);
     
     // Error Events
+    @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     void onError(TaskType type, String message);
+    void onError(LpError lpError, String message);
 }
 ```
 
-
-
 ### LivePerson Intents
-#### Intent Actions:  
+
+#### Intent Actions  
 
 ```java
 public interface ILivePersonIntentAction {
@@ -502,8 +475,7 @@ public interface ILivePersonIntentAction {
 }
 ```
 
-
-#### Intent parameter 'Extras':
+#### Intent parameter 'Extras'
 
 ```java
 public interface ILivePersonIntentExtras{
@@ -528,15 +500,19 @@ public interface ILivePersonIntentExtras{
     String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";
     
     // Error Extras
+    @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
+    String LP_ON_ERROR_INTENT_INT_EXTRA = "LP_ON_ERROR_INTENT_INT_EXTRA";
     String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";
 }
 ```
 
-
-### TaskType enum:
+### TaskType enum
 
 ```java
+/**
+* @deprecated Since September 28, 2020
+*/
 enum TaskType {
   CSDS,
   IDP,
@@ -557,3 +533,30 @@ enum TaskType {
 | INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
 | USER_EXPIRED        | The user's authentication has expired. |
 | CLOSING_SOCKET      | A request has timed out while trying to reach a server, and as a result we are closing our socket. |
+
+### LpError enum
+
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN,
+  STEP_UP_FAILURE
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Error while requesting domains. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| STEP_UP_FAILURE     | Error while stepping up consumer from un-authenticated conversation to authenticated. |
+| UNKNOWN             | General SDK error. |
+

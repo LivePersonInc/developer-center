@@ -38,7 +38,6 @@ Success response:
 
 In addition to the response, the ExConversationChangeNotification with the recent conversations (maximum 1001 conversation), fitting the parameters set in the subscription request, will be sent. 
 
-
 ### subscribeAgentsState
 
 This method is used to create a subscription for Agent State updates. An event will be received whenever the bot user's state is updated.
@@ -472,7 +471,7 @@ agent.publishEvent({
 			"elements": [
 				{
 				 "type": "image",
-					"url": "http://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
+					"url": "https://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
 					"tooltip": "image tooltip",
 					"click": {
 						"actions": [
@@ -508,7 +507,7 @@ agent.publishEvent({
 							{
 									"type": "link",
 									"name": "Add to cart",
-									"uri": "http://www.google.com"
+									"uri": "https://www.google.com/"
 							}
 						]
 					}
@@ -538,7 +537,7 @@ agent.publishEvent({
             "elements": [
                 {
                     "type": "image",
-                    "url": "http://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
+                    "url": "https://cdn.mos.cms.futurecdn.net/vkrEdZXgwP2vFa6AEQLF7f-480-80.jpg?quality=98&strip=all",
                     "tooltip": "image tooltip",
                     "click": {
                         "actions": [
@@ -574,7 +573,7 @@ agent.publishEvent({
                             {
                                 "type": "link",
                                 "name": "Add to cart",
-                                "uri": "http://www.google.com"
+                                "uri": "https://www.google.com/"
                             }
                         ]
                     }
@@ -636,13 +635,13 @@ Success response:
 
 **Make sure that you implement reconnect logic according to [liveperson's retry policy guidelines](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html)**
 
-Will reconnect the socket with the same configurations - will also regenerate token by default.  Use if socket closes unexpectedly or on token revocation.
+Will reconnect the socket with the same configurations — will also regenerate token by default.  Use if socket closes unexpectedly or on token revocation.
 
 Use `skipTokenGeneration = true` if you want to skip the generation of a new token.
 
 Call `reconnect` on `error` with code `401`.
 
-**Note**: When the `reconnect` method fails to re-establish a connection with Conversational Cloud, a `closed` and `error` events will fire. Unless these events are handled, multiple instances of a reconnection mechanism will be triggered. See our [retry policy](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html) for more information on how we recommend you handle a retry mechanism.
+**Note:** When the `reconnect` method fails to re-establish a connection with Conversational Cloud, a `closed` and `error` events will fire. Unless these events are handled, multiple instances of a reconnection mechanism will be triggered. See our [retry policy](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html) for more information on how we recommend you handle a retry mechanism.
 
 ### dispose()
 

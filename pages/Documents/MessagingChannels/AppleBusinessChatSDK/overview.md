@@ -25,7 +25,7 @@ After sending a [Custom Interactive Message (CIM)](apple-messages-for-business-t
   - Provides human and bot agents with context of the consumer’s iMessage app transactional and activity data, allowing them to have a more meaningful and effective conversation
 - Notify the developer of conversational events so that they can take action with custom SDEs
   - Create data-driven integrations to external systems via the agent widget SDK
-- Provide out of the box UI Solutions incuding PCI compliant secure forms
+- Provide out of the box UI Solutions including PCI compliant secure forms
 
 ### Who is the SDK for?
 
@@ -41,9 +41,9 @@ The SDK has 2 distinctive contextual integration environments:
 #### Consumer Transaction over iMessage App
 
 1. Consumer is messaging an appliance brand via Messages for Business
-2. Consumer is asking the agent to provide details on the delivery and installation offering for the their ovens.
-3. Agent gives the consumer all the details on the delivery and installation, and consumer decides to buy both the oven and the delivery package.
-4. Agent sends the consumer an iMessage app interaction that includes all products selected in cart area, with payment flow.
+2. Consumer is asking the agent to provide details on the delivery and installation offering for their ovens.
+3. Agent gives the consumer all the details on the delivery and installation, and the consumer decides to buy both the oven and the delivery package.
+4. Agent sends the consumer an iMessage app interaction that includes all products selected in the cart area, with payment flow.
 
 Path A:
 
@@ -59,7 +59,7 @@ Path B:
 
 5. Consumer does not respond to the iMessage app transaction sent to him by the agent, and texts that agent that he still need some time to decide
 6. Agent closes the conversation in Conversational Cloud
-7. After a couple of hours the consumer comes back to the Apple Messages for Business conversation and continues with the purchase flow on the iMessage app interaction - consumer does not message the brand, but only opens the iMessage app in the conversation thread
+7. After a couple of hours the consumer comes back to the Apple conversation and continues with the purchase flow on the iMessage app interaction — consumer does not message the brand, but only opens the iMessage app in the conversation thread
 8. LE Conversation is updated with the transaction items and value via SDEs while the conversation is closed in Conversational Cloud
 9. Agent manager generates a report that looks at the cross session conversation (transaction that reported after conversation closed in LE), to evaluate the correlation between consumer conversations and transactions, and to attribute incremental lift for LE conversation
 

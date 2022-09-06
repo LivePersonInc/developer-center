@@ -29,7 +29,6 @@ You can also access the location information with the {$location} variable, for 
 - Longitude: {$location.lng}
 - combined Lat,Lng {$location.latlng}.
 
-
 ### Get and Set UserName
 
 The get UserName and set UserName functions are used to get (and set) the value of a permanent variable, dedicated to the user’s name. Having this dedicated variable makes it easy to consistently set the user’s information.
@@ -84,7 +83,7 @@ Returns the type of platform that the user is currently communicating on. This f
 * SMS
 * INAPP (for In-app SDK)
 * FACEBOOK
-* ABC (for Apple Messages for Business)
+* ABC (for Apple Business Chat, now called Apple Messages for Business)
 * RCS
 * WHATSAPP
 

@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
   version: '1.0'
-  title: Liveperson Domains API
+  title: LivePerson Domains API
   description: |
     This is a read-only API that returns the base domain of LivePerson that should be used in the APIs outlined in this document.
-host: api.liveperson.net  
+host: api.liveperson.net
 basePath: /api/account/
 schemes:
   - https

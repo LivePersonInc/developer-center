@@ -12,7 +12,6 @@ permalink: video-chat-build-your-widgets.html
 indicator:
 ---
 
-
 Once you have the video service and accompanying html elements in place, you are ready to build the two Conversational Cloud widgets for your video call: the agent side widget and the customer side widget.
 
 ### Agent side widget

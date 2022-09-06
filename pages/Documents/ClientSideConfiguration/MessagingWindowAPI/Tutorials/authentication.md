@@ -9,7 +9,6 @@ subfoldername: Tutorials
 
 order: 40
 
-
 permalink: messaging-window-api-tutorials-authentication.html
 keywords: oauth2.0 jwt token
 indicator: messaging
@@ -18,18 +17,20 @@ indicator: messaging
 In this tutorial you will use the APIs with the authenticated identity of the consumer using a [JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519).
 
 ### Prerequisites
-See [Prerequisites](consumer-int-get-msg.html#prerequisites).
-In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator) according to [these instructions](consumer-int-account-provision.html).
 
-### Step 1 - Configure the Authentication Connector
-Log into Conversational Cloud and navigate to Campaign Builder > Data Sources > Authentication Server > Configure.
+See [Prerequisites](consumer-int-get-msg.html#prerequisites).
+In order to work with authentication, your account must be provisioned by an LPA (LivePerson Administrator).
+
+### Step 1 — Configure the Authentication Connector
+
+Log into Conversational Cloud and navigate to Campaign Builder → Data Sources → Authentication Server → Configure.
 
 ![campaigns](img/campaigns.png)
 ![datasources](img/datasources.png)
 
 In the connector configuration screen, set the following fields:
 
-* Choose from the dropdown ``oAuth 2.0 authentication (implicit)``.
+* Choose from the dropdown ``OAuth 2.0 authentication (implicit)``.
 * **Authentication Endpoint** : ``https://dummy.com``.
 * In the ``JWT Public Key``, type:
 
@@ -42,7 +43,7 @@ MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdlatRjRjogo3WojgGHFHYLugdUWAY9iR3fy4arWNA
 
 ![connector](img/connector.png)
 
-### Step 2 - Create an Authenticated Token
+### Step 2 — Create an Authenticated Token
 
 In order to create an authenticated token, you should supply a JWT with the identity of the user signed by your identity provider. For this tutorial you can use the JWT below. Its signature can be validated using the public key we configured in the previous step. To create your own external JWT, see [Further Testing](#further-testing).
 
@@ -65,7 +66,8 @@ To check the value inside the ``LP_AUTH_JWT``, type the following:
 eyJraWQiOiIwMDAwMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTBjZDc3YWY4NDM2NDM2OGQzNDgyNmFiNDlmMWI4YWM5Nzg2MzhlNmE2OGY3OTEyNGQzNzM4NGUzZWQ0YTc2IiwiYXVkIjoiYWNjOnFhNTcyMjE2NzYiLCJpc3MiOiJodHRwczpcL1wvaWRwLmxpdmVwZXJzb24ubmV0IiwibHAuZXh0Ijp7InN1YiI6Iis5NzItMy01NTU1LTU1NSIsImlzcyI6Imh0dHBzOlwvXC9pZHAubGl2ZXBlcnNvbi5uZXQiLCJscF9zZGVzIjoiZTJmNzk1OGJiNjU3ZGFjOGEyY2NiMGE1OGNiNGRkYjQ1ZGZiYmZmMzg0MzM1ZGJkYmMwMGNmNWM2YmFlZmNlMjQ5YWI3NDQ4YTQxMmIxZmQyNWYyMmU0YjY0YmZjYTEyMDQyMzFjZGE4NDI2ZGFmOGY3ZDYzZjk5NTM2ODA5YzNlZGZhOWVkMDQ2YmMxMjgyMDNkMTZmZTU3ZGNmNDcwYWVlYWE1NDQwZjYzMmVjZmY5MjY2YjFmOGVhYzI0NjA4In0sImV4cCI6MTUzNDk3MTkzMCwiaWF0IjoxNDcxODk5OTQyfQ.it83vkbhAZqSE-H6c87WnU38Cxh-K_uxsTkWvKRBbSxSQYrlK0Hi267OE4EGhr0CIsf8bRbaiwa3gQEYGY43alRWQiGZ1zR30okxFVUjQVvaWGjzF-aB5FEjWFBdbWsyZ28xR1i971ydB4-iMYgMWDvG8KkB9rFaY-gsoK5LXE0
 ```
 
-### Step 3 - Create an Authenticated Conversation
+### Step 3 — Create an Authenticated Conversation
+
 We will now be able to open a WebSocket connection. This time we will use the authenticated identity encoded in the ``LP_AUTH_JWT``:
 
 ```sh
@@ -84,7 +86,7 @@ Open the Agent Workspace and click the ``Accept`` button. The conversation will 
 Close the conversation.
 
 ### Further Testing
-You can try changing the external JWT properties using a JWT encoder, for example ([jwt.io](http://jwt.io)). Use the ``RS256`` algorithm with the following keys:
+You can try changing the external JWT properties using a JWT encoder, for example ([jwt.io](https://jwt.io/)). Use the ``RS256`` algorithm with the following keys:
 
 ```
 -----BEGIN PUBLIC KEY-----

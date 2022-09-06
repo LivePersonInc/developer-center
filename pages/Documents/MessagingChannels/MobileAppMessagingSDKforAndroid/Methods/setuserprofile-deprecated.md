@@ -27,4 +27,3 @@ The setUserProfile API takes custom parameters about the consumer as an input an
 | lastName | User’s last name |
 | phone | User’s phone |
 
-

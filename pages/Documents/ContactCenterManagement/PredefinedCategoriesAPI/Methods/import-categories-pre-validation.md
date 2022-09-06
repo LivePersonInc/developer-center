@@ -56,7 +56,6 @@ Type: String </td>
   </tr>
 </table>
 
-
 ### Query Parameters
 
 <table>
@@ -73,10 +72,9 @@ Type: String </td>
   <tr>
     <td>fileType</td>
     <td>Type of the file (parrent ac type)</td>
-    <td>CANNED_RESPONSE - canned response file type</td>
+    <td>CANNED_RESPONSE — canned response file type</td>
   </tr>
 </table>
-
 
 ### Request Headers
 
@@ -91,10 +89,9 @@ Type: String </td>
   </tr>
 </table>
 
-
 **Request Body**
 
-The request payload contain the csv content as string and a structure for containing the validation errors in that csv
+The request payload contain the CSV content as string and a structure for containing the validation errors in that CSV:
 
 <table>
   <tr>
@@ -109,7 +106,6 @@ The request payload contain the csv content as string and a structure for contai
 }</td>
   </tr>
 </table>
-
 
 ### Response Body
 

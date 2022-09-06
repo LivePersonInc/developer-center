@@ -18,9 +18,21 @@ This method is a destructive method that is typically used to clean a user’s d
 
 This method conducts the following:
 
-* Unregisters from the push notification service.
+* Unregisters from the push notification service based on unregister Type provided.
 * Clears all SDK persistent data.
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
+* Note: This does not end the current messaging conversation.
+
+`func logout(unregisterType: LPPusherUnregisterType, 
+            completion: @escaping ()->(), 
+            failure: @escaping (_ error: Error)->())`
+            
+**Important: This method must not be called when the conversation screen is displayed.**
 
 
-`func logout()`
+#### LPPusherUnregisterType
+* **All**: unregister for all types of push notification messages
+
+* **None**: do not unregister from the pusher at all
+
+* **Agent**: Unregister only for agent push notification messages. Consumers can still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.

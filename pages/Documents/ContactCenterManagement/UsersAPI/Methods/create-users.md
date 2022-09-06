@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 30
 permalink: users-api-methods-create-users.html
 
@@ -17,7 +16,7 @@ indicator: both
 
 This API creates a list of users for a specific account.
 
-**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+**Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
 ```
 https://API_REQUEST?v=4.0
@@ -44,6 +43,12 @@ https://API_REQUEST?v=4.0
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID|   String |
+ 
+**Query Parameters**
+
+ | Name            | Description                       | Type    | Required  | Notes                                                |
+ |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
+ | v               | API version number                | double  | Required  | Value should be 4.0                                  |
 
 ### Response
 

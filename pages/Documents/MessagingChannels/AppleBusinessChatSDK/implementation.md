@@ -23,7 +23,6 @@ LPABCSDK.initialize(minimumLogLevel: .trace)
 //For disabling logs use LPABCLogLevel.none
 LPABCSDK.initialize(minimumLogLevel: .none)
 
-
 //Use 'eventSubscription' for passing the events 'LPABCEvent' you wish to get a callback notification for. 
 //If not explicitly stated, the default would be subscribing to all events.
 LPABCSDK.initialize(minimumLogLevel: .none, eventSubscription: [.newConversation])
@@ -179,7 +178,6 @@ If you want to execute code whenever the Aggregated SDE Stack auto send complete
 lpabcsdk.aggregatedSDEStackCompletion = {  completion, error in
     // debug code
 }
-
 ```
 
 ### Event Callback
@@ -198,7 +196,11 @@ lpabcsdk.abcEventCallback = { event  in
 
 You can set the desired SDEs to express your custom reporting for the event triggered.
 
-**Supported Event Types**: - `newConversation` - Receiving an **incoming (agent to consumer)**, new first time CIM - per conversation. - `secureForm` - Receiving an **incoming (agent to consumer)** secure Form: See the [Secure Form documentation](https://knowledge.liveperson.com/security-regulations-secure-forms-secure-forms-for-messaging-user-guide.html).
+**Supported Event Types**:
+
+- `newConversation`: Receiving an **incoming (agent to consumer)**, new first time CIM — per conversation.
+- `secureForm`: Receiving an **incoming (agent to consumer)** secure form — see the [Secure Form documentation](https://knowledge.liveperson.com/security-regulations-secure-forms-secure-forms-for-messaging-user-guide.html).
+
 Example:
 
 ```swift

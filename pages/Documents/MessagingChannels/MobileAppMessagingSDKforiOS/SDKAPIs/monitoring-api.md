@@ -2,6 +2,8 @@
 pagename: Monitoring API
 redirect_from:
   - consumer-experience-ios-sdk-monitoring-methods.html
+  - consumer-experience-ios-sdk-methods.html#getEngagement
+  - consumer-experience-ios-sdk-methods.html#sendSDE
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -11,13 +13,12 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
 
-{:.important}
+{: .important}
 Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the [Quick Start](mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk) guide.
 
 ### sendSDE
 
 Use this API method to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
-
 
 ```swift
 func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())
@@ -47,8 +48,11 @@ func getEngagement(identities: [LPMonitoringIdentity], monitoringParams: LPMonit
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
 | failure | A Failure callback with an error in case the request fails. |  Yes |
 
+{: .notice}
+When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
+
 ### sendSDE (Deprecated)
-*This method was deprecated since SDK version 3.2.0 Use [sendSDE(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->()) instead](consumer-experience-ios-sdk-methods.html#sendSDE) instead*
+*This method was deprecated since SDK version 3.2.0 Use [sendSDE(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->()) instead](#sendsde) instead*
 
 Use this API to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
 
@@ -63,11 +67,8 @@ func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completio
 | completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
 | failure | A Failure callback with an error in case the request fails |  Yes |
 
-
-
-
 ### getEngagement (Deprecated)
-*This method was deprecated since SDK version 3.2.0 Use [getEngagement(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->()) instead) instead](consumer-experience-ios-sdk-methods.html#getEngagement) instead*
+*This method was deprecated since SDK version 3.2.0 Use [getEngagement(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->()) instead) instead](#getengagement) instead*
 
 Use this method to get an engagement for a consumer in an appInstallationId context. When calculating eligibility, the decision is based on the SDEs and other parameters based on the messaging campaign concept.
 
@@ -83,6 +84,5 @@ func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, c
 | monitoringParams | An optional [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with optional pageId, Entry Points array and Engagement Attributes | No |
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
 | failure | A Failure callback with an error in case the request fails |  Yes |
-
 
 *Please refer to the [Interface and Class Definitions](consumer-experience-ios-sdk-interfacedefinitions.html) section for parameter classes.*

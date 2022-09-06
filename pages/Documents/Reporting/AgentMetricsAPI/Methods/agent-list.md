@@ -8,7 +8,7 @@ permalink: agent-metrics-api-methods-agent-list.html
 indicator: messaging
 ---
 
-This method returns the list of  agents which are eligible to receive conversations and their state. This list of eligible agents depends on the transferred conversation's skill id and the privileges and permissions that the agent has (see offline users or not, take messages from the specific skill, etc.)
+This method returns the list of agents which are eligible to receive conversations and their state. This list of eligible agents depends on the transferred conversation's skill id and the privileges and permissions that the agent has (see offline users or not, take messages from the specific skill, etc.).
 
 **Request**
 
@@ -31,7 +31,6 @@ Filter is sent in the POST data (body) with the following JSON structure:
 | Name   |      Description      |  Type/Value | Notes |
 |----------|-------------|------|------|
 | skillIds | Conversation skill id to determine which agents will be filtered by ability to transfer to skill |    Array`<String>` ||
-
 
 **Response**
 

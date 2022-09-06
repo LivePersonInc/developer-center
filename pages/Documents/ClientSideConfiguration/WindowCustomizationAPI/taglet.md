@@ -27,4 +27,3 @@ This taglet is configured by the LivePerson account team based on the [Window Cu
 
 * Taglet can only be configured per [section](engagement-attributes-types-of-engagement-attributes.html#section) or for whole site.
 
-

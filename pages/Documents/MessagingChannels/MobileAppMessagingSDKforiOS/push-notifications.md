@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-push-notifications.html
 indicator: messaging
 ---
 
-Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
+Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 For push notifications to work, you must have a physical device and two .pem files for Conversational Cloud. Here, you will set up push notifications in your Xcode project, create your app certificate and key files, and create the required .pem files to implement push notifications.  
 
@@ -29,7 +29,6 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
    - **Maps:** Shows the location on the map.
 
    - **Background Modes + Remote notifications:** Minimizes the amount of time that elapses between when a user sees a push notification and when your app is able to display the content.
-
 
 2. Pass the user info of a remote push notification to the SDK:
 
@@ -57,21 +56,21 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(shouldShowPushNotification notification: LPNotification) -> Bool
    ```
 
-6. Override LPMessagingSDK - In-App Push Notification:
+6. Override LPMessagingSDK — In-App Push Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView
    ```
 
-7. Add custom tap behavior to LPMessagingSDK - In-App Notification:
+7. Add custom tap behavior to LPMessagingSDK — In-App Notification:
 
    ```swift
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
    ```
 
-   When using a Custom View for the in-app notification (LPMessagingSDKNotification(customLocalPushNotificationView)) the LPMessagingSDKNotificationDelete method gets overridden. 
+   When using `LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView` to customize the In App Notification, the following delegate `LPMessagingSDKNotification(notificationTapped notification: LPNotification)` won't be trigger as the behavior for the new InApp Notification should be implemented by the Host App. 
 
-   {:.important}
+   {: .important}
    The proprietary SDK notification is only for display purposes, interacting with it launches the app, but does not navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
 ### Step 2. Create a Certificate Signing Request
@@ -80,7 +79,7 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
 
 1. In the Applications folder, launch **Keychain Access**.
 
-2. From the Keychain Access menu, select **Certificate Assistant > Request a Certificate from a Certificate Authority**. 
+2. From the Keychain Access menu, select **Certificate Assistant → Request a Certificate from a Certificate Authority**. 
 
 3. Enter the required information:
 
@@ -156,14 +155,12 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
 
    - **Key file:** hostkey.pem
 
-   {:.notice}
-   If you are using a development certificate you should uncheck the Production checkbox and add 'Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
+   {: .notice}
+   If you are using a development certificate you should uncheck the Production checkbox and add '-Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
 
-   **Tip:** You have a **50** character limit for your Bundle ID.
+   **Tip:** You have a **155** character limit for your Bundle ID.
 
 7. Click **Close**.
-
-
 
 ### Unregister from push notifications
 

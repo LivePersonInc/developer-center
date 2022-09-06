@@ -14,7 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-shutdown-(deprecated).ht
 indicator: messaging
 ---
 
-
 *Deprecated. Please use the [shutDown(ShutDownLivePersonCallback)](android-shutdown.html) method.*
 
 Shuts down the SDK and removes the footprint of the user session from local memory. After shutdown the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 

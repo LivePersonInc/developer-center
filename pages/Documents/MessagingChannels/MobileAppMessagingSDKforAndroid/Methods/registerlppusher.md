@@ -14,14 +14,26 @@ permalink: mobile-app-messaging-sdk-for-android-methods-registerlppusher.html
 indicator: messaging
 ---
 
-
 If your system implementation involves an authentication step, use `LPAuthenticationParams`.
 
 There are 2 authenticated connection methods:
 
 * Authenticated (authenticationKey) 
 
-* Unauthenticated 
+* Unauthenticated
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
 
 ```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
@@ -31,16 +43,15 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | :--- | :--- |
 | brandId | The account ID, for example, 652838922. |
 | appId | The host app ID, for example, com.liveperson.myApp. |
-| gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
+| gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
-
 
 ### Authenticated (authenticationKey)
 
 Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePerson backend to verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
-**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with jwt - new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
+**Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
 When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
 

@@ -42,14 +42,14 @@ _For Visitor Authentication flow please collect necessary parameters from the [f
 
 **Body Parameters**
 
-Note that we expect you to send the parameters under the `"request"` key - see the Request Body Example
+Note that we expect you to send the parameters under the `"request"` key — see the Request Body Example.
 
 | Name	| Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
 | skill | Requests a chat with a specific skill. | alphanumeric | |
 | maxWaitTime | The maximum time in seconds that a visitor can wait before a chat starts. | numeric | This parameter must be between 0 and 86,400 seconds (24 hours). Use 0 for immediate availability. |
 | visitorIp | Sets the visitor's IP address. | alphanumeric (IP) | The IP address can be used to identify a visitor if that visitor has been marked as "blocked". This can be viewed in the Agent Console's Info tab (IP). The visitor's host name is found using this IP address. If no IP address is specified, the visitor's IP will be taken from the request's IP.  |
-| chatReferrer | Sets the location of where the chat button was clicked. | alphanumeric | Can have a URI format, but not mandatory. This is displayed in the Admin Console under Reporting & Analytics > Transcripts > select a transcript > Chat starting page (under General Chat Info). |
+| chatReferrer | Sets the location of where the chat button was clicked. | alphanumeric | Can have a URI format, but not mandatory. This is displayed in the Admin Console under Reporting & Analytics → Transcripts → select a transcript → Chat starting page (under General Chat Info). |
 | userAgent | Sets the visitor's user agent.  | alphanumeric | If no user agent is specified, it will be taken from the HTTP "User-Agent" header. This can be viewed in the Agent Console's Info tab (Browser). |
 | visitorId | A visitorId from a previous chat can be set in this parameter in order to link this chat to an existing visitor. | numeric | This will enable viewing chat history and visitor information from previous chats (of this visitor) in the Agent Console. Can be obtained using the Chat Information resource.  |
 | preChatLines | A list of lines that are shown to the agent before the chat starts in a special color.  | XML/JSON object | These lines are not displayed to the visitor. |
@@ -61,7 +61,6 @@ Note that we expect you to send the parameters under the `"request"` key - see t
 | conversationId | Conversation Id for Authentication flow | alphanumeric | mandatory for Visitor Authentication|
 | interactionTimeout | Setting the timeout for a user interaction in seconds. [optional] | numeric | |
 
-
 **Survey Body Parameters**
 
 | Name	| Description | Type/Value | Notes |
@@ -71,11 +70,25 @@ Note that we expect you to send the parameters under the `"request"` key - see t
 
 Request Body Example
 ```json
-    {
-      "request":{
-        "skill":"Sales","interactionTimeout":40,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36","LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA","LETagSessionId":"rN82d4rATN6EuiA4cJwaPg","LETagContextId":"2","engagementId":27469613,"campaignId":26948813,"language":"en-US"
-        }
+{
+    "request":{
+        "skill":"Sales",
+        "interactionTimeout":40,
+        "userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "preChatLines": {
+          "line": [
+            "This is a pre-chat line 1",
+            "This is a pre-chat line 2"
+          ]
+        },
+        "LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA",
+        "LETagSessionId":"rN82d4rATN6EuiA4cJwaPg",
+        "LETagContextId":"2",
+        "engagementId":27469613,
+        "campaignId":26948813,
+        "language":"en-US"
     }
+}
 ```
 
 *Notes:*
@@ -121,15 +134,20 @@ Request Body Example
 | LETagContextId | LiveEnagage context Id | alphanumeric | Taken from the Engagement response |
 | LETagVisitorId | LiveEnagage visitor Id | alphanumeric | Taken from the Engagement response |
 | engagementId | The ID of the engagement.   | numeric | Taken from the Engagement response |
-| ssoKey | An oAuth2.0 'code flow' token or 'implicit' JWT by oAuth2.0 RFC | alphanumeric | Provided by customer's IDP |
-| redirectUri | redirectURI parameter by oAuth2.0 RFC | alphanumeric | optional |
+| ssoKey | An OAuth 2.0 'code flow' token or 'implicit' JWT by OAuth 2.0 RFC | alphanumeric | Provided by customer's IDP |
+| redirectUri | redirectURI parameter by OAuth 2.0 RFC | alphanumeric | optional |
 
 Request Body Example
 
 ```json
-    {
-      "authChatConnId":568046210,"ssoKey":"k12197","engagementId":567609310,"LETagContextId":"2","LETagSessionId":"90o5l5twRUGu1rN7bzwNMA","LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"
-    }
+{
+    "authChatConnId":568046210,
+    "ssoKey":"k12197",
+    "engagementId":567609310,
+    "LETagContextId":"2",
+    "LETagSessionId":"90o5l5twRUGu1rN7bzwNMA",
+    "LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"
+}
 ```
 
 #### Response

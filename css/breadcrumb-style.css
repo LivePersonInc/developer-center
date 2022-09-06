@@ -1,15 +1,15 @@
-/* from Twitter Bootstrap */
+/* From Twitter Bootstrap */
 
 .breadcrumb {
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
   background-color: transparent;
 }
 
 .breadcrumb::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -20,10 +20,8 @@
 
 .breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
-  /*padding-right: 0.5rem;*/
-  /*padding-left: 0.5rem;*/
   color: var(--grey-button-icons);
-  content: "/";
+  content: '/';
 }
 
 .breadcrumb-item+.breadcrumb-item:hover::before {
@@ -34,21 +32,20 @@
   text-decoration: none;
 }
 
-.breadcrumb-item.active {}
+/* .breadcrumb-item.active {} */
 
-/*if you already use Twitter, you do not need these css lines above, cause they already in Twitter Bootstrap */
+/* If you already use Twitter, you do not need these CSS lines above, because they’re already in Twitter Bootstrap */
 
-/* Additions: imgage integration */
+/* Additions: image integration */
 
 .breadcrumbs {
   padding-left: 0;
-  margin-bottom: 1rem;
-  background-color: #f1f2ed;
-  border-radius: 0.25rem;
+  background-color: var(--body-text);
+  border-radius: .25rem;
 }
 
 .breadcrumbs::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -62,39 +59,31 @@
 }
 
 .breadcrumbs .breadcrumb-item {
-  font-size: 0.9em;
-  color: var(--grey-button-icons);
-  ;
-  font-family: "Open Sans";
-  font-weight: 300;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.no-after {
-  color: var(--grey-button-icons) !important;
-  ;
-}
-
-.breadcrumbs a.breadcrumb-item:after {
+.breadcrumbs .breadcrumb-item:after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "/";
+  content: '\\';
   padding-right: 8px;
   padding-left: 8px;
-  color: #999999;
+  color: var(--body-text);
   text-decoration: none;
 }
 
 .breadcrumbs .icon:after {
   display: inline-block;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  color: #818a91;
-  content: "/";
+  padding-right: .5rem;
+  padding-left: .5rem;
+  content: '/';
 }
 
 .breadcrumbs .icon {
@@ -102,6 +91,6 @@
 }
 
 .breadcrumbs .icon svg {
-  height: 0.7rem;
-  width: 0.7rem;
+  height: .7rem;
+  width: .7rem;
 }

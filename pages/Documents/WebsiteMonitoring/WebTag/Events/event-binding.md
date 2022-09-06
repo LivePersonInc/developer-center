@@ -39,12 +39,12 @@ There are two ways to use this method.
 
     ```javascript
     lpTag.events.bind({
-        eventName : "EVENTNAME",
-        appName : "APPNAME",
+        eventName: "EVENTNAME",
+        appName: "APPNAME",
         func: callbackFunction,
         context: callbackFunctionExecutionContext,  
         async: true, //default is false,
-        triggerOnce : true //default is false
+        triggerOnce: true //default is false
     });
     ```
 

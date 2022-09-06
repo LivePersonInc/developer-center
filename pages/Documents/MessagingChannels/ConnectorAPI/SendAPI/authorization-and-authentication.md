@@ -59,7 +59,7 @@ The `kid` (key id) is composed of `appjwt` and the date when it was issued. `typ
   "iat": 1524642670
 }
 ```
-Property `aud` defines the audience for whom the token is intended or the service for which it is intended. `azp` is the authorized party to which the AppJWT was issued. `scope` defines the part of application the authorized party has access to. `iss` defines the issuer of the token. `exp` is the expiration date and `iat` is the date when the token was issued. `aud` is always the account id, `azp` contains the app install id, `scope` is restricted to consumer, `iss` is Sentinel and `exp` and `iat` contain the corresponding dates. An AppJWT is valid for one hour. For more information about JWTs, please also see this [blog post](https://auth0.com/blog/json-web-token-signing-algorithms-overview/). 
+Property `aud` defines the audience for whom the token is intended or the service for which it is intended. `azp` is the authorized party to which the AppJWT was issued. `scope` defines the part of application the authorized party has access to. `iss` defines the issuer of the token. `exp` is the expiration date and `iat` is the date when the token was issued. `aud` is always the account id, `azp` contains the app install id, `scope` is restricted to consumer, `iss` is sentinel and `exp` and `iat` contain the corresponding dates. An AppJWT is valid for one hour. For more information about JWTs, please also see this [blog post](https://auth0.com/blog/json-web-token-signing-algorithms-overview/). 
 
 ### Get ConsumerJWT
 
@@ -69,7 +69,7 @@ Property `aud` defines the audience for whom the token is intended or the servic
 
 	* idp
 
-2. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
+2. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 #### Authentication with ConsumerJWS
 
@@ -79,11 +79,9 @@ The **ConsumerJWS** is the unique identifier of the user (consumer) and used by 
 
 A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 
-
 | Method | URI  |
 | :--- | :--- |
 | POST | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
-
 
 **Path Parameters**
 
@@ -92,7 +90,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | accountid | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 {
@@ -106,14 +104,12 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | :--- | :--- | :--- | --- |
 | v | The API version | numeric | 1.0 |
 
-
 **Request Headers**
 
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
-
 
 #### Response
 
@@ -122,7 +118,6 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | Code | Description |
 | :--- | :--- |
 | 201 | Created |
-
 
 **Response Example**
 
@@ -159,14 +154,13 @@ The SEND API returns an error response for every authorization or authentication
 | body.errorCode | A unique code identifying each possible error response. | *40104* | integer | The first three digits represent the HTTP status code and the last two digits are a changing number. When writing code for error detection and/or recovery, it should rely on the error code as it won't change over time. See below for the full list of possible values. |
 | type | The type of the response. | *.ReqBody$ErrorResp* | string | Always *.ReqBody$ErrorResp* for error response. |
 
-
 #### Response Bodies
 
 Each line in the following table represents one possible response body, including its title, details and errorCode. This means that there are five different error responses in total which can be returned by the API.
 
 | Error Code | Title | Details | Comment |
 | :--- | :--- | :--- | :--- | :--- |
-| 40001 | Missing parameter | Brand Id is missing | **Note:** This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `Sentinel`. Title and details will be adapted in a future release to reflect missing claims. The error code won't change. | 
+| 40001 | Missing parameter | Brand Id is missing | **Note:** This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `sentinel`. Title and details will be adapted in a future release to reflect missing claims. The error code won't change. | 
 | 40102 | Invalid AppJWT  | AppJWT has expired or is invalid | |
 | 40103 | Invalid ConsumerJWS  | ConsumerJWS is invalid  | |
 | 40104 | ConsumerJWS is missing  | X_ON_BEHALF_HEADER is not present |

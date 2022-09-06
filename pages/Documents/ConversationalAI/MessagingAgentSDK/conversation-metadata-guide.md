@@ -17,7 +17,7 @@ indicator: messaging
 
 Conversational Cloud provides a way for developers and partners that are building a bot using the Messaging Agent SDK to pass or listen for metadata or context information on a conversation. For example, sending metadata with structured content or listening for a metadata response after sending a request (payment, authorization, etc).
 
-_**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)._
+**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat).
 
 The metadata information can be used to achieve the following:
 
@@ -36,6 +36,7 @@ Below are the types of available metadata:
 * Structured Content identifier
 * Payment response
 * Authorization response
+* Social Messaging event
 
 #### Bot response
 
@@ -88,7 +89,6 @@ Bot response metadata is context information / the bot analysis of the last cons
   </tbody>
 </table>
 
-
 #### Action reason
 
 Action reason metadata describes the reason behind an action that was taken by a bot or a human agent, such as escalation or transfer. This information can be used to both provide information to an agent receiving a conversation that was escalated by a bot as well as analyze the transfer and escalation rate per escalation reason.
@@ -119,7 +119,6 @@ Action reason metadata describes the reason behind an action that was taken by a
    </tr>
   </tbody>
 </table>
-
 
 #### Escalation summary
 
@@ -159,7 +158,6 @@ Escalation summary metadata is a summary of conversation information up to an es
   </tbody>
 </table>
 
-
 **businessCase**
 
 <table>
@@ -186,7 +184,6 @@ Escalation summary metadata is a summary of conversation information up to an es
    </tr>
   </tbody>
 </table>
-
 
 #### Structured content identifier (ExternalId)
 
@@ -250,18 +247,57 @@ Structured content identifier metadata is used to both identify a specific "Card
   <tbody>
   <tr>
     <td>Status</td>
-    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
+    <td>Status of the consumer authentication — can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>
     <td>token</td>
-    <td>Token string - will be available only when authentication was successful </td>
+    <td>Token string — will be available only when authentication was successful </td>
     <td>String</td>
   </tr>
   <tr>
     <td>errors</td>
-    <td>Type of authentication error as received from channel - will be available only when authentication failed </td>
+    <td>Type of authentication error as received from channel — will be available only when authentication failed </td>
     <td>Array</td>
+  </tr>
+  </tbody>
+</table>
+
+#### Social Messaging Event
+
+**Type**: SocialMessagingEventData
+
+<table>
+  <thead>
+    <th>Property Name</th>
+    <th>Description</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>event</td>
+    <td>Social Event Data</td>
+    <td>Object</td>
+  </tr>
+  <tr>
+    <td>channel</td>
+    <td>Public/Private</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>replyToId</td>
+    <td>The id of the message which will be used to send a response, from Agent to Consumer</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>conversationState</td>
+    <td>Used for state management of the consumer interaction in the Agent Workspace / Bot Connector</td>
+    <td>Object</td>
+  </tr>
+  <tr>
+    <td>actions</td>
+    <td>Name of the action or field to be used on the Social Connector</td>
+    <td>Array of Objects</td>
   </tr>
   </tbody>
 </table>
@@ -276,7 +312,7 @@ The bot consumer input analysis information can be passed as metadata on the bot
 
 The reason for escalation as well as the last identified intent can be sent as metadata on the transfer action (updateConversationField method), currently supported only in messaging; this information can be useful to analyze the bot performance, help Agent Managers to monitor the conversation flow and provide context to human agents once a conversation was handed off.
 
-**publishEvent example:**
+**publishEvent example**
 
 ```javascript
 const metadata = [
@@ -319,7 +355,7 @@ agent.publishEvent({
 });
 ```
 
-**Bot escalation example:**
+**Bot escalation example**
 
 ```javascript
 const metadata = [
@@ -386,7 +422,7 @@ agent.updateConversationField({
 
 Upon sending a payment or authorization request to a consumer, it is necessary to listen for a response to confirm the transactions.
 
-**Listen for incoming Apple Authorization response example:**
+**Listen for incoming Apple Authorization response example**
 
 1. Have your bot listen for the "ms.MessagingEventNotification" messaging event notifications callback
 2. Loop through all the incoming changes and look for the correct metadata type
@@ -426,6 +462,348 @@ this.on('ms.MessagingEventNotification', body => {
 })
 ```
 
+#### Social Messaging Event
+
+{: .important}
+The following capability requires additional Account feature to be configured. Please contact your account team to enable.
+
+***Facebook — Schema***
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "{DirectMessage | Post | CC | CP }", // Post - User post into page community wall | CC - Comment to Comment | CP - Comment to Post
+        "parent": { // optional
+            "attachmentUrl": "{post_url}",
+            "pageName": "{FB Page Name}",
+            "postId": "{Parent Post or Comment Id}",
+            "postText": "{Parent text}",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "{Public|Private}",
+    "replyToId": "{The id of the message which will be send the response - used from Agent->Consumer}" // optional - from Consumer to Agent
+    "conversationState": {
+        "dmChatId": "{Messenger Id}",
+        "currentChannel": "{Public|Private}",
+        "enabledChannels": { // optional - channels enabled for this Facebook Page - configured on Connector
+            "private": true,
+            "public": true
+        }
+    },
+    "actions": [{ // optional
+        "name": "{Name of the action or field to be used on the connector}",
+        "payload": "{payload or field content}"
+        }
+    ]
+};
+```
+
+**Facebook Public — Consumer to Agent**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| This metadata is used to define the data for each consumer message in the conversation. The NAW (New Agent Workspace) will use the values received from UMS to render the consumer message. | ![](img/archive/social/facebook/public-comment.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "CP",
+        "parent": {
+            "attachmentUrl": "{post_url}",
+            "pageName": "QA le90617479",
+            "postId": "163516112161217",
+            "postText": "Brand post demo.",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "Public",
+    "conversationState": {
+        "dmChatId": "107202510969932",
+        "currentChannel": "Public",
+        "enabledChannels": {
+            "private": true,
+            "public": true
+        }
+    }
+};
+```
+
+**Facebook Public — Agent to Consumer**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The connector on back-end will use the fields replyToId and currentChannel to identify for which Facebook API the message needs to be sent to. | ![](img/archive/social/facebook/public-comment-reply.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+    "source": "Facebook",
+      "type": "CC"
+  },
+    "channel": "Public",
+    "replyToId": "107202510969932_151025713254278",
+    "conversationState": {
+      "currentChannel": "Public"
+  }
+};
+```
+
+**Facebook DM — Consumer to Agent**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The object enabledChannels is an indication to NAW for which types of channels are set on connector configs. | ![](img/archive/social/facebook/direct-message.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "DirectMessage"
+    },
+    "channel": "Private",
+    "conversationState": {
+        "dmChatId": "107202510969932",
+        "currentChannel": "Private",
+        "enabledChannels": {
+            "private": true,
+            "public": true
+        }
+    }
+};
+```
+
+**Facebook DM — Agent to Consumer**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Facebook API needs to be sent to. | ![](img/archive/social/facebook/direct-message-reply.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "DirectMessage"
+    },
+    "channel": "Private",
+    "replyToId": "107202510969932",
+    "conversationState": {
+        "currentChannel": "Private"
+    },
+};
+```
+
+**Facebook Public — Consumer to Agent — Identifying Facebook Dark Posts (Ads)**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The New Agent Workspace (NAW) will use the action field *parentPostIsAd* to render the information about Ads on the message metadata like the mockup below: | ![](img/archive/social/facebook/public-comment-ad.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Facebook",
+        "type": "CP",
+        "parent": {
+            "attachmentUrl": "{post_url}",
+            "pageName": "QA le90617479",
+            "postId": "163516112161217",
+            "postText": "Brand post demo.",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "Public",
+    "conversationState": {
+        "dmChatId": "107202510969932",
+        "currentChannel": "Public"
+    },
+    "actions": [
+      {
+        "name": "parentPostIsAd",
+        "payload": "true"
+      },
+      {
+        "name": "parentPostIsPublished",
+        "payload": "false" // the visibility Post status on Facebook
+      }
+    ]
+};
+```
+
+***Twitter — Schema***
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "event": {
+        "source": "Twitter",
+        "type": "{DirectMessage | Tweet | Reply | Retweet}", // for Quote use Retweet
+        "parent": { // for public tweets - optional
+            "attachmentUrl": "{tweet_url}",
+            "accountName": "{self explained}",
+            "accountId": "{self explained}",
+            "tweetId": "{self explained}",
+            "tweetText": "{self explained}",
+            "timestamp": 1594995901
+        }
+    },
+    "channel": "{Public|Private}",
+    "replyToId": "{The id of the message which will be send the response - used from Agent->Consumer}" // optional
+    "conversationState": {
+        "dmChatId": "{Twitter accountId}", // this is the account where the conversation was created
+        "currentChannel": "{Public|Private}"
+    },
+    "actions": [{ // optional
+        "name": "{Name of the action or field to be used on the connector}",
+        "payload": "{payload or field content}"
+        }
+    ]
+};
+```
+
+{: .important}
+The attribute conversationState.dmChatId refers to the Twitter account where the conversation was initiated on Twitter Connector.
+
+**Twitter Public — Consumer to Agent**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| For Retweet, Quotes and Replies the structure will be the same, changing the type of the event and adding the parent related to tweet replied, or retweeted. | ![](img/archive/social/twitter/public-tweet.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+      "channel": "Public",
+      "replyToId": "1391727435733929987",
+      "event": {
+      "source": "Twitter",
+        "type": "Tweet"
+    },
+    "conversationState": {
+        "currentChannel": "Public",
+        "dmChatId": "1352624671259320329"
+    }
+};
+```
+
+**Twitter Public — Agent to Consumer**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| The connector on back-end will use the fields replyToId and currentChannel to identify for which Twitter API the message needs to be sent to. | ![](img/archive/social/twitter/public-tweet-reply.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "channel": "Public",
+    "replyToId": "1391727435733929987",
+    "event": {
+        "parent": {
+            "attachmentUrl": "",
+            "timestamp": 1620648802733,
+            "accountName": "Antonio Neto",
+            "tweetText": "@antonio_local Hi, this an example of tweet",
+            "tweetId": "1391727435733929987"
+        },
+        "source": "Twitter",
+        "type": "Reply"
+    },
+    "conversationState": {
+      "currentChannel": "Public",
+      "dmChatId": "1352624671259320329"
+    },
+};
+```
+
+**Replying from a different Twitter account**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+| Sometimes it is necessary to reply from a different Twitter handle. | ![](img/archive/social/twitter/reply-from-account.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "channel": "Public",
+    "replyToId": "1391727435733929987",
+    "event": {
+        "parent": {
+            "attachmentUrl": "",
+            "timestamp": 1620648802733,
+            "accountName": "Antonio Neto",
+            "tweetText": "@antonio_local Hi, this an example of tweet",
+            "tweetId": "1391727435733929987"
+        },
+        "source": "Twitter",
+        "type": "Reply"
+    },
+    "conversationState": {
+        "currentChannel": "Public",
+        "dmChatId": "1352624671259320329"
+    },
+    "actions": [{
+        "name": "replyFromAccountId",
+        "payload": "1234567788992122343242"
+    }],
+};
+```
+
+{: .important}
+The connector on back-end will use the fields replyFromAccountId.
+The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
+
+**Twitter DM — Consumer to Agent**
+
+| Description | Outcome     | 
+| :---        |    :----:   | 
+|  Twitter DM | ![](img/archive/social/twitter/direct-message.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "channel": "Private",
+    "replyToId": "1357363938158145537",
+    "event": {
+        "source": "Twitter",
+        "type": "DirectMessage"
+    },
+    "conversationState": {
+      "currentChannel": "Private",
+      "dmChatId": "1352624671259320329"
+    },
+};
+```
+
+**Twitter DM — Agent to Consumer**
+
+| Description | Outcome     |
+| :---        |    :----:   |
+| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Twitter API needs to be sent to. | ![](img/archive/social/twitter/direct-message-reply.png)       |
+
+```javascript
+const content = {
+    "type": "SocialMessagingEventData",
+    "channel": "Private",
+    "replyToId": "1357363938158145537",
+    "event": {
+      "source": "Twitter",
+      "type": "DirectMessage"
+    },
+    "conversationState": {
+      "currentChannel": "Private",
+      "dmChatId": "1352624671259320329"
+    },
+};
+```
+
 #### Structured content
 
 Conversational Cloud allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates.html) for more information on how to build and send such structured content messages.
@@ -434,7 +812,7 @@ A template `ExternalId` can be sent as metadata on the agent message (publishEve
 
 An `ExternalId` for each element click action can also be defined in order to track the number of times a specific action was clicked / selected.
 
-**Messaging Structured content example:**
+**Messaging Structured content example**
 
 ![Structured Content Card](img/sccard.png)
 
@@ -469,7 +847,7 @@ const content = {
 			"actions": [{
 				"type": "link",
 				"name": "Add to cart",
-				"uri": "http://www.example.com"
+				"uri": "https://www.example.com/"
 			}]
 		}
 	}, {
@@ -486,7 +864,7 @@ const content = {
 				"actions": [{
 					"type": "link",
 					"name": "Buy",
-					"uri": "http://www.example.com"
+					"uri": "https://www.example.com/"
 				}]
 			}
 		}, {
@@ -501,7 +879,7 @@ const content = {
 				"actions": [{
 					"type": "link",
 					"name": "Buy",
-					"uri": "http://www.example.com"
+					"uri": "https://www.example.com/"
 				}]
 			}
 		}]

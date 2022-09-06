@@ -10,12 +10,10 @@ subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
-**(LivepersonMonitoring.java class)**
 
+## LivepersonMonitoring.java class
 
-> **NOTE**: If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params). Once initialization is completed (`onInitSucceed`), you can call LivePerson methods.
-
-
+**Note:** If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params). Once initialization is completed (`onInitSucceed`), you can call LivePerson methods.
 
 ### getEngagement
 
@@ -34,9 +32,10 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 | monitoringParams | An optional object with optional pageId, Entry Points array and Engagement Attributes | No |
 | callback | A callback of type [EngagementCallback](android-interface-definitions.html#engagementcallback). This response include SessionId, VisitorId and a list of [EngagementDetails](android-interface-definitions.html#engagementdetails) objects | Yes |
 
-
 *Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*
 
+{: .notice}
+When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
 
 ### sendSde
 
@@ -52,7 +51,6 @@ public static void sendSde(Context context, @NonNull List<LPMonitoringIdentity> 
 | identities | A list of LPMonitoringIdentity objects with the consumer identities | Yes |
 | monitoringParams | An mandatory MonitoringParams with mandatory Engagement Attributes and optional PageId and entry points array  | Yes |
 | callback | A callback of type [SdeCallback](android-interface-definitions.html#sdecallback). This response includes SessionId, VisitorId and PageId for future use | Yes |
-
 
 ### Monitoring API Related Classes
 
@@ -84,7 +82,6 @@ public final class EngagementDetails {
 }
 ```
 
-
 #### LPEngagementResponse
 
 ```java
@@ -105,9 +102,9 @@ public final class LPEngagementResponse {
 
 A class that contains data on the consumer identity.
 
-consumerId - unique and non-guessable identifier of the consumer (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and move between consumers).
+consumerId: unique and non-guessable identifier of the consumer (email and phone number are not good candidates since they can be guessed by an attacker, and might be recycled and move between consumers).
 
-issuer - Issuer, who identified the consumer - usually the brand.
+issuer: Issuer, who identified the consumer — usually the brand.
 
 ```java
 class LPMonitoringIdentity(val consumerId: String? = "", val issuer: String? = ""){
@@ -141,7 +138,6 @@ enum class MonitoringErrorType {
 }
 ```
 
-
 #### MonitoringInitParams
 
 ```java
@@ -159,8 +155,6 @@ public class MonitoringParams {
   private JSONArray engagementAttributes;
 }
 ```
-
-
 
 #### SdeCallback
 

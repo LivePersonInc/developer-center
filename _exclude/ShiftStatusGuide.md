@@ -26,10 +26,10 @@ For the purpose of configuring these APIs, we will need the following:
 
 #### Bearer token retrieval
 
-For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
+For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
 
 ```javascript
-// Bearer Token Needed for Messaging Queue Health & Shift Status APIs
+// Bearer Token Needed for Messaging Queue Health and Shift Status APIs
 var bearerToken = botContext.getLPEngagementAttribute("BearerToken");
 botContext.setBotVariable("bearerToken", bearerToken, true, false);
 ```
@@ -42,10 +42,10 @@ You likely used an account number to log into LiveEngage, but, for awareness, yo
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/guideShiftStatus_botAccountNumber.png">
 
-Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
+Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-session-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
 
 ```javascript
-//LE account number, needed for api calls
+//LE account number, needed for API calls
 var botAccountNumber = botContext.getLPAccountId();
 botContext.setBotVariable('botAccountNumber', botAccountNumber, true, false);
 ```
@@ -64,7 +64,7 @@ Using [Postman](https://www.postman.com/), include the account number and the se
 - Current Queue Health: leDataReporting
 
 For example, the URI for retrieving the Shift Status domain is:
-`http://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
+`https://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
 
 Calls to this URI return an object with a “baseURI” value that you'll want to store to a variable within Global Functions. 
 
@@ -81,7 +81,7 @@ botContext.setBotVariable('queueHealthDomain', 'va.data.liveperson.net', true, f
 Prior to calling on the Shift Status API, you'll need to set the skill ID that is being escalated to. This is typically done with a switch statement within a function defined in Global Functions, setting variables based on a user’s intent. An example of this function can be found in our [Simple Router template](conversation-builder-bot-templates-simple-router.html) and is as follows:
 
 ```javascript
-// FILL IN THE APPROPRIATE SKILL & INTENT INFORMATION
+// FILL IN THE APPROPRIATE SKILL AND INTENT INFORMATION
 function transfer(intent){
  var transferMessage = '';
  var skillId = '';
@@ -89,22 +89,22 @@ function transfer(intent){
  // check for which intent
  switch(intent){
    case "billing":
-     transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your billing issue…";
      skillId = '1234567890';
      skillName = intent;
      break;
    case "account":
-     transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your account issue…";
      skillId = '2345678901';
      skillName = intent;
      break;
    case "help":
-     transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
      skillId = '3456789012';
      skillName = intent;
      break;
    default:
-     transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+     transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
      skillId = '4567890123';
      skillName = 'default';
      break; 
@@ -133,7 +133,7 @@ Having previously done our setup, we're able to quickly interpolate the variable
 As seen from the [documentation](shift-status-api-methods-get-shift-status-by-account.html), the result of this call will be an array of JavaScript objects. Each object will have a skill and a corresponding `onShift` status. To ensure that the skill we are escalating to has an agent to receive the call, we'll want to iterate through our array of objects until we can locate the desired skill and check its `onShift` Boolean value. This work will be done within the **Transform Result Script** section of the integration.
 
 ```javascript
-// Retrieve json data and parse
+// Retrieve JSON data and parse
 var shiftStatusData = botContext.getBotVariable('api_Shift_Status');
 var shiftStatusJsonResponse = JSON.parse(shiftStatusData.jsonData);
 var jsonResponse = shiftStatusJsonResponse.api_Shift_Status;

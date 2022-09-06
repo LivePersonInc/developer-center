@@ -12,7 +12,6 @@ permalink: data-access-api-methods-web-session.html
 indicator: chat
 ---
 
-
 Web session retrieves the list of files in zip format of the visitor’s web session data.
 
 This data contains information about the vistor’s web journey. The web session data is calculated from the time the visitor enters the website till the time he leaves it. The data includes geo (country, city etc.), navigation (referrer URL etc.), eligible campaigns, engagement attributes and more.
@@ -736,7 +735,7 @@ JSON Example
     }
 ```
 
-###  GEO
+### GEO
 
 Information about visitor geolocation.
 
@@ -761,7 +760,7 @@ The following table describes the information that is available in the geo data:
 | isp | Internet service provider. | string |
 | countryCode | Country code. | string |
 
-###  Navigation
+### Navigation
 
 Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Web Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here.
 
@@ -782,7 +781,7 @@ The following table describes the information that is available in the navigatio
 | referrerUrl | The URL representation of the last page the visitor visited. | string |
 | sections | A list of the sections/tabs of the page the visitor visited. | string |
 
-###  Session Info
+### Session Info
 
 Information about the visitor’s browsing session.
 
@@ -800,13 +799,13 @@ The following table describes the information that is available in the session i
 | :------ | :--------- | :-------- |
 | sessionStartTime | Visitor session’s start time. | long |
 | userAgent | User agent. | string |
-| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS,LINUX, IOS, ANDROID. | string |
+| deviceOS | Device OS type, can be one of the following: NA, WINDOWS, MAC_OS, LINUX, IOS, ANDROID. | string |
 | deviceFamily | Device type, can be one of the following: NA, DESKTOP, TABLET, MOBILE. | string |
 | siteControlGroup | Site control group, can be one of the following: NA, CONTROL, TEST. | string |
 | search Engine | Search engine. Exist only if the visitor started a session after searching a known search engine. It is extracted from the referrer URL. | string |
 | search EngineKey | Keywords used to search through the search engine prior to the session starting point. It is taken from the referrer URL. | string |
 
-###  EligibilityData
+### EligibilityData
 
 Information about the campaigns that are eligible for the visitor during his session.
 
@@ -855,7 +854,7 @@ The following table describes the information that is available in the eligibili
 | id | Engagement ID. | long |
 | channel | Channel type. | string |
 | type | Engagement type. | string. Values: <br> peeling corner = 0 <br> overlay = 1 <br> toaster = 2 <br> slide-out = 3 <br> embedded = 5 <br> sticky = 6 |
-| visitorBehaviors | List of visitor behaviors. | container |
+| visitorBehaviors | List of behavioral targeting rules. | container |
 | skillId | Engagement skill ID (in case a skill was defined for it). | int |
 | skillName | Engagement skill name (in case a skill was defined for it). | string |
 | surveySkills | List of skills defined for the survey. | container |
@@ -868,8 +867,8 @@ The following table describes the information that is available in the eligibili
 
 | Parameter | Description | Type / Value |
 | :------ | :-------- | :--------- |
-| id | Visitor behavior unique identifier (LP ID). | long |
-| revision | Revision in visitor behavior ID. | long |
+| id | Behavioral targeting unique identifier (LP ID). | long |
+| revision | Revision in behavioral targeting ID. | long |
 
 ### Skill
 
@@ -910,7 +909,7 @@ The following table describes the information available in the impression data:
 | campaign | Contains information about the campaign. | container |
 | goal | Contains information about the goal. | container |
 
-###  GoalAchieved
+### GoalAchieved
 
 Information about the goals that were achieved during the visitor session.
 
@@ -977,9 +976,11 @@ The following table describes the information available in the goal achieved dat
 | category | Category of service activity. | string |
 | serviceId | Unique service identifier. | string |
 
-###  Engagement Attributes
+### Engagement Attributes
 
-Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud. **note** - some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
+Engagement attributes are standardized attributes defined by LivePerson that enable our customers to get more specific information about their visitors and pass it on via Conversational Cloud.
+
+**Note:** Some differences may exist in the naming conventions between this API and the [general Engagement Attributes document](engagement-attributes-overview.html). The general Engagement Attributes name appears in brackets next to the Attribute Type name, even if it is identical to the API name.
 
 **Header**
 
@@ -991,7 +992,7 @@ Engagement attributes are standardized attributes defined by LivePerson that ena
 
 Here is a description of the data structure of the existing engagement attributes in the system:
 
-### Engagement Attribute Type - Purchase (Transaction)
+### Engagement Attribute Type — Purchase (Transaction)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :--------- |
@@ -1023,7 +1024,7 @@ Here is a description of the data structure of the existing engagement attribute
 | sku | Unique product ID identifier in consumer database. | string |
 | price | Product price. | double |
 
-### Engagement Attribute Type - Lead (Lead)
+### Engagement Attribute Type — Lead (Lead)
 
 | Parameter | Description | Type / Value |
 | :------- | :--------- | :---------- |
@@ -1031,7 +1032,7 @@ Here is a description of the data structure of the existing engagement attribute
 | leadId | Unique system lead identifier. | string |
 | value | Lead value. | double |
 
-### Engagement Attribute Type - Customer Info
+### Engagement Attribute Type — Customer Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :---------- | :---------- |
@@ -1052,7 +1053,6 @@ Here is a description of the data structure of the existing engagement attribute
 | storeNumber | The store's number | String |
 | storeZipCode |The store's zip code | String |
 
-
 #### YMDDate
 
 | Parameter | Description | Type / Value |
@@ -1061,7 +1061,7 @@ Here is a description of the data structure of the existing engagement attribute
 | month | Month representation. | int |
 | day | Day representation. | int |
 
-### Engagement Attribute Type - Personal Info
+### Engagement Attribute Type — Personal Info
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :------------ |
@@ -1090,7 +1090,7 @@ Here is a description of the data structure of the existing engagement attribute
 | email | Contact email. | string |
 | phone | Contact phone number. | string |
 
-### Engagement Attribute Type - CartStatus (Cart update)
+### Engagement Attribute Type — CartStatus (Cart update)
 
 | Parameter | Description | Type / Value |
 | :-------- | :----------- | :----------- |
@@ -1109,7 +1109,7 @@ Here is a description of the data structure of the existing engagement attribute
 
 See above for [Product](#product) parameters.
 
-### Engagement Attribute Type - ViewedProduct (ViewedProduct)
+### Engagement Attribute Type — ViewedProduct (ViewedProduct)
 
 | Parameter | Description | Type / Value |
 | :------- | :---------- | :----------- |
@@ -1119,7 +1119,7 @@ See above for [Product](#product) parameters.
 
 See above for [Product](#product) parameters.
 
-### Engagement Attribute Type - ServiceActivity (Service Activity)
+### Engagement Attribute Type — ServiceActivity (Service Activity)
 
 | Parameter | Description | Type / Value |
 | :------- | :----------- | :----------- |
@@ -1128,7 +1128,7 @@ See above for [Product](#product) parameters.
 | category | Category of service activity. | string |
 | serviceId | Service unique identifier. | string |
 
-### Engagement Attribute Type - VisitorError (Visitor Error)
+### Engagement Attribute Type — VisitorError (Visitor Error)
 
 | Parameter | Description | Type / Value |
 | :--------- | :----------- | :----------- |
@@ -1138,7 +1138,7 @@ See above for [Product](#product) parameters.
 | level | Error severity level. | long |
 | resolved | Indication whether the error was resolved. | boolean |
 
-### Engagement Attribute Type - MarketingCampaignInfo (Marketing Source)
+### Engagement Attribute Type — MarketingCampaignInfo (Marketing Source)
 
 | Parameter | Description | Type / Value |
 | :------ | :---------- | :---------- |

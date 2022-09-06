@@ -2,6 +2,14 @@
 pagename: Interface and Class Definitions
 redirect_from:
   - android-interface-and-class-definitions.html
+  - android-interface-definitions.html#lpauthenticationparams
+  - android-interface-definitions.html#lpconversationdata
+  - android-interface-definitions.html#agentdata
+  - android-interface-definitions.html#permissiontype
+  - android-interface-definitions.html#engagementdetails
+  - android-interface-definitions.html#engagementcallback
+  - android-interface-definitions.html#sdecallback
+  - android-interface-definitions.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -10,7 +18,6 @@ subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html
 indicator: messaging
 ---
-
 
 ### AgentData
 
@@ -35,7 +42,6 @@ public class ConsumerProfile {
   private String mAvatarUrl;
 }
 ```
-
 
 ### ConversationViewParams
 
@@ -64,7 +70,6 @@ public class ConversationViewParams{
 * **LPConversationsHistoryStateToDisplay** - Use this to present open conversations, closed conversations, or all conversations.
 
 * **LPConversationHistoryMaxDaysDateType** - When using `mHistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` is the default.
-
 
 ### EngagementCallback (Monitoring API Related Classes)
 
@@ -103,7 +108,6 @@ public interface ICallback<T, E extends Throwable> {
 }
 ```
 
-
 ### InitLivePersonProperties
 
 ```java
@@ -116,7 +120,6 @@ public class InitLivePersonProperties{
 ```
 
 The SDK can be initialized once without MonitoringInitParams and then have another initialize call using these params.
-
 
 ### LPAuthenticationParams
 
@@ -132,9 +135,7 @@ public class LPAuthenticationParams{
 }
 ```
 
-
 ### LPConversationData
-
 
 ```java
 public class LPConversationData{
@@ -155,9 +156,8 @@ public enum LPConversationHistoryMaxDaysDateType {
 
 ```java
 public enum LPConversationsHistoryStateToDisplay {
-  OPEN, CLOSE , ALL
+  OPEN, CLOSE, ALL
 }
-
 ``` 
 
 ### LPEngagementResponse (Monitoring API Related Classes)
@@ -218,7 +218,6 @@ enum class MonitoringErrorType {
 }
 ```
 
-
 ### MonitoringInitParams (Monitoring API Related Classes)
 
 ```java
@@ -237,15 +236,14 @@ public class MonitoringParams {
 }
 ```
 
-
-
 ### PermissionType
-
 
 ```java
 public enum PermissionType {
-  PHOTO_SHARING
-}  
+  PHOTO_SHARING,
+  DOCUMENT_SHARING,
+  VOICE_RECORDING
+}
 ```
 
 ### PushMessage
@@ -263,6 +261,13 @@ public class PushMessage {
 }
 ```
 
+### PushType
+```java
+public enum PushType {
+  FCM,
+  HUAWEI
+}
+```
 
 ### SdeCallback (Monitoring API Related Classes)
 

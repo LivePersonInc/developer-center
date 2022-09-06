@@ -59,7 +59,7 @@ doesn't have required questions and it was not submitted before.
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
 **Response example**
 

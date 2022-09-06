@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
 
-
 order: 60
 permalink: users-api-methods-delete-users.html
 
@@ -17,7 +16,7 @@ indicator: both
 
 This API deletes users from a specific account.
 
-**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+**Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
 ```
 https://API_REQUEST?v=4.0
@@ -34,17 +33,24 @@ https://API_REQUEST?v=4.0
  |Header|         Description  |
  |:------ |       :--------  |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
- |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
+ |If-Match|  Contains data revision as known by the client [OR] just keep -1. Allows concurrent modification backend verification. |
 
 **Request Body**
 
 `["987654321", "1232455"]`
+ These are latest userIds. Those can be fetched from DB (latest one) [OR] get from  [{get-all-users request}](/users-api-methods-get-all-users.html)
 
 **Path Parameters**
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID|   String |
+ 
+**Query Parameters**
+
+ | Name            | Description                       | Type    | Required  | Notes                                                |
+ |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
+ | v               | API version number                | double  | Required  | Value should be 4.0                                  |
 
 ### Response
 

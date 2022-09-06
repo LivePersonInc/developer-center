@@ -14,7 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-checkagentid.html
 indicator: messaging
 ---
 
-
 If there is an active conversation, this API returns agent data through the provided callback. If there is no active conversation, the API returns null.
 
 [AgentData definition](android-interface-definitions.html)

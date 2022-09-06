@@ -1,13 +1,14 @@
-<p align='right'>A <a href="http://www.swisspush.org">swisspush</a> project <a href="http://www.swisspush.org" border=0><img align="top"  src='https://1.gravatar.com/avatar/cf7292487846085732baf808def5685a?s=32'></a></p>
+<p align='right'>A <a href="http://www.swisspush.org/">swisspush</a> project <a href="http://www.swisspush.org/" border=0><img src="https://1.gravatar.com/avatar/cf7292487846085732baf808def5685a?s=32" alt=""></a></p>
+
 Docson
 ======
 
 Documentation for your JSON types.
 
-Give Docson a JSON schema and it will generate a [beautiful documentation](http://lbovet.github.io/docson/index.html#/docson/examples/example.json).
+Give Docson a JSON schema and it will generate a [beautiful documentation](https://lbovet.github.io/docson/index.html#/docson/examples/example.json).
 
 ## Features
-* [JSON schema](http://json-schema.org/) v4 keywords.
+* [JSON schema](https://json-schema.org/) v4 keywords.
 * Runs entirely in the browser.
 * Render schema descriptions with markdown
 
@@ -17,38 +18,37 @@ Give Docson a JSON schema and it will generate a [beautiful documentation](http:
 
 ## Usage
 
-* Open [index.html](http://lbovet.github.io/docson/index.html) and enter the schema path in the form field.
-* Or give the schema path directly as hash parameter: [index.html#/docson/examples/example.json](http://lbovet.github.io/docson/index.html#/docson/examples/example.json)
+* Open [index.html](https://lbovet.github.io/docson/) and enter the schema path in the form field.
+* Or give the schema path directly as hash parameter: [index.html#/docson/examples/example.json](https://lbovet.github.io/docson/index.html#/docson/examples/example.json)
 
-Note that you can refer to a sub-schema by adding a json-pointer path as 'dollar-parameter': [index.html#/docson/examples/example.json$items](http://lbovet.github.io/docson/index.html#/docson/examples/example.json$items)
+Note that you can refer to a sub-schema by adding a json-pointer path as 'dollar-parameter': [index.html#/docson/examples/example.json$items](https://lbovet.github.io/docson/index.html#/docson/examples/example.json$items)
 
 ## Typson
 
 You can directly reference your JSON types defined as TypeScript interfaces. If the path ends with `.ts`, Docson will use [Typson](https://github.com/lbovet/typson) to convert the Type Scripts to schema in order to generate the documentation.
 
-For example, [index.html#/typson/example/invoice/line.ts$InvoiceLine](http://lbovet.github.io/docson/index.html#/typson/example/invoice/line.ts$InvoiceLine) is the documentation of [line.ts](https://github.com/lbovet/typson/blob/master/example/invoice/line.ts).
+For example, [index.html#/typson/example/invoice/line.ts$InvoiceLine](https://lbovet.github.io/docson/#/typson/example/invoice/line.ts$InvoiceLine) is the documentation of [line.ts](https://github.com/lbovet/typson/blob/master/example/invoice/line.ts).
 
 You need to install [Typson](https://github.com/lbovet/typson) by yourself on your server. It must be in a directory named `typson` located at the same level as the `docson` directory.
 
 ## Widget
 
-To include a Docson schema documentations on any page (wiki, ...) without worrying about messing up with javascript libraries and cross-origin issues:
+To include a Docson schema documentations on any page (wiki, …) without worrying about messing up with javascript libraries and cross-origin issues:
 
 * Install Docson somewhere as described above.
 * Place the following `script` tags in the including page, nothing else is needed:
 
 ```
-<script src="http://somewhere/path-to-docson/widget.js" data-schema="/path-to-schema">
-</script>
+<script src="https://somewhere/path-to-docson/widget.js" data-schema="/path-to-schema"></script>
 ```
 
-See the [widget example](http://jsfiddle.net/3kXu2/3/) on jsfiddle.
+See the [widget example](https://jsfiddle.net/3kXu2/3/) on jsfiddle.
 
 ## Swagger
 
 You can adapt [Swagger UI](https://github.com/wordnik/swagger-ui) to display Docson-generated model documentation instead of the builtin signatures.
 
-See how it looks like in the [Swagger Docson example](http://lbovet.github.io/swagger-ui/dist/index.html)
+See how it looks like in the [Swagger Docson example](https://lbovet.github.io/swagger-ui/dist/).
 
 In Swagger UI's `index.html`, include the [Swagger integration script after other script tags](https://github.com/lbovet/swagger-ui/blob/3f37722b03db6c48cc2a8460df26dda5f4d6f8e4/src/main/html/index.html#L19):
 ```
@@ -93,8 +93,8 @@ docson.doc(element, schema, ref)
 * `ref` is an optional json-pointer path to a sub-schema.
 
 Examples:
-* [Simple integration example](http://lbovet.github.io/docson/examples/example.html)
-* [See it in action](http://lbovet.github.io/typson-demo/) with its buddy [typson](https://github.com/lbovet/typson).
+* [Simple integration example](https://lbovet.github.io/docson/examples/example.html)
+* [See it in action](https://lbovet.github.io/typson-demo/) with its buddy [typson](https://github.com/lbovet/typson).
 
 ## Limitations
 
@@ -106,7 +106,7 @@ Not implemented:
 
 ## Development
 
-* [All tests](http://lbovet.github.io/docson/tests/test.html)
+* [All tests](https://lbovet.github.io/docson/tests/test.html)
 
 Please pull-request your failing schemas in the `tests/` folder and open an issue describing the expected result.
 

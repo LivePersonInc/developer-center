@@ -26,8 +26,8 @@ You can use these environment variables to customize how disambiguation works; f
 - `system_groupConsecutiveIntentRanksInDisambiguation`
 - `system_useIntentsOnlyWithDialogStartersInDisambiguation`
 
-#### Variables for blocking consumer interruptions
-These environment variables work together to block consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-advanced-use-cases.html#block-consumer-interruptions).
+#### Variables for preventing consumer interruptions
+These environment variables work together to prevent consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-consumer-interruptions.html).
 - `system_handleIntermediateUserMessage`
 - `system_intermediateBotMessage`
 - `system_intermediateBotResponseTimeout`
@@ -75,17 +75,17 @@ For example:
 switch(intent) {
   case "billing":
     transferMessage = "Hold on while I transfer you to someone who can help with your billing";
-    skillId = botcontext.getEnvVariable('billing');
+    skillId = botContext.getEnvVariable('billing');
     skillName = intent;
     break;
   case "account":
     transferMessage = "Hold on while I transfer you to someone who can help with your account";
-    skillId = botcontext.getEnvVariable('account');
+    skillId = botContext.getEnvVariable('account');
     skillName = intent;
     break;
   case "help":
     transferMessage = "Hold on while I transfer you to someone who can help with your issue";
-    skillId = botcontext.getEnvVariable('help');
+    skillId = botContext.getEnvVariable('help');
     skillName = intent;
     break;
 }

@@ -2,6 +2,8 @@
 pagename: Photo and File Sharing
 redirect_from:
   - consumer-experience-ios-sdk-photosharing.html
+  - mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
+  - mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -19,7 +21,7 @@ Agents can share:
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. The agent can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
-{:.important}
+{: .important}
 The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by double-clicking on the thumbnail image.
 
 When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
@@ -61,10 +63,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 #### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
-
-
-  
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 #### Step 1. Set app permissions
 
@@ -104,7 +103,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### Step 2. Enable or disable flags within the SDK's LPConfig.swift for file and photo sharing.
 
-#### Update the boolean value for file/photo sharing feature from agents to consumers to desired setting:
+Update the boolean value for file/photo sharing feature from agents to consumers to desired setting:
 
    ```swift
    LPConfig.defaultConfiguration.fileSharingFromAgent
@@ -112,7 +111,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 By default, the value is set to **true**.
 
-#### Update the boolean value for file/photo sharing feature from consumers to agents to desired setting:
+Update the boolean value for file/photo sharing feature from consumers to agents to desired setting:
 
    ```swift
    LPConfig.defaultConfiguration.fileSharingFromConsumer
@@ -120,7 +119,7 @@ By default, the value is set to **true**.
 
    By default, the value is set to **false**.
 
-#### Contact your Account Team to have the features enabled on your account.
+Contact your Account Team to have the features enabled on your account.
 
 ### Step 3. Change the settings
 
@@ -170,13 +169,12 @@ By default, the value is set to **true**.
 
    - conversationNavigationTintColor colors the L &amp; R bar buttons as well as the title color.
 
-   <img src="../../../../img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding-bottom: 20px;">
+   <img src="/img/image-preview-window-mode.png" alt="Window Mode" style="width: 300px;padding-bottom: 20px;">
 
    **View Controller Mode:**
 
    Your custom applicable navigation bar traits apply to the UIDocumentationInteractionController.
 
-   <img src="../../../../img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding-bottom: 20px;">
+   <img src="/img/image-preview-view-controller-mode.png" alt="View Controller Mode" style="width: 300px;padding-bottom: 20px;">
 
-
-You can find all the related configurations in the [resources ID table](http://localhost:4000/consumer-experience-ios-sdk-attributes.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.
+You can find all the related configurations in the [resources ID table](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-sdk-attributes-branding-and-configurations.html), under Photo Sharing. The color, font selections and other customizations of the message bubbles for file and photo sharing from agents adhere to the [remoteUserBubble](remoteUserBubble) configurations.  For the messages containing photos being shared from consumer to agent can be configured via the [userBubble](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html#userbubblebackgroundcolor) customizations.

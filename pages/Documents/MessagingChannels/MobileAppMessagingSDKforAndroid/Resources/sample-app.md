@@ -13,7 +13,7 @@ indicator: messaging
 
 The SDK is provided with a sample application called "SampleApp" that demonstrate the use of the SDK in a host app.
 
-###  Project structure explained
+### Project structure explained
 
 **MainActivity class**
 
@@ -23,7 +23,13 @@ The main screen has two buttons to optionally open the conversation in Activity 
 
 The Language and Region controls are used to test localization.
 
-![sampleapplication](img/sampleapplication.png)
+<div style="float: left; width: 50%;">
+   <img src="img/sampleapplication.png" alt="" style="width: 50%">
+</div>
+
+<div style="float: right; width: 50%;">
+   <img src="img/sampleapplication_1.png" alt="" style="width: 50%">
+</div>
 
 **setCallBack method** 
 Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. For more details about this method, see [Message API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setcallback).
@@ -41,6 +47,6 @@ This is an activity class that has a fragment container. It gets the conversatio
 The push package contains sample code for implementing push notification in [Google FCM](https://firebase.google.com/docs/cloud-messaging/). This is a simple code taken from Google documentation and integrated to be used in SampleApp and the Messaging SDK.
 
 **branding.xml**
-Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](android-initialization.html) section for more details.
+Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html) section for more details.
 
 [Conversational Cloud Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf)

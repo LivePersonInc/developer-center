@@ -11,7 +11,7 @@ permalink: monitoring-api-methods-engagement.html
 indicator: messaging
 ---
 
-**Note**: Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
+**Note:** Please make sure the read the [overview](rt-interactions-monitoring-overview.html) before getting started with this method.
 
 ### Description
 
@@ -52,12 +52,12 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead |  |
+| consumerId | Consumer Id (deprecated) | string | Optional, deprecated — use identities instead |  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1  |
+| identities.acr | ACR — account config read | string | Required for each identity | Supported values: "0" for unauth, "loa1" for auth  |
 | identities.sub | The subject for identification | string | Required | |
-| clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
+| clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure — The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
 | clientProperties.deviceFamily | | string | Optional | Example: personal_computer/tablet/mobile_phone <br> Supported values: "DESKTOP", "TABLET", "MOBILE" |
 | clientProperties.ipAddress | IP address (V4) | string | Optional | (IP format XXX.XXX.XXX.XXX) <br> Validation: Real IP address (IPv4) |
@@ -82,9 +82,9 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
    * a hashed/salted email address
 
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication -> Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
 
-### POST Request & body entity example
+### POST Request and body entity example
 
 **Example call URL**
 
@@ -116,7 +116,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
  ],
  "entryPoints":[
    "tel://972737004000",
-   "http://www.liveperson.com",
+   "https://www.liveperson.com/",
    "sec://Sport",
    "lang://English"
  ],
@@ -145,7 +145,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
 
 #### Response entity examples
 
-Status code: 201 Created - Engagement is available, created new session:
+Status code: 201 Created — Engagement is available, created new session:
 
 ```json
 {
@@ -165,7 +165,7 @@ Status code: 201 Created - Engagement is available, created new session:
 }
 ```
 
-Status code: 200 OK - Resume conversation same session:
+Status code: 200 OK — Resume conversation same session:
 
 ```json
 {
@@ -183,20 +183,22 @@ Status code: 200 OK - Resume conversation same session:
     }
   ]
 }
-
 ```
-Status code: 200/201 OK - Engagement is unavailable. **Note**: because the engagement is unavailable, the `engagementDetails` object does not return:
+
+Status code: 200/201 OK — Engagement is unavailable.
+
+**Note:** Because the engagement is unavailable, the `engagementDetails` object does not return:
 
 ```json
 {
      "sessionId": "abc",
      "visitorId": "xyz",
-     "pageId" : "4743822558"
+     "pageId": "4743822558"
 }
 ```
 
-Loading Account:
-API version 1.0, Status code 500 Server Error -
+Loading Account: API version 1.0, Status code 500 Server Error
+
 ```json
 {
     "time":1501074704502,
@@ -204,7 +206,9 @@ API version 1.0, Status code 500 Server Error -
     "internalCode":20
 }
 ```
-API version 1.1, Status code 202 Accepted -
+
+API version 1.1, Status code 202 Accepted
+
 ```json
 {
     "time":1501074704502,
@@ -220,12 +224,12 @@ API version 1.1, Status code 202 Accepted -
 | engagementDetails | The details of an engagement when it is available | object | Required if there is an engagement  |
 | engagementDetails.campaignId | | number | Required if there is an engagement  |
 | engagementDetails.engagementId | | number | Required if there is an engagement  |
-| engagementDetails.conversationId | | string | Required if there is an engagement |
+| engagementDetails.conversationId | | string | Required if there is an open conversation |
 | engagementDetails.windowId | | string | Required if there is an engagement  |
 | engagementDetails.connectorId | | string | Required if there is an engagement  |
 | engagementDetails.language | | string | Required if there is an engagement  |
 | engagementDetails.engagementRevision | | number | Required if there is an engagement  |
-| engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |
+| engagementDetails.status | | string | Required if there is an engagement, possible values: "expose" or "conversation" if there is an open conversation  |
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |
@@ -250,4 +254,4 @@ API version 1.1, Status code 202 Accepted -
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 | 202 | Loading account | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="important"> Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+<div class="important">Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>

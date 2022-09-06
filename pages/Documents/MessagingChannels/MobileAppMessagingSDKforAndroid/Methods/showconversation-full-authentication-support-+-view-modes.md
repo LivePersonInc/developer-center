@@ -2,6 +2,7 @@
 pagename: showConversation (full authentication support + view modes)
 redirect_from:
   - android-showconversationfull.html
+  - android-showconversation.html
 Keywords:
 
 categoryname: "Messaging Channels"
@@ -22,25 +23,25 @@ Initiating the conversation screen opens the WebSocket to the LivePerson Messagi
 
 **LPAuthenticationParams:**
 
-If your system implementation involves an authentication step - pass LPAuthenticationParams.
+If your system implementation involves an authentication step — pass LPAuthenticationParams.
 
 There are 2 authenticated connection methods:
 
- 1. with authenticationKey - Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
+ 1. with authenticationKey — Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
   new LPAuthenticationParams().setAuthKey(yourAuthCode).
 
-_Optional_ - when using this method, you can also set a special redirect URL when authenticating; by calling : lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
+_Optional_ — when using this method, you can also set a special redirect URL when authenticating; by calling: lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)
 
- 2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
+ 2. with jwt — new LPAuthenticationParams().setHostAppJWT(yourJwt)
 
 if you want to connect in an *unauthenticated* way, you have two options: Set up Unauth flow messaging, or use Signup flow, by passing an LPAuthenticationParams of type UN_AUTH or SIGN_UP, respectively.
 
-{:.important}
+{: .important}
 Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 **ConversationViewParams:**
 
-boolean viewOnlyMode : define if to show /hide the enter message area (under the conversation view)
+boolean viewOnlyMode: define if to show /hide the enter message area (under the conversation view)
 
 `public static boolean showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`
 

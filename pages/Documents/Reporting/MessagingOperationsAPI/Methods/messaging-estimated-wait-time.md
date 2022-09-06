@@ -12,9 +12,11 @@ permalink: messaging-operations-api-methods-messaging-estimated-wait-time.html
 indicator: messaging
 ---
 
+**Please note**: We are currently exploring deprecation of this feature in Q1, 2022, and discourage any new use. Until it is deprecated the feature will continue to be supported.
+
 This method returns the current average wait time in queue, per requested skill. The estimated wait time is the time from a consumer's first message until an agent is assigned to the conversation. This method can help you to better manage your operations and monitor your service level across all skills on an account. Messaging estimated wait time is calculated every 10 seconds, therefore new data will only be available every 10 seconds.
 
-**Notes**:
+**Notes:**
 
 1. The Estimated Wait Time API is currently not available by default, in order to enable the data flow for this API please contact your account manager.
 
@@ -39,7 +41,7 @@ This method returns the current average wait time in queue, per requested skill.
 | Name | Description | Type / Value | Required |
 | :----- | :-------------- | :-------------- | :--- |
 | v | version of API e.g. v=1 | numeric | default: 1 |
-| skills | When provided, the response will contain estimated wait time data for the requested skill Id/s. When not provided, the response will contain estimated wait time data for all skills of the account. If there is no data for the specified skill/s an object will be returned with value -1 for key: "ewt". You can provide one or more skill Ids. If you provide several skill IDs, they must be comma separated. Example: skills=4,15,3. | numeric, separated by commas | optional |
+| skills | When provided, the response will contain estimated wait time data for the requested skill Id/s. When not provided, the response will contain estimated wait time data for all skills of the account. If there is no data for the specified skill/s an object will be returned with value -1 for key: "estimatedWaitTime". You can provide one or more skill Ids. If you provide several skill IDs, they must be comma-separated. Example: skills=4,15,3. | numeric, separated by commas | optional |
 
 **Response Body**
 
@@ -75,8 +77,8 @@ This is an example response which contains information for two skills, skills=2,
 
 | Code | Response |
 | :----- | :--------- |
-| 200 | OK - Successfully retrieved the data. |
-| 400 | Bad request - Problem with body or query parameters. |
-| 401 | Unauthorized - Bad Authentication. |
-| 403 | Forbidden - Bad Authorization (invalid permissions). |
-| 500 | Internal Server Error - Please try again after the time specified in the response has passed. |
+| 200 | OK — Successfully retrieved the data |
+| 400 | Bad request — Problem with body or query parameters |
+| 401 | Unauthorized — Bad Authentication |
+| 403 | Forbidden — Bad Authorization (invalid permissions) |
+| 500 | Internal Server Error — Please try again after the time specified in the response has passed |

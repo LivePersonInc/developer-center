@@ -32,7 +32,7 @@ A bot can have only one Auto Escalation dialog.
 2. In the dialog that appears, specify the following:
     * **Dialog Name**: Enter a descriptive name.
     * **Dialog Type**: Select "Auto Escalation Dialog."
-    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). You can edit this information later in the Escalation Integration interaction's settings.
+    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots-the-basics.html) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). You can edit this information later in the Escalation Integration interaction's settings.
     * **Auto Escalation Threshold**: Select the maximum number of consecutive times the fallback message should be sent within a question before triggering the Auto Escalation dialog. Example: You set the threshold to 3. The consumer enters an incorrect answer three times, receiving the fallback response each time. After the fourth incorrect answer, the Auto Escalation dialog is triggered.
     
         You can edit this information later in the dialog's settings. LivePerson recommends setting this to "3," but you can set this to a different value based on your confidence that the fallback response will resolve the user's issue.
@@ -50,6 +50,10 @@ When you create the dialog, you configure two important settings that you might 
 
 * **Auto Escalation Threshold**: Change this in the [dialog's settings](conversation-builder-dialogs-dialog-basics.html#configure-dialog-settings).
 * **Agent Skill Id**: Change this in the settings of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions). (You can optionally specify an agent ID as well.)
+
+### Best practices
+
+For information on best practices when using Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions). This includes information on how to handle transfer failures and more.
 
 ### FAQs
 

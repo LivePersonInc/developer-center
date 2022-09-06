@@ -16,7 +16,7 @@ indicator: both
 
 The SDK is a lightweight, client-side code package for communicating with the Conversational Cloud Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe> -->
 
 ### Getting Started
 
@@ -30,9 +30,7 @@ Team to configure the widget over the "LP Unified Window" taglet.
 
 In the near future, Widget configuration will be available directly via Conversational Cloud.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
-
-
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Use Cases
 

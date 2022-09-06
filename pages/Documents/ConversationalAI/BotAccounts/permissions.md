@@ -16,7 +16,7 @@ Users are granted privileges in Conversation Builder by way of assignment of Con
 
 Conversation Builder's permission model is built on Conversational Cloud’s. You can use Conversational Cloud’s four roles (Agent, Agent manager, Campaign manager, Admin) as the basis from which to create custom profiles to suit your organization's needs. You can then assign those [profiles](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html) to users.
 
-As an example, in Conversational Cloud, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB - All Permissions," as we've done below.
+As an example, in Conversational Cloud, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB — All Permissions," as we've done below.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions2.png">
 
@@ -52,6 +52,7 @@ This permission provides full privileges for creating bots and related resources
 
 * Bots
 * Bot groups
+* Dialogs and dialog templates
 * Integrations
 * Global functions
 * Credentials
@@ -62,6 +63,7 @@ Users with this permission can also:
 
 * Activate and train models
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* Use the Conversation Tester
 * View versions and releases (For privileges to create and manage these, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
 * View and download analytics data
 

@@ -2,11 +2,11 @@
 pagename: Overview
 redirect_from:
   - administration-agent-groups-overview.html
+  - admin-settings-skills-groups-set-the-agent-group-hierarchy.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
-
 
 level-order: 3
 order: 9
@@ -39,12 +39,11 @@ A few things you'll need to get started with this API:
 
 	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
-
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).
 
 ### Use Cases for the Agent Groups API
 
@@ -54,4 +53,4 @@ A few things you'll need to get started with this API:
 
 * Update or change group managers
 
-* Synch agents groups within Conversational Cloud with your internal HR or staffing systems.
+* Sync agents groups within Conversational Cloud with your internal HR or staffing systems.

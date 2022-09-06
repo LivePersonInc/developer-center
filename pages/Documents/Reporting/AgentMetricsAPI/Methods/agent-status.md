@@ -35,12 +35,12 @@ Filter is sent in the POST data (body) with the following JSON structure:
 | Name   |      Description      |  Type/Value | Notes |
 |----------|-------------|------|------|
 | Status |  List of Agent’s statuses to be filtered  | Array`<String>` | |
-| agentIds |    List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<String>` ||
-| skillIds | List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` ||
-| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are members of the specified agent groups who are in logged in state.  |    Array`<String>` ||
+| agentIds |    List of agent ids — when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<Number>` ||
+| skillIds | List of skill ids — when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` ||
+| agentGroupIds | List of agent group ids — when provided, data will be returned for the agents that are members of the specified agent groups who are in logged in state.  |    Array`<String>` ||
 | agentPresence | Indicates whether the agent is present  | Boolean | If the filter is not provided, a default filter with the value true will be used |
 | connectionStates | List of agent connection states  | Array`<String>` | Valid values: CONNECTED or DISCONNECTED |
-| timestamp {from} | Epoch | Long - epoch time in milliseconds | Controls how far back to check for connected agents. Default is 5-10 mins unless specified
+| timestamp {from} | Epoch | Long — epoch time in milliseconds | Controls how far back to check for connected agents. Default is 5-10 mins unless specified
 
 **Response**
 

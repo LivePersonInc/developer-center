@@ -9,9 +9,14 @@ permalink: line-templates-limitations.html
 indicator: messaging
 ---
 
+### General limitations
+
+* Line does not guarantee message order and some message types might take longer to send than others. Therefore a small timeout is recommended when sending multiple successive messages. 
+
 ### Element limitations
 
-* Cards have a maximum of 3 buttons
+* `Carousel Template` cards have a maximum of 3 buttons
+* `Card Template` have a maximum of 4 buttons
 * Carousels have a maximum of 10 scrollable cards
 * Quick replies have a maximun of 13 chips 
 
@@ -19,12 +24,12 @@ indicator: messaging
 
 * **Title** has a max of 40 characters 
 * **Subtitle**:
-    * Without image and title - subtitle can be up to 160 chars
-    * With image and title - subtitle can be up to 60 chars
+    * Without image and title — subtitle can be up to 160 chars
+    * With image and title — subtitle can be up to 60 chars
 
 ### Styling limitations
 
- * Fonts, font colors or background color can’t be configured - default LINE font and colors will be used
+ * Fonts, font colors or background color can’t be configured — default LINE font and colors will be used
 
 ### Image limitations
   * Image URL has a limit of 1000 characters.

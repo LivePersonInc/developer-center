@@ -44,7 +44,7 @@ Now let’s create our first intent for our Billing option.
 
 To try this out, we need to associate this domain with our automation and the intent with the message.
 
-1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings > More Settings > Entity and select **the specific Domain you created above** and hit Save.
+1. Exit the Intent Builder <img class="inlineimage" src="img/conversationimages/image_23.png" /> and then select Bot Builder from the drop down menu. Enter your bot automation and go to <img class="inlineimage" src="img/conversationimages/image_4.png" /> Automation Settings → More Settings → Entity and select **the specific Domain you created above** and hit Save.
 
 2. Now select the Welcome dialog and select the Main Menu interaction again. Click on the Interaction Settings <img class="inlineimage" src="img/conversationimages/image_28.png" /> and instead of using patterns, we are going switch to our new intent.
 
@@ -56,7 +56,7 @@ To try this out, we need to associate this domain with our automation and the in
 
     <img src="img/conversationimages/image_30.png" style="height:150px">
 
-5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents!
+5. Click on the previewer, type "reset" and then type something similar to your billing intents like “I need help with billing” which should now match your message, not with patterns, but with intents.
 
     <img src="img/conversationimages/image_31.png" style="height:300px">
 
@@ -96,7 +96,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
     * Add the following to the editor and hit Save: botContext.printDebugMessage(‘Here is my Welcome debug message!’);
 
-    * NOTE: if you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
+    * **Note:** If you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
 
 4. You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
 

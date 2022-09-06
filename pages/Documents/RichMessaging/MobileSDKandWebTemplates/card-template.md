@@ -3,6 +3,7 @@ pagename: Card Template
 redirect_from:
   - rich-messaging-structured-content-card.html
   - structured-content-mobile-sdk-and-web-templates-card-template.html
+  - structured-content-mobile-sdk-web-templates-card-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
@@ -85,7 +86,7 @@ The very basic structured content elements that can contain either/or elements, 
           },
           {
             "type": "link",
-            "uri" : "https://www.google.com"
+            "uri": "https://www.google.com"
           }
         ]
       }
