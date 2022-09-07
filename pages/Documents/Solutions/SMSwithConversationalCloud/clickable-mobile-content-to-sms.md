@@ -46,7 +46,6 @@ Use the following code template for your engagement. The capitalized portions sh
 
 ```html
 <div>
-
   <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>
@@ -85,9 +84,9 @@ Example:
 
 ```html
 <div>
-<a href="sms://+12062021280;?&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
-<img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png" alt="">
-</a>
+  <a href="sms://+12062021280;?&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
+    <img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png" alt="">
+  </a>
 </div>
 ```
 
@@ -174,15 +173,15 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 
 ```html
 <div id="sms-modal" class="modal-centered">
- <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();">
-   <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
- </div>
- <div id="contact-main">
-   <CALL_TO_ACTION>
- </div>
- <div id="agreement" style="background-color:#eee; padding: 10px; display:none; width:100%; height:100%;">
-   <p>YOUR_OPT_IN_MESSAGE</p>
-   <p><a style="color:blue;" href="sms:+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED">I Agree ›</a></p>
- </div>
+  <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();">
+    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
+  </div>
+  <div id="contact-main">
+    <CALL_TO_ACTION>
+  </div>
+  <div id="agreement" style="background-color:#eee; padding: 10px; display:none; width:100%; height:100%;">
+    <p>YOUR_OPT_IN_MESSAGE</p>
+    <p><a style="color:blue;" href="sms:+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED">I Agree ›</a></p>
+  </div>
 </div>
 ```

@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html
 indicator: messaging
 ---
 
-**(Liveperson.java class)** 
+## Liveperson.java class 
 
 ### checkActiveConversation
 
