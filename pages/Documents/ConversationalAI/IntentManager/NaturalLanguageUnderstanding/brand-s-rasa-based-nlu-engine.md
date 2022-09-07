@@ -14,14 +14,17 @@ indicator: both
 
 If you’ve deployed your own NLU engine built on the [Rasa](https://rasa.com/) open source NLU framework, you can use it for Natural Language Understanding intelligence within LivePerson’s Conversational Cloud. Importantly, this lets you keep the investment that you’ve made in your own NLU solution.
 
+### Requirements
+
 When you integrate a Rasa-based NLU engine, training data and other model-related data is completely encapsulated within your solution. For its part, Conversation Cloud uses three of the engine’s exposed endpoints:
 
 * **Training**: [This endpoint](https://rasa.com/docs/rasa/pages/http-api#operation/trainModel) is used to train models.
 * **Activation**: [This endpoint](https://rasa.com/docs/rasa/pages/http-api#operation/replaceModel) is used to load the model when you activate a model version.
 * **Prediction**: [This endpoint](https://rasa.com/docs/rasa/pages/http-api#operation/parseModelMessage) is used to get the intents and entities in a message, so they can be saved and used elsewhere within Conversational Cloud. For example, this endpoint is used to associate the intents with the dialog starters in bots.
 
-{: .important}
 Your Rasa implementation must conform to the schemas at the links above.
+
+Additionally, after the domain is trained, your Rasa server returns the trained model to LivePerson’s Rasa adapter. This requires that HTTPS communication is available between the two services.
 
 ### Connect the NLU engine
 
@@ -32,7 +35,7 @@ Your Rasa implementation must conform to the schemas at the links above.
 
     * **NLU Provider**: Select “Brand's Rasa,” to indicate that you’re using a custom solution that you deployed.
     * **Rasa Host URL**: Enter the base URL for your Rasa training and prediction endpoints.
-    * **Authorization**: Select the [type of authentication](https://rasa.com/docs/rasa/pages/http-api) to use when making API calls to the Rasa engine: TokenAuth, JWT, or Custom. Then enter the permanent token to use. For security reasons, unauthenticated connections aren’t supported.
+    * **Authorization**: Select the [type of authentication](https://rasa.com/docs/rasa/pages/http-api) to use when making API calls to the Rasa engine: TokenAuth, JWT, or Custom. (TokenAuth and JWT are supported natively by Rasa.) Then enter the permanent token to use. For security reasons, unauthenticated connections aren’t supported.
 
         Select “Custom” if you’re using an authentication type other than TokenAuth or JWT. When you select “Custom,” you can enter the authentication type (e.g., “Bearer”) in the field below, although this isn’t required.
 
@@ -57,8 +60,9 @@ Your Rasa implementation must conform to the schemas at the links above.
 You must train the domain after every update to the training data therein if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can activate it and then use the testing tools to test. Please see the testing constraints discussed farther below.
 
 Note the following:
-* Training typically takes anywhere between 2 to 10 minutes depending on how big the domain is.
+* Typically, training takes anywhere between 2 to 10 minutes depending on how big the domain is. Larger domains can take longer.
 * You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
+* The model that’s received from your Rasa server is stored by LivePerson. When you activate the model, your brand’s Rasa server will request the model from LivePerson’s Rasa adapter.
 
 **To train a domain**
 
@@ -91,3 +95,17 @@ Therefore, LivePerson recommends that you incorporate two domains into your work
 #### Testing tools
 
 You can test using both the [Test User Input](intent-manager-build-test-a-single-utterance.html) tool and the [Model Tester](intent-manager-build-test-with-the-model-tester.html). However, since a Rasa-based NLU engine can only run predictions on the model that's currently activated, you cannot select a trained model version to use. The activated version is always used.
+
+### Process flow diagrams
+
+#### Training a Rasa domain
+
+<img style="width:800px" alt="Diagram illustrating training a Rasa domain" src="img/ConvoBuilder/rasa_processflow_traindomain.png">
+
+#### Activating a Rasa model version
+
+<img style="width:800px" alt="Diagram illustrating activating a Rasa model version" src="img/ConvoBuilder/rasa_processflow_activateversion.png">
+
+#### Making intent predictions
+
+<img style="width:800px" alt="Diagram illustrating makiing intent predictions" src="img/ConvoBuilder/rasa_processflow_intentpredictions.png">
