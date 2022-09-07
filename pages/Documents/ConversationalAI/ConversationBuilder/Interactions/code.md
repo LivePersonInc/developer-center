@@ -73,6 +73,98 @@ However, there is no validation check to ensure that the code adheres to the Con
 {: .important}
 As mentioned earlier, comments in the JSON aren't supported.
 
+#### Updating conversation metadata
+
+You can use the Universal interaction to send metadata during a conversation with the consumer. You can send the metadata either at the interaction level or at the button level. And like with any other interaction, you can retrieve the conversation’s metadata using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the Process User Response code of the interaction.
+
+##### Example 1: Sending metadata at the interaction level
+
+If your target channel is Apple Messages for Business, you might need to support authenticated messages that, by their nature, must include metadata.
+
+In this example, metadata is added at the interaction level in order to send an[authentication request](apple-messages-for-business-templates-apple-auth-template.html#sending-an-apple-authentication-request-to-a-consumer) to the consumer.
+
+```javascript
+{
+  "type": "vertical",
+  "elements": [{
+    "type": "text",
+    "text": "Sign In",
+    "tooltip": "Sign In"
+  }]
+,
+    "metadata": [
+  {
+    "type": "BusinessChatMessage",
+    "receivedMessage": {
+      "title": "Sign In to LivePerson",
+      "subtitle": "Thank you",
+      "style": "small"
+    },
+    "replyMessage": {
+      "title": "You Signed in",
+      "subtitle": "Thank you",
+      "style": "small"
+    }
+  },
+  {
+    "type": "ConnectorAuthenticationRequest",
+    "requestIdentifier": "req002",
+    "apple": {
+      "oauth2": {
+        "scope": ["profile", "openid", "email", "apple-business-chat.read"],
+        "clientSecret": "PWM9txAxC8DQFLu",
+        "responseEncryptionKey": "BGhyX8jmK31"
+      }
+    }
+  }
+]
+}
+```
+
+Once the consumer authenticates by signing in with a username and password, you can retrieve the authentication token from the [response metatadata](apple-messages-for-business-templates-apple-auth-template.html#receiving-an-apple-authentication-response-from-a-consumer) using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function. The token can then be stored and used throughout the conversation.
+
+##### Example 2: Sending metadata at the button level
+
+In this example, metadata is set in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function.
+
+```javascript
+{
+  "message": "Title message",
+  "type": "quickReplies",
+  "itemsPerRow": 4,
+  "replies": [
+    {
+      "title": "I am a Quick Reply",
+      "tooltip": "I am a Quick Reply tooltip",
+      "type": "button",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "I just sent a quick reply."
+          }
+        ],
+    	"metadata": [
+    		{
+    		"type":"ActionReason",
+    		"reasonId":"reasonId",
+    		"reason":"reason"
+    		}
+    	],
+      },
+      "style": {
+        "bold": true,
+        "italic": true,
+        "color": "#ffffff",
+        "background-color": "#e53232",
+        "border-color": "#e53232",
+        "border-radius": 10
+      }
+    }
+  ]
+}
+```
+
 #### Testing
 
 To fully test a Universal interaction, use a deployed bot.
@@ -86,10 +178,6 @@ The bot-level [Preview](conversation-builder-testing-deployment-previewing.html)
 As mentioned above, the Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 Use the Universal interaction when you want to render a particular bot response (i.e., layout and styling) that isn't yet supported by one of the Statement or Question interactions. As examples, you can use it instead of the Text, Structured, or Multiple Choice Question interactions.
-
-##### Can I use the Universal interaction to update the conversation’s metadata?
-
-No, this can't be done.
 
 ##### How does use of the Universal tile impact analytics?
 
