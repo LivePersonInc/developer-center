@@ -190,8 +190,25 @@ table>thead>tr>th {
   border-bottom: none;
 }
 
-table>tbody>tr:nth-of-type(odd) {
+table>tbody>tr:nth-of-type(odd):not(.categoryrow) td {
   background-color: var(--table-cell);
+}
+
+#featurestable tr td,
+#featurestable tr th {
+  padding: 8px;
+  min-width: 130px;
+}
+
+#featurestable tr td:first-child,
+#featurestable tr th:first-child {
+  min-width: 200px;
+}
+
+#featurestable tr {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .designsheet table tr td {
