@@ -70,7 +70,7 @@ indicator: both
 | SDK | Purpose |
 |---|---|
 | [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html) | Add custom widgets to the Conversational Cloud |
-| [Apple Business Chat SDK](apple-business-chat-sdk-overview.html) | Implement interactive experience for ABC consumers |
+| [Apple Messages for Business SDK](apple-business-chat-sdk-overview.html) | Implement interactive experience for AMB consumers |
 | [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) | Add custom widgets to the Engagement Window |
 | [JavaScript Chat SDK](javascript-chat-sdk-overview.html) | Create a chat window from scratch |
 | [Messaging Agent SDK](messaging-agent-sdk-overview.html) | Provide access to Agent Messaging API, enable bots to handle consumer conversations, and perform agent actions |

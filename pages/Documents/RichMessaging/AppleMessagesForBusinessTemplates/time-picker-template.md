@@ -13,7 +13,7 @@ indicator: messaging
 
 ### Overview
 
-[Business Chat Time Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
+[Messages for Business Time Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
 
 The following capabilities are supported:
 
@@ -27,7 +27,7 @@ The following capabilities are supported:
 
 By Using the using metadata properties, the brand can also define the received and reply bubble structures.
 
-Below is an example image of a Business Chat time picker:
+Below is an example image of a Messages for Business time picker:
 
 ![Apple Messages for Business Time Picker Main](img/archive/abc-timepicker-1.jpg)   ![AApple Messages for Business Time Picker list](img/archive/abc-timepicker-2.PNG)
 
@@ -39,7 +39,7 @@ Each Time Picker template has the following mandatory sections:
 
 1. [Business Event](#metadata---business-event) (part of the metadata JSON): defines the object as a time picker object for Apple Messages for Business. This section includes timing and location properties.
 
-2. [Business Chat Message](#metadata---business-chat-message) (part of the metadata JSON): defines the received and reply messages.
+2. [Messages for Business Message](#metadata---business-chat-message) (part of the metadata JSON): defines the received and reply messages.
 
 3. [Time Picker Items](#body---time-picker-items) (part of the JSON body): defines the dates available and the time slots for selection as part of the Time Picker.
 
@@ -158,7 +158,7 @@ The following JSON metadata and body structures are templates for any Time Picke
 }
 ```
 
-### Metadata — Business Chat Message
+### Metadata — Messages for Business Message
 
 Part of the Time Picker Conversational Cloud Structured Content metadata JSON.
 
@@ -231,7 +231,7 @@ Part of the Time Picker Conversational Cloud Structured Content metadata JSON. D
 | title         | Location name                                                                                                                                 | String | N        |            |
 | la            | A double representing the latitude of the location                                                                                            | double | N        |            |
 | lo            | A double representing the longitude of the location                                                                                           | double | N        |            |
-| radios        | A double representing the location radius, in meters. <br/>Business Chat ignores this property when latitude and longitude are missing or empty. | double | N        |            |
+| radios        | A double representing the location radius, in meters. <br/>Messages for Business ignores this property when latitude and longitude are missing or empty. | double | N        |            |
 
 #### Example
 

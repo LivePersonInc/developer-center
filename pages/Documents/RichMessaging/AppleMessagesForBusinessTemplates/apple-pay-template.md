@@ -172,13 +172,13 @@ To edit the `ConnectorPaymentRequest` and `BusinessChatMessage` metadata templat
   <tbody>
   <tr>
     <td>BusinessChatMessage</td>
-    <td>Represents the Business Chat bubbles view objects  </td>
+    <td>Represents the Messages for Business bubbles view objects  </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>ConnectorPaymentRequest</td>
-    <td>Represents a Business Chat apple pay request </td>
+    <td>Represents a Messages for Business apple pay request </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
@@ -282,7 +282,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud — this is an important property which allows you to correlate the payment response with your backend payment service  </td>
+    <td>A UUID for the request. Messages for Business includes the identifier in its response to Conversational Cloud — this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>

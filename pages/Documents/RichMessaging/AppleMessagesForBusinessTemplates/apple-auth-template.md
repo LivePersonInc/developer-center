@@ -153,13 +153,13 @@ Please use the metadata template with the relevant fields, as presented in the e
   <tbody>
   <tr>
     <td>BusinessChatMessage</td>
-    <td>Represents the Business Chat bubbles view objects  </td>
+    <td>Represents the Messages for Business bubbles view objects  </td>
     <td>Object</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>ConnectorAuthenticationRequest</td>
-    <td>Represents a Business Chat authentication request </td>
+    <td>Represents a Messages for Business authentication request </td>
     <td>Object</td>
     <td>Y</td>
   </tr>

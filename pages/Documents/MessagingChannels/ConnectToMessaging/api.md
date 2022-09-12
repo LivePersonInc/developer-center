@@ -482,7 +482,7 @@ We recommend a request be retried (3 attempts with exponential retry with delay 
 
 <strong>3. Which channels are supported as of now?</strong>
 
-C2M supports SMS-Twilio, WhatsApp, Apple Business Chat, Google RCS and INAPP channels.
+C2M supports SMS-Twilio, WhatsApp, Apple Messages for Business, Google RCS and INAPP channels.
 
 <strong>4. Is there a throughput limitation for the data that gets passed from Twilio to LP?</strong>
 

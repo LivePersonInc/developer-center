@@ -10,7 +10,7 @@ indicator: messaging
 
 ### Overview
 
-The Custom Interactive Message (CIM) Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
+The Custom Interactive Message (CIM) Template for Apple Messages for Business allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
 Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device.
 

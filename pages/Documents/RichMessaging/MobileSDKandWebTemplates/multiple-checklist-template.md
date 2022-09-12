@@ -115,7 +115,7 @@ The consumer selections will be displayed as a consumer message in the agent wor
                 },
                 {
                   "type": "checkbox",
-                  "text": "Apple Business Chat",
+                  "text": "Apple Messages for Business",
                   "borderLine": true,
                   "borderColor": "#d4d4d5",
                   "click": {
@@ -128,7 +128,7 @@ The consumer selections will be displayed as a consumer message in the agent wor
                     "actions": [
                       {
                         "type": "checked",
-                        "publishText": "Apple Business Chat"
+                        "publishText": "Apple Messages for Business"
                       }
                     ]
                   }
