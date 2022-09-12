@@ -3,8 +3,8 @@ pagename: Overview
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Apple Messages for Business Authentication
-permalink: apple-messages-for-business-authentication-overview.html
+documentname: Apple Business Chat Authentication
+permalink: apple-business-chat-authentication-overview.html
 indicator: messaging
 ---
 

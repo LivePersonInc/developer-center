@@ -4,8 +4,8 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-documentname: Apple Messages for Business SDK
-permalink: apple-messages-for-business-sdk-overview.html
+documentname: Apple Business Chat SDK
+permalink: apple-business-chat-sdk-overview.html
 indicator: messaging
 ---
 

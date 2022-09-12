@@ -137,7 +137,7 @@ Options are set to be shown by default, but if you don’t want them to be shown
  <td>If you want to display the Product or Service options to your customer, set this to "on". Otherwise, set to “off”. </td>
  </tr>
  <tr>
- <td>The following are for web client users only. Apple Messages for Businessand SMS will be shown automatically.</td>
+ <td>The following are for web client users only. Apple Messages for Business and SMS will be shown automatically.</td>
  <td></td>
  </tr>
  <tr>
