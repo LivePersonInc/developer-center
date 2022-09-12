@@ -95,7 +95,7 @@ Navigate to **Global Functions**.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png" alt="">
 
-The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the Apple Messages for Businessor SMS option dialogs appear, you can set the channel variable to the following:
+The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the Apple Messages for Business or SMS option dialogs appear, you can set the channel variable to the following:
 
 ```javascript
 // What channel is the user on? If you'd like to force the display of a particular channel's content, 
