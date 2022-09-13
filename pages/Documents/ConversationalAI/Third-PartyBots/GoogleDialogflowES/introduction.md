@@ -66,10 +66,11 @@ ABabcLe3h4XeslUI7Eowz2sypu72Q9+j1xOEtc9asl37wLac/zo0xy7wNxnDau+x
 …
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        IFRnWV9jafiw2t92CY9mRzqF5puk8iRtMiCRjy3u4L+RHdvYkZPqO9CZUPvq9t0q
-        q+J780stgv56BE7TAuIjRPkN+GPcqnm69qQvJdzSPc5dw5ZmM8b5TtIvlipzjU89
-        BSioVh/nHPX2QX2MKSbue+k=
-        -----END PRIVATE KEY-----</td>
+IFRnWV9jafiw2t92CY9mRzqF5puk8iRtMiCRjy3u4L+RHdvYkZPqO9CZUPvq9t0q
+q+J780stgv56BE7TAuIjRPkN+GPcqnm69qQvJdzSPc5dw5ZmM8b5TtIvlipzjU89
+BSioVh/nHPX2QX2MKSbue+k=
+-----END PRIVATE KEY-----</td>
+
   </tr>
   <tr>
     <td>Google Cloud scopes</td>
@@ -113,7 +114,9 @@ You have to acknowledge the Data Disclaimer in order to use Third-Party Bots.
 
 To validate the credentials provided, you can now perform a connection test to see if the configuration you have provided
 is working and the bot is reachable. You will be able to proceed in any case, but only if **Test Connection** will result in
-**Connection Successful** the bot is expected to later start successfully.
+**Connection Successful** the bot is expected to later start successfully. **Please note** that your bot should be capable of
+handling unsupported messages either via [fallback intents](https://cloud.google.com/dialogflow/es/docs/intents-default)
+or as your design pleases. This will ensure the success of the call to the API of Dialogflow ES for testing the connection.
 
 ### Limitations
 

@@ -134,6 +134,8 @@ For validation of the credentials provided, you can now perform a test connectio
 have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeed
 or fails.
 You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
+**Please note** that your bot should be capable of handling unsupported messages either via fallback intents
+or as your design pleases. This will ensure the success of the call to the API of Dialogflow CX for testing the connection.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png" alt="">
 

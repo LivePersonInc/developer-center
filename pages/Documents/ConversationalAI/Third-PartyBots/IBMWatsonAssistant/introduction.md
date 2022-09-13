@@ -127,7 +127,12 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 #### Test Connection
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
+For validation of the credentials provided, you can now perform a test connection request to see if
+everything that you have provided is working and reachable. **Please note** that your bot should be
+capable of handling unsupported messages either via fallback nodes or as your design pleases.
+This will ensure the success of the call to the API of IBM Watson Assistant for testing the connection.
+You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass
+authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png" alt="">
 
