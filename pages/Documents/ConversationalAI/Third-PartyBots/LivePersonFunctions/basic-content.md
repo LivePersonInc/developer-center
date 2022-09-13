@@ -91,6 +91,34 @@ const payload = {
 };
 ```
 
+If you have alternate intents data that you want to pass into the bot metadata you can also add this
+information in the response context via property `alternativeIntents` which is an array of objects
+(containing same properties as the main intent). The example of passing alternative intents alongside
+the main intent is as follow:
+
+```javascript
+const payload = {
+  messages: ["Hi i am an intent information example"],
+  context: {
+    alternativeIntents: [
+      {
+        intentId: "alternative-intent-info-example-1",
+        intentName: "alternative-Intent information example 1.",
+        confidenceScore: 0.6,
+      },
+      {
+        intentId: "alternative-intent-info-example-2",
+        intentName: "alternative-Intent information example 2.",
+        confidenceScore: 0.4,
+      },
+    ],
+    intentId: "intent-info-example",
+    intentName: "Intent information example.",
+    confidenceScore: 1,
+  },
+};
+```
+
 ### Sending Rich Content (Structured Content)
 
 {: .important}
