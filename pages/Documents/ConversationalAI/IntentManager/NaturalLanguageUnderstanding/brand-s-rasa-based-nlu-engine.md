@@ -100,12 +100,12 @@ You can test using both the [Test User Input](intent-manager-build-test-a-single
 
 #### Training a Rasa domain
 
-<img style="width:700px" alt="Diagram illustrating training a Rasa domain" src="img/ConvoBuilder/rasa_processflow_traindomain.png">
+<img style="width:700px" alt="Architectural diagram illustrating the process flow for training a Rasa domain" src="img/ConvoBuilder/rasa_processflow_traindomain.png">
 
 #### Activating a Rasa model version
 
-<img style="width:700px" alt="Diagram illustrating activating a Rasa model version" src="img/ConvoBuilder/rasa_processflow_activateversion.png">
+<img style="width:700px" alt="Architectural diagram illustrating the process flow for activating a Rasa model version" src="img/ConvoBuilder/rasa_processflow_activateversion.png">
 
 #### Making intent predictions
 
-<img style="width:700px" alt="Diagram illustrating makiing intent predictions" src="img/ConvoBuilder/rasa_processflow_intentpredictions.png">
+<img style="width:700px" alt="Architectural diagram illustrating the process flow for making intent predictions" src="img/ConvoBuilder/rasa_processflow_intentpredictions.png">
