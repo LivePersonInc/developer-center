@@ -133,11 +133,8 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
-        "clientSecret": "A string indicating the secret provisioned by the authorization server.",
-        "scope": "Insert your scope here. Ex.['email','profile']",
-        "responseType": "A string indicating the type of authentication request"
-        "responseEncryptionKey": "Insert your public key here",
-        "state": "A string indicating the state of the authentication request."
+        "scope": "Insert Your scope here. Ex.['email','profile']",
+        "responseEncryptionKey": "Insert Your Public Key Here"
       }
     }
   }
@@ -195,24 +192,6 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>apple.oauth2.scope</td>
     <td>An array of scope items that specifies the scope of the request, gives the exact fields of data that the authentication service provides to client requesting the authentication.</td>
     <td>Array&lt;string&gt;</td>
-    <td>Y</td>
-  </tr>
-    <tr>
-    <td>apple.oauth2.clientSecret</td>
-    <td>A string indicating the secret provisioned by the authorization server.</td>
-    <td>string</td>
-    <td>Y</td>
-  </tr>
-     <tr>
-    <td>apple.oauth2.responseType</td>
-    <td>A string indicating the type of authentication request.</td>
-    <td>string</td>
-    <td>Y</td>
-  </tr>
-     <tr>
-    <td>apple.oauth2.state</td>
-    <td>A string indicating the type of authentication request.</td>
-    <td>string</td>
     <td>Y</td>
   </tr>
   </tbody>
