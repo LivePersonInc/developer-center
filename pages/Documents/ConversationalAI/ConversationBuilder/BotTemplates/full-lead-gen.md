@@ -26,7 +26,7 @@ The template can be configured to handle Web, SMS, Apple Messages for Business, 
 * Lead Gen
   * This is the main dialog for collecting the user’s contact information.
   * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
-* Options for ABC
+* Options for AMB
   * If you are deploying to Apple Messages for Business, you can use this List Picker driven dialog to display your product or service offerings.
   * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
 * Options for SMS
@@ -99,7 +99,7 @@ The first thing our functions do is to get the particular channel the user is co
 
 ```javascript
 // What channel is the user on? If you'd like to force the display of a particular channel's content, 
-  // set the "channel" variable to: "CustomContext" for ABC, "sms" for SMS. Web will be displayed by default.
+  // set the "channel" variable to: "CustomContext" for AMB, "sms" for SMS. Web will be displayed by default.
   //var channel = "CustomContext";
   var channel = botContext.getChannel(); // Comment this line out if forcing the channel
   botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);

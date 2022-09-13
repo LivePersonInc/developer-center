@@ -188,7 +188,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * ImageURL MUST be whitelisted — to whitelist images for Structured Content contact your Conversational Cloud account representative
 
-* SessionIdentifier — Any interactive message that is sent to ABC has a UUID; either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more.
+* SessionIdentifier — Any interactive message that is sent to AMB has a UUID; either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more.
 
 * Images placed in the image used in imageURL field should be whitelisted in account Houston — Site Setting messaging.rich.content.valid.urls
 
