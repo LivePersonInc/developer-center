@@ -40,7 +40,7 @@ Dynamic Routing requires the following components to operate:
 * Next Actions API
 
 Here is a representation of how the various components integrate:
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_components.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_components.png" alt="An architectural diagram that illustrates the various components that work together to perform dynamic routing">
 
 #### Routing bot
 You need to have a routing bot either on Conversation Builder or on external automation platforms. The routing bot, connected to the primary messaging skill, receives the conversations, and executes  routing policies that brands define in the dynamic routing policy management interface, to direct incoming conversations to the right agent skill. LivePerson provides a Conversation Orchestrator bot template which makes it easy for brands to get started. The Conversation Orchestrator bot is pre-wired to both the Conversation Context Service and routing policies I. You are welcome to use your own routing bot but will have to manually configure the bot. You can also use a routing bot on a different automation platform like Google DialogFlow. In such cases, you need to use the Next Actions API to receive recommendations on those external platforms. 

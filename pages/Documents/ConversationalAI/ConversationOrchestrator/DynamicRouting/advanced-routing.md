@@ -31,11 +31,11 @@ The Expression Editor is only available to brands that are upgraded to Conversat
 
 **Launch the Expression Editor**: Open Conversion Orchestrator, and select **Manage Policies** under the Dynamic Routing module. To view the policy editor, select an existing policy, or click **Add Policy**. Switch to the **Write an expression** tab to view the expression-based editor.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting1.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting1.png" alt="The Write an expression tab in the expression editor">
 
 **Write expressions**: You can write expressions using logical operators, any SDEs, context variables or conversation attributes.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting2.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting2.png" alt="An example expression">
 
 The following operations are possible:
 
@@ -67,7 +67,7 @@ namespace.varP == (namespace.varX || namespace.varY)
 
 **Use custom variables and LivePerson Functions**: Add custom variables and LivePerson Functions to extend your use cases.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting3.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting3.png" alt="An example expression using custom variables">
 
 **Remember the following when writing expressions**
 
@@ -85,11 +85,11 @@ namespace.varP == (namespace.varX || namespace.varY)
 
 Use predefined templates to create date-based or time-based routing policies.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting4.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting4.png" alt="Using predefine templates to create a routing policy">
 
 Add the required template to the editor.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting5.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting5.png" alt="The template added to the policy">
 
 Update the template to create your rule.
 
@@ -135,7 +135,7 @@ Combine date and time to create policies:
 | --- | --- |
 | VIP customers during work hours on weekdays in the month of September in New York | orchestrator.phoneNumber in custom.VipList<br>and isDateRange('09/01/21', '09/30/21', ‘America/New_York')<br>and isTimeRange('09:00:00', '18:00:00', '‘America/New_York', ['MON','TUE','WED', 'THU','FRI'] )) |
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting6.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting6.png" alt="An example expression using date and time with other attributes">
 
 ##### Use the right formats for days and time zones
 
@@ -147,13 +147,13 @@ Combine date and time to create policies:
 
 Use [policy logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html) to debug your policies.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting7.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting7.png" alt="Using the policy logs to debug policies">
 
 #### Nesting multiple expressions for more complex conditions
 
 Write nested statements to combine multiple logical conditions to arrive at routing decisions. Enclose every block with brackets “( )”.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting8.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_advrouting8.png" alt="An example of a complex condition that nests multiple expressions">
 
 ### Combine other products to power more complex routing use cases
 
@@ -167,7 +167,7 @@ Routing to a different skill if the primary skill is experiencing a high load. T
 **Solution:**
 This can be solved using a combination of [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), [Context Service](conversation-orchestrator-conversation-context-service-overview.html), [LivePerson Functions](liveperson-functions-overview.html) and the [Queue Health API](operational-realtime-api-methods-queue-health.html). A LivePerson Function can be configured to run every 2-5 mins and update the “average wait time” for every skill into the Context service. Dynamic routing policies can then be configured to check average wait time for every skill and fall over to a different skill as appropriate.
 
-<img width="800" src="img/convorchestrator/co_dr_advrouting9.png" alt="">
+<img width="800" src="img/convorchestrator/co_dr_advrouting9.png" alt="The architectural diagram illustrating the flow between the components involved">
 
 {: important}
 The above solution can be deployed relatively quickly. However, it does require a few hours of coding effort for the LivePerson function. This method cannot be used to check queue health in real time for every conversation, but we believe that checking the queue every 2-5 mins will help solve this specific use case. Most conversations live much beyond 2-5 mins and queue stats are unlikely to change significantly during this time frame.
@@ -182,7 +182,7 @@ This can be solved using [SDE](engagement-attributes-types-of-engagement-attribu
 
 While SDEs are captured directly for conversations originating from web-engagements, they have to be manually set when conversations originate on other channels such as whatsapp or mobile apps. For this use case a routing bot will check for the customers’s VIP status through a CRM (or relevant application) and then update the SDE value for VIP customers. LivePersons Queue prioritization updates queue priority in real time whenever the SDE is updated. Next SDE based routing policies can be configured on Dynamic Routing to route VIP customers to the appropriate skill.
 
-<img width="800" src="img/convorchestrator/co_dr_advrouting10.png" alt="">
+<img width="800" src="img/convorchestrator/co_dr_advrouting10.png" alt="The architectural diagram illustrating the flow between the components involved">
 
 #### Other scenarios
 
