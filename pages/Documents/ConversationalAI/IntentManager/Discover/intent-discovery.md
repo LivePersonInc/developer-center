@@ -51,7 +51,7 @@ Below is a visual guide for anyone starting the intent discovery process:
 4. As you are reviewing each subcluster, consider each as inspiration for an intent in your taxonomy. Before you convert a subcluster to an intent, verify two things:
 
     * Does the subcluster represent an intent that is not covered in your taxonomy?
-    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy! Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
+    * Does the verb and noun pairing create a logical intent? If you answered yes to both of these questions, then you probably have a good candidate for a new intent to add to your taxonomy. Keep in mind that sometimes multiple subclusters can be duplicates that use synonymous verbs. So, consider this while you analyze the subclusters and feel free to convert multiple subclusters into only one intent.
 
 5. To convert a subcluster to an intent, find the subcluster you want to convert and click the “View Details” button. This will take you to the “Messages” view and show you the consumer messages that composed that cluster.
 
@@ -123,6 +123,7 @@ You can also export the utterances using the “Export table to CSV” as a spre
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_intent_discovery3h.png">
 
 ### Step 4: Train your new model
+
 Now that you have discovered some intents and found the training data for those intents, you’re ready to train your model. You should train your model at regular intervals as you add new intents and training data. Typically we advise training a new model at the end of every session of work. This will allow you to see the results of your changes the next time you revisit the model. To train a new model, [follow these steps](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 ### Split an intent

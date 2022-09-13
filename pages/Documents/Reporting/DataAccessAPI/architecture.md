@@ -10,7 +10,6 @@ permalink: data-access-api-architecture.html
 indicator: chat
 ---
 
-
 ### JSON-Generating Data Flow Process
 
 1.	Every visitor and/or agent action triggers an event.

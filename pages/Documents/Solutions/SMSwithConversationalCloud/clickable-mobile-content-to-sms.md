@@ -38,7 +38,6 @@ Within Conversational Cloud lies the capability to generate an SMS clickable mob
 
 5. Move to the next step: Engagement studio.
 
-
 #### Step 2: Edit the engagement
 
 Use the following code template for your engagement. The capitalized portions should be replaced.
@@ -47,24 +46,11 @@ Use the following code template for your engagement. The capitalized portions sh
 
 ```html
 <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   <a href="sms://+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED" data-LP-event="click">
     <CALL_TO_ACTION>
   </a>
   <a style="position:absolute; top:0px; left:0px; z-index:9999;" href="#" data-LP-event="close">
-    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png">
+    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
   </a>
 </div>
 ```
@@ -83,9 +69,8 @@ Use the following code template for your engagement. The capitalized portions sh
   </tr>
   <tr>
     <td>TEXT_MESSAGE_URI_ENCODED</td>
-    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use this site http://meyerweb.com/eric/tools/dencoder/<br>
+    <td>The message inserted into the body of the text message. It needs to be URI encoded. Use https://meyerweb.com/eric/tools/dencoder/<br>
     Note: separate the number and text with: ;?&</td>
-
 
   </tr>
   <tr>
@@ -95,14 +80,13 @@ Use the following code template for your engagement. The capitalized portions sh
 </tbody>
 </table>
 
-
 Example:
 
 ```html
 <div>
-<a href="sms://+12062021280;?&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
-<img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png">
-</a>
+  <a href="sms://+12062021280;?&body=Hello%20fashion%20consultant!%20Here%20is%20my%20question%3A%20">
+    <img style="width:250px; height:auto;" src="https://chrisjamestest.neocities.org/img/bigbag-clicktomessage.png" alt="">
+  </a>
 </div>
 ```
 
@@ -114,24 +98,14 @@ In order to ensure that responses from a brand are received by the consumer in t
 
 Notice the use of:
 
-·  	The + sign
-
-·  	The country code: 1
-
-·  	Brackets around the area code (000)
-
-·  	Dash between the final two number groups 000-0000
-
+* The + sign
+* The country code: 1
+* Brackets around the area code (000)
+* Dash between the final two number groups 000-0000
 
 #### Step 3: Create an Entry Point
 
 Assign the correct Entry Point to your engagement where the content engagement should be displayed
-
-
-
-
-
-
 
 #### Step 4: Add a Behavior
 
@@ -139,38 +113,7 @@ A "Time on Entry Point" behavior may utilize the new entry points you've just cr
 
 Save and publish your engagements. They will not display until you've added the necessary Entry Point *Section* attribute on your website.
 
-
-
 #### Step 5: Opt-in Privacy Notice (optional)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 It is possible to also include an opt in message prior to opening the SMS application, which makes sure the consumer agrees to receiving texts through the LivePerson system.
 
@@ -190,7 +133,7 @@ The goal is to add an additional view within the Conversational Cloud content en
 
 ```html  
 <div>
-  <a style="position:absolute; top:-10px; left:-10px; z-index:9999;" href="#" data-LP-event="close"><img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png"></a>
+  <a style="position:absolute; top:-10px; left:-10px; z-index:9999;" href="#" data-LP-event="close"><img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt=""></a>
     <div id="contact-main">
       <CALL_TO_ACTION>
     </div>
@@ -204,10 +147,10 @@ As well on the consumer end, the following JavaScript onclick trigger needs to b
 
 ```html
 <script>
- 	$(document).on('click', "#contact-main", function(){
-      	$('#contact-main').hide();
-      	$('#agreement').show();
- 	});
+  $(document).on('click', "#contact-main", function(){
+    $('#contact-main').hide();
+    $('#agreement').show();
+  });
 </script>
 ```
 
@@ -219,26 +162,26 @@ This option is for providing the invitation outside of Conversational Cloud (exa
 
 ```css
 .modal-centered{
- 	width:250px;
- 	height:200px;
- 	position:absolute;
- 	left:50%;
- 	top:50%;
- 	margin:-100px 0 0 -125px;
+  width:250px;
+  height:200px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-100px 0 0 -125px;
 }
 ```
 
 ```html
 <div id="sms-modal" class="modal-centered">
- <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();" >
-   <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png">
- </div>
- <div id="contact-main">
-   <CALL_TO_ACTION>
- </div>
- <div id="agreement" style="background-color:#eee; padding: 10px; display:none; width:100%; height:100%;">
-   <p>YOUR_OPT_IN_MESSAGE</p>
-   <p><a style="color:blue;" href="sms:+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED">I Agree ›</a></p>
- </div>
+  <div style="cursor:pointer; position:absolute; top:-10px; left:-10px; z-index:9999;" onclick="$('#sms-modal').hide();">
+    <img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt="">
+  </div>
+  <div id="contact-main">
+    <CALL_TO_ACTION>
+  </div>
+  <div id="agreement" style="background-color:#eee; padding: 10px; display:none; width:100%; height:100%;">
+    <p>YOUR_OPT_IN_MESSAGE</p>
+    <p><a style="color:blue;" href="sms:+SMS_NUMBER_WITH_COUNTRY_CODE;?&body=TEXT_MESSAGE_URI_ENCODED">I Agree ›</a></p>
+  </div>
 </div>
 ```

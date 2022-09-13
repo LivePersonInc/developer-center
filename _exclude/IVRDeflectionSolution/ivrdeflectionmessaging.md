@@ -57,7 +57,6 @@ The overall flow looks like the following:
 
 ![IVR Map](img/ivrmap.png)
 
-
 1. Consumer calls customer care and reaches the IVR system. He reaches a certain branch that was selected for deflection, and hears the offer to deflect (e.g. "Instead of waiting on line, you can also connect with us using text messaging. It will allow you to go about your day, with our representative getting in touch with you to update you on your issue. Click 1 to gain back your time and start messaging with us now.")
 
 2. If the consumer accepts the offer, the IVR system will connect to Twilio and trigger the initial SMS message.
@@ -130,7 +129,7 @@ Setting consumer expectations throughout the flow is key for successfully transi
 
 * Consumers send millions of SMS  to one another today. The B2C messaging experience is not yet fully perceived as a messaging channel, hence there’s a greater importance for setting expectations with the consumers.
 
-* Setting expectations throughout the funnel is key. For example, it’s not enough to mention it in the IVR or in the first message alone. The brand should ensure that the consumers understand the SLA throughout the conversation, not only in the beginning of the conversation. An additional example is the usage of ID&V - it affects the funnel and agents should handle it carefully by explaining what it is for, its ease and its speed.
+* Setting expectations throughout the funnel is key. For example, it’s not enough to mention it in the IVR or in the first message alone. The brand should ensure that the consumers understand the SLA throughout the conversation, not only in the beginning of the conversation. An additional example is the usage of ID&V — it affects the funnel and agents should handle it carefully by explaining what it is for, its ease and its speed.
 
 * The percent of repeating customers can be used as an indicating measurement for messaging containment. This metric, when monitored, can help in understanding how many consumers are actually returning to this channel instead of calling. For full containment analysis, the messaging data should be analyzed against the call data across a significant time frame (at least three months).
 

@@ -23,9 +23,9 @@ We support the following [grant types](https://oauth.net/2/grant-types/) out of 
 If you want to learn more about OAuth 2.0, [learn more about it in this YouTube-Video](https://www.youtube.com/watch?v=CPbvxxslDTU).
 ### Authorization Process
 
-#### Generation of client_id & client_secret
+#### Generation of client_id and client_secret
 
-The generation of the `client_id` & `client_secret` happens during the [App Installation](conversational-cloud-applications-installing-conversational-cloud-applications.html) process. Reach out to your account representative to perform this action, since there is no self-service available for this procedure. You need to provide a JSON that can be based on the following templates:
+The generation of `client_id` and `client_secret` happens during the [App Installation](conversational-cloud-applications-installing-conversational-cloud-applications.html) process. Reach out to your account representative to perform this action, since there is no self-service available for this procedure. You need to provide a JSON that can be based on the following templates:
 
 ```json
 {
@@ -64,7 +64,7 @@ The Invocation Gateway is the main entry point to the LivePerson Functions platf
 
 #### Get Domain of the Authorization Server
 
-The Authorization Server will consume the `client_id` & `client_secret` to generate the necessary `access_token` to access our Invocation Gateway. We recommend the [Service-Discovery API](domain-api.html) to identify your domain. Look for the `sentinel`-entry. It currently is one of the following:
+The Authorization Server will consume `client_id` and `client_secret` to generate the necessary `access_token` to access our Invocation Gateway. We recommend the [Service-Discovery API](domain-api.html) to identify your domain. Look for the `sentinel`-entry. It currently is one of the following:
 
 * **APAC:** sy.sentinel.liveperson.net
 * **EMEA:** lo.sentinel.liveperson.net
@@ -74,22 +74,22 @@ The Authorization Server will consume the `client_id` & `client_secret` to gener
 
 Using the information collected from the previous paragraphs, you can now follow the following steps for the different grant types:
 
-{:.notice}
+{: .notice}
 The **Access Token** has a fixed lifespan. To extend it, you will need to refresh it using the **Refresh Token** with the [Refresh API](authorizing-conversational-cloud-applications-methods-refresh-request.html)
 
 Client Credentials:
 
-1. Request an Access Token & Refresh Token using the [Token API](authorizing-conversational-cloud-applications-methods-token-request.html) using the `sentinel domain`, `client_id` & `client_secret`. Please make sure to set the proper grant_type (`client_credentials`). Also, you do not need to provide a `code`, as this is required for the below-described grant type.
+1. Request an Access Token and Refresh Token using the [Token API](authorizing-conversational-cloud-applications-methods-token-request.html), and `sentinel domain`, `client_id` and `client_secret`. Please make sure to set the proper grant_type (`client_credentials`). Also, you do not need to provide a `code`, as this is required for the below-described grant type.
 2. Now, you can leverage the **Access Token** as long as it has not expired using either the [Java Client](#java-client) or [JavaScript Client](#javascript-client)
 
 Authorization Code:
 
-1. Perform a [Authorization Request](authorizing-conversational-cloud-applications-methods-authorization-request.html) using the `sentinel domain`, `client_id` & `client_secret`. You can ignore the `redirect_uri` field if you have configured it in your app installation. Otherwise, you have to provide in this step.
+1. Perform a [Authorization Request](authorizing-conversational-cloud-applications-methods-authorization-request.html) using `sentinel domain`, `client_id` and `client_secret`. You can ignore the `redirect_uri` field if you have configured it in your app installation. Otherwise, you have to provide in this step.
 2. A user with FaaS-Invocation privilege needs to log in. He will be redirected automatically to a Login UI.
-3. Exchange the received **Authorization Code** into an **Access Token** & **Refresh Token** using the [Token API](authorizing-conversational-cloud-applications-methods-token-request.html).
+3. Exchange the received **Authorization Code** into an **Access Token** and **Refresh Token** using the [Token API](authorizing-conversational-cloud-applications-methods-token-request.html).
 4. Now, you can leverage the **Access Token** as long as it has not expired using either the [Java Client](#java-client) or [JavaScript Client](#javascript-client)
 
-{:.important}
+{: .important}
 You might want to check out this [example application](authorizing-conversational-cloud-applications-samples-application-login-sample-app.html) that highlights the `Authorization Code`-Flow in JavaScript.
 
 ### Function UUID
@@ -112,7 +112,7 @@ Our client is available within Maven Central. To get the latest version, you can
 </dependency>
 ```
 
-{:.notice}
+{: .notice}
 The default authentication method is OAuth 2.0 with grant type `client_credentials`. Please read the [chapter above](#authorization-process) for more information.
 
 You can leverage the following method that the client exposes:
@@ -122,7 +122,7 @@ You can leverage the following method that the client exposes:
 * `isImplemented` this method allows checking if an event or a specific UUID is implemented, i.e. has a productive function attached to it. It is a best practice to verify this before invoking.
 * `getLambdas` this method will return all functions and their states that belong to a specified account
 
-{:.important}
+{: .important}
 A more detailed version of the documentation can be found inside our [GitHub repository](https://github.com/LivePersonInc/faas-client-jdk). We welcome feature requests or bug reports via our (GitHub issue tracker)[https://github.com/LivePersonInc/faas-client-jdk/issues].
 
 **Error Handling:**
@@ -141,7 +141,7 @@ $ yarn add @liveperson/functions-client
 $ npm install @liveperson/functions-client
 ```
 
-{:.notice}
+{: .notice}
 The default authentication method is OAuth 2.0 with grant type `client_credentials`. Please read the [chapter above](#authorization-process) for more information.
 
 The client exposes the following methods:
@@ -150,7 +150,7 @@ The client exposes the following methods:
 * `isImplemented` allows checking if an event or a specific UUID is implemented. It is a best practice to check this before invoking.
 * `getLambdas` this method will return all functions and their respective states that belong to the specified account.
 
-{:.important}
+{: .important}
 A more detailed version of the documentation can be found inside our [GitHub repository](https://github.com/LivePersonInc/faas-client-node). If you experience an issue or have a feature request, please [create a GitHub issue](https://github.com/LivePersonInc/faas-client-node/issues).
 
 **Error Handling:**
@@ -160,7 +160,7 @@ Errors with the name `FaaSLambdaError` are raised when the invocation fails due 
 ```javascript
 try {
   // invoke here
-  ...
+  …
 } catch (error) {
   /**
    * LivePerson FunctionsLambdaErrors occur when the function fails due to the implementation.

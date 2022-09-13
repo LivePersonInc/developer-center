@@ -37,7 +37,6 @@ You will use your Merchant ID in the `merchantIdentifier` properties of the Appl
 
 ### Sending an Apple Pay Request to a Consumer
 
-
 You will send a metadata template and a body template for the Apple Pay request to the consumer.
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information on how to send these.
@@ -46,15 +45,15 @@ The **body** template will only define how the Apple Pay bubble is displayed in 
 
 *Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on Conversational Cloud)*
 
-<img style="width:250px" src="img/apple_pay_consumer1.png"> <img style="width:250px" src="img/apple_pay_consumer2.png">
+<img style="width:250px" src="img/apple_pay_consumer1.png" alt=""> <img style="width:250px" src="img/apple_pay_consumer2.png" alt="">
 
 *In the interim, consumer completes payment process and receives the reply message bubble with the payment status. Agent views Apple Pay Request in Conversational Cloud Agent Workspace*
 
-<img class="fancyimage" style="width:500px" src="img/apple_pay_agentworkspace2.png">
+<img class="fancyimage" style="width:500px" src="img/apple_pay_agentworkspace2.png" alt="">
 
 #### Request Metadata
 
-**BusinessChatMessage - receivedMessage bubbles**
+**BusinessChatMessage — receivedMessage bubbles**
 
 The `BusinessChatMessage` object holds the received message, which defines how the bubble element will be displayed when a message is received on the consumer’s device. The Apple Pay reply message on the consumer device is not configurable.
 
@@ -203,7 +202,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tr>
     <td>Style</td>
     <td>The Style of the apple pay Rich Message reply bubble. Can be set to icon, small or large. Defaults to icon</td>
-    <td>Enum - icon, small, large</td>
+    <td>Enum — icon, small, large</td>
     <td>N</td>
   </tr>
   <tr>
@@ -283,7 +282,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
+    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud — this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>
@@ -314,7 +313,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>paymentRequest</td>
-    <td>This is where you specify the - apple pay identifiers, line items, total amount, country code, currency code, supported countries, shipping methods</td>
+    <td>This is where you specify the — apple pay identifiers, line items, total amount, country code, currency code, supported countries, shipping methods</td>
     <td>object</td>
     <td>Y</td>
   </tr>
@@ -374,7 +373,7 @@ If you would like to opt in for this additional verification, internal account c
 1. Generate signature value
     1. Generate the Apple Pay payload
     2. Generate SHA1 Hash of the payload from step 1
-    3. Generate the signature, sign the generated hash from step 2 using the secret key & preferred algorithm required during onboarding to opt in to the verification flow
+    3. Generate the signature, sign the generated hash from step 2 using the secret key and preferred algorithm required during onboarding to opt in to the verification flow
 
 2. Add signature to payload
     1. Add “signature” property and the value generated from step 1C to [the original payload](#connectorpaymentrequest-object-properties)
@@ -391,7 +390,7 @@ If you are looking to receive and share the payment response with a **human agen
 
 Apple Pay response metadata is contextual information about the consumer payment status and details. You will receive the payment response inside the `requestIdentifier` parameter that was sent with the initial request. This `requestIdentifier` parameter should then be used to allow the bot to validate the payment against your payment backend.
 
-##### Successful payment response example:
+##### Successful payment response example
 
 ```json
 {  
@@ -401,7 +400,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 }
 ```
 
-##### Failed payment response example:
+##### Failed payment response example
 
 ```json
 {  
@@ -460,7 +459,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+<div class="important">The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
 ### Limitations
 

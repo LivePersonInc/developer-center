@@ -12,6 +12,6 @@ permalink: server-chat-api-sample-postman-collection.html
 indicator: chat
 ---
 
-**Download the Chat API resources by a Postman collection**. Use the following [link](assets/content/ServerChatAPI.postman_collection)
+**Download the Chat API resources [as a Postman collection](assets/content/ServerChatAPI.postman_collection).**
 
-Unfamiliar with Postman? [Click here for more information](https://www.getpostman.com/)
+[Unfamiliar with Postman?](https://www.getpostman.com/)

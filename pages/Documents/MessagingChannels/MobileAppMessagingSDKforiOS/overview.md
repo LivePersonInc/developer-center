@@ -20,7 +20,7 @@ Messaging and conversational experiences have transformed how businesses engage 
 
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
 
-### SDK support of XCFramework - a new format of packaging frameworks.
+### SDK support of XCFramework — a new format of packaging frameworks
 From iOS SDK version 6.0 and up, the SDK will [support the new XCFramework](https://developer.apple.com/videos/play/wwdc2019/416/). The new format packages all dependencies under all target platforms and architectes into one single unified bundle, removing the version-lock in swift as well as eliminating the need to build a fat framework. This means that the installation process from V6.0 and up, and V5.2.1 and down, will have different steps to follow. We have two quick start guides that are dedicated to the different processes, which will help you to install the relevant version on your app. 
 
 [**GO TO THE QUICK START GUIDE FOR 5.2.1 AND DOWN**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html)
@@ -48,7 +48,6 @@ To successfully deploy messaging within your mobile app, it’s important to und
 5. **Customization and branding.** Review the list of default configurations available for [iOS](/consumer-experience-ios-sdk-configuring-the-sdk.html#branding) to determine the features to enable.  
 
 6. **Callback behavior.**  Utilize LivePerson’s [Callbacks](consumer-experience-ios-sdk-callbacks-index.html) and APIs to control or change the behaviors and actions of the messaging app. The SDK provides a callback mechanism to keep the host app updated on events related to the conversation. The SDK provides APIs to establish the server connection for messaging.   
-
 
 7. **Messaging in multiple languages.** Utilize LivePerson’s default translations or override them with your own text and language adjustments.  Language settings are based on the user’s phone language settings and app language settings. Override all settings and maintain your default language at all times. 
 

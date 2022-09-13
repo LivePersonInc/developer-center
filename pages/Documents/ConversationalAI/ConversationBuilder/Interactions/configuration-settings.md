@@ -33,6 +33,8 @@ Basic settings are those that are common to all interactions.
     {: .important}
     If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
 
+    To override this delay, use the [setMessageDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value) scripting function in the Pre-Process code of the interaction.
+
 * **Enable Interaction**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
 * **Fallback Response**: Applicable to questions only. Enter the text to be sent to the user if none of the defined conditions are met.
 

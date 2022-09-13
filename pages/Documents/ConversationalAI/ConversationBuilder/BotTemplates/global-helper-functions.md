@@ -211,7 +211,7 @@ Automatically establishes frequently used values as bot variables. Includes LP E
    defaultSkillId: "",
    defaultSkillName: "",
    firstInteraction: 'WELCOME',
-   transferMessage: 'Stand by!, transferring...',
+   transferMessage: 'Stand by!, transferring…',
    contextNameSpace: 'testNamespace',
    errorThreshold: 2,
    errorCount: 0,
@@ -254,4 +254,4 @@ If you import the dialog template into a bot, do so **before** you begin buildin
 Contains all global helper functions and variables without the demonstration dialogs. 
 
 **Included dialogs:**
-* 00 - Global Functions README
+* 00 — Global Functions README

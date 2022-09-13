@@ -14,14 +14,12 @@ indicator: messaging
 
 Connect To Messaging (C2M) is a product offering from LivePerson allowing brands to offer consumers an option to deflect to messaging when they call into their IVR. C2M API serves as an intermediary between the brand’s IVR System and LivePerson Conversational Cloud, ensuring that the consumer is invited to join a conversation with an agent via eligible messaging channels. Once a consumer responds to a message from that channel, C2M ensures that the conversation is routed to an agent of the appropriate skill specified by the brands.
 
-
 ### Getting Started
 
 1. Onboarding to C2M is a mandatory process before running APIs.
 2. Brand’s system should integrate with two C2M API endpoints, which are <strong><i>Eligibility</i></strong> and <strong><i>Invite</i></strong>. 
   * <strong><i>Eligibility:</i></strong> Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
   * <strong><i>Invite:</i></strong> Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
-
 
 ### API Specifications
 ## C2M Domain
@@ -49,25 +47,25 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
 | Name | Datatype | Required | Definition |
 | :--- | :--- | :--- |:--- |
 | skill | string | yes | Engagement skill |
-| consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
-| handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA.
+| consumerPhoneNumber | string | yes | Consumer’s phone number (E.164 format with leading "+") |
+| handoffId | string | yes | C2M handoff Id for the chosen outbound campaign. This is accessible from C2M UI via Agent Console. |
+| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA. |
 | templateVariables | object | no | Key-value pairs of variables for the body template and only applicable for SMS and WA channels. |
 | headerVariables | object | no | Key-value pairs of variables for the header template and only applicable for WA channels. This object is nested inside templateVariables |
 | buttonVariables | object | no | Key-value pairs of variables for the Call-To-Action button template and only applicable for WA channels. This object is nested inside templateVariables |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 | consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
-SMS, WA
+SMS, Whatsapp, Google RCS
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -131,10 +129,10 @@ SMS, WA
         }
     }]
 }
-
 ```
 
-WA Rich Template
+Whatsapp Rich Template:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -149,7 +147,21 @@ WA Rich Template
 }
 ```
 
-INAPP
+Google RCS Rich Card:
+```json
+{
+    "consumerPhoneNumber": "+12061234567",
+    "handoffId": "H123456789",
+    "templateVariables": {
+        "1": "John Doe",
+        "2": "New York",
+        "3": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"
+    },
+    "skill": "support",
+}
+```
+
+INAPP:
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -158,7 +170,6 @@ INAPP
     "ivrNumber": "180000",
     "consumerId": "james"
 }
-
 ```
 
 **Response Body Parameters / Success / HTTP Status Code 200**
@@ -189,7 +200,6 @@ INAPP
     "eligible": true,
     "callId": "b52403dc-b140-45cc-a9ca-d749a39b1b56"
 }
-
 ```
 
 ### Invite API
@@ -213,7 +223,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -224,7 +234,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | overrideMessage | string | no | Override the message sent through SMS only. The maximum length is set to 1600 as it is the maximum limit set by Twilio. |
 | overrideSkill | string | no | Overrides the current skill which will be used in routing the messages. If the new skill is not present in handoff, an error will be sent. |
 
-**Request Body Example - JSON Payload**
+**Request Body Example — JSON Payload**
 
 ```json
 {
@@ -282,7 +292,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | 405 | 1005 | Method Not Allowed |
 | 415 | 1015 | Unsupported Media Type |
 | 429 | 1029 | Rate limit hit |
-| 500 | 5000 - 7000 | Internal Server Error |
+| 500 | 5000 – 7000 | Internal Server Error |
 
 ### Details on Authorization
 
@@ -453,12 +463,11 @@ public class OAuthAuthenticator {
         return generatedString;
     }
 }
-
 ```
 
-**How to generate <b>Authorization</b> header for APP JWT**
+**How to generate <b>Authorization</b> header for AppJWT**
 
-1. Retrieve the APP_JWT from [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+1. Retrieve the APP_JWT from [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
 2. Insert to <b>Authorization</b> header as Bearer «APP_JWT».
 
 ### Frequently Asked Questions
@@ -473,7 +482,7 @@ We recommend a request be retried (3 attempts with exponential retry with delay 
 
 <strong>3. Which channels are supported as of now?</strong>
 
-C2M supports SMS-Twilio, WA, and INAPP channels.
+C2M supports SMS-Twilio, WhatsApp, Apple Business Chat, Google RCS and INAPP channels.
 
 <strong>4. Is there a throughput limitation for the data that gets passed from Twilio to LP?</strong>
 
@@ -489,7 +498,7 @@ Yes, it does. See details [here](outbound-reporting-api-overview.html).
 
 <strong>7. How do we know which field is optional or required?</strong>
 
-Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
+Refer to each API's <strong>Request Body Parameters</strong> or [Swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
 
 <strong>8. What's the restriction on request body parameters?</strong>
 

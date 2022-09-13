@@ -21,11 +21,11 @@ The API supports the following methods:
     <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
     <li><a href='#close-conversation'>Close Conversation</a></li>
     <li><a href='#set-sdes'>Set SDEs</a></li>
-    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
+    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>
 </ul>
 
 {: .important}
-To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Moreover, our API only retain the history of the last 200 commands. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou), if you haven't already done so.
+To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Moreover, our API only retain the history of the last 200 commands. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou).
 
 ### Flow for using Public API
 
@@ -35,9 +35,9 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 | Service Domain                   | Third-Party Bots API Domain                      |
 | :------------------------------- | :----------------------------------------------- |
-| z1.bot-connectors.liveperson.net | https://bot-platform-api.fs.liveperson.com/      |
-| z2.bot-connectors.liveperson.net | https://bot-platform-api.emea.fs.liveperson.com/ |
-| z3.bot-connectors.liveperson.net | https://bot-platform-api.apac.fs.liveperson.com/ |
+| z1.bot-connectors.liveperson.net | <https://bot-platform-api.fs.liveperson.com/>      |
+| z2.bot-connectors.liveperson.net | <https://bot-platform-api.emea.fs.liveperson.com/> |
+| z3.bot-connectors.liveperson.net | <https://bot-platform-api.apac.fs.liveperson.com/> |
 
 #### Step 2. Create a Public API Bot User
 
@@ -45,7 +45,7 @@ In order to use Public API you must create a dedicated Public API bot agent/user
 
 Figure 2.1 shows a simple scenario below where a dedicated Public API user is first making a login call and then sending message via Public API to an ongoing conversation connected happening in LP Messaging with a Third-Party bot.
 
-<img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png">
+<img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png" alt="">
 Figure 2.1 Public API simple flow of sending messages command
 
 #### Step 3. Get Bearer Token
@@ -65,7 +65,7 @@ To perform login requests you will need a valid and dedicated Public API bot use
 You should not use the same user that is already assigned to another bot since they would log each other out.
 If the user belongs to a bot that is active and running on Third-Party-Bots the login request will get rejected.
 
-<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png">
+<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png" alt="">
 Figure 3.1 Showing two login methods of a Bot user
 
 #### Bearer Token via Username/Password
@@ -219,7 +219,7 @@ Currently, the user is allowed to carry out following actions using our Public A
     <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
     <li><a href='#close-conversation'>Close Conversation</a></li>
     <li><a href='#set-sdes'>Set SDEs</a></li>
-    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
+    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>
 </ul>
 
 ### Send Messages
@@ -268,7 +268,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am text Message",
+    "Hi I am a text message",
     {
       "delay": 4,
       "typing": true
@@ -281,7 +281,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
           "replies": [
             {
               "type": "button",
-              "tooltip": "yes i do",
+              "tooltip": "yes I do",
               "title": "yes",
               "click": {
                 "actions": [
@@ -324,8 +324,8 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
       "encodedMetadata": "SGVsbG8gV29ybGQh"
     },
     {
-    	"text" :"this is a private message",
-    	"messageAudience": "AGENTS_AND_MANAGERS"
+     "text" :"this is a private message",
+     "messageAudience": "AGENTS_AND_MANAGERS"
     },
     {
       "structuredContent": {
@@ -374,7 +374,7 @@ curl -X POST \
     "confidenceScore": 1
   },
   "messages": [
-    "Hi i am a text message",
+    "Hi I am a text message",
     "I am second message"
   ]
 }'
@@ -685,7 +685,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {bearerToken}' \
   -d '{
-	"ttrType": "URGENT"
+ "ttrType": "URGENT"
 }'
 
 ```
@@ -775,7 +775,7 @@ there could be three states of a command: `waiting` (command execution pending),
       "type": "messages",
       "payload": [
         {
-          "payload": "Hi i am text Message",
+          "payload": "Hi I am a text message",
           "metadata": [],
           "type": "text"
         }
@@ -910,15 +910,15 @@ there could be three states of a command: `waiting` (command execution pending),
 
 | Code | Response                                                             |
 | :--- | :------------------------------------------------------------------- |
-| 200  | OK - request for the given API succeeded.                            |
-| 400  | Bad request - Problem with body or query parameters.                 |
-| 401  | Unauthorized - Invalid bearer token.                                 |
-| 403  | Forbidden - If the request was marked as security risk by Reblaze.   |
-| 404  | Not Found - If the provided conversation Id is invalid or not found. |
-| 409  | Conflict - If the credentials are already used by a bot currently running on Third-Party Bots |
-| 500  | Internal server error.                                               |
+| 200  | OK — request for the given API succeeded                            |
+| 400  | Bad request — Problem with body or query parameters                 |
+| 401  | Unauthorized — Invalid bearer token                                 |
+| 403  | Forbidden — If the request was marked as security risk by Reblaze   |
+| 404  | Not Found — If the provided conversation Id is invalid or not found |
+| 409  | Conflict — If the credentials are already used by a bot currently running on Third-Party Bots |
+| 500  | Internal server error                                               |
 
 ### Limitations
 
-- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 - Forbidden) the reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
+- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 — Forbidden) the reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
 - Our Public API only retains a maximum of last 200 commands **per bot/agent**. Thus, there could be a possibility that an ongoing conversation will not be able to fetch the commands due to this max. commands retention policy.

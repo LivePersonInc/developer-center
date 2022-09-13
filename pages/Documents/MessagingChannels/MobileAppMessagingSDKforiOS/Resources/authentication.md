@@ -12,7 +12,6 @@ indicator: messaging
 ---
 For users of OAuth 2.0 for customer authentication, the following functions apply:
 
-
 ### Methods
 
 Reconnects the conversation’s connection for conversation query:

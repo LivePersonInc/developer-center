@@ -155,7 +155,7 @@ Returns an Salesforce Client, that is configured to work with the proxy.
 
 | Name | Type |
 | :------ | :------ |
-| `connectToSalesforce` | (`params`: [`IConnectionOptions`](http://jsforce.github.io/jsforce/doc/Connection.html)) => [`Connection`](http://jsforce.github.io/jsforce/doc/Connection.html) |
+| `connectToSalesforce` | (`params`: [`IConnectionOptions`](https://jsforce.github.io/jsforce/doc/Connection.html)) => [`Connection`](https://jsforce.github.io/jsforce/doc/Connection.html) |
 
 ___
 

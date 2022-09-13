@@ -388,6 +388,4 @@ A button at the bottom of a rich card.
     }
   ]
 }
-
-
 ```

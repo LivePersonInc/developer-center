@@ -11,7 +11,6 @@ order: 20
 indicator: both
 ---
 
-
 ### Description
 
 Get one Status reason by ID.

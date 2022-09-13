@@ -12,6 +12,7 @@ Additional:
 #Limited Release
 Limited:
   versions: [
+    { version: "6.8.3" },
     { version: "6.8.2" },
     { version: "6.8.1" },
     { version: "6.7.1" },
@@ -24,6 +25,7 @@ Limited:
 #Regular Release
 Regular: 
   versions: [
+    { version: "6.9.0" },
     { version: "6.8.0" },
     { version: "6.7.0" },
     { version: "6.6.0" },

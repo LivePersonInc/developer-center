@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
+In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you [switch to the newer template](conversation-orchestrator-dynamic-routing-getting-started.html), which is much simpler. This legacy topic remains available for those who still have bots based on the older template.
 
 ### Introduction
 
@@ -30,16 +30,16 @@ Each of these options is further discussed in this topic.
 
 1. Navigate to **Bot Accounts** within Conversational Cloud.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_botaccounts.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_botaccounts.png" alt="">
 
 2. Select your organization.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_selectorg.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_selectorg.png" alt="">
 
 3. Toggle to **Enable Context API**, and ensure you select to **Use Conversational Cloud Site ID**, entering your organization’s account number.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_enablecontextapi.png">
- 
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_enablecontextapi.png" alt="">
+
 #### Choose your routing bot
 
 * Use the Conversation Orchestrator bot template if you are setting up routing for the first time or if you don’t mind setting up a new routing or concierge bot. This template comes pre-wired with hooks to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). This is the easiest way to get started.
@@ -63,7 +63,7 @@ This example starts with a simple implementation, using static attributes (hard-
 
 In this tutorial, we’ll use Conversation Builder's [Conversation Orchestrator bot template](conversation-builder-bot-templates-conversation-orchestrator.html) that is pre-wired with Conversation Orchestrator and the Conversation Context Service.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usepolicywithcb.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usepolicywithcb.png" alt="">
 
 A Conversation Builder bot will handle the incoming consumer message, and then use Conversation Orchestrator routing policies to route the customer to a VIP agent or regular customer agent. Setting up the Conversation Builder bot in the beginning will allow you to test the scenarios end-to-end.
 
@@ -71,14 +71,15 @@ A Conversation Builder bot will handle the incoming consumer message, and then u
 
 In Conversational Cloud, navigate to **Conversation Builder**, and click **New Bot** in the upper-right corner.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_importtemplate1.png">
-<img class="fancyimage" width="300" src="img/convorchestrator/co_dr_importtemplate2.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_importtemplate1.png" alt="">
+<img class="fancyimage" width="300" src="img/convorchestrator/co_dr_importtemplate2.png" alt="">
 
 Choose the **Conversation Orchestrator** bot template from the bot template menu.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_importtemplate3.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_importtemplate3.png" alt="">
 
 The template is pre-wired with the following:
+
 1. A simple welcome intent
 2. A question that asks basic customer information (e.g., a phone number)
 3. Integration to Conversation Context Service
@@ -86,6 +87,7 @@ The template is pre-wired with the following:
 5. Based on a policy action, the bot can then perform the following: transfer to an agent, transfer to a skill, or send a message
 
 Once we have set this up with Conversation Orchestrator and Conversation Context Service, the following happens:
+
 1. The conversation starts with a Welcome intent, for example “hi”.
 2. The bot then asks the customer for a phone number.
 3. The phone number is stored in Conversation Context Service.
@@ -94,13 +96,13 @@ Once we have set this up with Conversation Orchestrator and Conversation Context
 
 #### Set up the Conversation Orchestrator bot
 
-Open the bot. 
+Open the bot.
 
 On the top navigation, click **Global Functions**, and edit the following fields:
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_setupbot.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_setupbot.png" alt="">
 
-* **mavenNamespace**: The Conversation Orchestrator namespace is used for organizing a set of attributes you might want to use in a policy. See [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for more information on how this works. Please enter “myNamespace” here. You will use this name in a routing policy. 
+* **mavenNamespace**: The Conversation Orchestrator namespace is used for organizing a set of attributes you might want to use in a policy. See [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for more information on how this works. Please enter “myNamespace” here. You will use this name in a routing policy.
 * **fallbackSkillName**, **fallbackSkillId**, and **fallbackMessage**: Set up an optional fallback skill by editing these values. This will be the fallback skill the conversation will be routed to in case there is some failure in Dynamic Routing logic.
 
 {: .important}
@@ -117,7 +119,7 @@ Conversation Builder is already integrated with the Conversation Context Service
 5. Save the skill and agent ids to be used with policy.
 
 {: .important}
-For some practice at creating skills, users, and campaigns, see [here](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html). 
+For some practice at creating skills, users, and campaigns, see the[tutorial on deploying a bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 #### Create a simple policy using static context attributes
 
@@ -127,24 +129,24 @@ In this example, you will create and use static attributes. To check if a custom
 
 ##### Create the context attributes
 
-1. Open **Conversation Orchestrator** in the Conversational Cloud applications menu, and navigate to **Conversation Context Service > Custom**.
+1. Open **Conversation Orchestrator** in the Conversational Cloud applications menu, and navigate to **Conversation Context Service → Custom**.
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_comenuitem.png">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ccscustom.png">
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_comenuitem.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ccscustom.png" alt="">
 
 2. Click **Add New**.
     1. Select the type “static.”
     2. Enter a name for the attribute: vipPhoneNumberList.
-    3. For **Value**, select the list type, and then copy these values: +155555501, +155555502 and +155555503. 
+    3. For **Value**, select the list type, and then copy these values: +155555501, +155555502 and +155555503.
     4. Click **Save**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno1.png">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno2.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno2.png" alt="">
 
 3. Click **Add New**.
     1. Select the type “static.”
     2. Enter a new name for the attribute: regularCustomerList.
-    3. For **Value**, select the list type, and then copy these values: +155555505, +155555506 and +155555507. 
+    3. For **Value**, select the list type, and then copy these values: +155555505, +155555506 and +155555507.
     4. Click **Save**.
 
 4. Add another static attribute:
@@ -161,9 +163,9 @@ In this example, you will create and use static attributes. To check if a custom
 
 *“If the customer phone number is in the allow list, send them to vipSkill in Conversational Cloud.”*
 
-1. Navigate to **Dynamic Routing > Intent and Context Policies** using the side navigation panel, and click **Add Policy**.
+1. Navigate to **Dynamic Routing → Intent and Context Policies** using the side navigation panel, and click **Add Policy**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprule.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprule.png" alt="">
 
 2. Edit the name to "VipRule_Static."
 3. In **Conditions**, select "custom.vipCustomer" from the dropdown.
@@ -173,11 +175,11 @@ In this example, you will create and use static attributes. To check if a custom
 
     {: .important}
     Don’t select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy.
- 
+
 7. Click **Save** to save the policy.
 8. Add a second policy for routing regular customers by clicking **Add Policy**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrule.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrule.png" alt="">
 
 9. Edit the name to "RegularCustomerRule_Static."
 10. In **Conditions**, select “custom.regularCustomer” from the dropdown.
@@ -196,7 +198,7 @@ You will use a standard web entry point to initiate a conversation with the Conv
 
 1. In the policy list in Conversation Orchestrator, click the toggle switch to enable the VipRule_Static policy.
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_vipenabled.png">
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_vipenabled.png" alt="">
 
 2. Start a new web messaging conversation using the account ID.
 3. Log in to Conversational Cloud using a VIP agent account.
@@ -205,13 +207,13 @@ You will use a standard web entry point to initiate a conversation with the Conv
 
     This should trigger the VIP policy and the conversation should be transferred to a VIP skill.If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring.
 
-    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_vipsupport.png">
+    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_vipsupport.png" alt="">
 
 **Test the regular customer policy**
 
 1. In the policy list in Conversation Orchestrator, click on the toggle switch and **disable** the VipRule_Static policy. **Enable** RegularCustomerRule_Static.
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_regenabled.png">
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_regenabled.png" alt="">
 
 2. Log out of Conversational Cloud, and then log in back using a Regular Agent account.
 3. Close the previous conversation, and start a new one.
@@ -219,7 +221,7 @@ You will use a standard web entry point to initiate a conversation with the Conv
 
     This should now trigger the Regular Customer policy and the conversation should be transferred to a Regular skill. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring.
 
-    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_regsupport.png">
+    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_regsupport.png" alt="">
 
 #### Create a simple policy using Conversation Context Service attributes
 
@@ -227,29 +229,29 @@ In the previous example we used Static attributes for everything. While this is 
 
 ##### Create the context attributes
 
-You will be using the Conversation Context Service to store a phone number, and then use it in a policy. The Conversation Builder bot template you set up earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service. To learn more about the Conversation Context Service, see [here](conversation-orchestrator-conversation-context-service-overview.html).
+You will be using the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to store a phone number, and then use it in a policy. The Conversation Builder bot template you set up earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service.
 
 ##### Create the policies
 
 1. Disable all policies you have previously created by switching off the toggle switches in Conversation Orchestrator.
 2. Create a new VIP customer policy by clicking **Add Policy** and entering the following details. Note some must be entered manually since they will not populate on the dropdown menus.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprulesession.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprulesession.png" alt="">
 
     This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from the namespace session attribute (myNamespace.phoneNumber). You created the namespace in the Global Functions during “Set Up the Orchestrator Bot.”
 
     The phoneNumber variable is captured on the question_phonenumber node in RULE_1.
 
-    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_phonenum1.png">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum2.png">
+    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_phonenum1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum2.png" alt="">
 
     The phoneNumber variable is then saved to the Namespace in the pre-process code on api_integration_4 (lines 5 and 6).
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum3.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum3.png" alt="">
 
 3. Create a new regular customer policy by clicking **Add Policy**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png">    
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png" alt="">
 
 4. Enable both policies by clicking on the toggle switches.
 
@@ -277,11 +279,11 @@ In the previous example, you checked for the phone number in a static list. Main
 Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false based on whether the phone number is for a VIP customer. The function can internally call a CRM backend to check this status.
 
 {: .important}
-Creating and deploying a LivePerson function (FaaS function) is beyond the scope of this topic and hence not covered in this topic. For information on this, see [here](liveperson-functions-overview.html).
+Creating and deploying a [LivePerson function](liveperson-functions-overview.html) (FaaS function) is beyond the scope of this topic and hence not covered in this topic.
 
 With the function created and deployed, now add a custom attribute of type “function” in Conversation Orchestrator.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_fxnattr.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_fxnattr.png" alt="">
 
 Add parameters to this function by selecting “attribute”, and then typing myNamespace.phoneNumber. Note that “myNamespace” is the name you used in the Conversation Builder template setup step in the beginning.
 
@@ -289,11 +291,11 @@ Add parameters to this function by selecting “attribute”, and then typing my
 
 1. Create the VIP policy using the FaaS attribute you created in the previous step as shown below, and click **Save**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipfaas.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipfaas.png" alt="">
 
 2. Create the regular customer policy as shown below, and click **Save**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regfaas.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regfaas.png" alt="">
 
 3. **Disable** the previous policies, and **enable** the ones you just created.
 4. You can now test the policies in the same way that you tested previously.
@@ -302,14 +304,14 @@ Add parameters to this function by selecting “attribute”, and then typing my
 
 The bot template that you used has one basic integration: It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies, for example, additional information such as customer name, email, or the NLU intent.
 
-Please see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) to learn about scripting functions inside Conversation Builder.
+Conversation Builder offers [scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 **To add additional context**
 
 Select the **Custom Code** option on the Phone Number Question, and navigate to **Process User Response**.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_addattr1.png">
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr2.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_addattr1.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr2.png" alt="">
 
 Edit the code to add more contextual information. The following shows how the phone number is added.
 
@@ -327,7 +329,7 @@ botContext.setContextDataForConversation(mavenNamespace, "intent", intent);
 
 You can now use this in a policy by adding a condition that uses the intent, as shown below. In the following example, the namespace is “myNamespace”.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr3.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr3.png" alt="">
 
 ### Using your own routing bot
 
@@ -354,31 +356,31 @@ Add a new integration, and enter the following information:
 * **Integration Name**: TRANSFER_TO_SKILL
 * **Integration Type**: LivePerson Agent Escalation
 * **Agent Skill Name**: {$botContext.skillName}
-* **Agent Skill Id**:	{$botContext.skillId}
+* **Agent Skill Id**: {$botContext.skillId}
 * **Message To User**: {$botContext.transferMessage}
 
 Save the integration.
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_skill.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_skill.png" alt="">
 
 ##### Agent Escalation
 
 Add a new integration, and enter the following information:
 
 * **Integration Name**: TRANSFER_TO_AGENT
-* **Integration Type**:	LivePerson Agent Escalation
-* **Agent Skill Name**:	{$botContext.skillName}
+* **Integration Type**: LivePerson Agent Escalation
+* **Agent Skill Name**: {$botContext.skillName}
 * **Agent Skill Id**: {$botContext.skillId}
-* **Agent Id**:	{$botContext.agentId}
+* **Agent Id**: {$botContext.agentId}
 * **Message To User**: {$botContext.transferMessage}
 
 Save the integration.
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_agent.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_agent.png" alt="">
 
 #### Define a namespace and fallback / default skill in Global Functions initialization
 
 Inside your current routing bot, navigate to the **Global Functions**, and add the following code.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_init1.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_init1.png" alt="">
 
 Code:
 
@@ -406,7 +408,7 @@ function __initConversation() {
 
 Below the initialization function, add a new function to set your transfer parameters.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_transf_params.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_transf_params.png" alt="">
 
 Code:
 
@@ -467,8 +469,8 @@ The dynamic escalation dialog will consist of:
 
 For testing, we will trigger the dialog starter with the pattern “agent”.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog1.png">
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog2.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog1.png" alt="">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog2.png" alt="">
 
 #### Create the Ask Maven API call and transfer to the relevant escalation
 
@@ -477,7 +479,7 @@ As this interaction makes the dynamic routing decision, all the dialog endpoints
 
 Create a text interaction, and set the text to BLANK_MESSAGE.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_askmavencall.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_askmavencall.png" alt="">
 
 In the Pre-Process Code, add the following code:
 
@@ -558,26 +560,27 @@ if (transferType) {
 
 Create an integration interaction, and assign it to the TRANSFER_TO_SKILL integration that you created. Ensure you rename the node to TRANSFER_TO_SKILL.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_skill.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_skill.png" alt="">
 
 Create an integration interaction, and assign it to the TRANSFER_TO_AGENT integration that you created. Ensure you rename the node to TRANSFER_TO_AGENT.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_agent.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_agent.png" alt="">
 
 #### Set your routing variable
+
 Next, capture a variable in the Conversation Context Service, so you can leverage it later for routing.
 
 Navigate to where you would like to set the variable that you will use to route to the complaints team. In this case, you will trigger the dialog using the pattern “complaint”.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_ds.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_ds.png" alt="">
 
 You will be setting a variable called “agentSkillRequired” in the Namespace, so you can route these conversations to a dedicated Complaints skill.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_var_assign.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_var_assign.png" alt="">
 
 In the Pre-Process Code, add the following code:
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_complaint_code.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_complaint_code.png" alt="">
 
 Code:
 
@@ -601,39 +604,42 @@ botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Sto
 ```
 
 #### Create your routing policy
+
 Now you can create a routing policy to check if the variable: myNamespace.agentSkillRequired is Complaints, and if so, route to the Human_Complaint Skill. Anything else will go to your fallback/default skill Human.
 
-Navigate to **Conversation Orchestrator > Dynamic Routing > Intent & Context Policies**.
+Navigate to **Conversation Orchestrator → Dynamic Routing → Intent & Context Policies**.
 
-<img class="fancyimage" width="300" src="img/convorchestrator/co_dr_comenu.png">
+<img class="fancyimage" width="300" src="img/convorchestrator/co_dr_comenu.png" alt="">
 
 Add a policy called “Complaints Routing”.
 
 In the **Conditions** section:
 
 * Set the **Attribute** to: myNamespace.agentSkillRequired
-* Keep the check as:	=
-* Keep the **Value Type** as:	String
+* Keep the check as: =
+* Keep the **Value Type** as: String
 * Set the **Value** to: Complaints
 
 In the **Actions** section:
 
 * Set the **Action** to: Transfer to skill
-* Set the **Skill** to:	*Your Complaints Skill*
+* Set the **Skill** to: *Your Complaints Skill*
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_crpolicy.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_crpolicy.png" alt="">
 
 Finally, enable the policy using the toggle.
 
-<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_crpolicy_enable.png">
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_crpolicy_enable.png" alt="">
 
 #### Test the policy
+
 You will use a standard web entry point to initiate a conversation with the Conversation Builder bot that you created, which will use the Conversation Orchestrator policies to route to the desired skill.
 
 ##### Test the Complaints policy
+
 In the policy list in Conversation Orchestrator, ensure the Complaints Policy is enabled.
 
-<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_testpolicy1.png">
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_testpolicy1.png" alt="">
 
 1. Start a new web messaging conversation using the account ID.
 2. Log in to Conversational Cloud using a Complaints agent account.
@@ -641,9 +647,10 @@ In the policy list in Conversation Orchestrator, ensure the Complaints Policy is
 
     This should trigger the Complaints policy, and the conversation should be transferred to the Complaints skill. If you are logged in to Conversational Cloud as a Complaints Agent, you will now get a ring.
 
-    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy2.png">
+    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy2.png" alt="">
 
 ##### Test the Standard Fallback routing
+
 Now test a conversation that doesn’t trigger the complaint routing.
 
 1. Start a new web messaging conversation using the account ID.
@@ -652,23 +659,25 @@ Now test a conversation that doesn’t trigger the complaint routing.
 
     This should not trigger a policy and the conversation should be transferred to the Fallback skill. If you are logged in to Conversational Cloud as a Standard Agent, you will now get a ring.
 
-    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy3.png">
+    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy3.png" alt="">
 
 ### Using Conversation Orchestrator outside of Conversational Cloud
-This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If you aren't, we strongly suggest that you read the documentation [here](third-party-bots-getting-started.html). 
+
+This section of the documentation assumes that you are already familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversational Cloud.
 
 Once your third-party bot is ready, you can set up routing policies on Dynamic Routing and leverage the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_co_outside_cc.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_co_outside_cc.png" alt="">
 
 #### Example using the Next Actions API from Google DialogFlow
 
 High-level flow:
+
 1. Get the conversation ID.
 2. Set the routing variable in the Conversation Context Service.
 3. Call the Next Actions API with the conversation ID.
 
-##### Step 1 - Get the conversation ID
+##### Step 1 — Get the conversation ID
 
 The conversation ID is required for using the Next Actions APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
 
@@ -688,7 +697,7 @@ request.body.session.substring(request.body.session.lastIndexOf("/") + 1);
 
 For debugging, you can see the logs by clicking the link **View execution logs in the Firebase console** inside the Dialogflow Fulfillment page.
 
-##### Step 2 - Call the Conversation Context Service APIs
+##### Step 2 — Call the Conversation Context Service APIs
 
 Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
 
@@ -710,9 +719,9 @@ axios.patch(
 );
 ```
 
-##### Step 3 - Call the Next Actions API
+##### Step 3 — Call the Next Actions API
 
-Now that you have the conversation ID, use it to call the Next Actions API as follows:
+Now that you have the conversation ID, use it to call the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) as follows:
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
@@ -730,5 +739,3 @@ axios.get(
    }
 });
 ```
-
-For more information on using the Next Actions API, see [here](conversation-orchestrator-next-actions-api-overview.html).

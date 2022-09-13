@@ -22,7 +22,7 @@ This topic contains information on settings and tasks that are common to both [e
 
 ### Common, configurable settings
 
-* **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
+* **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name.
 * **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Associated Domain**: If the knowledge base's **Intent Association** is "Domain Intents," this indicates the domain that's associated with the knowledge base.
 * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the KnowledgeAI application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
@@ -45,7 +45,7 @@ You can quickly search for and find an article that you want to edit.
     {: .important}
     If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail, tags).
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png" alt="">
 
 3. In the list that appears, select the article.
 
@@ -54,21 +54,24 @@ You can quickly search for and find an article that you want to edit.
 ### Format text in an article
 
 In the Summary and Detail fields of an article in an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), you can use the following subset of HTML tags:
+
 * `<p>` and `<br>`
 * `<strong>`, `<b>` and `<i>`
 * `<ul>`, `<ol>` and `<li>`
 * `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-* `<a href="http://example.com/test.jpg">click here</a>`
-* `<a href="http://example.com/1$2324%342523">click here</a>`
+
+* `<a href="https://example.com/test.jpg">click here</a>`
+* `<a href="https://example.com/1$2324%342523">click here</a>`
 * `<a href=”tel:+123456789”>phone</a>`
 * `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
+
 * `<a href="javascript: alert(’test’)">click here</a>`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
+* `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+* `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
 {: .important}
 If you're using an [external knowledge base](knowledgeai-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
@@ -77,7 +80,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 ### Restore an earlier version of an article
 
-In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
+In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content — that is, the title, the summary, the detail or a content URL — a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
 
 Note the following:
 
@@ -88,18 +91,18 @@ Note the following:
 
 1. Open the knowledge base, and use the Search box at the top of the page to find the article.
 
-2. Click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
+2. Click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png" alt=""> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png">
-    
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png" alt="">
+
     The system displays the current version and the previous version of the article’s content. The date shown for each version reflects when it was created. The name shown is the user who created that version of the article.
-    
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article.png">
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article.png" alt="">
 
     To display a different, earlier version (the last three are available), click the dropdown arrow beside **Previous Version**, and select the version from the list.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article2.png">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article3.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article2.png" alt="">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article3.png" alt="">
 
 3. Review the earlier version. To restore it, click its **Restore** button.
 
@@ -113,8 +116,9 @@ Deleting a knowledge base is a non-recoverable action, so be certain about doing
 Before you delete a knowledge base, ensure it isn't being used in any KnowledgeAI integrations.
 
 **To delete a knowledge base**
+
 1. Open the knowledge base.
 2. Click **Settings** in the menu in the upper-left corner.
 3. Scroll down and click **More Options**.
-4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
+4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png" alt=""> (Delete icon).
 5. In the confirmation dialog, click **Yes**.

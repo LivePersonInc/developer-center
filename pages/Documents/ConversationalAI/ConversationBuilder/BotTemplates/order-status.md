@@ -53,7 +53,7 @@ The *get order number* interaction is responsible for collecting a user's order 
 The current mock API returns date information in a format that is not structured in a user-friendly manner. To remedy this, the following code has been added to the Pre-Process Code of the *Order Status Text Display* interaction:
 
 ```
-// Converting date data from api call to a more human readable form for text display
+// Converting date data from API call to a more human readable form for text display
 var orderDate = new Date(botContext.getBotVariable('OrderStatus.orderDate'));
 var deliverDate = new Date(botContext.getBotVariable('OrderStatus.deliveryDate'));
 var stringedOrderDate = orderDate.toDateString();
@@ -75,7 +75,7 @@ For questions that a user must respond to, the code can be found under Process U
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
 {: .important}

@@ -21,7 +21,9 @@ This bot template contains dialog templates that can be used in other bots in yo
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_de.png">
 
 ### Included items
+
 #### Dialogs
+
 * **Loan Start**: The Loan Start dialog greets the user and then navigates to the first interaction in the Contact Info dialog.
 * **Contact Info**: Starts the process by collecting the user’s contact information and their preferred method of contact.
 * **Loan Info**: Gather information about the loan the user seeks. In the event of an Auto or Home loan request, the user is routed to loan-specific dialogs; otherwise, information collection occurs within Loan Info dialog.
@@ -32,18 +34,22 @@ This bot template contains dialog templates that can be used in other bots in yo
 * **Agent_Escalation**: Performs a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
+
 * **Agent_Transfer**: Performs a transfer to a Conversational Cloud skill. You will need to configure the skill name, id, and transfer message in Global Functions.
 * **Send_Email**: Sends an email to a preconfigured address that contains all of the collected fields from the various dialogs. You will need to configure the agent and reply email addresses, email subject, and the body of the email in Global Functions.
 
 ### Configuration needed
+
 To customize this template, you need to do the following:
 
 #### General dialog customization
+
 Review each of the dialogs, starting with Loan Start, and customize the verbiage used to greet your customer and request their details. This is done by editing the text copy of the interactions, and hitting Enter or using the menu to save.
 
 If you want to remove any capture interactions, be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog.
 
 #### Contact Info, Lending, and Financial Info dialogs
+
 All text-based questions within the dialogs are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
 For each dialog of questions for the user, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
@@ -59,19 +65,20 @@ For each dialog of questions for the user, we allow a certain number of attempts
 ```
 
 #### Analytics
+
 Custom event logging for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
 ```
-botContext.logCustomEvent(‘', ‘Interaction Name’, ‘’);
+botContext.logCustomEvent('', 'Interaction Name', '');
 ```
 
 For questions that a user must respond to, the code can be found under Process User Response:
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
 {: .important}
@@ -80,13 +87,15 @@ Personal information collection events are not logged by default in this templat
 For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
 #### Global Function customization
+
 Click **Global Functions** to access all the global functions and variables to be configured.
 
 You’ll want to customize the `generateLoanTemplate` and `getEmailBody` functions within Global Functions to reflect your branding and voice.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf1.png" alt="">
 
 #### Send Email integration
+
 The Send Email integration is provided to forward on the captured user information to a lending agent.
 
 Modify the following values in Global Functions:
@@ -103,6 +112,7 @@ Modify the following values in Global Functions:
 The bot captures relevant user information in several variables. These values are used in the `generateLoanTemplate` and `getEmailBody` global functions to dynamically generate the email body.
 
 #### Agent escalation
+
 If the user requests an agent or if they reach the max invalid attempts to validate entered information, they will be escalated to a human agent.
 
 Modify the following values in Global Functions:
@@ -114,12 +124,15 @@ Modify the following values in Global Functions:
 | botAgentSkillName | The skill name to transfer to |
 
 ### Dialog templates
+
 This bot template contains multiple [dialog templates](conversation-builder-dialog-templates.html). All dialog templates are designed to work independently of one another and provide specific use case features to your bot.
 
 #### Apply for Loan Full
+
 Walks through the process of applying for a home, auto, student or personal loan.
 
 Included dialogs:
+
 * Loan Start
 * Contact Info
 * Loan Info
@@ -128,24 +141,30 @@ Included dialogs:
 * Financial Info
 
 Pre-built NLU domain:
+
 * LP_Finance
 
 Integrations:
+
 * Send_Email
 
 #### Auto Loan
+
 Only the Auto Loan flow
 
 Included dialogs:
+
 * Auto Loan
 * Loan Start
 * Contact Info
 * Financial Info
 
 Pre-built NLU domain:
+
 * LP_Finance
 
 Integrations:
+
 * Send_Email
 
 Global Function modifications:
@@ -165,18 +184,22 @@ if (loanPurpose === 'Auto') {
 ```
 
 #### Home Loan
+
 Only the Home Loan flow
 
 Included dialogs:
+
 * Home Loan
 * Loan Start
 * Contact Info
 * Financial Info
 
 Pre-built NLU domain:
+
 * LP_Finance
 
 Integrations:
+
 * Send_Email
 
 Global Function modifications:

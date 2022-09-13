@@ -90,8 +90,6 @@ Optional:
      }
 ```
 
-
-
 ### Data Revisions
 
 The revision mechanism exists in order to maintain order and save historical data. To use the benefits of the revision mechanism, The developers are asked to add the 'IF-MATCH' request header. The 'IF-MATCH' request header contains data revision as known by the client, In addition, it allows to optimize the backend response and allows concurrent modification backend verification.

@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Where can I find the latest versions of the SDK Libraries
 
-Githubs:
+GitHubs:
 - [XCFramework](https://github.com/LivePersonInc/iOSFrameworks)
 - [SampleApp + XCFramework](https://github.com/LP-Messaging/iOS-Messaging-SDK)
 - [Cocoapods](https://github.com/LivePersonInc/iOSPodSpecs)
@@ -30,13 +30,13 @@ No, SDK usage of UIWebview was replaced with WkWebView in Mar 2017
 
 ### I upgraded  from SDK version < 6.0 to SDK 6.0+ and noticed that my API is gone
 
-Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs that were only available to serve as bridge API's between one LP SDK framework and another.  If you were using one of these previously available API's, please communicate with your Liveperson Account team to explore the options of using one of the public API’s or to file an enhancement request.
+Prior to v6.0, our  SDK was using 4 frameworks.  There were many public APIs that were only available to serve as bridge API's between one LP SDK framework and another.  If you were using one of these previously available API's, please communicate with your LivePerson Account team to explore the options of using one of the public API’s or to file an enhancement request.
 
 ### I have link preview enabled but link previews are not being displayed?
 
 If markdownHyperlinkFromAgent is enabled, link preview won’t be displayed.
 
-### While updating the SDK, my Structure Content is now showing a border on the buttons:
+### While updating the SDK, my Structure Content is now showing a border on the buttons
 
 On SDK 5.2.1, the border was introduced as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
 
@@ -64,7 +64,7 @@ On SDK 5.2.1, the border was introduced as an accessibility element for complian
 
 ### When opening the Conversation Screen I will encounter empty message bubbles
 
-This may happen as the SDK uses a unique Apple key named `identifierForVendor`, this key is an alphanumeric string that uniquely identifies a consumer device to the app’s vendor/brand, the key helps the SDK during the encryption process to create unique identifier names per device & per bundleId to store keys into the Device Keychain.
+This may happen as the SDK uses a unique Apple key named `identifierForVendor`, this key is an alphanumeric string that uniquely identifies a consumer device to the app’s vendor/brand, the key helps the SDK during the encryption process to create unique identifier names per device and per bundleId to store keys into the Device Keychain.
 
 This key’s value can change when installing test builds using Xcode or when installing an app on a device using ad-hoc distribution (e.g. TestFlight, TestFairy, etc.). When this value changes it creates an inconsistency between the value that is provided and the value that is recognized by the SDK, and those empty message bubbles are displayed.
 
@@ -72,7 +72,7 @@ As Apple mentioned in their article:
 
 “The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”. 
 
-{:.important}
+{: .important}
 For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
 
 ### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.

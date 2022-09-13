@@ -13,7 +13,6 @@ permalink: server-chat-api-methods-retrieve-chat-events.html
 indicator: chat
 ---
 
-
 This method retrieves the chat events. The possible event types include: state, url, line and a2a-transfer. You should use this method to periodically poll for new events in the chat session. The method for polling should always be the URI specified in the "next" link tag. This will retrieve a document that only contains events added after your last poll.
 
 ### Request
@@ -128,7 +127,6 @@ JSON Example:
 **System Messages**
 
 Messages that are initiated by the system. These messages are added with the `<systemMessageId>` element tag. The following table describes the available messages and IDs. **Please note**: while the **systemMessageID** field in the response is numeric, it is a number passed as a string.
-​
 
 | ID | Event |
 | :--- | :--- |

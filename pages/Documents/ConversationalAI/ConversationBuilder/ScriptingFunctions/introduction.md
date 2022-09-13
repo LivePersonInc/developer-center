@@ -17,10 +17,17 @@ Functions are modules of code that are used for accomplishing a certain task pro
 With few exceptions, functions can be used in the following JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html) in interactions:
 
 * Pre-Process Code
-* Process User Response
 * Post-Process Code
+* Process User Response
 
-**Note**
+{: .important}
+For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+
+### Requirements
+
+Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
+### Important notes
 
 * Function names are case-sensitive in the JavaScript.
 * Functions require the `botContext.` prefix.

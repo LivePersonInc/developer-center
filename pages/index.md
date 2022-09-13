@@ -1,5 +1,5 @@
 ---
-pagename: Index
+pagename: Conversational AI solutions
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
@@ -8,14 +8,13 @@ redirect_from:
 ---
 
 <div class="header-label">
-  We empower developers to build innovative solutions that are tailored to their business needs to best manage and
-  automate all consumer conversations.
+  We empower developers to build innovative solutions to manage, customize, and automate consumer conversations tailored to their business needs.
 </div>
 
 <div class="card-container home-container">
   <div class="flex flex-col gap-32">
     <a href="/platform-overview.html" id="success-stories" class="welcome-card">
-      <div href="/platform-overview.html">
+      <div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 23.1547C12 21.9929 11.5386 20.8787 10.7172 20.0571C9.89584 19.2354 8.78178 18.7737 7.62001 18.7733C7.54934 18.7733 7.48667 18.7907 7.41467 18.7947"
@@ -35,9 +34,8 @@ redirect_from:
             d="M31 16C30.9998 15.1292 30.7155 14.2822 30.1902 13.5877C29.6648 12.8932 28.9272 12.3891 28.0893 12.152C28.5027 11.7509 28.7918 11.2393 28.9219 10.6782C29.0521 10.1172 29.0179 9.53051 28.8234 8.98841C28.6288 8.44631 28.2822 7.97173 27.825 7.62146C27.3678 7.27119 26.8194 7.06006 26.2453 7.01334C26.0827 6.83026 25.8987 6.66732 25.6973 6.528C26.096 5.56889 26.1059 4.49232 25.7251 3.526C25.3442 2.55969 24.6024 1.77942 23.6565 1.35023C22.7107 0.921043 21.635 0.876596 20.657 1.22629C19.6789 1.57599 18.8753 2.2924 18.416 3.224C18.1374 2.84503 17.7735 2.53692 17.3538 2.32456C16.9341 2.1122 16.4704 2.00155 16 2.00155C15.5296 2.00155 15.0659 2.1122 14.6462 2.32456C14.2265 2.53692 13.8626 2.84503 13.584 3.224C13.1306 2.28165 12.3262 1.55431 11.3432 1.19779C10.3601 0.841278 9.27644 0.883935 8.32441 1.31663C7.37238 1.74932 6.62766 2.53764 6.24977 3.51272C5.87187 4.48779 5.89087 5.57209 6.30267 6.53334C6.10128 6.67265 5.91731 6.83559 5.75467 7.01867C5.18145 7.06606 4.63397 7.27738 4.17757 7.62741C3.72116 7.97745 3.37511 8.45141 3.1807 8.99273C2.9863 9.53406 2.95175 10.1199 3.08119 10.6803C3.21062 11.2407 3.49857 11.7521 3.91067 12.1533C3.07277 12.3906 2.33519 12.8948 1.80996 13.5895C1.28472 14.2841 1.00052 15.1312 1.00052 16.002C1.00052 16.8728 1.28472 17.7199 1.80996 18.4145C2.33519 19.1092 3.07277 19.6134 3.91067 19.8507C3.49689 20.2517 3.20745 20.7634 3.07703 21.3247C2.94661 21.8859 2.98073 22.4729 3.1753 23.0153C3.36988 23.5576 3.71666 24.0324 4.17413 24.3828C4.63159 24.7331 5.18034 24.9442 5.75467 24.9907C5.91731 25.1737 6.10128 25.3367 6.30267 25.476C5.90672 26.4347 5.89863 27.5097 6.28012 28.4742C6.66161 29.4387 7.40285 30.2173 8.34745 30.6458C9.29204 31.0742 10.3661 31.119 11.3431 30.7707C12.3201 30.4223 13.1236 29.7081 13.584 28.7787C13.8626 29.1576 14.2265 29.4657 14.6462 29.6781C15.0659 29.8905 15.5296 30.0011 16 30.0011C16.4704 30.0011 16.9341 29.8905 17.3538 29.6781C17.7735 29.4657 18.1374 29.1576 18.416 28.7787C18.8765 29.7081 19.6799 30.4223 20.6569 30.7707C21.6339 31.119 22.708 31.0742 23.6526 30.6458C24.5972 30.2173 25.3384 29.4387 25.7199 28.4742C26.1014 27.5097 26.0933 26.4347 25.6973 25.476C25.8987 25.3367 26.0827 25.1737 26.2453 24.9907C26.8197 24.9442 27.3684 24.7331 27.8259 24.3828C28.2833 24.0324 28.6301 23.5576 28.8247 23.0153C29.0193 22.4729 29.0534 21.8859 28.923 21.3247C28.7926 20.7634 28.5031 20.2517 28.0893 19.8507C28.9277 19.6134 29.6656 19.1089 30.191 18.4139C30.7163 17.7188 31.0004 16.8713 31 16Z"
             stroke="var(--text-invert)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <h3 class="welcome-title h3 ">LivePerson’s Conversational AI platform</h3>
-        <p class="welcome-content">Learn how to build and improve customer experiences through our intent discovery and
-          AI automation</p>
+        <h3 class="welcome-title h3">LivePerson’s Conversational AI platform</h3>
+        <p class="welcome-content">Learn how to build and improve customer experiences through our intent discovery and AI automation</p>
       </div>
     </a>
     <a class="welcome-card" href="/liveperson-functions-overview.html">
@@ -54,7 +52,7 @@ redirect_from:
           stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
       <h3 class="welcome-title h3">Explore Functions</h3>
-      <p class="welcome-content">Learn how to create custom logic, flows and integrations for your business</p>
+      <p class="welcome-content">Learn how to create custom logic, flows, and integrations for your business</p>
     </a>
     <a class="welcome-card" target="_blank"
       href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
@@ -81,8 +79,8 @@ redirect_from:
           d="M16 21C15.9011 21 15.8044 21.0293 15.7222 21.0843C15.64 21.1392 15.5759 21.2173 15.5381 21.3087C15.5002 21.4 15.4903 21.5006 15.5096 21.5975C15.5289 21.6945 15.5765 21.7836 15.6464 21.8536C15.7164 21.9235 15.8055 21.9711 15.9025 21.9904C15.9994 22.0097 16.1 21.9998 16.1913 21.9619C16.2827 21.9241 16.3608 21.86 16.4157 21.7778C16.4707 21.6956 16.5 21.5989 16.5 21.5C16.5 21.3674 16.4473 21.2402 16.3536 21.1464C16.2598 21.0527 16.1326 21 16 21Z"
           stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">FAQs & Contact Support</h3>
-      <p class="welcome-content">Get answers to common questions or contact support directly</p>
+      <h3 class="welcome-title h3">Get help</h3>
+      <p class="welcome-content">Get answers to common questions or contact support</p>
     </a>
     </div>
   <div class="flex flex-col gap-32">
@@ -119,8 +117,8 @@ redirect_from:
         <path d="M31.1667 24.1693L23.8427 22.2507" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">Get Started</h3>
-      <p class="welcome-content">Get up and running quickly using our getting started guides, APIs, and SDKs</p>
+      <h3 class="welcome-title h3">Get started</h3>
+      <p class="welcome-content">Get up and running quickly using our “Getting Started” guides, APIs, and SDKs</p>
     </a>
     <a class="welcome-card" href="/getting-started-with-rich-messaging-introduction.html">
       <svg class="container-image" width="33" height="32" viewBox="0 0 33 32" fill="none"
@@ -137,9 +135,8 @@ redirect_from:
         <path d="M11.5027 17C12.9141 18.2869 14.7553 19.0002 16.6653 19.0002C18.5754 19.0002 20.4166 18.2869 21.828 17"
           stroke="var(--body-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">Reach Customers with Rich Messaging</h3>
-      <p class="welcome-content">Unify your customer experience across channels and create meaningful, personalized
-        connections </p>
+      <h3 class="welcome-title h3">Reach customers with Rich Messaging</h3>
+      <p class="welcome-content">Unify your customer experience across channels and create meaningful, personalized connections</p>
     </a>
     <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new">
       <svg class="container-image" width="33" height="30" viewBox="0 0 33 30" fill="none"
@@ -151,25 +148,25 @@ redirect_from:
           stroke-linejoin="round" />
         <path d="M6.5 23H14.5" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
-        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)"stroke-width="2" stroke-linecap="round"
+        <path d="M6.5 6H20.5V14H6.5V6Z" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" />
       </svg>
-      <h3 class="welcome-title h3">Stay Informed</h3>
-      <p class="welcome-content">Get LivePerson’s latest news, updates and releases</p>
+      <h3 class="welcome-title h3">Stay informed</h3>
+      <p class="welcome-content">Get LivePerson’s latest news, updates, and releases</p>
     </a>
   </div>
 </div>
 <!-- <div class="free-trial-container">
   <div id="free-trial">
     <div id="free-trial-content-container">
-      <h3 class="free-trial-header h3">Excited? Let’s start your free trial today.</h3>
+      <h3 class="free-trial-header h3">Excited? Let’s start your free trial today</h3>
       <div class="cta-mobile-new">
-        <p class="free-trial-label"> &#10004; Free 45 days trial</p>
+        <p class="free-trial-label">&#10004; Free 45 days trial</p>
         <p class="free-trial-label">&#10004; No credit card</p>
       </div>
     </div>
     <div id="free-trial-button-welcome">
-      <a target="_blank" href="https://developers.liveperson.com/register.html">
+      <a href="https://developers.liveperson.com/register.html">
         <button class="create-button">Start Free Trial</button>
       </a>
     </div>

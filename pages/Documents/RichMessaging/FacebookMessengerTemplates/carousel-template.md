@@ -89,7 +89,7 @@ If using Carousel, type of header element will always be “carousel”</td>
   <tr>
     <td>size</td>
     <td>Defines the element size. Will always be set to ‘large’ in Facebook generic and button.</td>
-    <td>Enum - small/medium/large</td>
+    <td>Enum — small/medium/large</td>
     <td>N</td>
   </tr>
   <tr>

@@ -12,7 +12,7 @@ indicator: messaging
 
 The Custom Interactive Message (CIM) Template for App Business Chat allows you to invoke an iOS iMessage app / extension on the consumer device. This app can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
-Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device. 
+Sending the structured content templates (body and metadata) explained in this document will allow you to send the iMessage app / extension to the consumer device.
 
 For how to create an iMessage app / extension, see the Apple documentation [here](https://developer.apple.com/imessage/).
 
@@ -93,7 +93,6 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Received Message Properties
 
 <table>
@@ -149,18 +148,17 @@ Using Metadata, you can also control the visual appearance of the bubble that di
   </tbody>
 </table>
 
-
 #### Example Metadata Template
 
 ```json
 [{
-    "type": "BusinessChatCustomMessage",
-    "appId": 1234,
-    "appName": "productselection",
-    "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:yourTEAMID:yourextensionbundleID",
-    "sessionIdentifier": "",
-    "useLiveLayout": true,
-    "receivedMessage": {
+   "type": "BusinessChatCustomMessage",
+   "appId": 1234,
+   "appName": "productselection",
+   "bid": "com.apple.messages.MSMessageExtensionBalloonPlugin:yourTEAMID:yourextensionbundleID",
+   "sessionIdentifier": "",
+   "useLiveLayout": true,
+   "receivedMessage": {
       "imageURL":"https://s3.amazonaws.com/lp-mobile-apps/WelcomeMessagePOC/Welcome-02-web-version.jpg",
       "title": "Welcome!",
       "style": "icon",
@@ -169,8 +167,8 @@ Using Metadata, you can also control the visual appearance of the bubble that di
       "tertiarySubtitle": "",
       "imageTitle": "",
       "imageSubtitle": ""
-    },
-    "URL": "<YOUR_CUSTOM_URI_ENCODED_URL>”
+   },
+   "URL": "<YOUR_CUSTOM_URI_ENCODED_URL>”
 }]
 ```
 
@@ -180,30 +178,29 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 #### Metadata Guidelines
 
-* General recommendation for the URL field is to use an URI encoded data object which will represent the URL 
+* General recommendation for the URL field is to use an URI encoded data object which will represent the URL
 
-* Please note! The URL should be lean as possible as described in the example above, and should not replace or attempt to act as the app model. 
+* Please note: The URL should be lean as possible as described in the example above, and should not replace or attempt to act as the app model.
 
-* The AppID, Extension Bundle ID and Team ID (which are part of the Bid field) must be part of the SC metadata JSON! Without them your iMessage app will not be delivered to the consumer. 
+* The AppID, Extension Bundle ID and Team ID (which are part of the Bid field) must be part of the SC metadata JSON. Without them your iMessage app will not be delivered to the consumer.
 
-* RecivedBubble image URL - If consumer does not have the extension installed on device, or if consumer has the extension installed but does not use LiveLayout (set to false) then the recivedBubble will default to the imageURL set in the recievedBubble object.  If imageURL was not added to the SC schema defined, the layout view will be an empty frame! Always include an imageURL! 
+* Received bubble image URL — If consumer does not have the extension installed on device, or if consumer has the extension installed but does not use LiveLayout (set to false) then the received bubble will default to the imageURL set in the recievedBubble object. If imageURL was not added to the SC schema defined, the layout view will be an empty frame: Always include an imageURL!
 
-* ImageURL MUST be whitelisted - to whitelist images for Structured Content contact your Conversational Cloud account representative
+* ImageURL MUST be whitelisted — to whitelist images for Structured Content contact your Conversational Cloud account representative
 
-* SessionIdentifier - Any interactive message that is sent to ABC has a UUID - either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more. 
+* SessionIdentifier — Any interactive message that is sent to ABC has a UUID; either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more.
 
-* Images placed in the image used in imageURL field should be whitelisted in account Houston - Site Setting messaging.rich.content.valid.urls
+* Images placed in the image used in imageURL field should be whitelisted in account Houston — Site Setting messaging.rich.content.valid.urls
 
 * When no app exists on the receiving device that can consume the message, if this URL is a HTTP(S) url, it will be loaded in a web browser.
 
-* The root object of the JSON in the URL field should be a dictionary (key:value) and not an array ( {} and not [] ).
+* The root object of the JSON in the URL field should be a dictionary (key:value) and not an array ({} and not []).
 
 #### Metadata Limitations
 
-* URL characters limit is 64bit - you should create URLs to accommodate this limitation (An option to overcome this limitation is to create a static JSON in an S3 type environment which you can call in the message URL)
+* URL characters limit is 64bit — you should create URLs to accommodate this limitation (An option to overcome this limitation is to create a static JSON in an S3 type environment which you can call in the message URL)
 
-* Character limit - The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
-
+* Character limit — The limitation is currently 5000 characters, you should recognize this limitation and build URLs to accommodate this limitation
 
 ### Reply CIM from Consumer to Agent
 
@@ -220,8 +217,8 @@ In order to do this, all code is handled from within your Apple iMessage app / e
     ```json
     {
         "lpData": {
-          "interactive" : {
-            "response" : {
+          "interactive": {
+            "response": {
               "text": "YOUR_CUSTOM_TEXT" 
             }
           }
@@ -233,7 +230,7 @@ In order to do this, all code is handled from within your Apple iMessage app / e
 
 3. Create a URL by adding the encoded JSON on a query parameter `data` like the following: `?data=`
 
-4. Set the [url](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property of the [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object to the URL that you constructed. 
+4. Set the [url](https://developer.apple.com/documentation/messages/msmessage/1649739-url) property of the [MSMessage](https://developer.apple.com/documentation/messages/msmessage) object to the URL that you constructed.
 
 5. [Send](https://developer.apple.com/documentation/messages/msconversation/2909036-send) the MSMessage object from your iMessage app / extension.
 
@@ -243,6 +240,6 @@ Conversational Cloud will recieve this message and display the text in the Conve
 
 1. General recommendation for the URL field is to use an encoded data object which will represent the URL
 
-3. Custom iMessage app response bubble - the connector currently does not capture reply bubble response from the consumer to the iMessage app. However, the transaction that occurred in the iMessage app by the consumer can be captured by yourself and updated in the Agent Widget SDK. (The response will be captured in the LE transcript line in future version).
+3. Custom iMessage app response bubble — the connector currently does not capture reply bubble response from the consumer to the iMessage app. However, the transaction that occurred in the iMessage app by the consumer can be captured by yourself and updated in the Agent Widget SDK. (The response will be captured in the LE transcript line in future version).
 
-4. Reporting - in order to allow you to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app you use. This will allow you to then track how many times a specific iMessage app was sent via a transcript search.
+4. Reporting — in order to allow you to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app you use. This will allow you to then track how many times a specific iMessage app was sent via a transcript search.

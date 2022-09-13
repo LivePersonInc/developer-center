@@ -32,7 +32,6 @@ This section contains API details that are common to every API’s resource, met
 | v   | API version        | Double  | Required | Validation fail error code: 400  |
 | select  | Dynamic selection of the response fields. | YOGA 'gdata' dialect.  | Optional | Validation error: 400 Non-existing field: no error, blank in response. Supported fields: any in response body       |
 
-
 **Path Parameters**
 
  |Parameter | Description|  Type  |Notes |

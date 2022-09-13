@@ -11,7 +11,7 @@ permalink: special-occasions-api-methods-retrieve-special-occasion-by-id.html
 indicator: messaging
 ---
 
-Get a single special occasion by id
+Get a single special occasion by id.
 
 ### Request
 
@@ -25,7 +25,6 @@ Get a single special occasion by id
  |:----------- | :------------ | :--------------- |
  |accountId | LP site ID | String  |
  specialOccasionId|special occasion object’s unique id.| String
-
 
 **Request Headers**
 

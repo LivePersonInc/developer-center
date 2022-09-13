@@ -15,7 +15,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 ### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/674928030" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/674928030" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 ### The high-level deployment process
@@ -160,7 +160,7 @@ See also `disableGreetings`, which is farther below.
 **Chat**: No
 
 #### defaultStepupMessage
-The StepUp message sent to the bot when Stepup Authentication happens.
+The Step Up message sent to the bot when [Step Up authentication](conversation-builder-advanced-use-cases.html#step-up-authentication) happens.
 
 **Default value**: \_STEPUP\_<br>
 **Messaging**: Yes<br>

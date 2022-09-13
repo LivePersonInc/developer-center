@@ -7,7 +7,9 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
+date_published: 2019/01/30
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
    <div class="modal-content">
@@ -19,12 +21,12 @@ indicator: both
 <div class="lp-container flex-col-ipad">
    <div class=" welcome-card-modified">
       <div class="getting-started-paragraph" style="display:block;">
-         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
+         <a href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" target="_blank"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
       </div>
    </div>
    <div id="teaser-banner" class="welcome-card-modified">
       <div  style="display: flex;">
-         <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
+         <p class="teaser-header"> Watch a  quick product overview of LivePerson Platform and its tools</p>
          <img class="play-icon"  src="img/play_icon.svg">
       </div>
    </div>
@@ -34,12 +36,12 @@ indicator: both
       About your Free Trial Account
    </div>
    <div class="convo-cloud-paragraph">
-      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building"> here </a>.
+      Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building">here</a>.
    </div>
 </div>
 <div class="container-note">
    <div class="important" style="width:90%">
-      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial"> register </a> for a free 45-day trial.
+      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html" alt="Register free trial">register</a> for a free 45-day trial.
    </div>
 </div>
 <div class="concierge-bot-header">
@@ -50,7 +52,7 @@ indicator: both
       1. Welcome to the Conversational Cloud
    </div>
    <div class="convo-cloud-paragraph">
-      <a href="https://authentication.liveperson.net/login.html" alt="LiveEngage Login">Log in </a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
+      <a href="https://authentication.liveperson.net/login.html" alt="LiveEngage Login">Log in</a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
    </div>
 </div>
 <div class="welcome-card-modified">
@@ -62,7 +64,7 @@ indicator: both
    </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-   <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html">
+   <a class="welcome-card" href="/starting-with-your-concierge-bot.html">
       <img class="container-image" src="img/ic_robot.svg"/>
       <h5 class="getstarted-title">Conversational AI</h5>
       <p class="getstarted-content ">Starting with your Concierge Bot</p>
@@ -103,7 +105,7 @@ indicator: both
       4. Test your bot
    </div>
    <div class="convo-cloud-paragraph"  style="width:64%;">
-      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
+      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button</a> in the top right corner of the Dialog Editor to test the interaction.
    </div>
 </div>
 <div class="whole-external-link">
@@ -131,7 +133,7 @@ indicator: both
    </div>
 </div> -->
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript">
+<script>
    var modal = document.getElementById("myModal");
    // Get the button that opens the modal
    var btn = document.getElementById("teaser-banner");
