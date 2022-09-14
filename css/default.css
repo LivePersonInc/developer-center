@@ -1226,6 +1226,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #jumpto {
   padding-bottom: var(--space10);
+  max-width: 396px;
 }
 
 #jumpto #anchorlist p:not(:empty) {
