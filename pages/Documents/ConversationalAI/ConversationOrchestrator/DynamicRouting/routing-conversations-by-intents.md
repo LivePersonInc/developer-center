@@ -49,7 +49,7 @@ When an intent triggers a dialog starter, the intent name is automatically saved
 
 3. Set the **Next Action** to the Dynamic Routing interaction.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_next_action.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_next_action.png" alt="The dialog starter that's mapped to an intent named ‘book flight’">
 
 4. Create intent-based routing policies. For more on this, see the section at the end of this topic.
 
@@ -68,20 +68,20 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
     Retrieve the botAppKey value from a bot user agent. This can be found in the **User Management** section of the Conversational Cloud. Copy this value.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png" alt="The App key field in the User Management section of Conversational Cloud">
 
 3. Retrieve the intent domain ID.
 
     Retrieve the Domain ID for your intent domain. You can find this in the **Domain Settings** for your domain in Intent Manager. Copy this value.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png" alt="">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png" alt="The Domain Settings option for a given domain that's listed on the dashboard in Intent Manager">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png" alt="The Domain ID field in the settings for a given domain">
 
 4. Update configurations in the **Global Functions**.
 
     Enter the botAppKey and domainId values into their associated variables within the **Global Functions** editor of your bot.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png" alt="The lines of code in the bot's global functions where you need to enter the botAppKey and domainID values">
 
 5. Enable the intent dialogs in the bot.
 
@@ -89,11 +89,11 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
     *Enabling ASK_INTENT and getIntent_API interactions:*
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png" alt="The dialog flow, illustrating how the Dynamic Routing interaction is below the getIntent_API interaction">
 
     *To enable interactions, go to the **Interaction Settings**, and enable the toggle*:
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png" alt="The Interaction Enabled setting in the Basic settings of a given interaction">
 
 6. Create intent-based routing policies. For help with this, see the next section.
 
@@ -108,7 +108,7 @@ The policy creation flow is identical for both approaches:
 
     Use the **Manage routing policies** link in the Dynamic Routing interaction to navigate to Conversation Orchestrator.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png" alt="The Manage routing policies link that's directly on the face of the Dynamic Routing interaction">
 
 2. Create your policy.
 
@@ -118,13 +118,13 @@ The policy creation flow is identical for both approaches:
 
     In the actions editor, select "Transfer to skill" from the left-hand dropdown and the relevant skill from the right-hand dropdown. Ensure that agents are assigned to the book_flight skill.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png" alt="The configured Book flight policy">
 
 4. Enable your policy.
 
     Once saved, toggle the switch for the policy in the policy list to enable the policy.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png" alt="The enabled Book flight policy">
 
 5. Test your policy.
 
@@ -134,7 +134,7 @@ The policy creation flow is identical for both approaches:
 
     Follow these steps once you have configured your testing setup:
 
-    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png" alt="">
+    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png" alt="The conversation flow to follow">
 
     The message routing flow is identical for both approaches (Dialog Starter and Enabling Intent Routing) because we have used the same intent and the same policy in our demonstration.
 
