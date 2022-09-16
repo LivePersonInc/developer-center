@@ -12,7 +12,7 @@ indicator: messaging
 ### Overview
 
 WhatsApp now supports Product Messaging! Brands can now send single or multiple product messages to their WhatsApp Messenger customers.
-This allows the customer to view the product(s), ask questions about given products as well as purchase and complete the order 
+This allows the customer to view the product(s), ask questions about given products as well as submit a shopping cart
 all from inside WhatsApp.  (Product Question and Product Order Messages arrive as Simple text messages with the associated metadata attached (examples below))
 
 There however are a few steps a brand must do prior to being able to send product messages and this includes connecting a catalog
