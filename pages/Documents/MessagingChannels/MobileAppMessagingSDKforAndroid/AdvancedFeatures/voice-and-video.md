@@ -38,7 +38,9 @@ Below is the list of features and permissions elements added in the manifest fil
 <uses-feature android:name="android.hardware.microphone" />
 ```
 
-If you want to allow consumers to download the app from Google Play Store, even if their devices don't support Audio latency, please add below features in your app's manifest file:
+{: .important}
+android.hardware.audio.pro provides high-end audio functionality and performance capabilities. Not all Android devices may support this hardware feature.
+If you want to allow consumers to download the app from Google Play Store even if their devices don't support Audio latency, please update features in your app's manifest file as below:
 
 ```xml
 <uses-feature android:name="android.hardware.audio.pro"  android:required="false" tools:replace="required" />
