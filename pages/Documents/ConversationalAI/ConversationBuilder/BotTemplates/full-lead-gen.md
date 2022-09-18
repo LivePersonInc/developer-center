@@ -26,7 +26,7 @@ The template can be configured to handle Web, SMS, Apple Messages for Business, 
 * Lead Gen
   * This is the main dialog for collecting the user’s contact information.
   * By default this dialog collects (and attempts to validate) the user’s name, email address and phone number. There is also an interaction to collect a description of their interest.
-* Options for ABC
+* Options for AMB
   * If you are deploying to Apple Messages for Business, you can use this List Picker driven dialog to display your product or service offerings.
   * You can add rich images to the List Picker (though recommended to keep them small for faster loading).
 * Options for SMS
@@ -95,11 +95,11 @@ Navigate to **Global Functions**.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png" alt="">
 
-The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
+The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the Apple Messages for Business or SMS option dialogs appear, you can set the channel variable to the following:
 
 ```javascript
 // What channel is the user on? If you'd like to force the display of a particular channel's content, 
-  // set the "channel" variable to: "CustomContext" for ABC, "sms" for SMS. Web will be displayed by default.
+  // set the "channel" variable to: "CustomContext" for AMB, "sms" for SMS. Web will be displayed by default.
   //var channel = "CustomContext";
   var channel = botContext.getChannel(); // Comment this line out if forcing the channel
   botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);
@@ -137,7 +137,7 @@ Options are set to be shown by default, but if you don’t want them to be shown
  <td>If you want to display the Product or Service options to your customer, set this to "on". Otherwise, set to “off”. </td>
  </tr>
  <tr>
- <td>The following are for web client users only. ABC and SMS will be shown automatically.</td>
+ <td>The following are for web client users only. Apple Messages for Business and SMS will be shown automatically.</td>
  <td></td>
  </tr>
  <tr>

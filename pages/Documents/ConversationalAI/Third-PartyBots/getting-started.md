@@ -87,7 +87,7 @@ Those identifies are as follows:
 
 #### Support for different messaging channels and corresponding rich content
 
-The bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) since it only forwards the received structured content and metadata to LivePerson's messaging and chat services, where it is handled. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Business Chat**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
+The bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) since it only forwards the received structured content and metadata to LivePerson's messaging and chat services, where it is handled. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Messages for Business**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
 
 #### Creating and starting bots
 

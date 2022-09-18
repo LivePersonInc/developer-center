@@ -14,7 +14,7 @@ The Apple Messages for Business messaging channel now allows you to send an auth
 
 See the message flow below:
 
-<img style="width:800px" src="img/apple_auth.png" alt="Apple Messages for Business authentication flow">
+<img style="width:800px" src="img/apple_auth.png" alt="apple Messages for Business authentication flow">
 
 1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth feature.
 
@@ -26,7 +26,7 @@ See the message flow below:
 
 ### Setup
 
-1. Supply your private OAuth 2.0 service details in your Apple management area (register.apple.com).
+1. Supply your private OAuth2 service details in your Apple management area (register.apple.com).
 
 The required details include:
 
@@ -36,9 +36,9 @@ The required details include:
 
 * Client Identifier
 
-#### Instructions on how to create a free OAuth 2.0 service using [auth0](https://auth0.com/)
+#### Instructions on how to create a free OAuth2 service using [auth0](https://auth0.com/)
 
-If you do not yet have an OAuth 2.0 service or if you need a test service, follow the instructions below:
+If you do not yet have an OAuth2 service or if you need a test service, follow the instructions below:
 
 1. Create a [auth0 account](https://auth0.com/)
 
@@ -46,9 +46,9 @@ If you do not yet have an OAuth 2.0 service or if you need a test service, follo
 
 3. Put `https://auth.businesschat.apple.com` in Allowed Callback Urls
 
-4. Put `https://auth.businesschat.apple.com` in Allowed Origins and Allowed Web Origins
+4. Put `https://auth.businesschat.apple.com` in Allowed Origins & Allowed Web Origins
 
-5. On the same screen, go to the bottom and select advanced settings → Endpoints
+5. On the same screen, go to the bottom and select advanced settings -> Endpoints
 
 6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
 
@@ -66,7 +66,7 @@ In an Apple Messages for Business Conversation, the messaging channel will autom
 
 The agent or bot should read the consumer engagement attributes to check for this engagement attribute before sending the Apple Authentication request to the consumer.
 
-**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in Conversational Cloud, the conversation will not be updated with the consumer’s new capability — to solve this, the conversation should be closed and opened again in Conversational Cloud.
+**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in Conversational Cloud, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in Conversational Cloud.
 
 ![role engagement attributes](img/apple_auth_role_sde.png)
 
@@ -86,7 +86,7 @@ The **body** template will only define how the Apple Auth bubble is displayed in
 
 ![](img/apple_auth_consumer1.png)
 
-**Consumer fills out form from OAuth 2.0 provider**
+**Consumer fills out form from OAuth2 provider**
 
 ![](img/apple_auth_consumer2.png)
 
@@ -96,7 +96,7 @@ The **body** template will only define how the Apple Auth bubble is displayed in
 
 #### Request Metadata
 
-**BusinessChatMessage — receivedMessage and replyMessage bubbles**
+**BusinessChatMessage - receivedMessage and replyMessage bubbles**
 
 The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessage` objects, which define how the Authentication Interactive Message bubbles layout will be displayed when the message is received on the consumer’s device (`receivedMessage`) and once an authentication is submitted by the consumer (`replyMessage`).
 
@@ -109,7 +109,7 @@ The requestIdentifier and responseEncryptionKey is optional, but the responseEnc
 
 Please use the metadata template with the relevant fields, as presented in the example below:
 
-##### Metadata Template Example
+##### Metadata Template Example:
 
 ```json
 [
@@ -133,7 +133,6 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
-        "scope": "Insert Your scope here. Ex.['email','profile']",
         "responseEncryptionKey": "Insert Your Public Key Here"
       }
     }
@@ -161,12 +160,14 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>ConnectorAuthenticationRequest</td>
     <td>Represents a Messages for Business authentication request </td>
     <td>Object</td>
-    <td>Y</td>
+    <td>N</td>
   </tr>
   </tbody>
 </table>
 
+
 ###### `ConnectorAuthenticationRequest` Object Properties
+
 
 <table>
   <thead>
@@ -188,16 +189,11 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>string</td>
     <td>N</td>
   </tr>
-   <tr>
-    <td>apple.oauth2.scope</td>
-    <td>An array of scope items that specifies the scope of the request, gives the exact fields of data that the authentication service provides to client requesting the authentication.</td>
-    <td>Array&lt;string&gt;</td>
-    <td>Y</td>
-  </tr>
   </tbody>
 </table>
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
+
 
 ###### `receivedMessage` Object Properties  
 
@@ -212,7 +208,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   <tr>
     <td>Style</td>
     <td>The Style of the authentication interactive message reply bubble. Can be set to icon, small or large. Defaults to icon</td>
-    <td>Enum — icon, small, large
+    <td>Enum - icon, small, large
 </td>
     <td>N</td>
   </tr>
@@ -237,6 +233,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tbody>
 </table>
 
+
 ###### `replyMessage` Object Properties  
 
 <table>
@@ -250,7 +247,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   <tr>
     <td>style</td>
     <td>The Style of the authentication interactive message reply bubble. Can be set to icon, small or large. Defaults to icon</td>
-    <td>Enum — icon, small, large
+    <td>Enum - icon, small, large
 </td>
     <td>N</td>
   </tr>
@@ -317,7 +314,7 @@ If reading the auth response in an Agent Widget, you **must** initially send a p
 
 The authentication response metadata is contextual information about the consumer authentication response status. This information should be used to validate the authentication status of the consumer, as well as to report the auth response token back to the OAuth service in order to validate user identity.
 
-##### Example Conversational Metadata response
+##### Example Conversational Metadata response:
 
 **Success example response**:
 
@@ -359,7 +356,7 @@ The authentication response metadata is contextual information about the consume
   </tr>
   <tr>
     <td>status</td>
-    <td>Status of the consumer authentication — can be only true (successful) or false (failed) </td>
+    <td>Status of the consumer authentication - can be only true (successful) or false (failed) </td>
     <td>Boolean </td>
   </tr>
   <tr>

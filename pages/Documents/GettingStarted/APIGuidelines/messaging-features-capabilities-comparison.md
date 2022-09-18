@@ -1,12 +1,12 @@
 ---
 pagename: Messaging features Capabilities Comparison
 sitesection: Documents
-categoryname: "API Guidelines"
-permalink: messaging-features-capabilities-comparison.html
+categoryname: "Getting Started"
+documentname: API Guidelines
+permalink: api-guidelines-messaging-features-capabilities-comparison.html
 indicator: messaging
 redirect_from:
-    - essential-resources-messaging-features-capabilities-comparison.html
-    - api-guidelines-messaging-features-capabilities-comparison.html
+  - essential-resources-messaging-features-capabilities-comparison.html
 ---
 
 <input id="capabilitiesSearch" placeholder="Search by Capability Name" />

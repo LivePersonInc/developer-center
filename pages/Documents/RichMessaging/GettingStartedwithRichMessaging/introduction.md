@@ -214,7 +214,7 @@ Each structured content template will contain one or more **elements** in the `e
 | tag           | Further specifies the template type                                                 | String | N        |
 | elements      | List of element objects                                                             | Array  | Y        |
 
-All templates will consist of an object that holds the elements array. The object will always have a type and optionally have a tag. The tag is only relevant when using third party connectors like Facebook Messenger, Apple Business Chat, etc.
+All templates will consist of an object that holds the elements array. The object will always have a type and optionally have a tag. The tag is only relevant when using third party connectors like Facebook Messenger, Apple Messages for Business, etc.
 
 There is an additional property for Horizontal type only:
 
@@ -238,7 +238,7 @@ There is an additional property for Horizontal type only:
 
 Below you will find basic elements, their styling, and their click operations, that are common within all templates.
 
-When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK and Web, Facebook Messenger, Apple Business Chat, etc.
+When you are comfortable with the basic elements, you can see them in action in the various templates for Mobile SDK and Web, Facebook Messenger, Apple Messages for Business, etc.
 
 ### Basic Elements
 

@@ -2,6 +2,7 @@
   image: getting-started
   documents:
     - documentname: Getting Started with your Free Trial Account
+    - documentname: Do More with the Conversational Cloud
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
     - documentname: LivePerson APIs and SDKs
@@ -934,42 +935,7 @@
             - subpagename: Agent Activity
             - subpagename: Current Queue State
             - subpagename: SLA Histogram
-    - documentname: Outbound Reporting API
-      pages:
-        - pagename: Overview
-    - documentname: Key Messaging Metrics API
-      basedomain: https://{domain}/manager_workspace/api/account/{accountID}
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Metrics
-            - subpagename: Historical
-            - subpagename: Agent View
-    - documentname: Agent Activity API
-      basedomain: https://{domain}/api/account/{accountID}
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Get Status Changes
-        - pagename: Error Codes
-    - documentname: Actual Handle Time API
-      basedomain: https://{domain}/api/account/{accountID}
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Get Agent Segments
-        - pagename: Error Codes
-    - documentname: Net Handle Time API
-      basedomain: https://{domain}/operations/api/account/{accountID}
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Get Net Handle Time by Skill
-        - pagename: Error Codes
+
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:

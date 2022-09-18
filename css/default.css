@@ -596,11 +596,6 @@ td {
   }
 }
 
-.table-wrapper {
-  display: block;
-  overflow-x: auto;
-}
-
 #featurestable {
   width: 100%;
   max-width: none;
@@ -617,8 +612,6 @@ td {
 
 #featurestable tr td {
   vertical-align: middle;
-  hyphens: inherit;
-  overflow-wrap: inherit;
 }
 
 #featurestable .green {
@@ -673,7 +666,7 @@ td {
   padding-left: 10px;
 }
 
-.categoryrow td {
+.categoryrow {
   background-color: #162036 !important;
 }
 
@@ -1225,12 +1218,9 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #jumpto {
+  flex: 1 !important; /* TODO: Disable “important” */
   padding-bottom: var(--space10);
   max-width: 396px;
-}
-
-#jumpto #anchorlist p:not(:empty) {
-  min-width: 240px;
 }
 
 #anchorlist {
@@ -1277,8 +1267,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .highlightlink {
-  background-color: var(--body-background) !important;
-  /* Make sure background is white */
+  background-color: var(--body-background) !important; /* Make sure background is white */
   color: var(--link-color) !important;
   font-weight: bold;
 }
