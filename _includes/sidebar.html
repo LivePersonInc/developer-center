@@ -176,3 +176,17 @@
     </a>
   </li>
 </ul>
+<script>
+  let previousUrl = ""
+
+  const observer = new MutationObserver(() => {
+    if (window.location.href !== previousUrl) {
+      let button = document.getElementById("openSidebarMenu")
+      if (button.checked === true) button.checked = false
+      previousUrl = window.location.href
+    }
+  })
+  const config = { subtree: true, childList: true }
+
+  observer.observe(document, config)
+</script>
