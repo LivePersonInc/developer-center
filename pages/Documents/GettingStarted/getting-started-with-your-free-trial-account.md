@@ -40,7 +40,7 @@ date_published: 2019/01/30
    </div>
 </div>
 <div class="container-note">
-   <div class="important" style="width:90%">
+   <div class="note" style="width:90%">
       <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html" alt="Register free trial">register</a> for a free 45-day trial.
    </div>
 </div>

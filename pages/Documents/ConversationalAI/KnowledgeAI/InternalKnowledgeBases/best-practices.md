@@ -11,7 +11,7 @@ permalink: knowledgeai-internal-knowledge-bases-best-practices.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
 ### Limits

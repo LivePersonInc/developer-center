@@ -15,7 +15,7 @@ The Insurance Quote template is designed to capture information related to insur
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
+{: .note}
 This bot template contains dialog templates that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_de.png" alt="">
@@ -84,7 +84,7 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .important}
+{: .note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
 
 For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).

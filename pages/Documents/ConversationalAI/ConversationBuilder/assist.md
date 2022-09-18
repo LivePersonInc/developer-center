@@ -61,5 +61,5 @@ Once you've associated the dialog (or question interaction) with a domain, you c
     <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity2.png">
     <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity3.png">
 
-{: .important}
+{: .note}
 For several examples of how slot filling works, see [here](conversation-builder-variables-slots-slots.html). Also, be aware that you can’t use Assist to assign *global entities* to questions; you can only use Assist to assign *custom entities* to questions. To assign a global entity to a question, manually add the rule that creates the slot.

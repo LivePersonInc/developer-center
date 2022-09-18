@@ -15,7 +15,7 @@ With a question, you can take the user’s response, evaluate it against a condi
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots-variables.html), making them available for future use.
 
-{: .important}
+{: .note}
 For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
 
 ### Multiple choice questions
@@ -78,7 +78,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 
 Like with any question, a structured question expects and waits for the user response before executing the next action.
 
-{: .important}
+{: .note}
 Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
 
 <img style="width:600px" src="img/ConvoBuilder/questions_structured2.png" alt="">
@@ -178,7 +178,7 @@ if (metadata && metadata.id) {
 }
 ```
 
-{: .important}
+{: .note}
 Need help understanding custom data fields in API integrations? See [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 #### Notes on Structured questions
@@ -425,7 +425,7 @@ Additionally, all start dates and times must be defined **in GMT**, so depending
 
 The Duration field can't be populated dynamically; you must manually specify this value.
 
-{: .important}
+{: .note}
 For more on processing API results with custom data fields, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 #### Reply Message settings

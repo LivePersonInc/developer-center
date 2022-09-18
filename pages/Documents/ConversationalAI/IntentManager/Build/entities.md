@@ -33,7 +33,7 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 
 ### Add a Regular Expression entity
 
-{: .important}
+{: .note}
 Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
@@ -67,7 +67,7 @@ When you click the link, all of the values are placed into a single field. This 
 
 <img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png" alt="">
 
-{: .important}
+{: .note}
 To save your changes, click the **Update Entity** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
 
 Take care when using this feature to avoid making unintended changes:
@@ -92,7 +92,7 @@ Use the [getNamedEntities](conversation-builder-scripting-functions-get-set-sess
 
 Deleting an entity is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .important}
+{: .note}
 Before you delete an entity, ensure that it isn't being used in any intents or Knowledge Base articles.
 
 **To delete an entity**

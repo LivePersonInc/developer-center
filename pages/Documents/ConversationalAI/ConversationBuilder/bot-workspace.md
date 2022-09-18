@@ -23,7 +23,7 @@ A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basi
 * The Billing dialog contains 5 interactions. These are also listed in the dialogs panel on the left.
 * The Billing dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
 
-{: .important}
+{: .note}
 Conversation Builder supports the creation of bots for all the Conversational Cloud channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to Conversational Cloud can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
 
 ### The Dialogs view

@@ -17,7 +17,7 @@ Use the following built-in functions to log events and print debug messages.
 
 Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name. 
 
-{: .important}
+{: .note}
 The event detail is optional. Keep the event detail short, as it can't be more than 32 kilobytes, i.e., approximately 32,000 characters in length.
 
 | Function Name | Arguments | Returns |
@@ -31,7 +31,7 @@ In this example, we set the user message to the current user message and name th
 botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'API call successful');
 ```
 
-{: .important}
+{: .note}
 For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
 ### Print debug message

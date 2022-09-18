@@ -165,7 +165,7 @@ The following screen from the API integration setup shows that you must remember
     }
     ```
 
-    {: .important}
+    {: .note}
     The first property of that object is named `api_GetContext`, so adjust this with whatever the name you gave to your Bot Response Variable when defining the integration and append to the “**api_**” prefix.
 
 3. Clean the JSON.
@@ -209,7 +209,7 @@ The following screen from the API integration setup shows that you must remember
     var email = jsonResponse.email || false;
     ```
 
-    {: .important}
+    {: .note}
     The `|| false` construction means if the requested value does not exist, we will return false. This allows us to easily check later on if this was populated. (You could also use **null** in place of false if you prefer, as that is a **FALSE** value within JavaScript when it comes to conditional comparisons.)
 
 5. Set bot-level variables using those values and output them within a text interaction:

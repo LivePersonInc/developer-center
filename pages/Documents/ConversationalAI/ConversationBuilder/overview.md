@@ -20,7 +20,7 @@ Build automated conversation flows once, and run them on every messaging channel
 ### Identify and resolve bot failure points with MACS
 Our [Meaningful Automated Conversation Score](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) (MACS) is the first measurement of how much friction consumers experience in automated conversations. This built-in analysis assesses how well bots are helping with customer queries, highlights common points of failure like poor routing, and helps you quickly move to bot tuning in Conversation Builder.
 
-{: .important}
+{: .note}
 For more on MACS, see [here](https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html) in our Knowledge Center.
 
 ### Access Conversation Builder

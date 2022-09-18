@@ -10,7 +10,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-auto-escalation.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html).
 
 Every bot should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold was crossed. Now, Conversation Builder provides a special dialog type which takes care of all this for you without having to write any code.
@@ -37,7 +37,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
     * A Multiple Choice interaction to confirm that a user wants to be escalated to an agent
     * The corresponding escalation
 
-    {: .important}
+    {: .note}
     Because the user has not explicitly asked to be transferred to an agent, it’s good practice to confirm that this is what they would like to do.
 
 3. Modify the content of the multiple choice interaction to match the voice of your brand. Note that two rules have been automatically created to match the ‘yes’ and ‘no’ responses, so they will need to be updated should you change the response options.

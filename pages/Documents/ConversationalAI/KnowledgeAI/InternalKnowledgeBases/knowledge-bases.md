@@ -35,7 +35,7 @@ indicator: both
 
     If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
 
-    {: .important}
+    {: .note}
     If the system finds errors in the CSV file you are importing, you’re notified of this and offered a **Download errors** button. Use the button to download info on the errors that were found in the import file. Make sure your browser is configured to allow pop-ups, or you won’t be able to complete the download. 
 
 ### Create an import file
@@ -44,7 +44,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
-{: .important}
+{: .note}
 The import file can contain the subset of HTML that’s discussed [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article), and it should adhere to the limits discussed [here](knowledgeai-limits.html). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
@@ -78,7 +78,7 @@ When you convert Knowledge Base intents to Domain intents, the system takes each
 
 From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the KnowledgeAI application to the Intent Manager application.
 
-{: .important}
+{: .note}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
 
 **To convert from Knowledge Base intents to Domain intents**
@@ -102,7 +102,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
 
-{: .important}
+{: .note}
 This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that all new articles in the sheet are enabled by default (which means they are returned in knowledge base searches in KnowledgeAI integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
 
 Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.

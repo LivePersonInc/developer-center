@@ -20,7 +20,7 @@ When you integrate a Rasa-based NLU engine, training data and other model-relate
 * **Activation**: [This endpoint](https://rasa.com/docs/rasa/pages/http-api#operation/replaceModel) is used to load the model when you activate a model version.
 * **Prediction**: [This endpoint](https://rasa.com/docs/rasa/pages/http-api#operation/parseModelMessage) is used to get the intents and entities in a message, so they can be saved and used elsewhere within Conversational Cloud. For example, this endpoint is used to associate the intents with the dialog starters in bots.
 
-{: .important}
+{: .note}
 Your Rasa implementation must conform to the schemas at the links above.
 
 ### Connect the NLU engine

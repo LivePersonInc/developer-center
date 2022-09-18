@@ -815,7 +815,7 @@ Configure how the agent bot behaves in the event of an error.
   </tbody>
   </table>
 
-{: .important}
+{: .note}
 If no other skills are configured, it might be that the bot will escalate the conversation to itself. In this case only new messages will be processed.
 
 ### Survey Bots
@@ -864,13 +864,13 @@ In case of a survey bot the following additional settings must be configured.
   </tbody>
 </table>
 
-{: .important}
+{: .note}
 Currently the only supported vendor for Survey Bots is Medallia
 
-{: .important}
+{: .note}
 Survey Bots are only supported for messaging
 
-{: .important}
+{: .note}
 If an error occurs during a survey the bot will end the survey.
 Details about the error can then be found under conversation errors in the
 [Bot Status Dashboard](third-party-bots-bot-status-dashboard.html).

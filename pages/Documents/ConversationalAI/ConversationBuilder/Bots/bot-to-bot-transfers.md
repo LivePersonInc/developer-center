@@ -62,7 +62,7 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 
-{: .important}
+{: .note}
 While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in automatic, bot-to-bot transfers.
 
 #### Best practices

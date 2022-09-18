@@ -8,7 +8,7 @@ permalink: bots-status-overview.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 Use the Bots Status application to check the status of all your bots from a single location, and to help to resolve issues. 
@@ -19,7 +19,7 @@ You can use the application to monitor and manage both custom bots and post-conv
 
 ### Access Bots Status
 
-{: .important}
+{: .note}
 To access the Bots Status application, you must have the Bot Status Access [permission](bot-accounts-permissions.html).
 
 **To access the Bot Status application**

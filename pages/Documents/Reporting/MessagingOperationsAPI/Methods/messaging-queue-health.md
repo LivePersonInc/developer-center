@@ -346,7 +346,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 
 **Elements in the Response**
 
-<div class="important">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+<div class="note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

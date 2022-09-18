@@ -22,7 +22,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-{: .important}
+{: .note}
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding agent connectors. For details, see [here](conversation-builder-networking-security.html).
 
 Before you can deploy a bot, you must complete the following, pre-requisite steps in Conversational Cloud:
@@ -39,7 +39,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 1. Add the agent connector. This establishes the necessary connections to make the bot operational.
 2. Start the agent connector. This gets the agent connector running in the target environment.
 
-{: .important}
+{: .note}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 For some practice at deployment, complete the [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
@@ -52,7 +52,7 @@ The Agent Connectors page makes it fast and easy to understand the status of the
 ### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target Conversational Cloud environment.
 
-{: .important}
+{: .note}
 An agent can belong to only one bot.
 
 **To add an agent connector**
@@ -110,7 +110,7 @@ You can delete an agent connector as long as it isn't running.
 2. Click **Agent Connectors** in the upper-left corner.
 3. Locate the connector in the table, and click its **Start** button.
 
-{: .important}
+{: .note}
 Establishing the connection can take a few minutes.
 
 ### Stop an agent connector
@@ -138,7 +138,7 @@ You add these fields in the **Advanced Options** of the agent connector.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png">
 
-{: .important}
+{: .note}
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.
 
 #### acceptStatusEventValue
@@ -177,7 +177,7 @@ See also `defaultGreetingMessage`, which is farther above.
 
 #### enableButtonTextOnPostback
 
-{: .important}
+{: .note}
 This custom configuration field controls the behavior of Structured and Button questions, not Quick Reply questions.
 
 By default, when you specify a callback value for a button in a [Structured](conversation-builder-interactions-questions.html) or [Button](conversation-builder-interactions-questions.html) question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice.

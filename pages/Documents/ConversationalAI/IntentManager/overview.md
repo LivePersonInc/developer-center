@@ -11,7 +11,7 @@ permalink: intent-manager-overview.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
@@ -29,7 +29,7 @@ Consumers often request an action or information from a brand. These consumer re
 * **Optimize** how well they are being fulfilled
 * **Analyze** the most popular consumer intents
 
-{: .important}
+{: .note}
 For an in-depth introduction to Intent Manager, its use cases, and a discussion on the power of an intent-driven contact center, see [here](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-the-power-of-an-intent-driven-contact-center.html) in our Knowledge Center.
 
 ### Access permissions

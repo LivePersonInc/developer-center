@@ -105,7 +105,7 @@ In the other charts, you can select one or more interactions, issue types, and/o
 
 <img style="width:800px" src="img/ConvoBuilder/macs_filters1a.png" alt="">
 
-{: .important}
+{: .note}
 Note the following about adding filters.
 
 * When you add a filter from a chart, this updates that chart and all others except the **Overall trend** chart. The **Overall trend** chart doesn’t impact the other charts, nor is it impacted by the other charts.
@@ -122,7 +122,7 @@ This takes you to a list of conversations (as many as 100) that are filtered bas
 
 <img style="width:800px" src="img/ConvoBuilder/macs_conv_list.png" alt="">
 
-{: .important}
+{: .note}
 The conversations in the list are distributed across the selected scores, so, for example, if you select to show conversations with MACS 1 and MACS 2, you’ll see some number of conversations with MACS 1 and some number of conversations with MACS 2. The distribution might not be even since this depends on the data that’s available.
 
 From here, you can also search for a specific conversation: Enter its full conversation ID in the search box. The conversation will be displayed in the **Conversations** list regardless of how the other filters are set.

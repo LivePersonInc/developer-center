@@ -9,7 +9,7 @@ permalink: conversation-orchestrator-dynamic-routing-routing-conversations-by-in
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 This topic assumes that you are familiar with [Intent Manager](intent-manager-overview.html).
 
 You can create policies to recognize a consumer's intent from their utterance and transfer to the appropriate agent or skill. Routing by intent is very useful when agents or bots are organized by functional departments.
@@ -36,7 +36,7 @@ There are two ways to accomplish intent-based routing:
 * If you have a limited number of intents, use the dialog starter approach.
 * If you have many intents and corresponding skills, enable intent routing in the Conversation Orchestrator bot.
 
-{: .important}
+{: .note}
 Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access [an older version of this topic](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
 
 #### Routing by intent using the dialog starter approach
@@ -57,7 +57,7 @@ When an intent triggers a dialog starter, the intent name is automatically saved
 
 When working with larger domains, assigning individual dialogs to each intent can be difficult to scale. By using the Conversation Orchestrator bot template, bot developers can manually call the analyze intent API and save the intent name to the default namespace, enabling routing to any intent-based skill in the account.
 
-{: .important}
+{: .note}
 This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of LivePerson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
 
 1. Create the Dynamic Routing bot, and open **Global Functions**.

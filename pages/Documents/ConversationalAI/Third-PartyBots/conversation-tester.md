@@ -24,10 +24,10 @@ By hovering on the last alert you will see a tooltip that will give you the poss
 
 ### Limitations
 
-{: .important}
+{: .note}
 The Conversation Tester will only show the direct responses of the connected bot. No configured [Hooks](third-party-bots-hook-configuration.html) or [Public API](third-party-bots-public-api.html) calls will be computed by the Conversation Tester.
 
-{: .important}
+{: .note}
 The Medallia Survey vendor is not supported by the Conversation Tester since survey messages on this vendor are exclusively received via the [Public API](third-party-bots-public-api.html).
 
 

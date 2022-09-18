@@ -15,7 +15,7 @@ indicator: both
 
 For an explanation of a meta intent, see [here](intent-manager-key-terms-concepts.html#meta-intents).
 
-{: .important}
+{: .note}
 For some practice with meta intents, complete the [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html) tutorial series.
 
 ### Add a meta intent
@@ -24,7 +24,7 @@ The process for creating a meta intent is very similar to [creating a standard i
 
 When you are finished, click **Save** in the lower-right corner. In the left panel, you can now see that the standard intents are nested under the newly created meta intent.
 
-{: .important}
+{: .note}
 As meta intents are a grouping of related intents, you'll need to create at least one intent prior to creating a meta intent. 
 
 ### Train meta intents

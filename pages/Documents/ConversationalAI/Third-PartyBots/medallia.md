@@ -58,7 +58,7 @@ The following Dialogflow CX information should be provided to LivePerson:
 </table>
 
 ### Limitations
-{: .important}
+{: .note}
 Not all messages are currently forwarded by the LP Medallia adapter. The Bot will only
 send the messages forwarded so far. This does e.g. not include Welcome and Goodbye messages.
 The bot sends its own static messages on the beginning and end of a conversation for now.

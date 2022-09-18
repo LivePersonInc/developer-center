@@ -23,7 +23,7 @@ You can add both variables and slots to the [custom rules](conversation-builder-
 
 If you’re adding an [API integration](conversation-builder-integrations-api-integrations.html) to perform some action or retrieve information (e.g., retrieve an order’s status), variables and slots are useful for storing and then passing along the necessary data (e.g., the order’s number).
 
-{: .important}
+{: .note}
 For a tutorial on using variables in interactions, see [here](tutorials-guides-getting-started-with-bot-building-integrations.html).
 
 ### Referencing variables and slots

@@ -29,7 +29,7 @@ You can install Conversational Cloud Mobile App Messaging SDK for iOS using a co
 * [Automatically using CocoaPods](#option-1-cocoapods)
 * [Manually copying the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
-<div class="important">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
+<div class="note">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
 
 #### Option 1: Automatically using CocoaPods
 
@@ -47,7 +47,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod init
    ```
 
-   <div class="important">The Podfile must be created under your project's folder.</div>
+   <div class="note">The Podfile must be created under your project's folder.</div>
 
 3. Open the Podfile.
 

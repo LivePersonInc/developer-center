@@ -24,14 +24,14 @@ There's also a credential type that supports the use of [third-party NLU engines
 
 - **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
-{: .important}
+{: .note}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
 
 ### Add an OAuth 2.0 credential using the Authorization Code grant type
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
-{: .important}
+{: .note}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
 **To add an OAuth 2.0 credential using the Authorization Code grant type**
@@ -189,7 +189,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 ### Add a third-party NLU credential
 
-{: .important}
+{: .note}
 This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).

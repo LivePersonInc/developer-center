@@ -58,7 +58,7 @@ Second, when intent tracking data is gathered for analysis within Intent Manager
 
 As an example, assume you have three domains A, B and C, and domain B is your primary domain. The consumer says, “I want to disconnect from Acme Telecommunications.” This matches an intent in domain A with a 90% confidence score, an intent in domain B with a 60% confidence score, and an intent in domain C with a 20% confidence score. In this case, the intent in domain B is considered the best matched intent even though it’s confidence score is lower than that for the intent in domain A. This is because domain B is your primary domain, and the scores for the intents in both domains A and B are at least GOOD scores. If the match to the intent in domain B were 59% (FAIR PLUS), then the intent in domain A would be considered the best intent match.
 
-{: .important}
+{: .note}
 The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, KnowledgeAI, Conversation Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
 
 ### Intents
@@ -73,7 +73,7 @@ Consumers often request an action or information from a brand. These consumer re
 
 Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers might discuss are product names, service plan names, bills, service and product orders, locations and dates.
 
-{: .important}
+{: .note}
 For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For best practices, see [here](intent-manager-best-practices.html#intents).
 
 #### Intent versus non-intent example
@@ -150,7 +150,7 @@ Entities are keywords or expressions that represent groups of items. For example
 
 Entities facilitate the creation and curation of training phrases. For example, you might create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training phrases, you can replace a specific product name with the entity name PRODUCT. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
 
-{: .important}
+{: .note}
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.
 
 There are three types of entities:

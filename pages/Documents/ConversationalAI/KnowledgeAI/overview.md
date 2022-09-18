@@ -11,13 +11,13 @@ permalink: knowledgeai-overview.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
 KnowledgeAI unifies and leverages your brand’s content to provide fast answers to common questions and issues, and effectively automate consumer conversations at scale. Using KnowledgeAI, you can ingest and transform your existing content into messaging-ready answers and seamlessly answer consumer questions in rich, automated conversations.
 
-{: .important}
+{: .note}
 For an in-depth introduction to KnowledgeAI, see [here](https://knowledge.liveperson.com/ai-bots-automation-knowledgeai-with-agent-assist.html) in our Knowledge Center.
 
 ### Knowledge bases

@@ -14,7 +14,7 @@ Consider adopting the reuse techniques below to avoid building the same componen
 
 ### Create reusable “yes” and “no” intents
 
-{: .important}
+{: .note}
 The approach documented in this section is recommended only when using the LivePerson (Legacy) NLU engine. Brands using the LivePerson NLU engine should use Yes/No pattern matching, **not** Yes/No intents. You can easily add these "affirmative" and "negative" patterns using the pattern library that's available (discussed [here](conversation-builder-interactions-interaction-basics.html#popular-patterns)).
 
 One way to handle the responses to yes/no questions is to use pattern matching in the custom rule:

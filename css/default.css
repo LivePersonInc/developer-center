@@ -697,7 +697,7 @@ td {
   padding-left: 10px;
 }
 
-.important {
+.note {
   border-left-color: var(--important-border);
   padding: 16px;
   margin: 0 0 24px 0;
@@ -737,7 +737,7 @@ td {
   top: 2px;
 }
 
-.notice {
+.alert {
   border-left-color: var(--error-border);
   border-radius: 4px;
   padding: 16px;
@@ -749,25 +749,25 @@ td {
   padding-left: 15px;
 }
 
-.notice p:not(:first-child) {
+.alert p:not(:first-child) {
   margin-left: -25px;
 }
 
-.deprecated {
-  border-left-color: #000;
+p.deprecation {
+  border-left-color: #292931;
   padding: 12px 24px 12px 30px;
   margin: 2em 0;
   border-left-width: 4px;
   border-left-style: solid;
-  background-color: #f8f8f8;
+  background-color: #292931;
   font-size: 14px;
   line-height: 1.71;
-  color: #4a4a4a;
+  color: #fff !important;
   font-family: Inter, sans-serif;
   padding-left: 15px;
 }
 
-.deprecated::before {
+p.deprecation::before {
   content: '\f071';
   color: #000;
   font-family: 'Font Awesome 5 Free';

@@ -11,10 +11,10 @@ indicator: both
 
 You can use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
-{: .important}
+{: .note}
 There are two ways to implement an escalation: You can add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions). Or, you can add an Integration interaction that uses a supporting LivePerson Agent Escalation integration, *which is discussed here*. There is no difference between the two approaches when it comes to performance. However, use of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
 
-{: .important}
+{: .note}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
 ### Add a LivePerson Agent Escalation 

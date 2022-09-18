@@ -58,7 +58,7 @@ One of the goals and challenges in developing interactions is creating a unified
 
 For details on constraints like this, refer to [Rich Messaging best practices](facebook-messenger-templates-best-practices.html) as well as the [Messaging channels section](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) in the LivePerson Knowledge Center.
 
-{: .important}
+{: .note}
 Your bot implementation should meet Conversational Cloud requirements and those of the specific channels in use.
 
 For information on which interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
@@ -91,7 +91,7 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
 ### Add an interaction
 
-{: .important}
+{: .note}
 When selecting an interaction to add, make sure it's supported by the channel you will be using. For a listing of which channels support which interactions, see [here](conversation-builder-interactions-interaction-support.html).
 
 **To add a new interaction to the end of the dialog**
@@ -191,7 +191,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 CTRL+ENTER: Hold control and hit enter/return.
 
-{: .important}
+{: .note}
 This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
 
 #### Character limit
@@ -208,7 +208,7 @@ Add the following special tag inline inside your text interaction to force a bre
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint2.png" alt="">
 
-{: .important}
+{: .note}
 The delay value is in milliseconds. 1000 = 1 second.
 
 ### Add comments
@@ -295,7 +295,7 @@ A disabled interaction is ignored in a dialog flow. Consider disabling an intera
 
 Deleting an interaction is a non-recoverable action, so consider disabling the interaction as an alternative.
 
-{: .important}
+{: .note}
 After you delete an interaction, verify that the interaction flow isn't broken as a result. You might need to modify the Next Action field in the remaining interactions so that the conversation flow works as expected.
 
 **To delete an interaction**
