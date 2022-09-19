@@ -16,7 +16,7 @@ After you access Bot Analytics, the main dashboard is displayed. The dashboard i
 * At the top, there are account-level metrics and trend charts for all your bots regardless of environment (Demo, Production, and undeployed).
 * At the bottom, there are bot-level metrics for each of the bots.
 
-<img style="width:800px" src="img/ConvoBuilder/ba_dashboard.png">
+<img style="width:800px" src="img/ConvoBuilder/ba_dashboard.png" alt="Bot Analytics main dashboard">
 
 {: .important}
 The trend charts can show data for November 1, 2020 and later.
@@ -32,11 +32,11 @@ If you have bots that are hosted in both the LivePerson cloud and the Amazon Web
 
 On the dashboard, the date range for the displayed data is shown in the upper-right corner.
 
-<img style="width:500px" src="img/ConvoBuilder/ba_date_filter_main.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_date_filter_main.png" alt="Date range filter">
 
 You can use this filter to show the data for any 7-day date range within the last 13 months. You can also use the date filter to change the time zone in use.
 
 ### Perform a search
 Use the search box in the upper-right corner to find a bot by bot name.
 
-<img style="width:500px" src="img/ConvoBuilder/ba_search.png">
+<img style="width:500px" src="img/ConvoBuilder/ba_search.png" alt="Search box">

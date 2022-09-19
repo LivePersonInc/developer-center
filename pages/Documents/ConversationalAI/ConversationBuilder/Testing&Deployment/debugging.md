@@ -19,7 +19,7 @@ To get the User ID during a bot conversation, type "display userid".
 
 Here's a visual overview of the Bot Logs window:
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/debuggingWindow.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/debuggingWindow.png" alt="Bot Logs window with various features highlighted">
 
 - 1 = Use the **User ID** input box to specify the log you want to view.
 - 2 = Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png"> (Refresh) to display or refresh the log.
@@ -34,7 +34,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 1. With the Dialogs page displayed, click **Preview** in the upper-right corner.
 2. Just outside the lower-left corner of the Preview window, click the **Bot Logs** icon.
     
-    <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png">
+    <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png" alt="The Bot Logs icon that's just outside the lower-left corner of the Preview window">
 
     This opens the Bot Logs window, so it is displayed beside the Preview window.
     
@@ -42,7 +42,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 ### Print the most recent user message
 
-To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages — for example, the consumer's most recent message — to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
+To aid in debugging, you can use the [printDebugMessage](conversation-builder-scripting-functions-log-debug.html#print-debug-message) scripting function in the code areas of an interaction to print messages — for example, the consumer's most recent message — to the Bot Logs window.
 
 ### Events glossary
 

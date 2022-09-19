@@ -16,15 +16,15 @@ indicator: both
 
 During a bot conversation with a consumer, you’ll likely want to capture and store some information that’s been collected along the way. You can store that information in variables and slots:
 
-* **Variables**: Variables are more commonly used than slots. Use a variable when you simply want to save a value, for example, to save a consumer’s response in a Question interaction. Using a slot for this basic behavior doesn’t offer any additional value. So, when in doubt, use a variable. More on variables [here](conversation-builder-variables-slots-variables.html).
-* **Slots**: Slot variables are still variables; they’re just a special type. If you want to automatically detect an entity within a Question interaction, you must use a slot variable that’s associated with that entity. Using a standard variable won’t accomplish this; only slot variables have this specialized behavior. More on slots [here](conversation-builder-variables-slots-slots.html).
+* **Variables**: [Variables](conversation-builder-variables-slots-variables.html) are more commonly used than slots. Use a variable when you simply want to save a value, for example, to save a consumer’s response in a Question interaction. Using a slot for this basic behavior doesn’t offer any additional value. So, when in doubt, use a variable.
+* **Slots**: [Slot variables](conversation-builder-variables-slots-slots.html) are still variables; they’re just a special type. If you want to automatically detect an entity within a Question interaction, you must use a slot variable that’s associated with that entity. Using a standard variable won’t accomplish this; only slot variables have this specialized behavior.
 
 You can add both variables and slots to the [custom rules](conversation-builder-interactions-configuration-next-action.html#custom-rules) of an interaction.
 
 If you’re adding an [API integration](conversation-builder-integrations-api-integrations.html) to perform some action or retrieve information (e.g., retrieve an order’s status), variables and slots are useful for storing and then passing along the necessary data (e.g., the order’s number).
 
 {: .important}
-For a tutorial on using variables in interactions, see [here](tutorials-guides-getting-started-with-bot-building-integrations.html).
+See also [this tutorial on using variables in interactions](tutorials-guides-getting-started-with-bot-building-integrations.html).
 
 ### Referencing variables and slots
 To reference variables and slots and thereby insert dynamic values in interactions and integrations, use `{}`. Follow this syntax:
@@ -41,7 +41,7 @@ To reference variables and slots and thereby insert dynamic values in interactio
 
 When you define a variable or slot, you specify how long to keep the stored data.
 
-<img width="800" src="img/ConvoBuilder/variablesSlotsDuration.png">
+<img width="800" src="img/ConvoBuilder/variablesSlotsDuration.png" alt="The options for specifying a duration">
 
 There are three options for the duration:
 

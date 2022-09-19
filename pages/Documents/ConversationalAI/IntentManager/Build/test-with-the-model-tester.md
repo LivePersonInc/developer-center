@@ -15,7 +15,7 @@ indicator: both
 
 If your domain is using the LivePerson engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
+<img class="fancyimage" style="width:800px" alt="Test Set tab of the Model Tester page" src="img/ConvoBuilder/ib_model_tester.png">
 
 The Model Tester is designed to help you to determine if the model is improving or regressing from one version to the next as you train the intents in the domain.
 
@@ -44,18 +44,18 @@ You can download test reports and comparison reports.
 In a domain, there are several ways to add phrases to the Model Tester’s test set:
 
 * Access the Model Tester, and click **Import Test Set** to import a CSV file that contains the phrases.
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
+    <img class="fancyimage" style="width:600px" alt="Import Test Set link on the Test Set tab of the Model Tester" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
     Use the format below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
+    <img class="fancyimage" style="width:400px" alt="An example of a well-formatted CSV that can be imported" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
 
     Be aware that uploading a CSV file overwrites any test phrases that already exist in the test set with those in the import file. Additionally, when creating the import file, take care when specifying the intents. If an intent in the file isn't found in the domain, the associated test phrase is skipped during the import.
 
 * Access the Model Tester, and enter the phrases manually on the **Test Set** tab.
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
-* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed; on the **Intents** page), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
-* In an intent’s details, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
+    <img class="fancyimage" style="width:300px" alt="A close-up view of the Test Set tab of the Model Tester, where you can manually add phrases to the test set" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
+* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed; on the **Intents** page), click <img style="width:25px" alt="Quick Add icon" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
+    <img class="fancyimage" style="width:300px" alt="Quick Add icon in the Test User Input tool for testing intent detection" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
+* In an intent’s details, click <img style="width:25px" alt="Quick Add icon" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
+    <img class="fancyimage" style="width:500px" alt="Quick Add icon beside a training phrase on the Intent Details page" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
 
 ### Refine the test set
 Once you’ve added a number of phrases to the test set, you need to refine the test set.
@@ -72,7 +72,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     * If you added a number of phrases directly in the test set (i.e., not via quick add), for each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
     * Ensure that all phrases are unique within the test set.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_refine.png">
+    <img class="fancyimage" style="width:800px" alt="A list of phrases and their expected intent matches" src="img/ConvoBuilder/ib_model_tester_refine.png">
 
 {: .important}
 The test set overall can contain a maximum of 2,000 test phrases. LivePerson recommends that you include 5 test phrases for each intent in the domain.
@@ -81,11 +81,11 @@ The test set overall can contain a maximum of 2,000 test phrases. LivePerson rec
 
 The **Test Set** tab shows you the number of intents in the domain that are and aren’t represented in the test set. This determines the test’s Test Coverage percentage.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_coverage1.png">
+<img class="fancyimage" style="width:800px" alt="A message indicating the number of intents in the domain that are and aren't represented in the test set" src="img/ConvoBuilder/ib_model_tester_coverage1.png">
 
 Click the message, and then select **Unselected** to see the list of intents for which you need to take action and add test phrases. Assessing your test coverage can also help you find irrelevant intents that should be deleted.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_coverage2.png">
+<img class="fancyimage" style="width:300px" alt="An example list of unselected intents that aren't represented in the test set" src="img/ConvoBuilder/ib_model_tester_coverage2.png">
 
 ### Run the test
 **To run the test set against the domain**
@@ -97,9 +97,9 @@ Click the message, and then select **Unselected** to see the list of intents for
     * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
 4. Click **Test**.
 
-    You can click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
+    You can click <img class="inlineimage" style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_run_report.png">
+    <img class="fancyimage" style="width:800px" alt="Test Reports tab showing a list of two example reports" src="img/ConvoBuilder/ib_model_tester_run_report.png">
 
 ### View a report
 
@@ -112,7 +112,7 @@ The system retains the 10 most recent reports.
 2. Click the **Test Reports** tab.
 3. Click the report name.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_viewreport.png">
+    <img class="fancyimage" style="width:800px" alt="An example test report" src="img/ConvoBuilder/ib_model_tester_viewreport.png">
 
 There are several, important metrics displayed:
 
@@ -122,15 +122,15 @@ There are several, important metrics displayed:
 * **Success Rate**: The percentage of phrases in the test set that passed the test.
 * **Test Coverage**: The percentage of intents in the domain that are used in the test set.
 * **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with: 
-<img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
-<img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
+<img style="width:25px" alt="Passed indicator" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" alt="Failed indicator" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
+<img style="width:25px" alt="Passed with false positive indicator" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
 * **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
 <!-- * **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent. -->
 
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more, see [this explanation](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 
@@ -141,13 +141,13 @@ If the report's scores are low, take corrective action as follows:
 
 **Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_lowsuccessrate.png">
+<img class="fancyimage" style="width:800px" alt="An example of Failure result due to a low intent match rating" src="img/ConvoBuilder/ib_model_tester_lowsuccessrate.png">
 
 To improve the success rate, focus on training the associated intents to improve the scores. This might involve adding training phrases or removing irrelevant ones. Often, removing irrelevant training phrases can be more effective than adding new training phrases.
 
 **False Positives**: A false positive occurs when a test phrase matches an intent other than the expected intent. False positives are indicated with an "FP" indicator, like is shown in our example below:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_falsepositive.png">
+<img class="fancyimage" style="width:800px" alt="An example of a false positive intent match" src="img/ConvoBuilder/ib_model_tester_falsepositive.png">
 
 To correct false positives, here again, focus on training the associated intents.
 
@@ -164,7 +164,7 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 3. In the dashboard that lists the reports, select the checkboxes for both reports.
 4. Click **Compare Reports** in the upper-right corner.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_comparereports.png">
+    <img class="fancyimage" style="width:800px" alt="An example of a comparison of two reports" src="img/ConvoBuilder/ib_model_tester_comparereports.png">
 
     Note that a test phrase that is present in one test but not in another is marked with “ -- “ in the latter.
 

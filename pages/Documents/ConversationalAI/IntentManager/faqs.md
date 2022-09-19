@@ -12,10 +12,10 @@ indicator: both
 ### Model performance
 
 #### What is a confidence score?
-The confidence score approximates how likely an intent is present in the message. For every message, the model assigns a score to every defined intent in the range of zero to 1. These scores add up to 1. A confidence score close to 1.0 means the system is strongly confident that a message contains an intent. A score close to zero suggests that a particular intent is likely not present in a message.
+The [confidence score](intent-manager-key-terms-concepts.html#confidence-score-and-threshold) approximates how likely an intent is present in the message. A score of VERY GOOD means the system is strongly confident that a message contains an intent. A score close of POOR suggests that a particular intent likely is not present in a message.
 
 #### What is a good confidence score?
-The system is designed to be conservative in how it assigns scores. It cannot assign every message a confidence score of 1.0, and it only assigns an intent to a message if the confidence score reaches a certain threshold. The current threshold is set at 0.6. Anything below 0.6 is assigned the intent of “Undefined.” A score of 0.65, for example, would mean that the message is assigned an intent with less than strong confidence, whereas a score around 0.9 would represent a high likelihood that the message has a particular intent.
+The system is designed to be conservative in how it assigns scores. It cannot assign every message a confidence score of VERY GOOD, and it only assigns an intent to a message if the confidence score reaches a certain threshold. The current threshold is set at 60%. Anything below this is assigned the intent of “Undefined.” A score of 65%, for example, means that the message is assigned an intent with less than strong confidence, whereas a score around 90% would represent a high likelihood that the message has the intent.
 
 #### How should I use a model’s confidence scores to improve it?
 You should not use confidence scores to determine the model’s performance. The confidence scores are not a reflection of the accuracy of the model but an approximation of the likelihood of the intents associated with the scores. Instead, model accuracy, precision, and recall are the metrics we usually rely on to assess the performance of the model.
@@ -83,9 +83,6 @@ The Starter Packs are supposed to be the start rather than the end of a customer
 | Financial services | 59% | 64% |
 | Telecommunications | 46% | 64% |
 | Insurance | 78% | 68% |
-
-#### What are entities and how should they be used?
-Currently, the [LP NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) uses entities to facilitate the creation and curation of training sentences. For example, you may create an entity named PRODUCT with a value set of all the product names and models you supply. When creating or curating training sentences, you can replace a specific product name with the entity name PRODUCT. Using entities will help you extend your training sentences like a “template” onto all products and will prevent your model from focusing too much on certain product names during training. For more, see [here](intent-manager-key-terms-concepts.html#entities).
 
 #### Should I create intents to capture common ways that customers state affirmative (yes, yes please, sure, I would like that…) and negative (no, no thank you, not at this time, I don’t think so…)?
 It is rarely advised to create an affirmative/negative intent for a conversation, as the intent is but an affirmation or negation of the intent contained in the preceding agent question. Hence, the affirmatives/negatives could envelope a variety of intents. Our model currently does not process the preceding context when rendering a prediction on a particular consumer message. 

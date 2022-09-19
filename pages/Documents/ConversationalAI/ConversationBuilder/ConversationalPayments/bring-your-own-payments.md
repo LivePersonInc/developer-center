@@ -20,11 +20,11 @@ With BYOP, the consumer’s cCommerce experience is similar to that in eCommerce
 
 In mobile messaging channels, the payment form is displayed as a pop-up. Once the consumer enters their credit card information and submits the form, the form closes, and the consumer is returned to the main conversation. This experience is shown below:
 
-<img style="width:350px" src="img/ConvoBuilder/byop1.png">
+<img style="width:350px" src="img/ConvoBuilder/byop1.png" alt="The experience of entering credit card info as a consumer">
 
 In the Web channel, the payment form is displayed in a non-intrusive, slide-out window. Here again, once the consumer submits the form, the form closes, and the consumer is returned to the main conversation. This experience is shown below:
 
-<img style="width:650px" src="img/ConvoBuilder/byop2.png">
+<img style="width:650px" src="img/ConvoBuilder/byop2.png" alt="The Payment Form being displayed for the consumer in a window that slides out from the main conversation window">
 
 ### The end-to-end flow
 1. During the conversation, the consumer selects the item to pay for. The bot presents the total amount and asks for the consumer’s confirmation to pay. 
@@ -34,12 +34,12 @@ In the Web channel, the payment form is displayed in a non-intrusive, slide-out 
 5. Your payment service processes the payment and calls back the bot by invoking LivePerson’s Callback Service (our [external Web forms integration API](conversation-builder-integrations-web-view-integration-api.html)) .
 6. The Callback Service returns the consumer to the appropriate place in the conversation. The transaction’s success or failure and the order details received from your payment system are sent to the consumer.
 
-<img style="width:800px" src="img/ConvoBuilder/byop3.png">
+<img style="width:800px" src="img/ConvoBuilder/byop3.png" alt="The end-to-end flow diagram for conversational payments">
 
 ### Privacy
 In a BYOP implementation, the consumer’s credit card information is never stored in LivePerson’s environment. The payment form is hosted in your secure environment. The bot simply fetches the form and presents it to the consumer. The data entered by the consumer is submitted directly to your system.
 
 ### Setup
-BYOP’s Callback Service is implemented using our [external Web form integrations API](conversation-builder-integrations-web-view-integration-api.html). See [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) for a detailed tutorial.
+BYOP’s Callback Service is implemented using our [external Web form integrations API](conversation-builder-integrations-web-view-integration-api.html). Learn more with [this detailed tutorial](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).
 
 **Implementation tip**: The slide-out window shown farther above is achieved using the “Slideout” option in the button settings of a [Structured](conversation-builder-interactions-questions.html#structured-questions) or [Button](conversation-builder-interactions-questions.html#button-questions) question. Take advantage of this option (in the **Target** setting in specific). It affords a tightly integrated and attractive consumer experience; therefore, it’s often preferred in a cCommerce scenario.
