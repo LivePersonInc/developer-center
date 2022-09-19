@@ -8,7 +8,7 @@ permalink: third-party-bots-amazon-lex-advanced-features.html
 indicator:
 ---
 
-{: .important}
+{: .note}
 At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
@@ -22,7 +22,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 3.1 below:
@@ -125,7 +125,7 @@ Figure 3.5 Showing the Custom Markup message for delay message
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .important}
+{: .note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Markup response in intent definition (as shown in Figure 3.6). There are two properties, `text` and `messageAudience`.
@@ -203,7 +203,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Receiving Rich Content Response (Messaging Only)
 
-{: .important}
+{: .note}
 Following guide is going to introduce how to implement Amazon Lambda functions specifically for **Amazon Lex** via Amazon Console. Continue if you are familiar and have access to Amazon Lambda and Amazon Lex.
 
 Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages

@@ -119,7 +119,7 @@ Hides previous chat history until user identify has been verified
    - **Type:** Bool
    - **Default value:** true (enabled)
 
-{: .notice}
+{: .alert}
 Available in SDK 6.0 and above.
 
 ---  
@@ -327,13 +327,13 @@ Conversation separator text and line color.
 #### enableConversationSeparator
 Toggle conversation separator view when conversation resolved from agent or consumer.
 
-{: .notice}
+{: .alert}
 This configuration is available in SDK 6.2.0 and above.
 
-{: .important}
+{: .note}
 Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
 
-{: .notice}
+{: .alert}
 Setting this property to false will also disable **enableConversationSeparatorTextMessage** and **enableConversationSeparatorLine**
 
 - **Type:** Bool
@@ -342,7 +342,7 @@ Setting this property to false will also disable **enableConversationSeparatorTe
 #### enableConversationSeparatorTextMessage 
 Toggle conversation separator text message when conversation resolved from agent or consumer.
 
-{: .notice}
+{: .alert}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Text won't be displayed even if this property is enable
 
 - **Type:** Bool
@@ -351,7 +351,7 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator T
 #### enableConversationSeparatorLine 
 Toggle conversation separator line when conversation resolved from agent or consumer.
 
-{: .notice}
+{: .alert}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed even if this property is enable
 
 - **Type:** Bool
@@ -360,13 +360,13 @@ if **enableConversationSeparator** is set to **false**, Conversation Separator L
 #### enableConversationSeparatorLineOnAutoClose 
 Toggle conversation separator line when conversation is auto close
 
-{: .notice}
+{: .alert}
 This configuration is available in SDK 6.2.0 and above.
 
-{: .important}
+{: .note}
 For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
 
-{: .notice}
+{: .alert}
 if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed for Auto Close Conversations even if this property is enable.
 
 - **Type:** Bool
@@ -1064,7 +1064,7 @@ Examples: TimeToRespond notification, local notification, etc.
 
 ### Domains
 
-{: .notice}
+{: .alert}
 Overriding this values with incorrect domains will create connection issues on the LPMessagingSDK (e.g. "Failed to connect to server" banner)
 
 #### csdsDomain
@@ -1265,7 +1265,7 @@ Bool used to allow manual configuration for enabling the SDK to register to LP P
 
 ### Menu Options
 
-{: .notice}
+{: .alert}
 Disabling all elements will prevent the menu from being render.
 
 #### showResolveConversationMenuOption
@@ -1437,7 +1437,7 @@ Color of the loader progress line background.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray5`](#lpColor) 
 
-<div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
+<div class="note">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
@@ -1807,7 +1807,7 @@ Sets border color for button type element on Structured Content
 - **Type:** color
 - **Default value:** [`lightBlue`](#LPColor)
 
-{: .notice}
+{: .alert}
 Accessibility compliance highlights the need for links and buttons to have a distinctive UI characteristic, changing this value might break compliance.
 
 #### structuredContentButtonTextColor

@@ -15,15 +15,15 @@ indicator:
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson Assistant Version 1 and 2**.
 
-{: .notice}
+{: .alert}
 **IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).
 
 ### Watson Version 1 Configuration
 
-{: .important}
+{: .note}
 See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
-{: .important}
+{: .note}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
@@ -122,7 +122,7 @@ Following information needs to be completed for LivePerson:
   </tbody>
 </table>
 
-{: .important}
+{: .note}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
 
 #### Test Connection
@@ -149,16 +149,16 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
-<div class="notice">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.</div>
+<div class="alert">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.</div>
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
 
 ### Watson Assistant Version 2 Configuration
 
-{: .important}
+{: .note}
 See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
-{: .important}
+{: .note}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With Watson V2 there are two methods of authentication that are currently supported. These methods are username/password and IAM (token based) authentication. You can choose either one for your bot configuration but IAM is **highly recommended** (as it is more secure).
@@ -247,7 +247,7 @@ You need to fill in the following infromation:
   </tbody>
 </table>
 
-{: .important}
+{: .note}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
 
 #### Test Connection
@@ -269,7 +269,7 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
 
-<div class="notice">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL.</div>
+<div class="alert">Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL.</div>
 
 Once you are done with the configuration and the connection test succeded, you can save your configuration by pressing on "Done".
 

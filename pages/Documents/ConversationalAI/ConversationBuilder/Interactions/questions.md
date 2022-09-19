@@ -75,7 +75,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 
 Like with any question, a structured question expects and waits for the user response before executing the next action.
 
-{: .important}
+{: .note}
 Structured questions aren't supported on all channels. Be sure to [verify the channel's support](conversation-builder-interactions-interaction-support.html) before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
 
 <img style="width:600px" src="img/ConvoBuilder/questions_structured2.png" alt="The default state of a Structured question">
@@ -175,7 +175,7 @@ if (metadata && metadata.id) {
 }
 ```
 
-{: .important}
+{: .note}
 Need help understanding custom data fields in API integrations? See [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields). Wondering when the **Process User Response** code gets invoked in the interaction? See [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 #### Notes on Structured questions

@@ -15,10 +15,10 @@ permalink: conversation-assist-recommendation-sources-setting-up-bots.html
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
-{: .important}
+{: .note}
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
 
 ### Supported bot types
@@ -83,7 +83,7 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
-{: .important}
+{: .note}
 If you later delete a bot, you’ll need to manually refresh the list of discovered bots in Conversation Assist in order to see the bot removed from the list.
 
 ### Step 5: Configure settings
