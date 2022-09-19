@@ -60,7 +60,7 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 2. Click the **Bots** tab.
 3. Click <img class="inlineimage" style="width:25px" alt="Sync button" src="img/agentassist/icon_refresh.png"> over on the right. This fetches the available bots. Available bots include those you’ve deployed and started (i.e., they’re valid bots that can serve a conversation). You should see all of the bots that you’ve created (both public and private) and other public bots within your organization.
 
-    <img width="700" alt="Bots tab showing a list of bots that are turned on but one bot that is turned off" src="img/agentassist/configbot1.png">
+    <img width="700" alt="Bots tab showing a list of bots and an indicator pointing to one bot that is turned off" src="img/agentassist/configbot1.png">
 
 4. Verify that your bot is displayed. If it isn't, consult the [troubleshooting info](conversation-assist-troubleshooting.html).
 
@@ -68,7 +68,8 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
 5. Assign one or more skills to the bot:
     1. Beside the bot, click the <img class="inlineimage" style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
+
+    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," enter a description of the bot's capabilities, and add one or more skills.
 
         <img width="700" alt="Manage recommendation source window with options for turning the bot on and off and for assigning skills" src="img/agentassist/configbot2.png">
 
