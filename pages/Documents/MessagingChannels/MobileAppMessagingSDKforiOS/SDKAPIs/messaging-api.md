@@ -33,7 +33,7 @@ func checkActiveConversation(_ conversationQuery: ConversationParamProtocol) -> 
 
 Use this API method only when there is no active conversation because it will clear the messages presented on the Conversation Screen. The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
 
-{: .important}
+{: .note}
 Due to current product limitations, when calling the `logout` method in Authentication Mode, the user's history shows up when they return to the conversation, even if calling `clearHistory` previously.
 
 ```swift
@@ -149,14 +149,14 @@ When unread messages are waiting for the consumer within the brand app, this inf
 
 With every push, the SDK receives the unread messages number through the LP Push Service.
 
-{: .important}
+{: .note}
 The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open. 
 
 **Get the unread message badge counter**
 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache. Otherwise, it will be fetched again with new data.
 
-{: .notice}
+{: .alert}
 This method doesn't require Consumer to register for Push Notifications. 
 Additionally if authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
 
@@ -175,7 +175,7 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, auth
 
 This method can be use to check if current consumer and push notification token are registered for Push Notifications on LP Pusher
 
-{: .notice}
+{: .alert}
 If authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
 
 ```swift
@@ -205,7 +205,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-{: .important}
+{: .note}
 The proprietary SDK notification is only for display purposes, interacting with it launches the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
 ### initialize
@@ -214,7 +214,7 @@ The SDK initialization is done only once, inside AppDelegate, and it checks that
 
 SDK can be initialized once without monitoringInitParams and then have another initialize call using this param.
 
-{: .important}
+{: .note}
 Passing monitoringInitParams is mandatory when using Monitoring API capabilities.
 
 ```swift
@@ -266,7 +266,7 @@ func logout(unregisterType: LPPusherUnregisterType,
 | Completion block | A completion block for successfully logout. | Completion block invokes only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block invokes if at least one of the logout steps has failed. |
 
-{: .important}
+{: .note}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 #### LPPusherUnregisterType
@@ -338,7 +338,7 @@ func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDK
 
 **Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number. 
 
-{: .important}
+{: .note}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 ### removeConversation
@@ -347,7 +347,7 @@ When navigating out of the conversation screen, this API removes the view contro
 
 Use this API method on the container's [deinit function](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html).
 
-{: .important}
+{: .note}
 Calling this API method from [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear) or [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear) can cause unexpected behavior.
 
 ```swift
@@ -358,7 +358,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations display in the following screens. | Default: sorts the conversations by account number. |
 
-{: .important}
+{: .note}
 When using Custom View Controller Mode, you must configure it so that you remove the Conversation view when leaving the App.  To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View displays, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below:
 
 ```swift
@@ -446,7 +446,7 @@ func setUserProfile(_ lpuser: LPUser, brandID: String)
 
 Use this API method to open the conversation screen.
 
-{: .important}
+{: .note}
 Not available on iOS 12 or below
 
 ```swift
@@ -498,7 +498,7 @@ When unread messages are waiting for the consumer within the brand app, this inf
 
 With every push, the SDK receives the unread messages number through the LP Push Service.
 
-{: .important}
+{: .note}
 The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open. 
 
 **Get the unread message badge counter**

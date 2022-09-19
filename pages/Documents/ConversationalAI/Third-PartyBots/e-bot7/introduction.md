@@ -12,7 +12,7 @@ indicator:
 
 ### Overview
 
-{: .notice}
+{: .alert}
 Please note the e-bot7 connector is only accessible for early adopters. Enabling the use requires a whitelisting done by
 LivePerson. Contact your LivePerson account representative for assistance.
 
@@ -21,12 +21,12 @@ The following document outlines the configuration of the **e-bot7** connector.
 The e-bot7 feature of Third Party Bots allows brands to connect to their existing bots in the ecosystem of e-bot7
 as a service of bot responses inside the Conversational Cloud.
 
-{: .important}
+{: .note}
 To use this integration you need to make sure to have set up an account with e-bot7, have an existing bot, and created an application to be able to connect with third-party systems. You can read more about applications in the [documentation of e-bot7](https://docs.e-bot7.com/docs/applications/how_apps_work).
 
 ### Configuration
 
-{: .important}
+{: .note}
 See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
 You will be presented with the following screen to complete the Vendor Settings in order to add bot connector.
@@ -46,5 +46,5 @@ The parameters are as follows:
 
 ### Limitations
 
-{: .important}
+{: .note}
 The technical interface of e-bot7 does not allow us to take analytic insights into the answer generation of a bot. For this reason, there is unfortunately no statistical data that is collected in connection with the evaluation of intent or that can be evaluated in the Conversation Cloud.

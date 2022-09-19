@@ -54,7 +54,7 @@ botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If yo
 
 `sendMessageWithQuickReplies` is used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number).
 
-{: .important}
+{: .note}
 A few limitations apply to quick replies. You can have up to 10 quick replies per message. The quick reply titles have a character limit of 20 chars. The quick reply payload (delimited by `~`) is optional.
 
 | Function Name | Arguments | Returns |
@@ -74,7 +74,7 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 
 `sendImmediateReply` delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
-{: .important}
+{: .note}
 There are [some limitations](conversation-builder-conversation-builder-interactions.html#limitations) on types of text that you can send.
 
 | Function Name | Arguments | Returns |

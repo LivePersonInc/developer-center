@@ -95,7 +95,7 @@ Add custom functions as attributes in your conditions in the same way that you a
 
 Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs. For more details, see [here](conversation-orchestrator-conversation-context-service-attributes.html#getting-attributes-through-functions). 
 
-{: .important}
+{: .note}
 Keep in mind that this function will be invoked every time the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account. 
 
 #### Operators

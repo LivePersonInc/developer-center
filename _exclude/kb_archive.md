@@ -4,7 +4,7 @@ This file contains an archive of out-of-date Knowledge Base documentation.
 
 If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches, returns and renders content as you'd expect.
 
-{: .important}
+{: .note}
 If you're just getting started with knowledge bases and want to try using this tool, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
 
    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/kb_chat3.png">

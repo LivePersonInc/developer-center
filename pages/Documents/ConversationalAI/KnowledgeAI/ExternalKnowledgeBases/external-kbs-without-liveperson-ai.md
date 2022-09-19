@@ -81,5 +81,5 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png" alt="An example search with the Answer Tester">
 
-    {: .important}
+    {: .note}
     Answers are evaluated by your external CMS. When they're returned, they're always assumed to be a match.

@@ -17,7 +17,7 @@ The following documentation outlines the configuration for the connector and how
 
 ### Configuration
 
-{: .important}
+{: .note}
 See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings if you select Dialogflow ES.
@@ -79,7 +79,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   </tbody>
 </table>
 
-{: .important}
+{: .note}
 Dialogflow ES adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is
 necessary for setting up a valid Dialogflow ES client with _Read Only API access_.
 Follow the Dialogflow ES documentation available [here](https://cloud.google.com/dialogflow/es/docs/quick/setup#sa-create)
@@ -104,11 +104,11 @@ While creating the service account a JSON file can be retrieved, containing most
 
 Figure 1.2 Private key JSON generated during the Service Account setup
 
-{: .notice}
+{: .alert}
 The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes.
 For the private_key especially, do not modify the string, do not remove any of the newline characters.
 
-{: .important}
+{: .note}
 You have to acknowledge the Data Disclaimer in order to use Third-Party Bots.
 
 To validate the credentials provided, you can now perform a connection test to see if the configuration you have provided
@@ -117,7 +117,7 @@ is working and the bot is reachable. You will be able to proceed in any case, bu
 
 ### Limitations
 
-{: .important}
+{: .note}
 Dialogflow ES has a [limitation on the length of the text it can process](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2/QueryInput#TextInput).
 Any query longer than 256 characters will cause Third-Party Bots to invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a **DIALOGFLOW_CHAR_LIMIT** event.

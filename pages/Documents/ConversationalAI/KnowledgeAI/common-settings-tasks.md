@@ -42,7 +42,7 @@ You can quickly search for and find an article that you want to edit.
 1. Open the knowledge base, and click **Articles** in the menu in the upper-left corner.
 2. In the Search box at the top of the page, enter a word or phrase that’s contained in the article's content (title, summary, detail, tags).
 
-    {: .important}
+    {: .note}
     If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail, tags).
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png" alt="Using the Search box to find an article">
@@ -73,7 +73,7 @@ Examples of invalid anchor tags:
 * `<a href="https://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
 * `<a onmouseover="alert('test')" href="https://example.com/test.jpg">click here</a>`
 
-{: .important}
+{: .note}
 If you're using an [external knowledge base](knowledgeai-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
@@ -112,7 +112,7 @@ Note the following:
 
 Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .important}
+{: .note}
 Before you delete a knowledge base, ensure it isn't being used in any KnowledgeAI integrations.
 
 **To delete a knowledge base**
