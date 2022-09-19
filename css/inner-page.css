@@ -677,6 +677,7 @@ div.sidebarTitle-holder {
 .post-content img.inlineimage {
   display: inline-block;
   box-shadow: none;
+  margin: 0;
 }
 
 .post-content .zoomimg {
