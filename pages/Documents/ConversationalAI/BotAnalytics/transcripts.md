@@ -32,9 +32,9 @@ For an explanation of each status, see [here](bot-analytics-key-terms-concepts.h
 
 You can use the **MACS** view to perform a targeted review of transcripts based on MACS data, such as the MACS score. For example, you might want to review the transcripts of conversations that had MACS 1 (i.e., a low conversation quality score). Or, you might want to review the transcripts of conversations where the bot didn't understand the consumer's question.
 
-<img style="width:800px" src="img/ConvoBuilder/ba_transcripts_macs.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/ba_transcripts_macs.png" alt="Accessing transcripts for review by way of a conversation list that's filtered by MACS criteria">
 
-To learn more about MACS, see [here](bot-analytics-macs.html).
+[Learn more about MACS](bot-analytics-macs.html).
 
 ### Transcript review via the Transcripts view
 
@@ -45,11 +45,11 @@ You can use the **Transcripts** view to access all the transcripts for a specifi
 1. [Access Bot Analytics](bot-analytics-overview.html#access-bot-analytics), and select the bot in the table on the main dashboard.
 2. From the dropdown menu on the menu bar, select **Transcripts**.
 
-    <img style="width:500px" src="img/ConvoBuilder/ba_transcripts_menu_option.png" alt="">
+    <img style="width:500px" src="img/ConvoBuilder/ba_transcripts_menu_option.png" alt="Accessing the Transcripts view in Bot Analytics">
 
 3. Use the filtering controls to display the desired transcripts.
 
-    <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_filter.png" alt="">
+    <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_filter.png" alt="Using the filtering controls to display desired transcripts">
 
     {: .important}
     Currently, Phrase Search is disabled.

@@ -35,8 +35,8 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 1. Access the *Bot Accounts* application, and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use Conversational Cloud Site Id** (Only available for LivePerson accounts.)
-    * **Use Conversation Builder Account Id** (This is your organization ID.)
+    * **Use Conversational Cloud Site ID** (Only available for LivePerson accounts.)
+    * **Use Conversation Builder Account ID** (This is your organization ID.)
 4. Enter the ID for your selection in step 5.
 5. Click **Update Account**.
 

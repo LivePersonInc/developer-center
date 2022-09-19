@@ -219,14 +219,14 @@ Understanding the context of a consumer message can be valuable. This context or
 
 Use the `getMetadata` function to retrieve conversation metadata from the most recent consumer message received by the bot. Some notes on this:
 
-* The list of metadata types that you can retrieve is [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata).
+* The list of metadata types that you can retrieve is in [this section](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata).
 * Remember: The metadata is always retrieved from the most recent consumer message. Also, the metadata changes with each consumer message.
 * Conversation metadata can be set by any service that can inject it into the conversation: a social messaging event, a button click event in a Structured or Button question in a Conversation Builder bot, etc.
 * If you use this function in the **Process User Response** code of a question, the metadata comes from the consumer response to the *current* question. If you use this function elsewhere in a question (or in a statement or integration), the metadata comes from the *last* consumer message. So keep in mind the [order of operations](conversation-builder-interactions-interaction-basics.html#order-of-operations) in interactions.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| getMetadata(metadataEventTypeName) | metadataEventTypeName (String) — The name of the metadata type. For the list of types, see [here](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). | If the metadata type exists, the JSON list is returned. If it does not, returns null/undefined. |
+| getMetadata(metadataEventTypeName) | metadataEventTypeName (String) — The name of the metadata type. For the list of types, see [this section](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). | If the metadata type exists, the JSON list is returned. If it does not, returns null/undefined. |
 
 #### Example
 ```javascript
@@ -335,7 +335,7 @@ Using a similar script to the above color example, which returns the data value,
 ### Get NLP responses
 
 {: .important}
-This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy).
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to switching engines.
 
 `getNlpResponse` is used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
 
@@ -361,7 +361,7 @@ botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: 
 ### Get sentiment
 
 {: .important}
-This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy).
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to switching engines.
 
 `getSentiment` is used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
 
@@ -448,7 +448,7 @@ This method is commonly used to provide a different experience or messaging to t
 
 * **Keys**: The keys are user-defined and arbitrary (REG_HOURS, AFTER_HOURS, etc.). If you want to specify a shift/time period for a particular day, use the name of the day (“FRIDAY\|”, “SATURDAY\|”, etc.) as appropriate. You can also use a specific date (e.g., 12.25.2018 for Christmas).
 * **Values**: If two time frames overlap, the later time frame is used.
-* **Time zone**: The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+* **Time zone**: The time zone value should be the time zone of the agent call center, not the user. Use the [appropriate format](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 {: .important}
 `getHoursType` is a basic function to specify agent time shifts.

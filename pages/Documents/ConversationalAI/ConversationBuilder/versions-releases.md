@@ -28,10 +28,10 @@ Any time you might be making large changes to the functionality of a bot, there 
 **To save a version**
 
 1. Open the bot.
-2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
+2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
-    <img class="fancyimage" width="800" src="img/ConvoBuilder/bestPractices/versions1.png">
+    <img class="fancyimage" width="800" src="img/ConvoBuilder/bestPractices/versions1.png" alt="The Versions page, which lists the bot's versions">
 
 3. In the Versions window, click **Save Current Version**.
 4. In the dialog that appears, specify the following:
@@ -47,7 +47,7 @@ A "restore" completely overwrites your existing bot with the selected, previous 
 **To restore a previous version**
 
 1. Open the bot.
-2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
+2. In the upper-left corner, just to the right of the menu bar, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon">, and select **Versions**.
 
     This displays the list of versions of the bot.
 
@@ -62,12 +62,12 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
 1. From the Conversation Builder dashboard that lists your bots, click **New Bot** and create a new bot based on the *Custom Bot* template. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
 
-    <img class="fancyimage" width="350" src="img/ConvoBuilder/bestPractices/releases1.png">
+    <img class="fancyimage" width="350" src="img/ConvoBuilder/bestPractices/releases1.png" alt="Creating a new bot and entering a a name with PROD appended to it">
 
     You only need to create the Production bot; you don't need to build out its dialogs and interactions.
 
 2. Return to your Development bot.
-3. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Releases**.
+3. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon">, and select **Releases**.
 4. In the upper-right corner, click **New Release**.
 5. In the New Releases dialog box, specify the following:
 
@@ -81,15 +81,15 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
 7. Click the link to the new bot that's provided. 
 
-    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases2.png">
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases2.png" alt="The link to the new bot">
 
     This opens the new bot.
 
-8. In the new Production bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
+8. In the new Production bot, click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> in the upper-left corner, and select **Releases**.
 
     Note the **Upgrade** button. If this button isn't enabled, your account needs a configuration change made by LivePerson; contact your administrator for assistance.
 
-    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases3.png">
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases3.png" alt="The Upgrade button on the Upgrade page">
 
 9. Click **Upgrade**.
 

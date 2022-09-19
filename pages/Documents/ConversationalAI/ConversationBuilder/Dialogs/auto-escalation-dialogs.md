@@ -13,11 +13,11 @@ indicator: both
 
 The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response](conversation-builder-dialogs-fallback-dialogs.html) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
 
-<img style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
+<img style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png" alt="An example of a conversation where the consumer is stuck">
 
 The Auto Escalation dialog solves this problem by offering the consumer the option of being transferred to a live agent (or another bot). You configure the number of times that the fallback response should be sent within a question. Once that threshold is reached, the Auto Escalation dialog is triggered automatically.
 
-<img style="width:450px" src="img/ConvoBuilder/dialogs_autoEscalate2.png">
+<img style="width:450px" src="img/ConvoBuilder/dialogs_autoEscalate2.png" alt="An example of a conversation where the consumer is stuck but offered a way out, by being transferred to an agent">
 
 ### Implement an Auto Escalation dialog
 
@@ -42,9 +42,9 @@ A bot can have only one Auto Escalation dialog.
 
 By default, an Auto Escalation dialog includes a Yes/No multiple choice question that asks the consumer if they want to speak to a live agent. If the consumer says Yes, the escalation (transfer) occurs. If the consumer says No, the interaction ends.
 
-<img style="width:900px" src="img/ConvoBuilder/dialogs_autoEscalate3.png">
+<img style="width:900px" src="img/ConvoBuilder/dialogs_autoEscalate3.png" alt="The default configuration of the Auto Escalation dialog">
 
-If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
+If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For info on configuring Agent Transfer interactions, see [this section](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 
 When you create the dialog, you configure two important settings that you might want to change afterward:
 
@@ -53,7 +53,7 @@ When you create the dialog, you configure two important settings that you might 
 
 ### Best practices
 
-For information on best practices when using Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions). This includes information on how to handle transfer failures and more.
+See [these best practices](conversation-builder-interactions-integrations.html#agent-transfer-interactions) for using Agent Transfer interactions. They include info on how to handle transfer failures and more.
 
 ### FAQs
 
