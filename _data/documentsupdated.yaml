@@ -252,15 +252,15 @@
     - documentname: Conversation Assist
       pages:
         - pagename: Overview
-        - pagename: Recommendation Sources
+        - pagename: Recommendation sources
           subpages:
-            - subpagename: Setting Up Bots
-            - subpagename: Setting Up Knowledge Bases
-            - subpagename: Configuring Settings
-            - subpagename: Clearing the Recommendations Cache
+            - subpagename: Setting up bots
+            - subpagename: Setting up knowledge bases
+            - subpagename: Configuring settings
+            - subpagename: Clearing the recommendations cache
         - pagename: Testing
-        - pagename: Agent Experience
-        - pagename: Best Practices
+        - pagename: Agent experience
+        - pagename: Best practices
         - pagename: Troubleshooting
         - pagename: Reports
         - pagename: FAQs

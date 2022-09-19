@@ -1,10 +1,10 @@
 ---
-pagename: Configuring Settings
+pagename: Configuring settings
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
-subfoldername: Recommendation Sources
+subfoldername: Recommendation sources
 permalink: conversation-assist-recommendation-sources-configuring-settings.html
 indicator: messaging
 ---

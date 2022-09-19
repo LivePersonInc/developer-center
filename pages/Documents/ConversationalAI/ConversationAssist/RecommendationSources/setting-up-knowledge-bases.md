@@ -1,5 +1,5 @@
 ---
-pagename: Setting Up Knowledge Bases
+pagename: Setting up knowledge bases
 redirect_from:
   - maven-maven-assist-recommended-actions-for-knowledge-base.html
   - maven-ai-maven-assist-recommended-actions-for-knowledge-base.html
@@ -10,7 +10,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
-subfoldername: Recommendation Sources
+subfoldername: Recommendation sources
 permalink: conversation-assist-recommendation-sources-setting-up-knowledge-bases.html
 indicator: messaging
 ---

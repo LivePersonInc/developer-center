@@ -1,5 +1,5 @@
 ---
-pagename: Setting Up Bots
+pagename: Setting up bots
 redirect_from:
   - maven-maven-assist-recommended-actions-for-bots.html
   - maven-ai-maven-assist-recommended-actions-for-automations.html
@@ -10,7 +10,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
-subfoldername: Recommendation Sources
+subfoldername: Recommendation sources
 permalink: conversation-assist-recommendation-sources-setting-up-bots.html
 indicator: messaging
 ---

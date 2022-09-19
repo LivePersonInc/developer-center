@@ -1,10 +1,10 @@
 ---
-pagename: Clearing the Recommendations Cache
+pagename: Clearing the recommendations cache
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
-subfoldername: Recommendation Sources
+subfoldername: Recommendation sources
 permalink: conversation-assist-recommendation-sources-clearing-the-recommendations-cache.html
 indicator: messaging
 ---
