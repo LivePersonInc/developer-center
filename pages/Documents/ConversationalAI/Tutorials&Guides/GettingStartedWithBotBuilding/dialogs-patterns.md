@@ -24,20 +24,20 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 ### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png" alt=""> icon.
+2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png" alt="Conversational AI bot"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click the orange **Next** arrow.
 5. Give the bot a unique name (e.g., Getting Started Bot) and a description, and click **Create Bot**.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/custom_bot.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/custom_bot.png" alt="Custom Bot window">
 
     This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello.” The bot also has a Fallback dialog with some fallback text.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/welcome_dialog.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/welcome_dialog.png" alt="Default Welcome dialog">
 
 6. Examine the Welcome dialog, which is displayed by default. 
 
-    (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
+    (Learn about the different parts of the [workspace](conversation-builder-bot-workspace.html) in Conversation Builder.)
 
 ### Step 2: Test the Welcome dialog
 
@@ -45,7 +45,7 @@ With the bot created, let’s see how to make it respond to user utterances.
 
 The first interaction in the Welcome dialog is a Dialog Starter interaction that allows us to match a user’s utterance using patterns or intents. Following that is a Text Statement interaction that displays some text ("Hi there! Thanks for coming!") to the user.
 
-Statement interactions (e.g., Text, Image) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
+Statement interactions (e.g., Text, Image) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (Learn more about [interactions](conversation-builder-interactions-interaction-basics.html).)
 
 Let’s see the interactions in action!
 
@@ -53,13 +53,13 @@ Let’s see the interactions in action!
 
 2. In the Preview window, enter “hello” or “hello there,” and click **Send**. You should see the welcome response.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/preview.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/preview.png" alt="Example of previewing a conversation">
 
     So how is the Welcome dialog triggered?
 
 3. Examine the Dialog Starter interaction. On the interaction tile, note the different patterns used to match this particular dialog. (You can also use an intent to trigger a dialog, but in this tutorial we focus on patterns.)
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/dialog_starter.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/dialog_starter.png" alt="Dialog Starter interaction with patterns for hi">
 
     Since this is a "Welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response.
 
@@ -70,13 +70,13 @@ Let’s see the interactions in action!
 
 4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, and “hola”). Click **Save**.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent.png" alt="The Patterns and Intent tab in the Interaction Settings window">
 
 5. In the Preview window, click **Reset**. This starts a new session that "picks up" your changes.
 
 6. Test the new patterns in the Preview window like you did before.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_2.png" alt="">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_2.png" alt="Previewing more hi patterns">
 
     Now that you’ve seen how a dialog is triggered, let’s change the welcome response by editing the Text Statement interaction.
 
@@ -101,25 +101,25 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
 4. Under Patterns, add a few patterns like `goodbye`, `bye`, `see ya`, etc. You can do this manually:
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent_2.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent_2.png" alt="The Patterns and Intent tab with some goodbye patterns added">
 
     Alternatively, a quick and easy way to add these patterns is to click the **Library** link, and select the "Bye" set of patterns.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/pattern_intent_library_2.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/pattern_intent_library_2.png" alt="Using the Library to quickly add patterns">
 
 5. Click **Save**.
 
     Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-6. In the Interactions palette (shown below), click the Text Statement icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png" alt="">. This inserts the interaction.
+6. In the Interactions palette (shown below), click the Text Statement icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png" alt="Text statement icon">. This inserts the interaction.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/interactions_palette.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/interactions_palette.png" alt="Text statement on the Interaction tool palette">
 
     (If you can't see the Interactions palette, close the Preview window, which might be covering it up.)
 
 7. In the interaction, enter a goodbye message (e.g., "Thanks for stopping by."), and press Enter.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/text_interaction_thanks.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/text_interaction_thanks.png" alt="Text statement with a goodbye message">
 
     Let's test the changes.
 
@@ -127,7 +127,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
 9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png" alt="">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png" alt="Previewing the conversation by entering goodbye">
 
 ### Step 4: Test the Fallback dialog
 
@@ -144,13 +144,13 @@ There can be only one dialog of type Fallback per bot.
 
 3. Select the Text Statement interaction, and change the message to, "Sorry, I am not able to understand. Please try again." Press Enter.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/fallback_starter.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/fallback_starter.png" alt="Changing the default message in the Fallback's statement">
 
 4. Open the Preview window again, and click **Reset Session**.
 
 5. Enter something other than your hello and goodbye patterns. You should see your fallback message.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_4.png" alt="">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_4.png" alt="Previewing the changes">
 
 ### What's next?
 

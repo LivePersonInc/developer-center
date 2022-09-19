@@ -22,12 +22,12 @@ For example, if you have a bot that has both a Sandbox and Production version, 9
 Conversation Builder includes a number of environment variables that you can use to take advantage of associated bot behaviors:
 
 #### Variables for customizing disambiguation
-You can use these environment variables to customize how disambiguation works; for details, see [here](conversation-builder-dialogs-disambiguation-dialogs.html#customization-points).
+You can use these environment variables to [customize how disambiguation works](conversation-builder-dialogs-disambiguation-dialogs.html#customization-points):
 - `system_groupConsecutiveIntentRanksInDisambiguation`
 - `system_useIntentsOnlyWithDialogStartersInDisambiguation`
 
 #### Variables for preventing consumer interruptions
-These environment variables work together to prevent consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-best-practices-prevent-consumer-interruptions.html).
+These environment variables work together to [prevent consumer interruptions while the bot is responding to the consumer](conversation-builder-best-practices-prevent-consumer-interruptions.html):
 - `system_handleIntermediateUserMessage`
 - `system_intermediateBotMessage`
 - `system_intermediateBotResponseTimeout`
@@ -45,7 +45,7 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
     * **Environment Name**: Enter a descriptive name. For example, you might have Sandbox and Production instances  (e.g., "Router Bot Sandbox").
     * **Environment Values**: Enter the key/value pairs for each variable. Variables *cannot* have spaces or special characters in their names, only letters and numbers.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png" alt="The Add Environment window">
 
     You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
 
@@ -57,7 +57,7 @@ Once you’ve created an environment, you need to connect it to your bot.
 
 **To link environment variables to a bot**
 
-1. Open the bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+1. Open the bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-doct icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Click **Bot Settings** from the menu that appears.
 3. Scroll down, and click **More Settings**.
 4. For **Bot Environment**, select the name of the environment.
@@ -95,7 +95,7 @@ To display an environment variable directly in text, use the following notation:
 
 For example:
 
-<img style="width:700px" src="img/ConvoBuilder/bestPractices/env_6.png">
+<img style="width:700px" src="img/ConvoBuilder/bestPractices/env_6.png" alt="An example of using an environment variable in a Text statement, and a view of how it renders to the consumer">
 
 ### Export environment variables to a CSV file
 
@@ -105,5 +105,5 @@ Exporting a set of environment variables is useful when you need to "move" the v
 
 1. From the dashboard that lists your bots, click **Bot Environments** in the upper-left corner.
 2. In the left panel, select the environment.
-3. In the right panel, under **More Options**, click <img style="width:25px" src="img/ConvoBuilder/icon_envVariables_download.png"> (Download icon) beside **Export Environment Variables**.
+3. In the right panel, under **More Options**, click <img style="width:25px" src="img/ConvoBuilder/icon_envVariables_download.png" alt="Download icon"> (Download icon) beside **Export Environment Variables**.
 4. Follow the browser prompts to access and save the CSV file to a location of your choice.

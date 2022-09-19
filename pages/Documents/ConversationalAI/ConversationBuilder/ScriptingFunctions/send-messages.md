@@ -75,7 +75,7 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 `sendImmediateReply` delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+There are [some limitations](conversation-builder-conversation-builder-interactions.html#limitations) on types of text that you can send.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -94,7 +94,7 @@ botContext.sendImmediateReply('I think you said, ' + response);
 
 Private messages are messages that are visible to all conversation participants *except* the consumer. Use `sendPrivateMessage` to programmatically send a private message at any point in the conversation flow.
 
-Note that there’s also a Private Message interaction that’s available. For more on this, and for example scenarios where you might want to send a private message, see [here](conversation-builder-interactions-statements.html#private-message).
+Note that there’s also a [Private Message interaction](conversation-builder-interactions-statements.html#private-message) that’s available.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

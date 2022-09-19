@@ -14,7 +14,7 @@ indicator: both
 
 The following, built-in `askMaven` functions in Conversation Builder can be used to programmatically call [Conversation Orchestrator](maven-ai-overview.html) capabilities. These functions conveniently wrap the [Next Actions APIs](conversation-orchestrator-next-actions-api-overview.html). You can use them as part of a [Conversation Orchestrator](conversation-builder-bot-templates-conversation-orchestrator.html) bot to ask Conversation Orchestrator for the next best actions (route to skill, route to Knowledge Base article, etc.).
 
-Both methods return a String of the JSON response from the askMaven API. For a response example, see [here](maven-ai-askmaven-methods.html#get-next-actions).
+Both methods return a String of the JSON response from the askMaven API. See this [response example](maven-ai-askmaven-methods.html#get-next-actions).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
