@@ -8,7 +8,7 @@ subfoldername: Methods
 permalink: mtls-methods-create-certificate-for-account.html
 ---
 
-{: .important}
+{: .note}
 Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
 
 This API creates a certificate for a specific account ID.

@@ -55,7 +55,7 @@ Enable or disable the ability to display Proactive and IVR Deflection messages o
     - Consumer tapped InApp Notification
 - **Available since:** 6.4.1
 
-{: .notice}
+{: .alert}
 This flags enables SDK to process InApp Notifications for Proactive and IVR Deflection messages, is not related to Push Notifications received when the Application is not active.
 
 -----

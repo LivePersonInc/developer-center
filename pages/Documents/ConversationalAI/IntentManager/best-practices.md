@@ -27,7 +27,7 @@ The average number of intents for a taxonomy with good coverage is 20-60.
 ### Number of training phrases
 For optimal performance, LivePerson recommends 60 to 100 training phrases per intent, but not more than 150 due to the potential issue of model overfitting.
 
-{: .important}
+{: .note}
 Currently, you can only pull a maximum of 500 messages at a time. If you classify five messages as an intent out of that set, you will need to pull five times more data to get enough training utterances for that intent.
 
 ### Training phrases

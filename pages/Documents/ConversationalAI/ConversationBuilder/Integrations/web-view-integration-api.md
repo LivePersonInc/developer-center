@@ -21,10 +21,10 @@ The Web View API can be used by the external system to:
 - Post a message to the chat client
 - Invoke a dialog starter to trigger a dialog flow
 
-{: .important}
+{: .note}
 Don’t use this API to post Personally Identifiable Information (PII) or Payment Card Industry (PCI) data because the data is not masked.
 
-{: .important}
+{: .note}
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before using this API.
 
 ### Getting started

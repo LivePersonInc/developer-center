@@ -69,7 +69,7 @@ Choose your attribute, the operator and values.
 
 Here you type the variable name “orchestrator.phoneNumber”, choose “IN” as the operator, and check to see if it's in a “list” containing values 1111, 2222, 3333 and 4444.
 
-{: .important}
+{: .note}
 “namespace.variableName” is the way to leverage context variables for creating routing policies.
 
 #### Step 5: Configure your action to transfer to a skill
@@ -226,7 +226,7 @@ Using the LivePerson Functions-based custom attribute in a policy:
 
 Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs.
 
-{: .important}
+{: .note}
 Keep in mind that this function is invoked every time the call to Dynamic Routing is made, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account.
 
 ### Operators

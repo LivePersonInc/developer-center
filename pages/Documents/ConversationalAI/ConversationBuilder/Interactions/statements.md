@@ -43,7 +43,7 @@ Video statements currently aren't supported by Conversational Cloud. As an alter
 
 **For Apple Messages for Business only.**
 
-{: .important}
+{: .note}
 Use of Apple rich links for video is not supported at this time.
 
 If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
@@ -56,7 +56,7 @@ Apple rich links let consumers directly preview an inline image or video. If you
 
 #### Rich Link settings
 
-{: .important}
+{: .note}
 Use of Apple rich links for video is not supported at this time.
 
 | Setting | Description | Required or Optional | Example |

@@ -9,7 +9,7 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-4-1-and-below.htm
 indicator: messaging
 ---
 
-{: .notice}
+{: .alert}
 Please note: these attributes are relevant for **version 4.1 of the SDK and lower**. For the list of current attributes, please see [this](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html) document.
 
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
@@ -1327,7 +1327,7 @@ Radial loader progress background color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-<div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
+<div class="note">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
 #### photoSharingOpenMenuImageButton
 
