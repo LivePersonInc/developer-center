@@ -72,7 +72,7 @@ As Apple mentioned in their article:
 
 “The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”. 
 
-{: .important}
+{: .note}
 For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
 
 ### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.

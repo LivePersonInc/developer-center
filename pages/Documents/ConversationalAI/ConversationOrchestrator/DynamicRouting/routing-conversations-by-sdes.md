@@ -99,7 +99,7 @@ The following SDEs are already available in the dynamic routing interface and ca
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
 
-{: .important}
+{: .note}
 This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
 
 #### Detailed process
@@ -122,7 +122,7 @@ This method might have performance issues. Please contact your LivePerson accoun
 8. Click **Create function**.
 9. In the editor, delete any existing code, and add the code in the snippet below.
 
-{: .important}
+{: .note}
 This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
 
 ```javascript

@@ -26,14 +26,14 @@ In order to enable Apple Token Authentication, you will require the following da
 
 * **Key File**: p8 file containing Apple Token Key, to obtain your Token Key, see how to [Obtain an Encryption Key and Key ID from Apple](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns).
 
-{: .important}
+{: .note}
 Key File should be an authentication token signing key, specified as a text file (with a .p8 file extension), as downloaded from the Apple Developer Portal.
 
 * **Team ID:**: Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
 
 * **Key ID:**: A 10-character string with the Key ID.
   
-{: .important}
+{: .note}
 The Key ID is provided by Apple during the creation of the Apple Token Authentication.
 
 ### How to create a Token based App on the Conversational Cloud
@@ -51,10 +51,10 @@ This information can be added to the Mobile app management section under Campaig
 
 <img src="/img/pusher/AppleKeyDetails.png" alt="Apple Push Token Authentication Details" style="width: 800px;padding: 20px;">
 
-{: .important}
+{: .note}
 if your Application is running on debug mode (running from Xcode), the **Production** switch should be **OFF**.
 
-{: .notice}
+{: .alert}
 if using an Application downloaded from the App Store, or any other Ad-Hoc distribution service, the **Production** switch should be **ON**. 
 
 ### How to get your Apple Team ID

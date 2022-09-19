@@ -8,7 +8,7 @@ permalink: third-party-bots-liveperson-functions-advanced-features.html
 indicator:
 ---
 
-{: .important}
+{: .note}
 As the LivePerson functions feature uses [LivePerson Functions](liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Sending Encoded Metadata
@@ -21,7 +21,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses.
@@ -30,7 +30,7 @@ Encoded Metadata can be sent with simple Text, Rich Content (structured content)
 
 For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple two text message response is below:
 
-{: .important}
+{: .note}
 `encodedMetadata` will be supplied to all the messages defined in `messages` property.
 
 ```javascript
@@ -49,7 +49,7 @@ const payload = {
 
 For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the a simple text message and a rich content response is below:
 
-{: .important}
+{: .note}
 `encodedMetadata` will be supplied to all the messages defined in `messages` property and also to rich content.
 
 ```javascript
@@ -242,7 +242,7 @@ const payload = {
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .important}
+{: .note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.

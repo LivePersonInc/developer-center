@@ -11,7 +11,7 @@ indicator: messaging
 
 Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, see the [MobileSDK iOS Quick Start guide](/mobile-app-messaging-sdk-for-ios-quick-start.html).
 
-{: .notice}
+{: .alert}
 SDK versions are not downgrade-compatible.
 
 <hr/>

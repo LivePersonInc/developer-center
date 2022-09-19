@@ -22,7 +22,7 @@ You will choose a template, review what the template includes, configure the ite
 
 2. Fill in the required Bot info.
 
-    {: .important}
+    {: .note}
     Builder version must be 2.0
 
     <img style="width:700px" src="img/ConvoBuilder/libraries/createsettings.png" alt="">

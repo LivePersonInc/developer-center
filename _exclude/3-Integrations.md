@@ -12,7 +12,7 @@ indicator: both
 
 Many use cases require integration with an API to send and receive data. Following the "billing" use case, in this tutorial you add an integration to check a user’s account balance.
 
-{: .important}
+{: .note}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
 ### Step 8: Create an account balance API integration

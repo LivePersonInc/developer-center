@@ -464,7 +464,7 @@ this.on('ms.MessagingEventNotification', body => {
 
 #### Social Messaging Event
 
-{: .important}
+{: .note}
 The following capability requires additional Account feature to be configured. Please contact your account team to enable.
 
 ***Facebook — Schema***
@@ -669,7 +669,7 @@ const content = {
 };
 ```
 
-{: .important}
+{: .note}
 The attribute conversationState.dmChatId refers to the Twitter account where the conversation was initiated on Twitter Connector.
 
 **Twitter Public — Consumer to Agent**
@@ -756,7 +756,7 @@ const content = {
 };
 ```
 
-{: .important}
+{: .note}
 The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
 

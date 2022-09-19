@@ -17,7 +17,7 @@ However, LivePerson does offer a set of predefined, industry-specific bot templa
 
 ### Create a custom bot
 
-{: .important}
+{: .note}
 LivePerson recommends that before you create a bot, you set up the [domains](intent-manager-key-terms-concepts.html#domains), [intents](intent-manager-key-terms-concepts.html#intents), and [entities](intent-manager-key-terms-concepts.html#entities) that the bot will need. This makes creation of the bot much faster and easier because the [Assist tool](conversation-builder-assist.html) can use that information along the way to suggest suitable intents and entities to use.
 
 **To create a custom bot**
