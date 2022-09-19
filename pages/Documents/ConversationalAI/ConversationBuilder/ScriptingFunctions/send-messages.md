@@ -1,12 +1,12 @@
 ---
-pagename: Send Messages
+pagename: Send messages
 redirect_from:
     - conversation-builder-scripting-functions-sending-messages.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-send-messages.html
 indicator: both
 ---

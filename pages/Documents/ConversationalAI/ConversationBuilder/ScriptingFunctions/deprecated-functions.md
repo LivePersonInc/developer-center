@@ -1,11 +1,11 @@
 ---
-pagename: Deprecated Functions
+pagename: Deprecated functions
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
 ---

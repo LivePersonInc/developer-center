@@ -1,12 +1,12 @@
 ---
-pagename: Get & Set Session Data
+pagename: Get & set session data
 redirect_from:
     - conversation-builder-scripting-functions-get-set-contextual-data.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-get-set-session-data.html
 indicator: both
 ---

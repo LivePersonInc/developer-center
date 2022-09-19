@@ -1,5 +1,5 @@
 ---
-pagename: Environment Variables
+pagename: Environment variables
 redirect_from:  
     - conversation-builder-best-practices-using-environment-variables.html
     - conversation-builder-best-practices-environment-variables.html

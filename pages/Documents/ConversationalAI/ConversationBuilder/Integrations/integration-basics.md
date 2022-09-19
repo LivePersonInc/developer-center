@@ -1,5 +1,5 @@
 ---
-pagename: Integration Basics
+pagename: Integration basics
 redirect_from:
     - conversation-builder-conversation-builder-integrations.html
     - conversation-builder-integrations.html

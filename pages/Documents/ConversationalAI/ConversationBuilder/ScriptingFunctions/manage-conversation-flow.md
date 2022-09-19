@@ -1,12 +1,12 @@
 ---
-pagename: Manage Conversation Flow
+pagename: Manage conversation flow
 redirect_from:
     - conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-manage-conversation-flow.html
 indicator: both
 ---

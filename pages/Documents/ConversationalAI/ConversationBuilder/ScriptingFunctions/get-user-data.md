@@ -1,12 +1,12 @@
 ---
-pagename: Get User Data
+pagename: Get user data
 redirect_from:
     - conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-get-user-data.html
 indicator: both
 ---

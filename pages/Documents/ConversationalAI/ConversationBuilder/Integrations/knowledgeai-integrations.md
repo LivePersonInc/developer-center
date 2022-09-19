@@ -1,5 +1,5 @@
 ---
-pagename: KnowledgeAI Integrations
+pagename: KnowledgeAI integrations
 redirect_from:
     - conversation-builder-integrations-knowledge-base-integrations.html
 Keywords:

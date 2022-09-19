@@ -1,5 +1,5 @@
 ---
-pagename: The Basics
+pagename: The basics
 redirect_from:
     - conversation-builder-conversation-builder-variables-slots.html
     - conversation-builder-variables-slots.html
@@ -7,7 +7,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Variables & Slots
+subfoldername: Variables & slots
 permalink: conversation-builder-variables-slots-the-basics.html
 indicator: both
 ---

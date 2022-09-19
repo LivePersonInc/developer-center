@@ -203,40 +203,40 @@
             - subpagename: Configuration - Settings
             - subpagename: Troubleshooting
         - pagename: Assist
-        - pagename: Variables & Slots
+        - pagename: Variables & slots
           subpages:
-            - subpagename: The Basics
+            - subpagename: The basics
             - subpagename: Variables
             - subpagename: Slots
-        - pagename: System Patterns
+        - pagename: System patterns
         - pagename: Integrations
           subpages:
-            - subpagename: Integration Basics
-            - subpagename: API Integrations
-            - subpagename: Email Integrations
-            - subpagename: KnowledgeAI Integrations
-            - subpagename: LivePerson Agent Escalation Integrations
-            - subpagename: File Integrations
-            - subpagename: LivePerson Functions Integrations
-            - subpagename: Web View Integration API
-            - subpagename: Using Consumer Access Tokens
+            - subpagename: Integration basics
+            - subpagename: API integrations
+            - subpagename: Email integrations
+            - subpagename: KnowledgeAI integrations
+            - subpagename: LivePerson Agent Escalation integrations
+            - subpagename: File integrations
+            - subpagename: LivePerson Functions integrations
+            - subpagename: Web View integration API
+            - subpagename: Using consumer access tokens
             - subpagename: Troubleshooting
-        - pagename: Environment Variables
-        - pagename: Versions & Releases
-        - pagename: Global Functions
-        - pagename: Scripting Functions
+        - pagename: Environment variables
+        - pagename: Versions & releases
+        - pagename: Global functions
+        - pagename: Scripting functions
           subpages:
             - subpagename: Introduction
-            - subpagename: Functions List
-            - subpagename: Get & Set Session Data
-            - subpagename: Get User Data
-            - subpagename: Get Integration Data
-            - subpagename: Send Messages
-            - subpagename: Manage Conversation Flow
-            - subpagename: Log & Debug
+            - subpagename: Functions list
+            - subpagename: Get & set session data
+            - subpagename: Get user data
+            - subpagename: Get integration data
+            - subpagename: Send messages
+            - subpagename: Manage conversation flow
+            - subpagename: Log & debug
             - subpagename: Manage the Conversation Context Service
             - subpagename: askMaven
-            - subpagename: Deprecated Functions
+            - subpagename: Deprecated functions
         - pagename: Testing & Deployment
           subpages:
             - subpagename: Previewing

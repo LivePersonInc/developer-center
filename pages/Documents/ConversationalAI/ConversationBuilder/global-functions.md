@@ -1,5 +1,5 @@
 ---
-pagename: Global Functions
+pagename: Global functions
 redirect_from:
 Keywords:
 sitesection: Documents

@@ -1,11 +1,11 @@
 ---
-pagename: Get Integration Data
+pagename: Get integration data
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-get-integration-data.html
 indicator: both
 ---

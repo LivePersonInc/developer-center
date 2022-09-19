@@ -1,5 +1,5 @@
 ---
-pagename: System Patterns
+pagename: System patterns
 redirect_from:
 Keywords:
 sitesection: Documents

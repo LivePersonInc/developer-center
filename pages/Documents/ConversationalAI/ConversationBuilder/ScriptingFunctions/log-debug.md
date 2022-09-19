@@ -1,12 +1,12 @@
 ---
-pagename: Log & Debug
+pagename: Log & debug
 redirect_from:
     - conversation-builder-scripting-functions-debugging-and-logging.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting Functions
+subfoldername: Scripting functions
 permalink: conversation-builder-scripting-functions-log-debug.html
 indicator: both
 ---

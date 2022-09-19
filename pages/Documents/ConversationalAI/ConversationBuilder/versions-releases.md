@@ -1,5 +1,5 @@
 ---
-pagename: Versions & Releases
+pagename: Versions & releases
 redirect_from: 
     - conversation-builder-getting-started-getting-started-part-4.html
     - conversation-builder-best-practices-versions-releases-change-management.html

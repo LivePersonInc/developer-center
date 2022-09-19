@@ -1,5 +1,5 @@
 ---
-pagename: Using Consumer Access Tokens
+pagename: Using consumer access tokens
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
