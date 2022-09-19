@@ -36,7 +36,7 @@ This API updates a certificate for a specific account id.
   }
 ]
 ```
-{: .notice}
+{: .alert}
 The body is a byte array input of the p12 file.
 
 **Path Parameters**

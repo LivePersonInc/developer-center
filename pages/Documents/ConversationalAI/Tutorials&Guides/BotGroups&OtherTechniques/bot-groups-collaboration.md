@@ -10,7 +10,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration
 indicator: both
 ---
 
-{: .important}
+{: .note}
 This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 ### "Many Bots" design approach

@@ -36,7 +36,7 @@ _Optional_ — when using this method, you can also set a special redirect URL w
 
 if you want to connect in an *unauthenticated* way, you have two options: Set up Unauth flow messaging, or use Signup flow, by passing an LPAuthenticationParams of type UN_AUTH or SIGN_UP, respectively.
 
-{: .important}
+{: .note}
 Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 **ConversationViewParams:**

@@ -13,7 +13,7 @@ permalink: conversation-assist-overview.html
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Watch the video
@@ -34,7 +34,7 @@ On the **Home** page of Conversation Assist, you'll find a dashboard of rich ana
 
 <img width="800" alt="View of the top of the Conversation Assist dashboard" src="img/agentassist/dashboard.png" alt="">
 
-{: .important}
+{: .note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 ### Intent-based recommendations

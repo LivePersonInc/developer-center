@@ -20,7 +20,7 @@ indicator: both
 4. If necessary, add more intent qualifiers or training phrases to the article to improve the results.
 5. Add positive and/or negative learnings if appropriate.
 
-{: .important}
+{: .note}
 Keep in mind the best practices discussed farther below on this page.
 
 #### What is the intent score/threshold?

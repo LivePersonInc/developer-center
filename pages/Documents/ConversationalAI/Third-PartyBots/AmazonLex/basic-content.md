@@ -8,11 +8,11 @@ permalink: third-party-bots-amazon-lex-basic-content.html
 indicator:
 ---
 
-{: .important}
+{: .note}
 At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
-{: .important}
+{: .note}
 Following guide is going to introduce how to implement functions specifically for **Amazon Lex** using Amazon Console. Continue if you are familiar and have access to Amazon Console.
 
 ### The Welcome Event
@@ -70,7 +70,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Lex, send a _custom payload_ option via an intent.
 
-{: .important}
+{: .note}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
 ```json
@@ -135,7 +135,7 @@ This should contain valid structured content, along with any optional metadata r
 
 ### Sending Quick Replies (Structured Content)
 
-{: .important}
+{: .note}
 **Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
@@ -203,7 +203,7 @@ Figure 2.4 QuickReplies Structured Content example
 
 ### Bot Actions
 
-{: .notice}
+{: .alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer / Escalations
@@ -251,7 +251,7 @@ Figure 2.6
 
 #### Transfer to Agent
 
-{: .important}
+{: .note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill

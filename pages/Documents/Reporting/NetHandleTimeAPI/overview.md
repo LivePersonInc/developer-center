@@ -9,10 +9,10 @@ indicator: both
 
 ### Introduction
 
-{: .notice}
+{: .alert}
 This API is currently in its beta version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
 
-{: .important}
+{: .note}
 Please use the latest version as it contains the most recent updates and fixes. The newest version will be maintained whereas previous versions will be under low maintenance for backward compatability. 
 
 Net Handle Time (NHT) is a metric produced by a heuristic calculation, which is designed to provide an approximation of the average human agent's effort time to service a single consumer interaction (agent segment) across a skill in a one-hour interval.
@@ -37,7 +37,7 @@ A few things you'll need to get started with this API:
 
 4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
 
-{: .important}
+{: .note}
 This API is not available by default. To enable it please contact your account manager.
 
 ### Use cases
