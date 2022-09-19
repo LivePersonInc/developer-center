@@ -68,6 +68,7 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
 5. Assign one or more skills to the bot:
     1. Beside the bot, click the <img class="inlineimage" style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+
     2. In the **Manage recommendation source** dialog, change the **Status** to "ON," enter a description of the bot's capabilities, and add one or more skills.
 
         <img width="700" alt="Manage recommendation source window with options for turning the bot on and off and for assigning skills" src="img/agentassist/configbot2.png">
