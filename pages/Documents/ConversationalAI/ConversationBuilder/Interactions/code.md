@@ -17,7 +17,7 @@ Is there a cutting-edge interaction in a channel that you want to implement in y
 
 The Universal interaction, which is designed for advanced bot developers, is a flexible, channel-agnostic, code-based interaction that you can customize to render any conversational response from the bot. It opens up many opportunities to achieve the exact layout and styling that you require. For example, you might want to use a vertical card layout or perhaps a button question that uses buttons without button labels. In general, if you can code it in JSON according to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud, you can achieve it.
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png" alt="">
+<img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png" alt="An example Universal interaction in the dialog editor">
 
 {: .important}
 The Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
@@ -28,11 +28,11 @@ To use this interaction, first add it to the dialog. You'll find the **Universal
 
 Next, within the interaction, click **+ Enter JSON and preview**.
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_universal2.png" alt="">
+<img style="width:600px" src="img/ConvoBuilder/interactions_universal2.png" alt="The Enter JSON and preview button on the Universal interaction">
 
 This opens the editor, which works as follows:
 
-<img style="width:800px" src="img/ConvoBuilder/interactions_universal3.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/interactions_universal3.png" alt="The editor for configuring a Universal interaction, with several features highlighted">
 
 1. Manually enter the JSON into the editor. You are limited only by what’s supported by the Conversational Cloud, as the JSON must adhere to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Otherwise, the interaction won’t render correctly.
 
@@ -52,7 +52,7 @@ With the exception that you enter JSON code instead of interaction data, a Unive
 
 * Use bot context and environment variables. Enclose the variable in quotes, like so:
 
-    <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png" alt="">
+    <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png" alt="Enclosing variables in quotes">
 
 * [Configure](conversation-builder-interactions-configuration-settings.html) basic settings. For example, enable the **User Input Required** setting if the interaction should wait for a response from the consumer. If you disable the setting, the flow will immediately continue to the next action.
 * [Configure](conversation-builder-interactions-configuration-next-action.html) a Next Action, including via custom rules.
@@ -60,18 +60,110 @@ With the exception that you enter JSON code instead of interaction data, a Unive
 
 #### Templates
 
-There are templates available [here](https://github.com/LivePersonInc/ConversationBuilder-Samples/tree/main/universal-tile-templates) for various channels. Use these to get up and running quickly.
+There are [templates](https://github.com/LivePersonInc/ConversationBuilder-Samples/tree/main/universal-tile-templates) available for various channels. Use these to get up and running quickly.
 
 #### JSON validation
 
 Within the code editor, a validation check is performed to ensure that the code is valid JSON.
 
-<img style="width:400px" src="img/ConvoBuilder/interactions_universal4.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/interactions_universal4.png" alt="Examples of warning and failure indicators after validation checks are performed">
 
 However, there is no validation check to ensure that the code adheres to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
 
 {: .important}
 As mentioned earlier, comments in the JSON aren't supported.
+
+#### Updating conversation metadata
+
+You can use the Universal interaction to send metadata during a conversation with the consumer. You can send the metadata either at the interaction level or at the button level. And like with any other interaction, you can retrieve the conversation’s metadata using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function in the Process User Response code of the interaction.
+
+##### Example 1: Sending metadata at the interaction level
+
+If your target channel is Apple Messages for Business, you might need to support authenticated messages that, by their nature, must include metadata.
+
+In this example, metadata is added at the interaction level in order to send an[authentication request](apple-messages-for-business-templates-apple-auth-template.html#sending-an-apple-authentication-request-to-a-consumer) to the consumer.
+
+```javascript
+{
+  "type": "vertical",
+  "elements": [{
+    "type": "text",
+    "text": "Sign In",
+    "tooltip": "Sign In"
+  }]
+,
+    "metadata": [
+  {
+    "type": "BusinessChatMessage",
+    "receivedMessage": {
+      "title": "Sign In to LivePerson",
+      "subtitle": "Thank you",
+      "style": "small"
+    },
+    "replyMessage": {
+      "title": "You Signed in",
+      "subtitle": "Thank you",
+      "style": "small"
+    }
+  },
+  {
+    "type": "ConnectorAuthenticationRequest",
+    "requestIdentifier": "req002",
+    "apple": {
+      "oauth2": {
+        "scope": ["profile", "openid", "email", "apple-business-chat.read"],
+        "clientSecret": "PWM9txAxC8DQFLu",
+        "responseEncryptionKey": "BGhyX8jmK31"
+      }
+    }
+  }
+]
+}
+```
+
+Once the consumer authenticates by signing in with a username and password, you can retrieve the authentication token from the [response metatadata](apple-messages-for-business-templates-apple-auth-template.html#receiving-an-apple-authentication-response-from-a-consumer) using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function. The token can then be stored and used throughout the conversation.
+
+##### Example 2: Sending metadata at the button level
+
+In this example, metadata is set in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function.
+
+```javascript
+{
+  "message": "Title message",
+  "type": "quickReplies",
+  "itemsPerRow": 4,
+  "replies": [
+    {
+      "title": "I am a Quick Reply",
+      "tooltip": "I am a Quick Reply tooltip",
+      "type": "button",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "I just sent a quick reply."
+          }
+        ],
+    	"metadata": [
+    		{
+    		"type":"ActionReason",
+    		"reasonId":"reasonId",
+    		"reason":"reason"
+    		}
+    	],
+      },
+      "style": {
+        "bold": true,
+        "italic": true,
+        "color": "#ffffff",
+        "background-color": "#e53232",
+        "border-color": "#e53232",
+        "border-radius": 10
+      }
+    }
+  ]
+}
+```
 
 #### Testing
 
@@ -86,10 +178,6 @@ The bot-level [Preview](conversation-builder-testing-deployment-previewing.html)
 As mentioned above, the Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 Use the Universal interaction when you want to render a particular bot response (i.e., layout and styling) that isn't yet supported by one of the Statement or Question interactions. As examples, you can use it instead of the Text, Structured, or Multiple Choice Question interactions.
-
-##### Can I use the Universal interaction to update the conversation’s metadata?
-
-No, this can't be done.
 
 ##### How does use of the Universal tile impact analytics?
 

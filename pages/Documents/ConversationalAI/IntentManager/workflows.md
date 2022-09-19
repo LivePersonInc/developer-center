@@ -11,7 +11,7 @@ indicator: both
 
 Common workflows often require you to bounce between different areas of Intent Manager: Discover, Build, Optimize and Analyze. They also require that you use several features of the application, each robust on their own. Use this topic to guide you through various workflows.
 
-Keep in mind the best practices [here](intent-manager-best-practices.html).
+Keep in mind the [best practices](intent-manager-best-practices.html).
 
 ### A view from 1,000 feet
 

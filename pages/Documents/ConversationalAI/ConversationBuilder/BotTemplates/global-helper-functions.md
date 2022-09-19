@@ -29,7 +29,7 @@ This bot template serves to demonstrate the functionality of many of these globa
 
 #### Global Functions
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_ghf1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_ghf1.png" alt="The Global Functions page in a bot created from the Global Helper Functions bot template">
 
 The functions are designed to simplify the use of pre/post process code. All functions are provided with the dialog template.
 
@@ -202,7 +202,7 @@ function previous(){
 
 #### Init variables
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_ghf1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_ghf1.png" alt="Init variables on the Global Functions page in a bot created from the Global Helper Functions bot template">
 
 Automatically establishes frequently used values as bot variables. Includes LP Engagement Attributes as well as channel, account, user, and conversation-specific values. Is also used to establish default skills and registration of [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) namespace.
 

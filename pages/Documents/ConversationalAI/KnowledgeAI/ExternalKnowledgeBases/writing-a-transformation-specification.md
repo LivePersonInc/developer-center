@@ -17,13 +17,13 @@ The data schema used by your CMS differs from that used by LivePerson KnowledgeA
 
 If you’re using a popular CMS vendor (e.g., Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt spec. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default spec is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
 
-Jolt provides several, out-of-the-box transforms that you can use when writing the spec; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
+Jolt provides several, [out-of-the-box transforms](https://github.com/bazaarvoice/jolt#stock-transforms) that you can use when writing the spec. The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
-The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
+The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the [Jolt test samples](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
 ### Supported LivePerson attributes
 
-See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
+See [this section](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
 
 ### Reading the examples
 

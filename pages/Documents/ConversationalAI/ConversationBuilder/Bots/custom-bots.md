@@ -25,7 +25,7 @@ LivePerson recommends that before you create a bot, you set up the [domains](int
 2. On the **Bots** page, click **New Bot** in the upper-right corner.
 3. In the window that appears, select the **Custom Bot** template.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bot_custom_add.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bot_custom_add.png" alt="The right-facing arrow to click to create a custom bot">
     
     The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. 
 
@@ -42,4 +42,4 @@ LivePerson recommends that before you create a bot, you set up the [domains](int
 7. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
 8. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
-    For a Development-to-Production release workflow, see [here](conversation-builder-versions-releases.html).
+    See [this Development-to-Production release workflow](conversation-builder-versions-releases.html).
