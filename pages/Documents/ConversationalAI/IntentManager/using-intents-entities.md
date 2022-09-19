@@ -29,7 +29,7 @@ Looking for a tutorial? See the [Meta Intents & Knowledge Bases tutorial](tutori
 
 An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY.
 
-{: .important}
+{: .note}
 Remember when using entities that entity names are case-sensitive.
 
 #### Capture entities using Conversation Builder's Assist

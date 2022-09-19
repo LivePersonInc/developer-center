@@ -204,7 +204,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 ### Reply CIM from Consumer to Agent
 
-{: .important}
+{: .note}
 For an easier way to recieve a reply message from the consumer, implement the [ABC SDK](apple-business-chat-sdk-overview.html) and follow the steps seen [here](apple-business-chat-sdk-implementation.html#reply-cim-from-consumer-to-agent)
 
 An agent can recieve back from the consumer a Custom Interactive Message with a textual context. This text can be displayed to the agent in the Agent Workspace.

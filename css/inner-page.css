@@ -706,14 +706,18 @@ div.sidebarTitle-holder {
 }
 
 .post-content>p.notice,
-.post-content>p.important {
+.post-content>p.important,
+.post-content>p.alert,
+.post-content>p.note {
   color: var(--widget-text);
   display: block;
   width: 100%;
 }
 
 .post-content>p.notice strong,
-.post-content>p.important strong {
+.post-content>p.important strong,
+.post-content>p.alert strong,
+.post-content>p.note strong {
   color: var(--widget-text);
 }
 

@@ -13,7 +13,7 @@ root-link: true
 indicator:
 ---
 
-{: .deprecated}
+{: .deprecation}
 This information is outdated.
 
 ### Overview

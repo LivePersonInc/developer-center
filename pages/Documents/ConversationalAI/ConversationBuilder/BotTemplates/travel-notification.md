@@ -15,7 +15,7 @@ The Travel Notifications template allows an authenticated user to report their f
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
+{: .note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png" alt="The Travel Info dialog in a bot created from the Travel Notification bot template">
@@ -75,7 +75,7 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .important}
+{: .note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
 
 #### Global Function customization
