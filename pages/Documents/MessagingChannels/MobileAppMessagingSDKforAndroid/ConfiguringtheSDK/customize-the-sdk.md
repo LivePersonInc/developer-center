@@ -21,7 +21,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
 2. Add design attributes to your branding.xml file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
-   {: .important}
+   {: .note}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
@@ -50,5 +50,5 @@ You can customize the look and feel of the conversation screen with your brandin
 
    - **custom_font_name_non_conversation_feed** - the font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
 
-     {: .important}
+     {: .note}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).

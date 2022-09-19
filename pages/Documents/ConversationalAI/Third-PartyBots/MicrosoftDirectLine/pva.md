@@ -27,14 +27,14 @@ For certain features of the PVA platform, however, you should also mark the bot 
 
 ### Limitations
 
-{: .important}
+{: .note}
 `End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native 
 `endOfConversation` activity.
 As this is [not supported by the Direct Line Channel](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-end-conversation?view=azure-bot-service-4.0)
 this connector is also not capable of supporting this node. To close a conversation send custom Channel Data as seen 
 in Figure 4.4.
 
-{: .important}
+{: .note}
 The connector will send any Markdown as provided and not process the text further. 
 
 ### Features

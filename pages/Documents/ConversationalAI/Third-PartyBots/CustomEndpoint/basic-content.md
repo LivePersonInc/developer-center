@@ -20,7 +20,7 @@ In the case of Structure Content validation, you can also leverage
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation
 for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-{: .important}
+{: .note}
 If images are sent in Rich content, their URLs must be added to a whitelist via internal
 LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you
 must add all possible domains to this list manually as wildcards are not supported. Moreover,
@@ -70,7 +70,7 @@ Figure 3.1 Showing an example response of Structure Content Message
 
 ### Sending Quick Replies (Structured Content)
 
-{: .important}
+{: .note}
 **Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
@@ -134,7 +134,7 @@ Figure 3.2 Showing an example of a Quick Replies response
 
 ### Bot Actions
 
-{: .notice}
+{: .alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer
@@ -196,7 +196,7 @@ Figure 3.3 Example of a Transfer action to a skill with a message
 
 ##### Transfer to Agent
 
-{: .important}
+{: .note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId

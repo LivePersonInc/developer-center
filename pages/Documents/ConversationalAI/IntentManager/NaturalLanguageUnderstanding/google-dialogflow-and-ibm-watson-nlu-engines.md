@@ -67,7 +67,7 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 In Intent Manager, [add a domain](intent-manager-build-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
 
-{: .important}
+{: .note}
 The length of the domain name should not exceed 64 characters. (Watson limitation)
 
 #### Step 4: Create the NLU provider credentials

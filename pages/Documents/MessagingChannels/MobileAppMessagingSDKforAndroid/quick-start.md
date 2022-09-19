@@ -20,7 +20,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
 
-{: .important}
+{: .note}
 The Mobile SDK currently supports only Native Android (Java / Kotlin) implementations. If you use other core frameworks, languages, or development setups, please check with LivePerson support for advice before attempting these steps. 
 
 ### Step 1: Install the Messaging SDK into your project
@@ -195,7 +195,7 @@ Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search
 
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
-{: .important}
+{: .note}
 If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params).  
 
 1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
@@ -238,7 +238,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       To re-connect with a new Authentication key, use [`LivePerson.reconnect() API)`](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect)
 
-      {: .important}
+      {: .note}
       Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
    - **[Unauth Flow](mobile-app-messaging-sdk-for-android-resources-authentication.html#unauthenticated-in-app-messaging)**
@@ -264,7 +264,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
    * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
 
-      {: .notice}
+      {: .alert}
       Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
       Open conversation window in a fragment to return a conversation fragment and place it in a container in your activity:
@@ -429,7 +429,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
    }
    ```
    
-   {: .notice}
+   {: .alert}
    Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
 ### Step 4: Screen orientation

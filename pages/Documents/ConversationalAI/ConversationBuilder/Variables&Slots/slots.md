@@ -17,7 +17,7 @@ When combined with entities, slots bring dynamic, fluid behavior to storing cons
 
 ### Add a slot manually
 
-{: .important}
+{: .note}
 This section describes how to create a slot manually. However, if you [use the Assist tool to assign an entity to a question](conversation-builder-assist.html#associate-a-question-with-an-entity), Assist automatically creates a slot to store the consumer's response.
 
 **To add a slot manually**

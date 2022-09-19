@@ -8,7 +8,7 @@ permalink: intent-analyzer-overview.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
@@ -31,12 +31,12 @@ Before you begin, see [here](https://knowledge.liveperson.com/ai-bots-automation
 
 **To get started**, see [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html#getting-started) for important information on enabling Intent Analyzer, getting permissions, and beginning with starter packs versus manual setup.
 
-{: .important}
+{: .note}
 See [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-intent-analyzer-tips.html) for best practices and tips on working with Intent Analyzer.
 
 ### Enable Intent Analyzer for intents
 
-{: .important}
+{: .note}
 It's a best practice to have only one domain enabled for Intent Analyzer at a time; this minimizes intent overlap. Also, for the best analysis, it's a best practice to enable Intent Analyzer for all intents within a domain.
 
 **To enable Intent Analyzer for intents**

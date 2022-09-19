@@ -285,5 +285,5 @@ To handle a scenario when a push message is clicked, you need to implement a pus
     }
     ```
 
-{: .important}
+{: .note}
 Please note that if user must see the notifications right away by waking devices up from Doze mode, a high priority notification must be sent to user device. To allow sending high priority notifications, please contact your account team to activate the feature on the LivePerson server side.
