@@ -1,12 +1,12 @@
 ---
-pagename: Implementing a Web View Integration
+pagename: Implementing a Web View integration
 redirect_from:
  - conversation-builder-tutorials-guides-implementing-a-web-view-integration.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
-subfoldername: Advanced Integrations
+documentname: Tutorials & guides
+subfoldername: Advanced integrations
 permalink: tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html
 indicator: both
 ---

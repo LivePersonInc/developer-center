@@ -1,11 +1,11 @@
 ---
-pagename: Dialogs & Patterns
+pagename: Dialogs & patterns
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
-subfoldername: Getting Started with Bot Building
+documentname: Tutorials & guides
+subfoldername: Getting started with bot building
 permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html
 indicator: both
 ---

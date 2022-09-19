@@ -1,11 +1,11 @@
 ---
-pagename: Prerequisite Steps
+pagename: Prerequisite steps
 redirect_from:
     - tutorials-guides-using-agent-assist-prerequisite-steps.html
 keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
+documentname: Tutorials & guides
 subfoldername: Using Conversation Assist
 permalink: tutorials-guides-using-conversation-assist-prerequisite-steps.html
 indicator: both

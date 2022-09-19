@@ -1,11 +1,11 @@
 ---
-pagename: Escalate to an Agent
+pagename: Escalate to an agent
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
-subfoldername: Getting Started with Bot Building
+documentname: Tutorials & guides
+subfoldername: Getting started with bot building
 permalink: tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html
 indicator: both
 ---

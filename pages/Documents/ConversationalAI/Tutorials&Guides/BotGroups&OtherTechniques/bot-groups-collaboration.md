@@ -1,11 +1,11 @@
 ---
-pagename: Bot Groups & Collaboration
+pagename: Bot groups & collaboration
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
-subfoldername: Bot Groups & Other Techniques
+documentname: Tutorials & guides
+subfoldername: Bot groups & other techniques
 permalink: tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html
 indicator: both
 ---

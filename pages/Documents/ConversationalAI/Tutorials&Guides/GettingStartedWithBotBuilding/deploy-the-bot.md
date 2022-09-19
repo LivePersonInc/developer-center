@@ -1,11 +1,11 @@
 ---
-pagename: Deploy the Bot
+pagename: Deploy the bot
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
-subfoldername: Getting Started with Bot Building
+documentname: Tutorials & guides
+subfoldername: Getting started with bot building
 permalink: tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html
 indicator: both
 ---

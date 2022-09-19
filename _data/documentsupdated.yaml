@@ -117,32 +117,32 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-    - documentname: Platform Overview
-    - documentname: Tutorials & Guides
+    - documentname: Platform overview
+    - documentname: Tutorials & guides
       pages:
-        - pagename: Getting Started With Bot Building
+        - pagename: Getting started with bot building
           subpages:
             - subpagename: Overview
-            - subpagename: Dialogs & Patterns
+            - subpagename: Dialogs & patterns
             - subpagename: Intents
             - subpagename: Integrations
-            - subpagename: Deploy the Bot
-            - subpagename: Escalate to an Agent
-        - pagename: Bot Groups & Other Techniques
+            - subpagename: Deploy the bot
+            - subpagename: Escalate to an agent
+        - pagename: Bot groups & other techniques
           subpages:
             - subpagename: Overview
-            - subpagename: Bot Groups & Collaboration
-            - subpagename: Complex Conditions
-            - subpagename: Auto Escalation
-            - subpagename: Meta Intents & Knowledge Bases
-        - pagename: Advanced Integrations
+            - subpagename: Bot groups & collaboration
+            - subpagename: Complex conditions
+            - subpagename: Auto escalation
+            - subpagename: Meta intents & knowledge bases
+        - pagename: Advanced integrations
           subpages:
-            - subpagename: Implementing a Web View Integration
-            - subpagename: Using LivePerson Functions with a Bot
+            - subpagename: Implementing a Web View integration
+            - subpagename: Using LivePerson Functions with a bot
         - pagename: Using Conversation Assist
           subpages:
             - subpagename: Overview
-            - subpagename: Prerequisite Steps
+            - subpagename: Prerequisite steps
             - subpagename: Configure Conversation Assist
             - subpagename: Test Conversation Assist
     - documentname: Conversation Builder

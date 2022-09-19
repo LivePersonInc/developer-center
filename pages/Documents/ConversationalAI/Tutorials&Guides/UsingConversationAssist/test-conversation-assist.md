@@ -5,7 +5,7 @@ redirect_from:
 keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Tutorials & Guides
+documentname: Tutorials & guides
 subfoldername: Using Conversation Assist
 permalink: tutorials-guides-using-conversation-assist-test-conversation-assist.html
 indicator: both

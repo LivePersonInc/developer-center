@@ -1,5 +1,5 @@
 ---
-pagename: Platform Overview
+pagename: Platform overview
 redirect_from:
     - conversation-builder-platform-overview.html
     - conversational-ai-platform-platform-overview.html
