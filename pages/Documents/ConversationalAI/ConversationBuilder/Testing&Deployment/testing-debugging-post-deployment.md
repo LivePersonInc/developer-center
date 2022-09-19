@@ -1,10 +1,10 @@
 ---
-pagename: Testing & Debugging Post-Deployment
+pagename: Testing & debugging post-deployment
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Testing & Deployment
+subfoldername: Testing & deployment
 permalink: conversation-builder-testing-deployment-testing-debugging-post-deployment.html
 indicator: both
 ---

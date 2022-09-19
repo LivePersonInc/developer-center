@@ -1,5 +1,5 @@
 ---
-pagename: Advanced Use Cases
+pagename: Advanced use cases
 redirect_from:
 Keywords:
 sitesection: Documents

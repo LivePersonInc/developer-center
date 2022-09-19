@@ -237,18 +237,18 @@
             - subpagename: Manage the Conversation Context Service
             - subpagename: askMaven
             - subpagename: Deprecated functions
-        - pagename: Testing & Deployment
+        - pagename: Testing & deployment
           subpages:
             - subpagename: Previewing
             - subpagename: Debugging
             - subpagename: Deploying to Conversational Cloud
-            - subpagename: Testing & Debugging Post-Deployment
-        - pagename: Conversational Payments
+            - subpagename: Testing & debugging post-deployment
+        - pagename: Conversational payments
           subpages:
             - subpagename: Bring Your Own Payments
             - subpagename: Apple Pay
-        - pagename: Advanced Use Cases
-        - pagename: Networking & Security
+        - pagename: Advanced use cases
+        - pagename: Networking & security
     - documentname: Conversation Assist
       pages:
         - pagename: Overview

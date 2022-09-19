@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Testing & Deployment
+subfoldername: Testing & deployment
 permalink: conversation-builder-testing-deployment-deploying-to-conversational-cloud.html
 indicator: both
 ---

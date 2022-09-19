@@ -5,7 +5,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversational Payments
+subfoldername: Conversational payments
 permalink: conversation-builder-conversational-payments-bring-your-own-payments.html
 indicator: both
 ---
