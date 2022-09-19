@@ -1,11 +1,11 @@
 ---
-pagename: A Pre-Launch Checklist
+pagename: A pre-launch checklist
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-a-pre-launch-checklist.html
 indicator: both
 ---

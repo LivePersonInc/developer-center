@@ -1,10 +1,10 @@
 ---
-pagename: Train & Tune NLU
+pagename: Train & tune NLU
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 redirect_from:
     - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
     - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html

@@ -1,5 +1,5 @@
 ---
-pagename: Dialog Starter
+pagename: Dialog starter
 redirect_from:
     - conversation-builder-interactions-user-says.html
 Keywords:

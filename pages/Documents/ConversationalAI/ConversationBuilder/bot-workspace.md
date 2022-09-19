@@ -1,5 +1,5 @@
 ---
-pagename: Bot Workspace
+pagename: Bot workspace
 redirect_from:
     - conversation-builder-conversation-builder-overview.html
     - conversation-builder-automation-workspace-overview.html

@@ -1,11 +1,11 @@
 ---
-pagename: Conversational Design
+pagename: Conversational design
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-conversational-design.html
 indicator: both
 ---

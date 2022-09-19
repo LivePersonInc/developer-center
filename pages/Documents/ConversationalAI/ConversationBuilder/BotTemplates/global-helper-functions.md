@@ -1,11 +1,11 @@
 ---
-pagename: Global Helper Functions
+pagename: Global helper functions
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Bot Templates
+subfoldername: Bot templates
 permalink: conversation-builder-bot-templates-global-helper-functions.html
 indicator: both
 ---

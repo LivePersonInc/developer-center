@@ -1,12 +1,12 @@
 ---
-pagename: Full Lead Gen
+pagename: Full lead gen
 redirect_from:
     - conversation-builder-templates-full-lead-gen.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Bot Templates
+subfoldername: Bot templates
 permalink: conversation-builder-bot-templates-full-lead-gen.html
 indicator: both
 ---

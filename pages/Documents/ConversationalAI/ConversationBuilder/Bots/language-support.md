@@ -1,5 +1,5 @@
 ---
-pagename: Language Support
+pagename: Language support
 redirect_from:
 Keywords:
 sitesection: Documents

@@ -1,5 +1,5 @@
 ---
-pagename: Bot Examples & More
+pagename: Bot examples & more
 redirect_from: 
 Keywords:
 sitesection: Documents

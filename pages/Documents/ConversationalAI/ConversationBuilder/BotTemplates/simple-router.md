@@ -1,12 +1,12 @@
 ---
-pagename: Simple Router
+pagename: Simple router
 redirect_from:
     - conversation-builder-templates-simple-router.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Bot Templates
+subfoldername: Bot templates
 permalink: conversation-builder-bot-templates-simple-router.html
 indicator: both
 ---

@@ -1,5 +1,5 @@
 ---
-pagename: Fallback Dialogs
+pagename: Fallback dialogs
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

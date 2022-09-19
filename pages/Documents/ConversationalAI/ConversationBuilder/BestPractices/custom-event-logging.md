@@ -1,11 +1,11 @@
 ---
-pagename: Custom Event Logging
+pagename: Custom event logging
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-custom-event-logging.html
 indicator: both
 ---

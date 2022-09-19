@@ -1,5 +1,5 @@
 ---
-pagename: Dialog Templates
+pagename: Dialog templates
 redirect_from:
 Keywords:
 sitesection: Documents

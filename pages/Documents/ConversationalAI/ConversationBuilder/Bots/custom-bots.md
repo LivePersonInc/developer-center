@@ -1,5 +1,5 @@
 ---
-pagename: Custom Bots
+pagename: Custom bots
 redirect_from:
 Keywords:
 sitesection: Documents

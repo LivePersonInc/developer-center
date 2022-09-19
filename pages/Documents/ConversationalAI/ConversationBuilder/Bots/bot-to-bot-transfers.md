@@ -1,5 +1,5 @@
 ---
-pagename: Bot-to-Bot Transfers
+pagename: Bot-to-bot transfers
 redirect_from:
 Keywords:
 sitesection: Documents

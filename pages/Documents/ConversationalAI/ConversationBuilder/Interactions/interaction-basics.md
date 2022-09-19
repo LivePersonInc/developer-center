@@ -1,5 +1,5 @@
 ---
-pagename: Interaction Basics
+pagename: Interaction basics
 redirect_from:
   - conversation-builder-conversation-builder-interactions.html
 Keywords:

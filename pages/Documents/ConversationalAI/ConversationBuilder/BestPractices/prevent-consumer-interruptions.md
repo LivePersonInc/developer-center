@@ -1,11 +1,11 @@
 ---
-pagename: Prevent Consumer Interruptions
+pagename: Prevent consumer interruptions
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-prevent-consumer-interruptions.html
 indicator: both
 ---

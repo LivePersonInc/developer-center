@@ -1,11 +1,11 @@
 ---
-pagename: Reusable Components
+pagename: Reusable components
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-reusable-components.html
 indicator: both
 ---

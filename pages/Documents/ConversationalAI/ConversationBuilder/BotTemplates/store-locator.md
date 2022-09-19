@@ -1,11 +1,11 @@
 ---
-pagename: Store Locator
+pagename: Store locator
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername:  Bot Templates
+subfoldername:  Bot templates
 permalink: conversation-builder-bot-templates-store-locator.html
 indicator: both
 ---

@@ -1,5 +1,5 @@
 ---
-pagename: Dialog Basics
+pagename: Dialog basics
 redirect_from:
     - conversation-builder-conversation-builder-dialogs.html
     - conversation-builder-dialogs.html

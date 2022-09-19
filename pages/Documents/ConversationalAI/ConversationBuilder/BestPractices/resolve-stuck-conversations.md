@@ -1,11 +1,11 @@
 ---
-pagename: Resolve Stuck Conversations
+pagename: Resolve stuck conversations
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
+subfoldername: Best practices
 permalink: conversation-builder-best-practices-resolve-stuck-conversations.html
 indicator: both
 ---

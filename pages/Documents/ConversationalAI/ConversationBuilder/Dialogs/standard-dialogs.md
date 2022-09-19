@@ -1,5 +1,5 @@
 ---
-pagename: Standard Dialogs
+pagename: Standard dialogs
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

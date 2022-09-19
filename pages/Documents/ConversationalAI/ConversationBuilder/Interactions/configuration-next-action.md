@@ -1,5 +1,5 @@
 ---
-pagename: Configuration - Next Action
+pagename: Configuration - Next action
 redirect_from:
     - conversation-builder-conversation-builder-conditions.html
     - conversation-builder-conversation-builder-response-match-actions.html

@@ -1,5 +1,5 @@
 ---
-pagename: Bot Groups
+pagename: Bot groups
 redirect_from:
 Keywords:
 sitesection: Documents

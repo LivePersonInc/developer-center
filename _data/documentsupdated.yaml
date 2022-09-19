@@ -148,58 +148,58 @@
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
-        - pagename: Best Practices
+        - pagename: Best practices
           subpages:
-            - subpagename: Conversational Design
-            - subpagename: Train & Tune NLU
-            - subpagename: Prevent Consumer Interruptions
-            - subpagename: Resolve Stuck Conversations
-            - subpagename: Custom Event Logging
-            - subpagename: Reusable Components
-            - subpagename: A Pre-Launch Checklist
-        - pagename: Bot Workspace
+            - subpagename: Conversational design
+            - subpagename: Train & tune NLU
+            - subpagename: Prevent consumer interruptions
+            - subpagename: Resolve stuck conversations
+            - subpagename: Custom event logging
+            - subpagename: Reusable components
+            - subpagename: A pre-launch checklist
+        - pagename: Bot workspace
         - pagename: Bots
           subpages:
-            - subpagename: Language Support
-            - subpagename: Custom Bots
-            - subpagename: Post-Conversation Survey Bots
-            - subpagename: Bot Basics
-            - subpagename: Bot Groups
-            - subpagename: Bot-to-Bot Transfers
-        - pagename: Bot Templates
+            - subpagename: Language support
+            - subpagename: Custom bots
+            - subpagename: Post-conversation survey bots
+            - subpagename: Bot basics
+            - subpagename: Bot groups
+            - subpagename: Bot-to-bot transfers
+        - pagename: Bot templates
           subpages:
             - subpagename: Overview
-            - subpagename: Global Helper Functions
-            - subpagename: Apply for a Loan
-            - subpagename: Full Lead Gen
-            - subpagename: Insurance Quote
-            - subpagename: Order Status
+            - subpagename: Global helper functions
+            - subpagename: Apply for a loan
+            - subpagename: Full lead gen
+            - subpagename: Insurance quote
+            - subpagename: Order status
             - subpagename: Simple FAQ
-            - subpagename: Simple Lead Gen
-            - subpagename: Simple Router
-            - subpagename: Store Locator
-            - subpagename: Travel Notification
+            - subpagename: Simple lead gen
+            - subpagename: Simple router
+            - subpagename: Store locator
+            - subpagename: Travel notification
             - subpagename: Conversation Orchestrator
-        - pagename: Bot Examples & More
+        - pagename: Bot examples & more
         - pagename: Dialogs
           subpages:
-            - subpagename: Dialog Basics
-            - subpagename: Standard Dialogs
-            - subpagename: Fallback Dialogs
-            - subpagename: Disambiguation Dialogs
-            - subpagename: Auto Escalation Dialogs
-        - pagename: Dialog Templates
+            - subpagename: Dialog basics
+            - subpagename: Standard dialogs
+            - subpagename: Fallback dialogs
+            - subpagename: Disambiguation dialogs
+            - subpagename: Auto Escalation dialogs
+        - pagename: Dialog templates
         - pagename: Interactions
           subpages:
-            - subpagename: Interaction Basics
-            - subpagename: Interaction Support
-            - subpagename: Dialog Starter
+            - subpagename: Interaction basics
+            - subpagename: Interaction support
+            - subpagename: Dialog starter
             - subpagename: Statements
             - subpagename: Questions
             - subpagename: Integrations
             - subpagename: Code
-            - subpagename: Configuration - Next Action
-            - subpagename: Configuration - Custom Code
+            - subpagename: Configuration - Next action
+            - subpagename: Configuration - Custom code
             - subpagename: Configuration - Settings
             - subpagename: Troubleshooting
         - pagename: Assist

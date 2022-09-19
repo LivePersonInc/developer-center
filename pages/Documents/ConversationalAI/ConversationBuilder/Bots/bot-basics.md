@@ -1,5 +1,5 @@
 ---
-pagename: Bot Basics
+pagename: Bot basics
 redirect_from:
     - conversation-builder-conversation-builder-automations.html
     - conversation-builder-automations.html

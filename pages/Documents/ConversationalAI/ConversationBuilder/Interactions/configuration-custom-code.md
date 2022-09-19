@@ -1,5 +1,5 @@
 ---
-pagename: Configuration - Custom Code
+pagename: Configuration - Custom code
 redirect_from:
    - conversation-builder-interactions-details-code.html
 Keywords:

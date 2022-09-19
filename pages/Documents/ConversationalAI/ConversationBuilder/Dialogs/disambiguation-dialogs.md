@@ -1,5 +1,5 @@
 ---
-pagename: Disambiguation Dialogs
+pagename: Disambiguation dialogs
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

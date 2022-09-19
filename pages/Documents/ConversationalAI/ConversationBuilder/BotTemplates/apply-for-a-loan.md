@@ -1,12 +1,12 @@
 ---
-pagename: Apply for a Loan
+pagename: Apply for a loan
 redirect_from:
     - conversation-builder-templates-apply-loan.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername:  Bot Templates
+subfoldername:  Bot templates
 permalink: conversation-builder-bot-templates-apply-for-a-loan.html
 indicator: both
 ---
