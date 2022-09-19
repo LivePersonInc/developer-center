@@ -16,18 +16,19 @@ Conversation Builder allows users to configure API integrations that are invoked
 
 The Conversation Builder [templates](conversation-builder-templates-overview.html) include common integrations. For example, the [Simple FAQ](conversation-builder-templates-simple-faq.html) template includes a Knowledge Base integration.
 
+{: .note}
 Want some practice with integrations? The [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html) provides a walkthrough of adding one. You'll need to complete the Dialogs and Patterns tutorial and the Intents tutorial first, as they build on each other.
 
 ### Integration types
 
 An integration can be one of the following types:
 
-- **API**: API integrations allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog. See [here](conversation-builder-integrations-api-integrations.html) for more.
-- **Email**: Use an Email integration when you want Conversation Builder to send an email as the result of a bot's dialog flow. For example, if the consumer completes a survey, you might want to send a thank you email to the consumer or send the survey results to a moderator or administrator for collection. See [here](conversation-builder-integrations-email-integrations.html) for more.
-- **KnowledgeAI**: Use this type to search a knowledge base for articles. One use case for this type of integration is within a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed. If no results are found, you might then display a "sorry" message or transfer the conversation to a human agent. See [here](conversation-builder-integrations-knowledgeai-integrations.html) for more.
-- **LivePerson Agent Escalation**: This type of integration transfers the conversation to a human agent or another bot. See [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) for more.
-- **File**: Use a File integration to take a file that was uploaded by the consumer to Conversational Cloud via a [File Upload interaction](conversation-builder-interactions-integrations.html#file-upload-interactions) and upload it to your external file share or system. See [here](conversation-builder-integrations-file-integrations.html) for more.
-- **LivePerson Functions (FaaS)**: Use a LivePerson Functions integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with this integration. See [here](conversation-builder-integrations-liveperson-functions-integrations.html) for more.
+- <img class="inlineimage" style="width:30px" alt="Icon for API integration" src="img/ConvoBuilder/icon_integration_api.png"> **API**: [API integrations](conversation-builder-integrations-api-integrations.html) allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog.
+- <img class="inlineimage" style="width:30px" alt="Icon for Email integration" src="img/ConvoBuilder/icon_integration_email.png"> **Email**: Use an [Email integration](conversation-builder-integrations-email-integrations.html) when you want Conversation Builder to send an email as the result of a bot's dialog flow. For example, if the consumer completes a survey, you might want to send a thank you email to the consumer or send the survey results to a moderator or administrator for collection.
+- <img class="inlineimage" style="width:30px" alt="Icon for KnowledgeAI integration" src="img/ConvoBuilder/icon_integration_knowledgeai.png"> **KnowledgeAI**: Use a [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) to search a knowledge base for articles. One use case for this type of integration is within a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed. If no results are found, you might then display a "sorry" message or transfer the conversation to a human agent.
+- <img class="inlineimage" style="width:30px" alt="Icon for LivePerson Agent Escalation integration" src="img/ConvoBuilder/icon_integration_agenttransfer.png"> **LivePerson Agent Escalation**: A [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) transfers the conversation to a human agent or another bot.
+- <img class="inlineimage" style="width:30px" alt="Icon for File integration" src="img/ConvoBuilder/icon_integration_fileupload.png"> **File**: Use a [File integration](conversation-builder-integrations-file-integrations.html) to take a file that was uploaded by the consumer to Conversational Cloud via a [File Upload interaction](conversation-builder-interactions-integrations.html#file-upload-interactions) and upload it to your external file share or system.
+- <img class="inlineimage" style="width:30px" alt="Icon for LivePerson Functions integration" src="img/ConvoBuilder/icon_integration_lpfunction.png"> **LivePerson Functions (FaaS)**: Use a [LivePerson Functions integration](conversation-builder-integrations-liveperson-functions-integrations.html) to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with this integration.
 
 ### Check the API response status
 
@@ -69,11 +70,11 @@ Custom data fields allow you to use key/value pairs to capture data from an API 
 
 `{$.api_GetContext.<JSON_PATH>}`
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults1.png" alt="">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults1.png" alt="Some example custom data fields">
 
 Once you have created these variables, you have access to their values within the dialogs. To do so, use curly braces notation containing the integration name with the variable name you’ve created.
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/integrations_processAPIResults2.png" alt="">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/integrations_processAPIResults2.png" alt="Using the values of custom data fields in an interaction">
 
 These variables are also accessible in the pre-process or post-process code editors, should you need to use their values in your bot logic:
 
@@ -111,13 +112,13 @@ To capture each value to reproduce in a dialog, you need to iterate through this
 
 Take care to include the bracketed i in your value, as this signifies that the program needs to iterate through the “items” array to save all of the “title” values.
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults3.png" alt="">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults3.png" alt="Some example cusstom data fields, showing the i notation to signify an array">
 
 With these variables now set, they can be used within Structured Content interactions to display each of the titles, descriptions, and images together. Add your API variables to the relevant areas of the Structured Content tile, referencing the variables in the same way that was done in the previous example. When saved, Conversation Builder will iterate through each of the variables to display the correct content together in the user's messaging window.
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults4.png" alt="">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults4.png" alt="Using the custom data fields in an interaction">
 
-<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults5.gif">
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults5.gif" alt="How the interaction renders to the consumer, iterating over the items in carousel fashion">
 
 ### Transform an API result
 
@@ -125,9 +126,9 @@ You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript co
 
 The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to ***Transform Result Script*** (the place where you manipulate the API response as you want).
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png" alt="">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png" alt="The Response Data Variable Name in an example API integration">
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png" alt="">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png" alt="Using the Response Data Variable Name with the api prefix in code">
 
 1. Get the raw API response and save it in a variable:
 
@@ -165,7 +166,7 @@ The following screen from the API integration setup shows that you must remember
     }
     ```
 
-    {: .important}
+    {: .note}
     The first property of that object is named `api_GetContext`, so adjust this with whatever the name you gave to your Bot Response Variable when defining the integration and append to the “**api_**” prefix.
 
 3. Clean the JSON.
@@ -209,7 +210,7 @@ The following screen from the API integration setup shows that you must remember
     var email = jsonResponse.email || false;
     ```
 
-    {: .important}
+    {: .note}
     The `|| false` construction means if the requested value does not exist, we will return false. This allows us to easily check later on if this was populated. (You could also use **null** in place of false if you prefer, as that is a **FALSE** value within JavaScript when it comes to conditional comparisons.)
 
 5. Set bot-level variables using those values and output them within a text interaction:
@@ -221,7 +222,7 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png" alt="">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png" alt="Using the values of bot-level variables in a Statement interaction">
 
 ### Delete an integration
 
@@ -232,5 +233,5 @@ Deleting an integration affects only the bot for which it was added.
 **To delete an integration**
 
 1. Open the bot, and click **Integrations** in the upper-left corner.
-2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png" alt=""> icon that appears.
+2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png" alt="Three-dot icon"> icon that appears.
 3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog.

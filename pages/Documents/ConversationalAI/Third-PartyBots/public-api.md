@@ -24,7 +24,7 @@ The API supports the following methods:
     <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>
 </ul>
 
-{: .important}
+{: .note}
 To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Moreover, our API only retain the history of the last 200 commands. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou).
 
 ### Flow for using Public API
@@ -61,7 +61,7 @@ To perform login requests you will need a valid and dedicated Public API bot use
 
 **Please note** LivePerson maintains one session per user, thus if you receive an invalid bearer token error from Public API, you can always generate a new bearer by performing the login request again. We require making a dedicated Public API Bot Agent user that is dedicated for your Public API call.
 
-{: .notice}
+{: .alert}
 You should not use the same user that is already assigned to another bot since they would log each other out.
 If the user belongs to a bot that is active and running on Third-Party-Bots the login request will get rejected.
 
@@ -113,7 +113,7 @@ Example payload of the request. Please note the `authType` property is set to `U
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{userName}` and `{password}` from the below command with your information
 
 ```bash
@@ -184,7 +184,7 @@ Example payload of the request. Please note the `authType` property is set to `A
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{userName}`, `{appKey}`, `{secret}`, `{accessToken}` and `{accessTokenSecret}` from the below command with your information
 
 ```bash
@@ -257,7 +257,7 @@ This API allows The user to send The message(s) to an ongoing conversation with 
 
 Example payload of the request with Simple Text, Pause/Delay, Private Text, [Structured Content](getting-started-with-rich-messaging-introduction.html) and Quick Replies messages with [context information/metadata](messaging-agent-sdk-conversation-metadata-guide.html) and encodedMetadata.
 
-{: .important}
+{: .note}
 Quick Replies and encodedMetadata are only supported in messaging conversations. Moreover, You have to **enable** Private Message and Encoded Metadata feature for your account to successfully send such messages. Please contact LP administration if you need help in enabling Private Message and Encoded Metadata for your account. Moreover, If you want to send [Structured Content](getting-started-with-rich-messaging-introduction.html) make sure to follow the max size limit which is 15000 bytes.
 
 ```javascript
@@ -359,7 +359,7 @@ Quick Replies and encodedMetadata are only supported in messaging conversations.
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-3-get-bearer-token) from the below command with your information
 
 ```bash
@@ -422,7 +422,7 @@ This API allows an ongoing conversation to be transferred to another skill or an
 
 Example transfer to skill payload of the request with skill name `human_skill`.
 
-{: .important}
+{: .note}
 The skill name is **case sensitive** so provide with care
 
 ```javascript
@@ -433,7 +433,7 @@ The skill name is **case sensitive** so provide with care
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-3-get-bearer-token) and `{skillName}` from the below command with your information
 
 ```bash
@@ -451,7 +451,7 @@ curl -X POST \
 
 Example transfer to agent payload of the request with skill name `human_skill` and agentId `4129463410`.
 
-{: .important}
+{: .note}
 The skill name is **case sensitive** so provide with care
 
 ```javascript
@@ -463,7 +463,7 @@ The skill name is **case sensitive** so provide with care
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-3-get-bearer-token) and `{skillName}` from the below command with your information
 
 ```bash
@@ -521,7 +521,7 @@ There is no request body for this API.
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-3-get-bearer-token) from the below command with your information
 
 ```bash
@@ -599,7 +599,7 @@ Example payload of the request with setting visitors name and gender
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-3-get-bearer-token), `{visitorId}` and `{sessionId}` from the below command with your information
 
 ```bash
@@ -634,7 +634,7 @@ curl -X POST \
 
 LivePerson Messaging uses 3 different types of priorities: `URGENT`, `NORMAL`, `PRIORITIZED`. This API allows setting TTR for the ongoing conversation.
 
-{: .important}
+{: .note}
 Setting of TTR is supported only for messaging conversation
 
 #### Request
@@ -676,7 +676,7 @@ Example payload of the request with setting conversation ttr to Urgent
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-3-get-bearer-token) from the below command with your information.
 
 ```bash
@@ -700,7 +700,7 @@ curl -X POST \
 
 This API allows returning of the commands that were sent to a conversation via Public API.
 
-{: .important}
+{: .note}
 Our API only retains the history of last 200 commands per bot/agent. Only commands of ongoing conversation will be returned **AND** if they are found in the history of the last 200 commands. If a conversation is closed/ended or doesn't exist in history then commands will not be returned.
 
 #### Request
@@ -726,7 +726,7 @@ Our API only retains the history of last 200 commands per bot/agent. Only comman
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-3-get-bearer-token) from the below command with your information.
 
 ```bash
@@ -741,7 +741,7 @@ curl -X GET \
 
 Example response of an request with `Array` of commands returned.
 
-{: .important}
+{: .note}
 there could be three states of a command: `waiting` (command execution pending), `failed` (command execution caused an error) and `completed` (command executed successfully)
 
 ```json
@@ -830,7 +830,7 @@ there could be three states of a command: `waiting` (command execution pending),
 
 This API allows returning of a single command that was sent to a conversation via Public API.
 
-{: .important}
+{: .note}
 Our API only retains the history of last 200 commands per bot/agent. Only command of ongoing conversation will be returned **AND** if they are found in the history of the last 200 commands. If a conversation is closed/ended or doesn't exist in history then command will not be returned.
 
 #### Request
@@ -857,7 +857,7 @@ Our API only retains the history of last 200 commands per bot/agent. Only comman
 
 **Example cURL**:
 
-{: .important}
+{: .note}
 Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-3-get-bearer-token) and `{commandId}` from the below command with your information.
 
 ```bash
@@ -872,7 +872,7 @@ curl -X GET \
 
 Example response of a command returned by the API will look like this with state `completed`
 
-{: .important}
+{: .note}
 there could be three states of a command: `waiting` (command execution pending), `failed` (command execution caused an error) and `completed` (command executed successfully). See [example response](#example-response) of GET Commands API to see other examples of different states.
 
 ```json

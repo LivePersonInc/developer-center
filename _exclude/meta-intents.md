@@ -10,7 +10,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-meta-intents.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 **This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
 
 In order to maintain an optimal user experience, bots should handle not only business-focused intents, but should strive to respond intelligently to small talk from the user. Users asking “how are you” or “are you a bot” should receive a more intelligent response than simply hitting a fallback message. One intelligent solution for handling these types of utterances is by using a Knowledge Base to access and read back responses to a variety of small talk. However, simply pushing all of your KB searches in your Fallback Dialog can complicate your bot design with too many integration calls in one dialog. This final section of this tutorial series details creating a Small Talk meta intent and a Small Talk knowledge base, each of which to be implemented in our Small Talk Bot.
@@ -105,7 +105,7 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
     * **Intent Association**: Domain intents
     * **Domain**: Getting Started Domain
 
-    {: .important}
+    {: .note}
     Using Domain intents allows us to use intents created via Intent Builder for triggering Knowledge Base articles.
 
  Click **Save**.

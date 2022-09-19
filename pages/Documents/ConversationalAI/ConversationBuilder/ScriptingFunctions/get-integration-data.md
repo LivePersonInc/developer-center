@@ -16,7 +16,7 @@ Use the following built-in functions to get information on the results of an int
 
 `isApiExecutionSuccessful` is used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.
 
-{: .important}
+{: .note}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
 
 | Function Name | Arguments | Returns |
@@ -49,14 +49,14 @@ if(isApiExecutionSuccessful){
 }
 ```
 
-{: .important}
-You can also define rules in an interaction based on the result of an API integration; for information on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+{: .note}
+You can also [define rules in an interaction based on the result of an API integration](conversation-builder-interactions-integrations.html#integration-interactions).
 
 ### Get API integration status code
 
 `getApiStatusCode` is used to retrieve the HTTP status (response) code returned from execution of an API integration. The returned code might indicate success or failure, and, in the case of a failure, it can provide insight into the type of error that occurred.
 
-{: .important}
+{: .note}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
 
 | Function Name | Arguments | Returns |

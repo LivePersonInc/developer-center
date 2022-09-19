@@ -44,7 +44,7 @@ These messages are published into the conversation for other agent/manager parti
 This enables brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising
 on next actions the handover agent should take.
 
-{: .important}
+{: .note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 3.4).
@@ -172,7 +172,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.9 below.

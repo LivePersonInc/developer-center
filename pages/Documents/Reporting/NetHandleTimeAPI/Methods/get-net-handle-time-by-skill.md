@@ -10,12 +10,12 @@ indicator: both
 
 This method provides the Net Handle Time (NHT) at a skill level. The API  retrieves up to 9 weeks of information.
 
-{: .notice}
+{: .alert}
 Some metrics are calculated only in 60-minute intervals.
 These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
-{: .important}
-If no data is available, the response element will contain 0. (On August 6th 2020, the  default values were changed from -1 to 0).
+{: .note}
+In case there is no data available, the response element will contain -1.
 
 ### Request
 

@@ -70,6 +70,8 @@ If any event of type `ms.MessagingEventNotification.ContentEvent` or `ms.Messagi
 
 The time between retries increases exponentially. The first retry attempt is made after 2 seconds, the second after 4 and the third after 8. The maximum gap between two consecutive retries is 5 minutes. The retention time is configured in seconds with a minimum of 2 seconds and a  maximum of 3 days (259200 seconds). When an app install recovered from a failure, events in the retry mechanism are sent in the order, they were stored. New conversations are directly send to the webhook endpoint without delay. If a webhook recovers mid-conversation all events of the conversation are send in the right order. That is, in the order they were received from Conversational Cloud. For a more detailed explanation of the different states of an app install consider the following drawing:
 
+[comment]: <> TODO: Replace this by a proper chart
+
 ```
                             +----------------------------------------------------+
                             |                                                    |

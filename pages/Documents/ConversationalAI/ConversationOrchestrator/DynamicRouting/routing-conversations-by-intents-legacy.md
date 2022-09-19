@@ -23,7 +23,7 @@ By storing a user’s intent as a variable within the Conversation Context Servi
 
 In the Global Function’s ‘__initConversation’ function, create and register a namespace to house intent details. Additionally, save the namespace title as a bot variable that will be used when saving the intent name to the Conversation Context Service.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_initconv.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_initconv.png" alt="The code in the initConversation function in the bot's Global Functions">
 
 ```javascript
 var intentRoutingNamespace = 'intentRouting';
@@ -33,11 +33,11 @@ botContext.setBotVariable('intentRoutingNamespace', intentRoutingNamespace, true
 
 Next, use the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent) scripting function in the pre/post process code of any interaction to retrieve the name of the most recently matched dialog starter intent.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_getintent.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_getintent.png" alt="The Pre-Process code">
 
 Then, save that intent name to the Conversation Context Services conversation scope, using the [setContextDataForConversation](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#set-a-variable) function. Here, we’re demonstrating saving the intent under the chosen namespace with a key of “intent”.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_saveintent.png" alt="">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_saveintent.png" alt="The expanded Pre-Process code">
 
 ```javascript
 var intentTitle = botContext.getDialogStarterIntent();
@@ -46,7 +46,7 @@ var intentNamespace = botContext.getBotVariable('intentRoutingNamespace');
 botContext.setContextDataForConversation(intentNamespace, 'intent', intentTitle);
 ```
 
-{: .important}
+{: .note}
 This process is not limited to just saving the most recent intent for routing. Other variables that you save in your Conversation Builder bots can be preserved in the Context Session Store for the purpose of dynamic routing using the same high-level approach.
 
 ### Creating policies using intents
@@ -65,25 +65,25 @@ Having saved the intent names to the Conversation Context Service, you can now c
 
 1. From the Conversation Orchestrator welcome screen, select [Intents](intent-manager-key-terms-concepts.html#intents) under the **Conversation Context Service** heading to see a list of intents that are available for use in your policies. This intent list is generated from all the domains that have been created for your account.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_intentlist.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_intentlist.png" alt="The Intents page under the Conversation Context Service section of the Conversation Orchestrator application">
 
 2. Selecting **Intent & Context Policies** under the **Dynamic Routing** header gives access to create and manage the policies for your account. Here, you can view the usage statistics for policies, as well as a configurable list of all policies that have been created for the account.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policies1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policies1.png" alt="The Intent and Context Policies page under the Dynamic Routing section of the Conversation Orchestrator application">
 
 3. To create a new policy, select the **Add Policy** button under the **Manage policies** heading to generate the add policy form to the right. This form contains two sections, one which outlines the conditions that will trigger this policy, and a second that dictates the action that will be sent back to Conversation Builder. Give your policy a name of your choosing. Our recommendation is to assign a name that is related to the intent you are using for routing (e.g., cancel order).
 
 4. Under **Conditions**, assign the attribute using the “namespace.key” syntax. Using our example from the section above, name this attribute as “intentRouting.intent”. Keep the equality and data type dropdowns as their defaults (“=” and “string”), and select the desired intent from the **Enter a value** dropdown. Values can also be manually typed in. However, due to the specificity needed for strings, we recommend either choosing the intent from the dropdown or copying the intent name from the list of intents in step 1.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_conditions1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_conditions1.png" alt="The configured condition">
 
 5. Under **Actions**, define the rule and associated information you want to send back to the bot. For routing purposes, select the **Transfer to skill** option from the dropdown. Leave the second dropdown as the default **skill** choice, and from the final dropdown select the skill you would like this policy to transfer to. The list of skills that have been created for your account will display in that final dropdown menu.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_skilllist.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_skilllist.png" alt="Selecting the skill for the action">
 
 6. After saving, the policy is added to your list of available policies in a **disabled** status. To use the policy in your Conversation Builder bots, make sure to toggle the switch to **enabled** before navigating away from Conversation Orchestrator.
 
-    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_enabled.png" alt="">
+    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_enabled.png" alt="The policy with its enabled indicator turned on">
 
     With the policy enabled, you are ready to move back into Conversation Builder where you will complete the process of adding Intent Based Routing to your bot.
 
@@ -101,9 +101,9 @@ For information on how to deploy bot agents in Conversational Cloud, please see 
 
 Above in the *Getting Intents into the Conversation Context Service* section, you captured the intent from a user after triggering a dialog starter. In that same dialog, follow these steps:
 
-First, create a new [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions) interaction. To create a more seamless experience for the user, add the text content BLANK_MESSAGE.
+First, create a new [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions) interaction. To create a more seamless experience for the user, add the text content “BLANK_MESSAGE.”
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_transfer.png" alt="">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_transfer.png" alt="The configured Agent Transfer interaction">
 
 Then, in the pre-process code of this interaction, call the Next Actions API using the Conversation Builder scripting function, [askMaven](conversation-builder-scripting-functions-askmaven.html). This method returns a string representation of the matching policy, so you will also need to run the JSON.parse method to properly work with the result. An example of the returned JSON:
 
@@ -126,7 +126,7 @@ Then, in the pre-process code of this interaction, call the Next Actions API usi
 
 Next, parse out the skill ID from the returned JSON using the following syntax. Save this value to a bot variable for use in the setting of your Agent Transfer integration.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_code.png" alt="">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_code.png" alt="The Pre-Process code">
 
 ```javascript
 var policy = JSON.parse(botContext.askMaven());
@@ -136,11 +136,11 @@ botContext.setBotVariable('skillId', skillId, true, false);
 
 Once saved, click the setting wheel for the Agent Transfer integration. Navigate to the **Advanced** tab, and enter `{$botContext.skillId}` into the **Agent Skill Id** field.
 
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_intsettings.png" alt="">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_intsettings.png" alt="The Advanced settings of the interaction, which includes the AGent Skill Id field">
 
 Lastly, navigate to our [messaging test page](https://developers.liveperson.com/web-messaging/emulator.html). Enter your account information, open the engagement for your bot, and trigger the dialog by entering an utterance that will match the intent. If successful, the bot will transfer the user to the correct bot to handle their request.
 
-<img class="fancyimage" width="400" src="img/convorchestrator/co_dr_prodbot.png" alt="">
+<img class="fancyimage" width="400" src="img/convorchestrator/co_dr_prodbot.png" alt="The conversation flow to follow to test the bot">
 
-{: .important}
+{: .note}
 When using this feature in Production, it might be desirable to modify or disable the [automatic messages](https://knowledge.liveperson.com/contact-center-management-messaging-operations-automatic-messages-automatic-messages-overview.html) if you want to mask the transfers to and from each bot.

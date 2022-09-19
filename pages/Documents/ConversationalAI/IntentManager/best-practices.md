@@ -11,7 +11,7 @@ indicator: both
 
 To increase the quality of your intent matches, follow the best practices below.
 
-For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
+Also follow the [best practices for training and tuning NLU](conversation-builder-best-practices-train-tune-nlu.html).
 
 ### Number of intents
 Intent Manager requires a minimum of 5 intents and 15 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
@@ -27,7 +27,7 @@ The average number of intents for a taxonomy with good coverage is 20-60.
 ### Number of training phrases
 For optimal performance, LivePerson recommends 60 to 100 training phrases per intent, but not more than 150 due to the potential issue of model overfitting.
 
-{: .important}
+{: .note}
 Currently, you can only pull a maximum of 500 messages at a time. If you classify five messages as an intent out of that set, you will need to pull five times more data to get enough training utterances for that intent.
 
 ### Training phrases
@@ -44,15 +44,6 @@ Currently, you can only pull a maximum of 500 messages at a time. If you classif
         * Please reset my password.
         * Can you reset my password?
 * Verify each training phrase is a clear match to its named intent, and remove it if not.
-* Don’t use more than one entity per training phrase.
-
-### Entities
-Use a maximum of one custom [entity](intent-manager-key-terms-concepts.html#entities) per training phrase, as only a single entity is used when the model is trained.
-
-Don't use the names of global entities in training phrases. However, you can use example values of global entities. For example:
-
-* **Do** - I want to buy a phone today.
-* **Don't** - I want to buy a phone DATE.
 
 ### Model coverage
 Intent discovery is the task of finding new intents to add to your current taxonomy. This task is useful to expand the model’s coverage. [Intent discovery](intent-manager-discover-intent-discovery.html) is accomplished under “Discover.”

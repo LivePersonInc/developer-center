@@ -22,7 +22,7 @@ You can configure the Welcome message as a simple text message with or without q
 
 A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace. 
 
-{: .important}
+{: .note}
 To use this feature with the Control History API, refer to the following [page](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html#optional-code-sample-to-enable-welcome-message)
 
 ### How to enable
@@ -59,7 +59,7 @@ let conversationViewParams = LPConversationViewParams(conversationQuery: convers
 LPMessaging.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
 ```
 
-{: .notice}
+{: .alert}
 Support for rendering links automatically is available on SDK 6.2.0 and above.
 
 ### Limitations
@@ -73,12 +73,12 @@ Support for rendering links automatically is available on SDK 6.2.0 and above.
 
 - The conversational metadata (ExternalId) does not get populated.
 
-   ```
+   ```json
    "metadata": [
-        {
-            "type": "ExternalId",
-            "id": "Yes-1234"
-        }
+     {
+       "type": "ExternalId",
+       "id": "Yes-1234"
+     }
    ]
    ```
 

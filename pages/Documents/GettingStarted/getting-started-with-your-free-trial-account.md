@@ -7,8 +7,7 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
-date: 2019-01-30 00:00:00 +0000
-last_modified: 2022-03-25 00:00:00 +0000
+date_published: 2019/01/30
 ---
 
 <!-- The Modal -->

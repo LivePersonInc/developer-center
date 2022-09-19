@@ -104,7 +104,7 @@ The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessag
 
 The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` and `responseEncryptionKey` (public key), which allows you to identify the authentication request and map the OAuth token in the response to the request originator.
 
-{: .important}
+{: .note}
 The requestIdentifier and responseEncryptionKey is optional, but the responseEncryptionKey is required to view the auth response from an agent widget.
 
 Please use the metadata template with the relevant fields, as presented in the example below:
@@ -133,7 +133,11 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
-        "responseEncryptionKey": "Insert Your Public Key Here"
+        "clientSecret": "A string indicating the secret provisioned by the authorization server.",
+        "scope": "Insert your scope here. Ex.['email','profile']",
+        "responseType": "A string indicating the type of authentication request"
+        "responseEncryptionKey": "Insert your public key here",
+        "state": "A string indicating the state of the authentication request."
       }
     }
   }
@@ -160,7 +164,7 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>ConnectorAuthenticationRequest</td>
     <td>Represents a Business Chat authentication request </td>
     <td>Object</td>
-    <td>N</td>
+    <td>Y</td>
   </tr>
   </tbody>
 </table>
@@ -186,6 +190,30 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>responseEncryptionKey is a public key which will be used to encrypt the oauth2 token. In order to decrypt the token you should have the corresponding private key to decrypt the token. If this is not sent, LivePerson will supply a public key for you. In order to view the auth response in the agent widget you must supply your own key.</td>
     <td>string</td>
     <td>N</td>
+  </tr>
+   <tr>
+    <td>apple.oauth2.scope</td>
+    <td>An array of scope items that specifies the scope of the request, gives the exact fields of data that the authentication service provides to client requesting the authentication.</td>
+    <td>Array&lt;string&gt;</td>
+    <td>Y</td>
+  </tr>
+    <tr>
+    <td>apple.oauth2.clientSecret</td>
+    <td>A string indicating the secret provisioned by the authorization server.</td>
+    <td>string</td>
+    <td>Y</td>
+  </tr>
+     <tr>
+    <td>apple.oauth2.responseType</td>
+    <td>A string indicating the type of authentication request.</td>
+    <td>string</td>
+    <td>Y</td>
+  </tr>
+     <tr>
+    <td>apple.oauth2.state</td>
+    <td>A string indicating the type of authentication request.</td>
+    <td>string</td>
+    <td>Y</td>
   </tr>
   </tbody>
 </table>
@@ -303,7 +331,7 @@ If you are authenticating the consumer with a **bot**, you can listen for the au
 
 If you are authenticating the consumer with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorAuthResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorauthresponse).
 
-{: .important}
+{: .note}
 If reading the auth response in an Agent Widget, you **must** initially send a public key.
 
 #### Response Metadata

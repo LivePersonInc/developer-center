@@ -20,8 +20,8 @@ With few exceptions, functions can be used in the following JavaScript [code pan
 * Post-Process Code
 * Process User Response
 
-{: .important}
-For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+{: .note}
+For info on the order of operations (i.e., which code is run when), see [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 ### Requirements
 

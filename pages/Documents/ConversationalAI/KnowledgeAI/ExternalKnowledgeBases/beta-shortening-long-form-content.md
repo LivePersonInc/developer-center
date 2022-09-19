@@ -11,7 +11,7 @@ permalink: knowledgeai-external-knowledge-bases-beta-shortening-long-form-conten
 indicator: both
 ---
 
-{: .important}
+{: .note}
 This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
 
 Conversational messaging works best with content that’s as brief as possible. Therefore, LivePerson recommends that, when possible, you take one of the following approaches with your external CMS:
@@ -24,7 +24,7 @@ Sometimes, however, these approaches aren’t possible. For example, you might b
 1. You identify the CMS content that you want to use.
 2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the KnowledgeAI UI, in read-only form.
 
-    {: .important}
+    {: .note}
     Step 2 only happens if the content has HTML tags or is more than 1,000 characters, i.e., if the content warrants shortening or clean-up.
 
 3. You manually apply (copy/paste) the transformed content to editable **Summary** and **Detail** fields within the knowledge base, as desired.
@@ -39,7 +39,7 @@ To use this solution, *augment the request* so that each returned article also c
 
 When the knowledge base is added, the optional attribute is used to populate a **Message Ready Content** field in the UI when appropriate. This read-only field displays your content, which has been automatically shortened and cleaned up.
 
-<img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form1.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form1.png" alt="The Message Ready Content field on the Article Configuration page">
 
 These are the shortening and clean-up rules that are applied:
 
@@ -50,7 +50,7 @@ These are the shortening and clean-up rules that are applied:
 
 With the content that you intend to use now message-ready, you can quickly copy and paste it into the **Summary** and **Detail** field within an article as desired. Initially, the **Summary** and **Detail** fields are empty. This indicates that the message-ready content has not been applied yet.
 
-<img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form2.png" alt="">
+<img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form2.png" alt="Summary and Detail fields that are empty on the Article Configuration page">
 
 **Please note:**
 

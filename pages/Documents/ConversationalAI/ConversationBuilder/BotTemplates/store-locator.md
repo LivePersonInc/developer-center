@@ -14,10 +14,10 @@ The Store Locator template is designed to provide users with information on the 
 
 While this template takes advantage of rich content interactions, alternatives have been included for channels that do not support structured content (SMS, WhatsApp, etc.).
 
-{: .important}
-This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .note}
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png" alt="The Store Locator dialog in a bot created from the Store Locator bot template">
 
 ### Included items
 
@@ -34,8 +34,8 @@ This bot template contains a dialog template that can be used in other bots in y
     * Returned data is not dependent on the zip code provided by the user. This is included in the API URI simply as a demonstration of its use.
     * You will need to replace the mock API with your own API integration to return store location information.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview1.png">
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview2.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview1.png" alt="Returning location info in a conversation with a consumer">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview2.png" alt="A second example of returning location info in a conversation with a consumer">
 
 ### Configuration needed
 
@@ -65,7 +65,7 @@ botContext.setTriggerNextMessage('text only nearest stores');
 }
 ```
 
-Our *text only nearest stores* interaction contain both Pre-Process and Process User Response code snippets to dynamically create a multiple choice menu and respond appropriately. Details of this process can be found [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
+Our *text only nearest stores* interaction contain both Pre-Process and Process User Response code snippets to dynamically create a multiple choice menu and respond appropriately. Details of this process can be found in [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 ```
 // Parse store results array from API call
@@ -93,7 +93,7 @@ All information capture interactions include custom event logging by default. Th
 #### Notes on Structured Content
 Prior to displaying images within structured content, the image domains will need to be whitelisted. For assistance with this, please contact your LivePerson Account representative.
 
-By default, structured content is displayed vertically in messaging. If you want the content to be horizontally scrollable instead, you need to include the `tileDisplay: horizontal` custom configuration when creating your agent connector. For details on this, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#tiledisplay).
+By default, structured content is displayed vertically in messaging. If you want the content to be horizontally scrollable instead, you need to include the [tileDisplay custom configuration field](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#tiledisplay) when creating your agent connector and set it to "horizontal."
 
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.
