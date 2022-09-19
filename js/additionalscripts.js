@@ -16,10 +16,7 @@ $(document).ready(function () {
   sidebarClick()
   populateAnchors()
   menuDrop()
-
   codeButtons()
-  setNoticeIcon()
-  setImportantIcon()
   mobileHamburger()
   isExplorer()
   searchFunction()
@@ -80,35 +77,7 @@ function crossBrowserSafariCheck() {
     $(".sidebarbutton").attr("style", "top: 5px")
   }
 }
-function setNoticeIcon() {
-  var allNoticeIcon = $('p[class^="notice"]')
-  allNoticeIcon.each(function (i) {
-    var noticeIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>'
-    $(this).prepend(noticeIcon)
-  })
-  var allNoticeIconDiv = $('div[class^="notice"]')
-  allNoticeIconDiv.each(function (i) {
-    var noticeIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>'
-    $(this).prepend(noticeIcon)
-  })
-}
-function setImportantIcon() {
-  var allImportantIcon = $('p[class^="important"]')
 
-  allImportantIcon.each(function (i) {
-    var importantIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>'
-    $(this).prepend(importantIcon)
-  })
-  var allImportantIconDiv = $('div[class^="important"]')
-  allImportantIconDiv.each(function (i) {
-    var importantIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>'
-    $(this).prepend(importantIcon)
-  })
-}
 function removeTitleFirstSteps() {
   var $title = $(".h1").text()
   var titleContainer = $("#documentTitleContainer")
@@ -179,8 +148,6 @@ function navigateContent(url) {
       codeButtons()
       replaceTitle()
       handleUniquePages()
-      setNoticeIcon()
-      setImportantIcon()
       searchFunction()
       capabilitiesSearch()
       searchHighlight()
