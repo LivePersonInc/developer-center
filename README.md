@@ -175,11 +175,11 @@ If you’re adding or deprecating an API or SDK, add it or update its status on 
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
 * You can precede a paragraph with the following to highlight the content:
-`{: .note}` - important info to pay attention to
-`{: .alert}` - warnings or alerts (anything that indicates a problem)
-`{: .deprecation}` - info on features that are discouraged or no longer supported
-`{: .tip}` - useful suggestions or ideas
-`{: .info}` - complementary or auxiliary info
+  - `{: .note}` - important info to pay attention to
+  - `{: .alert}` - warnings or alerts (anything that indicates a problem)
+  - `{: .deprecation}` - info on features that are discouraged or no longer supported
+  - `{: .tip}` - useful suggestions or ideas
+  - `{: .info}` - complementary or auxiliary info
 * The maximum (view) width for images in this repository is 800 pixels
 
 You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
