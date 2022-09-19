@@ -15,7 +15,7 @@ There are a few ways to get started:
 
 ### Use a prebuilt domain
 
-To get you quickly up and running with intents, LivePerson provides a set of prebuilt domains that can easily be added to the Intent Manager environment. For an introduction to prebuilt domains, see [here](intent-manager-key-terms-concepts.html#prebuilt-domains).
+To get you quickly up and running with intents, LivePerson provides a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) that can easily be added to the Intent Manager environment.
 
 ### Import existing intents
 

@@ -23,7 +23,7 @@ This bot provides basic information and contact options to your consumers. If yo
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
 
 1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in</a>.
-2. On the left sidebar, click the bot icon ("Manage conversational AI and bots").
+2. On the left sidebar, click the bot icon ("Conversational AI and bots").
 3. In the Conversational AI dashboard, click <b> Conversation Builder</b>.
 4. Click on <i> Concierge Bot</i>
 

@@ -45,18 +45,18 @@ Filters provide you with increased flexibility and the ability to cover more gra
 1. Go to the **Analyze** tab, and filter by “undefined.”
 2. Click the **Add Filter** button at the top left of **Intent Trends**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_filters1.png" alt="">
+    <img class="fancyimage" style="width:800px" alt="Add Filter button in upper-left corner of Intent Trends tab on the Analyze page" src="img/ConvoBuilder/im_analyze_filters1.png">
 
 3. In the pop-up window, select “Intents” as your filter type on the left, and then select “unclassified” from the dropdown on the right.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_filters2.png" alt="">
+    <img class="fancyimage" style="width:800px" alt="An example of defining a filter where intents includes unclassified" src="img/ConvoBuilder/im_analyze_filters2.png">
 
 #### Rule-based power filters
 
 You can save and manage complex filters that let you surface and track specific insights on exact topics. You can use regular expressions to instantly mine and query up to 13 months of conversation data that matches specific criteria. This functionality is complementary to machine learning-powered intents and allows you to cover analysis use cases that don’t work within the intent taxonomy.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_filters3.png" alt="">
+<img class="fancyimage" style="width:800px" alt="The load/edit search filters window" src="img/ConvoBuilder/im_analyze_filters3.png">
 
 #### Filters and REGEX
 
-An example use case for using a REGEX is if an airline wants to search for each time a reservation number comes up. They can search in addition to intents if you want to find all messages. For more information on REGEX, click [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/regexp-syntax.html).
+An example use case for using a [REGEX](https://www.elastic.co/guide/en/elasticsearch/reference/current/regexp-syntax.html) is if an airline wants to search for each time a reservation number comes up. They can search in addition to intents if you want to find all messages.

@@ -24,12 +24,12 @@ This can be done in order to accomplish many business and operational use cases 
 
 You can create a Consumer Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the bot to make API calls on behalf of the consumer. With this credential, the consumer receives an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls. The general flow is this:
 
-   <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/delegation_flow.png" alt="">
+   <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/delegation_flow.png" alt="The flow for consumer authentication">
 
 1. In the bot, the Integration interaction is triggered in the dialog.
 2. The bot sends an authentication URL (a plain link) to the consumer.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/creds_consumer_auth_2.png" alt="">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/creds_consumer_auth_2.png" alt="Sending an authentication URL to the consumer">
 
 3. The consumer clicks the link, is directed to the authentication URL (e.g., a login page), and authenticates, thereby obtaining a token.
 4. The token is sent to the bot.
@@ -60,7 +60,7 @@ You can create a Consumer Authentication credential and use it in [API integrati
 https://accounts.brand.com/authorize?client_id=34e83335186541078261d83c6d050a32&response_type=code&redirect_uri=https://va.idp.liveperson.net/callback/12345566/redirectedCode&scope=user-read-private 
 ```  
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png" alt="Configuring the credential, by specifying the authentication URL">
 
 7. Click **Save**.
 
@@ -68,14 +68,14 @@ https://accounts.brand.com/authorize?client_id=34e83335186541078261d83c6d050a32&
   
 To use a defined Consumer Authentication credential in a bot, go into the bot and add an API integration. When you do, select the Consumer Authentication credential that you created and provide the endpoint.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/consumerAuthCred.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/consumerAuthCred.png" alt="Selecting the Consumer Authentication credential in the integration's settings on the Add Integration window">
 
 Then, add the provided access as an authorization header to the API integration.  
 In request headers, add authorization header:  
 **key** = Authorization  
 **value** = Bearer {$botContext.cidp_accessToken}  
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/authorizationDelegation.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/authorizationDelegation.png" alt="Adding the authorization header in the request parameters">
 
 **3. Configure Delegated Access Provider**  
 
@@ -113,4 +113,4 @@ The following paraeter should be define in the [interactive button/questions](co
 **Target** = New Window  
 **Callback** = {$botContext.external_auth_url}  
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/loginDialogBoxInDelegationFlow.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/loginDialogBoxInDelegationFlow.png" alt="Adding an interactive button, to provide the consumer delegation link">

@@ -596,6 +596,11 @@ td {
   }
 }
 
+.table-wrapper {
+  display: block;
+  overflow-x: auto;
+}
+
 #featurestable {
   width: 100%;
   max-width: none;
@@ -612,6 +617,8 @@ td {
 
 #featurestable tr td {
   vertical-align: middle;
+  hyphens: inherit;
+  overflow-wrap: inherit;
 }
 
 #featurestable .green {
@@ -666,7 +673,7 @@ td {
   padding-left: 10px;
 }
 
-.categoryrow {
+.categoryrow td {
   background-color: #162036 !important;
 }
 
@@ -813,6 +820,29 @@ a.loginText {
   color: var(--link-color-hover);
 }
 
+.post-content a.back-btn {
+  padding: 12px 32px;
+  gap: 2px;
+  min-width: 148px;
+  min-height: 48px;
+  border: 1px solid var(--title-text);
+  border-radius: 24px;
+  text-decoration: none !important;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: var(--title-text);
+}
+
+.post-content a.back-btn:hover {
+  background: var(--link-color-hover);
+  color: var(--button-text);
+  border: 1px solid var(--link-color-hover);
+}
+
 /* TODO: Remove trial button (check on HTML and JavaScript mentions, too) */
 
 .trialButton:hover {
@@ -824,6 +854,12 @@ a.loginText {
   color: var(--button-text);
   border: 0;
   display: none;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 14px;
 }
 
 .trialButton {
@@ -1218,8 +1254,12 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 #jumpto {
-  flex: 1 !important; /* TODO: Disable “important” */
   padding-bottom: var(--space10);
+  max-width: 396px;
+}
+
+#jumpto #anchorlist p:not(:empty) {
+  min-width: 240px;
 }
 
 #anchorlist {
@@ -1266,7 +1306,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .highlightlink {
-  background-color: var(--body-background) !important; /* Make sure background is white */
+  background-color: var(--body-background) !important;
+  /* Make sure background is white */
   color: var(--link-color) !important;
   font-weight: bold;
 }

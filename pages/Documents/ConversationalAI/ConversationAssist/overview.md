@@ -67,5 +67,5 @@ Recommendation sources include knowledge bases and bots:
 
 ### Access Conversation Assist
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" alt="Bot icon" src="img/ConvoBuilder/icon_cb.png" alt=""> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" alt="Conversational AI bot" src="img/ConvoBuilder/icon_cb.png" alt=""> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Assist**.
