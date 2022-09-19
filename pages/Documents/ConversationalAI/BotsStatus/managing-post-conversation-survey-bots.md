@@ -16,7 +16,7 @@ Successfully deployed survey bots display "Deployed" beneath the bot name.
 
 <img class="fancyimage" alt="The PCS Connector tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
 
-{: .important}
+{: .note}
 Since all survey bots share a single agent connector, performing any operation on the agent connector affects all the survey bots.
 
 ### Redeploy the connector

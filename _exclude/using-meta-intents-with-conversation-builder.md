@@ -58,7 +58,7 @@ Our Small Talk dialog is being triggered by our meta intent, which again capture
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideMetaIntents_smallTalkDialog.png" alt="">
 
-{: .important}
+{: .note}
 If your use case requires taking action on the specific, child intent, you can determine this by using the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent) scripting function.
 
 ```javascript

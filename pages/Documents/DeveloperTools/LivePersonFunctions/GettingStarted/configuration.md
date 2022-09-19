@@ -35,7 +35,7 @@ Any environment variable will be checked against the following restrictions:
 
 #### Updating an Environment Variable
 
-{: .notice}
+{: .alert}
 Changes made to the environment variable at runtime via `process.env` are local to the instance of the function. They are not propagated to the UI or any other running instance.
 
 The modification of existing environment variables is possible via the side panel of the editor UI. Select the environment variable you want to change by clicking its name on the list.
@@ -44,7 +44,7 @@ The modification of existing environment variables is possible via the side pane
 
 Once you click on "Set", you will have to save the function to store the changes permanently. Environment variables are static.
 
-{: .important}
+{: .note}
 Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect. 
 
 <img class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
@@ -63,7 +63,7 @@ Your configured environment variables are accessible via `process.env` from with
 
 ### Secrets
 
-{: .notice}
+{: .alert}
 We discourage storing credentials that cannot be easily revoked, like passwords. If possible, we recommend using credentials for token-based authentication methods instead.
 
 We offer secure storage for storing sensitive data such as credentials and tokens. Functions can read and write to this store at runtime. By default, your store will contain secrets created as part of the [provisioning](liveperson-functions-provisioning.html).
@@ -169,7 +169,7 @@ Access to the secrets of the account is possible at runtime thanks to the `Secre
             });
 ```
 
-{: .important}
+{: .note}
 If you know that your secret will not be changing as it is static and not getting updated at runtime. You may load it once into memory and then store it. This example code shows a lazy initialization of a secret using a variable.
 
 ```javascript

@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging
 ---
 
-<div class="notice">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
+<div class="alert">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
 
 # Android Messaging SDK — Version 5.12.0
 
@@ -221,7 +221,7 @@ The Android Mobile Messaging SDK version 5.8.0 uses:
     <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
 </div>
 
-{: .notice}
+{: .alert}
 ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
 
 ## [Date Picker](mobile-sdk-and-web-templates-date-picker-template.html) now supports Dark Mode.
@@ -361,7 +361,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{: .important}
+{: .note}
 Voice & Video capabilities are available only on Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
@@ -826,7 +826,7 @@ The Android Mobile Messaging SDK version 5.2.0 uses:
 - This new API is available from SDK version 5.2.0
 - The SDK needs to be initialized before calling this API.
 
-{: .important}
+{: .note}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 ```java
@@ -1056,7 +1056,7 @@ The Android Mobile Messaging SDK version 4.10.0 uses:
     <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
 </div>
 
-{: .notice}
+{: .alert}
 ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
 
 # Bugs fixed
@@ -1190,7 +1190,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{: .important}
+{: .note}
 Voice & Video capabilities are available only on Android SDK 4.8.1 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
@@ -1711,7 +1711,7 @@ The Android Mobile Messaging SDK version 4.4.0 uses:
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
-{: .important}
+{: .note}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 ```java
@@ -2026,7 +2026,7 @@ Agents can share:
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. They can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
-   {: .important}
+   {: .note}
    The Android SDK supports opening any file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
 
 When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.

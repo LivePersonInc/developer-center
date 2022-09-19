@@ -19,7 +19,7 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/ca_menu_option.png" alt="The Conversation Assist access point on the dashboard that displays all the Conversational AI applications">
 
-    {: .important}
+    {: .note}
     If it's your first time accessing Conversation Assist, you might see a window that introduces you to the application. Just click **Get started** in the window, and then click **Got it** at the next prompt. You'll be on the **Recommendation Sources** page at this point, which is good.
 
 2. If necessary, click **Recommendation Sources** at the top of the page, and then select the **Bots** tab.
@@ -56,7 +56,7 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
     For the purpose of this tutorial, we're relying on the default values for several [settings](conversation-assist-recommendation-sources-configuring-settings.html), e.g., the **Max # of recommendations** to offer at any one time.
 
-{: .important}
+{: .note}
 **Customize your POC:** If you built out additional resources in previous steps, make sure to turn on those resources too. Depending on the number of resources, it might be useful to increase the number of recommendations that you display to your agents when they are in a conversation.
 
 ### Step 7: Create the Web messaging engagement

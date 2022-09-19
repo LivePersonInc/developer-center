@@ -19,7 +19,7 @@ The `setBotVariable` function is used to set a bot variable’s state in memory,
 
 The `getBotVariable` function is used for getting the bot variable. Bot variables that are not set will return NULL.
 
-{: .important}
+{: .note}
 botVariables are strings. Whatever the data type of your input, it will be converted to a string. If you set a botVariable to an integer (ie: 10) it will be converted to “10”. When called using `getBotVariable()`, to be used as an integer again, you would need to convert it back to an integer (ie: 10*1).
 
 | Function Name | Arguments | Returns |
@@ -185,14 +185,14 @@ var acctId = botContext.getLPAccountId();
 
 The `getLPEngagementAttribute` function retrieves the specified LivePerson engagement attribute for the current conversation.
 
-{: .important}
+{: .note}
 When calling engagement attributes, some time is required to retrieve the results. Therefore, LivePerson strongly recommends that you call this function in the Global Functions in the `initConversation` function, which runs immediately when the conversation begins. This is a best practice. If, instead, you're calling engagement attributes in the Pre-Process code of the Integration interaction, add an interaction delay of a couple of seconds to the interaction.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getLPEngagementAttribute(arg)` | `sharkVisitorId` — The ID of the real-time visitor,<br>`sharkSessionId` — The ID of the session,<br>`sharkContextId` — Conversational Cloud's interactionContextId<br>`campaignId` — The ID of the campaign,<br>`engagementId` — The ID of the engagement,<br>`startTs` — The start time of the engagement,<br>`os` — The consumer's operating system,<br>`appId` — The ID of the app on the consumer's mobile device,<br>`brandId` — The ID of the brand,<br>`BearerToken` — The authentication credential,<br>`currentSkillId` — The ID of the current skill, or <br>`previousSkillId` — The ID of the previous skill<br>`rtSesssionId` — **Chat-specific**; the session ID for the chat engagement<br>`chatSessionKey` — **Chat-specific**; the unique key of the agent session (when the agent talks to the consumer) <br>`agentSessionId` — **Chat-specific**; the agent's login session ID (specific to the agent that's logged in, who can be talking to multiple consumers) | String |
 
-{: .important}
+{: .note}
 `previousSkillId` only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current skill ID.
 
 #### Example
@@ -334,7 +334,7 @@ Using a similar script to the above color example, which returns the data value,
 
 ### Get NLP responses
 
-{: .important}
+{: .note}
 This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to switching engines.
 
 `getNlpResponse` is used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
@@ -360,7 +360,7 @@ botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: 
 
 ### Get sentiment
 
-{: .important}
+{: .note}
 This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to switching engines.
 
 `getSentiment` is used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
@@ -450,7 +450,7 @@ This method is commonly used to provide a different experience or messaging to t
 * **Values**: If two time frames overlap, the later time frame is used.
 * **Time zone**: The time zone value should be the time zone of the agent call center, not the user. Use the [appropriate format](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
-{: .important}
+{: .note}
 `getHoursType` is a basic function to specify agent time shifts.
 
 | Function Name | Arguments | Returns |

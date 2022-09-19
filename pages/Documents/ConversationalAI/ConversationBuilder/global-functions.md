@@ -63,7 +63,7 @@ With these variables initialized at the start of the conversation, they are avai
 
 In short, take advantage of the Global Helper Functions dialog template. Since much of the Global Functions work is done for you, you can import the template to speed up and streamline your code elsewhere in your bot.
 
-{: .important}
+{: .note}
 LivePerson recommends that you import the template into a bot **before** you start building your bot. This is because, if you have existing, defined global functions, there might be naming conflicts. Therefore, it’s a good idea to check the functions after the import.
 
 ### Global Helper Functions bot template

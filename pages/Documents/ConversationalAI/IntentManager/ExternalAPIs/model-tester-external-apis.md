@@ -24,7 +24,7 @@ These APIs let you automate test report retrieval. You can call these APIs, and 
 * A permanent token provided by LivePerson. Contact your LivePerson representative to obtain this.
 * Your account (brand) ID in Conversational Cloud.
 
-{: .important}
+{: .note}
 To integrate a second account using these APIs, you must obtain a different permanent token. Each token is valid for only one account.
 
 ### Test Reports API
@@ -45,7 +45,7 @@ Use this API to retrieve the domain IDs and associated test report names for the
 
 ##### Path and query parameters
 
-{: .important}
+{: .note}
 All path and query parameters must be URL-encoded.
 
 | Name | Description | Type/Value | Required? | Notes |
@@ -151,7 +151,7 @@ Use this API to retrieve CSV files for all the test reports for a domain ID, or 
 
 ##### Path and query parameters
 
-{: .important}
+{: .note}
 All path and query parameters must be URL-encoded.
 
 | Name | Description | Type/Value | Required? | Notes |

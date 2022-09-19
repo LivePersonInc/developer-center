@@ -11,7 +11,7 @@ permalink: conversation-orchestrator-overview.html
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### What is Conversation Orchestrator

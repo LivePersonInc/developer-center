@@ -21,19 +21,19 @@ indicator: both
 
 Third party bot providers can be used and managed through LivePerson's Conversational Cloud just like a normal human agent or a LivePerson bot Using our connectors, you can provision IBM Watson, Google Dialogflow, Amazon Lex, or Microsoft bots. You can also leverage LivePerson Functions to build custom integrations with other third party bot providers.
 
-{: .important}
+{: .note}
 If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
 
-{: .important}
+{: .note}
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
-{: .important}
+{: .note}
 We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
 
-{: .important}
+{: .note}
 Please be advised that we recommend to have one bot for 250 open and active conversations, if you want your to handle more load, please add more bots to ensure a smooth and convenient consumer experience. Furthermore we recommend adding at least 2 bots for one bot skill to support a failover and a higher availability in case of any service interruptions and issues.
 
-{: .notice}
+{: .alert}
 Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
 
 ### Bot Lifecycle
