@@ -91,18 +91,3 @@ You can filter the errors by conversation id upon clicking the filter button.
 If you click on the error description, a new page will be opened with detailed information on how to fix the errors.
 
 Additionally, there is an option to copy the detailed error response for providing this information to LP Support.
-
-{: .note}
-lorem ipsum dolor sit amet
-
-{: .alert}
-lorem ipsum dolor sit amet
-
-{: .deprecation}
-lorem ipsum dolor sit amet
-
-{: .tip}
-lorem ipsum dolor sit amet
-
-{: .info}
-lorem ipsum dolor sit amet
