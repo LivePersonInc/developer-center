@@ -18,11 +18,12 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 There are several types of dialogs:
 
-- <img class="inlineimage" style="width:30px" alt="Icon for standard dialog" src="img/ConvoBuilder/icon_dialog_standard.png" alt="Icon for standard or regular dialog type"> **Dialog (Standard)**: [Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match.
-- <img class="inlineimage" style="width:30px" alt="Icon for fallback dialog" src="img/ConvoBuilder/icon_dialog_fallback.png" alt="Icon for fallback dialog type"> **Fallback**: The [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is triggered when the bot doesn't recognize the consumer's message.
-- <img class="inlineimage" style="width:30px" alt="Icon for disambiguation dialog" src="img/ConvoBuilder/icon_dialog_disambiguation.png" alt="Icon for disambiguation dialog type"> **Disambiguation**: The [disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html) is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed.
-- <img class="inlineimage" style="width:30px" alt="Icon for auto escalation dialog" src="img/ConvoBuilder/icon_dialog_autoescalation.png" alt="Icon for auto escalation dialog type"> **Auto Escalation**: The [Auto Escalation dialog](conversation-builder-dialogs-auto-escalation-dialogs.html) frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred.
-* <img class="inlineimage" style="width:30px" alt="Icon for survey dialog" src="img/ConvoBuilder/icon_dialog_survey.png" alt="Icon for survey dialog type"> **Survey**: Survey dialogs can only be created in [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). Use a survey dialog to define a survey.
+- <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dialog_standard.png" alt="Icon for standard or regular dialog type"> **Dialog (Standard)**: [Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match.
+- <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dialog_fallback.png" alt="Icon for fallback dialog type"> **Fallback**: The [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is triggered when the bot doesn't recognize the consumer's message.
+- <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dialog_disambiguation.png" alt="Icon for disambiguation dialog type"> **Disambiguation**: The [disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html) is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed.
+- <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dialog_autoescalation.png" alt="Icon for auto escalation dialog type"> **Auto Escalation**: The [Auto Escalation dialog](conversation-builder-dialogs-auto-escalation-dialogs.html) frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred.
+
+* <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dialog_survey.png" alt="Icon for survey dialog type"> **Survey**: Survey dialogs can only be created in [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). Use a survey dialog to define a survey.
 
 ### Dialog templates
 
@@ -99,6 +100,7 @@ When you import dialogs, consider and address any dependencies across the dialog
 You can duplicate a dialog that is of type Dialog (see *Dialog types* above). This can be useful when you have a well-defined dialog that you want to quickly and easily reuse in the same bot.
 
 During the operation:
+
 - The associations of domains, intents, and entities to interactions are maintained.
 - In the [Dialog Starter](conversation-builder-interactions-dialog-starter.html) interaction, the patterns or the intent is duplicated. **After the operation, modify or remove these as appropriate so that each dialog starter is unique within the bot.**
 
