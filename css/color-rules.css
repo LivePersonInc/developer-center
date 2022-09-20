@@ -59,8 +59,8 @@
   --success-border: #008738;
   --deprecation-background: #292931;
   --deprecation-border: #EAEAEA;
-  --tip-background: #FAF4F0;
-  --tip-border: #D65800;
+  --tip-background: #F3F5F1;
+  --tip-border: #008738;
   --info-background: #EEEFF1;
   --info-border: #5A5F72;
   --breadcrumbs-background: #e7e8ec;
@@ -111,8 +111,8 @@
   --success-border: #3f9f66;
   --deprecation-background: #1C1D22;
   --deprecation-icon: #646A7E;
-  --tip-background: #251A14;
-  --tip-border: #FAA514;
+  --tip-background: #101E1F;
+  --tip-border: #3F9F66;
   --info-background: #363944;
   --info-border: #D1D4DB;
   --breadcrumbs-background: #363944;
