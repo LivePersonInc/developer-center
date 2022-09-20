@@ -395,3 +395,25 @@ can be seen in Figure 4.8:
 <img class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
 
 Figure 4.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+In the Custom Endpoint service, the last consumer message is passed via the property `lastConsumerMessage` that is sent with `context` information as part of `lpEvent` data. An example of the request body containing the WelcomeEvent is provided below:
+
+```json
+{
+  "type": "START",
+  "source": "CONVERSATION",
+  "data": {},
+  "context": {
+    "lpEvent": {
+      "type": "ContentEvent",
+      "contentType": "welcome",
+      "lastConsumerMessage": "I need to return my order",
+    }
+  }
+}
+```

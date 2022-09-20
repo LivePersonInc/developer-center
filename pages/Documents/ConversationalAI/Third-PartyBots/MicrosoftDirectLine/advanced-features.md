@@ -368,7 +368,7 @@ property (further information about `channelData` can be found
 }
 ```
 
-Figure 4.1 Example showing the general structure of the `RichContentEvent`
+Figure 3.10 Example showing the general structure of the `RichContentEvent`
 
 An example use case of the `RichContentEvent` response sent by Third-Party Bots is below that demonstrates the information which is sent
 from Third-Party bots on a user sharing a location via WhatsApp:
@@ -401,7 +401,7 @@ from Third-Party bots on a user sharing a location via WhatsApp:
 }
 ```
 
-Figure 4.2 Shows example `RichContentEvent` received by Microsoft Bot when an user shares WhatsApp location
+Figure 3.11 Shows example `RichContentEvent` received by Microsoft Bot when an user shares WhatsApp location
 
 As an example defined below, we will send back raw `RichContentEvent` data in Microsoft bot multi-messages response, if the property on path `channelData.context.lpEvent.event.type` comes as `RichContentEvent`:
 
@@ -429,3 +429,31 @@ const response = {
 The results can be seen in a demo below:
 
 <img class="fancyimage" style="width:300px" src="img/microsoftbotframework/microsoft_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+In Microsoft Bot the last consumer message is passed via the property `lastConsumerMessage` that is sent with `context` information as part of the `lpEvent` data. This context information within a conversation is preserved/passed in the channelData property (further information about channelData can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)).
+
+An example of the request body containing WelcomeEvent can be seen below:
+
+```javascript
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "context": {
+      "lpEvent": {
+        "lastConsumerMessage": "I need to return my order"
+        "type": "ContentEvent",
+        "content": "welcome"
+      },
+      "lpSdes": {}
+    }
+  }
+}
+```
+
+Figure 3.12 Shows example welcomeEvent received by Microsoft Bot
