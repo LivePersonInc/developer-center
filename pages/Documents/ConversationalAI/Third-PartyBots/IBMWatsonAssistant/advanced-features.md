@@ -355,7 +355,7 @@ We can use an [action](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-acti
 cloud function to access the `RichContentEvent` data and attach this action as a webhook to
 the IBM Watson Assistant instance.
 
-A minimal code of IBM Cloud Function of type `action` can be seen below. This LivePerson function
+A code snippet of an IBM Cloud Function of type `action` can be seen below. This LivePerson function
 will check if the input payload has `RichContentEvent` in the request and then will respond with
 the map/location body.
 
