@@ -296,7 +296,7 @@ We will describe an example of how to set up and access the WelcomeEvent respons
 
 #### Create Welcome Event Handler 
 
-Ensure you have an event handler in your flow builder that handle the custom `WELCOME` event, the highlighted area in figure 3.11 show you how to add new event handler in DialogFlow CX builder.
+Ensure you have an event handler in your flow builder that handles the custom `WELCOME` event, the highlighted area in figure 3.11 shows you how to add a new event handler in DialogFlow CX builder.
 
 <img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-cx-welcome-event.png">
 
