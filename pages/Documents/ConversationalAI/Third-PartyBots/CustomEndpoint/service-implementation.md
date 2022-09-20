@@ -283,7 +283,7 @@ Figure 2.6 Example request body of Rich Content event sent to Send Content Event
 Please note we expect brands to use [OAuth 2.0](oauth-2-0-client-credentials.html) for
 authentication and authorization
 
-Third-Party Bots use [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
+Third-Party Bots use the [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
 mechanism for a server to server interaction. Third-Party Bots use the provided
 `Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate a JWT.
 We currently support **only** OAuth API V2 in Sentinel OAuth 2. API V1 will soon be deprecated
