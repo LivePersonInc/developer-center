@@ -1,4 +1,5 @@
-/* banner home page */
+/* Banner home page */
+
 .container {
   width: 100%;
   max-width: 1280px;
@@ -8,24 +9,24 @@
   max-width: 100%;
 }
 
-.banner-container {
-  width: 100%;
-  background-color: #f8f8f8;
-}
+.banner-container,
 .banner {
   width: 100%;
   background-color: #f8f8f8;
 }
+
 .banner .text {
   color: #162036;
   float: left;
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   margin-left: 50px;
   margin-top: 90px;
 }
+
 .banner .text .first-line {
   font-size: 1.066em;
 }
+
 .banner .text .second-line {
   font-size: 1.866em;
   max-width: 400px;
@@ -44,6 +45,7 @@ a.typeform-share.button {
 }
 
 @media only screen and (max-device-width: 480px) {
+
   .banner {
     height: auto;
   }
@@ -51,6 +53,7 @@ a.typeform-share.button {
   .events img {
     display: none;
   }
+
   .img-responsive-mobile img {
     display: block;
     width: 100%;
@@ -59,12 +62,14 @@ a.typeform-share.button {
   a.typeform-share.button {
     width: 40%;
   }
+
 }
 
 .home-first-line {
   width: 70%;
   margin: 50px auto;
 }
+
 .home-second-line {
   width: 55%;
   margin: 54px auto;
@@ -76,19 +81,20 @@ iframe {
 }
 
 html body div.container div div.title {
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-size: 1.2em;
   margin-bottom: 10px;
   color: #162036;
 }
+
 html body div.container div.home-first-line div.text,
 html body div.container div.home-second-line div.text {
   color: #808080;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
-  /*margin-bottom: 10px;*/
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: .8em;
   max-width: 90%;
 }
+
 .header.homepage {
   max-width: 800px;
   margin-top: 80px;
@@ -99,7 +105,6 @@ html body div.container div.home-second-line div.text {
   max-width: 800px;
   font-size: 1em;
   text-align: left;
-  margin-top: 10px;
   margin: auto;
 }
 
@@ -112,7 +117,7 @@ a.view-all-products {
   border: 1px solid #6d6d6d;
   color: #162036;
   display: table;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-size: 1.2em;
   margin: 0 auto 50px;
   padding: 7px 28px;
@@ -121,20 +126,22 @@ a.view-all-products {
 }
 
 a.view-all-products::after {
-  content: "";
+  content: '';
 }
 
 @media (max-width: 990px) {
   .home-first-line {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   .home-second-line {
     width: 70%;
     margin-bottom: 16%;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
-.botplaform > img {
+
+.botplaform>img {
   width: 850px;
   margin-top: 3%;
 }
@@ -201,7 +208,7 @@ a.view-all-products::after {
   position: relative;
   margin: 0 auto;
   width: 149px;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 50px;
@@ -212,10 +219,10 @@ a.view-all-products::after {
 }
 
 .developmentsummit h1 {
-  color: #ffffff;
+  color: #fff;
   font-size: 48px;
   line-height: 64px;
-  font-family: "roboto slab", arial;
+  font-family: 'roboto slab', arial, sans-serif;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 24px;
@@ -225,7 +232,7 @@ a.view-all-products::after {
   color: #162036;
   font-size: 24px;
   line-height: 32px;
-  font-family: "open sans", arial;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   margin-top: 0;
   padding-top: 0;
@@ -233,7 +240,7 @@ a.view-all-products::after {
 }
 
 .developmentsummit .orange {
-  color: #ffffff;
+  color: #fff;
   background: #ff720b;
   padding: 14px 26px;
   font-size: 1.5em;
@@ -241,20 +248,20 @@ a.view-all-products::after {
 }
 
 .developmentsummit p,
-.developmentsummit > ul > li {
+.developmentsummit>ul>li {
   color: #162036;
   font-size: 16px;
   line-height: 22px;
-  font-family: "open sans", arial;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-.developmentsummit > ul > li {
+.developmentsummit>ul>li {
   margin-bottom: 20px;
 }
 
 .developmentsummit .banner-container h2 {
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 32px;
 }
 
@@ -267,21 +274,24 @@ a.view-all-products::after {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+
   .developmentsummit .banner-container {
-    background: url(/images/background-le-for-bots@2x.png) no-repeat center
-      center / cover;
+    background: url(/img/archive/background-le-for-bots@2x.png) no-repeat center center / cover;
   }
+
 }
 
 @media (max-width: 992px) {
+
   .developmentsummit .section3 p {
     margin-bottom: 40px;
   }
+
 }
 
 .video_overlays {
@@ -324,7 +334,7 @@ a.view-all-products::after {
   color: #162036;
   font-size: 48px;
   line-height: 64px;
-  font-family: "roboto slab", arial;
+  font-family: 'roboto slab', arial, sans-serif;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 24px;
@@ -365,7 +375,7 @@ a.view-all-products::after {
 
 .thumbnailtitle {
   font-size: 1.575em;
-  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   width: 75%;
   display: inline-block;
   margin-top: 95px;
@@ -380,7 +390,7 @@ a.view-all-products::after {
   font-size: 1.2em;
   width: 182px;
   padding: 10px 40px 10px 40px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   border: 2px solid #a1a1a1;
 }
 

@@ -41,7 +41,7 @@ This API retrieves a single skill (by ID) for a specific account.
 
  | Name            | Description                                                                  | Type    | Notes                                          |
  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
- | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
+ | select          | Response field filter expression.                           | string  | Example values: id, name. Default value: all fields  |
 
 ### Response
 
@@ -60,7 +60,6 @@ This API retrieves a single skill (by ID) for a specific account.
  |Header  |Description |
 | :-------  | :-----  |
 | ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
-
 
 **Response Body**
 

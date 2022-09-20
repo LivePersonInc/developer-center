@@ -11,7 +11,6 @@ permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
 indicator: messaging
 ---
 
-
 ### Authenticated in-app messaging
 
 #### Prerequisites
@@ -20,7 +19,7 @@ indicator: messaging
 
 #### Authentication methods 
 
-If your system implementation involves an authentication step , you can use one of the following methods in order to get the conversation view:
+If your system implementation involves an authentication step, you can use one of the following methods in order to get the conversation view:
 
 ##### Activity mode
 
@@ -33,9 +32,6 @@ LivePerson.showConversation(Activity activity, LPAuthenticationParams lpAuthenti
 ```java
 LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎);
 ```
-
-
-
 
 #### Authenticated connection methods
 
@@ -60,27 +56,26 @@ LPAuthenticationParams().setHostAppJWT("yourJwt")
 
 Once the Authentication key expires, you get notified with a callback / local intent ["void onTokenExpired()"](android-callbacks-index.html#token-expired).
 
-To re-connect with a new Authentication key, use [reconnect( LPAuthenticationParams lpAuthenticationParams) ](android-methods.html#reconnect)
+To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
 
-
-{:.important}
+{: .note}
 Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
 ### Unauthenticated in-app messaging
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
 
-* Easier & quicker on-boarding to Conversational Cloud
+* Easier and quicker on-boarding to Conversational Cloud
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 
 * The ability to use Campaigns    
 
-#### Related Classes, Parameters & APIs
+#### Related Classes, Parameters and APIs
 
 The `LPAuthenticationParams` object contains an authentication type which should be passed in the constructor. An empty constructor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
 
-_Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
+_Note: If you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH._
 
 ```java
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);
@@ -88,13 +83,13 @@ LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAut
 
 ##### Server side configurations (In case needed, should be modified by LivePerson)
 
-* Identity idle time - setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation - it will be closed and a dialog explaining what happened will be presented to the consumer.
+* Identity idle time — setting the time frame for identifying a consumer while being idle (not communicating with the brand). When a consumer opens the conversation window after being idle for the configured time, the LivePerson data will be removed from the device. If there's an open conversation — it will be closed and a dialog explaining what happened will be presented to the consumer.
 
-* Unauthenticated token expiration - sets the time for the app to validate the token. When the token is expired, it will be refreshed.
+* Unauthenticated token expiration — sets the time for the app to validate the token. When the token is expired, it will be refreshed.
 
 ##### SDK configurations
 
-When an unauthenticated user session expire - the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
+When an unauthenticated user session expire — the SDK will notify by presenting a dialog to the consumer. The dialog content can be modified by overriding the following string params
 
 ```xml
    <string name="lp_new_unauth_user_dialog_title">New Conversation</string>
@@ -107,15 +102,15 @@ When an unauthenticated user session expire - the SDK will notify by presenting 
 // 1. Init SDK with Monitoring
 MonitoringInitParams monitoringInitParams = new MonitoringInitParams(monitoringAppInstallId);
 
-LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {...}));
+LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(accountId,APP_ID, monitoringInitParams, new InitLivePersonCallBack() {…}));
 
-// 2. create & pass LPAuthenticationParams
+// 2. create and pass LPAuthenticationParams
 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);
 
 LivePerson.showConversation(activity,lpAuthenticationParams, conversationViewParams);
 ```
 
-#### Notes & Best Practices
+#### Notes and Best Practices
 
 * Brands who wish to use Unauthenticated In-App Messaging must activate Campaigns for Messaging and create a default engagement. For additional information, please follow the [Campaigns for Messaging guide](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Campaigns/Mobile+App+Engagement+Configuration+Guide.pdf). In addition, the SDK should be initialized with the ```LPMonitoringInitParams``` object.
 

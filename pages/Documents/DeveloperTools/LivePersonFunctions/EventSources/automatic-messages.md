@@ -15,15 +15,15 @@ Thanks to our integration with Automatic Messages, you can create functions trig
 
 <img src="img/functions/functions_automessages_flow.png" alt="Functions: Automatic Messages Flow" style="width:100%;"/>
 
-{: .notice}
+{: .alert}
 A function will trigger regardless of the state of the enabled flag of an Automatic Message. To avoid a function being triggered, you must undeploy your function. You can choose to ignore a specific event by leveraging the `cbotEventType` property included in the invocation payload. However, the ignored invocations here would still count towards your usage limits.
 
 This is the Automatic Messages flow with Functions integration:
 
 1. Automatic Messages listens to conversation events.
-2. If there is an Auto-message configured for the event --> It will send that message to the conversation.
-3. If there is a Function deployed associated with that event -->  The function will be invoked.
-4. After invocation --> Automatic Messages will check the response and will perform one of the following actions based on the callback payload:
+2. If there is an Auto-message configured for the event, it will send that message to the conversation.
+3. If there is a Function deployed associated with that event, the function will be invoked.
+4. After invocation, automatic Messages will check the response and will perform one of the following actions based on the callback payload:
     1. Transfer Conversation to a different Skill.
     2. Transfer Conversation to a different Agent.
     3. Send a message.
@@ -32,14 +32,14 @@ This is the Automatic Messages flow with Functions integration:
 
 ### Configuration
 
-#### Step 1 - Enable Automatic Messages
+#### Step 1 — Enable Automatic Messages
 
 Enable the Automatic Messages feature.
 
-{: .important}
+{: .note}
 Your account must have the Automatic Messages permissions enabled; please get in touch with your account team to enable the feature.
 
-#### Step 2 - Create a function
+#### Step 2 — Create a function
 
 Create a new function using one of the following messaging events:
 
@@ -56,12 +56,12 @@ You can select one of the available [templates](liveperson-functions-event-sourc
 
 You can select a Skill or set of Skills. Specifying a Skill can reduce the complexity of the function's code, reducing the number of unnecessary invocations.
 
-#### Step 3 - Edit your Function
+#### Step 3 — Edit your Function
 
 Adjust the code of the template according to your needs. The function can return a series of commands to the trigger.
 Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
-#### Step 4 - Deploy your function
+#### Step 4 — Deploy your function
 
 Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function. At this point, you can also test your function.
 
@@ -69,7 +69,7 @@ Like any other function, this function must be deployed before it can be used. P
 
 Conversational Cloud Messaging uses a series of "Conversation State Change Events", fired when specific actions or events occur within the conversation. You can use these events to trigger your functions. The Automatic Messages are responsible for invoking functions on certain messaging events.
 
-{: .notice}
+{: .alert}
 Multiple conversation event types are mapped to the same invocation messaging event.
 
 A deployed function on a specific messaging event can be invoked on multiple conversation events. For example, a function deployed on the **Messaging conversation end** event will fire when one of these events occurs during a conversation: `AGENT_END_CONVERSATION`, `CONSUMER_END_CONVERSATION` and `SYSTEM_END_CONVERSATION`.
@@ -104,7 +104,7 @@ The `cbotEventType` property is included in the invocation payload to distinguis
 
 You can send commands back to the trigger by returning one command or multiple commands by simply adding them to an array. Using callback commands is **not** mandatory. If you do not want to take any actions, return an empty array `[]`. This will result in no operation.
 
-{: .important}
+{: .note}
 If no message is set in the result of the function (which it returns to the trigger, for example: `callback();` ), the default automatic message for the account will be triggered.
 
 ```javascript
@@ -174,7 +174,7 @@ let result = [
 callback(null, result);
 ```
 
-{: .notice}
+{: .alert}
 If you add more than one command of a particular type (e.g. two messages) **only the first command** of this type will be processed.
 
 ### Best Practices
@@ -183,7 +183,7 @@ If you add more than one command of a particular type (e.g. two messages) **only
 
 Functions for messaging listens for messaging events asynchronously. Consequently, this can cause race conditions with other parts of the Conversational Cloud. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in the process of being routed), e.g. a conversation is idle, or a message line has been sent in off-hours. Functions are an excellent option to enrich data with third-party systems like CRMs or save data in the [Conversation Context Service](maven-context-warehouse-overview.html) to make it usable by another system like this, the Conversation Orchestrator.
 
-{: .notice}
+{: .alert}
 If the authenticated consumer's previous conversation was auto-closed and the new one opened within 48 hours, the new conversation event will not be triggered.
 
 #### Automatic Messages Error Handling

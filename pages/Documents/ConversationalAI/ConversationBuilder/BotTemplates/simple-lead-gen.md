@@ -15,10 +15,10 @@ The Simple Lead Gen template is designed to capture contact and financial inform
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
-This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .note}
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_simple_leadgen_de.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_simple_leadgen_de.png" alt="The Lead Gen dialog in a bot created from the Simple Lead Gen bot template">
 
 ### Included items
 
@@ -79,7 +79,7 @@ Modify the following values in Global Functions:
 ### Dialog templates
 This bot template contains a dialog template that allows you to easily copy over the primary data collection flow independently from the bot template.
 
-#### Lead Gen - Data Collection
+#### Lead Gen — Data Collection
 Walks through the process of applying for a home, auto, student or personal loan.
 
 Included dialogs:

@@ -31,17 +31,17 @@ This API returns the metadata related to the deletion requests that were submitt
   |Parameter|  Description|  Type/Value |
   |:------    |:--------    |:--------|
   |site_id|  LP account ID|   String |
-  |requestId  |Optional - specific request id   |String|
+  |requestId  |Optional — specific request id   |String|
 
  **Query Parameters**
 
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
- | status| Filter by status of the deletion request (NOT_STARTED,IN_PROGRESS,CANCELED,DONE)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
- | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string - represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
+ | status| Filter by status of the deletion request (NOT_STARTED, IN_PROGRESS, CANCELED, DONE)  | string| Optional | Default is all requests. Can't be used with request_id parameter. |
+ | fromDate| The start of the date range for returning the deletion requests | yyyy-mm-dd string — represents the start date| Optional | Default is 1970-01-01. Can't be used with request_id parameter. |
  | toDate| The end of the date range for returning the deletion requests| yyyy-mm-dd string  - represents the end date| Optional | Default is current time. Can't be used only with request_id parameter. |
 
-**Note: The current date format (YYYY-MM-DD) will be deprecated in the near future and the new expected format will be unix timestamps.**
+**Note:** The current date format (YYYY-MM-DD) will be deprecated in the near future and the new expected format will be unix timestamps.
 
 ### Response
 
@@ -54,7 +54,6 @@ This API returns the metadata related to the deletion requests that were submitt
  |request_time         | Time in which the deletion request was requested                                | string|
  |requested_by         | The user id who requested to delete     | string|
  |status               | The current status of the deletion request     | string|
-
 
  **Response Example**
 

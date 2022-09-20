@@ -24,7 +24,7 @@ indicator: both
 - [SFClient](#sfclient)
 - [SecretClient](#secretclient)
 
-{: .important}
+{: .note}
 Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
 
 ## Methods
@@ -155,7 +155,7 @@ Returns an Salesforce Client, that is configured to work with the proxy.
 
 | Name | Type |
 | :------ | :------ |
-| `connectToSalesforce` | (`params`: [`IConnectionOptions`](http://jsforce.github.io/jsforce/doc/Connection.html)) => [`Connection`](http://jsforce.github.io/jsforce/doc/Connection.html) |
+| `connectToSalesforce` | (`params`: [`IConnectionOptions`](https://jsforce.github.io/jsforce/doc/Connection.html)) => [`Connection`](https://jsforce.github.io/jsforce/doc/Connection.html) |
 
 ___
 

@@ -22,31 +22,31 @@ The following example flow can happen with this template:
 4. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List).
 5. Bot transfers the conversation to a skill or agent based on the policy outcome.
 
-{: .important}
-This bot template contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .note}
+This bot template contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 ### Included items
 
-#### Dialogs 
+#### Dialogs
 
-* **1 Welcome**: The Welcome dialog greets the user and collects their phone number for use in dynamic routing policies. 
+* **1 Welcome**: The Welcome dialog greets the user and collects their phone number for use in dynamic routing policies.
 * **2 Fallback**: This is displayed when the user enters an utterance that is not recognized.
 * **3 Transfer**: Contains integration tiles to transfer to a different skill or agent based on the result of dynamic routing policies.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png" alt="The Welcome dialog in a bot created from the Conversation Orchestrator bot template">
 
 #### Integrations
 
 * **TRANSFER_TO_AGENT**: Performs a transfer to a Conversational Cloud agent and skill. Agent ID, Skill Name, and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
 * **TRANSFER_TO_SKILL**: Performs a transfer to a Conversational Cloud skill. Skill Name and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png" alt="The Integration Settings page for the Transfer to Agent configuration">
 
 ### Configuration needed
 
 The important environment related variables are stored in the **Global Functions**, and for most cases this is the only area you will edit.
 
-<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png" alt="The initConversation function on the Global Functions page in the bot">
 
 Open the bot. On the top navigation click **Global Functions** and edit the following fields:
 
@@ -57,7 +57,7 @@ Open the bot. On the top navigation click **Global Functions** and edit the foll
 
 Click **Save**.
 
-Configure Conversational Cloud and deploy the bot. 
+Configure Conversational Cloud and deploy the bot.
 
 ### Pre/post-process code
 
@@ -145,6 +145,6 @@ if (transferType) {
 }
 ```
 
-### Using the Conversation Context Service & Dynamic Routing
+### Using the Conversation Context Service and Dynamic Routing
 
 This bot template is designed for use within the [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html#using-the-conversation-orchestrator-bot-template) guide of our Conversation Orchestrator Dynamic Routing documentation. For details on configuring Conversation Orchestrator to work with this bot template, please follow along with that guide.

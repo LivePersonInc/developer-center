@@ -31,7 +31,7 @@ Changes Queries in Predefined Content data.
 | fields        | List of required fields                   | Comma delimited list of strings                | Optional | Validation fail error code: 400 Non existing field error code: 400 Supported fields: <br>• enabled <br>• data <br>• categoriesIds <br>• hot-key<br> • type                                                                                                     |
 | field_set     | Predefined set of fields                  | Comma delimited list of strings                | Optional | Default: summary Validation fail error code: 400 Non existing field error code: 400 Supported field_set values: <br>• all(id, deleted, enabled, data, categoriesIds, type, hot-key) <br>• summary(id, deleted, enabled, categoriesIds, type, hot-key) |
 | sanitize_data | Whether to sanitize any HTML messages     | Boolean                                        | Optional | Default: False                                                                                                                                                                                                                                  |
-| lang          | List of requested content languages       | Comma delimited list of language IDs (en-US,…) | Optional | Default: all languages                                                                                                                                                                                                                          |
+| lang          | List of requested content languages       | Comma delimited list of language IDs (en-US, …) | Optional | Default: all languages                                                                                                                                                                                                                          |
 
 **Request Body**
 
@@ -175,7 +175,8 @@ Type 1 (all changes)
     }
 ```
 
-**Response Body - All Changes Query**
+**Response Body — All Changes Query**
+
 ```json
     {
        "revisionsCollection": [

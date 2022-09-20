@@ -15,10 +15,10 @@ The Order Status template is designed to provide users with information on retai
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
-This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .note}
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account. The bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_order_status_de.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_order_status_de.png" alt="The Order Status dialog in a bot created from the Order Status bot template, with an example conversation shown in the Preview tool">
 
 ### Included items
 
@@ -53,7 +53,7 @@ The *get order number* interaction is responsible for collecting a user's order 
 The current mock API returns date information in a format that is not structured in a user-friendly manner. To remedy this, the following code has been added to the Pre-Process Code of the *Order Status Text Display* interaction:
 
 ```
-// Converting date data from api call to a more human readable form for text display
+// Converting date data from API call to a more human readable form for text display
 var orderDate = new Date(botContext.getBotVariable('OrderStatus.orderDate'));
 var deliverDate = new Date(botContext.getBotVariable('OrderStatus.deliveryDate'));
 var stringedOrderDate = orderDate.toDateString();
@@ -63,7 +63,7 @@ botContext.setBotVariable('deliveryDate', stringedDeliverDate, true, false);
 ```
 
 #### Analytics
-Custom event logging for this template has been provided by default.
+[Custom event logging](conversation-builder-scripting-functions-log-debug.html#log-custom-event) for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
@@ -75,13 +75,11 @@ For questions that a user must respond to, the code can be found under Process U
 
 ```
 var response = botContext.getCurrentUserMessage();
-botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .important}
+{: .note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
-
-For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.

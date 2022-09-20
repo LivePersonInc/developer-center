@@ -9,14 +9,14 @@ permalink: liveperson-functions-event-sources-post-conversation-survey-legacy.ht
 indicator: both
 ---
 
-{: .important}
+{: .note}
 This integration with Post Conversation Survey (PCS) is only available with [PCS Legacy solution](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html). New PCS bots can be configured in [Conversation Builder](conversation-builder-bots-post-conversation-survey-bots.html) and are **not** integrated with Functions.
 
 A Post Conversation Survey flow is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on their experience with your brand. A PCS is a great way to measure agent/bot and skill performance and identify opportunities to improve your quality targets.
 
 PCS Bot can be integrated with Functions. A function can be invoked when the survey starts (at the end of the conversation) and when the survey ends. This integration will not send any automated emails compared to the [chat post survey](liveperson-functions-event-sources-chat-post-survey.html).
 
-{: .important}
+{: .note}
 Post-Conversation Survey Bot is only available for **messaging**, not for chat.
 
 <img src="img/functions/functions_survey_bot_flow.png" alt="Functions: Post Conversation Survey Flow" style="width:100%;"/>
@@ -25,19 +25,19 @@ This is the Post Conversation Survey flow with Functions integration:
 
 1. Survey Bot listens to *conversation end* events.
 2. If certain conditions occur, the Survey bot will send the survey first question to the conversation:
-    1. If there is a Function deployed on the *Messaging Survey Started* event -->  the associated function will be invoked (if deployed).
+    1. If there is a Function deployed on the *Messaging Survey Started* event, the associated function will be invoked (if deployed).
     2. Survey will listen for survey responses, send more questions and listen to responses.
-3. When the Survey ends on the *Messaging Survey Ended* event --> Survey Bot will invoke the associated function (if deployed).
+3. When the Survey ends on the *Messaging Survey Ended* event, the Survey Bot will invoke the associated function (if deployed).
 
 ### Configuration
 
 Your account must have the Post Conversation Survey enabled; please get in touch with your account team to enable the feature.
 
-#### Step 1 - Configure your PCS
+#### Step 1 — Configure your PCS
 
 Follow this guide on configuring a [Post Conversation Survey](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html). If you already have a survey bot configured, make sure you have Functions enabled for your account.
 
-#### Step 2 - Create function
+#### Step 2 — Create function
 
 Create a new function using one of the messaging survey templates. There are the following events:
 
@@ -46,14 +46,14 @@ Create a new function using one of the messaging survey templates. There are the
 
 Currently, you can only create one function of this event type. If multiple types of functionality are needed that require the same event, this must be handled by a single function's code.
 
-{: .important}
+{: .note}
 The Survey Bot will not process any callback payload during the invocation.
 
-#### Step 3 - Edit the function
+#### Step 3 — Edit the function
 
 Adjust the code in the template according to your needs by modifying the function. On the right side, you can see an example of the payload (in the sidebar, which you might need to open). If the calling system does not thread the function, the function can return `ok` within the callback. Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
 
-#### Step 4 - Deploy the function
+#### Step 4 — Deploy the function
 
 Like any other function, this function must be deployed before it can be used. Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
 

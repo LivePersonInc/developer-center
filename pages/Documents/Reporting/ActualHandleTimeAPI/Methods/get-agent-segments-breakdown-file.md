@@ -10,9 +10,8 @@ indicator: both
 
 This method is used to download the files from Get Agent Segment Breakdown API, using the returned path.
 
-{: .notice}
-**Note:**
-This API is not available by default. To enable it please contact your account manager.
+{: .alert}
+**Note:** This API is not available by default. To enable it please contact your account manager.
 
 ### Request
 
@@ -25,7 +24,7 @@ This API is not available by default. To enable it please contact your account m
 | Name   | Description                                                                                                                     | Type   | Required? | Default | Notes                                                                                                                                  |
 |--------|---------------------------------------------------------------------------------------------------------------------------------|--------|-----------|---------|----------------------------------------------------------------------------------------------------------------------------------------|
 | path   | Relative file path as received from the Breakdown API                                                                           | string | Required  |         | Must match the following regex:  ^/year=\d{4}/month=\d{1,2}/day=\d{1,2}/hour=\d{1,2}/accountId=[a-zA-Z0-9]+/[a-zA-Z0-9_.-]+\.json\.gz$ |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters , Must match the following regex: ^[a-zA-Z0-9_]+$  Example: LP_AgentUI                       |
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization | string | Required  |         | Source name should be up to 20 characters, must match the following regex: ^[a-zA-Z0-9_]+$  Example: LP_AgentUI                        |
 
 ### Response
 
@@ -35,10 +34,10 @@ This API is not available by default. To enable it please contact your account m
 | sequence         | Event sequence number                        | string            |       |
 | startReason      | HTU measurement trigger                      | string            |       |
 | endReason        | HTU end reason                               | string            |       |
-| startTimestamp   | HTU start timestamp                          | long - Epoch time |       |
-| endTimestamp     | HTU end timestamp                            | long - Epoch time |       |
+| startTimestamp   | HTU start timestamp                          | long — Epoch time |       |
+| endTimestamp     | HTU end timestamp                            | long — Epoch time |       |
 | handleTimeMillis | Total time in milliseconds from start to end | string            |       |
-| insertTimestamp  | Record insertion time (internal)             | long - Epoch time |       |
+| insertTimestamp  | Record insertion time (internal)             | long — Epoch time |       |
 
 #### sample file content
 

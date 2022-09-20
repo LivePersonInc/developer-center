@@ -8,8 +8,7 @@ indicator: both
 
 This section describes how to register an OAuth 2.0 grant type [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) application and how to generate an access token. This is the preferred way to authorize machine-to-machine communication.
 
-
-### Step 1: Generate client_id & client_secret:
+### Step 1: Generate client_id and client_secret
 
 * Execute the **App Installation** process in order to generate a `client_id` and `client_secret` for the OAuth 2.0 flow. This can be done by your LivePerson account team, so you should contact them for more assistance (you can also see [this](https://developers.liveperson.com/guides-le-applications-installing.html) guide for more detailed information). You can use this JSON as a base template for requesting an App Installation:
 
@@ -26,7 +25,7 @@ This section describes how to register an OAuth 2.0 grant type [Client Credentia
 ```
 The `client_id` and `client_secret` will be given to you after [application registration](connectorapi-getting-started.html).
 
-### Step 2: Retrieve the domain of the authorization server.
+### Step 2: Retrieve the domain of the authorization server
 
 You will need to pass your `client_id` and `client_secret` to one of our authorization servers for authentication. Depending on your account, you can use the following servers (the base domain is: `sentinel`):
 
@@ -38,16 +37,16 @@ You will need to pass your `client_id` and `client_secret` to one of our authori
 
 However, instead of hardcoding the authorization server, it is recommended to use the [LivePerson Domain API](https://developers.liveperson.com/agent-domain-domain-api.html) to retrieve this information by providing the service name `sentinel` and retrieving the host address **dynamically**.
 
-
 ### Step 3: Generate OAuth 2.0 access token
 
 Together with the retrieved domain of the authorization server and the `client_id` + `client_secret`, you can now generate an access-token.
 "Sentinel", the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request. 
 
 ### API Versioning
+
 We currently have two versions for token generation.  
 
-**API V1** - This API uses a static private signing key. 
+**API V1** — This API uses a static private signing key. 
 
 Please use the following public key for the JWT signature validation:
 ```jwtPublicKey
@@ -63,7 +62,8 @@ Content-Type: application/x-www-form-urlencoded
 client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
 ``` 
 
-**API V2** - uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
+**API V2** — uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
+
 ```url
 https://{sentinel_service_domain}/sentinel/well-known/jwks
 ```
@@ -90,10 +90,9 @@ Content-Type: application/json;charset=utf-8
 { "access_token": "eyJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM", "token_type": "Bearer" }
 ```
 
-In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
+In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developer-center/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-<img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
-
+<!-- <img src="img/faas-postman.png" alt="Postman" style="width:100%;"/> -->
 
 1. In your request-tab under your function click on **Authorization**
 
@@ -103,7 +102,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 4. In the appearing dialog fill out the form:
 
-![](img/faas-token-client-credentials.png)
+<!-- ![](img/faas-token-client-credentials.png) -->
 
   1. **Token Name**: The name of the token.
 

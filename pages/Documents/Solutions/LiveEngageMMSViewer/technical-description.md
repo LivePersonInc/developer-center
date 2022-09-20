@@ -11,6 +11,9 @@ order: 10
 indicator:
 ---
 
+{: .deprecation}
+This information is outdated.
+
 The MMS Viewer consists of three parts: the front-end interface that uses the Conversational Cloud Agent Workspace SDK, the backend which is a Node.js service that receives MMS information and emits it to the front-end, and a Twilio function that speaks to the Node.js service. The high-level flow is as follows:
 
 1. The consumer sends a MMS message to the Conversational Cloud Agent

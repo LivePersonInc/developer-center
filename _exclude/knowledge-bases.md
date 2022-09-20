@@ -10,14 +10,14 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
-{: .important}
+{: .note}
 **This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
 
 Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in the Fallback Dialog, as a last check before triggering the Fallback interaction. In this section, you create a new knowledge base, which will be accessed in the Fallback dialog located in your Greeter Bot.
 
 ### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 
 ### Step 8: Create the FAQ knowledge base
@@ -26,7 +26,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
 1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Knowledge Base** section.
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/advtutorial/kb_app_option.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/advtutorial/kb_app_option.png" alt="">
 
 2. Click **Add Knowledge Base** in the upper-right corner.
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
@@ -34,7 +34,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
     Under **Intent Association**, select **Domain Intents** and create a new NLU V1 domain called **Retail FAQ**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png"> 
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png" alt=""> 
 
     Click **Save** in the lower-right corner.
 
@@ -43,8 +43,8 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
     * **Intent name**: Return policy
     * **Training Phrases**:
         * What is your return policy
-        * How do i return something
-        * How do i make a return
+        * How do I return something
+        * How do I make a return
         * What is your policy for making returns
 
     After creating your new intent, finish the article by adding the following summary and clicking **Save**:
@@ -53,9 +53,9 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
     *You have up to 30 days from the date you received your order to make a return.*
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_article.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_article.png" alt="">
 
-    {: .important}
+    {: .note}
     For the purpose of this demonstration, intents and training phrases are intentionally being kept simplistic to quickly showcase the capabilities of Domain Intents. A benefit of using Domain Intents is that, after creation, you can modify/improve the intents and training phrases using Intent Builder.
 
 6. Back in our Getting Started KB page, repeat this process to add additional articles with the following information:
@@ -78,14 +78,14 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
             * I need to cancel my order
     * **Summary**: *Orders can be cancelled up to an hour after they are placed. Please contact our support team at atyourservice@retail.com for further assistance.*
 
-    {: .important}
+    {: .note}
     Additional details and tags can be included when creating your Knowledge Base articles. Please see the [developers' documentation on knowledge bases](knowledge-base-overview.html) for more details on how to use these features to optimize your Knowledge Base searches.
 
 	Click **Save** in the lower-right corner.
 
 7. Back in the **Getting Started KB** menu, confirm that the newly created articles are present in your list of articles. Note the **Inactive** designation, as all newly created articles need to be enabled prior to being accessible.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_articles.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_articles.png" alt="">
 
     For each article, click the article title, scroll down to the **Enable Article** setting, and turn it on. Click **Save**.
 
@@ -105,12 +105,12 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
 
     The remainder of the form should have been auto completed when the Knowledge Base integration type was selected. Ensure that the form matches the content in the screenshot.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_integration_add.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_integration_add.png" alt="">
 
 3. Click **Save** in the lower right hand corner, and on success, navigate to the Fallback dialog.
 4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration. 
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_1.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_1.png" alt="">
 
     Rules will need to be created to direct the flow of the conversation based on whether there was a successful Knowledge Base query. Prior to doing so, create a new text message interaction that will display a successful search article.
 
@@ -118,7 +118,7 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
 
     For the text content, type `{FAQ.article}`. For the **Next Action**, select **End Interaction** to prevent triggering the fallback_starter after display.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_2.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_2.png" alt="">
 
 6. Create custom rules to account for successful and unsuccessful FAQ search requests. In the integration, in the **Next Action** dropdown, click **+ Custom Rule**, and complete with the following:
     * Rule name: KB Success
@@ -132,11 +132,11 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
     * **+ Add Condition**: **API Result** matches **Failure**
     * **And Go To**: Go To: fallback_starter
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_3.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_3.png" alt="">
 
 8. Test the FAQ search. Open the previewer, reset the session, and test user utterances that trigger the FAQ articles. Also test utterances you intend to pass through to the fallback_starter.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/kb_integration_preview.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/kb_integration_preview.png" alt="">
 
     Knowledge bases are optimized to handle frequently asked questions and other static content that you want to provide for users. By including them intelligently in your conversation designs, you can round out the bot experience to answer questions and ensure users will be happy to return to your bot.
 

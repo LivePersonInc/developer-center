@@ -16,9 +16,9 @@ For example, if a skill has a defined time to response of five minutes and a con
 
 It is important to understand that this API creates a "workdays" object which is then assigned to specific skills. If a "workdays" object is not assigned to any skills, it will not affect any consumers. So, for example: two different "workdays" objects can be created. **Object A** defines a regular, US hours business week. **Object B** defines a short, six hour work week. You can then assign Object A to example skills *Support* and *Billing* while assigning Object B to example skill *Sales*. Object A will affect only the skills assigned to it (Support and Billing) and Object B will only affect the skill assigned to it (Sales).
 
-**Note**: the Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
+**Note:** The Workdays feature relies on automatic messages in order to inform the visitor of the expected time to response. If the automatic messages feature is disable for an account, the Workdays feature will not work as expected.
 
-**Note**: Use the [Skills API](/administration-skills-appendix.html) to set the workingHoursId for the skill.
+**Note:** Use the [Skills API](/administration-skills-appendix.html) to set the workingHoursId for the skill.
 
 ### Use Cases
 
@@ -30,7 +30,7 @@ It is important to understand that this API creates a "workdays" object which is
 
 A few things you'll need to get started with this API:
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html){:target="_blank"} to retrieve this information by providing the following service name:
+1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
 	* Read only: accountConfigReadOnly
 
@@ -38,10 +38,10 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html){:target="_blank"}. Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
-	* [Follow these instructions](guides-gettingstarted.html){:target="_blank"}, to create and use an API key.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use){:target="_blank"}.
+3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html){:target="_blank"}
+4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html).

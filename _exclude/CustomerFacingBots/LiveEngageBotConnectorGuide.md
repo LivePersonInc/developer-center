@@ -10,11 +10,11 @@ indicator: both
 
 ### Introduction
 
-<div class="important">The intended audience of this document is LivePerson Professional Services and other account stakeholders. It is to be used for consulting 3rd party bot builders in integrating their bots to LivePerson on behalf of our customers.</div>
+<div class="note">The intended audience of this document is LivePerson Professional Services and other account stakeholders. It is to be used for consulting 3rd party bot builders in integrating their bots to LivePerson on behalf of our customers.</div>
 
 The LiveEngage platform helps orchestrate the flow of messages back and forth between consumers and Agents. Consumers can be on any end-user channel such as SMS, Web, Facebook Messenger and Apple Business chat, and communicate with both Human and Automated (Bot) agents. A bot is an automated conversational agent that performs a specific goal. LiveEngage has several avenues through which our customers can develop and deploy bots:
 
-* BotCentral Platform (Owned by Liveperson, soon to be deprecated by the Conversation Builder)
+* BotCentral Platform (owned by LivePerson, soon to be deprecated by the Conversation Builder)
 
 * Conversation Builder, a LivePerson product (in Beta), which allows customers to build and deploy bots directly within LiveEngage (Support for this channel is coming soon).
 
@@ -34,7 +34,7 @@ This document covers the following different scenarios with regards to deploying
 
 5. Amazon Lex
 
-6. Liveperson Bots & Automation Platform (AKA BotCentral, owned by Liveperson)
+6. LivePerson Bots & Automation Platform (AKA BotCentral, owned by LivePerson)
 
 7. Any Bot Platform (small, medium platforms)
 
@@ -46,13 +46,13 @@ This document covers the following different scenarios with regards to deploying
 
 2. Login to the Bot Connector Platform by using one of the following URLs:
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+<div class="note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.
@@ -67,7 +67,7 @@ This document covers the following different scenarios with regards to deploying
 
 3.  Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service.
 
-4.  Connect Watson Bot (Username & Password)
+4.  Connect Watson Bot (Username and Password)
 
     * Select Watson as AI provider
 
@@ -112,13 +112,13 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 2. Login to the Bot Connector Platform by using one of the following URLs:
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC - https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+<div class="note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.
@@ -145,7 +145,6 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
-
 ### Google Dialog V2.0 Flow
 
 The Google Dialogflow v2.0 connector will be available by mid December. Below are the instructions to deploy bots built using it.
@@ -154,13 +153,13 @@ The Google Dialogflow v2.0 connector will be available by mid December. Below ar
 
 2. Login to the Bot Connector Platform by using one of the following URLs
 
-    * LivePerson NA - https://bot-console.fs.liveperson.com
+    * LivePerson NA — https://bot-console.fs.liveperson.com
 
-    * LivePerson EMEA - https://bot-console.emea.fs.liveperson.com
+    * LivePerson EMEA — https://bot-console.emea.fs.liveperson.com
 
-    * LivePerson APAC - https://bot-console.apac.fs.liveperson.com
+    * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="important">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+<div class="note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.
@@ -190,7 +189,6 @@ The Google Dialogflow v2.0 connector will be available by mid December. Below ar
     6. Leave API Version unchanged as V2
 
 ![image alt text](img/bot-guide-dialogflow1.png)
-
 
 ### Microsoft Bot Framework (LUIS)
 
@@ -239,7 +237,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
 ### Small / medium niche Bot Platforms
 
-1. Login to Liveperson Bots & Automation Platform by using
+1. Login to LivePerson Bots & Automation Platform by using
 
     * Use [https://platform.botcentralai.com](https://platform.botcentralai.com) for deploying on AWS.
 
@@ -271,8 +269,6 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
     `https://external.botcentralapi.com/connector/{{consumerId}}`
     {% endraw %}
 
-
-
 ### Custom Connectors
 
 Customers can always write their own custom Bot connector using our Messaging Agent SDK and Chat Agent API.  This is mainly for the small, medium niche platforms who want to build connectivity to LiveEngage.
@@ -293,7 +289,6 @@ Customers can always write their own custom Bot connector using our Messaging Ag
   * LivePerson Developer [Documentation](https://developers.liveperson.com/messaging-agent-sdk-overview.html)
 
   * Live GitHub [Messaging SDK & Sample Apps](https://github.com/LivePersonInc/node-agent-sdk)
-
 
 ### FAQS
 

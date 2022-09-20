@@ -10,18 +10,18 @@ permalink: tutorials-guides-getting-started-with-bot-building-integrations.html
 indicator: both
 ---
 
-{: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+{: .note}
+This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 Many use cases require integration with an API to send and receive data. Following the "make payment" use case, in this tutorial you add an integration to check a user’s account balance.
 
-{: .important}
+{: .note}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
 <!--
 ### Watch the video
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/450720977" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/450720977" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0; right: 0; left: 0;"></iframe></div></div>
 <br>
 -->
 
@@ -34,11 +34,11 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+3. Click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png" alt="Assist icon"> (Assist icon) beside the interaction to open the Assist tool.
 
     Select the “LP_Cross-vertical” domain, followed by the "check order status" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to check the status of my order." Selecting this intent associates it with the dialog starter.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integr_order_status.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integr_order_status.png" alt="Associating the check order status intent with the dialog starter in the Order Status dialog">
 
 4. Add a new Text Statement to acknowledge the user's intent. Add the text, "Let’s find your order."
 
@@ -48,15 +48,15 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
 
-    {: .important}
+    {: .note}
     This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
 
     Still in the rule, capture the user’s order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, and enter `{$userMessage}` for its value.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png" alt="Adding a rule to capture the user's order number">
 
-    {: .important}
-    `{$userMessage}` is just one of many system variables you can use in your interactions. For the complete list, and for more on variables, see [here](conversation-builder-variables-slots-variables.html).
+    {: .note}
+    `{$userMessage}` is just one of many system [variables](conversation-builder-variables-slots-variables.html) you can use in your interactions.
 
     Click **Save**.
 
@@ -83,7 +83,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
     | orderStatus | {$.api_OrderStatus.orderStatus} |
     | image | {$.api_OrderStatus.image} |
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png" alt="The Integration Settings window">
 
 3. Click **Save**.
 
@@ -94,22 +94,22 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
     From the dropdown, select your newly created OrderStatus API Integration.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/orderstatus_integr.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/orderstatus_integr.png" alt="The Integration interaction added to the dialog">
 
 3. To display our returned API data, select a new **Structured** interaction.
 
     In the Structured Question title section, add `{OrderStatus.name}`.
 
-    {: .important}
-    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [here](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).)
+    {: .note}
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.” (For a quick reference on using variables in interactions, see [this section](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
     Click “ADD IMAGE” and in the **Image URL** field, add `{OrderStatus.image}`.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png" alt="The configured Structured interaction">
 
-    {: .important}
+    {: .note}
     While images show properly in Preview, deployed bots need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
 
     Now let's test all this out.
@@ -122,7 +122,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a �
 
 7. Verify that you are successfully receiving order information that is displayed with a user’s name, order status, and image.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png" alt="Previewing the conversation">
 
     Congratulations! You now understand the basics of integrations and variables.
 

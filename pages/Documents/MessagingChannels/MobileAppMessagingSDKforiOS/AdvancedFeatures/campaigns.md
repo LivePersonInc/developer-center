@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud — the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
 
 Use the Monitoring APIs to:
 
@@ -32,14 +32,13 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 - The SDK must be initialized with the `LPMonitoringInitParams` object.
 
-### Notes & Best Practices
+### Notes and Best Practices
 
 * To start a conversation with a specific campaign and engagement, provide an `LPCampaignInfo` object to the `LPConversationViewParams` object.
 
 * A monitoring session is a 6-hours window. All SDEs that report during the session get aggregated.
 
 * If not reporting any SDEs (idle) for 30 minutes, a new session starts when reporting the next SDE.
-
 
 ### Monitoring APIs
 
@@ -62,7 +61,7 @@ do {
 }
 
 // 2. APIs
-let entryPoints = ["http://www.liveperson-test.com",
+let entryPoints = ["https://www.liveperson-test.com/",
                    "sec://Food",
                    "lang://De"]
 let engagementAttributes = [
@@ -103,5 +102,4 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 // show conversation using campaignInfo
 LPMessaging.instance.showConversation(conversationViewParam)
 ```
-
 

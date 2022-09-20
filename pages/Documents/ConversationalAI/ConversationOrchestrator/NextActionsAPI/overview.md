@@ -39,15 +39,15 @@ A typical use case for using the Next Actions API is to get a routing decision t
 v2 of the Conversation Orchestrator APIs was released in July 2021. The new version applies to both the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the Next Actions API. v2 has the following additional benefits:
 
 * Higher scalability
-* Improved Better data security through OAuth2.0 authorization mechanism
+* Improved data security through OAuth 2.0 authorization mechanism
 * Visibility into Dynamic Routing [policy execution logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html)
 * Better APIs i.e. update multiple context variables in a single call
 * Better data security through improved encryption
 
 All accounts will gradually be migrated from v1 to v2 starting July 2021. Please talk to your LivePerson account executive if you want to be moved to v2 sooner. The v1 APIs will be deprecated on December 31, 2022. Please refer to the [v1](conversation-orchestrator-next-actions-api-methods-v1.html) or [v2](conversation-orchestrator-next-actions-api-methods-v2.html) documentation as appropriate for your case.
 
-{: .important}
-You can know you are on v2 if you see OAuth 2.0 authentication on the API Authorization page, as discussed [here](conversation-orchestrator-api-authorization.html).
+{: .note}
+You can know you are on v2 if you see OAuth 2.0 authentication on the [API Authorization](conversation-orchestrator-api-authorization.html).
 
 ### Getting started
-To generate credentials for using the API, see [here](conversation-orchestrator-api-authorization.html).
+See the [discussion on generating credentials for using the API](conversation-orchestrator-api-authorization.html).

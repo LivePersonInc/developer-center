@@ -14,7 +14,7 @@ indicator: messaging
 ---
 ### Introduction
 
-{: .notice}
+{: .alert}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing
 
 The key messaging metrics API retrieves core messaging metrics at the account, skill or agent group level, for up to the last 24 hours.
@@ -45,11 +45,9 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key.
 
-	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key. Please use the Data -> Key Messaging Metrics keys.
+	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key. Please use the Data → Key Messaging Metrics keys.
 
-3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
-
-
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 ### Use Cases
 

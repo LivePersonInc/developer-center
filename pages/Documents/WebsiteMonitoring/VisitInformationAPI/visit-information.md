@@ -39,10 +39,10 @@ This API supports OAuth 1.0 authentication patterns and requires SSL protocol. P
 | v | API version  | string | Required |
 | sid | Session ID | string | Required |
 
-<div class="important">The <strong>visitorId</strong> and the <strong>sid</strong> parameters referenced above are retrieved from the Web Tag. Each visitor receives from the Tag their own <strong>visitorId</strong> (also called <strong>vid</strong>) and <strong>sid</strong> (also called <strong>Session ID</strong>) which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation <a href="/lp-tag-engagement-window.html">here</a>.
-<br>
-<br>
-<strong>This method of retrieving the parameters is relevant to monitored sessions only</strong>. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default Conversational Cloud window), you'll need to use the <a href="/rt-interactions-app-engagement-overview.html">App Engagement API</a> instead, specifically the Create Session method which returns both of these parameters.</div>
+<div class="note">
+<p>The <strong>visitorId</strong> and the <strong>sid</strong> parameters referenced above are retrieved from the Web Tag. Each visitor receives from the Tag their own <strong>visitorId</strong> (also called <strong>vid</strong>) and <strong>sid</strong> (also called <strong>Session ID</strong>) which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation <a href="/lp-tag-engagement-window.html">here</a>.</p>
+<p><b>This method of retrieving the parameters is relevant to monitored sessions only</b>. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default Conversational Cloud window), you'll need to use the <a href="/rt-interactions-app-engagement-overview.html">App Engagement API</a> instead, specifically the Create Session method which returns both of these parameters.</p>
+</div>
 
 **Request Example**
 
@@ -404,7 +404,7 @@ See [JSON Example](#json-example).
         {
           "referrer": null,
           "pageBasic": {
-            "url": "http://testFile.com",
+            "url": "https://testfile.com",
             "startTime": 1475675316326,
             "referrer": null,
             "title": "Test Page",
@@ -420,7 +420,7 @@ See [JSON Example](#json-example).
           "timeOnPage": 21482,
           "id": "1899669462",
           "pageLoaded": true,
-          "url": "testFile.com"
+          "url": "testfile.com"
         }
       ],
       "events": [

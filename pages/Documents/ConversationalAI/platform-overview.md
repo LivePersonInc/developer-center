@@ -11,12 +11,12 @@ permalink: platform-overview.html
 indicator: both
 ---
 
-{: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+{: .note}
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 LivePerson's Conversational AI is a suite of integrated applications that work together to provide an all-in-one automation and AI solution.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/platform_main.png">
+<img class="fancyimage" alt="The page that displays the access points to all of the applications in the Conversational AI suite" style="width:750px" src="img/ConvoBuilder/platform_main.png">
 
 ### Applications
 

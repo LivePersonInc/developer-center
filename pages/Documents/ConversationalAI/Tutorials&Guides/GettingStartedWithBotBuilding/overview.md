@@ -20,8 +20,8 @@ permalink: tutorials-guides-getting-started-with-bot-building-overview.html
 indicator: both
 ---
 
-{: .important}
-Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+{: .note}
+Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 The **Getting Started with Bot Building** tutorial series include five tutorials that build on one another:
 

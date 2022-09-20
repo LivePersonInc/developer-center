@@ -13,9 +13,12 @@ permalink: javascript-chat-sdk-creating-an-instance.html
 indicator: chat
 ---
 
-Creating your instance is the first thing to do when using the SDK.   
-The instance expects a configuration file with an appkey and your lpNumber (LivePerson site ID).   
-Once you create an instance of the API, it retrieves your site's domain and initializes the ability to request data and chat.   
+Creating your instance is the first thing to do when using the SDK.
+   
+The instance expects a configuration file with an appkey and your lpNumber (LivePerson site ID).
+   
+Once you create an instance of the API, it retrieves your site's domain and initializes the ability to request data and chat.
+   
 At this stage you can also bind to the main events that you will be using throughout your chat application.
 
 At this point, it is recommended to bind to at least the following methods: onLoad, onInit, onStart, onState, onStop, and onLine.
@@ -24,7 +27,7 @@ At this point, it is recommended to bind to at least the following methods: onLo
 
 ```javascript
 var myChatObj = new lpTag.taglets.ChatOverRestAPI({
-    // The api key for this site
+    // The API key for this site
     appKey: "12345678945613",
     // The LivePerson site number
     lpNumber: "123456",
@@ -80,13 +83,12 @@ var myChatObj = new lpTag.taglets.ChatOverRestAPI({
 | Type | Value/Properties |
 | :--- | :--- |
 | Function  | An inline function or function pointer. |
-| Object | An object containing properties: <br> - callback - the callback function (Required) <br> - context - the execution context for the function (Optional) |
+| Object | An object containing properties: <br> — callback — the callback function (Required) <br> — context — the execution context for the function (Optional) |
 | Array | An array containing functions, or objects with the above syntax, or both. |
 
 **Examples**
 
 Function:
-
 
 `onLoad: myOnLoad`
 

@@ -38,10 +38,9 @@ In the below example, we send three messages to the user with a delay of 2000 mi
 ```javascript
 // setting a delay of 2000 for each message……
 botContext.setMessageDelay(2000);
-//  sending message to user...
+//  sending message to user…
 botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
 ```
-
 
 ### Set allow max text response
 
@@ -49,7 +48,7 @@ By default, a single text interaction has a limit of 320 characters on the word 
 
 To accomplish this, use this function in the pre-process code of the interaction (i.e., before the interaction is rendered). You can then revert it if desired in a subsequent interaction.
 
-{: .important}
+{: .note}
 Keep in mind the limits of the targeted channel(s), which might take precedence over this setting.
 
 | Function Name | Arguments | Returns |
@@ -60,14 +59,13 @@ Keep in mind the limits of the targeted channel(s), which might take precedence 
 botContext.setAllowMaxTextResponse(true);
 ```
 
-
 ### Set trigger next message
 
 `setTriggerNextMessage` is used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setTriggerNextMessage(messagename)` | messagename (string) – The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
+| `setTriggerNextMessage(messagename)` | messagename (string) — The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
 
 #### Example
 
@@ -88,7 +86,7 @@ if (company == 'LivePerson') {
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `evaluateOptions(userResponse, options)` | <em>userResponse - </em>the user's message text<br><br><em>options - </em>array of strings | string: matched option from an array of options. |
+| `evaluateOptions(userResponse, options)` | <em>userResponse</em> — the user's message text<br><br><em>options</em> — array of strings | string: matched option from an array of options. |
 
 #### Example
 

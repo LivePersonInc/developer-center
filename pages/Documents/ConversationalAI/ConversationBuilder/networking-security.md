@@ -18,7 +18,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 
 #### LivePerson Cloud
 
-If your implementation is hosted in LivePerson Cloud, you can find all details on whitelisting [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
+If your implementation is hosted in LivePerson Cloud, you can find all details on whitelisting in [this section](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
 
 #### AWS
 
@@ -28,28 +28,20 @@ More specifically, refer to Amazon’s **ip-ranges JSON file** that you can acce
 
 ##### Brand system calls to Conversation Builder
 
-| To use this... | Whitelist this in the ip-ranges file... | Notes | 
+| To use this… | Whitelist this in the ip-ranges file… | Notes | 
 |----|----|----|
-| Conversation Builder's web portal | All IPs for the CLOUDFRONT service and the EC2 service | Whitelisting the domain is recommended over whitelisting the IPs. |
+| Conversation Builder's web portal | All IPs for the CloudFront service and the EC2 service | Whitelisting the domain is recommended over whitelisting the IPs. |
 | Web View integration API | All IPs for the EC2 service | |
 
 ##### Conversation Builder calls to brand systems
 
-| To use this... | Whitelist this in the ip-ranges file... |
+| To use this… | Whitelist this in the ip-ranges file… |
 |----|----|
 | Agent connectors to LiveEngage | All IPs for the EC2 service |
 | API integrations | All IPs for the EC2 service |
 | Custom integrations (if any developed specifically for your brand) | All IPs for the EC2 service |
 
-### Whitelisting rich media
+### Whitelisting rich media and web links
 
-#### Images and other media
-You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
-
-If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain that's applied to all URLs must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
-
-#### Web link URLs (Facebook only)
-
-For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.
+* You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
+* For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.

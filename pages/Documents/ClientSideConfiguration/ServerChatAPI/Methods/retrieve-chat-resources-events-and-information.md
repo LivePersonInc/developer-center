@@ -188,7 +188,7 @@ JSON Example:
 | events | URI to retrieve the chat events, add a line or end a chat. | link relationship | See [Retrieve Chat Events](consumer-experience-server-chat-retrieve-chat-events.html)|
 | info | URI to retrieve information regarding the current status of the chat. | link relationship | See [Retrieve Chat Information](consumer-experience-server-chat-retrieve-chat-information.html). |
 | transcript-request | URI to send a transcript of the chat. | link relationship | |
-| exit-survey | URI to retrieve the Exit survey structure or to submit the survey data. | link relationship | |
+| exit-survey | URI to retrieve the exit survey structure or to submit the survey data. | link relationship | |
 | visitor-name | URI to return the visitor's name or set the visitor's name. | link relationship | |
 | visitor-typing | URI to return visitor's typing status or sets the visitor's typing status. | link relationship | |
 | agent-typing | URI to return the agent's typing status. | link relationship | |

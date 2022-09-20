@@ -12,19 +12,19 @@ indicator: accepts "messaging" "chat" or "both"
 
 Explain what a developer can do with these methods/functions.
 
-{: .important}
+{: .note}
 Perhaps note that the developer should see the [introduction](introduction-to-this-product.html) to this product if they have not yet?
 
 ### Function One
 
 Explain what this function does. Why the developer would want to use it.
 
-{: .important}
+{: .note}
 Optionally include a best practice or gotcha note.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
+| `sendImmediateReply(message)` | message — (string or array) — A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
 
 #### Example
 

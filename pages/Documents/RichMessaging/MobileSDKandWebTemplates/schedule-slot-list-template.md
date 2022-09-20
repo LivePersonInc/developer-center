@@ -15,8 +15,7 @@ Web Messaging and the Mobile SDK channels now allow functionality to present Sch
 
 Conversational Cloud enables the agent to send a structured content button with a Schedule Slot Lists action. This action will present a graphical user interface widget, which allows the consumer to efficiently select an appointment slot from a list.
 
-
-{: .notice}
+{: .alert}
 ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
 
 <div style="width: 100%; position: relative;">

@@ -13,9 +13,9 @@ indicator: both
 
 ### What's a meta intent?
 
-For an explanation of a meta intent, see [here](intent-manager-key-terms-concepts.html#meta-intents).
+A [meta intent]((intent-manager-key-terms-concepts.html#meta-intents)) is a wrapper that can contain many other standard intents.
 
-{: .important}
+{: .note}
 For some practice with meta intents, complete the [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html) tutorial series.
 
 ### Add a meta intent
@@ -24,16 +24,16 @@ The process for creating a meta intent is very similar to [creating a standard i
 
 When you are finished, click **Save** in the lower-right corner. In the left panel, you can now see that the standard intents are nested under the newly created meta intent.
 
-{: .important}
+{: .note}
 As meta intents are a grouping of related intents, you'll need to create at least one intent prior to creating a meta intent. 
 
 ### Train meta intents
 
-Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [this section](intent-manager-best-practices.html) for best practices when training intents. 
+Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [these best practices](intent-manager-best-practices.html) for training intents. 
 
 To test user utterances against your intents and meta intents, use the **Test User Input** tool provided in the "Build" area of Intent Manager. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
-<img style="width:500px" src="img/ConvoBuilder/meta_intent3.png">
+<img style="width:500px" alt="Test User Input tool showing detection of a meta intent and the intents within it" src="img/ConvoBuilder/meta_intent3.png">
 
 ### Example guide
 

@@ -7,7 +7,6 @@ permalink: third-party-bots-medallia.html
 indicator:
 ---
 
-
 ### Overview
 
 This document outlines the configuration and functionality of bots using **Medallia** as a vendor.
@@ -58,9 +57,8 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tbody>
 </table>
 
-
 ### Limitations
-{: .important}
+{: .note}
 Not all messages are currently forwarded by the LP Medallia adapter. The Bot will only
 send the messages forwarded so far. This does e.g. not include Welcome and Goodbye messages.
 The bot sends its own static messages on the beginning and end of a conversation for now.

@@ -17,13 +17,13 @@ The data schema used by your CMS differs from that used by LivePerson KnowledgeA
 
 If you’re using a popular CMS vendor (e.g., Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt spec. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default spec is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
 
-Jolt provides several, out-of-the-box transforms that you can use when writing the spec; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
+Jolt provides several, [out-of-the-box transforms](https://github.com/bazaarvoice/jolt#stock-transforms) that you can use when writing the spec. The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
-The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
+The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the [Jolt test samples](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
 ### Supported LivePerson attributes
 
-See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
+See [this section](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
 
 ### Reading the examples
 
@@ -32,8 +32,7 @@ See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#su
 LHS = left-hand side = the input JSON tree<br>
 RHS = right-hand side = the output JSON tree
 
-
-### Examples - Map articles' metadata (external KB with LivePerson AI)
+### Examples — Map articles' metadata (external KB with LivePerson AI)
 
 #### Example 1
 
@@ -50,7 +49,7 @@ RHS = right-hand side = the output JSON tree
                 "Account Information",
                 "Information"
             ],
-            "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information.</p>"
+            "body": "<p>For account information, go to Settings → Account → Basic Information.</p>"
         },
         {
             "id": 360048237271,
@@ -83,7 +82,7 @@ RHS = right-hand side = the output JSON tree
 ]
 ```
 
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
+**Using the “&” wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
 * The first parameter tells the level to go up on the LHS from current node.
 * The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
  
@@ -192,7 +191,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
+[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel → selectedCategories index → selectedCategories key →  categoryGroups index → categoryGroups key → results index.
 
 **Transformed output**
 ```JSON
@@ -207,8 +206,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 } ]
 ```
 
-
-### Examples - Map a single article's content (external KB with LivePerson AI)
+### Examples — Map a single article's content (external KB with LivePerson AI)
 
 #### Example 1
 
@@ -386,8 +384,7 @@ When fetching a single article, some CMS systems might return an array as per th
 }
 ```
 
-
-### Examples - Map article suggestions/answers (external KB without LivePerson AI)
+### Examples — Map article suggestions/answers (external KB without LivePerson AI)
 
 #### Example 1
 
@@ -409,7 +406,7 @@ When fetching a single article, some CMS systems might return an array as per th
       "label_names": [
         "Account"
       ],
-      "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information. </p>"
+      "body": "<p>For account information, go to Settings → Account → Basic Information.</p>"
     }
   ]
 }
@@ -444,7 +441,7 @@ When fetching a single article, some CMS systems might return an array as per th
 }, {
   "title" : "Account Information",
   "tags" : [ "Account" ],
-  "summary" : "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information. </p>",
+  "summary" : "<p>For account information, go to Settings → Account → Basic Information.</p>",
   "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json"
 } ]
 ```
@@ -498,7 +495,7 @@ When fetching a single article, some CMS systems might return an array as per th
 ]
 ```
 
-“[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url -> attributes -> searchRecords index.
+“[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url → attributes → searchRecords index.
 
 **Transformed output**
 ```JSON

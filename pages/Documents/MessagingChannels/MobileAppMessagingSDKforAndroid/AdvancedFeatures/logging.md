@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-logging.html
 indicator: messaging
 ---
 
-The LivePerson Mobile SDK's Logging system has been redesigned in Android SDK 4.4 / 5.2 to bring enhanced customer control and data safety to what we send to the system logs. This new logger brings with it two features, both now located under the `LivePerson.Logging` static class: Precise Logging Level Control and Log Data Masking
+The LivePerson Mobile SDK's Logging system has been redesigned in Android SDK 4.4 / 5.2 to bring enhanced customer control and data safety to what we send to the system logs. This new logger brings with it two features, both now located under the `LivePerson.Logging` static class: Precise Logging Level Control and Log Data Masking.
 
 ## Precise Logging Level Control
 
@@ -33,11 +33,11 @@ You can adjust the logging level with the following method:
 LivePerson.Logging.setSDKLoggingLevel(LogLevel.DEBUG);
 ```
 
-**WARNING:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
+**Warning:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
 
 ## Log Data Masking
 
-The Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "**\*\*\*\*\*\*\*\***" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs - everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
+The Mobile SDK now includes a feature that, when enabled, will replace all instances of sensitive data such as authentication tokens, user IDs, message contents, PII, and other sensitive data with a simple "**\*\*\*\*\*\*\*\***" string, ensuring that no details, not even the length of these items is exposed to the logs. This feature has been applied to *all* of our logs — everything from Error on down to Verbose. This allows a greater level of flexibility in deciding how much to allow the Mobile SDK to log, knowing that no matter what setting you choose, you won't have to worry about data leaks.
 
 This feature is **Enabled** by default in Release builds, but **Disabled** in Debug builds to preserve log detail.
 
@@ -113,5 +113,4 @@ Lines already written to the System Logs (logcat) are not affected, only the log
 ```java
 LivePerson.Logging.clearHistory();
 ```
-
 

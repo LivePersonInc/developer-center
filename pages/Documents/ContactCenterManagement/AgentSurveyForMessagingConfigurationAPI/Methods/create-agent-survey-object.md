@@ -30,8 +30,6 @@ Create new agent survey object(s) for an account. It is possible to create sever
  |:-------- | :------------ |
 | Authentication | Contains token string to allow request authentication and authorization |
 
-
-
 **Request Body**
 
 ```json

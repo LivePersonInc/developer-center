@@ -8,7 +8,6 @@ categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
 
-
 order: 30
 permalink: lobs-api-methods-create-lob.html
 

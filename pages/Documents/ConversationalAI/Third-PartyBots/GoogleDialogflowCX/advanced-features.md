@@ -18,12 +18,12 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.1 below
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.1 below:
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_encoded_metadata.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_encoded_metadata.png" alt="">
 Figure 3.1
 
 #### Sending Text Message with Encoded Metadata
@@ -46,9 +46,9 @@ An example of the custom payload text message response is below:
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_encodedmetadata_text.png">
-Figure 3.2 
- 
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_encodedmetadata_text.png" alt="">
+Figure 3.2
+
 #### Sending Rich Content (structured content) with Encoded Metadata
 
 You need to add another property of `encodedMetadata` with your rich content object that you have created. An example of the simple Rich Content `JSON` can be seen below:
@@ -84,7 +84,7 @@ You need to add another property of `encodedMetadata` with your rich content obj
 
 <br />
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_encodedmetadata_structuredcontent.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_encodedmetadata_structuredcontent.png" alt="">
 Figure 3.3
 
 ### Sending Pause/Delay Message
@@ -98,10 +98,10 @@ It is possible to send an event of type "delay" before regular content events an
 
 <br />
 
-Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 3.4.
+Setting a delay in between multiple messages is possible and an example of such a case (Message — Delay — Message) can be seen in Figure 3.4.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_message_delay_message.png">
-Figure 3.4 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_message_delay_message.png" alt="">
+Figure 3.4 An example of Message — Delay — Message configuration in the Dialogflow console's intent editor
 
 It is possible to send only a single delay response. The example payload of such response is below:
 
@@ -112,16 +112,16 @@ It is possible to send only a single delay response. The example payload of such
 }
 ```
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/delay_response_custom_payload.png">
-Figure 3.5 showing the Custom Markup message for delay message
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/delay_response_custom_payload.png" alt="">
+Figure 3.5 Showing the Custom Markup message for delay message
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 
 It is possible to send a private text message from the Conversational Cloud to other agents on the conversation. This feature can now be used via the Third-Party Bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .important}
+{: .note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 3.6). There are two properties, `text` and `messageAudience`, which are part of the Custom Payload response.
@@ -133,9 +133,9 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 3.6.
+Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message — Private Text Message — Action) can be seen in Figure 3.6.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/private_message_response_custom_payload.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/private_message_response_custom_payload.png" alt="">
 Figure 3.6 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
 
 It is possible to send only a private text message response. The example payload of such response is below:
@@ -162,15 +162,15 @@ In addition, it is possible to send your own payload to the function. Set your c
 
 The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/image_13.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/image_13.png" alt="">
 Figure 3.7
 
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 3.8.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
-Figure 3.8 Conversation Type step in creation/modification of bot configuration.
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
+Figure 3.8 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow CX these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/QueryParameters)). An example of the request body can be seen below:
 
@@ -199,7 +199,7 @@ An example use case of the Rich Content Event(`RichContentEvent`) response sent 
 
 We needs to create a intent which should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 3.9 below.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-intent.png">
+<img class="fancyimage" style="width:800px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-intent.png" alt="">
 Figure 3.9 Intent creation in Dialogflow CX console
 
 #### Create Google Cloud Function
@@ -276,16 +276,96 @@ Example `RichContentEvent` body of a map rich content that will be sent by Third
 
 #### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
 
-After the cloud function has been deployed, it can be added to the fulfillment of the page or your route by enabling WebHook.
-An example of enabling such a WebHook via Google Cloud function can be found in Figure 3.10 Highlighted area. If your function is deployed and active,
-It should populate in the list. Moreover, The Dialogflow CX console allows us to attach Third-Party WebHook calls as well.
-Please note, you need to ensure that, Third-Party Cloud WebHooks should be accessible and respond in the expected Dialogflow CX
-response formate as we have shown in the example of Google Cloud Function above.
+After the cloud function has been deployed, it can be added to the fulfillment of the page or your route by enabling WebHook. An example of enabling such a WebHook via Google Cloud function can be found in Figure 3.10 Highlighted area. If your function is deployed and active, it should populate in the list. Moreover, The Dialogflow CX console allows us to attach Third-Party WebHook calls as well.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-enable-webhook.png">
-Figure 3.10 Showing a Google Cloud Function named `googleRichContentEventCloudFunction` attached to the fulfillment Response
+Please note, you need to ensure that, Third-Party Cloud WebHooks should be accessible and respond in the expected Dialogflow CX response formate as we have shown in the example of Google Cloud Function above.
 
-Once all of the above steps have been configured then the Dialogflow CX bot will be able to respond to the requests via the cloud function.
-A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
+<img class="fancyimage" style="width:600px" src="img/dialogflowcx/dialogflow_cx_richcontentevent-enable-webhook.png" alt="">
+Figure 3.10 Showing a Google Cloud Function named `googleRichContentEventCloudFunction` attached to the fulfillment response
+
+Once all of the above steps have been configured then the Dialogflow CX bot will be able to respond to the requests via the cloud function. A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/dialogflowcx/dialogflow_cx_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+We will describe an example of how to set up and access the WelcomeEvent response in Google Dialogflow CX below. We will use Google Dialogflow's capability of providing fulfillment via google cloud function as webhook.
+
+#### Create Welcome Event Handler 
+
+Ensure you have an event handler in your flow builder that handles the custom `WELCOME` event, the highlighted area in figure 3.11 shows you how to add a new event handler in DialogFlow CX builder.
+
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-cx-welcome-event.png">
+
+Figure 3.11 Creation of the welcome event
+#### Create Google Cloud Function
+
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create Google cloud function that should be capable of parsing the additional message context sent by Third-Party Bots. 
+
+The minimal code example below shows how to check if `lastConsumerMessage` property is present in the request context, then sends back a text response containing the last consumer message. Please note, that response sent by The Google Cloud function should follow the Dialogflow CX response schemas
+
+
+```javascript
+/**
+ * Responds to any HTTP request.
+ *
+ * @param {Request} request HTTP request context.
+ * @param {Response} response HTTP response context.
+ */
+exports.handleWebhook = (request, response) => {
+  const {
+    payload: {
+      lpEvent: {
+        contentType,
+        lastConsumerMessage
+      } = {}
+    } = {} 
+  } = req.body;
+
+  let fulfillmentResponse;
+
+  if (contentType === 'welcome'  && lastConsumerMessage) {
+    fulfillmentResponse = {
+      fulfillmentResponse: {
+        messages: [
+          {
+            text: {
+              text: [`Last Consumer Message Received: ${lastConsumerMessage}`]
+            }
+          }
+        ]
+      }
+    };
+  } else {
+    fulfillmentResponse = {
+      fulfillmentResponse: {
+        messages: [
+          {
+            text: {
+              text: [`No Consumer Message found`]
+            }
+          }
+        ]
+      }
+    };
+  }
+  res.status(200).send(fulfillmentResponse);
+
+};
+```
+
+#### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
+
+After the function has been deployed this needs to be added to the fulfillment section of the Welcome event handler.
+This fulfillment can be found in the Google Dialogflow CX console as shown in the Figure 3.12 highlighted area.
+Webhook need to be enabled and filled with the relevant information of the cloud function.
+(e.g. Auth Data and the Trigger URL)
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow_cx_welcomeevent-cloud-function.png">
+Figure 3.12 Webhook configuration that needs to be added for calling Cloud Function
+
+Once Webhook configuration is added then the Google Dialogflow CX bot will be able to respond to the welcome event via the cloud function.
+

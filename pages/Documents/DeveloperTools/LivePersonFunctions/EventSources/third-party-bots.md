@@ -34,7 +34,7 @@ You can configure hooks in a bot connector using Functions to modify vendor payl
 
  **Third-Party Bots Error Hook**: Triggered when a bot using the Third-Party Bots Error Hooks is having an issue.
 
-{: .important}
+{: .note}
 **Third-Party Bots Error Hook** event will not send back any payload to the bot.
 
 **Third-Party Bots Pre Hook**: Triggered when a bot using the Third-Party Bots Post Hooks receives a message. The function will be invoked before the vendor gets the payload. The function receives invoked on every message the customer sends. It enables you to modify or expand the payload the vendor gets.
@@ -43,7 +43,7 @@ You can configure hooks in a bot connector using Functions to modify vendor payl
 
 ### Bot conversation errors
 
-{: .important}
+{: .note}
 Please follow the complete guide about [Third-Party Bots conversation errors](third-party-bots-bot-conversation-errors.html) for more details and solutions.
 
 These are the errors returned in a bot connector associated with Functions:
@@ -54,6 +54,6 @@ These are the errors returned in a bot connector associated with Functions:
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body|This happens if there is no response body provided.|
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook|Indicates that the Faas hook could not be invoked.|
 |com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-faas-request|This indicates an issue during Faas invocation.|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-bot-action|This indicates an issue during the invocation of an additional Liveperson Function.|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.testConnection|This happens when the Liveperson Function is not responding in time or with a bad status .|
-|com.liveperson.bot-connectors-worker.error.aivendor.faas.parse-message.malformed-alternative-intents|This indicates a wrong parsing of alternative intents inside the Liveperson Function .|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-bot-action|This indicates an issue during the invocation of an additional LivePerson Function.|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.testConnection|This happens when the LivePerson Function is not responding in time or with a bad status .|
+|com.liveperson.bot-connectors-worker.error.aivendor.faas.parse-message.malformed-alternative-intents|This indicates a wrong parsing of alternative intents inside the LivePerson Function .|

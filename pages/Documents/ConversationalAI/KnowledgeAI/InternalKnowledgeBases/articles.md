@@ -16,7 +16,7 @@ indicator: both
 
 An article is a focused piece of content (a message) on a single topic that you want to serve to consumers.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png" alt="An example of two articles in a list">
 
 **To add an article to an internal knowledge base**
 
@@ -25,15 +25,15 @@ An article is a focused piece of content (a message) on a single topic that you 
 3. Click **Add article** in the upper-right corner.
 4. Specify the following basic settings:
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
-    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices. **Note**: An intent qualifier can't be used more than once, i.e., in more than one article.
-    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Manager from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Manager from here. **Note**: An intent can't be used more than once, i.e., in more than one article. Also note that you don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content you care about the most, and link those to the relevant articles. This means you can focus on specific content areas in your knowledge base, and manage the content overall with varying levels of effort on your part. The approach gives you flexibility as you maintain the knowledge base over time.
-    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. For details on the subset of HTML that can be used in this field, see [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article).
-    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible. For details on the subset of HTML that can be used in this field, see [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article). To send the Detail content to the consumer, you must define a custom answer layout for the Knowledge AI interaction; see [here](conversation-builder-interactions-integrations.html#no-auto-rendering-using-a-custom-answer-layout).
+    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices. **Note:** An intent qualifier can't be used more than once, i.e., in more than one article.
+    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Manager from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Manager from here. **Note:** An intent can't be used more than once, i.e., in more than one article. Also note that you don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content you care about the most, and link those to the relevant articles. This means you can focus on specific content areas in your knowledge base, and manage the content overall with varying levels of effort on your part. The approach gives you flexibility as you maintain the knowledge base over time.
+    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. You can use [a subset of HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article) in this field.
+    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible. You can use [a subset of HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article) in this field. To send the Detail content to the consumer, you must define a [custom answer layout](conversation-builder-interactions-integrations.html#no-auto-rendering-using-a-custom-answer-layout) for the Knowledge AI interaction.
     * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the KnowledgeAI application.
     * **Tags**: Tags are keywords, *not* sentences, that highlight the key noun(s) or word(s) in the title and intent qualifiers/training phrases. Tags can also be [entities](intent-manager-key-terms-concepts.html#entities) that you've defined in a domain in Intent Manager. To increase the accuracy of Knowledge Base search results, add tags. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences.
 
 5. If desired, click **Advanced Settings**, and specify the following:
-     * **Valid From** and **Valid To**: If desired, specify in [UTC](https://www.timeanddate.com/worldclock/timezone/utc) the dates and times during which the article is active. To specify a finite time period, use both date settings. To specify an open-ended date range, omit the **Valid To** date. To activate an article immediately after you add it, omit the **Valid From** date. These settings work with the **Enable Article** setting to determine if and when the article is active. For more on this, see [here](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles).
+     * **Valid From** and **Valid To**: If desired, specify in [UTC](https://www.timeanddate.com/worldclock/timezone/utc) the dates and times during which the article is active. To specify a finite time period, use both date settings. To specify an open-ended date range, omit the **Valid To** date. To activate an article immediately after you add it, omit the **Valid From** date. These settings work with the **Enable Article** setting to determine if and when the article is [active](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles).
     * **Content**: Use this field to send a *hyperlink*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Audio**:  Use this field to send an *audio* file. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Image**: Use this field to send an *image*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
@@ -45,9 +45,9 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 ### Add content links
 
-You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article. 
+You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings0.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings0.png" alt="Content Links settings">
 
 Details on how to set this up follow below.
 
@@ -55,10 +55,10 @@ Details on how to set this up follow below.
 
 First, in the **Advanced Settings** of the article, enter the URLs to send **(1)**.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png" alt="Entering the URL in the Content field and entering the image in the Image field">
 
-{: .important}
-The remainder of this information below is for the benefit of bot developers using a KnowledgeAI integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a KnowledgeAI integration, namely, use of the Knowledge AI interaction in Conversation Builder. For details on this interaction, see [here](conversation-builder-interactions-integrations.html#knowledge-ai-interactions).
+{: .note}
+The remainder of this information below is for the benefit of bot developers using a KnowledgeAI integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a KnowledgeAI integration, namely, use of the [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
 
 #### Configure the KnowledgeAI integration in the bot
 
@@ -68,24 +68,24 @@ Verify that the appropriate knowledge base is selected **(2)**, and then add cus
 
 The "article" custom data field is added automatically when you add the Knowledge Base integration, but in this step you need to manually add additional custom data fields for the content links. For the values, specify the paths to the URL nodes in the JSON, like we've done in the image below.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png" alt="A well-configured KnowledgeAI integration">
 
-{: .important}
+{: .note}
 For the names of the JSON nodes for the content links, see the JSON reference farther below in this topic.
 
 #### Configure the dialog in the bot
 
-Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
+Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [this section](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
 
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png">
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png">
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png" alt="An example of an FAQ Search integration">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png" alt="The interactions that send the result, i.e., the article's image and content">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png" alt="The interaction that sends the result, i.e., the content URL and the interaction that sends a message when no results are found">
 
 #### Preview the conversation
 
 Use Conversation Builder's Preview tool to preview the conversation and verify the content is returned and rendered as you expect.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png" alt="The conversation with the consumer as it renders in the Preview tool">
 
 #### Useful techniques
 
@@ -93,7 +93,7 @@ Continuing our example, we've added some JavaScript so that, if there's a conten
 
 To accomplish this, in the Display Article interaction, we've configured the next action to be "End Interaction." Then, we've added some Post-Process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png" alt="Example post-process code">
 
 ### Enable or disable an article
 
@@ -117,14 +117,14 @@ The following table identifies the JSON node for article information that's ofte
 | Title | title |
 | Summary | summary |
 | Detail | detail |
-| Content Links > Content | contentURL |
-| Content Links > Image | imageURL |
-| Content Links > Video | videoURL |
-| Content Links > Audio | audioURL |
+| Content Links → Content | contentURL |
+| Content Links → Image | imageURL |
+| Content Links → Video | videoURL |
+| Content Links → Audio | audioURL |
 
 ### Using entities within a knowledge base (Legacy)
 
-{: .important}
+{: .note}
 This section is applicable to knowledge bases using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (i.e., intent qualifiers), which is a legacy feature. In this case, behind the scenes the LivePerson (Legacy) engine is used for intent matching.<br><br>For better performance and a more scalable solution, LivePerson recommends that you convert from *Knowledge Base intents* to *Domain intents* as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).<br><br>If you're using entities within your knowledge base (as discussed in this section), first [convert the knowledge base to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents). Then, if the domain itself uses LivePerson (Legacy), [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson).
 
 [Entities](intent-manager-key-terms-concepts.html#entities) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
@@ -171,18 +171,18 @@ In your articles, replace any word where you want the "CREDENTIALS" entity to be
 
 Assume we have a knowledge base using Knowledge Base intents and an existing article with the following content:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png" alt="The configuration of an example article that doesn't make use of entities">
 
 Our article when taking advantage of entities would result in the following:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png" alt="The configuration of an example article that makes use of entities">
 
 Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
 
-{: .important}
+{: .note}
 You don't need to enter entities using all capital letters like we've done above, but it helps you to identify the words that are entities.
 
 Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
 
-{: .important}
+{: .note}
 The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.

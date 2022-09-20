@@ -18,4 +18,3 @@ Prints all localized strings’ keys
 
 `func printAllLocalizedKeys()`
 
-

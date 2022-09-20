@@ -36,11 +36,11 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 ### Storage Data Types
 
-<div class="important">If no duration is specified for a Storage Type below, this means its duration is the browser session</div>
+<div class="note">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
 
 **SecureStorage**
 
-Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains - depending on browser capabilities.
+Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains — depending on browser capabilities.
 
 By default, Conversational Cloud uses the third-party storage solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the stored data and their types offered by LivePerson.
 
@@ -82,17 +82,16 @@ By default, Conversational Cloud uses the third-party storage solution type for 
   </tr>
   <tr>
     <td>lpTabId</td>
-    <td>Tab identifier - uses to share LivePerson data between different browser tabs</td>
-    <td>sessionStorage. <br><br>Duration: session - same tab and domain only</td>
+    <td>Tab identifier — uses to share LivePerson data between different browser tabs</td>
+    <td>sessionStorage. <br><br>Duration: session — same tab and domain only</td>
   </tr>
   <tr>
     <td>lpPmCalleeDfs</td>
     <td>For cross domain communication logic</td>
-    <td>sessionStorage. <br><br>Duration: session - same tab and domain only</td>
+    <td>sessionStorage. <br><br>Duration: session — same tab and domain only</td>
   </tr>
 </tbody>
 </table>
-
 
 ### Conversation Data
 
@@ -149,7 +148,6 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
-
 ### Login Cookies
 
 <table>
@@ -201,7 +199,6 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
-
 ### CoBrowse cookies
 
 <table>
@@ -221,6 +218,30 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
+### Other cookies
+
+<table>
+  <thead>
+  <tr>
+    <th>Entry Name</th>
+    <th>Description</th>
+    <th>Storage Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lpTestCookie{timestamp}</td>
+    <td>
+      <ul>
+        <li>This cookie is used only for testing whether the browser supports cookies, where 'timestamp' equals the current time (represented in milliseconds since the ECMAScript epoch).</li>
+        <li>It is set by LivePerson client-side code (not server response header).</li>
+        <li>This cookie holds no critical or sensitive values (value is "testValue"), and is removed immediately after the test.</li>
+      </ul>
+    </td>
+    <td>First party session cookie. No fallbacks. <br><br>Domain: parent domain. <br>Path: parent domain /.</td>
+  </tr>
+</tbody>
+</table>
 
 ### Considerations
 
@@ -234,10 +255,10 @@ Conversational Cloud supports secure cookies, but requires the Web Tag to be dep
 
 Conversational Cloud is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the Web Tag to collect cookies.
 
-#### Third Party Storage - Default
+#### Third Party Storage — Default
 
 By default, Conversational Cloud uses third-party session and visitor storage in order to save visitors’ tracking information. This is due to the fact that while visitors are browsing your site, the Conversational Cloud cookies are set by the Conversational Cloud domain and not by your website domain.
 
-Some browsers are currently limiting the usage of third-party storage - this can affect the LivePerson loading and monitoring process. it is possible also to enable first-party storage support for the secure storage for additional support.
+Some browsers are currently limiting the usage of third-party storage — this can affect the LivePerson loading and monitoring process. it is possible also to enable first-party storage support for the secure storage for additional support.
 
 If you have any questions that are not addressed through this cookie policy, please contact LivePerson Technical Support.

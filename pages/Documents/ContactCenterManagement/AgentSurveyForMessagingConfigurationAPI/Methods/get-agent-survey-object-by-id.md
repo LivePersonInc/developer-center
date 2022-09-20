@@ -24,7 +24,6 @@ Get a single agent survey object by ID.
  | accountId | LP site ID | String  |
  | agentSurveyId | agent survey object’s unique id.| String|
 
-
 **Request Headers**
 
 |Header | Description| Notes |

@@ -12,7 +12,7 @@ indicator: accepts "messaging" "chat" or "both"
 
 Explain what this method does.
 
-{: .important}
+{: .note}
 Perhaps note that the developer should see the [introduction](introduction-to-this-product.html) to this product if they have not yet?
 
 ### Request
@@ -52,5 +52,4 @@ Link to the [appendix](appendixStuff.html) if you'd like to define the response 
     }
 }
 ```
-
 

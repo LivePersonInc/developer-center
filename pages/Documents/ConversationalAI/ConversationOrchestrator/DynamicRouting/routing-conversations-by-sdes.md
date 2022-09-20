@@ -18,11 +18,11 @@ indicator: messaging
 [Structured Data Entities](engagement-attributes-types-of-engagement-attributes.html) (SDEs) are for brands to report/include business, user, and context data in campaigns when conversations are initiated. SDEs provide a valuable way for brands to include additional context information to the conversation when the conversation is initiated. This type of context can then allow brands to provide more personalized conversational journeys for consumers. This topic describes how to use SDEs with Conversation Orchestrator routing.
 
 Some SDEs are directly available in the dynamic routing interface and can be used to create policies, but for others LivePerson Functions need to be used.
- 
+
 ### Create policies using SDEs that are automatically available for routing
- 
+
 The following SDEs are already available in the dynamic routing interface and can be directly used for creating policies:
- 
+
 * sde.visitorinfo.customerinfo.ctype
 * sde.visitorinfo.customerinfo.cstatus
 * sde.visitorinfo.customerinfo.balance
@@ -43,17 +43,17 @@ The following SDEs are already available in the dynamic routing interface and ca
 * sde.visitorinfo.personalinfo.company
 
 **Note:** Three of the SDEs are objects. Please use the appropriate [SDE attribute names](engagement-attributes-types-of-engagement-attributes.html) for these:
- 
+
 * **sde.visitorinfo.customerinfo.lastpaymentdate**
 * sde.visitorinfo.customerinfo.lastpaymentdate.day
 * sde.visitorinfo.customerinfo.lastpaymentdate.month
 * sde.visitorinfo.customerinfo.lastpaymentdate.year
- 
+
 * **sde.visitorinfo.customerinfo.registrationdate**
 * sde.visitorinfo.customerinfo.registrationdate.day
 * sde.visitorinfo.customerinfo.registrationdate.month
 * sde.visitorinfo.customerinfo.registrationdate.year
- 
+
 * **sde.visitorinfo.customerinfo.age**
 * sde.visitorinfo.customerinfo.age.age
 * sde.visitorinfo.customerinfo.age.day
@@ -61,26 +61,26 @@ The following SDEs are already available in the dynamic routing interface and ca
 * sde.visitorinfo.customerinfo.age.year
 
 **To use the above SDEs for routing**
- 
+
 **Step 1: Enable SDEs for routing**
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/convorchestrator/icon_ai_menu.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/convorchestrator/icon_ai_menu.png" alt="The Bot icon, which shows a bot"> icon.
 2. In the Conversational AI dashboard, click **Conversation Orchestrator**.
 3. Under **Conversation Context Service**, click **Structured Data Entities**.
 4. Scroll down to **Enable Context Service to store SDE values**, and turn on the **enabled** setting.
-  <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_sdemenuitem.png">
+  <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_sdemenuitem.png" alt="The enabled setting turned on">
 
 **Step 2: Create a policy**
 
 1. In the Conversation Orchestrator, navigate to **Intent and Context Policies**.
 2. Click **Add Policy** to create a new routing policy.
 3. Name the policy.
-4. Under **Conditions**, select any of the available SDE attributes. 
-       
+4. Under **Conditions**, select any of the available SDE attributes.
+
    Example: sde.visitorinfo.customerinfo.companybranch
-   <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_managepolicies.png">
-5. Select an operator from the available list of operators. 
-       
+   <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_managepolicies.png" alt="Selecting an attribute for a new condition in a new policy">
+5. Select an operator from the available list of operators.
+
     Example: “=” (EQUALS)
 6. Select the data type.
 
@@ -90,25 +90,26 @@ The following SDEs are already available in the dynamic routing interface and ca
 9. Select the skill you want to route to.
 10. Save your policy.
 11. Enable the policy for it to start routing.
- 
+
 ### Create policies using SDEs that are not automatically available for routing
- 
+
 #### High-level process
- 
+
 1. Write a function to retrieve the SDE and add it to the Conversation Context Service.
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
 
-{: .important}
+{: .note}
 This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
 
 #### Detailed process
- 
+
 **Step 1: Create a function to pull the SDE to the Conversation Context Service**
 
 1. Log in to Conversational Cloud, and navigate to **Functions** from the waffle menu in the lower-left corner.
-  <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_functionsmenuitem.png">
+  <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_functionsmenuitem.png" alt="The Functions application option that's available from the waffle icon, which is a three-by-three grid of dots">
 2. Click **Create a function**.
+  <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png" alt="The Create a function button">
 3. In the **Select an event to see its available responses** dropdown, select “No Event.”
 4. In the **Select a template to start your implementation** dropdown, select “Greeting Template.”
 5. Click **Continue**.
@@ -119,10 +120,9 @@ This method might have performance issues. Please contact your LivePerson accoun
 
    Example Description: Sets authenticated SDE StoreNumber in Conversation Context Service for routing
 8. Click **Create function**.
-  <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png">
 9. In the editor, delete any existing code, and add the code in the snippet below.
 
-{: .important}
+{: .note}
 This method might have performance issues. Please contact your LivePerson account executive if you want to route based on unauthenticated SDEs.
 
 ```javascript
@@ -251,7 +251,7 @@ Save the changes. Then, in the **Actions** column, deploy the function.
 
 **Step 2: Create the Conversation Context Service attribute in the Dynamic Routing interface**
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/convorchestrator/icon_ai_menu.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/convorchestrator/icon_ai_menu.png" alt="The Bot icon, which shows a bot"> icon.
 2. In the Conversational AI dashboard, click **Conversation Orchestrator**.
 3. Under **Conversation Context Service**, navigate to the **Custom** option.
 4. Select **Add New** to create a new custom context attribute.

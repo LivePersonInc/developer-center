@@ -13,13 +13,12 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
 
-{:.important}
+{: .note}
 Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the [Quick Start](mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk) guide.
 
 ### sendSDE
 
 Use this API method to report on engagement attributes (SDEs) for a consumer in an appInstallationId context including show and accept impressions.
-
 
 ```swift
 func sendSDE(identities: [LPMonitoringIdentity], monitoringParams: LPMonitoringParams, completion: @escaping (_ response: LPSendSDEResponse)->(), failure: @escaping (_ error: NSError)->())
@@ -49,7 +48,7 @@ func getEngagement(identities: [LPMonitoringIdentity], monitoringParams: LPMonit
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
 | failure | A Failure callback with an error in case the request fails. |  Yes |
 
-{:.notice}
+{: .alert}
 When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
 
 ### sendSDE (Deprecated)
@@ -68,9 +67,6 @@ func sendSDE(consumerID: String, monitoringParams: LPMonitoringParams, completio
 | completion | A Completion callback with response of type [LPSendSDEResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
 | failure | A Failure callback with an error in case the request fails |  Yes |
 
-
-
-
 ### getEngagement (Deprecated)
 *This method was deprecated since SDK version 3.2.0 Use [getEngagement(identity: LPMonitoringIdentity, monitoringParams: LPMonitoringParams?, completion: @escaping (_ response: LPGetEngagementResponse)->(), failure: @escaping (_ error: NSError)->()) instead) instead](#getengagement) instead*
 
@@ -88,6 +84,5 @@ func getEngagement(consumerID: String?, monitoringParams: LPMonitoringParams?, c
 | monitoringParams | An optional [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html) with optional pageId, Entry Points array and Engagement Attributes | No |
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use |  Yes |
 | failure | A Failure callback with an error in case the request fails |  Yes |
-
 
 *Please refer to the [Interface and Class Definitions](consumer-experience-ios-sdk-interfacedefinitions.html) section for parameter classes.*

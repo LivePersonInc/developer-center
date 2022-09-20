@@ -15,7 +15,7 @@ redirect_from:
 
 The LivePerson Functions platform enables users to create scheduled functions. Two examples for these are OAuth 2.0 related refresh operations and scheduled invocation to keep [functions warm](liveperson-functions-foundations-concepts.html#cold-start). We allow the scheduling of functions based on CRON expressions. We urge leveraging [this page](https://crontab.guru/) to verify your expression. Please be aware of the following limitation:
 
-{: .important}
+{: .note}
 Scheduled invocations are always performed in the **UTC** timezone and might differ from your local time. Please keep that in mind when scheduling any function.
 
 * The lowest frequency for scheduled invocations is once a minute
@@ -23,7 +23,7 @@ Scheduled invocations are always performed in the **UTC** timezone and might dif
 * A maximum of 10 functions can be scheduled at any given time
 * Configurable Payload is limited to 8000 characters
 
-{: .notice}
+{: .alert}
 Undeploying a scheduled function will result in the **deletion** of the associated schedule. You will need to **recreate** it once you have redeployed the function.
 
 Schedules can be created by heading to the "Schedule an Invocation"-page reachable via the "Watch" icon on the sidebar. Here you will also see any existing Schedule. Further, it will show you the last and next invocation times in your **local** time. The "STATE" column will indicate if the previous invocation was successful or a failure.
@@ -58,11 +58,11 @@ This chapter will highlight some important details about the Secret Store. If yo
 
 Our Secret Store allows you to store any credentials or secrets securely you may use in your function. The creation of secrets happens exclusively via the UI, not the CLI or from a function. Once you create a  secret, you will no longer be able to see its value in cleartext. Only the key will remain visible.
 
-Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed & modified by multiple functions simultaneously.
+Modifications of existing secrets are only possible by a function. Be aware of potential race conditions: The last writer will win if a secret is accessed and modified by multiple functions simultaneously.
 
 You can only perform the deletion of a secret via the UI. The secret will become unavailable immediately to any functions using it with the deletion. Therefore, you should ensure it is not used anywhere before deleting the secret.
 
-{: .important}
+{: .note}
 During the [provisioning](liveperson-functions-provisioning.html) process, a couple of default secrets are created. Those are not displayed by default, but they are viewable for debugging purposes.
 
 <img class="fancyimage" alt="Functions: Default Secrets" src="img/functions/functions_secret_defaults.png">
@@ -83,11 +83,11 @@ When adding a domain to the allowlist, you should always look out for common pit
 
 Example:
 
-The following example shows that when calling `http://google.com`, a redirection to `http://www.google.com/` is performed.
+The following example shows that when calling `http://google.com`, a redirection to `https://www.google.com/` is performed.
 
 ```sh
     $ curl -v -L http://google.com 2>&1 | grep -i "^< location:"
-    < Location: http://www.google.com/
+    < Location: https://www.google.com/
 ```
 
 Next, ensure that you safe list the correct domain when working with subdomains. Let's say you are visiting `https://www.liveperson.com` and therefore allowlisted `liveperson.com`. Then, you fell into a trap because `www.` is a subdomain. Instead, the correct domain to allowlist would be `www.liveperson.com` or `*.liveperson.com`.
@@ -98,7 +98,7 @@ Finally, as shown above, we do support the use of wildcards by setting `*`. But 
 
 Type the domain in the text field and click the "Add"-button. Once it is saved, it will be reflected in the domain list below.
 
-{: .notice}
+{: .alert}
 Be aware that adding a domain can take up to 5 minutes until being "active".
 
 #### Removing a domain from the allowlist

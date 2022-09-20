@@ -11,8 +11,9 @@ indicator: both
 
 This deep dive will look into how functions can be managed and configured via our web interface. If you want to learn how to interact with the functions platform via our command-line interface, head over to the [deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html).
 
-{: .notice}
+{: .alert}
 When you use the LivePerson Functions platform for the first time please make sure that you are using a Conversational Cloud Admin account to ensure that the [provisioning](liveperson-functions-provisioning.html) of the account succeeds.
+
 ### Creation Process
 
 Head to the function management view using the "Lambda" icon in the side panel on the left-hand side to create new functions. Here you can see all available functions on the account and their current state.
@@ -28,7 +29,6 @@ A function can behold the following states:
 
 To create a new function, press the "Create a Function"-button displayed next to the header of the functions table.
 
-<br/>
 #### First step: Coding Details
 
 On the first page of the "Create a new function"-assistant, you can set basic information for the function: the runtime version, the event to respond to, skills attached to this function, a template and access to external domains.  The editor on the right side will always show you the initial code generated based on your selections.
@@ -43,7 +43,7 @@ By default, the function will respond to all skills. The maximum number of skill
 
 <img src="img/functions/functions_select_skill.png" alt="Functions: select multiple skill" style="width:100%;"/>
 
-{: .notice}
+{: .alert}
 The drop-down menu is always disabled if the selected function template is not an Automatic Messages template.
 
 You may choose to create more than one function of the same event if you set different skills for each function. As long as they are not overlapping, you can create multiple functions for the same event. The following Scenario should highlight the implications:
@@ -53,9 +53,9 @@ You may choose to create more than one function of the same event if you set dif
 - ✅  Function 1 for Event A [Default]
 - ❌  Function 1 for Event A [Skill 1,2] + Function 2 for Event A [Skill 3,4] + [Default]
 
-{: .important}
+{: .note}
 The above example, "[Default]", refers to not selecting any skill, the default behaviour.
-<br />
+
 #### Second step: Adding Domains to the Allowlist
 
 When adding a domain to the allowlist, you should always consider some common pitfalls. First, make sure your target domain is not redirecting: If it is, you also need to allowlist any domain that is part of the redirection chain. An easy way to test if your domain redirecting is the following command:
@@ -66,11 +66,11 @@ When adding a domain to the allowlist, you should always consider some common pi
 
 Example:
 
-The following example shows that when calling `http://google.com`, a redirection to `http://www.google.com/` is performed.
+The following example shows that when calling `http://google.com`, a redirection to `https://www.google.com/` is performed.
 
 ```sh
     $ curl -v -L http://google.com 2>&1 | grep -i "^< location:"
-    < Location: http://www.google.com/
+    < Location: https://www.google.com/
 ```
 
 Next, ensure that you allowlisted the correct domain when working with subdomains. Let's say you are visiting `https://www.liveperson.com` and therefore allowlisted `liveperson.com`. `www.liveperson.com` is a subdomain of `liveperson.com` so this will not work with your allowlist entry. Instead, the correct domain to allowlist would be `www.liveperson.com` or `*.liveperson.com`.
@@ -81,9 +81,9 @@ Finally, as shown above, we do support the use of wildcards by setting `*`. Be a
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 
-{: .notice}
+{: .alert}
 Adding a domain might take up to to 5 minutes until being "active"
-<br />
+
 #### Third step: Function Description
 
 In this final step, you will need to provide a name and a description of your function. Names within an account need to be unique.  Provide a meaningful description of what your function does in the "Description" field. 
@@ -138,7 +138,7 @@ Before you start debugging your function, you might want to modify the debug inp
 
 We supply each event with a default payload that can be used without modification but might not give you deep insights into the behaviour of your functions.
 
-{: .notice}
+{: .alert}
 Payloads are not saved on the server. Make sure to keep your payload locally if you want to reuse it at a later date. The payload is limited to **10.000** characters.
 
 Once you are inside the *debug* tab, you can place breakpoints as you'd expect in any IDE. Breakpoints will halt the debug execution as expected in your local environment. Breakpoints can be set before or during a debugging session by clicking on the space left of the line numbers.
@@ -152,7 +152,7 @@ To start a debugging session, click the Start Debugger"-button. This step will c
 * **Restart**: Cancel the execution and start from the top again
 * **Stop**: Cancels the debugging session
 
-{: .notice}
+{: .alert}
 Sometimes, the debugging session might be lost due to connectivity errors or the long idling of the debugger. The Functions platform will try to heal this situation automatically. If this is not the case *stopping* the debugging session and starting it will resolve the issue.
 
 During the execution, the easiest way to analyse the state of the execution is using the variable inspector within the debug sidebar. It is a searchable list of all variables and their values currently active in the execution scope.
@@ -162,7 +162,7 @@ For additional information, the debug output will print out any ``console`` comm
 <img class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_output.png">
 
 Once you close the editor, the debugging session will be closed.
-<br />
+
 #### Editor
 
 Our editor is based on [Monaco](https://microsoft.github.io/monaco-editor/), offering you access to a variety of its features. The context menu is most notable, which will provide you with access to snippets, general code suggestions, and context-aware code suggestions.
@@ -189,7 +189,7 @@ We added our snippets to the context service, accessible by typing in `Snippet` 
 
 <img class="fancyimage" alt="Functions: snippets in action" src="img/functions/functions_editor_snippet.gif">
 
-##### Code documentation & Types
+##### Code Documentation and Types
 
 Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt), as well as some of the included [libraries](liveperson-functions-getting-started-configuration.html#dependencies), are shipped with JSDocs. This allows you to access the documentation from the editor directly by simply hovering over the function or the object. The docs will provide you with additional parameters and may give you information about the types.
 

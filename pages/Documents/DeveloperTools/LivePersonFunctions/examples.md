@@ -16,8 +16,8 @@ OAuth is an open-standard authorization framework that describes how unrelated s
 
 The following code shows an example that performs a `POST` request with `Authorization Header`.
 
-{: .notice}
-  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
+{: .alert}
+  It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {
@@ -48,14 +48,14 @@ async function lambda(input, callback) {
     const request_data = {
       url: 'www.mywebsite.com/request',
       method: 'POST',
-      body: ...,
+      body: …,
     };
 
     const response = await httpClient(request_data.url, {
       method: request_data.method,
       headers: {
         // toHeader() returns the Authorization request header and assigns it to the header using the spread operator
-        ...oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
+        …oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
         'Content-Type': 'application/json',
       },
       body: request_data.body,
@@ -81,9 +81,8 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
-{: .notice}
-It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html)
-
+{: .alert}
+It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
 async function lambda(input, callback) {
@@ -132,7 +131,7 @@ async function lambda(input, callback) {
 
 Clients use the Refresh Token grant type to exchange a refresh token for an access token when the access token has expired. We recommend refreshing the token using a scheduled function. Refreshed details are written back to the [secret storage](liveperson-functions-development-toolbelt.html#secret-storage-client) for further usage in other functions.
 
-<img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth2 Refresh Token" class="fancyimage"/>
+<img src="img/functions/functions_examples_oauth2_refresh_token.png" alt="LivePerson Functions OAuth 2.0 Refresh Token" class="fancyimage"/>
 
 The following reduced code snippet shows how to obtain the refresh and access token.
 
@@ -170,7 +169,7 @@ The following reduced code snippet shows how to obtain the refresh and access to
 ### Caching inside lambdas
 A simple way to make your function more performant and more reliable is caching requested data outside of the context of your function. In the following example, we use caching to improve the interaction with the secret store. Caching the secret makes your code highly reliable against problems that might arise from network congestion. Additionally, it enhances the performance of your functions since you omit unnecessary network calls. The following code uses an environment variable `TTL` to indicate how long to keep the data in memory.
 
-{: .notice}
+{: .alert}
 This cache is in-memory. If your function is down-scaled due to inactivity, data in the cache will be lost. Likewise, if your function is upscaled to multiple instances, there is no mechanism to synchronize the caches.
 
 ```javascript

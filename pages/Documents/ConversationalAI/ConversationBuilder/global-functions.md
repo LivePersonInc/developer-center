@@ -12,7 +12,7 @@ indicator: both
 ### Introduction
 Global functions are functions that you define in the Global Functions area of a bot.
 
-<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_example.png">
+<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_example.png" alt="The Global Functions tab in a bot">
 
 Global functions have two key benefits:
 * Code reuse 
@@ -22,7 +22,7 @@ First, any function that you define in Global Functions can be called from anywh
 
 Second, a bot’s Global Functions includes an empty `initConversation` function by default.
 
-<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_initconversation.png">
+<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_initconversation.png" alt="An empty initConversation function">
 
 `initConversation` is run immediately when the conversation begins, so it’s a good place to do anything that needs to be done at that time, for example, to run a function or to initialize variables that you’ll need later.
 
@@ -37,7 +37,7 @@ Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2
 ### Global Helper Functions dialog template
 LivePerson offers a Global Helper Functions dialog template that aggregates and makes available many capabilities using global functions. You can import this template into your bot to “add in” the global functions that are included.
 
-<img class="fancyimage" width="600" src="img/ConvoBuilder/gf_dialogtemplate.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/gf_dialogtemplate.png" alt="Importing the Global Helper Functions dialog template into a bot">
 
 The helper global functions are based on years of experience with bot building, and they’re designed to speed up and simplify your bot code. There are a numerous global functions defined based on commonly used botContext scripting functions, for example:
 
@@ -63,10 +63,10 @@ With these variables initialized at the start of the conversation, they are avai
 
 In short, take advantage of the Global Helper Functions dialog template. Since much of the Global Functions work is done for you, you can import the template to speed up and streamline your code elsewhere in your bot.
 
-{: .important}
+{: .note}
 LivePerson recommends that you import the template into a bot **before** you start building your bot. This is because, if you have existing, defined global functions, there might be naming conflicts. Therefore, it’s a good idea to check the functions after the import.
 
 ### Global Helper Functions bot template
 In addition to the Global Helper Functions dialog template, there exists a Global Helper Functions bot template. The bot template is intended for educational purposes. You can create a new test bot that’s based on the template, and then explore the example dialogs therein. There are several dialogs that illustrate using global functions in various ways.
 
-<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_bottemplate.png">
+<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_bottemplate.png" alt="A view of the Global Helper Functions bot template">

@@ -11,7 +11,7 @@ permalink: mobile-sdk-and-web-templates-complex-layout.html
 indicator: both
 ---
 
-Complex templates have a different JSON structure - the basic elements which make up the template are contained in another hierarchy which specifies their ordering.
+Complex templates have a different JSON structure — the basic elements which make up the template are contained in another hierarchy which specifies their ordering.
 This adds the option to send Structured Content templates with more friendly structure, including more [elements and actions](rich-messaging-getting-started.html).
 
 Each template can include other basic elements or different templates.

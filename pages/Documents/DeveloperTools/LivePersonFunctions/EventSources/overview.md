@@ -11,8 +11,8 @@ indicator: both
 
 LivePerson Functions may listen to Conversation Cloud events or are directly linked to conversational bots. Functions will start reacting to events once they are successfully deployed until they do not have an effect.
 
-{: .notice}
-The number of functions connected to a specific event is restricted and seen in the tables below.
+{: .alert}
+The number of functions connected to a specific event is restricted, and documented in the tables below.
 
 ### Event Integrations
 
@@ -69,7 +69,7 @@ There is only a single event of Chat Post Survey that uses Functions to re-creat
 
 |Event Name|Event Description|Event Source|Function Limit| Supports Skills|
 |--- |--- |--- |--- |---
-|Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished, and CSAT survey has been submitted.|Chat Service|10|
+|Chat Post Survey Email Transcript|Triggered after a chat conversation is finished, and CSAT survey has been submitted.|Chat Service|10|
 
 ### Integrations without events
 
@@ -87,7 +87,7 @@ Functions offer several templates. They can be used as a sample to ease the deve
 
 |Event|Template Name|Template Description|
 |--- |--- |--- |
-|Chat Post Survey E-Mail Transcript|Chat Post Survey E-Mail Transcript|A template displaying some basic ways how the "Chat Post Survey E-Mail Transcript"-Event can be used.|
+|Chat Post Survey Email Transcript|Chat Post Survey Email Transcript|A template displaying some basic ways how the "Chat Post Survey Email Transcript"-Event can be used.|
 |Conversational Command|Conversational Command|A template displaying some basic ways how the "Conversational Command"-Event can be used.|
 |Messaging Conversation End|Keyword Scanner|A template displaying how to use the Conversation Util to get a conversation and scan it for keywords.|
 ||Messaging Conversation End|A template displaying some basic ways how the "Messaging Conversation End"-Event can be used.|

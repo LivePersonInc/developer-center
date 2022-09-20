@@ -13,6 +13,8 @@ indicator: both
 ### LivePerson NLU engine
 
 The [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) supports:
+
+* Dutch
 * English
 * French
 * German
@@ -21,6 +23,10 @@ The [LivePerson NLU engine](intent-manager-natural-language-understanding-livepe
 * Japanese
 * Portuguese
 * Spanish
+* Tagalog
+
+{: .note}
+We're always working to expand our language coverage. If you need a language but don't see it available in the application, contact us!
 
 ### LivePerson (Legacy) NLU engine
 
@@ -72,7 +78,7 @@ Available with [Google Dialogflow](intent-manager-natural-language-understanding
 
 ### Brand's Rasa-based NLU engine
 
-Language support depends on which version of Rasa you’ve implemented. For more information, see [https://rasa.com/docs/rasa/language-support/](https://rasa.com/docs/rasa/language-support/).
+Language support depends on which version of Rasa you’ve implemented. For more information, see [Rasa's info on language support](https://rasa.com/docs/rasa/language-support/).
 
 ### Related topics
 * [Language Support](conversation-builder-bots-language-support.html) (Conversation Builder bots)

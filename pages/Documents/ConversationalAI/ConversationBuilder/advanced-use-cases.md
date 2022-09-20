@@ -27,23 +27,23 @@ To solve this problem, you can create a rule with a [No Match condition](convers
 
 In our example below, the No Match condition directs the flow to the current interaction in order to repeat it. This interaction is a question that asks for the consumer's email address.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png" alt="The Add Next Action Rule window showing the addition of a custom rule that uses a No Match condition">
 
 Our example dialog flow now looks like this:
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png" alt="The example dialog flow">
 
 When the user enters anything but a well-formed email address, this yields a conversation that looks like the following, where the email address question is repeated:
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png" alt="Preview of the conversation, showing how the bot request for the consumer's email address is repeated">
 
-For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
+For more information on the "No Match" match type and other match types that can be used in conditions, see [this section](conversation-builder-interactions-configuration-next-action.html#conditions).
 
 ### Step Up authentication
 
-You can use Step Up authentication to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication. For more on this, see [here](https://knowledge.liveperson.com/step-up-authentication-overview/) in the Knowledge Center.
+You can use [Step Up authentication](https://knowledge.liveperson.com/step-up-authentication-overview/) to authenticate a consumer mid-stream in a conversation and, importantly, retain the messages that were exchanged before the authentication.
 
-Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can change it as desired (more on this [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage)).
+Be aware that, if your bot is using Step Up authentication, the bot receives a message after the consumer has been authenticated successfully. The default message is “\_STEPUP\_”, but you can [change it](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#defaultstepupmessage) as desired.
 
 Regardless of the message text, it’s important that you catch the Step Up message in the bot’s flow and handle it: Use it to start the authenticated workflow. If you don’t catch the message, a fallback message is sent to the consumer.
 
@@ -51,7 +51,7 @@ Regardless of the message text, it’s important that you catch the Step Up mess
 
 The JavaScript editor within Conversation Builder doesn't natively support encoding to and decoding from Base 64. If you have a case where you need to do so, you can call a FaaS function and use the `crypto` package to encode a value and return it to your bot. Alternatively, using the following code in your Global Functions will give you access to this functionality without having to call outside of Conversation Builder.
 
-Below, we've constructed two new functions -- `encode` and `decode` -- that work the same way as the Window object's `atob` and `btoa` functions:
+Below, we've constructed two new functions — `encode` and `decode` — that work the same way as the Window object's `atob` and `btoa` functions:
 
 ```javascript
 function encode(string) {
@@ -97,8 +97,8 @@ function decode(string) {
 
 Once created, you can call both functions as needed from the Pre-Process and Post-Process code editors.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64a.png" alt="Calling the functions in the code editors">
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/base64b.png" alt="Using the results in a statement">
 
-Both functions were adapted from a polyfill located [here](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).
+Both functions were adapted from [this polyfill](https://github.com/MaxArt2501/base64-js/blob/master/base64.js).

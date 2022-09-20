@@ -21,7 +21,7 @@ Everything that is stored in the Conversation Context Service (CCS) consists of 
 
 *Session properties* are those where the property belongs to one namespace and one session, and *namespace properties* are those where the property belongs to one namespace and does not belong to any session.
 
-<img width="400" src="img/convorchestrator/co_ccs_properties.png">
+<img width="400" src="img/convorchestrator/co_ccs_properties.png" alt="A diagram illustrating namespace and sessions properties, both within a namespace">
 
 Since properties cannot be moved to other namespaces or sessions, if you want to change the affiliation, you must delete the property and create a new one.
 
@@ -45,4 +45,4 @@ Since the TTL set on the session has a higher priority than the TTL set on the n
 
 ### API authorization
 
-To start using the API, you’ll need to authenticate; for details, see [here](conversation-orchestrator-api-authorization.html).
+To start using the API, you’ll need to [authenticate](conversation-orchestrator-api-authorization.html).

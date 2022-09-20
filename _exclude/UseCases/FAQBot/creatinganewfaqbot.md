@@ -10,7 +10,7 @@ indicator: both
 
 ### Importing the Template
 
-In the Conversation Builder, tap on the NEW BOT icon and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
+In the Conversation Builder, tap on the NEW BOT button and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
 
 ### Initial Bot Setup
 
@@ -71,7 +71,6 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
 </tbody>
 </table>
 
-
 * **Custom Data Fields:**
 
 <table>
@@ -88,7 +87,6 @@ Return to the Conversation Builder and in the upper left corner of the Conversat
   </tr>
 </tbody>
 </table>
-
 
 After you have reviewed, and tweaked, hit Save
 

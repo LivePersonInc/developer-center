@@ -13,7 +13,6 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-date-and-time-st
 indicator: messaging
 ---
 
-
 The iOS platform provides four different default types of date and time styles:
 
 - SHORT is numeric, for example, **12/13/52 or 3:30 PM**.
@@ -29,7 +28,6 @@ You can set a specific 'locale' that is different from the device locale through
 country: String?,  language: String?
 ```
 
-
 ### Bubble timestamp
 
 Bubble timestamps contain only the time in SHORT time format, according to the locale (default or custom) and device setting.
@@ -43,7 +41,6 @@ Override the resource ID with any **time** format, for example, "hh:mm a" or "HH
  lpTimeFormat: String? 
 ```
 
-
 ### Date and time format instead of style
 
 It is also possible to configure a specific format for date and time instead of style.
@@ -56,18 +53,17 @@ If the host app has customized formatting, this formatting gets used instead of 
    lpDateFormat: String?
    ```
 
-* **For a time only, that is, the bubble's timestamp & the off hours time in case of today/tomorrow:**
+* **For a time only, that is, the bubble's timestamp and the off hours time in case of today/tomorrow:**
 
    ```swift
    lpTimeFormat: String?
    ```
 
-* For date & time together, that is, resolve message & the off hours time in case of another date:
+* For date and time together, that is, resolve message and the off hours time in case of another date:
 
    ```swift
    lpDateTimeFormat: String?
    ```
-
 
 ### Date off hours
 
@@ -81,12 +77,11 @@ Date off hours messages (not today/tomorrow) use the default LONG date and SHORT
   
    * "Thanks for your message. We will be back online January 12, 2017 at 15:30"*
 
-Define a special date/hour format with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
+Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
 
 ```swift
 lpDateFormat: String?
 ```
-
 
 ### Resolve message
 
@@ -100,14 +95,13 @@ Resolve messages use the default SHORT date and SHORT time according to the loca
   
   *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
 
-Define a special date/hour format with any **date & time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
+Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
 
 ```swift
 lpDateTimeFormat: String?
 ```
 
 **Limitation:** If the formatting changed after the Resolve messages already appear, this change takes no effect. We plan to fix this limitation in future versions.*
-
 
 ### Separator timestamp
 
@@ -121,8 +115,6 @@ Override the resource ID with any **date** format, for example, "MMM d, yyyy" or
 lpDateFormat: String?
 ```
 
-
-
 ### Timezone off hours
 
 Off hours can appear in different time zones with this resource ID :
@@ -134,8 +126,6 @@ Off hours can appear in different time zones with this resource ID :
 You can find a list of timezone IDs [here](https://helpspot.readdle.com/calendars/index.php?pg=kb.page&id=588).
 
 **Example**: _"US/Pacific", "Europe/Berlin"._
-
-
 
 ### Today and tomorrow off hours
 

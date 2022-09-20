@@ -11,20 +11,18 @@ indicator: messaging
 
 Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, see the [MobileSDK iOS Quick Start guide](/mobile-app-messaging-sdk-for-ios-quick-start.html).
 
-{: .notice}
-SDK versions are not downgrade compatible
+{: .alert}
+SDK versions are not downgrade-compatible.
 
 <hr/>
 
 <h3>Regular Release</h3>
 
-A planned and scheduled release with a defined scope that has gone through regression testing and passed by our QA team. This release typically contains prioritized features and customer bugs and may also include internal development and fixes. Note that these releases are always built using the latest version of Swift (N and N - 1).
+A planned and scheduled release with a defined scope that has gone through regression testing and passed by our QA team. This release typically contains prioritized features and customer bugs and may also include internal development and fixes. Note that these releases are always built using the latest version of Swift (N and N – 1).
 
 **These release are available as** [direct download](https://github.com/LivePersonInc/iOSFrameworks) **and** [cocoapods](https://github.com/LivePersonInc/iOSPodSpecs)
 
-
 <a href="mobile-app-messaging-sdk-for-ios-all-releases-regular-releases.html">View regular release notes</a>
-
 
 <hr/>
 <h3>Additional Release</h3>
@@ -33,10 +31,7 @@ These release are generally used to address any critical bugs on the SDK and/or 
 
 **These release are available only through** [cocoapods](https://github.com/LivePersonInc/iOSPodSpecs).
 
-
 <a href="mobile-app-messaging-sdk-for-ios-all-releases-additional-releases.html">View additional release notes</a>
-
-
 
 <hr/>
 <h3>Limited Release</h3>
@@ -48,6 +43,5 @@ These builds may undergo limited  or focused regression testing only.
 Any issues or bugs reported on this Limited release build will only be addressed on the latest SDK version of the "Regular Releases".
 
 **These release are available only through** [cocoapods](https://github.com/LivePersonInc/iOSPodSpecs#limited-releases).
-
 
 <a href="mobile-app-messaging-sdk-for-ios-all-releases-limited-releases.html">View limited release notes</a>

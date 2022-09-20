@@ -17,7 +17,7 @@ Along with the invocation, a payload is sent containing the conversation ID and 
 
 ### Configuration
 
-{: .important}
+{: .note}
 Your account must have the New Agent Workspace enabled; please get in touch with your account team to enable the feature.
 
 To be able to use Conversational Commands, an Agent needs the following permissions:
@@ -25,7 +25,7 @@ To be able to use Conversational Commands, an Agent needs the following permissi
 * **Use enhanced Agent Workspace**
 * **FaaS-Invocation**
 
-#### Step 1 - Create a new Function
+#### Step 1 — Create a new Function
 
 Create a new function with the **Conversational Command** event as the trigger. The function's name will be displayed as the name of the Conversational Command in the Agent Workspace.
 
@@ -33,16 +33,18 @@ The `description` will also be shown in the Agent Workspace. The description can
 
 `[email, subject:optional] - Sends the conversation transcript to the provided email address.`
 
-{: .important}
+{: .note}
 You can create up to 30 functions for this event.
 
-#### Step 2 - Edit the Function
+#### Step 2 — Edit the Function
 
 Adjust the code in the template according to your needs by modifying the function. You can see an example of the payload in the sidebar, which might be collapsed.
 
 The function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the agent will only be shown a generic success message. If the function returns an `Error`, this will be displayed to the agent as an error message.
+
 Please see our [Deep Dive UI Creation Process](liveperson-functions-getting-started-development-deep-dive-ui.html#creation-process) section or alternatively [Deep Dive CLI Create](liveperson-functions-getting-started-development-deep-dive-cli.html) section for further information.
-#### Step 3 - Deploy the function
+
+#### Step 3 — Deploy the function
 
 Like any other function, this function must be deployed before it can be used.  Please see our [Deep Dive UI Deployment Process](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) section or alternatively [Deep Dive CLI Deploy](liveperson-functions-getting-started-development-deep-dive-cli.html) section for more information on how to deploy your function.
 ### Examples

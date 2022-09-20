@@ -32,7 +32,7 @@ The APIs lets brands:
 
 - To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForHistoryControlAPI`
 
-{: .important}
+{: .note}
 To see more about the Welcome Message with Quick Replies, visit the following [page](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
 
 ### Parameters
@@ -72,7 +72,7 @@ Used to present open conversations or closed conversations or all conversations.
 Used to choose how much conversation history presents to the consumer by days.
 Not providing a value allows consumers to see the last 2 conversations (more can be seen by scrolling up to fetch additional conversations if stored on the local database, otherwise they'll be retrieved from the LP server).
 
-{:.important}
+{: .note}
 When using this property, you must also use `LPConversationHistoryMaxDaysDateType`.
 
 #### LPConversationHistoryMaxDaysDateType

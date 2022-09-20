@@ -17,12 +17,12 @@ Use the following built-in functions to log events and print debug messages.
 
 Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name. 
 
-{: .important}
+{: .note}
 The event detail is optional. Keep the event detail short, as it can't be more than 32 kilobytes, i.e., approximately 32,000 characters in length.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail - </em>string; any **optional** detail | Void |
+| `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message — </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail — </em>string; any **optional** detail | Void |
 
 #### Example
 In this example, we set the user message to the current user message and name the event “Invoice API”.
@@ -31,8 +31,8 @@ In this example, we set the user message to the current user message and name th
 botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'API call successful');
 ```
 
-{: .important}
-For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
+{: .note}
+See also [this step-by-step, example guide](conversation-builder-best-practices-custom-event-logging.html) on implementing custom event logging.<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
 ### Print debug message
 
@@ -46,7 +46,7 @@ Logged debug messages are displayed in the [bot's logs](conversation-builder-tes
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `printDebugMessage(message)` | message (string) – A message to print to the debug logs | None |
+| `printDebugMessage(message)` | message (string) — A message to print to the debug logs | None |
 
 #### Example
 

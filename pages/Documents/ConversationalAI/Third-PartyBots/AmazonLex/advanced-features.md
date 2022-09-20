@@ -8,8 +8,8 @@ permalink: third-party-bots-amazon-lex-advanced-features.html
 indicator:
 ---
 
-{: .important}
-At this time, Lex response cards & audio messages are not supported.
+{: .note}
+At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 ### Sending Encoded Metadata
@@ -22,12 +22,12 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 3.1 below
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 3.1 below:
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_custom_markup.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_custom_markup.png" alt="">
 Figure 3.1
 
 #### Sending Text Message with Encoded Metadata
@@ -50,7 +50,7 @@ An example of the custom payload text message response is below:
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_text.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_text.png" alt="">
 Figure 3.2
 
 #### Sending Rich Content (structured content) with Encoded Metadata
@@ -88,7 +88,7 @@ You need to add another property of `encodedMetadata` with your rich content obj
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png" alt="">
 Figure 3.3
 
 ### Sending Pause/Delay Message
@@ -102,10 +102,10 @@ It is possible to send an event of type "delay" before regular content events an
 
 <br />
 
-Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 3.4.
+Setting a delay in between multiple messages is possible and an example of such a case (Message — Delay — Message) can be seen in Figure 3.4.
 
-<img class="fancyimage"  src="img/lex/lex_message_delay_message.png">
-Figure 3.4 An example of Message - Delay - Message  configuration in the Amazon lex console's intent editor
+<img class="fancyimage"  src="img/lex/lex_message_delay_message.png" alt="">
+Figure 3.4 An example of Message — Delay — Message configuration in the Amazon lex console's intent editor
 
 it is also possible to send only a single delay response. The example payload of such response is below:
 
@@ -116,16 +116,16 @@ it is also possible to send only a single delay response. The example payload of
 }
 ```
 
-<img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
-Figure 3.5 showing the Custom Markup message for delay message
+<img class="fancyimage" src="img/lex/delay_response_custom_payload.png" alt="">
+Figure 3.5 Showing the Custom Markup message for delay message
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Sending Private Text Message
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .important}
+{: .note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Markup response in intent definition (as shown in Figure 3.6). There are two properties, `text` and `messageAudience`.
@@ -137,9 +137,9 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 3.6.
+Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message — Private Text Message — Action) can be seen in Figure 3.6.
 
-<img class="fancyimage" style="width:600px" src="img/lex/private_message_response_custom_payload.png">
+<img class="fancyimage" style="width:600px" src="img/lex/private_message_response_custom_payload.png" alt="">
 Figure 3.6 An example of transfer action with a simple text message and private text message in the Amazon lex console's intent editor
 
 It is possible to send only a private text message response. The example payload of such response is below:
@@ -182,8 +182,8 @@ The bot does not escalate on a failed invocation by default. To enable this, jus
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 3.7.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
-Figure 3.7 Conversation Type step in creation/modification of bot configuration.
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
+Figure 3.7 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
 
@@ -203,7 +203,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Receiving Rich Content Response (Messaging Only)
 
-{: .important}
+{: .note}
 Following guide is going to introduce how to implement Amazon Lambda functions specifically for **Amazon Lex** via Amazon Console. Continue if you are familiar and have access to Amazon Lambda and Amazon Lex.
 
 Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
@@ -305,15 +305,88 @@ An example of a `RichContentEvent` body that will be sent by Third-Party Bots on
 
 #### Create Intent for RichContentEvent and Link Amazon Lambda
 
-After the Amazon Lambda function is deployed now we need to create an intent which should have Sample utterances
-`com.liveperson.bot-connectors.consumer.send-rich-content`. After the Sample utterances are added move to section
-of the fulfillment and choose AWS Lambda function. Our deployed lambda function should populate in the list of selections.
-Select the lambda function which in our example case is `botplRichContentEventLamda`. This can be seen in Figure 3.8 below
+After the Amazon Lambda function is deployed now we need to create an intent which should have Sample utterances `com.liveperson.bot-connectors.consumer.send-rich-content`. After the Sample utterances are added move to section of the fulfillment and choose AWS Lambda function. Our deployed lambda function should populate in the list of selections. Select the lambda function which in our example case is `botplRichContentEventLamda`. This can be seen in Figure 3.8 below:
 
-<img class="fancyimage" style="width:800px" src="img/lex/lex_richcontentevent-intent-lamda.png">
+<img class="fancyimage" style="width:800px" src="img/lex/lex_richcontentevent-intent-lamda.png" alt="">
 Figure 3.8 Sample utterances and Lambda function configuration for `RichContentEvent`
 
-Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to
-respond to the requests via the Amazon Lambda function. A demo of our WhatsApp map example (defined above) can be seen below:
+Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to respond to the requests via the Amazon Lambda function. A demo of our WhatsApp map example (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/lex/lex_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+We will describe an example of how to set up and access the WelcomeEvent response in Amazon Lex below. We will use Amazon Lex's capability of providing fulfillment via Amazon Lambda.
+
+#### Create Amazon Lambda Function
+
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create an Amazon Lambda function that should be capable of parsing the additional message context sent by Third-Party Bots. 
+
+The minimal code example below shows how to check if `lastConsumerMessage` property present in the request context, then send back a text response containing the last consumer message. Please note that the response must follow the Lex response schema. More information on how to create the Lambda function for Amazon Lex you can also follow [the official documentation](https://docs.aws.amazon.com/lex/latest/dg/gs2-prepare.html)
+
+```javascript
+'use strict';
+
+function close(sessionAttributes, fulfillmentState, message) {
+  return {
+    sessionAttributes,
+    dialogAction: {
+      type: 'Close',
+      fulfillmentState,
+      message,
+    },
+  };
+}
+
+// --------------- Events -----------------------
+
+function dispatch(intentRequest, callback) {
+  const sessionAttributes = intentRequest.sessionAttributes;
+  const requestAttributes = intentRequest.requestAttributes;
+  let response;
+
+  if (requestAttributes && requestAttributes['BC-LP-CONTEXT']) {
+    const parsedLpContext = JSON.parse(requestAttributes['BC-LP-CONTEXT']);
+    if (parsedLpContext.lpEvent && parsedLpContext.lpEvent.lastConsumerMessage) {
+      response = `I received lastConsumerMessage: ${parsedLpContext.lastConsumerMessage}`;
+    }
+    else {
+      response = 'Unable to find any lastConsumerMessage data';
+    }
+  }
+  else {
+    response = 'Unable to find any LP Context Information';
+  }
+
+  callback(close(sessionAttributes, 'Fulfilled', { 'contentType': 'PlainText', 'content': response }));
+}
+
+// --------------- Main handler -----------------------
+
+// Route the incoming request based on intent.
+// The JSON body of the request is provided in the event slot.
+exports.handler = (event, context, callback) => {
+  try {
+    dispatch(event, (response) => {
+      callback(null, response);
+    });
+  }
+  catch (err) {
+    callback(err);
+  }
+};
+```
+
+
+#### Create WelcomeEvent Intent and Link Amazon Lambda
+
+Ensure you have an ‘entry point’ intent that utilizes the default ‘WELCOME’ event, if not you can create new intent triggered by `WELCOME-INTENT` utterances. After the Sample utterances are added move to the section of the fulfillment and choose the AWS Lambda function.
+Our deployed lambda function should populate the list of selections. Select the Lambda function which in our example case is `WelcomeEventCloudFunction`. This can be seen in Figure 3.9 below
+
+
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/amazon-lex-welcome-intent.png">
+
+Figure 3.9 Sample utterances and Lambda function configuration for WelcomeEvent

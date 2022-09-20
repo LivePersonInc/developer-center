@@ -13,6 +13,9 @@ root-link: true
 indicator:
 ---
 
+{: .deprecation}
+This information is outdated.
+
 ### Overview
 
 Messaging with your favorite brand via SMS is now an even better fit with the MMS Viewer Agent-Side Widget. Within Conversational Cloud this widget provides a method of viewing image and video attachments sent by consumers to your agents. The widget exists within the Agent Workspace along your existing tools.

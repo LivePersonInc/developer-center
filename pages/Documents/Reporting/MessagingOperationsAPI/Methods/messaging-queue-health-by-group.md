@@ -12,8 +12,7 @@ indicator: messaging
 
 Retrieves the information about the current messaging queue state (and all its related metrics) in the account, skill and agent group level
 
-
-**Note**:
+**Notes:**
 
 1. The messaging queue data is currently not available by default, in order to enable the data flow please contact your account manager.
 
@@ -49,7 +48,7 @@ If your request is throttled in this manner, it is recommended that you provide 
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
 | allocatedAgentGroupIds | When set to true, metrics in the response will be grouped by the requested agent groups.  When not provided, defaults to 'all' agent groups.You can provide one or more agent group IDs. <br> Example: skillIds=44,173. To retrieve all agent groups active for the time period, use allocatedAgentGroupIds=all or do not specify this parameter at all.|  numeric, comma separated | optional |
 | includeSubGroups | When set to true, metrics in the response will be calculated according to the agent groups and their sub groups. Default if not specified is false| boolean | optional |
-| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: unassignedConversations,unassignedConversationsAndFirstTimeConsumer,actionableConversations,actionableAndDuringTransferToAgent,actionableAndDuringTransferToSkill,actionableAndDuringBackToQueue,notActionableConversations,notActionableAndDuringTransferToAgent,notActionableAndDuringTransferToSkill,notActionableAndDuringBackToQueue. example: metrics=notActionableAndDuringTransferToSkill,notActionableAndDuringBackToQueue. Default if not specified will return all metrics. | string, comma separated | optional |
+| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: unassignedConversations, unassignedConversationsAndFirstTimeConsumer, actionableConversations, actionableAndDuringTransferToAgent, actionableAndDuringTransferToSkill, actionableAndDuringBackToQueue, notActionableConversations, notActionableAndDuringTransferToAgent, notActionableAndDuringTransferToSkill, notActionableAndDuringBackToQueue. example: metrics=notActionableAndDuringTransferToSkill,notActionableAndDuringBackToQueue. Default if not specified will return all metrics. | string, comma separated | optional |
 | timeframe | Include conversation that were create or updated in the given timeframe. Time is in hours | string| optional, default is 24 hours |
 
 ### Response
@@ -107,8 +106,7 @@ Request by skillIds=12,13 and allocatedAgentGroupIds=22,33
 
 **Elements in the Response**
 
-<div class="important">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
-
+<div class="note">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

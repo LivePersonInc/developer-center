@@ -8,7 +8,6 @@ indicator: both
 permalink: mtls-creating-a-p12-file.html
 ---
 
-
 ## General explanation
 
 The following is a step by step walkthrough on how to create a certificate to work with the mTLS API.

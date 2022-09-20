@@ -8,17 +8,12 @@ permalink: third-party-bots-microsoft-direct-line-pva.html
 indicator:
 ---
 
-### Power Virtual Agents - Overview
+### Power Virtual Agents — Overview
 
-[Power Virtual Agents](https://powervirtualagents.microsoft.com) is a platform provided by Microsoft for codeless 
-chatbot development.
-Therefore, this platform can be used instead of creating a bot with the Microsoft Bot Framework.
-Please read the 
-[Microsoft documentation](https://docs.microsoft.com/en-us/power-virtual-agents/fundamentals-what-is-power-virtual-agents) 
-on a more detailed guide.
-Throughout this document the platform will be refered to as `PVA`.
+[Power Virtual Agents](https://powervirtualagents.microsoft.com) is a platform provided by Microsoft for codeless chatbot development. Therefore, this platform can be used instead of creating a bot with the Microsoft Bot Framework. Please read the [Microsoft documentation](https://docs.microsoft.com/en-us/power-virtual-agents/fundamentals-what-is-power-virtual-agents) on a more detailed guide. Throughout this document the platform will be refered to as `PVA`.
 
 ### Usage
+
 The Direct Line secret necessary to add the bot on Third-Party Bots can be found in the `Manage` Section of the PVA bot.
 
 <img class="fancyimage" alt="PVA-secret" src="img/ThirdPartyBots/microsoft-secret-pva.png">
@@ -32,16 +27,15 @@ For certain features of the PVA platform, however, you should also mark the bot 
 
 ### Limitations
 
-{: .important}
+{: .note}
 `End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native 
 `endOfConversation` activity.
 As this is [not supported by the Direct Line Channel](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-end-conversation?view=azure-bot-service-4.0)
 this connector is also not capable of supporting this node. To close a conversation send custom Channel Data as seen 
 in Figure 4.4.
 
-{: .important}
+{: .note}
 The connector will send any Markdown as provided and not process the text further. 
-
 
 ### Features
 
@@ -62,10 +56,7 @@ Figure 4.2 Question node in PVA
 <br>
 
 #### Transfer to Agent
-This PVA node can be selected under `End the conversation`=>`Transfer to agent` and will create a native event activity
-with the name `handoff.initiate`. Third-Party Bots supports this event. It is,however, crucial to take an additional step
-for it to work as a Conversational Cloud transfer request. A variable named `skill` needs to be set before the transfer 
-node is executed. This can e.g. be achieved by calling a Power Automation Action that returns such a value.
+This PVA node can be selected under `End the conversation`=>`Transfer to agent` and will create a native event activity with the name `handoff.initiate`. Third-Party Bots supports this event. It is, however, crucial to take an additional step for it to work as a Conversational Cloud transfer request. A variable named `skill` needs to be set before the transfer node is executed. This can e.g. be achieved by calling a Power Automation Action that returns such a value.
 
 <img class="fancyimage" alt="Transfer example" src="img/ThirdPartyBots/microsoft-example-pva-transfer.png">
 Figure 4.3 Transfer to agent
@@ -83,9 +74,3 @@ In the following example this is used to send a Close Conversation action.
 
 <img class="fancyimage" alt="Channel Data example" src="img/ThirdPartyBots/microsoft-example-pva-structured-content.png">
 Figure 4.4 Close Conversation as Channel Data in PVA
-
-
-
-
-
-

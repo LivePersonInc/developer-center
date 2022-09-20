@@ -37,7 +37,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://api.liveperson.net/api/account/{{account}}/service/agentVep/baseURI.json?version=1.0",
+					"raw": "https://api.liveperson.net/api/account/{{account}}/service/agentVep/baseURI.json?version=1.0",
 					"protocol": "http",
 					"host": [
 						"api",

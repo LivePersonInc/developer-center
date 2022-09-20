@@ -8,7 +8,7 @@ subfoldername: Methods
 permalink: mtls-methods-create-certificate-from-file.html
 ---
 
-{: .important}
+{: .note}
 Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
 
 This API creates a certificate by uploading a file, for a specific account ID.
@@ -19,13 +19,11 @@ This API creates a certificate by uploading a file, for a specific account ID.
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
-
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
-
 
 **Request Body**
 
@@ -35,7 +33,6 @@ This end-point receives information formatted as `form-data`. The below is an ex
 |:------|        :--------  |
 |file  (File field type)|    p12 file   |
 |certificate  (Text field type)|    {"name":"myCertificate", "password":"1234"}   |
-
 
 **Path Parameters**
 
@@ -53,7 +50,6 @@ This end-point receives information formatted as `form-data`. The below is an ex
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
 
 **Response Body**
 
@@ -78,7 +74,6 @@ for example:
 }
 ```
 
-
 **Entity Structure:**
 
 | Attribute | Description  | Type/Value | Required | Notes |
@@ -88,5 +83,5 @@ for example:
 | name | A certificate's unique name. | unique string | Required | |
 | displayName    | A certificate's display name.  | string | Required | |
 | siteId | The account ID the certificate is associated with. | string | Required | |
-| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and LivePerson's Data Base and if isn't expired)|
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both HashiCorp Vault and LivePerson's Data Base and if isn't expired)|
 | expirationDate | certificate's expiration date. | string | Not Required | |

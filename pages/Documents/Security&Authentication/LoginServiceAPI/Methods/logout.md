@@ -37,7 +37,7 @@ indicator: both
 
 | Parameter | Description |
 | :--- | :--- |
-| csrf | CSRF - Taken from the Login response body. |
+| csrf | CSRF — Taken from the Login response body |
 
 Example:
 
@@ -54,8 +54,8 @@ Example:
 | Code | Response |
 | :--- | :--- |
 | 200 | OK with empty body (see [note](#note2)).
-| 401  | Unauthorized - Bad Authentication (invalid site or agent). |
-| 500 | Internal server error. |
+| 401  | Unauthorized — Bad Authentication (invalid site or agent) |
+| 500 | Internal server error |
 
 *Note*: In case csrf is invalid, response code is 401 Unauthorized with the following body:*
 

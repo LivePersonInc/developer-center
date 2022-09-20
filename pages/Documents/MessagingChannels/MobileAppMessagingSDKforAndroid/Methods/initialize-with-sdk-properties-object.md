@@ -25,4 +25,3 @@ When the conversation screen is displayed, the server connection for messaging w
 | context | A context from the host app |
 | initProperties | An object with all the properties needed to initialize the SDK |
 
-

@@ -20,8 +20,7 @@ If an engagement is available, the IVR Engagement API returns a URL to start the
 
 In some cases, brands can choose to skip the availability check and provide the option to move to mobile messaging regardless using a static link. In this this case, it is the brand’s responsibility to ensure that their service center is properly staffed.
 
-In addition to cost-effectiveness over voice, live messaging and chat interactions have also been proven to drive higher CSAT. In a [study
-conducted by [Amdocs](http://www.amdocs.com/news/pages/amdocs-survey-improved-proactive-care-mobile-self-service-tools.aspx), 76% of consumers say they prefer to communicate with brands via mobile messaging. However, 92% of interactions with brands are still conducted over the phone.
+In addition to cost-effectiveness over voice, live messaging and chat interactions have also been proven to drive higher CSAT. In a [study conducted by [Amdocs](https://web.archive.org/web/20160730182551/http://www.amdocs.com/news/pages/amdocs-survey-improved-proactive-care-mobile-self-service-tools.aspx), 76% of consumers say they prefer to communicate with brands via mobile messaging. However, 92% of interactions with brands are still conducted over the phone.
 
 The LivePerson IVR Deflection Solution provides brands with the opportunity to facilitate consumers who have already dialed their service number with the option to move their interaction to mobile chat.
 
@@ -45,7 +44,6 @@ Top use cases of deflecting calls to mobile chat are for inquiries that are digi
 
 ### Security Information
 
-
 The LivePerson IVR Deflection Solution provides a secure environment for mobile chat between agents and consumers. For more information on how LivePerson protects your private data, refer to the LiveEngage Security Whitepaper, available upon request from your LivePerson Account Manager.
 
 ### SMS Vendors Code Examples
@@ -64,19 +62,18 @@ The following are VXML examples of sending text messages using leading SMS gatew
 
 5. Disconnect.
 
-
 ### clickatell.com
 
 ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<vxml version = "2.1">
 	<form>
-	<var name="msg" expr="'Please click this URL to chat with an agent http://bit.ly/1FqRKyT'"
+	<var name="msg" expr="'Please click this URL to chat with an agent https://bit.ly/1FqRKyT'"
 	<field name="user" type="digits">
-	<audio src="http://s3.amazonaws.com/lpivr/voice/presspound.mp3" fetchhint="prefetch">
+	<audio src="https://s3.amazonaws.com/lpivr/voice/presspound.mp3" fetchhint="prefetch">
 	<filled>
-	<audio src="http://s3.amazonaws.com/lpivr/voice/thank+you+after+pressed+1.mp3" fetchhint="prefetch">
-	<data ecmaxmltype="e4x" name="SendSMS" srcexpr="'http://api.clickatell.com/http/sendmsg?user=hblutrich&amp;password=<password>&amp;api\_id=<id>&amp;to=' + encodeURIComponent(user) + '&amp;text=' + encodeURIComponent(msg)">
+	<audio src="https://s3.amazonaws.com/lpivr/voice/thank+you+after+pressed+1.mp3" fetchhint="prefetch">
+	<data ecmaxmltype="e4x" name="SendSMS" srcexpr="'https://api.clickatell.com/http/sendmsg?user=hblutrich&amp;password=<password>&amp;api\_id=<id>&amp;to=' + encodeURIComponent(user) + '&amp;text=' + encodeURIComponent(msg)">
 	</filled>
 	</field>
 	</form>
@@ -91,14 +88,14 @@ The following are VXML examples of sending text messages using leading SMS gatew
 	<form>
 	<var name="botkey" expr="<key>"
 	<var name="apimethod" expr="'send'"
-	<var name="msg" expr="'Please click this URL to chat with an agent http://bit.ly/1IAVehP'"
+	<var name="msg" expr="'Please click this URL to chat with an agent https://bit.ly/1IAVehP'"
 	<var name="network" expr="'SMS'"
 	<var name="from" expr="3477733852"
 	<field name="user" type="digits">
-	<audio src="http://s3.amazonaws.com/lpivr/voice/presspound.mp3" fetchhint="prefetch"
+	<audio src="https://s3.amazonaws.com/lpivr/voice/presspound.mp3" fetchhint="prefetch"
 	<filled>
-	<audio src="http://s3.amazonaws.com/lpivr/voice/thank+you+after+pressed+1.mp3" fetchhint="prefetch"
-	<data name="SendSMS" srcexpr="'http://<user>:<password>@api.messaging.staging.voxeo.net/1.0/messaging?botkey=' + encodeURIComponent(botkey)+ '&amp;apimethod=' + encodeURIComponent(apimethod) + '&amp;msg=' + encodeURIComponent(msg) + '&amp;user=' + encodeURIComponent(user) + '&amp;network=' + encodeURIComponent(network) + '&amp;from=' + encodeURIComponent(from)"
+	<audio src="https://s3.amazonaws.com/lpivr/voice/thank+you+after+pressed+1.mp3" fetchhint="prefetch"
+	<data name="SendSMS" srcexpr="'https://<user>:<password>@api.messaging.staging.voxeo.net/1.0/messaging?botkey=' + encodeURIComponent(botkey)+ '&amp;apimethod=' + encodeURIComponent(apimethod) + '&amp;msg=' + encodeURIComponent(msg) + '&amp;user=' + encodeURIComponent(user) + '&amp;network=' + encodeURIComponent(network) + '&amp;from=' + encodeURIComponent(from)"
 	</filled>
 	</field>
 	</form>

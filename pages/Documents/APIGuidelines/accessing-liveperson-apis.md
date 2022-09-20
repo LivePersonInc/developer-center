@@ -12,13 +12,13 @@ redirect_from:
 
 Some of our APIs require authorization before you can use them. This is done via either of the following methods:
 
-1. **Common oAuth2.0 scenarios** for web server applications.
+1. **Common OAuth 2.0 scenarios** for web server applications.
 
 2. **Server to server authorization** via either
 
     1. An API Key which uses the OAuth 1.0 methodology
 
-    2. oAuth2.0 for server to server interactions.
+    2. OAuth 2.0 for server to server interactions.
 
 Every API uses either of the two methods (or both), as listed in its overview (for example, the [introduction to the Audit Trail API](/audit-trail-api-introduction.html)).
 

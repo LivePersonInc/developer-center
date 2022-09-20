@@ -19,15 +19,15 @@ In this step, you create two user agents, one for the bot and one for the human 
 #### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
-2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
-3. In the upper-right corner, click **Action > Add**.
+2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png">, and then click the **Skills** tab.
+3. In the upper-right corner, click **Action → Add**.
 4. On the Add Skill page, specify the following:
     * **Name**: Enter "Bot."
     * **Description**: Enter "Bot skill."
 5. Click **Save**.
 
     The Bot skill will be the default skill connected to the bot agent.
-6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
+6. Repeat steps 3–5 to create another skill named "Human." To enable the Save button, you'll need to provide a description here too; anything is suitable.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
 
@@ -39,7 +39,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
 1. Still in LiveEngage, click the **Users** tab.
-2. In the upper-right corner, click **Action > Add**.
+2. In the upper-right corner, click **Action → Add**.
 3. On the Add User page, specify the following:
     * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
     * **Login name**: Enter any value, e.g., "bot_user."
@@ -52,14 +52,14 @@ In addition to the skills, you also need user agents, one for the bot and one fo
     * **Skills**: Click this field, and select "Bot" from the list that appears. This is the default bot skill. **Do NOT add additional skills.**
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_2.png">
 4. Click **Save**.
-5. Repeat steps 2 - 4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
+5. Repeat steps 2–4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
 
 #### Assign the bot skill to an engagement
 
 You will test this connection with a standard web chat engagement, so now you create a campaign and an engagement that routes to the new Bot skill.
 
 1. Click the Campaigns and Engagements icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
-2. In the upper-right corner, click **Action > Add**.
+2. In the upper-right corner, click **Action → Add**.
 3. On the page that appears, specify the following:
     * **Campaign name**: Enter "Bot test."
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
@@ -90,7 +90,7 @@ In this step, you set up an [integration](conversation-builder-integrations-live
 
         (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
 
-    * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+    * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent…" Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
 5. Click **Save**.
 
@@ -126,7 +126,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
-{: .important}
+{: .note}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 #### Start the agent connector
@@ -140,7 +140,7 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
 
 ### Step 13: Test the bot
 
-{: .important}
+{: .note}
 In this step, you'll be testing with Chat, so you'll be using [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]), adding your account number to the URL. When you test with Messaging for Web, you can use [this test page](https://vx-lp.github.io/v2/lpwm/).
 
 1. Be sure you are online as a Human agent in LiveEngage.

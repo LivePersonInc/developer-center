@@ -13,49 +13,23 @@ This section contains details that are common for every method’s resource and 
 
 ### Formats
 
-JSON
+* JSON
 
-**Request Headers**
+### Request headers
 
-<table>
-<thead>
-  <tr>
-    <td>Header</td>
-    <td>Description</td>
-</thead>
-<tbody>
-  </tr>
-  <tr>
-    <td>Authorization</td>
-    <td>Contains token string to allow request authentication and authorization. See the doc for more details.</td>
-  </tr>
-</tbody>
-</table>
+| Header | Description |
+| --- | --- |
+| Authorization | Contains token string to allow request authentication and authorization |
 
+### Query parameters
 
-### Query Parameters
+| Parameter | Description | Notes |
+| --- | --- | --- |
+| v | API version number | Required<br>Type: Double<br>Default value: 1.0<br>Validation fail error code: 400 |
 
-<table>
-<thead>
-  <tr>
-    <td>Parameter</td>
-    <td>Description</td>
-    <td>Notes</td>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>v</td>
-    <td>api version number</td>
-    <td>Required<br>Type: Double<br>Default Value: 1.0<br>Validation fail error code: 400</td>
-  </tr>
-</tbody>
-</table>
-
-
-**Response Codes**
+### Response codes
 
 |Code | Description |
-| :----- | :-------------|
-|200 | OK |
+| --- | --- |
+| 200 | OK |
 | 400 | Bad request |

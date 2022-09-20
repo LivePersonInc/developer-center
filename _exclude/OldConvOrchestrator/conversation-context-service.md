@@ -19,31 +19,31 @@ The Conversation Context Service API is a REST interface to a cloud based reposi
 
 1. Save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
 
-2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
+2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill.
 
 The Conversation Service Context APIs are part of Conversation Orchestrator, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
 
-<img class="fancyimage" width="600" src="img/maven/image_37.png">
+<img class="fancyimage" width="600" src="img/maven/image_37.png" alt="">
 
-Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information such as name, email, phone number etc. which are stored as **Key-Value Pairs.** Brands can define as many attributes they need per namespace. To group together the attributes in a namespace for example a conversation session brands can use the **Session ID**. Each object in the hierarchical structure (Namespace, Session ID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST APIs. 
+Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information such as name, email, phone number etc. which are stored as **Key-Value Pairs.** Brands can define as many attributes they need per namespace. To group together the attributes in a namespace for example a conversation session brands can use the **Session ID**. Each object in the hierarchical structure (Namespace, Session ID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST APIs.
 
 <!--
-{: .important}
+{: .note}
 If you want to use the Conversation Context Service with Conversation Builder, please use the convenient [API wrapper functions](conversation-builder-scripting-functions-context-session-store-wrapper.html).
 -->
 ### Example Use Cases
 
 * Passing context (intent, customer info) and customer routing / escalation path between bots.
 
-<img class="fancyimage" width="600" src="img/maven/image_38.png">
+<img class="fancyimage" width="600" src="img/maven/image_38.png" alt="">
 
 * Use shared context across different agents in a single conversation
 
-<img class="fancyimage" width="600" src="img/maven/image_39.png">
+<img class="fancyimage" width="600" src="img/maven/image_39.png" alt="">
 
-* Carry over attributes and information collected in a multi-step conversational journey for continuity and warm handoffs between bots and human agents. 
+* Carry over attributes and information collected in a multi-step conversational journey for continuity and warm handoffs between bots and human agents.
 
-<img class="fancyimage" width="600" src="img/maven/image_40.png">
+<img class="fancyimage" width="600" src="img/maven/image_40.png" alt="">
 
 ### Developer Key
 
@@ -51,11 +51,11 @@ To use Conversation Context Service APIs you will need to create and use an API 
 
 1. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
 
-2. Copy and paste the key you see in the experience and use it in your API headers. 
+2. Copy and paste the key you see in the experience and use it in your API headers.
 
 3. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
-<img class="fancyimage" width="750" src="img/maven/devkey.png">
+<img class="fancyimage" width="750" src="img/maven/devkey.png" alt="">
 
 ### Methods
 
@@ -67,10 +67,9 @@ Every API call to the Conversation Orchestrator's Conversation Context Service r
 
 #### Base URL per environment
 
-AMERICAS : https://z1.context.liveperson.net  
-EMEA: https://z2.context.liveperson.net  
-APAC: https://z3.context.liveperson.net  
-
+AMERICAS : <https://z1.context.liveperson.net>  
+EMEA: <https://z2.context.liveperson.net>  
+APAC: <https://z3.context.liveperson.net>  
 
 #### Create a custom namespace
 
@@ -103,8 +102,9 @@ You will use the namespace value that is returned in the response in all other C
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request POST \
@@ -125,7 +125,6 @@ curl --request POST \
 #### Set custom namespace properties
 
 This will override the value if an existing key is used. If a new key is used then it will be added. If a key is omitted it will not be removed.
-
 
 <table>
     <thead>
@@ -151,8 +150,9 @@ This will override the value if an existing key is used. If a new key is used th
     </tbody>
 </table>
 
-##### Example:
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request PATCH \
@@ -176,7 +176,7 @@ curl --request PATCH \
 
 #### Set custom namespace properties within a session
 
-This will override the value if an existing key is used. If a new key is used then it will be added. 
+This will override the value if an existing key is used. If a new key is used then it will be added.
 
 <table>
     <thead>
@@ -202,8 +202,9 @@ This will override the value if an existing key is used. If a new key is used th
     </tbody>
 </table>
 
-Example:
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request PATCH \
@@ -211,12 +212,13 @@ curl --request PATCH \
   --header 'content-type: application/json' \
   --header 'maven-api-key: LkhR5UPv03zP4xrwacy6wx7LYCverxyz' \
   --data '{
-	"a": 720,
-	"b": "jeff@test.com",
-	"c": true
+ "a": 720,
+ "b": "jeff@test.com",
+ "c": true
 }'
 
 ```
+
 #### Get list of namespaces created
 
 <table>
@@ -240,9 +242,10 @@ curl --request PATCH \
     </tbody>
 </table>
 
-##### Example: 
+##### Example
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
+
 ```bash
 
 curl --request GET \
@@ -277,8 +280,9 @@ This will get all Key/value pairs for all requested properties that are availabl
     </tbody>
 </table>
 
-##### Example:
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request GET \
@@ -294,7 +298,7 @@ Customer can generate multiple sessionIds under one namespace. The APIs describe
 Because the number of sessions can be quite large, the API supports pagination. There are two optional parameters for this:
 
 * page
-  * This sets the index of the page to be returned. Index starts at 0. 
+  * This sets the index of the page to be returned. Index starts at 0.
   * Type: int
   * Default value: 0
   * Range: A number greater than or equal to zero.
@@ -307,12 +311,11 @@ Because the number of sessions can be quite large, the API supports pagination. 
 ##### Pagination examples
 
 ```
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
-http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
+https://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
 ```
-
 
 <table>
     <thead>
@@ -379,10 +382,9 @@ curl --request GET \
   --header 'maven-api-key: hD2kGFmLPwNDQwNzgyNTE='
 ```
 
-
 #### Get all properties within a session
 
-We recommend to use Namespace to group related attributes (KVPs), and use the sessionID to store as a session state variable. You can put anything you want in the sessionId. If you want to put consumer and conversation data in the same namespace, you can as long as the sessionIDs are unique across the two. And it's optional – if omitted, the system will use a default sessionId of `__default__`
+We recommend to use Namespace to group related attributes (KVPs), and use the sessionID to store as a session state variable. You can put anything you want in the sessionId. If you want to put consumer and conversation data in the same namespace, you can as long as the sessionIDs are unique across the two. And it's optional — if omitted, the system will use a default sessionId of `__default__`
 
 <table>
     <thead>
@@ -406,8 +408,9 @@ We recommend to use Namespace to group related attributes (KVPs), and use the se
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -417,7 +420,7 @@ curl --request GET \
 
 ```
 
-#### Get one property 
+#### Get one property
 
 <table>
     <thead>
@@ -440,12 +443,12 @@ curl --request GET \
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/myCoolMamespace2/properties/{propertyName}   --header 'maven-api-key:  BEnAcoA2p4OTAyMzM1Nxyz'
-
 
 ```
 
@@ -469,17 +472,18 @@ curl --request GET   --url https://z2.context.liveperson.net/v1/account/90233/my
             <td>Update multiple properties
             </td>
             <td>{
-	"a": 1,
-	"b": 2,
-	"c": 3
+ "a": 1,
+ "b": 2,
+ "c": 3
 }</td>
             <td></td>
         </tr>
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -488,15 +492,14 @@ curl --request PATCH \
   --header 'content-type: application/json' \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz' \
   --data '{
-	"a": 1,
-	"b": 2,
-	"c": 3
+ "a": 1,
+ "b": 2,
+ "c": 3
 }'
-
 
 ```
 
-#### Pass multiple propertyName to the GET properties	
+#### Pass multiple propertyName to the GET properties 
 
 <table>
     <thead>
@@ -515,8 +518,9 @@ curl --request PATCH \
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -526,11 +530,9 @@ curl --request GET \
 
 ```
 
-
 #### Delete a sessionID (Group of properties)
 
-Delete sessionID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation. 
-
+Delete sessionID would be used if brands wants to delete a set of session attributes within a namespace. For instance after the attributes have been used in a conversational journey they may decide to delete the values at the logical end of the conversation.
 
 <table>
     <thead>
@@ -549,8 +551,9 @@ Delete sessionID would be used if brands wants to delete a set of session attrib
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 
@@ -559,8 +562,8 @@ curl --request DELETE \
  --header 'maven-api-key: 04UQXk21ZDmKdN9jTwP8ty1sSoTLFxyz'
 
 ```
-#### Delete a property
 
+#### Delete a property
 
 <table>
     <thead>
@@ -579,8 +582,9 @@ curl --request DELETE \
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request DELETE \
@@ -588,6 +592,7 @@ curl --request DELETE \
   --header 'maven-api-key: DigxAZB4lO9M0XCaW1DphiwW4Tz9Uxyz'
 
 ```
+
 #### Delete a custom namespace
 
 Delete namespace may be used if brand wants to retire a namespace. This would really be quite rare, and may happen if entire set of attributes are not used any more, such as an entire use case is being retired.
@@ -609,8 +614,9 @@ Delete namespace may be used if brand wants to retire a namespace. This would re
     </tbody>
 </table>
 
-##### Example: 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated
+##### Example
+
+Note: The accountId and API key in these examples are fake — please replace it with your accountID and developer key that you generated.
 
 ```bash
 curl --request DELETE \

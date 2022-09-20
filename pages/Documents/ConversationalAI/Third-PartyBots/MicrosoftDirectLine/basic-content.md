@@ -10,9 +10,7 @@ indicator:
 
 ### Introduction
 
-Most of the basic content must be send either via the text property of an activity or via the json object provided on
-the `channelData` property of the activity. Improving support for native content is planned but as of now most of the
-content needs to be provided in the described custom format.
+Most of the basic content must be send either via the text property of an activity or via the JSON object provided on the `channelData` property of the activity. Improving support for native content is planned but as of now most of the content needs to be provided in the described custom format.
 
 ### Structured Content
 
@@ -25,7 +23,7 @@ the structured content. Always validate your structured content using
 
 Direct Line bots need to send this payload in the `channelData` property of the message activity.
 
-{: .important}
+{: .note}
 If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration
 (Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list manually. Wildcards are not supported.
@@ -33,7 +31,7 @@ Moreover, all domains must be HTTPS secure.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -70,7 +68,7 @@ Figure 2.1 Activity with Structured Content
 
 ### Sending Quick Replies
 
-{: .important}
+{: .note}
 Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
@@ -83,7 +81,7 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -100,7 +98,7 @@ For detailed information on Quick Replies check out the documentation for the sp
         "replies": [
           {
             "type": "button",
-            "tooltip": "yes i do",
+            "tooltip": "yes I do",
             "title": "yes",
             "click": {
               "actions": [
@@ -168,7 +166,7 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
@@ -185,18 +183,14 @@ Figure 2.3 Welcome activity on chat
 
 ### Bot Actions
 
-{: .notice}
+{: .alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer
 
 This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
 
-<div class="notice">
-<strong>Naming Conventions:</strong> 
-When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the 
-skill matching to work.
-</div>
+<div class="alert"><strong>Naming conventions:</strong> When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the skill matching to work.</div>
 
 #### Transfer To Skill
 
@@ -213,7 +207,7 @@ The action must be named `TRANSFER` and a skill name must be provided.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "I'll transfer you to a human agent", // an optional message to the customer (can be left empty)
   "channelData": {
@@ -245,7 +239,7 @@ const handoffContext = { skill: "human-expert" };
 
 const payload = {
   text: "I'll transfer you to a human agent",
-  ...EventFactory.createHandoffInitiation(context, handoffContext),
+  …EventFactory.createHandoffInitiation(context, handoffContext),
 };
 ```
 
@@ -255,7 +249,7 @@ Figure 2.5 Microsoft BotBuilder example code
 
 #### Transfer To Agent
 
-{: .important}
+{: .note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
@@ -265,7 +259,7 @@ The action must be named `TRANSFER` and a skill name alongside agentId must be p
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "I'll transfer you to a certain agent", // an optional message to the customer (can be left empty)
   "channelData": {
@@ -291,7 +285,7 @@ The action must be named `CLOSE_CONVERSATION` in this case.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "", // an optional message to the customer
   "channelData": {
@@ -339,11 +333,11 @@ LivePerson Messaging uses 3 different types of priorities:
 
 The time values of these are defined in the Agent Workspace.
 
-A text message can also be provided simultaneously in the activity json.
+A text message can also be provided simultaneously in the activity JSON.
 
 ```json-doc
 {
-  // ...
+  // …
   "type": "message",
   "text": "",
   "channelData": {
