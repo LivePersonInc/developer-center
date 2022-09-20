@@ -1,5 +1,5 @@
 ---
-pagename: Setting Up Bots
+pagename: Setting up bots
 redirect_from:
   - maven-maven-assist-recommended-actions-for-bots.html
   - maven-ai-maven-assist-recommended-actions-for-automations.html

@@ -1,5 +1,5 @@
 ---
-pagename: Clearing the Recommendations Cache
+pagename: Clearing the recommendations cache
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

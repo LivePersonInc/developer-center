@@ -1,5 +1,5 @@
 ---
-pagename: Setting Up Knowledge Bases
+pagename: Setting up knowledge bases
 redirect_from:
   - maven-maven-assist-recommended-actions-for-knowledge-base.html
   - maven-ai-maven-assist-recommended-actions-for-knowledge-base.html

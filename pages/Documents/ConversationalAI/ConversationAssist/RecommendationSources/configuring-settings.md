@@ -1,5 +1,5 @@
 ---
-pagename: Configuring Settings
+pagename: Configuring settings
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
