@@ -5,7 +5,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting functions
+subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
 ---

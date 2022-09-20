@@ -5,7 +5,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Scripting functions
+subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-get-integration-data.html
 indicator: both
 ---
@@ -106,6 +106,7 @@ botContext.setBotVariable('fileCaption',fileCaption,true,false);
 ```
 
 ### Get file type
+
 The `getFileType` function is used to retrieve the file type (PDF, JPEG, etc.) of the file that’s uploaded to an external file share via a [File integration](conversation-builder-integrations-file-integrations.html).
 
 | Function Name | Arguments | Returns |
