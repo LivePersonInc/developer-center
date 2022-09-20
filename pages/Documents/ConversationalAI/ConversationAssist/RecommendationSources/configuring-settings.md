@@ -9,6 +9,8 @@ permalink: conversation-assist-recommendation-sources-configuring-settings.html
 indicator: messaging
 ---
 
+### Introduction
+
 The **Settings** page in Conversation Assist contains settings that are shared by all recommendation sources, or by all recommendation sources of a given type (bots or knowledge bases).
 
 ### Suspend/Resume recommendations
