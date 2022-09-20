@@ -305,7 +305,7 @@ Figure 3.11 Creation of the welcome event
 
 The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create Google cloud function that should be capable of parsing the additional message context sent by Third-Party Bots. 
 
-The minimal code example below shows how to check if `lastConsumerMessage` property present in the request context, then send back a text response containing the last consumer message. Please note, that response sent by The Google Cloud function should follow the Dialogflow CX response schemas
+The minimal code example below shows how to check if `lastConsumerMessage` property is present in the request context, then sends back a text response containing the last consumer message. Please note, that response sent by The Google Cloud function should follow the Dialogflow CX response schemas
 
 
 ```javascript
