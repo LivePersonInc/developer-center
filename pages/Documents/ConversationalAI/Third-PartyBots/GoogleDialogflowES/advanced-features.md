@@ -441,7 +441,7 @@ After adding cloud function make sure to deploy it and verify it is active.
 
 #### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
 
-After the function has been deployed this needs to be added to the fulfillment section of the Bot Configuration.
+After the function has been deployed, it needs to be added to the fulfillment section of the Bot Configuration.
 This fulfillment can be found in the Google Dialogflow ES console as shown in the Figure 4.4 highlighted area.
 Webhook needs to be enabled and filled with the relevant information of the cloud function.
 (e.g. Auth Data and the Trigger URL)
