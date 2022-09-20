@@ -442,7 +442,7 @@ After adding cloud function make sure to deploy it and verify it is active.
 
 After the function has been deployed this needs to be added to the fulfillment section of the Bot Configuration.
 This fulfillment can be found in the Google Dialogflow ES console as shown in the Figure 4.4 highlighted area.
-Webhook need to be enabled and filled with the relevant information of the cloud function.
+Webhook needs to be enabled and filled with the relevant information of the cloud function.
 (e.g. Auth Data and the Trigger URL)
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png">
