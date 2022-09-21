@@ -70,7 +70,7 @@ If you're adding a domain that will use your own Rasa-based engine as the NLU pr
 3. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
 4. In the Add Domain window, on the **New domain** tab, specify the following:
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
-    * **NLU Provider**: Select the provider of the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use.
+    * **NLU Provider**: Select the provider of the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use. Don't see the NLU provider that you're looking for? Check the settings in your [account details](bot-accounts-account-details.html) in Bot Accounts.
     * **Language**: Select the language of the domain.
     * **Create content**: If you're going to add intents and entities manually, select "Manually." If you're going to import them from a file, select "Import."
     * **Import Intents & Entities from**: If you selected "Import" as the import method, now select the type of import file involved: CSV or Google Sheet. Then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.

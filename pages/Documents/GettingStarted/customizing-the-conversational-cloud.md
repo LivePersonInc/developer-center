@@ -15,7 +15,7 @@ date_updated: 2022/07/25
        Now that you know the basics, you’re ready to take a deeper dive into the full capabilities of the Conversational Cloud. The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a journey below to learn more about the tools and customization options available.
             </div>
 </div>
-<div class="container-note">
+<div>
     <div class="important" style="width:91%">
     <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide">Getting Started with your Free Trial Account</a> which outlines the first steps to take in the Conversational Cloud.
   </div>

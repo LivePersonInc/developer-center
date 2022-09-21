@@ -218,6 +218,31 @@ Note: We do not currently use this data although we do store it.</td>
 </tbody>
 </table>
 
+### Other cookies
+
+<table>
+  <thead>
+  <tr>
+    <th>Entry Name</th>
+    <th>Description</th>
+    <th>Storage Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lpTestCookie{timestamp}</td>
+    <td>
+      <ul>
+        <li>This cookie is used only for testing whether the browser supports cookies, where 'timestamp' equals the current time (represented in milliseconds since the ECMAScript epoch).</li>
+        <li>It is set by LivePerson client-side code (not server response header).</li>
+        <li>This cookie holds no critical or sensitive values (value is "testValue"), and is removed immediately after the test.</li>
+      </ul>
+    </td>
+    <td>First party session cookie. No fallbacks. <br><br>Domain: parent domain. <br>Path: parent domain /.</td>
+  </tr>
+</tbody>
+</table>
+
 ### Considerations
 
 The following issues should be considered when working with Conversational Cloud Cookies.
