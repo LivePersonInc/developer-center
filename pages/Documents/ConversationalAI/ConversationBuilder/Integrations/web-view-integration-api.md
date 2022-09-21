@@ -36,9 +36,6 @@ Retrieve your domain based on your environment:
 | LivePerson Cloud US | va.bc-intg.liveperson.net |
 | LivePerson Cloud UK | lo.bc-intg.liveperson.net |
 | LivePerson Cloud SY | sy.bc-intg.liveperson.net |
-| Amazon Web Services US | platformservice.botcentralapi.com |
-| Amazon Web Services UK | integration-eu.botcentralapi.com |
-| Amazon Web Services SY | integration-ap.botcentralapi.com |
 | Google Cloud Platform PROD | cbsrvc-us-p.liveperson.net |
 
 Also review the [API terms of use](https://policies.liveperson.com/apitou).
