@@ -294,6 +294,8 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | 429 | 1029 | Rate limit hit |
 | 500 | 5000 – 7000 | Internal Server Error |
 
+** Refer [Error Dictionary](outbound-reporting-api-error-dictionary.html) to get more description about reporting errors.
+
 ### Details on Authorization
 
 **How to generate <b>Authorization</b> header for API key**

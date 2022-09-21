@@ -493,6 +493,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 ## Reporting API: Example Request and Response
 
 * Refer [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) to get the status of messages.
+* Refer [Error Dictionary](outbound-reporting-api-error-dictionary.html) to get more description about reporting errors.
 
 ### Proactive 2.0 API: Frequently Asked Questions
 
