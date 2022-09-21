@@ -28,7 +28,7 @@ If, in Intent Manager, you have one or more domains that use a Google Dialogflow
 
 #### Step 1: Enable 3rd-party NLU support
 
-Contact your LivePerson account administrator to enable your account for 3rd-party NLU support.
+Enable your account for 3rd-party NLU support within [Account Details](bot-accounts-account-details.html) in [Bot Accounts](bot-accounts-overview.html).
 
 #### Step 2: Sign up and get the API keys
 
