@@ -55,9 +55,6 @@ Customize the **bot messages** if you’re using bots as recommendation sources.
 
 ### On-Demand Recommendations widget
 
-{: .note}
-Currently, the On-Demand Recommendations widget is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
-
 Your agents can use this widget to look up bots, knowledge answers, and [predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) (replies to greetings, closings, etc.) on demand. Turn on this setting to display the widget in the Agent Workspace. (To see the change, you might need to refresh your browser or log in again.)
 
 <img width="800" alt="On-Demand Recommendation on and off setting" src="img/agentassist/settings_ondemandrecs.png">

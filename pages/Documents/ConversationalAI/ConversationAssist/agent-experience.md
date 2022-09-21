@@ -73,9 +73,6 @@ As with recommendations that are displayed inline in the conversation, all recom
 
 Other info in the widget is also skill-based. For example, if the agent’s active conversation is on the Ordering skill, the widget’s “Most used by all” list includes only the answers and bots used the most in conversations on the Ordering skill.
 
-{: .note}
-Currently, the On-Demand Recommendations widget is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
-
 ### Look up replies on demand
 
 [Predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) is a set of canned responses (replies) for common use cases: greetings, closings, and so on. Conversational Cloud lets you personalize predefined content, so it reflects your brand’s voice and business needs.
@@ -89,5 +86,3 @@ Note the following identified in the image:
 1. **Copy reply**: Copy the reply to your clipboard in order to paste it somewhere else
 2. **Edit and send reply**: Copy the reply to the conversation window, where you can edit it before sending it.
 
-{: .note}
-Currently, the On-Demand Recommendations widget is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
