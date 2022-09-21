@@ -677,11 +677,6 @@ div.sidebarTitle-holder {
 .post-content img.inlineimage {
   display: inline-block;
   box-shadow: none;
-}
-
-.post-content li img,
-.inlineimage,
-.post-content p img {
   margin: 0;
 }
 

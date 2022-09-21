@@ -55,7 +55,7 @@ redirect_from:
       <p class="welcome-content">Learn how to create custom logic, flows, and integrations for your business</p>
     </a>
     <a class="welcome-card" target="_blank"
-      href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
+      href="https://knowledge.liveperson.com/live-messaging/">
       <svg class="container-image" width="32" height="32" viewBox="0 0 32 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
