@@ -18,6 +18,7 @@ For a flexible architecture and an optimal consumer experience, follow these bes
 * Provide broad coverage within the knowledge base. The more diverse the content is, the more likely it is that the consumer’s query will be matched to an article.
 * Keep the articles themselves short and focused.
 * Evaluate whether long articles can be broken into smaller ones.
+* If, during testing, you find there’s an article that isn’t returned by AI Search as the top answer, associate an intent with the article.
 * Specify tags for articles: Tags are keywords, not sentences, that highlight the key noun(s) or word(s) in the article’s title, training phrases, or content. An article about health insurance might have the following tags: health, insurance, benefits. To increase the accuracy of search results, add tags.
 * Take advantage of categories: You can add a category to an article, so you can find articles based on category. If the knowledge base has many articles, this makes that task easier.
 

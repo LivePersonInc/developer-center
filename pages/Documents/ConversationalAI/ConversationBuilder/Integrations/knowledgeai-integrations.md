@@ -30,14 +30,11 @@ The [Simple FAQ bot template](conversation-builder-templates-simple-faq.html) pr
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **KnowledgeAI**.
-    
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png" alt="Integration settings for a KnowledgeAI integration">
-    
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Method**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
     - **Request Parameters**:
-        - *mode*: Select the [search method](knowledgeai-search-methods.html), either Intents, Intents Only, or Text. This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
-        - *threshold*: Select the [minimum score](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
+        - *mode*: Select from the following [search methods](knowledgeai-search-methods.html): KnowledgeAI (recommended), Intent match only, or AI search only. In Production, we recommend that you use the “KnowledgeAI” offering. The “Intent match only” and “AI search only” options are primarily intended for testing and for diagnosing issues during troubleshooting. This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
+        - *threshold*: Select the [threshold](knowledgeai-search-methods.html#thresholds) (minimum score) that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
         - *phrase*: Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots-variables.html#store-the-consumers-response), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
