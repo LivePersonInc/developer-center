@@ -937,6 +937,7 @@
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
+        - pagename: Error Dictionary
     - documentname: Key Messaging Metrics API
       basedomain: https://{domain}/manager_workspace/api/account/{accountID}
       pages:
