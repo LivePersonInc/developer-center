@@ -37,17 +37,18 @@ LivePerson clients who use Proactive Messaging and Connect To Messaging need to 
 
 Outbound Reporting API provides the following data fields. This table explains the definition of each field.
 
-| # | Data Field | Definition |
-| 1 | Attempted | Count of total outbound messages initiated through Proactive Messaging or C2M APIs |
-| 2 | Eligible | Count of messages that had phone numbers eligible to receive the outbound message for the selected  channel. For example, trying to send an SMS message to a landline will not count as eligible |
-| 3 | Sent | Count of messages that were successfully sent to the messaging gateway such as Twilio, or WhatsApp |
-| 4 | Delivered* | Count of total messages delivered to the consumer as reported by the messaging gateway |
-| 5 | Read | Count of messages successfully read by consumers. Note: Twilio does not provide read status, so this status is not applicable to the SMS channel |
-| 6 | Responded / Conversations Created | Count of messages successfully responded to by consumers and conversations created |
-| 7 | Conversations Closed | Count of closed conversations |
-| 8 | Failed | Count of failures i.e. difference between attempted count and sent count. This failed count includes recipients that were not eligible to receive a message through the chosen channel, there was an open conversation, etc. |
-| 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
-| 10 | CSAT | Average of the CSAT rating score |
+| Data Field | Definition |
+| Attempted | Count of total outbound messages initiated through Proactive Messaging or C2M APIs |
+| Eligible | Count of messages that had phone numbers eligible to receive the outbound message for the selected  channel. For example, trying to send an SMS message to a landline will not count as eligible |
+| Invite | Count of total messages for eligible phone numbers for whom the invites were sent succesfully. This invite data will be available only for Connect To Messaging |
+| Sent | Count of messages that were successfully sent to the messaging gateway such as Twilio, or WhatsApp |
+| Delivered* | Count of total messages delivered to the consumer as reported by the messaging gateway |
+| Read | Count of messages successfully read by consumers. Note: Twilio does not provide read status, so this status is not applicable to the SMS channel |
+| Responded / Conversations Created | Count of messages successfully responded to by consumers and conversations created |
+| Conversations Closed | Count of closed conversations |
+| Failed | Count of failures i.e. difference between attempted count and sent count. This failed count includes recipients that were not eligible to receive a message through the chosen channel, there was an open conversation, etc. |
+| Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
+| CSAT | Average of the CSAT rating score |
 
 *Delivered count for Whatsapp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by Whatsapp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
 
