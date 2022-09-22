@@ -13,7 +13,7 @@ indicator: messaging
 {: .note}
 When evaluating the agent experience, keep in mind the [FAQs](conversation-assist-faqs.html).
 
-### Tip
+{: .tip}
 To train your agents, start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article
@@ -49,3 +49,40 @@ After you have joined a bot to a conversation, you can remove or replace it if d
 ### Notify the agent when the bot has finished
 
 If you’re recommending bots to your agents, it can be a challenge for the agent to know when the bot has finished its work. The agent must check back repeatedly on the bot’s progress. To solve this, the bot can send a [private message](conversation-builder-interactions-statements.html#private-message) when it’s finished handling the consumer’s request. The private message can tell the agent what action has been taken, and let them know that it’s time for them to rejoin the conservation to close things out with the consumer.
+
+### Look up bots and answers on demand
+
+Conversation Assist automatically recommends answers and bots to agents, inline in conversations, based on consumer intent and conversation skill. But…sometimes…your agents need more flexibility. Sometimes, they need to be able to look up answers and bots on demand, regardless of what the consumer just said. The On-Demand Recommendations widget in the Agent Workspace meets this need.
+
+If you’ve [turned on the display of the widget](conversation-assist-recommendation-sources-configuring-settings.html#on-demand-recommendations-widget), you can use the Bots & Answers tab to ask any question, or enter a phrase, and get back available bots and answers. You can then easily use those recommendations in the current conversation.
+
+<img width="800" alt="The Bots and Answers tab of the On-Demand Recommendations widget" src="img/agentassist/ca_ondemandwidget_botsandanswers.png">
+
+Note the following identified in the image:
+
+1. **Copy answer**: Copy the recommended answer to your clipboard in order to paste it somewhere else.
+2. **Edit and send answer**: Copy the recommended answer to the conversation window, where you can edit it before sending it.
+3. **Send answer**: Send the recommended answer immediately.
+4. **Delegate to bot**: Delegate the conversation to the recommended bot.
+
+As with recommendations that are displayed inline in the conversation, all recommendations shown in the widget depend on the skills assigned within Conversation Assist. For example:
+
+1. The agent picks up a conversation on the “Ordering” skill.
+2. The agent uses the widget to search for available answers and bots.
+3. The results returned include only answers from knowledge bases assigned the “Ordering” skill and only bots similarly assigned the “Ordering” skill within Conversation Assist.
+
+Other info in the widget is also skill-based. For example, if the agent’s active conversation is on the Ordering skill, the widget’s “Most used by all” list includes only the answers and bots used the most in conversations on the Ordering skill.
+
+### Look up replies on demand
+
+[Predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) is a set of canned responses (replies) for common use cases: greetings, closings, and so on. Conversational Cloud lets you personalize predefined content, so it reflects your brand’s voice and business needs.
+
+Predefined content is made available on the Replies tab in the On-Demand Recommendations widget. If you’ve [turned on the display of the widget](conversation-assist-recommendation-sources-configuring-settings.html#on-demand-recommendations-widget), you can use the tab to search and browse for replies on demand. You can then easily use them in the current conversation.
+
+<img width="800" alt="The Replies tab of the On-Demand Recommendations widget" src="img/agentassist/ca_ondemandwidget_replies.png">
+
+Note the following identified in the image:
+
+1. **Copy reply**: Copy the reply to your clipboard in order to paste it somewhere else
+2. **Edit and send reply**: Copy the reply to the conversation window, where you can edit it before sending it.
+
