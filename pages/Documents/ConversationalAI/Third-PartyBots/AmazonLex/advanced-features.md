@@ -313,3 +313,80 @@ Figure 3.8 Sample utterances and Lambda function configuration for `RichContentE
 Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to respond to the requests via the Amazon Lambda function. A demo of our WhatsApp map example (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/lex/lex_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+We will describe an example of how to set up and access the WelcomeEvent response in Amazon Lex below. We will use Amazon Lex's capability of providing fulfillment via Amazon Lambda.
+
+#### Create Amazon Lambda Function
+
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create an Amazon Lambda function that should be capable of parsing the additional message context sent by Third-Party Bots. 
+
+The minimal code example below shows how to check if `lastConsumerMessage` property present in the request context, then send back a text response containing the last consumer message. Please note that the response must follow the Lex response schema. More information on how to create the Lambda function for Amazon Lex you can also follow [the official documentation](https://docs.aws.amazon.com/lex/latest/dg/gs2-prepare.html)
+
+```javascript
+'use strict';
+
+function close(sessionAttributes, fulfillmentState, message) {
+  return {
+    sessionAttributes,
+    dialogAction: {
+      type: 'Close',
+      fulfillmentState,
+      message,
+    },
+  };
+}
+
+// --------------- Events -----------------------
+
+function dispatch(intentRequest, callback) {
+  const sessionAttributes = intentRequest.sessionAttributes;
+  const requestAttributes = intentRequest.requestAttributes;
+  let response;
+
+  if (requestAttributes && requestAttributes['BC-LP-CONTEXT']) {
+    const parsedLpContext = JSON.parse(requestAttributes['BC-LP-CONTEXT']);
+    if (parsedLpContext.lpEvent && parsedLpContext.lpEvent.lastConsumerMessage) {
+      response = `I received lastConsumerMessage: ${parsedLpContext.lastConsumerMessage}`;
+    }
+    else {
+      response = 'Unable to find any lastConsumerMessage data';
+    }
+  }
+  else {
+    response = 'Unable to find any LP Context Information';
+  }
+
+  callback(close(sessionAttributes, 'Fulfilled', { 'contentType': 'PlainText', 'content': response }));
+}
+
+// --------------- Main handler -----------------------
+
+// Route the incoming request based on intent.
+// The JSON body of the request is provided in the event slot.
+exports.handler = (event, context, callback) => {
+  try {
+    dispatch(event, (response) => {
+      callback(null, response);
+    });
+  }
+  catch (err) {
+    callback(err);
+  }
+};
+```
+
+
+#### Create WelcomeEvent Intent and Link Amazon Lambda
+
+Ensure you have an ‘entry point’ intent that utilizes the default ‘WELCOME’ event, if not you can create new intent triggered by `WELCOME-INTENT` utterances. After the Sample utterances are added move to the section of the fulfillment and choose the AWS Lambda function.
+Our deployed lambda function should populate the list of selections. Select the Lambda function which in our example case is `WelcomeEventCloudFunction`. This can be seen in Figure 3.9 below
+
+
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/amazon-lex-welcome-intent.png">
+
+Figure 3.9 Sample utterances and Lambda function configuration for WelcomeEvent

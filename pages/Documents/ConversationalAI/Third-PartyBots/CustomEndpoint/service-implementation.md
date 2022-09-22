@@ -33,8 +33,11 @@ response is sent back.
 To connect to Third-Party Bots via the Custom Endpoint vendor few service endpoints
 methods must be implemented by brands that we will explain below. We also have provided
 a public [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-that contains the [OpenAPI Specification](https://swagger.io/specification). It includes
-detailed information on Request and Response bodies sent or expected by the Third-Party Bots.
+that includes:
+
+- [Node.js](https://nodejs.org/en/) sample implementation of custom endpoint service which mock the supported Bot responses
+- [OpenAPI Specification](https://swagger.io/specification) that describe endpoints and information on
+  Request and Response bodies sent or expected by the Third-Party Bots
 
 #### Get Bot Environments
 
@@ -57,7 +60,7 @@ This endpoint is expected to fetch the list of environments defined for a bot.
 
 Example of the response body that is expected by Third-Party Bots can be seen
 in Figure 2.2. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```json
 ["draft", "alpha"]
@@ -93,7 +96,7 @@ is interpreted as a nonhealthy and unreachable bot.
 
 Example of the response body that is expected by Third-Party Bots can be seen
 in Figure 2.3. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```json
 {
@@ -136,7 +139,7 @@ store or update [SDES](engagement-attributes-types-of-engagement-attributes.html
 
 Example of the request body that is sent by Third-Party Bots can be seen
 in Figure 2.4. Please refer to [GitHub Repository](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
-for the latest endpoint contracts/interfaces.
+for the latest endpoint contracts/interfaces and service implementation.
 
 ```javascript
 {
@@ -280,15 +283,16 @@ Figure 2.6 Example request body of Rich Content event sent to Send Content Event
 Please note we expect brands to use [OAuth 2.0](oauth-2-0-client-credentials.html) for
 authentication and authorization
 
-Third-Party Bots uses [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
-mechanism for a server to server interaction. Third-Party Bots uses the provided
+Third-Party Bots use the [App-JWT OAuth 2.0](oauth-2-0-client-credentials.html) authentication
+mechanism for a server to server interaction. Third-Party Bots use the provided
 `Client ID` and `Client Secret` of an App Installation in the vendor configuration to generate a JWT.
-More information on the Sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt).
-
-Third-Party Bots sends the JWT inside the `Authorization` header on all requests
-to the Custom Endpoint service. The brands need to ensure the request is authorized, e.g.
-if the account the token has been generated on is allowed to access the addressed bot
-resources.
+We currently support **only** OAuth API V2 in Sentinel OAuth 2. API V1 will soon be deprecated
+thus we do not recommend customers implement authentication using the V1 API. More
+information on the Sentinel API can be found [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+and also [here](oauth-2-0-client-credentials.html). Third-Party Bots send the JWT inside the
+`Authorization` header on all requests to the Custom Endpoint service. The brands need to ensure
+the request is authorized, e.g. if the account the token has been generated on is allowed
+to access the addressed bot resources.
 
 ### Error Retry Strategies and Endpoint Timeout
 
