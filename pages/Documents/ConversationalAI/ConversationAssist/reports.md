@@ -11,7 +11,7 @@ indicator: messaging
 
 Conversation Assist automatically generates a series of reports on the performance of your solution.
 
-<img class="fancyimage" style="width:800px" alt="List of reports" src="img/agentassist/reports1.png" alt="">
+<img class="fancyimage" style="width:800px" alt="List of reports" src="img/agentassist/reports1.png">
 
 The reports cover:
 
@@ -32,7 +32,7 @@ Overall, if you manage agent operations or you manage the recommendations from y
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Reports** from the menu at the top.
 2. Use the filters on the left to display the reports you want.
 
-    <img class="fancyimage" style="width:300px" alt="Filter options" src="img/agentassist/reports2.png" alt="">
+    <img class="fancyimage" style="width:300px" alt="Filter options" src="img/agentassist/reports2.png">
 
 3. Do either of the following:
     * To download a single report, click its **Download** link.
