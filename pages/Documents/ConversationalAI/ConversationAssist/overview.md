@@ -32,7 +32,7 @@ You can set up bot and answer recommendations in just a few clicks.
 
 On the **Home** page of Conversation Assist, you'll find a dashboard of rich analytics, which you can use to continuously monitor and tune recommendation performance. Use this valuable data to understanding the impact that your solution is having on your agent operations.
 
-<img width="800" alt="View of the top of the Conversation Assist dashboard" src="img/agentassist/dashboard.png" alt="">
+<img width="800" alt="View of the top of the Conversation Assist dashboard" src="img/agentassist/dashboard.png">
 
 {: .note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
@@ -41,7 +41,7 @@ Just getting started? Complete the [Using Conversation Assist](tutorials-guides-
 
 Within a messaging conversation, Conversation Assist recommends bots and answers based on the intent that’s detected in the consumer’s message. The recommendations are presented in real time, inline within the conversation.
 
-<img width="550" alt="View of the agent workspace with two recommendations being offered to the agent" src="img/agentassist/example.png" alt="">
+<img width="550" alt="View of the agent workspace with two recommendations being offered to the agent" src="img/agentassist/example.png">
 
 When offered a recommended answer, the agent can send it to the consumer. The agent can optionally modify it before sending it.
 
@@ -67,5 +67,5 @@ Recommendation sources include knowledge bases and bots:
 
 ### Access Conversation Assist
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" alt="Conversational AI bot" src="img/ConvoBuilder/icon_cb.png" alt=""> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" alt="Conversational AI bot" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Assist**.
