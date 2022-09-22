@@ -33,7 +33,7 @@ indicator: messaging
  | outbound_twilio_21612 (outbound_21612) | Twilio error - 'To' number not reachabe | [Twilio - 21612](https://www.twilio.com/docs/api/errors/21612) |
  | outbound_twilio_21614 (outbound_21614) | Twilio error  -  Not a mobile number | [Twilio - 21614](https://www.twilio.com/docs/api/errors/21614) |
  | outbound_twilio_21617 (outbound_21617) | Twilio error  - Message exceeds 1600 characters | [Twilio - 21617](https://www.twilio.com/docs/api/errors/21617) |
- | twilio_5008 | No delivery response from Twilio or message is undelivered  | Message were sent successfully to the network service provider of the recipient, but there was no response from the provider that the message was delivered to the recipient. If there is no delivery response for 72 hours after the message was successfully sent, this sms message will be marked as failed. |
+ | twilio_5008 | No delivery response from Twilio or message is undelivered  | Message was sent successfully to the network service provider of the recipient, but there was no response from the provider that the message was delivered to the recipient. As there is no delivery response for 72 hours after the message was successfully sent, this sms message was marked as failed. |
  | twilio_30001 | Twilio error  - Queue overflow | [Twilio - 30001](https://www.twilio.com/docs/api/errors/30001) |
  | twilio_30002 | Twilio error  - Account suspended | [Twilio - 30002](https://www.twilio.com/docs/api/errors/30002) |
  | twilio_30003 | Twilio error  - Unreachable destination | [Twilio - 30003](https://www.twilio.com/docs/api/errors/30003) |
@@ -42,7 +42,7 @@ indicator: messaging
  | twilio_30006 | Twilio error - Unreachable carrier | [Twilio - 30006](https://www.twilio.com/docs/api/errors/30006) |
  | twilio_30007 | Twilio error - Carrier violation | [Twilio - 30007](https://www.twilio.com/docs/api/errors/30007) |
  | twilio_30008 | Twilio error - unknown error | [Twilio - 30008](https://www.twilio.com/docs/api/errors/30008) |
- | c2m_1300 | No engagement found for skill | Engagement not found for the skill. Please check if the skill is added in Live Engage and also activated from self-service web tool. |
+ | c2m_1300 | No engagement found for skill | Engagement not found for the skill. Please check if the skill is added in Conversational Cloud and is also activated from C2M self-service web tool. |
  | c2m_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry |
  | c2m_5000 | Unexpected error occured  | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
  | c2m_5401 | Internal Server Error | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
@@ -53,13 +53,13 @@ indicator: messaging
  | proactive_19 | InApp certificate missing  | There was an internal error. If this continues to fail, please contact LP support.  |
  | proactive_27 | InApp - Mobile app does not support in app messaging | The recipient mobile device does not support InApp messaging |
  | proactive_28 | InApp - Consumer is not authenticated | There was an internal error. If this continues to fail, please contact LP support. |
- | proactive_500 | Message could not be sent | This error will be displayed for older transactions and can be due to one of the following: Open conversation exists, Invalid input, Network errors, Errors on connector component. |
+ | proactive_500 | Message could not be sent | This error can occur because of any of the following reasons: open conversation exists, invalid input, network errors, internal connector error. If this continues to fail in spite of no open conversations, please contact LP support. |
  | proactive_1001 | Consumer ineligible to receive message | The recipient number is not eligibile to receive messages for the specifc channel. Please check if its a landline number or invalid number. |
  | proactive_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry |
  | proactive_1401 | Bad request / Invalid Input | There was an internal error. If this continues to fail, please contact LP support. |
  | proactive_1800 | Open conversation already exists for inapp | There is an open conversation for this customer on the inapp channel. Make sure all the conversation from this customer on the specific channel are closed and retry |
  | proactive_5000 | Unexpected error occured  | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
- | proactive_5002 | Network error occured | Network error occured . If this continues to fail, please contact LP support. |
- | proactive_5403 | Internal error occured | There was an internal error. If this continues to fail, please contact LP support. |
+ | proactive_5002 | Network error occured | Network error occured. If this continues to fail, please contact LP support. |
+ | proactive_5403 | Internal error occured | There was an error in internal connector component. If this continues to fail, please contact LP support. |
  | proactive_5401 | Unknown error occured  | There was an internal error. If this continues to fail, please contact LP support. |
  | proactive_5803 | InApp message sent failed | Proactive message failed to be delivered to the in-app. If this continues to fail, please contact LP support. |
