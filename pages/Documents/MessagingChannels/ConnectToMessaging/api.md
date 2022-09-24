@@ -17,14 +17,14 @@ Connect To Messaging (C2M) is a product offering from LivePerson allowing brands
 ### Getting Started
 
 1. Onboarding to C2M is a mandatory process before running APIs.
-2. Brand’s system should integrate with two C2M API endpoints, which are <strong><i>Eligibility</i></strong> and <strong><i>Invite</i></strong>. 
-  * <strong><i>Eligibility:</i></strong> Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
-  * <strong><i>Invite:</i></strong> Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
+2. Brand’s system should integrate with two C2M API endpoints, which are ***Eligibility*** and ***Invite***.
+    * ***Eligibility:*** Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
+    * ***Invite:*** Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
 
 ### API Specifications
 ## C2M Domain
 
-C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the [Domain API](api-guidelines-domain-api.html) to identify the zone of C2M API for an account with <b>connectToMessagingDomain</b> as Service Name.
+C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the [Domain API](api-guidelines-domain-api.html) to identify the zone of C2M API for an account with **connectToMessagingDomain** as Service Name.
 
 ### Eligibility API
 
@@ -32,7 +32,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/eligibility?v={version}
+| POST | https://{domain}/api/account/{accountId}/eligibility?v={version}|
 
 **Path/Query Parameters**
 
@@ -65,7 +65,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 **Request Body Example — JSON Payload**
 
-SMS, Whatsapp, Google RCS
+SMS, WhatsApp, Google RCS:
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -131,7 +131,7 @@ SMS, Whatsapp, Google RCS
 }
 ```
 
-Whatsapp Rich Template:
+WhatsApp Rich Template:
 
 ```json
 {
@@ -143,11 +143,12 @@ Whatsapp Rich Template:
         "headerVariables": {"1":  "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"},
         "buttonVariables": {"1":  "Paynow"}
     },
-    "skill": "support",
+    "skill": "support"
 }
 ```
 
 Google RCS Rich Card:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -157,11 +158,12 @@ Google RCS Rich Card:
         "2": "New York",
         "3": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"
     },
-    "skill": "support",
+    "skill": "support"
 }
 ```
 
 INAPP:
+
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -208,7 +210,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/invite?v={version}
+| POST | https://{domain}/api/account/{accountId}/invite?v={version}|
 
 **Path/Query Parameters**
 
@@ -298,12 +300,12 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 ### Details on Authorization
 
-**How to generate <b>Authorization</b> header for API key**
+**How to generate Authorization header for API key**
 
 1. Retrieve the appKey, secret, accessToken, accessTokenSecret from [API key](api-guidelines-create-api-keys.html)
 2. Retrieve a domain from [Domain API](api-guidelines-domain-api.html) and API endpoint path.
 3. Use following code snippet(Nodejs, Java) to generate OAuth string programmatically.
-4. Insert generated OAuth string to <b>Authorization</b> header.
+4. Insert generated OAuth string to **Authorization** header.
 
 ```javascript
 const OAuth = require('oauth-1.0a');
@@ -467,42 +469,42 @@ public class OAuthAuthenticator {
 }
 ```
 
-**How to generate <b>Authorization</b> header for AppJWT**
+**How to generate Authorization header for AppJWT**
 
 1. Retrieve the APP_JWT from [AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
-2. Insert to <b>Authorization</b> header as Bearer «APP_JWT».
+2. Insert to **Authorization** header as Bearer «APP_JWT».
 
 ### Frequently Asked Questions
 
-<strong>1. What is the rate limit for the API?</strong>
+**1. What is the rate limit for the API?**
 
 Eligibility/Invite endpoints: 30 requests per second per API.
 
-<strong>2. What is the recommended action from brands for 429 responses?</strong>
+**2. What is the recommended action from brands for 429 responses?**
 
 We recommend a request be retried (3 attempts with exponential retry with delay of 5 sec) when witnessing 429 status code.
 
-<strong>3. Which channels are supported as of now?</strong>
+**3. Which channels are supported as of now?**
 
-C2M supports SMS-Twilio, WhatsApp, Apple Business Chat, Google RCS and INAPP channels.
+C2M supports SMS-Twilio, WhatsApp, Apple Business Chat, Google RCS, and INAPP channels.
 
-<strong>4. Is there a throughput limitation for the data that gets passed from Twilio to LP?</strong>
+**4. Is there a throughput limitation for the data that gets passed from Twilio to LP?**
 
-C2M does not have any limitations on the message size while sending messages to twilio or other channels. 
- 
-<strong>5. Does C2M 2.0 API provide a report?</strong>
+C2M does not have any limitations on the message size while sending messages to twilio or other channels.
+
+**5. Does C2M 2.0 API provide a report?**
 
 Yes, it does. See details [here](outbound-reporting-api-overview.html).
 
-<strong>6. What’s the lookback period?</strong>
-- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.  
+**6. What’s the lookback period?**
+- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
-<strong>7. How do we know which field is optional or required?</strong>
+**7. How do we know which field is optional or required?**
 
-Refer to each API's <strong>Request Body Parameters</strong> or [Swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
+Refer to each API's **Request Body Parameters** or [Swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
 
-<strong>8. What's the restriction on request body parameters?</strong>
+**8. What's the restriction on request body parameters?**
 
 | Field Name | Limitation |
 | :--- | :--- |
