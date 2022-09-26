@@ -15,13 +15,13 @@ Some metrics are calculated only in 60-minute intervals.
 These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
 {: .note}
-In case there is no data available, the response element will contain -1.
+In case there is no data available, the response element will contain 0 (On September 1st 2022, the  default values were changed from -1 to 0)..
 
 ### Request
 
 | Method | URL |
 | --- | --- |
-| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountId}/nht?fromDate={timestamp}&toDate={timestamp}&skillIds={comma separated skill ids}&interval={interval in minutes}&source={source name}&v={api version}
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountId}/nht?fromDate={timestamp}&toDate={timestamp}&skillIds={comma separated skill ids}&interval={interval in minutes}&source={source name}&v={api version}|
 
 #### Request Query Parameters
 
@@ -103,7 +103,7 @@ In case there is no data available, the response element will contain -1.
     "metricsByIntervals": [{
       "timestamp": "2022-05-19T09:00",
       "epochTimestamp": 1652950800000,
-      "arrivals": -1,
+      "arrivals": 0,
       "avgAgentSegmentDuration": 3127.00,
       "totalAgentSegmentDuration": 3127,
       "avgTimeInQueue": 3.00,
@@ -116,7 +116,7 @@ In case there is no data available, the response element will contain -1.
       {
         "timestamp": "2022-05-19T10:00",
         "epochTimestamp": 1652954400000,
-        "arrivals": -1,
+        "arrivals": 0,
         "avgAgentSegmentDuration": 31.15,
         "totalAgentSegmentDuration": -1,
         "avgTimeInQueue": 31.15,
