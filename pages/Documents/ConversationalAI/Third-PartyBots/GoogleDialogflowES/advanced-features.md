@@ -365,7 +365,7 @@ After adding cloud function make sure to deploy it and verify it is active.
 
 After the function has been deployed this needs to be added to the fulfillment section of the Bot Configuration.
 This fulfillment can be found in the Google Dialogflow ES console as shown in the Figure 4.2 highlighted area.
-Webhook needs to be enabled and filled with the relevant information of the cloud function.
+Webhook need to be enabled and filled with the relevant information of the cloud function.
 (e.g. Auth Data and the Trigger URL)
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png" alt="">
@@ -375,3 +375,78 @@ Once Webhook configuration is added then the Google Dialogflow ES bot will be ab
 A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/dialogflowes/dialog_flow_2_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+We will describe an example of how to set up and access the WelcomeEvent response in Google Dialogflow ES below. We will use Google Dialogflow's capability of providing fulfillment via google cloud function as webhook.
+
+#### Create Welcome Intent
+
+Ensure you have an ‘entry point’ intent that utilizes the default ‘WELCOME’ event, if not you can create new intent triggered by the default `WELCOME` event. After that enable webhook call for this intent in the fulfillment section, to be able to access the message context.
+
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-hook.png">
+
+Figure 4.3 Configuration of the welcome event
+
+#### Create Google Cloud Function
+
+For accessing the WelcomeEvent body sent by Third-Party Bots you will need to create a Google cloud function that should be capable of parsing the additional message context sent by Third-Party Bots. The minimal code example below shows how to check if there is a `lastConsumerMessage` and `contentType` exists, then send back raw Event data containing the last consumer message. Please note, that response sent by The Google Cloud function should follow the Dialogflow ES response schemas.
+
+```javascript
+/**
+ * Responds to any HTTP request.
+ *
+ * @param {Request} request HTTP request context.
+ * @param {Response} response HTTP response context.
+ */
+exports.handleWebhook = (request, response) => {
+  let jsonResponse = {};
+
+  const {
+    originalDetectIntentRequest: {
+      payload: { lpEvent: { contentType, lastConsumerMessage } } = {},
+    } = {},
+  } = request.body;
+
+  if (contentType === "welcome" && lastConsumerMessage) {
+    jsonResponse = {
+      fulfillment_messages: [
+        {
+          text: {
+            text: [`Last Consumer Message Received: ${lastConsumerMessage}`],
+          },
+        },
+      ],
+    };
+  } else {
+    jsonResponse = {
+      fulfillment_messages: [
+        {
+          text: {
+            text: ["No Consumer Message found"],
+          },
+        },
+      ],
+    };
+  }
+
+  response.send(jsonResponse);
+};
+```
+
+After adding cloud function make sure to deploy it and verify it is active.
+
+#### Link Google/Third-Party Cloud Function to Fulfillment as Webhook
+
+After the function has been deployed, it needs to be added to the fulfillment section of the Bot Configuration.
+This fulfillment can be found in the Google Dialogflow ES console as shown in the Figure 4.4 highlighted area.
+Webhook needs to be enabled and filled with the relevant information of the cloud function.
+(e.g. Auth Data and the Trigger URL)
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png">
+Figure 4.4 Webhook configuration that needs to be added for calling Cloud Function
+
+Once Webhook configuration is added then the Google Dialogflow ES bot will be able to respond to the requests via the cloud function.
