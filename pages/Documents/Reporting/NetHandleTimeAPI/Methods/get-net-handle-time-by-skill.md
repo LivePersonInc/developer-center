@@ -15,7 +15,7 @@ Some metrics are calculated only in 60-minute intervals.
 These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
 {: .note}
-In case there is no data available, the response element will contain 0 (On September 1st 2022, the  default values were changed from -1 to 0)..
+In case there is no data available, the response element will contain 0. (On September 1st 2022, the default values were changed from -1 to 0.)
 
 ### Request
 
@@ -40,8 +40,8 @@ In case there is no data available, the response element will contain 0 (On Sept
 
 ### Response
 
-| Property Name            | Description | Type | Interval         | Default value | Notes |
-|--------------------------| --- | --- |------------------|---------------|----------------------------|
+| Property Name | Description | Type | Interval| Default value | Notes |
+|---| --- | --- |---|---|---|
 | fromDate | The requested start date | ISO format. UTC timezone |||||
 | fromMillis | Query start date (same as above) in Epoch time format | Long — Epoch time | | || 
 | toDate| The requested end date | ISO format. UTC timezone ||||
@@ -53,11 +53,11 @@ In case there is no data available, the response element will contain 0 (On Sept
 | timestamp| Interval start time (human-readable format)  | ISO format. UTC timezone |  ||
 | epochTimestamp| Interval start time (epoch format) | Long — Epoch time | ||
 | arrivals| Segments arrived to the queue/skill of all types (new conversation, back2Q, transfer to skill) in the interval | Integer | 15/30/60 minutes | |
-| AvgTimeInQueue| The average time a segment waits in the queue before assignment to an agent | Double | 15/30/60 minutes | 0  |
+| AvgTimeInQueue| The average time a segment waits in the queue before assignment to an agent | Double | 15/30/60 minutes | 0 |
 | totalAgentSegmentDuration | Total time of all closed segments ending by any means within the interval | Long | 15/30/60 minutes | 0 |
-| AvgAgentSegmentDuration| Average duration of all closed segments ending by any means within the interval | Double | 15/30/60 minutes | 0             |                            |0|
+| AvgAgentSegmentDuration| Average duration of all closed segments ending by any means within the interval | Double | 15/30/60 minutes | 0 |  |0|
 | avgAvailableLoad| Weighted average load of logged in agents within the interval, this is represented in percentage value for agents that have the skill | Double | 60 minutes only  | 0| Used for the NHT calculation. |
-| messagesSent| Total individual messages sent to consumers within time step by human agents | Integer | 60 minutes only  | 0             | Used for the NHT calculation. |
+| messagesSent| Total individual messages sent to consumers within time step by human agents | Integer | 60 minutes only  | 0 | Used for the NHT calculation. |
 | handledSegments | Number of individual segments within current interval that have sent at least 1 human agent message (assigned agent) | Integer |  60 minutes only  | 0 | Used for the NHT calculation. |
 | avgSegmentWorkTime | The average time it takes for all agents in the skill to work on a message response per skill | Double | 60 minutes only  | 0| Used for the NHT calculation. |
 | netHandleTime | Effort time heuristic LP calculation (NHT) | Double | 60 minutes only  | 0  Used for the NHT calculation. |
