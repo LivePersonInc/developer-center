@@ -36,13 +36,13 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
 3. Assign the "Agent" skill to the Seating Bot:
     1. Beside the bot, click the <img style="width:25px" src="img/agentassist/icon_managesource.png" alt="Manage source icon"> (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, change the **Status** value to "ON," and add the "Agent" skill.
+    2. In the **Manage recommendation source** dialog, change the **Status** value to "ON," enter a description for the bot, and add the "Agent" skill.
 
         <img width="700" src="img/agentassisttutorial/assignskill.png" alt="The Manage recommendation source window, setting the Status of the Seating Bot to On">
 
     3. Click **Save**.
 
-4. Repeat the process for the previous step to change the status of the Booking Bot and assign the "Agent" skill to it.
+4. Repeat the process for the previous step to change the status of the Booking Bot, enter its description, and assign the "Agent" skill to it.
 
 ### Step 6: Configure the KB for Conversation Assist
 

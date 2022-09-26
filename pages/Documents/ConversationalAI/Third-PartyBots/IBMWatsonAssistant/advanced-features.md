@@ -288,31 +288,19 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Receiving Rich Content Response (Messaging Only)
 
-Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
-(Structured Content) to be sent back to the vendor based on specific user interactions/responses (For example user sharing their location on WhatsApp).
-Please note these capabilities are sometimes limited by the channels in which the conversation is happening. For the list of Rich Messaging capabilities for each channel,
+Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received
+as a response from the vendor but also, allow Rich Messages (Structured Content) to be sent back
+to the vendor based on specific user interactions/responses (For example user sharing their
+location on WhatsApp).
+Please note these capabilities are sometimes limited by the channels in which the conversation
+is happening. For the list of Rich Messaging capabilities for each channel,
 browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
 
-An example use case of the Rich Content Event (`RichContentEvent`) response sent by Third-Party Bots is described below. The example will show how to set up and access the `RichContentEvent` response with Watson Assistant after a user shares the location.
+An example use case of the Rich Content Event (`RichContentEvent`) response sent by Third-Party
+Bots is described below. The example will show how to set up and access the `RichContentEvent`
+response with Watson Assistant after a user shares the location.
 
-#### Create Intent for RichContentEvent
-
-We needs to create a intent that should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 3.8 below
-
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-intent.png" alt="">
-Figure 3.8 Intent creation in Watson Assistant console
-
-#### Accessing the RichContentEvent Data in Dialogs
-
-The `RichContentEvent` is sent with the context. Thus, for Watson Assistant, we can leverage
-the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables)
-for accessing the `RichContentEvent` data. The context information that is sent by Third-Party Bots contains in `$lpEvent`.
-An example of accessing `RichContentEvent` from that context variable can be seen in Figure 3.9.
-
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-access-event.png" alt="">
-Figure 3.9 Displaying how to access the Rich Content/Structured Content using Context Variables
-
-Usually a `RichContentEvent` of type map will have following JSON schema:
+Usually a `RichContentEvent` of type map/location will have following JSON schema:
 
 ```json
 {
@@ -331,9 +319,117 @@ Usually a `RichContentEvent` of type map will have following JSON schema:
 }
 ```
 
-A demo of our WhatsApp map example with the above bot configuration (defined above) can be seen below:
+#### Create Intent for RichContentEvent
 
-<img class="fancyimage" style="width:300px" src="img/watsonassistant/watson_v1_richcontent_demo.gif">
+We needs to create a intent that should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 3.8 below
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-intent.png" alt="">
+Figure 3.8 Intent creation in Watson Assistant console
+
+#### Access RichContentEvent in Dialog
+
+There are two ways in which a RichContentEvent can be accessed in IBM Watson Assistant.
+You can either access the raw data directly in the node configuration or you can
+leverage the IBM Cloud Functions to handle more complex scenarios for your business cases.
+We will define our demo example for both use cases below.
+
+##### Accessing the RichContentEvent via node configuration
+
+The `RichContentEvent` is sent with the context. Thus, for Watson Assistant, we can leverage
+the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables)
+for accessing the `RichContentEvent` data. The context information that is sent by Third-Party Bots contains in `$lpEvent`.
+An example of accessing `RichContentEvent` from that context variable can be seen in Figure 3.9.
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/watson_richcontentevent-access-event.png" alt="">
+Figure 3.9 Displaying how to access the Rich Content/Structured Content using Context Variables
+
+##### Accessing the RichContentEvent Data via IBM Cloud Functions
+
+The `RichContentEvent` is sent with the context. Thus, for Watson Assistant, we can leverage
+the [IBM Cloud Functions](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-getting-started)
+for responding to the `RichContentEvent`. The `RichContentEvent` information is accessed via
+[Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables).
+The context variable that is sent by the Third-Party bot is `$lpEvent`.
+
+We can use an [action](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-actions_over)
+cloud function to access the `RichContentEvent` data and attach this action as a webhook to
+the IBM Watson Assistant instance.
+
+A code snippet of an IBM Cloud Function of type `action` can be seen below. This LivePerson function
+will check if the input payload has `RichContentEvent` in the request and then will respond with
+the map/location body.
+
+```javascript
+/**
+ *
+ * main() will be run when you invoke this action
+ *
+ * @param contains the lpEvent variables that is passed from the Dialog Node
+ *
+ * @return The output message for for Rich Content Event
+ *
+ */
+function main(params) {
+  const { lpEvent: { event = {} } = {} } = ({} = params);
+
+  let message = "rich content not found";
+
+  if (event && event.type && event.type === "RichContentEvent") {
+    // Default response for Rich Content
+    message = `Found Rich Content Event Raw data: ${JSON.stringify(event)} `;
+
+    // If we find Rich Content Event of type Map then respond different for E2E Tests
+    if (
+      event.content &&
+      event.content.elements &&
+      event.content.elements &&
+      Array.isArray(event.content.elements)
+    ) {
+      message = `you sent me this location: ${event.content.elements[0]}`;
+    }
+  }
+
+  return { message };
+}
+```
+
+Once the function is created and you have the link to the endpoint to call the IBM Cloud Function,
+this can then be attached to an IBM Watson Assistant instance via the Webhooks option. An example of
+this can be seen in Figure 3.10 below
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/ibm-watson-assistant-webhook-config.png" alt="">
+Figure 3.10 IBM Watson Assistant Webhooks configuration to an IBM Cloud Function
+
+**Please Note** the ending of the endpoint with `.json` this is needed to be added additionally to
+the endpoint of the IBM Cloud Function if you expect the response from the IBM Cloud Function
+as JSON Object. Like in our above example code of function it was in the property `message`.
+
+After setting up the Webhook configuration we need to now configure the Dialog node which is replying
+to the intent of `RichContentEvent` an example of the configuration of the dialog node can be seen in
+Figure 3.11 below:
+
+<img class="fancyimage" style="width:600px" src="img/watsonassistant/dialog-node-webhook-richcontent-setup.png" alt="">
+Figure 3.11 A Dialog Node setup for a RichContentEvent
+
+We can see in Figure 3.11 that `$lpEvent` context variable is passed as parameter `lpEvent`
+which was accessed in the IBM Cloud Function implementation we wrote above. The result is
+returned to the variable `webhook_result_1` and then the response is accessed via
+`$webhook_result_1.message`.
+
+A demo of our WhatsApp map example with both of the above bot configurations (defined above) can be seen below:
+
+<img class="fancyimage" style="width:300px" src="img/watsonassistant/watson_v1_richcontent_demo.gif" alt="">
+
+### Receiving Last consumer message (Messaging Only)
+
+Third-Party bot now provides a way to add the last consumer message as a part of the welcome event. When an ongoing conversation gets transferred to a new Agent or Skill, This enhancement will allow brands to respond to the last consumer message uttered as per their needs.
+
+The last consumer message is passed via the property `lastConsumerMessage` which is part of another property `lpEvent` that is sent with `context` information by Third-Party Bots. Thus, for Watson Assistant, we can leverage the [Context Variables](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime-context#dialog-runtime-context-variables)
+
+An example of accessing `lastConsumerMessage` from that context variable can be seen in Figure 3.12.
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson_consumer-message-access-event.png">
+Figure 3.12 Displaying how to access the last consumer message using Context Variables
 
 ### Watson Discovery
 
@@ -348,7 +444,7 @@ Find details on how it works [here](https://cloud.ibm.com/docs/assistant?topic=a
 Disambiguation responses will be renders as `Quick Replies`.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/watson2-disambiguation.png" alt="">
-Figure 3.10 Configure Watson Disambiguation
+Figure 3.13 Configure Watson Disambiguation
 
 ### Prevent Transferring loop behavior
 
