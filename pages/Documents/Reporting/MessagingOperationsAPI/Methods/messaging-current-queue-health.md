@@ -85,7 +85,6 @@ Request by skillIds=12,13 and overdueConversations=true
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
                 "unassignedConversationsAndFirstTimeConsumer": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0,
                 "avgWaitTimeForAgentAssignment_NewConversation": 300,
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
                 "maxWaitTimeForAgentAssignment": 370,
