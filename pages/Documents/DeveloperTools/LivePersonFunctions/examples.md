@@ -186,25 +186,26 @@ class CacheController {
                         _expiry: Date.now() + ttl,
                 };
         }
+        // Be careful secret returned here is value while original secret client returns {key, value}
         getValue(key) {
                 const entry = this.cache[key]
                 if (!entry)
                         return;
                 if (entry._expiry < Date.now()) {
                         this.cache.delete(key)
-                        return
+                        return;
                 } else {
                         return entry.value
                 }
         }
 }
 
-let cache = new CacheController();
+const cache = new CacheController();
 
 async function lambda(input, callback) {
-        const secret = await getSecret("YOUR_SECRET");
+        const secret = await getSecret("YOUR_SECRET"); // Be aware this can be undefined
         // YOUR CODE WHICH NEEDS SECRET
-        callback(null, secret);
+        callback(null, 'Success');
 }
 
 async function getSecret(key) {
@@ -214,12 +215,14 @@ async function getSecret(key) {
                         console.info("Secret taken from cache")
                         return secret;
                 } else {
-                        let secret = await secretClient.readSecret(key);
-                        cache.setValue(key, secret, process.env['TTL'])
-                        return secret
+                        // As cache only works with secret value we only take this from the readSecret response
+                        const { value } = await secretClient.readSecret(key);
+                        cache.setValue(key, value, 100000)
+                        return value
                 }
         } catch (error) {
                 console.error(`received following error message: ${error.message}`);
+                return undefined
         }
 }
 ```
