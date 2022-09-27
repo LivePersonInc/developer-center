@@ -1326,7 +1326,8 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 /* hide jumpto menu if empty */
-#jumpto:has(#anchorlist:empty) {
+#jumpto:has(#anchorlist:empty),
+#jumpto:has(#anchorlist p:empty) {
   flex-basis: 0;
 }
 
