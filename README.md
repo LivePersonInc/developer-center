@@ -144,6 +144,8 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
+* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
+* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
 
 ## Notes on content and code
 
@@ -158,21 +160,30 @@ When contributing to this repository, please observe the following:
 * Use lists (ordered series in numbered lists, unordered series in bulleted lists)
 * In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
 * Use an Oxford comma (“one, two, and three”)
-* Use typographically correct quotation marks (“”)
+* Use typographically correct quotation marks (“”) ([keyboard shortcuts](https://chrisbracco.com/curly-quotes/))
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+* In code samples, indent by two spaces
 
 #### APIs and SDKs
 
 If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
+
+### Special formatting
+
+* You can precede a paragraph with the following to highlight the content:
+  - `{: .note}` — important info to pay attention to
+  - `{: .alert}` — warnings or alerts (anything that indicates a problem)
+  - `{: .deprecation}` — info on features that are discouraged or no longer supported
+  - `{: .tip}` — useful suggestions or ideas
+  - `{: .info}` — complementary or auxiliary info
 
 ### Code and media
 
 * Be consistent
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
-* To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
 * The maximum (view) width for images in this repository is 800 pixels
 
 You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!

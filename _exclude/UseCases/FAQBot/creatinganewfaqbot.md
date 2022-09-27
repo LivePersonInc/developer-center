@@ -10,7 +10,7 @@ indicator: both
 
 ### Importing the Template
 
-In the Conversation Builder, tap on the NEW BOT icon and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
+In the Conversation Builder, tap on the NEW BOT button and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
 
 ### Initial Bot Setup
 

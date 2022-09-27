@@ -15,10 +15,10 @@ permalink: conversation-assist-recommendation-sources-setting-up-bots.html
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
-{: .important}
+{: .note}
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
 
 ### Supported bot types
@@ -60,15 +60,16 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 2. Click the **Bots** tab.
 3. Click <img class="inlineimage" style="width:25px" alt="Sync button" src="img/agentassist/icon_refresh.png"> over on the right. This fetches the available bots. Available bots include those you’ve deployed and started (i.e., they’re valid bots that can serve a conversation). You should see all of the bots that you’ve created (both public and private) and other public bots within your organization.
 
-    <img width="700" alt="Bots tab showing a list of bots that are turned on but one bot that is turned off"src="img/agentassist/configbot1.png">
+    <img width="700" alt="Bots tab showing a list of bots and an indicator pointing to one bot that is turned off" src="img/agentassist/configbot1.png">
 
 4. Verify that your bot is displayed. If it isn't, consult the [troubleshooting info](conversation-assist-troubleshooting.html).
 
     Your bot doesn't have any assigned skills yet, so its **Status** is initially set to "Off." For the bot to be recommended in conversations, you must assign one or more skills **and** change the **Status**.
 
 5. Assign one or more skills to the bot:
-    1. Beside the bot, click the <img style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
-    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," and add one or more skills.
+    1. Beside the bot, click the <img class="inlineimage" style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+
+    2. In the **Manage recommendation source** dialog, change the **Status** to "ON," enter a description of the bot's capabilities, and add one or more skills.
 
         <img width="700" alt="Manage recommendation source window with options for turning the bot on and off and for assigning skills" src="img/agentassist/configbot2.png">
 
@@ -83,7 +84,7 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
-{: .important}
+{: .note}
 If you later delete a bot, you’ll need to manually refresh the list of discovered bots in Conversation Assist in order to see the bot removed from the list.
 
 ### Step 5: Configure settings

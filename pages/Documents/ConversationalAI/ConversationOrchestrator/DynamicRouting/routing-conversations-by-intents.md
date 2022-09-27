@@ -9,7 +9,7 @@ permalink: conversation-orchestrator-dynamic-routing-routing-conversations-by-in
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 This topic assumes that you are familiar with [Intent Manager](intent-manager-overview.html).
 
 You can create policies to recognize a consumer's intent from their utterance and transfer to the appropriate agent or skill. Routing by intent is very useful when agents or bots are organized by functional departments.
@@ -36,8 +36,8 @@ There are two ways to accomplish intent-based routing:
 * If you have a limited number of intents, use the dialog starter approach.
 * If you have many intents and corresponding skills, enable intent routing in the Conversation Orchestrator bot.
 
-{: .important}
-Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access an older version of this topic [here](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
+{: .note}
+Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access [an older version of this topic](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
 
 #### Routing by intent using the dialog starter approach
 
@@ -49,7 +49,7 @@ When an intent triggers a dialog starter, the intent name is automatically saved
 
 3. Set the **Next Action** to the Dynamic Routing interaction.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_next_action.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_next_action.png" alt="The dialog starter that's mapped to an intent named ‘book flight’">
 
 4. Create intent-based routing policies. For more on this, see the section at the end of this topic.
 
@@ -57,31 +57,31 @@ When an intent triggers a dialog starter, the intent name is automatically saved
 
 When working with larger domains, assigning individual dialogs to each intent can be difficult to scale. By using the Conversation Orchestrator bot template, bot developers can manually call the analyze intent API and save the intent name to the default namespace, enabling routing to any intent-based skill in the account.
 
-{: .important}
+{: .note}
 This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of LivePerson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
 
 1. Create the Dynamic Routing bot, and open **Global Functions**.
 
-    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
+    Create a new bot using the **Dynamic Routing Bot** by following the steps in the [Getting Started topic](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change two configurations (botAppKey and domainId) as highlighted in the next, few steps.
 
 2. Retrieve the botAppKey.
 
     Retrieve the botAppKey value from a bot user agent. This can be found in the **User Management** section of the Conversational Cloud. Copy this value.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png" alt="The App key field in the User Management section of Conversational Cloud">
 
 3. Retrieve the intent domain ID.
 
     Retrieve the Domain ID for your intent domain. You can find this in the **Domain Settings** for your domain in Intent Manager. Copy this value.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png" alt="">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png" alt="The Domain Settings option for a given domain that's listed on the dashboard in Intent Manager">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png" alt="The Domain ID field in the settings for a given domain">
 
 4. Update configurations in the **Global Functions**.
 
     Enter the botAppKey and domainId values into their associated variables within the **Global Functions** editor of your bot.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png" alt="The lines of code in the bot's global functions where you need to enter the botAppKey and domainID values">
 
 5. Enable the intent dialogs in the bot.
 
@@ -89,11 +89,11 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
     *Enabling ASK_INTENT and getIntent_API interactions:*
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png" alt="The dialog flow, illustrating how the Dynamic Routing interaction is below the getIntent_API interaction">
 
     *To enable interactions, go to the **Interaction Settings**, and enable the toggle*:
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png" alt="The Interaction Enabled setting in the Basic settings of a given interaction">
 
 6. Create intent-based routing policies. For help with this, see the next section.
 
@@ -108,7 +108,7 @@ The policy creation flow is identical for both approaches:
 
     Use the **Manage routing policies** link in the Dynamic Routing interaction to navigate to Conversation Orchestrator.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png" alt="The Manage routing policies link that's directly on the face of the Dynamic Routing interaction">
 
 2. Create your policy.
 
@@ -118,23 +118,23 @@ The policy creation flow is identical for both approaches:
 
     In the actions editor, select "Transfer to skill" from the left-hand dropdown and the relevant skill from the right-hand dropdown. Ensure that agents are assigned to the book_flight skill.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png" alt="The configured Book flight policy">
 
 4. Enable your policy.
 
     Once saved, toggle the switch for the policy in the policy list to enable the policy.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png" alt="">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png" alt="The enabled Book flight policy">
 
 5. Test your policy.
 
-    You can test your setup on the web client emulator. For details on this, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+    You can [test your setup on the web client emulator](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
 
-    Alternatively, to test, you can deploy the bot and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+    Alternatively, to test, you can [deploy the bot and connect it to a campaign that’s linked to the production/staging channel of your choice](conversation-orchestrator-dynamic-routing-getting-started.html).
 
     Follow these steps once you have configured your testing setup:
 
-    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png" alt="">
+    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png" alt="The conversation flow to follow">
 
     The message routing flow is identical for both approaches (Dialog Starter and Enabling Intent Routing) because we have used the same intent and the same policy in our demonstration.
 

@@ -11,7 +11,7 @@ permalink: mcs-toolkit-getting-started.html
 indicator:
 ---
 
-<div class="important">Please <a href="https://knowledge.liveperson.com/data-reporting-meaningful-connection-score-(mcs)-accessing-the-toolkit.html">see this page</a> for updated information on how to access the MCS Toolkit.</div>
+<div class="note">Please <a href="https://knowledge.liveperson.com/data-reporting-meaningful-connection-score-(mcs)-accessing-the-toolkit.html">see this page</a> for updated information on how to access the MCS Toolkit.</div>
 
 ### Authentication
 

@@ -16,11 +16,11 @@ indicator: messaging
 
 There are two ways to use the Next Actions functionality:
 
-* The REST API that can directly access CCS. A primary use case for this is to retrieve policy routing decisions when using external, third-party bots, such as Watson or DialogFlow. For more information on integrating your third-party bots with Conversational Cloud, see [here](third-party-bots-getting-started.html).
+* The REST API that can directly access CCS. A primary use case for this is to retrieve policy routing decisions when using [external, third-party bots](third-party-bots-getting-started.html), such as Watson or DialogFlow.
 * A JavaScript function that wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-For information on this, see [here](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
+See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
 Every API call to the Conversation Context Service requires the following auth headers to be accepted:  
@@ -33,7 +33,7 @@ Base URL per environment:
 * EMEA: https://z2.askmaven.liveperson.net
 * APAC: https://z3.askmaven.liveperson.net
 
-{: .important}
+{: .note}
 The accountId and API key in these examples are fake; please replace them with the accountID and the developer key that you generated.
 
 #### Get Next Actions

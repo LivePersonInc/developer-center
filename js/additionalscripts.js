@@ -16,10 +16,7 @@ $(document).ready(function () {
   sidebarClick()
   populateAnchors()
   menuDrop()
-
   codeButtons()
-  setNoticeIcon()
-  setImportantIcon()
   mobileHamburger()
   isExplorer()
   searchFunction()
@@ -80,35 +77,7 @@ function crossBrowserSafariCheck() {
     $(".sidebarbutton").attr("style", "top: 5px")
   }
 }
-function setNoticeIcon() {
-  var allNoticeIcon = $('p[class^="notice"]')
-  allNoticeIcon.each(function (i) {
-    var noticeIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>'
-    $(this).prepend(noticeIcon)
-  })
-  var allNoticeIconDiv = $('div[class^="notice"]')
-  allNoticeIconDiv.each(function (i) {
-    var noticeIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>'
-    $(this).prepend(noticeIcon)
-  })
-}
-function setImportantIcon() {
-  var allImportantIcon = $('p[class^="important"]')
 
-  allImportantIcon.each(function (i) {
-    var importantIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>'
-    $(this).prepend(importantIcon)
-  })
-  var allImportantIconDiv = $('div[class^="important"]')
-  allImportantIconDiv.each(function (i) {
-    var importantIcon =
-      '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>'
-    $(this).prepend(importantIcon)
-  })
-}
 function removeTitleFirstSteps() {
   var $title = $(".h1").text()
   var titleContainer = $("#documentTitleContainer")
@@ -179,8 +148,6 @@ function navigateContent(url) {
       codeButtons()
       replaceTitle()
       handleUniquePages()
-      setNoticeIcon()
-      setImportantIcon()
       searchFunction()
       capabilitiesSearch()
       searchHighlight()
@@ -557,7 +524,7 @@ function sidebarClick() {
   })
 }
 
-function breadClick(event) {
+/* function breadClick(event) {
   event.preventDefault()
   let breadText = $(this).innerHTML
   var breadSidebar = $("#defaultsidebar")
@@ -565,7 +532,7 @@ function breadClick(event) {
     .find("span:contains('" + breadText + "')")
     .trigger("click")
   // console.log(targetLink)
-}
+} */
 
 //a function to make sure the page's title is updated on load
 function replaceTitle() {
@@ -668,7 +635,7 @@ function searchFunction() {
 //very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
   var $title = $(".h1").text()
-  if ($title.indexOf("Rich Messaging Channel Capabilities") > -1) {
+  if ($title.indexOf("Messaging features Capabilities Comparison") > -1) {
     // Declare variables
     // console.log("run")
     var input, filter, table, tr, categorytr, td, i

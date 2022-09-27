@@ -36,7 +36,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. In the window that appears, select the **Other Connection** tab, and then select **External Knowledge Base without LivePerson AI**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_2.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_2.png" alt="Add a Knowledge Base window, where you specify the source name">
 
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
@@ -44,7 +44,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **Language**: Select the language of the content. This setting is informational only and doesn't affect the behavior of the knowledge base.
 4. Click **Next**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png" alt="Add a Knowledge Base window, where you set up the content search">
 
 5. Define the request for the on-demand content retrieval using your CMS' query and answer API. To pass the input phrase to use when performing the search in the CMS, you must use the {inputPhrase} placeholder that's provided as per your CMS' API contract: in the URL, in the request parameters, or in the post body.
 
@@ -57,7 +57,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
 
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, [map the article suggestions/answers data model (schema) to the LivePerson KnowledgeAI data model](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
 ### Test the CMS integration
@@ -71,7 +71,7 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 
     Initially, the **Articles** page doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within KnowledgeAI. The content remains in the CMS.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png" alt="Default message on the Articles page that says that initially the page doesn't show any metadata or content">
 
 2. Enter an utterance in the **Answer Tester** on the right, and click **Get answers**.
 
@@ -79,7 +79,7 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
 
-    <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png" alt="">
+    <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png" alt="An example search with the Answer Tester">
 
-    {: .important}
+    {: .note}
     Answers are evaluated by your external CMS. When they're returned, they're always assumed to be a match.

@@ -221,7 +221,7 @@ The icon is available next to the agent message bubble or on the top of the tool
 
 Called when a structured content control with Link action gets clicked.  
 
-{: .important}
+{: .note}
 This callback only gets called if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to **true**.
 
 > **Intent Action:** 

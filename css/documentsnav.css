@@ -9,9 +9,8 @@
 }
 
 .container.documents {
-    padding-left: 10%;
-    /*padding-bottom: 24%;*/
-    vertical-align: top;
+  padding-left: 10%;
+  vertical-align: top;
 }
 
 .documentscontainer {
@@ -26,8 +25,6 @@
   height: 340px;
   width: 890px;
   background-color: #fff;
-  -webkit-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
   box-shadow: -2px 21px 55px 0 rgba(0, 0, 0, 0.07);
   margin: 0 auto;
   margin-bottom: 18px;
@@ -56,7 +53,7 @@
 
 .documentboxtitletext {
   flex: 1;
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: 'Roboto Slab', Arial, sans-serif;
   color: #0c1320;
   font-size: 26px;
   margin-top: 62px;
@@ -64,8 +61,8 @@
 }
 
 .documentboxinfo {
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #333333;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
   font-size: 16px;
   margin-left: 32px;
   padding-right: 10px;
@@ -76,7 +73,7 @@
   display: flex;
   line-height: 2.8;
   background-color: #ECF1FF;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 18px 18px 18px 10px;
 }
 
@@ -93,10 +90,6 @@
 }
 
 .usecasebox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
   rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
@@ -140,22 +133,22 @@
 }
 
 .usecasetitle {
-  font-family: "Roboto Slab", Arial, sans-serif;
-  color: #333333;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  color: #333;
   font-size: 1.625em;
   float:left;
 }
 
 .usecaseinner {
   display: inline-block;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 1em;
   font-weight: 100;
   margin-bottom: 30px;
   float:left;
   clear: both;
   width: 85%;
-  color: #333333;
+  color: #333;
 }
 
 .boximage {
@@ -174,11 +167,13 @@
 }
 
 @media (max-width: 425px) {
+
   .usecasebox {
-    float:right;
+    float: right;
     margin-right: 22%;
     width: 81%;
   }
+
 }
 
 .documentlast {
@@ -201,7 +196,7 @@
 
 .solutionsbox {
   background-color: #fff;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   margin: 10px;
   flex: 1;
 }
@@ -211,10 +206,6 @@
 }
 
 .solutionsbox:hover {
-  -webkit-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
-  -moz-box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
-  rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   box-shadow: rgba(45,45,45,0.05) 0 2px 2px, rgba(49,49,49,0.05) 0 4px 4px,
   rgba(42,42,42,0.05) 0 8px 8px, rgba(32,32,32,0.05) 0 16px 16px, rgba(49,49,49,0.05) 0 32px 32px, rgba(35,35,35,0.05) 0 64px 64px;
   transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
@@ -237,8 +228,8 @@
 }
 
 .solutionstitle {
-  font-family: "Roboto Slab", Arial, sans-serif;
-  color: #333333;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  color: #333;
   font-size: 1.625em;
 }
 
@@ -253,12 +244,12 @@
 }
 
 .solutionsinner {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 1em;
-    font-weight: 100;
-    margin-bottom: 30px;
-    width: 85%;
-    color: #333333;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  margin-bottom: 30px;
+  width: 85%;
+  color: #333;
 }
 
 .solutionsbottomrow {
@@ -280,20 +271,22 @@
 
 @media (max-width: 425px) {
 
-.solutionscontainer {
+  .solutionscontainer {
   width: 100%;
-}
+  }
 
-.solutionsrow {
-  display:block;
-}
+  .solutionsrow {
+  display: block;
+  }
 
-.solutionstext {
+  .solutionstext {
   display: block;
   text-align: center;
-}
+  }
 
-.solutionstext .banner-hr {
+  .solutionstext .banner-hr {
   margin-left: auto;
   margin-right: auto;
+  }
+
 }

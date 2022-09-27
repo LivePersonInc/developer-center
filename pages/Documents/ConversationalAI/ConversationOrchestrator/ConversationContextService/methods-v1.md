@@ -18,7 +18,7 @@ There are two ways to manage properties in the Conversation Context Service (CCS
 
 ### JavaScript wrapper
 
-For information on this, see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
+See the [discussion on scripting functions for managing the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
 
 ### REST APIs overview
 
@@ -35,7 +35,7 @@ Base URL per environment:
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 
-{: .important}
+{: .note}
 The accountId and API key in these examples are fake; please replace them with your accountID and the developer key that you generated.
 
 ### REST Namespace API
@@ -43,7 +43,7 @@ The accountId and API key in these examples are fake; please replace them with y
 #### Create a custom namespace
 This API creates a new namespace in the Conversation Context Service. 
 
-{: .important}
+{: .note}
 Saving properties to a namespace that has not been previously created using this method will create the new namespace automatically
 
 | Method | Path |
@@ -299,12 +299,12 @@ Empty body; status code = 204
 
 #### Delete all properties belonging to Namespace without TTL setting
 
-{: .important}
+{: .note}
 Currently, this feature is not supported.
 
 #### Delete all properties belonging to Session with TTL setting
 
-{: .important}
+{: .note}
 Currently, this feature is not supported.
 
 <!--

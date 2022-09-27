@@ -12,7 +12,7 @@ indicator:
 
 ### Overview
 
-{: .notice}
+{: .alert}
 Please note Custom Endpoint is only accessible for early adopters. Enabling the use of
 Custom Endpoint integrations require a configuration change and whitelisting done by
 LivePerson. Contact your LivePerson account representative for assistance.
@@ -35,7 +35,7 @@ Possible user-cases that can help brands leverage the custom endpoint feature ar
 
 ### Configuration
 
-{: .important}
+{: .note}
 See the [Getting Started](third-party-bots-getting-started.html) guide first to complete the necessary preparations for your account to use Third Party Bots
 
 #### Prerequisite for Vendor Configuration
@@ -119,7 +119,12 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   </tbody>
 </table>
 
-{: .important}
+You can also use the `App Installation` selector to fill-out the `Client ID` and`Client Secret` fields.
+If the selector contains no App Installations, then you have to install a Custom Endpoint
+[Application](conversational-cloud-applications-installing-conversational-cloud-applications.html).
+Contact your LivePerson account representative for assistance if you need help in this regard.
+
+{: .note}
 You have to agree to the Data Disclaimer to use the services of the Third-Party Bots connector.
 For that, you can click on the checkbox "I agree to the Data Disclaimer"
 
@@ -145,7 +150,7 @@ Figure 1.4 Showing the failure case when testing the connection.
 Once you are done providing configuration you can save it by pressing "Done". **_Congratulations!_** You have
 completed the configuration of the Custom Endpoint bot.
 
-{: .important}
+{: .note}
 Following guide is going to introduce how to implement functions for Custom Endpoint using reference of
 [API Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service).
 Continue if you are familiar with how to implement a Custom Endpoint service.

@@ -2,6 +2,8 @@
 pagename: Overview
 redirect_from:
   - webhooks-overview.html
+  - webhooks-troubleshooting.html
+  - connector-api-webhooks-troubleshooting.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API

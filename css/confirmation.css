@@ -75,7 +75,7 @@ body {
 }
 
 #confirmationTitle {
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   font-size: 40px;
   font-weight: 300;
   color: #ff720b;
@@ -83,7 +83,7 @@ body {
 }
 
 #confirmationSub {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
   color: #666;
@@ -91,7 +91,7 @@ body {
 }
 
 #accountNumber {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
   color: #666;
@@ -99,7 +99,7 @@ body {
 }
 
 #userID {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 18px;
   font-weight: normal;
   color: #666;
@@ -118,7 +118,7 @@ body {
 }
 
 #loginButton span {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -133,7 +133,7 @@ body {
 }
 
 #secondTitle {
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 300;
   color: #fff;
@@ -192,7 +192,7 @@ body {
 }
 
 .cardTitle {
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 300;
   color: #162036;
@@ -200,14 +200,14 @@ body {
 }
 
 .cardInnerText {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 13px;
   color: #666;
   padding-right: 15px;
 }
 
 .cardLinks {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 13px;
   align-self: flex-start;
   margin-left: 24px;
@@ -259,7 +259,7 @@ body {
 }
 
 #thirdTitle {
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 300;
   color: #162036;
@@ -277,7 +277,7 @@ body {
 }
 
 .subjectColumn {
-  font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
+  font-family: 'Roboto Slab', 'Open Sans', Helvetica, sans-serif;
   font-size: 18px;
   color: #162036;
   flex: 1
@@ -300,14 +300,14 @@ body {
 }
 
 .answerTitle {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #666;
 }
 
 .answerContent {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 13px;
   color: #666;
 }
@@ -321,7 +321,7 @@ body {
 
 #footerText {
   display: flex;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 12px;
   color: #666;
 }
@@ -332,7 +332,7 @@ body {
 }
 
 #footerText a::before {
-  content: "\2022";
+  content: '\2022';
   margin-left: 5px;
   margin-right: 5px;
   color: #666;
@@ -342,7 +342,7 @@ body {
   margin: 0 5px;
 }
 
-/* Media queries begin, don't panic! */
+/* Media queries begin, don’t panic! */
 
 @media screen and (max-width: 1240px) {
 
@@ -474,7 +474,7 @@ body {
   }
 
   #footerText a:first-child::before {
-    content: "";
+    content: '';
     margin-left: 5px;
     margin-right: 5px;
     color: #666;

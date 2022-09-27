@@ -14,7 +14,7 @@ permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-csat.h
 indicator: messaging
 ---
 
-{: .important}
+{: .note}
 This topic discusses a legacy solution for CSAT surveys and is made available for the benefit of brands using this solution. **If you're new to CSAT surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
 
 ### Prerequisites

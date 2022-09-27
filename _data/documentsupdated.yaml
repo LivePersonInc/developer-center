@@ -2,7 +2,6 @@
   image: getting-started
   documents:
     - documentname: Getting Started with your Free Trial Account
-    - documentname: Do More with the Conversational Cloud
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
     - documentname: LivePerson APIs and SDKs
@@ -18,7 +17,6 @@
     - documentname: API Data Metrics
     - documentname: Engagement Attributes
     - documentname: Analytics Builder Data Metrics
-    - documentname: Important Updates
     - documentname: Retry Policy Recommendations
 
 - categoryname: Agent Experience
@@ -332,6 +330,7 @@
             - subpagename: Intent Trends
             - subpagename: Intent Details
             - subpagename: Conversation Details
+        - pagename: Using Intents & Entities
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -340,6 +339,7 @@
       pages:
         - pagename: Overview
         - pagename: Language Support
+        - pagename: Best Practices
         - pagename: External Knowledge Bases
           subpages:
             - subpagename: Introduction
@@ -347,14 +347,12 @@
             - subpagename: External KBs without LivePerson AI
             - subpagename: Mapping Content Metadata
             - subpagename: Writing a Transformation Specification
-            - subpagename: Best Practices
             - subpagename: Beta - Shortening Long-Form Content
         - pagename: Internal Knowledge Bases
           subpages:
             - subpagename: Introduction
             - subpagename: Knowledge Bases
             - subpagename: Articles
-            - subpagename: Best Practices
         - pagename: Using Intents with KBs
         - pagename: Sending Content to Consumers and Agents
         - pagename: Optimizing Your Content
@@ -939,6 +937,7 @@
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
+        - pagename: Error Dictionary
     - documentname: Key Messaging Metrics API
       basedomain: https://{domain}/manager_workspace/api/account/{accountID}
       pages:
@@ -996,7 +995,6 @@
             - subpagename: Notification Protocol
             - subpagename: Retry Policy
             - subpagename: Disclaimers
-            - subpagename: Troubleshooting
             - subpagename: Webhooks Examples
     # - documentname: IVR Engagement API
     #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
@@ -1129,7 +1127,6 @@
     - documentname: Getting Started with Rich Messaging
       pages:
         - pagename: Introduction
-        - pagename: Rich Messaging Channel Capabilities
     - documentname: Mobile SDK and Web Templates
       pages:
         - pagename: Introduction

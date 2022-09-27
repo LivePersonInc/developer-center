@@ -13,7 +13,7 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-<div class="important">It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
+<div class="note">It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
 
 In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to Conversational Cloud, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
@@ -38,7 +38,7 @@ The identity function should be implemented on every authenticated page (the Web
 
 **Identity object description**
 
-<div class="important">All 3 object keys are mandatory.</div>
+<div class="note">All 3 object keys are mandatory.</div>
 
 * iss: The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
 
@@ -283,7 +283,10 @@ Example for Mandatory+Standard+Custom Claims JWT:
 * The JWT should be signed with your RSA private key.
 
 * The public key should be base64 encoded with X509 key spec and can _either_ be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
-    **Note:** For more details on JWKS, please read [this (external) article](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens).
+{: .note}
+JWKS endpoints should provide the RSA key modulus in base64url encoding, [as specified in the JWA RFC](https://www.rfc-editor.org/rfc/rfc7518#section-6.3.1.1)
+{: .note}
+For more details on JWKS, please read [this (external) article](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens).
 
 ### Nested JWT
 

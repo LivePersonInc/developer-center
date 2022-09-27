@@ -15,10 +15,10 @@ The Travel Notifications template allows an authenticated user to report their f
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
-This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .note}
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png" alt="The Travel Info dialog in a bot created from the Travel Notification bot template">
 
 ### Included items
 
@@ -46,7 +46,7 @@ Travel dates, destinations, and the approved card steps of the Travel Info dialo
 
 Additionally, dates are validated to ensure they are appropriate (e.g., dates cannot occur in the past, return date on or after depart date). These can be customized with JavaScript as needed in the interaction's Process User Response section.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_code.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_code.png" alt="Some example code in the Process User Response code panel in the interaction">
 
 For the date captures, we allow a certain number of attempts before we escalate to an agent. In addition, we apply the same logic to the information confirmation interactions. These can be configured to your liking in the Global Functions.
 
@@ -60,7 +60,7 @@ For the date captures, we allow a certain number of attempts before we escalate 
 ```
 
 #### Analytics
-Custom event logging for this template has been provided by default.
+[Custom event logging](conversation-builder-scripting-functions-log-debug.html#log-custom-event) for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
@@ -75,15 +75,13 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .important}
+{: .note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
-
-For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
 #### Global Function customization
 Click **Global Functions** to access all the global functions and variables to be configured.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_gf.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_gf.png" alt="Some of the code for the initConversation function on the Global Functions page in the bot">
 
 You’ll want to customize the `getEmailBody` functions within Global Functions to reflect your brand and voice.
 

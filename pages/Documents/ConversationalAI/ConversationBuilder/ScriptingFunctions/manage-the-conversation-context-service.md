@@ -18,12 +18,12 @@ Within the Conversation Context Service, you can have multiple namespaces for di
 
 In Conversation Builder, the following built-in functions for managing the Conversation Context Service are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 
-{: .important}
+{: .note}
 Don't store personally identifiable information (PII) in the Conversation Context Service.<br><br>All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
 For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html).
 
-{: .important}
+{: .note}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
 ### Getting started
@@ -35,8 +35,8 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 1. Access the *Bot Accounts* application, and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use Conversational Cloud Site Id** (Only available for LivePerson accounts.)
-    * **Use Conversation Builder Account Id** (This is your organization ID.)
+    * **Use Conversational Cloud Site ID** (Only available for LivePerson accounts.)
+    * **Use Conversation Builder Account ID** (This is your organization ID.)
 4. Enter the ID for your selection in step 5.
 5. Click **Update Account**.
 
@@ -67,7 +67,7 @@ botContext.printDebugMessage("context API enabled: " + success);
 
 The `registerContextNamespace` method creates a custom namespace.
 
-{: .important}
+{: .note}
 If the namespace already exists, this method does not create an additional one. It uses the existing namespace.
 
 | Function Name | Arguments | Returns |
@@ -86,7 +86,7 @@ botContext.printDebugMessage("Register Namespace: " + success);
 
 The `deleteContextNamespace` method deletes a custom namespace.
 
-{: .important}
+{: .note}
 It is not mandatory to delete a previously registered namespace.
 
 | Function Name | Arguments | Returns |
