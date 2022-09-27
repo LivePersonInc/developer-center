@@ -18,13 +18,14 @@ Connect To Messaging (C2M) is a product offering from LivePerson allowing brands
 
 1. Onboarding to C2M is a mandatory process before running APIs.
 2. Brand’s system should integrate with two C2M API endpoints, which are ***Eligibility*** and ***Invite***.
-    * ***Eligibility:*** Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
-    * ***Invite:*** Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
+  * ***Eligibility:*** Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
+  * ***Invite:*** Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
 
 ### API Specifications
+
 ## C2M Domain
 
-C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the [Domain API](api-guidelines-domain-api.html) to identify the zone of C2M API for an account with **connectToMessagingDomain** as Service Name.
+C2M is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the [Domain API](api-guidelines-domain-api.html) to identify the zone of C2M API for an account with **connectToMessagingDomain** as Service Name.
 
 ### Eligibility API
 
@@ -68,66 +69,66 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 SMS, WhatsApp, Google RCS:
 ```json
 {
-    "consumerPhoneNumber": "+12061234567",
-    "handoffId": "H123456789",
-    "templateVariables": {
-        "1": "John Doe",
-        "2": "New York"
-    },
-    "skill": "support",
-    "ivrNumber": "180000",
-    "sdes": [{
-        "type": "personal",
-        "info": {
-            "firstname": "Smith",
-            "lastname": "John",
-            "age": {
-                "age": 31,
-                "year": 1990,
-                "month": 1,
-                "day": 11
-            },
-            "contacts": [{
-                "email": "test@example.com",
-                "phone": "+18004444444",
-                "address": {
-                    "country": "United States",
-                    "region": "NA"
-                }
-            }],
-            "gender": "MALE",
-            "language": "en-US",
-            "company": "LP"
+  "consumerPhoneNumber": "+12061234567",
+  "handoffId": "H123456789",
+  "templateVariables": {
+    "1": "John Doe",
+    "2": "New York"
+  },
+  "skill": "support",
+  "ivrNumber": "180000",
+  "sdes": [{
+    "type": "personal",
+    "info": {
+      "firstname": "Smith",
+      "lastname": "John",
+      "age": {
+        "age": 31,
+        "year": 1990,
+        "month": 1,
+        "day": 11
+      },
+      "contacts": [{
+        "email": "test@example.com",
+        "phone": "+18004444444",
+        "address": {
+          "country": "United States",
+          "region": "NA"
         }
-    },
-    {
-        "type": "ctmrinfo",
-        "info": {
-            "cstatus": "VIP",
-            "ctype": "Gold",
-            "customerId": "138766AC",
-            "balance": -200.99,
-            "currency": "EUR",
-            "socialId": "11256324780",
-            "imei": "3543546543545688",
-            "userName": "user000",
-            "companySize": 500,
-            "companyBranch": "East Village",
-            "accountName": "Bank corp",
-            "role": "Marketing manager",
-            "lastPaymentDate": {
-                "day": 15,
-                "month": 10,
-                "year": 2016
-            },
-            "registrationDate": {
-                "day": 23,
-                "month": 5,
-                "year": 2015
-            },
-            "loginStatus": 1
-        }
-    }]
+      }],
+      "gender": "MALE",
+      "language": "en-US",
+      "company": "LP"
+    }
+  },
+  {
+    "type": "ctmrinfo",
+    "info": {
+      "cstatus": "VIP",
+      "ctype": "Gold",
+      "customerId": "138766AC",
+      "balance": -200.99,
+      "currency": "EUR",
+      "socialId": "11256324780",
+      "imei": "3543546543545688",
+      "userName": "user000",
+      "companySize": 500,
+      "companyBranch": "East Village",
+      "accountName": "Bank corp",
+      "role": "Marketing manager",
+      "lastPaymentDate": {
+        "day": 15,
+        "month": 10,
+        "year": 2016
+      },
+      "registrationDate": {
+        "day": 23,
+        "month": 5,
+        "year": 2015
+      },
+      "loginStatus": 1
+    }
+  }]
 }
 ```
 
@@ -135,15 +136,15 @@ WhatsApp Rich Template:
 
 ```json
 {
-    "consumerPhoneNumber": "+12061234567",
-    "handoffId": "H123456789",
-    "templateVariables": {
-        "1": "John Doe",
-        "2": "New York",
-        "headerVariables": {"1":  "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"},
-        "buttonVariables": {"1":  "Paynow"}
-    },
-    "skill": "support"
+  "consumerPhoneNumber": "+12061234567",
+  "handoffId": "H123456789",
+  "templateVariables": {
+    "1": "John Doe",
+    "2": "New York",
+    "headerVariables": {"1":  "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"},
+    "buttonVariables": {"1":  "Paynow"}
+  },
+  "skill": "support"
 }
 ```
 
@@ -151,14 +152,14 @@ Google RCS Rich Card:
 
 ```json
 {
-    "consumerPhoneNumber": "+12061234567",
-    "handoffId": "H123456789",
-    "templateVariables": {
-        "1": "John Doe",
-        "2": "New York",
-        "3": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"
-    },
-    "skill": "support"
+  "consumerPhoneNumber": "+12061234567",
+  "handoffId": "H123456789",
+  "templateVariables": {
+    "1": "John Doe",
+    "2": "New York",
+    "3": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png"
+  },
+  "skill": "support"
 }
 ```
 
@@ -166,11 +167,11 @@ INAPP:
 
 ```json
 {
-    "consumerPhoneNumber": "+12061234567",
-    "handoffId": "H123456789",    
-    "skill": "support",
-    "ivrNumber": "180000",
-    "consumerId": "james"
+  "consumerPhoneNumber": "+12061234567",
+  "handoffId": "H123456789",  
+  "skill": "support",
+  "ivrNumber": "180000",
+  "consumerId": "james"
 }
 ```
 
@@ -195,12 +196,12 @@ INAPP:
 
 ```json
 {
-    "availableChannels": [
-        "sms","wa" 
-    ],
-    "recommendedChannelName": "sms",
-    "eligible": true,
-    "callId": "b52403dc-b140-45cc-a9ca-d749a39b1b56"
+  "availableChannels": [
+    "sms","wa" 
+  ],
+  "recommendedChannelName": "sms",
+  "eligible": true,
+  "callId": "b52403dc-b140-45cc-a9ca-d749a39b1b56"
 }
 ```
 
@@ -240,7 +241,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 ```json
 {
-    "callId":"ec88bd52-3d1e-40a7-a2fc-95565a528258"
+  "callId":"ec88bd52-3d1e-40a7-a2fc-95565a528258"
 }
 ```
 
@@ -261,7 +262,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 ```json
 {
-    "callId":"ec88bd52-3d1e-40a7-a2fc-95565a528258"
+  "callId":"ec88bd52-3d1e-40a7-a2fc-95565a528258"
 }
 ```
 
@@ -362,110 +363,110 @@ import java.net.URLEncoder;
 import java.util.*;
 
 public class OAuthAuthenticator {
-    private String domain;
-    private String path;
-    private String appKey;
-    private String secret;
-    private String accessToken;
-    private String accessTokenSecret;
+  private String domain;
+  private String path;
+  private String appKey;
+  private String secret;
+  private String accessToken;
+  private String accessTokenSecret;
 
-    public static void main(String[] args) {
-        String domain = "your domain";
-        // Insert the path without the query string: "/api/account/:accountId/eligibility"
-        String path = "your path";
-        String appKey = "your appkey";
-        String secret = "your secret";
-        String accessToken = "your accessToken";
-        String accessTokenSecret = "your accessTokenSecret";
-        // Insert query string as an array
-        String[] parameterList = {"v=2.0"};
-        OAuthAuthenticator generator = new OAuthAuthenticator(domain, path, appKey, secret, accessToken, accessTokenSecret);
-        String result = generator.generateOauthHeader("POST", parameterList);
-        System.out.println(result);
+  public static void main(String[] args) {
+    String domain = "your domain";
+    // Insert the path without the query string: "/api/account/:accountId/eligibility"
+    String path = "your path";
+    String appKey = "your appkey";
+    String secret = "your secret";
+    String accessToken = "your accessToken";
+    String accessTokenSecret = "your accessTokenSecret";
+    // Insert query string as an array
+    String[] parameterList = {"v=2.0"};
+    OAuthAuthenticator generator = new OAuthAuthenticator(domain, path, appKey, secret, accessToken, accessTokenSecret);
+    String result = generator.generateOauthHeader("POST", parameterList);
+    System.out.println(result);
+  }
+
+  public OAuthAuthenticator(String domain,
+                String path,
+                String appKey,
+                String secret,
+                String accessToken,
+                String accessTokenSecret) {
+    this.domain = domain;
+    this.path = path;
+    this.appKey = appKey;
+    this.secret = secret;
+    this.accessToken = accessToken;
+    this.accessTokenSecret = accessTokenSecret;
+  }
+
+  public String generateOauthHeader(String method,
+                    String[] additionalParameters) {
+    long timestamp = new Date().getTime() / 1000;
+    String nonce = getNonce();
+
+    ArrayList<String> parameters = new ArrayList<String>();
+    parameters.add("oauth_consumer_key=" + appKey);
+    parameters.add("oauth_nonce=" + nonce);
+    parameters.add("oauth_signature_method=HMAC-SHA1");
+    parameters.add("oauth_timestamp=" + timestamp);
+    if (accessToken != null) {
+      parameters.add("oauth_token=" + accessToken);
     }
-
-    public OAuthAuthenticator(String domain,
-                              String path,
-                              String appKey,
-                              String secret,
-                              String accessToken,
-                              String accessTokenSecret) {
-        this.domain = domain;
-        this.path = path;
-        this.appKey = appKey;
-        this.secret = secret;
-        this.accessToken = accessToken;
-        this.accessTokenSecret = accessTokenSecret;
+    parameters.add("oauth_version=1.0");
+    if (additionalParameters != null) {
+      for (String additionalParameter : additionalParameters) {
+        parameters.add(additionalParameter);
+      }
     }
-
-    public String generateOauthHeader(String method,
-                                      String[] additionalParameters) {
-        long timestamp = new Date().getTime() / 1000;
-        String nonce = getNonce();
-
-        ArrayList<String> parameters = new ArrayList<String>();
-        parameters.add("oauth_consumer_key=" + appKey);
-        parameters.add("oauth_nonce=" + nonce);
-        parameters.add("oauth_signature_method=HMAC-SHA1");
-        parameters.add("oauth_timestamp=" + timestamp);
-        if (accessToken != null) {
-            parameters.add("oauth_token=" + accessToken);
-        }
-        parameters.add("oauth_version=1.0");
-        if (additionalParameters != null) {
-            for (String additionalParameter : additionalParameters) {
-                parameters.add(additionalParameter);
-            }
-        }
-        Collections.sort(parameters);
-        StringBuffer parametersList = new StringBuffer();
-        for (int i = 0; i < parameters.size(); i++) {
-            parametersList.append(((i > 0) ? "&" : "") + parameters.get(i));
-        }
-        String signatureString =
-                method + "&" +
-                        URLEncoder.encode("https://" + domain + path) + "&" +
-                        URLEncoder.encode(parametersList.toString());
-        String signature = null;
-        try {
-            SecretKeySpec signingKey = new SecretKeySpec((secret + "&"
-                    + (accessTokenSecret == null ? "" : accessTokenSecret)
-            ).getBytes(), "HmacSHA1");
-            Mac mac = Mac.getInstance("HmacSHA1");
-            mac.init(signingKey);
-            byte[] rawHMAC = mac.doFinal(signatureString.getBytes());
-            signature = Base64.getEncoder().encodeToString(rawHMAC);
-        } catch (Exception e) {
-            System.err.println("Unable to append signature");
-            System.exit(0);
-        }
-        String authorizationLine =
-                "OAuth " +
-                        "oauth_consumer_key=\"" + appKey + "\", " +
-                        "oauth_nonce=\"" + nonce + "\", " +
-                        "oauth_timestamp=\"" + timestamp + "\", " +
-                        "oauth_signature_method=\"HMAC-SHA1\", " +
-                        "oauth_signature=\"" + URLEncoder.encode(signature) + "\", " +
-                        "oauth_version=\"1.0\"";
-        if (accessToken != null) {
-            authorizationLine += ", oauth_token=\"" + accessToken + "\"";
-        }
-        return authorizationLine;
+    Collections.sort(parameters);
+    StringBuffer parametersList = new StringBuffer();
+    for (int i = 0; i < parameters.size(); i++) {
+      parametersList.append(((i > 0) ? "&" : "") + parameters.get(i));
     }
-
-    public String getNonce() {
-        int leftLimit = 48;
-        int rightLimit = 122;
-        int targetStringLength = 10;
-        Random random = new Random();
-        String generatedString = random.ints(leftLimit, rightLimit + 1)
-                .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
-                .limit(targetStringLength)
-                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-                .toString();
-
-        return generatedString;
+    String signatureString =
+        method + "&" +
+            URLEncoder.encode("https://" + domain + path) + "&" +
+            URLEncoder.encode(parametersList.toString());
+    String signature = null;
+    try {
+      SecretKeySpec signingKey = new SecretKeySpec((secret + "&"
+          + (accessTokenSecret == null ? "" : accessTokenSecret)
+      ).getBytes(), "HmacSHA1");
+      Mac mac = Mac.getInstance("HmacSHA1");
+      mac.init(signingKey);
+      byte[] rawHMAC = mac.doFinal(signatureString.getBytes());
+      signature = Base64.getEncoder().encodeToString(rawHMAC);
+    } catch (Exception e) {
+      System.err.println("Unable to append signature");
+      System.exit(0);
     }
+    String authorizationLine =
+        "OAuth " +
+            "oauth_consumer_key=\"" + appKey + "\", " +
+            "oauth_nonce=\"" + nonce + "\", " +
+            "oauth_timestamp=\"" + timestamp + "\", " +
+            "oauth_signature_method=\"HMAC-SHA1\", " +
+            "oauth_signature=\"" + URLEncoder.encode(signature) + "\", " +
+            "oauth_version=\"1.0\"";
+    if (accessToken != null) {
+      authorizationLine += ", oauth_token=\"" + accessToken + "\"";
+    }
+    return authorizationLine;
+  }
+
+  public String getNonce() {
+    int leftLimit = 48;
+    int rightLimit = 122;
+    int targetStringLength = 10;
+    Random random = new Random();
+    String generatedString = random.ints(leftLimit, rightLimit + 1)
+        .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+        .limit(targetStringLength)
+        .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+        .toString();
+
+    return generatedString;
+  }
 }
 ```
 
@@ -497,6 +498,7 @@ C2M does not have any limitations on the message size while sending messages to 
 Yes, it does. See details [here](outbound-reporting-api-overview.html).
 
 **6. What’s the lookback period?**
+
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
