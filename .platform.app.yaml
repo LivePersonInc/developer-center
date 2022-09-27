@@ -10,7 +10,6 @@ web:
       passthru: false
       headers:
         Content-Security-Policy: upgrade-insecure-requests
-        Strict-Transport-Security: max-age=15768000
         X-Content-Type-Options: nosniff
         X-Frame-Options: SAMEORIGIN
         X-XSS-Protection: 1; mode=block
