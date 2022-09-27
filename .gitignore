@@ -9,3 +9,4 @@ _pdf
 _site/
 node_modules/
 vendor
+.cb
