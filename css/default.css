@@ -1318,7 +1318,13 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #jumpto {
   padding-bottom: var(--space10);
-  max-width: 396px;
+  max-width: 100%;
+  flex-basis: 20%;
+}
+
+/* hide jumpto menu if empty */
+#jumpto:has(#anchorlist:empty) {
+  flex-basis: 0;
 }
 
 #jumpto #anchorlist p:not(:empty) {
