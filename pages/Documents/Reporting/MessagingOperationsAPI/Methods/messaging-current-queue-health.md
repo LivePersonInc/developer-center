@@ -35,7 +35,7 @@ If your request is throttled in this manner, it is recommended that you provide 
 **URL Parameters**
 
 | Name      | Description  | Type / Value | Required |
-| :-----    |:------------------------------| :-------------- | :--- |
+| :--- |:---| :--- | :--- |
 | v | Version of API, for example, v=1.                                                                                                                                                                                                                                                                                                                             | numeric | required |
 | fromMillis | The start time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is 72 hours before the current time.                                                                                                                                                                                                                        | numeric | required  only if the version is 2 |
 | toMillis   | The end time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is  the current time.                                                                                                                                                                                                                          | numeric | required  only if the version is 2 |
@@ -122,7 +122,7 @@ Request by skillIds=12,13 and overdueConversations=true
 <div class="note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
-| :------ | :------------- | :------------- |
+| :--- | :--- | :--- |
 | skillsMetrics | An array of skills with their metrics. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested skills per each interval. | element |
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |
