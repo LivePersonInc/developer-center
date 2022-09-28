@@ -17,6 +17,8 @@ You can add custom code to an interaction. The code can be executed before the i
 
 Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
 
+Also, your custom JavaScript code must complete within 5 seconds; otherwise, it times out and the execution flow continues on as per the [order of operations](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+
 ### Custom code indicator
 An interaction that contains custom code displays a green dot:
 
