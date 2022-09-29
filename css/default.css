@@ -566,12 +566,10 @@ td {
 }
 
 @media (min-width: 769px) and (max-width: 1680px) {
-
   .max-width {
     padding-left: var(--space8);
     padding-right: var(--space8);
   }
-
 }
 
 @media (max-width: 768px) {
@@ -593,6 +591,12 @@ td {
 
   .article-meta p {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width:1420px) {
+  #jumpto {
+    max-width: 200px;
   }
 }
 
@@ -1318,11 +1322,13 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 
 #jumpto {
   padding-bottom: var(--space10);
-  max-width: 396px;
+  flex-basis: 20%;
 }
 
-#jumpto #anchorlist p:not(:empty) {
-  min-width: 240px;
+/* hide jumpto menu if empty */
+#jumpto:has(#anchorlist:empty),
+#jumpto:has(#anchorlist p:empty) {
+  flex-basis: 0;
 }
 
 #anchorlist {
