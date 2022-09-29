@@ -30,7 +30,7 @@ The APIs lets brands:
 
 - When opening the window with closed conversations only, the window opens as a view only mode.
 
-- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForHistoryControlAPI`
+- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForControlHistoryAPI`
 
 {: .attn-note}
 To see more about the Welcome Message with Quick Replies, visit the following [page](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
