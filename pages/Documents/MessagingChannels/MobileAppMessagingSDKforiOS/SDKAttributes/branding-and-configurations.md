@@ -491,7 +491,7 @@ The configuration to control our modal presentation stylen for LPDatePicker cont
 - **See also:** [Clear History Function](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#clearhistory)
 - **Limitations:** The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
 
-##### enableWelcomeMessageForHistoryControlAPI
+##### enableWelcomeMessageForControlHistoryAPI
 - **Description:** This configuration will only enable showing the Welcome Message when `LPConversationsHistoryStateToDisplay.Open`
 - **Type:** Bool
 - **Default Value:** false

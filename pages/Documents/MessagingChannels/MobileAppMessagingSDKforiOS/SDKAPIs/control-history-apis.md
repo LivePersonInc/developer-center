@@ -113,7 +113,7 @@ Used to decide whether to count the days from the conversation start date or end
 ```swift
  func showConversation() {
     // Configuration needs to be set to true to present Welcome Message if one is configured
-    LPConfig.defaultConfiguration.enableWelcomeMessageForHistoryControlAPI = true
+    LPConfig.defaultConfiguration.enableWelcomeMessageForControlHistoryAPI = true
 
     // Welcome Message Configuration
 
