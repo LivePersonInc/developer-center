@@ -56,5 +56,6 @@ To successfully deploy messaging within your mobile app, it’s important to und
         - false
         - false
 
-<p style="text-align: right">
-<a href="mobile-app-messaging-sdk-for-android-quick-start.html" center><img src="/img/btn-mobile-quick-start.png" style="height: 30px; width: auto;"></a><br></p>
+<div class="btn-wrapper">
+<a class="back-btn" href="mobile-app-messaging-sdk-for-android-quick-start.html">Go to the quick start guide</a>
+</div>
