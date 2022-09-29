@@ -28,7 +28,7 @@ Domain URL per environment:
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 
-{: .note}
+{: .attn-note}
 See also the [discussion on generating the secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 #### Get Next Actions

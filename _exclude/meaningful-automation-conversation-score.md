@@ -91,7 +91,7 @@ The score is calculated based on the presence of failure points in the conversat
 | Doesn't understand | The bot fails to understand the consumer's intent and is not offering to repair the conversation. | Improve poor performing intents<br><br>Add intents<br><br>Move to a menu-based approach |
 | Bad transfer | The bot transfers the consumer to an agent, but this either leaves the consumer hanging or abruptly ends the chat.<br><br>The bot might also fail to tell the consumer early enough in the conversation that there are no agents available at that hour. | Give a warning early in conversation that the agent capacity is near capacity<br><br>Check if agents are available before declaring the conversation will be escalated |
 
-{: .note}
+{: .attn-note}
 A MACS is only calculated for closed conversations.<br><br>A MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
 
 #### Accuracy of MACS
@@ -102,7 +102,7 @@ MACS has a correlation of ~.7 with human judgment. While this is quite good, exp
 
 MACS is a self-service feature that you can display (turn on) or hide (turn off) at any time.
 
-{: .note}
+{: .attn-note}
 Before turning on MACS, please consult with your LivePerson account representative.
 
 If you hide MACS data, be aware that this only hides the display of the feature and the data in the user interface. MACS scoring of bot conversations still takes place behind the scenes.
@@ -156,7 +156,7 @@ Note the following about the filters:
 
 In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1 (Bad). We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
-{: .note}
+{: .attn-note}
 The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS of 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
 
 ##### Analyze the data

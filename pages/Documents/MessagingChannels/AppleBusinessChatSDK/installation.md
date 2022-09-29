@@ -73,7 +73,7 @@ Add the LPABCSDK pod to integrate it into your Xcode project. Make sure you chan
 
 2. In the `info.plist` file of each implementing target, create a dictionary with the key `LPABC_PARAMS` and add a key-value pair of `lpabc_appgroup : <your_app_group_id>`
 
-    {: .note}
+    {: .attn-note}
     Your app group id should be the same across all implementing targets.
 
 3. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).

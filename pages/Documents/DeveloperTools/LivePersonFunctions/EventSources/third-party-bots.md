@@ -34,7 +34,7 @@ You can configure hooks in a bot connector using Functions to modify vendor payl
 
  **Third-Party Bots Error Hook**: Triggered when a bot using the Third-Party Bots Error Hooks is having an issue.
 
-{: .note}
+{: .attn-note}
 **Third-Party Bots Error Hook** event will not send back any payload to the bot.
 
 **Third-Party Bots Pre Hook**: Triggered when a bot using the Third-Party Bots Post Hooks receives a message. The function will be invoked before the vendor gets the payload. The function receives invoked on every message the customer sends. It enables you to modify or expand the payload the vendor gets.
@@ -43,7 +43,7 @@ You can configure hooks in a bot connector using Functions to modify vendor payl
 
 ### Bot conversation errors
 
-{: .note}
+{: .attn-note}
 Please follow the complete guide about [Third-Party Bots conversation errors](third-party-bots-bot-conversation-errors.html) for more details and solutions.
 
 These are the errors returned in a bot connector associated with Functions:

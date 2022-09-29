@@ -29,7 +29,7 @@ To retry the consumer's last message, [edit the bot's agent connector](conversat
     * For 1 retry, set it to 2. (1 for the original try + 1 for the single retry)
     * For 2 retries, set it to 3. (1 for the original try + 2 for the two retries)
 
-    {: .note}
+    {: .attn-note}
     LivePerson recommends you add support for this retry flow by setting this to 2 or 3, but no higher than 3.
 
     The default value of this field is 1, which means the consumer’s message will be sent only once. This means if you don’t want to add the retry flow, there’s no need to add this field.
@@ -47,7 +47,7 @@ You can resolve stuck conversations by:
 
 You must manually add support for this flow. You can add just Step 1 or both Steps 1 and 2. You cannot add Step 2 alone.
 
-{: .note}
+{: .attn-note}
 For an optimal consumer experience, LivePerson recommends that you configure both steps.
 
 If you configure both steps, the flow works as follows: Step 1 starts a 10-minute timer. If the conversation is identified as "stuck" again within the 10-minute window, Step 2 is performed immediately. If the conversation is identified as "stuck" after the 10-minute window has expired, Step 1 is performed again.

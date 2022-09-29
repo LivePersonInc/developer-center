@@ -33,7 +33,7 @@ Base URL per environment:
 * EMEA: https://z2.askmaven.liveperson.net
 * APAC: https://z3.askmaven.liveperson.net
 
-{: .note}
+{: .attn-note}
 The accountId and API key in these examples are fake; please replace them with the accountID and the developer key that you generated.
 
 #### Get Next Actions

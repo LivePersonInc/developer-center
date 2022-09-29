@@ -34,7 +34,7 @@ To begin, you need:
 
 * Conversational Cloud account with messaging enabled.
   
-  <div class="alert">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
+  <div class="attn-alert">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 
 * LivePerson only supports OAuth 2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
 

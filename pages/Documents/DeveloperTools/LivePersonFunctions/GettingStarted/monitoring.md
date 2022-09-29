@@ -44,7 +44,7 @@ Within your function code, you can write logs of different levels. Those are the
 * Warn
 * Error
 
-{: .alert}
+{: .attn-alert}
 Logs written as part of a [test invocation](liveperson-functions-getting-started-your-first-function.html#test) will not be stored permanently. Further `Debug` logs are never stored and will be only visible as part of [test invocations](liveperson-functions-getting-started-your-first-function.html#test), allowing to debug and verify without the risk of having sensitive data leak into persistent logs.
 
 The following code will show the JavaScript interface along with examples that should highlight the use of optional `extras`:

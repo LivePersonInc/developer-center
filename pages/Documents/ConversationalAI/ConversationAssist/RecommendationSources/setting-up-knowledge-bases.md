@@ -15,10 +15,10 @@ permalink: conversation-assist-recommendation-sources-setting-up-knowledge-bases
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
-{: .note}
+{: .attn-note}
 It takes up to 3 hours for changes in Conversation Assist configuration to take effect.
 
 ### Prerequisite knowledge
@@ -54,7 +54,7 @@ To get started, it’s recommended that you create at least one article therein,
 
 If you’re setting up a knowledge base that associates intents with articles, then you’ll also need to use [Intent Manager](intent-manager-overview.html) to create the domain and the necessary intents therein. Once this is done, back in KnowledgeAI, you’ll need to [associate the intents with the articles](knowledgeai-using-intents-with-kbs.html).
 
-{: .note}
+{: .attn-note}
 At this point, use KnowledgeAI to verify that the desired articles are active. The knowledge base should have at least one active article.
 
 ### Step 2: Configure the KBs
@@ -88,7 +88,7 @@ At this point, use KnowledgeAI to verify that the desired articles are active. T
 
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
-{: .note}
+{: .attn-note}
 If you later delete a knowledge base in KnowledgeAI, you’ll need to manually refresh the list of discovered knowledge bases in Conversation Assist in order to see the knowledge base removed from the list.
 
 ### Step 3: Configure settings

@@ -105,7 +105,7 @@ The code above will check if the value already exists in the `secretCache` and w
 
 We strongly recommend the usage of environment variables to make functions easier to configure, even for less tech-savvy people. They do not need to understand the code but only adjust environment variables if necessary. Using environment variables improves the readability of the code by moving the configuration part into them. If you want to learn more about the environment variables setup, head over [here](liveperson-functions-getting-started-configuration.html#environment-variables).
 
-{: .alert}
+{: .attn-alert}
 Environment variables changes need a deployment to take effect. Environment variables are always a string, so you need to parse any non-string type before using it. Be aware of the [POSIX1.-2017-compliant](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html) naming schema, environment variable names must not start with a digit and may consist solely of uppercase letters, digits, and the <underscore> ( '_' ).
 
 ### Design your function to be idempotent

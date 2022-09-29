@@ -59,7 +59,7 @@ You can find your incomplete external knowledge bases listed along with your oth
 
 A knowledge base is considered no longer "Incomplete" once all required fields are completed for the first time.
 
-{: .note}
+{: .attn-note}
 Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "Incomplete" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "Incomplete" status if you subsequently remove or alter required information.
 
 To delete an incomplete knowledge base, click the knowledge base's 3-dot icon (on the right), and select **Delete**.

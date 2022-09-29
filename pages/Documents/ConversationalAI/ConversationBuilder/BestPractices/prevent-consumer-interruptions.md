@@ -22,7 +22,7 @@ Sometimes, a bot needs some time to respond to the consumer's message. For examp
 
 All Conversation Builder bots use this "ignore" behavior by default so that a bot is given sufficient time to send its response to the consumer. Without the behavior, if the consumer were to send another message while the bot was still responding to their last message, the new message would be processed for matching intents and patterns. As a result, the bot could jump the consumer to an upcoming question in the current dialog, to another dialog, or even send a fallback response. This leads to a poor consumer experience.
 
-{: .note}
+{: .attn-note}
 In practice, it should be rare that a bot takes 15 seconds to respond to the consumer. If you find that this is happening, evaluate and address other aspects of your solution, e.g., the speed of your API calls, and so on.
 
 ### Customizing the behavior
@@ -47,7 +47,7 @@ To customize the behavior:
     **Type**: string<br>
     **Default value**: BLANK_MESSAGE
 
-    {: .note}
+    {: .attn-note}
     If you want to customize the timeout period or bot message, you must add all three variables, including the variable for enablement.
 
 3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn’t already linked.
@@ -64,7 +64,7 @@ To ensure the best consumer experience, LivePerson recommends that you keep this
     **Type**: Boolean<br>
     **Default value**: true
 
-    {: .note}
+    {: .attn-note}
     If you want to disable the behavior, you need only add the `system_handleIntermediateUserMessage` variable.
 
 3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn’t already linked.

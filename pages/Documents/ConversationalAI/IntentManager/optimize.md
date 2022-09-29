@@ -11,7 +11,7 @@ indicator: both
 
 If your agents are [leveraging AI Annotator to annotate messages](https://knowledge.liveperson.com/ai-bots-automation-ai-annotator.html) for the purpose of optimizing your intent models and bots, the **Optimize** tab within Intent Manager is where you can review the annotations and add them to intents.
 
-{: .note} 
+{: .attn-note} 
 The **Optimize** tab is only available to Administrators and Managers.
 
 ### Review an intent annotation

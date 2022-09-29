@@ -18,14 +18,14 @@ After you access Bot Analytics, the main dashboard is displayed. The dashboard i
 
 <img style="width:800px" src="img/ConvoBuilder/ba_dashboard.png" alt="Bot Analytics main dashboard">
 
-{: .note}
+{: .attn-note}
 The trend charts can show data for November 1, 2020 and later.
 
 **MACS**, **Conversation**, and **Transfers** metrics are specific to deployed bots and exclude conversations conducted via Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool. However, the rest of the metrics (**Messages**, **Users**, and **Intent Match Rate**) include conversations conducted via Preview. This means you can test a bot’s performance, for example, its intent matching, without having to deploy it.
 
 Use the dashboard page to get a quick indication of the overall performance of your organization’s automation program.
 
-{: .note}
+{: .attn-note}
 If you have bots that are hosted in both the LivePerson cloud and the Amazon Web Services (AWS) cloud, you’ll only see the data for the bots within one cloud at a time, namely, the one you’re logged into.
 
 ### Date range and time zone
