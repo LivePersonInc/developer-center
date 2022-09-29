@@ -58,7 +58,7 @@ Once the Authentication key expires, you get notified with a callback / local in
 
 To re-connect with a new Authentication key, use [reconnect(LPAuthenticationParams lpAuthenticationParams)](android-methods.html#reconnect)
 
-{: .note}
+{: .attn-note}
 Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
 ### Unauthenticated in-app messaging

@@ -30,7 +30,7 @@ encoded metadata you must ensure the following conditions in order to successful
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .note}
+{: .attn-note}
 Failing to comply with the above validation points will cause the message to be dropped.
 This feature is only available for messaging conversations, not for chat conversations
 
@@ -205,7 +205,7 @@ the handover agent should take. Please note private text messages will never be
 shown to the consumer and will be visible only inside the conversation window
 of the agent workspace.
 
-{: .note}
+{: .attn-note}
 Please note If you have not migrated to the new Agent Workspace you will not be able
 to see the `Private` message indicator in the conversation window. Nevertheless,
 private text messages will not be shown to the consumer and only remain visible
@@ -254,7 +254,7 @@ is deployed and running. Furthermore, the user can provide a payload as well tha
 the LivePerson function while invocation. The invoke response is considered an action response.
 An example of such a response can be seen in Figure 4.5.
 
-{: .alert}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 ```json

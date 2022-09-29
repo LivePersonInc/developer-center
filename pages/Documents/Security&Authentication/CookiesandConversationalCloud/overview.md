@@ -36,7 +36,7 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 ### Storage Data Types
 
-<div class="note">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
+<div class="attn-note">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
 
 **SecureStorage**
 

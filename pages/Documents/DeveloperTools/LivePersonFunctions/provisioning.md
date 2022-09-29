@@ -25,7 +25,7 @@ Interaction between Functions and other LivePerson APIs needs to get authenticat
 * **lp-faas-default-app-key**: This secret is required by the LP Client to access LivePerson Apis, which is available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
 * **lp-faas-orchestrator-app-key**: This secret is required and used for the Orchestrator Feature, available in the [Toolbelt](liveperson-functions-foundations-features.html#toolbelt).
 
-{: .alert}
+{: .attn-alert}
 To ease functions development, Toolbelt clients for internal APIs use those secrets. In this way, the developers do not need to implement any authentication method for those APIs.
 
 #### lp-faas-default-app-key privileges

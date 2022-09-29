@@ -15,7 +15,7 @@ The Order Status template is designed to provide users with information on retai
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .note}
+{: .attn-note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account. The bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_order_status_de.png" alt="The Order Status dialog in a bot created from the Order Status bot template, with an example conversation shown in the Preview tool">
@@ -78,7 +78,7 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .note}
+{: .attn-note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
 
 ### Dialog templates

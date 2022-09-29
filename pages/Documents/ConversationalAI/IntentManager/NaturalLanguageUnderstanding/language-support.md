@@ -25,7 +25,7 @@ The [LivePerson NLU engine](intent-manager-natural-language-understanding-livepe
 * Spanish
 * Tagalog
 
-{: .note}
+{: .attn-note}
 We're always working to expand our language coverage. If you need a language but don't see it available in the application, contact us!
 
 ### LivePerson (Legacy) NLU engine

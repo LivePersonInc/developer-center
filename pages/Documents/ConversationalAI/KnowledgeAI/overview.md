@@ -11,7 +11,7 @@ permalink: knowledgeai-overview.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction

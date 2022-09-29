@@ -7,7 +7,7 @@ permalink: transporter-getting-started.html
 indicator: Both
 ---
 
-<div class="note">Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login. <b>Please be aware that some elements and usability may change as we finalize this feature.</b></div>
+<div class="attn-note">Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login. <b>Please be aware that some elements and usability may change as we finalize this feature.</b></div>
 
 ### Requirements
 
@@ -97,7 +97,7 @@ For security and data protection, all reports shall be encrypted — Transporter
 
 Once your keys are generated, your Public Key will be saved to your account, and you will be prompted to securely store your Private Key and Passphrase (these will not be saved).
 
-<div class="note">If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports — use GPG Suite or GPG4Win to do so.</div>
+<div class="attn-note">If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports — use GPG Suite or GPG4Win to do so.</div>
 
 **Notes:**
 
@@ -128,4 +128,4 @@ When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-
 Once you have created your keys, enter them into Transporter via the Conversational Cloud section and click create.  Your API keys will be encrypted and stored securely.
 After verifying your keys are valid, you will see the Conversational Cloud setting appear in the table at the bottom of the page — it is now ready for use as your source when you configure your first report.
 
-<div class="note">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>
+<div class="attn-note">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>

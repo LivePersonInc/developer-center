@@ -20,7 +20,7 @@ With few exceptions, functions can be used in the following JavaScript [code pan
 * Post-Process Code
 * Process User Response
 
-{: .note}
+{: .attn-note}
 For info on the order of operations (i.e., which code is run when), see [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 ### Requirements

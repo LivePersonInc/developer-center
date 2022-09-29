@@ -13,7 +13,7 @@ root-link: true
 indicator:
 ---
 
-{: .deprecation}
+{: .attn-deprecation}
 This information is outdated.
 
 ### Overview

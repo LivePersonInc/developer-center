@@ -62,7 +62,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
 2. Add design attributes to your **branding.xml** file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
-   {: .note}
+   {: .attn-note}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
@@ -102,7 +102,7 @@ You can customize the look and feel of the conversation screen with your brandin
 
    - **custom_font_name_non_conversation_feed** - Font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
 
-     {: .note}
+     {: .attn-note}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).
 
 ### Callbacks interface
@@ -152,7 +152,7 @@ BroadcastReceiver <your receiver> = new BroadcastReceiver(){
 };
 ```
 
-{: .note}
+{: .attn-note}
 If you registered for multiple **Intents**, you must filter each one, using a **switch**.
 
 #### Callbacks
@@ -222,7 +222,7 @@ For example:
 
 ### Initialize the SDK with Monitoring Params
 
-{: .note}
+{: .attn-note}
 To get the App key or appInstallationId, a new Conversation Source needs to be added on Conversational Cloud. For more information about it, contact your Account Team.
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.
@@ -245,7 +245,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
 2. Create **MonitoringParams**. 
 
-   <div class="alert">The entry points and engagement attributes used here are dummies.</div>
+   <div class="attn-alert">The entry points and engagement attributes used here are dummies.</div>
 
    ```java
     // Create Entry Points JSON
@@ -658,7 +658,7 @@ Pass and display consumer information to agents, and agent information to consum
 public static void setUserProfile(ConsumerProfile profile)
 ```
 
-{: .note}
+{: .attn-note}
 When using SDEs (Authenticated Chat), SDEs have priority and will override the setUserProfile.
 
 #### Get Agent Details

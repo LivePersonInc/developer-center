@@ -175,11 +175,11 @@ If you’re adding or deprecating an API or SDK, add it or update its status on 
 ### Special formatting
 
 * You can precede a paragraph with the following to highlight the content:
-  - `{: .note}` — important info to pay attention to
-  - `{: .alert}` — warnings or alerts (anything that indicates a problem)
-  - `{: .deprecation}` — info on features that are discouraged or no longer supported
-  - `{: .tip}` — useful suggestions or ideas
-  - `{: .info}` — complementary or auxiliary info
+  - `{: .attn-note}` — important info to pay attention to
+  - `{: .attn-alert}` — warnings or alerts (anything that indicates a problem)
+  - `{: .attn-deprecation}` — info on features that are discouraged or no longer supported
+  - `{: .attn-tip}` — useful suggestions or ideas
+  - `{: .attn-info}` — complementary or auxiliary info
 
 ### Code and media
 
