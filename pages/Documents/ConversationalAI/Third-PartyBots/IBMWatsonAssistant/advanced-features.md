@@ -8,10 +8,10 @@ permalink: third-party-bots-ibm-watson-assistant-advanced-features.html
 indicator:
 ---
 
-{: .alert}
+{: .attn-alert}
 **Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
 
-{: .note}
+{: .attn-note}
 Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
 
 ### Sending Encoded Metadata
@@ -24,7 +24,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .note}
+{: .attn-note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor (Figure 3.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
@@ -32,7 +32,7 @@ Encoded Metadata can be sent with simple Text, Rich Content (structured content)
   <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png" alt="">
   Figure 3.1 Showing options of JSON editor and context editor
 
-{: .note}
+{: .attn-note}
 Be careful with the camel-case characters `encodedMetadata` you must provide it exactly the same.
 
 #### Sending Watson Native Content with Encoded Metadata
@@ -161,7 +161,7 @@ If you have a different context for multiple dialogs in a conversation that are 
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .note}
+{: .attn-note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via Watson's `JSON editor` (as shown in Figure 9.1). There are two properties, `text` and `messageAudience` required for sending a private text message.

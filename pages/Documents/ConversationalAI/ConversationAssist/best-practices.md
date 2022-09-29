@@ -14,7 +14,7 @@ indicator: messaging
 
 Use existing knowledge bases and bots as recommendation sources to get started in just a few clicks.
 
-{: .note}
+{: .attn-note}
 If you're starting from scratch, [try the tutorial](tutorials-guides-using-conversation-assist-overview.html) to create a proof-of-concept.
 
 #### Using your existing content

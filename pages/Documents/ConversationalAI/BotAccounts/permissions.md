@@ -119,7 +119,7 @@ Users with this permission can only create and manage integrations.
 
 Users with this permission can only create and manage credentials.
 
-{: .note}
+{: .attn-note}
 Whenever you assign this permission, also assign Bot Builder Lite *and* API Developer.
 
 ##### Conversation Builder: Import/Export Manager

@@ -21,7 +21,7 @@ First, to easily gauge the coverage of the current model, visit the Intent Manag
 
 <img class="fancyimage" style="width:800px" alt="Top Intents and Intents Summary pie charts" src="img/ConvoBuilder/im_intent_discovery1.png">
 
-{: .note}
+{: .attn-note}
 In the **Intent Summary** pie chart, check both the classified vs. unclassified space at both the “Conversations” and “Messages” levels using the toggle buttons. In the **Top Intents** chart look for how much of the pie chart “Undefined” occupies. If any of these metrics are very low, i.e., one-quarter or less of the pie charts, it is unlikely there will be many intents to discover. Take this into consideration as you proceed. Don’t see undefined in the Top Intents chart? Enable it by clicking the gear option and selecting Display “undefined” intents.
 
 1. Go to the “Build” page and check the intent names and their training data. It is important to read each message of training data that corresponds to each intent and verify whether the message fits the name of the intent. If a message is not a clear match to its corresponding intent, remove it from the training data.
@@ -31,7 +31,7 @@ In the **Intent Summary** pie chart, check both the classified vs. unclassified 
 
 Intent discovery is the task of finding new intents to add to your current taxonomy. This is useful to expand your model’s coverage. Make sure to consider any existing intents (i.e., a starter pack) as you begin this process since you do not want to create an intent that will overlap with one of the existing intents in name or function.
 
-{: .note}
+{: .attn-note}
 Sometimes it’s better to use the keyword filter instead of creating an intent, depending on your goal. For instance, if you want to see which intents are being impacted by a devastating event like a wildfire, you could use a list of keywords such as “fire,” “smoke,” “air quality,” “evacuation,” etc., and from there, you can check the graphs to see how often the keywords are occurring per intent as well as other useful metrics like the total number of utterances that contain one of the keywords.
 
 Below is a visual guide for anyone starting the intent discovery process:
@@ -117,7 +117,7 @@ Regardless of which option you choose to find more messages, once you’ve found
 
 <img class="fancyimage" style="width:800px" alt="Dropdown for classifying a message, assigning it to an intent" src="img/ConvoBuilder/im_intent_discovery3g.png">
 
-{: .note}
+{: .attn-note}
 You can also export the utterances using the “Export table to CSV” as a spreadsheet to Excel or Google Sheets. Once the data has been exported and downloaded onto your local device, you can upload the file into Google Sheets or Excel and begin classifying messages.
 
 <img class="fancyimage" style="width:800px" alt="Export table to CSV link in the upper-right corner" src="img/ConvoBuilder/im_intent_discovery3h.png">

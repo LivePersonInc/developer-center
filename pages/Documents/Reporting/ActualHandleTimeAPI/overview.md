@@ -9,7 +9,7 @@ indicator: both
 
 ### Introduction
 
-{: .alert}
+{: .attn-alert}
 This API is currently in its beta version and might require a few adjustments. A primary purpose of this beta version is to obtain feedback on the API performance and accuracy.
 
 Actual Handle Time metric tracks events within the agent workspace. The metric is based on an internal algorithm that looks at several factors to give the most accurate view of handle time effort at an individual segment level. (In essence, it tracks time whenever an agent has a conversation selected on the screen that is awaiting their response.)
@@ -33,7 +33,7 @@ A few things you'll need to get started with this API:
 
 4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html).
 
-{: .note}
+{: .attn-note}
 This API is not available by default. To enable it please contact your account manager.
 
 ### Use cases

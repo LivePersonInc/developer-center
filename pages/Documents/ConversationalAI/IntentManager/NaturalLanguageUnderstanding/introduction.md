@@ -24,7 +24,7 @@ While LivePerson provides its own proprietary NLU out of the box, Intent Manager
 - IBM Watson
 - Your own custom, Rasa-based NLU engine
 
-{: .note}
+{: .attn-note}
 If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Manager. Third-party providers require an additional setup process.
 
 ### Limitations and constraints of third-party NLU engines

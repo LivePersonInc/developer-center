@@ -10,10 +10,10 @@ permalink: conversation-assist-agent-experience.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 When evaluating the agent experience, keep in mind the [FAQs](conversation-assist-faqs.html).
 
-{: .tip}
+{: .attn-tip}
 To train your agents, start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article

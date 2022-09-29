@@ -27,7 +27,7 @@ There are two, general types of bots:
 
 ### Configure bot settings
 
-{: .note}
+{: .attn-note}
 Post-conversation survey bots have [a few, unique settings](conversation-builder-bots-post-conversation-survey-bots.html#configure-the-survey-bots-settings) that custom bots don't have.
 
 **To configure bot settings**
@@ -92,7 +92,7 @@ Bot settings include:
 ### Import a bot
 You can add a bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
 
-{: .note}
+{: .attn-note}
 Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To import a bot**
@@ -114,7 +114,7 @@ You might need to export a bot for a few reasons:
 - You want to move or copy a bot to another environment, so you plan to export it and import it into a different environment.
 - You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
 
-{: .note}
+{: .attn-note}
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To export a bot**
@@ -126,7 +126,7 @@ In case 2 above—-moving or copying a bot to a different environment (that is, 
 ### Delete a bot
 Deleting a bot is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .note}
+{: .attn-note}
 If you want to delete a bot that is deployed, first stop the bot, un-deploy it, and remove any enterprise integrations that are running. This helps to ensure there are no adverse effects.
 
 **To delete a bot**

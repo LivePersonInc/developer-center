@@ -28,7 +28,7 @@ The Conversation Service Context APIs are part of Conversation Orchestrator, Liv
 Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information such as name, email, phone number etc. which are stored as **Key-Value Pairs.** Brands can define as many attributes they need per namespace. To group together the attributes in a namespace for example a conversation session brands can use the **Session ID**. Each object in the hierarchical structure (Namespace, Session ID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST APIs.
 
 <!--
-{: .note}
+{: .attn-note}
 If you want to use the Conversation Context Service with Conversation Builder, please use the convenient [API wrapper functions](conversation-builder-scripting-functions-context-session-store-wrapper.html).
 -->
 ### Example Use Cases

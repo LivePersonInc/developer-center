@@ -16,7 +16,7 @@ OAuth is an open-standard authorization framework that describes how unrelated s
 
 The following code shows an example that performs a `POST` request with `Authorization Header`.
 
-{: .alert}
+{: .attn-alert}
   It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
@@ -81,7 +81,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
-{: .alert}
+{: .attn-alert}
 It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
@@ -169,7 +169,7 @@ The following reduced code snippet shows how to obtain the refresh and access to
 ### Caching inside lambdas
 A simple way to make your function more performant and more reliable is caching requested data outside of the context of your function. In the following example, we use caching to improve the interaction with the secret store. Caching the secret makes your code highly reliable against problems that might arise from network congestion. Additionally, it enhances the performance of your functions since you omit unnecessary network calls. The following code uses an environment variable `TTL` to indicate how long to keep the data in memory.
 
-{: .alert}
+{: .attn-alert}
 This cache is in-memory. If your function is down-scaled due to inactivity, data in the cache will be lost. Likewise, if your function is upscaled to multiple instances, there is no mechanism to synchronize the caches.
 
 ```javascript

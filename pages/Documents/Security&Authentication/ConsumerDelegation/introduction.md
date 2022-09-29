@@ -13,7 +13,7 @@ indicator: both
 With Consumer Delegation brands can delegate consumer access to their APIs. Using this flow, brands can challenge a consumer identity verification during an open conversation and sending an OAuth 2.0 access token to a Bot.
 
 In this flow, the consumer will not be considered as an Authenticated Consumer within LivePerson Conversation Cloud. The flow is only used for delegating access to the Bot to make sequential API calls (API Integrations).
-{: .alert}
+{: .attn-alert}
 
 Delegation flow is based on OAuth 2.0 [Authorization Code Flow](https://tools.ietf.org/html/rfc6749#section-1.3.1). Access Tokens are stored within the context of the current conversation and are not shared with other conversations. Refresh Tokens are ignored and not stored. In case of an expired access token, the consumer will be re-challenged to verify his identity.
 

@@ -253,7 +253,7 @@ configuration.csatNavigationBackgroundColor = UIColor.lightGray
 
    The rating question includes 'Agent' by default in the text. If the conversation has an assigned agent and the agent's nickName is not empty, this nickName is used instead.
 
-   {: .note}
+   {: .attn-note}
    The visibility cannot be configured; therefore, it is always visible.
 
 * Hide or don't use the Resolution Confirmation View (yes/no):
@@ -262,7 +262,7 @@ configuration.csatNavigationBackgroundColor = UIColor.lightGray
    LPConfig.defaultConfiguration.csatResolutionHidden
    ```
 
-   {: .note}
+   {: .attn-note}
    If agentView is shown ("**csatAgentViewHidden**"), this view will always be hidden, even if "**csatResolutionHidden**" is set to true.
 
 * Define the CSAT title text color:

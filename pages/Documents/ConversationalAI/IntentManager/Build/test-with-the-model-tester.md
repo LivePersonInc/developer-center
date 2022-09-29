@@ -74,7 +74,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 
     <img class="fancyimage" style="width:800px" alt="A list of phrases and their expected intent matches" src="img/ConvoBuilder/ib_model_tester_refine.png">
 
-{: .note}
+{: .attn-note}
 The test set overall can contain a maximum of 2,000 test phrases. LivePerson recommends that you include 5 test phrases for each intent in the domain.
 
 #### Evaluating the test coverage
@@ -103,7 +103,7 @@ Click the message, and then select **Unselected** to see the list of intents for
 
 ### View a report
 
-{: .note}
+{: .attn-note}
 The system retains the 10 most recent reports.
 
 **To view a report**
@@ -129,7 +129,7 @@ There are several, important metrics displayed:
 
 ### Evaluate the report
 
-{: .note}
+{: .attn-note}
 On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more, see [this explanation](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:

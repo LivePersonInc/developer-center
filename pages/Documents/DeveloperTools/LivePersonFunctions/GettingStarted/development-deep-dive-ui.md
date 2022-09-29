@@ -11,7 +11,7 @@ indicator: both
 
 This deep dive will look into how functions can be managed and configured via our web interface. If you want to learn how to interact with the functions platform via our command-line interface, head over to the [deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html).
 
-{: .alert}
+{: .attn-alert}
 When you use the LivePerson Functions platform for the first time please make sure that you are using a Conversational Cloud Admin account to ensure that the [provisioning](liveperson-functions-provisioning.html) of the account succeeds.
 
 ### Creation Process
@@ -43,7 +43,7 @@ By default, the function will respond to all skills. The maximum number of skill
 
 <img src="img/functions/functions_select_skill.png" alt="Functions: select multiple skill" style="width:100%;"/>
 
-{: .alert}
+{: .attn-alert}
 The drop-down menu is always disabled if the selected function template is not an Automatic Messages template.
 
 You may choose to create more than one function of the same event if you set different skills for each function. As long as they are not overlapping, you can create multiple functions for the same event. The following Scenario should highlight the implications:
@@ -53,7 +53,7 @@ You may choose to create more than one function of the same event if you set dif
 - ✅  Function 1 for Event A [Default]
 - ❌  Function 1 for Event A [Skill 1,2] + Function 2 for Event A [Skill 3,4] + [Default]
 
-{: .note}
+{: .attn-note}
 The above example, "[Default]", refers to not selecting any skill, the default behaviour.
 
 #### Second step: Adding Domains to the Allowlist
@@ -81,7 +81,7 @@ Finally, as shown above, we do support the use of wildcards by setting `*`. Be a
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 
-{: .alert}
+{: .attn-alert}
 Adding a domain might take up to to 5 minutes until being "active"
 
 #### Third step: Function Description
@@ -138,7 +138,7 @@ Before you start debugging your function, you might want to modify the debug inp
 
 We supply each event with a default payload that can be used without modification but might not give you deep insights into the behaviour of your functions.
 
-{: .alert}
+{: .attn-alert}
 Payloads are not saved on the server. Make sure to keep your payload locally if you want to reuse it at a later date. The payload is limited to **10.000** characters.
 
 Once you are inside the *debug* tab, you can place breakpoints as you'd expect in any IDE. Breakpoints will halt the debug execution as expected in your local environment. Breakpoints can be set before or during a debugging session by clicking on the space left of the line numbers.
@@ -152,7 +152,7 @@ To start a debugging session, click the Start Debugger"-button. This step will c
 * **Restart**: Cancel the execution and start from the top again
 * **Stop**: Cancels the debugging session
 
-{: .alert}
+{: .attn-alert}
 Sometimes, the debugging session might be lost due to connectivity errors or the long idling of the debugger. The Functions platform will try to heal this situation automatically. If this is not the case *stopping* the debugging session and starting it will resolve the issue.
 
 During the execution, the easiest way to analyse the state of the execution is using the variable inspector within the debug sidebar. It is a searchable list of all variables and their values currently active in the execution scope.
