@@ -1,3 +1,5 @@
+![Logo](https://knowledge.liveperson.com/images/logo.svg)
+
 # LivePerson’s Developer Center and Community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
