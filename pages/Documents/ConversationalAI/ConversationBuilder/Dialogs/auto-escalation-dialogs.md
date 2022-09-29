@@ -23,7 +23,7 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 
 #### Step 1: Create the dialog
 
-{: .note}
+{: .attn-note}
 A bot can have only one Auto Escalation dialog.
 
 **To create an Auto Escalation dialog**

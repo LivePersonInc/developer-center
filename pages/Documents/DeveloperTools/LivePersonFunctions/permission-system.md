@@ -15,7 +15,7 @@ There are three user permissions concerning Functions:
 * FaaS-Invocation: provides read access to all functions and permission to invoke them. The Agent profile has this permission enabled by default.
 
 ### Permissions by role
-{: .note}
+{: .attn-note}
 Only the Administrator role has all the Function permissions enabled by default as described below.
 
 Agent Manager roles will have all Function permission disabled by default, and Agents only will be able to have FaaS-Invocation permissions.

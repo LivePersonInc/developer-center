@@ -10,7 +10,7 @@ permalink: conversation-orchestrator-dynamic-routing-using-dynamic-routing-outsi
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 This topic assumes you are familiar with linking [third-party bots](third-party-bots-getting-started.html) to Conversational Cloud.
 
 ### Introduction
@@ -69,7 +69,7 @@ axios.patch(
 );
 ```
 
-{: .note}
+{: .attn-note}
 The snippet above uses Context Service v1. For Context Service v2 methods, see the [discussion on v2 methods](conversation-orchestrator-conversation-context-service-methods-v2.html).
  
 ##### Step 3 — Call the Next Actions API
@@ -93,5 +93,5 @@ axios.get(
 });
 ```
 
-{: .note}
+{: .attn-note}
 The snippet above uses Next Actions v1. For Next Actions v2 methods, see the [discussion on v2 methods](conversation-orchestrator-next-actions-api-methods-v2.html). 

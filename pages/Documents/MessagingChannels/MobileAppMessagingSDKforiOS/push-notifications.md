@@ -70,7 +70,7 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
 
    When using `LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView` to customize the In App Notification, the following delegate `LPMessagingSDKNotification(notificationTapped notification: LPNotification)` won't be trigger as the behavior for the new InApp Notification should be implemented by the Host App. 
 
-   {: .note}
+   {: .attn-note}
    The proprietary SDK notification is only for display purposes, interacting with it launches the app, but does not navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
 ### Step 2. Create a Certificate Signing Request
@@ -155,7 +155,7 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
 
    - **Key file:** hostkey.pem
 
-   {: .alert}
+   {: .attn-alert}
    If you are using a development certificate you should uncheck the Production checkbox and add '-Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
 
    **Tip:** You have a **155** character limit for your Bundle ID.

@@ -14,7 +14,7 @@ The Store Locator template is designed to provide users with information on the 
 
 While this template takes advantage of rich content interactions, alternatives have been included for channels that do not support structured content (SMS, WhatsApp, etc.).
 
-{: .note}
+{: .attn-note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png" alt="The Store Locator dialog in a bot created from the Store Locator bot template">

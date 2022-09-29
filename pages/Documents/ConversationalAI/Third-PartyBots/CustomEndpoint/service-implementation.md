@@ -119,7 +119,7 @@ This API endpoint is expected to create a conversation resource that can be
 addressed on the following [Send Conversation Events](third-party-bots-custom-endpoint-service-implementation.html#send-conversation-events)
 call.
 
-{: .note}
+{: .attn-note}
 **Please Note** It is the responsibility of the Custom Endpoint service owner to
 store or update [SDES](engagement-attributes-types-of-engagement-attributes.html) information.
 
@@ -279,7 +279,7 @@ Figure 2.6 Example request body of Rich Content event sent to Send Content Event
 
 ### Authorization and Authentication
 
-{: .alert}
+{: .attn-alert}
 Please note we expect brands to use [OAuth 2.0](oauth-2-0-client-credentials.html) for
 authentication and authorization
 
@@ -304,7 +304,7 @@ This section will describe some of the common interaction flows. We will highlig
 that are described in the [service endpoints](third-party-bots-custom-endpoint-service-implementation.html#service-endpoints)
 will be made by the Third-Party Bots.
 
-{: .note}
+{: .attn-note}
 Please note brands needs to store information/session about the Conversation and Bot on their Custom Endpoint
 service so that information can be used in subsequent calls.
 
@@ -321,7 +321,7 @@ Test connection flow is executed in two different scenarios:
 In both scenarios Figure 2.7 shows the sequence of interactions with the involved services
 service is called
 
-{: .note}
+{: .attn-note}
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 
@@ -345,7 +345,7 @@ The consumer message flow is executed once the Third-Party Bots receives a consu
 notification from Universal Message Service (UMS) of Conversational Cloud. Figure 2.8 shows
 the sequence diagram of which endpoints in the Custom Endpoint service are called
 
-{: .note}
+{: .attn-note}
 More information on the Request body and Responses expected by or received from the Custom Endpoint service are available
 in [API Service Specification](https://github.com/LivePersonInc/third-party-bots-custom-endpoint-reference-service)
 

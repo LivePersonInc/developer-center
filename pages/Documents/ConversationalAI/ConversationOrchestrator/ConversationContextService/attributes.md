@@ -88,7 +88,7 @@ Static variables are useful for storing constant data or lists that can be used 
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_staticvar.png" alt="An example of a saved static variable">
 
-{: .note}
+{: .attn-note}
 When creating *custom* attributes in the Context Session Service, ensure that you are following naming conventions that avoid spaces in the name (use camel case, snake case, pascal case, etc.). While having an attribute name that contains spaces will not trigger an error message, you will be unable to properly access these attribute’s values from within the policies you will be creating.
 
 ### Getting attributes through functions

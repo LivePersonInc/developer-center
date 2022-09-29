@@ -11,7 +11,7 @@ permalink: intent-manager-overview.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
@@ -29,7 +29,7 @@ Intent Manager is a suite of tools for intent modeling and management. You can u
 * *Optimize* how well they are being fulfilled
 * *Analyze* the most popular consumer intents
 
-{: .note}
+{: .attn-note}
 Just getting to know Intent Manager? Check out the [in-depth introduction](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-the-power-of-an-intent-driven-contact-center.html) in our Knowledge Center. Learn about the power of an intent-driven contact center.
 
 ### Access permissions

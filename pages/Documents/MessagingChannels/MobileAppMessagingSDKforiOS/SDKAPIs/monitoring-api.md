@@ -13,7 +13,7 @@ permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 Monitoring API is enabled only when the SDK is initialized with [LPMonitoringParams](consumer-experience-ios-sdk-interfacedefinitions.html), to use this initialization refer to the [Quick Start](mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk) guide.
 
 ### sendSDE
@@ -48,7 +48,7 @@ func getEngagement(identities: [LPMonitoringIdentity], monitoringParams: LPMonit
 | completion | A Completion callback with response of type [LPGetEngagementResponse](consumer-experience-ios-sdk-interfacedefinitions.html). This response includes sessionID and visitorID for future use. |  Yes |
 | failure | A Failure callback with an error in case the request fails. |  Yes |
 
-{: .alert}
+{: .attn-alert}
 When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
 
 ### sendSDE (Deprecated)

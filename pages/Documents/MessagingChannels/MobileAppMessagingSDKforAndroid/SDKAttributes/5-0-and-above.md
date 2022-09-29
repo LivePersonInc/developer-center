@@ -14,7 +14,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-{: .note}
+{: .attn-note}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
 ---
@@ -2782,7 +2782,7 @@ Defines whether to show the feedback dialog.
 #### show_agent_details_csat
 Define if the agent’s name and avatar are visible on top of feedback dialog.
 
-{: .alert}
+{: .attn-alert}
 If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2806,7 +2806,7 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 #### show_yes_no_question
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
-{: .alert}
+{: .attn-alert}
 If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2998,7 +2998,7 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
-{: .note}
+{: .attn-note}
 When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
 
 #### show_timestamp_in_ttr_notification
@@ -3602,7 +3602,7 @@ Only available as long as the announce_agent_typing configuration is on (set as 
 &nbsp;
 </div>
 
-{: .note}
+{: .attn-note}
 If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
 
 #### agent_bubble_link_preview_background_stroke_color

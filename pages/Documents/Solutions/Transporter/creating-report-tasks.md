@@ -83,7 +83,7 @@ This option allows you to securely save files to your own SFTP server having pro
 
 Securely upload files to your AWS S3 or Google Cloud Storage bucket.
 
-<div class="note">For these destinations, when providing your authorization credentials in the relevant section of Transporter, LivePerson strongly recommends to use [IAM (Identity & Access Management)](https://cloud.google.com/iam/docs/overview) based authorization keys.</div>
+<div class="attn-note">For these destinations, when providing your authorization credentials in the relevant section of Transporter, LivePerson strongly recommends to use [IAM (Identity & Access Management)](https://cloud.google.com/iam/docs/overview) based authorization keys.</div>
 
 ### Editing Report Tasks
 
@@ -106,7 +106,7 @@ After a report task has completed, you can view the history from the HISTORY sec
 
 To download the report to your browser, simply click the download icon.
 
-<div class="note">If you see a lock next to the download icon, this means you have not entered and verified your Private Key during this browsing session. Whilst your Private Key is not needed to download the encrypted file, if it is not provided, the file will not be decrypted after download and you will need to decrypt it yourself.</div>
+<div class="attn-note">If you see a lock next to the download icon, this means you have not entered and verified your Private Key during this browsing session. Whilst your Private Key is not needed to download the encrypted file, if it is not provided, the file will not be decrypted after download and you will need to decrypt it yourself.</div>
 
 ### Limitations
 

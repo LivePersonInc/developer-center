@@ -64,7 +64,7 @@ The following Medallia information should be provided to LivePerson:
 
 ### Limitations
 
-{: .note}
+{: .attn-note}
 Not all messages are currently forwarded by the LP Medallia adapter. The Bot will only
 send the messages forwarded so far. This does e.g. not include Welcome and Goodbye messages.
 The bot sends its own static messages on the beginning and end of a conversation for now.

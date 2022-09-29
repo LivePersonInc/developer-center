@@ -12,7 +12,7 @@ indicator: both
             </div>
 </div>
 <div>
-    <div class="note" style="width:91%">
+    <div class="attn-note" style="width:91%">
     <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide">Getting Started with your Free Trial Account</a> which outlines the first steps to take in the Conversational Cloud.
   </div>
 </div>

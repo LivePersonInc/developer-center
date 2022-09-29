@@ -16,7 +16,7 @@ When you [create a Conversation Builder bot](conversation-builder-bots-custom-bo
 
 Select the language based on how you'll train the bot: If you will use an intent domain, you must select the language of the domain that will be associated with the bot. For example, if the intent domain uses English, select "English" for the bot language. If these languages don't match, errors during NLU processing will occur. Alternatively, if the bot will use only pattern matching, you can select or enter any language for the bot language.
 
-{: .note}
+{: .attn-note}
 In general, specify the same language for the bot and its integrations, i.e., the intent domains and the knowledge bases that the bot uses, if any.
 
 You can select any of the following for the bot language:

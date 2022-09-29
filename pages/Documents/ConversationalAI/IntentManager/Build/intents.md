@@ -15,7 +15,7 @@ indicator: both
 
 An [intent]((intent-manager-key-terms-concepts.html#intents)) is a consumer request for action or information from your brand.
 
-{: .note}
+{: .attn-note}
 For some practice with intents, complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-intents.html) tutorial series.
 
 ### Import a batch of intents
@@ -88,7 +88,7 @@ When you click the link, all of the training phrases are placed into a single fi
 
 <img style="width:700px" src="img/ConvoBuilder/im_intents_bulkedit2.png" alt="Example of all training phrases in a single field">
 
-{: .note}
+{: .attn-note}
 To save your changes, click the **Update Intent** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
 
 Take care when using this feature to avoid making unintended changes:
@@ -101,7 +101,7 @@ Take care when using this feature to avoid making unintended changes:
 
 Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .note}
+{: .attn-note}
 Ensure the intent isn't being used by any bots or knowledge bases before you delete it.
 
 **To delete an intent**

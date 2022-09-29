@@ -96,7 +96,7 @@ Download Event Details will provide you with a CSV file that includes all the de
 
 This information allows you to see where your bot isn't performing as expected and is valuable to train and tune your knowledge base intents. All user-reported, mismatched intents for this knowledge base will show here and provide a window into where you can make improvements.
 
-{: .note}
+{: .attn-note}
 When downloading custom events in Bot Analytics, the limit is 100,000 in number.
 
 Custom events provide a powerful way to add functionality to your reporting workflow. Adding them to your bot developer's toolset will enhance the content of your analytics in a number of different scenarios.

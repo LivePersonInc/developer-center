@@ -134,7 +134,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSEDI
 
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
-{: .note}
+{: .attn-note}
 These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Close the conversation
@@ -149,7 +149,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSECO
 
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
-{: .note}
+{: .attn-note}
 These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Configure dialog settings

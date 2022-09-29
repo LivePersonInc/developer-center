@@ -13,14 +13,14 @@ indicator: both
 
 ### Introduction
 
-{: .note}
+{: .attn-note}
 KnowledgeAI integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a KnowledgeAI integration.
 
 Use a KnowledgeAI integration when you want to search one of your knowledge bases for articles. You’ll need to [create the knowledge base](knowledgeai-overview.html) first.
 
 One use case for this type of integration is within a fallback dialog, to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed. If no results are found, you might then display a "sorry" message or [transfer the conversation](conversation-builder-interactions-integrations.html#agent-transfer-interactions) to a human agent.
 
-{: .note}
+{: .attn-note}
 The [Simple FAQ bot template](conversation-builder-templates-simple-faq.html) provides a bot that answers users' questions by connecting to a knowledge base.
 
 ### Add a KnowledgeAI integration

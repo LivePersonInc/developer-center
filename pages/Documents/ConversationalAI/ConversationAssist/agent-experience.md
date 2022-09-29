@@ -10,10 +10,10 @@ permalink: conversation-assist-agent-experience.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 When evaluating the agent experience, keep in mind the [FAQs](conversation-assist-faqs.html).
 
-{: .tip}
+{: .attn-tip}
 To train your agents, start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article
@@ -54,6 +54,8 @@ If you’re recommending bots to your agents, it can be a challenge for the agen
 
 Conversation Assist automatically recommends answers and bots to agents, inline in conversations, based on consumer intent and conversation skill. But…sometimes…your agents need more flexibility. Sometimes, they need to be able to look up answers and bots on demand, regardless of what the consumer just said. The On-Demand Recommendations widget in the Agent Workspace meets this need.
 
+<img width="800" alt="An agent using the Bots and Answers tab of the On-Demand Recommendations widget to find bots and answers" src="img/agentassist/ca_widget_botsandanswers.gif">
+
 If you’ve [turned on the display of the widget](conversation-assist-recommendation-sources-configuring-settings.html#on-demand-recommendations-widget), you can use the Bots & Answers tab to ask any question, or enter a phrase, and get back available bots and answers. You can then easily use those recommendations in the current conversation.
 
 <img width="800" alt="The Bots and Answers tab of the On-Demand Recommendations widget" src="img/agentassist/ca_ondemandwidget_botsandanswers.png">
@@ -77,7 +79,11 @@ Other info in the widget is also skill-based. For example, if the agent’s acti
 
 [Predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) is a set of canned responses (replies) for common use cases: greetings, closings, and so on. Conversational Cloud lets you personalize predefined content, so it reflects your brand’s voice and business needs.
 
-Predefined content is made available on the Replies tab in the On-Demand Recommendations widget. If you’ve [turned on the display of the widget](conversation-assist-recommendation-sources-configuring-settings.html#on-demand-recommendations-widget), you can use the tab to search and browse for replies on demand. You can then easily use them in the current conversation.
+Predefined content is made available on the Replies tab in the On-Demand Recommendations widget.
+
+<img width="800" alt="An agent using the Replies tab of the On-Demand Recommendations widget to find predefined content" src="img/agentassist/ca_widget_predefinedcontent.gif">
+
+If you’ve [turned on the display of the widget](conversation-assist-recommendation-sources-configuring-settings.html#on-demand-recommendations-widget), you can use the tab to search and browse for replies on demand. You can then easily use them in the current conversation.
 
 <img width="800" alt="The Replies tab of the On-Demand Recommendations widget" src="img/agentassist/ca_ondemandwidget_replies.png">
 

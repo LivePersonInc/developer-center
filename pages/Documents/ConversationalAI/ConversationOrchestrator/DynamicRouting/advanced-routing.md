@@ -24,7 +24,7 @@ The Expression Editor allows you to configure routing policies that require comp
 2. Routing conversations from certain channels with critical intents during the busiest months or weeks
 3. Joining multiple complex evaluation criteria to arrive at a logical decision for routing
 
-{: .note}
+{: .attn-note}
 The Expression Editor is only available to brands that are upgraded to Conversation Context Service v2. Please talk to your LivePerson account representative if you want to use this feature and have not been upgraded.
 
 #### Using the Expression Editor
