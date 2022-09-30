@@ -117,7 +117,7 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-    - documentname: Platform Overview
+    - documentname: Get Started with Automation
     - documentname: Tutorials & Guides
       pages:
         - pagename: Getting Started With Bot Building

@@ -15,4 +15,4 @@ In the repository, you can find useful resources for download:
 
 * Example bots for Instagram, SMS, Conversation Assist, etc.
 * Templates for the [Universal interaction](conversation-builder-interactions-code.html) (a date picker for Web messaging, a carousel for Facebook, and many more)
-* Solutions for various behaviors, such as programmatically testing a LivePerson NLU domain against a set of utterances, or extracting the patterns used in a bot
+* Solutions for various behaviors, such as extracting the patterns used in a bot
