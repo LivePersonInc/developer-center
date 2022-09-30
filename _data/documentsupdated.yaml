@@ -1318,7 +1318,7 @@
         - pagename: Visit Information
 
 - categoryname: Solutions
-  image: mcs-toolkit
+  image: toolkit
   documents:
     - documentname: CRM Integrations
       pages:
@@ -1330,11 +1330,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: MCS Toolkit
-      pages:
-        - pagename: Overview
-        - pagename: Getting Started
-        - pagename: Using API to Build the Toolkit
     - documentname: Transporter
       pages:
         - pagename: Overview

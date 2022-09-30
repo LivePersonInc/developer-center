@@ -4,7 +4,10 @@ sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
 redirect_from:
-- get-started-LE-APIs.html
+  - get-started-LE-APIs.html
+  - mcs-toolkit-getting-started.html
+  - mcs-toolkit-overview.html
+  - mcs-toolkit-using-api-to-build-the-toolkit.html
 ---
 
 <div class="header-label">
