@@ -13,7 +13,7 @@ redirect_from:
 
 <div class="card-container home-container">
   <div class="flex flex-col gap-32">
-    <a href="/platform-overview.html" id="success-stories" class="welcome-card">
+    <a href="/get-started-with-automation.html" id="success-stories" class="welcome-card">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
