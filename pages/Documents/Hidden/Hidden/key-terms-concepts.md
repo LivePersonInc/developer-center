@@ -39,7 +39,7 @@ Previously called “Escalations”. This metric is the total number of conversa
 #### Intended transfers
 This metric is the number of conversations transferred from the bot to a human agent as designed, e.g., via an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) or a [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). For example, you might want to transfer to a human agent for the purpose of collecting credit card information from the consumer.
 
-{: .note}
+{: .attn-note}
 This metric doesn’t include bot-to-bot transfers [performed within a bot group](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) but does include bot-to-bot transfers to a specific skill.
 
 You can use this metric to identify missed opportunities for automation.
@@ -47,7 +47,7 @@ You can use this metric to identify missed opportunities for automation.
 #### Unintended transfers
 This metric is the number of conversations transferred from the bot to a human agent due to an [automatic escalation](conversation-builder-dialogs-auto-escalation-dialogs.html). If the number is high, evaluate whether the bot was equipped with all the resources needed to satisfy the consumer’s intent.
 
-{: .note}
+{: .attn-note}
 This metric doesn’t include bot-to-bot transfers [performed within a bot group](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) but does include bot-to-bot transfers to a specific skill.
 
 #### Bot contained
@@ -69,7 +69,7 @@ LivePerson has found through research that consumer effort is a key determiner i
 
 Based on the issues detected, the conversation is classified with a MACS 1 (below average), 2 (average), or 3 (good). Use the MACS to understand the perceived consumer experience.
 
-{: .note}
+{: .attn-note}
 For an in-depth introduction to MACS, its benefits, its scoring, and more, see [here](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center. For information on using MACS within Bot Analytics, see [here](bot-analytics-macs.html) in this Developer Center.
 
 #### Intent Match Rate

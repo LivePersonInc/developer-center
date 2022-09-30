@@ -104,7 +104,7 @@ The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessag
 
 The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` and `responseEncryptionKey` (public key), which allows you to identify the authentication request and map the OAuth token in the response to the request originator.
 
-{: .note}
+{: .attn-note}
 The requestIdentifier and responseEncryptionKey is optional, but the responseEncryptionKey is required to view the auth response from an agent widget.
 
 Please use the metadata template with the relevant fields, as presented in the example below:
@@ -331,7 +331,7 @@ If you are authenticating the consumer with a **bot**, you can listen for the au
 
 If you are authenticating the consumer with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorAuthResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorauthresponse).
 
-{: .note}
+{: .attn-note}
 If reading the auth response in an Agent Widget, you **must** initially send a public key.
 
 #### Response Metadata

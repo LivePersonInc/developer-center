@@ -17,7 +17,7 @@ indicator: messaging
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
-{: .note}
+{: .attn-note}
 Make sure the conversation history is in-sync with server before call this API.
 
 ```java
@@ -91,7 +91,7 @@ There are 2 authenticated connection methods:
 
    **Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
-   {: .note}
+   {: .attn-note}
    **Optional:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)`.
 
 2. jwt — new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
@@ -163,7 +163,7 @@ This API method uses a threshold mechanism of 10 seconds. If this API is called 
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
 
 ```java
@@ -178,7 +178,7 @@ public static void getUnreadMessagesCount(String appId, LPAuthenticationParams a
 
 ### getNumUnreadMessages
 
-{: .note}
+{: .attn-note}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -190,7 +190,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 To get count of unread messages using this function, all devices must be registered to receive push notifications using the [registerLPPusher](android-registerlppusher.html) function.
 
 ```java
@@ -204,7 +204,7 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 
 ### getUnreadMessagesCount
 
-{: .note}
+{: .attn-note}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -216,7 +216,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 This API will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
@@ -257,7 +257,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | brandId | The account Id. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
-<div class="note">The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.</div>
+<div class="attn-note">The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.</div>
 
 ### hideConversation
 
@@ -363,7 +363,7 @@ Previous conversations will not be displayed automatically until the consumer's 
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="note">This method must not be called when the conversation screen is displayed.</div>
+<div class="attn-note">This method must not be called when the conversation screen is displayed.</div>
 
 ```java
 public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback)
@@ -602,7 +602,7 @@ There are 2 authenticated connection methods:
 
 * **Signup**
 
-{: .note}
+{: .attn-note}
 Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 **ConversationViewParams:**
@@ -911,5 +911,5 @@ public static void shutDown()
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="note">This method must not be called when the conversation screen is displayed.</div>
+<div class="attn-note">This method must not be called when the conversation screen is displayed.</div>
 

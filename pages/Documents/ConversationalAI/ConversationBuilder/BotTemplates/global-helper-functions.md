@@ -240,14 +240,14 @@ Automatically establishes frequently used values as bot variables. Includes LP E
  botContext.registerContextNamespace(getBotVar('contextNameSpace'));
 ```
 
-{: .note}
+{: .attn-note}
 Many of these bot variables don't return information if you're testing from within Conversation Builder. It is recommended that you [deploy your bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) to a messaging test page.
 
 ### Dialog templates
 
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be imported into any Conversation Builder bot.
 
-{: .note}
+{: .attn-note}
 If you import the dialog template into a bot, do so **before** you begin building out the bot. If you have existing global functions, there could be naming conflicts; so please double check after import.
 
 #### Global Helper Functions

@@ -106,7 +106,7 @@ Request by skillIds=12,13 and allocatedAgentGroupIds=22,33
 
 **Elements in the Response**
 
-<div class="note">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+<div class="attn-note">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

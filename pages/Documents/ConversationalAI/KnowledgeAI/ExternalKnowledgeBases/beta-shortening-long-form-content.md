@@ -11,7 +11,7 @@ permalink: knowledgeai-external-knowledge-bases-beta-shortening-long-form-conten
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
 
 Conversational messaging works best with content that’s as brief as possible. Therefore, LivePerson recommends that, when possible, you take one of the following approaches with your external CMS:
@@ -24,7 +24,7 @@ Sometimes, however, these approaches aren’t possible. For example, you might b
 1. You identify the CMS content that you want to use.
 2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the KnowledgeAI UI, in read-only form.
 
-    {: .note}
+    {: .attn-note}
     Step 2 only happens if the content has HTML tags or is more than 1,000 characters, i.e., if the content warrants shortening or clean-up.
 
 3. You manually apply (copy/paste) the transformed content to editable **Summary** and **Detail** fields within the knowledge base, as desired.

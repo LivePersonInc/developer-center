@@ -15,7 +15,7 @@ The Simple Lead Gen template is designed to capture contact and financial inform
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .note}
+{: .attn-note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_simple_leadgen_de.png" alt="The Lead Gen dialog in a bot created from the Simple Lead Gen bot template">

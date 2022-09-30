@@ -7,10 +7,10 @@ permalink: agent-activity-api-overview.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
 
-{: .alert}
+{: .attn-alert}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
 
 ### Introduction

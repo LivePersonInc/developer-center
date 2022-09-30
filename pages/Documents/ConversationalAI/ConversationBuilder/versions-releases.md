@@ -18,7 +18,7 @@ Throughout the bot creation lifecycle, it's important to follow good change mana
 
 * **Releases** are similar to versions in that they also involve creation of a snapshot of the bot. However, releases are used to push the snapshot to a different bot, updating it with the new bot code.
 
-{: .note}
+{: .attn-note}
 Use *versions* during the development cycle to take snapshots at different milestones. Use *releases* to push snapshots to different bots, e.g., to push a snapshot from a Development bot to a Production bot.<br><br>Conversation Builder stores only the last 10 versions.
 
 ### Save a version
@@ -41,7 +41,7 @@ Any time you might be making large changes to the functionality of a bot, there 
 
 ### Restore a previous version 
 
-{: .note}
+{: .attn-note}
 A "restore" completely overwrites your existing bot with the selected, previous version, so use caution when restoring versions.
 
 **To restore a previous version**
@@ -95,7 +95,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version of the Production bot has been created.
 
-{: .note}
+{: .attn-note}
 The bot user agents attached to the Development bot are not pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
 
 **Tip:** If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.

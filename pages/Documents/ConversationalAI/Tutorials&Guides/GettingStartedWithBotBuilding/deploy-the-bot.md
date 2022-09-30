@@ -10,7 +10,7 @@ permalink: tutorials-guides-getting-started-with-bot-building-deploy-the-bot.htm
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 In this tutorial, you walk through how to link your bot to Conversational Cloud.
@@ -43,7 +43,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Assignment → Assign Profile**: Agent
     * **Skills**: Bot
 
-    {: .note}
+    {: .attn-note}
     By typing in the skill name **Bot**, a new skill with the name **Bot** is created.
 
 4. Click **Save**.
@@ -90,7 +90,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     To view more details about the connector, move your mouse over the "i" icon beside **Details**.
 
-    {: .note}
+    {: .attn-note}
     LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).<br><br>
     There is no limit to the number of agent connectors that a bot can have.
 

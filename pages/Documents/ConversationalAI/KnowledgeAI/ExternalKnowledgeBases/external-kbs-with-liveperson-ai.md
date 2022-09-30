@@ -33,7 +33,7 @@ When adding an external knowledge base with LivePerson AI, follow this high-leve
     * (Conversation Builder) [Adding a KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in a bot
     * (Conversation Orchestrator) Adding a KnowledgeAI integration as a part of an [Conversation Assist](conversation-assist-overview.html) component
 
-{: .note}
+{: .attn-note}
 After making any changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
 
 ### Add an external KB with LivePerson AI
@@ -90,7 +90,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 
 You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
 
-{: .note}
+{: .attn-note}
 An intent can't be used more than once, i.e., in more than one article.
 
 **To associate an article with an intent**
