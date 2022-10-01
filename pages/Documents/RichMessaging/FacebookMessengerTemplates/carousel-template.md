@@ -23,7 +23,7 @@ The carousel includes a list of up to 10 generic or button cards that each can i
 
 *Carousel example with all button actions, including a link button and navigation button tap view:*
 
-![image alt text](img/fb_structuredcontent_image_6.png)
+![](img/fb_structuredcontent_image_6.png)
 
 ### Template Properties
 

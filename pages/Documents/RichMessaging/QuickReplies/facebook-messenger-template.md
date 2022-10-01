@@ -19,7 +19,7 @@ Please note that should you want to share a question/statement before sending th
 
 Below is an image of a Quick Reply template with four quick replies:
 
-![image alt text](img/fb_structuredcontent_image_7.png)![image alt text](img/fb_structuredcontent_image_8.png)
+![](img/fb_structuredcontent_image_7.png)![](img/fb_structuredcontent_image_8.png)
 
 ### Template Properties
 

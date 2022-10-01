@@ -21,13 +21,13 @@ The [Generic template](https://developers.facebook.com/docs/messenger-platform/s
 
 *Generic example images with all button actions, including a link button and navigation button tap view:*
 
-![image alt text](img/fb_structuredcontent_image_0.jpg)
-![image alt text](img/fb_structuredcontent_image_1.jpg)
-![image alt text](img/fb_structuredcontent_image_2.jpg)
+![](img/fb_structuredcontent_image_0.jpg)
+![](img/fb_structuredcontent_image_1.jpg)
+![](img/fb_structuredcontent_image_2.jpg)
 
 *Agent side experience:*
 
-![image alt text](img/fb_structuredcontent_image_3.png)
+![](img/fb_structuredcontent_image_3.png)
 
 ### Template Properties
 
