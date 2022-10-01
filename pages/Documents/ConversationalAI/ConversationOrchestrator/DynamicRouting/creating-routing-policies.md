@@ -173,7 +173,7 @@ PATCH  /v2/context/document/create
   "nameSpace": "airlineNameSpace",
   "sessionId": "85d25bb7-977b-462c-925b-b7977b462c9d",
   "ttlSeconds": 3600,
-  "payload": { 
+  "payload": {
     "preferences":["aisle", "vegetarian", "business-class"]
   }
 }

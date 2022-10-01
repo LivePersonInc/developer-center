@@ -66,7 +66,7 @@ Using [Postman](https://www.postman.com/), include the account number and the se
 For example, the URI for retrieving the Shift Status domain is:
 `https://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
 
-Calls to this URI return an object with a “baseURI” value that you'll want to store to a variable within Global Functions. 
+Calls to this URI return an object with a “baseURI” value that you'll want to store to a variable within Global Functions.
 
 ```javascript
 // variables needed for Shift Status and Queue Health APIs
@@ -107,8 +107,8 @@ function transfer(intent){
      transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
      skillId = '4567890123';
      skillName = 'default';
-     break; 
- }     
+     break;
+ }
  botContext.setBotVariable("transferMessage", transferMessage, true, false);
  botContext.setBotVariable("skillId", skillId, true, false);
  botContext.setBotVariable("skillName", skillName, true, false);
@@ -137,7 +137,7 @@ As seen from the [documentation](shift-status-api-methods-get-shift-status-by-ac
 var shiftStatusData = botContext.getBotVariable('api_Shift_Status');
 var shiftStatusJsonResponse = JSON.parse(shiftStatusData.jsonData);
 var jsonResponse = shiftStatusJsonResponse.api_Shift_Status;
- 
+
 // iterate through all skills returned by shift status to see if the user's intent can be fulfilled.
 var skillId = getVariable('botAgentSkillId');
 for (var i = 0; i < jsonResponse.length; i++) {
@@ -170,7 +170,7 @@ As shown in the [documentation](messaging-operations-api-methods-messaging-curre
 
 <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/guideShiftStatus_botImpl.png">
 
-We will call these APIs within our Agent Escalation dialog to customize and further improve the flow of the conversation. 
+We will call these APIs within our Agent Escalation dialog to customize and further improve the flow of the conversation.
 
 #### Shift Status
 

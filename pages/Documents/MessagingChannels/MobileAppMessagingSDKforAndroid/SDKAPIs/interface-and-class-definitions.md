@@ -142,7 +142,7 @@ public class LPConversationData{
   private CloseReason closeReason;
   private String conversationId;
 }
-``` 
+```
 
 ### LPConversationHistoryMaxDaysDateType
 
@@ -158,7 +158,7 @@ public enum LPConversationHistoryMaxDaysDateType {
 public enum LPConversationsHistoryStateToDisplay {
   OPEN, CLOSE, ALL
 }
-``` 
+```
 
 ### LPEngagementResponse (Monitoring API Related Classes)
 

@@ -1,6 +1,6 @@
 ---
 pagename: Bot Examples & More
-redirect_from: 
+redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -9,7 +9,7 @@ permalink: conversation-builder-bot-examples-more.html
 indicator: both
 ---
 
-Looking for some example bots or sample code to help you with your solution? Check out our [Conversation Builder repository](https://github.com/LivePersonInc/ConversationBuilder-Samples) in GitHub. 
+Looking for some example bots or sample code to help you with your solution? Check out our [Conversation Builder repository](https://github.com/LivePersonInc/ConversationBuilder-Samples) in GitHub.
 
 In the repository, you can find useful resources for download:
 

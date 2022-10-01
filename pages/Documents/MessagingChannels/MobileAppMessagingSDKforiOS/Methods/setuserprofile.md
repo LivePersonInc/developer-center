@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-methods-setuserprofile.html
 indicator: messaging
 ---
 
-Add custom parameters about the user and set them for the messaging agent. 
+Add custom parameters about the user and set them for the messaging agent.
 
 `func setUserProfile(_ lpuser: LPUser, brandID: String)`
 

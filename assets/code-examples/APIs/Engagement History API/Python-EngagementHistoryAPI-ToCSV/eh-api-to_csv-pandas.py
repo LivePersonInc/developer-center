@@ -32,7 +32,7 @@ oauth = OAuth1(consumer_key,
 
 client = requests.session()
 postheader = {'content-type': 'application/json'}
-# Customize the body for what you want 
+# Customize the body for what you want
 body={
 	'interactive':'true',
 	'ended':'true',
@@ -62,15 +62,15 @@ numRecords = 0
 #########################
 
 while(offset <= count): # Grab the data incrementally because can only pull 100 at a time.
-	
+
 	# Complete the Requests.session POST
-	params={'offset':offset, 'limit':limit, 'start':'des'} # Prob shouldn't change offset and limit 
+	params={'offset':offset, 'limit':limit, 'start':'des'} # Prob shouldn't change offset and limit
 	engHistoryResponse = client.post(url=engHistoryURI, headers=postheader, data=json.dumps(body), auth=oauth, params=params)
 	if not engHistoryResponse.ok:
 		print(engHistoryResponse.status_code)
 	engHistoryResults = engHistoryResponse.json()
 
-	# Fill our dataframe 
+	# Fill our dataframe
 	for record in engHistoryResults['interactionHistoryRecords']:
 		# Update numRecords
 		numRecords += 1
@@ -79,7 +79,7 @@ while(offset <= count): # Grab the data incrementally because can only pull 100 
 		df_.set_value(engagementId, "endTime", record['info']['endTime'])
 		df_.set_value(engagementId, "skillName", record['info']['skillName'])
 		df_.set_value(engagementId, "agentLoginName", record['info']['agentLoginName'])
-		
+
 		# Get the transcript lines in a readable format
 		transcript = ""
 		for line in record['transcript']['lines']:
@@ -89,18 +89,18 @@ while(offset <= count): # Grab the data incrementally because can only pull 100 
 		# This is a good way to grab a value that may not exist
 		try:
 			df_.set_value(engagementId, "chatStartUrl", record['info']['chatStartUrl'])
-		except KeyError: 
+		except KeyError:
 			df_.set_value(engagementId, "chatStartUrl", "N/A")
 		try:
 			df_.set_value(engagementId, "sdes", record['sdes']['events'])
 		except KeyError:
 			df_.set_value(engagementId, "sdes", "N/A")
-	
+
 	# Update count, offset
 	count = engHistoryResults['_metadata']['count']
 	offset += limit
-	# print the status of the aggregation 
-	print(str(offset) + "<=" + str(count))	   
+	# print the status of the aggregation
+	print(str(offset) + "<=" + str(count))
 
 print("num records processed = " + str(numRecords))
 

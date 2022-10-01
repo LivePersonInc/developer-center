@@ -61,7 +61,7 @@ An agent can belong to only one bot.
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-left corner.
 3. Click **Add Agent Connector** in the upper-right corner.
-    
+
     The Add Agent Connector dialog appears.
 
 4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png" alt="Right-facing orange chevron button">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
@@ -81,8 +81,8 @@ An agent can belong to only one bot.
 7. Click **Save**.
 
     This establishes the connection between the bot and the bot agent in the target Conversational Cloud environment.
-    
-    To fully deploy the bot, now you must start the agent connector. 
+
+    To fully deploy the bot, now you must start the agent connector.
 
 ### Edit an agent connector
 You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in Conversational Cloud.
@@ -104,7 +104,7 @@ You can delete an agent connector as long as it isn't running.
 2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
 4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Delete** from the menu that appears.
-5. Click **Yes** to confirm the deletion. 
+5. Click **Yes** to confirm the deletion.
 
 ### Start an agent connector
 1. Open the bot.
@@ -134,7 +134,7 @@ For status descriptions, see [this section](bots-status-overview.html#statuses).
 ### Custom configuration fields
 
 Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
- 
+
 You add these fields in the **Advanced Options** of the agent connector.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png" alt="The Custom Configurations button for adding custom configuration fields to an agent connector">
@@ -199,7 +199,7 @@ If this is true, and if the bot is stuck, the conversation is transferred to a s
 **Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
- 
+
 #### escalationMessageOnStuckConversation
 If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
@@ -255,7 +255,7 @@ You can customize this per your requirements; for example, to use a 3-second win
 #### messageResendMaxRetries
 This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
- Note that this number represents the total tries, not the retries alone. Examples: 
+ Note that this number represents the total tries, not the retries alone. Examples:
 
 * For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
 * For 2 retries, set this to 3.

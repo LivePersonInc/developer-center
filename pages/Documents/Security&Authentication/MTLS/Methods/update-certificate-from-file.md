@@ -3,7 +3,7 @@ pagename: Update certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-update-certificate-from-file.html
 ---
@@ -12,7 +12,7 @@ This API updates a certificate by uploading a file for specific account ID.
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
@@ -58,9 +58,9 @@ VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 for example:
 
 ```JSON
-{  
-   "successfulySavedCertificates":[  
-      {  
+{
+   "successfulySavedCertificates":[
+      {
          "id":2628739923,
          "deleted":false,
          "name":"{certificateName}",
@@ -70,7 +70,7 @@ for example:
 	 "expirationDate": null
       }
    ],
-   "failedSaveToVaultCertificates":[  
+   "failedSaveToVaultCertificates":[
 
    ]
 }

@@ -1,5 +1,5 @@
 # Knowledge Base Widget
-This is an example widget that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor. 
+This is an example widget that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor.
 
 This widget uses the CollapsibleLists JS library.
 
@@ -14,5 +14,5 @@ One of the challenges that came up was when you are sending articles with images
 This widget could easily be modified to pull the content from some type of database, or to allow agents add new content on the fly. It could also be used for a starting point of having automatic articles display based on visitor information, or chat lines.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

@@ -30,7 +30,7 @@ lpTag.taglets.rendererStub.getEngagementState(engagementId);
 
 ```javascript
     if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){
-       var info =   
+       var info =
             lpTag.taglets.rendererStub.getEngagementState(12356454);
     }
 ```

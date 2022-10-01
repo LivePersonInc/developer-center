@@ -18,7 +18,7 @@ This API deletes LoBs from a specific account.
 
 ### Request
 
- |Method    |  URL    |     
+ |Method    |  URL    |
  |:-------- |  :--------- |
  |DELETE   |   https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/lobs |
 

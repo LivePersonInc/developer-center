@@ -40,7 +40,7 @@ Additionally, after the domain is trained, your Rasa server returns the trained 
         Select “Custom” if you’re using an authentication type other than TokenAuth or JWT. When you select “Custom,” you can enter the authentication type (e.g., “Bearer”) in the field below, although this isn’t required.
 
         <img style="width:600px" alt="Fields available when using a Custom authentication type" src="img/ConvoBuilder/rasa2.png">
-        
+
         In the Authorization header of a request, the custom authentication type that you entered is used as the prefix denoting the token type (e.g., if the type is “Bearer,” the header’s value is “Bearer &lt;tokenValue&gt;”). If you don’t enter a custom authentication type, the token alone is sent (e.g., the header’s value is simply “&lt;tokenValue&gt;”).
 
     * **Credential**: This is optional. If you’d like to add an extra layer of security when transferring data, select the [Mutual Authentication credential](bot-accounts-credentials.html#add-a-mutual-authentication-credential) to use along with the token. If you have the proper [permissions](bot-accounts-permissions.html), you can create one on the Credentials page in Bot Accounts, and you can also create one on-the-fly here.

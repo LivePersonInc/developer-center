@@ -31,16 +31,16 @@ The Language and Region controls are used to test localization.
    <img src="img/sampleapplication_1.png" alt="" style="width: 50%">
 </div>
 
-**setCallBack method** 
+**setCallBack method**
 Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. For more details about this method, see [Message API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setcallback).
 
-**initActivityConversation method** 
+**initActivityConversation method**
 Opens the conversation view in Activity mode.
 
-**openFragmentContainer method** 
+**openFragmentContainer method**
 Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
-**FragmentContainerActivity class** 
+**FragmentContainerActivity class**
 This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (`LivePerson.getConversationFragment()`) and attach it to the container.
 
 **Push package**

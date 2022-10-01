@@ -371,11 +371,11 @@ const metadata = [
            {
                id: 'Help-Greetings',
                time: 9
-           },  
+           },
            {
                id: 'Payment-Bank_Information',
                time: 13
-           }        
+           }
        ],
        conversationDuration: 22,   //conversation duration up to the escalation
        escalatedDuringBusinessCase: 'Payment-Bank_Information' //the capability that led to escalation
@@ -441,20 +441,20 @@ this.on('ms.MessagingEventNotification', body => {
    });
    if (authResponse) {
     console.info('authResponse.token :', authResponse.token);
-    const authorisationCode = authResponse.token; // make a call to brand IdP endpoint sending authCode to get user info        
+    const authorisationCode = authResponse.token; // make a call to brand IdP endpoint sending authCode to get user info
     const localBot = this;
-    var auth0domain = "your.auth0.com"; // get userInfo        
+    var auth0domain = "your.auth0.com"; // get userInfo
     var options = {
      uri: `https://${auth0domain}/userinfo`,
      qs: {},
      headers: {
       'Authorization': `Bearer ${authResponse.token}`
      },
-     json: true // Automatically parses the JSON string in the response        
+     json: true // Automatically parses the JSON string in the response
     };
     rp(options)
      .then(function(userInfo) {
-      // do something with userInfo response object as needed          
+      // do something with userInfo response object as needed
      })
    }
   }
@@ -503,8 +503,8 @@ const content = {
 
 **Facebook Public — Consumer to Agent**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | This metadata is used to define the data for each consumer message in the conversation. The NAW (New Agent Workspace) will use the values received from UMS to render the consumer message. | ![](img/archive/social/facebook/public-comment.png)       |
 
 ```javascript
@@ -535,8 +535,8 @@ const content = {
 
 **Facebook Public — Agent to Consumer**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | The connector on back-end will use the fields replyToId and currentChannel to identify for which Facebook API the message needs to be sent to. | ![](img/archive/social/facebook/public-comment-reply.png)       |
 
 ```javascript
@@ -556,8 +556,8 @@ const content = {
 
 **Facebook DM — Consumer to Agent**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | The object enabledChannels is an indication to NAW for which types of channels are set on connector configs. | ![](img/archive/social/facebook/direct-message.png)       |
 
 ```javascript
@@ -581,8 +581,8 @@ const content = {
 
 **Facebook DM — Agent to Consumer**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Facebook API needs to be sent to. | ![](img/archive/social/facebook/direct-message-reply.png)       |
 
 ```javascript
@@ -602,8 +602,8 @@ const content = {
 
 **Facebook Public — Consumer to Agent — Identifying Facebook Dark Posts (Ads)**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | The New Agent Workspace (NAW) will use the action field *parentPostIsAd* to render the information about Ads on the message metadata like the mockup below: | ![](img/archive/social/facebook/public-comment-ad.png)       |
 
 ```javascript
@@ -674,8 +674,8 @@ The attribute conversationState.dmChatId refers to the Twitter account where the
 
 **Twitter Public — Consumer to Agent**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | For Retweet, Quotes and Replies the structure will be the same, changing the type of the event and adding the parent related to tweet replied, or retweeted. | ![](img/archive/social/twitter/public-tweet.png)       |
 
 ```javascript
@@ -696,8 +696,8 @@ const content = {
 
 **Twitter Public — Agent to Consumer**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | The connector on back-end will use the fields replyToId and currentChannel to identify for which Twitter API the message needs to be sent to. | ![](img/archive/social/twitter/public-tweet-reply.png)       |
 
 ```javascript
@@ -725,8 +725,8 @@ const content = {
 
 **Replying from a different Twitter account**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 | Sometimes it is necessary to reply from a different Twitter handle. | ![](img/archive/social/twitter/reply-from-account.png)       |
 
 ```javascript
@@ -762,8 +762,8 @@ The fallback mechanism when the replyFromAccountId is not provided is to use the
 
 **Twitter DM — Consumer to Agent**
 
-| Description | Outcome     | 
-| :---        |    :----:   | 
+| Description | Outcome     |
+| :---        |    :----:   |
 |  Twitter DM | ![](img/archive/social/twitter/direct-message.png)       |
 
 ```javascript
@@ -916,7 +916,7 @@ agent.publishEvent({
 }, null, [{
 	type: 'ExternalId',
 	id: 'CARD IDENTIFIER' // METADATA ExternalID
-}]); 
+}]);
 ```
 
 #### Sending metadata over Chat

@@ -18,9 +18,9 @@ This API updates an agent group for a specific account.
 
 ### Request
 
-| Method | URL| 
+| Method | URL|
 | :-------- | :------- |
- |PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups/{agentGroupId}| 
+ |PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups/{agentGroupId}|
 
 **Request Headers**
 

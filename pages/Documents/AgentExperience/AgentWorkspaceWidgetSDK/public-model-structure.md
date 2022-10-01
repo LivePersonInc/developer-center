@@ -352,7 +352,7 @@ Structure example:
     "token"             : "token encrypted string",
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
-        "message" : "Optional Error Message"    
+        "message" : "Optional Error Message"
     }]
 }
 ```

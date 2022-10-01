@@ -19,7 +19,7 @@ indicator: both
 
 The `lpTag` handles the communication of many events that occur on the vistor's webpage.
 
-These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
+These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others.
 
 Below you can find a list of events published on a web page by the Web Tag, each organized under an `appName` and given an `eventName`.
 

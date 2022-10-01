@@ -13,14 +13,14 @@ indicator: messaging
 
 ### Requirements
 
-**Supported versions:** 
+**Supported versions:**
  - SDK 5.1 and higher
 
 **Authentication**
  - Only support authentication mode: Code flow and JWT flow.
 
 ### How to configure
-Simply set the attributes for `conversationScrollConfiguration` in the `lpconfig` class. Please follow the instructions for each attributes below. 
+Simply set the attributes for `conversationScrollConfiguration` in the `lpconfig` class. Please follow the instructions for each attributes below.
 
 #### Scroll Options
 
@@ -32,8 +32,8 @@ Simply set the attributes for `conversationScrollConfiguration` in the `lpconfig
 
 ### Show Conversation
 
-`showConversation` 
-scenario when the SDK conversation is shown. 
+`showConversation`
+scenario when the SDK conversation is shown.
 
 Default option: **Bottom**
 
@@ -49,8 +49,8 @@ configurations.conversationScrollConfiguration.showConversation = ScrollPosition
 
 ### Move to foreground from background
 
-`backgroundToForeground` 
-scenario when the application goes from background to foreground state. 
+`backgroundToForeground`
+scenario when the application goes from background to foreground state.
 
 Default option: **LastPosition**
 

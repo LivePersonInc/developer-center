@@ -91,7 +91,7 @@ This section contains API details that are common to every API’s resource and 
 | profileIds  | The user’s profile IDs. | array of longs| Required | |
 | isApiUser | Indicates whether the user is an API user (not a real user/ bot)  | Boolean | Optional (Default: false) | It has the ability to login via API (instead of username and password) |
 | userTypeId | The user's type  | integer number | Optional | 0 — system; 1 — human; 2 — bot; (Default: 1) |
-| allowedAppKeys | The API user's application keys | string | Required (for API user) |  
+| allowedAppKeys | The API user's application keys | string | Required (for API user) |
 | lobIds | The user’s LOB IDs | array of numbers | Optional |  ||
 
 ### Entity Example
@@ -134,7 +134,7 @@ This section contains API details that are common to every API’s resource and 
        "isApiUser": false,
        "userTypeId": 1
 
-    }  
+    }
 ```
 
 ### Data Revisions

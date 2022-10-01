@@ -65,19 +65,19 @@ With the NLU domain created, the next step is to create a knowledge base with ar
         * *Use the CSV file that is in the ZIP file that you downloaded earlier.*
     * **Domain**: LP_Airlines
     * **Language**: English
-	
+
 5. Click **Save** to upload your knowledge base articles, with intents from the LP_Airlines domain automatically associated with each article.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/articles.png" alt="A list of three active articles in the Airline FAQ knowledge base">
 
-    **Note:** Intents will be automatically associated as long as you have already created the NLU model in the previous section. If you have not done so, you can make your intent associations after by aligning the intents with the correct article. 
+    **Note:** Intents will be automatically associated as long as you have already created the NLU model in the previous section. If you have not done so, you can make your intent associations after by aligning the intents with the correct article.
 
     | Article Title | Intent |
     | --- | --- |
     | Seating assignment | ask about seat assignment |
     | Refund policy | request refund or credit |
     | Claim reward miles | claim reward miles |
-    | Baggage policies | ask about baggage | 
+    | Baggage policies | ask about baggage |
     | Upgrade my seat | upgrade seat |
     | Cancel flight | cancel flight |
     | Change flight | change flight |
@@ -91,7 +91,7 @@ Every bot and human agent requires a user profile to be deployed and accessible 
 {: .attn-note}
 **Customize your POC:** This guide provides two bots that Conversation Assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain-specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
 
-1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png" alt="The Manage users and skills icon"> from the left-side menu to go to the **User Management** section of the Conversational Cloud. 
+1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png" alt="The Manage users and skills icon"> from the left-side menu to go to the **User Management** section of the Conversational Cloud.
 2. From the list of users, select your logged-in human user. From the **Edit user** form, scroll to the bottom. In the **Skills** field, add the skill “Agent.” Click **Save**.
 
     <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/agentskill.png" alt="Adding the Agent skill to the Skills field">
@@ -122,7 +122,7 @@ Every bot and human agent requires a user profile to be deployed and accessible 
 
 ### Step 4: Import the Conversation Builder bots
 
-In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier: 
+In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier:
 
 * Booking Bot
 * Seating Bot
@@ -139,7 +139,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 3. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
 4. Click **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
-5. Click the orange **> Start** button to start the agent connector. 
+5. Click the orange **> Start** button to start the agent connector.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png" alt="The Start button for an agent connector">
 

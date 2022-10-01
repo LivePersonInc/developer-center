@@ -34,7 +34,7 @@ To retry the consumer's last message, [edit the bot's agent connector](conversat
 
     The default value of this field is 1, which means the consumer’s message will be sent only once. This means if you don’t want to add the retry flow, there’s no need to add this field.
 
-* [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval): This is the amount of time to wait before resending the consumer's last message. The default value is 60000 milliseconds (60 seconds). To customize the timeout interval, add this field, and set it as desired. 
+* [retryMessageInterval](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#retrymessageinterval): This is the amount of time to wait before resending the consumer's last message. The default value is 60000 milliseconds (60 seconds). To customize the timeout interval, add this field, and set it as desired.
 
 ### Resolving stuck conversations
 

@@ -17,7 +17,7 @@ public class AgentList {
 	//you need to update the token below with your information
 	static Token accessToken = new Token("YOUR ACCESS TOKEN",
             "YOUR ACCESS TOKEN SECRET");
-	
+
 	public static void main(String[] args) {
 	}
 	//gets information on a particular agent by using the agent id
@@ -29,6 +29,6 @@ public class AgentList {
 		 JSONObject obj =  new JSONObject(response.getBody());
 		 //System.out.println(obj);
 		return obj;
-		
+
 	}
 }

@@ -51,7 +51,7 @@ So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los An
             "name": "navigate",
             "lo": yourLongitude,
             "la": yourLatitude
-          }  
+          }
         ]
       }
     },
@@ -105,7 +105,7 @@ var data = {
               "name": "navigate",
               "lo": yourLongitude,
               "la": yourLatitude
-            }  
+            }
           ]
         }
       },
@@ -166,7 +166,7 @@ agent.publishEvent({
                 "name": "navigate",
                 "lo": yourLongitude,
                 "la": yourLatitude
-              }  
+              }
             ]
           }
         },

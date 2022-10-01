@@ -23,7 +23,7 @@ Login to Transporter requires:
 
 Access to Transporter is strictly by request — speak to your account manager to discuss pricing and availability. Once your account is enabled, you can begin by logging in via [https://transporter.liveperson.net](https://transporter.liveperson.net)
 
-#### Login Page  
+#### Login Page
 
 Enter your Conversational Cloud credentials:
 
@@ -35,7 +35,7 @@ Enter your Conversational Cloud credentials:
 
 Note that logging into Transporter will terminate any existing Conversational Cloud sessions — however, you can login to Conversational Cloud after logging into Transporter without disrupting your Transporter session.
 
-#### Two-factor Authentication  
+#### Two-factor Authentication
 
 For security reasons and to protect your data privacy, Transporter also requires mandatory login verification via Two-factor Authentication. If this is the first time you are logging in, you will need to enroll — simply download an Authenticator application, such as:
 

@@ -1,6 +1,6 @@
 ---
 pagename: Quick Replies Template
-redirect_from: 
+redirect_from:
 Keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Overview
 
-When a user receives a message that contains quick reply buttons from a brand, those buttons appear at the bottom of the chat screen on LINE messenger. The user can simply tap one of the buttons to reply to the brand, the response will be captured and shared back to the agent. 
+When a user receives a message that contains quick reply buttons from a brand, those buttons appear at the bottom of the chat screen on LINE messenger. The user can simply tap one of the buttons to reply to the brand, the response will be captured and shared back to the agent.
 
 A LINE quick reply button consists of the question/statement text and a set of up to 13 buttons and that each contain:
 

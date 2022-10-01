@@ -54,7 +54,7 @@ var CLIENT_ID = 'Your Client ID';
           insertFile(file);
         });
       }
-      
+
       /**
  * Insert a new permission.
  *""

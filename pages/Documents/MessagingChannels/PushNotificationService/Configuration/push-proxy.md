@@ -55,7 +55,7 @@ In order to enable the push proxy feature, you will require the following data a
 
   * Value: max length of 300 characters (allows alphanumeric and special characters: -, _, $, &, @,.,#,*)
 
---- 
+---
 
 This information can be added to the Mobile app management section under Data Sources
 

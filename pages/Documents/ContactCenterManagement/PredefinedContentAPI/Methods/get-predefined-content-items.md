@@ -106,7 +106,7 @@ Retrieves a list of Predefined Content items from a specific account.
                     "msg": "Thank you for chatting with me!",
                     "lang": "en-us",
                     "title": "Closing",
-                    "isDefault":false  
+                    "isDefault":false
                 },
                 {
                     "msg": "תודה ושלום",

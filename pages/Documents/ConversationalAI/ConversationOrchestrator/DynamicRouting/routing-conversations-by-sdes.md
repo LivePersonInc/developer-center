@@ -128,20 +128,20 @@ This method might have performance issues. Please contact your LivePerson accoun
 ```javascript
 // import FaaS Toolbelt
 const { Toolbelt, ConversationContentTypes } = require('lp-faas-toolbelt');
-  
+
 // Create SDE/Conversation-Util instance
 const conversationUtil = Toolbelt.ConversationUtil();
 const sdeUtil = Toolbelt.SDEUtil();
-    
+
 const sdeType = 'customerInfo';
 const sdeKey = 'storeNumber';
-    
+
 async function getAuthCustomerInfo(conversationId) {
   // Parameters for authSDEs
   const contentToRetrieve = [
       ConversationContentTypes.SDES,
   ];
-      
+
   // Get Conversation and extract SDEs
   let conversation;
   for (let i = 0; i < 3; i++) {
@@ -169,17 +169,17 @@ async function getAuthCustomerInfo(conversationId) {
       }
     }
   }
-      
+
   // Get certain type of array
   return sdes.sdes.events.filter(item => item.hasOwnProperty(sdeType));
 }
-    
+
 async function getUnAuthCustomerInfo(conversationId) {
   // Parameters for unAuthSDEs
   const contentToRetrieve = [
       ConversationContentTypes.UNAUTH_SDES,
   ];
-      
+
   // Get Conversation and extract SDEs
   let conversation;
   for (let i = 0; i < 3; i++) {
@@ -207,14 +207,14 @@ async function getUnAuthCustomerInfo(conversationId) {
       }
     }
   }
-      
+
   // Get certain type of array
   return sdes.unAuthSdes.events.filter(item => item.hasOwnProperty(sdeType));
 }
-    
+
 async function getSdeValue(arrayOfCustomerInfo) {
   const sortedDescendingArrayOfCustomerInfo = arrayOfCustomerInfo.sort((a, b) => b.customerInfo.originalTimeStamp - a.customerInfo.originalTimeStamp);
-      
+
   if (sortedDescendingArrayOfCustomerInfo
       && sortedDescendingArrayOfCustomerInfo[0]
       && sortedDescendingArrayOfCustomerInfo[0][sdeType]
@@ -225,7 +225,7 @@ async function getSdeValue(arrayOfCustomerInfo) {
   }
   return '';
 }
-    
+
 async function lambda(input, callback) {
   const conversationId = input.payload;
   try {
@@ -237,7 +237,7 @@ async function lambda(input, callback) {
         throw new Error('Failed to fetch sde data');
       }
       const sdeVal = await getSdeValue(arrayOfCustomerInfo);
-      
+
       console.info(`Fetched following SDE ${sdeVal} for ${conversationId}`);
       callback(null, sdeVal);
   } catch (e) {
