@@ -84,8 +84,8 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
-{: .attn-note}
-If you later delete a bot, you’ll need to manually refresh the list of discovered bots in Conversation Assist in order to see the bot removed from the list.
+{: .attn-alert}
+If you later change the bot user for a bot, you’ll need to manually refresh the bot list here within Conversation Assist so that the configuration change is picked up. This avoids issues that might occur. Similarly, if you delete a bot, you’ll also need to refresh the bot list so that the bot is removed from it.
 
 ### Step 5: Configure settings
 
