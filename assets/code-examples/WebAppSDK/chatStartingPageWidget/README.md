@@ -7,7 +7,7 @@ This widget was built for a client that wanted a way to track which pages a chat
 One idea was to tie the chat starting page to an engagement attribute, and then pass that information to LiveEngage. The issue we had at the time was that the engagement attributes where not available in the transcripts or the APIs. So, I came up with the solution to pass these attributes to another source, Google Sheets.
 
 ## Instructions
-In order to use this widget, you will need to have a Google Account, that way you can host a spreadsheet on your Google Drive. 
+In order to use this widget, you will need to have a Google Account, that way you can host a spreadsheet on your Google Drive.
 
 Please see this PDF for instructions on how to set up the Google Spreadsheet and the Google Script.
 
@@ -15,5 +15,5 @@ Please see this PDF for instructions on how to set up the Google Spreadsheet and
 This widget could be used as a starting point for sending engagement attribute data to another platform in real time.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

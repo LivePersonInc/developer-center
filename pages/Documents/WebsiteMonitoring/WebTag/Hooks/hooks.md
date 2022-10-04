@@ -21,7 +21,7 @@ indicator: both
 
 The `lpTag` handles the interfere of many events that occur on the vistor's webpage by executing a callback.
 
-These tag hooks provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
+These tag hooks provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others.
 
 Below you can find a list of hooks available on a web page by the Web Tag, each organized under a given `eventName`.
 
@@ -29,9 +29,9 @@ Below you can find a list of hooks available on a web page by the Web Tag, each 
 
 **Hook callback parameters**: The “hook” function will get always one object:
 
-**Hook callback return  parameters**:  The “hook” function MUST return always one object — if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one. 
+**Hook callback return  parameters**:  The “hook” function MUST return always one object — if the “hook” returns non-object parameter, the executor will ignore the returned parameter and will take the previous one.
 
-**Execute order**:  The hooks will be executed by the order they were “pushed”. 
+**Execute order**:  The hooks will be executed by the order they were “pushed”.
 
 If param1 was changed on hook1, hook2 will get param1 after the change.
 
@@ -56,7 +56,7 @@ function hookCallback(options){
   return "some string";
 }
 ```
- 
+
 ### Limitations
 
 *   The customers need to make sure to integrate properly and to not cause bugs / edge cases
@@ -112,7 +112,7 @@ Place: rendererStub.js → engagement.createInstance
 
 Timing: Before
 
-Parameters: TBD 
+Parameters: TBD
 
 #### NAME: BEFORE_ENG_CHANNEL_OPEN
 
@@ -127,7 +127,7 @@ baseOffer.js → click → _openChannel
 
 Timing: Before
 
-Parameters: TBD 
+Parameters: TBD
 
 ### Unified Window
 
@@ -167,7 +167,7 @@ Parameters:
    </td>
    <td>Which survey type is the one submitted
    </td>
-   <td> “offlineSurvey” | “preChatSurvey” | “postChatSurvey” 
+   <td> “offlineSurvey” | “preChatSurvey” | “postChatSurvey”
    </td>
   </tr>
   <tr>
@@ -184,12 +184,12 @@ Parameters:
 </table>
 
 ```json
-{  
+{
    "header":"",
    "id":1058794,
-   "questions":{  
-      "question":[  
-         {  
+   "questions":{
+      "question":[
+         {
             "type":"Text Field",
             "validationType":"alpha_numeric",
             "id":5567213,
@@ -242,7 +242,7 @@ Parameters:
    </td>
    <td>Which survey type is the one submitted
    </td>
-   <td> “offlineSurvey”/ “preChatSurvey” / “postChatSurvey” / 
+   <td> “offlineSurvey”/ “preChatSurvey” / “postChatSurvey” /
    </td>
   </tr>
   <tr>
@@ -272,7 +272,7 @@ Parameters:
 #### Array of Object — Data structure
 
 ```json
-[{  
+[{
    "type":"Text Field",
    "validationType":"alpha_numeric",
    "id":5567213,
@@ -287,19 +287,19 @@ Parameters:
 #### surveyData — Data structure
 
 ```json
-{  
-   "survey":{  
+{
+   "survey":{
       "id":1058794,
-      "question":[  
-         {  
+      "question":[
+         {
             "id":5567213,
             "answer":"asf"
          },
-         { 
+         {
             "id":5567214,
             "answer":"sadf@asf.con"
          },
-         {  
+         {
             "id":5567217,
             "answer":"asdf"
          }
@@ -355,7 +355,7 @@ Parameters:
 </table>
 
 ```json
-{  
+{
    "text":"Can you help me?"
 }
 ```
@@ -403,8 +403,8 @@ The rational value to change is only the “text”
 </table>
 
 ```json
-[  
-   {  
+[
+   {
       "@id":"4",
       "@type":"line",
       "time":"2017-03-02T11:51:02.545+02:00",

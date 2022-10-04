@@ -1,6 +1,6 @@
 ---
 pagename: Introduction
-redirect_from: 
+redirect_from:
   - structured-content-rcs-business-messaging-templates-introduction.html
 Keywords: structured content rich messaging
 sitesection: Documents
@@ -10,7 +10,7 @@ permalink: google-rcs-business-messaging-templates-introduction.html
 indicator: messaging
 ---
 
-### Overview 
+### Overview
 
 With Google RCS Business Messaging, brands can communicate with consumers through Android Messages, Google’s native messaging app. RCS Business Messaging has a range of rich media and rich messaging capabilities, providing an enhanced messaging experience.
 

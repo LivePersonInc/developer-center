@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-methods-isurgent.html
 indicator: messaging
 ---
 
-Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false. 
+Checks if the active conversation (if existing) is marked as urgent. Otherwise returns false.
 
 *Note: You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.*
 
@@ -23,4 +23,3 @@ Checks if the active conversation (if existing) is marked as urgent. Otherwise r
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
-

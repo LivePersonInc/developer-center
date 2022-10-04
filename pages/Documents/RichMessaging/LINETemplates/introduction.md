@@ -1,6 +1,6 @@
 ---
 pagename: Introduction
-redirect_from: 
+redirect_from:
 Keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"

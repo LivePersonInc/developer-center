@@ -168,7 +168,7 @@ INAPP:
 ```json
 {
   "consumerPhoneNumber": "+12061234567",
-  "handoffId": "H123456789",  
+  "handoffId": "H123456789",
   "skill": "support",
   "ivrNumber": "180000",
   "consumerId": "james"
@@ -197,7 +197,7 @@ INAPP:
 ```json
 {
   "availableChannels": [
-    "sms","wa" 
+    "sms","wa"
   ],
   "recommendedChannelName": "sms",
   "eligible": true,
@@ -269,13 +269,13 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 ### Common Error Responses
 
 ```json
-{  
+{
   "errorMessage":"Not Found",
   "errorCode":1004
 }
 ```
 
-| HTTP Status | Error Code | Error Message | 
+| HTTP Status | Error Code | Error Message |
 | :--- | :--- | :--- |
 | 400 | 1000 | Invalid request |
 | 400 | 1001 | Invalid customerPhoneNumber |
@@ -320,7 +320,7 @@ const siteObject = {
 // the domain retrieved from domain API
 const domain = 'your domain';
 // insert whole path such as: '/api/account/:accountId/eligibility?v=2.0'
-const path = 'your path'; 
+const path = 'your path';
 const method = 'POST';
 
 function getOauthToHeaders(siteObject, url, method) {

@@ -42,7 +42,7 @@ If you intend to build your bots using a third-party application, see the [Getti
 5. In **Conversation Assist**, configure relevant settings.
 
 ### Step 1: Create the bots
-[Access Conversation Builder](conversation-builder-overview.html#access-conversation-builder) and create at least one bot. For help, try [the tutorial](tutorials-guides-getting-started-with-bot-building-overview.html). 
+[Access Conversation Builder](conversation-builder-overview.html#access-conversation-builder) and create at least one bot. For help, try [the tutorial](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 For help with creating a third-party bot, see the [Getting Started info](third-party-bots-getting-started.html).
 
@@ -78,14 +78,14 @@ To connect a Google Dialogflow or IBM Watson bot to LivePerson’s Conversationa
 
     After you assign at least one skill to each of the bots, the bots can be recommended in conversations that are routed to the same skills. In this manner, you can control on a skill-by-skill basis which bots are candidates for recommendation to human agents.
 
-    In our example below, for the agent to be recommended the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills. 
+    In our example below, for the agent to be recommended the Ordering Bot, the agent must pick up a conversation that was routed to either the “Support” or “Ordering” skills.
 
     <img width="700" alt="Bots tab with all bots now turned on" src="img/agentassist/configbot3.png">
 
     Keep in mind that a conversation is routed to the skills assigned to the campaign’s engagement.
 
-{: .attn-note}
-If you later delete a bot, you’ll need to manually refresh the list of discovered bots in Conversation Assist in order to see the bot removed from the list.
+{: .attn-alert}
+If you later change the bot user for a bot, you’ll need to manually refresh the bot list here within Conversation Assist so that the configuration change is picked up. This avoids issues that might occur. Similarly, if you delete a bot, you’ll also need to refresh the bot list so that the bot is removed from it.
 
 ### Step 5: Configure settings
 

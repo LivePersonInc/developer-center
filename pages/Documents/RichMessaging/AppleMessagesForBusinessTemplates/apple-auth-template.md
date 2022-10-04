@@ -52,7 +52,7 @@ If you do not yet have an OAuth 2.0 service or if you need a test service, follo
 
 6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
 
-7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use.
 
 ### Checking for Apple Auth device compatibility
 
@@ -220,7 +220,7 @@ Please use the metadata template with the relevant fields, as presented in the e
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
 
-###### `receivedMessage` Object Properties  
+###### `receivedMessage` Object Properties
 
 <table>
   <thead>
@@ -258,7 +258,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tbody>
 </table>
 
-###### `replyMessage` Object Properties  
+###### `replyMessage` Object Properties
 
 <table>
   <thead>
@@ -359,7 +359,7 @@ The authentication response metadata is contextual information about the consume
     "status"            : false,
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
-        "message" : "Optional Error Message"    
+        "message" : "Optional Error Message"
     }]
 }
 ```

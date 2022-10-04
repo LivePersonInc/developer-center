@@ -8,7 +8,7 @@ subfoldername: Methods
 order: 12
 permalink: authorizing-conversational-cloud-applications-methods-token-revocation-request.html
 indicator: both
-redirect_from: 
+redirect_from:
   - authorizing-liveengage-applications-methods-token-revocation-request.html
 ---
 
@@ -68,4 +68,3 @@ client_id=d51186e9-e1a1-421e-8b1d-161ade532012&client_secret=r7ufeqb32ore583r6lj
 | 400 | Bad request — Problem with query parameters |
 | 401 | Unauthorized — Bad Authentication (invalid site or application id) |
 | 500 | Internal server error |
-

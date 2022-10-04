@@ -40,7 +40,7 @@ if(failedRequest && failedRequest.error){
     alert(failedRequest.error);
 }
 ```
-                                                                                                                      
+
 ### Response
 
 **Sample response**
@@ -48,4 +48,3 @@ if(failedRequest && failedRequest.error){
 ```json
 { "visitorName" : "Phil" }
 ```
-

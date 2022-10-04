@@ -13,7 +13,7 @@ indicator: messaging
 
 Step Up authentication allows consumers to continue the ongoing unauthenticated conversations by merging it to the authenticated conversation history after signing in.
 
-**Supported versions** 
+**Supported versions**
  - v6.8.0 and higher
 
 ### How to enable

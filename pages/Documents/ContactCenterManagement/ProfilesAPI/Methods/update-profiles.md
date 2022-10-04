@@ -28,7 +28,7 @@ This API updates a list of profiles for a specific account.
  |:--- | :--- |
  |Authorization  |Contains token string to allow request authentication and authorization. |
 
-**Request Body** 
+**Request Body**
 
 [Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.
 
@@ -43,4 +43,3 @@ This API updates a list of profiles for a specific account.
 **Response Body**
 
 [Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.
-

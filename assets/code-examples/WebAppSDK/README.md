@@ -36,17 +36,17 @@ You can view a live example here: [HTML Table Widget](https://scottwestover.hero
 
 # Knowledge Base Widget
 
-This is an example widget that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor. 
+This is an example widget that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor.
 
 You can view a live example here: [Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidget/)
 
-# SC — Knowledge Base Widget 
+# SC — Knowledge Base Widget
 
-This is an example widget that was created for the SC team that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor. 
+This is an example widget that was created for the SC team that shows how you can have a knowledge base of information that an agent can search through, and then send that content to a visitor.
 
 You can view a live example here: [SC — Knowledge Base Widget](https://scottwestover.herokuapp.com/liveengageWidgets/knowledgeBaseWidgetv2/)
 
-### Contribution 
+### Contribution
 
 Thank you Anthony Kunjbehari for providing the examples for this widget.
 
@@ -71,7 +71,7 @@ This is an example widget of how you can integrate with Marketo by using the pre
 
 In order to use this widget you will need to update the demo.html file with your Marketo information.
 
-### Contribution 
+### Contribution
 
 Thank you Mukthesh Saraf for providing this example widget.
 
@@ -79,7 +79,7 @@ Thank you Mukthesh Saraf for providing this example widget.
 
 This is an example widget that was created for a client that shows how to pull in prechat survey information and then preview it before sending it to Marketo.
 
-This widget uses Munchkin and thus requires a Munchkin id as well as a Marketo form id. These two values currently need to be hardcoded into the code. 
+This widget uses Munchkin and thus requires a Munchkin id as well as a Marketo form id. These two values currently need to be hardcoded into the code.
 
 You can view a live example here: [Marketo Example Widget 3](https://marketo-integration.herokuapp.com/index.html)
 
@@ -131,7 +131,7 @@ Note: This sample widget was not created by me. I am sharing the source code her
 
 You can view a live example here: [Sample Widget](https://scottwestover.herokuapp.com/liveengageWidgets/SDKsampleWidget/)
 
-# Tiered Responses Widget 
+# Tiered Responses Widget
 
 This is an example widget that was created for a client that shows how you can have a knowledge base of tiered information that an agent can search through and then send that content to a visitor.
 
@@ -139,13 +139,13 @@ This widget uses the CollapsibleLists JS library.
 
 You can view a live example here: [Tiered Responses Widget](https://tiered-responses-widget.herokuapp.com/index.html)
 
-### Contribution 
+### Contribution
 
 Thank you [Josh Espinosa](https://github.com/Hauuguu) for creating this widget example.
 
 # Translate Widget
 
-This is an example widget of how you can have the chat lines translated to another language. The widget uses the Bing translator widget to translate the lines. 
+This is an example widget of how you can have the chat lines translated to another language. The widget uses the Bing translator widget to translate the lines.
 
 The widget checks what skill the current chat is assigned to, and it will then translate the visitor chat lines to the correct language. It will also allow you to translate anything the agent types into the corresponding language.
 

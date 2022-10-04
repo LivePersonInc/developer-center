@@ -24,7 +24,7 @@ https://API_REQUEST?v=4.0
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users  |
 
@@ -43,7 +43,7 @@ https://API_REQUEST?v=4.0
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID|   String |
- 
+
 **Query Parameters**
 
  | Name            | Description                       | Type    | Required  | Notes                                                |
@@ -52,7 +52,7 @@ https://API_REQUEST?v=4.0
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -65,7 +65,7 @@ https://API_REQUEST?v=4.0
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. | 
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
 **Response Body**
 

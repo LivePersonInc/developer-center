@@ -22,7 +22,7 @@ The iOS platform provides four different default types of date and time styles:
 
 The LPMessagingSDK uses default styles. Each feature has a style, which is flexible and adapts the 'locale' configuration of the device. For example, the US locale SHORT date displays as "9/25/16", whereas the Japanese locale SHORT date displays as "2016/9/25".
 
-You can set a specific 'locale' that is different from the device locale through the language and country configurations. 
+You can set a specific 'locale' that is different from the device locale through the language and country configurations.
 
 ```swift
 country: String?,  language: String?
@@ -38,7 +38,7 @@ Bubble timestamps contain only the time in SHORT time format, according to the l
 Override the resource ID with any **time** format, for example, "hh:mm a" or "HH:mm", which overrides all bubble timestamps:
 
 ```swift
- lpTimeFormat: String? 
+ lpTimeFormat: String?
 ```
 
 ### Date and time format instead of style
@@ -70,11 +70,11 @@ If the host app has customized formatting, this formatting gets used instead of 
 Date off hours messages (not today/tomorrow) use the default LONG date and SHORT time according to the locale (default or custom) and device setting.
 
 - Device set to 12-hour format:
-  
+
    * "Thanks for your message. We will be back online January 12, 2017 at 3:30pm"*
 
 - Device set to 24-hour format:
-  
+
    * "Thanks for your message. We will be back online January 12, 2017 at 15:30"*
 
 Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
@@ -92,7 +92,7 @@ Resolve messages use the default SHORT date and SHORT time according to the loca
   *"Conversation resolved by [agent name] \n 9/25/16, 3:30pm"*
 
 - Device set to 24-hour format (US locale):
-  
+
   *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
 
 Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
@@ -132,11 +132,11 @@ You can find a list of timezone IDs [here](https://helpspot.readdle.com/calendar
 Today and tomorrow off hours messages use the default SHORT time only (without a date) according to the locale (default or custom) and device setting.
 
 - Device set to 12-hour format:
-  
+
    * "Thanks for your message. We will be back online today/tomorrow at 3:30pm"*
 
 - Device set to 24-hour format:
-  
+
    * "Thanks for your message. We will be back online today/tomorrow at 15:30"*
 
 Define a special hour format with any **time** format, for example, "hh:mm a" or "HH:mm".:
@@ -144,4 +144,3 @@ Define a special hour format with any **time** format, for example, "hh:mm a" or
 ```swift
 lpTimeFormat: String?
 ```
-

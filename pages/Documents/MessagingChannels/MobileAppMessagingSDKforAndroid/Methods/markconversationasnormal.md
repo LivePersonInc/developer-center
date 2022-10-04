@@ -14,6 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-markconversationasnormal
 indicator: messaging
 ---
 
-Marks the current conversation as normal. 
+Marks the current conversation as normal.
 
 `public static void markConversationAsNormal()`

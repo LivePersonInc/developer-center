@@ -44,26 +44,26 @@ You can request queue state data using the following parameters:
 Request by all skills, when v=1
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
+    {
+        "skills":{
+            "1":{
                 "currentAvailableSlots":5,
                 "currentQueueSize":5
             },
-            "2":{  
+            "2":{
                 "currentAvailableSlots":11,
                 "currentQueueSize":14
             },
-            "3":{  
+            "3":{
                 "currentAvailableSlots":6,
                 "currentQueueSize":15
             },
-            "4":{  
+            "4":{
                 "currentAvailableSlots":27,
                 "currentQueueSize":0
             }
         },
-        "totals":{  
+        "totals":{
             "currentAvailableSlots":49,
             "currentQueueSize":34
         }
@@ -73,30 +73,30 @@ Request by all skills, when v=1
 Request by all skills, whene v=2
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
+    {
+        "skills":{
+            "1":{
                 "currentAvailableSlots":5,
                 "currentQueueSize":5,
                 "currentMaxWaitTimeInQueue": 15253
             },
-            "2":{  
+            "2":{
                 "currentAvailableSlots":11,
                 "currentQueueSize":14,
                 "currentMaxWaitTimeInQueue": 75388
             },
-            "3":{  
+            "3":{
                 "currentAvailableSlots":6,
                 "currentQueueSize":15,
                 "currentMaxWaitTimeInQueue": 15253
             },
-            "4":{  
+            "4":{
                 "currentAvailableSlots":27,
                 "currentQueueSize":0,
                 "currentMaxWaitTimeInQueue": -1
             }
         },
-        "totals":{  
+        "totals":{
             "currentAvailableSlots":49,
             "currentQueueSize":34,
             "currentMaxWaitTimeInQueue": 75388
@@ -107,18 +107,18 @@ Request by all skills, whene v=2
 Request by skills=1,2 and v=1
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
+    {
+        "skills":{
+            "1":{
                 "currentAvailableSlots":5,
                 "currentQueueSize":5
             },
-            "2":{  
+            "2":{
                 "currentAvailableSlots":11,
                 "currentQueueSize":14
             }
         },
-        "totals":{  
+        "totals":{
             "currentAvailableSlots":16,
             "currentQueueSize":19
         }
@@ -128,21 +128,21 @@ Request by skills=1,2 and v=1
 Request by skills=1,100 and v=2 (skill 100 has no queue state data)
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
+    {
+        "skills":{
+            "1":{
                 "currentAvailableSlots":5,
                 "currentQueueSize":5,
                 "currentMaxWaitTimeInQueue": 65203
 
             },
-            "100":{  
+            "100":{
                 "currentAvailableSlots":-1,
                 "currentQueueSize":-1,
                 "currentMaxWaitTimeInQueue": -1
             }
         },
-        "totals":{  
+        "totals":{
             "currentAvailableSlots":5,
             "currentQueueSize":5,
             "currentMaxWaitTimeInQueue": 65203

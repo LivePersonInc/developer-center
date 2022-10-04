@@ -65,8 +65,8 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 1. Display the domain, and access the Model Tester.
 2. Click the **Test Set** tab.
 3. Refine the test set as follows:
-    * If you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents. This will always yield a passing score, so it isn't a valid test. In fact, if the phrase is an exact match, the match is found in pre-processing, and NLU processing is never used. 
-    
+    * If you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents. This will always yield a passing score, so it isn't a valid test. In fact, if the phrase is an exact match, the match is found in pre-processing, and NLU processing is never used.
+
         Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
 
     * If you added a number of phrases directly in the test set (i.e., not via quick add), for each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
@@ -90,7 +90,7 @@ Click the message, and then select **Unselected** to see the list of intents for
 ### Run the test
 **To run the test set against the domain**
 
-1. Display the domain, and access the Model Tester. 
+1. Display the domain, and access the Model Tester.
 2. Click **Run Test** in the upper-right corner.
 3. Specify the following:
     * **Test Report Name**: Enter a name for the report.
@@ -108,7 +108,7 @@ The system retains the 10 most recent reports.
 
 **To view a report**
 
-1. Display the domain, and access the Model Tester. 
+1. Display the domain, and access the Model Tester.
 2. Click the **Test Reports** tab.
 3. Click the report name.
 
@@ -121,7 +121,7 @@ There are several, important metrics displayed:
 * **Failed**: The number of test phrases that either didn't match the expected intents or matched them with a match rating of Fair Plus, Fair or Poor.
 * **Success Rate**: The percentage of phrases in the test set that passed the test.
 * **Test Coverage**: The percentage of intents in the domain that are used in the test set.
-* **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with: 
+* **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with:
 <img style="width:25px" alt="Passed indicator" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" alt="Failed indicator" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
 <img style="width:25px" alt="Passed with false positive indicator" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
 * **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
@@ -159,7 +159,7 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 
 **To compare reports**
 
-1. Display the domain, and access the Model Tester. 
+1. Display the domain, and access the Model Tester.
 2. Click the **Test Reports** tab.
 3. In the dashboard that lists the reports, select the checkboxes for both reports.
 4. Click **Compare Reports** in the upper-right corner.

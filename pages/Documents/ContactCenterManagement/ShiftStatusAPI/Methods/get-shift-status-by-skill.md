@@ -27,8 +27,8 @@ This API retrieves a skill entity and displays its current shift status as defin
 
 **Path Parameters**
 
-| Parameter   |  Description   |   Type / Value  |              
- |:---------- |  :------------- |  :-------------  |            
+| Parameter   |  Description   |   Type / Value  |
+|:---------- |  :------------- |  :-------------  |
 | accountId |    LivePerson site ID    |   String  |
 | skillId |    Skill ID    |   String  |
 
@@ -61,5 +61,5 @@ This API retrieves a skill entity and displays its current shift status as defin
         "onShift": false,
         "nextOn": 1535979600000,
         "nextOff": 1535997600000
-    }    
+    }
 ```

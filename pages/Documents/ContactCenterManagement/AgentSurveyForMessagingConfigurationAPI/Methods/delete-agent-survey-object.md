@@ -3,13 +3,13 @@ pagename: Delete Agent Survey Object
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Configuration API 
+documentname: Agent Survey For Messaging Configuration API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-configuration-api-methods-delete-agent-survey-object.html
 indicator: messaging
 ---
 
-Delete an existing agent survey object. 
+Delete an existing agent survey object.
 
 ### Request
 
@@ -50,7 +50,7 @@ Delete an existing agent survey object.
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specific version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specific version using this parameter's value..|
 
 **Response example**
 

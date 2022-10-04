@@ -15,7 +15,7 @@ This is a tutorial series that's cumulative in nature. What's more, this series 
 
 ### "Many Bots" design approach
 
-Historically, all of our bot capabilities would be included in a single, monolithic bot design. This bot would house all of our intent-driven dialogs, knowledge bases, the fallback dialog, and escalations. 
+Historically, all of our bot capabilities would be included in a single, monolithic bot design. This bot would house all of our intent-driven dialogs, knowledge bases, the fallback dialog, and escalations.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/single_bot_design.png" alt="Illustration of a single bot design, where a single bot has many capabilities">
 
@@ -27,7 +27,7 @@ With the addition of *bot groups* and *bot group collaboration*, we’re able to
 
 ### Breaking up the monolith
 
-After completing the [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html), you have a single bot that handles welcoming the user, processing several intents, and escalating to a human agent. As new functionality is introduced, the size and scope of this single bot can become difficult to manage. Breaking a single bot into multiple bots is no small task, so it is best to do so as early in your development process as possible. 
+After completing the [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html), you have a single bot that handles welcoming the user, processing several intents, and escalating to a human agent. As new functionality is introduced, the size and scope of this single bot can become difficult to manage. Breaking a single bot into multiple bots is no small task, so it is best to do so as early in your development process as possible.
 
 We’ll use three separate bots as part of our "many bot" solution:
 
@@ -42,13 +42,13 @@ Instead of creating these new bots from scratch, we will copy our Getting Starte
 1. From the Getting Started bot in Conversation Builder, click the three-dot icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_three_dot_ellipsis_vert.png" alt="Three-dot icon"> in the menu bar, and select **Bot Settings**.
 2. Expand the **More Settings** menu, and scroll towards the bottom until you see the **Export Bot** option. Click the download icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_download.png" alt="Download icon"> to generate a JSON-formatted copy of the Getting Started bot.
 3. Back out of the Getting Started bot to the dashboard of bots. Click **Import Bot** in the upper-right corner.
-4. Select and open the downloaded JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
-5. Navigate to this bot’s **Bot Settings**, and update the name to "Greeter Bot." 
+4. Select and open the downloaded JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor.
+5. Navigate to this bot’s **Bot Settings**, and update the name to "Greeter Bot."
 6. Prior to saving, click the **Bot Group** dropdown and select the **Create Group** option and provide the following values in the Create Bot Group form:
     * **Bot group name**: Many bots
     * **Collaboration**: Turn on
     * **Transfer message**: BLANK_MESSAGE
-    
+
     Click **Create** to exit the Create Bot Group form, and click **Save** from the Bot Settings menu.
 
 7. Lastly, delete the dialogs that Greeter Bot isn't responsible for. From the **Dialogs** menu, click the three-dot icon next to the Make Payment dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation and Order Status dialogs.
@@ -61,18 +61,18 @@ Instead of creating these new bots from scratch, we will copy our Getting Starte
 
 ### Step 2: Create the Order bot
 
-For the Order bot, follow the same process that you used to create the Greeter bot: 
+For the Order bot, follow the same process that you used to create the Greeter bot:
 
 1. From the Conversation Builder dashboard of bots, click **Import Bot** in the upper-right corner.
-2. Select and open the downloaded Getting Started JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
-3. Navigate to this bot's **Bot Settings**, and update the name to "Order Bot." 
+2. Select and open the downloaded Getting Started JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor.
+3. Navigate to this bot's **Bot Settings**, and update the name to "Order Bot."
 4. Prior to saving, click the **Bot Group** dropdown, and notice there is now an option for the "Many bots" group. Select that option, and click **Save**.
 5. Delete the dialogs that Order Bot isn't responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
-6. Verify that the Make Payment and Order Status dialogs are still set to be triggered using their associated intents. 
+6. Verify that the Make Payment and Order Status dialogs are still set to be triggered using their associated intents.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/make_payment_dialog.png" alt="The Make Payment dialog with its associated make payment intent still assigned in the dialog starter">
 
-    As long as you are still in the same account, these links remain active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account. 
+    As long as you are still in the same account, these links remain active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account.
 
     Back in the Conversation Builder dashboard of bots, ensure that your Order Bot is nested underneath your "Many bots" group, along with the Greeter Bot.
 
@@ -101,7 +101,7 @@ As much of the functionality of the Service Bot has yet to be constructed, you w
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/agent_transfer_interaction.png" alt="The Agent Transfer interaction in the Escalation dialog">
 
-6. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that were provided on bot creation. 
+6. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that were provided on bot creation.
 
 7. Back out of the Service bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group, along with the Greeter and Order bots.
 
@@ -109,7 +109,7 @@ As much of the functionality of the Service Bot has yet to be constructed, you w
 
 ### Step 4: Deploying the "Many Bots" group
 
-Due to the nature of the Many Bots solution, each bot in our bot group will need to be deployed with an agent connector in order to see the collaboration in action. To do so, new bot agents will need to be created and assigned to each bot in our group. 
+Due to the nature of the Many Bots solution, each bot in our bot group will need to be deployed with an agent connector in order to see the collaboration in action. To do so, new bot agents will need to be created and assigned to each bot in our group.
 
 1. Navigate to the **User Management** section of the Conversational Cloud by clicking the **Manage users and skills** icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_user_mgmt.png" alt="Manage users and skills icon"> on the left.
 2. In the lower-left corner, click **+ Add user**.
@@ -130,7 +130,7 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
     * **Assign profile**: Agent
     * **Skills**: Greeter
 
-    Unless you have previously created your Greeter skill, you will need to type it into the **Skills** field to create it. 
+    Unless you have previously created your Greeter skill, you will need to type it into the **Skills** field to create it.
 
 	Click **Save**.
 
@@ -163,7 +163,7 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png" alt="Previewing the conversation using the Messaging test page, specifically triggering the Greeter bot">
 
     Next, type “I want to check my order status”. This results in the Order Bot taking over and directing to the appropriate intent.
-    
+
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png" alt="Previewing the conversation using the Messaging test page, specifically triggering the Order Status bot">
 
     Follow this by typing “agent” to see the Service bot handle the escalation to a human agent.

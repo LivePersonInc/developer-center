@@ -61,7 +61,7 @@ You can import dialogs from one bot to another within your organization. This ca
 - You can import a maximum of 10 dialogs at a time from multiple bots. If you need to import more, you can repeat the process.
 - You can import only dialogs of type Dialog (see *Dialog types* above).
 - You can import dialogs from the bots to which you have access in your organization. For example, you can’t import dialogs from a bot that's owned by another bot developer and isn't [public](conversation-builder-bots-bot-basics.html#configure-bot-settings).
-- The following is imported:  
+- The following is imported:
   - All selected dialogs and the interactions therein
   - All integrations referenced in the selected dialogs
 - The following isn't imported and must be added manually:

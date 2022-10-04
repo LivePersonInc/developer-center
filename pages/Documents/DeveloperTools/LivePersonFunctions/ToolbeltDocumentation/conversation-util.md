@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
-permalink: liveperson-functions-toolbelt-documentation-conversation-util.html 
+permalink: liveperson-functions-toolbelt-documentation-conversation-util.html
 indicator: both
 ---
 

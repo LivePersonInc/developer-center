@@ -143,7 +143,7 @@ Input the following command:
 
 **Expected Notification**
 
-* In this example, the `changes` array is still empty since there are still no conversations  
+* In this example, the `changes` array is still empty since there are still no conversations
 
 ```json
 {

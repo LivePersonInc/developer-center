@@ -3,7 +3,7 @@ pagename: Get all certificates by account
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-get-all-certificates-by-account.html
 ---
@@ -12,7 +12,7 @@ This API gets all certificates from a specific account by account ID.
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |GET|  https://[{domain}]/mtls/account/{accountId}/certificates |
 

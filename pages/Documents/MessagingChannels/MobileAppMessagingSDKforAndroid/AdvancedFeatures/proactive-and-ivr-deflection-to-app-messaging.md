@@ -19,7 +19,7 @@ Call SDK’s [handlePushMessage](mobile-app-messaging-sdk-for-android-sdk-apis-m
 
 ```java
 public static PushMessage handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)
-``` 
+```
 
 - ##### PushMessage
 ```json
@@ -86,4 +86,3 @@ Updated Liveperson.LogOut api:
 ````java
 public static void logOut(Context context, String brandId, String appId, PushUnregisterType unregisterType, LogoutLivePersonCallback logoutCallback)
 ````
-

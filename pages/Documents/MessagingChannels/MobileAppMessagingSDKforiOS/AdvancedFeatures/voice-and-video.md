@@ -32,7 +32,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 ```
 
 {: .attn-alert}
-Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call. 
+Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call.
 
 ### Branding and configurations
 

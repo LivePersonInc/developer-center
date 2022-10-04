@@ -67,7 +67,7 @@ Example of a normal layout:
       - documentname: Chat Agent API
         basedomain: https://{domain}/api/account/{accountId}/agentSession
         pages:
-        - pagename: Overview 
+        - pagename: Overview
 
 1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
 2. `Add Agent Widgets` is a folder in layer 1 with the `AgentExperience/AddAgentWidgets` path. The `Add Agent Widgets` folder only contains one page.
@@ -91,14 +91,14 @@ Example of a subfolder layout:
               - subpagename: Using Meta Intents with Conversation Builder
               - subpagename: Implementing a Web View Integration
               - subpagename: Using LivePerson Functions with a Bot
-  
+
 1. The `pagename` entry `Tutorial & Guides` is not a file, but a folder, because it has subpages.
 2. In the Markdown file for `Using Meta Intents with Conversation Builder`, the `pagename` must match the `subpagename`.
-3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2. 
-4. The file must include `Conversation Builder` as a `documentname` in the header. 
+3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2.
+4. The file must include `Conversation Builder` as a `documentname` in the header.
 5. The permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`.
 6. Notice how the `&` in the `subfoldername` is replaced by a dash in the permalink.
-  
+
 Another example:
 
     - categoryname: Getting Started
@@ -119,7 +119,7 @@ Another example:
         - pagename: Engagement Attributes
         - pagename: Analytics Builder Data Metrics
         - pagename: Retry Policy Recommendations
-        
+
 1. The `documentname` entry `Getting Started with your Free Trial Account` does not represent a folder, because it does not contain a pages key.
 2. Since this above file only contains one parent, there should not be a `documentname` in the file `getting-started-with-your-free-trial-account.md`.
 3. The `pagename` for `getting-started-with-your-free-trial-account.md` must match the `documentname` in the YAML file `Getting Started with your Free Trial Account`.

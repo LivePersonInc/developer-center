@@ -59,7 +59,7 @@ https://API_REQUEST?v=4.0
 |------|-----------------------|
 | 200  | OK                    |
 | 401  | Not Authenticated     |
-| 403  | Not Authorized        |      
+| 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
 **Response Headers**

@@ -11,12 +11,12 @@ To use this program, you will need to setup a SendGrid account and create an OAu
 In order to use the program you will need to get an API key for your SendGrid account, and you will need to fill out the config.properties file with your API information.
 
 ### Setup SendGrid
- 
+
 Once you have logged into your SendGrid account, you will need to go to Settings and then API Keys on the left hand side of the screen.
 
 Next, click the Create API Key button, and then choose General API Key.
 
-In the new dialog box, enter a name for your API key such as EHAPI Key. For this key, the only option you need to enable is Full Access for the Mail Send permissions. 
+In the new dialog box, enter a name for your API key such as EHAPI Key. For this key, the only option you need to enable is Full Access for the Mail Send permissions.
 
 Click Save to save your key.
 
@@ -25,7 +25,7 @@ You will then be shown your API key. Make sure to store this key in a safe place
 ### Edit config.properties
 
 In the config.properties file, you will need to add the following information:
-* 
+*
 * apikey= Your App Key ID
 * apisecret= Your App Key Secret
 * tokenkey= Your Token ID

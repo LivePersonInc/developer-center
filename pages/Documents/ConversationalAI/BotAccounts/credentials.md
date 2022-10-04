@@ -108,7 +108,7 @@ Depending on the configuration of the resource, you might need to manually reaut
 
 You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. A Mutual Authentication credential makes use of a key certificate and a trust certificate.
 
-#### Key certificates 
+#### Key certificates
 A key certificate is a key store file that contains private and public key pairs. A key certificate identifies the LivePerson platform as a valid entity that is allowed to interact with external systems. The recommended format is .p12 (PKCS12). You can generate a self-signed certificate pair using openssl or keytool, for example:
 
 `keytool -genkeypair -alias nt-ms -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore cb-mtls-server.p12 -validity 3650 -ext SAN=dns:localhost,ip:127.0.0.1`
@@ -120,7 +120,7 @@ You can verify the file using:
 #### Trust certificates
 A trust certificate is exported from the external system (e.g., Salesforce) to which the LivePerson platform makes the external call. The recommended file format is .pem.
 
-When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
+When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required.
 
 **Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 

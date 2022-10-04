@@ -53,7 +53,7 @@ To use Conversation Context Service APIs you will need to create and use an API 
 
 2. Copy and paste the key you see in the experience and use it in your API headers.
 
-3. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.  
+3. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.
 
 <img class="fancyimage" width="750" src="img/maven/devkey.png" alt="">
 
@@ -67,9 +67,9 @@ Every API call to the Conversation Orchestrator's Conversation Context Service r
 
 #### Base URL per environment
 
-AMERICAS : <https://z1.context.liveperson.net>  
-EMEA: <https://z2.context.liveperson.net>  
-APAC: <https://z3.context.liveperson.net>  
+AMERICAS : <https://z1.context.liveperson.net>
+EMEA: <https://z2.context.liveperson.net>
+APAC: <https://z3.context.liveperson.net>
 
 #### Create a custom namespace
 
@@ -499,7 +499,7 @@ curl --request PATCH \
 
 ```
 
-#### Pass multiple propertyName to the GET properties 
+#### Pass multiple propertyName to the GET properties
 
 <table>
     <thead>
