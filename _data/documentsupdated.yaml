@@ -1043,6 +1043,7 @@
           subpages:
             - subpagename: Latest Release Notes
             - subpagename: All Release Notes
+            - subpagename: Supportability
         - pagename: Resources
           subpages:
             - subpagename: Authentication
