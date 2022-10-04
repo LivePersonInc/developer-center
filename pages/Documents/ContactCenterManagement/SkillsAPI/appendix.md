@@ -79,13 +79,13 @@ This section contains API details that are common to every API’s resource and 
 | transferToAgentMaxWaitInSeconds | Maximum wait time for transferred conversation to wait in queue for the assigned agent | Integer | Optional ||
 | fallbackSkill | Allowed fallback skill for this skill | Long | Optional ||
 | fallbackWhenAllAgentsAreAway | Setting per skill whether or not to use fallback skill when all agents are away | Boolean | Optional | Default: true |
-| agentSurveyForMsgTimeoutInMinutes | The time which elapsed between the end of the conversation and the agent survey expiring | Integer | Optional || 
-| agentSurveyForMsgId | The agent survey for messaging id this skill is assigned to | Long | Optional || 
+| agentSurveyForMsgTimeoutInMinutes | The time which elapsed between the end of the conversation and the agent survey expiring | Integer | Optional ||
+| agentSurveyForMsgId | The agent survey for messaging id this skill is assigned to | Long | Optional ||
 
 ### Entity Example
 
 ```json
-    {  
+    {
           "id":326244912,
           "skillOrder":0,
           "description":"skillDescription",
@@ -103,13 +103,13 @@ This section contains API details that are common to every API’s resource and 
           "lobIds": [
             766661812
           ],
-          "skillRoutingConfiguration":[  
-             {  
+          "skillRoutingConfiguration":[
+             {
                 "priority":1,
                 "splitPercentage":10,
                 "agentGroupId":326244812
              },
-             {  
+             {
                 "priority":2,
                 "splitPercentage":20,
                 "agentGroupId":326244812

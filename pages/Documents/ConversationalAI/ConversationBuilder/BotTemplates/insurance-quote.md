@@ -15,10 +15,10 @@ The Insurance Quote template is designed to capture information related to insur
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .important}
-This bot template contains dialog templates that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).<br><br>This bot template also contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+{: .attn-note}
+This bot template contains [dialog templates](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_de.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_de.png" alt="The Auto dialog in a bot created from the Insurance Quote bot template">
 
 ### Included items
 
@@ -56,7 +56,7 @@ Each interaction requiring user input is performing some level of validation on 
 For each dialog of questions for the user, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```
- // Max count of fail user inputs 
+ // Max count of fail user inputs
   setVariable('maxAttempts', 2);
   setVariable('autoAttempts', 0);
   setVariable('lifeAttempts', 0);
@@ -69,7 +69,7 @@ The name, email and phone number steps of the Quote dialog are performing some l
 
 #### Analytics
 
-Custom event logging for this template has been provided by default.
+[Custom event logging](conversation-builder-scripting-functions-log-debug.html#log-custom-event) for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
@@ -84,10 +84,8 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .important}
+{: .attn-note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
-
-For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
 #### Global Function customization
 
@@ -95,7 +93,7 @@ Click **Global Functions** to access all the global functions and variables to b
 
 You’ll want to customize the `setAutoTemplate`, `setHomeTemplate`, `setLifeTemplate` and `getEmailBody` functions within Global Functions to reflect your branding and voice.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf1.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf1.png" alt="Some example functions that you will want to customize on the Global Functions page in the bot">
 
 #### Send Email integration
 
@@ -110,7 +108,7 @@ Modify the following values in Global Functions:
 | emailSubject | Email subject line content |
 | emailText | Initial email text, default value of "Insurance Consultation Request Results" |
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf2.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_gf2.png" alt="The initConversation function in Global Functions">
 
 The bot captures relevant user information in several variables. These values are used in the `setAutoTemplate`, `setHomeTemplate`, `setLifeTemplate` and `getEmailBody` functions to dynamically generate the email body.
 

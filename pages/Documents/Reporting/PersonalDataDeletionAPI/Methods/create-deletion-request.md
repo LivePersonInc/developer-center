@@ -18,13 +18,13 @@ This API allows a brand to submit a deletion request via one of the following me
 
 2. Messaging Conversation: Deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
 
-3. consumerId: Deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). **Note:** In other APIs, the `consumerId` is referred to as `visitorId` (for example, the [Engagement History API](engagement-history-api-methods.html)). You can use that `visitorId` as part of this request to identify the specific visitor for which you'd like to request data deletion.
+3. consumerId: Deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). Note: In the [Messaging Interactions API](messaging-interactions-api-overview.html), the consumerId is referred to as "participantId" under the "consumerParticipants" array. You can use that participantId as part of this request to identify the specific consumer for which you'd like to request data deletion.
 
 4. ticketId: Deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion |
 
@@ -92,14 +92,14 @@ Example 4:
 
  **Response Codes**
 
-  |Code|  Response|  
+  |Code|  Response|
   |:------    |:-------- |
-  |201 |  Created|  
-  |400 |  Bad request|  
-  |401 |  Unauthorized request|  
-  |403 |  Not sufficient priviliges|  
+  |201 |  Created|
+  |400 |  Bad request|
+  |401 |  Unauthorized request|
+  |403 |  Not sufficient priviliges|
   |429 |  Requests threshold for current month was reached|
-  |500 |  Internal server error|  
+  |500 |  Internal server error|
 
 **Note:** By default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
 

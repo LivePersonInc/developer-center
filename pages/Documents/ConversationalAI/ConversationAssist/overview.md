@@ -13,7 +13,7 @@ permalink: conversation-assist-overview.html
 indicator: messaging
 ---
 
-{: .important}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Watch the video
@@ -24,7 +24,7 @@ Did you know that LivePerson has a Conversational AI forum for builders? [Check 
 
 Conversation Assist offers recommended bots and answers to your human agents inline in their conversations with consumers.
 
-<img width="400" src="img/agentassist/example2.gif" align="left" style="margin: 0 25px 0 0;">
+<img width="400" alt="Animation showing inline recommendations being offered" src="img/agentassist/example2.gif" align="left" style="margin: 0 25px 0 0;">
 
 When your agents take advantage of these just-in-time recommendations, they become more efficient and save time. What's more, their conversational outcomes are improved and more consistent. Conversation Assist can even help to reduce the time to onboard new agents.
 
@@ -32,16 +32,16 @@ You can set up bot and answer recommendations in just a few clicks.
 
 On the **Home** page of Conversation Assist, you'll find a dashboard of rich analytics, which you can use to continuously monitor and tune recommendation performance. Use this valuable data to understanding the impact that your solution is having on your agent operations.
 
-<img width="800" src="img/agentassist/dashboard.png" alt="">
+<img width="800" alt="View of the top of the Conversation Assist dashboard" src="img/agentassist/dashboard.png">
 
-{: .important}
+{: .attn-note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 ### Intent-based recommendations
 
 Within a messaging conversation, Conversation Assist recommends bots and answers based on the intent that’s detected in the consumer’s message. The recommendations are presented in real time, inline within the conversation.
 
-<img width="550" src="img/agentassist/example.png" alt="">
+<img width="550" alt="View of the agent workspace with two recommendations being offered to the agent" src="img/agentassist/example.png">
 
 When offered a recommended answer, the agent can send it to the consumer. The agent can optionally modify it before sending it.
 
@@ -67,5 +67,5 @@ Recommendation sources include knowledge bases and bots:
 
 ### Access Conversation Assist
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt=""> icon.
-2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Assist**.
+1. [Access the dashboard of Conversational AI applications](get-started-with-automation.html#access-the-conversational-ai-applications).
+2. Click **Conversation Assist**.

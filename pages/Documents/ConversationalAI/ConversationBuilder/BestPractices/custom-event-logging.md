@@ -16,7 +16,9 @@ This topic provides a guide for implementing custom event logging to provide a m
 
 ### Custom Events
 
-Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. Details on the structure of the scripting function can be found [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event). Custom events are more flexible than our default analytics, allowing you to specify when and what data is captured for analytic or tracking purposes. We'll cover where to access and how to read these captured events later in this guide, but to start let’s look at our bot and write some custom events.
+Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. See [these details](conversation-builder-scripting-functions-log-debug.html#log-custom-event) on the structure of the scripting function.
+
+Custom events are more flexible than our default analytics, allowing you to specify when and what data is captured for analytic or tracking purposes. We'll cover where to access and how to read these captured events later in this guide, but to start let’s look at our bot and write some custom events.
 
 ### Bot Configuration
 
@@ -25,9 +27,9 @@ When using a [knowledge base](knowledgeai-overview.html), it might be desirable 
 * A custom event to log when we have a successful response from our FAQ knowledge base
 * A custom event that is triggered from a user response indicating the correctness of the returned article
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1a.png" alt="">
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1b.png" alt="">
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1c.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1a.png" alt="The top of the dialog flow, which begins with an FAQ integration that has two rules for FAQ success and fail">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1b.png" alt="The middle of the dialog flow, which includes a question to the consumer on whether their question was answered correctly">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1c.png" alt="The bottom of the dialog flow, which includes No and Sorry statements">
 
 Our first custom event tracks successful knowledge base queries. We'll include the following code in the **Pre-Process Code** section of the interaction that displays our FAQ article. As this interaction is only displayed on a successful API response, we can capture and log information here.
 
@@ -46,11 +48,11 @@ Our custom event is called with three arguments:
 
 With this in place, we will fire off a new event every time this interaction is displayed. We’ll look at the result of this after we include the second custom event.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/bp_eventLogging2.png" alt="">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/bp_eventLogging2.png" alt="An example conversation with a consumer">
 
 For our second event, we want to identify and record user responses to determine if we have false positives or mismatched intents. In the example below, our user has been presented with incorrect information, despite the fact that their message was picked up by one of our KB intents.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/bp_eventLogging3.png" alt="">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/bp_eventLogging3.png" alt="An example conversation with a consumer where they say that their question wasn't answered">
 
 This interaction will register as a matched intent in Bot Analytics. We want to ensure that we are logging this interaction with the appropriate data to ensure that we can address false positives. To do so, we will include the following code snippet in the **Process User Response** section of the multiple choice question interaction.
 
@@ -73,11 +75,11 @@ By using the user's response in the custom event title, we have effectively crea
 
 Within Bot Analytics, let's navigate to **Custom Events** by using the three-dot menu.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bp_eventLogging4.png" alt="">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bp_eventLogging4.png" alt="The Custom Events menu option in Bot Analytics">
 
 We are first greeted by a graph showing the occurrences of all our created custom events. While we are not yet seeing all the details from our events, we can quickly see the number of KB article searches against the number of false positives from those searches. We already have some benefits by including the custom logs simply by seeing how accurate our matched intents are.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_eventLogging5.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_eventLogging5.png" alt="The Events page, with a pointer to the Events menu you can use to filter the data">
 
 From the Event Menu, you can select the individual custom events to gain specific information about what triggered that event.
 
@@ -90,11 +92,11 @@ Download Event Details will provide you with a CSV file that includes all the de
 * eventCreationTime (timestamp of event)
 * conversationId (unique ID for the conversation)
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/bp_eventLogging6.png" alt="">
+<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/bp_eventLogging6.png" alt="An example of a downloaded CSV file">
 
 This information allows you to see where your bot isn't performing as expected and is valuable to train and tune your knowledge base intents. All user-reported, mismatched intents for this knowledge base will show here and provide a window into where you can make improvements.
 
-{: .important}
+{: .attn-note}
 When downloading custom events in Bot Analytics, the limit is 100,000 in number.
 
 Custom events provide a powerful way to add functionality to your reporting workflow. Adding them to your bot developer's toolset will enhance the content of your analytics in a number of different scenarios.

@@ -16,7 +16,7 @@ The following documentation outlines the configuration for the connector and how
 
 ### Configuration
 
-{: .important}
+{: .attn-note}
 See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
@@ -81,10 +81,10 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tbody>
 </table>
 
-{: .important}
+{: .attn-note}
 `EnvironmentId` is an optional parameter. When it is not provided, the current Draft Flow will be used.
 
-{: .important}
+{: .attn-note}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
 <br />
@@ -111,7 +111,7 @@ The expected output of a service account setup is a JSON file, example below:
 
 Figure 1.2 JSON containing Private key that is generated during the Service Account setup
 
-{: .notice}
+{: .attn-alert}
 The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
 <br />
@@ -124,7 +124,7 @@ Figure 1.3 Environments in the Dialogflow CX Console
 
 The necessary Environment ID is the last part of the environment URI you can copy in the Dialogflow CX console.
 
-{: .important}
+{: .attn-note}
 projects/test-project/locations/us-central1/agents/a11a1aa1-aa1a-1a11-a1a1-1111111111a11/environments/**_53ad121d-5196-41a3-4682-d9de6df94203_**
 
 <br />
@@ -134,6 +134,8 @@ For validation of the credentials provided, you can now perform a test connectio
 have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeed
 or fails.
 You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
+**Please note** that your bot should be capable of handling unsupported messages either via fallback intents
+or as your design pleases. This will ensure the success of the call to the API of Dialogflow CX for testing the connection.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png" alt="">
 
@@ -141,14 +143,14 @@ Figure 1.4 Showing the failure case when testing the connection.
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Google DialogFlow CX bot.
 
-{: .important}
+{: .attn-note}
 Following guide is going to introduce how to implement functions specifically for **Dialogflow CX** using [Dialogflow console](https://console.cloud.google.com/apis/api/dialogflow.googleapis.com/). Continue if you are familiar and have access to [Dialogflow console](https://console.cloud.google.com/apis/api/dialogflow.googleapis.com/).
 
 ### Limitations
 
 #### Query length Limit
 
-<div class="notice">The Dialogflow CX service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow. To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ <em>event</em>.</div>
+<div class="attn-alert">The Dialogflow CX service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow. To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ <em>event</em>.</div>
 
 1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 

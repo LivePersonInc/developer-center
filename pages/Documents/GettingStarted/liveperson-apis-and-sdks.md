@@ -3,10 +3,14 @@ pagename: LivePerson APIs and SDKs
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: liveperson-apis-and-sdks.html
+redirect_from:
+  - essential-resources-messaging-features-capabilities-comparison.html
+  - api-guidelines-important-updates.html
+  - important-updates.html
 indicator: both
+date_published: 2022/08/03
+date_updated: 2022/09/30
 ---
-
-[comment]: <> TODO: Regularly confirm page accuracy
 
 ### APIs
 
@@ -23,6 +27,7 @@ indicator: both
 | [Audit Trail API](audit-trail-api-introduction.html) | List changes made to users, profiles, skills, lines of business, or agent groups |
 | [Automatic Messages API](automatic-messages-api-overview.html) | Retrieve and modify Automatic Messages |
 | [Chat Agent API](chat-agent-api-overview.html) | Run agent activities |
+| [Connect To Messaging API](connect-to-messaging-api.html) | Deflect to messaging when calling into IVR |
 | [Connector API](connector-api-overview.html) | Connect common messaging channels |
 | [Consumer Messaging History API](consumer-messaging-history-api-overview.html) | Retrieve historical conversations data |
 | [Conversation Context Service API](conversation-orchestrator-conversation-context-service-overview.html) | Guide contextual continuity, context-based dynamic, and human-bot tango |
@@ -33,12 +38,13 @@ indicator: both
 | [Engagement History API](engagement-history-api-overview.html) | Search and filter copies of chat transcripts and related data |
 | [Engagement Trigger API](engagement-trigger-api-overview.html) | Get information about engagements and interact with them |
 | [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) | Retrieve CSV files for test reports |
-| Key Messaging Metrics API | [→ Outbound Reporting API](outbound-reporting-api-overview.html) |
+| Key Messaging Metrics API | → [Outbound Reporting API](outbound-reporting-api-overview.html) |
 | [LOBs API](lobs-api-overview.html) | Manage Lines of Business |
 | [Login Service API](login-service-api-overview.html) | Manage user sessions |
 | [Messaging Interactions API](messaging-interactions-api-overview.html) | Retrieves most up-to-date information about messaging interactions |
 | [Messaging Operations API](messaging-operations-api-overview.html) | Extract call center information on account, skill, and agent level |
 | [Messaging Window API](messaging-window-api-overview.html) | Control messaging window look, behavior, and implementation source |
+| Model Tester External APIs | → [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api)<br>→ [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) |
 | [Monitoring API](monitoring-api-overview.html) | Enable consumer monitoring and engagement flows |
 | [Net Handle Time API](net-handle-time-api-overview.html) (beta) | Calculate agent headcount |
 | [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) | Retrieve next best action (route to skill, send a response, etc.) for a bot or app |
@@ -47,8 +53,9 @@ indicator: both
 | [Personal Data Deletion API](personal-data-deletion-api-overview.html) | Delete personal data (e.g., to comply with regulations like the GDPR) |
 | [Predefined Categories API](predefined-categories-api-introduction.html) | Group and manage predefined categories |
 | [Predefined Content API](predefined-content-api-overview.html) | Find, create, modify, and delete predefined content items |
+| [Proactive Messaging API](proactive-messaging-api.html) | Send outbound messages to consumers and route responses from consumers into the Conversational Cloud |
 | [Profiles API](profiles-api-overview.html) | Manage Admin, Agent Manager, Agent, Campaign Manager, or customized profiles |
-| [Send API](connector-api-send-api-overview.html) | Handles communication between Connector and Conversational Cloud |
+| [Send API](connector-api-send-api-overview.html) | Handles communication between Connector and the Conversational Cloud |
 | [Server Chat API](server-chat-api-overview.html) | Incorporate Conversational Cloud chat window into desktop or mobile applications |
 | [Shift Status API](shift-status-api-overview.html) | Check whether skills are currently in an active shift |
 | [Skills API](skills-api-overview.html) | Manage skills |

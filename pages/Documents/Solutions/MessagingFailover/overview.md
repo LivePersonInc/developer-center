@@ -13,6 +13,9 @@ permalink: alternate-messaging-notifications-overview.html
 indicator: messaging
 ---
 
+{: .attn-deprecation}
+This information is outdated.
+
 The Alternate Messaging Notifications Solution is for brands that cannot deploy Mobile App Messaging, but still need a method to remind their visitors when they have a new message from an agent that they haven’t read in a while. Normally, this need is serviced by push notifications; however, since web messaging does not by definition has such notifications, a different solution is needed. The proposed solution aims to retain web messaging visitors by alerting them of any unread messages if they do not come back to the website, whether via an email/SMS (which are configured via the solution UI) or via a badge notification on the website's engagement button.
 
 This document will highlight the features of the Alternate Messaging Notifications Solution as well as the badge notification API layer, as well as steps and requirements for deploying this solution.
@@ -73,12 +76,12 @@ Example front-end usage can be found below. In this example, we call the Badge N
 
 ```javascript
 $.get('https://messagingfailover.herokuapp.com/helpers/msghist/' + lpTag.site + '/' + jwt_decode(token).sub + '/unreadByConsumer',
-	function(data){
-		console.log(data);
-		if(data.unreadByConsumer){
-			//display badge
-		  document.getElementById("new-messages-notification").style.display="table";
-		}
+  function(data){
+    console.log(data);
+    if(data.unreadByConsumer){
+      //display badge
+      document.getElementById("new-messages-notification").style.display="table";
+    }
 });
 ```
 

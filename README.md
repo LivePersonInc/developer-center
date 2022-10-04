@@ -1,3 +1,5 @@
+![Logo](https://knowledge.liveperson.com/images/logo.svg)
+
 # LivePerson’s Developer Center and Community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
@@ -65,7 +67,7 @@ Example of a normal layout:
       - documentname: Chat Agent API
         basedomain: https://{domain}/api/account/{accountId}/agentSession
         pages:
-        - pagename: Overview 
+        - pagename: Overview
 
 1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
 2. `Add Agent Widgets` is a folder in layer 1 with the `AgentExperience/AddAgentWidgets` path. The `Add Agent Widgets` folder only contains one page.
@@ -89,14 +91,14 @@ Example of a subfolder layout:
               - subpagename: Using Meta Intents with Conversation Builder
               - subpagename: Implementing a Web View Integration
               - subpagename: Using LivePerson Functions with a Bot
-  
+
 1. The `pagename` entry `Tutorial & Guides` is not a file, but a folder, because it has subpages.
 2. In the Markdown file for `Using Meta Intents with Conversation Builder`, the `pagename` must match the `subpagename`.
-3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2. 
-4. The file must include `Conversation Builder` as a `documentname` in the header. 
+3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2.
+4. The file must include `Conversation Builder` as a `documentname` in the header.
 5. The permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`.
 6. Notice how the `&` in the `subfoldername` is replaced by a dash in the permalink.
-  
+
 Another example:
 
     - categoryname: Getting Started
@@ -117,7 +119,7 @@ Another example:
         - pagename: Engagement Attributes
         - pagename: Analytics Builder Data Metrics
         - pagename: Retry Policy Recommendations
-        
+
 1. The `documentname` entry `Getting Started with your Free Trial Account` does not represent a folder, because it does not contain a pages key.
 2. Since this above file only contains one parent, there should not be a `documentname` in the file `getting-started-with-your-free-trial-account.md`.
 3. The `pagename` for `getting-started-with-your-free-trial-account.md` must match the `documentname` in the YAML file `Getting Started with your Free Trial Account`.
@@ -144,6 +146,8 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
+* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
+* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
 
 ## Notes on content and code
 
@@ -158,20 +162,33 @@ When contributing to this repository, please observe the following:
 * Use lists (ordered series in numbered lists, unordered series in bulleted lists)
 * In headings, use [sentence case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/sentence-case) (“This is a heading”)
 * Use an Oxford comma (“one, two, and three”)
-* Use typographically correct quotation marks (“”)
+* Use typographically correct quotation marks (“”) ([keyboard shortcuts](https://chrisbracco.com/curly-quotes/))
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+* In code samples, indent by two spaces
+
+#### APIs and SDKs
+
+If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
+
+### Special formatting
+
+* You can precede a paragraph with the following to highlight the content:
+  - `{: .attn-note}` — important info to pay attention to
+  - `{: .attn-alert}` — warnings or alerts (anything that indicates a problem)
+  - `{: .attn-deprecation}` — info on features that are discouraged or no longer supported
+  - `{: .attn-tip}` — useful suggestions or ideas
+  - `{: .attn-info}` — complementary or auxiliary info
 
 ### Code and media
 
 * Be consistent
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
-* To highlight notes, important sections, or deprecated information, you can precede the respective paragraph with `{: .important}`, `{: .notice}`, or `{: .deprecated}`
 * The maximum (view) width for images in this repository is 800 pixels
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are always welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
 
 ## Building the site locally
 
@@ -181,12 +198,12 @@ If you have not done so, install Ruby. Here’s a helpful guide on [how to best 
 
 Once you have installed Ruby, clone this repository to your machine. Then, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you’re on Windows, don’t forget to run your CLI as an admin.**
 
-### First time install
+### Install
 
 1. Run `npm install`
 2. Run `bundle install`
 
-### Start-up
+### Launch
 
 3. Run `npm run serve`
 4. Navigate to http://localhost:4000/ (or the port you chose) to access the site

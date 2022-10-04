@@ -25,18 +25,18 @@ A good starting point is the documentation on
 
 ### Limitations
 
-{: .important}
+{: .attn-note}
 Third-Party Bots only supports the Direct Line API version 3.0.
 
-{: .important}
+{: .attn-note}
 Third-Party Bots only supports authorization with the Direct Line secret. Authorization with a Bot ID and Tenant ID is
 not supported.
 
-{: .important}
+{: .attn-note}
 Third-Party Bots uses the replyToId of a bot activity to match it against the consumer message.
 Bot activities that are not an explicit response to a consumer message won't be processed.
 
-{: .important}
+{: .attn-note}
 The connector respects the error codes sent by the Direct Line API. For example, the API sends the HTTP Status Code
 `502` if a bot does not handle a message within 15 seconds.
 This means that our connector won't process activities that are sent by the bot in this case. Instead, it resends
@@ -51,7 +51,7 @@ Figure 1.1 The vendor configuration step for Microsoft Direct Line bots
 <br>
 <br>
 
-{: .important}
+{: .attn-note}
 **Test Connection** requires the bot to acknowledge the test message that will be sent.
 The bot does not necessarily need to send any response activities for this message.
 

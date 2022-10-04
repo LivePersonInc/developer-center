@@ -24,7 +24,7 @@ v2 — will allow to retrieve both authenticated and unauthenticated engagement 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                | 
+| serverTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType    | Customer type — will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | v1- alphanumeric, v2- double|

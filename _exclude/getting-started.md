@@ -1,6 +1,6 @@
 THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
-{: .important}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Overview
@@ -132,7 +132,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
 You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that hasn't been accounted for? To catch and handle these when they occur, you can provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
 
-{: .important}
+{: .attn-note}
 There can be only one dialog of type Fallback per bot.
 
 1. In the Dialogs panel on the left, click **2 Fallback**. This opens the Fallback dialog.
@@ -319,7 +319,7 @@ You now understand the basics of intents, entities, and branching dialog flows.
 
 Many use cases require integration with an API to send and receive data. Following the "billing" use case, in this tutorial you add an integration to check a user’s account balance.
 
-{: .important}
+{: .attn-note}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
 #### Watch the video
@@ -429,7 +429,7 @@ This tutorial uses an example API that returns random balance data when given an
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/displaybalance.png" alt="">
 
     When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
-  
+
     Now let's test all this out.
 
 11. Open the Preview window, and start a new session by clicking **Reset Session**.
@@ -559,7 +559,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png" alt="">
 
-{: .important}
+{: .attn-note}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ##### Start the agent connector
@@ -572,7 +572,7 @@ LivePerson recommends that, when you connect your bot to Conversational Cloud in
 
 #### Step 13: Test the bot
 
-{: .important}
+{: .attn-note}
 In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
 
 1. Be sure you are online as a Human agent in Conversational Cloud.

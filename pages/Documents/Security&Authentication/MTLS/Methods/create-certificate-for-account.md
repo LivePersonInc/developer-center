@@ -3,19 +3,19 @@ pagename: Create certificate for account
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-create-certificate-for-account.html
 ---
 
-{: .important}
+{: .attn-note}
 Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
 
 This API creates a certificate for a specific account ID.
 
 ### Request
 
-|Method|      URL|  
+|Method|      URL|
 |:--------  |:---  |
 |POST|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
@@ -59,9 +59,9 @@ This API creates a certificate for a specific account ID.
 For example:
 
 ```json
-{  
-   "successfulySavedCertificates":[  
-      {  
+{
+   "successfulySavedCertificates":[
+      {
          "id":2628739923,
          "deleted":false,
          "name":"{certificateName}",
@@ -71,7 +71,7 @@ For example:
 	 "expirationDate": null
       }
    ],
-   "failedSaveToVaultCertificates":[  
+   "failedSaveToVaultCertificates":[
 
    ]
 }

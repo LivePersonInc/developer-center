@@ -40,13 +40,13 @@ However, instead of hardcoding the authorization server, it is recommended to us
 ### Step 3: Generate OAuth 2.0 access token
 
 Together with the retrieved domain of the authorization server and the `client_id` + `client_secret`, you can now generate an access-token.
-"Sentinel", the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request. 
+"Sentinel", the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any API request.
 
 ### API Versioning
 
-We currently have two versions for token generation.  
+We currently have two versions for token generation.
 
-**API V1** — This API uses a static private signing key. 
+**API V1** — This API uses a static private signing key.
 
 Please use the following public key for the JWT signature validation:
 ```jwtPublicKey
@@ -60,7 +60,7 @@ Host: {sentinel_service_domain}
 Content-Type: application/x-www-form-urlencoded
 
 client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
-``` 
+```
 
 **API V2** — uses a dynamic singing key whose corresponding public key can be retrieved from Sentinel's well-known JWKS endpoint:
 
@@ -78,9 +78,9 @@ client_id={client_id}&client_secret={client_secret}&grant_type=client_credential
 ```
 
 The `sentinel_service_domain` has been retrieved in step #2.
-The `account_id` is your LivePerson site id. 
+The `account_id` is your LivePerson site id.
 
-The content type is always `application/x-www-form-urlencoded`. Sentinel will answer in accordance with [OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/). For example, a successful response looks as follows:  
+The content type is always `application/x-www-form-urlencoded`. Sentinel will answer in accordance with [OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/). For example, a successful response looks as follows:
 
 ```http
 HTTP/1.1 200 OK
@@ -92,7 +92,7 @@ Content-Type: application/json;charset=utf-8
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developer-center/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-<img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
+<!-- <img src="img/faas-postman.png" alt="Postman" style="width:100%;"/> -->
 
 1. In your request-tab under your function click on **Authorization**
 
@@ -102,14 +102,14 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
 4. In the appearing dialog fill out the form:
 
-![](img/faas-token-client-credentials.png)
+<!-- ![](img/faas-token-client-credentials.png) -->
 
   1. **Token Name**: The name of the token.
 
   2. **Grant Type**: Select grant type **Client Credentials**.
 
   3. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example:
-  
+
       {% raw %}
       `https://{{domain}}/sentinel/api/v2/account/{{accountId}}/app/token`
       {% endraw %}

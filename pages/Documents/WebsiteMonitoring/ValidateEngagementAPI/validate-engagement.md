@@ -58,9 +58,9 @@ This API supports OAuth 1.0.
 | Code     | Description |
 | :------ | :------- |
 | 200 | OK; Engagement is valid |
-| 401 | Unauthorized (no permissions) |  
+| 401 | Unauthorized (no permissions) |
 | 404 | Engagement is not valid or resource not found |
-| 422 | Invalid Account ID |      
+| 422 | Invalid Account ID |
 | 500 | Internal Server Error |
 | 503 | Service Unavailable |
 

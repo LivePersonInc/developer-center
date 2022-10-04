@@ -21,28 +21,40 @@ CCS is a cloud-based repository for storing and retrieving session state attribu
 
 CCS provides a system to hierarchically organize data using *key-value pairs*. At the top of the hierarchy, brands can have multiple *namespaces* to specify sections based on different business use cases. Typically, namespaces group together related attributes, such as customer information or reporting dashboard data for your account. Brands can define as many attributes as needed within their namespace, and they can further organize and structure these attributes under session IDs within the namespace.
 
-<img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_namespace.png" alt="">
+```
+{ Namespace
+
+  <Group-related attributes, e.g., customer info>
+
+  { Session ID
+
+  <Identifier to group KVPs, e.g., a session ID>
+
+    { Key-Value Pairs
+
+    <Attributes, e.g., customer name, email>
+```
 
 CCS stores data in key-value pairs and includes developer tools like js-libraries, LivePerson Functions support and REST APIs. These can be used to store data from other products within the Conversational Cloud and from external data sources.
 
 ### When to use the Conversation Context Service
 
-{: .important}
+{: .attn-note}
 Don’t store personally identifiable information (PII) in the Conversation Context Service.
 
 CCS attributes can be used in a variety of ways to enhance the conversational experience of consumers. Attributes are accessible at any point in the conversational journey, and they can be used in the following ways:
 
 * **Power contextual continuity between bots** - In this example, the intent and email is being saved into the CCS by one bot and is being retrieved by another bot to continue the conversation.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase1.png" alt="">
+  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase1.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from one bot to another">
 
 * **Perform context-based dynamic routing at scale** - In this example, a concierge bot saves the intent into the CCS. The CCS links to an external CRM to get customer tier information. A Dynamic Routing policy then makes use of the intent and tier information to power a routing decision.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase2.png" alt="">
+  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase2.png" alt="An example conversation with a consumer that illustrates use of the CCS to perform context-based, dynamic routing at scale">
 
 * **Perform human-bot tango** - In this example, bots continue to build context about the consumer and the context information can be exposed to human agents through an agent-facing widget.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase3.png" alt="">
+  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase3.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from bot to human agent">
 
 ### How to use the Conversation Context Service
 
@@ -67,5 +79,5 @@ v2 of the Conversation Orchestrator APIs was released in July 2021. The new vers
 
 All accounts will gradually be migrated from v1 to v2 starting July 2021. Please talk to your LivePerson account executive if you want to be moved to v2 sooner. The v1 APIs will be deprecated on December 31, 2022. Please refer to the [v1](conversation-orchestrator-conversation-context-service-methods-v1.html) or [v2](conversation-orchestrator-conversation-context-service-methods-v2.html) documentation as appropriate for your case.
 
-{: .important}
-You can know you are on v2 if you see OAuth 2.0 authentication on the **API Authorization** page, as discussed [here](conversation-orchestrator-api-authorization.html).
+{: .attn-note}
+To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application, and consult the discussion on [API Authorization](conversation-orchestrator-api-authorization.html).

@@ -45,7 +45,7 @@ if (failedRequest && failedRequest.error) {
 }
 ```
 *Note: For more information on the Survey Object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
-                                                                                                                      
+
 ### Response
 
 **Sample response**

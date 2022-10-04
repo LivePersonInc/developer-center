@@ -31,7 +31,7 @@ An audit trail is available for the following elements:
 * Campaigns
 
 * Predefined content
- 
+
 * Post conversation survey
 
 * Agent conversation survey
@@ -68,7 +68,7 @@ A few things you'll need to get started with this API:
 
 ### Authentication
 
-This API supports both LP OAuth1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](guides-gettingstarted.html).
+This API supports both LP OAuth 1.0 and LP Access Token authentication patterns. More info about LP APIs authentication can be found [here](guides-gettingstarted.html).
 
 ### Use Cases
 

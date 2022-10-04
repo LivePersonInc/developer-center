@@ -91,7 +91,7 @@ Type: String </td>
 
 **Request Body**
 
-The request payload contain the csv content as string and a structure for containing the validation errors in that csv
+The request payload contain the CSV content as string and a structure for containing the validation errors in that CSV:
 
 <table>
   <tr>

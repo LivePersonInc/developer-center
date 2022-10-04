@@ -70,7 +70,7 @@ Now, with these best practices in mind, tap on the Add New button to add your fi
 
 * Enter a brief solution in the summary field. You can include web links in the summary though depending on the channel they may not display correctly. For SMS/Messaging, you may need to show the URL by itself, not wrapped in HTML.
 
-{: .important}
+{: .attn-note}
 The detail field can be used for longer messages but for messaging it is recommended to keep your responses as brief as possible. We will not be using the detail for this exercise.
 
 * Add some tags that highlight the key noun in your intent qualifiers.
@@ -97,7 +97,7 @@ Even though this utterance was not exactly the same as what was added, it still 
 
 If I try something like "my password is not letting me into my account" this is different enough that it returns as FAIR PLUS. Generally we set the threshold to GOOD so this may not be shown to a user. However, we can easily “train” the article by tapping on the thumbs-up <img src="img/faqbot/image_9.png" alt="" style="width:50px"> icon. This will add the utterance to a set of “Positive Learnings” that will be used in the matching. Once you tap the icon, resubmit the search and the article should now come back as VERY GOOD.
 
-{: .important}
+{: .attn-note}
 Keep in mind that when you are training your articles, it is VERY easy to use the thumbs up button. So easy, that you might OVER train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one.
 
 What about thumbs-down? This should be used sparingly to differentiate between two articles that may have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help.
@@ -124,14 +124,14 @@ Previously, we had created a domain and an entity for some of our options (eg: b
 
 * Now, when someone says an utterance that includes any of our entity synonyms, they should match.
 
-{: .important}
+{: .attn-note}
 We do cache the entity values, so if you add a number of entities but they are not matching your articles right away, give them a minute or two and the cache should update.
 
 Now that you understand how to train and tune your knowledge base articles, **add some more articles** and be sure to train them well.
 
 ### Importing the FAQ Template
 
-In the Conversation Builder, tap on the NEW BOT icon and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
+In the Conversation Builder, tap on the NEW BOT button and give your bot a unique name and description. Then select FAQ Bot from the template area below and hit Save.
 
 ### Initial Bot Setup
 

@@ -12,11 +12,11 @@ indicator: messaging
 
 There are two ways to use the Next Actions functionality:
 
-* The REST API can directly access policies. A primary use case for this is to retrieve policy routing decisions when using external, third-party bots, such as Watson or DialogFlow. For more information on integrating your third-party bots with Conversational Cloud, see [here](third-party-bots-getting-started.html).
+* The REST API can directly access policies. A primary use case for this is to retrieve policy routing decisions when using [external, third-party bots](third-party-bots-getting-started.html), such as Watson or DialogFlow.
 * A JavaScript function wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
 ### JavaScript wrapper
-For information on this, see [here](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
+See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
 
@@ -28,8 +28,8 @@ Domain URL per environment:
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 
-{: .important}
-For information on generating the secure token, see [here](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
+{: .attn-note}
+See also the [discussion on generating the secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 #### Get Next Actions
 Gets a routing decision based on Conversation Orchestrator configured policies.
@@ -46,7 +46,7 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 | conversationId | string | The conversation ID of the current conversation | optional |
 | customerId | string | LivePerson customer ID of the current conversation | optional |
 | sessionId | string | The group ID associated with the session store variable call to set values. If no session is specified, then the conversationId is used to associate with the session store variables. | optional |
-| lpToken | string | Bearer {bearer token} | optional | 
+| lpToken | string | Bearer {bearer token} | optional |
 | policyId | string | The ID of the policy | optional |
 
 ##### Request payload example

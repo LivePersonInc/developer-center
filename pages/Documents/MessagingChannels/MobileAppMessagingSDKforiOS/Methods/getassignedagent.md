@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-ios-methods-getassignedagent.html
 indicator: messaging
 ---
 
-Get assigned agent details of the last or current conversation — depending on retrieveAssignedAgentFromLastClosedConversation in the LPConfig defaultConfiguration. 
+Get assigned agent details of the last or current conversation — depending on retrieveAssignedAgentFromLastClosedConversation in the LPConfig defaultConfiguration.
 
 You must check that the SDK is ready before calling this method.
 

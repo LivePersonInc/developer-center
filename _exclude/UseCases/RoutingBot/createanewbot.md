@@ -20,7 +20,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
     ![](img/conversationimages/image_2.png)
 
-3. Click on the NEW BOT icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Router Bot for Training** from the template area below and hit Save.
+3. Click on the NEW BOT button and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Router Bot for Training** from the template area below and hit Save.
 
 4. You will be taken to your new automation in the Conversation Builder.
 

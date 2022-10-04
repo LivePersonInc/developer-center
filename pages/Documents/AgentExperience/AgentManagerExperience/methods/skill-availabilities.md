@@ -19,8 +19,8 @@ Method | URL
 POST| https://[{domain}](/domain-api.html)/manager_workspace/api/account/{accountId}/skill/availability
 
 Note: The amount of retrieved skills is limited by configuration, default value is 1000.<br/>
- 
-**BODY Parameters** 
+
+**BODY Parameters**
 
 Note: Should be a valid JSON object, at least empty body ("{}")
 
@@ -28,21 +28,21 @@ Note: Should be a valid JSON object, at least empty body ("{}")
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Optional |
 
-_filters info_ 
+_filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|userTypes | Type of the user conducting the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT. 
-    
+|userTypes | Type of the user conducting the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT.
+
 Request body — JSON example:
 
 ```json
 {
-    "filters": {        
+    "filters": {
         "userTypes": [
             "HUMAN"
         ]
-    }        
+    }
 }
 ```
 
@@ -62,8 +62,8 @@ count  | Number of returned skills.| long
 _skillAvailabilities info_
 
 | Name| Description | Type/ Value| Notes|
-|-----|-------------|------------|------| 
-| skillId| The skill Id. | Long | 
+|-----|-------------|------------|------|
+| skillId| The skill Id. | Long |
 | onlineAgents| The number of online agents.| Long |
 | backSoonAgents| The number of back soon agents.| Long |
 | awayAgents| The number of away agents.| Long |
@@ -81,7 +81,7 @@ Response DTO — JSON example:
             "backSoonAgents": 2
         }, {
             "skillId": 3680508912,
-            "awayAgents": 1            
+            "awayAgents": 1
         }
     ]
 }

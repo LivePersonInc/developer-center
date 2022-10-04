@@ -1,7 +1,7 @@
 ---
 pagename: Overview
 redirect_from:
-  - 
+  -
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
@@ -14,7 +14,7 @@ indicator: messaging
 ---
 ### Introduction
 
-{: .notice}
+{: .attn-alert}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing
 
 The key messaging metrics API retrieves core messaging metrics at the account, skill or agent group level, for up to the last 24 hours.

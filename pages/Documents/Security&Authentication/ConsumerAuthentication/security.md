@@ -13,7 +13,7 @@ permalink: consumer-authentication-security.html
 indicator: messaging
 ---
 
-At LivePerson, security is a top priority and key for enabling trusted, meaningful engagements.  
+At LivePerson, security is a top priority and key for enabling trusted, meaningful engagements.
 
 LivePerson's comprehensive security model and practices were developed based on:
 * Years of experience in SaaS operations

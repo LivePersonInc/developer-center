@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-Users within Conversational Cloud can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
+Users within the Conversational Cloud can be agents, agent managers, administrators, or campaign managers. For brands with many agents, the user list may need to be updated regularly. The user entity includes name, picture URL, password, skill, and other important user information.
 
 **Note:** The current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:
 
@@ -25,7 +25,7 @@ Users within Conversational Cloud can be agents, agent managers, administrators 
 
 ### Getting Started
 
-A few things you'll need to get started with this API:
+A few things you’ll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
@@ -39,14 +39,14 @@ A few things you'll need to get started with this API:
 
 	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow**
 		* **OAuth 1.0 App Keys** — [follow the instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
-		
-		{: .important}
-	For the Users API, select the Admisintration category and check Users
 
-		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.  
+		{: .attn-note}
+	For the Users API, select the Administration category and check Users
 
-		{: .important}
-	When registering an OAuth 2.0 application for using the Users API, use the 'users.read' and 'users.write' scopes
+		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.
+
+		{: .attn-note}
+	When registering an OAuth 2.0 application for using the Users API, use the “users.read” and “users.write” scopes
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
@@ -54,9 +54,9 @@ A few things you'll need to get started with this API:
 
 ### Use Cases for Users API
 
-* Automatically update user information such as profile picture, login name, or password
+* Automatically update user information such as profile picture, email, nickname, or password
 
-* Automatically update user assignments such as skills, max concurrent chats or max open messaging conversations
+* Automatically update user assignments such as skills, max concurrent chats, or max open messaging conversations
 
 * Automatically add new agent users to the system
 

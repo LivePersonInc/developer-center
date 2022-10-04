@@ -32,7 +32,7 @@ This step requires that you have a user account for the Conversation Builder pla
 
     ![](img/conversationimages/image_2.png)
 
-3. Click on the NEW BOT icon and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Router Bot for Training** from the template area below and hit Save.
+3. Click on the NEW BOT button and give your bot a unique name and description. Be sure to select Version 2.0 under Bot Builder and Consumer Facing Bot. Then select **Router Bot for Training** from the template area below and hit Save.
 
 4. You will be taken to your new automation in the Conversation Builder.
 
@@ -260,7 +260,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
     * Add the following to the editor and hit Save: botContext.printDebugMessage(‘Here is my Welcome debug message!’);
 
-    {: .important}
+    {: .attn-note}
     If you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
 
 4. You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
@@ -275,7 +275,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
 Because this is a routing bot, its main purpose is to route to a particular skill based on the user’s intent.
 
-{: .important}
+{: .attn-note}
 For the purposes of this tutorial we will NOT be connecting to LiveEngage.
 
 <img src="img/conversationimages/image_38.png" alt="" style="height:200px">

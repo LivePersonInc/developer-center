@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-ios-resources-customizing-toast-notifica
 indicator: messaging
 ---
 
-{: .notice}
+{: .attn-alert}
 This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
 **Note:** Once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior.

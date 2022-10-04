@@ -1,16 +1,7 @@
-
-
 - solutionname: Mobile App Messaging
   image: mobile-app-messaging
   documents:
     - documentname: Add Messaging to Your App
-
-- solutionname: MCS Toolkit
-  image: mcs-toolkit
-  documents:
-    - documentname: Overview
-    - documentname: Getting Started
-    - documentname: Using API to Build the Toolkit
 
 - solutionname: CRM Integrations
   image: crm-integrations
@@ -38,7 +29,6 @@
     - documentname: Technical Description
     - documentname: Deployment Steps
     - documentname: Additional Options
-
 
 - solutionname: Video Chat
   image: video-chat

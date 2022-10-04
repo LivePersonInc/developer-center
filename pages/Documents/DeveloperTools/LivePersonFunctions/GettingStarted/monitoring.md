@@ -44,7 +44,7 @@ Within your function code, you can write logs of different levels. Those are the
 * Warn
 * Error
 
-{: .notice}
+{: .attn-alert}
 Logs written as part of a [test invocation](liveperson-functions-getting-started-your-first-function.html#test) will not be stored permanently. Further `Debug` logs are never stored and will be only visible as part of [test invocations](liveperson-functions-getting-started-your-first-function.html#test), allowing to debug and verify without the risk of having sensitive data leak into persistent logs.
 
 The following code will show the JavaScript interface along with examples that should highlight the use of optional `extras`:
@@ -113,8 +113,18 @@ Given that multiple developers and users may use a Functions account, it can get
 
 All activities will be stored for roughly two months and can be reviewed in this time window. For example, some of the activities, `Lambda Update`, come with different subactivities. The Description field usually discloses those. Sticking to our example of the `Lambda Update`, you may see `Lambda deployed` and `Code changed` as potential subactivities.
 
-<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png"> 
+<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png">
 
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
-<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
+<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png">
+
+### Invocation Histogram
+
+The invocation histogram allows you to better understand how your function was invoked over time and how it behaved. The graph includes successful and unsuccessful invocations.
+
+Please be aware that invocation data will be retained for the last 30 days and not longer. The graph is updated every few minutes.
+
+The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the x-axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
+
+<img alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">

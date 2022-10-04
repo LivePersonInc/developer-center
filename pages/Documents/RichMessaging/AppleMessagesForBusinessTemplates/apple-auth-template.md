@@ -26,7 +26,7 @@ See the message flow below:
 
 ### Setup
 
-1. Supply your private OAuth2 service details in your Apple management area (register.apple.com).
+1. Supply your private OAuth 2.0 service details in your Apple management area (register.apple.com).
 
 The required details include:
 
@@ -36,9 +36,9 @@ The required details include:
 
 * Client Identifier
 
-#### Instructions on how to create a free OAuth2 service using [auth0](https://auth0.com/)
+#### Instructions on how to create a free OAuth 2.0 service using [auth0](https://auth0.com/)
 
-If you do not yet have an OAuth2 service or if you need a test service, follow the instructions below:
+If you do not yet have an OAuth 2.0 service or if you need a test service, follow the instructions below:
 
 1. Create a [auth0 account](https://auth0.com/)
 
@@ -52,7 +52,7 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
 
-7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use.
 
 ### Checking for Apple Auth device compatibility
 
@@ -86,7 +86,7 @@ The **body** template will only define how the Apple Auth bubble is displayed in
 
 ![](img/apple_auth_consumer1.png)
 
-**Consumer fills out form from OAuth2 provider**
+**Consumer fills out form from OAuth 2.0 provider**
 
 ![](img/apple_auth_consumer2.png)
 
@@ -104,7 +104,7 @@ The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessag
 
 The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` and `responseEncryptionKey` (public key), which allows you to identify the authentication request and map the OAuth token in the response to the request originator.
 
-{: .important}
+{: .attn-note}
 The requestIdentifier and responseEncryptionKey is optional, but the responseEncryptionKey is required to view the auth response from an agent widget.
 
 Please use the metadata template with the relevant fields, as presented in the example below:
@@ -133,7 +133,11 @@ Please use the metadata template with the relevant fields, as presented in the e
     "requestIdentifier": "Insert Your Unique Request Key Here",
     "apple": {
       "oauth2": {
-        "responseEncryptionKey": "Insert Your Public Key Here"
+        "clientSecret": "A string indicating the secret provisioned by the authorization server.",
+        "scope": "Insert your scope here. Ex.['email','profile']",
+        "responseType": "A string indicating the type of authentication request"
+        "responseEncryptionKey": "Insert your public key here",
+        "state": "A string indicating the state of the authentication request."
       }
     }
   }
@@ -160,7 +164,7 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>ConnectorAuthenticationRequest</td>
     <td>Represents a Business Chat authentication request </td>
     <td>Object</td>
-    <td>N</td>
+    <td>Y</td>
   </tr>
   </tbody>
 </table>
@@ -187,12 +191,36 @@ Please use the metadata template with the relevant fields, as presented in the e
     <td>string</td>
     <td>N</td>
   </tr>
+   <tr>
+    <td>apple.oauth2.scope</td>
+    <td>An array of scope items that specifies the scope of the request, gives the exact fields of data that the authentication service provides to client requesting the authentication.</td>
+    <td>Array&lt;string&gt;</td>
+    <td>Y</td>
+  </tr>
+    <tr>
+    <td>apple.oauth2.clientSecret</td>
+    <td>A string indicating the secret provisioned by the authorization server.</td>
+    <td>string</td>
+    <td>Y</td>
+  </tr>
+     <tr>
+    <td>apple.oauth2.responseType</td>
+    <td>A string indicating the type of authentication request.</td>
+    <td>string</td>
+    <td>Y</td>
+  </tr>
+     <tr>
+    <td>apple.oauth2.state</td>
+    <td>A string indicating the type of authentication request.</td>
+    <td>string</td>
+    <td>Y</td>
+  </tr>
   </tbody>
 </table>
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
 
-###### `receivedMessage` Object Properties  
+###### `receivedMessage` Object Properties
 
 <table>
   <thead>
@@ -230,7 +258,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tbody>
 </table>
 
-###### `replyMessage` Object Properties  
+###### `replyMessage` Object Properties
 
 <table>
   <thead>
@@ -303,7 +331,7 @@ If you are authenticating the consumer with a **bot**, you can listen for the au
 
 If you are authenticating the consumer with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorAuthResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorauthresponse).
 
-{: .important}
+{: .attn-note}
 If reading the auth response in an Agent Widget, you **must** initially send a public key.
 
 #### Response Metadata
@@ -331,7 +359,7 @@ The authentication response metadata is contextual information about the consume
     "status"            : false,
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
-        "message" : "Optional Error Message"    
+        "message" : "Optional Error Message"
     }]
 }
 ```

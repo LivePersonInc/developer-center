@@ -1,7 +1,7 @@
 ---
 pagename: Historical
 redirect_from:
-  - 
+  -
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
@@ -13,17 +13,17 @@ indicator: messaging
 
 ---
 
-### General 
+### General
 
 The trends API retrieves messaging metrics over time filtered by agent, group or skill  for a time frame of up to 24 hours.
 
 Using this API, you can enrich your customized real-time dashboard. Here are some example use cases of the API, that can assist you in analyzing your contact center performance:
 
-- Track how many conversation have been closed over time, for a pre-defined skill / agent / group 
+- Track how many conversation have been closed over time, for a pre-defined skill / agent / group
 
-- Track how many conversation have been transferred over time, for a pre-defined skill / agent / group 
+- Track how many conversation have been transferred over time, for a pre-defined skill / agent / group
 
-- Track how many conversation have been concluded over time, for a pre-defined skill / agent / group 
+- Track how many conversation have been concluded over time, for a pre-defined skill / agent / group
 
 ### Request
 
@@ -49,9 +49,9 @@ _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section.
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
-|agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
+|agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional |
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 

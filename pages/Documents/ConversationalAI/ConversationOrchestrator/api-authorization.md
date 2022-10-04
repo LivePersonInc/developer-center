@@ -11,8 +11,8 @@ indicator: messaging
 
 Server-to-server authentication is required to use Conversation Orchestrator APIs, including the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism differs between version 1 (v1) and version 2 (v2).
 
-{: .important}
-To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
+{: .attn-note}
+There are some [differences between v1 and v2](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
 
 ### API Authorization for v1
 
@@ -20,7 +20,7 @@ Version 1 APIs are dependent on an API authorization key. To get your unique key
 
 1. **Access the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." This page displays an API key that you can use.
 
-    <img width="800" src="img/convorchestrator/api_auth1.png" alt="">
+    <img width="800" src="img/convorchestrator/api_auth1.png" alt="The Developer Key page where you can copy your API key">
 
 2. **Use the API key**: Copy and paste the key provided, and use it in your API headers.
 
@@ -32,7 +32,7 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
 
 1. **Launch the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." If you have been upgraded to v2, you will see the screen below.
 
-    <img width="800" src="img/convorchestrator/api_auth2.png" alt="">
+    <img width="800" src="img/convorchestrator/api_auth2.png" alt="The API Authorization page where you can get credentials for the v2 and v1 APIs">
 
     The page has three sections:
 
@@ -40,23 +40,23 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
     * **Credentials for using the v2 APIs in your code**: This section has a user ID and password that you can use to generate your secure access token. Please see the next step for details.
     * **API key for v1 APIs**: Users who have been upgraded to v2 will have access to the v1 API key until December 31, 2022.
 
-2. **Generate your OAuth2.0 secure access token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure access token through the login endpoint:
+2. **Generate your OAuth 2.0 secure access token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure access token through the login endpoint:
 
     **<https://{domain}/v2/authenticate/login>**
 
     Domain URL per environment:
-    * AMERICAS : <https://z1.context.liveperson.net>
-    * EMEA: <https://z2.context.liveperson.net>
-    * APAC: <https://z3.context.liveperson.net>
+    * AMERICAS : <https://z1.ccs.liveperson.net/v2/authenticate/login>
+    * EMEA: <https://z2.ccs.liveperson.net/v2/authenticate/login>
+    * APAC: <https://z3.ccs.liveperson.net/v2/authenticate/login>
 
     You will need to authorize the header with the pattern “Basic” followed by a space and a base64-encoded string username:password. For example, to authorize demo / p@55w0rd you would need to send
     Basic ZGVtbzpwQDU1dzByZA==
 
     **Note:** Because base64 is easily decoded, Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL.
 
-    This endpoint returns 200 ok with the OAuth2.0 secure token if the username and password are valid.
+    This endpoint returns 200 ok with the OAuth 2.0 secure token if the username and password are valid.
 
-3. **Use the OAuth2.0 secure token in your API calls**: Pass the token in the authorization header while making API calls.
+3. **Use the OAuth 2.0 secure token in your API calls**: Pass the token in the authorization header while making API calls.
 
 Example:
 

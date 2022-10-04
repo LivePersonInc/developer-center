@@ -13,15 +13,15 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sha
 indicator: messaging
 ---
 Mobile Messaging SDK v4.1 introduces a feature for consumer to share supported type of files to agents.
-Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.    
+Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.
 
 Agents can share:
 
-- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. They can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. They can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. The agent can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
-{: .important}
+{: .attn-note}
 The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by double-clicking on the thumbnail image.
 
 When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
@@ -48,7 +48,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 - Both photo sharing and file sharing are two way (agent-to-consumer and consumer-to-agent)
 
    **For SDKs previous to 4.1:** File sharing is one-way only (from agent-to-consumer, but not vice versa) and available for the Mobile Message SDK only.
- 
+
    **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
 
 - If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
@@ -127,10 +127,10 @@ Contact your Account Team to have the features enabled on your account.
 
    ```swift
    // photos
-   LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk    
+   LPConfig.defaultConfiguration.maxNumberOfSavedFilesOnDisk
 
    // document files
-   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
+   LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk
    ```
 
    The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest downloaded file.

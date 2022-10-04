@@ -22,7 +22,7 @@
     "code": {
       "type": "integer",
       "description": "Response code according to the HTTP status codes standard"
-    },    
+    },
     "body": {
     }
   },

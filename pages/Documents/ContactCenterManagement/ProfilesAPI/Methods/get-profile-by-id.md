@@ -18,14 +18,14 @@ This API retrieves a single profile (by ID) for a specific account.
 
 ### Request
 
-|Method   |   URL    |            
+|Method   |   URL    |
 |:--------  | :----------------- |
 | GET     |    https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles/{profileId}|
 
 **Request Headers**
 
-|Header     |     Description  |                              
-|:------------  | :---------------------  |                   
+|Header     |     Description  |
+|:------------  | :---------------------  |
 | Authorization  | Contains token string to allow request authentication and authorization. |
 
 **Request Body**
@@ -34,8 +34,8 @@ This API retrieves a single profile (by ID) for a specific account.
 
 **Path Parameters**
 
-| Parameter    |   Description   |   Type / Value      |                                      
-|:------------  | :------------- |  :----------------- |                                       
+| Parameter    |   Description   |   Type / Value      |
+|:------------  | :------------- |  :----------------- |
 |accountId   |    LP site ID   |    string  |
 |profileId       |  Profile ID       |  Positive long number greater than zero |
 

@@ -42,8 +42,8 @@ var failedRequest = myChat.addLine({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```  
-                                                                                                                    
+```
+
 ### Response
 
 **Sample response**

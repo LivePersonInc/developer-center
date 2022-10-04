@@ -10,16 +10,16 @@ permalink: intent-manager-build-versions.html
 indicator: both
 ---
 
-{: .important}
+{: .attn-note}
 This topic applies if your domain is using the LivePerson engine or a third-party NLU engine. The LivePerson (Legacy) engine doesn't require training, nor does it support versions.
 
 ### Train a domain
 
 Training a domain creates a new model version with the results. The process and related info vary depending on which NLU engine the domain uses:
 
-* LivePerson NLU engine: See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain).
-* Google Dialogflow or IBM Watson NLU engine: See [here](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain).
-* Your Rasa-based NLU engine: See [here](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain).
+* [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#train-a-liveperson-domain)
+* [Google Dialogflow or IBM Watson NLU engine]((intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html#train-a-domain))
+* [Your Rasa-based NLU engine]((intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#train-a-domain))
 
 A new model version created from training isn't activated automatically. See below for info on this.
 
@@ -31,7 +31,7 @@ The first model version that you create via training is activated automatically.
 
 Each model version starts as a copy of the version before it regardless of whether it has been activated or not. You can (and should!) create and test multiple model versions before choosing to activate one of them. You can activate any model version that was created after the one that is currently activated. Typically, you'll test as you go, so you'll be activating the latest model version.
 
-{: .important}
+{: .attn-note}
 Ensure you test before activating a model version. Once you activate a version, all earlier versions are no longer available, so you can’t deactivate it or revert back to a previous version. To update, you’ll need to activate an even more recent model version. You might already have one if you didn’t activate the most recent version. Or, if you don’t have one, you’ll have to update the domain as needed, retrain to create a new model version, and then activate that version. If you think you might want to revert after an update, you can export the training phrases and entities before updating them. You can then use the export files to create a new model version at any time.
 
 **Example 1:** Assume you're using model version 3, and you create model versions 4, 5, 6 and 7 also. After testing, you activate version 7. Once you do so, versions 3 through 6 are no longer available. From this point, you can train a new version 8, which builds upon version 7.
@@ -48,4 +48,4 @@ Ensure you test before activating a model version. Once you activate a version, 
 4. Select the **Versions** page.
 4. Click the **Activate** button beside the latest model version.
 
-    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_activate.png">   
+    <img class="fancyimage" style="width:900px" alt="Version page showing three versions, one is active and the other two have Activate buttons" src="img/ConvoBuilder/ib_activate.png">   

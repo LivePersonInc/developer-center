@@ -18,21 +18,21 @@ Deletes a Predefined Content item from a specific account.
 
 ### Request
 
- |Method|  URL| 
- |:-------  |:-----| 
+ |Method|  URL|
+ |:-------  |:-----|
  |DELETE|  /api/account/{accountId}/configuration/engagement-window/canned-responses/{pre-defined-content-id} |
 
 **Path Parameters**
 
  |Parameter|  Description|  Type / Value| Notes|
- |:-----------|  :-------------|  :-------------|:----------| 
+ |:-----------|  :-------------|  :-------------|:----------|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
  |predefined-content-id|  Account Config object's unique ID|  Positive long number greater than zero  |
 
 ### Request Headers
 
- |Header|  Description|  Notes| 
- |:-------  |:--------------  |:---| 
+ |Header|  Description|  Notes|
+ |:-------  |:--------------  |:---|
  |Authorization|  Contains token string to allow request authentication and authorization.  |
  |If-Match|  This parameter allows you to specify a version of the data object to retrieve. If this parameter is not specified, the latest version of the data object is retrieved..|  Allows optimization of backend, networking and client resource utilization. |
 
@@ -40,7 +40,7 @@ Deletes a Predefined Content item from a specific account.
 
 ### Response Headers
 
- |Header|  Description| 
+ |Header|  Description|
  |:-------   |:-----  |
  |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 

@@ -15,7 +15,7 @@ Listed below are attributes that have been deprecated. These keys should no long
 
 In order to configure different string for this key, see String localization in SDK.
 
-{: .notice}
+{: .attn-alert}
 By default, these keys are configured with Localization keys values, and are sensitive to any language changes.  These keys must be reconfigured each time a language is changed.*
 
 | Attribute name | Type | Description | Replacement |

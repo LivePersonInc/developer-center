@@ -22,12 +22,12 @@ Clear the recommendations cache whenever you make any changes that alter what is
 * Delete an article in a knowledge base in KnowledgeAI
 * Change the training phrases for an intent in Intent Manager
 
-{: .notice}
+{: .attn-alert}
 If you don’t clear the cache when appropriate, your agents might not receive the right recommendations.
 
 ### Clear the recommendations cache
 
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
-2. Scroll down to **Invalidate recommended action cache**, and click **Invalidate cache**.
+2. Scroll down to **Clear recommendations cache**, and click **Clear cache**.
 
     <img width="800" alt="Button on Settings page for clearing recommendations cache" src="img/agentassist/clear_recommendations_cache.png">

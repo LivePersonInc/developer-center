@@ -10,8 +10,8 @@ permalink: tutorials-guides-getting-started-with-bot-building-intents.html
 indicator: both
 ---
 
-{: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
+{: .attn-note}
+This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent. LivePerson offers several trained and pre-built domains to help you get up and running quickly with intents. For this tutorial, we’ll take advantage of the Cross-vertical pre-built domain, which is designed as a great starting point for any brand with an online presence.
 
@@ -35,7 +35,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 2. Click **Intent Manager**.
 
-    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. (Learn more about [Intent Manager](intent-manager-overview.html).)
 
     Now let’s create a domain.
 
@@ -43,17 +43,17 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 4. On the Add Domain page, select the **Prebuilt domains** option along the top. Hover over the "Cross-vertical" option, and select **Add**.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain.png" alt="">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain.png" alt="Add Domain window">
 
 5. Adding the Cross-vertical pre-built domain provides you with a robust, trained domain with several intents designed to quickly get you up and running. Take some time to look at the intents provided along the left side. Clicking any of them displays the intent name and its training phrases, which can be modified to suit your specific needs.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain2.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_cv_domain2.png" alt="The Intent Details page for one of the intents in the Cross-vertical domain">
 
     For now, you won’t add any additional content, but keep in mind that any new intents you add will need a minimum of 15 training phrases, and that any changes will result in the model needing to be re-trained.
 
 6. In the **Test User Input** panel on the right, you can test utterances and see how they score against the provided intents. You will be using the "make payment" intent in this tutorial, so enter an utterance that you would expect to trigger this particular intent, such as, “I want to make a payment.” Select "1" for your **Model version**, and toggle the **Search in domain** switch to "on." Then click **Test**.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_test.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_test.png" alt="The Test User Input tool">
 
 7. Continue to test utterances to see how the confidence scores differ from phrase to phrase. The following test phrases should all score either Very Good or Good, signifying that they will successfully trigger the dialog this intent is attached to.
 
@@ -72,22 +72,22 @@ With the "Make Payment" intent configured, let’s return to Conversation Builde
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-5. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png" alt=""> (Assist icon) beside the Dialog Starter interaction.
+5. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png" alt="Assist icon"> (Assist icon) beside the Dialog Starter interaction.
 6. In Assist, search for the name of the domain that you created, i.e., "LP_Cross-vertical."
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_assist1.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_assist1.png" alt="The Assist tool">
 
 7. Select the domain to associate it with the dialog starter.
 
-    In Assist, the intents within the domain are displayed. 
+    In Assist, the intents within the domain are displayed.
 
 8. Type in a sample user message to use the NLU engine to identify the correct intent.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_assist2.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_assist2.png" alt="Using Assist to associate an intent">
 
 9. Select the "Make payment" intent that you tested. This associates the intent with the dialog starter.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_assoc.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_assoc.png" alt="The intent associated with the dialog starter">
 
 ### Step 7: Add custom rules
 
@@ -96,32 +96,32 @@ Now you can begin to build out the Make Payment dialog.
 1. Add a Text statement that says, “Sure, I can help with that."
 2. Add a Multiple Choice question that asks, "Are you prepared with your preferred payment method?" Enter "Yes" and "No" as the choices.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules1.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules1.png" alt="A multiple choice question with yes and no choices">
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
 3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "Great! To pay your bill, please go to our billing portal at example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules2.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules2.png" alt="The Text statement to respond to a reply of Yes">
 
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
 
 4. Add a Text statement to respond to a reply of "no". Name the interaction "No" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules3.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules3.png" alt="The Text statement to respond to a reply of No">
 
     You've got the dialog fleshed out; now you need to add custom rules to detect when a user says "yes" or “no” and direct them to the correct text statement.
 
 5. Return to the multiple choice question, and select the **Next Action** dropdown.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules4.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules4.png" alt="The Next Action dropdown in the multiple choice question">
 
 6. Add a rule to handle a "yes" response: Click **+ Custom Rule** in the Next Action dropdown. In the Add Next Action Rule window, configure the Yes rule as follows:
     * **Rule name**: Enter "Yes".
     * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter "yes" and "y" as patterns.
     * **And Go To**: Select the "Yes" statement as the next action.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_rules5.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_rules5.png" alt="The Add Next Action Rule, for adding a rule to handle a Yes response">
 
     Click **Save**.
 
@@ -130,20 +130,20 @@ Now you can begin to build out the Make Payment dialog.
     * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter "no" and "n" as patterns.
     * **And Go To**: Select the "No" statement as the next action.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_rules6.png" alt="">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_rules6.png" alt="The Add Next Action Rule, for adding a rule to handle a No response">
 
     Click **Save**.
-    
+
     The multiple choice question should now look like this:
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules7.png" alt="">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules7.png" alt="The multiple choice question with two defined rules for Yes and No">
 
     Now let's see the dialog in action.
 
 8. Open the Preview window, and start a new session by clicking **Reset**.
 9. Enter an utterance that should match the Make Payment intent, like, "Can you help me to make a payment?" You should see the Make Payment dialog's flow and the multiple choice question. Tap or enter “Yes” or “No” and see what response you get.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_preview.png" alt="">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/intents_preview.png" alt="Previewing the conversation">
 
     You now understand the basics of intents and branching dialog flows.
 

@@ -18,20 +18,20 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
-{: .important}
+{: .attn-note}
 While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group).
 
 It's common to organize bots into groups based on business function. You could then further organize them based on environment. In the image below, bots are grouped based on business function (Checking and Savings).
 
 Note the following about the bots dashboard when bot groups exist:
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_dashboard.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_dashboard.png" alt="The Bots dashboard with several key features highlighted">
 
 1. The bot group name. Click this bar to show/hide the bots in the group.
 2. The list of bots in the group. Click any bot name to open the bot in the Dialog Editor.
 3. The **Collaboration** icon lets you know that collaboration ([automatic transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group)) is enabled for the group.
 4. No icon is displayed when collaboration is disabled for the group.
-5. Click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon to access the group menu, which provides options for editing and deleting the group.
+5. Click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png" alt="Three-dot icon"> icon to access the group menu, which provides options for editing and deleting the group.
 
 ### Create a bot group solely to group bots
 
@@ -68,7 +68,7 @@ You can enable or disable collaboration for a bot group, respectively, to enable
 
 **To enable or disable collaboration for a bot group**
 
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon that corresponds to the bot group name.
+1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png" alt="Three-dot icon"> icon that corresponds to the bot group name.
 2. Select **Edit Group** from the menu that appears.
 3. In the Edit Bot Group dialog, click the **Collaboration** slider to turn it on (Enabled) or off (Disabled).
 4. Click **Update**.
@@ -79,7 +79,7 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 
 **To delete a bot group**
 
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png"> icon that corresponds to the bot group name.
+1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical_light.png" alt="Three-dot icon"> icon that corresponds to the bot group name.
 2. Select **Delete Group** from the menu that appears.
 3. Click **Yes** to confirm the action.
 
@@ -99,7 +99,7 @@ For bot groups that are collaborative (the Collaboration setting is enabled):
 
 No, this isn't required. Bots that aren't assigned to a bot group are listed above the bot groups.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png" alt="The Ungrouped bots section on the Bots dashboard">
 
 #### Can I test bot groups using Preview?
 
