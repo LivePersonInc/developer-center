@@ -69,6 +69,8 @@ date_updated: 2022/09/30
 
 ### Conversational AI APIs
 
+Building a custom automation solution? These Conversational AI APIs might be of interest:
+
 | Application | API | Purpose |
 |---|---|---|
 | Intent Manager | Model Tester External APIs | → [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api)<br>→ [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) |
