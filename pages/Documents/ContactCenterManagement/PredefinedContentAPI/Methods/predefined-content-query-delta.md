@@ -80,8 +80,8 @@ Type 1 (all changes)
 
 **Request Headers**
 
-| Header|  Description|  
- |:-------  |:--------------|  
+| Header|  Description|
+ |:-------  |:--------------|
  |Authorization|  Contains token string to allow request authentication and authorization.  |
 
 ### Response

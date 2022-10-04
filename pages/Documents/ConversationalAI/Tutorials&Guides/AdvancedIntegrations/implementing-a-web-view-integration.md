@@ -81,18 +81,18 @@ submitForm = async function() {
  const userId = queryParams.get('userId');
  const conversationId = queryParams.get('convId');
  const botId = queryParams.get('botId');
- 
+
  // Get data from form
  const name = document.querySelector('input[name="user_name"]').value;
  const color = document.querySelector('input[name="favorite_color"]').value;
  const swallow = document.querySelector('input[name="unladen_swallow"]').value;
- 
+
  // use correct domain for your region
  const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
   // encode auth string
  const authString = `${conversationId} || ${botId}`;
  const auth = await sha256(authString);
- 
+
  const res = await postData(domain, auth, {
    botId,
    conversationId,

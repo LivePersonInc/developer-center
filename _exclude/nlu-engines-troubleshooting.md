@@ -19,7 +19,7 @@ Occasionally you may run into problems using NLU integrations from other provide
 
 We see this error only for Watson NLU, when the max workspace limit is reached on the account. To resolve this you will need to login your IBM Cloud account and remove enough unused skills to get below the five workspace limit.
 
-Steps: 
+Steps:
 
 1. Login to cloud.ibm.com:
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png">

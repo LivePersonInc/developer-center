@@ -13,7 +13,7 @@ indicator: messaging
 
 Step Up authentication allows consumers to continue the ongoing unauthenticated conversations by merging it to the authenticated conversation history after signing in.
 
-**Supported versions** 
+**Supported versions**
  - v5.10.0 and higher
 
 ### How to enable
@@ -35,4 +35,3 @@ lpAuthenticationParams.setPerformStepUp(true);
 // Presenting the conversation window. During open conversation and based on the performStepUp flag, SDK will detect authenticated identity added and perform Step Up flow.
 LivePerson.showConversation(activity, lpAuthenticationParams, conversationViewParams);
 ```
-

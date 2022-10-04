@@ -82,7 +82,7 @@ Once you have created a Function, you can now use that as an attribute in Conver
 
 {% raw %}
 
-```javascript 
+```javascript
 {
     name: "isVIP"
     type: "faas",

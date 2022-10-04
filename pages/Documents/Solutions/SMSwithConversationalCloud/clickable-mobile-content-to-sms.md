@@ -131,7 +131,7 @@ The goal is to add an additional view within the Conversational Cloud content en
 
     1.  See the below example of the HTML engagement content.
 
-```html  
+```html
 <div>
   <a style="position:absolute; top:-10px; left:-10px; z-index:9999;" href="#" data-LP-event="close"><img src="https://lpcdn.lpsnmedia.net/gallery/libraries/content/close_icons/blue_white.png" alt=""></a>
     <div id="contact-main">

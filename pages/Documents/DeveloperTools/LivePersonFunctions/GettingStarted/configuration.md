@@ -45,7 +45,7 @@ The modification of existing environment variables is possible via the side pane
 Once you click on "Set", you will have to save the function to store the changes permanently. Environment variables are static.
 
 {: .attn-note}
-Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect. 
+Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect.
 
 <img class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
 
@@ -100,7 +100,7 @@ As mentioned above, we do not allow the modification of secrets from the UI. You
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     // This needs to be initialized only once, than the reference can be reused
-    const secretClient = Toolbelt.SecretClient(); 
+    const secretClient = Toolbelt.SecretClient();
 
     try {
       const updatedSecret = { key: 'YOUR_SECRET', value: 'some updated secret' };

@@ -141,24 +141,24 @@ See below a few examples of how to do so.
 **Example Request Body — JSON Payload**
 
 ```json
-[  
-   {  
+[
+   {
       "kind":"req",
       "id":"2,",
       "type":"userprofile.SetUserProfile",
       "body":{
-         "authenticatedData":{  
-            "lp_sdes":[  
-               {  
+         "authenticatedData":{
+            "lp_sdes":[
+               {
                   "type":"ctmrinfo",
-                  "info":{  
+                  "info":{
                      "socialId":"1234567890",
                      "companyBranch":"ACME"
                   }
                },
-               {  
+               {
                   "type":"personal",
-                  "personal":{  
+                  "personal":{
                      "firstname":"John",
                      "lastname":"Doe",
                      "gender":"MALE"
@@ -168,11 +168,11 @@ See below a few examples of how to do so.
          }
       }
    },
-   {  
+   {
       "kind":"req",
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
-      "body":{  
+      "body":{
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
@@ -192,24 +192,24 @@ See below a few examples of how to do so.
 **Example Request Body — JSON Payload**
 
 ```json
-[  
-   {  
+[
+   {
       "kind":"req",
       "id":"2,",
       "type":"userprofile.SetUserProfile",
       "body":{
-         "authenticatedData":{  
-            "lp_sdes":[  
-               {  
+         "authenticatedData":{
+            "lp_sdes":[
+               {
                   "type":"ctmrinfo",
-                  "info":{  
+                  "info":{
                      "socialId":"1234567890",
                      "ctype":"vip"
                   }
                },
-               {  
+               {
                   "type":"personal",
-                  "personal":{  
+                  "personal":{
                      "firstname":"John",
                      "lastname":"Doe",
                      "gender":"MALE"
@@ -219,11 +219,11 @@ See below a few examples of how to do so.
          }
       }
    },
-   {  
+   {
       "kind":"req",
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
-      "body":{  
+      "body":{
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
@@ -262,13 +262,13 @@ This is an example of how to send a message to Conversational Cloud to an open c
 **Request Body — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":"1",
    "type":"ms.PublishEvent",
-   "body":{  
+   "body":{
       "dialogId":"{conversationId}",
-      "event":{  
+      "event":{
          "type":"ContentEvent",
          "contentType":"text/plain",
          "message":"Hi from Send Message only - SendLine"
@@ -307,12 +307,12 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 **Example Request Body — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":1,
-   "body":{  
+   "body":{
       "conversationId":"{conversationId}",
-      "conversationField":{  
+      "conversationField":{
          "field":"ConversationStateField",
          "conversationState":"CLOSE"
       }
@@ -353,13 +353,13 @@ In order to send an indication that the consumer is typing, the connector will s
 **Example Request Body — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":"1",
    "type":"ms.PublishEvent",
-   "body":{  
+   "body":{
       "dialogId":"{conversationId}",
-      "event":{  
+      "event":{
          "type":"ChatStateEvent",
          "chatState":"COMPOSING"
       }
@@ -415,24 +415,24 @@ The following example illustrates how to enable the auto messages feature upon c
 **Request Body — JSON Payload**
 
 ```json
-[  
-   {  
+[
+   {
       "kind":"req",
       "id":"1,",
       "type":"userprofile.SetUserProfile",
-      "body":{  
-         "authenticatedData":{  
-            "lp_sdes":[  
-               {  
+      "body":{
+         "authenticatedData":{
+            "lp_sdes":[
+               {
                   "type":"ctmrinfo",
-                  "info":{  
+                  "info":{
                      "socialId":"1234567890",
                      "ctype":"vip"
                   }
                },
-               {  
+               {
                   "type":"personal",
-                  "personal":{  
+                  "personal":{
                      "firstname":"John",
                      "lastname":"Doe",
                      "gender":"MALE"
@@ -442,11 +442,11 @@ The following example illustrates how to enable the auto messages feature upon c
          }
       }
    },
-   {  
+   {
       "kind":"req",
       "id":"2,",
       "type":"cm.ConsumerRequestConversation",
-      "body":{  
+      "body":{
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}",
@@ -486,13 +486,13 @@ The following example illustrates how to enable the auto messages feature upon c
 **Request Body — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":"1",
    "type":"ms.PublishEvent",
-   "body":{  
+   "body":{
       "dialogId":"{conversationId}",
-      "event":{  
+      "event":{
          "type":"ContentEvent",
          "contentType":"text/plain",
          "message":"Hi from Send Message only - Auto Messages feature"
@@ -533,7 +533,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 **Example Request Body — JSON Payload**
 
 ```json
-[  
+[
   {
    "kind": "req",
    "id": "1,",
@@ -559,13 +559,13 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
      }
    }
  },
-   {  
+   {
       "kind":"req",
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
-      "body":{  
+      "body":{
          "ttrDefName":"NORMAL",
-         "campaignInfo":{  
+         "campaignInfo":{
             "campaignId":"2739101812",
             "engagementId":"2739121912"
          },
@@ -608,7 +608,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 **Example Request Body — JSON Payload**
 
 ```json
-[  
+[
   {
    "kind": "req",
    "id": "1,",
@@ -634,11 +634,11 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
      }
    }
  },
-   {  
+   {
       "kind":"req",
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
-      "body":{  
+      "body":{
          "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}",
@@ -680,7 +680,7 @@ A typical flow of setting up the file sharing feature using the Messaging Window
 
 4. Upload the file to storage
 
-5. Publish the file as a message inside the conversation  
+5. Publish the file as a message inside the conversation
 
 6. Request a download URL
 

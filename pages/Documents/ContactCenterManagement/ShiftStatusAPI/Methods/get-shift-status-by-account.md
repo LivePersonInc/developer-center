@@ -25,14 +25,14 @@ This API retrieves a list of skills for a specific account and displays the curr
 
 **Path Parameters**
 
-| Parameter   |  Description   |   Type / Value  |              
- |:---------- |  :------------- |  :-------------  |            
+| Parameter   |  Description   |   Type / Value  |
+ |:---------- |  :------------- |  :-------------  |
 | accountId |    LP site ID    |   String  |
- 
+
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -61,20 +61,20 @@ This API retrieves a list of skills for a specific account and displays the curr
             "nextOn": 1535979600000,
             "nextOff": 1535997600000
         },
-        {  
+        {
             "skill": 326244932,
             "onShift": true,
             "nextOn": 1535997600000,
             "nextOff": 1535997600000
         },
-        {  
+        {
             "skill": 326244952,
             "onShift": true
         },
-        {  
+        {
             "skill": 326244972,
             "onShift": true,
-            "nextOn": 1535997600000     
+            "nextOn": 1535997600000
         }
     ]
 ```

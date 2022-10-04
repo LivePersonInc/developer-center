@@ -33,7 +33,7 @@ indicator: chat
 | engagementDetails.skillName          | string                                                                                        | Optional when the status is 'Available’                             |                                                                     |
 | pageId                               | Page identification Id for sending event on the current engagement                            | string                                                              | Mandatory (waiting for client side to fix)                          |
 | sessionId                            | The visit session ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     |
-| visitorId                            | The visit visitor ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     | 
+| visitorId                            | The visit visitor ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     |
 
 **Sample Response**
 
@@ -52,7 +52,7 @@ indicator: chat
         "engagementRevision": 44,
         "validForSeconds": 900,
         "skillId": 23,
-        "skillName":"TestSkill" 
+        "skillName":"TestSkill"
        }
     }
 ```
@@ -65,4 +65,3 @@ indicator: chat
     "pageId": "4743822558"
 }
 ```
-    

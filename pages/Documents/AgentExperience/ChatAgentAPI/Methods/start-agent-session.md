@@ -69,5 +69,5 @@ Response example for JSON:
      "@rel": "location"
    }
  }
-}  
+}
 ```

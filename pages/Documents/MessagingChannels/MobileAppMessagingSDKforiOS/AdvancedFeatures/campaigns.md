@@ -46,7 +46,7 @@ The Monitoring APIs provide brands access to the LivePerson monitoring system. T
 
 * [sendSDE](consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Use whenever the app would like to report on an engagement attribute.
 
-* [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - Returns an engagement if there is a matching campaign and engagement. Use to send engagement attributes (as part of the request body) as well. 
+* [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - Returns an engagement if there is a matching campaign and engagement. Use to send engagement attributes (as part of the request body) as well.
 
 ### Code Samples
 
@@ -102,4 +102,3 @@ let conversationViewParam = LPConversationViewParams(conversationQuery: conversa
 // show conversation using campaignInfo
 LPMessaging.instance.showConversation(conversationViewParam)
 ```
-

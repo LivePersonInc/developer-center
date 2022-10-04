@@ -25,13 +25,13 @@ CCS provides a system to hierarchically organize data using *key-value pairs*. A
 { Namespace
 
   <Group-related attributes, e.g., customer info>
-  
+
   { Session ID
-  
+
   <Identifier to group KVPs, e.g., a session ID>
-  
+
     { Key-Value Pairs
-    
+
     <Attributes, e.g., customer name, email>
 ```
 

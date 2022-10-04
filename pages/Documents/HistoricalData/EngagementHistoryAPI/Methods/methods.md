@@ -30,7 +30,7 @@ This returns a list of engagements with all their metadata and related transcrip
 | offset | The offset from where to retrieve the chat. | numeric | Optional | Default is 0.  |
 | limit | Max chats to be received in the response.  | numeric | Optional | Default is 50. Max value is 100. The remaining chats can be obtained using pagination (using offset, in a subsequent request). |
 | sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/desc] |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|
 
 
 **BODY/POST Parameters**
@@ -96,7 +96,7 @@ lineScores | Contains information about the line's score, including line raw sco
 visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |
 coBrowseSessions | The CoBrowse data | container |
 surveys | Survey data from the chat. | container |
-predictions | Contains information about the predictions of the chat. | container | Available only for accounts that enabled intent analyzer. | 
+predictions | Contains information about the predictions of the chat. | container | Available only for accounts that enabled intent analyzer. |
 sdes | List of Engagement Attributes. | container | See [Appendix](data-engagement-history-appendix.html)
 
 _Interaction info_
@@ -324,7 +324,7 @@ In the example below, we ask for chats that occurred between the 1st of June and
 
 **Request example 3:**
 
-In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.  
+In this example, we reduce the previous search, and require that the skill matches the skill IDs {14, 17, 18} that were conducted by agentID 109 or 169, where the duration was between 0 and 180 seconds, and focus only on the transcript.
 
 ```json
     {
@@ -552,7 +552,7 @@ Example:
           },
           "lineSeq": "29"
         }
-      ], 
+      ],
          "sdes": {
            "events": [
              {
@@ -639,8 +639,8 @@ Example:
                        "phone": "+1 212-788-8877",
 		       "address": {
 			"country": "Israel",
-			"region": "Moscow", 
-			"zipCode": 12345 
+			"region": "Moscow",
+			"zipCode": 12345
 				}
                      }
                    }
@@ -1482,4 +1482,3 @@ Example:
 	]
 }
 ```
-

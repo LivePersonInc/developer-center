@@ -23,7 +23,7 @@ The vertical card contains the following elements:
 * Buttons with the following actions:
   * Link
   * Publish text
-    
+
 ### JSON Template Properties
 
 <table>

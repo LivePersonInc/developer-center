@@ -9,7 +9,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "oneOf": [ 
+                "oneOf": [
                     {
                         "$ref": "types/StateChange.json"
                     },

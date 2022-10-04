@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-events-onagenttyping.html
 indicator: chat
 ---
 
-Triggered when the agent typing status is changed. The agentTyping property is a boolean value. 
+Triggered when the agent typing status is changed. The agentTyping property is a boolean value.
 
 ```json
 { "agentTyping" : true }

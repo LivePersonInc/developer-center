@@ -29,7 +29,7 @@ Once connected, you can now test out Conversation Assist by conversing with your
 <img class="fancyimage" style="width:500px" src="img/agentassisttutorial/recommendations.png" alt="The agent side of the conversational experience, which is tested via the Agent Workspace">
 
 Select **Delegate** to bring the Booking Bot into the conversation and immediately start the consumer with the correct, associated dialog.
- 
+
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/use_bot.png" alt="The conversation as it appears after the Booking Bot has been joined to it">
 
 When the bot has completed the task for the consumer, remove the bot from the conversation by selecting the **Remove bot** button at the top of the messaging window.

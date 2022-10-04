@@ -24,7 +24,7 @@ This API allows a brand to submit a deletion request via one of the following me
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion |
 
@@ -92,14 +92,14 @@ Example 4:
 
  **Response Codes**
 
-  |Code|  Response|  
+  |Code|  Response|
   |:------    |:-------- |
-  |201 |  Created|  
-  |400 |  Bad request|  
-  |401 |  Unauthorized request|  
-  |403 |  Not sufficient priviliges|  
+  |201 |  Created|
+  |400 |  Bad request|
+  |401 |  Unauthorized request|
+  |403 |  Not sufficient priviliges|
   |429 |  Requests threshold for current month was reached|
-  |500 |  Internal server error|  
+  |500 |  Internal server error|
 
 **Note:** By default, the requests threshold is set to 100 requests per calendar month. If you wish to change this, please contact your LivePerson Account Team.
 

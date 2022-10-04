@@ -284,7 +284,7 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
 6. Enter the Salesforce console and switch it to classic mode.
 7. Select the Customization Settings tab in your Salesforce settings, copy the first part of the URL, and add the "ChatLink" suffix to ensure you're using the correct link.
 8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box.
-  
+
 ![](/img/salesforce_pastewidget.png)
 
 <!-- <div class="attn-alert">
@@ -292,7 +292,7 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
 
 <img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
 </div>
-   
+
 **Tip:** You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
 
 {:start="7"}
@@ -639,4 +639,3 @@ These are just a few examples meant to demonstrate how to write these “address
 2. The SF feature ‘Person accounts’ is not supported: Person accounts is a SF feature which stores information about individual consumers (Account = Contact).
 3. The transcript for converted leads is not accessible.
 4. The widget is not defined as SF Lightning ready.
-

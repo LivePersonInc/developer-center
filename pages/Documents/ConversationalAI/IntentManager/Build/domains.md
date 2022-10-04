@@ -145,7 +145,7 @@ Key Phrase Matching can be helpful when you know there are specific words that d
 
 Here's a test example without Key Phrase Matching enabled:
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">  
+<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">
 
 And here's a test example with Key Phrase Matching enabled:
 

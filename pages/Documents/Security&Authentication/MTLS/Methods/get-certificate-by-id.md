@@ -3,7 +3,7 @@ pagename: Get certificate by ID
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-get-certificate-by-id.html
 ---
@@ -12,7 +12,7 @@ This API gets a certificate by account ID and certificate ID.
 
 ### Request
 
-|Method|      URL|  
+|Method|      URL|
 |:--------  |:---  |
 |GET|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 

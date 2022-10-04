@@ -473,7 +473,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
                                 if(content) {
                                     refs[item] = content;
                                     renderBox();
-                                    resolveRefsReentrant(content); 
+                                    resolveRefsReentrant(content);
                                 }
                             });
                         }
@@ -499,10 +499,10 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
                     }
                 });
             };
-            
+
             resolveRefsReentrant(schema);
             renderBox();
-            
+
             d.resolve();
         })
         return d.promise();

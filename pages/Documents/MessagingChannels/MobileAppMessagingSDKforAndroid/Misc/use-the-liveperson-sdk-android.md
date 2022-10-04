@@ -15,11 +15,11 @@ indicator: messaging
 ---
 
 ### Prerequisites
-It is important that you have followed the [Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).  If not, make sure to install the LivePerson Mobile App Messaging SDK before proceeding. 
+It is important that you have followed the [Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).  If not, make sure to install the LivePerson Mobile App Messaging SDK before proceeding.
 
 ### Step 1 — Create initial views
 
-In this step, you'll use some basic name features to create some initial views on our main activity / an activity of your choosing. 
+In this step, you'll use some basic name features to create some initial views on our main activity / an activity of your choosing.
 
 ![initialview](img/initialview.png)
 
@@ -50,9 +50,9 @@ If you have any of these features enabled, you must add the following to your ap
 
 ### Step 3 — Add LivePerson events
 
-In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
+In this step, you add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback.
 
-1. Create a class named **IntentsHandler**.  
+1. Create a class named **IntentsHandler**.
 
    **Tip:** You can use any name of your choosing.
 
@@ -79,11 +79,11 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
       }
     ```
 
-   In this example, you listen to all events via the **intentfilter**. 
-   
+   In this example, you listen to all events via the **intentfilter**.
+
    **Tip:** You can create your own specific intent filter.
 
-3. Create a function named `createLivePersonReceiver` to handle the events.  
+3. Create a function named `createLivePersonReceiver` to handle the events.
 
    **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
@@ -185,7 +185,7 @@ private void initOpenConversationButton() {
 ```
 
 #### initActivityConversation
-You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
+You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section.
 
 **Tip:** If the initialization succeeds, the `openActivity` method is called.
 
@@ -219,7 +219,7 @@ private void  initActivityConversation() {
 
 #### openActivity function
 
-Here, you use the LivePerson SDK’s `showConversation` method. 
+Here, you use the LivePerson SDK’s `showConversation` method.
 
 **Tip:** In the example below, we do not use an authentication parameter.  If you need to use an authentication paramenter, use `setPhoneNumber`.
 
@@ -236,7 +236,7 @@ private void openActivity() {
 ```
 
 ### Step 5 — Configure push notifications
-  
+
 Push and local notifications are a key factor that makes the experience better for consumers — they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
 #### Prerequisites
@@ -283,7 +283,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    **Tip:** You can find the **Package Name** on the Firebase console under **General**, and the **Legacy Key** on the Firebase console under **Cloud Messaging**.
 
-#### Step 3. Configure the services and classes 
+#### Step 3. Configure the services and classes
 
 1. Under the **application** tab, add the following services + receiver:
 

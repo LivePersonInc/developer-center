@@ -56,7 +56,7 @@ Each API message can be one of the following kinds:
 
 * **Response** - A message sent by the server in response to a client/connector request message.
 
-* **Notification** - A message sent from the server to the client/connector. A registration of an application to receive Webhooks notifications is achieved by enabling the “webhooks” capability of that application. Please refer to the [webhooks overview](webhooks-overview.html) for more information.  
+* **Notification** - A message sent from the server to the client/connector. A registration of an application to receive Webhooks notifications is achieved by enabling the “webhooks” capability of that application. Please refer to the [webhooks overview](webhooks-overview.html) for more information.
 
 The kind of message is denoted by the `kind` property in the top level of the JSON object, and can be any of the following: `req`, `resp`, `notification`. Below is an example of a request message:
 

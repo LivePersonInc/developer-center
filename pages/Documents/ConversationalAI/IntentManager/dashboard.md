@@ -23,7 +23,7 @@ From the dashboard, you can control settings and quickly navigate to the Discove
 
 The Domain list includes a complete list of all existing domains.
 
-* **Intent Tracking**: When [Intent Tracking](intent-manager-key-terms-concepts.html#intent-tracking) is enabled for a domain, all messages (bot and human) are evaluated by the model for intent in real time. Results of intent tracking are shown in the Analyze section of Intent Manager. The [Primary Intent Tracking domain](intent-manager-key-terms-concepts.html#primary-domain) is indicated with a star. This is the default intent tracking domain for applications that don't support multi-domain Intent Tracking.  
+* **Intent Tracking**: When [Intent Tracking](intent-manager-key-terms-concepts.html#intent-tracking) is enabled for a domain, all messages (bot and human) are evaluated by the model for intent in real time. Results of intent tracking are shown in the Analyze section of Intent Manager. The [Primary Intent Tracking domain](intent-manager-key-terms-concepts.html#primary-domain) is indicated with a star. This is the default intent tracking domain for applications that don't support multi-domain Intent Tracking.
 * **NLU Provider**: Indicates the underlying machine-learning (ML) model used to train the domain.
 * **Test Performance**: Shows the latest test performance for each domain.
 * **Last Trained**: Shows the date on which the model was last trained.

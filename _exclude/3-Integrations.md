@@ -69,7 +69,7 @@ This tutorial uses an example API that returns random balance data when given an
 ### Step 9: Use the integration in a dialog
 
 1. Return to the dialog editor by clicking the bot name in the upper-left corner.
-  
+
     <img style="width:200px" src="img/ConvoBuilder/helloworld/navfromintegrations.png">
 2. Add a regular dialog named "Account Balance."
 3. In the dialog, in the User Says interaction, enter, "I want to see my account balance" for the sample user statement.
@@ -97,7 +97,7 @@ This tutorial uses an example API that returns random balance data when given an
 11. Add a Text statement that says, "Your current balance is {Balance.balance}."
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/helloworld/dialogflow_accountbalance.png">
   When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
-  
+
     Now let's test all this out.
 12. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
 13. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."

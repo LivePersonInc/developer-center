@@ -62,7 +62,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
     e. Based on policy action the bot can then perform the following: transfer to an agent, transfer to a skill, or send a message
 
 4. Once we have set this up with Conversation Orchestrator and Conversation Context Service, the following happens
-  
+
     a. The conversation starts with a Welcome intent, for example “hi”
 
     b. The bot then asks the customer for a phone number
@@ -163,14 +163,14 @@ In this example we will create and use static attributes. To check if a customer
 
 ### Create Routing Policy
 
-“If customer phone number is in the allow list, send them to vipSkill in Conversational Cloud”.  
+“If customer phone number is in the allow list, send them to vipSkill in Conversational Cloud”.
 
 1. Navigate to Intent and Context Policies and then click Add Policy.
 
     <img class="fancyimage" width="750" src="img/maven/workspace-viprule-static.png" alt=""/>
 
     a. Edit the name to VipRule_Static
-  
+
     b. In Conditions select custom.vipCustomer from the drop down
 
     c. Select the Is In operator
@@ -179,7 +179,7 @@ In this example we will create and use static attributes. To check if a customer
 
     e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in Conversational Cloud prior to this step).
 
-        i. Please note not to select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy. 
+        i. Please note not to select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy.
 
     f. Click Save to save the policy
 
@@ -199,7 +199,7 @@ In this example we will create and use static attributes. To check if a customer
 
     f. Click Save to save the policy
 
-As you may have noticed, we have created two policies, one for VIP customer, and one for a regular customer. In this example we evaluate both using static variables. In later sections we will retrieve the customer phone number from a session.  
+As you may have noticed, we have created two policies, one for VIP customer, and one for a regular customer. In this example we evaluate both using static variables. In later sections we will retrieve the customer phone number from a session.
 
 ### Test the policies
 
@@ -248,7 +248,7 @@ We will be using the Conversation Context Service to store a phone number, and t
 1. Disable all policies you have previously created by switching off the toggle switch in Conversation Orchestrator.
 
 2. Create a new policy by clicking Add Policy
-  
+
     a. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier.
 
     <img class="fancyimage" width="750" src="img/maven/workspace-viprule-session.png" alt=""/>
@@ -301,7 +301,7 @@ In the previous example we checked for the phone number in a static list. Mainta
 
     b. Add parameters to this function by selecting Attribute and then typing myNameSpace.phoneNumber.
 
-        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the beginning. 
+        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the beginning.
 
     c. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
 

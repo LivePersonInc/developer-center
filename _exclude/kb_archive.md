@@ -20,7 +20,7 @@ If you're just getting started with knowledge bases and want to try using this t
 
 5. Begin to feed test user input to the bot to see how it responds.
 
-   <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat2.png"> 
+   <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat2.png">
 
 ### Refresh the intents
 

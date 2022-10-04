@@ -18,7 +18,7 @@ Updates existing Predefined Content items for a specific account.
 
 ### Request
 
- |Method|    URL|    
+ |Method|    URL|
  |:-------  |:-----|
  |PUT|       https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses/ |
 

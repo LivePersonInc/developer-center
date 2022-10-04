@@ -24,7 +24,7 @@
             "description": "Sent once there is a change in convesation metadata",
             "allOf": [{
                     "$ref": "../infra/notification.json"
-                }, 
+                },
                 {
                     "type": "object",
                     "properties": {
@@ -34,7 +34,7 @@
                             "readonly": "true"
                         },
                         "body": {
-                            "$ref": "../aam/subscribeExConversationsNotification.json"                            
+                            "$ref": "../aam/subscribeExConversationsNotification.json"
                         }
                     }
                 }]
@@ -43,7 +43,7 @@
             "description": "Sent once there is a change in a routing task",
             "allOf": [{
                     "$ref": "../infra/notification.json"
-                }, 
+                },
                 {
                     "type": "object",
                     "properties": {
@@ -53,7 +53,7 @@
                             "readonly": "true"
                         },
                         "body": {
-                            "$ref": "../routing/routingTaskNotification.json"                            
+                            "$ref": "../routing/routingTaskNotification.json"
                         }
                     }
                 }]
@@ -62,7 +62,7 @@
             "description": "Sent once there is a change in the state of the agent",
             "allOf": [{
                     "$ref": "../infra/notification.json"
-                }, 
+                },
                 {
                     "type": "object",
                     "properties": {
@@ -72,7 +72,7 @@
                             "readonly": "true"
                         },
                         "body": {
-                            "$ref": "../routing/agentStateNotification.json"                            
+                            "$ref": "../routing/agentStateNotification.json"
                         }
                     }
                 }]
