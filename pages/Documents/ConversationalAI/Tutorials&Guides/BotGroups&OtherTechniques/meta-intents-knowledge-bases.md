@@ -36,7 +36,7 @@ Using [meta intents](intent-manager-key-terms-concepts.html#meta-intents), you c
       * cancel account
 
    When finished, click **Save**.
- 
+
    If created correctly, you should see your standard intents displayed underneath the FAQ meta intent.
 
    <img style="width:300px" src="img/ConvoBuilder/advtutorial/meta_intents_list.png" alt="A view of Intent Manager that shows several intents nested under an FAQ meta intent">
@@ -44,7 +44,7 @@ Using [meta intents](intent-manager-key-terms-concepts.html#meta-intents), you c
 4. Once saved, you will need to re-train your domain for your changes to take effect. Click **Train** in the upper-right corner.
 5. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the **Model version** dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should see both the standard intent and its parent meta intent triggered with the same confidence score.
 
-   <img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png" alt="Using the Test User Input tool to trigger the intents and meta intent"> 
+   <img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png" alt="Using the Test User Input tool to trigger the intents and meta intent">
 
 6. With a newly created meta intent in hand, activate the new model version, so the changes are reflected in your bot.
 

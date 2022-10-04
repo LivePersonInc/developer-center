@@ -22,7 +22,7 @@ Once you have the video service and accompanying html elements in place, you are
 
 * [Add widget to the agent workspace](/guides-agent-workspace-widget.html)
 
-The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the Agent Workspace. 
+The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the Agent Workspace.
 
 It is comprised of the following:
 
@@ -42,13 +42,13 @@ To create your consumer side widget you will need:
 
 * Help from your LivePerson contact to integrate
 
-The Engagement Window Widget is an iframe-based service that loads the content received from the agent widget.  
+The Engagement Window Widget is an iframe-based service that loads the content received from the agent widget.
 
 Recommendations:
 
 * Status of the request needs to be accepted
 
-* The widget (slider to the right of the window) opens when you trigger the widget 'start state’.  This should trigger based on the acceptance of the request the agent sends. 
+* The widget (slider to the right of the window) opens when you trigger the widget 'start state’.  This should trigger based on the acceptance of the request the agent sends.
 
 **Implement the window application**
 

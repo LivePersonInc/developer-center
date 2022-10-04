@@ -23,7 +23,7 @@ LPABCSDK.initialize(minimumLogLevel: .trace)
 //For disabling logs use LPABCLogLevel.none
 LPABCSDK.initialize(minimumLogLevel: .none)
 
-//Use 'eventSubscription' for passing the events 'LPABCEvent' you wish to get a callback notification for. 
+//Use 'eventSubscription' for passing the events 'LPABCEvent' you wish to get a callback notification for.
 //If not explicitly stated, the default would be subscribing to all events.
 LPABCSDK.initialize(minimumLogLevel: .none, eventSubscription: [.newConversation])
 

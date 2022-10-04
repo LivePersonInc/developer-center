@@ -37,7 +37,7 @@ You may choose an event to react to from the drop-down. The default value is `No
 
 The toggle at the bottom of the page can activate/deactivate the second step, which allows you to configure a [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting) entry.
 
-If you want a function to be triggered only by specific skills, you may choose these in the drop-down menu, that is populated using the skills available in the Conversational Cloud. Please note that this functionality is **limited** to the [Automatic Messages](liveperson-functions-event-sources-overview.html#automatic-messages). 
+If you want a function to be triggered only by specific skills, you may choose these in the drop-down menu, that is populated using the skills available in the Conversational Cloud. Please note that this functionality is **limited** to the [Automatic Messages](liveperson-functions-event-sources-overview.html#automatic-messages).
 
 By default, the function will respond to all skills. The maximum number of skills is **50**.
 
@@ -86,7 +86,7 @@ Adding a domain might take up to to 5 minutes until being "active"
 
 #### Third step: Function Description
 
-In this final step, you will need to provide a name and a description of your function. Names within an account need to be unique.  Provide a meaningful description of what your function does in the "Description" field. 
+In this final step, you will need to provide a name and a description of your function. Names within an account need to be unique.  Provide a meaningful description of what your function does in the "Description" field.
 
 <img class="fancyimage" alt="Functions: name and approve function creation" src="img/functions/functions_name_function.png">
 

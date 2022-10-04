@@ -15,7 +15,7 @@ Global functions are functions that you define in the Global Functions area of a
 <img class="fancyimage" width="800" src="img/ConvoBuilder/gf_example.png" alt="The Global Functions tab in a bot">
 
 Global functions have two key benefits:
-* Code reuse 
+* Code reuse
 * Initialization of the conversation
 
 First, any function that you define in Global Functions can be called from anywhere else in the bot, i.e., from any interaction in any dialog. This allows you to easily reuse code.

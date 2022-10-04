@@ -21,7 +21,7 @@ The Login Service API provides endpoints to manage the User Session in Conversat
 
 ### Step 1. Retrieve your domain
 
-Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).  
+Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).
 
 **Tip:** Use the `agentVep` service name to retrieve your domain.
 

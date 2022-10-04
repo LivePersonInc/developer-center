@@ -3,7 +3,7 @@ pagename: Forward delete request
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-forward-delete-request.html
 ---
@@ -12,7 +12,7 @@ The Forward API methods proxies incoming requests to the `LP-forward-url` suppli
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |DELETE|  https://[{domain}]/mtls/account/{accountId} |
 
@@ -49,4 +49,3 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 **Response Body**
 
 Response will be returned from the `LP-forward-url` as if contacted directly.
-

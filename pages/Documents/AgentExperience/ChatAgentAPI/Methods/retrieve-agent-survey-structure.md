@@ -60,6 +60,6 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
-| Code | Response | 
+| Code | Response |
 | :--- | :--- |
 | 200 | OK |

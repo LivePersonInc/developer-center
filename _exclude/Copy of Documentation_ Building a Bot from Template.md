@@ -46,7 +46,7 @@ indicator: both
 
 11. Specify Skill name, Skill description and click on the “Save” button. The skill routes to your bot, so it is recommended to name it properly to match the main purpose of your bot or bot name, i.e. the bot that gives the information about the shop promotions can have BotAgent skill. Such explicit skill names will help to quickly differentiate many skills in the list. ![](image_13.png)
 
-12. Now when the skill is created, it should have a corresponding user. 
+12. Now when the skill is created, it should have a corresponding user.
 
 13. Navigate to Users tab and click on the “Add user” button: ![](image_14.png)
 

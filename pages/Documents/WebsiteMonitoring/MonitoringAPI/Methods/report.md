@@ -72,7 +72,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 * A good consumerID would be:
 
-   * UUID assigned specifically and uniquely for consumer  
+   * UUID assigned specifically and uniquely for consumer
 
    * a hashed/salted email address
 
@@ -92,7 +92,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
  "identities": [
    {
         "iss": "LivePerson",
-        "acr": "0",    
+        "acr": "0",
         "sub": "identifierForNoAuth"
     },
     {
@@ -164,7 +164,7 @@ ImpressionDisplayEvent:
     }
   ]
 }
-```  
+```
 
 ImpressionExpandedEvent:
 

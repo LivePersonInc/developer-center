@@ -24,7 +24,7 @@ https://API_REQUEST?v=4.0
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |DELETE|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users |
 
@@ -45,7 +45,7 @@ https://API_REQUEST?v=4.0
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID|   String |
- 
+
 **Query Parameters**
 
  | Name            | Description                       | Type    | Required  | Notes                                                |
@@ -54,13 +54,13 @@ https://API_REQUEST?v=4.0
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
 | 401  | Not Authenticated     |
-| 403  | Not Authorized        |      
+| 403  | Not Authorized        |
 | 404  | Data Not Found        |
 | 500  | Internal Server Error |
 

@@ -31,7 +31,7 @@ An audit trail is available for the following elements:
 * Campaigns
 
 * Predefined content
- 
+
 * Post conversation survey
 
 * Agent conversation survey

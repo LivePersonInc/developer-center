@@ -1,6 +1,6 @@
 ---
 pagename: Carousel Template
-redirect_from: 
+redirect_from:
   - structured-content-facebook-messenger-templates-carousel-template.html
 Keywords: structured content rich messaging
 sitesection: Documents

@@ -9,7 +9,7 @@ This widget was built as a proof of concept in regards to how we can create a le
 To create this widget, I decided to use the Heroku Nodejs project skeleton since they offer free hosting.
 
 ## Instructions
-On your LiveEngage account, you will need to setup an engagement that uses the default pre chat survey. 
+On your LiveEngage account, you will need to setup an engagement that uses the default pre chat survey.
 
 To use this widget you will need to have access to a Marketo instance. You will need to update the index.js file with the REST API credentials for your Marketo instance.
 
@@ -19,5 +19,5 @@ For the widget, if you would like to see if a lead exists then you will need to 
 This widget could be used as a starting point for connecting to another CRM.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

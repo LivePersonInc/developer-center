@@ -1,6 +1,6 @@
 ---
 pagename: Generic Template
-redirect_from: 
+redirect_from:
   - structured-content-facebook-messenger-templates-generic-template.html
 Keywords: structured content rich messaging
 sitesection: Documents

@@ -8,19 +8,19 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html
 indicator: messaging
----   
+---
 
 **Supported versions:** 3.8 and newer
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
 
-> *Welcome to our support! What can we help you with today?*   
-> 
+> *Welcome to our support! What can we help you with today?*
+>
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud Agent Workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud Agent Workspace.
 
 ### How to enable
 
@@ -54,11 +54,11 @@ public MessageOption(@NonNull String displayText, @NonNull String value)
 - **displayText** is the text displayed in the quick reply button.
 - **value** is the content that is sent to the agent. Default value is `displayText` if set to empty String.
 
-There are two message frequencies: 
+There are two message frequencies:
 - **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
 - **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
 
-### Limitations  
+### Limitations
 
 - You can configure up to 24 quick reply options for the user to chose.
 

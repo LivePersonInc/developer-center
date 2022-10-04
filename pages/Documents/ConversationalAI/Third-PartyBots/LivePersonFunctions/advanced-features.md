@@ -425,8 +425,8 @@ const {
   message,
   convId,
   context: {
-    lpEvent: { 
-      type, 
+    lpEvent: {
+      type,
       content,
       lastConsumerMessage
     } // this contain the ContentEvent with content value `welcome`
@@ -446,10 +446,10 @@ function lambda(input, callback) {
   const {
     message,
     context: {
-      lpEvent: { 
+      lpEvent: {
         lastConsumerMessage = "",
         type = "",
-        content = "" 
+        content = ""
       } = {}
     } = {},
   } = input.payload;

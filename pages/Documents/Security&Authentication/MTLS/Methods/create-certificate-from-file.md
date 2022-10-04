@@ -3,7 +3,7 @@ pagename: Create certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-create-certificate-from-file.html
 ---
@@ -15,7 +15,7 @@ This API creates a certificate by uploading a file, for a specific account ID.
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
@@ -56,9 +56,9 @@ This end-point receives information formatted as `form-data`. The below is an ex
 for example:
 
 ```JSON
-{  
-   "successfulySavedCertificates":[  
-      {  
+{
+   "successfulySavedCertificates":[
+      {
          "id":2628739923,
          "deleted":false,
          "name":"{certificateName}",
@@ -68,7 +68,7 @@ for example:
 	 "expirationDate": null
       }
    ],
-   "failedSaveToVaultCertificates":[  
+   "failedSaveToVaultCertificates":[
 
    ]
 }

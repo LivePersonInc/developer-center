@@ -3,7 +3,7 @@ pagename: Check mapping configuration
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-check-mapping-configuration.html
 ---
@@ -14,7 +14,7 @@ The aim of this method is to minimize sending TLS only requests through the serv
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/mapping |
 
@@ -68,7 +68,7 @@ Contains list of `CertificateMappingParamters` objects:
 }
 ```
 
-**V2 response** 
+**V2 response**
 
 * The "doExist" status is added to the submitted parameters.
 

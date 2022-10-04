@@ -82,7 +82,7 @@ async function lambda(input, callback) {
   } catch(error) {
     // Error Handling
   }
-  
+
 }
 
 async function lazyLoadSecret(name) {
