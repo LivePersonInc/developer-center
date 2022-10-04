@@ -34,7 +34,7 @@ Create new workday object(s) for an account. It is possible to create several it
 **Request Body**
 
 ```json
-{  
+{
   "name": "Workdays 1",
   "description": "Description for workdays 1",
   "deleted": false,
@@ -99,7 +99,7 @@ The `isDefault` field determines whether a workdays object is the default for th
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
 **Response example**
 

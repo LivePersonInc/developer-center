@@ -15,7 +15,7 @@ let path;
       if (fs.existsSync(path) && item.documents) {
          item.documents.forEach(doc => {
             var document_path = path
-            //check if document is a folder 
+            //check if document is a folder
             if (doc.pages) {
                document_path += commonMethods.convertToExpectedFolderName(doc.documentname) + '/'
                // console.log("Doc is a folder")
@@ -63,5 +63,3 @@ let path;
    }
    return errorCounter
 }());
-
-

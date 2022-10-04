@@ -15,10 +15,10 @@ indicator: messaging
 ---
 
 {% include msgtype.html title='Request' type='req' %}
-{% include json.html name="req_editor" 
+{% include json.html name="req_editor"
     schemaFile='assets/schema/ws/consumerRequests.json'
-    startval='{"id":"0","type":"cm.UpdateConversationField","body":{"conversationId":"hello","conversationField":[{"field":"TTRField","ttrType":"URGENT","value":300}]}}' 
-    properties=false 
+    startval='{"id":"0","type":"cm.UpdateConversationField","body":{"conversationId":"hello","conversationField":[{"field":"TTRField","ttrType":"URGENT","value":300}]}}'
+    properties=false
     readonly_oneOf='root' %}
 
 {% include msgtype.html title='Response' type='resp' %}

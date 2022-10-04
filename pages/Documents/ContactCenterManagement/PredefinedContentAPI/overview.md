@@ -18,7 +18,7 @@ indicator: both
 
 The predefined content API gives brands the tools to find, create, modify and delete predefined content items, developing canned responses that accurately reflect the brand’s voice and business needs.
 
-The predefined content tool is one which agents rely on to provide quick answers to repetitive or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.  
+The predefined content tool is one which agents rely on to provide quick answers to repetitive or long questions.  Agents are able to either search for predefined answers and push them directly into the conversations, or utilize hotkeys for quick entries.
 
 ![PredefinedContent](img/predefinedcontent.png)
 
@@ -118,7 +118,7 @@ Issue a REST request to create a new predefined content entry (this example uses
 
 * Create a new POST request on POSTMAN.
 
-* URL: 
+* URL:
 
 	{% raw %}
 	`https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US`

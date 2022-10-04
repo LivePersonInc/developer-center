@@ -21,10 +21,10 @@ JSON Formatter is an AngularJS directive for rendering JSON objects in HTML with
     …
     'jsonFormatter'
   ])
-    
+
   ```
 * Use `<json-formatter>` directive
- 
+
   ```html
   <json-formatter json="{my: 'json'}" open="1"></json-formatter>
   ```
@@ -32,7 +32,7 @@ JSON Formatter is an AngularJS directive for rendering JSON objects in HTML with
 
 ## Demo
 
-See [examples](http://mohsenweb.com/json-formatter/demo/demo.html). 
+See [examples](http://mohsenweb.com/json-formatter/demo/demo.html).
 
 ## Browser Support
 
@@ -42,4 +42,4 @@ All modern browsers are supported. Lowest supported version of Internet Explorer
 
 Apache 2.0
 
-See LICENSE 
+See LICENSE

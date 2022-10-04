@@ -104,7 +104,7 @@ date_updated: 2022/07/25
         </div>
     </div>
 
-<!-- 
+<!--
 <div class="lp-container">
     <div class="header-paragraph">
    The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a guide below to learn more.

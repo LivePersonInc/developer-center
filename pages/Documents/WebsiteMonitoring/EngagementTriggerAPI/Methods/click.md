@@ -42,4 +42,4 @@ This method simulates a mouse click on an engagement. For example, a virtual age
 
 **Return Value**
 
-The method returns a boolean value: **True** if an engagement was found and clicked; **false** if not.  
+The method returns a boolean value: **True** if an engagement was found and clicked; **false** if not. 

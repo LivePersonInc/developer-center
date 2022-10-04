@@ -93,7 +93,7 @@ JSON Example:
 					"currentStatusStartTimeL": 1490033214962,
 					"currentStatusStartTime": "2017-03-20 18:06:54.962+0000",
 					"currentStatusReasonStartTimeL": 1490033214962,
-					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",					
+					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",
 					"agentName": "agent_name2",
 					"agentNickname": "agent_nick2",
 					"agentLoginName": "agent2@liveperson.com",

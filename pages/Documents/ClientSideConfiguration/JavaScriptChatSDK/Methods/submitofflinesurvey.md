@@ -21,7 +21,7 @@ Used to submit the Offline survey.
 **Properties**
 
 | Value | Description | Type | Required |
-| :--- | :--- | :--- | :--- | 
+| :--- | :--- | :--- | :--- |
 | survey | The survey answers as entered by the visitor. | object | Required |
 
 Structure:
@@ -63,4 +63,4 @@ var failedRequest = myChat.submitOfflineSurvey({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```                                                                                                               
+```                                                                                                              

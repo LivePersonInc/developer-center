@@ -31,7 +31,7 @@ Global entities are automatically detected by the system, so you don’t have to
 | STATE | United States state | NY<br>New York |
 | STREET | United States descriptors for street names | Main St.<br>123 Main St. NE<br>123 East-West Highway Apt. 107 |
 | TIME | Time of day | 2 p.m.<br>23:00 |
-| URL | A URL | https://www.google.com/search?&lt;param&gt; | 
+| URL | A URL | https://www.google.com/search?&lt;param&gt; |
 
 Keep in mind that the detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
 

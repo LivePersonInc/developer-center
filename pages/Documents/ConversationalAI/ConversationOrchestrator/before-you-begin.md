@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Understand your API version
 
-There are two versions of the Conversation Orchestrator APIs: v1 and v2. 
+There are two versions of the Conversation Orchestrator APIs: v1 and v2.
 v2 was released in July 2021. This newer version applies to both the Conversation Context Service and the Next Actions APIs and unlocks the following benefits:
 
 * Higher scalability

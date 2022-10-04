@@ -45,9 +45,9 @@ If your request is throttled in this manner, it is recommended that you provide 
 Request by skillIds=199,200 (no interval)
 
 ```json
-    {  
-        "skillsMetrics":{  
-            "199":{  
+    {
+        "skillsMetrics":{
+            "199":{
                 "totalTimeToAnswer":7,
                 "enteredQEng":5,
                 "avgTimeToAnswer":0,
@@ -69,7 +69,7 @@ Request by skillIds=199,200 (no interval)
                 "queueSizeSum":216,
                 "queueSizeCount":3
             },
-            "200":{  
+            "200":{
                 "totalTimeToAnswer":3,
                 "enteredQEng":5,
                 "avgTimeToAnswer":0,
@@ -92,7 +92,7 @@ Request by skillIds=199,200 (no interval)
                 "queueSizeCount":5
             }
         },
-        "metricsTotals":{  
+        "metricsTotals":{
             "totalTimeToAnswer":10,
             "enteredQEng":10,
             "avgTimeToAnswer":0,
@@ -120,13 +120,13 @@ Request by skillIds=199,200 (no interval)
 Request by skillIds=11,21,269364510, interval=360, timeframe=720
 
 ```json
-    {  
-        "metricsByIntervals":[  
-            {  
+    {
+        "metricsByIntervals":[
+            {
                 "timestamp":1465286700000,
-                "metricsData":{  
-                    "skillsMetrics":{  
-                        "11":{  
+                "metricsData":{
+                    "skillsMetrics":{
+                        "11":{
                             "avgTimeToAbandon":0,
                             "totalTimeToAnswer":5,
                             "averageQueueSize":0.010390574264774098,
@@ -148,7 +148,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":112,
                             "connectedEng":1
                         },
-                        "21":{  
+                        "21":{
                             "avgTimeToAbandon":0,
                             "totalTimeToAnswer":2,
                             "averageQueueSize":0.0033572068039391225,
@@ -170,7 +170,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":30,
                             "connectedEng":1
                         },
-                        "269364510":{  
+                        "269364510":{
                             "avgTimeToAbandon":0,
                             "totalTimeToAnswer":9,
                             "averageQueueSize":0.023550191345304682,
@@ -193,7 +193,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "connectedEng":1
                         }
                     },
-                    "metricsTotals":{  
+                    "metricsTotals":{
                         "avgTimeToAbandon":0,
                         "totalTimeToAnswer":17,
                         "averageQueueSize":0,
@@ -217,11 +217,11 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                     }
                 }
             },
-            {  
+            {
                 "timestamp":1465308300000,
-                "metricsData":{  
-                    "skillsMetrics":{  
-                        "11":{  
+                "metricsData":{
+                    "skillsMetrics":{
+                        "11":{
                             "avgTimeToAbandon":1,
                             "totalTimeToAnswer":220,
                             "averageQueueSize":0.239413988657845,
@@ -243,7 +243,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":2533,
                             "connectedEng":25
                         },
-                        "21":{  
+                        "21":{
                             "avgTimeToAbandon":4,
                             "totalTimeToAnswer":52,
                             "averageQueueSize":0.036370384115791424,
@@ -265,7 +265,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":392,
                             "connectedEng":5
                         },
-                        "269364510":{  
+                        "269364510":{
                             "avgTimeToAbandon":0,
                             "totalTimeToAnswer":471,
                             "averageQueueSize":0.07260261106414953,
@@ -288,7 +288,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "connectedEng":18
                         }
                     },
-                    "metricsTotals":{  
+                    "metricsTotals":{
                         "avgTimeToAbandon":3,
                         "totalTimeToAnswer":743,
                         "averageQueueSize":0,
@@ -312,11 +312,11 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                     }
                 }
             },
-            {  
+            {
                 "timestamp":1465329900000,
-                "metricsData":{  
-                    "skillsMetrics":{  
-                        "11":{  
+                "metricsData":{
+                    "skillsMetrics":{
+                        "11":{
                             "avgTimeToAbandon":198,
                             "totalTimeToAnswer":5073,
                             "averageQueueSize":0,
@@ -338,7 +338,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":0,
                             "connectedEng":38
                         },
-                        "21":{  
+                        "21":{
                             "avgTimeToAbandon":424,
                             "totalTimeToAnswer":365,
                             "averageQueueSize":0,
@@ -360,7 +360,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "queueSizeSum":0,
                             "connectedEng":14
                         },
-                        "269364510":{  
+                        "269364510":{
                             "avgTimeToAbandon":250,
                             "totalTimeToAnswer":1777,
                             "averageQueueSize":1,
@@ -383,7 +383,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                             "connectedEng":47
                         }
                     },
-                    "metricsTotals":{  
+                    "metricsTotals":{
                         "avgTimeToAbandon":264,
                         "totalTimeToAnswer":7215,
                         "averageQueueSize":0,
@@ -408,8 +408,8 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                 }
             }
         ],
-        "skillsMetrics":{  
-            "11":{  
+        "skillsMetrics":{
+            "11":{
                 "avgTimeToAbandon":132,
                 "totalTimeToAnswer":5299,
                 "averageQueueSize":0.12326405070370025,
@@ -431,7 +431,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                 "queueSizeSum":2645,
                 "connectedEng":64
             },
-            "21":{  
+            "21":{
                 "avgTimeToAbandon":215,
                 "totalTimeToAnswer":419,
                 "averageQueueSize":0.021299147024680765,
@@ -453,7 +453,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                 "queueSizeSum":422,
                 "connectedEng":20
             },
-            "269364510":{  
+            "269364510":{
                 "avgTimeToAbandon":250,
                 "totalTimeToAnswer":2257,
                 "averageQueueSize":0.053111716100683,
@@ -476,7 +476,7 @@ Request by skillIds=11,21,269364510, interval=360, timeframe=720
                 "connectedEng":66
             }
         },
-        "metricsTotals":{  
+        "metricsTotals":{
             "avgTimeToAbandon":189,
             "totalTimeToAnswer":7975,
             "averageQueueSize":0.06717785493827161,

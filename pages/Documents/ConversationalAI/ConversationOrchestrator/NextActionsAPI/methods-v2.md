@@ -46,7 +46,7 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 | conversationId | string | The conversation ID of the current conversation | optional |
 | customerId | string | LivePerson customer ID of the current conversation | optional |
 | sessionId | string | The group ID associated with the session store variable call to set values. If no session is specified, then the conversationId is used to associate with the session store variables. | optional |
-| lpToken | string | Bearer {bearer token} | optional | 
+| lpToken | string | Bearer {bearer token} | optional |
 | policyId | string | The ID of the policy | optional |
 
 ##### Request payload example

@@ -8,5 +8,5 @@ This widget was built as a proof of concept for a client that needed to create a
 To use this widget you will need to update the demo.html file with your Marketo Munchkin Id and your Marketo Form Id.
 
 ## Author
-Mukthesh Saraf 
+Mukthesh Saraf
 Email: msaraf@liveperson.com

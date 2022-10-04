@@ -153,7 +153,7 @@ This section contains API details that are common to every API’s resource and 
 | 20015      | Handle messaging conversations  | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations                       |
 | 20017      | Set manual SLA  | Allows agents to manually configure the response time in a conversation.                    |
 | 20020      | Update consumer profile via API. | Allow agent and agent managers to update consumer profile via API   |
-| 20040      | View previously submitted messaging agent surveys | Allow agents to view all agent surveys submitted for the current conversation  |   
+| 20040      | View previously submitted messaging agent surveys | Allow agents to view all agent surveys submitted for the current conversation  |
 | 30000      | Agent Manager core permissions     | Core permissions that are included with the Agent Manager role and cannot be disabled.      |
 | 30001      | Join Agents' conversations                                     | Join a conversation handled by any Agent within their Group(s) or Sub-group(s)              |
 | 30002      | View Agents' conversations                                     | View conversations handled by Agents within their Group(s) or Sub-group(s)                  |
@@ -205,4 +205,3 @@ The revision mechanism exists in order to maintain order and save historical dat
 Every entity will have only one latest revision and the maximum revision number is a global number by account. Each change/update on one of these entities increases The revision. The developer can call the GET entity API in order to retrieve the latest revision. This revision will be part of the response header under ac-revision header.
 
 When sending the API calls using the 'IF-MATCH' header with a specific revision if there was no change the response will be 304 (Not Modified) response. When using 'IF-MATCH' header with '-1' value you will always get the full response.
-

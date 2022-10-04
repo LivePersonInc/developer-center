@@ -124,7 +124,7 @@ Contexted response:
 		        "lang": "cs-CZ",
 		        "msg": "Estaré con ustedes"
 		      }
-		    ],    
+		    ],
 		    "attributes": [
 		          {
 		              "timer": "60"

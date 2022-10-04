@@ -34,9 +34,9 @@ Use the views to understand the bot's performance, for example:
 
 Some measures that are useful to assess while monitoring and improving your bots include:
 
-#### Usage  
+#### Usage
 * What day and time were your bots active the most?
-* How many users were presented and connected to the bot? 
+* How many users were presented and connected to the bot?
 * How many interactions did the bot have with the consumer?
 * Is usage tied to any known external issues, e.g., service outages, supply chain issues, or social disruption?
 
@@ -47,11 +47,11 @@ Some measures that are useful to assess while monitoring and improving your bots
 * Does the bot fail? How often does it happen?
 * What is the bot’s intent match rate?
 
-#### Engagement 
+#### Engagement
 * How many users stayed through the entire bot flow?
 * Did they make it through what you consider the complete happy path to intent resolution?
 * Did they express any negative feedback or run into unforeseen problems?
-* How many conversations encountered fallback? 
+* How many conversations encountered fallback?
 
 #### Transfers
 * Was the bot equipped with all the resources needed to satisfy the consumer's intent?

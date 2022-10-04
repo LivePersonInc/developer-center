@@ -25,7 +25,7 @@ https://API_REQUEST?v=4.0
 ### Request
 
 | Method|      URL  |
-| :-------- | :---|  
+| :-------- | :---|
  |PUT|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/users/{userId}/resetPassword |
 
 **Request Headers**
@@ -48,7 +48,7 @@ https://API_REQUEST?v=4.0
  |:------|    :--------|    :--------|
  |accountId|  LP site ID|   String |
  |userId|  User ID|   Positive long number greater than zero|
- 
+
 **Query Parameters**
 
  | Name            | Description                       | Type    | Required  | Notes                                                |

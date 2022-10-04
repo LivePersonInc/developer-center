@@ -27,9 +27,9 @@ In the Web channel, the payment form is displayed in a non-intrusive, slide-out 
 <img style="width:650px" src="img/ConvoBuilder/byop2.png" alt="The Payment Form being displayed for the consumer in a window that slides out from the main conversation window">
 
 ### The end-to-end flow
-1. During the conversation, the consumer selects the item to pay for. The bot presents the total amount and asks for the consumer’s confirmation to pay. 
+1. During the conversation, the consumer selects the item to pay for. The bot presents the total amount and asks for the consumer’s confirmation to pay.
 2. The bot presents the consumer with a link or button to a payment form hosted by you.
-3. The consumer clicks the link or button that presents the form. 
+3. The consumer clicks the link or button that presents the form.
 4. The consumer provides their credit card information: name, credit card number, expiry date and CVC number. Then they submit the information to your payment service. Along with the credit card data, metadata such as SKU number, total amount and context data (user id, bot id and conversation id) is sent to your system.
 5. Your payment service processes the payment and calls back the bot by invoking LivePerson’s Callback Service (our [external Web forms integration API](conversation-builder-integrations-web-view-integration-api.html)) .
 6. The Callback Service returns the consumer to the appropriate place in the conversation. The transaction’s success or failure and the order details received from your payment system are sent to the consumer.

@@ -17,7 +17,7 @@ indicator: messaging
 * Your mobile app users should be able to log into your back-end securely.
 * Your back-end must be able to supply, upon request during the session, an OAuth 2.0 (for Code Flow) or a JWT token (for Implicit Flow).
 
-#### Authentication methods 
+#### Authentication methods
 
 If your system implementation involves an authentication step, you can use one of the following methods in order to get the conversation view:
 
@@ -69,7 +69,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 
-* The ability to use Campaigns    
+* The ability to use Campaigns
 
 #### Related Classes, Parameters and APIs
 

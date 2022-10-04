@@ -15,7 +15,7 @@ You can easily customize the unified window yourself by using these classes and 
 
 `block` — a component of the window
 
-`element` — a specific item within a block   
+`element` — a specific item within a block
 
 `modifier` — defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`):
 

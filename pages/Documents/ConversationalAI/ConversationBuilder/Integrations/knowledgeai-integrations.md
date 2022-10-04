@@ -30,9 +30,9 @@ The [Simple FAQ bot template](conversation-builder-templates-simple-faq.html) pr
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **KnowledgeAI**.
-    
+
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png" alt="Integration settings for a KnowledgeAI integration">
-    
+
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Method**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
     - **Request Parameters**:

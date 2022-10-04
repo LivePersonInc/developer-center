@@ -80,7 +80,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 {
     "metricsByIntervals": [
         {
-            "timestamp": 1516261915679,  
+            "timestamp": 1516261915679,
             "skillsMetrics": {
               "12": {
                 "totalSkillConversationSegments": 45,

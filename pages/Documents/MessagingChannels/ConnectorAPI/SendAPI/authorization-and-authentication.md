@@ -27,7 +27,7 @@ Content-Type: application/x-www-form-urlencoded
 client_id={client_id}&client_secret={client_secret}
 ```
 
-The `sentinel_service_domain` can be retrieved using the [LivePerson Domain API](agent-domain-domain-api.html) and searching for `sentinel`. The `accId` is your LivePerson site id. `client_id` and `client_secret` are given to you after [application registration](connectorapi-getting-started.html). The content type is always `application/x-www-form-urlencoded`. Sentinel will answer in accordance with [OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/). For example, a successful response looks as follows:  
+The `sentinel_service_domain` can be retrieved using the [LivePerson Domain API](agent-domain-domain-api.html) and searching for `sentinel`. The `accId` is your LivePerson site id. `client_id` and `client_secret` are given to you after [application registration](connectorapi-getting-started.html). The content type is always `application/x-www-form-urlencoded`. Sentinel will answer in accordance with [OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/). For example, a successful response looks as follows:
 
 ```http
 HTTP/1.1 200 OK
@@ -59,7 +59,7 @@ The `kid` (key id) is composed of `appjwt` and the date when it was issued. `typ
   "iat": 1524642670
 }
 ```
-Property `aud` defines the audience for whom the token is intended or the service for which it is intended. `azp` is the authorized party to which the AppJWT was issued. `scope` defines the part of application the authorized party has access to. `iss` defines the issuer of the token. `exp` is the expiration date and `iat` is the date when the token was issued. `aud` is always the account id, `azp` contains the app install id, `scope` is restricted to consumer, `iss` is sentinel and `exp` and `iat` contain the corresponding dates. An AppJWT is valid for one hour. For more information about JWTs, please also see this [blog post](https://auth0.com/blog/json-web-token-signing-algorithms-overview/). 
+Property `aud` defines the audience for whom the token is intended or the service for which it is intended. `azp` is the authorized party to which the AppJWT was issued. `scope` defines the part of application the authorized party has access to. `iss` defines the issuer of the token. `exp` is the expiration date and `iat` is the date when the token was issued. `aud` is always the account id, `azp` contains the app install id, `scope` is restricted to consumer, `iss` is sentinel and `exp` and `iat` contain the corresponding dates. An AppJWT is valid for one hour. For more information about JWTs, please also see this [blog post](https://auth0.com/blog/json-web-token-signing-algorithms-overview/).
 
 ### Get ConsumerJWT
 
@@ -160,9 +160,8 @@ Each line in the following table represents one possible response body, includin
 
 | Error Code | Title | Details | Comment |
 | :--- | :--- | :--- | :--- | :--- |
-| 40001 | Missing parameter | Brand Id is missing | **Note:** This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `sentinel`. Title and details will be adapted in a future release to reflect missing claims. The error code won't change. | 
+| 40001 | Missing parameter | Brand Id is missing | **Note:** This response will also be generated when mandatory claims in the AppJwt are missing. For example, when claim `iss` is not present or does not have the value `sentinel`. Title and details will be adapted in a future release to reflect missing claims. The error code won't change. |
 | 40102 | Invalid AppJWT  | AppJWT has expired or is invalid | |
 | 40103 | Invalid ConsumerJWS  | ConsumerJWS is invalid  | |
 | 40104 | ConsumerJWS is missing  | X_ON_BEHALF_HEADER is not present |
 | 40105 | AppJWT is missing  | AUTHORIZATION header is not present |
-
