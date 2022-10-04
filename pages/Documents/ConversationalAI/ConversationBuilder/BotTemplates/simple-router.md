@@ -13,7 +13,7 @@ indicator: both
 
 The Simple Router template provides an easy framework for the creation of a routing bot.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simplerouter.png" alt="">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simplerouter.png" alt="The Escalation dialog in a bot created from the Simple Router bot template">
 
 ### Included items
 
@@ -34,11 +34,11 @@ The Simple Router template provides an easy framework for the creation of a rout
   - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
   - In the Integrations area, there should be a pre-configured integration named “Transfer” and “LivePerson Agent Escalation” should be selected in the Integration Type menu.
 
-    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png" alt="">
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png" alt="Some of the integration settings for the Transfer integration">
 
   - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
 
-    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_4.png" alt="">
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_4.png" alt="Some more of the settings for the Transfer integration">
 
 ### Configuration needed
 
@@ -50,7 +50,7 @@ In the Welcome dialog, in the Dialog Starter interaction, click the defined "hi"
 
 In the Multiple Choice interaction, edit each option text for your skills. Then edit the custom rules for the new skills. You will need to edit the Conditions patterns **and** and intent variable value for each. Of course, you should add or remove rules depending on how many skills you plan to route to.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png" alt="Editing the rule">
 
 #### Reprompt dialog
 
@@ -92,8 +92,8 @@ switch(intent){
       transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
       skillId = '1680373730';
       skillName = 'help';
-      break;  
-  }      
+      break;
+  }
 ```
 
 For each of your skill options:

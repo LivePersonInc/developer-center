@@ -41,13 +41,13 @@ Called whenever either the consumer or the agent starts a new conversation.
 
 Called when the current conversation is marked as resolved by either the consumer or the agent.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION
 >
 > - To get the convData param from the Intent, use LivePersonIntents.getLPConversationData(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onConversationResolved(LPConversationData convData)
 >
@@ -65,23 +65,23 @@ Called when the current conversation is marked as resolved by either the consume
 
 Called when the Conversation Fragment is closed (only called when using Fragment Mode).
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CONVERSATION_FRAGMENT_CLOSED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
-> onConversationFragmentClosed() 
+> onConversationFragmentClosed()
 
 #### Conversation Marked as Urgent
 
 Called when the current conversation gets marked as urgent by either the consumer or the agent.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onConversationMarkedAsUrgent()
 
@@ -89,28 +89,28 @@ Called when the current conversation gets marked as urgent by either the consume
 
 Called when the current conversation gets marked as normal by either the consumer or the agent.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onConversationMarkedAsNormal()
 
 ### Agent Action Events
 #### Agent details changed
 
-Called when the assigned agent of the current conversation has changed, or their details are updated. When no agent is associated with the conversation, the callback passes a null value. For example, this happens when an agent returns the consumer to the request queue. 
+Called when the assigned agent of the current conversation has changed, or their details are updated. When no agent is associated with the conversation, the callback passes a null value. For example, this happens when an agent returns the consumer to the request queue.
 
 **Note:** You must check for null value before using the agentData object.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION
 >
 > - To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onAgentDetailsChanged(AgentData agentData)
 
@@ -122,13 +122,13 @@ Called when the assigned agent of the current conversation has changed, or their
 
 Called when the assigned agent is typing a message. When there are 2 seconds of idle time, the callback returns false to indicate that the agent stopped typing.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION
 >
 > - To get the isTyping param from the Intent, use LivePersonIntents.getAgentTypingValue(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onAgentTyping(boolean isTyping)
 
@@ -138,15 +138,15 @@ Called when the assigned agent is typing a message. When there are 2 seconds of 
 
 #### Offline Hours Changed
 
-Called when there is a change in agent availability. 
+Called when there is a change in agent availability.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION
 >
 > - To get the isOfflineHoursOn param from the Intent, use LivePersonIntents.getOfflineHoursOn(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onOfflineHoursChanges(boolean isOfflineHoursOn)
 
@@ -159,16 +159,16 @@ Called when there is a change in agent availability.
 
 **Android version supported:** 6.0 and above
 
-Called if the user denied a necessary system permission for the action they tried to perform. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed, and the user denied permission. 
+Called if the user denied a necessary system permission for the action they tried to perform. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed, and the user denied permission.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_USER_DENIED_PERMISSION
 >
 > - To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).
 > - To get the doNotShowAgainMarked param from the Intent, use LivePersonIntents.getPermissionDoNotShowAgainMarked(intent).
 >
-> **Callbacks:** 
+> **Callbacks:**
 >
 > onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
 
@@ -183,13 +183,13 @@ Called if the user denied a necessary system permission for the action they trie
 
 Called before requiring a permission that the user has not yet accepted. For example, when the user clicks the camera or gallery buttons to add an image, this callback gets called just before the permission dialog is displayed. If the user already allowed permission, this callback does not get called.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION
 >
 > - To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onUserActionOnPreventedPermission(PermissionType permissionType)
 
@@ -203,15 +203,15 @@ Called when the user taps on the agent avatar.
 
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode).
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION
 >
 > - To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
-> onAgentAvatarTapped (AgentData agentData) 
+> onAgentAvatarTapped (AgentData agentData)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -219,18 +219,18 @@ The icon is available next to the agent message bubble or on the top of the tool
 
 #### Structured Content Link Clicked
 
-Called when a structured content control with Link action gets clicked.  
+Called when a structured content control with Link action gets clicked.
 
-{: .important}
+{: .attn-note}
 This callback only gets called if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to **true**.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_STRUCTURED_CONTENT_LINK_CLICKED
 >
 > - To get the uri param from the Intent, use LivePersonIntents.getLinkUri(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onStructuredContentLinkClicked(String uri)
 
@@ -243,23 +243,23 @@ This callback only gets called if the [structured_content_link_as_callback](andr
 
 Called when the feedback screen launches.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onCsatLaunched()
 
 #### CSAT Screen Dismissed
 
-Called when the feedback screen gets dismissed with any result, positive or negative. (The user taps the **Submit**, **Skip**, or **Back** buttons.) 
+Called when the feedback screen gets dismissed with any result, positive or negative. (The user taps the **Submit**, **Skip**, or **Back** buttons.)
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CSAT_DISMISSED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onCsatDismissed()
 
@@ -267,14 +267,14 @@ Called when the feedback screen gets dismissed with any result, positive or nega
 
 Called when the user taps the **Submit** button on the feedback screen. The onCsatDismissed callback is called as well.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION
 >
 > - To get the conversationID param from the Intent, use LivePersonIntents.getConversationID(intent).
 > - To get the starRating param from the Intent, use LivePersonIntents.getCsatStarRating(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onCsatSubmitted(String conversationId, int starRating)
 >
@@ -290,11 +290,11 @@ Called when the user taps the **Submit** button on the feedback screen. The onCs
 
 Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed callback is called as well.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onCsatSkipped()
 
@@ -303,11 +303,11 @@ Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed 
 
 Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-methods.html#reconnect) with a new authentication key.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onTokenExpired()
 
@@ -315,11 +315,11 @@ Called if the token used in the session has expired and is no longer valid. The 
 
 Called if the temporary user authentication used specifically in an Unauthenticated type flow expires.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_UNAUTHENTICATED_USER_EXPIRED_INTENT_ACTION
 >
-> **Callback:** 
+> **Callback:**
 >
 > onUnauthenticatedUserExpired()
 
@@ -328,13 +328,13 @@ Called if the temporary user authentication used specifically in an Unauthentica
 
 Called when the connection to the conversation server has been established or disconnected.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_CONNECTION_CHANGED_INTENT_ACTION
 >
 > - To get the isConnected param from the Intent, use LivePersonIntents.getConnectedValue(intent).
-> 
-> **Callback:** 
+>
+> **Callback:**
 >
 > onConnectionChanged(boolean isConnected)
 
@@ -347,7 +347,7 @@ Called when the connection to the conversation server has been established or di
 
 Called to indicate that an internal SDK error occurred.
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION
 >
@@ -355,7 +355,7 @@ Called to indicate that an internal SDK error occurred.
 > - To get the type param from the Intent, use LivePersonIntents.getOnErrorTaskType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onError(TaskType type, String message)
 
@@ -364,14 +364,14 @@ Called to indicate that an internal SDK error occurred.
 | type      | TaskType (enum) | The category or type of error. |
 | message   | String          | A detailed message on the error. |
 
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
 >
 > - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onError(LpError lpError, String message);
 
@@ -398,18 +398,18 @@ public interface LivePersonCallback {
     void onConversationFragmentClosed();
     void onConversationMarkedAsUrgent();
     void onConversationMarkedAsNormal();
-    
+
     // Agent Events
     void onAgentTyping(boolean isTyping);
     void onAgentDetailsChanged(AgentData agentData);
     void onOfflineHoursChanges(boolean isOfflineHoursOn);
-    
+
     // User Action Events
     void onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
     void onUserActionOnPreventedPermission(PermissionType permissionType);
     void onAgentAvatarTapped(AgentData agentData);
     void onStructuredContentLinkClicked(String uri);
-    
+
     // Survey Events
     void onCsatLaunched();
     void onCsatDismissed();
@@ -418,14 +418,14 @@ public interface LivePersonCallback {
     void onCsatSubmitted(String conversationId);
     void onCsatSubmitted(String conversationId,int starRating);
     void onCsatSkipped();
-    
+
     // Authentication Events
     void onTokenExpired();
     void onUnauthenticatedUserExpired();
-    
+
     // Connection Events
     void onConnectionChanged(boolean isConnected);
-    
+
     // Error Events
     @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     void onError(TaskType type, String message);
@@ -435,7 +435,7 @@ public interface LivePersonCallback {
 
 ### LivePerson Intents
 
-#### Intent Actions  
+#### Intent Actions
 
 ```java
 public interface ILivePersonIntentAction {
@@ -445,31 +445,31 @@ public interface ILivePersonIntentAction {
     String LP_ON_CONVERSATION_FRAGMENT_CLOSED_INTENT_ACTION = "LP_ON_CONVERSATION_FRAGMENT_CLOSED_INTENT_ACTION";
     String LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION";
     String LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION = "LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION";
-    
+
     // Agent Action Events
     String LP_ON_AGENT_TYPING_INTENT_ACTION = "LP_ON_AGENT_TYPING_INTENT_ACTION";
     String LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION = "LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION";
     String LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION = "LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION";
-    
+
     // User Action Events
     String LP_ON_USER_DENIED_PERMISSION = "LP_ON_USER_DENIED_PERMISSION";
     String LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION = "LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION";
     String LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION = "LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION";
     String LP_ON_STRUCTURED_CONTENT_LINK_CLICKED = "LP_ON_STRUCTURED_CONTENT_LINK_CLICKED";
-    
+
     // Survey Events
     String LP_ON_CSAT_LAUNCHED_INTENT_ACTION = "LP_ON_CSAT_LAUNCHED_INTENT_ACTION";
     String LP_ON_CSAT_DISMISSED_INTENT_ACTION = "LP_ON_CSAT_DISMISSED_INTENT_ACTION";
     String LP_ON_CSAT_SUBMITTED_INTENT_ACTION = "LP_ON_CSAT_SUBMITTED_INTENT_ACTION";
     String LP_ON_CSAT_SKIPPED_INTENT_ACTION = "LP_ON_CSAT_SKIPPED_INTENT_ACTION";
-    
+
     // Authentication Events
     String LP_ON_TOKEN_EXPIRED_INTENT_ACTION = "LP_ON_TOKEN_EXPIRED_INTENT_ACTION";
     String LP_ON_UNAUTHENTICATED_USER_EXPIRED_INTENT_ACTION = "LP_ON_UNAUTHENTICATED_USER_EXPIRED_INTENT_ACTION";
-    
+
     // Connection Events
     String LP_ON_CONNECTION_CHANGED_INTENT_ACTION = "LP_ON_CONNECTION_CHANGED_INTENT_ACTION";
-    
+
     // Error Events
     String LP_ON_ERROR_INTENT_ACTION = "LP_ON_ERROR_INTENT_ACTION";
 }
@@ -481,24 +481,24 @@ public interface ILivePersonIntentAction {
 public interface ILivePersonIntentExtras{
     // Conversation Extras
     String LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA = "LP_CONVERSATION_DATA_INTENT_PARCELABLE_EXTRA";
-    
+
     // Agent Extras
     String LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA = "LP_AGENT_IS_TYPING_INTENT_BOOLEAN_EXTRA";
     String LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA = "LP_AGENT_DATA_INTENT_PARCELABLE_EXTRA";
     String LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA = "LP_IS_OFFLINE_HOURS_ON_INTENT_BOOLEAN_EXTRA";
-    
+
     // User Extras
     String LP_PERMISSION_TYPE_EXTRA = "LP_PERMISSION_TYPE_EXTRA";
     String LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA = "LP_PERMISSION_DO_NOT_SHOW_AGAIN_EXTRA";
     String LP_LINK_URI_EXTRA = "LP_LINK_URI_EXTRA";
-    
+
     // Survey Extras
     String LP_CONVERSATION_ID_INTENT_STRING_EXTRA = "LP_CONVERSATION_ID_INTENT_STRING_EXTRA";
     String LP_CSAT_STAR_RATING_INTENT_INT_EXTRA = "LP_CSAT_STAR_RATING_INTENT_INT_EXTRA";
-    
+
     // Connection Extras
     String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";
-    
+
     // Error Extras
     @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
@@ -559,4 +559,3 @@ enum class LpError {
 | INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
 | STEP_UP_FAILURE     | Error while stepping up consumer from un-authenticated conversation to authenticated. |
 | UNKNOWN             | General SDK error. |
-

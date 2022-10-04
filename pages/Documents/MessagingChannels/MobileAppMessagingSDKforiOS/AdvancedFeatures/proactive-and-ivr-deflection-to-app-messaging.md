@@ -9,7 +9,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-proactive-and-ivr-
 indicator: messaging
 ---
 
-To integrate Proactive or IVR Deflection to App messaging, brands must follow these configurations steps when implementing the SDK (minimum version iOS SDK 6.2): 
+To integrate Proactive or IVR Deflection to App messaging, brands must follow these configurations steps when implementing the SDK (minimum version iOS SDK 6.2):
 
 * Make sure the brand app already has push notification set up in order to enable their consumers to receive notifications. You can find detailed instructions on how to set up LivePerson's push notification service [here](mobile-app-messaging-sdk-for-ios-push-notifications.html).
 
@@ -25,8 +25,8 @@ Consumers can now receive push notifications even in logged out state. SDK has i
 Brands can choose either of the following configurations to unregister user from pusher:
 
 ```swift
-func logout(unregisterType: LPPusherUnregisterType, 
-                       completion: @escaping ()->(), 
+func logout(unregisterType: LPPusherUnregisterType,
+                       completion: @escaping ()->(),
                        failure: @escaping (_ errors: [Error])->())
 ```
 
@@ -55,7 +55,7 @@ Enable or disable the ability to display Proactive and IVR Deflection messages o
     - Consumer tapped InApp Notification
 - **Available since:** 6.4.1
 
-{: .notice}
+{: .attn-alert}
 This flags enables SDK to process InApp Notifications for Proactive and IVR Deflection messages, is not related to Push Notifications received when the Application is not active.
 
 -----

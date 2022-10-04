@@ -11,7 +11,7 @@ indicator: both
 
 Chat Post Survey integrates LivePerson Functions with Conversational Cloud Chat. This integration will use Functions to re-create one of our Legacy features: the ability to send out email transcripts after a chat conversation ends conditionally.
 
-{: .important}
+{: .attn-note}
 For this integration, the chat server will still take care of sending out emails. Functions will enable you to write more sophisticated conditions.
 
 ### Configuration
@@ -22,7 +22,7 @@ There are no further requirements other than your Functions account has been [pr
 
 Create a new function from the **Chat Post Survey Email Transcript** event. Leave the default template selected.
 
-{: .important}
+{: .attn-note}
 Once a Function implements this specific event, it will disable the existing logic (i.e., any rules defined otherwise in Conversational Cloud). Therefore, confirm that you implemented the current logic within your function before deployment.
 
 #### Step 2 — Edit the Function

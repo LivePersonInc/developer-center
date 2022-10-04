@@ -12,11 +12,11 @@ permalink: mobile-sdk-and-web-templates-structured-content-rendering-tool.html
 indicator: both
 ---
 
-The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock). In addition to the Json-Pollock library, the [Rich Content Validation](https://github.com/LivePersonInc/rich-content-validator) library can be used for validating rich content across different channels. 
+The **Json-Pollock** package renders live DOM elements out of JSON templates according to the [Structured Messaging Templates specification](rich-messaging-structured-content-card.html). You can find the GitHub repository for this project [here](https://github.com/LivePersonInc/json-pollock). In addition to the Json-Pollock library, the [Rich Content Validation](https://github.com/LivePersonInc/rich-content-validator) library can be used for validating rich content across different channels.
 
 **A sandbox environment which you can use to check out the tool in context can be found [here](https://livepersoninc.github.io/json-pollock/editor/).**
 
-<div class="important">The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.</div>
+<div class="attn-note">The JSON-Pollock Playground in its current state, is used for testing the rendering of Structured Content on Web Messaging only, not covering Chat, In-App and Messaging Connectors. There is no SLA or an official support process provided for this web tool. The web tool itself is based on an open source project in GitHub, to which everyone is welcome to create a pull request and enhance it.</div>
 
 ### Installation
 

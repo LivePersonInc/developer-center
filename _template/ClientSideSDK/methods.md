@@ -12,14 +12,14 @@ indicator: accepts "messaging" "chat" or "both"
 
 Explain what a developer can do with these methods/functions.
 
-{: .important}
+{: .attn-note}
 Perhaps note that the developer should see the [introduction](introduction-to-this-product.html) to this product if they have not yet?
 
 ### Function One
 
 Explain what this function does. Why the developer would want to use it.
 
-{: .important}
+{: .attn-note}
 Optionally include a best practice or gotcha note.
 
 | Function Name | Arguments | Returns |

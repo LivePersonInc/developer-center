@@ -122,7 +122,7 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
 You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that has not been accounted for? To catch these when they occur, you need to provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
 
-{: .important}
+{: .attn-note}
 There can be only one dialog of type Fallback per bot.
 
 1. Click the **Fallback** tab in the lower-left corner to open the Fallback dialog.

@@ -28,7 +28,7 @@ This method receives an engagement ID and returns the engagement information if 
 
 ```javascript
     if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){
-       var info =   
+       var info =
             lpTag.taglets.rendererStub.getEngagementInfo(12356454);
     }
 ```
@@ -40,18 +40,18 @@ The method returns a JSON with the engagement information.
 *Example*
 
 ```json
-    {  
+    {
   "campaignId":1547868510,
   "confKey":"1547868510_1547904110_21",
   "contextId":"1",
-  "contexts":[  
-     {  
-        "EngagementContext":{  
+  "contexts":[
+     {
+        "EngagementContext":{
            "id":"1"
         }
      },
-     {  
-        "pageContext":{  
+     {
+        "pageContext":{
            "id":"2203783087"
         }
      }

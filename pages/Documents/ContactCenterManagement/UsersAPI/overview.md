@@ -39,13 +39,13 @@ A few things you’ll need to get started with this API:
 
 	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow**
 		* **OAuth 1.0 App Keys** — [follow the instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
-		
-		{: .important}
+
+		{: .attn-note}
 	For the Users API, select the Administration category and check Users
 
 		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.
 
-		{: .important}
+		{: .attn-note}
 	When registering an OAuth 2.0 application for using the Users API, use the “users.read” and “users.write” scopes
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).

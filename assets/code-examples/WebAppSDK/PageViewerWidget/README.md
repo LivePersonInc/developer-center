@@ -1,4 +1,4 @@
-# PV — Page Viewer Widget 
+# PV — Page Viewer Widget
 
 This is an example widget that was created for a client that shows how you can simulate a page viewer in LiveEngage. While we have the "Page Navigation" built into the agent workspace in LiveEngage, it does not give a visual view of what the customer is seeing. This simple widget allows a visual understanding of where your customers are on your website all in one window.
 
@@ -16,7 +16,7 @@ Additionally, this widget uses the Agent Workspace Widget SDK and binds to the U
 Currently the tooltip on the copy button has a slight bug where it might not appear as consistently. The copy function still operates as expected.
 
 ## Instructions
-* 
+*
 * Host the widget on your servers (or use the live demo provided)
 * Login to LiveEngage as an admin
 * Go to Night Vision (icon next to your name at the far top-right) > Agent Workspace > "+"> Add a new widget

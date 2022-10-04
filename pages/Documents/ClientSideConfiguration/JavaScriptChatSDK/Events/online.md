@@ -77,5 +77,5 @@ Triggered any time a line is added to the chat. The data here can be a single li
             "@id": "18"
         }
     ]
-}  
+}
 ```

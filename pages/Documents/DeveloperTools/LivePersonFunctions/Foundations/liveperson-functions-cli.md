@@ -15,14 +15,14 @@ The Functions Command Line Interface (CLI) tool will enable you to develop, test
 
 ## How to install
 
- {: .notice}
+ {: .attn-alert}
 The CLI is optimized for use with macOS and Linux. If you want to use the CLI from a Windows machine, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about).
 
 Use the command `npm install -g liveperson-functions-cli` or `yarn global add liveperson-functions-cli` to install the CLI on your local machine. Once the CLI has been successfully installed you can display the current version using `lpf version`:
 
 <img class="fancyimage" alt="Functions: cli version" src="img/functions/functions_cli_version.png">
 
-{: .notice}
+{: .attn-alert}
 The user using CLI should have admin privileges. Otherwise, the correct functionality of the CLI cannot be guaranteed.
 ### Overview Functionality
 All CLI functionality is available through the `lpf` command followed by:
@@ -53,7 +53,7 @@ Local development with Functions is easy using the CLI if you require a more det
 #### Initialization
 The development process should start with initializing your functions environment using `lpf init` in an empty folder or an existing functions project. This will create the basic structure of your functions project. Additionally, it will add all the required files for local development, such as snippets or the debugger runtime.
 
-{: .notice}
+{: .attn-alert}
 Each time you update the CLI or download a project created with the CLI it is recommended to reinitialize with `lpf init`, as changes to the CLI tools can introduce new features that have to be added to the project's codebase.
 
 #### Development and Testing
@@ -61,7 +61,7 @@ To create a new function locally use `lpf create:function` from your project's r
 
 You can develop your function's code within this folder by modifying the `index.js` using the IDE of your choice, similarly to the Functions UI. To alter your function's metadata (e.g. description), you can do so in the `config.json`.
 
-{: .notice}
+{: .attn-alert}
 Modifying the `config.json` should be done with care. The function name is immutable and used as an identifier within the Functions platform.
 
 Testing a function locally can be done by using the `lpf invoke FUNCTION_NAME --local` or `lpf debugger FUNCTION_NAME` to either invoke or debug the function. In both cases, the `input` property of the `config.json` will be used for payload. For a step-by-step guide please consult the [CLI deep dive](liveperson-functions-getting-started-development-deep-dive-cli.html).
@@ -106,7 +106,7 @@ To get the correct domain for your account, use the [Domain Retrieval tool](agen
 
 The request will result in a JSON that contains `bearer` property which we will need for authorization. To login to your account use `lpf login --token <BEARER> --accountId <ACCOUNT_ID> --userId <USER_ID>`.
 
-{: .notice}
+{: .attn-alert}
 The bearer token will stay valid for a sufficient time for most CI/CD jobs. If you wish to invalidate the bearer token and remove the credentials from the CLI use the command `lpf logout --accountId <ACCOUNT_ID> --delete`
 
 Here is a simple example for a shell script which can be a blueprint for your Functions CI/CD integration. It clones a repository, gets the login credentials, pushes the function to the Functions platform, and (re)deploys it.

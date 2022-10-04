@@ -12,7 +12,7 @@ indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-{: .important}
+{: .attn-note}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
 ---
@@ -43,7 +43,7 @@ Announce when the agent is typing. This is applicable only in Activity mode.
 
 When set to **true** the callback [LivePersonCallback](/android-callbacks-index.html#liveperson-callbacks) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active.
 
-* **Type:** bool  
+* **Type:** bool
 * **Default value:** true
 
 ---
@@ -54,24 +54,24 @@ When set to **true** the callback [LivePersonCallback](/android-callbacks-index.
 
 Enable or disable the audio messaging feature.
 
-* **Type:** bool  
+* **Type:** bool
 * **Default value:** false
 
 #### lp_record_max_time_seconds
 
 Maximum voice recording time in seconds.
 
-* **Type:** int  
+* **Type:** int
 * **Default value:** 120
 
 #### max_number_stored_voice_files
 
 Maximum number of voice files stored on the device.
 
-* **Type:** int  
+* **Type:** int
 * **Default value:** 120
 
----  
+---
 
 ### Avatars
 
@@ -119,7 +119,7 @@ Defines the remote avatar Trailing spacing (from the avatar to the bubble).
 &nbsp;
 </div>
 
----  
+---
 
 ### Brand
 
@@ -403,7 +403,7 @@ The font name for all elements that are not in the conversation feed.
 * **Default value:** Empty (use the device font)
 * **Example:** customFont.ttf
 
----  
+---
 
 ### Connection status bar
 
@@ -495,7 +495,7 @@ Define the color of status bar text color when connection is unavailable.
 &nbsp;
 </div>
 
----  
+---
 
 ### Controller Message
 
@@ -579,7 +579,7 @@ Define the color of menu button and back arrow on toolbar.
 &nbsp;
 </div>
 
----  
+---
 
 ### Conversations
 
@@ -837,7 +837,7 @@ The character used to mask the real time message.
 &nbsp;
 </div>
 
----  
+---
 
 ### Date and Time
 
@@ -876,7 +876,7 @@ Define timeout for automatic resending pending message before moving it to faile
 * **Type:** integer
 * **Default value:** 60
 
----  
+---
 
 ### Date Separator
 
@@ -1126,7 +1126,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 
 Default progress bar vector drawable for downloading or uploading an image. It appears on the image, inside the bubble, until progress is done. To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
----  
+---
 
 ### Delivery Notifications
 
@@ -1193,7 +1193,7 @@ Define if to show confirm dialog before clearing history or not.
 * **Type:** bool
 * **Default value:** true
 
----  
+---
 
 ### General Style
 
@@ -1426,7 +1426,7 @@ parse only &lt;og:> tags or others as well
 * false: use &lt;og:title&gt; tags only
 * true: use &lt;og:title&gt; and &lt;title&gt; tags
 
----  
+---
 
 ### Message Edit Text
 
@@ -1630,7 +1630,7 @@ Available options:
 1. Bottom
 2. LastPosition
 
----  
+---
 
 ### Navigation — Scroll down indicator
 
@@ -1662,7 +1662,7 @@ Enable or disable the summary in scroll down indicator (shown or invisible). If 
 
 The scroll to bottom button width is dynamic and will be auto adjusted based on length of the summary text.
 
-* **Type:** bool  
+* **Type:** bool
 * **Default value:** true
 
 <div style="float: left; width: 50%;height: 73px;">
@@ -1797,7 +1797,7 @@ Color of the unread messages counter solid color.
 
 Color of the scroll down background color.
 
-* **Type:** color  
+* **Type:** color
 * **Default value:** #CC000000
 
 <div style="float: left; width: 50%;height: 75px;">
@@ -1822,7 +1822,7 @@ Color of the scroll down background color.
 
 Color of the image arrow scrolling down.
 
-* **Type:** color  
+* **Type:** color
 * **Default value:** @android:color/white
 
 <div style="float: left; width: 50%;height: 73px;">
@@ -1887,7 +1887,7 @@ Corner radius of the unread messages counter inside the scroll down indicator.
 &nbsp;
 </div>
 
----  
+---
 
 ### Photo and File Sharing
 
@@ -2067,7 +2067,7 @@ Quick Replies button border width.
 * **Type:** dimen
 * **Default value:** 1dp
 
----  
+---
 
 ### Secure Form
 
@@ -2089,7 +2089,7 @@ Define the font of the pci secure form.
 
 Default progress bar vector drawable for PCI secure form (after pressing to fill the form, the button changes to progress bar until we can show the form). To override this resource, create a vector drawable under the android drawable folder with the same resource name.
 
----  
+---
 
 ### Survey screen
 
@@ -2610,7 +2610,7 @@ Define the color of the agent name on agent details section in feedback dialog.V
 
 Defines whether to show the feedback dialog.
 
-* **Type:** bool  
+* **Type:** bool
 * **Default value:** true
 
 <div style="width: 85%;padding: 5px;">
@@ -2621,7 +2621,7 @@ Defines whether to show the feedback dialog.
 
 Define if the agent’s name and avatar are visible on top of feedback dialog.
 
-{: .notice}
+{: .attn-alert}
 If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2646,7 +2646,7 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 
 Defines whether to show or hide the yes/no question in the feedback dialog (true=show, false=hide).
 
-{: .notice}
+{: .attn-alert}
 If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details_csat) are set to **true**, then `show_yes_no_question` gets ignored and hidden.
 
 <div style="float: left; width: 50%;height: 400px;">
@@ -2671,7 +2671,7 @@ If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details
 
 Define if "thank you" screen will appear after submitting the survey.
 
-* **Type:** bool  
+* **Type:** bool
 * **Default value:** true (show)
 
 <div style="width: 85%;padding: 5px;">
@@ -2795,7 +2795,7 @@ Configuration to fit number of text lines in structured content button element.
 * **Type:** integer
 * **Default value:** 1
 
----  
+---
 
 ### System messages
 
@@ -2821,7 +2821,7 @@ Color code for the text of the system messages.
 &nbsp;
 </div>
 
----  
+---
 
 ### Time to Response and Off Hours
 
@@ -2832,7 +2832,7 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
-{: .important}
+{: .attn-note}
 When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
 
 #### show_timestamp_in_ttr_notification
@@ -2870,7 +2870,7 @@ Define the frequency of the TTR (time to response) messages.
 * **Type:** integer
 * **Default value:** 8
 
----  
+---
 
 ### Unread Messages
 
@@ -2928,7 +2928,7 @@ Color code for the background of the unread messages bubble.
 &nbsp;
 </div>
 
----  
+---
 
 ### Bubbles
 
@@ -3256,7 +3256,7 @@ color of the stroke (border) of the form invitation bubble.
 
 #### agent_bubble_pci_form_invitation_button_text_color
 
-color of the text on the button  
+color of the text on the button
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
@@ -3456,7 +3456,7 @@ Only available as long as the announce_agent_typing configuration is on (set as 
 &nbsp;
 </div>
 
-{: .important}
+{: .attn-note}
 If you want to present a different animation or image, create a file and name it *lp_messaging_ui_typing_animation_frames.xml* to override the SDK's original animation.<br><br>**Default value:** LivePerson animation
 
 #### agent_bubble_link_preview_background_stroke_color

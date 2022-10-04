@@ -19,7 +19,7 @@ indicator: both
 
 The `lpTag` handles the communication of many events that occur on the vistor's webpage.
 
-These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
+These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others.
 
 Below you can find a list of events published on a web page by the Web Tag, each organized under an `appName` and given an `eventName`.
 
@@ -91,7 +91,7 @@ This event is triggered when vistor monitoring starts and/or when its state is c
 
 These are chat window related events. Because the customer conversation is contained within the window, the events provided here are related to the lifecycle of a conversation.
 
-{: .important}
+{: .attn-note}
 These events will only be triggered for an **embedded** window, **not** a pop-out window.
 
 #### state

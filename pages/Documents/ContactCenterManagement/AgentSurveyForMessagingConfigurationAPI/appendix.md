@@ -42,11 +42,11 @@ This section contains API details that are common to every API’s resource, met
 **Entity Structure**
 
  | Attribute | Description | Type/Value | Notes |
- | :--------- | :-------------- | :----------- | :--- | 
- | name | Agent survey’s unique name| String |   
+ | :--------- | :-------------- | :----------- | :--- |
+ | name | Agent survey’s unique name| String |
  | description | Survey's description | String |
- | root | The first question in the survey | String |  
- | isDefault | is this the default survey | boolean | 
+ | root | The first question in the survey | String |
+ | isDefault | is this the default survey | boolean |
  | defaultTimeoutInMinutes | default timeout of the survey | long | Timeout defined on skill level, overrides this default timeout |
  | deleted | Whether the item is deleted or not | boolean |
  | enabled | Whether the item is enabled or not| boolean |
@@ -60,7 +60,7 @@ This section contains API details that are common to every API’s resource, met
     "description": "survey description",
     "root": 11,
     "isDefault": true,
-    "defaultTimeoutInMinutes": 123, 
+    "defaultTimeoutInMinutes": 123,
     "deleted": false,
     "enabled": true,
     "questions": [
@@ -94,8 +94,8 @@ This section contains API details that are common to every API’s resource, met
 **Question definition**
 
 | Attribute | Description | Type/Value | Notes |
-| :--------- | :-------------- | :----------- | :--- |  
-| id | Question unique ID | Long | 
+| :--------- | :-------------- | :----------- | :--- |
+| id | Question unique ID | Long |
 | orderId |  Ordered number, represents the location of the question in the survey |
 | text | Question's text | String |
 | next | ID of the next question in the survey | Long | should be null in case the question contains replies |
@@ -110,8 +110,8 @@ This section contains API details that are common to every API’s resource, met
 **Reply definition**
 
 | Attribute | Description | Type/Value | Notes |
-| :--------- | :-------------- | :----------- | :--- |  
-| id | Answer unique ID | Long | 
+| :--------- | :-------------- | :----------- | :--- |
+| id | Answer unique ID | Long |
 | text | Answer's text | String |
 | next | ID of the next question in the survey that the agent will be redirected to when he choose this answer | Long |
 | nextInOrder|  True if the next question this answer redirects to, is in order | Boolean |

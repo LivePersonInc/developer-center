@@ -34,8 +34,8 @@ This API retrieves a list of profiles for a specific account.
 
 **Path Parameters**
 
-| Parameter   |  Description   |   Type / Value  |              
- |:---------- |  :------------- |  :-------------  |            
+| Parameter   |  Description   |   Type / Value  |
+ |:---------- |  :------------- |  :-------------  |
 | accountId |    LP site ID    |   String  |
 
 ### Response

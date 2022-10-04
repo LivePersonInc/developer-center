@@ -16,6 +16,6 @@ indicator: chat
 
 Triggered when a transcript has been requested from the server.
 
-```json 
+```json
 { "email" : "me@me.com" }
 ```

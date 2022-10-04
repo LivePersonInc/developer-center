@@ -17,7 +17,7 @@ function prepareToConnect() {
       LPUtils.getDomain(account, 'asyncMessagingEnt').then(umsDomain => {
         LPWs.connect(`wss://${umsDomain}/ws_api/account/${account}/messaging/consumer/${jwt}?v=3`)
         .then(
-          openedSocket => handleOpenedSocket(openedSocket,jwt), 
+          openedSocket => handleOpenedSocket(openedSocket,jwt),
           errorOpening => {
             $('#log').append(`error opening connection ${errorOpening}\n`);
             prepareToConnect();
@@ -25,7 +25,7 @@ function prepareToConnect() {
       });
     }, errorGettingJwt => {
       $('#connect').text('connect');
-      $('#account').prop('disabled',false).val();      
+      $('#account').prop('disabled',false).val();
       $('#log').append(`error ${errorGettingJwt} getting jwt for account ${account}\n`);
     });
   });
@@ -57,7 +57,7 @@ function handleOpenedSocket(socket,jwt) {
         publishTo(socket,Object.keys(openConvs)[0]);
       } else  {
         socket.consumerRequestConversation()
-          .then(resp => publishTo(socket,resp.body.conversationId));                                            
+          .then(resp => publishTo(socket,resp.body.conversationId));
       }
     });
   });
@@ -88,7 +88,7 @@ function onCloseSocket(socket,evt) {
   $('#log').append(`connection was closed with code ${evt.code}\n`);
   prepareToConnect();
   $('#send').prop('disabled', true).unbind('click');
-  $('#account').prop('disabled',false).val();        
+  $('#account').prop('disabled',false).val();
 }
 
 function publishTo(socket,convID) {

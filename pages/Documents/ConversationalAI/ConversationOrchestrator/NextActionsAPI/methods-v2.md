@@ -28,7 +28,7 @@ Domain URL per environment:
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 
-{: .important}
+{: .attn-note}
 See also the [discussion on generating the secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2).
 
 #### Get Next Actions
@@ -46,7 +46,7 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 | conversationId | string | The conversation ID of the current conversation | optional |
 | customerId | string | LivePerson customer ID of the current conversation | optional |
 | sessionId | string | The group ID associated with the session store variable call to set values. If no session is specified, then the conversationId is used to associate with the session store variables. | optional |
-| lpToken | string | Bearer {bearer token} | optional | 
+| lpToken | string | Bearer {bearer token} | optional |
 | policyId | string | The ID of the policy | optional |
 
 ##### Request payload example

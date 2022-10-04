@@ -36,7 +36,7 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 ### Storage Data Types
 
-<div class="important">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
+<div class="attn-note">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
 
 **SecureStorage**
 
@@ -129,12 +129,12 @@ Note: We do not currently use this data although we do store it.</td>
     <td>lpStrMap</td>
     <td>manages storages keys (used for secure storage logic)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>  
+  </tr>
   <tr>
     <td>UIConf</td>
     <td>Stores conversation settings (features, logic etc.)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>  
+  </tr>
   <tr>
     <td>lpMessaging-</td>
     <td>Stores the JWT token and authentication code in messaging scenarios for messaging window recovery on navigation and cross tabs</td>
@@ -214,6 +214,31 @@ Note: We do not currently use this data although we do store it.</td>
     <td>s.browser</td>
     <td>For transports based on HTTP (long-polling and callback-polling), CoBrowse sends a HTTP cookie with the handshake response, marked as HttpOnly, called s.browser. The cookie identifies the browser. See BAYEUX_BROWSER for details. Cookie is removed when the browser is closed.</td>
     <td>Third party cookie. HttpOnly and Secure. Domain: CoBrowse Domain prefixed with siteId. <br><br>Path: /sync.</td>
+  </tr>
+</tbody>
+</table>
+
+### Other cookies
+
+<table>
+  <thead>
+  <tr>
+    <th>Entry Name</th>
+    <th>Description</th>
+    <th>Storage Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lpTestCookie{timestamp}</td>
+    <td>
+      <ul>
+        <li>This cookie is used only for testing whether the browser supports cookies, where 'timestamp' equals the current time (represented in milliseconds since the ECMAScript epoch).</li>
+        <li>It is set by LivePerson client-side code (not server response header).</li>
+        <li>This cookie holds no critical or sensitive values (value is "testValue"), and is removed immediately after the test.</li>
+      </ul>
+    </td>
+    <td>First party session cookie. No fallbacks. <br><br>Domain: parent domain. <br>Path: parent domain /.</td>
   </tr>
 </tbody>
 </table>

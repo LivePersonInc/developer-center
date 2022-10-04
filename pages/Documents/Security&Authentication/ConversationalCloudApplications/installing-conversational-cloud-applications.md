@@ -75,7 +75,7 @@ Once the application has been installed, the LivePerson resource will send you y
     "client_credentials"
   ],
   "response_types": ["code"],
-  "redirect_uris": [    
+  "redirect_uris": [
       "http://{YOUR_APPLICATION_DOMAIN}/{CALLBACK_PATH}"
     ],
   "scope": "msg.consumer",

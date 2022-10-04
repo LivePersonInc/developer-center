@@ -70,7 +70,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 150,
                 "overdueConversationsInQueue": 0,
                 "overdueConversationsAssigned": 2,
-                "overdueConversationsTotal": 2        
+                "overdueConversationsTotal": 2
             },
             "13": {
                 "time": 1516277646515,
@@ -91,7 +91,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 240,
                 "overdueConversationsInQueue": 1,
                 "overdueConversationsAssigned": 0,
-                "overdueConversationsTotal": 1                
+                "overdueConversationsTotal": 1
             }
         },
         "metricsTotal": {
@@ -111,14 +111,14 @@ Request by skillIds=12,13 and overdueConversations=true
             "waitTimeForAgentAssignment_90thPercentile": 224,
             "overdueConversationsInQueue": 1,
             "overdueConversationsAssigned": 2,
-            "overdueConversationsTotal": 3            
+            "overdueConversationsTotal": 3
         }
     }
 ```
 
 **Elements in the Response**
 
-<div class="important">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+<div class="attn-note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

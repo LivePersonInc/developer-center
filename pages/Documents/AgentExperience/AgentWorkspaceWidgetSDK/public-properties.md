@@ -20,4 +20,4 @@ indicator: both
 | appNames   | Names of apps for communication with the agent. |   |
 | cmdNames   | Names of commands for the agent.                |   |
 | reqNames   | Names of requests for the agents.               |   |
-| eventNames | Names of the events sent by the agent           |   | 
+| eventNames | Names of the events sent by the agent           |   |

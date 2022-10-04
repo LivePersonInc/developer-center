@@ -34,7 +34,7 @@ You can find all the related configurations in the resources ID table, under Sur
    </div>
 </div>
 
----   
+---
 
 The CSAT screen includes several content containers:
 

@@ -19,7 +19,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 
-* The ability to use Campaigns 
+* The ability to use Campaigns
 
 ### Related Classes, Parameters and APIs
 

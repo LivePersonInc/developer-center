@@ -10,7 +10,8 @@ subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-monitoring-api.html
 indicator: messaging
 ---
-**(LivepersonMonitoring.java class)**
+
+## LivepersonMonitoring.java class
 
 **Note:** If you want to use the Monitoring API, you must [initialize the SDK with MonitoringParams](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params). Once initialization is completed (`onInitSucceed`), you can call LivePerson methods.
 
@@ -33,7 +34,7 @@ public static void getEngagement(Context context, @Nullable List<LPMonitoringIde
 
 *Please refer to the [Interface and Class Definitions](android-interface-definitions.html) section for parameter classes.*
 
-{: .notice}
+{: .attn-alert}
 When trying to fetch an Authenticated Engagement, the LPMonitoringIdentity parameter containing the ConsumerId is required.
 
 ### sendSde

@@ -158,6 +158,6 @@ Request Body Example
   | :--- | :--- |
   | 201 | Created |
 
-<div class="important">This method returns an empty response body. Instead, all the info you require is received via the response headers. Most crucially, the "Location" header contains the <code>chatId</code> (sometimes known as "chat key") as part of its URL. See example screenshot below.</div>
+<div class="attn-note">This method returns an empty response body. Instead, all the info you require is received via the response headers. Most crucially, the "Location" header contains the <code>chatId</code> (sometimes known as "chat key") as part of its URL. See example screenshot below.</div>
 
 ![Start Chat Location](img/startchatlocation.png)

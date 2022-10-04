@@ -12,7 +12,7 @@ permalink: conversation-builder-scripting-functions-introduction.html
 indicator: both
 ---
 
-Functions are modules of code that are used for accomplishing a certain task programmatically. 
+Functions are modules of code that are used for accomplishing a certain task programmatically.
 
 With few exceptions, functions can be used in the following JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html) in interactions:
 
@@ -20,8 +20,8 @@ With few exceptions, functions can be used in the following JavaScript [code pan
 * Post-Process Code
 * Process User Response
 
-{: .important}
-For info on the order of operations (i.e., which code is run when), see [here](conversation-builder-interactions-interaction-basics.html#order-of-operations).
+{: .attn-note}
+For info on the order of operations (i.e., which code is run when), see [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 ### Requirements
 

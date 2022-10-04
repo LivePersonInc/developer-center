@@ -12,8 +12,8 @@ Your Conversational Cloud free trial account comes preloaded with a Concierge Bo
 
 This bot provides basic information and contact options to your consumers. If you don’t have an agent available, it can also collect consumer contact information and then send it to an email address that you provided so you can respond later. This means you can engage with your consumers 24/7 without needing a 24-hour support staff.
 
-<div class="container-note">
-    <div class="important" style="width:100%">
+<div>
+    <div class="attn-note" style="width:100%">
     <b>Prerequisites:</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration">here</a>.
   </div>
 </div>
@@ -23,7 +23,7 @@ This bot provides basic information and contact options to your consumers. If yo
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
 
 1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in</a>.
-2. On the left sidebar, click the bot icon ("Manage conversational AI and bots").
+2. On the left sidebar, click the bot icon ("Conversational AI and bots").
 3. In the Conversational AI dashboard, click <b> Conversation Builder</b>.
 4. Click on <i> Concierge Bot</i>
 

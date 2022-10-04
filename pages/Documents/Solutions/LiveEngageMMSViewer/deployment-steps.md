@@ -11,7 +11,7 @@ order: 30
 indicator:
 ---
 
-{: .deprecated}
+{: .attn-deprecation}
 This information is outdated.
 
 1. Within your Twilio account, navigate to All Products and Services → Runtime → Functions. Keep track of the Your Domain field on this page.

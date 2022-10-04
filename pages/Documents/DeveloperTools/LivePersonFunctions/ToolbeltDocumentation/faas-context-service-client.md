@@ -5,13 +5,13 @@ sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
-permalink: liveperson-functions-toolbelt-documentation-faas-context-service-client.html 
+permalink: liveperson-functions-toolbelt-documentation-faas-context-service-client.html
 indicator: both
 ---
 
 # Interface: IFaaSContextServiceClient
 
-{: .important}
+{: .attn-note}
 Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
 
 ## Table of contents

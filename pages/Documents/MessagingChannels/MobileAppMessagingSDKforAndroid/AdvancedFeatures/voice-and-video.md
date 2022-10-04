@@ -17,7 +17,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
-{: .important}
+{: .attn-note}
 Voice & Video capabilities are available only on Android SDK 4.8.1 and above, Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-live-chat-cobrowse-for-live-chat.html)
@@ -26,7 +26,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 
 ### Features and permissions
 
-Below is the list of features and permissions elements added in the manifest file to support this feature. 
+Below is the list of features and permissions elements added in the manifest file to support this feature.
 
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
@@ -38,7 +38,9 @@ Below is the list of features and permissions elements added in the manifest fil
 <uses-feature android:name="android.hardware.microphone" />
 ```
 
-If you want to allow consumers to download the app from Google Play Store, even if their devices don't support Audio latency, please add below features in your app's manifest file:
+{: .attn-note}
+android.hardware.audio.pro provides high-end audio functionality and performance capabilities. Not all Android devices may support this hardware feature.
+If you want to allow consumers to download the app from Google Play Store even if their devices don't support Audio latency, please update features in your app's manifest file as below:
 
 ```xml
 <uses-feature android:name="android.hardware.audio.pro"  android:required="false" tools:replace="required" />
@@ -169,4 +171,3 @@ Defines background color for Voice & Video Bubble
 
 - **Type:** color
 - **Default value:** light gray
-

@@ -3,7 +3,7 @@ pagename: Get Agent Survey
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Runtime API 
+documentname: Agent Survey For Messaging Runtime API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey.html
 indicator: messaging
@@ -11,7 +11,7 @@ indicator: messaging
 
 Get the full agent survey configuration.
 
-Get the next sequence of the survey — sequence is a series of question starting from the root question and ending with a question that contains logic. 
+Get the next sequence of the survey — sequence is a series of question starting from the root question and ending with a question that contains logic.
 
 ### Request
 
@@ -28,7 +28,7 @@ Get the next sequence of the survey — sequence is a series of question startin
  **Query Parameters**
 
 | Parameter | Description | Type / Value | Required | Notes
-|:----------- |  :------------ | :--------------- | :--- | :--- | 
+|:----------- |  :------------ | :--------------- | :--- | :--- |
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
 | seq | boolean to determine if the full survey will be returned or next sequence | Boolean | Optional | Default value is true |
@@ -60,7 +60,7 @@ Get the next sequence of the survey — sequence is a series of question startin
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |
 
 **Response example**
 
@@ -81,7 +81,7 @@ Get the next sequence of the survey — sequence is a series of question startin
             "questionDefinition": "regular_question",
             "containsLogic": false
         },
- 
+
         {
             "id": 4565,
             "orderId": 4,

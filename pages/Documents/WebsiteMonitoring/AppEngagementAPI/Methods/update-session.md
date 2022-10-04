@@ -46,28 +46,28 @@ Use this method to update the session and add SDEs.
 **Body entity example**
 
 ```json
-    {  
+    {
        "pageId":"4743822558",
-       "impAttributes":[  
-          {  
+       "impAttributes":[
+          {
              "type":"impAccept",
              "campaign":3115242510,
              "engId":3115242810,
              "revision":537,
-             "eContext":[  
-                {  
+             "eContext":[
+                {
                    "type":"engagementContext",
                    "id":"1"
                 }
              ]
           },
-          {  
+          {
              "type":"impDisplay",
              "campaign":3115242510,
              "engId":3115242810,
              "revision":537,
-             "eContext":[  
-                {  
+             "eContext":[
+                {
                    "type":"engagementContext",
                    "id":"1"
                 }

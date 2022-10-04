@@ -15,7 +15,7 @@ The Lead Gen template is designed to capture contact information from a customer
 
 The template can be configured to handle Web, SMS, Apple Messages for Business, WhatsApp and Facebook Messenger. Escalation to an agent is also included.
 
-<img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_0.png" alt=""> <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_1.png" alt="">
+<img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_0.png" alt=""> <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_1.png" alt="The top and bottom views of a conversation in the Preview tool, using a Full Lead Gen bot">
 
 ### Included items
 
@@ -75,7 +75,7 @@ The name, email and phone number steps of the LeadGen dialog are performing some
 For email address and phone number capture, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```javascript
-// Max count of fail user inputs 
+// Max count of fail user inputs
 setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```
@@ -93,12 +93,12 @@ setVariable('sendSMS', 'false');
 
 Navigate to **Global Functions**.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png" alt="The Global Functions page in the bot">
 
 The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
 
 ```javascript
-// What channel is the user on? If you'd like to force the display of a particular channel's content, 
+// What channel is the user on? If you'd like to force the display of a particular channel's content,
   // set the "channel" variable to: "CustomContext" for ABC, "sms" for SMS. Web will be displayed by default.
   //var channel = "CustomContext";
   var channel = botContext.getChannel(); // Comment this line out if forcing the channel
@@ -120,7 +120,7 @@ The Options dialogs are offered for a few different channels:
 
 To configure the display (or not) of these options, navigate to the Global Functions.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_full_lead_image_11.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_full_lead_image_11.png" alt="Configuring the display of the options">
 
 Options are set to be shown by default, but if you don’t want them to be shown in your bot flow just type ‘off’ value for the 'enableOptions' variable:
 
@@ -151,17 +151,17 @@ Options are set to be shown by default, but if you don’t want them to be shown
  </tbody>
 </table>
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png" alt=""><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png" alt="">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png" alt=""><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png" alt="A conversation in the Preview tool, where the consumer is offered the options">
 
 ##### Configure Options dialogs
 
 Each of the Options dialogs are displaying a number of products or services to the user.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_3a.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_3a.png" alt="The Options for Web Buttons dialog">
 
  Based on the user's selection, each dialog also sets the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the [conditions and patterns](conversation-builder-conversation-builder-conditions.html) so that your products and services will be matched and sent to the variable.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_3.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_3.png" alt="Editing the rule">
 
 If you want to display these Options dialogs, after you have configured the Global Functions appropriately, depending on which channels you are supporting, you will want to populate the various options interactions with your content.
 
@@ -169,24 +169,24 @@ If you want to display these Options dialogs, after you have configured the Glob
 
 If supporting Apple Messages for Business, you will want to replace and customize the ListPicker that displays your products and services. Just tap on the images or the text fields to edit. You can see over in the preview how it will appear (if you have hard coded the channel in the Global Functions).
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_4.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_4.png" alt="The Options for ABC dialog">
 
 **Options for SMS**
 
 If you are supporting SMS, you will need to update the list-based menu options. Though they may not look like they are displaying properly in the Chat Preview, they will on SMS.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_5a.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_5a.png" alt="The Options for SMS dialog">
 
 As mentioned previously, be sure to add a custom rule for each of your menu items (as shown below).
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_5.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_5.png" alt="Editing the rule">
 
 **Options for Web Buttons**
 
 If you are supporting a web client and want to show your options as a button tile, once you have configured the Global Functions accordingly, be sure to set up your custom rule (as shown below).
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_6a.png" alt="">
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_6.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_6a.png" alt="The Options for Web Buttons dialog">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_6.png" alt="Editing the rule">
 
 #### Agent Escalation Integration
 
@@ -293,15 +293,17 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
  </tbody>
 </table>
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_8.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_8.png" alt="The Twilio console, where you can see your account SID and auth token">
 
-You can find both your account SID and auth token in the[Twilio Console](https://www.twilio.com/console) after[signing up for a free Twilio trial account](https://www.twilio.com/try-twilio).  [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
+You can find both your account SID and auth token in the [Twilio Console](https://www.twilio.com/console) after [signing up for a free Twilio trial account](https://www.twilio.com/try-twilio).
+
+[How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
 
 ##### How to generate a Bearer Token
 
 In order to use the Twilio API, the standard Account SID and Auth Token are not enough. A Bearer token must be generated by calling the API using Postman once.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_9.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_9.png" alt="Generating a bearer token">
 
 <table>
  <tr>
@@ -326,13 +328,13 @@ Password: YOUR_AUTH_TOKEN</td>
 
 When this has been set up in Postman, hit Send. This will hit the API, sending a text message to the "To" and will generate your Bearer token. Tap on the Headers tab in Postman and copy THE ENTIRE string, including the “Basic”. This will be your **twilioAuthorization** value.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_10.png" alt="">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_10.png" alt="The Headers tab in Postman">
 
 #### Shopify Integration
 
 You can populate the **Options for Web Gallery API** dialog with products from your Shopify store.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_14.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_14.png" alt="Some Shopify integration settings">
 
 In the Global Functions, edit the following values:
 

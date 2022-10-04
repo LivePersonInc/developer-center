@@ -34,7 +34,7 @@ You can find all the related configurations in the resources ID table, under Sur
    </div>
 </div>
 
----  
+---
 
 The CSAT screen includes several content containers:
 
@@ -45,7 +45,7 @@ The CSAT screen includes several content containers:
 - [resolutionConfirmationView (yes/no)](#resolutionConfirmationView-yesno)
 
 ### agentView (avatar and agent name)
-   
+
 You can either hide or show the agent avatar.
 
 ```xml
@@ -58,7 +58,7 @@ You can either hide or show the agent avatar.
 
 - If the conversation has assigned agent, the SDK uses the agent’s nickName.
 
-### ratingQuestionView (stars) 
+### ratingQuestionView (stars)
 
 By default, it’s a blank label and always visible (you cannot configure its visibility).
 
@@ -72,7 +72,7 @@ Rating question includes Agent by default in the text. If the conversation has a
 
 ### resolutionConfirmationView (yes/no)
 
-You can either hide or show the confirmation view resolution.  
+You can either hide or show the confirmation view resolution.
 
 ```xml
 <bool name="show_yes_no_question">

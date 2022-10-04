@@ -2,7 +2,6 @@
   image: getting-started
   documents:
     - documentname: Getting Started with your Free Trial Account
-    - documentname: Do More with the Conversational Cloud
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
     - documentname: LivePerson APIs and SDKs
@@ -118,7 +117,7 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-    - documentname: Platform Overview
+    - documentname: Get Started with Automation
     - documentname: Tutorials & Guides
       pages:
         - pagename: Getting Started With Bot Building
@@ -331,6 +330,7 @@
             - subpagename: Intent Trends
             - subpagename: Intent Details
             - subpagename: Conversation Details
+        - pagename: Using Intents & Entities
         - pagename: External APIs
           subpages:
             - subpagename: Getting Started
@@ -339,6 +339,7 @@
       pages:
         - pagename: Overview
         - pagename: Language Support
+        - pagename: Best Practices
         - pagename: External Knowledge Bases
           subpages:
             - subpagename: Introduction
@@ -346,14 +347,12 @@
             - subpagename: External KBs without LivePerson AI
             - subpagename: Mapping Content Metadata
             - subpagename: Writing a Transformation Specification
-            - subpagename: Best Practices
             - subpagename: Beta - Shortening Long-Form Content
         - pagename: Internal Knowledge Bases
           subpages:
             - subpagename: Introduction
             - subpagename: Knowledge Bases
             - subpagename: Articles
-            - subpagename: Best Practices
         - pagename: Using Intents with KBs
         - pagename: Sending Content to Consumers and Agents
         - pagename: Optimizing Your Content
@@ -939,6 +938,7 @@
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
+        - pagename: Error Dictionary
     - documentname: Key Messaging Metrics API
       basedomain: https://{domain}/manager_workspace/api/account/{accountID}
       pages:
@@ -996,7 +996,6 @@
             - subpagename: Notification Protocol
             - subpagename: Retry Policy
             - subpagename: Disclaimers
-            - subpagename: Troubleshooting
             - subpagename: Webhooks Examples
     # - documentname: IVR Engagement API
     #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
@@ -1045,6 +1044,7 @@
           subpages:
             - subpagename: Latest Release Notes
             - subpagename: All Release Notes
+            - subpagename: Supportability
         - pagename: Resources
           subpages:
             - subpagename: Authentication
@@ -1320,7 +1320,7 @@
         - pagename: Visit Information
 
 - categoryname: Solutions
-  image: mcs-toolkit
+  image: toolkit
   documents:
     - documentname: CRM Integrations
       pages:
@@ -1332,11 +1332,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: MCS Toolkit
-      pages:
-        - pagename: Overview
-        - pagename: Getting Started
-        - pagename: Using API to Build the Toolkit
     - documentname: Transporter
       pages:
         - pagename: Overview

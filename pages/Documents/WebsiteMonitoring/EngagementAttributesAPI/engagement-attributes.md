@@ -81,7 +81,7 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
               "serviceId": "service12" // SERVICE UNIQUE IDENTIFIER OR TICKET ID
            }
     }]
-```    
+```
 
 ### Response
 
@@ -94,8 +94,8 @@ https://lo.v.liveperson.net/api/account/1234/monitoring/visitors/xyz/visits/curr
 | Code     | Description |
 | :------ | :------- |
 | 200 | OK; Operation performed successfully |
-| 400 | Bad Request; Problem with body or query parameters |  
+| 400 | Bad Request; Problem with body or query parameters |
 | 401 | Unauthorized (no permissions) |
-| 404 | Not Found |      
+| 404 | Not Found |
 | 422 | Invalid Account ID |
 | 500 | Internal Server Error |

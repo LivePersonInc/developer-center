@@ -1,6 +1,6 @@
 ---
 pagename: Methods v1
-redirect_from: 
+redirect_from:
   - conversation-orchestrator-conversation-context-service-methods.html
 Keywords:
 sitesection: Documents
@@ -11,7 +11,7 @@ permalink: conversation-orchestrator-conversation-context-service-methods-v1.htm
 indicator: messaging
 ---
 
-There are two ways to manage properties in the Conversation Context Service (CCS): 
+There are two ways to manage properties in the Conversation Context Service (CCS):
 
 * REST APIs can directly access the CCS outside of Conversational Cloud. Use the REST APIs when you want to retrieve information from external data sources.
 * A Javascript function wraps the REST API for easy use within Conversational Cloud. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
@@ -25,8 +25,8 @@ See the [discussion on scripting functions for managing the Conversation Context
 If the Conversation Context Service(CCS) is summarized in one sentence, it is a service that manages properties in a key-value relationship. So, most APIs are for storing, reading, and deleting properties, and there are some additional APIs.
 
 Every API call to the CCS requires the following auth headers to be accepted:
-  
-* content-Type : application/json  
+
+* content-Type : application/json
 * maven-api-key : {YOUR API KEY}
 
 Base URL per environment:
@@ -35,15 +35,15 @@ Base URL per environment:
 * EMEA: https://z2.context.liveperson.net
 * APAC: https://z3.context.liveperson.net
 
-{: .important}
+{: .attn-note}
 The accountId and API key in these examples are fake; please replace them with your accountID and the developer key that you generated.
 
 ### REST Namespace API
 
 #### Create a custom namespace
-This API creates a new namespace in the Conversation Context Service. 
+This API creates a new namespace in the Conversation Context Service.
 
-{: .important}
+{: .attn-note}
 Saving properties to a namespace that has not been previously created using this method will create the new namespace automatically
 
 | Method | Path |
@@ -55,7 +55,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X POST 
+curl -X POST
 "https://{domain}/v1/account/{accountId}" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"myNamespace\"}"
 ```
 
@@ -73,7 +73,7 @@ Request payload example:<br>
 N/A
 
 ```bash
-curl -X GET 
+curl -X GET
 "https://{domain}/v1/account/{accountId}" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
@@ -96,7 +96,7 @@ Request payload example:<br>
 N/A
 
 ```bash
-curl -X DELETE 
+curl -X DELETE
 "https://{domain}/v1/account/{accountId}/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
@@ -128,9 +128,9 @@ Empty body; status code = 204
 #### Save a namespace property
 This is an API for saving one namespace property. This API overwrites an existing property and inserts a non-existing property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| PUT | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} | 
+| PUT | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} |
 
 Request payload example:<br>
 `"value4"`
@@ -146,9 +146,9 @@ Empty body; status code = 204
 #### Save session properties
 This is an API for saving one or several session properties. This API overwrites existing properties and inserts non-existing properties.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| PATCH | ​/v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties | 
+| PATCH | ​/v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties |
 
 Request payload example:<br>
 `{ "myProperty1": ["value1", "value2", "value3"] }`
@@ -164,9 +164,9 @@ Empty body; status code = 204
 #### Save a session property
 This is an API for saving one session property. This API overwrites an existing property and inserts a non-existing property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| PUT | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} | 
+| PUT | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} |
 
 Request payload example:<br>
 `{ "name": "value2", "items": ["A", "B", "C"] }`
@@ -184,9 +184,9 @@ Empty body; status code = 204
 #### Read namespace properties
 This API takes a namespace as a parameter and returns all properties belonging to the namespace.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/properties | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/properties |
 
 Request payload example:<br>
 N/A
@@ -210,9 +210,9 @@ Response payload example:<br>
 #### Read a namespace property
 This API takes a namespace and a property as a parameter and returns the value of the namespace property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} |
 
 Request payload example:<br>
 N/A
@@ -228,9 +228,9 @@ Response payload example:<br>
 #### Read session properties
 This API takes a namespace and a session as a parameter and returns all session properties belonging to the namespace and session.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties |
 
 Request payload example:<br>
 N/A
@@ -254,9 +254,9 @@ Response payload example:<br>
 #### Read a session property
 This API takes a namespace, a session and a property as a parameter and returns the value of the session property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} |
 
 Request payload example:<br>
 N/A
@@ -282,9 +282,9 @@ There are three ways to delete properties. First, it is automatically deleted by
 #### Delete all namespace properties belonging to the namespace with TTL setting
 This API takes a namespace as a parameter and deletes all namespace properties belonging to the namespace. It also removes the TTL applied to the namespace.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| DELETE | /v1​/account​/{accountId}​/{customNamespace} | 
+| DELETE | /v1​/account​/{accountId}​/{customNamespace} |
 
 Request payload example:<br>
 N/A
@@ -299,20 +299,20 @@ Empty body; status code = 204
 
 #### Delete all properties belonging to Namespace without TTL setting
 
-{: .important}
+{: .attn-note}
 Currently, this feature is not supported.
 
 #### Delete all properties belonging to Session with TTL setting
 
-{: .important}
+{: .attn-note}
 Currently, this feature is not supported.
 
 <!--
 This API takes a namespace and a session as a parameter and deletes all session properties belonging to the namespace and session. It also removes the TTL applied to the session.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| DELETE | ​/v1​/account​/{accountId}​/namespace​/{customNamespace}​/session​/{sessionId} | 
+| DELETE | ​/v1​/account​/{accountId}​/namespace​/{customNamespace}​/session​/{sessionId} |
 
 Request payload example:<br>
 N/A
@@ -329,9 +329,9 @@ Empty body; status code = 204
 #### Delete all properties belonging to Session without TTL setting
 This API takes a namespace and a session as a parameter and deletes all session properties belonging to the namespace and session. However, it does not remove the TTL applied to the session.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties | 
+| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties |
 
 Request payload example:<br>
 N/A
@@ -347,9 +347,9 @@ Empty body; status code = 204
 #### Delete a namespace property
 This API takes a namespace and a property name as a parameter and deletes the namespace property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} | 
+| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} |
 
 Request payload example:<br>
 N/A
@@ -365,9 +365,9 @@ Empty body; status code = 204
 #### Delete a session property
 This API takes a namespace, a session and a property name as a parameter and deletes the session property.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} | 
+| DELETE | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} |
 
 Request payload example:<br>
 N/A
@@ -385,23 +385,23 @@ The APIs described here are to show a list of sessionIds that have any propertie
 
 Because the number of sessions can be quite large, the API supports pagination. There are two optional parameters for this:
 
-page 
-* This sets the index of the page to be returned. Index starts at 0. 
-* Type: int 
-* Default value: 0 
-* Range: A number greater than or equal to zero. 
+page
+* This sets the index of the page to be returned. Index starts at 0.
+* Type: int
+* Default value: 0
+* Range: A number greater than or equal to zero.
 
-perPage 
-* This sets the number of rows returned per page 
-* Type: int 
-* Default value : 100 
+perPage
+* This sets the number of rows returned per page
+* Type: int
+* Default value : 100
 * Range: A number between 1 and 1000
 
 #### Get all sessionIds
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/session-ids | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/session-ids |
 
 Request payload example:<br>
 N/A
@@ -422,9 +422,9 @@ Response payload example:<br>
 
 #### Get all properties within a session
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | /v1​/account​/{accountId}​/{customNamespace}​/session-properties | 
+| GET | /v1​/account​/{accountId}​/{customNamespace}​/session-properties |
 
 Request payload example:<br>
 N/A
@@ -453,9 +453,9 @@ Response payload example:<br>
 #### Set TTL on Namespace
 This API takes a namespace and ttlSeconds as parameters, and then sets the TTL of the namespace to ttlSeconds. The TTL of all namespace properties created or updated afterwards has the value of ttlSeconds automatically. One thing to note is that the TTL of an existing namespace property does not change until it is updated.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| POST | /v1/account/{accountId}?ttlSecond={ttlSecond} | 
+| POST | /v1/account/{accountId}?ttlSecond={ttlSecond} |
 
 Request payload example:<br>
 `{ "name": "someCustomNamespace" }`
@@ -477,9 +477,9 @@ Empty body; status code = 204
 #### Set TTL on Session
 This API takes a namespace, session and ttlSeconds as parameters, and then sets the TTL of the session to ttlSeconds. The TTL of all session properties created or updated afterwards has the value of ttlSeconds automatically. One thing to note is that the TTL of an existing session property does not change until it is updated.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| POST | /v1/account/{accountId}/namespace/{customNamespace}/session?ttlSecond={ttlSecond} | 
+| POST | /v1/account/{accountId}/namespace/{customNamespace}/session?ttlSecond={ttlSecond} |
 
 Request payload example:<br>
 `{ "sessionId": "someSessionId" }`
@@ -495,9 +495,9 @@ Empty body; status code = 204
 #### Get TTL list on Namespaces
 You can use this API to retrieve the list of TTLs applied to a namespace. Please note that this API is not intended to look up all namespaces in use. Even if you are actively using namespaces, they will be excluded from the list unless you have set the TTL.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | ​/v1​/account​/{accountId} | 
+| GET | ​/v1​/account​/{accountId} |
 
 Request payload example:<br>
 N/A
@@ -522,9 +522,9 @@ Response payload example:<br>
 #### Get TTL list on Sessions
 You can use this API to retrieve the list of TTLs applied to the session. Please note that this API is not intended to look up all sessions in use. Even if you are actively using sessions, they will be excluded from the list unless you have set the TTL.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
-| GET | ​/v1​/account​/{accountId}​/namespace​/{customNamespace}​/session | 
+| GET | ​/v1​/account​/{accountId}​/namespace​/{customNamespace}​/session |
 
 Request payload example:<br>
 N/A

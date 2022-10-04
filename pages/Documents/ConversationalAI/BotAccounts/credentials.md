@@ -8,7 +8,7 @@ permalink: bot-accounts-credentials.html
 indicator: both
 ---
 
-Resource owners can use the [Bot Accounts](conversational-ai-platform-platform-overview.html) application to define credentials for accessing resources. Once a credential is defined, you can attach it to a bot [API integration](conversation-builder-integrations-api-integrations.html). When the bot is processing a dialog and needs to call the API integration as a part of the dialog flow, the bot will use the associated credentials to authenticate and perform the necessary actions.
+Resource owners can use the Bot Accounts application to define credentials for accessing resources. Once a credential is defined, you can attach it to a bot [API integration](conversation-builder-integrations-api-integrations.html). When the bot is processing a dialog and needs to call the API integration as a part of the dialog flow, the bot will use the associated credentials to authenticate and perform the necessary actions.
 
 You define credentials per organization.
 
@@ -24,48 +24,48 @@ There's also a credential type that supports the use of [third-party NLU engines
 
 - **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
-{: .important}
+{: .attn-note}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
 
 ### Add an OAuth 2.0 credential using the Authorization Code grant type
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
-{: .important}
+{: .attn-note}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
 **To add an OAuth 2.0 credential using the Authorization Code grant type**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "OAuth 2.0."
     - **Grant Type**: Select "Authorization Code."
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img7.png">
+    <img class="fancyimage" alt="Add Credentials page when adding an OAuth 2.0 credential and selecting the credential type" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img7.png">
 
 5. Click **Next**.
 6. Set the callback/redirect URI in the resource:
 
     a. Click **Copy** to copy the redirect URI to your clipboard.
-        <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img1.png">
+        <img class="fancyimage" alt="Add Credentials page when adding an OAuth 2.0 credential and setting the callback or redirect URI in the resource" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img1.png">
     b. Go to the resource (for example, Salesforce), paste in/set the redirect URI there, and save.
-        <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img2.png">
+        <img class="fancyimage" alt="Setting the redirect URI in the resource, for example, Salesforce" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img2.png">
 7. Click **Next**.
 8. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource application (where you earlier pasted the redirect URI):
     - **Client ID**: A public ID that identifies the API client to the respective entity. Also called the consumer key/ID.
     - **Client Secret**: A private secret that only the client should have. Used for verifying the client's identity before providing an access token to the API. Also called the consumer secret.
     - **Scope**: (Optional) Used to define the scope of the access granted by the token. For example, read_only in some resource providers would mean that the token will only grant access to read APIs. This value is passed as is; it should conform to the OAuth 2.0 specification.
-    - **Auth URL**: Enter the auth URL (the auth end point). Used to exchange the OAuth 2.0 credentials for a code that is later exchanged for an access token. Used only during the authorization process, which usually happens once.
-    - **Token URL**: Enter the resource URL (the token end point). Used to exchange the OAuth 2.0 credentials plus the code that was received from the Auth URL for an access token that will be used for making the secured API calls. Also used for refreshing the token when it expires.
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img3.png">
+    - **Auth URL**: Enter the auth URL (the auth end point). Used to exchange the OAuth2 credentials for a code that is later exchanged for an access token. Used only during the authorization process, which usually happens once.
+    - **Token URL**: Enter the resource URL (the token end point). Used to exchange the OAuth2 credentials plus the code that was received from the Auth URL for an access token that will be used for making the secured API calls. Also used for refreshing the token when it expires.
+    <img class="fancyimage" alt="Add Credentials page when adding an OAuth 2.0 credential and setting the properties needed for the authorization process" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img3.png">
 9. Click **Authorize**.
 
     This adds the credentials and proceeds to authorize them with the resource. You are redirected to the resource for authentication. If a session is already cached, you might be redirected immediately back to Conversation Builder; otherwise, you'll have to allow authorization.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img4.png">
+    <img class="fancyimage" alt="Logging into the resource, for example, Salesforce, to authenticate" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img4.png">
 
     If the credentials are valid, you are then redirected back to Conversation Builder, and you'll see a confirmation message indicating that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
 
@@ -77,21 +77,21 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "OAuth 2.0."
     - **Grant Type**: Select "Client Credentials."
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img8.png">
+    <img class="fancyimage" alt="Add Credentials page when adding an OAuth 2.0 credential and selecting the authentication type" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img8.png">
 
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource application:
     - **Client ID**: A public ID that identifies the API client to the respective entity. Also called the consumer key/ID.
     - **Client Secret**: A private secret that only the client should have. Used for verifying the client's identity before providing an access token to the API. Also called the consumer secret.
     - **Scope**: (Optional) Used to define the scope of the access granted by the token. For example, read_only in some resource providers would mean that the token will only grant access to read APIs. This value is passed as is; it should conform to the OAuth 2.0 specification.
-    - **Token URL**: Enter the resource URL (the token end point). Used to exchange the OAuth 2.0 credentials for an access token that will be used for making the secured API calls. Also used for refreshing the token when it expires.
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img9.png">
+    - **Token URL**: Enter the resource URL (the token end point). Used to exchange the OAuth2 credentials for an access token that will be used for making the secured API calls. Also used for refreshing the token when it expires.
+    <img class="fancyimage" alt="Add Credentials page when adding an OAuth 2.0 credential and setting the properties needed for the authorization process" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img9.png">
 7. Click **Authorize**.
 
     If the credentials are valid, you'll see a confirmation message indicating that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
@@ -100,15 +100,15 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 
 Depending on the configuration of the resource, you might need to manually reauthorize an existing credential. For example, if you've defined the expiry of the access token, but you haven't defined a refresh token (to refresh the access token when needed), you'll need to manually reauthorize the credential when the access token expires. In general, a configuration like that isn't recommended so that things can be automated as much as possible. However, you can manually reauthorize whenever you need:
 
-- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
+- To reauthorize, in the Credentials view, move your mouse over the credential in the list, click the <img class="inlineimage" style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis.png"> icon, and then select **Authorize** from the menu that appears.
 
-    <img class="fancyimage" style="width:125px" src="img/ConvoBuilder/creds_oauth2_img6.png">
+    <img class="fancyimage" alt="Menu for a credential; provides options for Edit, Delete, and Authorize" style="width:125px" src="img/ConvoBuilder/creds_oauth2_img6.png">
 
 ### Add a Mutual Authentication credential
 
 You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. A Mutual Authentication credential makes use of a key certificate and a trust certificate.
 
-#### Key certificates 
+#### Key certificates
 A key certificate is a key store file that contains private and public key pairs. A key certificate identifies the LivePerson platform as a valid entity that is allowed to interact with external systems. The recommended format is .p12 (PKCS12). You can generate a self-signed certificate pair using openssl or keytool, for example:
 
 `keytool -genkeypair -alias nt-ms -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore cb-mtls-server.p12 -validity 3650 -ext SAN=dns:localhost,ip:127.0.0.1`
@@ -120,7 +120,7 @@ You can verify the file using:
 #### Trust certificates
 A trust certificate is exported from the external system (e.g., Salesforce) to which the LivePerson platform makes the external call. The recommended file format is .pem.
 
-When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
+When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required.
 
 **Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 
@@ -134,16 +134,16 @@ You can convert a trust certificate to the required format using openssl. For ex
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Mutual Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Keys Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks.
-    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required.
-    - **Keys Certificate Password**: Optionally enter the password for the keys certificate.
-    - **Trust Certificate Password**: Optionally enter the password for the trust certificate.
+    - **Key Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks. Note that the UI doesn’t verify that the uploaded certificate and keys are working; you must verify externally that they’re current and valid.
+    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required. Note that the UI doesn’t verify that the uploaded certificate and keys are working; you must verify externally that they’re current and valid.
+    - **Key Certificate Password**: This is an optional field, but if the keys certificate requires a password, you must enter it here.
+    - **Trust Certificate Password**: This is an optional field, but if the trust certificate requires a password, you must enter it here.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
 7. Click **Save**.
 
@@ -157,7 +157,7 @@ Like the Access Token credential (discussed below), this type of credential isn'
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Basic Authentication."
@@ -177,7 +177,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Access Token."
@@ -189,7 +189,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 ### Add a third-party NLU credential
 
-{: .important}
+{: .attn-note}
 This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).
@@ -198,7 +198,7 @@ While the credential types discussed above support [API integrations](conversati
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
+3. Click **Add Credential** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "Third-party NLU."
@@ -216,6 +216,6 @@ Before deleting a credential, manually verify that it isn't in use by a bot or, 
 
 1. In the Bot Accounts application, select the name of the organization for which to delete the credential.
 2. Click **Credentials** in the upper-left corner to display the list of credentials.
-3. Select the credential, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
+3. Select the credential, and then click the <img style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
 4. Select **Delete**.
 5. Click **Continue** in the confirmation dialog.

@@ -3,7 +3,7 @@ pagename: Delete certificate by ID
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-delete-certificate-by-id.html
 ---
@@ -12,7 +12,7 @@ This API deletes a certificate by account ID and certificate ID.
 
 ### Request
 
-|Method|      URL|  
+|Method|      URL|
 |:--------  |:---  |
 |DELETE|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 

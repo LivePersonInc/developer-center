@@ -12,7 +12,7 @@ indicator: accepts "messaging" "chat" or "both"
 
 Explain what this method does.
 
-{: .important}
+{: .attn-note}
 Perhaps note that the developer should see the [introduction](introduction-to-this-product.html) to this product if they have not yet?
 
 ### Request
@@ -39,7 +39,7 @@ Explain what the POST body payload is for.
 | from | timerange starting point | number | Yes |
 | to | timerange ending point | number | No |
 
-##### Request Body Example 
+##### Request Body Example
 
 ```json
 {
