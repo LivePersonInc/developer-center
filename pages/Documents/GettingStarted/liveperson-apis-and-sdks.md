@@ -69,7 +69,7 @@ date_updated: 2022/09/30
 
 #### Conversational AI APIs
 
-Building a custom automation solution? These Conversational AI APIs might be of interest:
+Building a custom automation solution? These Conversational AI APIs can help:
 
 | Application | API | Purpose |
 |---|---|---|
