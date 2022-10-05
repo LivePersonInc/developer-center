@@ -15,7 +15,7 @@ Use the following built-in functions to log events and print debug messages.
 
 ### Log custom event
 
-Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name. 
+Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name.
 
 {: .attn-note}
 The event detail is optional. Keep the event detail short, as it can't be more than 32 kilobytes, i.e., approximately 32,000 characters in length.

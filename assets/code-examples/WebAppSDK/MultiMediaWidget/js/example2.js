@@ -14,14 +14,14 @@ app.controller('MainCtrl', function ($scope) {
     $scope.bindResult = {};
     $scope.myString = "";
     $scope.myString2 = "";
-    
+
     $scope.command2 = function(ev) {
         $scope.myString = "";
         $scope.myString2 = "";
        $scope.myString = '<a href=\"' + $scope.commandInput + '\"><img src=\"' + $scope.commandInput +'\" style="max-width: 100%;\"></a>';
         SDK.command('Write ChatLine',{text:$scope.myString},$scope.cb);
       };
-      
+
       $scope.command4 = function(ev) {
           $scope.myString = "";
           var urlTest = document.getElementById("fileURL").innerHTML;
@@ -41,7 +41,7 @@ app.controller('MainCtrl', function ($scope) {
             $scope.myString = '<a href=\"' + $scope.commandInput + '\"><img src=\"' + $scope.myString2 +'\" style="max-width: 100%;\"></a>';
         SDK.command('Write ChatLine',{text:$scope.myString},$scope.cb);
     };
-    
+
     $scope.command = function(ev){
         SDK.command('Write ChatLine',{text:$scope.commandInput},$scope.cb);
     };

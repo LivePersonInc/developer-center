@@ -79,7 +79,7 @@ The highlighted headline of the list message.
 }
 ```
 
-### Subtitle 
+### Subtitle
 
 The subtitle represents the secondary text of the List Messsage.
 This is generally where the body of the message can be entered.

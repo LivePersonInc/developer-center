@@ -6,9 +6,9 @@ This folder contains examples for the agent activity, engagement activity, and q
 
 This is an example of how to connect to the Real Time Operational API in Python by using the requests_oauthlib library, and how to create a CSV file with the data that is returned from the API by using Pandas. In order to run this example you will need to update the rt-api-to_csv-pandas.py file with your Real Time Operational API credentials.
 
-This example works with Python 3.5. 
+This example works with Python 3.5.
 
-### Contribution 
+### Contribution
 
 Thank you [WildYorkies](https://github.com/WildYorkies) for providing this example code.
 
@@ -16,13 +16,13 @@ Thank you [WildYorkies](https://github.com/WildYorkies) for providing this examp
 
 This is an example of how to query the Agent Activity Method of the Real Time Operational API in Python by using the requests_oauthlib library. In order to run this example you will need to update the AgentActivityExample.py file with your Real Time Operational API credentials.
 
-This example works with Python 3.5. 
+This example works with Python 3.5.
 
 # Python — Engagement Activity API Example
 
 This is an example of how to query the Engagement Activity Method of the Real Time Operational API in Python by using the requests_oauthlib library. In order to run this example you will need to update the EngagementActivityExample.py file with your Real Time Operational API credentials.
 
-This example works with Python 3.5. 
+This example works with Python 3.5.
 
 # Python — Queue Health API Example
 

@@ -75,7 +75,7 @@ var data = {
      }
    }]
  };
- 
+
 var fun = function() {};
 lpTag.sdes.send(data, fun);
 ```
@@ -96,4 +96,3 @@ This function returns the actual object and not a clone. Any tempering with the 
 ```javascript
 lpTag.sdes.get("prodView");
 ```
-

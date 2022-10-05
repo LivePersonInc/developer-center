@@ -294,7 +294,7 @@ This allows the bot to react to the last consumer message instead of instantiati
 
 We will describe an example of how to set up and access the WelcomeEvent response in Google Dialogflow CX below. We will use Google Dialogflow's capability of providing fulfillment via google cloud function as webhook.
 
-#### Create Welcome Event Handler 
+#### Create Welcome Event Handler
 
 Ensure you have an event handler in your flow builder that handles the custom `WELCOME` event, the highlighted area in figure 3.11 shows you how to add a new event handler in DialogFlow CX builder.
 
@@ -303,7 +303,7 @@ Ensure you have an event handler in your flow builder that handles the custom `W
 Figure 3.11 Creation of the welcome event
 #### Create Google Cloud Function
 
-The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create Google cloud function that should be capable of parsing the additional message context sent by Third-Party Bots. 
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create Google cloud function that should be capable of parsing the additional message context sent by Third-Party Bots.
 
 The minimal code example below shows how to check if `lastConsumerMessage` property is present in the request context, then sends back a text response containing the last consumer message. Please note, that response sent by The Google Cloud function should follow the Dialogflow CX response schemas
 
@@ -322,7 +322,7 @@ exports.handleWebhook = (request, response) => {
         contentType,
         lastConsumerMessage
       } = {}
-    } = {} 
+    } = {}
   } = req.body;
 
   let fulfillmentResponse;
@@ -368,4 +368,3 @@ Webhook need to be enabled and filled with the relevant information of the cloud
 Figure 3.12 Webhook configuration that needs to be added for calling Cloud Function
 
 Once Webhook configuration is added then the Google Dialogflow CX bot will be able to respond to the welcome event via the cloud function.
-

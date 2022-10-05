@@ -36,7 +36,7 @@ These release are generally used to address any critical bugs on the SDK and/or 
 <hr/>
 <h3>Limited Release</h3>
 
-1. "Customized Builds" provided to customers to address specific business impacting requirements for e.g. supporting specific older version of Swift etc. Note that this would be only a one time custom build and will not have any progressive increments on this build. 
+1. "Customized Builds" provided to customers to address specific business impacting requirements for e.g. supporting specific older version of Swift etc. Note that this would be only a one time custom build and will not have any progressive increments on this build.
 2. Beta releases also comes under this category where the team builds an SDK around the beta OS versions from Apple.
 
 These builds may undergo limited  or focused regression testing only.

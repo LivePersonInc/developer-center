@@ -323,7 +323,7 @@ We will describe an example of how to set up and access the WelcomeEvent respons
 
 #### Create Amazon Lambda Function
 
-The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create an Amazon Lambda function that should be capable of parsing the additional message context sent by Third-Party Bots. 
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create an Amazon Lambda function that should be capable of parsing the additional message context sent by Third-Party Bots.
 
 The minimal code example below shows how to check if `lastConsumerMessage` property present in the request context, then send back a text response containing the last consumer message. Please note that the response must follow the Lex response schema. More information on how to create the Lambda function for Amazon Lex you can also follow [the official documentation](https://docs.aws.amazon.com/lex/latest/dg/gs2-prepare.html)
 

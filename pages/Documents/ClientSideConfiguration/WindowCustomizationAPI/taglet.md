@@ -20,10 +20,9 @@ This taglet is configured by the LivePerson account team based on the [Window Cu
 
 ### Cons of using the taglet
 
-* Has to be configured by the LivePerson account team. 
+* Has to be configured by the LivePerson account team.
 * Does not allow to set different styles for different pages.
 
 ### Limitations
 
 * Taglet can only be configured per [section](engagement-attributes-types-of-engagement-attributes.html#section) or for whole site.
-

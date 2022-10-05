@@ -18,7 +18,7 @@ Before testing recommendations, verify that your bots and knowledge bases work i
 1. Create a test skill, and assign it to your bot and/or knowledge base.
 2. [Start a new messaging conversation](https://developers.liveperson.io/web-messaging/) from the consumer side.
 3. Open Conversational Cloud and accept the conversation.
-    
+
     This opens the conversation window.
 4. From the consumer side, enter a message that is relevant to a bot or an article that you want to be triggered. The goal here is to test that the intent is being mapped correctly and triggering the right recommendations.
 

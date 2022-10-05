@@ -24,7 +24,7 @@
             "description": "Sent once there is a change in convesation metadata",
             "allOf": [{
                     "$ref": "../infra/notification.json"
-                }, 
+                },
                 {
                     "type": "object",
                     "properties": {
@@ -34,7 +34,7 @@
                             "readonly": "true"
                         },
                         "body": {
-                            "$ref": "../aam/subscribeExConversationsNotification.json"                            
+                            "$ref": "../aam/subscribeExConversationsNotification.json"
                         }
                     }
                 }]

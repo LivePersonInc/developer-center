@@ -23,7 +23,7 @@ The LivePerson Mobile SDK can now be set to one of six different verbosity setti
 - **ERROR** (things that went wrong enough that we either failed or had to resort to a fallback that the user may have noticed)
 - **OFF** (no logging output from LivePerson Mobile SDK's)
 
-As is standard with most logging systems, each of these settings also includes all levels below it. Setting the SDK Logging Level to **OFF** disables SDK logging entirely.  The LivePerson Mobile SDK's will retain up to 100 lines of logs for combined all logging levels regardless of the logging level.  This means that if the logging level is set to "ERROR" for example, you may not be able to retrieve the last 100 logs recorded.    
+As is standard with most logging systems, each of these settings also includes all levels below it. Setting the SDK Logging Level to **OFF** disables SDK logging entirely.  The LivePerson Mobile SDK's will retain up to 100 lines of logs for combined all logging levels regardless of the logging level.  This means that if the logging level is set to "ERROR" for example, you may not be able to retrieve the last 100 logs recorded.
 
 {: .attn-deprecation}
 For SDK 6.0.X and below, the default log level is **INFO** in Release builds, and **TRACE** in Debug builds.
@@ -62,7 +62,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 ## Retrieval of SDK Logs
-The logs within the LivePerson Mobile SDK remain until new logs overwrite them (we record up to 100 lines) or until the SDK is shutdown.  We provide provides 2 functions to retrieve logs from the SDK back to the host app as well as real time console logs.  These functions will return up to 100 lines of logging based on the current log stack.  Current logs can be returned to the host application either as an array of strings or concatenated into 1 string object.  See below for these functions. 
+The logs within the LivePerson Mobile SDK remain until new logs overwrite them (we record up to 100 lines) or until the SDK is shutdown.  We provide provides 2 functions to retrieve logs from the SDK back to the host app as well as real time console logs.  These functions will return up to 100 lines of logging based on the current log stack.  Current logs can be returned to the host application either as an array of strings or concatenated into 1 string object.  See below for these functions.
 
 ```Swift
  The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings
@@ -115,4 +115,3 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     return true
 }
 ```
-

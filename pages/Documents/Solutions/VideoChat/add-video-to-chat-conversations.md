@@ -21,7 +21,7 @@ Consumers prefer to message rather than call brands. However, in some cases, a h
 
 ### Benefits of using video chat
 
-* **Solve issues, the first time around**: video gives agents the best tools for achieving first contact resolution and reducing wait time and average hold time. 
+* **Solve issues, the first time around**: video gives agents the best tools for achieving first contact resolution and reducing wait time and average hold time.
 
 * **Build relationships with your customers**: video lets agents meaningfully connect with consumers they are already messaging with, fostering a more personal connection.
 
@@ -29,12 +29,11 @@ Consumers prefer to message rather than call brands. However, in some cases, a h
 
 ### Use cases
 
-* Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem. 
+* Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem.
 
-* Provide your VIP customers with concierge, premium treatment. 
+* Provide your VIP customers with concierge, premium treatment.
 Video provides tailored solutions and service for consumers, with their personal choices kept on priority.
 
 * Replace in-person meetings such as consultations or long application process with real-time assistance and in-store experience.
 
 * Identify consumers when verification is needed on personal and secure issues.
-

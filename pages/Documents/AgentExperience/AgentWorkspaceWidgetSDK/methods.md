@@ -391,7 +391,7 @@ Example 6 — 'Send File':
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'blob';
-    xhr.onload = function (ev) { 
+    xhr.onload = function (ev) {
         if (this.status === 200) {
             var file = this.response;
             var name = url.split('\\').pop().split('/').pop();

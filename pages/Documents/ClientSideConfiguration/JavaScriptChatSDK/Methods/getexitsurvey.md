@@ -27,7 +27,7 @@ The exit survey will be displayed after the chat has ended if one was configured
 
 | Value | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| surveyName | A specific survey for which the name is known. | string | Optional | Otherwise the server will determine the appropriate survey. | 
+| surveyName | A specific survey for which the name is known. | string | Optional | Otherwise the server will determine the appropriate survey. |
 | surveyApiId | A specific survey ID you know on the server. | string | Optional | |
 
 **Sample code**
@@ -42,5 +42,4 @@ var failedRequest = myChat.getExitSurvey({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```                                                                                                                      
-
+```                                                                                                                     

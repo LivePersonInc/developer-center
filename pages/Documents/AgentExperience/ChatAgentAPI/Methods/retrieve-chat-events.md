@@ -19,16 +19,16 @@ Use this method to periodically poll for new events in the chat session. The met
 ### Request
 
  |Method  |URL |
- |:---|  :---| 
+ |:---|  :---|
  |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/events?v=1&NC=true |
 
 **Request Headers**
 
  |Header  |Description |
- |:---|  :---| 
+ |:---|  :---|
  |Authorization| Bearer {bearer-from-login} |
- |Content-Type|  application/json| 
- |Accept|  application/json| 
+ |Content-Type|  application/json|
+ |Accept|  application/json|
 
 **Formats**
 
@@ -39,9 +39,9 @@ The body media type must have one of the following formats:
 
 **Parameters**
 
- |Name|  Description|  Type/Value| 
+ |Name|  Description|  Type/Value|
  |:---  |:---  |:--- |
-|from  |The ID of the first event that is shown in the response.  |numeric| 
+|from  |The ID of the first event that is shown in the response.  |numeric|
 
 ### Response
 

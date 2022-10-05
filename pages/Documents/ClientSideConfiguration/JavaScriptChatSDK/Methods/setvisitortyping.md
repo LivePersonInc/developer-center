@@ -23,7 +23,7 @@ This notifies the agent of the typing state of the visitor. The response echoes 
 **Properties**
 
 | Value | Description | Type | Required |
-| :--- | :--- | :--- | :--- | 
+| :--- | :--- | :--- | :--- |
 | typing | The current state of the visitor input. | Boolean | Required |
 
 **Sample code**
@@ -35,12 +35,12 @@ var failedRequest = myChat.setVisitorTyping({
     error: myChat.typingUpdateFailed,
     context: myChat
 });
- 
+
 if(failedRequest && failedRequest.error){
     alert(failedRequest.error);
 }
-```    
-                                                                                                                      
+```
+
 ### Response
 
 **Sample response**

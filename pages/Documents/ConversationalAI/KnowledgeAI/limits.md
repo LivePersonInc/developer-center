@@ -32,7 +32,7 @@ If you’re using an [internal knowledge base](knowledgeai-internal-knowledge-ba
 | Attribute or setting | Limit |
 | --- | --- |
 | Title | 128 characters |
-| Summary | 300 characters | 
+| Summary | 300 characters |
 | Detail | 5,000 characters<br><br>If you include HTML markup, take care to test it and ensure it doesn’t break when the content is sent to the consumer. |
 | Intent qualifiers | 40 in number<br><br>*Not applicable when the knowledge base uses Domain intents* |
 | Positive learnings | 10 in number |

@@ -14,5 +14,5 @@ One of the challenges that came up was when I was trying to send videos through 
 In order to use the file sharing portion of the widget, you will need to have a Google Developer account, and a Google Drip API client Id. You can read more about the setting up the Drive API here: [Drive API](https://developers.google.com/drive/v2/web/quickstart/js)
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

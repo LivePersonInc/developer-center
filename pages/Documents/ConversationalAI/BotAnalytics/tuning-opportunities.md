@@ -12,7 +12,7 @@ indicator: both
 
 You can use Bot Analytics to evaluate a bot's performance and thereby identify tuning opportunities. There are a few key approaches to the data: MACS and intents. <!-- There are a few key approaches to the data: conversation status, MACS, and intents. -->
 
-<!-- 
+<!--
 ### Conversation status
 
 The conversation status is the end state of the bot conversation, which can be:

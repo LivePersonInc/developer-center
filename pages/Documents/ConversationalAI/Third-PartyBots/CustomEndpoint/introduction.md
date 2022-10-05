@@ -90,7 +90,7 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   <tbody>
   <tr>
     <td>Base URL</td>
-    <td>Custom Endpoint service endpoint that will be called by Third-Party Bots. Must be 
+    <td>Custom Endpoint service endpoint that will be called by Third-Party Bots. Must be
         whitelisted and respond as per API specification. (No trailing <b>/</b> at the end of URL)
     </td>
     <td>https://examplecustomendpoint.com/api</td>
@@ -112,7 +112,7 @@ The following Custom Endpoint information should be provided to Third-Party Bots
   </tr>
   <tr>
     <td>Environment</td>
-    <td>The environment of the bot that should be selected for communication with the Custom 
+    <td>The environment of the bot that should be selected for communication with the Custom
         Endpoint service. Defaults to draft </td>
     <td>draft</td>
   </tr>
