@@ -1751,6 +1751,12 @@ Enable or Disable toggle for Structured Content feature in conversations.
    - **Type:** Bool
    - **Default value:** true
 
+#### structuredContentButtonBorderCornerRadius
+Structured Content button border corner radius in pixels.
+
+   - **Type:** CGFloat
+   - **Default value:** 15.0
+
 #### structuredContentBubbleBorderWidth
 Structured Content bubble border width in pixels.
 
@@ -1816,11 +1822,23 @@ Sets text color for button type element on Structured Content
 - **Type:** color
 - **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
 
+#### structuredContentLinkButtonTextColor
+Sets the text color for Structured Content elements of link button type
+
+- **Type:** color
+- **Default value:** [`UIColor.systemTeal`](#LPColor)
+
 #### structuredButtonWidthConstant
-Defines padding constraint for Structured Constant elements of button type
+Defines padding constraint for Structured Content elements of button type
 
 - **Type:** CGFloat
 - **Default value:** -20.0
+
+#### structuredButtonMinimumHeight
+If provided then sets the minimum height constraint for Structured Content elements of button type
+
+- **Type:** CGFloat?
+- **Default value:** nil
 
 #### structuredContentTextColor
 Sets text color for text type element on Structured Content
