@@ -67,6 +67,16 @@ date_updated: 2022/09/30
 | [Window Customization API](window-customization-api-overview.html) | Customize the look and feel of the web engagement window |
 | [Workdays API](workdays-api-overview.html) | Configure hours of operation for specific days, and assign them to specific skills |
 
+#### Conversational AI APIs
+
+Building a custom automation solution? These Conversational AI APIs can help:
+
+| Application | API | Purpose |
+|---|---|---|
+| Intent Manager | Model Tester External APIs | → [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api)<br>→ [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) |
+| Conversation Orchestrator | [Conversation Context Service API](conversation-orchestrator-conversation-context-service-overview.html) | Guide contextual continuity, context-based dynamic, and human-bot tango |
+| Conversation Orchestrator | [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) | Retrieve next best action (route to skill, send a response, etc.) for a bot or app |
+
 ### SDKs
 
 | SDK | Purpose |
