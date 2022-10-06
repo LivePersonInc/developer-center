@@ -1,7 +1,7 @@
 ---
 pagename: Data APIs
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: data-apis.html
 order: 30
 indicator: both

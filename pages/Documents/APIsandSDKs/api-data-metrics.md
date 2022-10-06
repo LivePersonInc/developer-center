@@ -1,7 +1,7 @@
 ---
 pagename: API Data Metrics
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: api-data-metrics.html
 indicator: both
 redirect_from:
