@@ -145,6 +145,9 @@
             - subpagename: Prerequisite Steps
             - subpagename: Configure Conversation Assist
             - subpagename: Test Conversation Assist
+    - documentname: Common Solutions
+      pages:
+        - pagename: Set Consumer Expectations about Wait Times for Agents
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
