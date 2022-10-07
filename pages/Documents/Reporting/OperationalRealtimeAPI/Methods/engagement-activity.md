@@ -45,327 +45,327 @@ If your request is throttled in this manner, it is recommended that you provide 
 Request by skillIds=2 (no interval, the data is for agentID=3).
 
 ```json
-    {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {  
-    "2": {  
-    "metricsPerAgent": {  
-    "3": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 1,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 5,  
-    "connectedEngagements": 2  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 1,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 5,  
-    "connectedEngagements": 2  
-    }  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 1,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 5,  
-    "connectedEngagements": 2  
-    }  
-    }  
-    }  
+    {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {
+    "2": {
+    "metricsPerAgent": {
+    "3": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 1,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 5,
+    "connectedEngagements": 2
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 1,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 5,
+    "connectedEngagements": 2
+    }
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 1,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 5,
+    "connectedEngagements": 2
+    }
+    }
+    }
 ```
 
 Request by skillIds=all and agentIds=3 (there is data only for skill=2).
 
 ```json
-    {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {  
-    "2": {  
-    "metricsPerAgent": {  
-    "3": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    },  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "3": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
-    }  
+    {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {
+    "2": {
+    "metricsPerAgent": {
+    "3": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    },
+    "agentsMetrics": {
+    "metricsPerAgent": {
+    "3": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
+    }
 ```
 
 Request with no skillId / agentId (there is some data).
 
 ```json
-    {  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
+    {
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
     }
 ```
 
 Request with skillId and agentId but there is no data for the specified IDs.
 
 ```json
-    {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    },  
-    "agentsMetrics": {  
-    "metricsPerAgent": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
+    {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    },
+    "agentsMetrics": {
+    "metricsPerAgent": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
 ```
 
 Request with agentId = 2, timeframe=1200 and interval = 600.
 
 ```json
-    {  
-    "metricsByIntervals": [  
-    {  
-    "timestamp": 1412680800000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412644800000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412608800000,  
-    "metricsData": {  
-    "agentsMetrics": {  
-    "metricsPerAgent": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    }  
-    ],  
-    "agentsMetrics": {  
-    "metricsPerAgent": {  
-    "2": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    },  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
-    }  
+    {
+    "metricsByIntervals": [
+    {
+    "timestamp": 1412680800000,
+    "metricsData": {
+    "agentsMetrics": {
+    "metricsPerAgent": {
+    "2": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
+    }
+    },
+    {
+    "timestamp": 1412644800000,
+    "metricsData": {
+    "agentsMetrics": {
+    "metricsPerAgent": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    },
+    {
+    "timestamp": 1412608800000,
+    "metricsData": {
+    "agentsMetrics": {
+    "metricsPerAgent": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    }
+    ],
+    "agentsMetrics": {
+    "metricsPerAgent": {
+    "2": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    },
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
+    }
 ```
 
 Request with skillId (no data), timeframe = 1200 and interval=600.
 
 ```json
-    {  
-    "metricsByIntervals": [  
-    {  
-    "timestamp": 1412680800000,  
-    "metricsData": {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412644800000,  
-    "metricsData": {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412608800000,  
-    "metricsData": {  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    }  
-    ],  
-    "skillsMetricsPerAgent": {  
-    "metricsPerSkill": {},  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
+    {
+    "metricsByIntervals": [
+    {
+    "timestamp": 1412680800000,
+    "metricsData": {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    },
+    {
+    "timestamp": 1412644800000,
+    "metricsData": {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    },
+    {
+    "timestamp": 1412608800000,
+    "metricsData": {
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    }
+    ],
+    "skillsMetricsPerAgent": {
+    "metricsPerSkill": {},
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
 ```
 Request with no skill/agent, there is some data: timeframe=1200 and interval=600.
 
 ```json
-    {  
-    "metricsByIntervals": [  
-    {  
-    "timestamp": 1412680800000,  
-    "metricsData": {  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412644800000,  
-    "metricsData": {  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    },  
-    {  
-    "timestamp": 1412608800000,  
-    "metricsData": {  
-    "metricsTotals": {  
-    "totalInteractiveChats": 0,  
-    "totalNonInteractiveChats": 0,  
-    "totalHandlingTime": 0,  
-    "nonInteractiveTotalHandlingTime": 0,  
-    "connectedEngagements": 0  
-    }  
-    }  
-    }  
-    ],  
-    "metricsTotals": {  
-    "totalInteractiveChats": 1,  
-    "totalNonInteractiveChats": 2,  
-    "totalHandlingTime": 12,  
-    "nonInteractiveTotalHandlingTime": 13,  
-    "connectedEngagements": 3  
-    }  
-    }  
+    {
+    "metricsByIntervals": [
+    {
+    "timestamp": 1412680800000,
+    "metricsData": {
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
+    },
+    {
+    "timestamp": 1412644800000,
+    "metricsData": {
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    },
+    {
+    "timestamp": 1412608800000,
+    "metricsData": {
+    "metricsTotals": {
+    "totalInteractiveChats": 0,
+    "totalNonInteractiveChats": 0,
+    "totalHandlingTime": 0,
+    "nonInteractiveTotalHandlingTime": 0,
+    "connectedEngagements": 0
+    }
+    }
+    }
+    ],
+    "metricsTotals": {
+    "totalInteractiveChats": 1,
+    "totalNonInteractiveChats": 2,
+    "totalHandlingTime": 12,
+    "nonInteractiveTotalHandlingTime": 13,
+    "connectedEngagements": 3
+    }
+    }
 ```
 
 **Elements in the Response**

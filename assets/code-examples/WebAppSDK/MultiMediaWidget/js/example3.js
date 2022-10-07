@@ -54,7 +54,7 @@ var CLIENT_ID = '{YOUR CLIENT ID}'; //you will need to update this with your cli
           insertFile(file);
         });
       }
-      
+
       /**
  * Insert a new permission.
  *""

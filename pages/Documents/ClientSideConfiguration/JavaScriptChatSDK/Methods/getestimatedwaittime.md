@@ -46,7 +46,8 @@ var failedRequest = myChat.getEstimatedWaitTime({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```                                                                                                                            
+```
+
 ### Response
 
 **Sample response**

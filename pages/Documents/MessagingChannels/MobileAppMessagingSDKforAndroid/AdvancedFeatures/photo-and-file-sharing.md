@@ -87,7 +87,7 @@ Consumers can share:
    ```xml
    <bool name="enable_photo_sharing">
    ```
-  
+
    By default, this value is set to **false**.
 
    ```xml

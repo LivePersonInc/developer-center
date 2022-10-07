@@ -4,10 +4,10 @@
             "$ref": "TextValue.json"
         }, {
             "title" : "RichContentEvent",
-            "$ref": "RichContent.json"            
+            "$ref": "RichContent.json"
         }, {
             "title" : "HostedFile",
-            "$ref": "HostedFile.json"            
+            "$ref": "HostedFile.json"
         }, {
             "title" : "ChatStateEvent",
             "$ref": "ChatStateEvent.json"

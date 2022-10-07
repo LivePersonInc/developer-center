@@ -13,7 +13,7 @@ indicator: messaging
 If you encounter issues during setup, verify the following:
 
 ### Common
-**All flows should work as expected outside of Conversation Assist.** 
+**All flows should work as expected outside of Conversation Assist.**
 
 For example:
 * The Conversation Builder bot should respond as expected using Conversation Builder's [Preview tool](conversation-builder-testing-deployment-previewing.html).
@@ -26,7 +26,7 @@ Remember to assign skills to your bots and knowledge bases within Conversation A
 The campaign must be of the Messaging conversation type. Recommendations aren’t made if the type is Chat.
 
 Also, the engagement must route to specific skills. It should not be set to route to all skills.
- 
+
 <img width="500" alt="Route to specific skill setting" src="img/agentassist/routing.png">
 
 If you instead set the engagement to route to “All skills,” the effect is that conversations within the engagement don’t have an assigned skill. As a result, there are no recommendations within the Conversational Cloud agent workspace since all recommendations are made based on the conversation’s skills.

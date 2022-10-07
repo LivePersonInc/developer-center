@@ -22,12 +22,12 @@ The Next Actions API is a REST API that allows you to ask Conversation Orchestra
 A typical use case for using the Next Actions API is to get a routing decision to transfer to a skill from a bot or LOB app:
 
 1. A brand’s concierge bot (for example, a bot built in Conversation Builder) handles branded greetings, dialogs, and intents.
-2. It then calls the Next Actions API, which evaluates all the policies set up in Dynamic Routing and returns the next best action. 
+2. It then calls the Next Actions API, which evaluates all the policies set up in Dynamic Routing and returns the next best action.
 
     * If you're using the Conversation Orchestrator bot template, the ask maven call is already pre-configured for you, and you don’t have to do this.
-    * If you're using a different Conversation Builder bot, you can use the [askMaven JavaScript method](conversation-builder-scripting-functions-askmaven.html). 
+    * If you're using a different Conversation Builder bot, you can use the [askMaven JavaScript method](conversation-builder-scripting-functions-askmaven.html).
     * If you're using a third-party bot on any external platform (for example, Google Dialogflow), use the REST API.
-  
+
     Please see Dynamic Routing's [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html) topic for more information.
 
 3. The concierge bot then uses the action (for example, route to a skill) to transfer the conversation to that skill in Conversational Cloud.

@@ -70,7 +70,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 150,
                 "overdueConversationsInQueue": 0,
                 "overdueConversationsAssigned": 2,
-                "overdueConversationsTotal": 2        
+                "overdueConversationsTotal": 2
             },
             "13": {
                 "time": 1516277646515,
@@ -91,7 +91,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 240,
                 "overdueConversationsInQueue": 1,
                 "overdueConversationsAssigned": 0,
-                "overdueConversationsTotal": 1                
+                "overdueConversationsTotal": 1
             }
         },
         "metricsTotal": {
@@ -111,7 +111,7 @@ Request by skillIds=12,13 and overdueConversations=true
             "waitTimeForAgentAssignment_90thPercentile": 224,
             "overdueConversationsInQueue": 1,
             "overdueConversationsAssigned": 2,
-            "overdueConversationsTotal": 3            
+            "overdueConversationsTotal": 3
         }
     }
 ```

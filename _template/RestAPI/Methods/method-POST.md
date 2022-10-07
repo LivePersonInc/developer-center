@@ -39,7 +39,7 @@ Explain what the POST body payload is for.
 | from | timerange starting point | number | Yes |
 | to | timerange ending point | number | No |
 
-##### Request Body Example 
+##### Request Body Example
 
 ```json
 {

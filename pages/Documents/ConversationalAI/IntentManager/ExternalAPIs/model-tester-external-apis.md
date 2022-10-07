@@ -127,7 +127,7 @@ curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/mod
 
 #### Troubleshooting
 
-Typically, the automation for your use case should always use the domain_name query parameter to filter the results by domain name. However, to troubleshoot, you can remove it and “work backwards” to identify the issue: 
+Typically, the automation for your use case should always use the domain_name query parameter to filter the results by domain name. However, to troubleshoot, you can remove it and “work backwards” to identify the issue:
 
 1. Remove the domain_name query parameter.
 2. Call this API and retrieve the test report name for the report you want.

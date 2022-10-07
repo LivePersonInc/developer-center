@@ -23,7 +23,7 @@ Get a list of all special occasions of an account.
 
  |Parameter  |Description |  Type / Value |
  |:----------- | :------------ | :--------------- |
- |accountId | LP site ID | String  
+ |accountId | LP site ID | String
 
 **Request Headers**
 
@@ -50,7 +50,7 @@ Get a list of all special occasions of an account.
 
  |Header|  Description|
  |:-------|   :-----  |
- |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+ |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
  **Response example**
 

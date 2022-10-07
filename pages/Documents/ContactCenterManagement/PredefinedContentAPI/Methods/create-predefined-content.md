@@ -42,7 +42,7 @@ Creates new Predefined Content for an account.
 
 |Header | Description |
  |:------- | :-------------- |
-| Authorization  |Contains token string to allow request authentication and authorization.|  
+| Authorization  |Contains token string to allow request authentication and authorization.|
 
 **Request Body**
 

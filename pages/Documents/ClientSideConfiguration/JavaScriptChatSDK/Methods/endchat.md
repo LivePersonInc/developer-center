@@ -39,8 +39,8 @@ var failedRequest = myChat.endChat({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```         
-                                                                                                             
+```
+
 ### Response
 
 **Sample response**

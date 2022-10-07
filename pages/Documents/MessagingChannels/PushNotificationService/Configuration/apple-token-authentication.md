@@ -32,7 +32,7 @@ Key File should be an authentication token signing key, specified as a text file
 * **Team ID:**: Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
 
 * **Key ID:**: A 10-character string with the Key ID.
-  
+
 {: .attn-note}
 The Key ID is provided by Apple during the creation of the Apple Token Authentication.
 
@@ -55,7 +55,7 @@ This information can be added to the Mobile app management section under Campaig
 if your Application is running on debug mode (running from Xcode), the **Production** switch should be **OFF**.
 
 {: .attn-alert}
-if using an Application downloaded from the App Store, or any other Ad-Hoc distribution service, the **Production** switch should be **ON**. 
+if using an Application downloaded from the App Store, or any other Ad-Hoc distribution service, the **Production** switch should be **ON**.
 
 ### How to get your Apple Team ID
 
@@ -65,4 +65,3 @@ To retrieve your Team ID, follow the next steps:
 - Once you are logged in, click on [Account](https://developer.apple.com/account)
 - Then [Membership](https://developer.apple.com/account/#/membership/)
 - Under Membership Information, please you'll find the Team Name and Team ID fields
-

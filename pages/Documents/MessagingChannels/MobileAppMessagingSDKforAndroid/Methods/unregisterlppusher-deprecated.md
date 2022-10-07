@@ -16,7 +16,7 @@ indicator: messaging
 
 *This method was deprecated — please use the [new method](android-unregisterlppusher.html).*
 
-Unregister from registered push notification service. 
+Unregister from registered push notification service.
 
 `public static void unregisterLPPusher(String brandId, String appId)`
 
@@ -24,4 +24,3 @@ Unregister from registered push notification service.
 | :--- | :--- |
 | brandId | The account ID. |
 | appId | The host app ID. |
-

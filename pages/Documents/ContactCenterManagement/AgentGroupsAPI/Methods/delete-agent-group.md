@@ -18,7 +18,7 @@ This API deletes an agent group from a specific account.
 
 ### Request
 
-| Method|  URL| 
+| Method|  URL|
  |:--------  |:---- |
  |DELETE|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/agentGroups/{agentGroupId} |
 
@@ -33,7 +33,7 @@ This API deletes an agent group from a specific account.
 
  |Parameter | Description | Type / Value  |Required |
 | :----------- | :-------------  |:-------------- | :--- |
-|v|   API version number|  Double. Default Value: 1.0|  Required 
+|v|   API version number|  Double. Default Value: 1.0|  Required
  |select|  Dynamic selection of the response fields|  YOGA 'gdata' dialect. Non-existing field: no error, blank in response. Supported fields: any in response body|  Optional |
 
 **Path Parameters**

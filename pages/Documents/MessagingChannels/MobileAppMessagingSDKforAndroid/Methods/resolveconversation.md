@@ -14,6 +14,6 @@ permalink: mobile-app-messaging-sdk-for-android-methods-resolveconversation.html
 indicator: messaging
 ---
 
-Resolves the current conversation. 
+Resolves the current conversation.
 
 `public static void resolveConversation()`

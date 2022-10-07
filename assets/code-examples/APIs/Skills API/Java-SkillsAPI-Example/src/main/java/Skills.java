@@ -22,7 +22,7 @@ public class Skills {
 		 OAuthRequest request = new OAuthRequest(Verb.GET, "https://{BASE URI}.liveperson.net/api/account/{YOUR ACCOUNT NUMBER}/configuration/le-users/skills?v=1");
 		 request.addHeader("Content-Type", "application/json");
 		 // sign the request
-		 service.signRequest(accessToken, request); 
+		 service.signRequest(accessToken, request);
 		 Response response = request.send();
 		 // print the response to the console
 		 System.out.println(response.getBody());

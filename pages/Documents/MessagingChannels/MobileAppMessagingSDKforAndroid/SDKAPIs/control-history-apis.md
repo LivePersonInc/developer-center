@@ -28,18 +28,18 @@ The APIs lets brands:
 
 * The `mHistoryConversationsMaxDays` value will be applicable only for CLOSED conversations.
 
-* In no conversations match the provided filter, an empty state presents with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured. To change the text, change the value of `lp_history_control_api_empty_state` parameters. 
+* In no conversations match the provided filter, an empty state presents with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured. To change the text, change the value of `lp_history_control_api_empty_state` parameters.
 
 * When opening the window with closed conversations only, the window opens as a view only mode.
 
 * Every message that arrives from the agent or sent by the consumer removes the filter and the conversations present as if no filter was applied.
 
-### Parameters 
+### Parameters
 
 You have three relevant parameters for `ConversationViewParams`:
 
   - [LPConversationsHistoryStateToDisplay](#lpconversationshistorystatetodisplay)
-  
+
   - [LPConversationHistoryMaxDaysDateType](#lpconversationhistorymaxdaysdatetype)
 
 ```java
@@ -63,12 +63,12 @@ public enum LPConversationsHistoryStateToDisplay {
 
 #### LPConversationHistoryMaxDaysDateType
 
-* `mHistoryConversationMaxDaysType` - has the following values: 
+* `mHistoryConversationMaxDaysType` - has the following values:
 
-   * `startConversationDate`  
+   * `startConversationDate`
 
    * `endConversationDate`
-  
+
    When using `mHistoryConversationsMaxDays`, LPConversationHistoryMaxDaysDateType decides if to filter by the conversations' start date or end date. When not providing a value, `startConversationDate` becomes default.
 
 * `mHistoryConversationsMaxDays` - Brands can choose how much conversation history presents to the consumer by days. Not providing a value allows consumers to see the entire history stored on LivePerson's servers (by scrolling down to see additional conversations).
@@ -118,4 +118,3 @@ LivePerson.initialize(getApplicationContext(), new InitLivePersonProperties(bran
     }
 }));
 ```
-

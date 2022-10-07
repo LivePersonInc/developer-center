@@ -44,12 +44,12 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
 
 5. Add a new Text Question to capture the userâ€™s order number. Add the text, "What is your order number?"
 
-6. Still in the Text question, add a custom rule that checks whether the order number is valid: 
+6. Still in the Text question, add a custom rule that checks whether the order number is valid:
 
-    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
+    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`.
 
     {: .attn-note}
-    This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
+    This mock API will successfully return order data for accounts A001001, A001010 and A001002.
 
     Still in the rule, capture the userâ€™s order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, and enter `{$userMessage}` for its value.
 
@@ -72,7 +72,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
     * **Method**: GET
     * **URL**: https://5fc54a0936bc790016344a09.mockapi.io/order-status/{$botContext.orderNumber}
 
-        Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
+        Note the use of the orderNumber bot variable being interpolated onto the end of the URL string.
 
     * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here. (For more on processing API results with custom data fields, see [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).)
 

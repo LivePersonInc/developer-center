@@ -31,7 +31,7 @@ https://API_REQUEST?v=4.0
 **Request Headers**
 
 | Header      |   Description  |
- |:------ |       :--------|  
+ |:------ |       :--------|
  |Authorization | Contains token string to allow request authentication and authorization.  |
  |X-HTTP-Method-Override|  Overrides unsupported HTTP methods.  To be used with the PUT value. |
  |If-Match  |Contains data revision as known by the client. Allows concurrent modification backend verification.  |
@@ -55,21 +55,21 @@ https://API_REQUEST?v=4.0
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
 | 401  | Not Authenticated     |
-| 403  | Not Authorized        | 
-| 404  | Not found             | 
+| 403  | Not Authorized        |
+| 404  | Not found             |
 | 500  | Internal Server Error |
 
 **Response Headers**
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |  
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
 **Response Body**
 

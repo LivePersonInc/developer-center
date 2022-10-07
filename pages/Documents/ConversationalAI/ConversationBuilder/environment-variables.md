@@ -1,6 +1,6 @@
 ---
 pagename: Environment Variables
-redirect_from:  
+redirect_from:
     - conversation-builder-best-practices-using-environment-variables.html
     - conversation-builder-best-practices-environment-variables.html
 Keywords:
@@ -51,7 +51,7 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
 
 4. Click **Save**.
 
-### Link environment variables to a bot 
+### Link environment variables to a bot
 
 Once you’ve created an environment, you need to connect it to your bot.
 
@@ -62,7 +62,7 @@ Once you’ve created an environment, you need to connect it to your bot.
 3. Scroll down, and click **More Settings**.
 4. For **Bot Environment**, select the name of the environment.
 5. Click **Save**.
- 
+
 ### Use environment variables
 
 There are two ways you can call environment variables.

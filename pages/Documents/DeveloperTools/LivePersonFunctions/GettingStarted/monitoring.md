@@ -113,11 +113,11 @@ Given that multiple developers and users may use a Functions account, it can get
 
 All activities will be stored for roughly two months and can be reviewed in this time window. For example, some of the activities, `Lambda Update`, come with different subactivities. The Description field usually discloses those. Sticking to our example of the `Lambda Update`, you may see `Lambda deployed` and `Code changed` as potential subactivities.
 
-<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png"> 
+<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png">
 
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
-<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
+<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png">
 
 ### Invocation Histogram
 

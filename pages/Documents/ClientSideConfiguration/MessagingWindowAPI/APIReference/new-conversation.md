@@ -15,9 +15,8 @@ indicator: messaging
 ---
 
 {% include msgtype.html title='Request' type='req' %}
-{% include json.html name="req_editor" 
+{% include json.html name="req_editor"
     schemaFile='assets/schema/ws/consumerRequests.json'
     startval='{"type":"cm.ConsumerRequestConversation","id":"A3HC"}'
     readonly_oneOf = 'root'
     properties=true %}
-

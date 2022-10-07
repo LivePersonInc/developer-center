@@ -31,7 +31,7 @@ The most common way that agents will receive multiple recommendations for an utt
 
 #### Rolling out recommendations to agents
 
-When introducing your agents to Conversation Assist, you can control rollout and set up training groups by enabling recommendations for particular skills. 
+When introducing your agents to Conversation Assist, you can control rollout and set up training groups by enabling recommendations for particular skills.
 
 #### Automations for Conversation Assist
 

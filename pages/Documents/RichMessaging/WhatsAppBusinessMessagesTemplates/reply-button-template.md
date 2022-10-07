@@ -35,7 +35,7 @@ The Reply Button is the container that holds the information that should be disp
 | type          | Type of container                               | Enum                  | Y        |
 | tag           | Tag of template view must be **generic**        | Enum                  | Y        |
 | elements      | Array of elements/templates that contains the actual content of the reply button. The elements must be in the following order: <br>  1) Image header <br> 2) Title <br> 3) Subtitle <br> 4) Footer <br> 5) Button <br> The description and at least a button is required.| Array(Element) | Y |
-                  
+
 #### JSON Representation Card
 
 ```json
@@ -87,7 +87,7 @@ the [Meta documentation](https://developers.facebook.com/docs/whatsapp/on-premis
 }
 ```
 
-### Subtitle 
+### Subtitle
 
 The text of the rich card.
 
@@ -140,7 +140,7 @@ A button at the bottom of a rich card.
 ```json
 {
   "type": "vertical",
-  "tag": "generic", 
+  "tag": "generic",
   "elements": [
     {
       "type": "image",
@@ -189,7 +189,7 @@ A button at the bottom of a rich card.
       "type": "button",
       "title": "Post office",
       "click": {
-        "actions": [  
+        "actions": [
           {
             "type": "publishText",
             "text": "Post office"

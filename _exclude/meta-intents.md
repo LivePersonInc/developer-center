@@ -82,7 +82,7 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
         * I am upset
         * Thank you
         * Who are you?
- 
+
     When finished, click **Save**.
 
     If created correctly, you should see your standard intents displayed underneath the Small Talk meta intent.

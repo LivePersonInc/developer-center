@@ -9,21 +9,21 @@ info:
     url: 'img/liveperson-inc-logo.jpg'
   description: |
     # Introduction
-    
+
     In this document document you will find the reference to the api methods.
     In order to invoke those methods you will first have to:
-        
+
         * Establish a websocket connection to the messaging service.
         * Send authentication token, either by attaching it to the websocket connection request header,
         or sending InitConnection request after the connection has been established.
-    
+
     Please refer to the [Getting Started](https://developers.liveperson.com/consumer-int-getting-started.html) section to see how to do that.
-        
+
     ## Requests
-    
+
     Inovking the api methods is done by sending json messages on the open websocket connection. The messages should be in
     the following format:
-        
+
     ```json
     {
         "type" : "cm.AgentRequestConversation",
@@ -31,14 +31,14 @@ info:
         "body" : { "ttrDefName" : "NORMAL" }
     }
     ```
-    
+
     In the following reference, you will find the ``type``, and the ``body`` of each supported request.
     The ``id`` should be unique string. It will be attached to the service response for correlation purposes.
-    
+
     ## Responses
 
     Each request will responded by the service with a response message in the following format:
-        
+
     ```json
     {
             "kind" : "resp",
@@ -48,14 +48,14 @@ info:
             "body" : { "conversationId" : "hdjsdhksh2" }
     }
     ```
-    
+
     The possible ``code`` and the ``body`` are documented on each request.
-    
+
     ## Notifications
-    
+
     Some of the requests creates subscription in the server. Following that the server will send notifications
     treggered by specific events. The notification messages will be structured in the following format:
-        
+
     ```json
     {
             "kind" : "notification",
@@ -63,10 +63,10 @@ info:
             "body" : { "conversationId" : "hdjsdhksh2" }
     }
     ```
-    
+
     The specific ``type`` and ``body`` structure for each notfication, will be documented as reponse code ``100``
     for the subscription request.
-    
+
 #externalDocs:
 #  description: Find out how to create GitHub repo for your OpenAPI spec.
 #  url: 'https://github.com/Rebilly/generator-openapi-repo'
@@ -172,7 +172,7 @@ paths:
         - Messaging
       summary: Subscribe Messaging Events
       description: |
-        Subscribes to get the events of a conversation. 
+        Subscribes to get the events of a conversation.
         Existing events will be sent immediately, while new events will be notified as they happen.
       parameters:
         - name: body
@@ -267,4 +267,3 @@ paths:
           description: Success
           schema:
             $ref: ../infra/stringRespBody.json
-  
