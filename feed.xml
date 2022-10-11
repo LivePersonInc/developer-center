@@ -11,13 +11,13 @@ layout: none
     <description>{{ site.description | xml_escape }}</description>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% assign pages = site.pages | sort: "date_published" | reverse %}
-    {%- for page in pages limit:25 -%}
+    {% assign pages = site.pages | sort: "pagename" | sort: "date_published" | reverse %}
+    {%- for page in pages limit:100 -%}
     <item>
       <title>{{ page.pagename | xml_escape }}</title>
       <link>{{ page.url | prepend: site.url }}</link>
       <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
-      <description><![CDATA[{{ page.content | xml_escape }}]]></description>
+      <description xml:base="{{ site.url }}/"><![CDATA[{{ page.content | markdownify }}]]></description>
       <!-- <pubDate>{{ page.date_published | default: "2017/05/17" | date_to_rfc822 }}</pubDate> -->
     </item>
     {% endfor %}
