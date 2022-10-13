@@ -2,7 +2,6 @@
 pagename: Get Deletion Request
 redirect_from:
   - personal-data-deletion-get-deletion-requests.html
-keywords:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Personal Data Deletion API

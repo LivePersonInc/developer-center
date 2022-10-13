@@ -3,14 +3,11 @@ pagename: Appendix
 redirect_from:
   - administration-profiles-appendix.html
   - aadministration-profiles-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
-
 order: 101
 permalink: profiles-api-appendix.html
-
 indicator: both
 ---
 

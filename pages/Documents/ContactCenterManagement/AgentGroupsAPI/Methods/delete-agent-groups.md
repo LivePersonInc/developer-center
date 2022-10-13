@@ -2,16 +2,13 @@
 pagename: Delete Agent Groups
 redirect_from:
   - administration-delete-agent-groups.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
-
 order: 70
 
 permalink: agent-groups-api-methods-delete-agent-groups.html
-
 indicator: both
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: LivePerson Functions CLI
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

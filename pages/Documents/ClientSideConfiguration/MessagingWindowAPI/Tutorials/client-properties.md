@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 70
 permalink: messaging-window-api-tutorials-client-properties.html
-
 indicator: messaging
 ---
 

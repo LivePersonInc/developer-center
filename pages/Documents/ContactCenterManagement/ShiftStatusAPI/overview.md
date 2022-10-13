@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API

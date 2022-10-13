@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
-
 order: 100
 permalink: messaging-window-api-api-reference-overview.html
-
 folder: messaging-apis
 docs: https://lpgithub.dev.lprnd.net/pages/Architecture/api-ums/2.0.0.10-SNAPSHOT
 icon_style: style="width:16px; height:16px;" height="16" width="16"

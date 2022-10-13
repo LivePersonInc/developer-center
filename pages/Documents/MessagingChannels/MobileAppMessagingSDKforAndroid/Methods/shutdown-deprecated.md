@@ -2,15 +2,11 @@
 pagename: shutDown (Deprecated)
 redirect_from:
   - android-shutdowndeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 240
 permalink: mobile-app-messaging-sdk-for-android-methods-shutdown-(deprecated).html
-
 indicator: messaging
 ---
 

@@ -3,9 +3,7 @@ pagename: Add Messaging to Your App
 redirect_from:
   - products-channels-inapp-messaging.html
 sitesection: Solutions
-
 documentname: Mobile App Messaging
-
 order: 1
 level-order: 1
 root-link: true

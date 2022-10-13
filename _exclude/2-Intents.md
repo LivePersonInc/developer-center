@@ -1,7 +1,7 @@
 ---
 pagename: 2 - Intents
-redirect_from: conversation-builder-getting-started-getting-started-part-2.html
-Keywords:
+redirect_from:
+  - conversation-builder-getting-started-getting-started-part-2.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

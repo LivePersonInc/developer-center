@@ -2,15 +2,12 @@
 pagename: Send Lines and Structured Content
 redirect_from:
   - agent-add-lines.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 130
 permalink: chat-agent-api-methods-send-lines-and-structured-content.html
-
 indicator: chat
 ---
 

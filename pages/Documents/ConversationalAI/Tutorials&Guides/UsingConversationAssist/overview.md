@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
     - tutorials-guides-using-agent-assist-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

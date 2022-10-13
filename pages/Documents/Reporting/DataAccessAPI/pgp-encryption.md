@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 order: 61
 permalink: data-access-api-pgp-encryption.html
-
 indicator: chat
 ---
 

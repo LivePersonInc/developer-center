@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - rt-interactions-visit-information-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Visit Information API

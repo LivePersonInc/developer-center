@@ -2,7 +2,6 @@
 pagename: Test Conversation Assist
 redirect_from:
     - tutorials-guides-using-agent-assist-test-agent-assist.html
-keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

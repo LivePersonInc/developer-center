@@ -2,7 +2,6 @@
 pagename: Retrieve Workdays Object by ID
 redirect_from:
   - account-configuration-workdays-get-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Workdays API

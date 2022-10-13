@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - administration-users-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
-
 level-order: 1
 order: 9
 permalink: users-api-overview.html

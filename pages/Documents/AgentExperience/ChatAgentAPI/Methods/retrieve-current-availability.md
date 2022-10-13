@@ -2,15 +2,12 @@
 pagename: Retrieve Current Availability
 redirect_from:
   - agent-retrieve-current-availability.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 20
 permalink: chat-agent-api-methods-retrieve-current-availability.html
-
 indicator: chat
 ---
 

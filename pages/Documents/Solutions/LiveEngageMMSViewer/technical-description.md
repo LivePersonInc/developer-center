@@ -4,7 +4,6 @@ redirect_from:
   - products-channels-mms-technical.html
   - liveengage-mms-viewer-technical-description.html
 sitesection: Solutions
-
 documentname: Conversational Cloud MMS Viewer
 permalink: conversational-cloud-mms-viewer-technical-description.html
 order: 10

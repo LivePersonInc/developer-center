@@ -2,15 +2,12 @@
 pagename: Retrieve Available Skills
 redirect_from:
   - agent-chat-agent-retrieve-skills.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 200
 permalink: chat-agent-api-methods-retrieve-available-skills.html
-
 indicator: chat
 ---
 

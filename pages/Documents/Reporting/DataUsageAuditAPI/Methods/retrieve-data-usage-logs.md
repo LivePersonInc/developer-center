@@ -6,7 +6,6 @@ documentname: Data Usage Audit API
 subfoldername: Methods
 order: 20
 permalink: data-usage-audit-api-methods-retrieve-data-usage-logs.html
-
 indicator: both
 ---
 

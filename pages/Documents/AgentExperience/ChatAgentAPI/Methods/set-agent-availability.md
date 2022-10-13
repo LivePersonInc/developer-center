@@ -2,15 +2,12 @@
 pagename: Set Agent Availability
 redirect_from:
   - agent-set-agent-availability.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 30
 permalink: chat-agent-api-methods-set-agent-availability.html
-
 indicator: chat
 ---
 

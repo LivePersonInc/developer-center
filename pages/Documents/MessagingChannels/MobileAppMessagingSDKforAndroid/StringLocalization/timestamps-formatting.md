@@ -2,15 +2,12 @@
 pagename: Timestamps Formatting
 redirect_from:
   - android-timestamps.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 230
 permalink: mobile-app-messaging-sdk-for-android-string-localization-timestamps-formatting.html
-
 indicator: messaging
 ---
 

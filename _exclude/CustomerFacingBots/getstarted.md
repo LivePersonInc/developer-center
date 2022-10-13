@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Solutions
 categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots
-
 order: 3
 permalink: customer-facing-bots-getting-started.html
 indicator:

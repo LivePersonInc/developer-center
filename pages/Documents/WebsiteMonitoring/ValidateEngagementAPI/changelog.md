@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - rt-interactions-validate-engagement-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Validate Engagement API

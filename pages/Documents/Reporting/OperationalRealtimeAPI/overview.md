@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Operational Realtime API
-
 level-order: 5
 order: 1
 permalink: operational-realtime-api-overview.html

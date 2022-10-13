@@ -2,15 +2,12 @@
 pagename: authenticate
 redirect_from:
   - consumer-experience-javascript-chat-authenticate.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 31
 permalink: javascript-chat-sdk-methods-authenticate.html
-
 indicator: chat
 ---
 

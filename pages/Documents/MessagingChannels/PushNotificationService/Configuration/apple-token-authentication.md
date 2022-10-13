@@ -1,14 +1,11 @@
 ---
 pagename: Apple Token Authentication
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 subfoldername: Configuration
 order: 40
 permalink: push-notification-service-configuration-apple-token-authentication.html
-
 indicator: messaging
 ---
 

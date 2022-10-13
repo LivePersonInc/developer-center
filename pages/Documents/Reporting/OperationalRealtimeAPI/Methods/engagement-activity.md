@@ -8,7 +8,6 @@ documentname: Operational Realtime API
 subfoldername: Methods
 order: 20
 permalink: operational-realtime-api-methods-engagement-activity.html
-
 indicator: chat
 ---
 

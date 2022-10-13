@@ -2,15 +2,12 @@
 pagename: Retrieve Available Agents
 redirect_from:
   - agent-retrieve-available-agents.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 40
 permalink: chat-agent-api-methods-retrieve-available-agents.html
-
 indicator: chat
 ---
 

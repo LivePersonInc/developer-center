@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 160
 permalink: server-chat-api-methods-submit-survey-data.html
-
 indicator: chat
 ---
 

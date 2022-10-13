@@ -2,7 +2,6 @@
 pagename: Test with the Model Tester
 redirect_from:
     - intent-builder-testing-advanced-model-testing.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

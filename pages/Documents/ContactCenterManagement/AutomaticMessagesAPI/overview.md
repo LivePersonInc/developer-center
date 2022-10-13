@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - account-configuration-automatic-messages-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Automatic Messages API
-
 level-order: 5
 order: 9
 permalink: automatic-messages-api-overview.html

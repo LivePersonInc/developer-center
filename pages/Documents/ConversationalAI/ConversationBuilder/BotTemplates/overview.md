@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
     - conversation-builder-templates-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

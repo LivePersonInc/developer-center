@@ -3,11 +3,9 @@ pagename: Overview
 redirect_from:
   - administration-agent-groups-overview.html
   - admin-settings-skills-groups-set-the-agent-group-hierarchy.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
-
 level-order: 3
 order: 9
 permalink: agent-groups-api-overview.html

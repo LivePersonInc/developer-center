@@ -2,15 +2,12 @@
 pagename: Retrieve Chat Events
 redirect_from:
   - agent-retrieve-chat-events.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 120
 permalink: chat-agent-api-methods-retrieve-chat-events.html
-
 indicator: chat
 ---
 

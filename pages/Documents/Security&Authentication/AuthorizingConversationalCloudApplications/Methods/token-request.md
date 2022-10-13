@@ -2,13 +2,11 @@
 pagename: Token Request
 redirect_from:
   - authorizing-liveengage-applications-methods-token-request.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
 permalink: authorizing-conversational-cloud-applications-methods-token-request.html
-
 indicator: both
 ---
 

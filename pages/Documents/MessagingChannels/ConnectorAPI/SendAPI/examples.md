@@ -18,7 +18,6 @@ subfoldername: Send API
 order: 59
 indicator: messaging
 permalink: connector-api-send-api-examples.html
-
 ---
 
 ### Create a new conversation

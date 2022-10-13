@@ -3,7 +3,6 @@ pagename: Overview
 redirect_from:
     - conversation-builder-intent-builder-overview.html
     - intent-builder-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

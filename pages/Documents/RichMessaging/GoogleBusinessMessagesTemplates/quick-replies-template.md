@@ -2,7 +2,7 @@
 pagename: Quick Replies Template
 redirect_from:
   - structured-content-google-business-messages-templates-quick-replies-template.html
-Keywords: structured content rich messaging gbm google business messages quick replies quick-replies template
+keywords: structured content rich messaging gbm google business messages quick replies quick-replies template
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google Business Messages Templates

@@ -2,14 +2,11 @@
 pagename: Release Notes
 redirect_from:
   - messaging-agent-sdk-releasenotes.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience & Bot"
 documentname: Messaging Agent SDK
-
 order: 120
 permalink: messaging-agent-sdk-release-notes.html
-
 indicator: messaging
 ---
 

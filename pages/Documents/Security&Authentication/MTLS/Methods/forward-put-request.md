@@ -1,6 +1,5 @@
 ---
 pagename: Forward put request
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

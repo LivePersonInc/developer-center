@@ -3,15 +3,11 @@ pagename: showConversation (full authentication support + view modes)
 redirect_from:
   - android-showconversationfull.html
   - android-showconversation.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 25
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(full-authentication-support-+-view-modes).html
-
 indicator: messaging
 ---
 

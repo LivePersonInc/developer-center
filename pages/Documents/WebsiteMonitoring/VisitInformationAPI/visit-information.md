@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Visit Information API
-
 order: 2
 permalink: visit-information-api-visit-information.html
-
 indicator: chat
 ---
 

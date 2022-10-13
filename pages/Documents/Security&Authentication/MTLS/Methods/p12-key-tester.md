@@ -1,6 +1,5 @@
 ---
 pagename: P12 Key Tester
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

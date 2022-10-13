@@ -3,7 +3,6 @@ pagename: Time Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-timepicker.html
   - structured-content-apple-business-chat-templates-time-picker-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates

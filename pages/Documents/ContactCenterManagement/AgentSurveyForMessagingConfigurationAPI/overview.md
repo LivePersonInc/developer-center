@@ -2,15 +2,13 @@
 pagename: Overview
 redirect_from:
   - administration-agentsurvey-config-api-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API
 permalink: agent-survey-for-messaging-configuration-api-overview.html
-
 indicator: messaging
-
 ---
+
 ### Introduction
 
 The Agent Survey for Messaging, enables brands to categorize, qualify and collect feedback from agents about the conversation. Brands are using this information to optimize their operation: improve campaigns, train agent, reduce the need for transfer etc.

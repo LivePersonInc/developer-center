@@ -1,6 +1,5 @@
 ---
 pagename: Development Deep Dive (CLI)
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

@@ -2,15 +2,12 @@
 pagename: User Login
 redirect_from:
   - agent-user-login.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
-
 order: 10
 permalink: login-service-api-methods-user-login.html
-
 indicator: both
 ---
 

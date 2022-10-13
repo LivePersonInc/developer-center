@@ -3,11 +3,9 @@ pagename: Overview
 redirect_from:
   - account-configuration-predefined-content-overview.html
   - products-admin-predefined-content.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
-
 level-order: 2
 order: 9
 permalink: predefined-content-api-overview.html

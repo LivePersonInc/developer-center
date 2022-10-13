@@ -1,6 +1,5 @@
 ---
 pagename: Routing Conversations by SDEs
-Keywords:
 redirect_from:
   - maven-ai-ai-powered-routing-using-sde-attributes-in-routing.html
   - maven-ai-dynamic-routing-using-sde-attributes-in-routing.html

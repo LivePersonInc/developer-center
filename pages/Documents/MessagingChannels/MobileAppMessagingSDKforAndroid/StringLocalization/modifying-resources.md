@@ -2,15 +2,12 @@
 pagename: Modifying Resources
 redirect_from:
   - android-modifying-resources.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
-
 order: 180
 permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-modifying-resources.html
-
 indicator: messaging
 ---
 
