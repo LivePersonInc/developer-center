@@ -2,7 +2,7 @@
 pagename: Introduction to Quick Replies
 redirect_from:
   - rich-messaging-quick-replies-overview.html
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Quick Replies

@@ -1,6 +1,5 @@
 ---
 pagename: Delete Agent Survey Object
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API

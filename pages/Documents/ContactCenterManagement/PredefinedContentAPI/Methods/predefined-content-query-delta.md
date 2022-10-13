@@ -2,15 +2,12 @@
 pagename: Predefined Content Query Delta
 redirect_from:
   - account-configuration-predefined-content-query-delta.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 30
 permalink: predefined-content-api-methods-predefined-content-query-delta.html
-
 indicator: both
 ---
 

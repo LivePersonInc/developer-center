@@ -5,11 +5,9 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 order: 62
 permalink: data-access-api-changelog.html
 indicator: both
-
 ---
 
 This document describes changes made to the Data Access API. Entries will appear under a relevant date and will detail changes made to either the documentation or the API itself. All changes should be backwards compatible but where they are not or extra work is needed to make sure that backwards compatibility is maintained, the Changelog will mention this.

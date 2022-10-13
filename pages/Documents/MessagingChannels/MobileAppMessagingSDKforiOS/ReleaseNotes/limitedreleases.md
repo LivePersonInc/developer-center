@@ -1,6 +1,5 @@
 ---
 pagename: Limited Releases
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

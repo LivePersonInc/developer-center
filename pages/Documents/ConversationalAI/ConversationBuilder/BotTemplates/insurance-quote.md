@@ -2,7 +2,6 @@
 pagename: Insurance Quote
 redirect_from:
     - conversation-builder-templates-insurance-quote.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

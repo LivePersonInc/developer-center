@@ -1,7 +1,5 @@
 ---
 pagename: Deprecated Functions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

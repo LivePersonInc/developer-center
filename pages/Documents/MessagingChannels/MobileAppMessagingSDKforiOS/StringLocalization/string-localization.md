@@ -2,7 +2,6 @@
 pagename: String Localization
 redirect_from:
   - consumer-experience-ios-sdk-stringlocalization.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

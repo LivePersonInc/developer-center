@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Operations API
-
 order: 100
 permalink: messaging-operations-api-appendix.html
-
 indicator: messaging
 ---
 

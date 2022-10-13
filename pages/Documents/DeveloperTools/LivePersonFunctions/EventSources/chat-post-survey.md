@@ -1,6 +1,5 @@
 ---
 pagename: Chat Post Survey
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

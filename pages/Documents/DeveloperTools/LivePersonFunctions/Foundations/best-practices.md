@@ -1,6 +1,5 @@
 ---
 pagename: Best Practices
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

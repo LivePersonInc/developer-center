@@ -2,15 +2,12 @@
 pagename: Delete Skills
 redirect_from:
   - administration-delete-skills.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
-
 order: 70
 permalink: skills-api-methods-delete-skills.html
-
 indicator: both
 ---
 

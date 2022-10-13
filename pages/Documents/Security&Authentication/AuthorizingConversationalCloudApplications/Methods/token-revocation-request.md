@@ -1,6 +1,5 @@
 ---
 pagename: Token Revocation Request
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications

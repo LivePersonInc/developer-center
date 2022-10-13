@@ -11,7 +11,6 @@ redirect_from:
   - conversation-builder-getting-started-4-connect-to-liveengage.html
   - conversation-builder-getting-started-getting-started-part-4.html
   - conversation-builder-tutorials-guides-getting-started.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

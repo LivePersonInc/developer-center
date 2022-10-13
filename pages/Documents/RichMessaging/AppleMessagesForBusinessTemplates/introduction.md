@@ -3,7 +3,6 @@ pagename: Introduction
 redirect_from:
   - rich-messaging-apple-business-chat-templates.html
   - structured-content-apple-business-chat-templates-introduction.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates

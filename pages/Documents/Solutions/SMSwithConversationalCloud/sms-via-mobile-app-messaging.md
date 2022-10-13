@@ -4,9 +4,7 @@ redirect_from:
   - products-channels-sms-inapp.html
   - sms-with-liveengage-sms-via-mobile-app-messaging.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
-
 permalink: sms-with-conversational-cloud-sms-via-mobile-app-messaging.html
 order: 40
 indicator:

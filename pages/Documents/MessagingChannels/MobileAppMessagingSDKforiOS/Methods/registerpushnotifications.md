@@ -3,15 +3,11 @@ pagename: registerPushNotifications
 redirect_from:
   - consumer-experience-ios-sdk-registerpushnotifications.html
   - consumer-experience-ios-sdk-methods.html#registerpushnotifications
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 150
 permalink: mobile-app-messaging-sdk-for-ios-methods-registerpushnotifications.html
-
 indicator: messaging
 ---
 

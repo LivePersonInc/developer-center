@@ -3,9 +3,7 @@ pagename: Add Video to Chat Conversations
 redirect_from:
   - products-video-chat-overview.html
 sitesection: Solutions
-
 documentname: Video Chat
-
 order: 1
 level-order: 1
 root-link: true

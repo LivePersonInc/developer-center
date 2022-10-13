@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - trigger-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Engagement Trigger API

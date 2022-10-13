@@ -2,7 +2,6 @@
 pagename: Getting Started
 redirect_from:
     - intent-builder-external-apis-getting-started.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

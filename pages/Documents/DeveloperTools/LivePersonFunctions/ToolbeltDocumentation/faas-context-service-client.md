@@ -1,6 +1,5 @@
 ---
 pagename: FaaS Context Service Client
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

@@ -1,6 +1,5 @@
 ---
 pagename: Get all certificates by account
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

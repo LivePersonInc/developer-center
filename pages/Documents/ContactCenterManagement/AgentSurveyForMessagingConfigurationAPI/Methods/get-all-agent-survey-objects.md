@@ -1,6 +1,5 @@
 ---
 pagename: Get All Agent Survey Objects
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API

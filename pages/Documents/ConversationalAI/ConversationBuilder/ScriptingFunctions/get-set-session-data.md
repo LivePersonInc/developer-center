@@ -2,7 +2,6 @@
 pagename: Get & Set Session Data
 redirect_from:
     - conversation-builder-scripting-functions-get-set-contextual-data.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

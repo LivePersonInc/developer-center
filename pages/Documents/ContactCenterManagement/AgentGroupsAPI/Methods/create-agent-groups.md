@@ -2,15 +2,12 @@
 pagename: Create Agent Groups
 redirect_from:
   - administration-create-agent-groups.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
-
 order: 30
 permalink: agent-groups-api-methods-create-agent-groups.html
-
 indicator: both
 ---
 

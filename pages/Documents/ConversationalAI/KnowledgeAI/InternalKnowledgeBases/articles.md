@@ -3,7 +3,6 @@ pagename: Articles
 redirect_from:
     - knowledge-base-articles.html
     - knowledge-base-internal-knowledge-bases-articles.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

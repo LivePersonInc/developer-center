@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - account-configuration-unified-automatic-messages-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Unified Automatic Messages API
-
 level-order: 1
 order: 9
 permalink: unified-automatic-messages-api-overview.html

@@ -4,9 +4,7 @@ redirect_from:
   - products-channels-sms-clickable.html
   - sms-with-liveengage-clickable-mobile-content-to-sms.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
-
 permalink: sms-with-conversational-cloud-clickable-mobile-content-to-sms.html
 order: 20
 indicator:

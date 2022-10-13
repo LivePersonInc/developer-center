@@ -1,11 +1,8 @@
 ---
 pagename: Overview
-redirect_from:
-  -
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
-
 level-order: 2
 order: 1
 permalink: key-messaging-metrics-api-overview.html

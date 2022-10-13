@@ -2,15 +2,10 @@
 pagename: Deploying Bots on Live Chat
 redirect_from:
   - products-bots-chat.html
-
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 6
-
 permalink: customer-facing-bots-deploying-bots-on-live-chat.html
-
 indicator:
 ---
 

@@ -1,7 +1,5 @@
 ---
 pagename: MACS
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Analytics

@@ -3,13 +3,9 @@ pagename: Limitations
 redirect_from:
   - products-bots-limitations.html
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 5
-
 permalink: customer-facing-bots-limitations.html
-
 indicator:
 ---
 

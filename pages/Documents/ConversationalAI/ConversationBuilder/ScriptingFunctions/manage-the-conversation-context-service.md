@@ -3,7 +3,6 @@ pagename: Manage the Conversation Context Service
 redirect_from:
     - conversation-builder-scripting-functions-context-session-store-wrapper.html
     - conversation-builder-scripting-functions-manage-the-context-session-store.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

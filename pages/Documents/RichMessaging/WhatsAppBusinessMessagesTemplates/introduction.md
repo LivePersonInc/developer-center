@@ -2,7 +2,7 @@
 pagename: Introduction
 redirect_from:
   - structured-content-whatsapp-business-messages-templates-introduction.html
-Keywords: structured content rich messaging whatsapp business messages
+keywords: structured content rich messaging whatsapp business messages
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: WhatsApp Business Messages Templates

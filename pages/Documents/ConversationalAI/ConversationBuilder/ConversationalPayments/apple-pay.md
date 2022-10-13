@@ -1,7 +1,5 @@
 ---
 pagename: Apple Pay
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

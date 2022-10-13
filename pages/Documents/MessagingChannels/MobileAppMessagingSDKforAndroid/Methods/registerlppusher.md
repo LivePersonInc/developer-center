@@ -2,15 +2,11 @@
 pagename: registerLPPusher
 redirect_from:
   - android-registerlppusher.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 110
 permalink: mobile-app-messaging-sdk-for-android-methods-registerlppusher.html
-
 indicator: messaging
 ---
 

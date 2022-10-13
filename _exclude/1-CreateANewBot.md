@@ -1,7 +1,7 @@
 ---
 pagename: 1 - Dialogs and Patterns
-redirect_from: conversation-builder-getting-started-getting-started-part-1.html
-Keywords:
+redirect_from:
+  - conversation-builder-getting-started-getting-started-part-1.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

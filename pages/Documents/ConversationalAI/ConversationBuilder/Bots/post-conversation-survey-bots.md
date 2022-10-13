@@ -1,7 +1,5 @@
 ---
 pagename: Post-Conversation Survey Bots
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

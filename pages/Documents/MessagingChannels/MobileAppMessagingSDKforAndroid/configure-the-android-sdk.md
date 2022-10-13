@@ -1,6 +1,5 @@
 ---
 pagename: Configure the Android SDK
-
 redirect_from:
   - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
   - android-configuring-changing-fonts.html
@@ -9,8 +8,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
   - android-configuring-sdk.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

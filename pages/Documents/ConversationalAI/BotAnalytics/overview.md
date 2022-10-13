@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
     - conversation-builder-analytics.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Analytics

@@ -2,15 +2,12 @@
 pagename: Create Profile
 redirect_from:
   - administration-create-profile.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 30
 permalink: profiles-api-methods-create-profile.html
-
 indicator: both
 ---
 

@@ -2,14 +2,11 @@
 pagename: Creating an Instance
 redirect_from:
   - consumer-experience-javascript-chat-creating-an-instance.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 order: 4
 permalink: javascript-chat-sdk-creating-an-instance.html
-
 indicator: chat
 ---
 

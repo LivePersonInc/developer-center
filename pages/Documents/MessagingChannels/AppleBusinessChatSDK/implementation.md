@@ -1,7 +1,5 @@
 ---
 pagename: Implementation
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Apple Business Chat SDK

@@ -2,15 +2,12 @@
 pagename: Use the LivePerson SDK - Android
 redirect_from:
   - android-integration-guide.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Resources
-
 order: 341
 permalink: mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html
-
 indicator: messaging
 ---
 

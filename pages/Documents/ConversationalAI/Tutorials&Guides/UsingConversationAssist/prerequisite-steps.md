@@ -2,7 +2,6 @@
 pagename: Prerequisite Steps
 redirect_from:
     - tutorials-guides-using-agent-assist-prerequisite-steps.html
-keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

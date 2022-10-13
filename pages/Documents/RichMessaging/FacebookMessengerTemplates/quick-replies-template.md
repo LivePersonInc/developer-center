@@ -2,7 +2,7 @@
 pagename: Quick Replies Template
 redirect_from:
   - quick-replies-facebook-messenger-template.html
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Facebook Messenger Templates

@@ -2,17 +2,16 @@
 pagename: Overview
 redirect_from:
   - agent-workspace-sdk-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 level-order: 5
 order: 10
 permalink: agent-workspace-widget-sdk-overview.html
 root-link: true
 indicator: both
 ---
+
 ### Introduction
 
 The Agent Workspace Widget SDK is a lightweight, client-side package for communicating with the Conversational Cloud Agent Workspace. Using this SDK, Agent Managers can add custom widgets to Conversational Cloud, making it possible to integrate applications into the Agent Workspace.
