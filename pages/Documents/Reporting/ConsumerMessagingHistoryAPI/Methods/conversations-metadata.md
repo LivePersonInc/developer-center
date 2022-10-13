@@ -1,6 +1,5 @@
 ---
 pagename: Conversations - Metadata
-redirect_from:
   - consumer-experience-messaging-history-conversations-metadata.html
 sitesection: Documents
 categoryname: Reporting

@@ -2,15 +2,12 @@
 pagename: addLine
 redirect_from:
   - consumer-experience-javascript-chat-addline.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 40
 permalink: javascript-chat-sdk-methods-addline.html
-
 indicator: chat
 ---
 

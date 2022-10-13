@@ -2,14 +2,11 @@
 pagename: Appendix
 redirect_from:
   - administration-agent-groups-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
-
 order: 110
 permalink: agent-groups-api-appendix.html
-
 indicator: both
 ---
 

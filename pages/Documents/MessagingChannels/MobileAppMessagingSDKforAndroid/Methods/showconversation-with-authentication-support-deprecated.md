@@ -2,15 +2,11 @@
 pagename: showConversation (with authentication support) (Deprecated)
 redirect_from:
   - android-showconversationauthdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 40
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(with-authentication-support)-(deprecated).html
-
 indicator: messaging
 ---
 *This method was deprecated — please use [showConversation(Activity, LPAuthenticationParams, ConversationViewParams)](android-showconversationfull.html).*

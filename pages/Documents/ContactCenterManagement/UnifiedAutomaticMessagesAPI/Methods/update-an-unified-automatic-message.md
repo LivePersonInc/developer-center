@@ -2,15 +2,12 @@
 pagename: Update an Unified Automatic Message
 redirect_from:
   - account-configuration-unified-automatic-messages-update-an-automatic-message.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Unified Automatic Messages API
 subfoldername: Methods
-
 order: 30
 permalink: unified-automatic-messages-api-methods-update-an-unified-automatic-message.html
-
 indicator: both
 ---
 

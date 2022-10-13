@@ -3,7 +3,6 @@ pagename: Apple Pay Template
 redirect_from:
   - payment-apple-business-chat-template.html
   - payment-apple-business-chat-apple-pay.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates

@@ -7,10 +7,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 60
 permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html
-
 indicator: messaging
 ---
 

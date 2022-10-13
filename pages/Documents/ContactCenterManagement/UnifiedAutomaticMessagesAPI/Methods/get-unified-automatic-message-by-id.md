@@ -2,15 +2,12 @@
 pagename: Get Unified Automatic Message by ID
 redirect_from:
   - account-configuration-unified-automatic-messages-get-automatic-message-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Unified Automatic Messages API
 subfoldername: Methods
-
 order: 20
 permalink: unified-automatic-messages-api-methods-get-unified-automatic-message-by-id.html
-
 indicator: both
 ---
 

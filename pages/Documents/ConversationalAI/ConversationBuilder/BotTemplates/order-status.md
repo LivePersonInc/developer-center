@@ -2,7 +2,6 @@
 pagename: Order Status
 redirect_from:
     - conversation-builder-templates-order-status.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

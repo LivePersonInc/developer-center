@@ -1,7 +1,5 @@
 ---
 pagename: Welcome Message with Quick Replies
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

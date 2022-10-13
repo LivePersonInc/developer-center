@@ -2,15 +2,10 @@
 pagename: Deploying Bots on Messaging
 redirect_from:
   - products-bots-messaging.html
-
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 7
-
 permalink: customer-facing-bots-deploying-bots-on-messaging.html
-
 indicator:
 ---
 

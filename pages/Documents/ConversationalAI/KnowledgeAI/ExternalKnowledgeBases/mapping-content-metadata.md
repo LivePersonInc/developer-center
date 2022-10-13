@@ -2,7 +2,6 @@
 pagename: Mapping Content Metadata
 redirect_from:
     - knowledge-base-external-knowledge-bases-mapping-content-metadata.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

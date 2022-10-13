@@ -2,7 +2,6 @@
 pagename: 5.0 and below
 redirect_from:
   - mobile-app-messaging-sdk-for-android-sdk-attributes-4-1-and-below.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

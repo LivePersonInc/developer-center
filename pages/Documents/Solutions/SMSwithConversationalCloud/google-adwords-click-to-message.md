@@ -4,9 +4,7 @@ redirect_from:
   - products-channels-sms-adwords.html
   - sms-with-liveengage-google-adwords-click-to-message.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
-
 permalink: sms-with-conversational-cloud-google-adwords-click-to-message.html
 order: 31
 indicator:

@@ -2,7 +2,6 @@
 pagename: Open Source List and Dependencies
 redirect_from:
   - android-opensource.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

@@ -1,7 +1,5 @@
 ---
 pagename: Reports
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist

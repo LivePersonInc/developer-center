@@ -2,15 +2,12 @@
 pagename: Get User by ID
 redirect_from:
   - administration-get-user-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
-
 order: 20
 permalink: users-api-methods-get-user-by-id.html
-
 indicator: both
 ---
 

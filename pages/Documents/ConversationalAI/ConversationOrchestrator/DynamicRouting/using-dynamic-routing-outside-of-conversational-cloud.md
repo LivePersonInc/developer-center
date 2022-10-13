@@ -1,7 +1,5 @@
 ---
 pagename: Using Dynamic Routing Outside of Conversational Cloud
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator

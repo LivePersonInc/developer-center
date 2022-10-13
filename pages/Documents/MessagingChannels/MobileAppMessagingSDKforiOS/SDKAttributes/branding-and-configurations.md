@@ -5,7 +5,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html
   - mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
   - mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-5-0-and-above.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

@@ -2,7 +2,6 @@
 pagename: Get Skill by ID
 redirect_from:
   - administration-get-skill-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API

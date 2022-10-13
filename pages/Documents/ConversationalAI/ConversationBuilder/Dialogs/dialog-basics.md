@@ -3,7 +3,6 @@ pagename: Dialog Basics
 redirect_from:
     - conversation-builder-conversation-builder-dialogs.html
     - conversation-builder-dialogs.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

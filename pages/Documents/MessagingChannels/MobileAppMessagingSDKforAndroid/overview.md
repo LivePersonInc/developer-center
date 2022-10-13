@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
   - android-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

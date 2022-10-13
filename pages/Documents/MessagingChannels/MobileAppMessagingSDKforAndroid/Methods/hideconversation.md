@@ -2,15 +2,11 @@
 pagename: hideConversation
 redirect_from:
   - android-hideconversation.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 50
 permalink: mobile-app-messaging-sdk-for-android-methods-hideconversation.html
-
 indicator: messaging
 ---
 

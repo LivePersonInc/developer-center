@@ -4,7 +4,6 @@ redirect_from:
     - conversation-builder-getting-started-getting-started-part-4.html
     - conversation-builder-best-practices-versions-releases-change-management.html
     - conversation-builder-best-practices-versions-releases.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

@@ -4,13 +4,12 @@ redirect_from:
   - products-channels-sms-desktop.html
   - sms-with-liveengage-desktop-content-campaign.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
-
 permalink: sms-with-conversational-cloud-desktop-content-campaign.html
 order: 30
 indicator:
 ---
+
 ### Creating a desktop content campaign to advertise the SMS channel
 
 Below are the steps required to create a content campaign on desktop and tablet that advertises your brand’s SMS channel to consumers. Consumers will be exposed to this campaign on their desktop. While these campaigns are not clickable, they do direct the consumer to begin an SMS conversation with the number advertised in the campaign. See the example campaign below.

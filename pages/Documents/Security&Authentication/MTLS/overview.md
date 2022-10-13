@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

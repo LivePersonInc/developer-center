@@ -1,7 +1,5 @@
 ---
 pagename: Before You Begin
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator

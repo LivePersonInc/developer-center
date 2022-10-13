@@ -2,7 +2,6 @@
 pagename: Release Notes
 redirect_from:
   - consumer-experience-android-sdk-release-notes.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

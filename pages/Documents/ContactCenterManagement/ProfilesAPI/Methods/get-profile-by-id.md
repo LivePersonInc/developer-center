@@ -2,15 +2,12 @@
 pagename: Get Profile by ID
 redirect_from:
   - administration-get-profile-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 20
 permalink: profiles-api-methods-get-profile-by-id.html
-
 indicator: both
 ---
 

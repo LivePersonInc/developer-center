@@ -3,7 +3,6 @@ pagename: List Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-listpicker.html
   - structured-content-apple-business-chat-templates-list-picker-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates

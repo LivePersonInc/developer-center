@@ -2,15 +2,11 @@
 pagename: reconnect (Deprecated)
 redirect_from:
   - android-reconnectdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 80
 permalink: mobile-app-messaging-sdk-for-android-methods-reconnect-(deprecated).html
-
 indicator: messaging
 ---
 

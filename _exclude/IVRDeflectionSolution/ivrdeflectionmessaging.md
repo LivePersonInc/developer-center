@@ -3,7 +3,6 @@ pagename: IVR Deflection
 redirect_from:
   - products-channels-ivrmessaging.html
 sitesection: Solutions
-
 documentname: IVR Deflection
 root-link: true
 permalink: ivr-deflection-ivr-deflection.html

@@ -1,6 +1,5 @@
 ---
 pagename: Secret Client
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

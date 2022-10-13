@@ -1,6 +1,5 @@
 ---
 pagename: Update certificate from file
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

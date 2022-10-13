@@ -2,15 +2,12 @@
 pagename: Create Users
 redirect_from:
   - administration-create-users.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
-
 order: 30
 permalink: users-api-methods-create-users.html
-
 indicator: both
 ---
 

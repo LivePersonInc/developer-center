@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Agent Metrics API
-
 level-order: 2
 order: 1
 permalink: agent-metrics-api-overview.html

@@ -2,15 +2,12 @@
 pagename: Update Users
 redirect_from:
   - administration-update-users.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
-
 order: 40
 permalink: users-api-methods-update-users.html
-
 indicator: both
 ---
 

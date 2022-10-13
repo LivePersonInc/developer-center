@@ -2,15 +2,12 @@
 pagename: Transfer a Chat
 redirect_from:
   - agent-transfer-chat.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 210
 permalink: chat-agent-api-methods-transfer-a-chat.html
-
 indicator: chat
 ---
 

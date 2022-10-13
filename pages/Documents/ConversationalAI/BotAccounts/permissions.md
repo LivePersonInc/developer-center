@@ -4,7 +4,6 @@ redirect_from:
     - conversation-builder-accounts-user-role-permissions.html
     - bot-accounts-user-role-permissions.html
     - bot-accounts-permissions-per-role.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts

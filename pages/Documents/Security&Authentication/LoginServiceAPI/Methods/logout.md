@@ -2,15 +2,12 @@
 pagename: Logout
 redirect_from:
   - agent-logout.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
-
 order: 30
 permalink: login-service-api-methods-logout.html
-
 indicator: both
 ---
 

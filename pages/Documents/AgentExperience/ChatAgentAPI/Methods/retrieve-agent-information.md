@@ -2,15 +2,12 @@
 pagename: Retrieve Agent Information
 redirect_from:
   - agent-retrieve-agent-information.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 60
 permalink: chat-agent-api-methods-retrieve-agent-information.html
-
 indicator: chat
 ---
 

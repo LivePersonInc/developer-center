@@ -1,6 +1,5 @@
 ---
 pagename: Creating Report Tasks
-redirect_from:
 sitesection: Solutions
 documentname: Transporter
 permalink: transporter-creating-report-tasks.html

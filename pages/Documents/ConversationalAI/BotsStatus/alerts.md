@@ -1,6 +1,5 @@
 ---
 pagename: Alerts
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bots Status

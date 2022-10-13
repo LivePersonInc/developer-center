@@ -2,15 +2,12 @@
 pagename: Delete User
 redirect_from:
   - administration-delete-user.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
-
 order: 70
 permalink: users-api-methods-delete-user.html
-
 indicator: both
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Create certificate for account
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

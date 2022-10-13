@@ -2,7 +2,6 @@
 pagename: Google Dialogflow and IBM Watson NLU Engines
 redirect_from:
     - intent-manager-natural-language-understanding-third-party-nlu-engines.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

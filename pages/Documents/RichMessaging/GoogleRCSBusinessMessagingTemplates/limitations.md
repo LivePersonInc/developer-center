@@ -2,7 +2,7 @@
 pagename: Limitations
 redirect_from:
   - structured-content-rcs-business-messaging-templates-limitations.html
-Keywords: structured content rich messaging
+keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google RCS Business Messaging Templates

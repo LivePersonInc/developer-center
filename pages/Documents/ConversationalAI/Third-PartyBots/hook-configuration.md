@@ -1,6 +1,5 @@
 ---
 pagename: Hook Configuration
-redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots

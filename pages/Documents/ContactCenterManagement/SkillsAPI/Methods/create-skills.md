@@ -2,15 +2,12 @@
 pagename: Create Skills
 redirect_from:
   - administration-create-skills.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
-
 order: 30
 permalink: skills-api-methods-create-skills.html
-
 indicator: both
 ---
 

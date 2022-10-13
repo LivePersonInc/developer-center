@@ -1,6 +1,5 @@
 ---
 pagename: Routing Conversations by Intents - Legacy
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator

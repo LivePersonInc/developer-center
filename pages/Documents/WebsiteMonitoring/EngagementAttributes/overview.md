@@ -1,10 +1,8 @@
 ---
 pagename: Overview
-Keywords:
 sitesection: Documents
 categoryname: Website Monitoring
 documentname: Engagement Attributes
-
 level-order: 3
 order: 10
 permalink: engagement-attributes-overview.html

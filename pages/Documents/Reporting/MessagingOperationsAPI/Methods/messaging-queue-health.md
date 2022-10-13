@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 20
 permalink: messaging-operations-api-methods-messaging-queue-health.html
-
 indicator: messaging
 ---
 

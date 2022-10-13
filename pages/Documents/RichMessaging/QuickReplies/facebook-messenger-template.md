@@ -1,6 +1,6 @@
 ---
 pagename: Facebook Messenger Template
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Quick Replies

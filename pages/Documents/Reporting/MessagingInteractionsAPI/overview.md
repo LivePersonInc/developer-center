@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API
-
 level-order: 3
 order: 1
 permalink: messaging-interactions-api-overview.html

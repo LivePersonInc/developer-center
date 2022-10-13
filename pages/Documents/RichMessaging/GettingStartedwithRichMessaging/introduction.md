@@ -9,7 +9,6 @@ redirect_from:
   - getting-started-with-rich-messaging-basic-elements-button.html
   - rich-messaging-getting-started.html
   - getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
