@@ -2,7 +2,7 @@
 pagename: Reply Button Template
 redirect_from:
   - structured-content-whatsapp-business-messages-templates-reply-button-template.html
-Keywords: structured content rich messaging whatsapp business messages reply button card template
+keywords: structured content rich messaging whatsapp business messages reply button card template
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: WhatsApp Business Messages Templates

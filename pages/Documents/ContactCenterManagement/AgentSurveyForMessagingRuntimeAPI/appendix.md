@@ -1,13 +1,10 @@
 ---
 pagename: Appendix
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API
-
 order: 100
 permalink: agent-survey-for-messaging-runtime-api-appendix.html
-
 indicator: messaging
 ---
 

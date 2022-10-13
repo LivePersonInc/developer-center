@@ -1,6 +1,5 @@
 ---
 pagename: Permission System
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

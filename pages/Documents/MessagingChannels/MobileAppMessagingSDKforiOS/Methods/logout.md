@@ -2,15 +2,11 @@
 pagename: logout
 redirect_from:
   - consumer-experience-ios-sdk-logout.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 120
 permalink: mobile-app-messaging-sdk-for-ios-methods-logout.html
-
 indicator: messaging
 ---
 

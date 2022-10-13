@@ -2,15 +2,12 @@
 pagename: Application Login
 redirect_from:
   - agent-app-login.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
-
 order: 11
 permalink: login-service-api-methods-application-login.html
-
 indicator: both
 ---
 ### Request

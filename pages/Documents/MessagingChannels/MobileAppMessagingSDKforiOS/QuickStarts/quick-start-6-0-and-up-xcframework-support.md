@@ -6,7 +6,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-ios-quick-start.html
   - consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params
   - mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

@@ -2,7 +2,6 @@
 pagename: Campaigns
 redirect_from:
   - consumer-experience-android-sdk-advanced-campaigns.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

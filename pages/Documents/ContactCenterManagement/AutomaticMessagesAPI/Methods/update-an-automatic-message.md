@@ -2,15 +2,12 @@
 pagename: Update an Automatic Message
 redirect_from:
   - account-configuration-automatic-messages-update-an-automatic-message.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Automatic Messages API
 subfoldername: Methods
-
 order: 30
 permalink: automatic-messages-api-methods-update-an-automatic-message.html
-
 indicator: both
 ---
 

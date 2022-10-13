@@ -7,6 +7,7 @@ subfoldername: Proactive Alert API
 permalink: livedeflect-api-proactive-alert-api-proactive-alert.html
 indicator: both
 ---
+
 Outlined below is a sample reporting API call that is used to retrieve transactional proactive alert information pertaining to the LiveDeflect middleware solution.
 
 The proactiveReporting API endpoint should be passed a start and end timestamp in epoch milliseconds. Any proactive alert transactions for the Account ID provided between the start and end timestamp will be returned with their current status.

@@ -1,7 +1,5 @@
 ---
 pagename: Intent Trends
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

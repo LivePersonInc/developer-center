@@ -2,15 +2,12 @@
 pagename: Get Default Predefined Content Items
 redirect_from:
   - account-configuration-predefined-content-get-default-items.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 90
 permalink: predefined-content-api-methods-get-default-predefined-content-items.html
-
 indicator: both
 ---
 

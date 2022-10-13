@@ -1,6 +1,5 @@
 ---
 pagename: Metrics
-redirect_from: TBD
 sitesection: Documents
 categoryname: "Agent Manager Experience"
 documentname: Agent manager workspace API
@@ -8,7 +7,6 @@ subfoldername: methods
 order: 10
 permalink: TBD
 indicator: Agent Manager Experience
-
 ---
 
 ### General

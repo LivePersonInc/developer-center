@@ -2,7 +2,6 @@
 pagename: Scroll Behavior Configuration
 redirect_from:
   - consumer-experience-ios-sdk-scroll-behavior-configuration.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

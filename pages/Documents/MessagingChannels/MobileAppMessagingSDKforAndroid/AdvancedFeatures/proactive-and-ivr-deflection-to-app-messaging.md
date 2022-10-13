@@ -1,7 +1,6 @@
 ---
 pagename: Proactive and IVR Deflection to App Messaging
 
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

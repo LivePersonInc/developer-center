@@ -1,6 +1,5 @@
 ---
 pagename: Managing Custom Bots
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bots Status

@@ -2,14 +2,11 @@
 pagename: Sample App
 redirect_from:
   - consumer-experience-javascript-chat-sample.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 order: 5
 permalink: javascript-chat-sdk-sample-app.html
-
 indicator: chat
 ---
 

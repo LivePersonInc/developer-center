@@ -2,15 +2,11 @@
 pagename: toggleChatActions
 redirect_from:
   - consumer-experience-ios-sdk-togglechatactions.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 50
 permalink: mobile-app-messaging-sdk-for-ios-methods-togglechatactions.html
-
 indicator: messaging
 ---
 

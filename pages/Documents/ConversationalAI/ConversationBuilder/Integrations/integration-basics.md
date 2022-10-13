@@ -3,7 +3,6 @@ pagename: Integration Basics
 redirect_from:
     - conversation-builder-conversation-builder-integrations.html
     - conversation-builder-integrations.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Engagement Attributes API
-
 order: 2
 permalink: engagement-attributes-api-engagement-attributes.html
-
 indicator: both
 ---
 

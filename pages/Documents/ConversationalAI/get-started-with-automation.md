@@ -5,7 +5,6 @@ redirect_from:
     - conversational-ai-platform-platform-overview.html
     - conversational-ai-overview.html
     - platform-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 permalink: get-started-with-automation.html

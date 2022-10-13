@@ -8,7 +8,6 @@ documentname: Engagement Trigger API
 subfoldername: Methods
 order: 20
 permalink: engagement-trigger-api-methods-getengagementinfo.html
-
 indicator: both
 ---
 

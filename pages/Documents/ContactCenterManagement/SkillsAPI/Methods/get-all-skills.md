@@ -2,15 +2,12 @@
 pagename: Get All Skills
 redirect_from:
   - administration-get-all-skills.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
-
 order: 10
 permalink: skills-api-methods-get-all-skills.html
-
 indicator: both
 ---
 

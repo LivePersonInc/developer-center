@@ -2,15 +2,11 @@
 pagename: markAsUrgent
 redirect_from:
   - consumer-experience-ios-sdk-markasurgent.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 70
 permalink: mobile-app-messaging-sdk-for-ios-methods-markasurgent.html
-
 indicator: messaging
 ---
 

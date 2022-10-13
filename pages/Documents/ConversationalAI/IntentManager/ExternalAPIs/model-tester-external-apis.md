@@ -2,7 +2,6 @@
 pagename: Model Tester External APIs
 redirect_from:
     - intent-builder-external-apis-model-tester-external-apis.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

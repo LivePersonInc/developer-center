@@ -3,14 +3,12 @@ pagename: Push Proxy
 redirect_from:
   - push-service-configuration.html
   - configuration-of-push-proxy.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 subfoldername: Configuration
 order: 40
 permalink: push-notification-service-configuration-push-proxy.html
-
 indicator: messaging
 ---
 

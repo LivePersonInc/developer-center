@@ -1,7 +1,5 @@
 ---
 pagename: Bring Your Own Payments
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

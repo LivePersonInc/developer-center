@@ -2,7 +2,6 @@
 pagename: Types of Engagement Attributes
 redirect_from:
   - engagement-attributes-types.html
-Keywords:
 sitesection: Documents
 categoryname: Website Monitoring
 documentname: Engagement Attributes

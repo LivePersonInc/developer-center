@@ -2,15 +2,12 @@
 pagename: Resolve Message
 redirect_from:
   - android-resolve.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 280
 permalink: mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
-
 indicator: messaging
 ---
 

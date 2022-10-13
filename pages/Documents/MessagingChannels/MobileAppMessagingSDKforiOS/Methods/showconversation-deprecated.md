@@ -2,15 +2,11 @@
 pagename: showConversation (Deprecated)
 redirect_from:
   - consumer-experience-ios-sdk-showconversationdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 25
 permalink: mobile-app-messaging-sdk-for-ios-methods-showconversation-(deprecated).html
-
 indicator: messaging
 ---
 *This method was deprecated since SDK version 2.7.0. Use [showConversation(_ conversationViewParams: LPConversationViewParams)](consumer-experience-ios-sdk-showconversation.html) instead*

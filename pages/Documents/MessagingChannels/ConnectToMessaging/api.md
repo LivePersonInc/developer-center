@@ -2,7 +2,6 @@
 pagename: API
 redirect_from:
   - ConnectToMessaging.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connect To Messaging

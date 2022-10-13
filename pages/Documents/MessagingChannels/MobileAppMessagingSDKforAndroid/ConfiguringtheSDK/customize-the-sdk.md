@@ -2,14 +2,11 @@
 pagename: Customize the SDK
 redirect_from:
   - android-configuring-sdk.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
-
 permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
-
 indicator: messaging
 ---
 

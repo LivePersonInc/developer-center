@@ -2,15 +2,14 @@
 pagename: IP Whitelisting
 redirect_from:
   - push-service-whitelist.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 order: 50
 permalink: push-notification-service-ip-whitelisting.html
-
 indicator: messaging
 ---
+
 ### IP Whitelisting
 
 To ensure that your communications infrastructure doesn’t block communication from the Conversational Cloud push service, you'll need to whitelist the LivePerson IP ranges.

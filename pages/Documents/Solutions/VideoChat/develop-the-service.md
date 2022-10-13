@@ -3,11 +3,8 @@ pagename: Develop the Service
 redirect_from:
   - products-video-chat-develop-the-services.html
 sitesection: Solutions
-
 documentname: Video Chat
-
 order: 3
-
 permalink: video-chat-develop-the-service.html
 indicator:
 ---

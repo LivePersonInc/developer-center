@@ -2,7 +2,6 @@
 pagename: Search Methods
 redirect_from:
     - knowledgeai-search-modes.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

@@ -1,6 +1,5 @@
 ---
 pagename: Check mapping configuration
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

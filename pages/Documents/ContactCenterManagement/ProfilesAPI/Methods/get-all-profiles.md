@@ -2,15 +2,12 @@
 pagename: Get All Profiles
 redirect_from:
   - administration-get-all-profiles.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 10
 permalink: profiles-api-methods-get-all-profiles.html
-
 indicator: both
 ---
 

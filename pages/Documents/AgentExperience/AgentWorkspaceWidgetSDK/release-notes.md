@@ -2,14 +2,11 @@
 pagename: Release Notes
 redirect_from:
   - agent-workspace-sdk-releasenotes.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 120
 permalink: agent-workspace-widget-sdk-release-notes.html
-
 indicator: both
 ---
 

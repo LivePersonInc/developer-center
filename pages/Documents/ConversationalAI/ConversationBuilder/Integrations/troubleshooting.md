@@ -2,7 +2,6 @@
 pagename: Troubleshooting
 redirect_from:
     - conversation-builder-troubleshooting-transfer-to-an-agent-or-bot.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

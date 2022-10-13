@@ -2,7 +2,7 @@
 pagename: Introduction
 redirect_from:
   - structured-content-google-business-messages-templates-introduction.html
-Keywords: structured content rich messaging gbm google business messages
+keywords: structured content rich messaging gbm google business messages
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google Business Messages Templates

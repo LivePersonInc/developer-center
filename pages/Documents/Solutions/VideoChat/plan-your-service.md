@@ -3,11 +3,8 @@ pagename: Plan Your Service
 redirect_from:
   - products-video-chat-plan-your-service.html
 sitesection: Solutions
-
 documentname: Video Chat
-
 order: 2
-
 permalink: video-chat-plan-your-service.html
 indicator:
 ---

@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
-
 permalink: customized-chat-windows-overview.html
 root-link: true
 level-order: 3

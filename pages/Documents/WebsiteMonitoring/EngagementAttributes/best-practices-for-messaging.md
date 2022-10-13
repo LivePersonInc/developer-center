@@ -2,7 +2,6 @@
 pagename: Best Practices for Messaging
 redirect_from:
   - engagement-attributes-best-practices-messaging.html
-Keywords:
 sitesection: Documents
 categoryname: Website Monitoring
 documentname: Engagement Attributes

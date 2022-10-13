@@ -2,15 +2,12 @@
 pagename: Retrieve Available Slots
 redirect_from:
   - agent-retrieve-available-slots.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 50
 permalink: chat-agent-api-methods-retrieve-available-slots.html
-
 indicator: chat
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Deploying Bots to LivePerson
-redirect_from:
 sitesection: Solutions
 categoryname: "Agent Experience & Bot"
 documentname: Customer Facing Bots

@@ -2,15 +2,12 @@
 pagename: Retrieve Data for Multiple Chats
 redirect_from:
   - agent-retrieve-data.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 110
 permalink: chat-agent-api-methods-retrieve-data-for-multiple-chats.html
-
 indicator: chat
 ---
 

@@ -2,7 +2,6 @@
 pagename: Update Workdays Object
 redirect_from:
   - account-configuration-workdays-update.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Workdays API

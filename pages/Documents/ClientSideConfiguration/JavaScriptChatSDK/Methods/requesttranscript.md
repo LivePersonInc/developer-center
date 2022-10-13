@@ -2,15 +2,12 @@
 pagename: requestTranscript
 redirect_from:
   - consumer-experience-javascript-chat-requesttranscript.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 80
 permalink: javascript-chat-sdk-methods-requesttranscript.html
-
 indicator: chat
 ---
 

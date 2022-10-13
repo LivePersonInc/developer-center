@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 10
 permalink: messaging-operations-api-methods-messaging-conversation.html
-
 indicator: messaging
 ---
 

@@ -3,7 +3,6 @@ pagename: Sending Content to Consumers and Agents
 redirect_from:
     - knowledge-base-sending-content-to-consumers.html
     - knowledgeai-sending-content-to-consumers.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

@@ -11,15 +11,12 @@ redirect_from:
   - android-resolve.html
   - mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
   - mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 240
 permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time-formats.html
-
 indicator: messaging
 ---
 

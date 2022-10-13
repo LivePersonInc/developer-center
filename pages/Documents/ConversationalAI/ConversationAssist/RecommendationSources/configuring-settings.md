@@ -1,6 +1,5 @@
 ---
 pagename: Configuring Settings
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist

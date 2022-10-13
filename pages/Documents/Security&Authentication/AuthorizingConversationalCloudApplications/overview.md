@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
   - authorizing-liveengage-applications-overview.html
-Keywords:
 sitesection:
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications
