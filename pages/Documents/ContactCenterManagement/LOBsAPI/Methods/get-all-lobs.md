@@ -2,15 +2,12 @@
 pagename: Get all LOBs
 redirect_from:
   - administration-get-all-lobs.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 10
 permalink: lobs-api-methods-get-all-lobs.html
-
 indicator: both
 ---
 

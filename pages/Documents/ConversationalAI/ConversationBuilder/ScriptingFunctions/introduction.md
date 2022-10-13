@@ -3,7 +3,6 @@ pagename: Introduction
 redirect_from:
     - conversation-builder-conversation-builder-scripting-functions.html
     - conversation-builder-scripting-functions.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

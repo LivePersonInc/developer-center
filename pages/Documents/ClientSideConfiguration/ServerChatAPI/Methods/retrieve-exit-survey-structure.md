@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 150
 permalink: server-chat-api-methods-retrieve-exit-survey-structure.html
-
 indicator: chat
 ---
 

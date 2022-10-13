@@ -13,7 +13,6 @@ categoryname: "Website Monitoring"
 documentname: Web Tag
 subfoldername: Events
 permalink: web-tag-events-events.html
-
 indicator: both
 ---
 

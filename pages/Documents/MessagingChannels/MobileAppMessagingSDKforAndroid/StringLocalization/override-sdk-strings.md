@@ -2,7 +2,6 @@
 pagename: Override SDK Strings
 redirect_from:
   - android-localization-strings.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

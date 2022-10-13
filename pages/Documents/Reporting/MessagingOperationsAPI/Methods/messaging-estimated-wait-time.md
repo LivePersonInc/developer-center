@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 40
 permalink: messaging-operations-api-methods-messaging-estimated-wait-time.html
-
 indicator: messaging
 ---
 

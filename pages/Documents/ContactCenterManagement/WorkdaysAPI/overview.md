@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
   - account-configuration-workdays-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Workdays API

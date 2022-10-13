@@ -1,7 +1,7 @@
 ---
 pagename: 3 - Integrations
-redirect_from: conversation-builder-getting-started-getting-started-part-3.html
-Keywords:
+redirect_from:
+  - conversation-builder-getting-started-getting-started-part-3.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

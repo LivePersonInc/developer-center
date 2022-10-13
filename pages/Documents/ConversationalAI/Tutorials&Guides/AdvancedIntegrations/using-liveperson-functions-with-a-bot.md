@@ -1,8 +1,7 @@
 ---
 pagename: Using LivePerson Functions with a Bot
 redirect_from:
- - conversation-builder-tutorials-guides-using-liveperson-functions-with-a-bot.html
-Keywords:
+  - conversation-builder-tutorials-guides-using-liveperson-functions-with-a-bot.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

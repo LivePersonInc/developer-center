@@ -2,15 +2,12 @@
 pagename: Get LOB by ID
 redirect_from:
   - administration-get-lob-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 20
 permalink: lobs-api-methods-get-lob-by-id.html
-
 indicator: both
 ---
 

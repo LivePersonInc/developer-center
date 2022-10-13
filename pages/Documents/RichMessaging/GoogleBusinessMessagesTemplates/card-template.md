@@ -2,7 +2,7 @@
 pagename: Card Template
 redirect_from:
   - structured-content-google-business-messages-templates-card-template.html
-Keywords: structured content rich messaging gbm google business messages card template
+keywords: structured content rich messaging gbm google business messages card template
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google Business Messages Templates

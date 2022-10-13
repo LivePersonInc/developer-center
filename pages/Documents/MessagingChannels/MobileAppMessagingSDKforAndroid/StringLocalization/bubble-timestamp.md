@@ -2,15 +2,12 @@
 pagename: Bubble timestamp
 redirect_from:
   - android-bubble.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 250
 permalink: mobile-app-messaging-sdk-for-android-string-localization-bubble-timestamp.html
-
 indicator: messaging
 ---
 

@@ -1,7 +1,5 @@
 ---
 pagename: Using Intents & Entities
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

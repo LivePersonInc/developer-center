@@ -2,7 +2,6 @@
 pagename: KnowledgeAI Integrations
 redirect_from:
     - conversation-builder-integrations-knowledge-base-integrations.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

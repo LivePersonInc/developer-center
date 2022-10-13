@@ -3,13 +3,9 @@ pagename: Considerations
 redirect_from:
   - products-bots-considerations.html
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 4
-
 permalink: customer-facing-bots-considerations.html
-
 indicator:
 ---
 

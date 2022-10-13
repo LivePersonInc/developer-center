@@ -2,7 +2,6 @@
 pagename: API
 redirect_from:
   - ProactiveMessaging.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Proactive Messaging

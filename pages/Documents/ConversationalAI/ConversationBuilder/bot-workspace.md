@@ -4,7 +4,6 @@ redirect_from:
     - conversation-builder-conversation-builder-overview.html
     - conversation-builder-automation-workspace-overview.html
     - conversation-builder-getting-started-bot-workspace-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

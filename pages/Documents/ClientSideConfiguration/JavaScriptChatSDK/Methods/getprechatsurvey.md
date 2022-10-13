@@ -2,15 +2,12 @@
 pagename: getPreChatSurvey
 redirect_from:
   - consumer-experience-javascript-chat-getprechatsurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 10
 permalink: javascript-chat-sdk-methods-getprechatsurvey.html
-
 indicator: chat
 ---
 

@@ -3,11 +3,8 @@ pagename: Build Your Widgets
 redirect_from:
   - products-video-chat-build-your-widgets.html
 sitesection: Solutions
-
 documentname: Video Chat
-
 order: 4
-
 permalink: video-chat-build-your-widgets.html
 indicator:
 ---

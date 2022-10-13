@@ -1,6 +1,5 @@
 ---
 pagename: SDK 4.1 and below
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

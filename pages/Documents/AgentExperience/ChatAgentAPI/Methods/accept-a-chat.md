@@ -2,15 +2,12 @@
 pagename: Accept a Chat
 redirect_from:
   - agent-accept-chat.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 80
 permalink: chat-agent-api-methods-accept-a-chat.html
-
 indicator: chat
 ---
 

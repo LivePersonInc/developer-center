@@ -2,14 +2,11 @@
 pagename: Close ConversationTTR
 redirect_from:
   - consumer-int-msg-conv-ttr.html
-
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
-
 order: 121
 layout: page
-
 permalink: messaging-window-api-api-reference-close-conversationttr.html
 indicator: messaging
 ---

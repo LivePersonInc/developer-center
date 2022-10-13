@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - rt-interactions-ivr-engagement-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: IVR Engagement API

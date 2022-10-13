@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - rt-interactions-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: App Engagement API

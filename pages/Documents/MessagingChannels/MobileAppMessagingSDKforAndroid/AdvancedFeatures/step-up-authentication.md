@@ -2,7 +2,6 @@
 pagename: Step Up Authentication
 redirect_from:
   - android-sdk-step-up-authentication.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

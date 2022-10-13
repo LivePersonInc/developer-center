@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
-
 order: 171
 permalink: server-chat-api-sample-postman-collection.html
-
 indicator: chat
 ---
 

@@ -2,16 +2,13 @@
 pagename: Overview
 redirect_from:
   - login-getting-started.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
-
 order: 9
 permalink: login-service-api-overview.html
 root-link: true
 level-order: 6
-
 indicator: both
 ---
 <br>

@@ -2,14 +2,11 @@
 pagename: checkActiveConversation
 redirect_from:
   - consumer-experience-ios-sdk-checkactiveconversation.html
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 60
 permalink: mobile-app-messaging-sdk-for-ios-methods-checkactiveconversation.html
-
 indicator: messaging
 ---
 

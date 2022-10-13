@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-redirect_from:
   - consumer-experience-messaging-history-overview.html
 sitesection: Documents
 categoryname: Reporting

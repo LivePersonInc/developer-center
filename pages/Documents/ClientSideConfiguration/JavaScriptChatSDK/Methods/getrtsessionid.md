@@ -2,15 +2,12 @@
 pagename: getRtSessionId
 redirect_from:
   - consumer-experience-javascript-chat-getrtsessionid.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 170
 permalink: javascript-chat-sdk-methods-getrtsessionid.html
-
 indicator: chat
 ---
 

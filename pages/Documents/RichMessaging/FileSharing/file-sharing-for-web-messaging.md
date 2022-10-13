@@ -2,7 +2,6 @@
 pagename: File Sharing for Web Messaging
 redirect_from:
   - rich-messaging-file-sharing.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: File Sharing

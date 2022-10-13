@@ -2,7 +2,6 @@
 pagename: Retrieve Participant Info
 redirect_from:
   - agent-retrieve-participant-info.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API

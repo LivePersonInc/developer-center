@@ -2,7 +2,6 @@
 pagename: Simple FAQ
 redirect_from:
     - conversation-builder-templates-simple-faq.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

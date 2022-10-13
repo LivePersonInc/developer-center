@@ -2,7 +2,6 @@
 pagename: Configure Conversation Assist
 redirect_from:
     - tutorials-guides-using-agent-assist-configure-agent-assist.html
-keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

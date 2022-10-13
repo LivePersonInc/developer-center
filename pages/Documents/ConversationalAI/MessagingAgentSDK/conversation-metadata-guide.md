@@ -2,7 +2,6 @@
 pagename: Conversation Metadata Guide
 redirect_from:
   - guides-conversation-metadata-guide.html
-Keywords:
 sitesection: Documents
 categoryname: Conversational AI
 documentname: Messaging Agent SDK

@@ -4,7 +4,6 @@ redirect_from:
   - products-channels-sms-overview.html
   - sms-with-liveengage-overview.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
 permalink: sms-with-conversational-cloud-overview.html
 level-order:
@@ -12,6 +11,7 @@ order: 1
 root-link: true
 indicator:
 ---
+
 The Conversational Cloud messaging platform enables brands to provide a continuous connection with consumers, creating the personalized, convenient level of service people expect today — straight to their mobile devices. The Conversational Cloud SMS solution provides brands with multiple entry points for their consumers.
 
 ![IntroKeys](img/introductionkeys.png)

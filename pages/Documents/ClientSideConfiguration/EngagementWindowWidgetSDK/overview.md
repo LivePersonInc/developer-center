@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
-
 order: 1
 level-order: 4
 permalink: engagement-window-widget-sdk-overview.html

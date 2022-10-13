@@ -2,7 +2,6 @@
 pagename: Troubleshooting
 redirect_from:
     - conversation-orchestrator-agent-assist-troubleshooting.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist

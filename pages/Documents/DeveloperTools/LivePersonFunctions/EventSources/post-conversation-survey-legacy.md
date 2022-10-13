@@ -1,6 +1,5 @@
 ---
 pagename: Post Conversation Survey (Legacy)
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

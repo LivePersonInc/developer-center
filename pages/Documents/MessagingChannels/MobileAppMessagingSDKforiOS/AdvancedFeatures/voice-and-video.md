@@ -1,7 +1,5 @@
 ---
 pagename: Voice and Video
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

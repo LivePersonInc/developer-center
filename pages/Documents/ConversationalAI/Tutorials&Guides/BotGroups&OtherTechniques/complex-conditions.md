@@ -1,7 +1,5 @@
 ---
 pagename: Complex Conditions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides

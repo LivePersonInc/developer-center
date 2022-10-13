@@ -1,6 +1,5 @@
 ---
 pagename: Proactive and IVR Deflection to App Messaging
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -38,6 +37,7 @@ func logout(unregisterType: LPPusherUnregisterType,
 **Agent**: Unregister only for agent push notification messages. Consumers can still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
 
 -----
+
 ### Processing InApp Notifications when App is active
 
 To enable processing of Proactive and IVR Deflection while the Application is active, the following configuration needs to be enable:

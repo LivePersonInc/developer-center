@@ -1,7 +1,7 @@
 ---
 pagename: 4 - Connect to LiveEngage
-redirect_from: conversation-builder-getting-started-getting-started-part-4.html
-Keywords:
+redirect_from:
+  - conversation-builder-getting-started-getting-started-part-4.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

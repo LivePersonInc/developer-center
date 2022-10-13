@@ -2,15 +2,12 @@
 pagename: Update Skills
 redirect_from:
   - administration.update-skills.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
-
 order: 50
 permalink: skills-api-methods-update-skills.html
-
 indicator: both
 ---
 

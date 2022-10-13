@@ -2,15 +2,11 @@
 pagename: initialize
 redirect_from:
   - consumer-experience-ios-sdk-initialize.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 5
 permalink: mobile-app-messaging-sdk-for-ios-methods-initialize.html
-
 indicator: messaging
 ---
 

@@ -2,7 +2,6 @@
 pagename: Create Special Occasion
 redirect_from:
   - account-configuration-special-occasions-create.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Special Occasions API
