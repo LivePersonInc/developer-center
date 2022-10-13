@@ -2,7 +2,6 @@
 pagename: Simple Router
 redirect_from:
     - conversation-builder-templates-simple-router.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

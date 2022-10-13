@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
   - push-service-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service

@@ -2,7 +2,6 @@
 pagename: Beta - Shortening Long-Form Content
 redirect_from:
     - knowledge-base-external-knowledge-bases-beta-shortening-long-form-content.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

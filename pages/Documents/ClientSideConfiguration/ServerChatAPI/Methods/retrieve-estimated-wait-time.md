@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 30
 permalink: server-chat-api-methods-retrieve-estimated-wait-time.html
-
 indicator: chat
 ---
 

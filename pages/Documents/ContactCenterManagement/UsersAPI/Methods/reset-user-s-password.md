@@ -2,15 +2,12 @@
 pagename: Reset User's Password
 redirect_from:
   - administration-reset-users-password.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
 subfoldername: Methods
-
 order: 90
 permalink: users-api-methods-reset-user-s-password.html
-
 indicator: both
 ---
 

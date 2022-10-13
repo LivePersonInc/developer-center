@@ -2,7 +2,6 @@
 pagename: Introduction
 redirect_from:
     - knowledge-base-external-knowledge-bases-introduction.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

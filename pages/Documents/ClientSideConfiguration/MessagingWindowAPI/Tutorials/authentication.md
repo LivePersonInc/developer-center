@@ -6,9 +6,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 40
-
 permalink: messaging-window-api-tutorials-authentication.html
 keywords: oauth2.0 jwt token
 indicator: messaging

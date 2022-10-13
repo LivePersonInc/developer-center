@@ -1,6 +1,5 @@
 ---
 pagename: Get Shift Status by Account
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API

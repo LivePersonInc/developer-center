@@ -2,15 +2,11 @@
 pagename: shutDown
 redirect_from:
   - android-shutdown.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 230
 permalink: mobile-app-messaging-sdk-for-android-methods-shutdown.html
-
 indicator: messaging
 ---
 

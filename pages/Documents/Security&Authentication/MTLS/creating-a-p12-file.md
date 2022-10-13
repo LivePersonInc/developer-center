@@ -1,6 +1,5 @@
 ---
 pagename: Creating a P12 File
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

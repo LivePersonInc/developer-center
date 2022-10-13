@@ -2,7 +2,6 @@
 pagename: Uses-permission and Uses-feature
 redirect_from:
   - android-uses-permission-and-uses-feature.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

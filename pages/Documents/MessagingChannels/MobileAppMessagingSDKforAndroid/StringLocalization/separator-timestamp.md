@@ -2,15 +2,12 @@
 pagename: Separator timestamp
 redirect_from:
   - android-separator.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 260
 permalink: mobile-app-messaging-sdk-for-android-string-localization-separator-timestamp.html
-
 indicator: messaging
 ---
 

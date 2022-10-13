@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: App Engagement API
-
 order: 22
 permalink: app-engagement-api-impression-events-body-example.html
-
 indicator: both
 ---
 

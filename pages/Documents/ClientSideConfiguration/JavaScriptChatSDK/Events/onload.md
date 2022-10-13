@@ -3,15 +3,12 @@ pagename: onLoad
 redirect_from:
   - consumer-experience-javascript-chat-onload.html
   - consumer-experience-javascript-chat-events.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 192
 permalink: javascript-chat-sdk-events-onload.html
-
 indicator: chat
 ---
 

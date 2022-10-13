@@ -2,15 +2,11 @@
 pagename: unregisterLPPusher (Deprecated)
 redirect_from:
   - android-unregisterlppusherdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 120
 permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher-(deprecated).html
-
 indicator: messaging
 ---
 

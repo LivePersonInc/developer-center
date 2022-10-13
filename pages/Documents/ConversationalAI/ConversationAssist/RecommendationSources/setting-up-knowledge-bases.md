@@ -6,7 +6,6 @@ redirect_from:
   - conversation-orchestrator-maven-assist-recommended-actions-for-knowledge-base.html
   - conversation-orchestrator-agent-assist-recommended-actions-for-knowledge-base.html
   - conversation-orchestrator-agent-assist-setting-up-knowledge-base-recommendations.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist

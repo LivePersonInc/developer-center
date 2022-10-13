@@ -3,7 +3,6 @@ pagename: Attributes Design Sheet
 redirect_from:
   - android-attributes-designsheet.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes-design-sheet.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

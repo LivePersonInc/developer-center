@@ -3,7 +3,6 @@ pagename: Entities
 redirect_from:
     - conversation-builder-intent-builder-entities.html
     - intent-builder-entities.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

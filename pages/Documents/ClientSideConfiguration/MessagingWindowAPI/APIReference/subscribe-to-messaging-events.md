@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
-
 order: 200
 layout: page
-
 permalink: messaging-window-api-api-reference-subscribe-to-messaging-events.html
 indicator: messaging
 ---

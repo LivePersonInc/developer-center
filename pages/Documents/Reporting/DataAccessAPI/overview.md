@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 level-order: 1
 order: 1
 permalink: data-access-api-overview.html

@@ -2,14 +2,11 @@
 pagename: Public Model Structure
 redirect_from:
   - agent-workspace-sdk-public-model.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 60
 permalink: agent-workspace-widget-sdk-public-model-structure.html
-
 indicator: both
 ---
 

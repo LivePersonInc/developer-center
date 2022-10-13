@@ -2,15 +2,12 @@
 pagename: End Chat
 redirect_from:
   - agent-end-chat.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 140
 permalink: chat-agent-api-methods-end-chat.html
-
 indicator: chat
 ---
 

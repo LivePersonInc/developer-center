@@ -4,7 +4,6 @@ redirect_from:
   - consumer-experience-ios-sdk-photosharing.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

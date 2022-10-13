@@ -1,6 +1,5 @@
 ---
 pagename: Forward delete request
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

@@ -2,7 +2,6 @@
 pagename: Introduction
 redirect_from:
   - structured-content-mobile-sdk-and-web-templates-introduction.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

@@ -2,15 +2,12 @@
 pagename: Start Agent Session
 redirect_from:
   - agent-start-agent-session.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 10
 permalink: chat-agent-api-methods-start-agent-session.html
-
 indicator: chat
 ---
 

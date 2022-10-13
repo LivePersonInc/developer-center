@@ -3,14 +3,11 @@ pagename: Appendix
 redirect_from:
   - administration-skills-appendix.html
   - aadministration-skills-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
-
 order: 100
 permalink: skills-api-appendix.html
-
 indicator: both
 ---
 

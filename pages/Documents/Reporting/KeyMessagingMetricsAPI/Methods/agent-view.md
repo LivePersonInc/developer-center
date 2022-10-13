@@ -1,14 +1,11 @@
 ---
 pagename: Agent View
-redirect_from:
-  -
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
 permalink: key-messaging-metrics-api-methods-agent-view.html
-
 indicator: messaging
 ---
 

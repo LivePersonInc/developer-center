@@ -2,7 +2,6 @@
 pagename: Certificate Pinning
 redirect_from:
   - consumer-experience-ios-sdk-certpinning.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

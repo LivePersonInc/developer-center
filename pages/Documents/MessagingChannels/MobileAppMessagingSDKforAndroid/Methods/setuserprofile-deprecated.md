@@ -2,15 +2,11 @@
 pagename: setUserProfile (Deprecated)
 redirect_from:
   - android-setuserprofiledeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 100
 permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile-(deprecated).html
-
 indicator: messaging
 ---
 

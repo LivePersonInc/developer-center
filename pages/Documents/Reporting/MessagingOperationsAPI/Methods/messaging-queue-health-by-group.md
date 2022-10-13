@@ -6,7 +6,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 30
 permalink: messaging-operations-api-methods-messaging-queue-health-by-group.html
-
 indicator: messaging
 ---
 

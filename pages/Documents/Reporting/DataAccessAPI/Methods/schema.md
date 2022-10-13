@@ -8,7 +8,6 @@ documentname: Data Access API
 subfoldername: Methods
 order: 60
 permalink: data-access-api-methods-schema.html
-
 indicator: chat
 ---
 

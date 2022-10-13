@@ -2,7 +2,6 @@
 pagename: Account Performance
 redirect_from:
     - bot-analytics-account-level-performance.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Analytics

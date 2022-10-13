@@ -1,6 +1,5 @@
 ---
 pagename: Get Shift Status by Skill
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API

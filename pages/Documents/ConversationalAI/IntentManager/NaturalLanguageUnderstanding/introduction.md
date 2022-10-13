@@ -6,7 +6,6 @@ redirect_from:
     - conversational-ai-natural-language-understanding-nlu-engines.html
     - intent-builder-natural-language-understanding.html
     - intent-manager-natural-language-understanding.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

@@ -2,15 +2,12 @@
 pagename: setVisitorName
 redirect_from:
   - consumer-experience-javascript-chat-setvisitorname.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 60
 permalink: javascript-chat-sdk-methods-setvisitorname.html
-
 indicator: chat
 ---
 

@@ -3,13 +3,9 @@ pagename: Prerequisites
 redirect_from:
   - products-bots-prerequisites.html
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 2
-
 permalink: customer-facing-bots-prerequisites.html
-
 indicator:
 ---
 

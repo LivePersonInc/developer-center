@@ -2,7 +2,6 @@
 pagename: Changelog
 redirect_from:
   - rt-interactions-engagement-attributes-changelog.html
-Keywords:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Engagement Attributes API

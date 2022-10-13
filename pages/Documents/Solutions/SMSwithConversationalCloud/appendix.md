@@ -4,12 +4,12 @@ redirect_from:
   - products-channels-sms-appendix.html
   - sms-with-liveengage-appendix.html
 sitesection: Solutions
-
 documentname: SMS with Conversational Cloud
 permalink: sms-with-conversational-cloud-appendix.html
 order: 41
 indicator:
 ---
+
 ### Additional/Miscellanious Best Practices
 
 Based on our messaging expertise and know-how, here are the best practices that we suggest to make SMS more successful for your brand. See below for links to additional best practices for messaging resources.

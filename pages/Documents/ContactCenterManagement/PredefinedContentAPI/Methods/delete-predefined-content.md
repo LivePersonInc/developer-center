@@ -2,15 +2,12 @@
 pagename: Delete Predefined Content
 redirect_from:
   - account-configuration-predefined-content-delete-content.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 70
 permalink: predefined-content-api-methods-delete-predefined-content.html
-
 indicator: both
 ---
 

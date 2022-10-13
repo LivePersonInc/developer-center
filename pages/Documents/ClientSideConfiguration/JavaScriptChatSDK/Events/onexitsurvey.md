@@ -2,15 +2,12 @@
 pagename: onExitSurvey
 redirect_from:
   - consumer-experience-javascript-chat-onexitsurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 300
 permalink: javascript-chat-sdk-events-onexitsurvey.html
-
 indicator: chat
 ---
 

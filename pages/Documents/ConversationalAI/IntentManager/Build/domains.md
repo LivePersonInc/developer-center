@@ -2,7 +2,6 @@
 pagename: Domains
 redirect_from:
     - intent-builder-domains.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

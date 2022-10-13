@@ -1,7 +1,5 @@
 ---
 pagename: Testing & Training
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base

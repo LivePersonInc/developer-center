@@ -2,7 +2,6 @@
 pagename: Best Practices
 redirect_from:
   - engagement-attributes-bestpractices.html
-Keywords:
 sitesection: Documents
 categoryname: Website Monitoring
 documentname: Engagement Attributes

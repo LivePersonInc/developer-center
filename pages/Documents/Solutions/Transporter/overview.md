@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-redirect_from:
 sitesection: Solutions
 documentname: Transporter
 permalink: transporter-overview.html

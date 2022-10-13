@@ -1,6 +1,5 @@
 ---
 pagename: Skill Availabilities
-redirect_from: TBD
 sitesection: Documents
 categoryname: "Agent Manager Experience"
 documentname: Agent manager workspace API

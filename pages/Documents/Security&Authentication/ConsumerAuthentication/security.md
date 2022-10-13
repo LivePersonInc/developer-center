@@ -2,14 +2,11 @@
 pagename: Security
 redirect_from:
   - android-security.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication
-
 order: 320
 permalink: consumer-authentication-security.html
-
 indicator: messaging
 ---
 

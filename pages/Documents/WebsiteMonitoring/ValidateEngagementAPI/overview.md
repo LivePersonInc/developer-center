@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Validate Engagement API
-
 level-order: 5
 order: 1
 permalink: validate-engagement-api-overview.html

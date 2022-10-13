@@ -2,15 +2,12 @@
 pagename: submitExitSurvey
 redirect_from:
   - consumer-experience-javascript-chat-submitexitsurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 100
 permalink: javascript-chat-sdk-methods-submitexitsurvey.html
-
 indicator: chat
 ---
 

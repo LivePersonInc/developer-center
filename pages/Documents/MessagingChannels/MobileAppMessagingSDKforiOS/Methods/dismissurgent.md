@@ -2,15 +2,11 @@
 pagename: dismissUrgent
 redirect_from:
   - consumer-experience-ios-sdk-dismissurgent.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 90
 permalink: mobile-app-messaging-sdk-for-ios-methods-dismissurgent.html
-
 indicator: messaging
 ---
 

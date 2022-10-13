@@ -7,9 +7,7 @@ categoryname: "Reporting"
 documentname: Data Access API
 subfoldername: Methods
 order: 20
-
 permalink: data-access-api-methods-agent-activity.html
-
 indicator: chat
 ---
 

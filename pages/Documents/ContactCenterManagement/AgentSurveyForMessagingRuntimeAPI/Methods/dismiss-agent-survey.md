@@ -1,6 +1,5 @@
 ---
 pagename: Dismiss Agent Survey
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API
