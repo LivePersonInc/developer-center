@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-best-practices.html
 indicator: both
+date_updated: 2022/10/12
 ---
 
 To increase the quality of your intent matches, follow the best practices below.

@@ -7,8 +7,9 @@ permalink: outbound-reporting-api-overview.html
 root-link: true
 indicator: Connect To Messaging
 redirect_from:
- - connect-to-messaging-reporting-api.html
- - proactive-messaging-reporting-api.html
+  - connect-to-messaging-reporting-api.html
+  - proactive-messaging-reporting-api.html
+date_updated: 2022/09/21
 ---
 
 ### Introduction
@@ -16,6 +17,7 @@ redirect_from:
 The Outbound Reporting API provides a complete message journey of the conversation from start to finish. It provides a full end to end summary of messages/deflections sent, including how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. This service stitches pre and post conversation events of every message/deflections and provide full analytical data to API clients.
 
 ### API provides reporting for below services
+
 * Proactive Messaging 2.0
 * Connect To Messaging 2.0
 
