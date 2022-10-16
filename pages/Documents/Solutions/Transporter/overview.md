@@ -14,7 +14,8 @@ Many brands seek to regularly receive data from and integrate with our Data APIs
 
 Transporter 2.0 solves this problem by providing the connection to the Data APIs without the need to develop on top of them — a user will log-in with their secure credentials, select the report they wish to receive, and pick the destination. The task will then run on the selected schedule and provide the user with a log of the calls made, their responses, and the ability to retrieve the file with the data in it right within the interface.
 
-<div class="attn-note">For more information on how to setup and configure the Transporter, please see the <a href="transporter-getting-started.html">Transporter Getting Started document</a>.</div>
+{: .attn-note}
+For more information on how to setup and configure the Transporter, please see the [Transporter Getting Started document](transporter-getting-started.html).
 
 ### Features Overview
 

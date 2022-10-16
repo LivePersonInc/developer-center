@@ -11,10 +11,11 @@ root-link: true
 level-order: 6
 indicator: both
 ---
-<br>
+
 The Login Service API provides endpoints to manage the User Session in Conversational Cloud, such as User Login, Application Login, Logout and Refresh.  Use this API to log into Conversational Cloud as a *user* with credentials or an *application* with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-<div class="attn-note">Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>. We recommend that you implement our <a href="https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html">Retry Policy and KeepAlive Best Practices</a>.</div>
+{: .attn-note}
+Refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou). We recommend that you implement our [Retry Policy and KeepAlive Best Practices](https://developers.liveperson.com/retry-and-keepalive-best-practices-overview.html).
 
 ### Step 1. Retrieve your domain
 

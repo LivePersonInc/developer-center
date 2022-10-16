@@ -118,7 +118,8 @@ Request by skillIds=12,13 and overdueConversations=true
 
 **Elements in the Response**
 
-<div class="attn-note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+{: .attn-alert}
+All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. **In case there is no relevant data on metrics the default value is -1**.
 
 | Name |  Description | Type / Value |
 | :--- | :--- | :--- |
