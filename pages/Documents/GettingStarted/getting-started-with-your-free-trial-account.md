@@ -126,7 +126,7 @@ date_published: 2019/01/30
          <p class="free-trial-header" style="width:80%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p>
       </div>
       <div id="free-trial-button-welcome">
-         <a target="_blank" href="https://www.liveperson.com/upgrade/">
+         <a target="_blank" rel="noopener noreferrer" href="https://www.liveperson.com/upgrade/">
          <button class="create-button">Upgrade Account</button>
          </a>
       </div>
