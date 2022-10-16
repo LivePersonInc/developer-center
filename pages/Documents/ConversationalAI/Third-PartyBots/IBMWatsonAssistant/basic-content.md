@@ -475,10 +475,10 @@ Please note we only support **ONE ACTION** per response
 
 #### Transfer / Escalations
 
-<div class="attn-alert">
-<p><strong>Naming conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.</p>
-<p>Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.</p>
-</div>
+{: .attn-alert}
+**Naming conventions:** Before going into **actions** and **skills** is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be **CLOSE\_CONVERSATION**.
+
+Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.
 
 #### Transfer To Skill
 

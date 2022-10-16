@@ -150,7 +150,8 @@ Following guide is going to introduce how to implement functions specifically fo
 
 #### Query length Limit
 
-<div class="attn-alert">The Dialogflow CX service has a <a href="https://dialogflow.com/docs/reference/agent/query" target="_blank">limitation</a> on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow. To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW_CHAR_LIMIT’ <em>event</em>.</div>
+{: .attn-alert}
+The Dialogflow CX service has a [limitation](https://dialogflow.com/docs/reference/agent/query) on the length of the ‘query’ property. Any query longer than 255 characters will invoke a custom event in Dialogflow. To handle this gracefully, we recommend building a simple intent that handles a ‘DIALOGFLOW\_CHAR\_LIMIT’ _event_.
 
 1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
