@@ -1,6 +1,5 @@
 ---
 pagename: Development Deep Dive (CLI)
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -33,7 +32,7 @@ You can sign-out using the `lpf logout` command. There are situations where you 
 
 Before developing, debugging, or deploying any function, you will have to *initialize* your environment. This is a mandatory step as it creates all the files for the CLI to work correctly. Use it with an empty folder or an existing repository with `lpf init`.
 
-{: .alert}
+{: .attn-alert}
 We advise against changing the file or folder names or the structure in which they are generated as the CLI might not be able to cope with such a change.
 
 We recommend using `lpf init` before working on an existing repository to keep your repository up-to-date with any updates to the CLI that might have affected the repository's default structure. `lpf init` will create files required by git such as a `README` and a preconfigured `.gitignore` for your convenience. The `settings.json` stores a locally used account configuration used by the [debugging](liveperson-functions-getting-started-development-deep-dive-cli.html#debugging) feature to reproduce the production environment for testing accurately.
@@ -52,7 +51,7 @@ You can now either select an event from the list or use `"No Event"` as an Id to
 
 The CLI will have created a *functions* folder wherein the *exampleFunction* and its configuration files are stored if it does not exist.
 
-{: .note}
+{: .attn-note}
 The create:function command should always be called in the root folder of your project, i.e. the folder in which you called `lpf init` earlier
 
 Aside from listing the event Ids, all steps have been executed on your local machine. Suppose you encounter problems such as not being able to retrieve the list of events. Please check if your user has been assigned the [Functions Developer Permission](liveperson-functions-permission-system.html).
@@ -132,7 +131,7 @@ You can configure your local account set up to reflect your production account b
 * **secrets**: An array of key/value pairs that contain `String`-based secrets.
 * **whitelist**: An array of domains which the functions will be allowed to call.
 
-{: .note}
+{: .attn-note}
 This information will not be pushed to our services and therefore not be checked for validity. Please read [this](liveperson-functions-getting-started-configuration.html#secrets) chapter about the secret/whitelist specifications. It is important to note that we do not recommend storing real secrets on your local machine as cleartext. This is not a secure method of storing any credential and should be used for testing only.
 
 Once you have used the `lpf debug` command and started the debug process, you can place your breakpoints. To start debugging, you have three options:
@@ -149,14 +148,14 @@ First, you have to upload your function to your account using the `lpf push` met
 
 <img class="fancyimage" alt="Functions: cli push wizard" src="img/functions/functions_cli_push.gif">
 
-{: .alert}
+{: .attn-alert}
 If your function is currently in the process of being (un)deployed, we will not allow you to push and update your function.
 
 Once pushed, you can confirm its location by using the `lpf get functions | grep YOUR_FUNCTIONNAME` command. It should be in `Draft` or `Modified` state depending on whether or not the function has already been deployed in the past on your account. Next, use the command `lpf deploy FUNCTION_NAME`. This will cause the function to be (re)deployed. After a short period, you should receive the confirmation.
 
 <img class="fancyimage" alt="Functions: cli deploy wizard" src="img/functions/functions_cli_deploy.gif">
 
-{: .note}
+{: .attn-note}
 The CLI can fail during the deployment process for reasons such as timeouts or network issues. The deployment process does not require continuous connection to your local CLI. Therefore, you should use the `lpf get functions | grep YOUR_FUNCTIONNAME` to check the state of your function before retrying.
 
 If you want to undeploy the function, it is the same process: use the command `lpf undeploy FUNCTION_NAME` to undeploy the lambda. However, you cannot delete the function from your account using the CLI once pushed.
@@ -173,7 +172,7 @@ In both instances, the `lpf invoke` command will automatically use the **input**
 
 There are numerous ways to ensure the continuous quality of your function. One of these is creating unit tests for it.
 
-{: .note}
+{: .attn-note}
 The CLI will ignore any file that is not the index.js or the config.json — so do not worry about adding your tools
 
 First, we have created this simple function which returns a custom string for a given input:

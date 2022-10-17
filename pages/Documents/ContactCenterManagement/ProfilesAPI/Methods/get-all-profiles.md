@@ -2,15 +2,12 @@
 pagename: Get All Profiles
 redirect_from:
   - administration-get-all-profiles.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 10
 permalink: profiles-api-methods-get-all-profiles.html
-
 indicator: both
 ---
 
@@ -34,8 +31,8 @@ This API retrieves a list of profiles for a specific account.
 
 **Path Parameters**
 
-| Parameter   |  Description   |   Type / Value  |              
- |:---------- |  :------------- |  :-------------  |            
+| Parameter   |  Description   |   Type / Value  |
+ |:---------- |  :------------- |  :-------------  |
 | accountId |    LP site ID    |   String  |
 
 ### Response

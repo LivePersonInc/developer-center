@@ -1,8 +1,8 @@
 ---
 pagename: Introduction
-redirect_from: 
+redirect_from:
   - structured-content-google-business-messages-templates-introduction.html
-Keywords: structured content rich messaging gbm google business messages
+keywords: structured content rich messaging gbm google business messages
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google Business Messages Templates
@@ -10,7 +10,7 @@ permalink: google-business-messages-templates-introduction.html
 indicator: messaging
 ---
 
-### Overview 
+### Overview
 
 Google Business Messages (GBM) enables customers to contact a brand through Google Maps or Google Search. Google Business Messages provides enhanced messaging capabilities like Rich Cards, Carousels and Quick Replies.
 

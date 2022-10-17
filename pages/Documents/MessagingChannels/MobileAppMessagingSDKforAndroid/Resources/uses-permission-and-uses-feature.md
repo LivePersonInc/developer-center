@@ -2,7 +2,6 @@
 pagename: Uses-permission and Uses-feature
 redirect_from:
   - android-uses-permission-and-uses-feature.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -18,15 +17,15 @@ indicator: messaging
 | android.permission.INTERNET `*`                     | Normal                       | |
 | android.permission.ACCESS_NETWORK_STATE `*`         | Normal                       | |
 | android.permission.CAMERA     	                    | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) |
-| android.permission.READ_EXTERNAL_STORAGE     	      | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) | 
+| android.permission.READ_EXTERNAL_STORAGE     	      | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) |
 | android.permission.WRITE_EXTERNAL_STORAGE           | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) |
-| android.permission.READ_MEDIA_IMAGES <br /> `Android 13 and above`           | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) | 
-| android.permission.RECORD_AUDIO     		            | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html) | 
-| android.webkit.resource.AUDIO_CAPTURE     	        | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) | 
-| android.webkit.resource.VIDEO_CAPTURE     	        | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) | 
-| android.permission.MODIFY_AUDIO_SETTINGS    	      | Normal                       | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) | 
-| android.permission.FOREGROUND_SERVICE     	        | Normal                       | [Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) | 
-| android.permission.VIBRATE                          | Normal                       | [Vibrate on new incoming message](mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file) | 
+| android.permission.READ_MEDIA_IMAGES <br /> `Android 13 and above`           | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html)<br />[Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) |
+| android.permission.RECORD_AUDIO     		            | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)<br />[Audio Message](mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html) |
+| android.webkit.resource.AUDIO_CAPTURE     	        | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) |
+| android.webkit.resource.VIDEO_CAPTURE     	        | Runtime                      | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) |
+| android.permission.MODIFY_AUDIO_SETTINGS    	      | Normal                       | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html) |
+| android.permission.FOREGROUND_SERVICE     	        | Normal                       | [Photo and File Sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) |
+| android.permission.VIBRATE                          | Normal                       | [Vibrate on new incoming message](mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file) |
 
 `*` **Required** permission
 
@@ -49,7 +48,7 @@ Example: If an application does not implement [Voice and Video](mobile-app-messa
 
 ### Uses-feature
 
-| Name                                                | Feature                      | 
+| Name                                                | Feature                      |
 |-----------------------------------------------------|------------------------------|
 | android.hardware.audio.pro                          | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)              |
 | android.hardware.microphone                         | [Voice and Video](mobile-app-messaging-sdk-for-android-advanced-features-voice-and-video.html)              |

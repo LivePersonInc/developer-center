@@ -2,7 +2,6 @@
 pagename: Simple FAQ
 redirect_from:
     - conversation-builder-templates-simple-faq.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -45,7 +44,7 @@ The FAQ Search dialog handles calling the Knowledge Base integration and display
 
 #### FAQ integration
 
-{: .note}
+{: .attn-note}
 You will need to [create an internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base) **before** setting up this [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html).
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "KnowledgeAI" should be selected as the **Integration Type**.

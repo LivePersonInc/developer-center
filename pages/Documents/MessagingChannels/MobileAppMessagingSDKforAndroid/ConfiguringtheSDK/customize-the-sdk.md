@@ -2,14 +2,11 @@
 pagename: Customize the SDK
 redirect_from:
   - android-configuring-sdk.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
-
 permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
-
 indicator: messaging
 ---
 
@@ -21,11 +18,11 @@ You can customize the look and feel of the conversation screen with your brandin
 
 2. Add design attributes to your branding.xml file. The file MUST contain all the resource-names as they are listed in [Attributes](android-attributes.html). The Customer notes column includes space for you to add your branding.
 
-   {: .note}
+   {: .attn-note}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
-   
+3. Add resources to your project. The SDK utilizes several resources as part of its GUI.
+
    | Resource name | Description |
    |---|---|
    | lp_messaging_ui_brand_logo | Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned. In case you want to define the background color for this avatar — override "brand_logo_background_color" resource id. (This is relevant for bubble brand’s avatar only. Background color of agent avatar on action bar is "agent_avatar_background_color"). |
@@ -44,11 +41,11 @@ You can customize the look and feel of the conversation screen with your brandin
    </style>
    ```
 
-2. Change the font of the elements in the conversation view with two separate settings: 
+2. Change the font of the elements in the conversation view with two separate settings:
 
-   - **custom_font_name_conversation_feed** - the font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty. 
+   - **custom_font_name_conversation_feed** - the font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty.
 
-   - **custom_font_name_non_conversation_feed** - the font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
+   - **custom_font_name_non_conversation_feed** - the font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text.
 
-     {: .note}
+     {: .attn-note}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).

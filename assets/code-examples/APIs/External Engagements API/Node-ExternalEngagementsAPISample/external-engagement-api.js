@@ -2,7 +2,7 @@
     LivePerson LE 2.0 External Engagements API Example
     Author: Josh Espinosa - LivePerson
 
-    Web call needed to discover baseURI needed to call External Engagements API for individual LiveEngage accounts for Accounts: 
+    Web call needed to discover baseURI needed to call External Engagements API for individual LiveEngage accounts for Accounts:
     https://api.liveperson.net/api/account/{YOUR ACCOUNT NUMBER}/service/smt/baseURI.json?version=1.0
     Expected response example:
     {

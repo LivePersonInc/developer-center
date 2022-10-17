@@ -2,13 +2,11 @@
 pagename: HTTP Response Codes
 redirect_from:
   - push-service-codes.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 order: 30
 permalink: push-notification-service-http-response-codes.html
-
 indicator: messaging
 ---
 

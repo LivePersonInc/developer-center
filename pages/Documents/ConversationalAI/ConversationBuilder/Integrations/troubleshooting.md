@@ -2,7 +2,6 @@
 pagename: Troubleshooting
 redirect_from:
     - conversation-builder-troubleshooting-transfer-to-an-agent-or-bot.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -41,7 +40,7 @@ In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperso
 
 ##### Common errors in a manual implementation
 
-{: .note}
+{: .attn-note}
 This section describes common errors when implementing a transfer via code instead of using the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration type. To make your bots more flexible and dynamic, LivePerson recommends that you switch to the LivePerson Agent Escalation integration type. It handles several, variable aspects (like the Transfer API URL) automatically.
 
 The following are common errors in a manual implementation:

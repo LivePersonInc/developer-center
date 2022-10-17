@@ -2,7 +2,6 @@
 pagename: KnowledgeAI Integrations
 redirect_from:
     - conversation-builder-integrations-knowledge-base-integrations.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -13,14 +12,14 @@ indicator: both
 
 ### Introduction
 
-{: .note}
+{: .attn-note}
 KnowledgeAI integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a KnowledgeAI integration.
 
 Use a KnowledgeAI integration when you want to search one of your knowledge bases for articles. You’ll need to [create the knowledge base](knowledgeai-overview.html) first.
 
 One use case for this type of integration is within a fallback dialog, to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed. If no results are found, you might then display a "sorry" message or [transfer the conversation](conversation-builder-interactions-integrations.html#agent-transfer-interactions) to a human agent.
 
-{: .note}
+{: .attn-note}
 The [Simple FAQ bot template](conversation-builder-templates-simple-faq.html) provides a bot that answers users' questions by connecting to a knowledge base.
 
 ### Add a KnowledgeAI integration
@@ -30,9 +29,9 @@ The [Simple FAQ bot template](conversation-builder-templates-simple-faq.html) pr
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **KnowledgeAI**.
-    
+
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png" alt="Integration settings for a KnowledgeAI integration">
-    
+
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Method**: This is always "Phrase Search," which means the search is performed using the phrase that's defined in the request parameter.
     - **Request Parameters**:

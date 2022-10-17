@@ -1,6 +1,5 @@
 ---
 pagename: Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -17,7 +16,7 @@ Integrations are similar to questions in that you can define conditions that eac
 
 ### Integration interactions
 
-{: .note}
+{: .attn-note}
 Before you can add an Integration interaction, you need to [create the integration](conversation-builder-integrations-integration-basics.html#integration-types) itself.
 
 **To add an Integration interaction**
@@ -31,7 +30,7 @@ Before you can add an Integration interaction, you need to [create the integrati
 
 #### Defining rules based on the result of the API integration
 
-{: .note}
+{: .attn-note}
 It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
 In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction…
@@ -132,7 +131,7 @@ In contrast, strategies that are less targeted can yield a lower answer rate. Fo
 7. Click **Save**.
 8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer Layout** setting, you’ll also need to add the interactions that display the answers.
 
-{: .note}
+{: .attn-note}
 You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [KnowledgeAI integration](conversation-builder-integrations-knowledgeai-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated KnowledgeAI integration.
 
 #### No auto rendering: Using a custom answer layout
@@ -185,10 +184,10 @@ Use an Agent Transfer interaction in a dialog when you want to transfer a conver
 
 For some practice with this interaction type, complete the [Escalate to an Agent tutorial](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html).
 
-{: .note}
+{: .attn-note}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed right here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
 
-{: .note}
+{: .attn-note}
 Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more info.
 
 #### Add an Agent Transfer interaction
@@ -207,17 +206,17 @@ Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots
 
     * **Agent Skill ID**: Mandatory; without this, the transfer won’t work. Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
-        When the transfer is attempted, the Agent Skill ID is evaluated; if it isn't numeric, the fallback message is sent to the user. 
-        
+        When the transfer is attempted, the Agent Skill ID is evaluated; if it isn't numeric, the fallback message is sent to the user.
+
         If the value is numeric and the bot responds, the conversation is added to the queue for the skill specified here. The conversation is then routed according to Conversational Cloud’s [Transfer to agent](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html/) rules.
-        
+
         If the value is numeric, but the bot doesn't respond for more than 3 minutes (e.g., the chat server becomes overloaded and drops the message), an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
 
     * **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
 
 4. Click **Save**.
 
-{: .note}
+{: .attn-note}
 If, given your use case, you need to [prevent context switching](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching) from occurring during the transfer (e.g., messages are sent after the transfer that shouldn't be), you can do so.
 
 #### Best practices
@@ -244,14 +243,14 @@ If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the
 
 ### File Upload interactions
 
-{: .note}
+{: .attn-note}
 File Upload interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
 When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [this section](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html) in our Knowledge Center.)
 
-{: .note}
+{: .attn-note}
 Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
 
 **To add a File Upload interaction**
@@ -314,7 +313,7 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code.
 
-{: .note}
+{: .attn-note}
 The Dynamic Routing interaction is only available to brands who log in with single sign-on via Conversational Cloud. It isn’t available if you log into Conversation Builder directly. <br><br>
 This section provides basic information on Conversation Builder’s Dynamic Routing interaction. For detailed information on using this interaction, see the [Conversation Orchestrator getting started documentation](conversation-orchestrator-dynamic-routing-getting-started.html).
 
@@ -393,7 +392,7 @@ No, this can’t be done. If you’d like to do this, the Dynamic Routing intera
 
 **For Apple Messages for Business only.**
 
-If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. 
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay.
 
 The interaction has been developed per Apple's Apple Pay [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#apple-pay-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 
@@ -447,7 +446,7 @@ You can add a list of available shipping methods. For each shipping method, spec
 * **Description**: An additional description of the shipping method.
 * **ID**: (Optional) A value that you provide to identify the shipping method.
 
-{: .note}
+{: .attn-note}
 The shipping method fields can be updated dynamically via an API call, i.e., you can specify a botContext or integration variable name in these fields.<br><br>The first shipping method that you add is used as the default method.
 
 **Additional Fields and Payment Capabilities**

@@ -2,15 +2,12 @@
 pagename: Retrieve Agent's Typing Status
 redirect_from:
   - agent-retrieve-agent-typing.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 170
 permalink: chat-agent-api-methods-retrieve-agent-s-typing-status.html
-
 indicator: chat
 ---
 

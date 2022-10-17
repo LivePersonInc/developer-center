@@ -1,7 +1,5 @@
 ---
 pagename: Dialog Templates
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -18,7 +16,7 @@ A dialog template is a set of resources that:
 
 When a bot developer imports a single dialog template, the entire unit of working functionality is imported. This includes not only the main dialog that supports the flow, but also all other necessary resources: other dialogs, domains, integrations, and so on.
 
-{: .note}
+{: .attn-note}
 Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#dialog-types) can be included within a dialog template. Fallback, Disambiguation and other dialog types are not allowed, so plan your template accordingly.
 
 Your published dialog templates are available for import within the organization (account) in which they are created. You can also import additional dialog templates that have been published by LivePerson.
@@ -68,7 +66,7 @@ There are two reasons for this constraint:
     * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that the dialog template relies on. You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
     * **+ Add Global Function**: Click this, and specify the global functions that the dialog template relies on. Copy the needed functions in the left panel, paste them into the right panel, and click **Add**.
 
-    {: .note}
+    {: .attn-note}
     You don't need to specify any integrations. All integrations used by all the dialogs that are a part of the dialog template are automatically included in the actual import.
 
 6. Do one of the following:
@@ -80,14 +78,14 @@ There are two reasons for this constraint:
 
     <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png" alt="The Draft and Published indicators that are shown beside dialogs in the dialogs panel">
 
-{: .note}
+{: .attn-note}
 If you subsequently change the dialog in a way that impacts the template definition, remember to update the template definition accordingly.
 
 ### Publish a dialog template
 
 Publishing a dialog template changes its status from "draft" to "published." This makes it possible for other bot developers within your organization to import the dialog template.
 
-{: .note}
+{: .attn-note}
 Once you publish a dialog template, there is no way to unpublish it. Delete the dialog template instead.
 
 **To publish a dialog template**
@@ -132,7 +130,7 @@ Note the following:
 
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 
-{: .note}
+{: .attn-note}
 Keep in mind that importing a dialog template often can involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog in different ways on different occasions, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
 
 **To import a dialog template**

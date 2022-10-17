@@ -2,7 +2,6 @@
 pagename: API
 redirect_from:
   - ProactiveMessaging.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Proactive Messaging
@@ -18,7 +17,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 
 ### Getting Started
 
-1. Onboarding to the [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For the Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. 
+1. Onboarding to the [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For the Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded.
 2. To onboard on Proactive 2.0 API, perform steps as mentioned below
 - Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
     * Click on Settings tab in menu bar.
@@ -39,7 +38,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 ## OAuth 2.0 Authorization
 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
-![Secrets](img/proactive/proactive-show-secrets.png)  
+![Secrets](img/proactive/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from the above AppJWT response should be used in the Request Header for Authorization.
 
@@ -106,7 +105,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
         "5": "Text5"
       },
       "headerVariables": {
-        "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4" 
+        "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
       }
     },
     {
@@ -261,7 +260,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 {
   "campaignName": "TestProactiveAPI",
   "skill": "sales",
-  "templateId": "H1234567890", //Handoff Id should be used here 
+  "templateId": "H1234567890", //Handoff Id should be used here
   "outboundNumber": "22222222222",
   "consent": true,
   "consumers": [
@@ -428,11 +427,11 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-1. All fields are required. 
+1. All fields are required.
 2. If variables is empty object, the default value set in handoff will be used.
-3. The value of consent must be true. 
-4. If the vaule of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned. 
- 
+3. The value of consent must be true.
+4. If the vaule of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned.
+
 **Response Example**
 
 ```json
@@ -585,7 +584,7 @@ Proactive Messaging does not have call backs to inform the status. Proactive Mes
 
 - Proactive Messaging does not have any limitations on the message size while sending messages to twilio or other channels. However a large message may translate to more than one message when the recipient receives it.
 - Example: A message of more than 140 characters will be divided into two messages and sent to recipients.
- 
+
 **What reporting metrics do I get? What metrics are available now?**
 
 - Proactive Messaging provides the status of messages delivered to recipients through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
@@ -620,7 +619,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 **What’s the lookback period?**
 
-- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive API. 
+- Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive API.
 - Example: When a message is sent to consumer using Proactive Messaging API and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 **Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?**
@@ -663,7 +662,7 @@ Message body in WA Rich template is mandatory. Header, footer, buttons are optio
 
 **What extensions are supported for WA rich template in the header section?**
 
-Allowed extensions for different types of header for a rich template: 
+Allowed extensions for different types of header for a rich template:
 
 - Image: [jpg,png],
 - Document: [pdf],
@@ -677,9 +676,9 @@ Below are the limitations:
 - Only https urls are supported
 - Before sending WhatsApp rich messages using a template with header of type image/video/document, get the Root domain/URL whitelisted in Proactive UI.
 
-For example; if the brand wants to send images from upload.wikimedia.org like 
+For example; if the brand wants to send images from upload.wikimedia.org like
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg or https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg, the brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below.
- 
+
 <img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 **Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?**
@@ -688,7 +687,7 @@ Footer and quick reply buttons have static values and do not need any user input
 
 **What kind of customers can get Inapp message through Proactive Messaging?**
 
-Only registered customers can. 
+Only registered customers can.
 
 **How does first Inapp message display in agent workspace?**
 

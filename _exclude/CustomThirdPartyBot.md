@@ -10,7 +10,7 @@ permalink: custom-bots.html
 indicator: both
 ---
 
-<div class="note">This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.</div>
+<div class="attn-note">This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.</div>
 
 ### Small / Medium niche Bot Platforms
 
@@ -56,6 +56,6 @@ There are two options available to you if you're looking to integrate bots into 
 
 In both cases, generally speaking, you will need to use JavaScript from your bot to [post lines to LiveEngage](chat-agent-api-methods-send-lines-and-structured-content.html) and to [listen to new events](chat-agent-api-methods-retrieve-chat-events.html) in the chat (such as consumer text) and react accordingly.
 
-#### Integrating Custom Bots via Messaging  
+#### Integrating Custom Bots via Messaging
 
 There is one option available to you if you're looking to integrate bots with messaging conversations and that is the [Messaging Agent SDK](messaging-agent-sdk-overview.html). This allows you to create a Conversational Bot, a Routing / Controller Bot or Post Conversation Survey Bots and leverage LivePerson Structured Content & Conversational Metadata capabilities.

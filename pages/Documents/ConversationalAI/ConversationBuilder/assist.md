@@ -3,7 +3,6 @@ pagename: Assist
 redirect_from:
     - conversation-builder-conversation-builder-assist.html
     - conversation-builder-nlu-assist.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -61,5 +60,5 @@ Once you've associated the dialog (or question interaction) with a domain, you c
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity2.png" alt="Using the Assist tool to associate an entity with a question">
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity3.png" alt="The rule and the slot that are automatically created, as shown in the Edit Next Action Rule window">
 
-{: .note}
+{: .attn-note}
 There are [several examples of how slot filling works](conversation-builder-variables-slots-slots.html). Also, be aware that you can’t use Assist to assign *global entities* to questions; you can only use Assist to assign *custom entities* to questions. To assign a global entity to a question, manually add the rule that creates the slot.

@@ -1,8 +1,8 @@
 ---
 pagename: Quick Replies Template
-redirect_from: 
+redirect_from:
   - quick-replies-rcs-business-messaging-template.html
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google RCS Business Messaging Templates

@@ -24,7 +24,7 @@ const searchInstance = autocomplete(
           let category = suggestion.categoryname;
           let title = $('h1');
           //add category name folder to this array IE Getting Started to remove folder from search
-          let categoryFolderExcludeList = ['Hidden']; 
+          let categoryFolderExcludeList = ['Hidden'];
           let titletext = title.text();
           //if the result has highlighting, populate var with it instead of the non-highlighted text
           if (suggestion._highlightResult.pagename) {

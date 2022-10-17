@@ -2,19 +2,15 @@
 pagename: clearHistory
 redirect_from:
   - consumer-experience-ios-sdk-clearhistory.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 110
 permalink: mobile-app-messaging-sdk-for-ios-methods-clearhistory.html
-
 indicator: messaging
 ---
 
-This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made. 
+This API may be used only when there is no active conversation. This API clears the local database. The history is still available on the server, but won’t be retrieved from the specific device unless a fresh installation is made.
 
 `func clearHistory(_ conversationQuery: ConversationParamProtocol) throws`
 

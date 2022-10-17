@@ -16,7 +16,7 @@
             "type": "array",
             "items": {
                 "maxLength": 64,
-                "type": "string"                
+                "type": "string"
             }
         },
         "intents": {
@@ -42,5 +42,5 @@
             }
         }
     },
-    "required": ["type"] 
+    "required": ["type"]
 }

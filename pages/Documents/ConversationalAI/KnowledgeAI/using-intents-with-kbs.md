@@ -3,7 +3,6 @@ pagename: Using Intents with KBs
 redirect_from:
     - conversation-builder-knowledge-base.html
     - knowledge-base-using-intents-with-kbs.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -21,7 +20,7 @@ To take advantage of NLU, you'll need to link the articles in the knowledge base
 
 1. In [Intent Manager](intent-manager-overview.html), create a domain with the necessary intents. The domain specifies the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use.
 
-    {: .note}
+    {: .attn-note}
     Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
 
 2. In KnowledgeAI, associate the domain with the knowledge base. Then associate the domain's intents with the knowledge base's articles.

@@ -11,15 +11,12 @@ redirect_from:
   - android-resolve.html
   - mobile-app-messaging-sdk-for-android-string-localization-resolve-message.html
   - mobile-app-messaging-sdk-for-android-string-localization-date-and-time.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
 order: 240
 permalink: mobile-app-messaging-sdk-for-android-string-localization-date-and-time-formats.html
-
 indicator: messaging
 ---
 
@@ -70,11 +67,11 @@ Override the resource ID with any **time** format, for example, "hh:mm a" or "HH
 Date off hours messages (not today/tomorrow) use the default LONG date and SHORT time according to the locale (default or custom) and device setting.
 
 - Device set to 12-hour format:
-  
+
    * "Thanks for your message. We will be back online January 12, 2017 at 3:30pm"*
 
 - Device set to 24-hour format:
-  
+
    * "Thanks for your message. We will be back online January 12, 2017 at 15:30"*
 
 - If you want to define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm".
@@ -92,7 +89,7 @@ Resolve messages use the default SHORT date and SHORT time according to the loca
   *"Conversation resolved by [agent name] \n 9/25/16, 3:30pm"*
 
 - Device set to 24-hour format (US locale):
-  
+
   *"Conversation resolved by [agent name] \n 9/25/16, 15:30"*
 
 Define a special date/hour format with any **date and time format**, for example, "MMM d, yyyy hh:mm a" or "EEEE dd/mm/yy HH:mm":
@@ -125,15 +122,15 @@ You can find a list of timezone IDs [here](https://garygregory.wordpress.com/201
 
 **Example**: _"US/Pacific", "Europe/Berlin"_
 
-### Today and tomorrow off hours 
+### Today and tomorrow off hours
 Today and tomorrow off hours messages use the default SHORT time only (without a date) according to the locale (default or custom) and device setting.
 
 - Device set to 12-hour format:
-  
+
    * "Thanks for your message. We will be back online today/tomorrow at 3:30pm"*
 
 - Device set to 24-hour format:
-  
+
    * "Thanks for your message. We will be back online today/tomorrow at 15:30"*
 
 Define a special hour format with any **time** format, for example, "hh:mm a" or "HH:mm".:

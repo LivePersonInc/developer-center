@@ -10,18 +10,18 @@ indicator: both
 
 This method provides the Net Handle Time (NHT) at a skill level. The API  retrieves up to 9 weeks of information.
 
-{: .alert}
+{: .attn-alert}
 Some metrics are calculated only in 60-minute intervals.
 These metrics, when calling the API in a 15-minutes interval, will be replicated for each timeframe.
 
-{: .note}
+{: .attn-note}
 In case there is no data available, the response element will contain -1.
 
 ### Request
 
 | Method | URL |
 | --- | --- |
-| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountId}/nht?fromDate={timestamp}&toDate={timestamp}&skillIds={comma separated skill ids}&interval={interval in minutes}&source={source name}&v={api version}
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountId}/nht?fromDate={timestamp}&toDate={timestamp}&skillIds={comma separated skill ids}&interval={interval in minutes}&source={source name}&v={api version}|
 
 #### Request Query Parameters
 
@@ -40,32 +40,32 @@ In case there is no data available, the response element will contain -1.
 
 ### Response
 
-| Property Name | Description | Type | Notes |
-| --- | --- | --- | --- |
-| fromDate | The requested start date | ISO format. UTC timezone | |
-| fromMillis | Query start date (same as above) in Epoch time format | Long — Epoch time | |
-| toDate | The requested end date | ISO format. UTC timezone | |
-| toMillis | Query end date (same as above) in Epoch time format | Long — Epoch time | |
-| Interval | The requested interval | Integer | |
-| skillInfo | Skill information container | Array of objects | |
-| skillId | The skill Id | Long | |
-| metricsByIntervals | Contains a summary of the requested metrics by intervals | Container only | |
-| timestamp | Interval start time (human-readable format)  | ISO format. UTC timezone | |
-| epochTimestamp | Interval start time (epoch format) | Long — Epoch time | |
-| arrivals | Segments arrived to the queue/skill of all types (new conversation, back2Q, transfer to skill) in the interval | Integer | |
-| AvgTimeInQueue | The average time a segment waits in the queue before assignment to an agent | Double | |
-| totalAgentSegmentDuration | Total time of all closed segments ending by any means within the interval | Long | |
-| AvgAgentSegmentDuration | Average duration of all closed segments ending by any means within the interval | Double | |
-| avgAvailableLoad | Weighted average load of logged in agents within the interval, this is represented in percentage value for agents that have the skill | Double | Used for the NHT calculation. <br>60 minutes metric |
-| messagesSent | Total individual messages sent to consumers within time step by human agents | Integer | Used for the NHT calculation. <br>60 minutes metric |
-| handledSegments | Number of individual segments within current interval that have sent at least 1 human agent message (assigned agent) | Integer | Used for the NHT calculation. <br>60 minutes metric |
-| avgSegmentWorkTime | The average time it takes for all agents in the skill to work on a message response per skill | Double | Used for the NHT calculation. <br>60 minutes metric |
-| netHandleTime | Effort time heuristic LP calculation (NHT) | Double | Used for the NHT calculation. <br>60 minutes metric |
-| metadata | Container for additional data | Container | |
-| count | The total number of results for the query (skills) | Numeric | |
-| references | An array of links to the pages in the response | Array | |
-| rel | Pagination: The name of the link. This is based on the “offset” and “limit” elements | String | Possible values: <br>**self** - the link to the same page in the query. <br>**previous** - link to the previous page of results. <br>**previous** - link to the previous page of results. <br>**first** - link to the first page of the query results. <br>**last** - link to the last page of the query results.|
-| href | Pagination: The specific link for each one of the above values | String | The values: self, first, and last will always be returned whereas the others will be returned if there is more than 1 page in the response |
+| Property Name | Description | Type | Interval| Default value | Notes |
+|---|---|---|---|---|---|
+| fromDate | The requested start date | ISO format. UTC timezone |||||
+| fromMillis | Query start date (same as above) in Epoch time format | Long — Epoch time | | || 
+| toDate| The requested end date | ISO format. UTC timezone ||||
+| toMilli| Query end date (same as above) in Epoch time format | Long — Epoch time |||
+| Interval| The requested interval | Integer |||
+| skillInfo| Skill information container | Array of objects |||
+| skillId| The skill Id | Long |||
+| metricsByIntervals| Contains a summary of the requested metrics by intervals | Container only |||
+| timestamp| Interval start time (human-readable format)  | ISO format. UTC timezone |||
+| epochTimestamp| Interval start time (epoch format) | Long — Epoch time |||
+| arrivals| Segments arrived to the queue/skill of all types (new conversation, back2Q, transfer to skill) in the interval | Integer | 15/30/60 minutes | |
+| AvgTimeInQueue| The average time a segment waits in the queue before assignment to an agent | Double | 15/30/60 minutes | 0 |
+| totalAgentSegmentDuration | Total time of all closed segments ending by any means within the interval | Long | 15/30/60 minutes | 0 |
+| AvgAgentSegmentDuration| Average duration of all closed segments ending by any means within the interval | Double | 15/30/60 minutes | 0 |  |0|
+| avgAvailableLoad| Weighted average load of logged in agents within the interval, this is represented in percentage value for agents that have the skill | Double | 60 minutes only  | 0| Used for the NHT calculation. |
+| messagesSent| Total individual messages sent to consumers within time step by human agents | Integer | 60 minutes only  | 0 | Used for the NHT calculation. |
+| handledSegments | Number of individual segments within current interval that have sent at least 1 human agent message (assigned agent) | Integer |  60 minutes only  | 0 | Used for the NHT calculation. |
+| avgSegmentWorkTime | The average time it takes for all agents in the skill to work on a message response per skill | Double | 60 minutes only  | 0| Used for the NHT calculation. |
+| netHandleTime | Effort time heuristic LP calculation (NHT) | Double | 60 minutes only  | 0  Used for the NHT calculation. |
+| metadata| Container for additional data | Container |||
+| count| The total number of results for the query (skills) | Numeric |||
+| references| An array of links to the pages in the response | Array |||
+| rel| Pagination: The name of the link. This is based on the “offset” and “limit” elements | String ||| Possible values: <br>**self** - the link to the same page in the query. <br>**previous** - link to the previous page of results. <br>**previous** - link to the previous page of results. <br>**first** - link to the first page of the query results. <br>**last** - link to the last page of the query results. |
+| href| Pagination: The specific link for each one of the above values | String ||| The values: self, first, and last will always be returned whereas the others will be returned if there is more than 1 page in the response |
 
 #### Response Example (V2)
 
@@ -103,7 +103,7 @@ In case there is no data available, the response element will contain -1.
     "metricsByIntervals": [{
       "timestamp": "2022-05-19T09:00",
       "epochTimestamp": 1652950800000,
-      "arrivals": -1,
+      "arrivals": 0,
       "avgAgentSegmentDuration": 3127.00,
       "totalAgentSegmentDuration": 3127,
       "avgTimeInQueue": 3.00,
@@ -116,7 +116,7 @@ In case there is no data available, the response element will contain -1.
       {
         "timestamp": "2022-05-19T10:00",
         "epochTimestamp": 1652954400000,
-        "arrivals": -1,
+        "arrivals": 0,
         "avgAgentSegmentDuration": 31.15,
         "totalAgentSegmentDuration": -1,
         "avgTimeInQueue": 31.15,

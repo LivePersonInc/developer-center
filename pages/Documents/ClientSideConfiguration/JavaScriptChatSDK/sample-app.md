@@ -2,14 +2,11 @@
 pagename: Sample App
 redirect_from:
   - consumer-experience-javascript-chat-sample.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 order: 5
 permalink: javascript-chat-sdk-sample-app.html
-
 indicator: chat
 ---
 
@@ -24,7 +21,7 @@ Download the Sample App from the following [GitHub repository](https://github.co
 
 #### Prerequisites for un-monitored flow
 
-- An existing Conversational Cloud site — [click here](https://register.liveperson.com/) to create a site.      
+- An existing Conversational Cloud site — [click here](https://register.liveperson.com/) to create a site.
 - An existing API-based engagement window configured in Conversational Cloud.
 - An existing External engagement configured in Conversational Cloud, which refers to the above API-based engagement window.
 - An available user (agent) who is logged into Conversational Cloud.

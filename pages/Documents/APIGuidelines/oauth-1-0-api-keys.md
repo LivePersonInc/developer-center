@@ -18,7 +18,7 @@ redirect_from:
 
 API keys are security tokens that you use to access Conversational Cloud services. The API key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
 
-{: .alert}
+{: .attn-alert}
 You use the API key when you create bots, access our APIs programmatically and authorize Conversational Cloud Applications. You can create up to 100 keys per account. The API key is issued on behalf of the site and not for the user (server to server) which means you don't need a bearer (no need to be logged in) when using an API key.
 
 1. Log into Conversational Cloud with Administrator or Campaign Manager permissions and along the top open the **Campaign Builder** area.
@@ -27,17 +27,17 @@ You use the API key when you create bots, access our APIs programmatically and a
 
 3. Open the API tab and click **Add new**.
 
-{: .alert}
+{: .attn-alert}
 Alternatively, you can click on an existing key to edit its privileges rather than create a new one.
 
 {:start="4"}
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
-5. Select the relevant category for your API, check the relevant checkbox for selecting API permissions and then click **Save**.  
- 
-    {: .note}
+5. Select the relevant category for your API, check the relevant checkbox for selecting API permissions and then click **Save**.
+
+    {: .attn-note}
    For bots logins, you will need to select the **Agent Interactions** category and check the **User Login** API permission
- 
+
    ![](/img/APIKeyCreation.png)
 
 {:start="6"}
@@ -58,12 +58,12 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 
    ![](/img/close-window.png)
 
-   {: .note}
+   {: .attn-note}
    Currently, we do not support deleting an API key.
 
 8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
-{: .alert}
+{: .attn-alert}
 The API key best practices correspond to general oAuth1 best practices. For example, usually, the API key is generated per application/implementation, to make sure that environments have their own unique key.
 
 **Example:**

@@ -8,7 +8,6 @@ documentname: Operational Realtime API
 subfoldername: Methods
 order: 50
 permalink: operational-realtime-api-methods-sla-histogram.html
-
 indicator: chat
 ---
 

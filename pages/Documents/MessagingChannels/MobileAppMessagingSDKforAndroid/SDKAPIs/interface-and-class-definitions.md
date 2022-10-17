@@ -10,7 +10,6 @@ redirect_from:
   - android-interface-definitions.html#engagementcallback
   - android-interface-definitions.html#sdecallback
   - android-interface-definitions.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -142,7 +141,7 @@ public class LPConversationData{
   private CloseReason closeReason;
   private String conversationId;
 }
-``` 
+```
 
 ### LPConversationHistoryMaxDaysDateType
 
@@ -158,7 +157,7 @@ public enum LPConversationHistoryMaxDaysDateType {
 public enum LPConversationsHistoryStateToDisplay {
   OPEN, CLOSE, ALL
 }
-``` 
+```
 
 ### LPEngagementResponse (Monitoring API Related Classes)
 

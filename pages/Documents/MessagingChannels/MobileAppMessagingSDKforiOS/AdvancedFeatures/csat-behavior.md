@@ -2,7 +2,6 @@
 pagename: CSAT Behavior
 redirect_from:
   - consumer-experience-ios-sdk-advanced-csat.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -34,7 +33,7 @@ You can find all the related configurations in the resources ID table, under Sur
    </div>
 </div>
 
----   
+---
 
 The CSAT screen includes several content containers:
 

@@ -2,15 +2,11 @@
 pagename: initialize (with SDK properties object)
 redirect_from:
   - android-initializeproperties.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 20
 permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(with-sdk-properties-object).html
-
 indicator: messaging
 ---
 

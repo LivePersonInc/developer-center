@@ -4,7 +4,6 @@ redirect_from:
   - maven-context-warehouse-custom-static-or-function.html
   - maven-ai-context-warehouse-custom-static-or-function.html
   - conversation-orchestrator-context-warehouse-custom-static-or-function.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -82,7 +81,7 @@ Once you have created a Function, you can now use that as an attribute in Conver
 
 {% raw %}
 
-```javascript 
+```javascript
 {
     name: "isVIP"
     type: "faas",

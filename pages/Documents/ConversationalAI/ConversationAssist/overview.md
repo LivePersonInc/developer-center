@@ -5,7 +5,6 @@ redirect_from:
   - maven-ai-maven-assist-overview.html
   - conversation-orchestrator-maven-assist-overview.html
   - conversation-orchestrator-agent-assist-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
@@ -13,7 +12,7 @@ permalink: conversation-assist-overview.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Watch the video
@@ -34,7 +33,7 @@ On the **Home** page of Conversation Assist, you'll find a dashboard of rich ana
 
 <img width="800" alt="View of the top of the Conversation Assist dashboard" src="img/agentassist/dashboard.png">
 
-{: .note}
+{: .attn-note}
 Just getting started? Complete the [Using Conversation Assist](tutorials-guides-using-conversation-assist-overview.html) tutorial.
 
 ### Intent-based recommendations
@@ -67,5 +66,5 @@ Recommendation sources include knowledge bases and bots:
 
 ### Access Conversation Assist
 
-1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" alt="Conversational AI bot" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the [Conversational AI dashboard](platform-overview.html), click **Conversation Assist**.
+1. [Access the dashboard of Conversational AI applications](get-started-with-automation.html#access-the-conversational-ai-applications).
+2. Click **Conversation Assist**.

@@ -24,7 +24,7 @@ public class EngagementHistory {
 		 // body parameters that you would like to add to the api call
 		 request.addPayload("{\"start\":{\"from\":1433140200000,\"to\":1435645800000}}");
 		 // sign the request
-		 service.signRequest(accessToken, request); 
+		 service.signRequest(accessToken, request);
 		 Response response = request.send();
 		 // print the response to the console
 		 System.out.println(response.getBody());

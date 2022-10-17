@@ -6,9 +6,8 @@ sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API
 subfoldername: Methods
-order: 30  
+order: 30
 permalink: messaging-interactions-api-methods-get-conversations-by-consumer-id.html
-
 indicator: messaging
 ---
 
@@ -24,7 +23,7 @@ POST       | https://[{domain}](/agent-domain-domain-api.html)/messaging_history
 
 |Name   | Description  | Type/Value | Required | Notes
 |:----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|
 
 **BODY/POST Parameters**
 

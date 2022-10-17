@@ -1,7 +1,5 @@
 ---
 pagename: Advanced Routing
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -24,7 +22,7 @@ The Expression Editor allows you to configure routing policies that require comp
 2. Routing conversations from certain channels with critical intents during the busiest months or weeks
 3. Joining multiple complex evaluation criteria to arrive at a logical decision for routing
 
-{: .note}
+{: .attn-note}
 The Expression Editor is only available to brands that are upgraded to Conversation Context Service v2. Please talk to your LivePerson account representative if you want to use this feature and have not been upgraded.
 
 #### Using the Expression Editor
@@ -178,7 +176,7 @@ The above solution can be deployed relatively quickly. However, it does require 
 Recognize when a high value customer (HVC) starts a conversation and immediately escalate them to specific agents without any wait-time or queuing delays. The prioritization should vary across skills. Example if a customer is in the HVC skill their conversation can have a normal priority but on being moved to a different skill, the conversation should be placed top of the line.
 
 **Solution:**
-This can be solved using [SDE](engagement-attributes-types-of-engagement-attributes.html), [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), [Conversation Builder](platform-overview.html), [Context Service](conversation-orchestrator-conversation-context-service-overview.html) and [LivePerson’s internal queue prioritization application](https://knowledge.liveperson.com/contact-center-management-messaging-operations-queue-management-queue-prioritization-overview.html). LivePerson’s queue prioritization tool can host custom business rules to boost queue priority for Conversations that have certain attributes.  For this use-case LivePerson will add a new rule to boost priority of conversations that have value "VIP” for “Customer Type SDE”. (SDEs can be used to capture one/more/multiple customer attributes).
+This can be solved using [SDE](engagement-attributes-types-of-engagement-attributes.html), [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), [Conversation Builder](conversation-builder-overview.html), [Context Service](conversation-orchestrator-conversation-context-service-overview.html) and [LivePerson’s internal queue prioritization application](https://knowledge.liveperson.com/contact-center-management-messaging-operations-queue-management-queue-prioritization-overview.html). LivePerson’s queue prioritization tool can host custom business rules to boost queue priority for Conversations that have certain attributes.  For this use-case LivePerson will add a new rule to boost priority of conversations that have value "VIP” for “Customer Type SDE”. (SDEs can be used to capture one/more/multiple customer attributes).
 
 While SDEs are captured directly for conversations originating from web-engagements, they have to be manually set when conversations originate on other channels such as whatsapp or mobile apps. For this use case a routing bot will check for the customers’s VIP status through a CRM (or relevant application) and then update the SDE value for VIP customers. LivePersons Queue prioritization updates queue priority in real time whenever the SDE is updated. Next SDE based routing policies can be configured on Dynamic Routing to route VIP customers to the appropriate skill.
 

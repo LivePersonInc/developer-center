@@ -1,9 +1,8 @@
 ---
 pagename: Get All Agent Survey Objects
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Configuration API 
+documentname: Agent Survey For Messaging Configuration API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-configuration-api-methods-get-all-agent-survey-objects.html
 indicator: messaging
@@ -48,7 +47,7 @@ Get a list of all agent survey objects of an account.
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
 ### Response example
 

@@ -2,7 +2,6 @@
 pagename: Messaging API
 redirect_from:
   - android-methods.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -11,13 +10,13 @@ permalink: mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html
 indicator: messaging
 ---
 
-## Liveperson.java class 
+## Liveperson.java class
 
 ### checkActiveConversation
 
 Checks whether there is an active (unresolved) conversation. The result will be returned to the provided callback.
 
-{: .note}
+{: .attn-note}
 Make sure the conversation history is in-sync with server before call this API.
 
 ```java
@@ -69,10 +68,10 @@ public static void checkConversationIsMarkedAsUrgent(final ICallback<Boolean, Ex
 | :--- | :--- |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 
-**openFragmentContainer method** 
+**openFragmentContainer method**
 Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
-**FragmentContainerActivity class** 
+**FragmentContainerActivity class**
 This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (`LivePerson.getConversationFragment()`) and attach it to the container.
 
 ### getConversationFragment (with full authentication support)
@@ -91,7 +90,7 @@ There are 2 authenticated connection methods:
 
    **Note:** Usually this means that the LivePerson backend will verify the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call will fail.
 
-   {: .note}
+   {: .attn-note}
    **Optional:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)`.
 
 2. jwt — new **LPAuthenticationParams().setHostAppJWT("yourJwt")**
@@ -163,7 +162,7 @@ This API method uses a threshold mechanism of 10 seconds. If this API is called 
 - This new API is available from SDK version 4.4.0
 - The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
 
 ```java
@@ -178,7 +177,7 @@ public static void getUnreadMessagesCount(String appId, LPAuthenticationParams a
 
 ### getNumUnreadMessages
 
-{: .note}
+{: .attn-note}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -190,7 +189,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 To get count of unread messages using this function, all devices must be registered to receive push notifications using the [registerLPPusher](android-registerlppusher.html) function.
 
 ```java
@@ -204,7 +203,7 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 
 ### getUnreadMessagesCount
 
-{: .note}
+{: .attn-note}
 This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
 This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
@@ -216,7 +215,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 
 **Note:** The SDK needs to be initialized before calling this API.
 
-{: .note}
+{: .attn-note}
 This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 This API will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
@@ -257,7 +256,7 @@ public static PushMessage handlePushMessage(Context context, Map<String, String>
 | brandId | The account Id. |
 | showNotification | Used to instruct the SDK to either show or not show a notification to the user. If you wish your app will handle the display of the notification you can set this as false.  |
 
-<div class="note">The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.</div>
+<div class="attn-note">The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity, for a fully interactive notification host app needs to provide the implementation.</div>
 
 ### hideConversation
 
@@ -276,10 +275,10 @@ public static void hideConversation(Activity activity)
 - Hiding the conversation closes the WebSocket.
 - When using the SDK’s activity, the back button performs the same function.
 
-**initActivityConversation method** 
+**initActivityConversation method**
 Opens the conversation view in Activity mode.
 
-You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
+You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section.
 
 **Tip:** If the initialization succeeds, the `openActivity` method is called.
 
@@ -363,7 +362,7 @@ Previous conversations will not be displayed automatically until the consumer's 
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="note">This method must not be called when the conversation screen is displayed.</div>
+<div class="attn-note">This method must not be called when the conversation screen is displayed.</div>
 
 ```java
 public static void logOut(Context context, String brandId, String appId, LogoutLivePersonCallback logoutCallback)
@@ -409,7 +408,7 @@ public static void markConversationAsUrgent()
 
 #### openActivity function
 
-Here, you use the LivePerson SDK’s `showConversation` method. 
+Here, you use the LivePerson SDK’s `showConversation` method.
 
 **Tip:** In the example below, we do not use an authentication parameter.  If you need to use an authentication paramenter, use `setPhoneNumber`.
 
@@ -441,7 +440,7 @@ initOpenConversationButton();
 }
 ```
 
-### openFragmentContainer method 
+### openFragmentContainer method
 Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
 ### reconnect
@@ -495,11 +494,11 @@ Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePers
 
 **Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
-When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
+When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.
 
-When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.  
+When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.
 
-* If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`. 
+* If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`.
 
 * If the screen is in the foreground, the host app calls `reconnect()` to renew the JWT.
 
@@ -577,11 +576,11 @@ There are 2 authenticated connection methods:
 
    **Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
-   When using **[registerLPPusher](#registerlppusher)** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
+   When using **[registerLPPusher](#registerlppusher)** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.
 
-   When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.  
+   When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.
 
-   * If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`. 
+   * If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`.
 
    * If the screen is in the foreground, the host app calls `reconnect()` to renew the JWT.
 
@@ -602,8 +601,8 @@ There are 2 authenticated connection methods:
 
 * **Signup**
 
-{: .note}
-Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
+{: .attn-note}
+Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections.
 
 **ConversationViewParams:**
 
@@ -636,7 +635,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
     new ConversationViewParams().setHistoryConversationMaxDaysType(LPConversationHistoryMaxDaysDateType.endConversationDate);
    ```
 
-* **LPWelcomeMessage** 
+* **LPWelcomeMessage**
 
    ```java
    LPWelcomeMessage lpWelcomeMessage = new LPWelcomeMessage("Welcome Message");
@@ -702,7 +701,7 @@ public static void unregisterLPPusher(String brandId, String appId, ICallback<Vo
 
 ### setPushNotificationTapped
 
-Notify SDK that push notification is tapped when scroll behavior for push notification is configured. 
+Notify SDK that push notification is tapped when scroll behavior for push notification is configured.
 
 Call this method before `LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)` or `LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`. For more detailed information, see the [Scroll Behavior Configuration](mobile-app-messaging-sdk-for-android-advanced-features-scroll-behavior-configuration.html) page.
 
@@ -911,5 +910,4 @@ public static void shutDown()
 
 *Note: This does not end the current messaging conversation.*
 
-<div class="note">This method must not be called when the conversation screen is displayed.</div>
-
+<div class="attn-note">This method must not be called when the conversation screen is displayed.</div>

@@ -1,6 +1,5 @@
 ---
 pagename: FAQ
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -23,7 +22,7 @@ No, SDK usage of UIWebview was replaced with WkWebView in Mar 2017
 
 - That's because the grep command will search the iOS SDK for text references and there was 1 reference to UIWebview in the `LPTTTAttributedLabel` dependency, this was only a comment description, and has been removed.
 
-### While upgrading from SDK version < 6.0 to SDK 6.0+, I noticed there were tons of compile errors. What do I do? 
+### While upgrading from SDK version < 6.0 to SDK 6.0+, I noticed there were tons of compile errors. What do I do?
 
 - Read this [guide](mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html)
 - If you are upgrading versions then likely before you were using one of several public facade classes (LPInfraFacade, LPMessagingSDK, LPMonitoring, etc.).  When combining the frameworks we moved all publicly documented APIs into LPMessaging.  So look within that object for your previously used API.
@@ -70,9 +69,9 @@ This key’s value can change when installing test builds using Xcode or when in
 
 As Apple mentioned in their article:
 
-“The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”. 
+“The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”.
 
-{: .note}
+{: .attn-note}
 For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
 
 ### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.

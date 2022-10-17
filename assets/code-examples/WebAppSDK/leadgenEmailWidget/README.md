@@ -17,5 +17,5 @@ To use the widget, you will need to have access to a SendGrid account. You will 
 This widget could be used as starting point for sending the chat transripts to a database or a CRM, or as a way to send notifications of when a customer selects a low CSAT answer.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

@@ -260,7 +260,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
     * Add the following to the editor and hit Save: botContext.printDebugMessage(‘Here is my Welcome debug message!’);
 
-    {: .note}
+    {: .attn-note}
     If you copy and paste the above line, the quotes may not paste correctly. Replace them using your keyboard and hit Save.
 
 4. You will need to type "**reset**" and “**hi**” to trigger the updated Welcome message.
@@ -275,7 +275,7 @@ Before we move on, it’s important to discuss a way to test and troubleshoot yo
 
 Because this is a routing bot, its main purpose is to route to a particular skill based on the user’s intent.
 
-{: .note}
+{: .attn-note}
 For the purposes of this tutorial we will NOT be connecting to LiveEngage.
 
 <img src="img/conversationimages/image_38.png" alt="" style="height:200px">

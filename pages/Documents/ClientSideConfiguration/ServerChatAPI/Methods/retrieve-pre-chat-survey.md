@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 40
 permalink: server-chat-api-methods-retrieve-pre-chat-survey.html
-
 indicator: chat
 ---
 
@@ -47,7 +45,7 @@ Returns an XML or JSON response with the pre-chat survey.
 | visitorId | The current visitor ID. | alphanumeric | This parameter can be used to associate the survey to the current visitor.|
 | skill | Set a skill to the current visitor. | alphanumeric | |
 
-<div class="note">To retrieve the <code>surveyApiId</code>, you need to call the Engagement and Window API. The information to retrieve the <code>domain</code> name can be found <a href="/agent-domain-domain-api.html">here</a>. Make sure to set the service name as <code>acCdnDomain</code>. <br><br>Through the Engagement API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/le-campaigns/campaigns/{campaignId}/engagements/{engagementId}/revision/{revisionId}?v=3.0</code> to get the <code>windowId</code>. <br><br>Next, through the Window API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/engagement-window/window-confs/{windowId}</code> to get the <code>surveyPreChatId</code>. The <code>surveyPreChatId</code> is the value that needs to be passed through the <code>surveyApiId</code> parameter.</div>
+<div class="attn-note">To retrieve the <code>surveyApiId</code>, you need to call the Engagement and Window API. The information to retrieve the <code>domain</code> name can be found <a href="/agent-domain-domain-api.html">here</a>. Make sure to set the service name as <code>acCdnDomain</code>. <br><br>Through the Engagement API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/le-campaigns/campaigns/{campaignId}/engagements/{engagementId}/revision/{revisionId}?v=3.0</code> to get the <code>windowId</code>. <br><br>Next, through the Window API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/engagement-window/window-confs/{windowId}</code> to get the <code>surveyPreChatId</code>. The <code>surveyPreChatId</code> is the value that needs to be passed through the <code>surveyApiId</code> parameter.</div>
 
 ### Response
 

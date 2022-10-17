@@ -1,6 +1,5 @@
 ---
 pagename: Methods
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Messaging Agent SDK
@@ -23,7 +22,7 @@ This method is used to create a subscription for conversation updates. You can s
 ```javascript
 agent.subscribeExConversations({
     'convState': ['OPEN']
-    ,'maxLastUpdatedTime': <time in millis> 
+    ,'maxLastUpdatedTime': <time in millis>
     ,'minLastUpdatedTime': <time in millis> // can be any of these 'Time' fields, or both, or none.
     ,'agentIds': [agent.agentId] // remove this line to subscribe to all conversations instead of just the bot's conversations
 }, (e, resp) => {
@@ -36,7 +35,7 @@ Success response:
 
 `{"subScriptionId":"aaaabbbb-cccc-1234-56d7-a1b2c3d4e5f6"}`
 
-In addition to the response, the ExConversationChangeNotification with the recent conversations (maximum 1001 conversation), fitting the parameters set in the subscription request, will be sent. 
+In addition to the response, the ExConversationChangeNotification with the recent conversations (maximum 1001 conversation), fitting the parameters set in the subscription request, will be sent.
 
 ### subscribeAgentsState
 
@@ -331,8 +330,8 @@ agent.generateURLForUploadFile({
 
 ### publishEvent
 
-This method is used to publish an event to a conversation. 
-For different types of events see the following examples: 
+This method is used to publish an event to a conversation.
+For different types of events see the following examples:
 
 #### Example: Sending Text
 

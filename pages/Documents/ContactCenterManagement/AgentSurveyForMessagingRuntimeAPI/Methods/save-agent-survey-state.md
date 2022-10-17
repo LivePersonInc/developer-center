@@ -1,16 +1,15 @@
 ---
 pagename: Save Agent Survey State
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Runtime API 
+documentname: Agent Survey For Messaging Runtime API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-runtime-api-methods-save-agent-survey-state.html
 indicator: messaging
 ---
 
 Save the agent survey state. This will save the state without producing FormSubmitEvent <br>
-Using this method, you can implement auto-save and assure that the survey display will not change upon page refresh. 
+Using this method, you can implement auto-save and assure that the survey display will not change upon page refresh.
 
 ### Request
 
@@ -27,7 +26,7 @@ Using this method, you can implement auto-save and assure that the survey displa
  **Query Parameters**
 
 | Parameter | Description | Type / Value | Required | Notes
-|:----------- |  :------------ | :--------------- | :--- | :--- | 
+|:----------- |  :------------ | :--------------- | :--- | :--- |
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
 | seqRoot | questionId, describe the first question in the next sequence | Long | Optional | provides the ability to get the next sequence upon save |
@@ -38,7 +37,7 @@ Using this method, you can implement auto-save and assure that the survey displa
 |Header | Description| Notes |
 |:------- | :-------------- | :--- |
 | Authorization | Contains token string to allow request authentication and authorization.|
-| x-lp-state-rev | state revision, use the value last received from the server (response header of the last request) | 
+| x-lp-state-rev | state revision, use the value last received from the server (response header of the last request) |
 
 **Request Body**
 
@@ -65,7 +64,7 @@ Using this method, you can implement auto-save and assure that the survey displa
         "service" : {
             "topic": "loan",
             "status" : 3,
-            "category": "business", 
+            "category": "business",
             "serviceId": "544547"
         }
     }
@@ -78,9 +77,9 @@ Using this method, you can implement auto-save and assure that the survey displa
         "service" : {
             "topic": "sales",
             "value" : 2.0,
-            "leadId": "878979", 
+            "leadId": "878979",
             "currency": "USD"
-        }      
+        }
     }
 },
 {
@@ -92,7 +91,7 @@ Using this method, you can implement auto-save and assure that the survey displa
             "total": 100.5,
             "orderId" : "476847365",
             "currency": "USD"
-        }  
+        }
     }
 }
 ]
@@ -118,7 +117,7 @@ Using this method, you can implement auto-save and assure that the survey displa
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |
 
 **Entity structure**
 

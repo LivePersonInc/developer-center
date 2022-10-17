@@ -23,8 +23,9 @@ Limited:
   ]
 
 #Regular Release
-Regular: 
+Regular:
   versions: [
+    { version: "6.10.0" },
     { version: "6.9.0" },
     { version: "6.8.0" },
     { version: "6.7.0" },

@@ -23,7 +23,7 @@ lpTag.sdes = lpTag.sdes||[];
 
 The `lpTag.sdes.push` function will push an sde object or array of objects to the visitor session when the lpTag communicates next.
 
-{: .note}
+{: .attn-note}
 See the [Send](#send-sdes) function if you need the SDEs to send immediately (eg. Single Page Apps)
 
 It will trigger the [VAR_ADDED](le-tag-events-events.html#var_added) event as well.
@@ -54,7 +54,7 @@ lpTag.sdes.push(
 
 The `lpTag.sdes.send` function will push an sde object or array of objects to the visitor session immediately.
 
-{: .note}
+{: .attn-note}
 If using on page load, make sure the function exists. Falling back to `lpTag.sdes.push` is a good practice.
 
 | Function Name | Arguments | Returns |
@@ -75,7 +75,7 @@ var data = {
      }
    }]
  };
- 
+
 var fun = function() {};
 lpTag.sdes.send(data, fun);
 ```
@@ -84,7 +84,7 @@ lpTag.sdes.send(data, fun);
 
 The `lpTag.sdes.get` function will return the sdes in the object store. It does not return all of the sdes from the visitor's session, but just the sdes that are present in the store on the given page.
 
-{: .note}
+{: .attn-note}
 This function returns the actual object and not a clone. Any tempering with the object may interfere with the expected functionality of the function.
 
 | Function Name | Arguments | Returns |
@@ -96,4 +96,3 @@ This function returns the actual object and not a clone. Any tempering with the 
 ```javascript
 lpTag.sdes.get("prodView");
 ```
-

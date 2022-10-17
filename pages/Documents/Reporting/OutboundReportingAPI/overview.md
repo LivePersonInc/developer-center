@@ -7,8 +7,9 @@ permalink: outbound-reporting-api-overview.html
 root-link: true
 indicator: Connect To Messaging
 redirect_from:
- - connect-to-messaging-reporting-api.html
- - proactive-messaging-reporting-api.html
+  - connect-to-messaging-reporting-api.html
+  - proactive-messaging-reporting-api.html
+date_updated: 2022/09/21
 ---
 
 ### Introduction
@@ -16,6 +17,7 @@ redirect_from:
 The Outbound Reporting API provides a complete message journey of the conversation from start to finish. It provides a full end to end summary of messages/deflections sent, including how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. This service stitches pre and post conversation events of every message/deflections and provide full analytical data to API clients.
 
 ### API provides reporting for below services
+
 * Proactive Messaging 2.0
 * Connect To Messaging 2.0
 
@@ -67,9 +69,9 @@ Outbound Reporting API provides the following data fields. This table explains t
 
 ### API Specifications
 
-## OAuth 2.0 Authorization 
+## OAuth 2.0 Authorization
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
-![Secrets](img/proactive/proactive-show-secrets.png)  
+![Secrets](img/proactive/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
@@ -232,7 +234,7 @@ Each of the filter options shown above are optional. Regardless of what filter o
 
 ### Campaign API
 
-API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable. 
+API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable.
 
 **1. Campaign — analytics API for the campaign**
 
@@ -352,7 +354,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 ### Transaction API
 
-API for account level transactions. 
+API for account level transactions.
 
 There are two versions of transaction API's.
 
@@ -414,7 +416,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
         ],
         "messagestatus": [
             "FAILED", "READ"
-        ], 
+        ],
         "transactionids" : [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
@@ -521,7 +523,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 }
 ```
 
-**2. Get details for Transactions - Version 1.0** 
+**2. Get details for Transactions - Version 1.0**
 
 | Method | URI  |
 | :--- | :--- |
@@ -578,7 +580,7 @@ Each of the filter options shown above are optional.
 }
 ```
 
-**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records. 
+**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records.
 
 **Response Example**
 
@@ -592,11 +594,11 @@ Each of the filter options shown above are optional.
    "attemptedEndTime": 1602008344000,
    "filters": {
         "channels": [
-            "sms", 
+            "sms",
             "inapp"
         ],
         "skills": [
-            "billing", 
+            "billing",
             "sales"
         ]
     }
@@ -767,7 +769,7 @@ For Connect To Messaging:
 <strong>6. What is a LP data retention policy? And how long data is persisted for Outbound Reporting API?</strong>
 
 Retention policy period is 13 months.
- 
+
 <strong>7. Is Outbound Reporting API GDPR Compliant?</strong>
 
 Yes

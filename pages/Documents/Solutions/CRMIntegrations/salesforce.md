@@ -10,7 +10,7 @@ indicator: both
 
 <!-- TODO: Use the following as content for the page, or remove:
 
-<div class="note">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>
+<div class="attn-note">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>
 
 This integration will allow you to see and create your Salesforce Contact, Lead, Account and Opportunity record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Salesforce. Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
 
@@ -70,7 +70,7 @@ The first three check-boxes can have any value (true/false), however, the 4th �
 3. “Step 3: Legal Disclaimer” — Read the terms of use and check the “I have read and agree to these terms.”
 4. “Step 4: Activation” — Click “Activate.”
 
-{: .note}
+{: .attn-note}
 **Note:** When you click on “Deactivate,” you will disable the use of the widget within the platform and stop all periodic sync processes with your account.
 
 #### **Configuring the app**
@@ -89,7 +89,7 @@ This section sets out the Salesforce objects for which we would like the widget 
 
 1. The Skills are used within the Salesforce Widget. In this section, you will define which Salesforce Objects will be available to each Skill in the Salesforce Widget.
 
-{: .alert}
+{: .attn-alert}
 **Note:** You must have skills in your LivePerson Conversational Cloud account for this package to work. If you don’t have any skills configured, please create a default one before continuing forward.
 
 {:start="2"}
@@ -103,7 +103,7 @@ This section sets out the Salesforce objects for which we would like the widget 
    2. Select the default widget screen: either a Search Type or New Record page. The default and recommended option is “**People Search**” — the “People Search” shows the agent all the Accounts, Contacts and Leads that answer the search criteria, structured in a convenient tree format.
    3. If you select a search option as the default page, you can select the relevant search values that should be retrieved. For example, if the default screen selected is “Search Contact” and the selected Search Value is “Pre-Chat Survey Visitor Email”, then once the widget is loading, it will search for any SFDC Contact record which holds an email address matching to the email address filled by the visitor as part of the pre-chat survey. The available values for search represent the list of available LivePerson SDK search values.
 
-{: .alert}
+{: .attn-alert}
 As a best practice, we recommend to use the search option, since that allows the agent to verify if the record he’s about to create already exists before creating it.
 
 If you are using the Salesforce Service Console, select “Use Service Console." By selecting this, when you click on the “SF Full View” option within the widget, the Service Console will open with the record’s tab. Otherwise, the standard SF Classic view will open in a new browser tab for each record.
@@ -284,15 +284,15 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
 6. Enter the Salesforce console and switch it to classic mode.
 7. Select the Customization Settings tab in your Salesforce settings, copy the first part of the URL, and add the "ChatLink" suffix to ensure you're using the correct link.
 8. Switch back to your Conversational Cloud settings, select the Salesforce widget, click Edit, and paste the URL in the 'URL' box.
-  
+
 ![](/img/salesforce_pastewidget.png)
 
-<!-- <div class="alert">
+<!-- <div class="attn-alert">
 <p>If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:</p>
 
 <img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
 </div>
-   
+
 **Tip:** You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.
 
 {:start="7"}
@@ -437,7 +437,7 @@ In case you are using both chat and messaging within the Conversational Cloud, t
 
 #### **Objective**
 
-{: .note}
+{: .attn-note}
 **Note:** This section is very technical, please assist your AM/CVM/TAM or our Technical Support in case of a problem or if you’re not sure about any step.
 
 Using each object’s Field Mapping, you can choose to map the Conversational Cloud fields/parameters to Salesforce Fields, both for Pre-Population of new record forms, or for saving information to the chat transcript record itself.
@@ -460,7 +460,7 @@ The complete structure of the data in the “Agent Widget SDK,” “Engagement 
 
 To get one of the standard out-of-the-box pre-chat survey questions the access is easy using the list of predefined values, but you need “Other” for any custom questions you have on that type of survey or others, the address you’ll build will use the Display Name of the question. Below are a few examples.
 
-{: .alert}
+{: .attn-alert}
 **Note:** If you ever change the text in the Display Name of a survey question in the Conversational Cloud — you have to update this mapping too, otherwise the mapping will stop working.
 
 1. For a **custom pre-chat survey question** with the text “What is your Account Number?” use the following:
@@ -639,4 +639,3 @@ These are just a few examples meant to demonstrate how to write these “address
 2. The SF feature ‘Person accounts’ is not supported: Person accounts is a SF feature which stores information about individual consumers (Account = Contact).
 3. The transcript for converted leads is not accessible.
 4. The widget is not defined as SF Lightning ready.
-

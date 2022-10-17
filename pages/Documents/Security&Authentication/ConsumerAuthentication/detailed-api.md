@@ -13,7 +13,7 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-<div class="note">It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
+<div class="attn-note">It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
 
 In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to Conversational Cloud, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
@@ -38,7 +38,7 @@ The identity function should be implemented on every authenticated page (the Web
 
 **Identity object description**
 
-<div class="note">All 3 object keys are mandatory.</div>
+<div class="attn-note">All 3 object keys are mandatory.</div>
 
 * iss: The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
 
@@ -107,13 +107,13 @@ redirect_uri=https://liveperson.net
 _Example: Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW_
 
 ```
-HTTP/1.1   
+HTTP/1.1
 Host: server.example.com
-Path: /token  
+Path: /token
 Method: POST
-Content-Type: application/x-www-form-urlencoded  
+Content-Type: application/x-www-form-urlencoded
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
-Body:    
+Body:
 code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c&
 grant_type-authorization_code&
 redirect_uri=https://liveperson.net
@@ -126,10 +126,10 @@ If the transaction is successful, then the response will be an HTTP 200, and the
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
-Cache-Control: no-store   
-Pragma: no-cache    
+Cache-Control: no-store
+Pragma: no-cache
 Response:
-{    
+{
  "access_token" : "NotApplicabale",
    "token_type"  : "Bearer",
  "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MjU1NTUxMjEyIiwiY29uc3VtZXJfdHlwZSI6ImNvcHBlciIsImlzcyI6Imh0dHBzOi8vd3d3LnQtbW9iaWxlLmNvbSIsImV4cCI6MTQ0NjExNTM1MjAwMCwiaWF0IjoxNDQ2MTExNzUyMDAwfQ.mMERThLDcoW51434sJyOtRUOZZVOVmB_evxTwduJ1Ht1Q78ZZ6ZLqH3tN3idXI7-Qn7WOwej2OI-8vsAENB_7gxxpZFUlQ8dCZFM1o7ZJd5gsXvjHbHgIlnRn1zxonZ5L8pIO8TByTNOgwDp847JyGStyzEZTYKkyOwxB5p96Z8"
@@ -166,9 +166,9 @@ If an error is encountered during processing, an error message will be returned:
 ```
 HTTP/1.1
 Status: 400 - Bad Request
-Content-Type: application/json   
-Cache-Control: no-store   
-Pragma: no-cache    
+Content-Type: application/json
+Cache-Control: no-store
+Pragma: no-cache
 Response:
 {
     "error": "invalid_code"
@@ -177,7 +177,7 @@ Response:
 
 One of the following errors will be returned:
 
-|    Name                   | Description                                                               |  
+|    Name                   | Description                                                               |
 |---------------------------|---------------------------------------------------------------------------|
 |    json_parse_error       |    There was a problem with the format of the JSON document provided.   |
 |    invalid_code           |    The code provided is not valid.                                      |
@@ -227,17 +227,17 @@ Custom Claims will be added in LP SDE form from the SDEs list, see the [Engageme
 Example for Mandatory+Standard+Custom Claims JWT:
 
 ```json
-{  
+{
    "sub":"4255551212",
    "iss":"https://www.YourBrand.com",
    "exp":1446115352,
    "iat":1446111752,
    "preferred_username":"JohnDoe",
    "phone_number":"+1-10-344-3765333",
-   "lp_sdes":[  
-      {  
+   "lp_sdes":[
+      {
          "type":"ctmrinfo",
-         "info":{  
+         "info":{
             "cstatus":"cancelled",
             "ctype":"vip",
             "customerId":"138766AC",
@@ -248,12 +248,12 @@ Example for Mandatory+Standard+Custom Claims JWT:
             "companySize":500,
             "accountName":"bank corp",
             "role":"broker",
-            "lastPaymentDate":{  
+            "lastPaymentDate":{
                "day":15,
                "month":10,
                "year":2014
             },
-            "registrationDate":{  
+            "registrationDate":{
                "day":23,
                "month":5,
                "year":2013
@@ -282,10 +282,10 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 * The JWT should be signed with your RSA private key.
 
-* The public key should be base64 encoded with X509 key spec and can _either_ be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
-{: .note}
+* The public key should be base64 encoded with X509 key spec and can _either_ be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.
+{: .attn-note}
 JWKS endpoints should provide the RSA key modulus in base64url encoding, [as specified in the JWA RFC](https://www.rfc-editor.org/rfc/rfc7518#section-6.3.1.1)
-{: .note}
+{: .attn-note}
 For more details on JWKS, please read [this (external) article](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens).
 
 ### Nested JWT

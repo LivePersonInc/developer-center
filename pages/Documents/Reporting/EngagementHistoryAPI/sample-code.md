@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Engagement History API
-
 order: 11
 permalink: engagement-history-api-sample-code.html
-
 indicator: chat
 ---
 

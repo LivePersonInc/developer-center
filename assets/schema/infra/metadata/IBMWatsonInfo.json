@@ -64,5 +64,5 @@
             "type": "array"
         }
     },
-    "required": ["type", "referred_visitor_message_sequences"] 
+    "required": ["type", "referred_visitor_message_sequences"]
 }

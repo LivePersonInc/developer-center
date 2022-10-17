@@ -1,7 +1,5 @@
 ---
 pagename: Getting Started Tutorial2
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -46,7 +44,7 @@ indicator: both
 
 11. Specify Skill name, Skill description and click on the “Save” button. The skill routes to your bot, so it is recommended to name it properly to match the main purpose of your bot or bot name, i.e. the bot that gives the information about the shop promotions can have BotAgent skill. Such explicit skill names will help to quickly differentiate many skills in the list. ![image alt text](image_13.png)
 
-12. Now when the skill is created, it should have a corresponding user. 
+12. Now when the skill is created, it should have a corresponding user.
 
 13. Navigate to Users tab and click on the “Add user” button: ![image alt text](image_14.png)
 
@@ -64,7 +62,7 @@ indicator: both
 
 * In Assignment dropdown select Agent: ![image alt text](image_15.png)
 
-* In Skills dropdown select the skill created in the previous step: ![image alt text](image_16.png) 
+* In Skills dropdown select the skill created in the previous step: ![image alt text](image_16.png)
 
 - Click on the “Save” button and check enabled switcher position: ![image alt text](image_17.png)
 

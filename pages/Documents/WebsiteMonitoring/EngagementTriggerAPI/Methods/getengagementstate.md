@@ -8,7 +8,6 @@ documentname: Engagement Trigger API
 subfoldername: Methods
 order: 30
 permalink: engagement-trigger-api-methods-getengagementstate.html
-
 indicator: both
 ---
 
@@ -30,7 +29,7 @@ lpTag.taglets.rendererStub.getEngagementState(engagementId);
 
 ```javascript
     if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){
-       var info =   
+       var info =
             lpTag.taglets.rendererStub.getEngagementState(12356454);
     }
 ```
