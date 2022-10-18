@@ -78,7 +78,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     * Configure UserName and password
 
-![image alt text](img/bot-guide-watson0.png)
+![](img/bot-guide-watson0.png)
 
 {:start="5"}
 5.  Connect Watson (IAM Authentication)
@@ -103,7 +103,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     10. AUTH_HEADER (**DO NOT CHANGE DEFAULT**)
 
-![image alt text](img/bot-guide-watson1.png)
+![](img/bot-guide-watson1.png)
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
@@ -143,7 +143,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     3. Configure Google Dialogflow URL
 
-![image alt text](img/bot-guide-dialogflow0.png)
+![](img/bot-guide-dialogflow0.png)
 
 Complete documentation can be found at [https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY](https://drive.google.com/drive/folders/1x6uRyTJ4jW72dAQ--0vjXI51S6zlqMiY)
 
@@ -191,7 +191,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     6. Leave API Version unchanged as V2
 
-![image alt text](img/bot-guide-dialogflow1.png)
+![](img/bot-guide-dialogflow1.png)
 
 ### Microsoft Bot Framework (LUIS)
 
@@ -211,7 +211,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     * Update the Authorization header with the Azure Bearer token (API Access Key) for the 3 responders. When you log into Azure, you can enable API Access which provides the Microsoft Azure API access key.
 
-![image alt text](img/bot-guide-microsoft0.png)
+![](img/bot-guide-microsoft0.png)
 
 {:start="5"}
 5. Go to Enterprise Integrations in the Message Editor.
@@ -226,7 +226,7 @@ Only registered IPs can login to the BOT-Platform console. Customer’s IT team 
 
     4. Configure LiveEngage Bot User API Keys (OAuth 1.0).
 
-![image alt text](img/bot-guide-microsoft1.png)
+![](img/bot-guide-microsoft1.png)
 
 ### Amazon Lex
 
@@ -262,7 +262,7 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 
     6. Configure an end point for the bot you want to connect. This URL will be used by the connector to post the data. This is where customer bot implemented using 3rd party bot platform is listening on.
 
-![image alt text](img/bot-guide-niche0.png)
+![](img/bot-guide-niche0.png)
 
 {:start="5"}
 5. Fallback SkillId is optional. You can set it as a backup option; when the connector does not receive any messages due to backend systems failure, it will escalate to this skill.
