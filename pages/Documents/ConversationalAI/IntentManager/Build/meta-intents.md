@@ -2,7 +2,6 @@
 pagename: Meta Intents
 redirect_from:
     - intent-builder-meta-intents.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -25,11 +24,11 @@ The process for creating a meta intent is very similar to [creating a standard i
 When you are finished, click **Save** in the lower-right corner. In the left panel, you can now see that the standard intents are nested under the newly created meta intent.
 
 {: .attn-note}
-As meta intents are a grouping of related intents, you'll need to create at least one intent prior to creating a meta intent. 
+As meta intents are a grouping of related intents, you'll need to create at least one intent prior to creating a meta intent.
 
 ### Train meta intents
 
-Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [these best practices](intent-manager-best-practices.html) for training intents. 
+Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [these best practices](intent-manager-best-practices.html) for training intents.
 
 To test user utterances against your intents and meta intents, use the **Test User Input** tool provided in the "Build" area of Intent Manager. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 

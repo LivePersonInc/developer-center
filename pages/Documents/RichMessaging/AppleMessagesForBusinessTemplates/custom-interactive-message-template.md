@@ -1,6 +1,5 @@
 ---
 pagename: Custom Interactive Message Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -219,7 +218,7 @@ In order to do this, all code is handled from within your Apple iMessage app / e
         "lpData": {
           "interactive": {
             "response": {
-              "text": "YOUR_CUSTOM_TEXT" 
+              "text": "YOUR_CUSTOM_TEXT"
             }
           }
         }

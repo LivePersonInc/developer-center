@@ -2,7 +2,6 @@
 pagename: Tutorial
 redirect_from:
     - knowledge-base-tutorial.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
@@ -82,7 +81,8 @@ Let’s test our knowledge base and see how the NLU will return results.
 
     The article should now come back as VERY GOOD.
 
-<div class="attn-note">Keep in mind that when you are training articles, it's very easy to use the thumbs-up button. It's so easy that you might *overtrain* the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. Overall, use the training feature sparingly.</div>
+{: .attn-note}
+Keep in mind that when you are training articles, it's very easy to use the thumbs-up button. It's so easy that you might \*overtrain\* the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. Overall, use the training feature sparingly.
 
 What about **Thumbs Down**? This should be used sparingly to differentiate two articles that might have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 
@@ -141,4 +141,5 @@ You don't need to enter entities using all capital letters like we've done here,
 
 Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
 
-<div class="attn-note">The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.</div>
+{: .attn-note}
+The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.

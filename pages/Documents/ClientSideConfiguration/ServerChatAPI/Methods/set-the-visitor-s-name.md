@@ -3,7 +3,6 @@ pagename: Set the Visitor's Name
 redirect_from:
   - consumer-experience-server-chat-set-visitor-name.html
 permalink: undefined-set-the-visitors-name.html
-
 indicator: chat
 ---
 

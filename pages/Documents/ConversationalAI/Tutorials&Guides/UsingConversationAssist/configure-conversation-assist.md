@@ -1,14 +1,14 @@
 ---
 pagename: Configure Conversation Assist
 redirect_from:
-    - tutorials-guides-using-agent-assist-configure-agent-assist.html
-keywords:
+  - tutorials-guides-using-agent-assist-configure-agent-assist.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
 subfoldername: Using Conversation Assist
 permalink: tutorials-guides-using-conversation-assist-configure-conversation-assist.html
 indicator: both
+date_updated: 2022/09/19
 ---
 
 After completing the [prerequisite steps](tutorials-guides-using-conversation-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Assist to configure its capabilities.
@@ -31,7 +31,7 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
     <img style="width:800px" src="img/agentassisttutorial/botlist.png" alt="The Bots tab under Recommendation Soures, showing a Seating Bot and a Booking Bot that are both set to Off">
 
     Recommendations are tied to skills, so you must assign skills to the bots before the bots can be offered to human agents during conversations.
-    
+
     Earlier, you assigned an "Agent" skill to the logged-in human agent; this is what needs to be assigned for these two bots to be recommended.
 
 3. Assign the "Agent" skill to the Seating Bot:
@@ -61,17 +61,17 @@ After completing the [prerequisite steps](tutorials-guides-using-conversation-as
 
 ### Step 7: Create the Web messaging engagement
 
-Updates to the Conversation Assist configuration can take up to 20 minutes to be reflected in conversations. While waiting for these changes to take effect, create a web messaging engagement that connects to the “Agent” skill. 
+Updates to the Conversation Assist configuration can take up to 20 minutes to be reflected in conversations. While waiting for these changes to take effect, create a web messaging engagement that connects to the “Agent” skill.
 
 1. Back in the Conversational Cloud, select the **Manage campaigns and engagements** icon <img style="width:30px" src="img/agentassisttutorial/icon_campaigns.png" alt="Manage campaigns and engagements icon"> from the left-side menu.
 2. From the **Campaign Builder** portal, click **+ Add campaign** in the lower-left corner.
-3. Give the campaign the name "Conversation Assist Testing," and under **Campaign goal**, select the default “Interact with consumers.” 
+3. Give the campaign the name "Conversation Assist Testing," and under **Campaign goal**, select the default “Interact with consumers.”
 4. Click the **+ Add engagement** link, and then select "Web" as the engagement source.
 5. In the **Engagement template gallery**, accept the default value, and click **Next**.
 6. In the **Engagement settings**, under **Routing**, route to the specific skill "Agent."
 
     <img class="fancyimage" style="width:650px" src="img/agentassisttutorial/engagement_settings.png" alt="The Engagement settings, showing Routing to a specific skill named Agent">
-    
+
     It is important that this engagement is routing to the "Agent" skill that has been assigned to the human agent. As the Conversation Assist settings have been configured to recommend bots and answers to this particular skill, skipping this important step will result in recommendations not being sent.
 
 6. Click **Next**, and continue through the workflow, accepting the default values. When you’ve reached the last option, "Behavioral targeting library," click **Done** in the lower-right corner.

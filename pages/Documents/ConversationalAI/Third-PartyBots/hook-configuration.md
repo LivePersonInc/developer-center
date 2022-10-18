@@ -1,6 +1,5 @@
 ---
 pagename: Hook Configuration
-redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -34,7 +33,8 @@ Depending on the hook and vendor type the palyoad information differs in content
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) for more information on how to deploy your function. At this point, you can also test your function.
 
-<div class="attn-note">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
+{: .attn-note}
+Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the **Participants Change** event and an agent joins the conversation, the consumer may see the resulting \`systemMessage\` **after the agent already responded to the consumer themselves**.
 
 #### Last Steps in Third-Party Bots
 

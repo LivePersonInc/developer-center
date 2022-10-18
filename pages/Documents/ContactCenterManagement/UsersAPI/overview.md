@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - administration-users-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
-
 level-order: 1
 order: 9
 permalink: users-api-overview.html
@@ -39,7 +37,7 @@ A few things you’ll need to get started with this API:
 
 	* **For a machine-to-machine authorizion using OAuth 1.0 App Keys OAuth 2.0 Client Credentials flow**
 		* **OAuth 1.0 App Keys** — [follow the instructions](create-oauth-1-0-api-keys.html), to create and use an App key.
-		
+
 		{: .attn-note}
 	For the Users API, select the Administration category and check Users
 

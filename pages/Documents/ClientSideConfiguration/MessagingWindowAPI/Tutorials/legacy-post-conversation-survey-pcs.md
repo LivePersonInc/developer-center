@@ -46,7 +46,8 @@ The Messaging Window API was enhanced to support the multi-dialog concept by pro
 
 ### Prerequisites
 
-<div class="attn-note">The below tutorial assumes that you have performed the initial steps required in order to work with this API, which can be found <a href="/messaging-window-api-getting-started.html">here</a>.</div>
+{: .attn-note}
+The below tutorial assumes that you have performed the initial steps required in order to work with this API, which can be found [here](/messaging-window-api-getting-started.html).
 
 * Configure the Post Conversation Survey (PCS) and get familiar with it. Please refer to [this guide](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) for more information.
 
@@ -143,7 +144,7 @@ Input the following command:
 
 **Expected Notification**
 
-* In this example, the `changes` array is still empty since there are still no conversations  
+* In this example, the `changes` array is still empty since there are still no conversations
 
 ```json
 {
@@ -486,7 +487,8 @@ As we said, we do not actually close the Conversation. We only close the Main Di
 {"kind":"req","id":"2","type":"cm.UpdateConversationField","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"DialogChange","type":"UPDATE","dialog":{"dialogId":"__YOUR_CONVERSATION_ID__","state":"CLOSE","closedCause":"Closed by consumer"}}}}
 ```
 
-<div class="attn-note">In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.</div>
+{: .attn-note}
+In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.
 
 Important fields:
 

@@ -1,6 +1,5 @@
 ---
 pagename: Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -207,10 +206,10 @@ Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots
 
     * **Agent Skill ID**: Mandatory; without this, the transfer won’t work. Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
-        When the transfer is attempted, the Agent Skill ID is evaluated; if it isn't numeric, the fallback message is sent to the user. 
-        
+        When the transfer is attempted, the Agent Skill ID is evaluated; if it isn't numeric, the fallback message is sent to the user.
+
         If the value is numeric and the bot responds, the conversation is added to the queue for the skill specified here. The conversation is then routed according to Conversational Cloud’s [Transfer to agent](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html/) rules.
-        
+
         If the value is numeric, but the bot doesn't respond for more than 3 minutes (e.g., the chat server becomes overloaded and drops the message), an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
 
     * **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
@@ -393,7 +392,7 @@ No, this can’t be done. If you’d like to do this, the Dynamic Routing intera
 
 **For Apple Messages for Business only.**
 
-If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. 
+If your business uses Apple’s Messages for Business service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay.
 
 The interaction has been developed per Apple's Apple Pay [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#apple-pay-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 

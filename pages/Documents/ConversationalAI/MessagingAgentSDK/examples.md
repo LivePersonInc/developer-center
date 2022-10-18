@@ -1,6 +1,5 @@
 ---
 pagename: Examples
-Keywords:
 sitesection: Documents
 categoryname: Conversational AI
 documentname: Messaging Agent SDK
@@ -38,12 +37,12 @@ To run the [greeting bot example](https://github.com/LivePersonInc/node-agent-sd
        ```
     - Windows Shell
        ```sh
-       set LP_ACCOUNT=1234567 
-       set LP_USER=BotUserName 
-       set LP_PASS=b0tpa55word 
+       set LP_ACCOUNT=1234567
+       set LP_USER=BotUserName
+       set LP_PASS=b0tpa55word
        node examples/greeting-bot/greeting-bot.js
        ```
-   
+
 
 ### Agent Bot
 
@@ -69,9 +68,9 @@ To run the [agent bot example](https://github.com/LivePersonInc/node-agent-sdk/t
         ```
     - Windows Shell
        ```sh
-       set LP_ACCOUNT=1234567 
-       set LP_USER=BotUserName 
-       set LP_PASS=b0tpa55word 
+       set LP_ACCOUNT=1234567
+       set LP_USER=BotUserName
+       set LP_PASS=b0tpa55word
        node examples/agent-bot/main.js
        ```
 
@@ -103,10 +102,10 @@ To run the [survey bot example](https://github.com/LivePersonInc/node-agent-sdk/
         ```
     - Windows Shell
         ```sh
-       set APP_INST=1234-3454-34657 
-       set LP_ACCOUNT=1234567 
-       set LP_USER=BotUserName 
-       set LP_PASSWORD=b0tpa55word 
+       set APP_INST=1234-3454-34657
+       set LP_ACCOUNT=1234567
+       set LP_USER=BotUserName
+       set LP_PASSWORD=b0tpa55word
        node examples/survey-bot/main.js
         ```
 
@@ -129,9 +128,9 @@ Pre-requisites:
 
 - A LivePerson Account
     * Account should have the ac-feature `Messaging.Transfer_To_Agent` enabled.
-- A user with Agent permissions. These permissions also need to be edited. To edit the agent permission: 
+- A user with Agent permissions. These permissions also need to be edited. To edit the agent permission:
     * Login to your account using administrator/agent manager permissions.
-    * Navigate to the users tab. 
+    * Navigate to the users tab.
     * Click the __Profiles__ option and then click the __Agent__ profile or create a new profile based on the __Agent__ role and there enable the following:
         + `Transfer messaging conversations to a specific agent in 'online' or 'back soon' state`
 
@@ -149,9 +148,9 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        LP_ACCOUNT=1234567 LP_USER=BotUserName LP_PASSWORD=b0tpa55word node examples/transfer2same-agent-bot/main.js
     - Windows Shell
        ```sh
-       set LP_ACCOUNT=1234567 
-       set LP_USER=BotUserName 
-       set LP_PASS=b0tpa55word 
+       set LP_ACCOUNT=1234567
+       set LP_USER=BotUserName
+       set LP_PASS=b0tpa55word
        node examples/transfer2same-agent-bot/main.js
        ```
 
@@ -185,9 +184,9 @@ To run the [agent bot example](https://github.com/LivePersonInc/node-agent-sdk/t
         ```
     - Windows Shell
        ```sh
-       set LP_ACCOUNT=1234567 
-       set LP_USER=BotUserName 
-       set LP_PASS=b0tpa55word 
+       set LP_ACCOUNT=1234567
+       set LP_USER=BotUserName
+       set LP_PASS=b0tpa55word
        node examples/social-bot/main.js
        ```
 

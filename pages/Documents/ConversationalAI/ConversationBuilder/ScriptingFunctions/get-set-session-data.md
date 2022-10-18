@@ -2,7 +2,6 @@
 pagename: Get & Set Session Data
 redirect_from:
     - conversation-builder-scripting-functions-get-set-contextual-data.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -130,8 +129,8 @@ case "help":
     transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
     skillId = botContext.getEnvVariable('help');
     skillName = intent;
-    break;  
-}      
+    break;
+}
 ```
 
 ### Get bot ID
@@ -455,7 +454,7 @@ This method is commonly used to provide a different experience or messaging to t
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* — The hours classified by type <br><br> *zoneIdStr (String)* — The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
+| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* — The hours classified by type <br><br> *zoneIdStr (String)* — The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” |
 
 #### Example
 

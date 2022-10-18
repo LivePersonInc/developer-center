@@ -1,7 +1,7 @@
 ---
 pagename: Analytics Builder Data Metrics
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: analytics-builder-data-metrics.html
 indicator: both
 redirect_from:

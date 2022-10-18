@@ -2,15 +2,12 @@
 pagename: onEngagement
 redirect_from:
   - consumer-experience-javascript-chat-onengagement.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 200
 permalink: javascript-chat-sdk-events-onengagement.html
-
 indicator: chat
 ---
 
@@ -33,7 +30,7 @@ indicator: chat
 | engagementDetails.skillName          | string                                                                                        | Optional when the status is 'Available’                             |                                                                     |
 | pageId                               | Page identification Id for sending event on the current engagement                            | string                                                              | Mandatory (waiting for client side to fix)                          |
 | sessionId                            | The visit session ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     |
-| visitorId                            | The visit visitor ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     | 
+| visitorId                            | The visit visitor ID. Must be saved in the mobile SDK, for future requests in the same visit. | string                                                              |                                                                     |
 
 **Sample Response**
 
@@ -52,7 +49,7 @@ indicator: chat
         "engagementRevision": 44,
         "validForSeconds": 900,
         "skillId": 23,
-        "skillName":"TestSkill" 
+        "skillName":"TestSkill"
        }
     }
 ```
@@ -65,4 +62,3 @@ indicator: chat
     "pageId": "4743822558"
 }
 ```
-    

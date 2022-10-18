@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -22,7 +21,7 @@ Each event has a specific input (payload) that the triggering system will provid
 
 #### Automatic Messages
 
- Automatic Messages (also known as System Messages) allow brands to send custom messages during conversations based on Conversational Cloud Events (e.g. conversation started, agent joined the conversation). 
+ Automatic Messages (also known as System Messages) allow brands to send custom messages during conversations based on Conversational Cloud Events (e.g. conversation started, agent joined the conversation).
 Only productive functions will react to these events. Head to the [Automatic Messages chapter](liveperson-functions-event-sources-automatic-messages.html) to learn more.
 
 |Event Name|Event Description|Event Source|Function Limit| Supports Skills|

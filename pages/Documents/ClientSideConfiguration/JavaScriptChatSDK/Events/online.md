@@ -2,15 +2,12 @@
 pagename: onLine
 redirect_from:
   - consumer-experience-javascript-chat-online.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 260
 permalink: javascript-chat-sdk-events-online.html
-
 indicator: chat
 ---
 
@@ -77,5 +74,5 @@ Triggered any time a line is added to the chat. The data here can be a single li
             "@id": "18"
         }
     ]
-}  
+}
 ```

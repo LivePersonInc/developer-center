@@ -3,7 +3,6 @@ pagename: Using Intents with KBs
 redirect_from:
     - conversation-builder-knowledge-base.html
     - knowledge-base-using-intents-with-kbs.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

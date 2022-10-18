@@ -6,7 +6,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 30
 permalink: messaging-operations-api-methods-messaging-queue-health-by-group.html
-
 indicator: messaging
 ---
 
@@ -106,7 +105,8 @@ Request by skillIds=12,13 and allocatedAgentGroupIds=22,33
 
 **Elements in the Response**
 
-<div class="attn-note">All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+{: .attn-alert}
+All metrics under the hierarchy of 'skillGroupMetrics' represent the most recent values for each skill ang agent group. **In case there is no relevant data on metrics the default value is -1**.
 
 | Name |  Description | Type / Value |
 | :------ | :------------- | :------------- |

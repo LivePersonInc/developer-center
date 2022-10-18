@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 120
 permalink: server-chat-api-methods-retrieve-visitor-s-name.html
-
 indicator: chat
 ---
 

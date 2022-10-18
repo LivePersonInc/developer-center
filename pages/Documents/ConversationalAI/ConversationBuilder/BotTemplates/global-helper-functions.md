@@ -1,7 +1,5 @@
 ---
 pagename: Global Helper Functions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -149,7 +147,7 @@ function logEventAdv(user_message, event_name, event_details){
 [goNext](conversation-builder-scripting-functions-manage-conversation-flow.html#set-trigger-next-message): Navigates to a specific interaction.
 
 ```javascript
-function goNext(arg){botContext.setTriggerNextMessage(arg);} 
+function goNext(arg){botContext.setTriggerNextMessage(arg);}
 ```
 
 [setDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value): Use in pre-process code to set a delay to the interaction in milliseconds.
@@ -194,7 +192,7 @@ function previous(){
  if(e.length === 1){
    debugMsg('You are already back to the start');
  }
- e.pop(); 
+ e.pop();
  setBotVar('intArr', e);
  goNext(e.pop());
 }
@@ -251,7 +249,7 @@ This bot template contains a [dialog template](conversation-builder-dialog-templ
 If you import the dialog template into a bot, do so **before** you begin building out the bot. If you have existing global functions, there could be naming conflicts; so please double check after import.
 
 #### Global Helper Functions
-Contains all global helper functions and variables without the demonstration dialogs. 
+Contains all global helper functions and variables without the demonstration dialogs.
 
 **Included dialogs:**
 * 00 — Global Functions README

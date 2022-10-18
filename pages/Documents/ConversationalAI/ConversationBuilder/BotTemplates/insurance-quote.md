@@ -2,7 +2,6 @@
 pagename: Insurance Quote
 redirect_from:
     - conversation-builder-templates-insurance-quote.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -56,7 +55,7 @@ Each interaction requiring user input is performing some level of validation on 
 For each dialog of questions for the user, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```
- // Max count of fail user inputs 
+ // Max count of fail user inputs
   setVariable('maxAttempts', 2);
   setVariable('autoAttempts', 0);
   setVariable('lifeAttempts', 0);

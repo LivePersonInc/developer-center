@@ -3,14 +3,12 @@ pagename: Push Proxy
 redirect_from:
   - push-service-configuration.html
   - configuration-of-push-proxy.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 subfoldername: Configuration
 order: 40
 permalink: push-notification-service-configuration-push-proxy.html
-
 indicator: messaging
 ---
 
@@ -55,7 +53,7 @@ In order to enable the push proxy feature, you will require the following data a
 
   * Value: max length of 300 characters (allows alphanumeric and special characters: -, _, $, &, @,.,#,*)
 
---- 
+---
 
 This information can be added to the Mobile app management section under Data Sources
 

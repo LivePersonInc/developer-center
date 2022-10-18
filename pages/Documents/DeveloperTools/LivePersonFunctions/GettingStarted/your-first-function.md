@@ -1,6 +1,5 @@
 ---
 pagename: Your First Function
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

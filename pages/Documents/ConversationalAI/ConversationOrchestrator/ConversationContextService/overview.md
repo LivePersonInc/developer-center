@@ -4,7 +4,6 @@ redirect_from:
   - maven-context-warehouse-overview.html
   - maven-ai-context-warehouse-overview.html
   - conversation-orchestrator-context-warehouse-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -25,13 +24,13 @@ CCS provides a system to hierarchically organize data using *key-value pairs*. A
 { Namespace
 
   <Group-related attributes, e.g., customer info>
-  
+
   { Session ID
-  
+
   <Identifier to group KVPs, e.g., a session ID>
-  
+
     { Key-Value Pairs
-    
+
     <Attributes, e.g., customer name, email>
 ```
 

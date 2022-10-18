@@ -1,6 +1,5 @@
 ---
 pagename: Clearing the Recommendations Cache
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist

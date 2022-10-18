@@ -1,7 +1,5 @@
 ---
 pagename: Get Integration Data
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -37,15 +35,15 @@ var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
 if(isApiExecutionSuccessful){
   var apiStatusCode = botContext.getApiStatusCode();
   botContext.printDebugMessage("API Execution Successful with Status Code: "+apiStatusCode);
- 
+
   if(apiStatusCode == "200"|apiStatusCode == "201"|apiStatusCode == "203"){
     // request was successful
     botContext.printDebugMessage("All is well.");
   }else{
     // request was not successful
     botContext.printDebugMessage("Something went wrong!");
-  }  
-     
+  }
+
 }
 ```
 

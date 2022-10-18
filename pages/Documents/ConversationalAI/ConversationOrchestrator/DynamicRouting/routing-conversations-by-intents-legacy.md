@@ -1,6 +1,5 @@
 ---
 pagename: Routing Conversations by Intents - Legacy
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -41,7 +40,7 @@ Then, save that intent name to the Conversation Context Services conversation sc
 
 ```javascript
 var intentTitle = botContext.getDialogStarterIntent();
- 
+
 var intentNamespace = botContext.getBotVariable('intentRoutingNamespace');
 botContext.setContextDataForConversation(intentNamespace, 'intent', intentTitle);
 ```

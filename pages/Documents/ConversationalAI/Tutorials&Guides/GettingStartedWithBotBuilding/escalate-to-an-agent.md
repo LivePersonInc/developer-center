@@ -1,7 +1,5 @@
 ---
 pagename: Escalate to an Agent
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -25,12 +23,12 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 ### Step 15: Create a Human skill
 
 1. Return to the **User Management** section of the Conversational Cloud.
-2. Select the **Skills** tab from the menu bar, and click **+ Add skill** in the lower-left corner. 
+2. Select the **Skills** tab from the menu bar, and click **+ Add skill** in the lower-left corner.
 3. Complete the **Add skill** form with the following:
 
     * **Name**: Human
     * **Description**: Transfer to a human agent
-	
+
 	Leave the remaining fields as default, and click **Save**.
 
 4. After saving, you will be back in the **Skills** section of **User Management**. Select the skill you’ve just created, as you need to reference the Skill ID.

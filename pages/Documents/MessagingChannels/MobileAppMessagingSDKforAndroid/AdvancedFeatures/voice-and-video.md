@@ -1,6 +1,5 @@
 ---
 pagename: Voice and Video
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -26,7 +25,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 
 ### Features and permissions
 
-Below is the list of features and permissions elements added in the manifest file to support this feature. 
+Below is the list of features and permissions elements added in the manifest file to support this feature.
 
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
@@ -171,4 +170,3 @@ Defines background color for Voice & Video Bubble
 
 - **Type:** color
 - **Default value:** light gray
-

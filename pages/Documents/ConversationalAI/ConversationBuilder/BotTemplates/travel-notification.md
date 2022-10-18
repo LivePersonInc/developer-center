@@ -2,7 +2,6 @@
 pagename: Travel Notification
 redirect_from:
     - conversation-builder-templates-travel-notification.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -42,7 +41,7 @@ Review each of the dialogs, starting with Welcome, and customize the verbiage us
 If you want to remove any capture interactions, be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog.
 
 #### Travel Info dialog
-Travel dates, destinations, and the approved card steps of the Travel Info dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if preferred. 
+Travel dates, destinations, and the approved card steps of the Travel Info dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if preferred.
 
 Additionally, dates are validated to ensure they are appropriate (e.g., dates cannot occur in the past, return date on or after depart date). These can be customized with JavaScript as needed in the interaction's Process User Response section.
 
@@ -51,7 +50,7 @@ Additionally, dates are validated to ensure they are appropriate (e.g., dates ca
 For the date captures, we allow a certain number of attempts before we escalate to an agent. In addition, we apply the same logic to the information confirmation interactions. These can be configured to your liking in the Global Functions.
 
 ```
- // Max count of fail user inputs 
+ // Max count of fail user inputs
   setVariable('maxAttempts', 2);
   setVariable('departAttempts', 0);
   setVariable('returnAttempts', 0);
@@ -124,8 +123,8 @@ Modify the following values in Global Functions:
 
 | Variable Name | Description |
 | --- | --- |
-| escalationBotMessage | What the bot should say prior to hand off | 
-| botAgentSkillId | The skill ID to transfer to | 
+| escalationBotMessage | What the bot should say prior to hand off |
+| botAgentSkillId | The skill ID to transfer to |
 | botAgentSkillName | The skill name to transfer to |
 
 ### Dialog templates

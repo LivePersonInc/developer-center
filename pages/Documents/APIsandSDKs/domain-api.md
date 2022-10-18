@@ -6,9 +6,8 @@ redirect_from:
     - essential-resources-domain-api.html
     - common-resources-domain-api.html
     - api-guidelines-domain-api.html
-Keywords:
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: domain-api.html
 root-link: true
 indicator:

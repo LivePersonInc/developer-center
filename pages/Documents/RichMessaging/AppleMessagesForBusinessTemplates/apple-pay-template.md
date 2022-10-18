@@ -3,7 +3,6 @@ pagename: Apple Pay Template
 redirect_from:
   - payment-apple-business-chat-template.html
   - payment-apple-business-chat-apple-pay.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -366,7 +365,7 @@ The Apple Pay Signature Flow is an extra layer of validation for Apple Pay trans
 
 The signature flow is optional, and provides an extra layer of security before sending the payment request to Apple.
 
-If you would like to opt in for this additional verification, internal account configurations are required. Please contact your LivePerson representative for help and further information on setting up this additional flow. 
+If you would like to opt in for this additional verification, internal account configurations are required. Please contact your LivePerson representative for help and further information on setting up this additional flow.
 
 **How to generate the signed payload to include in the Apple Pay payload for verification:**
 
@@ -393,7 +392,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 ##### Successful payment response example
 
 ```json
-{  
+{
   "type":"ConnectorPaymentResponse",
   "status":true,
   "requestIdentifier":"b0bbb054-6f71-4de1-831a-9f93ddc93968"
@@ -403,7 +402,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 ##### Failed payment response example
 
 ```json
-{  
+{
   "type":"ConnectorPaymentResponse",
   "status":false,
   "requestIdentifier":"16238516-02a2-4b19-bd0b-d98c144f3b3f"
@@ -443,9 +442,9 @@ Apple Pay response metadata is contextual information about the consumer payment
 #### Consumer received and reply bubble behavior
 
 **If using received bubble with style "icon"**:
-  * Received bubble experience - the image in the received bubble will only be presented in the push preview message. Once you tap to view the bubble in the conversation thread, the image will not be presented (only the default Apple Pay logo) and the size will be set to "icon" as the  default view.  
+  * Received bubble experience - the image in the received bubble will only be presented in the push preview message. Once you tap to view the bubble in the conversation thread, the image will not be presented (only the default Apple Pay logo) and the size will be set to "icon" as the  default view.
 
-  * Reply bubble experience - image in the reply bubble will not be presented, but only the payment details in text. The size of the reply bubble will be defaulted to "icon".  
+  * Reply bubble experience - image in the reply bubble will not be presented, but only the payment details in text. The size of the reply bubble will be defaulted to "icon".
 
 **If using received bubble with style "small"**:
 
@@ -459,7 +458,8 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="attn-note">The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+{: .attn-note}
+The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.
 
 ### Limitations
 

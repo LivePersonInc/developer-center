@@ -10,7 +10,7 @@ permalink: documentname-subfoldername-pagename.html
 indicator: accepts "messaging" "chat" or "both"
 ---
 
-Optionally place any huge response payloads here so you don't have to repeat yourself. 
+Optionally place any huge response payloads here so you don't have to repeat yourself.
 
 ### Response Body
 

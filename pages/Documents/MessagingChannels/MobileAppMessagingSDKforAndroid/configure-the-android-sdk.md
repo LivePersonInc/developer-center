@@ -1,6 +1,5 @@
 ---
 pagename: Configure the Android SDK
-
 redirect_from:
   - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
   - android-configuring-changing-fonts.html
@@ -9,8 +8,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
   - android-configuring-sdk.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -18,13 +15,13 @@ permalink: mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html
 indicator: messaging
 ---
 
-You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 
+You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.
 
 ### Android Automatic Restore
 
 Since Android 6.0 (API 23), Android has offered the Auto Backup and restore for Apps feature as a way for developers to quickly add backup functionality to their apps. If enabled on an App, when reinstalling the application, all stored data gets restored to the device. For more details, see [Auto Backup for Apps](https://developer.android.com/guide/topics/data/autobackup.html) for more info.
 
-Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app. 
+Currently, the Mobile App Messaging SDK for Android does not support Automatic Restore.  If the app has enabled Automatic Backup, you must disable it on the host app.
 
 **Note:** If you have Automatic Backup enabled on the manifest of the host app, you must add the following:
 
@@ -65,15 +62,15 @@ You can customize the look and feel of the conversation screen with your brandin
    {: .attn-note}
    If a clearer view of which attribute corresponds with a design element is needed, utilize the [Attributes Design Sheet](android-attributes-designsheet.html).
 
-3. Add resources to your project. The SDK utilizes several resources as part of its GUI. 
-   
+3. Add resources to your project. The SDK utilizes several resources as part of its GUI.
+
    - [**lp_messaging_ui_brand_logo**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_brand_logo) - Default brand avatar on the avatar next to brand bubble (the first brand message) and on agent avatar appearing on the action bar before an agent is assigned.
 
       If you want to define the background color for this avatar, override `brand_logo_background_color` resource ID. Only relevant for bubble brand’s avatar.
 
       Background color of the agent avatar on action bar is `agent_avatar_background_color`.
 
-  
+
    - [**lp_messaging_ui_ic_agent_avatar**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_ic_agent_avatar) - Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.
 
       If you want to define the background color for this avatar, override `agent_avatar_background_color` resource ID.
@@ -96,11 +93,11 @@ You can customize the look and feel of the conversation screen with your brandin
    </style>
    ```
 
-2. Change the font of the elements in the conversation view with two separate settings: 
+2. Change the font of the elements in the conversation view with two separate settings:
 
-   - **custom_font_name_conversation_feed** - Font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty. 
+   - **custom_font_name_conversation_feed** - Font name (standard Android font name, such as *san-serif-thin*) for all conversation feed’s element. By default, the value is empty.
 
-   - **custom_font_name_non_conversation_feed** - Font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text. 
+   - **custom_font_name_non_conversation_feed** - Font name (custom installed TTF font, such as *customFont.ttf*), for all elements that are not in the conversation feed. For example, the font on the Enter Message EditText control or toolbar text.
 
      {: .attn-note}
      The custom font file must reside in the **assets** folder of the host app, located as a sibling of the **res** folder. If using a custom font, the above font parameters should be the custom font file name with the TTF extension (**customFont.ttf**).
@@ -243,9 +240,10 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    }));
    ```
 
-2. Create **MonitoringParams**. 
+2. Create **MonitoringParams**.
 
-   <div class="attn-alert">The entry points and engagement attributes used here are dummies.</div>
+{: .attn-alert}
+The entry points and engagement attributes used here are dummies.
 
    ```java
     // Create Entry Points JSON
@@ -255,7 +253,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
     } catch (JSONException e) {
         Log.e(TAG, "Error Creating Entry Points :: " + e);
     }
-    
+
     // Create Engagement Attributes
     JSONArray engagementAttributes = null;
     try {
@@ -264,7 +262,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
     } catch (JSONException e) {
         Log.e(TAG, "Error Creating Engagement Attr :: " + e);
     }
-    
+
     // Create Monitoring Params
     MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttributes);
    ```
@@ -324,7 +322,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    params.setReadOnlyMode(false);
    ```
 
-5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
+5. **Start a new Conversation.**  If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view.
 
    Choose an authentication method:
 
@@ -350,7 +348,7 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
       **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button. 
+   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button.
 
       The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
@@ -403,9 +401,9 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
           toolbar.setTitle("survey submitted");
         }
       }
-      ```  
+      ```
 
-6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection. 
+6. **Shutdown the SDK and remove the footprint of the user session from local memory.** After shutdown, the SDK is unavailable until re-initiated. Message history is saved locally on the device and synced with the server upon reconnection.
 
    ```java
    public static void shutDown(final ShutDownLivePersonCallback shutdownCallback)
@@ -420,9 +418,9 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    For more details, see the [logOut](android-logout.html) method.
 
 ### LivePerson events
-Add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback. 
+Add a class to handle LivePerson basic messaging events via BroadcastReceiver and respond via callback.
 
-1. Create a class named **IntentsHandler**.  
+1. Create a class named **IntentsHandler**.
 
    **Tip:** You can use any name.
 
@@ -449,11 +447,11 @@ Add a class to handle LivePerson basic messaging events via BroadcastReceiver an
     }
     ```
 
-   In this example, you listen to all events via the **intentfilter**. 
-   
+   In this example, you listen to all events via the **intentfilter**.
+
    **Tip:** You can create your own specific intent filter.
 
-3. Create a function named `createLivePersonReceiver` to handle the events.  
+3. Create a function named `createLivePersonReceiver` to handle the events.
 
    **Note:** Here we provide you with a wide example of handling most events. For more information, see [LivePerson events](android-callbacks-index.html).
 
@@ -567,7 +565,7 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
 ```
 
 #### initActivityConversation
-You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section. 
+You initialize the SDK with the brandID and appID, but only if you're not already in a `valid` state, which was checked in a previous section.
 
 **Tip:** If the initialization succeeds, the `openActivity` method is called.
 
@@ -601,7 +599,7 @@ private void  initActivityConversation() {
 
 #### openActivity function
 
-Here, you use the LivePerson SDK’s `showConversation` method. 
+Here, you use the LivePerson SDK’s `showConversation` method.
 
 **Tip:** In the example below, we do not use an authentication parameter.  If you need to use an authentication paramenter, use `setPhoneNumber`.
 
@@ -617,7 +615,7 @@ LivePerson.setUserProfile(consumerProfile);
 }
 ```
 
-### Proguard 
+### Proguard
 
 The SDK handles its own obfuscation and all its dependencies according to ProGuard rules. When enabled in the gradle file of your application, ProGuard activates and runs automatically.
 
@@ -666,4 +664,3 @@ When using SDEs (Authenticated Chat), SDEs have priority and will override the s
 ```java
 public static void checkAgentID(final ICallback<AgentData, Exception> callback)
 ```
-

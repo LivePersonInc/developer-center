@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started - Legacy
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -388,13 +387,13 @@ Code:
 function __initConversation() {
   // Define the Namespace you will access from Orchestrator
   var mavenNamespace = "myNamespace";
-  
+
   // Define the Fallback/Default skill
   // This will be the skill name, SkillId and transfer message used by the bot if no policies are returned by Conversation Orchestrator
   var fallbackSkillName = "**Your_Fallback_Skill_Name***";
   var fallbackSkillId = "***Your_Fallback_Skill_ID***";
   var fallbackMessage = "BLANK_MESSAGE";
-  
+
   // Set our variables to the botContext so we can access them later
   botContext.setBotVariable("accountId", botContext.getLPAccountId(), true, false);
   botContext.setBotVariable("mavenNamespace", mavenNamespace, true, false);
@@ -415,7 +414,7 @@ Code:
 ```javascript
 function setTransferParameters(agentId, skillId, skillName, transferType) {
   // This function recieves our Transfer Parameters and sets them if available.
-  // If they are not available the Transfer Parameters will be set to 
+  // If they are not available the Transfer Parameters will be set to
   // the Fallback/Default Skill Defined in __initConversation()
   var fallbackSkillId = botContext.getBotVariable("fallbackSkillId");
   var fallbackSkillName = botContext.getBotVariable("fallbackSkillName");
@@ -705,7 +704,7 @@ The Conversation Context Service is useful for storing any context information g
 
 ```javascript
 const contextUrl = 'https://z1.context.liveperson.net/v1/account/55884191/namespace1/' + conversationId + '/properties';
- 
+
 var data = {
    'key1': 'val1',
    'key2': 'val2',
@@ -713,8 +712,8 @@ var data = {
 };
 
 axios.patch(
-   contextUrl, 
-   data, 
+   contextUrl,
+   data,
    { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
 );
 ```
@@ -725,17 +724,17 @@ Now that you have the conversation ID, use it to call the [Next Actions API](con
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
- 
+
 axios.get(
-   askMavenUrl, 
+   askMavenUrl,
    { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
 ).then(function(response){
    const rule = response.rule;
    if (rule && rule.actions) {
       // You can inspect the actions and do something according to the actions
-      //   e.g. transfer to an agent or skill, or send back a message.  
+      //   e.g. transfer to an agent or skill, or send back a message.
       //        Here we just log the actions to the console.
-      console.log(rule.actions); 
+      console.log(rule.actions);
    }
 });
 ```

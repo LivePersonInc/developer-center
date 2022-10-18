@@ -1,8 +1,8 @@
 ---
 pagename: Introduction
-redirect_from: 
+redirect_from:
   - structured-content-whatsapp-business-messages-templates-introduction.html
-Keywords: structured content rich messaging whatsapp business messages
+keywords: structured content rich messaging whatsapp business messages
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: WhatsApp Business Messages Templates
@@ -10,7 +10,7 @@ permalink: whatsapp-business-messages-templates-introduction.html
 indicator: messaging
 ---
 
-### Overview 
+### Overview
 
 WhatsApp Business messaging enables customers to contact a brand through WhatsApp. It provides enhanced messaging capabilities like Interactive Messages.
 

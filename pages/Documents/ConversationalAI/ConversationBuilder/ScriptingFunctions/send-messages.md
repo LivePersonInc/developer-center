@@ -2,7 +2,6 @@
 pagename: Send Messages
 redirect_from:
     - conversation-builder-scripting-functions-sending-messages.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

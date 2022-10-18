@@ -1,6 +1,6 @@
 # LiveEngage Code Examples
 
-This repository contains code samples for using the Web App SDK ([Agent Workspace Widget SDK](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/SDK+Guides/Agent+Workspace+Widget+SDK.pdf)), setting up a mobile chat slideout menu, connecting to the different APIs that are available, and an example of implementing the visitor side OAuth SSO in NodeJS. 
+This repository contains code samples for using the Web App SDK ([Agent Workspace Widget SDK](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/SDK+Guides/Agent+Workspace+Widget+SDK.pdf)), setting up a mobile chat slideout menu, connecting to the different APIs that are available, and an example of implementing the visitor side OAuth SSO in NodeJS.
 
 Please see each sub folder for the appropriate examples.
 

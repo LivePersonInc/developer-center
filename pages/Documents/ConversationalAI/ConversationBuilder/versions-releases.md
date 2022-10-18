@@ -1,10 +1,9 @@
 ---
 pagename: Versions & Releases
-redirect_from: 
+redirect_from:
     - conversation-builder-getting-started-getting-started-part-4.html
     - conversation-builder-best-practices-versions-releases-change-management.html
     - conversation-builder-best-practices-versions-releases.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -12,7 +11,7 @@ permalink: conversation-builder-versions-releases.html
 indicator: both
 ---
 
-Throughout the bot creation lifecycle, it's important to follow good change management practices. Conversation Builder has two features that support this: 
+Throughout the bot creation lifecycle, it's important to follow good change management practices. Conversation Builder has two features that support this:
 
 * **Versions** let you save your progress at crucial moments during bot development. When you save a new version, the system takes a snapshot of the bot at that moment and saves it. You can then recover the bot to the state of a previous version. This is helpful if you ever make mistakes or break something and need to go back.
 
@@ -39,7 +38,7 @@ Any time you might be making large changes to the functionality of a bot, there 
     * **Description**: Briefly explain what's changed in the version. While this info is optional, it can be helpful when debugging later.
 5. Click **Save**.
 
-### Restore a previous version 
+### Restore a previous version
 
 {: .attn-note}
 A "restore" completely overwrites your existing bot with the selected, previous version, so use caution when restoring versions.
@@ -79,7 +78,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     This creates a release "snapshot." To complete the push, the new bot must accept the release.
 
-7. Click the link to the new bot that's provided. 
+7. Click the link to the new bot that's provided.
 
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases2.png" alt="The link to the new bot">
 

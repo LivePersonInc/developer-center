@@ -3,15 +3,11 @@ pagename: Reconnect
 redirect_from:
   - consumer-experience-ios-sdk-reconnectdeprecated.html
   - consumer-experience-ios-sdk-reconnect.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 45
 permalink: mobile-app-messaging-sdk-for-ios-methods-reconnect.html
-
 indicator: messaging
 ---
 *This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](consumer-experience-ios-sdk-reconnect.html) instead*

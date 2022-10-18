@@ -3,7 +3,6 @@ pagename: Manage the Conversation Context Service
 redirect_from:
     - conversation-builder-scripting-functions-context-session-store-wrapper.html
     - conversation-builder-scripting-functions-manage-the-context-session-store.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -56,7 +55,7 @@ The `isContextApiEnabled` method checks whether the Context API is enabled.
 | --- | --- | --- |
 | `isContextApiEnabled()` | none | Boolean |
 
-#### Example 
+#### Example
 
 ```javascript
 var success = botContext.isContextApiEnabled();
@@ -160,7 +159,7 @@ Both methods return a java.util.HashMap. To retrieve a specific property, use th
 ```
 function displayAllVars(map) {
   var stringOfMap = map.toString();
- 
+
   for each (var i in map.keySet()) {
 
        botContext.printDebugMessage('Key → ' + i);

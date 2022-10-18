@@ -1,7 +1,5 @@
 ---
 pagename: Knowledge Bases
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -34,7 +32,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
     Under **Intent Association**, select **Domain Intents** and create a new NLU V1 domain called **Retail FAQ**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png" alt=""> 
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png" alt="">
 
     Click **Save** in the lower-right corner.
 
@@ -108,7 +106,7 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_integration_add.png" alt="">
 
 3. Click **Save** in the lower right hand corner, and on success, navigate to the Fallback dialog.
-4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration. 
+4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_1.png" alt="">
 
@@ -124,7 +122,7 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
     * Rule name: KB Success
     * **+ Add Condition**: **API Result** matches **Success**
     * **And Go To**: Go To: Next Interaction
-	
+
 	Click **Save**.
 
 7. Create a second rule to account for a failed search; this will point to the **fallback_starter** as the next action. Click **+ Custom Rule**, and complete with the following:

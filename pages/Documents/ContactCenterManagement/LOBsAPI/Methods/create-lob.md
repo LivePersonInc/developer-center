@@ -2,15 +2,12 @@
 pagename: Create LOB
 redirect_from:
   - administration-create-lob.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 30
 permalink: lobs-api-methods-create-lob.html
-
 indicator: both
 ---
 

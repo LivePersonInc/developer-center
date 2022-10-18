@@ -3,15 +3,11 @@ pagename: showConversation (full authentication support + view modes)
 redirect_from:
   - android-showconversationfull.html
   - android-showconversation.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 25
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(full-authentication-support-+-view-modes).html
-
 indicator: messaging
 ---
 
@@ -37,7 +33,7 @@ _Optional_ — when using this method, you can also set a special redirect URL w
 if you want to connect in an *unauthenticated* way, you have two options: Set up Unauth flow messaging, or use Signup flow, by passing an LPAuthenticationParams of type UN_AUTH or SIGN_UP, respectively.
 
 {: .attn-note}
-Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
+Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections.
 
 **ConversationViewParams:**
 

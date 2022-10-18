@@ -1,6 +1,5 @@
 ---
 pagename: Provisioning
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -8,7 +7,7 @@ permalink: liveperson-functions-provisioning.html
 indicator: both
 ---
 
-You must perform your first sign-in to the LivePerson Functions platform with a Conversational Cloud Admin account. During your initial agreement to the terms of use, we automatically provision your LivePerson Functions environment. 
+You must perform your first sign-in to the LivePerson Functions platform with a Conversational Cloud Admin account. During your initial agreement to the terms of use, we automatically provision your LivePerson Functions environment.
 
 <img src="img/functions/functions_ui_terms_of_use.png" alt="Functions: Terms of Use" style="width:100%;"/>
 
@@ -41,7 +40,7 @@ To ease functions development, Toolbelt clients for internal APIs use those secr
   <tr>
     <td style="text-align: center; vertical-align: middle;">Data Access API</td>
     <td style="text-align: center; vertical-align: middle;">Read</td>
-  </tr> 
+  </tr>
   <tr>
     <td style="text-align: center; vertical-align: middle;">Engagement History API</td>
     <td style="text-align: center; vertical-align: middle;">Read</td>
@@ -53,7 +52,7 @@ To ease functions development, Toolbelt clients for internal APIs use those secr
   <tr>
     <td style="text-align: center; vertical-align: middle;">Personal Data Deletion API</td>
     <td style="text-align: center; vertical-align: middle;">Read</td>
-  </tr> 
+  </tr>
   <tr>
     <td style="text-align: center; vertical-align: middle;">Users API</td>
     <td style="text-align: center; vertical-align: middle;">Read</td>
@@ -126,7 +125,7 @@ To ease functions development, Toolbelt clients for internal APIs use those secr
   <tr>
     <td style="text-align: center; vertical-align: middle;">Functions API</td>
     <td style="text-align: center; vertical-align: middle;">Invoke</td>
-  </tr> 
+  </tr>
   </tbody>
 </table>
 
@@ -147,7 +146,7 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
     <td>faaSGW</td>
     <td style="text-align: center; vertical-align: middle;">LivePerson Functions Gateway</td>
     <td style="text-align: center; vertical-align: middle;">Required for Orchestrator FN client in order to invoke other functions.</td>
-  </tr> 
+  </tr>
   <tr>
     <td>msgHist</td>
     <td style="text-align: center; vertical-align: middle;">Consumer Messaging History API</td>
@@ -162,7 +161,7 @@ Clients use the domains below to call internal LivePerson APIs from the [Toolbel
     <td>accountConfigReadOnly</td>
     <td style="text-align: center; vertical-align: middle;">Agent Groups API, Skills API, Users API, LOBs API, Profiles API, Automatic Messages API, Unified Automatic Messages API, Predefined Content API, Predefined Categories API, Agent Status Reason API, Special Occasions API, Workdays API, Audit Trail API</td>
     <td style="text-align: center; vertical-align: middle;">(Only to retrieve data) Includes a set of different APIs for you LE account management. E.g Predefined Content, Automatic Messages, Workdays… </td>
-  </tr> 
+  </tr>
   <tr>
     <td>accountConfigReadWrite</td>
     <td style="text-align: center; vertical-align: middle;">Agent Groups API, Skills API, Users API, LOBs API, Profiles API, Automatic Messages API, Unified Automatic Messages API, Predefined Content API, Predefined Categories API, Agent Status Reason API, Special Occasions API, Workdays API, Audit Trail API</td>

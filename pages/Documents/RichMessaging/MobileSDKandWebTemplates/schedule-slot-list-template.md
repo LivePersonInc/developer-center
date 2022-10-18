@@ -1,7 +1,5 @@
 ---
 pagename: Schedule Slot List Template
-redirect_from:
-Keywords: 
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

@@ -2,15 +2,10 @@
 pagename: Deploying Bots on Messaging
 redirect_from:
   - products-bots-messaging.html
-
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 7
-
 permalink: customer-facing-bots-deploying-bots-on-messaging.html
-
 indicator:
 ---
 
@@ -22,9 +17,9 @@ indicator:
 
 	* Bot should be assigned to a designated bot skill.  This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 
-	* Skill assigned with your bots are also important for escalation purposes, when you have more than one bot in your contact center. For example, if one of your agents decides to escalate to a bot in order to quickly perform a task, he should be able to distinguish between the bots expertise by the skill they are assigned to.   
+	* Skill assigned with your bots are also important for escalation purposes, when you have more than one bot in your contact center. For example, if one of your agents decides to escalate to a bot in order to quickly perform a task, he should be able to distinguish between the bots expertise by the skill they are assigned to.
 
-	* Uploading an avatar for your bot is important when looking to achieve a level of transparency with your consumers. Clarifying to your consumers they are messaging with a bot will create a transparent user experience and eliminate miscommunication.  
+	* Uploading an avatar for your bot is important when looking to achieve a level of transparency with your consumers. Clarifying to your consumers they are messaging with a bot will create a transparent user experience and eliminate miscommunication.
 
 ### Step 2 — Implement the Messaging Agent SDK
 
@@ -78,7 +73,7 @@ Furthermore, you can decide within each entrypoint on different routing rules, f
 
 _Please contact your LivePerson representative to complete this task._
 
-To manage bot escalations, you can teach your bot to escalate to a human skill once consumer types "Agent", provide structured menu with escalation option for In-app and Facebook, or use your AI and NLP service to perform Intent matching).  
+To manage bot escalations, you can teach your bot to escalate to a human skill once consumer types "Agent", provide structured menu with escalation option for In-app and Facebook, or use your AI and NLP service to perform Intent matching).
 
 ### Step 5 — Test your bot
 

@@ -1,7 +1,5 @@
 ---
 pagename: Intents
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -79,7 +77,7 @@ With the "Make Payment" intent configured, let’s return to Conversation Builde
 
 7. Select the domain to associate it with the dialog starter.
 
-    In Assist, the intents within the domain are displayed. 
+    In Assist, the intents within the domain are displayed.
 
 8. Type in a sample user message to use the NLU engine to identify the correct intent.
 
@@ -133,7 +131,7 @@ Now you can begin to build out the Make Payment dialog.
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/intents_rules6.png" alt="The Add Next Action Rule, for adding a rule to handle a No response">
 
     Click **Save**.
-    
+
     The multiple choice question should now look like this:
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules7.png" alt="The multiple choice question with two defined rules for Yes and No">

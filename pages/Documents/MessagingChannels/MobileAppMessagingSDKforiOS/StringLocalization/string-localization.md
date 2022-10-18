@@ -2,7 +2,6 @@
 pagename: String Localization
 redirect_from:
   - consumer-experience-ios-sdk-stringlocalization.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -20,16 +19,16 @@ The example below contains four language folders:
 * **pt.lproj**: Portuguese strings
 * **pt-PT.lproj**: Portuguese (Portugal) strings
 
-You can override the string localization of any supported language in Conversational Cloud. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
+You can override the string localization of any supported language in Conversational Cloud. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.
 
 ### Create and localize a strings file and add languages
 
 1. In your app, go to **New file → Strings file → Create**.
 
-2. Create a file called **LPLocalizable.strings**.  
+2. Create a file called **LPLocalizable.strings**.
 
-3. Add a new key, for example, if you want to override the SDK English string of `send`:  
-   
+3. Add a new key, for example, if you want to override the SDK English string of `send`:
+
    ```swift
    "send" = "<ANY NEW VALUE>";
    ```

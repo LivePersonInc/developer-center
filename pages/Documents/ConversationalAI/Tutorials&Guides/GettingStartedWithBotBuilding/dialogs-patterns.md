@@ -1,7 +1,5 @@
 ---
 pagename: Dialogs & Patterns
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -35,7 +33,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/welcome_dialog.png" alt="Default Welcome dialog">
 
-6. Examine the Welcome dialog, which is displayed by default. 
+6. Examine the Welcome dialog, which is displayed by default.
 
     (Learn about the different parts of the [workspace](conversation-builder-bot-workspace.html) in Conversation Builder.)
 

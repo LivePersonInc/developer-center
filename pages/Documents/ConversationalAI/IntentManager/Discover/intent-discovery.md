@@ -1,7 +1,5 @@
 ---
 pagename: Intent Discovery
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -11,7 +9,7 @@ indicator: both
 ---
 
 ### Step 1: Understand your existing model
-When you begin, first take a look at how the existing model is performing. There are a few key things to note: 
+When you begin, first take a look at how the existing model is performing. There are a few key things to note:
 
 * Coverage
 * Intent names

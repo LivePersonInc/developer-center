@@ -6,7 +6,7 @@
             "$ref": "TextValue.json"
         }, {
             "title": "HostedFile",
-            "$ref": "HostedFile.json"            
+            "$ref": "HostedFile.json"
         }
     ]
 }

@@ -2,7 +2,6 @@
 pagename: Simple Lead Gen
 redirect_from:
     - conversation-builder-templates-simple-lead-gen.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -44,7 +43,7 @@ The name, email and phone number steps of the LeadGen dialog are performing some
 For email address and phone number capture, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```
-// Max count of fail user inputs 
+// Max count of fail user inputs
 setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```

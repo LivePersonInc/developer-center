@@ -3,7 +3,6 @@ pagename: Limitations
 redirect_from:
   - rich-messaging-structured-content-limitations.html
   - structured-content-mobile-sdk-and-web-templates-limitations.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

@@ -1,6 +1,5 @@
 ---
 pagename: Debugging
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -9,7 +8,7 @@ permalink: conversation-builder-testing-deployment-debugging.html
 indicator: both
 ---
 
-The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways. 
+The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways.
 
 First, if you're encountering unexpected behavior, always check the Bot Logs window. Errors and failures are displayed in red, so you'll know at a glance if and where they occurred.
 
@@ -33,11 +32,11 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 1. With the Dialogs page displayed, click **Preview** in the upper-right corner.
 2. Just outside the lower-left corner of the Preview window, click the **Bot Logs** icon.
-    
+
     <img style="width:500px" src="img/ConvoBuilder/debuggingWindow2.png" alt="The Bot Logs icon that's just outside the lower-left corner of the Preview window">
 
     This opens the Bot Logs window, so it is displayed beside the Preview window.
-    
+
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 
 ### Print the most recent user message
@@ -60,7 +59,7 @@ The limit of 10 is designed to prevent infinite loops and other potential error 
 
 #### Iteration count exceeded 5
 
-This error is: 
+This error is:
 
     Breaking the interaction flow because iteration count exceeded 5
 

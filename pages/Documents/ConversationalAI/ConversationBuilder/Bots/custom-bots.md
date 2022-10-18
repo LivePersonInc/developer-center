@@ -1,7 +1,5 @@
 ---
 pagename: Custom Bots
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -26,8 +24,8 @@ LivePerson recommends that before you create a bot, you set up the [domains](int
 3. In the window that appears, select the **Custom Bot** template.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bot_custom_add.png" alt="The right-facing arrow to click to create a custom bot">
-    
-    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. 
+
+    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch.
 
 4. In the next window that appears, specify the following:
 

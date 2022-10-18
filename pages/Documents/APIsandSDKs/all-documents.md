@@ -1,7 +1,7 @@
 ---
 pagename: All Documents
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: all-documents.html
 indicator: both
 ---

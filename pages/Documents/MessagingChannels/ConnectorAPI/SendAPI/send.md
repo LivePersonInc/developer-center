@@ -6,7 +6,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: Send API 
+subfoldername: Send API
 order: 12
 indicator: messaging
 permalink: connector-api-send-api-send.html
@@ -39,7 +39,7 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
-| v | The API version | numeric |  
+| v | The API version | numeric |
 
 **Request Headers**
 
@@ -59,13 +59,13 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 **Example Request Body — Send A Message — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":"1",
    "type":"ms.PublishEvent",
-   "body":{  
+   "body":{
       "dialogId":"{conversationId}",
-      "event":{  
+      "event":{
          "type":"ContentEvent",
          "contentType":"text/plain",
          "message":"Hi from Send Message only - Send a line"
@@ -86,13 +86,13 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 **Example Request Body — Consumer is Typing — JSON Payload**
 
 ```json
-{  
+{
    "kind":"req",
    "id":"1",
    "type":"ms.PublishEvent",
-   "body":{  
+   "body":{
       "dialogId":"{conversationId}",
-      "event":{  
+      "event":{
          "type":"ChatStateEvent",
          "chatState":"COMPOSING"
       }
@@ -108,12 +108,12 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 | type | The messaging event type | ChatStateEvent | string | true |
 | ChatState | Chat Status of the consumer | "COMPOSING" - Consumer is typing | String | true | Possible values: **"ACTIVE"** (user is in the chat), **"INACTIVE"** (e.g. Consumer navigated away but application is still open), **"GONE"** (e.g. Consumer closed the chat application), **"COMPOSING"** (Consumer is typing), **"PAUSE"** (Consumer has stopped typing) |
 
-**Note:** After sending **"chatState":"COMPOSING"**, In order to send an indication that the consumer has stopped typing, an additional message has to be sent with a different **"chatState"** value than **"COMPOSING"**. Otherwise it will keep indicating on the Agent side that the consumer is typing.  
+**Note:** After sending **"chatState":"COMPOSING"**, In order to send an indication that the consumer has stopped typing, an additional message has to be sent with a different **"chatState"** value than **"COMPOSING"**. Otherwise it will keep indicating on the Agent side that the consumer is typing.
 
 **Example Request Body — Consumer has accepted the message**
 
 ```json
-{  
+{
   "kind":"req",
 	"id": "0",
 	"type": "ms.PublishEvent",
@@ -135,7 +135,7 @@ The SEND method allows you to send a JSON payload to Conversational Cloud. This 
 | dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | "AcceptStatusEvent" | string | true |
 | status | Acceptance status of the message sent by the Agent to the Consumer | "ACCEPT" | string | true | Possible values: **"ACCEPT"** (message was accepted by the consumer), **"READ"** (message was read by the consumer), **"ACCESS"** (Consumer has accessed the file), **"NACK"** (message not received), **"ACTION"** (used in conjunction with metadata to reply on structured content sent by the Agent) |
-| sequenceList | List of **sequence** values | [2,3] | Array of integers | true |  See [example](webhooks-examples.html#agent-sent-a-text-messages). You can mention more than one sequence number hence the sequence list |   
+| sequenceList | List of **sequence** values | [2,3] | Array of integers | true |  See [example](webhooks-examples.html#agent-sent-a-text-messages). You can mention more than one sequence number hence the sequence list |
 
 **Note:** Conversational Cloud assigns a number to every message. That number controls where that message appears in the sequence. In order to refer to a specific message or group of messages, you need to pass their sequence IDs. For example, if you want to "ACCEPT" the first and second message, you will pass the sequenceList as above.
 

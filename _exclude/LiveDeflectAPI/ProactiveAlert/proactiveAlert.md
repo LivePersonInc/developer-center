@@ -119,7 +119,7 @@ The following information should be provided to LivePerson.
 
 ```json
 {
-  "siteId":"25508804",  
+  "siteId":"25508804",
   "skill": "service",
   "customerCountryCode":"1",
   "customerPhoneNumber":"7703101414",

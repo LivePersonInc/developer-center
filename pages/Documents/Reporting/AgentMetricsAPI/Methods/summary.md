@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Reporting"
 documentname: Agent Metrics API
 subfoldername: Methods
-
 order: 20
 permalink: agent-metrics-api-methods-summary.html
-
 indicator: messaging
 ---
 

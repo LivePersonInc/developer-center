@@ -1,6 +1,5 @@
 ---
 pagename: API Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -34,7 +33,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
     - **Request Headers — Use default headers**: When this toggle is on, the following request headers are included automatically in the API request:
         * Accept: application/json;charset=UTF-8
         * Content-Type: application/json;charset=UTF-8
-        
+
         Since these headers are commonly used, the toggle is on by default as a convenience. However, you can use different values if required by your API: Just turn off the toggle, and add the headers manually as key/value pairs.
     - **Request Headers — key/value pairs**: Add any message headers to include in the request.
     - **Request Parameters**: Add the request parameters to pass in the URL’s query string. It's more common to pass variable values as key/value pairs added here:

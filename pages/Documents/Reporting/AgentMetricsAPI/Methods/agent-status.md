@@ -8,7 +8,6 @@ documentname: Agent Metrics API
 subfoldername: Methods
 order: 10
 permalink: agent-metrics-api-methods-agent-status.html
-
 indicator: messaging
 ---
 
@@ -103,7 +102,7 @@ JSON Example:
 					"currentStatusStartTimeL": 1490033214962,
 					"currentStatusStartTime": "2017-03-20 18:06:54.962+0000",
 					"currentStatusReasonStartTimeL": 1490033214962,
-					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",					
+					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",
 					"agentName": "michal",
 					"agentNickname": "michal",
 					"agentLoginName": "michal@liveperson.com",

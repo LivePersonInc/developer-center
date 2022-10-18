@@ -4,7 +4,6 @@ redirect_from:
   - android-photo-sharing.html
   - mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html
   - mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -87,7 +86,7 @@ Consumers can share:
    ```xml
    <bool name="enable_photo_sharing">
    ```
-  
+
    By default, this value is set to **false**.
 
    ```xml

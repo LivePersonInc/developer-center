@@ -2,7 +2,6 @@
 pagename: Tips
 redirect_from:
     - intent-builder-liveintent-tips.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: LiveIntent
@@ -114,7 +113,7 @@ Here are some steps you can take to evaluate how well your model is doing.
 
 1. Identify the undefined messages that should’ve been classified as your intent. If you find any that have been missed by the model, you can add them to the training utterances.
 
-2. If you see a large number of patterns in unlabeled data, consider creating more intents.  
+2. If you see a large number of patterns in unlabeled data, consider creating more intents.
 
 ### Step 3. Improve the model
 

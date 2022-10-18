@@ -3,7 +3,6 @@ pagename: Control History APIs
 redirect_from:
   - consumer-experience-ios-sdk-advanced-control-history-ios.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-control-history-apis.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -30,7 +29,7 @@ The APIs lets brands:
 
 - When opening the window with closed conversations only, the window opens as a view only mode.
 
-- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForHistoryControlAPI`
+- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForControlHistoryAPI`
 
 {: .attn-note}
 To see more about the Welcome Message with Quick Replies, visit the following [page](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
@@ -113,7 +112,7 @@ Used to decide whether to count the days from the conversation start date or end
 ```swift
  func showConversation() {
     // Configuration needs to be set to true to present Welcome Message if one is configured
-    LPConfig.defaultConfiguration.enableWelcomeMessageForHistoryControlAPI = true
+    LPConfig.defaultConfiguration.enableWelcomeMessageForControlHistoryAPI = true
 
     // Welcome Message Configuration
 

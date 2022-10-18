@@ -2,7 +2,6 @@
 pagename: Dialog Starter
 redirect_from:
     - conversation-builder-interactions-user-says.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -11,7 +10,7 @@ permalink: conversation-builder-interactions-dialog-starter.html
 indicator: both
 ---
 
-### What's a dialog starter? 
+### What's a dialog starter?
 
 Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction. ([Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) work differently.) A dialog can have only one Dialog Starter interaction, and it must start the dialog.
 
@@ -55,7 +54,7 @@ When you create a standard dialog, by default it includes a dialog starter inter
 
 1. Click the **+ Intent** button.
 
-   <img style="width:700px" alt="The Intent button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter9.png"> 
+   <img style="width:700px" alt="The Intent button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter9.png">
 
 2. Use the [Assist tool](conversation-builder-assist.html) to associate the dialog starter with a domain. Then associate the dialog starter with an intent.
 

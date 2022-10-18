@@ -1,9 +1,8 @@
 ---
 pagename: Onboarding
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 indicator: both
 permalink: mtls-onboarding.html
 ---
@@ -17,7 +16,7 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 
 1) **Log into Conversational Cloud** using the [Login Service API](login-service-api-methods-user-login.html). Provide a username and password (for an administrator user) and receive an authorization token (Bearer) in return. Use this token as your authorization header for any request requiring a bearer in the future.
 
-2) **Domain** - Unless mentioned otherwise, domain refers to the MTLS domain. To get the domain, you can make a simple call to the CSDS endpoint (GET method). For example: 
+2) **Domain** - Unless mentioned otherwise, domain refers to the MTLS domain. To get the domain, you can make a simple call to the CSDS endpoint (GET method). For example:
 
 `https://adminlogin.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0`
 
@@ -52,7 +51,7 @@ These are the parameters that connect the configuration data to runtime. They co
 
 * **accountId:** The actual account that is creating/consuming the configuration.
 
-* **serviceName:** The service that will be creating/consuming the configuration, possible options are **0, 1, 2** which maps as such: 
+* **serviceName:** The service that will be creating/consuming the configuration, possible options are **0, 1, 2** which maps as such:
 
 ```java
 public enum Services {
@@ -76,7 +75,7 @@ In order to create the mapping object, you will need to use the following method
 
 **Note:** This action is performed against ac-common domain, not the MTLS service.
 
-|Method|      URL|  
+|Method|      URL|
 |:--------  |:---  |
 |POST|  https://{accountConfigReadWrite-domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
 
@@ -99,8 +98,8 @@ Example body (Certificates array):
     {
         "certificationId": "{idFromPreviousCreation}",
         "serviceId": "{serviceIdAsNumber}",
-        "enable": true,   
-        "url": "{url}", 
+        "enable": true,
+        "url": "{url}",
         "siteId": "{accountId}",
         "name": "{anyNonDuplicatingNamePerAccount}",
         "deleted": false

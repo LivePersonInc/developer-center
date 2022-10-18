@@ -1,6 +1,5 @@
 ---
 pagename: LivePerson Agent Escalation Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -28,20 +27,20 @@ Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots
     - **Integration Type**: Select LivePerson Agent Escalation.
     - **Agent Skill Name**: Enter the name of the agent skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Entering the name provides you with something display-friendly and "readable" by which to readily understand which skill is being used (since the skill ID is a number).
     - **Agent Skill ID**: Mandatory; without this, the transfer won’t work. Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
-        
+
         When the escalation is attempted, the Agent Skill ID is evaluated; if it isn't numeric, the fallback message is sent to the user.
-        
+
         If the value is numeric and the bot responds, the conversation is added to the queue for the skill specified here. The conversation is then routed according to Conversational Cloud’s [Transfer to agent](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html/) rules.
-        
+
         If the value is numeric, but the bot doesn't respond for more than 3 minutes (e.g., the chat server becomes overloaded and drops the message), an attempt is made to transfer the escalation to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the escalation fails. For information on handling failures, see farther below on this page.
     - **Agent ID**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is available. If the agent isn't available, the conversation is added to the queue for the skill specified in **Agent Skill ID** in this integration, and the conversation is routed according to Conversational Cloud’s [Transfer to agent](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html/) rules.
     - **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
-    - **Message to User**: Use this field to guarantee that the user will see a message prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. If you need to insert a new line, use an escape character like so: \\\n. 
+    - **Message to User**: Use this field to guarantee that the user will see a message prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. If you need to insert a new line, use an escape character like so: \\\n.
 
-    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. 
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add [the fields](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields) that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields.
-3. Click **Save**.  
+3. Click **Save**.
 
 ### Best practices
 

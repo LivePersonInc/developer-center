@@ -429,7 +429,7 @@ This tutorial uses an example API that returns random balance data when given an
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/displaybalance.png" alt="">
 
     When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
-  
+
     Now let's test all this out.
 
 11. Open the Preview window, and start a new session by clicking **Reset Session**.

@@ -2,7 +2,6 @@
 pagename: Release Notes
 redirect_from:
   - consumer-experience-android-sdk-release-notes.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -10,7 +9,8 @@ permalink: mobile-app-messaging-sdk-for-android-release-notes.html
 indicator: messaging
 ---
 
-<div class="attn-alert">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content" target="_blank">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
+{: .attn-alert}
+Working with this SDK or planning to in the future? Make sure to [subscribe to receive notifications of changes](https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content). When we update the release notes, you'll get a notification straight to your email of choice.
 
 # Android Messaging SDK — Version 5.12.0
 
@@ -340,7 +340,7 @@ The Android Mobile Messaging SDK version 5.6.0 uses:
 
 # Maven Central
 
-Maven Central is the new repository for SDK v5.6.0 and above. 
+Maven Central is the new repository for SDK v5.6.0 and above.
 
 Maven Central Repository: [LivePerson Messaging SDK](https://search.maven.org/search?q=com.liveperson.android)
 
@@ -370,7 +370,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 
 ### Features and permissions
 
-Below is the list of features and permissions elements added in the manifest file to support this feature. 
+Below is the list of features and permissions elements added in the manifest file to support this feature.
 
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
@@ -610,7 +610,7 @@ public static void logOut(Context context, String brandId, String appId, boolean
 # Attribute update
 
 ## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#conversation_background)
-Added image support for Fragment mode. 
+Added image support for Fragment mode.
 Limitation: there will be distortion of background image when keyboard appears.
 
 # Bugs fixed
@@ -648,7 +648,7 @@ An SDK enhancement has been added that will prevent a second customer from viewi
 
 It’s enabled out of the box — there’s nothing the brands need to do.
 
-Note: Auto logout works only for authenticated users. 
+Note: Auto logout works only for authenticated users.
 
 # Attribute update
 
@@ -661,14 +661,14 @@ Notify host app immediately when failed to authenticate consumer instead of perf
 # New callback
 
 ## Added following error events and error callback
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
 >
 > - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onError(LpError lpError, String message);
 
@@ -855,7 +855,7 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 | callback | An ICallback implementation |
 
 ## Control your Logs
-New Logging subsystem, which introduces: 
+New Logging subsystem, which introduces:
 - Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
 - Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
 
@@ -979,16 +979,16 @@ The Android Mobile Messaging SDK version 5.1.0 uses:
 - Removed an extra stop when using TalkBack swipe gestures to navigate between elements of a Structured Content Carousel.
 - Removed unnecessary TalkBack swipe gestures needed to navigate through Structured Content Map elements.
 - Structured Content now scales with system accessibility Text Size settings, preventing cramped content elements with scaled-up text.
-- Fullscreen photo view no longer erroneously suggests that the photo can be double-tapped, and will now only provide double-tap-and-hold instructions. 
+- Fullscreen photo view no longer erroneously suggests that the photo can be double-tapped, and will now only provide double-tap-and-hold instructions.
 
 ### Deprecation
 
-- 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**. 
+- 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**.
 - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
 # Android Messaging SDK — Version 5.0.0
 
-**Release Date**: Oct 31, 2019 
+**Release Date**: Oct 31, 2019
 
 ### Overview
 
@@ -1004,17 +1004,17 @@ The Android Mobile Messaging SDK version 5.0.0 uses:
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
 ### Bugs fixed
- 
+
 * Fixed issue where crash could occur while loading conversation.
 
 ### New features
- 
-* **Dark Theme Support** - The Android Mobile Messaging SDK Supports Dark Theme for Android 10.  
+
+* **Dark Theme Support** - The Android Mobile Messaging SDK Supports Dark Theme for Android 10.
 For More information see: [Attributes Page](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html)
- 
+
 ### Known issues
 
-* **Android 10, Structured Content and Quick reply messages**: Currently, structured content message colors are sent from the Conversational Cloud Agent Workspace as hexadecimal colors and we cannot be certain of the appearance setting the consumer will have enabled as the structured content message arrives. Currently the Android Mobile Messaging SDK does not support converting these colors to an alternate appearance for Dark Theme. Therefore we ask our customers to ensure that colors selected for the structured content JSON are visually legible for both appearance modes for backgrounds and text within the Android Mobile Messaging SDK. As an alternative, from SDK 5.0.0 you can also set Dark Mode configuration `darkMode_SC_QR_override_colors_from_LE` in SDk not to override colors from LE and use Quick Replies, Structured Content color attributes in SDK. 
+* **Android 10, Structured Content and Quick reply messages**: Currently, structured content message colors are sent from the Conversational Cloud Agent Workspace as hexadecimal colors and we cannot be certain of the appearance setting the consumer will have enabled as the structured content message arrives. Currently the Android Mobile Messaging SDK does not support converting these colors to an alternate appearance for Dark Theme. Therefore we ask our customers to ensure that colors selected for the structured content JSON are visually legible for both appearance modes for backgrounds and text within the Android Mobile Messaging SDK. As an alternative, from SDK 5.0.0 you can also set Dark Mode configuration `darkMode_SC_QR_override_colors_from_LE` in SDk not to override colors from LE and use Quick Replies, Structured Content color attributes in SDK.
 
 * **Android 10 and Secure Form web view**: We support Dark Theme for Secure Form by force enabling it with attribute `darkMode_force_enable_for_webView`(enabled by default).
 
@@ -1155,7 +1155,7 @@ The workaround for this issue is to use [structured_content_link_as_callback](mo
 
 # Overview
 
-Android Mobile Messaging SDK version 4.8.1 release includes Voice & Video support and enhancements. 
+Android Mobile Messaging SDK version 4.8.1 release includes Voice & Video support and enhancements.
 
 ## Environment requirements
 
@@ -1170,7 +1170,7 @@ The Android Mobile Messaging SDK version 4.8.1 uses:
 
 # Maven Central
 
-Maven Central is the new repository for SDK v4.8.1 and above. 
+Maven Central is the new repository for SDK v4.8.1 and above.
 
 Maven Central Repository: [LivePerson Messaging SDK](https://search.maven.org/search?q=com.liveperson.android)
 
@@ -1199,7 +1199,7 @@ To enable the feature on your Conversational Cloud account please review the KB 
 
 ### Features and permissions
 
-Below is the list of features and permissions elements added in the manifest file to support this feature. 
+Below is the list of features and permissions elements added in the manifest file to support this feature.
 
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
@@ -1440,7 +1440,7 @@ public static void logOut(Context context, String brandId, String appId, boolean
 # Attribute update
 
 ## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#conversation_background)
-Added image support for Fragment mode. 
+Added image support for Fragment mode.
 Limitation: there will be distortion of background image when keyboard appears.
 
 # Bugs fixed
@@ -1471,14 +1471,14 @@ The Android Mobile Messaging SDK version 4.6.1 uses:
 # New callback
 
 ## Added following error events and error callback
-> **Intent Action:** 
+> **Intent Action:**
 >
 > ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
 >
 > - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
-> **Callback:** 
+> **Callback:**
 >
 > onError(LpError lpError, String message);
 
@@ -1514,7 +1514,7 @@ enum class LpError {
 
 # Deprecations
 
-The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated. 
+The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated.
 
 # Android Messaging SDK — Version 4.6.0
 
@@ -1545,7 +1545,7 @@ An SDK enhancement has been added that will prevent a second customer from viewi
 
 It’s enabled out of the box — there’s nothing the brands need to do.
 
-Note: Auto logout works only for authenticated users. 
+Note: Auto logout works only for authenticated users.
 
 # Attribute update
 
@@ -1883,7 +1883,7 @@ The Android Mobile Messaging SDK version 4.3.0 uses:
 - Removed an extra stop when using TalkBack swipe gestures to navigate between elements of a Structured Content Carousel.
 - Removed unnecessary TalkBack swipe gestures needed to navigate through Structured Content Map elements.
 - Structured Content now scales with system accessibility Text Size settings, preventing cramped content elements with scaled-up text.
-- Fullscreen photo view no longer erroneously suggests that the photo can be double-tapped, and will now only provide double-tap-and-hold instructions. 
+- Fullscreen photo view no longer erroneously suggests that the photo can be double-tapped, and will now only provide double-tap-and-hold instructions.
 
 ### Deprecation
 
@@ -1933,7 +1933,7 @@ The Android Mobile Messaging SDK version 4.2.0 uses:
 - Added a new getUnreadMessageCount API to allow the user to get the count of unread messages without needing to be registered to receive Push Notifications
 - Added Metadata support to Welcome Message Quick Replies
 - Added a setting to hide the "clear history" context menu option: `clear_history_menu_item_visible` in branding.xml
-- Added a setting for the color of the "attach" paperclip icon and its associated "close" icon: `lp_file_attach_icon_clip_color` and `lp_file_close_icon_clip_color` in branding.xml 
+- Added a setting for the color of the "attach" paperclip icon and its associated "close" icon: `lp_file_attach_icon_clip_color` and `lp_file_close_icon_clip_color` in branding.xml
 - Added a setting to adjust the maximum number of text lines that can appear in a Structured Content's button elements: `structured_content_button_no_text_lines` in branding.xml
 - Added a parameter to the onCsatSubmitted callback containing the submitted survey's star rating
 - Added TLSv1.2 support to the image loading library
@@ -1971,7 +1971,7 @@ The Android Mobile Messaging SDK version 4.1.0 uses:
 ### New features
 
 - Added a callback parameter to the `unregisterLPPusher` API, similar to the one that exists for the `registerLPPusher` API.
-- A backwards-compatible copy of `unregisterLPPusher` without the callback has also been added, and marked Deprecated, as the version with a callback is the preferred one for all uses. 
+- A backwards-compatible copy of `unregisterLPPusher` without the callback has also been added, and marked Deprecated, as the version with a callback is the preferred one for all uses.
 
 ### Bugs fixed
 
@@ -1999,7 +1999,7 @@ The Android Mobile Messaging SDK version 4.1.0 uses:
 
 ### Overview
 
-Android Mobile Messaging SDK version 4.0.0 provides Android P support. 
+Android Mobile Messaging SDK version 4.0.0 provides Android P support.
 Built with Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
 ### Environment requirements
@@ -2018,11 +2018,11 @@ The Android Mobile Messaging SDK version 3.9 requires the minimum Android API ve
 
 ##### Photo and File sharing
 
-Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.    
+Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.
 
 Agents can share:
 
-- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The agent can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The agent can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. They can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
@@ -2070,16 +2070,16 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 <img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
----   
+---
 
-##### Step 1. Enable or disable 
+##### Step 1. Enable or disable
 
 1. Change the boolean value:
 
    ```java
    <bool name="enable_photo_sharing">
    ```
-   
+
    By default, this value is set to **false**.
 
    ```java
@@ -2196,13 +2196,13 @@ The Android Mobile Messaging SDK version 3.8 requires the minimum Android API ve
 
 Version 3.8 of the Mobile Messaging SDK introduces a Welcome message with quick reply options in the conversation window. When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
 
-> *Welcome to our support! What can we help you with today?*   
-> 
+> *Welcome to our support! What can we help you with today?*
+>
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace.
 
 ##### How to enable
 
@@ -2235,11 +2235,11 @@ public MessageOption(@NonNull String displayText, @NonNull String value)
 - **displayText** is the text displayed in the quick reply button.
 - **value** is the content that is sent to the agent. Default value is displayText if set to empty String.
 
-There are two message frequencies: 
+There are two message frequencies:
 - **FIRST_TIME_CONVERSATION:** Shows the welcome message for first conversation only.
 - **EVERY_CONVERSATION:** Shows welcome a message for every new conversation.
 
-##### Limitations  
+##### Limitations
 
 You can configure up to 24 quick reply options for the user to chose.
 
@@ -2259,21 +2259,21 @@ You can configure up to 24 quick reply options for the user to chose.
    "id": "Yes-1234"
    }
    ]
-   ```  
+   ```
 
 #### Bug fixes
 
 - **For Android 9 only.** Calling `hideConversation()` while app is in the background caused the app to come to the foreground. When having multiple apps and the consumer has one CustID across all apps, the consumer could not log out of all apps bringing the other app to the foreground.
 
-- Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared. 
+- Data masking message displayed after sending SecureForm. When setting the `enable_client_only_masking` bool to **true**, and the customer sent a SecureForm, the “Your personal data has been masked to protect your security. Only the agent can read it.” system message appeared.
 
-- The Unread Message Divider separator appeared after the agent resumed conversation. If the agent closed the conversation but reopened it by sending a new message, the Unread divider appeared above the new message when it should not appear.  
-   
-   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button. 
+- The Unread Message Divider separator appeared after the agent resumed conversation. If the agent closed the conversation but reopened it by sending a new message, the Unread divider appeared above the new message when it should not appear.
 
-- Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message. 
+   By default, the Unread Message Divider separator appears in the message view.   When enabled, this feature does not prevent the badge or message text from displaying on the **Scroll to Bottom** button. Instead, the Unread Message Divider system message displays above the unread messages within the view of the user when returning to the conversation view. When disabled, the separator does not appear, and the unread message badge count displays on the **Scroll to Bottom** button.
 
-- Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form. 
+- Scroll bar did not scroll to the bottom with specific branding settings. When setting the `enable_conversation_resolved_separator` and `enable_conversation_resolved_message` bool to **false** the scroll bar did not scroll to the bottom. The bug prevented users from scrolling to the bottom of the message.
+
+- Skipping PCS showed Quick reply JSON. If PCS is activated and you send messages, close the conversation, and then skip the PCS it resulted in showing the quick reply JSON in RAW form.
 
 # Android Messaging SDK — Version 3.7.0
 
@@ -2570,7 +2570,7 @@ The following issues are still being investigated and have been prioritized for 
 
 ##### Audio Messaging
 
-**Type:** Consumer Experience Feature  
+**Type:** Consumer Experience Feature
 
 **Available to all customers?** No. Please contact your account team.
 

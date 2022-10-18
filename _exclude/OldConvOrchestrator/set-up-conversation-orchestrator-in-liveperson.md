@@ -5,7 +5,6 @@ redirect_from:
   - maven-ai-ai-powered-routing-set-up-maven-in-liveperson.html
   - maven-ai-dynamic-routing-set-up-maven-in-liveperson.html
   - conversation-orchestrator-dynamic-routing-set-up-maven-in-liveperson.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -58,7 +57,7 @@ To route your conversations to Conversation Orchestrator, you need to create at 
 
 #### Optional
 
-If you want to combine your existing skills with Conversation Orchestrator please setup the following  
+If you want to combine your existing skills with Conversation Orchestrator please setup the following
 
 1. For each skill in your campaign that you want Conversation Orchestrator to handle routing create a new skill with the name **"maven:{skill name}"**. For example if there is a skill called **“Billing”** that has agents handling billing inquiries create a new skill called **“maven:Billing”**
 2. Assign the Conversation Orchestrator bot user to this skill.

@@ -1,14 +1,16 @@
 ---
-pagename: LivePerson APIs and SDKs
+pagename: Overview
 sitesection: Documents
-categoryname: "Getting Started"
-permalink: liveperson-apis-and-sdks.html
+categoryname: "APIs and SDKs"
+permalink: overview.html
 redirect_from:
   - essential-resources-messaging-features-capabilities-comparison.html
   - api-guidelines-important-updates.html
   - important-updates.html
+  - liveperson-apis-and-sdks.html
 indicator: both
-# date_published: 2022/08/04
+date_published: 2022/08/03
+date_updated: 2022/09/30
 ---
 
 ### APIs
@@ -37,12 +39,13 @@ indicator: both
 | [Engagement History API](engagement-history-api-overview.html) | Search and filter copies of chat transcripts and related data |
 | [Engagement Trigger API](engagement-trigger-api-overview.html) | Get information about engagements and interact with them |
 | [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) | Retrieve CSV files for test reports |
-| Key Messaging Metrics API | [→ Outbound Reporting API](outbound-reporting-api-overview.html) |
+| Key Messaging Metrics API | → [Outbound Reporting API](outbound-reporting-api-overview.html) |
 | [LOBs API](lobs-api-overview.html) | Manage Lines of Business |
 | [Login Service API](login-service-api-overview.html) | Manage user sessions |
 | [Messaging Interactions API](messaging-interactions-api-overview.html) | Retrieves most up-to-date information about messaging interactions |
 | [Messaging Operations API](messaging-operations-api-overview.html) | Extract call center information on account, skill, and agent level |
 | [Messaging Window API](messaging-window-api-overview.html) | Control messaging window look, behavior, and implementation source |
+| Model Tester External APIs | → [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api)<br>→ [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) |
 | [Monitoring API](monitoring-api-overview.html) | Enable consumer monitoring and engagement flows |
 | [Net Handle Time API](net-handle-time-api-overview.html) (beta) | Calculate agent headcount |
 | [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) | Retrieve next best action (route to skill, send a response, etc.) for a bot or app |
@@ -64,6 +67,16 @@ indicator: both
 | [Visit Information API](visit-information-api-overview.html) | Retrieve information about session, visitor, and engagement in a brand’s Agent Workspace |
 | [Window Customization API](window-customization-api-overview.html) | Customize the look and feel of the web engagement window |
 | [Workdays API](workdays-api-overview.html) | Configure hours of operation for specific days, and assign them to specific skills |
+
+#### Conversational AI APIs
+
+Building a custom automation solution? These Conversational AI APIs can help:
+
+| Application | API | Purpose |
+|---|---|---|
+| Intent Manager | Model Tester External APIs | → [Test Reports API](intent-manager-external-apis-model-tester-external-apis.html#test-reports-api)<br>→ [Export Test Report API](intent-manager-external-apis-model-tester-external-apis.html#export-test-report-api) |
+| Conversation Orchestrator | [Conversation Context Service API](conversation-orchestrator-conversation-context-service-overview.html) | Guide contextual continuity, context-based dynamic, and human-bot tango |
+| Conversation Orchestrator | [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) | Retrieve next best action (route to skill, send a response, etc.) for a bot or app |
 
 ### SDKs
 

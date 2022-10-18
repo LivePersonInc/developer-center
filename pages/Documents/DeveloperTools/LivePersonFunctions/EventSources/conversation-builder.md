@@ -1,6 +1,5 @@
 ---
 pagename: Conversation Builder
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -46,9 +45,9 @@ function lambda(input, callback) {
     const tooLittle = price + "$ is for a " + item + "? Nice deal!"
 
     if( price > 100) {
-      callback(null, tooMuch); 
+      callback(null, tooMuch);
     }
 
-    callback(null, tooLittle); 
+    callback(null, tooLittle);
 };
 ```

@@ -1,6 +1,5 @@
 ---
 pagename: Web View Integration API
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -44,7 +43,7 @@ Also review the [API terms of use](https://policies.liveperson.com/apitou).
 
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type) function.
-- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field. 
+- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field.
 - **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-id) function.
 
 ### Request

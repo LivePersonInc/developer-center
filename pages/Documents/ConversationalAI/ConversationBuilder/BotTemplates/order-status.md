@@ -2,7 +2,6 @@
 pagename: Order Status
 redirect_from:
     - conversation-builder-templates-order-status.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -84,7 +83,7 @@ Personal information collection events are not logged by default in this templat
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.
 
-#### Order Status 
+#### Order Status
 Just the Order Status dialog flow. This template doesn't include escalation, fallback or other dialogs.
 
 Included dialogs:

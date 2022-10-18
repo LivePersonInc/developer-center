@@ -1,6 +1,5 @@
 ---
 pagename: Creating and Managing Policies
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -11,9 +10,9 @@ indicator: messaging
 
 ### Introduction
 
-The Policy management interface provides the UI to create your Dynamic Routing policies. Policies contain conditions and actions. Conditions can be configured using attributes, logical operators and values. Some attributes, like conversation attributes and authenticated SDEs, are directly available for routing. Developers are required to use the Conversation Context Service to leverage other attributes or custom data for routing. Actions can be configured to transfer to skills or agents, or even to send messages. The interface allows users to enable/disable and prioritize policies. 
+The Policy management interface provides the UI to create your Dynamic Routing policies. Policies contain conditions and actions. Conditions can be configured using attributes, logical operators and values. Some attributes, like conversation attributes and authenticated SDEs, are directly available for routing. Developers are required to use the Conversation Context Service to leverage other attributes or custom data for routing. Actions can be configured to transfer to skills or agents, or even to send messages. The interface allows users to enable/disable and prioritize policies.
 
-To start creating policies, navigate to **Intent & Context Policies** under the **Dynamic Routing** section of Conversation Orchestrator. Here, you can view an **Intent & Context Policy Usage** dashboard highlighting which policies have been used for a given timeframe and see which are the most used policies for your account. 
+To start creating policies, navigate to **Intent & Context Policies** under the **Dynamic Routing** section of Conversation Orchestrator. Here, you can view an **Intent & Context Policy Usage** dashboard highlighting which policies have been used for a given timeframe and see which are the most used policies for your account.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policyusage.png" alt="">
 
@@ -44,7 +43,7 @@ Taken together, these four fields are a logical statement. If the statement retu
 #### Attributes
 
 Attributes for policies can come from several different sources:
- 
+
 * Conversational attributes
 * Custom attributes, which are either set to static values or dynamically updated using * LivePerson Functions
 * Conversational Context Service attributes (including intents)
@@ -71,13 +70,13 @@ Similarly, supported SDEs are provided in the same “Choose an attribute” dro
 
 ##### Adding attributes to the CCS from Dynamic Routing
 
-Custom static attributes for routing policies can be manually added to the Conversation Context Service (CCS) using the **Custom** section of the **Conversation Context Service**. 
+Custom static attributes for routing policies can be manually added to the Conversation Context Service (CCS) using the **Custom** section of the **Conversation Context Service**.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes2.png" alt="">
 
 These custom attributes can be a variety of data types, whether string, number, list, or even JSON, enabling you to define and use your own data (e.g., a list of names or emails).
 
-Once created, the custom attributes are available from within your policy in the “Choose an attribute” dropdown as “custom.attributeName”. 
+Once created, the custom attributes are available from within your policy in the “Choose an attribute” dropdown as “custom.attributeName”.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_attributes3.png" alt="">
 
@@ -85,7 +84,7 @@ Additionally, conversation-scoped context variables set using Conversation Build
 
 ##### Using LivePerson Functions to get dynamic attributes
 
-LivePerson Functions can be used to create more dynamic attributes to base policies off of. When adding a new custom attribute, click the dropdown under **Type** to change from the default **static** to **function**. Doing so generates a new section that allows you to pick from a list of your deployed functions on an account. Additionally, provide a payload to the function to pass other custom attributes, SDEs, other context session store variables, or any static data into your function for a truly dynamic result.  
+LivePerson Functions can be used to create more dynamic attributes to base policies off of. When adding a new custom attribute, click the dropdown under **Type** to change from the default **static** to **function**. Doing so generates a new section that allows you to pick from a list of your deployed functions on an account. Additionally, provide a payload to the function to pass other custom attributes, SDEs, other context session store variables, or any static data into your function for a truly dynamic result.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn1.png" alt="">
 
@@ -93,10 +92,10 @@ Add custom functions as attributes in your conditions in the same way that you a
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usefxn2.png" alt="">
 
-Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs. For more details, see [here](conversation-orchestrator-conversation-context-service-attributes.html#getting-attributes-through-functions). 
+Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs. For more details, see [here](conversation-orchestrator-conversation-context-service-attributes.html#getting-attributes-through-functions).
 
 {: .attn-note}
-Keep in mind that this function will be invoked every time the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account. 
+Keep in mind that this function will be invoked every time the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account.
 
 #### Operators
 
@@ -128,7 +127,7 @@ Selecting the **Transfer to skill** action type generates a dropdown list of all
 
 <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_actiontypes1.png" alt="">
 
-Alternatively, you can choose to send an attribute value as well using the **Transfer to skill** action type. 
+Alternatively, you can choose to send an attribute value as well using the **Transfer to skill** action type.
 
 When received by the bot, the action is a JSON object in the following format. This object can then be parsed, passing the returned skill ID to a transfer interaction.
 
@@ -179,7 +178,7 @@ When received by the bot, the action is a JSON object in the following format. T
 
 ##### Sending messages
 
-Selecting the **Send message** action type is the most flexible, allowing the developer to manually input their own string to be sent back to the bot and processed. Alternatively, a custom attribute, SDE, or other conversation context variable can be sent by selecting from the provided dropdown. 
+Selecting the **Send message** action type is the most flexible, allowing the developer to manually input their own string to be sent back to the bot and processed. Alternatively, a custom attribute, SDE, or other conversation context variable can be sent by selecting from the provided dropdown.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_actiontypes3.png" alt="">
 
@@ -206,7 +205,7 @@ As with Conditions, multiple actions can be sent with a single policy. The “ac
 
 ### Managing policies
 
-When creating a new policy, that policy is added to the bottom of the list in a **disabled** status. Each policy from within the list can be selected to show more details to the right. Additionally, selecting a policy allows you to either edit or delete that policy. 
+When creating a new policy, that policy is added to the bottom of the list in a **disabled** status. Each policy from within the list can be selected to show more details to the right. Additionally, selecting a policy allows you to either edit or delete that policy.
 
 #### Enabling or disabling policies
 

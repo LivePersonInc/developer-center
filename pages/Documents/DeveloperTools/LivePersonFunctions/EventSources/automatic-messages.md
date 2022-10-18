@@ -1,6 +1,5 @@
 ---
 pagename: Automatic Messages
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -133,7 +132,7 @@ With Automatic Messages selected as trigger, you have the option to execute the 
 let result = [
    {
        type: "systemMessage", // Returns a system message into the conversation
-       text: "your message", 
+       text: "your message",
    }
 ]
 callback(null, result);

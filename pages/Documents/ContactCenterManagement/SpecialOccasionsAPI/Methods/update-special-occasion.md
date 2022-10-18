@@ -2,7 +2,6 @@
 pagename: Update Special Occasion
 redirect_from:
   - account-configuration-special-occasions-update.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Special Occasions API
@@ -95,7 +94,7 @@ The `isDefault` field determines whether a special occasions object is the defau
 
  |Header|  Description|
  |:-------|   :-----  |
- |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+ |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
  **Response example**
 

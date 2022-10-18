@@ -1,7 +1,7 @@
 ---
 pagename: OAuth 1.0 API keys
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: oauth-1-0-api-keys.html
 indicator: both
 redirect_from:
@@ -33,11 +33,11 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 {:start="4"}
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
-5. Select the relevant category for your API, check the relevant checkbox for selecting API permissions and then click **Save**.  
- 
+5. Select the relevant category for your API, check the relevant checkbox for selecting API permissions and then click **Save**.
+
     {: .attn-note}
    For bots logins, you will need to select the **Agent Interactions** category and check the **User Login** API permission
- 
+
    ![](/img/APIKeyCreation.png)
 
 {:start="6"}

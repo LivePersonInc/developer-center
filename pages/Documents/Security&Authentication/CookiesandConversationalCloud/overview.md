@@ -36,7 +36,8 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 ### Storage Data Types
 
-<div class="attn-note">If no duration is specified for a Storage Type below, this means its duration is the browser session.</div>
+{: .attn-note}
+If no duration is specified for a Storage Type below, this means its duration is the browser session.
 
 **SecureStorage**
 
@@ -129,12 +130,12 @@ Note: We do not currently use this data although we do store it.</td>
     <td>lpStrMap</td>
     <td>manages storages keys (used for secure storage logic)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>  
+  </tr>
   <tr>
     <td>UIConf</td>
     <td>Stores conversation settings (features, logic etc.)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>  
+  </tr>
   <tr>
     <td>lpMessaging-</td>
     <td>Stores the JWT token and authentication code in messaging scenarios for messaging window recovery on navigation and cross tabs</td>
