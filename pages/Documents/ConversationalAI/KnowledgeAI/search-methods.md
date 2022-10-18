@@ -21,7 +21,7 @@ In actuality, it’s a little more nuanced than this (more on this later), but t
 
 ### AI Search
 
-{: .note}
+{: .attn-note}
 Currently, AI Search is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
 
 AI Search is KnowledgeAI’s powerful, one-size-fits-all search method that’s based on the latest research in deep learning. Key characteristics of this search include the following:
@@ -77,12 +77,12 @@ Here’s an example:
 
 <img class="fancyimage" style="width:800px" alt="The list of search offerings in the Answer Tester" src="img/ConvoBuilder/kb_searchofferings.png">
 
-{: .note}
+{: .attn-note}
 The “Intent match only” and “AI search only” options are primarily intended for testing and for diagnosing issues during troubleshooting. In Production, we recommend that you use the “KnowledgeAI” offering.
 
 ##### “KnowledgeAI” option
 
-{: .note}
+{: .attn-note}
 The “KnowledgeAI” option is what’s used by the [KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
 
 1. Runs an exact match search.
