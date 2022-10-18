@@ -13,7 +13,8 @@ indicator: chat
 
 Returns an XML or JSON response with the pre-chat survey.
 
-*Note: Posting answers for a pre-chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html).*
+{: .attn-note}
+Posting answers for a pre-chat survey is done through [Start Chat](consumer-experience-server-chat-start-chat.html).
 
 ### Request
 
@@ -46,12 +47,8 @@ Returns an XML or JSON response with the pre-chat survey.
 | skill | Set a skill to the current visitor. | alphanumeric | |
 
 {: .attn-note}
-To retrieve the `surveyApiId`, you need to call the Engagement and Window API. The information to retrieve the `domain` name can be found [here](/agent-domain-domain-api.html). Make sure to set the service name as `acCdnDomain`.  
-
-{: .attn-note}
-Through the Engagement API, you need to call `GET https://{domain}/api/account/{accountId}/configuration/le-campaigns/campaigns/{campaignId}/engagements/{engagementId}/revision/{revisionId}?v=3.0` to get the `windowId`.  
-
-{: .attn-note}
+To retrieve the `surveyApiId`, you need to call the Engagement and Window API. The information to retrieve the `domain` name can be found [here](/agent-domain-domain-api.html). Make sure to set the service name as `acCdnDomain`.
+Through the Engagement API, you need to call `GET https://{domain}/api/account/{accountId}/configuration/le-campaigns/campaigns/{campaignId}/engagements/{engagementId}/revision/{revisionId}?v=3.0` to get the `windowId`.
 Next, through the Window API, you need to call `GET https://{domain}/api/account/{accountId}/configuration/engagement-window/window-confs/{windowId}` to get the `surveyPreChatId`. The `surveyPreChatId` is the value that needs to be passed through the `surveyApiId` parameter.
 
 ### Response
