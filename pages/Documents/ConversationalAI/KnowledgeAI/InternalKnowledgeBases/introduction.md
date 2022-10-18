@@ -8,6 +8,7 @@ documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
 permalink: knowledgeai-internal-knowledge-bases-introduction.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### What's an internal knowledge base?

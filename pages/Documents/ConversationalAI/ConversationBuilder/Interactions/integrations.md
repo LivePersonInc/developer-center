@@ -6,6 +6,7 @@ documentname: Conversation Builder
 subfoldername: Interactions
 permalink: conversation-builder-interactions-integrations.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 Integration interactions make programmatic calls to retrieve or post data to external systems and/or to perform actions. They perform their work and then execute the next action.

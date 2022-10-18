@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: KnowledgeAI
 permalink: knowledgeai-best-practices.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 For a flexible architecture and an optimal consumer experience, follow these best practices.
