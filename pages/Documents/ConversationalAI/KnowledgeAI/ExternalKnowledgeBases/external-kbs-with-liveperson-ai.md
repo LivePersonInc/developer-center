@@ -8,6 +8,7 @@ documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
 permalink: knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### What's an external KB with LivePerson AI?

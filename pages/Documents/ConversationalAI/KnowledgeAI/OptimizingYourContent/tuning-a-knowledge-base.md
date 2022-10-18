@@ -6,6 +6,7 @@ documentname: KnowledgeAI
 subfoldername: Optimizing Your Content
 permalink: knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### Introduction 

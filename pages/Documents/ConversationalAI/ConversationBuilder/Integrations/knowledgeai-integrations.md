@@ -8,6 +8,7 @@ documentname: Conversation Builder
 subfoldername: Integrations
 permalink: conversation-builder-integrations-knowledgeai-integrations.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### Introduction

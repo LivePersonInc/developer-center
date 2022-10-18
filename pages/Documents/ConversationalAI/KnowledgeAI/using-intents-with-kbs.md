@@ -8,6 +8,7 @@ categoryname: "Conversational AI"
 documentname: KnowledgeAI
 permalink: knowledgeai-using-intents-with-kbs.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### Why use intents?
