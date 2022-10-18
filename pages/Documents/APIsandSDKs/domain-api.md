@@ -7,7 +7,7 @@ redirect_from:
     - common-resources-domain-api.html
     - api-guidelines-domain-api.html
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: domain-api.html
 root-link: true
 indicator:

@@ -10,7 +10,8 @@ indicator: messaging
 {: .attn-deprecation}
 This SDK is no longer maintained.
 
-<div class="attn-note">In depth documentation for this SDK, including a code sample, can be found <a href="https://github.com/LivePersonInc/messaging-window-sdk">on GitHub</a>.</div>
+{: .attn-note}
+In depth documentation for this SDK, including a code sample, can be found [on GitHub](https://github.com/LivePersonInc/messaging-window-sdk).
 
 This Messaging Window SDK for the Conversational Cloud [Messaging Window API](messaging-window-api-overview.html) makes building custom messaging windows and JavaScript applications efficient and stable. The SDK does a lot of the work of connecting to LivePerson's messaging servers, subscribing to notifications, and managing conversations for you. Thus, you can use this SDK to build your own messaging windows for your consumers to use or even moving the conversation entirely out of a window-type experience and embedding it into the webpage.
 
