@@ -1,7 +1,7 @@
 ---
 pagename: OAuth 2.0 Client Credentials
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: oauth-2-0-client-credentials.html
 indicator: both
 ---

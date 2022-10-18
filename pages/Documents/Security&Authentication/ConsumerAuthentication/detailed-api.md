@@ -13,7 +13,8 @@ indicator: both
 
 ### Web Interaction Embedded Window API
 
-<div class="attn-note">It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.</div>
+{: .attn-note}
+It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.
 
 In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to Conversational Cloud, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
@@ -38,7 +39,8 @@ The identity function should be implemented on every authenticated page (the Web
 
 **Identity object description**
 
-<div class="attn-note">All 3 object keys are mandatory.</div>
+{: .attn-note}
+All 3 object keys are mandatory.
 
 * iss: The "iss" (issuer) claim identifies the principal that issued the JWT. The "iss" value is a case-sensitive string containing a [StringOrURI](https://datatracker.ietf.org/doc/html/rfc7519#:~:text=define%20the%20name.-,StringOrURI,-A%20JSON%20string) value.
 

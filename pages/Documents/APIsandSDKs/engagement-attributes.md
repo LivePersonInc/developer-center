@@ -6,7 +6,7 @@ redirect_from:
     - essential-resources-engagement-attributes.html
     - api-guidelines-engagement-attributes.html
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: engagement-attributes.html
 order: 20
 indicator: both

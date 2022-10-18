@@ -33,7 +33,8 @@ The SDK allows you to override the string localization of any supported language
 <string name="brand_name">This new and fancy Brand name</string>
 ```
 
-<div class="attn-note">If you want to change the Brand name, when using the SDK on Activity Mode, you'll need to create an English Locale and override the name.</div>
+{: .attn-note}
+If you want to change the Brand name, when using the SDK on Activity Mode, you'll need to create an English Locale and override the name.
 
 ### Create new Localization File
 
