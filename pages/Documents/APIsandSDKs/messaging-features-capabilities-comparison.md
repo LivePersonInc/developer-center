@@ -1,7 +1,7 @@
 ---
 pagename: Messaging features Capabilities Comparison
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: messaging-features-capabilities-comparison.html
 indicator: messaging
 redirect_from:

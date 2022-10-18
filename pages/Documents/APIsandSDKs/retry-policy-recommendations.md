@@ -1,7 +1,7 @@
 ---
 pagename: Retry Policy Recommendations
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 level-order: 11
 order: 10
 permalink: retry-policy-recommendations.html
