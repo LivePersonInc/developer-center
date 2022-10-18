@@ -1436,7 +1436,8 @@ Color of the loader progress line background.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray5`](#lpColor)
 
-<div class="attn-note">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
+{: .attn-note}
+The disabled/enabled color of the Camera button, which is in the input text view, changes according to the `sendButtonDisabledTextColor` and `sendButtonEnabledTextColor` parameters.
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.

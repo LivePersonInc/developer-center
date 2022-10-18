@@ -9,7 +9,8 @@ indicator: both
 
 ### Introduction
 
-<div class="attn-note">The intended audience of this document is LivePerson Professional Services and other account stakeholders. It is to be used for consulting 3rd party bot builders in integrating their bots to LivePerson on behalf of our customers.</div>
+{: .attn-note}
+The intended audience of this document is LivePerson Professional Services and other account stakeholders. It is to be used for consulting 3rd party bot builders in integrating their bots to LivePerson on behalf of our customers.
 
 The LiveEngage platform helps orchestrate the flow of messages back and forth between consumers and Agents. Consumers can be on any end-user channel such as SMS, Web, Facebook Messenger and Apple Business chat, and communicate with both Human and Automated (Bot) agents. A bot is an automated conversational agent that performs a specific goal. LiveEngage has several avenues through which our customers can develop and deploy bots:
 
@@ -51,7 +52,8 @@ This document covers the following different scenarios with regards to deploying
 
     * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="attn-note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+{: .attn-note}
+Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.
@@ -117,7 +119,8 @@ Complete documentation can be found at [https://drive.google.com/drive/folders/1
 
     * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="attn-note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+{: .attn-note}
+Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.
@@ -158,7 +161,8 @@ The Google Dialogflow v2.0 connector will be available by mid December. Below ar
 
     * LivePerson APAC — https://bot-console.apac.fs.liveperson.com
 
-<div class="attn-note">Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.</div>
+{: .attn-note}
+Only registered IPs can login to the BOT-Platform console. Customer’s IT team will provide with the IP address of the location from where users will be accessing this console. These IP addresses must be added into the management console of the bot connector.
 
 {:start="3"}
 3. Go to Config Menu Option to add a new Bot.

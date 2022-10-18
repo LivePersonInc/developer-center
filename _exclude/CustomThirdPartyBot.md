@@ -10,7 +10,8 @@ permalink: custom-bots.html
 indicator: both
 ---
 
-<div class="attn-note">This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.</div>
+{: .attn-note}
+This document explains how to connect external bots to LivePerson if there is not an already pre-built and supported Connector. However, several configurations will need to be enabled on your account before you can use the below solutions. Please check with your LivePerson account team before using this document.
 
 ### Small / Medium niche Bot Platforms
 

@@ -1,12 +1,13 @@
 ---
-pagename: LivePerson APIs and SDKs
+pagename: Overview
 sitesection: Documents
-categoryname: "Getting Started"
-permalink: liveperson-apis-and-sdks.html
+categoryname: "APIs and SDKs"
+permalink: overview.html
 redirect_from:
   - essential-resources-messaging-features-capabilities-comparison.html
   - api-guidelines-important-updates.html
   - important-updates.html
+  - liveperson-apis-and-sdks.html
 indicator: both
 date_published: 2022/08/03
 date_updated: 2022/09/30

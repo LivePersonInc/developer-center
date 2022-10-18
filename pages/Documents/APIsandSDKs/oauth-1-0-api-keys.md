@@ -1,7 +1,7 @@
 ---
 pagename: OAuth 1.0 API keys
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: oauth-1-0-api-keys.html
 indicator: both
 redirect_from:
