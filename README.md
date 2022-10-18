@@ -170,7 +170,7 @@ When contributing to this repository, please observe the following:
 
 #### APIs and SDKs
 
-If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
+If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/overview.html).
 
 ### Special formatting
 

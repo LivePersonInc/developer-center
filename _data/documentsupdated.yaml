@@ -4,11 +4,11 @@
     - documentname: Getting Started with your Free Trial Account
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
-    - documentname: LivePerson APIs and SDKs
 
-- categoryname: API Guidelines
+- categoryname: APIs and SDKs
   image: api-guidelines
   documents:
+    - documentname: Overview
     - documentname: Accessing LivePerson APIs
     - documentname: OAuth 1.0 API keys
     - documentname: OAuth 2.0 Client Credentials
