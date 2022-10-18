@@ -1,7 +1,5 @@
 ---
 pagename: Enabling LiveIntent
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: LiveIntent

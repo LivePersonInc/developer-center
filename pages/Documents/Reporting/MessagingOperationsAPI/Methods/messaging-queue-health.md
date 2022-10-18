@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 20
 permalink: messaging-operations-api-methods-messaging-queue-health.html
-
 indicator: messaging
 ---
 
@@ -32,12 +31,14 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 **URL Parameters**
 
-| Name      |  Description | Type / Value | Required |
-| :-----    | :--------------- | :-------------- | :--- |
-| timeframe | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time – timeframe. The maximum timeframe value is 1440 minutes (24 hours). | numeric | required |
-| v | Version of API, for example, v=1. | numeric | required |
-| skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, metrics on the response will be calculated for all skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all, or do not specify this parameter at all. | numeric, comma separated | optional |
-| interval | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional |
+| Name       | Description                                                                                                                                                                                                                                                                                                                                                                                         | Type / Value | Required                           |
+|:---|:---| :--- |:---|
+| timeframe  | The time range (in minutes) in which the data can be filtered. Where end time = current time, and start time = end time – timeframe. The maximum timeframe value is 1440 minutes (24 hours).                                                                                                                                                                                                        | numeric | required  only if the version is 1 |
+| fromMillis | The start time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is 24 hours before the current time.                                                                                                                                                                                                                                                          | numeric | required  only if the version is 2 |
+| toMillis   | The end time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is the current time..                                                                                                                                                                                                                                                          | numeric | required  only if the version is 2 |
+| v          | Version of API, for example, v=1.                                                                                                                                                                                                                                                                                                                                                                   | numeric | required                           |
+| skillIds   | When provided, metrics on the response will be grouped by the requested skills. When not provided, metrics on the response will be calculated for all skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all, or do not specify this parameter at all.                                                     | numeric, comma separated | optional                           |
+| interval   | Interval size in minutes (the minimum value is five minutes). When provided, the returned data will be aggregated by intervals of the requested size. The interval has to be smaller or equal to the time frame and also a divisor of the time frame. <br> Example: <br> timeframe=60&interval=30 (correct) <br> timeframe=60&interval=61 (bad request) <br> timeframe=60&interval=31 (bad request) | numeric | optional                           |
 
 ### Response
 
@@ -349,7 +350,7 @@ Request by skillIds=12,13 interval=60, timeframe=180
 <div class="attn-note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
 
 | Name |  Description | Type / Value |
-| :------ | :------------- | :------------- |
+| :--- | :--- | :--- |
 | skillsMetrics | When skillIDs are provided: An array of skills with their metrics. <br> When interval size is provided: The response will have the skillsMetrics element in each interval representing the data for the related interval. <br> There will also be a skillsMetrics element at the end of the response, representing the data of the whole requested time frame. <br>If there is no data for a specific skill, it will not be included in the array. <br> If there is no data for any of the skills, this member will have an empty element as value. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested intervals.<br> If skill/sID/s are requested and there is no data for any of them, this element will still include all of the metrics with value zero. <br> Note: Totals may not add up due to rounding differences. | element |
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |

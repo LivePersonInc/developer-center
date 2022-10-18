@@ -2,14 +2,11 @@
 pagename: Methods
 redirect_from:
   - agent-workspace-sdk-methods.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 50
 permalink: agent-workspace-widget-sdk-methods.html
-
 indicator: both
 ---
 

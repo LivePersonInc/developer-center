@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 30
 permalink: messaging-window-api-tutorials-read-and-accept-events.html
-
 indicator: messaging
 ---
 

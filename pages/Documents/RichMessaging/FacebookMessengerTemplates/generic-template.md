@@ -2,7 +2,7 @@
 pagename: Generic Template
 redirect_from:
   - structured-content-facebook-messenger-templates-generic-template.html
-Keywords: structured content rich messaging
+keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Facebook Messenger Templates

@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - consumer-experience-javascript-chat-getting-started.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 level-order: 6
 order: 1
 permalink: javascript-chat-sdk-overview.html

@@ -3,7 +3,6 @@ pagename: Carousel Template
 redirect_from:
   - rich-messaging-structured-content-carousel.html
   - structured-content-mobile-sdk-and-web-templates-carousel-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

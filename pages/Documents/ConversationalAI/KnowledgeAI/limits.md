@@ -3,7 +3,6 @@ pagename: Limits
 redirect_from:
     - knowledge-base-internal-knowledge-bases-limits.html
     - knowledge-base-limits.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started
-redirect_from:
 sitesection: Solutions
 documentname: Transporter
 permalink: transporter-getting-started.html

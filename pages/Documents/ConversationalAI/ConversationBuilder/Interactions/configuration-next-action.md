@@ -7,7 +7,6 @@ redirect_from:
     - conversation-builder-interactions-response-match-actions.html
     - conversation-builder-interactions-details-next-actions.html
     - conversation-builder-interactions-configuration-next-step.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

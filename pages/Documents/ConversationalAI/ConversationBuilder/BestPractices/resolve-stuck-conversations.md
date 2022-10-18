@@ -1,7 +1,5 @@
 ---
 pagename: Resolve Stuck Conversations
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API
-
 order: 32
 permalink: messaging-interactions-api-engagement-attributes.html
-
 indicator: messaging
 ---
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart abandonment etc., from the webpage into Conversational Cloud. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).

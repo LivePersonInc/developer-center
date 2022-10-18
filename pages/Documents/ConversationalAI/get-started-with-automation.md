@@ -1,15 +1,15 @@
 ---
 pagename: Get Started with Automation
 redirect_from:
-    - conversation-builder-platform-overview.html
-    - conversational-ai-platform-platform-overview.html
-    - conversational-ai-overview.html
-    - platform-overview.html
-Keywords:
+  - conversation-builder-platform-overview.html
+  - conversational-ai-platform-platform-overview.html
+  - conversational-ai-overview.html
+  - platform-overview.html
 sitesection: Documents
 categoryname: "Conversational AI"
 permalink: get-started-with-automation.html
 indicator: both
+date_published: 2022/09/30
 ---
 
 LivePerson's Conversational AI is a suite of integrated applications that work together to provide an all-in-one automation and AI solution.

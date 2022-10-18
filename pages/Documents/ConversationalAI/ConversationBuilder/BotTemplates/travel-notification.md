@@ -2,7 +2,6 @@
 pagename: Travel Notification
 redirect_from:
     - conversation-builder-templates-travel-notification.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

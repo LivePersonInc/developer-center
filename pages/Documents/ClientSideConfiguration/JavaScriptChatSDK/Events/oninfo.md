@@ -2,15 +2,12 @@
 pagename: onInfo
 redirect_from:
   - consumer-experience-javascript-chat-oninfo.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 280
 permalink: javascript-chat-sdk-events-oninfo.html
-
 indicator: chat
 ---
 

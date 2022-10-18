@@ -2,15 +2,12 @@
 pagename: Create Predefined Content
 redirect_from:
   - account-configuration-predefined-content-create-content.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 40
 permalink: predefined-content-api-methods-create-predefined-content.html
-
 indicator: both
 ---
 

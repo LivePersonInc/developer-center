@@ -2,7 +2,6 @@
 pagename: Meta Intents
 redirect_from:
     - intent-builder-meta-intents.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

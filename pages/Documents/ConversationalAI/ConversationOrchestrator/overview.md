@@ -3,45 +3,40 @@ pagename: Overview
 redirect_from:
   - maven-overview.html
   - maven-ai-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
 permalink: conversation-orchestrator-overview.html
 indicator: messaging
+date_updated: 2022/10/06
 ---
 
 {: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
-### What is Conversation Orchestrator
+### What's Conversation Orchestrator?
 
-Conversational Commerce has unlocked new channels for consumers to interact with brands on their terms. Consumer demand for messaging presents a challenge for brands to effectively handle high-volumes of messaging conversations while simultaneously delivering personalized and effective service to every consumer.
+Conversational Commerce has unlocked new channels for consumers to interact with brands on their terms. Consumer demand for messaging presents a challenge for you to effectively handle high volumes of messaging conversations, while simultaneously delivering personalized and effective service to every consumer.
 
-LivePerson’s Conversation Orchestrator offers brands tools to enable efficient and personalized customer journeys at scale, while allowing brands control and transparency over how AI is used in their business.
+Conversation Orchestrator offers tools to enable efficient and personalized consumer journeys at scale. It gives you control and transparency over how AI is used in your business.
 
-Conversation Orchestrator, part of LivePerson’s Conversational AI, empowers brands to create highly personalized conversational experiences for their customers. Conversation Orchestrator provides the following key value to brands:
+### Key values
 
-1. **Humans in loop**: Accelerate human agents in the contact center with Recommended Actions
-2. **Go handsfree with AI**: Centralized AI policy experience that evolves with your business, and allows you to use all information to make decisions using the Conversation Context Service.
-3. **Connect to an AI ecosystem**:  Use Next Actions APIs from an application or bot, or go faster with inbox predictions and models
-4. **Drive continuous improvements** using Conversation Orchestrator learning, that improves predictions and outcomes with more usage.
+1. **Go hands-free with AI**: A centralized AI policy experience that evolves with your business. Use all available info to make decisions.
+2. **Connect to an AI ecosystem**:  Use the Next Actions APIs from an application or bot, or go faster with inbox predictions and models.
+3. **Drive continuous improvements**: Conversation Orchestrator learning improves predictions and outcomes with more usage.
 
-Conversation Orchestrator is introducing several new capabilities that enable brands to achieve conversational commerce at scale:
+### Key features
 
-* [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html)
-* [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html)
-* [Next Actions API](conversation-orchestrator-next-actions-api-overview.html)
+Conversation Orchestrator is a self-service, low-code/no-code experience:
 
-### Conversation Orchestrator
+* Manage and use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html), which is a repository for brand, session, and consumer attributes. Connect to external data sources (e.g., to a CRM system using a LivePerson function). And use these attributes throughout the consumer's conversational journey or in routing policies.
+* Author [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) policies based on attributes (intent, content, session, or AI-based inferences) to route to the right human or bot — unlocking highly personalized consumer journeys.
+* Access developer features, such as the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to retrieve the next best actions, or the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to customize and integrate Conversation Orchestrator into decision processes.
 
-The Conversation Orchestrator is a self-service, low-code/no-code experience for brands to enable or tune Conversation Orchestrator capabilities and features. With Conversation Orchestrator brands can:
+### Access Conversation Orchestrator
 
-1. Manage and use the **Conversation Orchestrator Conversation Context Service**, a repository for brand, session, or customer attributes, including the ability to connect to external data sources (CRM using a FaaS), and use these attributes throughout the customer’s conversation journey or in routing policies.
-2. Author **Dynamic Routing** policies based on attributes (intent, content, session, or AI based inferences) to route to the right human or bot — unlocking highly personalized consumer journeys.
-3. Access developer features such as **Next Actions API** for next action or **Conversation Context Service** to customize and integrate Conversation Orchestrator into their decision processes.
-
-You can start using Conversation Orchestrator by visiting the following links:
+Get started by visiting one of the following links:
 
 * North America: [https://z1.maven.liveperson.net](https://z1.maven.liveperson.net)
 * Europe: [https://z2.maven.liveperson.net](https://z2.maven.liveperson.net)

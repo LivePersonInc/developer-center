@@ -8,7 +8,6 @@ documentname: IVR Engagement API
 subfoldername: Methods
 order: 10
 permalink: ivr-engagement-api-methods-external-engagement.html
-
 indicator: chat
 ---
 

@@ -1,7 +1,5 @@
 ---
 pagename: Advanced Use Cases
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

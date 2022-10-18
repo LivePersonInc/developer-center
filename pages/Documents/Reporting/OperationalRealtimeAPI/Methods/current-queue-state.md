@@ -8,7 +8,6 @@ documentname: Operational Realtime API
 subfoldername: Methods
 order: 40
 permalink: operational-realtime-api-methods-current-queue-state.html
-
 indicator: chat
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Delete certificate by ID
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

@@ -14,11 +14,11 @@
     "lodash": "^4.17.21",
     "lodash.template": ">=4.5.0",
     "object-path": ">=0.11.5",
-    "socket.io": ">=4.5.2",
+    "socket.io": ">=4.5.3",
     "yargs-parser": ">=21.1.1"
   },
   "devDependencies": {
-    "@j9t/imagemin-guard": "^3.2.8",
+    "@j9t/imagemin-guard": "^3.2.9",
     "pre-commit": "^1.2.2"
   },
   "scripts": {

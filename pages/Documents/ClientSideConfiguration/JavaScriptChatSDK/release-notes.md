@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 order: 500
 permalink: javascript-chat-sdk-release-notes.html
 indicator: chat

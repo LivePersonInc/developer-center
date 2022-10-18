@@ -3,9 +3,7 @@ pagename: Overview
 redirect_from:
   - usecases-alternate-messaging-notifications.html
 sitesection: Solutions
-
 documentname: Alternate Messaging Notifications
-
 order: 1
 level-order: 10
 root-link: true

@@ -2,7 +2,6 @@
 pagename: Deprecated Attributes
 redirect_from:
   - consumer-experience-ios-sdk-deprecated-attributes.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

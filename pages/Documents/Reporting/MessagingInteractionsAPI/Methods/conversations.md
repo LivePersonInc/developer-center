@@ -1,6 +1,7 @@
 ---
 pagename: Conversations
-redirect_from: data-messaging-interactions-conversations.html
+redirect_from:
+  - data-messaging-interactions-conversations.html
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API

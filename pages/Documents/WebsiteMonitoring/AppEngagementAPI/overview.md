@@ -5,13 +5,13 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: App Engagement API
-
 level-order: 1
 order: 1
 permalink: app-engagement-api-overview.html
 root-link: true
 indicator: both
 ---
+
 ### Introduction
 
 When implementing an API-based chat window in a non-monitored flow (when the Conversational Cloud Web Tag is not part of the flow), getting the Engagement is within the responsibility of the Chat API Based window Service.

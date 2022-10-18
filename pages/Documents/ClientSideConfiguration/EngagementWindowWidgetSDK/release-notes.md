@@ -2,14 +2,11 @@
 pagename: Release Notes
 redirect_from:
   - rt-interactions-window-sdk-releasenotes.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
-
 order: 120
 permalink: engagement-window-widget-sdk-release-notes.html
-
 indicator: both
 ---
 

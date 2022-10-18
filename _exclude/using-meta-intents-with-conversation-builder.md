@@ -1,7 +1,5 @@
 ---
 pagename: Using Meta Intents with Conversation Builder
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

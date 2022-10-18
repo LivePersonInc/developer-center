@@ -17,8 +17,6 @@ redirect_from:
   - consumer-experience-ios-sdk-user-data.html
   - mobile-app-messaging-sdk-for-ios-configuration-user-data.html
   - consumer-experience-ios-sdk-configuration.html
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

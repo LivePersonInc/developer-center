@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 40
 permalink: server-chat-api-methods-retrieve-pre-chat-survey.html
-
 indicator: chat
 ---
 

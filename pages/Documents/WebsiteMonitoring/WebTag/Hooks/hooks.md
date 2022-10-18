@@ -13,7 +13,6 @@ categoryname: "Website Monitoring"
 documentname: Web Tag
 subfoldername: Hooks
 permalink: web-tag-hooks-hooks.html
-
 indicator: both
 ---
 

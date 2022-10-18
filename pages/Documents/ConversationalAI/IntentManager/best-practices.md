@@ -1,12 +1,11 @@
 ---
 pagename: Best Practices
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-best-practices.html
 indicator: both
+date_updated: 2022/10/12
 ---
 
 To increase the quality of your intent matches, follow the best practices below.
@@ -17,7 +16,15 @@ Also follow the [best practices for training and tuning NLU](conversation-builde
 
 Intent Manager requires a minimum of 5 intents and 15 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.
 
-The average number of intents for a taxonomy with good coverage is 20-60. If you find that your domain is exceeding this, divide it into smaller domains.
+The average number of intents for a taxonomy with good coverage is 20-60.
+
+#### Going beyond 60 intents
+
+We have experimented with up to 80 intents in a domain without a significant performance drawback. Going above that, there is an increasing chance of intent overlap, and the number of “Undefined” might go up as a result of the model being undecided and having low confidence scores below the minimum threshold. As your taxonomy grows in size, the intents themselves will likely become more narrow and specific in their definitions. The most important thing to remember is that intents should never overlap each other in definition. This becomes of greater and greater importance as intents become more and more granular.
+
+To avoid overlap in a model with very granular intents, make sure that each message being used as training data only contains a singular topic of discussion. This topic should relate directly to the intent. It is very important that “edge case” messages (i.e., overly long messages or messages that contain multiple topics of discussion) are not used for training data when working on a large, granular taxonomy. Only use strong, clear examples as training data. 
+
+Models that have very granular intents usually require a substantial amount of tuning once the first model is trained. Do this by carefully adding new training data in an iterative cycle. Add some training data and then train a new model; then evaluate and repeat the process if necessary. It is also useful to use the Test User Input tool in Intent Manager to test consumer messages to see which intents have a strong confidence score for that message. If you see any intents that have a confidence score greater than ~20% - 30% and do not belong, revisit the training data for those intents and remove any messages that are similar to the message that you used in the Test User Input tool. Set a goal to create an intent that at least covers 1% of all the [SOIs](intent-manager-key-terms-concepts.html) and a taxonomy with at least 50% coverage, but recognize that it is definitely worthwhile to create an intent with lower coverage if it has special value to you.
 
 ### Intents
 

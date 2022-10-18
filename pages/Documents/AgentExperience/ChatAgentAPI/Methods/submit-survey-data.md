@@ -2,15 +2,12 @@
 pagename: Submit Survey Data
 redirect_from:
   - agent-submit-survey.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 230
 permalink: chat-agent-api-methods-submit-survey-data.html
-
 indicator: chat
 ---
 

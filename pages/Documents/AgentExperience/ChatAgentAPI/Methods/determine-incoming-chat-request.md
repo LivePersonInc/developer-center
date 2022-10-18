@@ -2,15 +2,12 @@
 pagename: Determine Incoming Chat Request
 redirect_from:
   - agent-determine-incoming.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 70
 permalink: chat-agent-api-methods-determine-incoming-chat-request.html
-
 indicator: chat
 ---
 

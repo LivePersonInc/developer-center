@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: App Engagement API
 subfoldername: Methods
-
 order: 20
 permalink: app-engagement-api-methods-update-session.html
-
 indicator: both
 ---
 

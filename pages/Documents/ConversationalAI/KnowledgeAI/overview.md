@@ -3,7 +3,6 @@ pagename: Overview
 redirect_from:
     - conversation-builder-knowledge-base.html
     - knowledge-base-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

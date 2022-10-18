@@ -2,7 +2,6 @@
 pagename: Apply for a Loan
 redirect_from:
     - conversation-builder-templates-apply-loan.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

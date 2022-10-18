@@ -8,7 +8,6 @@ documentname: Agent Metrics API
 subfoldername: Methods
 order: 10
 permalink: agent-metrics-api-methods-agent-status.html
-
 indicator: messaging
 ---
 

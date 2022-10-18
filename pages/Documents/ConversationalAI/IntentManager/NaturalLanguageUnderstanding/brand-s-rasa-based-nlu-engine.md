@@ -1,7 +1,5 @@
 ---
 pagename: Brand's Rasa-Based NLU Engine
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

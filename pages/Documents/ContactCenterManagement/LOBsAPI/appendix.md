@@ -3,14 +3,11 @@ pagename: Appendix
 redirect_from:
   - administration-lobs-appendix.html
   - aadministration-lobs-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
-
 order: 100
 permalink: lobs-api-appendix.html
-
 indicator: both
 ---
 

@@ -2,7 +2,6 @@
 pagename: CSAT Behavior
 redirect_from:
   - android-csat.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

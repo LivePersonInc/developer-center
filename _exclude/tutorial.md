@@ -2,7 +2,6 @@
 pagename: Tutorial
 redirect_from:
     - knowledge-base-tutorial.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base

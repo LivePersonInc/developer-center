@@ -2,7 +2,6 @@
 pagename: Authorization Request
 redirect_from:
   - authorizing-liveengage-applications-methods-authorization-request.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications

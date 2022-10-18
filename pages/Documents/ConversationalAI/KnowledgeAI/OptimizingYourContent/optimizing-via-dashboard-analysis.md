@@ -2,7 +2,6 @@
 pagename: Optimizing via Dashboard Analysis
 redirect_from:
     - knowledgeai-optimizing-via-dashboard-analysis.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI

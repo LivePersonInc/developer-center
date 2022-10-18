@@ -1,6 +1,5 @@
 ---
 pagename: BrandServiceStatusAPI
-redirect_from:
 sitesection: Documents
 categoryname: "RealTimeData"
 documentname: BrandStatusService_test-details

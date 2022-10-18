@@ -2,7 +2,6 @@
 pagename: Test a Single Utterance
 redirect_from:
     - intent-builder-testing-single-utterance-testing.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

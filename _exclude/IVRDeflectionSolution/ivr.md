@@ -4,12 +4,12 @@ redirect_from:
   - products-channels-ivr-deflection-solution-introduction.html
 keywords: ['IVR', 'IVR Deflection', 'IVR Deflection for Messaging']
 sitesection: Solutions
-
 documentname: IVR Deflection
 order: 20
 permalink: ivr-deflection-ivr-deflection-for-chat.html
 indicator: chat
 ---
+
 ### How the IVR Deflection Solution Works
 
 The diagram below illustrates the flow of the IVR Deflection Solution:

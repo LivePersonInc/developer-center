@@ -2,7 +2,6 @@
 pagename: Log & Debug
 redirect_from:
     - conversation-builder-scripting-functions-debugging-and-logging.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

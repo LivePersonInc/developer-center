@@ -2,15 +2,12 @@
 pagename: Retrieve Chat Sessions
 redirect_from:
   - agent-retrieve-chat-sessions.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 90
 permalink: chat-agent-api-methods-retrieve-chat-sessions.html
-
 indicator: chat
 ---
 
