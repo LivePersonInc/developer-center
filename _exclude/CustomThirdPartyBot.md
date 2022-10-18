@@ -37,7 +37,7 @@ This document explains how to connect external bots to LivePerson if there is no
 
     6. Configure an end point for the bot you want to connect. This URL will be used by the connector to post the data. This is where your 3rd Party Bot should also be listening to, to receive information from LiveEngage.
 
-![image alt text](img/bot-guide-niche0.png)
+![](img/bot-guide-niche0.png)
 
 {:start="4"}
 4. Fallback SkillId is optional. You can set it as a backup option; when the connector does not receive any messages due to backend systems failure, it will escalate to this skill.
