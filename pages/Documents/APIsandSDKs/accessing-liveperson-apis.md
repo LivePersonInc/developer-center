@@ -1,7 +1,7 @@
 ---
 pagename: Accessing LivePerson APIs
 sitesection: Documents
-categoryname: "API Guidelines"
+categoryname: "APIs and SDKs"
 permalink: accessing-liveperson-apis.html
 order: 11
 indicator: both

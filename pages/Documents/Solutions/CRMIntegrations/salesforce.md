@@ -10,7 +10,8 @@ indicator: both
 
 <!-- TODO: Use the following as content for the page, or remove:
 
-<div class="attn-note">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>
+{: .attn-note}
+Please see our [Knowledge Center](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html) for more updated information on our Salesforce integration and how to use it.
 
 This integration will allow you to see and create your Salesforce Contact, Lead, Account and Opportunity record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Salesforce. Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to Salesforce by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
 
@@ -287,8 +288,8 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
 
 ![](/img/salesforce_pastewidget.png)
 
-<!-- <div class="attn-alert">
-<p>If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:</p>
+<!-- {: .attn-note}
+If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:
 
 <img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
 </div>

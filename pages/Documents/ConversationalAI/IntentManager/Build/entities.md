@@ -13,7 +13,7 @@ indicator: both
 
 ### What's an entity?
 
-An [entity]((intent-manager-key-terms-concepts.html#entities)) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
+An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
 
 ### Add a Value Set entity
 
