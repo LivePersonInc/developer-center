@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
-
 order: 3
 permalink: engagement-window-widget-sdk-limitations.html
-
 indicator: both
 ---
 

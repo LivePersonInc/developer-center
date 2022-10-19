@@ -2,14 +2,11 @@
 pagename: Methods
 redirect_from:
   - agent-workspace-sdk-methods.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 50
 permalink: agent-workspace-widget-sdk-methods.html
-
 indicator: both
 ---
 
@@ -159,7 +156,8 @@ _Note: The updateCallback must be the same callback provided for the bind._
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 | "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {…//File or Blob}, name: "name_of_file.png"} |
 
-<div class="note">Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least <b>one</b> of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system.</div>
+{: .attn-note}
+Two permissions exist that pertain to file sharing: one for sharing files directly from your file system and one for sharing files from a custom widget. The API checks that at least **one** of these permissions is enabled. This means that a user with permissions to send files from a custom widget only could theoretically still use this API to send files directly from their file system.
 
 Example 1 — 'Write ChatLine':
 
@@ -391,7 +389,7 @@ Example 6 — 'Send File':
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'blob';
-    xhr.onload = function (ev) { 
+    xhr.onload = function (ev) {
         if (this.status === 200) {
             var file = this.response;
             var name = url.split('\\').pop().split('/').pop();
@@ -539,7 +537,8 @@ lpTag.agentSDK.get('city', onSuccess, onError);
 
 ### setConsumerProfile
 
-<div class="note">If you set any of the values in the consumerData object to null the SDK will throw an error. We recommend setting values that you want left blank with an empty string instead.</div>
+{: .attn-note}
+If you set any of the values in the consumerData object to null the SDK will throw an error. We recommend setting values that you want left blank with an empty string instead.
 
 Before using this method, you need to make sure that the "AgentSetConsumerProfile" feature is enabled for your account. Once it is, you will be able to grant the necessary permission to one of your agent/agent manager users (the necessary permission is "update consumer profile via API").
 

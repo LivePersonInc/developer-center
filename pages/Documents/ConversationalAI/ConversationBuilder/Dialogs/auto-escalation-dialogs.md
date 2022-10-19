@@ -1,6 +1,5 @@
 ---
 pagename: Auto Escalation Dialogs
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -23,7 +22,7 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 
 #### Step 1: Create the dialog
 
-{: .note}
+{: .attn-note}
 A bot can have only one Auto Escalation dialog.
 
 **To create an Auto Escalation dialog**
@@ -34,7 +33,7 @@ A bot can have only one Auto Escalation dialog.
     * **Dialog Type**: Select "Auto Escalation Dialog."
     * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots-the-basics.html) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). You can edit this information later in the Escalation Integration interaction's settings.
     * **Auto Escalation Threshold**: Select the maximum number of consecutive times the fallback message should be sent within a question before triggering the Auto Escalation dialog. Example: You set the threshold to 3. The consumer enters an incorrect answer three times, receiving the fallback response each time. After the fourth incorrect answer, the Auto Escalation dialog is triggered.
-    
+
         You can edit this information later in the dialog's settings. LivePerson recommends setting this to "3," but you can set this to a different value based on your confidence that the fallback response will resolve the user's issue.
 3. Click **Save**.
 

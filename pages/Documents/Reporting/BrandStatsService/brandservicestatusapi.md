@@ -1,6 +1,5 @@
 ---
 pagename: BrandServiceStatusAPI
-redirect_from:
 sitesection: Documents
 categoryname: "RealTimeData"
 documentname: BrandStatusService_test-details
@@ -10,7 +9,7 @@ indicator:
 
 ### Introduction
 
-The table below provides detail on the tests availalbe in the Brand Status Service API and Dashboard. 
+The table below provides detail on the tests availalbe in the Brand Status Service API and Dashboard.
 
 The following Amazon Lex information should be provided to LivePerson:
 
@@ -30,4 +29,3 @@ The following Amazon Lex information should be provided to LivePerson:
   </tr>
  </tbody>
 </table>
-

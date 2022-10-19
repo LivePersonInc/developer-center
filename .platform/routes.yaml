@@ -3,6 +3,10 @@ https://developers.liveperson.com:
   upstream: jekyll_app:http
   tls:
     min_version: TLSv1.2
+    strict_transport_security:
+      enabled: true
+      include_subdomains: true
+      preload: true
   cache:
     enabled: true
     default_ttl: 0

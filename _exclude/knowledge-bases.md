@@ -1,7 +1,5 @@
 ---
 pagename: Knowledge Bases
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -10,7 +8,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 **This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
 
 Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in the Fallback Dialog, as a last check before triggering the Fallback interaction. In this section, you create a new knowledge base, which will be accessed in the Fallback dialog located in your Greeter Bot.
@@ -34,7 +32,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
     Under **Intent Association**, select **Domain Intents** and create a new NLU V1 domain called **Retail FAQ**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png" alt=""> 
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png" alt="">
 
     Click **Save** in the lower-right corner.
 
@@ -55,7 +53,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_article.png" alt="">
 
-    {: .note}
+    {: .attn-note}
     For the purpose of this demonstration, intents and training phrases are intentionally being kept simplistic to quickly showcase the capabilities of Domain Intents. A benefit of using Domain Intents is that, after creation, you can modify/improve the intents and training phrases using Intent Builder.
 
 6. Back in our Getting Started KB page, repeat this process to add additional articles with the following information:
@@ -78,7 +76,7 @@ In this step, you create a new FAQ knowledge base and add FAQ articles to it.
             * I need to cancel my order
     * **Summary**: *Orders can be cancelled up to an hour after they are placed. Please contact our support team at atyourservice@retail.com for further assistance.*
 
-    {: .note}
+    {: .attn-note}
     Additional details and tags can be included when creating your Knowledge Base articles. Please see the [developers' documentation on knowledge bases](knowledge-base-overview.html) for more details on how to use these features to optimize your Knowledge Base searches.
 
 	Click **Save** in the lower-right corner.
@@ -108,7 +106,7 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_integration_add.png" alt="">
 
 3. Click **Save** in the lower right hand corner, and on success, navigate to the Fallback dialog.
-4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration. 
+4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_1.png" alt="">
 
@@ -124,7 +122,7 @@ Prior to displaying the Fallback message for unrecognized utterances, create a K
     * Rule name: KB Success
     * **+ Add Condition**: **API Result** matches **Success**
     * **And Go To**: Go To: Next Interaction
-	
+
 	Click **Save**.
 
 7. Create a second rule to account for a failed search; this will point to the **fallback_starter** as the next action. Click **+ Custom Rule**, and complete with the following:

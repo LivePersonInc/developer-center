@@ -1,6 +1,5 @@
 ---
 pagename: Hook Configuration
-redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -10,12 +9,12 @@ indicator: both
 
 The following documentation outlines the configuration for a bot connector using LivePerson Functions to modify vendor payloads, repsonses and read out errors.
 
-{: .note}
+{: .attn-note}
 As the Hook feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting up LivePerson Functions and its permissions.
 
 ### Bot Configuration
 
-{: .note}
+{: .attn-note}
 See the [Getting Started](third-party-bots-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 #### Step-by-Step Hook creation and deployment guide
@@ -34,7 +33,8 @@ Depending on the hook and vendor type the palyoad information differs in content
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](liveperson-functions-getting-started-development-deep-dive-ui.html#deployment-process) for more information on how to deploy your function. At this point, you can also test your function.
 
-<div class="note">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
+{: .attn-note}
+Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the **Participants Change** event and an agent joins the conversation, the consumer may see the resulting \`systemMessage\` **after the agent already responded to the consumer themselves**.
 
 #### Last Steps in Third-Party Bots
 

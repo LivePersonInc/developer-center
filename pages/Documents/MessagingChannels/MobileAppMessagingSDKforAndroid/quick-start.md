@@ -5,7 +5,6 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 redirect_from:
   - android-quickstart.html
-Keywords:
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 indicator: messaging
 ---
@@ -16,12 +15,12 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
-- [Latest version](https://developer.android.com/studio) of **Android Studio**. 
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.
+- [Latest version](https://developer.android.com/studio) of **Android Studio**.
 - [Latest version](https://gradle.org/install/) of **Gradle**.
 
-{: .note}
-The Mobile SDK currently supports only Native Android (Java / Kotlin) implementations. If you use other core frameworks, languages, or development setups, please check with LivePerson support for advice before attempting these steps. 
+{: .attn-note}
+The Mobile SDK currently supports only Native Android (Java / Kotlin) implementations. If you use other core frameworks, languages, or development setups, please check with LivePerson support for advice before attempting these steps.
 
 ### Step 1: Install the Messaging SDK into your project
 
@@ -33,7 +32,7 @@ You can install the Mobile App Messaging SDK using a couple of different methods
 
 #### Option 1: Automatically add the SDK files using Gradle
 
-You can use Gradle, an automation tool, to scale your projects effortlessly. 
+You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 1. Add `mavenCentral()` to the project level gradle file:
 ```java
@@ -42,8 +41,8 @@ repositories {
 }
 ```
 2. In your project, locate and double-click **Gradle Scripts → build.gradle (Module: app)**.
-   
-   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developer-center/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
+
+   ![Preview](https://raw.githubusercontent.com/LivePersonInc/developer-center/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)
 
 3. In the **dependencies** section, add:
    ```java
@@ -88,8 +87,8 @@ repositories {
 
 #### Option 2: Manually copying the SDK files to your project
 
-1. Download the latest SDK libraries. 
-Download 4.7.1 and below, 5.0.0 ~ 5.5.1 [here](https://bintray.com/liveperson-mobile/maven), 
+1. Download the latest SDK libraries.
+Download 4.7.1 and below, 5.0.0 ~ 5.5.1 [here](https://bintray.com/liveperson-mobile/maven),
 Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search?q=com.liveperson.android)
 2. You can get a sample app that demonstrates how to use the SDK [here](https://github.com/LP-Messaging/Android-Messaging-SDK).
 3. In your Android Studio project, go to **File->New->New Module->Import .JAR/>AAR Package** and select .aars to add.
@@ -182,7 +181,7 @@ Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search
 
 2. Add imports to your class imports section:
 
-   ```java 
+   ```java
    import com.liveperson.api.LivePersonCallback;
    import com.liveperson.infra.InitLivePersonProperties;
    import com.liveperson.infra.callbacks.InitLivePersonCallBack;
@@ -191,15 +190,15 @@ Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search
    import com.liveperson.messaging.sdk.api.LivePerson;
    ```
 
-### Step 3: Initialize the Messaging SDK 
+### Step 3: Initialize the Messaging SDK
 
-Before you can show a conversation, you must initialize the Messaging SDK.  
+Before you can show a conversation, you must initialize the Messaging SDK.
 
-{: .note}
-If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params).  
+{: .attn-note}
+If you want to use the Monitoring API, you must [initialize the Messaging SDK with Monitoring Params](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#initialize-the-sdk-with-monitoring-params).
 
 1. **Set your app ID and view controller.** Provide your `APP_ID` as a string your application's class.
-   
+
    ```java
    private static final String APP_ID = "com.mybrand.app";
 
@@ -212,9 +211,9 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
 2. **Select your choice of authentication** for initializing the SDK instance.
 
-   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow). 
+   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow).
 
-   - **[Code Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
+   - **[Code Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated)
 
      The LivePerson back-end verifies the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
@@ -228,7 +227,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      lpAuthenticationParams.setHostAppRedirectUri("yourRedirectUrl")
      ```
 
-   - **[Implicit Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)  
+   - **[Implicit Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)
 
       ```java
       LPAuthenticationParams().setHostAppJWT("yourJwt")
@@ -238,7 +237,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       To re-connect with a new Authentication key, use [`LivePerson.reconnect() API)`](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect)
 
-      {: .note}
+      {: .attn-note}
       Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
    - **[Unauth Flow](mobile-app-messaging-sdk-for-android-resources-authentication.html#unauthenticated-in-app-messaging)**
@@ -248,7 +247,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
      ```
 
-3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
+3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view.
 
    Choose an authentication method:
 
@@ -264,7 +263,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
    * **Fragment mode**  - Attaches the returned fragment to a container in your activity.  The caller, placed inside a container, receives the conversation fragment from the SDK.  Also, the caller is responsible for initializing the SDK and, if needed, implementing a toolbar or other indicators according to the provided SDK callbacks.
 
-      {: .alert}
+      {: .attn-alert}
       Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
       Open conversation window in a fragment to return a conversation fragment and place it in a container in your activity:
@@ -275,7 +274,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
       **Tip.** When using fragment mode, you could use the provided SDK callbacks in your app to implement functionalities such as menu items, action bar indications, agent name, and typing indicator.
 
-   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button. 
+   * **Fragment mode — Handle CSAT (feedback)** — Implements notifications of the CSAT screen state (**visible**/**invisible**). For example, you can show a different title on the toolbar or show a close CSAT button.
 
       The container Activity (the activity that hosts the fragment) needs to implement  ConversationFragmentCallbacks interface:
 
@@ -328,7 +327,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
           toolbar.setTitle("survey submitted");
         }
       }
-      ```  
+      ```
 
 4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the Conversational Cloud console.
 
@@ -352,7 +351,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      }
      ```
    - **Implicit Flow**
-   
+
      ```java
      public void startImplicitFlow(View v) {
          String brandID = "42391995";
@@ -428,8 +427,8 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
        }));
    }
    ```
-   
-   {: .alert}
+
+   {: .attn-alert}
    Make sure that the init process, from the `onInitSucceed`callback, finished successfully.
 
 ### Step 4: Screen orientation
@@ -448,15 +447,15 @@ Set the desired orientation in your container Activity definition in AndroidMani
 
 ### Next Steps
 
-Congratulations! You're all set.  
+Congratulations! You're all set.
 
 You can now do any of the following:
-- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.  You can also customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 
+- [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.  You can also customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file.
 
-- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add these features to your app's AndroidManifest.xml file.  
+- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add these features to your app's AndroidManifest.xml file.
 
 - [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers. They never have to stay in your app or keep the window open as they get a proactive notification as soon as a reply or notice is available.
 
-- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device.
 
-- [Configure quick replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents. 
+- [Configure quick replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.

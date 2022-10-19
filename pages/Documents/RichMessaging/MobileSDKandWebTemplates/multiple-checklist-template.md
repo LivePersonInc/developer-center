@@ -1,7 +1,5 @@
 ---
 pagename: Multiple Checklist Template
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates
@@ -9,11 +7,11 @@ permalink: mobile-sdk-and-web-templates-multiple-checklist-template.html
 indicator: messaging
 ---
 
-The Multiple Checklist Template for the Web Messaging channel enables human or bot agents to share a list of items, while allowing the consumer to select multiple items and reply back with the selection. 
+The Multiple Checklist Template for the Web Messaging channel enables human or bot agents to share a list of items, while allowing the consumer to select multiple items and reply back with the selection.
 
 <img class="fancyimage" src="img/multipleChecklist.png">
 
-### Overview 
+### Overview
 
 The template includes the following customizable structured content elements:
 
@@ -44,17 +42,17 @@ The consumer selections will be displayed as a consumer message in the agent wor
 {
   "type": "list",
   "elements": [
-    // Header of the checklist 
+    // Header of the checklist
     {
-      "type": "text", 
+      "type": "text",
       "text": "Which messaging channels are you specifically looking for?"
     },
-    // Body of the checklist 
+    // Body of the checklist
     //   The sectionList must have at least one section element
     {
       "type": "sectionList",
       "elements": [
-        // Section of the body 
+        // Section of the body
         //   The section is the component that wraps different types of lists that are supported, so in our case, it would be checklist
         //   Each section must have an attribute sectionID. The sectionID is a unique identifier that differentiates each section. This can be the category of the checklist you are creating.
         {
@@ -63,7 +61,7 @@ The consumer selections will be displayed as a consumer message in the agent wor
           "elements": [
             // Subheader of the checklist
             {
-              "type": "text", 
+              "type": "text",
               "text": "&#x1F449; choose all that apply"
             },
             // Checklist
@@ -74,8 +72,8 @@ The consumer selections will be displayed as a consumer message in the agent wor
                 // Checkbox
                 //   This is the actual checkbox element.
                 {
-                  "type": "checkbox", 
-                  "text": "WhatsApp", // the content that is shown when the structured content is rendered 
+                  "type": "checkbox",
+                  "text": "WhatsApp", // the content that is shown when the structured content is rendered
                   "borderLine": true, // border line between each checkbox item
                   "borderColor": "#d4d4d5", // color of the border line between each checkbox item
                   "click": { // This is similar to the existing button element. One key difference is that the actions that are supported for the checkbox item is the action "checked". The publishText attribute that is in the "checked" action is the content that will be displayed after the user has checked all the desired items and submits. No change to the metadata structure has been made.
@@ -200,8 +198,8 @@ The consumer selections will be displayed as a consumer message in the agent wor
       ]
     },
     // buttonList
-    //   This is the element that holds the submit button and an existing button. Inside this element, the user must have a  submitButton. 
-    //   The second button is just an existing button that the user can add optionally depending on their needs. 
+    //   This is the element that holds the submit button and an existing button. Inside this element, the user must have a  submitButton.
+    //   The second button is just an existing button that the user can add optionally depending on their needs.
     {
       "type": "buttonList",
       "elements": [
@@ -254,7 +252,7 @@ The consumer selections will be displayed as a consumer message in the agent wor
 
 ### Limitations
 
-Please note current limitations: 
+Please note current limitations:
 
 - This feature is not available for the enhanced agent workspace
 - It is supported for the web messaging channel only.

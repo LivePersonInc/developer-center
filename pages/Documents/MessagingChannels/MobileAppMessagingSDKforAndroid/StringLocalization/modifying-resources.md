@@ -2,15 +2,12 @@
 pagename: Modifying Resources
 redirect_from:
   - android-modifying-resources.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Customization and Branding
-
 order: 180
 permalink: mobile-app-messaging-sdk-for-android-customization-and-branding-modifying-resources.html
-
 indicator: messaging
 ---
 
@@ -42,7 +39,7 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
   </tr>
 
   <tr>
-    <td>Default progress bar vector drawable for downloading \ uploading an image. It will appear on the image, inside the bubble, until progress is done.  
+    <td>Default progress bar vector drawable for downloading \ uploading an image. It will appear on the image, inside the bubble, until progress is done.
     To override this resource — create your own vector drawable under the android drawable folder with the same resource name.
    </td>
     <td>lpmessaging_ui_image_progress_bar.xml</td>

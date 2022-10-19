@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -13,11 +12,11 @@ indicator: messaging
 
 Namespaces and sessions are the concept of a collection of properties. You can group properties of similar characteristics into one namespace, and you can also group properties obtained from the same task with different characteristics into a single session.
 
-Namespaces and sessions are independent of each other, but since all properties must belong to a namespace, there is no session without a namespace. 
+Namespaces and sessions are independent of each other, but since all properties must belong to a namespace, there is no session without a namespace.
 
 ### Properties
 
-Everything that is stored in the Conversation Context Service (CCS) consists of a property and value pair. Properties are grouped into Namespace and Session. All properties must belong to only one namespace. At the same time, properties can belong to only one session or not belong to any session. 
+Everything that is stored in the Conversation Context Service (CCS) consists of a property and value pair. Properties are grouped into Namespace and Session. All properties must belong to only one namespace. At the same time, properties can belong to only one session or not belong to any session.
 
 *Session properties* are those where the property belongs to one namespace and one session, and *namespace properties* are those where the property belongs to one namespace and does not belong to any session.
 
@@ -27,7 +26,7 @@ Since properties cannot be moved to other namespaces or sessions, if you want to
 
 It is not necessary to have previously created a Namespace or Session to save the property. Namespace and Session are abstract concepts. They are stored as additional information of properties, so there is no creation process for namespaces and sessions.
 
-One thing to note is that some names are reserved for internal use for the service and cannot be used for other purposes. If you use these namespaces it will cause 400 errors. Here is a list of namespaces reserved internally: 
+One thing to note is that some names are reserved for internal use for the service and cannot be used for other purposes. If you use these namespaces it will cause 400 errors. Here is a list of namespaces reserved internally:
 
 * consumer
 * operational

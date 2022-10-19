@@ -1,9 +1,8 @@
 ---
 pagename: Overview
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Runtime API 
+documentname: Agent Survey For Messaging Runtime API
 
 permalink: agent-survey-for-messaging-runtime-api-overview.html
 indicator: messaging

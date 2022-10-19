@@ -9,7 +9,6 @@ redirect_from:
   - getting-started-with-rich-messaging-basic-elements-button.html
   - rich-messaging-getting-started.html
   - getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Getting Started with Rich Messaging
@@ -51,7 +50,7 @@ So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los An
             "name": "navigate",
             "lo": yourLongitude,
             "la": yourLatitude
-          }  
+          }
         ]
       }
     },
@@ -105,7 +104,7 @@ var data = {
               "name": "navigate",
               "lo": yourLongitude,
               "la": yourLatitude
-            }  
+            }
           ]
         }
       },
@@ -166,7 +165,7 @@ agent.publishEvent({
                 "name": "navigate",
                 "lo": yourLongitude,
                 "la": yourLatitude
-              }  
+              }
             ]
           }
         },

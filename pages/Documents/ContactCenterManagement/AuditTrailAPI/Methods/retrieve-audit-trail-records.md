@@ -42,22 +42,22 @@ N/A
 Contains a JSON object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](https://graphql.org/).
 
 ```json
-{"query" : 
-"{auditData { 
-        accountId 
-        objectType 
-        objectName 
-        element 
-        oldValue 
-        newValue 
-        originator 
+{"query" :
+"{auditData {
+        accountId
+        objectType
+        objectName
+        element
+        oldValue
+        newValue
+        originator
         originatorLoginName
         originatorUserId
         originatorUserAgent
-        originatorAuthType 
-        originatorIsLpa 
+        originatorAuthType
+        originatorIsLpa
         changeDate}}"
- } 
+ }
 ```
 
 **Required parameters**
@@ -83,7 +83,7 @@ At least one parameter from the above parameters is required in order to retirve
 Example:
 
 ```json
-{"query" : 
+{"query" :
 "{auditData (lpa:true) { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
 }
 ```

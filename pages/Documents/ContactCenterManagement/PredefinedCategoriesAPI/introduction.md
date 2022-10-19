@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Categories API
-
 permalink: predefined-categories-api-introduction.html
 root-link: true
 level-order: 3

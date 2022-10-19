@@ -1,6 +1,5 @@
 ---
 pagename: Concepts
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -39,7 +38,7 @@ The following graph also shows the general invocation flow for both invocation s
 
 Before raising an event, the event source will check if there is a function listening for the specified event. Only **productive** functions are considered. If a function listens to the event, the trigger will raise an event. Our platform will search all functions listening to the specified event and start calling them. Once all responses are received, they will be combined and returned to the event source.
 
-{: .alert}
+{: .attn-alert}
 Please be aware that failing functions will abort the invocation chain for that event.
 
 <img class="fancyimage" alt="Functions: Direct Invocation" src="img/functions/functions_concept_direct_invocation.png">

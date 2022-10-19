@@ -78,7 +78,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 * A good consumerID would be:
 
-   * UUID assigned specifically and uniquely for consumer  
+   * UUID assigned specifically and uniquely for consumer
 
    * a hashed/salted email address
 
@@ -105,7 +105,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/engagement?
  "identities": [
    {
         "iss": "LivePerson",
-        "acr": "0",    
+        "acr": "0",
         "sub": "identifierForNoAuth"
     },
     {
@@ -254,4 +254,5 @@ API version 1.1, Status code 202 Accepted
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 | 202 | Loading account | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="note">Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+{: .attn-note}
+Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the `vid` from the response body and append it as the value of the `vid` query param for the retry request (to be issued following a pause interval of a few seconds).

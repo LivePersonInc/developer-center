@@ -3,13 +3,9 @@ pagename: Considerations
 redirect_from:
   - products-bots-considerations.html
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 4
-
 permalink: customer-facing-bots-considerations.html
-
 indicator:
 ---
 
@@ -35,7 +31,7 @@ The following considerations should be kept in mind when setting up Bots:
 	* Best practice is to have a bot focused on an individual, focused task
 	* Have a few different bots per task or use case you want to implement
 	* Each bot can be an agent user with a name and avatar
-	
+
 * Match the skills of your bots to the operational structure of the contact center operations
 
 	* Associate bots to the appropriate skill and group

@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 140
 permalink: server-chat-api-methods-set-the-visitor-s-typing-status.html
-
 indicator: chat
 ---
 

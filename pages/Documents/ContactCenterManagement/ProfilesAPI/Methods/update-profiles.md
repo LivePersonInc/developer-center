@@ -2,15 +2,12 @@
 pagename: Update Profiles
 redirect_from:
   - administration.update-profiles.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 50
 permalink: profiles-api-methods-update-profiles.html
-
 indicator: both
 ---
 
@@ -28,7 +25,7 @@ This API updates a list of profiles for a specific account.
  |:--- | :--- |
  |Authorization  |Contains token string to allow request authentication and authorization. |
 
-**Request Body** 
+**Request Body**
 
 [Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.
 
@@ -43,4 +40,3 @@ This API updates a list of profiles for a specific account.
 **Response Body**
 
 [Appendix](administration-profiles-appendix.html) for Entity Structure and Entity Example.
-

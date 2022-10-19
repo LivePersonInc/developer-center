@@ -1,7 +1,7 @@
 ---
 pagename: 4 - Connect to LiveEngage
-redirect_from: conversation-builder-getting-started-getting-started-part-4.html
-Keywords:
+redirect_from:
+  - conversation-builder-getting-started-getting-started-part-4.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -18,7 +18,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 
 #### Create the skills
 
-1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
+1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account.
 2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png">, and then click the **Skills** tab.
 3. In the upper-right corner, click **Action → Add**.
 4. On the Add Skill page, specify the following:
@@ -66,8 +66,8 @@ You will test this connection with a standard web chat engagement, so now you cr
     * **Engagement**: Click **+ Add engagement**. For the **engagement source**, select "Web." In the gallery that appears next, select a chat template, and click **Next**. In the Engagement Settings that appear next, select "Live chat" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
 
     <img style="width:400px" src="img/ConvoBuilder/helloworld/confLE_5.png">
-4. Click **Next**. 
-5. In the Engagement Studio, click **Next**. 
+4. Click **Next**.
+5. In the Engagement Studio, click **Next**.
 6. In the Engagement Window Library, click **Done**.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_6.png">
@@ -123,10 +123,10 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     - **Conversation Type**: Select "Chat."
     - **Deploy to**: Select "Demo." The Demo environment is a testing environment, and the Production environment is the live environment. It's always a best practice to test your bot in the Demo environment first, before deploying it to the Production environment.
 4. Click **Save**.
-    
+
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
-{: .note}
+{: .attn-note}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 #### Start the agent connector
@@ -140,7 +140,7 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
 
 ### Step 13: Test the bot
 
-{: .note}
+{: .attn-note}
 In this step, you'll be testing with Chat, so you'll be using [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]), adding your account number to the URL. When you test with Messaging for Web, you can use [this test page](https://vx-lp.github.io/v2/lpwm/).
 
 1. Be sure you are online as a Human agent in LiveEngage.

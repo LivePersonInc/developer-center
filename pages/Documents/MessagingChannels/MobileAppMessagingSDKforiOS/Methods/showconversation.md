@@ -2,15 +2,11 @@
 pagename: showConversation
 redirect_from:
   - consumer-experience-ios-sdk-showconversation.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 20
 permalink: mobile-app-messaging-sdk-for-ios-methods-showconversation.html
-
 indicator: messaging
 ---
 

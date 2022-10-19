@@ -2,7 +2,7 @@
 pagename: Carousel Template
 redirect_from:
   - structured-content-google-business-messages-templates-carousel-template.html
-Keywords: structured content rich messaging gbm google business messages carousel template
+keywords: structured content rich messaging gbm google business messages carousel template
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Google Business Messages Templates

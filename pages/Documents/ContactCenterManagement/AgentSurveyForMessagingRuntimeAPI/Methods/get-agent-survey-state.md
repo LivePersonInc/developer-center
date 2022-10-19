@@ -1,9 +1,8 @@
 ---
 pagename: Get Agent Survey State
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Runtime API 
+documentname: Agent Survey For Messaging Runtime API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey-state.html
 indicator: messaging
@@ -26,7 +25,7 @@ Get the survey state that has been saved in previous requests.
  **Query Parameters**
 
 | Parameter | Description | Type / Value | Required | Notes
-|:----------- |  :------------ | :--------------- | :--- | :--- | 
+|:----------- |  :------------ | :--------------- | :--- | :--- |
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
 | seq | when seq=true and survey state is null the first sequence will be returned | Boolean | Optional | Default value is true |
@@ -57,7 +56,7 @@ Get the survey state that has been saved in previous requests.
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |
 
 **Response example**
 

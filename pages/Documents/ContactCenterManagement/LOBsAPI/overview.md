@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - administration-lobs-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
-
 level-order: 2
 order: 9
 permalink: lobs-api-overview.html

@@ -1,9 +1,8 @@
 ---
 pagename: Update certificate for account
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-update-certificate-for-account.html
 redirect_from:
@@ -14,7 +13,7 @@ This API updates a certificate for a specific account id.
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
@@ -36,7 +35,7 @@ This API updates a certificate for a specific account id.
   }
 ]
 ```
-{: .alert}
+{: .attn-alert}
 The body is a byte array input of the p12 file.
 
 **Path Parameters**
@@ -61,9 +60,9 @@ The body is a byte array input of the p12 file.
 for example:
 
 ```
-{  
-   "successfulySavedCertificates":[  
-      {  
+{
+   "successfulySavedCertificates":[
+      {
          "id":2628739923,
          "deleted":false,
          "name":"{certificateName}",
@@ -73,7 +72,7 @@ for example:
 	 "expirationDate": null
       }
    ],
-   "failedSaveToVaultCertificates":[  
+   "failedSaveToVaultCertificates":[
 
    ]
 }

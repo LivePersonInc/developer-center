@@ -2,7 +2,7 @@
 
 This is a basic example of how to connect to the Users API in Java by using Scribe. In order to run the example you will need to update the Users.java file with your Users API credentials.
 
-### Contribution 
+### Contribution
 
 Thank you [David Eleff](https://github.com/deleff) for providing this example code.
 

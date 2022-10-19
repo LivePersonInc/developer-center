@@ -3,9 +3,7 @@ pagename: Add Messaging to Your App
 redirect_from:
   - products-channels-inapp-messaging.html
 sitesection: Solutions
-
 documentname: Mobile App Messaging
-
 order: 1
 level-order: 1
 root-link: true
@@ -26,15 +24,21 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 * Optimized for network bandwidth and battery usage.
 
-<img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> <img src="img/inapp2.png" style="max-width:230px;max-height:700px;"> <img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
+<img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> 
+<img src="img/inapp2.png" alt="Add Messaging to Your App" style="max-width:230px;max-height:700px;">
+<img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
 
 ### Prerequisites
 
 To begin, you need:
 
 * Conversational Cloud account with messaging enabled.
+
+{: .attn-alert}
+Contact your LivePerson representative to enable messaging on your account.
   
-  <div class="alert">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
+{: .attn-tip}
+If you see 'All Conversations’ when you log in, your account has messaging enabled.
 
 * LivePerson only supports OAuth 2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
 
@@ -46,17 +50,17 @@ To begin, you need:
 
 * Android native app with:
 
-   * Package name 
+   * Package name
 
    * Android Studio (any version)
 
-*For more information, refer to the Conversational Cloud Enterprise In-App Messaging SDK Supported Devices section of [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices.* 
+*For more information, refer to the Conversational Cloud Enterprise In-App Messaging SDK Supported Devices section of [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices.*
 
 ### Implementation overview
 
 For a successful deployment of messaging within your iOS or Android app, you must implement three main components:
 
-* Deploy all customization you require using the Mobile App Messaging SDK deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html) or [Android](android-quickstart.html). 
+* Deploy all customization you require using the Mobile App Messaging SDK deployment guide for [iOS](consumer-experience-ios-sdk-quick-start.html) or [Android](android-quickstart.html).
 
 * Configure Push Notifications
 
@@ -68,7 +72,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) to view the Conversational Cloud System Requirements document. Under "Conversational Cloud Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
-* **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.  
+* **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.
 
     * Determine if you will place messaging in authenticated areas of your app?
 
@@ -116,7 +120,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **Accessibility**: Is your app accessible to people with disabilities? Do you want to extend accessibility to your Mobile App Messaging?
 
-    * Not all features available in the SDK support accessibility — you may need to turn off various features in order to be fully compliant.  
+    * Not all features available in the SDK support accessibility — you may need to turn off various features in order to be fully compliant.
 
     * The following is the list of features that need to be configured in order to be completely accessible:
 

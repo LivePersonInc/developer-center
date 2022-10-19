@@ -17,36 +17,36 @@ import org.scribe.oauth.OAuthService;
 
 public class Main {
 	public static void main(String[] args) {
-		//below, we are using todays date, and then converting the date back to midnight that way we are consistently pulling
-		//a clean set of records
-		//we then convert the time to UTC that way it matches the api timezone
-		LocalDateTime now = LocalDateTime.now(); 
+		// Below, we are using todays date, and then converting the date back to midnight that way we are consistently pulling
+		// A clean set of records
+		// We then convert the time to UTC that way it matches the api timezone
+		LocalDateTime now = LocalDateTime.now();
 		LocalDateTime midnight = now.toLocalDate().atStartOfDay();
-		ZoneId zoneId = ZoneId.of("UTC"); 
+		ZoneId zoneId = ZoneId.of("UTC");
 		long epoch = midnight.atZone(zoneId).toInstant().toEpochMilli();
-		//System.out.println(epoch);
-		
-		//to change the date range change minuDays function below. For example change 1 to 2 for two days
+		// System.out.println(epoch);
+
+		// To change the date range, change minusDays function below. For example, change 1 to 2 for two days
 		LocalDateTime before = midnight.minusDays(1);
 		long epoch2 = before.atZone(zoneId).toInstant().toEpochMilli();
-		//System.out.println(epoch2);
+		// System.out.println(epoch2);
 		callAPI(epoch,epoch2);
 	 }
-	
+
 	public static void callAPI(long epoch, long epoch2){
-		//we define a count variable as a way to keep looping through all of the records until we have a complete set for the data range we are pulling
-		//we have to do this since there is a limit to the api for how many records we can grab at a time
+		// We define a count variable as a way to keep looping through all of the records until we have a complete set for the data range we are pulling
+		// We have to do this since there is a limit to the api for how many records we can grab at a time
 		long count = 0;
 		int limit = 100;
 		int offset = 0;
-		//we are using the scribe package to generate our oauth header for the post request
-		//you need to update the api key and secret below with yours
+		// We are using the scribe package to generate our oauth header for the post request
+		// You need to update the api key and secret below with yours
 		OAuthService service = new ServiceBuilder()
 				 	.provider(LPAPI.class)
 	                .apiKey("YOUR APP KEY")
 	                .apiSecret("YOUR APP SECRET")
 	                .build();
-		//you need to update the token below with your information
+		// You need to update the token below with your information
 		 Token accessToken = new Token("YOUR ACCESS TOKEN",
 	            "YOUR ACCESS TOKEN SECRET");
 		 OAuthRequest request = new OAuthRequest(Verb.POST, "https://{BASE URI}/interaction_history/api/account/{YOUR ACCOUNT NUMBER}/interactions/search?offset=0&limit=100");
@@ -56,7 +56,7 @@ public class Main {
 		 Response response = request.send();
 		 JSONObject obj =  new JSONObject(response.getBody());
 		 count = obj.getJSONObject("_metadata").getLong("count");
-		 //keep making api calls until we have a full set of records
+		 // Keep making API calls until we have a full set of records
 		 while(offset < count){
 			 offset = offset + limit;
 			 OAuthRequest request2 = new OAuthRequest(Verb.POST, "https://{BASE URI}/interaction_history/api/account/{YOUR ACCOUNT NUMBER}/interactions/search?offset="+offset+"&limit=100");
@@ -65,7 +65,7 @@ public class Main {
 			 service.signRequest(accessToken, request2);
 			 Response response2 = request2.send();
 			 JSONObject obj2 =  new JSONObject(response2.getBody());
-			 //System.out.println(obj2.getJSONArray("interactionHistoryRecords"));
+			 // System.out.println(obj2.getJSONArray("interactionHistoryRecords"));
 			 if(obj2.has("interactionHistoryRecords")){
 				 if(obj2.getJSONArray("interactionHistoryRecords").length() != 0){
 					 for(int i = 0; i < obj2.getJSONArray("interactionHistoryRecords").length(); i++){
@@ -73,23 +73,23 @@ public class Main {
 					 }
 				 }
 			 }
-		 } 
+		 }
 		 System.out.println(obj);
 		 getCSAT(obj);
 	}
 	public static void getCSAT( JSONObject obj){
 		JSONArray records = new JSONArray();
 		System.out.println(obj.getJSONArray("interactionHistoryRecords").length());
-		//we are looping through all of the interaction records, and then we are adding them to our array
+		// We are looping through all of the interaction records, and then we are adding them to our array
 		for(int i = 0; i < obj.getJSONArray("interactionHistoryRecords").length(); i++){
 			records.put(obj.getJSONArray("interactionHistoryRecords").getJSONObject(i));
 		 }
-		//we are going to write our array of records to the text file below
+		// We are going to write our array of records to the text file below
 		BufferedWriter out = null;
-		 //write to file
-		 try  
+		 // Write to file
+		 try
 		 {
-		     FileWriter fstream = new FileWriter("out.txt"); //true tells to append data.
+		     FileWriter fstream = new FileWriter("out.txt"); // true tells to append data
 		     out = new BufferedWriter(fstream);
 		     for(int m = 0; m < records.length(); m++){
 		    	 out.write("Chat " +m+ "\n");
@@ -135,11 +135,10 @@ public class Main {
 		         try {
 					out.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+					// TODO: Auto-generate catch block
 					e.printStackTrace();
 				}
 		     }
-		 } 
+		 }
 	}
 }
-

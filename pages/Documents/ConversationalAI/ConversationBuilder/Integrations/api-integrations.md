@@ -1,6 +1,5 @@
 ---
 pagename: API Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -15,7 +14,7 @@ API Integrations allow Conversation Builder to perform some action or access the
 
 For practice at using an API integration, try the [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
 
-{: .note}
+{: .attn-note}
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before adding an API integration.<br><br>An API integration call times out in 20 seconds; within that time, the integration attempts 3 retries. This isn’t configurable.
 
 ### Add an API integration
@@ -34,7 +33,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
     - **Request Headers — Use default headers**: When this toggle is on, the following request headers are included automatically in the API request:
         * Accept: application/json;charset=UTF-8
         * Content-Type: application/json;charset=UTF-8
-        
+
         Since these headers are commonly used, the toggle is on by default as a convenience. However, you can use different values if required by your API: Just turn off the toggle, and add the headers manually as key/value pairs.
     - **Request Headers — key/value pairs**: Add any message headers to include in the request.
     - **Request Parameters**: Add the request parameters to pass in the URL’s query string. It's more common to pass variable values as key/value pairs added here:
@@ -60,7 +59,7 @@ When implementing API integrations, follow these security best practices:
 
 ### Disabling the predefined request header fields (legacy)
 
-{: .note}
+{: .attn-note}
 This section discusses a legacy approach to disabling the predefined request headers in an API integration. The approach requires a bit of JavaScript code. But there's a simpler way: In the API integration, simply disable the **Use default headers** toggle. For more on this toggle, see "Add an API integration" farther above.
 
 As a convenience, the following request header fields are predefined for an API integration:

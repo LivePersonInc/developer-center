@@ -1,7 +1,5 @@
 ---
 pagename: System Patterns
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

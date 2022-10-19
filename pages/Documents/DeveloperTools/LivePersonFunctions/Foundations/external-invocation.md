@@ -1,6 +1,5 @@
 ---
 pagename: External Invocation
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -74,7 +73,7 @@ The Authorization Server will consume `client_id` and `client_secret` to generat
 
 Using the information collected from the previous paragraphs, you can now follow the following steps for the different grant types:
 
-{: .alert}
+{: .attn-alert}
 The **Access Token** has a fixed lifespan. To extend it, you will need to refresh it using the **Refresh Token** with the [Refresh API](authorizing-conversational-cloud-applications-methods-refresh-request.html)
 
 Client Credentials:
@@ -89,7 +88,7 @@ Authorization Code:
 3. Exchange the received **Authorization Code** into an **Access Token** and **Refresh Token** using the [Token API](authorizing-conversational-cloud-applications-methods-token-request.html).
 4. Now, you can leverage the **Access Token** as long as it has not expired using either the [Java Client](#java-client) or [JavaScript Client](#javascript-client)
 
-{: .note}
+{: .attn-note}
 You might want to check out this [example application](authorizing-conversational-cloud-applications-samples-application-login-sample-app.html) that highlights the `Authorization Code`-Flow in JavaScript.
 
 ### Function UUID
@@ -112,7 +111,7 @@ Our client is available within Maven Central. To get the latest version, you can
 </dependency>
 ```
 
-{: .alert}
+{: .attn-alert}
 The default authentication method is OAuth 2.0 with grant type `client_credentials`. Please read the [chapter above](#authorization-process) for more information.
 
 You can leverage the following method that the client exposes:
@@ -122,7 +121,7 @@ You can leverage the following method that the client exposes:
 * `isImplemented` this method allows checking if an event or a specific UUID is implemented, i.e. has a productive function attached to it. It is a best practice to verify this before invoking.
 * `getLambdas` this method will return all functions and their states that belong to a specified account
 
-{: .note}
+{: .attn-note}
 A more detailed version of the documentation can be found inside our [GitHub repository](https://github.com/LivePersonInc/faas-client-jdk). We welcome feature requests or bug reports via our (GitHub issue tracker)[https://github.com/LivePersonInc/faas-client-jdk/issues].
 
 **Error Handling:**
@@ -141,7 +140,7 @@ $ yarn add @liveperson/functions-client
 $ npm install @liveperson/functions-client
 ```
 
-{: .alert}
+{: .attn-alert}
 The default authentication method is OAuth 2.0 with grant type `client_credentials`. Please read the [chapter above](#authorization-process) for more information.
 
 The client exposes the following methods:
@@ -150,7 +149,7 @@ The client exposes the following methods:
 * `isImplemented` allows checking if an event or a specific UUID is implemented. It is a best practice to check this before invoking.
 * `getLambdas` this method will return all functions and their respective states that belong to the specified account.
 
-{: .note}
+{: .attn-note}
 A more detailed version of the documentation can be found inside our [GitHub repository](https://github.com/LivePersonInc/faas-client-node). If you experience an issue or have a feature request, please [create a GitHub issue](https://github.com/LivePersonInc/faas-client-node/issues).
 
 **Error Handling:**

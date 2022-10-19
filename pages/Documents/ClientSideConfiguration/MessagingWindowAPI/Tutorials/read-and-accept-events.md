@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 30
 permalink: messaging-window-api-tutorials-read-and-accept-events.html
-
 indicator: messaging
 ---
 
@@ -91,7 +89,7 @@ Type the following request to the WebSocket connection while substituting the __
 {"kind":"req","id":2,"type":"ms.PublishEvent","body":{"dialogId":"__DIALOG_ID__","event":{"type" : "AcceptStatusEvent" , "status" : "ACCEPT", "sequenceList" : [ __SEQUENCE__ ]}}}
 ```
 
-Switch to the Agent Workspace. You will see that the a second "V" has appeared next to the agent message. 
+Switch to the Agent Workspace. You will see that the a second "V" has appeared next to the agent message.
 ![](img/accept_read.png)
 
 You can also try sending ``read`` receipts using a similar message.
