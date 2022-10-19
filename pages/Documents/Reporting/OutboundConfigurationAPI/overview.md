@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 ### Introduction
-The Outbound configuration API provides a complete list of API handoffs created in the Proactive Web Tool. This API allows 1) Fetching all handoffs configurations 2) Fetching all handoff configurations filtered by a specific messaging channel (sms, whats app, apple business chat, in-app, google rcs etc)
+The Outbound configuration API provides a complete list of API handoffs created in the Proactive Web Tool. This API allows 1) Fetching all handoffs configurations 2) Fetching all handoff configurations filtered by a specific messaging channel (SMS, WhatsApp, Apple Business Chat, In-app, Google Rcs, etc.)
 
 API provides outbound configuration for below services
 * Proactive Messaging 2.0
@@ -28,7 +28,7 @@ All Brands who use Proactive Messaging version 2.0 have access to the Outbound C
 Both endpoints are currently read only, i.e it is not possible to make configuration changes using the outbound configuration API.
 
 **OAuth 2.0 Authorization**
-* Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.<br />
+* Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.<br>
 ![Secrets](img/proactive/proactive-show-secrets.png)  
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
@@ -73,7 +73,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 200 Success
 
-* ​sms-twilio:<br /><br />
+* ​sms-twilio:<br><br>
   ​sms-twilio response example:
 ```json
 {
@@ -91,7 +91,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-* WhatsApp:<br /><br />
+* WhatsApp:<br><br>
   WhatsApp response example:
 ```json
 ​{
@@ -115,7 +115,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
   ]
 }
 ```
-  Whats app rich content response example
+  WhatsApp rich content response example
 ```json
 {
    "type": "wa",
@@ -145,16 +145,16 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 The messageComponents fields can reflect the following fields depending on the template
 
-| Header image with static url | {<br /> &nbsp;  "type": "header",<br /> &nbsp;  "sub_type": "image",<br />&nbsp;   "content": "https://upload.wikimedia.org/commons-1/c/ce/1963_Tornadoes.png",<br /> &nbsp;  "variables": []<br />}|
-| Header image with dynamic url that is expected to be passed in the request payload | {<br /> &nbsp;  "type": "header",<br /> &nbsp;  "sub_type": "image",<br /> &nbsp;   "content": "${{1}}",<br /> &nbsp;  "variables": [ "1" ]<br />} |
-| Header with a static document url | {<br /> &nbsp;  "type": "header",<br /> &nbsp;  "sub_type": "document",<br /> &nbsp;  "content": "https://cdn.timelab.se/cellite-1/20180626140206/{{1}}.pdf",<br /> &nbsp;  "variables": [ "1" ]<br />} |
-| Header with a static video url | {<br /> &nbsp;  "type": "header",<br /> &nbsp;  "sub_type": "video",<br /> &nbsp;  "content": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4",<br /> &nbsp;  "variables": []<br /> } |
-| Button with a static call to action  value | {<br /> &nbsp;  "type": "button",<br /> &nbsp;  "index": 0,<br /> &nbsp;  "content": "Call",<br /> &nbsp;  "sub_type": "phone_number",<br /> &nbsp;  "phone_number": "+12062061111"<br /> } |
-| Button with a dynamic call to action value  that is expected to be passed in the request payload | {<br /> &nbsp;  "type": "button",<br /> &nbsp;  "index": 1,<br /> &nbsp;  "content": "Link",<br /> &nbsp;  "sub_type": "url",<br /> &nbsp;  "url": "https://www.google.com/{{1}}",<br /> &nbsp;  "variables": [ "1" ]<br /> } |
-| Button with a static value for quick reply | {<br /> &nbsp;  [<br />&nbsp;  &nbsp;   {<br /> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br /> &nbsp;  &nbsp;  &nbsp;  "index": 0,<br /> &nbsp;  &nbsp;  &nbsp;  "content": "Yes",<br /> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br /> &nbsp;  &nbsp;  },<br /> &nbsp;  &nbsp;  {<br /> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br /> &nbsp;  &nbsp;  &nbsp;  "index": 1,<br /> &nbsp;  &nbsp;  &nbsp;  "content": "No",<br /> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br /> &nbsp;  &nbsp;  }<br />&nbsp;  ]<br /> } |
+| Header image with static url | {<br> &nbsp;  "type": "header",<br> &nbsp;  "sub_type": "image",<br>&nbsp;   "content": "https://upload.wikimedia.org/commons-1/c/ce/1963_Tornadoes.png",<br> &nbsp;  "variables": []<br>}|
+| Header image with dynamic url that is expected to be passed in the request payload | {<br> &nbsp;  "type": "header",<br> &nbsp;  "sub_type": "image",<br> &nbsp;   "content": "${{1}}",<br> &nbsp;  "variables": [ "1" ]<br>} |
+| Header with a static document url | {<br> &nbsp;  "type": "header",<br> &nbsp;  "sub_type": "document",<br> &nbsp;  "content": "https://cdn.timelab.se/cellite-1/20180626140206/{{1}}.pdf",<br> &nbsp;  "variables": [ "1" ]<br>} |
+| Header with a static video url | {<br> &nbsp;  "type": "header",<br> &nbsp;  "sub_type": "video",<br> &nbsp;  "content": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4",<br> &nbsp;  "variables": []<br> } |
+| Button with a static call to action  value | {<br> &nbsp;  "type": "button",<br> &nbsp;  "index": 0,<br> &nbsp;  "content": "Call",<br> &nbsp;  "sub_type": "phone_number",<br> &nbsp;  "phone_number": "+12062061111"<br> } |
+| Button with a dynamic call to action value  that is expected to be passed in the request payload | {<br> &nbsp;  "type": "button",<br> &nbsp;  "index": 1,<br> &nbsp;  "content": "Link",<br> &nbsp;  "sub_type": "url",<br> &nbsp;  "url": "https://www.google.com/{{1}}",<br> &nbsp;  "variables": [ "1" ]<br> } |
+| Button with a static value for quick reply | {<br> &nbsp;  [<br>&nbsp;  &nbsp;   {<br> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br> &nbsp;  &nbsp;  &nbsp;  "index": 0,<br> &nbsp;  &nbsp;  &nbsp;  "content": "Yes",<br> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br> &nbsp;  &nbsp;  },<br> &nbsp;  &nbsp;  {<br> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br> &nbsp;  &nbsp;  &nbsp;  "index": 1,<br> &nbsp;  &nbsp;  &nbsp;  "content": "No",<br> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br> &nbsp;  &nbsp;  }<br>&nbsp;  ]<br> } |
 
 
-* In-app:<br /><br />
+* In-app:<br><br>
   In-app response example:
 ```json
 [
@@ -184,7 +184,7 @@ The messageComponents fields can reflect the following fields depending on the t
     }
 ]
 ```
-* Google Rcs:<br /><br />
+* Google Rcs:<br><br>
   Google Rcs response example:
 ```json
 {
@@ -376,15 +376,15 @@ Outbound Reporting API provides the following data fields. This table explains t
 | routeAllWithinLookback | A flag that indicates whether or not to route reopened conversations within the lookback period |
 | updatedAt | Shows last updated time in utc |
 | createdAt | Shows the configuration created time in utc |
-| channels |  An array of channels and their respective configuration.<br /> For example:<br /> **type** (name of the messaging channel):<br /> “wa”: whats app <br /> “sms-twilio”: standard text message<br /> “apple-twilio”: apple business chat<br /> “googlercs” google rich content<br /> “inapp” : LivePerson consumer application<br /> **appName**: (in app channel only) the associated sdk data source.<br /> **outboundnumber**: the “From” number of the sent message<br /> **language**: the associated language for the channel<br /> **namespace**: for whats app only indicated the template namespace |
-| messageComponents | * type<br /> * sub_type<br /> * content<br /> * variables<br /> * optOut<br /> * index<br /> * phone_number<br /> * height<br /> * thumbnailImageAlignment<br /> * cardOrientation<br /> * serviceAccountNameisSameMessageForNotification<br /> * notificationTitlemessageText |
+| channels |  An array of channels and their respective configuration.<br> For example:<br> **type** (name of the messaging channel):<br> “wa”: whats app <br> “sms-twilio”: standard text message<br> “apple-twilio”: apple business chat<br> “googlercs” google rich content<br> “inapp” : LivePerson consumer application<br> **appName**: (in app channel only) the associated sdk data source.<br> **outboundnumber**: the “From” number of the sent message<br> **language**: the associated language for the channel<br> **namespace**: for whats app only indicated the template namespace |
+| messageComponents | * type<br> * sub_type<br> * content<br> * variables<br> * optOut<br> * index<br> * phone_number<br> * height<br> * thumbnailImageAlignment<br> * cardOrientation<br> * serviceAccountNameisSameMessageForNotification<br> * notificationTitlemessageText |
 | type | header,body,button,media (grcs only), footer |
-| sub_type | For example:<br /> Type : “header”<br /> sub_type: “image” |
-| content | The string (including variables placeholder) <br /> For example: “This is a text with a var ${{1}} |
+| sub_type | For example:<br> Type : “header”<br> sub_type: “image” |
+| content | The string (including variables placeholder) <br> For example: “This is a text with a var ${{1}} |
 | variables | If the template contains variables it will be reflected here by numbers, for example a configuration for a template with a single var will look like this: “variables: [“1”, “2”, “3”] |
 | optOut | The opt out text that will be sent to the consumer |
-| Index | For button type only, indicates the order of the button starting from 0, For example 1st out of 2 buttons will be indicated as => index: 0 <br /> url: the link attached to the button |
-| phone_number | For button type only<br /> For example: “phone_number”: “+14xxxxx5674” |
+| Index | For button type only, indicates the order of the button starting from 0, For example 1st out of 2 buttons will be indicated as => index: 0 <br> url: the link attached to the button |
+| phone_number | For button type only<br> For example: “phone_number”: “+14xxxxx5674” |
 
 The following attributes are for google rcs only.
 
