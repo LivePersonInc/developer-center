@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
-
 permalink: customized-chat-windows-create-an-api-engagement.html
 order: 3
 indicator: chat

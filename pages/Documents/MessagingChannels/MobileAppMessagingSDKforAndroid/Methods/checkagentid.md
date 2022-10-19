@@ -2,15 +2,11 @@
 pagename: checkAgentID
 redirect_from:
   - android-checkagentid.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 180
 permalink: mobile-app-messaging-sdk-for-android-methods-checkagentid.html
-
 indicator: messaging
 ---
 

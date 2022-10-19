@@ -15,7 +15,7 @@ This tutorial explains how to start a Voice or Video Call on consumer side using
 * The LivePerson account must have the LiveVoice and/or LiveVideo features enabled. LivePerson Support can help with the enablement.
 
 ### Important information
-The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands must either set up their own infrastructure or use a 3rd party provider. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.  
+The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands must either set up their own infrastructure or use a 3rd party provider. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.
 
 ### Step 1 — Set required Feature in Client Properties
 
@@ -100,7 +100,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
 );
 ```
 
-{: .note}
+{: .attn-note}
 **Tips for Debugging**: ``lpTag.events.publish`` can fail if the event contains invalid data. It logs errors in the browser console if you have the debug mode of ``lpTag`` enabled (You can enable it when you load your pages with the additional URL parameter ``lpDebug=2`` appended to the URLs). Since the debug logs also contain logs from other irrelevant ``lpTag`` components, you can use keywords like ``event``, ``error`` or ``cobrowse`` in the console filter to narrow them down. An example error you get when you publish an event missing mandatory fields looks like the following: <br/>```13:36:38 Events : Error executing cobrowseOffered eventId: evId_5e=win is undefined LEVEL: ERROR```
 
 ### Step 4 — Accept/Reject call

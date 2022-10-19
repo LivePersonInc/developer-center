@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 70
 permalink: messaging-window-api-tutorials-client-properties.html
-
 indicator: messaging
 ---
 
@@ -29,8 +27,8 @@ After sending a text message in Step 5, the device type and OS will be displayed
 Other ``ClientProperties`` that can be sent can be found in the [API Reference](consumer-int-api-reference.html#conection-establishment).
 
 This object can be used as part of the websocket headers, or as part of the ``InitConnection`` request.
-{% include json.html name = "req_editor" 
-	schemaFile = 'assets/schema/infra/clientPropertiesHeader.json' 
+{% include json.html name = "req_editor"
+	schemaFile = 'assets/schema/infra/clientPropertiesHeader.json'
 	startval = '{"deviceFamily":"DESKTOP","os":"WINDOWS","browser":"","appId":"","appVersion":"","deviceModel":"","deviceManufacture":"","timeZone":"","browserVersion":"","integrationVersion":"","integration":"WEB_SDK","osName":"","osVersion":""}'
 	properties = true %}
 

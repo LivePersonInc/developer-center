@@ -2,7 +2,6 @@
 pagename: Retrieve Participant Info
 redirect_from:
   - agent-retrieve-participant-info.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
@@ -39,17 +38,17 @@ The body media type must have one of the following formats:
 **Elements in the response**
 
 ```json
-{  
-   "authenticatedParticipantInfo":{  
+{
+   "authenticatedParticipantInfo":{
       "isUserAuthenticated":true,
       "participantId":"55fc1779-83b0-4e8b-8eea-503a8eaf8822",
       "balance":-400.99,
-      "registrationDate":{  
+      "registrationDate":{
          "year":2013,
          "month":5,
          "day":23
       },
-      "lastPaymentDate":{  
+      "lastPaymentDate":{
          "year":2014,
          "month":10,
          "day":15
@@ -64,11 +63,11 @@ The body media type must have one of the following formats:
       "accountName":"bank corp",
       "role":"broker"
    },
-   "authenticatedPersonalInfo":{  
+   "authenticatedPersonalInfo":{
       "name":"Test",
       "surname":"User",
-      "contacts":[  
-         {  
+      "contacts":[
+         {
             "email":"testuser@liveperson.com",
             "phone":"+1-10-344-3765333"
          }

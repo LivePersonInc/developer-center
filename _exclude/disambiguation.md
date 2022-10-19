@@ -1,7 +1,5 @@
 ---
 pagename: Disambiguation
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -18,7 +16,7 @@ When working with natural language from our users, it is sometimes necessary to 
 <br>
 
 ### Step 11: Demonstration of need
-This step serves to demonstrate a use case for when we might need to employ disambiguation. 
+This step serves to demonstrate a use case for when we might need to employ disambiguation.
 
 1. From the Conversational AI section of the Conversational Cloud, navigate to **Intent Builder** and select the **Getting Started Domain**.
 
@@ -34,22 +32,22 @@ This step serves to demonstrate a use case for when we might need to employ disa
 
 In recognizing the need to provide this level of consideration to our users, Conversation Builder comes equipped with a special type of dialog called a Disambiguation dialog.
 
-1. Navigate back to Conversation Builder, and select your Getting Started bot. 
+1. Navigate back to Conversation Builder, and select your Getting Started bot.
 2. Click **Add Dialog** in the lower-left corner, and fill the resulting **Add Dialog** form with the following:
     * **Dialog Name**: Disambiguation
     * **Dialog Type**: Disambiguation Dialog
     * **Match Threshold**: Fair Plus
     * **Disambiguate only selected domains**: Getting Started Domain
-	
+
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/getstartedtutorial/add_disambig_dialog.png" alt="">
 
-    The Disambiguation dialog is a special type of dialog that serves the single purpose of providing disambiguation for a user’s utterance. Like the Fallback dialog, Disambiguation dialogs are limited to one per bot. 
+    The Disambiguation dialog is a special type of dialog that serves the single purpose of providing disambiguation for a user’s utterance. Like the Fallback dialog, Disambiguation dialogs are limited to one per bot.
 
     Click **Save**.
 
-    The resulting Disambiguation dialog provides a new interaction type specifically for handling disambiguation. This is displayed much like a multiple choice interaction, with the intents that are being disambiguated representing the button options. 
+    The resulting Disambiguation dialog provides a new interaction type specifically for handling disambiguation. This is displayed much like a multiple choice interaction, with the intents that are being disambiguated representing the button options.
 
-3. Click into the interaction text and change the display text to read “Which can I assist you with?” 
+3. Click into the interaction text and change the display text to read “Which can I assist you with?”
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/disambig_interaction.png" alt="">
 
@@ -59,7 +57,7 @@ In recognizing the need to provide this level of consideration to our users, Con
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_7.png" alt="">
 
-6. Selecting either option should result in the appropriate dialog being started for the user. 
+6. Selecting either option should result in the appropriate dialog being started for the user.
 
     While made up of a single interaction, the Disambiguation dialog goes a long way in ensuring that users are being directed to the correct solution. Every bot solution should include a way to drill deeper into the user's intent so that you are always pushing them towards a solution.
 

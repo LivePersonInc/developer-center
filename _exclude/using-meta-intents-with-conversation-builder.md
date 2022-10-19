@@ -1,7 +1,5 @@
 ---
 pagename: Using Meta Intents with Conversation Builder
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -58,7 +56,7 @@ Our Small Talk dialog is being triggered by our meta intent, which again capture
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideMetaIntents_smallTalkDialog.png" alt="">
 
-{: .note}
+{: .attn-note}
 If your use case requires taking action on the specific, child intent, you can determine this by using the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-session-data.html#get-matched-intent) scripting function.
 
 ```javascript

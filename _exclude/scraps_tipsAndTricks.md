@@ -39,7 +39,7 @@ Examine the following conversation flow where the consumer's last utterance to t
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting2.png">
 
-In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance to the human agent, which is checked by the bot. Before the Fallback dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins with the paybill_flow_start interaction. 
+In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance to the human agent, which is checked by the bot. Before the Fallback dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins with the paybill_flow_start interaction.
 
 Because the first interaction, our "paybill_flow_start" interaction, sets the `transferAcknowledged` bot variable to "yes", subsequent, unmatched utterances likewise trigger the Fallback dialog. However, the Fallback dialog flow begins instead.
 

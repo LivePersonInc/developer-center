@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
-
 order: 2
 permalink: messaging-window-api-getting-started.html
-
 indicator: messaging
 ---
 

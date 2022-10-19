@@ -2,7 +2,6 @@
 pagename: Prerequisite Steps
 redirect_from:
     - tutorials-guides-using-agent-assist-prerequisite-steps.html
-keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -11,7 +10,7 @@ permalink: tutorials-guides-using-conversation-assist-prerequisite-steps.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 **Customize your POC:** This guide walks through building a working example of the Conversation Assist capabilities within 30 minutes. The provided examples and starter resources are intentionally simple to move through the process quickly. Keep an eye out for "Customize your POC" sections like this one for indications as to where you can further develop and customize your implementation of a Conversation Assist proof-of-concept to fit your specific needs.
 
 This section walks through the steps that are necessary to complete before configuring Conversation Assist. These steps include the creation of the following:
@@ -30,7 +29,7 @@ Before you get started with this tutorial, download this [ZIP file](assets/resou
 
 LivePerson offers a variety of domain-specific starter packs ([prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains)) to help you get up and running with Intent Manager quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Conversation Assist solution.
 
-{: .note}
+{: .attn-note}
 **Customize your POC:** For demonstration purposes, this guide assumes a build-out suited for an Airline client. Add in a vertical-specific, pre-built domain to customize for your use case, or optionally add additional domains to supplement the primary one you are using. Conversation Assist can pull from multiple domain intents to offer recommendations to agents.
 
 1. From the Conversational AI dashboard of applications, click **Intent Manager**.
@@ -49,7 +48,7 @@ LivePerson offers a variety of domain-specific starter packs ([prebuilt domains]
 
 With the NLU domain created, the next step is to create a knowledge base with articles to be tied to domain intents. For the purpose of this demonstration, a CSV file has been provided to simplify the process. You downloaded this file earlier.
 
-{: .note}
+{: .attn-note}
 **Customize your POC:** This example uses a single knowledge base in order to quickly showcase the capabilities of recommending articles using Conversation Assist. Adding additional knowledge bases to showcase that Conversation Assist can pull from multiple data sources can help to create a more substantial and impressive demonstration with your proof-of-concept. Each additional knowledge base can pull from any domain you previously created to showcase their functionality.
 
 1. Return to the Conversational AI dashboard of applications, and click **KnowledgeAI**.
@@ -65,19 +64,19 @@ With the NLU domain created, the next step is to create a knowledge base with ar
         * *Use the CSV file that is in the ZIP file that you downloaded earlier.*
     * **Domain**: LP_Airlines
     * **Language**: English
-	
+
 5. Click **Save** to upload your knowledge base articles, with intents from the LP_Airlines domain automatically associated with each article.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/articles.png" alt="A list of three active articles in the Airline FAQ knowledge base">
 
-    **Note:** Intents will be automatically associated as long as you have already created the NLU model in the previous section. If you have not done so, you can make your intent associations after by aligning the intents with the correct article. 
+    **Note:** Intents will be automatically associated as long as you have already created the NLU model in the previous section. If you have not done so, you can make your intent associations after by aligning the intents with the correct article.
 
     | Article Title | Intent |
     | --- | --- |
     | Seating assignment | ask about seat assignment |
     | Refund policy | request refund or credit |
     | Claim reward miles | claim reward miles |
-    | Baggage policies | ask about baggage | 
+    | Baggage policies | ask about baggage |
     | Upgrade my seat | upgrade seat |
     | Cancel flight | cancel flight |
     | Change flight | change flight |
@@ -88,10 +87,10 @@ With the NLU domain created, the next step is to create a knowledge base with ar
 
 Every bot and human agent requires a user profile to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
 
-{: .note}
+{: .attn-note}
 **Customize your POC:** This guide provides two bots that Conversation Assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain-specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
 
-1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png" alt="The Manage users and skills icon"> from the left-side menu to go to the **User Management** section of the Conversational Cloud. 
+1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png" alt="The Manage users and skills icon"> from the left-side menu to go to the **User Management** section of the Conversational Cloud.
 2. From the list of users, select your logged-in human user. From the **Edit user** form, scroll to the bottom. In the **Skills** field, add the skill “Agent.” Click **Save**.
 
     <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/agentskill.png" alt="Adding the Agent skill to the Skills field">
@@ -122,7 +121,7 @@ Every bot and human agent requires a user profile to be deployed and accessible 
 
 ### Step 4: Import the Conversation Builder bots
 
-In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier: 
+In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier:
 
 * Booking Bot
 * Seating Bot
@@ -139,7 +138,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 3. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
 4. Click **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
-5. Click the orange **> Start** button to start the agent connector. 
+5. Click the orange **> Start** button to start the agent connector.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png" alt="The Start button for an agent connector">
 

@@ -3,7 +3,6 @@ pagename: Time Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-timepicker.html
   - structured-content-apple-business-chat-templates-time-picker-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -259,7 +258,7 @@ The Time Picker item elements consists of a title element and a row of available
 
 They are based on the Structured Content [basic elements](structured-content-introduction-to-structured-content.html#basic-elements) with some limitations.
 
-The following section describes those elements and their specific configuration properties.  
+The following section describes those elements and their specific configuration properties.
 
 #### Template Properties
 

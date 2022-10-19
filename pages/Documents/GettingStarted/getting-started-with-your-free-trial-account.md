@@ -1,8 +1,8 @@
 ---
 pagename: Getting Started with your Free Trial Account
 redirect_from:
-- first-steps.html
-- before-you-get-started-let-s-get-started.html
+  - first-steps.html
+  - before-you-get-started-let-s-get-started.html
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
@@ -40,7 +40,7 @@ date_published: 2019/01/30
    </div>
 </div>
 <div>
-   <div class="note" style="width:90%">
+   <div class="attn-note" style="width:90%">
       <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html" alt="Register free trial">register</a> for a free 45-day trial.
    </div>
 </div>

@@ -2,15 +2,12 @@
 pagename: Delete Profiles
 redirect_from:
   - administration-delete-profiles.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 70
 permalink: profiles-api-methods-delete-profiles.html
-
 indicator: both
 ---
 
@@ -18,7 +15,7 @@ This API deletes profiles from a specific account.
 
 ### Request
 
- |Method    |  URL    |     
+ |Method    |  URL    |
  |:-------- |  :--------- |
  |DELETE   |   https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/profiles |
 

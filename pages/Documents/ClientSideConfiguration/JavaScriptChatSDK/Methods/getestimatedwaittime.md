@@ -2,12 +2,10 @@
 pagename: getEstimatedWaitTime
 redirect_from:
   - consumer-experience-javascript-chat-getestimatedwaittime.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 191
 
 permalink: javascript-chat-sdk-methods-getestimatedwaittime.html
@@ -46,7 +44,8 @@ var failedRequest = myChat.getEstimatedWaitTime({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```                                                                                                                            
+```
+
 ### Response
 
 **Sample response**

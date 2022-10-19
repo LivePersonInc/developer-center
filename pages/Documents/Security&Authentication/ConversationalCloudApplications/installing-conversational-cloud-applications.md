@@ -3,7 +3,6 @@ pagename: Installing Conversational Cloud Applications
 redirect_from:
   - guides-le-applications-installing.html
   - liveengage-applications-installing-liveengage-applications.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Conversational Cloud Applications
@@ -75,7 +74,7 @@ Once the application has been installed, the LivePerson resource will send you y
     "client_credentials"
   ],
   "response_types": ["code"],
-  "redirect_uris": [    
+  "redirect_uris": [
       "http://{YOUR_APPLICATION_DOMAIN}/{CALLBACK_PATH}"
     ],
   "scope": "msg.consumer",

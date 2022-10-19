@@ -2,15 +2,12 @@
 pagename: Update LOB
 redirect_from:
   - administration-update-lob.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 60
 permalink: lobs-api-methods-update-lob.html
-
 indicator: both
 ---
 

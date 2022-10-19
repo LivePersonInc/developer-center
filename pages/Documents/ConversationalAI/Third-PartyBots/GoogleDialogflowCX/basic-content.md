@@ -67,7 +67,7 @@ To send Structured Content via Dialogflow CX, send a _custom payload_ option via
 
 Figure 2.2
 
-{: .note}
+{: .attn-note}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 2.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
@@ -116,7 +116,7 @@ Figure 2.3 Dialogflow Example Custom Payload
 
 ### Sending Quick Replies (Structured Content)
 
-{: .note}
+{: .attn-note}
 **Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
@@ -184,7 +184,7 @@ Figure 2.4 QuickReplies Structured Content example
 
 ### Bot Actions
 
-{: .alert}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer
@@ -214,7 +214,7 @@ Figure 2.5
 
 #### Transfer to Agent
 
-{: .note}
+{: .attn-note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transferred to an available agent with the same skill

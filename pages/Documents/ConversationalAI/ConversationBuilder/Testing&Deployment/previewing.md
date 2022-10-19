@@ -1,6 +1,5 @@
 ---
 pagename: Previewing
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -30,6 +29,6 @@ If you've already opened the Preview window and subsquently made changes to the 
 **To reset the session**
 - Click **Reset** in the Preview window. Alternatively, enter "reset" and press Enter.
 
-{: .note}
+{: .attn-note}
 If you've disabled the [Enable Debug bot setting](conversation-builder-bots-bot-basics.html#configure-bot-settings), the **Reset** button is disabled.
 

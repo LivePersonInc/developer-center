@@ -1,6 +1,5 @@
 ---
 pagename: Clearing the Recommendations Cache
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
@@ -22,7 +21,7 @@ Clear the recommendations cache whenever you make any changes that alter what is
 * Delete an article in a knowledge base in KnowledgeAI
 * Change the training phrases for an intent in Intent Manager
 
-{: .alert}
+{: .attn-alert}
 If you don’t clear the cache when appropriate, your agents might not receive the right recommendations.
 
 ### Clear the recommendations cache

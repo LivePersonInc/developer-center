@@ -90,5 +90,5 @@ curl -i \
     -H "X-HTTP-Method-Override: PUT" \
     -H "Content-Type: application/json" \
     -X POST -d '{"clientProperties":{"osName": "MAC_OSX","osVersion": "1.2","appVersion": "1.0","deviceFamily": "MOBILE"},"consumerId":"uniqueIdInBrand","engagementAttributes": [{"type":"impDisplay","campaign":2695999112,"engId":2696029112,"revision":3,"eContext":[{"type":"engagementContext","id":"1"}]}]}' \
-    https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/report?v=1.0&vid=A0ZTA5YTVlYTY5NTI1ODYx&sid=Vo13h4lpShW655STQJi9Jg    
+    https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/report?v=1.0&vid=A0ZTA5YTVlYTY5NTI1ODYx&sid=Vo13h4lpShW655STQJi9Jg
 ```

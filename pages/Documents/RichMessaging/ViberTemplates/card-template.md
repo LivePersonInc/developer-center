@@ -1,7 +1,6 @@
 ---
 pagename: Card Template
-redirect_from:
-Keywords: structured content rich messaging
+keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Viber Templates
@@ -23,7 +22,7 @@ The vertical card contains the following elements:
 * Buttons with the following actions:
   * Link
   * Publish text
-    
+
 ### JSON Template Properties
 
 <table>

@@ -1,6 +1,5 @@
 ---
 pagename: Features
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -15,7 +14,7 @@ redirect_from:
 
 The LivePerson Functions platform enables users to create scheduled functions. Two examples for these are OAuth 2.0 related refresh operations and scheduled invocation to keep [functions warm](liveperson-functions-foundations-concepts.html#cold-start). We allow the scheduling of functions based on CRON expressions. We urge leveraging [this page](https://crontab.guru/) to verify your expression. Please be aware of the following limitation:
 
-{: .note}
+{: .attn-note}
 Scheduled invocations are always performed in the **UTC** timezone and might differ from your local time. Please keep that in mind when scheduling any function.
 
 * The lowest frequency for scheduled invocations is once a minute
@@ -23,7 +22,7 @@ Scheduled invocations are always performed in the **UTC** timezone and might dif
 * A maximum of 10 functions can be scheduled at any given time
 * Configurable Payload is limited to 8000 characters
 
-{: .alert}
+{: .attn-alert}
 Undeploying a scheduled function will result in the **deletion** of the associated schedule. You will need to **recreate** it once you have redeployed the function.
 
 Schedules can be created by heading to the "Schedule an Invocation"-page reachable via the "Watch" icon on the sidebar. Here you will also see any existing Schedule. Further, it will show you the last and next invocation times in your **local** time. The "STATE" column will indicate if the previous invocation was successful or a failure.
@@ -62,7 +61,7 @@ Modifications of existing secrets are only possible by a function. Be aware of p
 
 You can only perform the deletion of a secret via the UI. The secret will become unavailable immediately to any functions using it with the deletion. Therefore, you should ensure it is not used anywhere before deleting the secret.
 
-{: .note}
+{: .attn-note}
 During the [provisioning](liveperson-functions-provisioning.html) process, a couple of default secrets are created. Those are not displayed by default, but they are viewable for debugging purposes.
 
 <img class="fancyimage" alt="Functions: Default Secrets" src="img/functions/functions_secret_defaults.png">
@@ -98,7 +97,7 @@ Finally, as shown above, we do support the use of wildcards by setting `*`. But 
 
 Type the domain in the text field and click the "Add"-button. Once it is saved, it will be reflected in the domain list below.
 
-{: .alert}
+{: .attn-alert}
 Be aware that adding a domain can take up to 5 minutes until being "active".
 
 #### Removing a domain from the allowlist

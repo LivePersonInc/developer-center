@@ -4,7 +4,6 @@ redirect_from:
     - conversation-builder-accounts-user-role-permissions.html
     - bot-accounts-user-role-permissions.html
     - bot-accounts-permissions-per-role.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts
@@ -119,7 +118,7 @@ Users with this permission can only create and manage integrations.
 
 Users with this permission can only create and manage credentials.
 
-{: .note}
+{: .attn-note}
 Whenever you assign this permission, also assign Bot Builder Lite *and* API Developer.
 
 ##### Conversation Builder: Import/Export Manager

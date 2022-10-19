@@ -1,11 +1,11 @@
-# Tiered Responses Widget 
+# Tiered Responses Widget
 This is an example widget that was created for a client that shows how you can have a knowledge base of tiered information that an agent can search through and then send that content to a visitor.
 
 This widget uses the CollapsibleLists JS library.
 
 You can view a live example here: [Tiered Responses Widget](https://tiered-responses-widget.herokuapp.com/index.html)
 
-### Contribution 
+### Contribution
 Thank you Scott Westover for lending some tools to use as a base for this widget. Thank you Christian James and Cale Short for your help with some stylization.
 
 ## Background

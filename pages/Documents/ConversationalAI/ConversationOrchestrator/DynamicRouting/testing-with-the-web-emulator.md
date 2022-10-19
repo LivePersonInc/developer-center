@@ -1,7 +1,5 @@
 ---
 pagename: Testing with the Web Emulator
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -40,7 +38,7 @@ If you already have at least one web messaging engagement deployed for your acco
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_test3.png" alt="Adding a new entry point as described">
 
-    {: .note}
+    {: .attn-note}
     The skill name will be referenced as part of the URL of our testing page. Ensure to not have any spaces.
 
 6. **Continue and publish the engagement**: Save the entry point, and continue following the provided documentation to publish your engagement.
@@ -59,7 +57,7 @@ If you already have at least one web messaging engagement deployed for your acco
 
     Press **Enter** to reload the page with the referenced skill name.
 
-    {: .note}
+    {: .attn-note}
     Once you’ve added the skill to the URL, don't click **Show Window**, as that will refresh the page without the added skill.
 
 4. **Start testing**: Once the page has reloaded, select the engagement, and start a conversation with your dynamic routing bot.

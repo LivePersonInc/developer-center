@@ -2,7 +2,6 @@
 pagename: Test a Single Utterance
 redirect_from:
     - intent-builder-testing-single-utterance-testing.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -11,7 +10,7 @@ permalink: intent-manager-build-test-a-single-utterance.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 Test intents on the **Intents** tab and test entities on the **Entities** tab. You can't use either tab to test both.
 
 ### Test intent detection
@@ -20,7 +19,7 @@ You can use the **Test User Input** tool to test how a single utterance performs
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug3.png" alt="Test User Input tool showing a matched intent">
 
-{: .note}
+{: .attn-note}
 If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more, see [this explanation](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 #### To test a single utterance for intent detection

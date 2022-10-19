@@ -3,7 +3,6 @@ pagename: Articles
 redirect_from:
     - knowledge-base-articles.html
     - knowledge-base-internal-knowledge-bases-articles.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -57,7 +56,7 @@ First, in the **Advanced Settings** of the article, enter the URLs to send **(1)
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png" alt="Entering the URL in the Content field and entering the image in the Image field">
 
-{: .note}
+{: .attn-note}
 The remainder of this information below is for the benefit of bot developers using a KnowledgeAI integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a KnowledgeAI integration, namely, use of the [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in Conversation Builder.
 
 #### Configure the KnowledgeAI integration in the bot
@@ -70,7 +69,7 @@ The "article" custom data field is added automatically when you add the Knowledg
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png" alt="A well-configured KnowledgeAI integration">
 
-{: .note}
+{: .attn-note}
 For the names of the JSON nodes for the content links, see the JSON reference farther below in this topic.
 
 #### Configure the dialog in the bot
@@ -124,7 +123,7 @@ The following table identifies the JSON node for article information that's ofte
 
 ### Using entities within a knowledge base (Legacy)
 
-{: .note}
+{: .attn-note}
 This section is applicable to knowledge bases using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (i.e., intent qualifiers), which is a legacy feature. In this case, behind the scenes the LivePerson (Legacy) engine is used for intent matching.<br><br>For better performance and a more scalable solution, LivePerson recommends that you convert from *Knowledge Base intents* to *Domain intents* as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).<br><br>If you're using entities within your knowledge base (as discussed in this section), first [convert the knowledge base to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents). Then, if the domain itself uses LivePerson (Legacy), [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson).
 
 [Entities](intent-manager-key-terms-concepts.html#entities) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
@@ -179,10 +178,10 @@ Our article when taking advantage of entities would result in the following:
 
 Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
 
-{: .note}
+{: .attn-note}
 You don't need to enter entities using all capital letters like we've done above, but it helps you to identify the words that are entities.
 
 Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
 
-{: .note}
+{: .attn-note}
 The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.

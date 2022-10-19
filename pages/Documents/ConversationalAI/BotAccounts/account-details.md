@@ -1,6 +1,5 @@
 ---
 pagename: Account Details
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts

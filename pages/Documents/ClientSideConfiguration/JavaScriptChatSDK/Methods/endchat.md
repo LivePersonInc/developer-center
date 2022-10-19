@@ -2,15 +2,12 @@
 pagename: endChat
 redirect_from:
   - consumer-experience-javascript-chat-endchat.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 70
 permalink: javascript-chat-sdk-methods-endchat.html
-
 indicator: chat
 ---
 
@@ -39,8 +36,8 @@ var failedRequest = myChat.endChat({
 if (failedRequest && failedRequest.error) {
     alert(failedRequest.error);
 }
-```         
-                                                                                                             
+```
+
 ### Response
 
 **Sample response**

@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 100
 permalink: server-chat-api-methods-add-lines-end-chat.html
-
 indicator: chat
 ---
 

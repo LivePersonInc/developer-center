@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 50
 permalink: messaging-operations-api-methods-messaging-csat-distribution.html
-
 indicator: messaging
 ---
 

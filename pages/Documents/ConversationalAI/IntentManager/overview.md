@@ -3,7 +3,6 @@ pagename: Overview
 redirect_from:
     - conversation-builder-intent-builder-overview.html
     - intent-builder-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -11,7 +10,7 @@ permalink: intent-manager-overview.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 Did you know that LivePerson has a Conversational AI forum for builders? [Check it out!](https://talkyard.livepersonai.com/)
 
 ### Introduction
@@ -29,7 +28,7 @@ Intent Manager is a suite of tools for intent modeling and management. You can u
 * *Optimize* how well they are being fulfilled
 * *Analyze* the most popular consumer intents
 
-{: .note}
+{: .attn-note}
 Just getting to know Intent Manager? Check out the [in-depth introduction](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-the-power-of-an-intent-driven-contact-center.html) in our Knowledge Center. Learn about the power of an intent-driven contact center.
 
 ### Access permissions
@@ -43,8 +42,8 @@ In order for a user to access Intent Manager, they must be assigned a profile th
 
 ### Access Intent Manager
 
-1. On the left sidebar in Conversational Cloud, click the <img class="inlineimage" alt="Conversational AI bot" style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the [Conversational AI dashboard](platform-overview.html), click **Intent Manager**.
+1. [Access the dashboard of Conversational AI applications](get-started-with-automation.html#access-the-conversational-ai-applications).
+2. Click **Intent Manager**.
 
 ### Enable intent discovery, optimization and analysis
 

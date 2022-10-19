@@ -2,7 +2,6 @@
 pagename: Retrieve Workdays Object by ID
 redirect_from:
   - account-configuration-workdays-get-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Workdays API
@@ -51,7 +50,7 @@ Get a single workday object by ID.
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
 **Response example**
 
