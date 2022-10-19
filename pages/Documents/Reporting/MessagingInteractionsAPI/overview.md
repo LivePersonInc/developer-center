@@ -15,7 +15,6 @@ indicator: messaging
 
 {: .attn-alert}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
-Please be aware that the underlying Messaging Interactions API is not meant for real-time decisions, as the API has a delay of up to 1 minute.
 
 {: .attn-note}
 The Messaging Interaction API exposes Open and Closed conversations with **near real-time data freshness**. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.
