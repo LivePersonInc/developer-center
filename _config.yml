@@ -36,8 +36,9 @@ algolia:
   index_name: "devMain"
   # also index the following html elements
   files_to_exclude:
-    - _exclude/**/*
-    - _exclude/**/**/*
+    - _exclude/*
+    - _exclude/*/*
+    - pages/Documents/Hidden/Hidden/*
 
 # values for the Algolia plugin
 

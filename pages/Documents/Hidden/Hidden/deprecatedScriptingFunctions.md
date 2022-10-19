@@ -1,3 +1,12 @@
+---
+pagename: Deprecated Scripting Functions
+sitesection: Documents
+categoryname: Hidden
+documentname: Hidden
+permalink: deprecated-scripting-functions.html
+layout: hidden-layout
+---
+
 The following scripting functions were deprecated and removed from the doc on 10/23/2019. Keeping here in the exclude folder for historical purposes.
 
 ### Get User Location

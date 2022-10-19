@@ -1,6 +1,5 @@
 ---
 pagename: Scraps
-subtitle: Scraps
 sitesection: Documents
 categoryname: Hidden
 documentname: Hidden
