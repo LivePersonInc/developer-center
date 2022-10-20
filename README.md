@@ -148,6 +148,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
 * `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
 * `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
 ## Notes on content and code
 
