@@ -35,7 +35,7 @@ The following parameters should be defined:
 
 * **OAuth 2.0 Authentication Type** - Implicit / Code Flow
 
-* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Seperate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
+* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Separate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
 
 * **OAuth 2.0 Token Endpoint** - An HTTPS URL that used in Code Flow
 
