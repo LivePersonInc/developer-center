@@ -8,6 +8,7 @@ documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
 permalink: knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### What's an external KB with LivePerson AI?
@@ -87,7 +88,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 
 ### Associate an article with an intent
 
-You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
+You must associate articles with intents so that &mdash; during a knowledge base search at run time &mdash; the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest scoring articles that are found in the search are then retrieved from the CMS.
 
 {: .attn-note}
 An intent can't be used more than once, i.e., in more than one article.

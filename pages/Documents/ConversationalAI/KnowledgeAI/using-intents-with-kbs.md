@@ -8,13 +8,15 @@ categoryname: "Conversational AI"
 documentname: KnowledgeAI
 permalink: knowledgeai-using-intents-with-kbs.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### Why use intents?
 
-If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), it can make use of Natural Language Understanding or NLU to find the right answer (article) to use to respond to a consumer's message. What's so great about NLU? It's superior to the alternative, which is text-based search. NLU is much more nuanced and leverages AI to identify various attributes of a message: meaning, intent, sentiment, and more. It makes answer retrieval more accurate.
+If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), it can use Natural Language Understanding or NLU to find the right answer (article) to use to respond to a consumer's message. However, using NLU isn’t always necessary. KnowledgeAI offers a powerful, alternative search method called AI Search. And unlike when using NLU, AI Search requires no setup work on your part. There are benefits to both [search methods](knowledgeai-search-methods.html).
 
-To take advantage of NLU, you'll need to link the articles in the knowledge base to the intents in a domain. So, in summary, using intents is the way you tap into the power of NLU.
+To take advantage of NLU, you'll need to link the articles in the knowledge base to the intents in a domain.
+
 
 ### Getting started
 
@@ -27,7 +29,7 @@ To take advantage of NLU, you'll need to link the articles in the knowledge base
 
 3. Train the knowledge base (and the underlying intents) until you get the performance you expect.
 
-    When NLU is used, the consumer's message is evaluated against the intents that are associated with the articles, and the highest scoring article is returned as the answer.
+    When NLU is used, the consumer's message is evaluated against the intents that are associated with the articles, and the highest scoring articles are returned as answers.
 
 For more details, see below.
 
@@ -45,24 +47,12 @@ Associating the domain gives you access to the domain's intents, so you can asso
 
 ### Associate intents with articles
 
-After you've added a knowledge base that is associated to a domain, configure the articles so that each is linked to the appropriate intent.
+After you've associated a domain with the knowledge base, you can configure the articles so that each is linked to the appropriate intent.
 
 <img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png" alt="Associating an intent with an article">
 
-You don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content you care about the most, and link those to the relevant articles. This means you can focus on specific content areas in your knowledge base, and manage the content overall with varying levels of effort on your part. The approach gives you flexibility as you maintain the knowledge base over time.
+You don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content that can benefit from them. Any articles that don’t have associated intents can be matched to consumer queries using KnowledgeAI’s [AI Search](knowledgeai-search-methods.html). The approach gives you flexibility as you maintain the knowledge base over time.
 
 ### Tune a knowledge base
 
-For info on this, see [this section](knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html).
-
-### Scoring and thresholds
-
-When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it [scores the articles based on the confidence level](intent-manager-key-terms-concepts.html#confidence-score-and-threshold) of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
-
-| If the knowledge base is… | Then… |
-| --- | --- |
-| an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
-| an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
-| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
-
-When you implement a knowledge base search within a bot via a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
+[Tuning a knowledge base](knowledgeai-optimizing-your-content-tuning-a-knowledge-base.html) is necessary for optimal performance.

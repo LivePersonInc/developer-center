@@ -6,6 +6,7 @@ documentname: Conversation Builder
 subfoldername: Interactions
 permalink: conversation-builder-interactions-integrations.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 Integration interactions make programmatic calls to retrieve or post data to external systems and/or to perform actions. They perform their work and then execute the next action.
@@ -57,7 +58,7 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 #### How the Knowledge AI search works
 
 * **The search phrase**: The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search**: When performing the search, the [search mode](knowledgeai-search-methods.html) is always “Intents.” This cannot be changed.
+* **The search**: When performing the search, the [search mode](knowledgeai-search-methods.html) is always “KnowledgeAI.” This cannot be changed.
 * **The results**: The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
@@ -119,7 +120,7 @@ In contrast, strategies that are less targeted can yield a lower answer rate. Fo
 
     <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png" alt="The settings on the Advanced tab">
 
-    * **Min Confidence Score for Answers**: Select the [minimum score](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
+    * **Min Confidence Score for Answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this [threshold](knowledgeai-search-methods.html#match-scores-and-thresholds) to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
