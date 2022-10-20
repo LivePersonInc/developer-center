@@ -38,7 +38,6 @@ algolia:
   files_to_exclude:
     - _exclude/*
     - _exclude/*/*
-    - pages/Documents/Hidden/Hidden/*
 
 # values for the Algolia plugin
 
