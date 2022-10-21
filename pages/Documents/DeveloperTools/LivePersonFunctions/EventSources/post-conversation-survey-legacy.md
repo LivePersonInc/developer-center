@@ -1,6 +1,5 @@
 ---
 pagename: Post Conversation Survey (Legacy)
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -9,14 +8,14 @@ permalink: liveperson-functions-event-sources-post-conversation-survey-legacy.ht
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This integration with Post Conversation Survey (PCS) is only available with [PCS Legacy solution](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html). New PCS bots can be configured in [Conversation Builder](conversation-builder-bots-post-conversation-survey-bots.html) and are **not** integrated with Functions.
 
 A Post Conversation Survey flow is triggered at the end of a conversation with an agent or custom bot. You can use it to obtain feedback from the consumer on their experience with your brand. A PCS is a great way to measure agent/bot and skill performance and identify opportunities to improve your quality targets.
 
 PCS Bot can be integrated with Functions. A function can be invoked when the survey starts (at the end of the conversation) and when the survey ends. This integration will not send any automated emails compared to the [chat post survey](liveperson-functions-event-sources-chat-post-survey.html).
 
-{: .note}
+{: .attn-note}
 Post-Conversation Survey Bot is only available for **messaging**, not for chat.
 
 <img src="img/functions/functions_survey_bot_flow.png" alt="Functions: Post Conversation Survey Flow" style="width:100%;"/>
@@ -46,7 +45,7 @@ Create a new function using one of the messaging survey templates. There are the
 
 Currently, you can only create one function of this event type. If multiple types of functionality are needed that require the same event, this must be handled by a single function's code.
 
-{: .note}
+{: .attn-note}
 The Survey Bot will not process any callback payload during the invocation.
 
 #### Step 3 — Edit the function

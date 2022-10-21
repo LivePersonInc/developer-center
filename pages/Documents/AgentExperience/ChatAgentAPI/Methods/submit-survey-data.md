@@ -2,15 +2,12 @@
 pagename: Submit Survey Data
 redirect_from:
   - agent-submit-survey.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 230
 permalink: chat-agent-api-methods-submit-survey-data.html
-
 indicator: chat
 ---
 
@@ -20,9 +17,9 @@ This method submits the survey data.
 
 | Method | URL |
 | :--- | :--- |
-| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey?v=1&NC=true | 
+| PUT | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/agentSession/{agentSessionId}/chat/{chatId}/survey?v=1&NC=true |
 
-*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.* 
+*Note: Currently PUT is supported using a POST method with the "X-HTTP-Method-Override=PUT" header.*
 
 **Request Headers**
 
@@ -55,4 +52,3 @@ The following parameters can be used in the XML body:
 | Code | Response |
 | :--- | :--- |
 | 200 | OK |
-

@@ -2,7 +2,6 @@
 pagename: Setting up Engagement Attributes
 redirect_from:
   - engagement-attributes-setting-up.html
-Keywords:
 sitesection: Documents
 categoryname: Website Monitoring
 documentname: Engagement Attributes

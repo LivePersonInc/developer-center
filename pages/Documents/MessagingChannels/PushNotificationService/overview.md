@@ -2,7 +2,6 @@
 pagename: Overview
 redirect_from:
   - push-service-overview.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
@@ -17,7 +16,7 @@ indicator: messaging
 
 ### Introduction
 
-Mobile App Messaging provides brands with the ability to provide their customers with an ongoing, continuous conversation that takes place on their time.  For Mobile App Messaging to be successful, push notifications must be configured in order to send customers incoming messages when they are not inside the app.  
+Mobile App Messaging provides brands with the ability to provide their customers with an ongoing, continuous conversation that takes place on their time.  For Mobile App Messaging to be successful, push notifications must be configured in order to send customers incoming messages when they are not inside the app.
 
 <img src="/img/pushservices.png" alt="Push Notification Sample">
 

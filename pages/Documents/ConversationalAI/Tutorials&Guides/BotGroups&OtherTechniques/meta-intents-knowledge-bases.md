@@ -1,7 +1,5 @@
 ---
 pagename: Meta Intents & Knowledge Bases
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -10,7 +8,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-meta-intents-knowledge-b
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. As opposed to creating individual interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. To best work within the Collaborative Bot Group structure, we will create an FAQ meta intent to capture all FAQ questions and present them to our user within the **Service Bot**.
@@ -36,7 +34,7 @@ Using [meta intents](intent-manager-key-terms-concepts.html#meta-intents), you c
       * cancel account
 
    When finished, click **Save**.
- 
+
    If created correctly, you should see your standard intents displayed underneath the FAQ meta intent.
 
    <img style="width:300px" src="img/ConvoBuilder/advtutorial/meta_intents_list.png" alt="A view of Intent Manager that shows several intents nested under an FAQ meta intent">
@@ -44,7 +42,7 @@ Using [meta intents](intent-manager-key-terms-concepts.html#meta-intents), you c
 4. Once saved, you will need to re-train your domain for your changes to take effect. Click **Train** in the upper-right corner.
 5. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the **Model version** dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should see both the standard intent and its parent meta intent triggered with the same confidence score.
 
-   <img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png" alt="Using the Test User Input tool to trigger the intents and meta intent"> 
+   <img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png" alt="Using the Test User Input tool to trigger the intents and meta intent">
 
 6. With a newly created meta intent in hand, activate the new model version, so the changes are reflected in your bot.
 
@@ -64,7 +62,7 @@ In this step, you’ll create a new FAQ knowledge base and add FAQ articles to i
 
    From the Domain dropdown, select our "LP_Cross-vertical" domain. Click **Save**.
 
-   {: .note}
+   {: .attn-note}
    Internal knowledge bases leverage LivePerson NLU domains when surfacing articles.
 
    <img style="width:800px" src="img/ConvoBuilder/advtutorial/add_kb.png" alt="Adding a knowledge base using the Add Knowledge Base window">

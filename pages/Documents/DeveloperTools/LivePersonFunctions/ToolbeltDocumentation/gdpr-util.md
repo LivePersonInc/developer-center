@@ -1,11 +1,10 @@
 ---
 pagename: GDPR Util
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
-permalink: liveperson-functions-toolbelt-documentation-gdpr-util.html 
+permalink: liveperson-functions-toolbelt-documentation-gdpr-util.html
 indicator: both
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Scroll Behavior Configuration
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -11,7 +10,7 @@ indicator: messaging
 
 ### Requirements
 
-**Supported versions:** 
+**Supported versions:**
  - 4.3 and higher
  - (AndroidX) 5.1 and higher
 
@@ -20,7 +19,7 @@ indicator: messaging
 
 ### How to configure
 
-Simply set the attributes in branding.xml file. Please follow the instructions of each attributes below. If the configuration is missing in branding.xml file or configure to wrong value, the SDK will take the default scroll behavior. 
+Simply set the attributes in branding.xml file. Please follow the instructions of each attributes below. If the configuration is missing in branding.xml file or configure to wrong value, the SDK will take the default scroll behavior.
 
 | Scroll Option | Description | Limitation |
 | :--- | :--- | :--- |
@@ -30,7 +29,7 @@ Simply set the attributes in branding.xml file. Please follow the instructions o
 
 ### Show Conversation
 
-`lp_scroll_show_conversation` configures the scroll behavior when opening the conversation screen from another screen of the app. 
+`lp_scroll_show_conversation` configures the scroll behavior when opening the conversation screen from another screen of the app.
 
 Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
@@ -40,7 +39,7 @@ Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
 ### Move to foreground from background
 
-`lp_scroll_when_foreground` configures the scroll behavior when bringing the conversation screen to the foreground from the background. 
+`lp_scroll_when_foreground` configures the scroll behavior when bringing the conversation screen to the foreground from the background.
 
 Available options: **Bottom, LastPosition(Default), FirstUnreadMessage**
 
@@ -50,9 +49,9 @@ Available options: **Bottom, LastPosition(Default), FirstUnreadMessage**
 
 ### Tapped on push notification
 
-`lp_scroll_when_push_notification` configures the scroll behavior when open conversation screen by tapping on push notification. 
+`lp_scroll_when_push_notification` configures the scroll behavior when open conversation screen by tapping on push notification.
 
-`LivePerson.setPushNotificationTapped();` before show the conversation screen. Otherwise, the scroll behavior will follow the configuration of `lp_scroll_show_conversation`. `LivePerson.setPushNotificationTapped();` must be called after SDK is initialized. 
+`LivePerson.setPushNotificationTapped();` before show the conversation screen. Otherwise, the scroll behavior will follow the configuration of `lp_scroll_show_conversation`. `LivePerson.setPushNotificationTapped();` must be called after SDK is initialized.
 
 Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
@@ -90,11 +89,10 @@ protected void onNewIntent(Intent intent) {
 
 ### Click on the scroll down indicator
 
-`lp_scroll_when_scroll_down` configures the scroll behavior when tapping on the scroll down indicator. 
+`lp_scroll_when_scroll_down` configures the scroll behavior when tapping on the scroll down indicator.
 
 Available options: **Bottom(Default), FirstUnreadMessage**
 
 ```xml
 <string name="lp_scroll_when_scroll_down" translatable="false">Bottom</string>
 ```
-

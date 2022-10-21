@@ -1,6 +1,5 @@
 ---
 pagename: Apple Auth Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -52,7 +51,7 @@ If you do not yet have an OAuth 2.0 service or if you need a test service, follo
 
 6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
 
-7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use.
 
 ### Checking for Apple Auth device compatibility
 
@@ -104,7 +103,7 @@ The `BusinessChatMessage` object contains the `receivedMessage` and `replyMessag
 
 The `ConnectorAuthenticationRequest` object holds the `requestIdentifier` and `responseEncryptionKey` (public key), which allows you to identify the authentication request and map the OAuth token in the response to the request originator.
 
-{: .note}
+{: .attn-note}
 The requestIdentifier and responseEncryptionKey is optional, but the responseEncryptionKey is required to view the auth response from an agent widget.
 
 Please use the metadata template with the relevant fields, as presented in the example below:
@@ -220,7 +219,7 @@ Please use the metadata template with the relevant fields, as presented in the e
 
 For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
 
-###### `receivedMessage` Object Properties  
+###### `receivedMessage` Object Properties
 
 <table>
   <thead>
@@ -258,7 +257,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
   </tbody>
 </table>
 
-###### `replyMessage` Object Properties  
+###### `replyMessage` Object Properties
 
 <table>
   <thead>
@@ -331,7 +330,7 @@ If you are authenticating the consumer with a **bot**, you can listen for the au
 
 If you are authenticating the consumer with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorAuthResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorauthresponse).
 
-{: .note}
+{: .attn-note}
 If reading the auth response in an Agent Widget, you **must** initially send a public key.
 
 #### Response Metadata
@@ -359,7 +358,7 @@ The authentication response metadata is contextual information about the consume
     "status"            : false,
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
-        "message" : "Optional Error Message"    
+        "message" : "Optional Error Message"
     }]
 }
 ```

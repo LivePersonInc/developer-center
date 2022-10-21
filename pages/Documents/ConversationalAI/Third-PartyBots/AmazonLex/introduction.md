@@ -14,13 +14,13 @@ indicator:
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for **Amazon Lex**.
 
-{: .note}
+{: .attn-note}
 At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
 ### Configuration
 
-{: .note}
+{: .attn-note}
 See the [Getting Started](third-party-bots-getting-started.html) guide before using this document to complete pre-requisite steps.
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
@@ -31,7 +31,7 @@ Figure 1.1 Showing the configuration that needed to be filled
 
 The following Amazon Lex information should be provided to LivePerson:
 
-{: .note}
+{: .attn-note}
 Lex APIs adhere to [Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) Signing Process.
 Some degree of familiarity with AWS IAM policies and the AWS IAM console is necessary for setting up a valid Lex client with _Read Only API Key access_.
 A _service account_ is a **prerequisite** for setting up the above config. Documentation available [here](https://docs.aws.amazon.com/lex/index.html).
@@ -73,10 +73,14 @@ A _service account_ is a **prerequisite** for setting up the above config. Docum
  </tbody>
 </table>
 
-{: .note}
+{: .attn-note}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively.
+For validation of the credentials provided, you can now perform a test connection request to see if
+everything that you have provided is working and reachable. You can click on the button "Test Connection"
+to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively. **Please note** that
+your bot should be capable of handling unsupported messages either via [fallback intents](https://docs.aws.amazon.com/lex/latest/dg/built-in-intent-fallback.html)
+or as your design pleases. This will ensure the success of the call to the API of Lex for testing the connection.
 
 <img class="fancyimage" style="width:600px" src="img/lex/connection-success.png" alt="">
 

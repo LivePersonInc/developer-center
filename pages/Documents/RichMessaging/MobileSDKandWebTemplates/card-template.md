@@ -4,7 +4,6 @@ redirect_from:
   - rich-messaging-structured-content-card.html
   - structured-content-mobile-sdk-and-web-templates-card-template.html
   - structured-content-mobile-sdk-web-templates-card-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

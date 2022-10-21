@@ -1,6 +1,5 @@
 ---
 pagename: Rich Links Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Link Previews
@@ -22,9 +21,9 @@ Rich link preview configurable content will include:
 
 Brands will be able to adjust the preview content to their desired experience via the structured content framework and elements. Please note that all other structured content requirements apply (AC feature enablement and image whitelist).
 
-![image alt text](img/link_preview_abc0.jpg)
+![](img/link_preview_abc0.jpg)
 
-![image alt text](img/link_preview_abc1.png)
+![](img/link_preview_abc1.png)
 
 ### Example JSON
 

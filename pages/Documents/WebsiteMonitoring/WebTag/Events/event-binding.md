@@ -11,13 +11,12 @@ categoryname: "Website Monitoring"
 documentname: Web Tag
 subfoldername: Events
 permalink: web-tag-events-event-binding.html
-
 indicator: both
 ---
 
 The `lpTag` handles the communication of many events that occur on the vistor's webpage.
 
-These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and more. 
+These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and more.
 
 You can find a list of events published on a web page by the Web Tag, each organized under an `appName` and given an `eventName`, [in the Events document](le-tag-events-events.html).
 
@@ -25,12 +24,12 @@ This document explains how to `bind` to events to help customize on-page behavio
 
 ### Initialize
 
-To listen for and bind to an event, you can use the `lpTag.events.bind` method. 
+To listen for and bind to an event, you can use the `lpTag.events.bind` method.
 
 There are two ways to use this method.
 
 - Call it with the appName, eventName and your callback function.
-    
+
     ```javascript
     lpTag.events.bind(appName, eventName, callbackFunction);
     ```
@@ -42,7 +41,7 @@ There are two ways to use this method.
         eventName: "EVENTNAME",
         appName: "APPNAME",
         func: callbackFunction,
-        context: callbackFunctionExecutionContext,  
+        context: callbackFunctionExecutionContext,
         async: true, //default is false,
         triggerOnce: true //default is false
     });

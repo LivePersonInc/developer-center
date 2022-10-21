@@ -2,7 +2,6 @@
 pagename: Plural String Resource Example
 redirect_from:
   - android-plural-string.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

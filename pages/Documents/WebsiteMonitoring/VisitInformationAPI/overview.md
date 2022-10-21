@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Visit Information API
-
 level-order: 2
 order: 1
 permalink: visit-information-api-overview.html

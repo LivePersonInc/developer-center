@@ -34,7 +34,7 @@ Figure 3.1 Activity resulting in a delay with typing indicator
 - `delay` This is the number of seconds the bot will wait. Only whole numbers can be provided.
 - `typing` This property controls if a typing indicator is shown during the delay. The property is optional and defaults to `true`.
 
-{: .note}
+{: .attn-note}
 A pure delay activity without any text or other structured content can e.g. be used if the bot should not respond with any
 content but an error escalation should be prevented (the connector would assume an issue with the bot if no response at all can
 be found).
@@ -48,7 +48,7 @@ within the conversational flow of the bot. These messages are published into the
 Managers. This enables brands to customize messages giving more insight, summarizing actions taken by the bot, or
 also advising on next actions the handover agent should take.
 
-{: .note}
+{: .attn-note}
 If you have not migrated to the new Agent Workspace you will not be able to see the `Private` message indicator in the
 conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to
 Agents and Managers.
@@ -193,7 +193,7 @@ to successfully send the data.
 - Content is base64 encoded
 - Metadata size is limited to 5k
 
-{: .note}
+{: .attn-note}
 Failing to comply with the above criteria will cause the message to be dropped. This feature is only available for the
 messaging conversations, not for chat conversations.
 
@@ -265,7 +265,7 @@ Figure 3.7 Activity containing encodedMetadata for Rich Content
 
 For sending Encoded Metadata with multiple responses one must provide an additional property of `encodedMetadata` with the already existing `type` and `value` properties under `multiMessage` array object. Sending encoded metadata is supported for the `text` and `structure-content` types only. An example of sending encoded metadata with both types can be found below.
 
-{: .note}
+{: .attn-note}
 **Please note** if you will send `encodedMetadata` within the `value` property of type `structure-content`, then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response. Furthermore, for each message, you can see different `encodedMetadata` are defined so both of the messages will be sent with different encoded metadata.
 
 ```json-doc
@@ -368,7 +368,7 @@ property (further information about `channelData` can be found
 }
 ```
 
-Figure 4.1 Example showing the general structure of the `RichContentEvent`
+Figure 3.10 Example showing the general structure of the `RichContentEvent`
 
 An example use case of the `RichContentEvent` response sent by Third-Party Bots is below that demonstrates the information which is sent
 from Third-Party bots on a user sharing a location via WhatsApp:
@@ -401,7 +401,7 @@ from Third-Party bots on a user sharing a location via WhatsApp:
 }
 ```
 
-Figure 4.2 Shows example `RichContentEvent` received by Microsoft Bot when an user shares WhatsApp location
+Figure 3.11 Shows example `RichContentEvent` received by Microsoft Bot when an user shares WhatsApp location
 
 As an example defined below, we will send back raw `RichContentEvent` data in Microsoft bot multi-messages response, if the property on path `channelData.context.lpEvent.event.type` comes as `RichContentEvent`:
 
@@ -429,3 +429,31 @@ const response = {
 The results can be seen in a demo below:
 
 <img class="fancyimage" style="width:300px" src="img/microsoftbotframework/microsoft_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+In Microsoft Bot the last consumer message is passed via the property `lastConsumerMessage` that is sent with `context` information as part of the `lpEvent` data. This context information within a conversation is preserved/passed in the channelData property (further information about channelData can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)).
+
+An example of the request body containing WelcomeEvent can be seen below:
+
+```javascript
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "context": {
+      "lpEvent": {
+        "lastConsumerMessage": "I need to return my order"
+        "type": "ContentEvent",
+        "content": "welcome"
+      },
+      "lpSdes": {}
+    }
+  }
+}
+```
+
+Figure 3.12 Shows example welcomeEvent received by Microsoft Bot

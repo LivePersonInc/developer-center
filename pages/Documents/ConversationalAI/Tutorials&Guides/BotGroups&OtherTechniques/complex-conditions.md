@@ -1,7 +1,5 @@
 ---
 pagename: Complex Conditions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -10,7 +8,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 In the [Getting Started](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series, we used conditional logic in the Make Payment dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
@@ -58,26 +56,26 @@ We’ve now created a dialog that records whether or not a purchase was made in 
 2. Add a total of 4, new text interactions. Give each interaction the following title and text content:
 
     * **Interaction Title**: Store Less 30
-    * **Text Content**: If you purchased your item within 30 days from one of our stores, you can bring the item back for a full refund. 
-    * **Next Action**: End Interaction 
+    * **Text Content**: If you purchased your item within 30 days from one of our stores, you can bring the item back for a full refund.
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Store More 30
     * **Text Content**: If you purchased your item more than 30 days ago from our store, you can bring the item back for a store credit.
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Web Less 30
     * **Text Content**: If you purchased your item within 30 days from our website, you can send the item back for a full refund. We'll even pay the postage!
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Web More 30
     * **Text Content**: If you purchased your item more than 30 days ago from our website, you can return the item for a credit. You could bring the item into one of our stores, or pay for the return shipping.
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/four_text_interactions.png" alt="The Text interactions that have just been added">
 
 3. Return to the "Online or Instore" multiple choice question, and create a new rule: Click the **Next Action** dropdown, and then click **+ Custom Rule**. We’re going to add a new rule to correspond to each of the text statements that we will be routing to.
 
-    For the first rule, give it a name of "Store Less 30." Click **+ Add Condition**, and set the condition to match a pattern of `*store`. This will match both "In-store" and "store" utterances, which provides flexibility in how our users can respond. 
+    For the first rule, give it a name of "Store Less 30." Click **+ Add Condition**, and set the condition to match a pattern of `*store`. This will match both "In-store" and "store" utterances, which provides flexibility in how our users can respond.
 
     Still in the **Add Condition** section, we want to check the value of the previously stored `within30Days` variable to determine the next step. Click **+ Add Variable Condition**, and under **Variable Name**, type in "within30Days".  In the adjacent dropdown, select **Equals**, and for **Value**, set to "true".
 
@@ -111,7 +109,7 @@ We’ve now created a dialog that records whether or not a purchase was made in 
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview.png" alt="Previewing the conversation using the Preview tool">
 
-    Without a single line of JavaScript code, we now have complex conditional logic to check for multiple variables in determining a flow for our users. 
+    Without a single line of JavaScript code, we now have complex conditional logic to check for multiple variables in determining a flow for our users.
 
 ### What's next?
 

@@ -1,6 +1,5 @@
 ---
 pagename: Email Integrations
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -25,7 +24,7 @@ Use an Email integration when you want Conversation Builder to send an email as 
     - **Subject**: Enter the subject of the email.
     - **Body**: Enter the body of the email. If you also select the **Html Email** check box (discussed below), you can enter HTML formatting in the body.
 
-        {: .note}
+        {: .attn-note}
         In the Subject and Body fields, you can use data that's available in the bot runtime if it's stored in botContext variables. For help with setting and getting values in bot variables, see [this section](conversation-builder-scripting-functions-get-set-session-data.html#get-and-set-bot-variable).
 
     - **HTML Email**: Select this to send the email in HTML format. Otherwise, it will be sent in plain text format.

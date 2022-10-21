@@ -8,7 +8,7 @@ permalink: third-party-bots-amazon-lex-advanced-features.html
 indicator:
 ---
 
-{: .note}
+{: .attn-note}
 At this time, Lex response cards and audio messages are not supported.
 The Connector uses Lex ApiVersion 2016-11-28. Currently, we only support Amazon Lex V1 and we don't support Amazon Lex V2.
 
@@ -22,7 +22,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .note}
+{: .attn-note}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 3.1 below:
@@ -125,7 +125,7 @@ Figure 3.5 Showing the Custom Markup message for delay message
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
-{: .note}
+{: .attn-note}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Markup response in intent definition (as shown in Figure 3.6). There are two properties, `text` and `messageAudience`.
@@ -203,7 +203,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Receiving Rich Content Response (Messaging Only)
 
-{: .note}
+{: .attn-note}
 Following guide is going to introduce how to implement Amazon Lambda functions specifically for **Amazon Lex** via Amazon Console. Continue if you are familiar and have access to Amazon Lambda and Amazon Lex.
 
 Third-Party Bots allows LivePerson's Rich Messaging channel capabilities not only to be received as a response from the vendor but also, allow Rich Messages
@@ -313,3 +313,80 @@ Figure 3.8 Sample utterances and Lambda function configuration for `RichContentE
 Once all of above steps has been configured and updated bot has been published then the Amazon Lex bot will be able to respond to the requests via the Amazon Lambda function. A demo of our WhatsApp map example (defined above) can be seen below:
 
 <img class="fancyimage" style="width:300px" src="img/lex/lex_richcontent_demo.gif">
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+We will describe an example of how to set up and access the WelcomeEvent response in Amazon Lex below. We will use Amazon Lex's capability of providing fulfillment via Amazon Lambda.
+
+#### Create Amazon Lambda Function
+
+The last consumer message is part of the context information sent by Third-Party Bots in the request body. For accessing the welcome event we will need to create an Amazon Lambda function that should be capable of parsing the additional message context sent by Third-Party Bots.
+
+The minimal code example below shows how to check if `lastConsumerMessage` property present in the request context, then send back a text response containing the last consumer message. Please note that the response must follow the Lex response schema. More information on how to create the Lambda function for Amazon Lex you can also follow [the official documentation](https://docs.aws.amazon.com/lex/latest/dg/gs2-prepare.html)
+
+```javascript
+'use strict';
+
+function close(sessionAttributes, fulfillmentState, message) {
+  return {
+    sessionAttributes,
+    dialogAction: {
+      type: 'Close',
+      fulfillmentState,
+      message,
+    },
+  };
+}
+
+// --------------- Events -----------------------
+
+function dispatch(intentRequest, callback) {
+  const sessionAttributes = intentRequest.sessionAttributes;
+  const requestAttributes = intentRequest.requestAttributes;
+  let response;
+
+  if (requestAttributes && requestAttributes['BC-LP-CONTEXT']) {
+    const parsedLpContext = JSON.parse(requestAttributes['BC-LP-CONTEXT']);
+    if (parsedLpContext.lpEvent && parsedLpContext.lpEvent.lastConsumerMessage) {
+      response = `I received lastConsumerMessage: ${parsedLpContext.lastConsumerMessage}`;
+    }
+    else {
+      response = 'Unable to find any lastConsumerMessage data';
+    }
+  }
+  else {
+    response = 'Unable to find any LP Context Information';
+  }
+
+  callback(close(sessionAttributes, 'Fulfilled', { 'contentType': 'PlainText', 'content': response }));
+}
+
+// --------------- Main handler -----------------------
+
+// Route the incoming request based on intent.
+// The JSON body of the request is provided in the event slot.
+exports.handler = (event, context, callback) => {
+  try {
+    dispatch(event, (response) => {
+      callback(null, response);
+    });
+  }
+  catch (err) {
+    callback(err);
+  }
+};
+```
+
+
+#### Create WelcomeEvent Intent and Link Amazon Lambda
+
+Ensure you have an ‘entry point’ intent that utilizes the default ‘WELCOME’ event, if not you can create new intent triggered by `WELCOME-INTENT` utterances. After the Sample utterances are added move to the section of the fulfillment and choose the AWS Lambda function.
+Our deployed lambda function should populate the list of selections. Select the Lambda function which in our example case is `WelcomeEventCloudFunction`. This can be seen in Figure 3.9 below
+
+
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/amazon-lex-welcome-intent.png">
+
+Figure 3.9 Sample utterances and Lambda function configuration for WelcomeEvent

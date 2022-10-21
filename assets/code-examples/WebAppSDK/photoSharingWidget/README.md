@@ -10,15 +10,15 @@ To create this widget, I decided to use the Google Drive API since it allows for
 ## Instructions
 To use the widget, you will need to update the example3.js and index.html files with your Google Drive API client Id. You can read more about the setting up the Drive API here: [Drive API](https://developers.google.com/drive/v2/web/quickstart/js)
 
-You will also need to update line 83 of the index.html file with the Google Folder ID that you are allowing visitors to upload files to. 
+You will also need to update line 83 of the index.html file with the Google Folder ID that you are allowing visitors to upload files to.
 
-You will also need to setup a Google Script to allow other people to upload files to your own Google Drive account. To do this, you can make a copy of this script here: [Google Script] (https://script.google.com/d/1b9coaI9zCMZdBMF8HxLKPodgyy3aovoUlAiJWhxaHOKe8dOXhKtcxbxF/edit?usp=sharing) 
+You will also need to setup a Google Script to allow other people to upload files to your own Google Drive account. To do this, you can make a copy of this script here: [Google Script] (https://script.google.com/d/1b9coaI9zCMZdBMF8HxLKPodgyy3aovoUlAiJWhxaHOKe8dOXhKtcxbxF/edit?usp=sharing)
 
 After you make a copy of the script, you just need to publish it as a Web App, which will give you a URL. You will need to put this URL in line 76 of index.html.
 
 ## Other Use Cases
-This widget could be used as a starting point for other file sharing solutions.  
+This widget could be used as a starting point for other file sharing solutions.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

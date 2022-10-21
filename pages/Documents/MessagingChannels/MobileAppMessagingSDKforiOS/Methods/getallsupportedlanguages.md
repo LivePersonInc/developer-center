@@ -2,15 +2,11 @@
 pagename: getAllSupportedLanguages
 redirect_from:
   - consumer-experience-ios-sdk-getallsupportedlanguages.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 220
 permalink: mobile-app-messaging-sdk-for-ios-methods-getallsupportedlanguages.html
-
 indicator: messaging
 ---
 

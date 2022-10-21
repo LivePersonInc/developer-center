@@ -1,6 +1,5 @@
 ---
 pagename: Conversational Commands
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -17,7 +16,7 @@ Along with the invocation, a payload is sent containing the conversation ID and 
 
 ### Configuration
 
-{: .note}
+{: .attn-note}
 Your account must have the New Agent Workspace enabled; please get in touch with your account team to enable the feature.
 
 To be able to use Conversational Commands, an Agent needs the following permissions:
@@ -33,7 +32,7 @@ The `description` will also be shown in the Agent Workspace. The description can
 
 `[email, subject:optional] - Sends the conversation transcript to the provided email address.`
 
-{: .note}
+{: .attn-note}
 You can create up to 30 functions for this event.
 
 #### Step 2 — Edit the Function

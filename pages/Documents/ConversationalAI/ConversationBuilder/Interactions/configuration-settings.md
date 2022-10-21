@@ -5,7 +5,6 @@ redirect_from:
     - conversation-builder-interaction-details.html
     - conversation-builder-interactions-interaction-details.html
     - conversation-builder-interactions-details-settings.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -30,7 +29,7 @@ Basic settings are those that are common to all interactions.
 * **Interaction Type**: Shows the interaction type. Be aware that it is possible to change the type from this drop-down list.
 * **Interaction Delay**: Set the time delay in milliseconds before sending this message. You can specify a maximum value of 10000 milliseconds (10 seconds). Specifying a botContext variable as the value isn’t supported.
 
-    {: .note}
+    {: .attn-note}
     If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
 
     To override this delay, use the [setMessageDelay](conversation-builder-scripting-functions-manage-conversation-flow.html#set-message-delay-value) scripting function in the Pre-Process code of the interaction.

@@ -1,5 +1,5 @@
 # Translate Widget
-This is an example widget of how you can have the chat lines translated to another language. The widget uses the Bing translator widget to translate the chat lines. 
+This is an example widget of how you can have the chat lines translated to another language. The widget uses the Bing translator widget to translate the chat lines.
 
 The widget checks what skill the current chat is assigned to, and it will then translate the visitor chat lines to the correct language. It will also allow you to translate anything the agent types into the corresponding language.
 
@@ -18,8 +18,8 @@ On your LiveEngage account, you will need to setup 2 skill groups: Russian and S
 If a chat comes in that is not tied to one of these skill groups, or then the translator widget will translate English into Spanish for the visitor, and Spanish into English for the agent.
 
 ## Other Use Cases
-This widget could be used with other translating serverices and a basis for virtual agents. 
+This widget could be used with other translating serverices and a basis for virtual agents.
 
 ## Author
-Scott Westover 
+Scott Westover
 Email: swestover@liveperson.com

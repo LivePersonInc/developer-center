@@ -8,7 +8,7 @@ permalink: third-party-bots-liveperson-functions-basic-content.html
 indicator:
 ---
 
-{: .note}
+{: .attn-note}
 As the LivePerson functions feature uses [LivePerson Functions](liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](liveperson-functions-getting-started-development-deep-dive-ui.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### The Welcome Event
@@ -91,14 +91,42 @@ const payload = {
 };
 ```
 
+If you have alternate intents data that you want to pass into the bot metadata you can also add this
+information in the response context via property `alternativeIntents` which is an array of objects
+(containing same properties as the main intent). The example of passing alternative intents alongside
+the main intent is as follow:
+
+```javascript
+const payload = {
+  messages: ["Hi i am an intent information example"],
+  context: {
+    alternativeIntents: [
+      {
+        intentId: "alternative-intent-info-example-1",
+        intentName: "alternative-Intent information example 1.",
+        confidenceScore: 0.6,
+      },
+      {
+        intentId: "alternative-intent-info-example-2",
+        intentName: "alternative-Intent information example 2.",
+        confidenceScore: 0.4,
+      },
+    ],
+    intentId: "intent-info-example",
+    intentName: "Intent information example.",
+    confidenceScore: 1,
+  },
+};
+```
+
 ### Sending Rich Content (Structured Content)
 
-{: .note}
+{: .attn-note}
 Structured Content will be added into messages property after LivePerson Functions version 2.9 to support multiple structured content messages
 
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting. There are two ways you can send structured content.
 
-{: .note}
+{: .attn-note}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
 #### Sending Structured content via 'messages' property
@@ -179,12 +207,12 @@ const payload = {
 };
 ```
 
-{: .note}
+{: .attn-note}
 **Please note** that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
 
 ### Sending Quick Replies (Structured Content)
 
-{: .note}
+{: .attn-note}
 **Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent alongside with predefined answers.
@@ -257,7 +285,7 @@ const payload = {
 
 ### Bot Actions
 
-{: .alert}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer / Escalations
@@ -294,7 +322,7 @@ const payload = {
 
 #### Transfer to Agent
 
-{: .note}
+{: .attn-note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill

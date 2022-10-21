@@ -2,15 +2,11 @@
 pagename: logOut
 redirect_from:
   - android-logout.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 260
 permalink: mobile-app-messaging-sdk-for-android-methods-logout.html
-
 indicator: messaging
 ---
 

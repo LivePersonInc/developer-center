@@ -1,6 +1,5 @@
 ---
 pagename: Latest Android Messaging SDK Release Notes
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -11,7 +10,9 @@ indicator: messaging
 {% for operatingsystem in site.data.releasenotesandroid %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first == true %}
-<div class="alert">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/mobile-app-messaging-sdk-for-android-latest-release-notes.html&mode=web&css=post-content" target="_blank">subscribe to receive notifications of changes</a>. When we update the release notes, you'll get a notification straight to your email of choice.</div>
+
+{: .attn-alert}
+Working with this SDK or planning to in the future? Make sure to [subscribe to receive notifications of changes](https://visualping.io/?url=developers.liveperson.com/mobile-app-messaging-sdk-for-android-latest-release-notes.html&mode=web&css=post-content). When we update the release notes, you'll get a notification straight to your email of choice.
 
 #### SDK version {{ release.releasename }}
 

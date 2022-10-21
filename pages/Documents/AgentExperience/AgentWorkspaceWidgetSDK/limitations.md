@@ -2,14 +2,11 @@
 pagename: Limitations
 redirect_from:
   - agent-workspace-sdk-limitations.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 30
 permalink: agent-workspace-widget-sdk-limitations.html
-
 indicator: both
 ---
 

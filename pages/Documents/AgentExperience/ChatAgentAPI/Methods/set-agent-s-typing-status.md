@@ -2,15 +2,12 @@
 pagename: Set Agent's Typing Status
 redirect_from:
   - agent-set-agent-typing.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 180
 permalink: chat-agent-api-methods-set-agent-s-typing-status.html
-
 indicator: chat
 ---
 

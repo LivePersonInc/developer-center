@@ -2,11 +2,9 @@
 pagename: Sample App
 redirect_from:
   - chat-agent-sample-app.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
-
 order: 241
 permalink: chat-agent-api-sample-app.html
 indicator: chat

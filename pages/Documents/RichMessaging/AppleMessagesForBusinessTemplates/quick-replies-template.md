@@ -1,6 +1,5 @@
 ---
 pagename: Quick Replies Template
-Keywords: 
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -10,7 +9,7 @@ indicator: messaging
 
 ### Overview
 
-The [Quick Reply message](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#quick-reply-message) provides a way to receive consumer input to a question/statement by a set of buttons that each contain a title text and/or emojis. 
+The [Quick Reply message](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#quick-reply-message) provides a way to receive consumer input to a question/statement by a set of buttons that each contain a title text and/or emojis.
 
 Quick Replies for Apple Messages for Business includes a set of up to 5 buttons that can each contain a text title and a publish text click action.
 

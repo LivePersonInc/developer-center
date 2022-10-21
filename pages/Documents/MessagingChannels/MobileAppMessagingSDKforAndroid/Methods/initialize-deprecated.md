@@ -2,15 +2,11 @@
 pagename: initialize (Deprecated)
 redirect_from:
   - android-initializedeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 12
 permalink: mobile-app-messaging-sdk-for-android-methods-initialize-(deprecated).html
-
 indicator: messaging
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -9,7 +8,7 @@ permalink: conversation-orchestrator-dynamic-routing-getting-started.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. If you're still using bots based on the older template, see [this setup info](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead.
 
 ### Introduction
@@ -28,7 +27,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
 
 1. Enable the Conversation Context Service for Conversation Builder.
 
-    {: .note}
+    {: .attn-note}
     You don’t have to complete this step if your Conversational Cloud account was created after August 20, 2021. If you have an older account, complete this step.
 
     In Conversational Cloud, from the dashboard of Conversational AI applications, select **Bot Accounts** to access the application. Then, enable the settings as shown below. Turn on **Enable Context API**, and select **Use Conversational Cloud Site Id**.

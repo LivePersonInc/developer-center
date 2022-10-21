@@ -2,7 +2,6 @@
 pagename: Domains
 redirect_from:
     - intent-builder-domains.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -34,14 +33,14 @@ Domains added from [prebuilt domains](intent-manager-key-terms-concepts.html#pre
 6. For **Language**, select the language of the domain you want to add.
 7. Click the **Add** button that's displayed when you move your mouse over the desired domain.
 
-    {: .note}
+    {: .attn-note}
     After you add the domain, there's no need to train or activate it for the first time. This has been done automatically. However, from this point forward, things work as if you had created the domain manually: You can customize the domain as you see fit. If you subsequently make any changes, you must re-train the domain to create a new model version that reflects the changes. And when ready, you’ll need to activate the new model version.
 
 ### Overwrite from a prebuilt domain
 
 If you've added a [prebuilt domain](intent-manager-key-terms-concepts.html#prebuilt-domains) and customized it, but you no longer want to use your customizations, you can overwrite your domain to reflect the prebuilt domain offered by LivePerson. This operation removes all the model versions in your domain, and it creates a single model version--trained and activated--that is based on the prebuilt domain.
 
-{: .note}
+{: .attn-note}
 You can overwrite your domain with a prebuilt domain if you have not customized your domain's *name*. Once you do this, you break the relationship with the source prebuilt domain.<br><br>Overwriting a domain should only be done during the development phase because it disrupts all the associated resources (bots and knowledge bases) that use the domain.
 
 **To overwrite your domain with a prebuilt domain**
@@ -60,7 +59,7 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
 ### Add a domain manually or using an import file
 
-{: .note}
+{: .attn-note}
 If you're adding a domain that will use your own Rasa-based engine as the NLU provider, there's [additional info](intent-manager-natural-language-understanding-brand-s-rasa-based-nlu-engine.html#connect-the-nlu-engine) that you need to provide when you do this.
 
 **To add a domain manually or using an import file**
@@ -70,7 +69,7 @@ If you're adding a domain that will use your own Rasa-based engine as the NLU pr
 3. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
 4. In the Add Domain window, on the **New domain** tab, specify the following:
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
-    * **NLU Provider**: Select the provider of the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use.
+    * **NLU Provider**: Select the provider of the [NLU engine](intent-manager-natural-language-understanding-introduction.html) to use. Don't see the NLU provider that you're looking for? Check the settings in your [account details](bot-accounts-account-details.html) in Bot Accounts.
     * **Language**: Select the language of the domain.
     * **Create content**: If you're going to add intents and entities manually, select "Manually." If you're going to import them from a file, select "Import."
     * **Import Intents & Entities from**: If you selected "Import" as the import method, now select the type of import file involved: CSV or Google Sheet. Then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
@@ -96,7 +95,7 @@ The following illustrates a well-formatted intents file:
 
 <img class="fancyimage" style="width:600px" alt="Example of a well-formatted import file" src="img/ConvoBuilder/ib_importFile_intents_a.png">
 
-{: .note}
+{: .attn-note}
 Key phrases are only applicable to the LivePerson (Legacy) engine. You can leave this section blank if you're using another NLU engine. For information on key phrase matching, see *Configure domain settings*, which follows below.
 
 Additionally, having said the above, the following, simplified format also works. It should suit most use cases.
@@ -145,7 +144,7 @@ Key Phrase Matching can be helpful when you know there are specific words that d
 
 Here's a test example without Key Phrase Matching enabled:
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">  
+<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">
 
 And here's a test example with Key Phrase Matching enabled:
 
@@ -155,7 +154,7 @@ And here's a test example with Key Phrase Matching enabled:
 
 After you've made changes to the Google sheet that's linked to the domain, sync the domain to update it with the content.
 
-{: .note}
+{: .attn-note}
 This action overwrites the content in the domain with the content in the Google sheet, so use caution when performing this.
 
 **To sync a domain with a Google sheet**
@@ -198,7 +197,7 @@ Download of a domain creates a ZIP file that contains 2 CSV files, one for the i
 
 Deleting a domain is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .note}
+{: .attn-note}
 Before you delete a domain, ensure that it isn't being used by any bots or knowledge bases. Also, consider downloading the domain for backup purposes.
 
 **To delete a domain**

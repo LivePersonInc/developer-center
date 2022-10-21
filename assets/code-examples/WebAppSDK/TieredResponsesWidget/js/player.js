@@ -255,13 +255,13 @@ function parseToHtml(obj){
             list-style-image: none;
             cursor: pointer;
         }
-        li.collapsibleListClosed {            
+        li.collapsibleListClosed {
             list-style-image: url('img/button-closed.png');
             list-style-position: inside;
             cursor: pointer;
             color: #767678;
         }
-        li.collapsibleListOpen {            
+        li.collapsibleListOpen {
             list-style-image: url('img/button-open.png');
             list-style-position: inside;
             cursor: pointer;
@@ -541,7 +541,7 @@ function parseToHtml(obj){
             .focusout(function() {
                 $('.lpview_clear_search_icon').css('display', '');
             });
-         
+
       </script>
 </body>
 </html>`

@@ -677,11 +677,6 @@ div.sidebarTitle-holder {
 .post-content img.inlineimage {
   display: inline-block;
   box-shadow: none;
-}
-
-.post-content li img,
-.inlineimage,
-.post-content p img {
   margin: 0;
 }
 
@@ -705,19 +700,15 @@ div.sidebarTitle-holder {
   color: var(--body-text);
 }
 
-.post-content>p.notice,
-.post-content>p.important,
-.post-content>p.alert,
-.post-content>p.note {
+.post-content>p.attn-alert,
+.post-content>p.attn-note {
   color: var(--widget-text);
   display: block;
   width: 100%;
 }
 
-.post-content>p.notice strong,
-.post-content>p.important strong,
-.post-content>p.alert strong,
-.post-content>p.note strong {
+.post-content>p.attn-alert strong,
+.post-content>p.attn-note strong {
   color: var(--widget-text);
 }
 

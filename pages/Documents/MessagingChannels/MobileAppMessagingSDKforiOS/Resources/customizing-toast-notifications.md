@@ -2,7 +2,6 @@
 pagename: Customizing Toast Notifications
 redirect_from:
   - consumer-experience-ios-sdk-toastnotifications.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -11,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-ios-resources-customizing-toast-notifica
 indicator: messaging
 ---
 
-{: .alert}
+{: .attn-alert}
 This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
 **Note:** Once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior.

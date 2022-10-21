@@ -2,15 +2,12 @@
 pagename: Get Automatic Messages
 redirect_from:
   - account-configuration-automatic-messages-get-automatic-messages.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Automatic Messages API
 subfoldername: Methods
-
 order: 10
 permalink: automatic-messages-api-methods-get-automatic-messages.html
-
 indicator: both
 ---
 

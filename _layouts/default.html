@@ -109,14 +109,14 @@
                   Published:
                   <time datetime="{{ page.date_published | date_to_xmlschema }}">{{ page.date_published | date: "%b %-d, %Y" }}</time>
                 </p>
-                {% endif %} 
+                {% endif %}
                 <!-- show last updated date -->
                 {% if page.date_updated %}
                 <p>
                   Updated:
                   <time datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
                 </p>
-                {% endif %} 
+                {% endif %}
               </div>
               <!-- Show read time only if it's more than one minute read -->
               {% assign words = content | number_of_words %}

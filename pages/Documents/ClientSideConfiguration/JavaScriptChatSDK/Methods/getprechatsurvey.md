@@ -2,15 +2,12 @@
 pagename: getPreChatSurvey
 redirect_from:
   - consumer-experience-javascript-chat-getprechatsurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 10
 permalink: javascript-chat-sdk-methods-getprechatsurvey.html
-
 indicator: chat
 ---
 
@@ -45,7 +42,7 @@ if (failedRequest && failedRequest.error) {
 }
 ```
 *Note: For more information on the Survey Object, see [Surveys](consumer-experience-javascript-chat-surveys.html).*
-                                                                                                                      
+
 ### Response
 
 **Sample response**

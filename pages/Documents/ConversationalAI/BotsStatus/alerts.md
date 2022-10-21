@@ -1,6 +1,5 @@
 ---
 pagename: Alerts
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bots Status
@@ -8,13 +7,13 @@ permalink: bots-status-alerts.html
 indicator: both
 ---
 
-### Introduction 
+### Introduction
 
 You can set up alerts to notify you when a deployed bot's [agent connector status](bots-status-overview.html#statuses) changes to Offline or Online. (A bot's status changes to Stopped when it is stopped manually, so notifications about this are not sent.)
 
 While these alerts do inform you of changes to the status of the bot's agent connector, they don't provide insight into changes to the status of backend services supporting the Bots and Automation platform. For information on the latter, visit the [LivePerson Service Status Dashboard](https://status.liveperson.com/), which is managed by LivePerson [Support](https://knowledge.liveperson.com/security-regulations-liveperson-support-policy.html). You can subscribe to events posted to the dashbord. You can also use the API to create your own dashboard or integrate with your own monitoring system.
 
-{: .note}
+{: .attn-note}
 To set up alerts, you don't need permissions to access the Bots Status application.
 
 ### Set up an alert for a bot
@@ -28,7 +27,7 @@ To set up alerts, you don't need permissions to access the Bots Status applicati
     * If your environment is Amazon Web Services or AWS (i.e., you access Conversation Builder directly, and your browser is pointing to the "livepersonai.com" domain), in the top banner, click <img class="inlineimage" alt="Person icon" style="width:25px" src="img/ConvoBuilder/icon_profile_person.png">, and then select **Subscriptions**.
 
 2. In the upper-right corner, select the bot to subscribe to, and click **Add Bot**. You can select from all bots to which you have access, regardless of whether they have agent connectors. However, to receive alerts, the bot must have at least one, deployed agent connector.
-3. Select how you want to receive alerts: Email and/or Phone (text). The Phone option is only available if your environment is AWS. 
+3. Select how you want to receive alerts: Email and/or Phone (text). The Phone option is only available if your environment is AWS.
 4. For **Bot monitor**, click the slider to enable (turn on) the alert.
 
     <img class="fancyimage" alt="Configuration options for setting up alerts for a bot" style="width:850px" src="img/ConvoBuilder/subscriptions_2.png">

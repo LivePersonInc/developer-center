@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 order: 61
 permalink: data-access-api-pgp-encryption.html
-
 indicator: chat
 ---
 
@@ -33,7 +31,7 @@ The customer will receive the Data Access files in the usual JSON format and wil
 ### How to Create a Public Key with PGP
 
 * pgp --version
-	
+
 	* Verify you are using PGP 1.4.10 or higher
 
 * pgp --gen-key -a

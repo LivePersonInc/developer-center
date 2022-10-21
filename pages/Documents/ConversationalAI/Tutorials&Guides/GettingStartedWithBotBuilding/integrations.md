@@ -1,7 +1,5 @@
 ---
 pagename: Integrations
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -10,12 +8,12 @@ permalink: tutorials-guides-getting-started-with-bot-building-integrations.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This is a tutorial series that's cumulative in nature. To start from the beginning, [start here](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html).
 
 Many use cases require integration with an API to send and receive data. Following the "make payment" use case, in this tutorial you add an integration to check a user‚Äôs account balance.
 
-{: .note}
+{: .attn-note}
 This tutorial uses an example API that returns random balance data when given an account number and email address.
 
 <!--
@@ -44,18 +42,18 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
 5. Add a new Text Question to capture the user‚Äôs order number. Add the text, "What is your order number?"
 
-6. Still in the Text question, add a custom rule that checks whether the order number is valid: 
+6. Still in the Text question, add a custom rule that checks whether the order number is valid:
 
-    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
+    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`.
 
-    {: .note}
-    This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
+    {: .attn-note}
+    This mock API will successfully return order data for accounts A001001, A001010 and A001002.
 
     Still in the rule, capture the user‚Äôs order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, and enter `{$userMessage}` for its value.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png" alt="Adding a rule to capture the user's order number">
 
-    {: .note}
+    {: .attn-note}
     `{$userMessage}` is just one of many system [variables](conversation-builder-variables-slots-variables.html) you can use in your interactions.
 
     Click **Save**.
@@ -72,7 +70,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
     * **Method**: GET
     * **URL**: https://5fc54a0936bc790016344a09.mockapi.io/order-status/{$botContext.orderNumber}
 
-        Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
+        Note the use of the orderNumber bot variable being interpolated onto the end of the URL string.
 
     * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here. (For more on processing API results with custom data fields, see [this section](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).)
 
@@ -100,7 +98,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     In the Structured Question title section, add `{OrderStatus.name}`.
 
-    {: .note}
+    {: .attn-note}
     When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is ‚Äúname.‚Äù (For a quick reference on using variables in interactions, see [this section](conversation-builder-variables-slots-the-basics.html#referencing-variables-and-slots).)
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
@@ -109,7 +107,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a ‚
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png" alt="The configured Structured interaction">
 
-    {: .note}
+    {: .attn-note}
     While images show properly in Preview, deployed bots need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
 
     Now let's test all this out.

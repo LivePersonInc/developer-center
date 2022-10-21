@@ -1,6 +1,5 @@
 ---
 pagename: Custom Interactive Message Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -204,7 +203,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 ### Reply CIM from Consumer to Agent
 
-{: .note}
+{: .attn-note}
 For an easier way to recieve a reply message from the consumer, implement the [ABC SDK](apple-business-chat-sdk-overview.html) and follow the steps seen [here](apple-business-chat-sdk-implementation.html#reply-cim-from-consumer-to-agent)
 
 An agent can recieve back from the consumer a Custom Interactive Message with a textual context. This text can be displayed to the agent in the Agent Workspace.
@@ -219,7 +218,7 @@ In order to do this, all code is handled from within your Apple iMessage app / e
         "lpData": {
           "interactive": {
             "response": {
-              "text": "YOUR_CUSTOM_TEXT" 
+              "text": "YOUR_CUSTOM_TEXT"
             }
           }
         }

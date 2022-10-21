@@ -2,15 +2,11 @@
 pagename: setUserProfile
 redirect_from:
   - android-setuserprofile.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 90
 permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile.html
-
 indicator: messaging
 ---
 
