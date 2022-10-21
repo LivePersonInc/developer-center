@@ -219,8 +219,7 @@ Changes that alter site navigation or other changes that change the site as a wh
 
 * Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
-* Set `noindex` to `true` for search engines not to find it.
-* Follow the header structure of [`blank.md`](/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+* Set `noindex` to `true` if you want search engines not to find it.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
