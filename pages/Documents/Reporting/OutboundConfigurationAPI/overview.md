@@ -6,39 +6,43 @@ documentname: Outbound Configuration API
 permalink: outbound-configuration-api-overview.html
 root-link: true
 indicator: Proactive Messaging
+date_published: 2022/10/30
 redirect_from:
  - proactive-messaging-reporting-api.html
 ---
 
-### Introduction
-The Outbound configuration API provides a complete list of API handoffs created in the Proactive Web Tool. This API allows 1) Fetching all handoffs configurations 2) Fetching all handoff configurations filtered by a specific messaging channel (SMS, WhatsApp, Apple Business Chat, In-app, Google Rcs, etc.)
+### Introduction   
+
+The Outbound configuration API provides a complete list of API handoffs created in the Proactive Web Tool. This API allows 1) Fetching all handoffs configurations 2) Fetching all handoff configurations filtered by a specific messaging channel (SMS, WhatsApp, Apple Business Chat, In-app, Google RCS, etc.)
 
 API provides outbound configuration for below services
 * Proactive Messaging 2.0
 
 
-### Getting Started
+### Getting started
 
-**Who can access this Outbound Configuration API**
+#### Who can access this Outbound Configuration API
 
 All Brands who use Proactive Messaging version 2.0 have access to the Outbound Configuration API service.
 
-**What are the limitations**
+#### What are the limitations
 
 Both endpoints are currently read only, i.e it is not possible to make configuration changes using the outbound configuration API.
 
-**OAuth 2.0 Authorization**
-* Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.<br>
-![Secrets](img/proactive/proactive-show-secrets.png)  
+#### OAuth 2.0 authorization
+
+* Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.   
+
+  ![Secrets](img/proactive/proactive-show-secrets.png)  
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
 
-### Outbound Configuration API
+### Outbound configuration API
 
 API for account level outbound configurations
 
-**1. Account - Get outbound configuration  for the given account**
+#### 1. Account - Get outbound configuration for the given account
 
 Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Account/get) to go through API spec to get started.
 
@@ -46,7 +50,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | :----- | :-------------------------------------------------------------------- |
 | GET    | https://{domain}/api/account/{id}/app/{appName}/handoffs/list?v=1 |
 
-**Path Parameters**
+##### Path parameters
 
 | Name      | Description        | Required | Value/Example                                                                    |
 | :-------- | :----------------- | :------- | :------------------------------------------------------------------------------- |
@@ -55,26 +59,25 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | app       | App name           | Yes      | "prmsg"                                                                          |
 | v         | Version            | Yes      | 1                                                                                |
 
-**Query Parameters**
+##### Query parameters
 
 | Name   | Description                                   | Required | Value/Example |
 | :----- | :-------------------------------------------- | :------- | :------------ |
 | limit  | Max count of outbound configurations to fetch | No       | 30            |
 | offset | Starting point to fetch from                  | No       | 0             |
 
-**Request Headers**
+##### Request headers
 
 | Header        | Description                                                                                                                                                                                                                                         | Value/Example    |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------- |
 | Content-Type  | Used to indicate the media type of the resource                                                                                                                                                                                                     | application/json |
 | Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token |                  |
 
-**Response Example**
+##### Response examples
 
-200 Success
+**SMS Twilio:**    
 
-* ​sms-twilio:<br><br>
-  ​sms-twilio response example:
+SMS Twilio 200 Success:
 ```json
 {
    "type": "sms-twilio",
@@ -91,8 +94,9 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-* WhatsApp:<br><br>
-  WhatsApp response example:
+**WhatsApp:**   
+
+WhatsApp 200 Success:
 ```json
 ​{
    "type": "wa",
@@ -115,7 +119,8 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
   ]
 }
 ```
-  WhatsApp rich content response example
+
+WhatsApp rich content 200 Success:
 ```json
 {
    "type": "wa",
@@ -154,8 +159,9 @@ The messageComponents fields can reflect the following fields depending on the t
 | Button with a static value for quick reply | {<br> &nbsp;  [<br>&nbsp;  &nbsp;   {<br> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br> &nbsp;  &nbsp;  &nbsp;  "index": 0,<br> &nbsp;  &nbsp;  &nbsp;  "content": "Yes",<br> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br> &nbsp;  &nbsp;  },<br> &nbsp;  &nbsp;  {<br> &nbsp;  &nbsp;  &nbsp;  "type": "button",<br> &nbsp;  &nbsp;  &nbsp;  "index": 1,<br> &nbsp;  &nbsp;  &nbsp;  "content": "No",<br> &nbsp;  &nbsp;  &nbsp;  "sub_type": "quick_reply"<br> &nbsp;  &nbsp;  }<br>&nbsp;  ]<br> } |
 
 
-* In-app:<br><br>
-  In-app response example:
+**In-app:**   
+
+In-app 200 response:
 ```json
 [
     {
@@ -184,8 +190,10 @@ The messageComponents fields can reflect the following fields depending on the t
     }
 ]
 ```
-* Google Rcs:<br><br>
-  Google Rcs response example:
+
+**Google RCS:**   
+
+Google RCS 200 response:
 ```json
 {
    "type": "googlercs",
@@ -227,7 +235,8 @@ The messageComponents fields can reflect the following fields depending on the t
    "serviceAccountName": "c2m-7453907-grcs"
 }
  ```
-  Google Rcs channel object with text suggestions:
+
+Google RCS channel object with text suggestions:
 ```json
 {
    "type": "googlercs",
@@ -259,7 +268,8 @@ The messageComponents fields can reflect the following fields depending on the t
    "serviceAccountName": "c2m-7453907-grcs"
 }
 ```
-  Google RCS channel Object with media:
+
+Google RCS channel Object with media:
 ```json 
 {
    "type": "googlercs",
@@ -282,7 +292,7 @@ The messageComponents fields can reflect the following fields depending on the t
 }
 ```
 
-**2. Account - Get outbound configuration by channel**
+#### 2. Account - Get outbound configuration by channel
 
 Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Account/post) to go through API spec to get started.
 
@@ -290,7 +300,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | :----- | :------------------------------------------------------------------------------------------------ |
 | GET    | https://{domain}/api/account/{id}/app/{appName}/handoffs/list/channel /{channelName}?v=1 |
 
-**Path Parameters**
+##### Path parameters
 
 | Name      | Description                | Required | Value/Example                                                                    |
 | :-------- | :------------------------- | :------- | :------------------------------------------------------------------------------- |
@@ -300,7 +310,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | channel   | The messaging channel name | Yes      | wa, sms-twilio, apple-twilio, googlercs, inapp                                   |
 | v         | Version                    | Yes      | v=1                                                                              |
 
-**Query Parameters**
+##### Query parameters
 
 | Name   | Description                                   | Required | Value/Example |
 | :----- | :-------------------------------------------- | :------- | :------------ |
@@ -308,18 +318,16 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | offset | Starting point to fetch froms                 | No       | 0             |
 
 
-**Request Headers**
+##### Request headers
 
 | Header        | Description                                                                                                                                                                                                                                         | Value/Example    |
 | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------- |
 | Content-Type  | Used to indicate the media type of the resource                                                                                                                                                                                                     | application/json |
 | Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token |                  |
 
-**Response Example**
+##### Response example
 
-200 Success
-
-outbound configuration by response example:
+Outbound configuration 200 response:
 ```json
 [
     {
@@ -368,33 +376,35 @@ outbound configuration by response example:
 
 Outbound Reporting API provides the following data fields. This table explains the definition of each field.
 
-| Data Field | Definition |
-| id | The outbound configuration profile id |
-| name |  The name of the outbound configuration template |
-| lookbackPeriodDay | A numeric value representing the skill lookback back period in days, example: 30min value: 0 Max value: 30 |
-| lookbackPeriodHour | A numeric value representing the lookback back period in hours, example: 0 min value:0 Max value: 23
-| routeAllWithinLookback | A flag that indicates whether or not to route reopened conversations within the lookback period |
-| updatedAt | Shows last updated time in utc |
-| createdAt | Shows the configuration created time in utc |
-| channels |  An array of channels and their respective configuration.<br> For example:<br> **type** (name of the messaging channel):<br> “wa”: whats app <br> “sms-twilio”: standard text message<br> “apple-twilio”: apple business chat<br> “googlercs” google rich content<br> “inapp” : LivePerson consumer application<br> **appName**: (in app channel only) the associated sdk data source.<br> **outboundnumber**: the “From” number of the sent message<br> **language**: the associated language for the channel<br> **namespace**: for whats app only indicated the template namespace |
-| messageComponents | * type<br> * sub_type<br> * content<br> * variables<br> * optOut<br> * index<br> * phone_number<br> * height<br> * thumbnailImageAlignment<br> * cardOrientation<br> * serviceAccountNameisSameMessageForNotification<br> * notificationTitlemessageText |
-| type | header,body,button,media (grcs only), footer |
-| sub_type | For example:<br> Type : “header”<br> sub_type: “image” |
-| content | The string (including variables placeholder) <br> For example: “This is a text with a var ${{1}} |
-| variables | If the template contains variables it will be reflected here by numbers, for example a configuration for a template with a single var will look like this: “variables: [“1”, “2”, “3”] |
-| optOut | The opt out text that will be sent to the consumer |
-| Index | For button type only, indicates the order of the button starting from 0, For example 1st out of 2 buttons will be indicated as => index: 0 <br> url: the link attached to the button |
-| phone_number | For button type only<br> For example: “phone_number”: “+14xxxxx5674” |
+| Data field | Definition |
+| ------ | -------- |
+| `id` | The outbound configuration profile id |
+| `name` |  The name of the outbound configuration template |
+| `lookbackPeriodDay` | A numeric value representing the skill lookback back period in days, example: 30min value: 0 Max value: 30 |
+| `lookbackPeriodHour` | A numeric value representing the lookback back period in hours, example: 0 min value:0 Max value: 23
+| `routeAllWithinLookback` | A flag that indicates whether or not to route reopened conversations within the lookback period |
+| `updatedAt`| Shows last updated time in utc |
+| `createdAt` | Shows the configuration created time in utc |
+| `channels` |  An array of channels and their respective configuration.<br> For example:<br> **type** (name of the messaging channel):<br> “wa”: whats app <br> “sms-twilio”: standard text message<br> “apple-twilio”: apple business chat<br> “googlercs” google rich content<br> “inapp” : LivePerson consumer application<br> **appName**: (in app channel only) the associated sdk data source.<br> **outboundnumber**: the “From” number of the sent message<br> **language**: the associated language for the channel<br> **namespace**: for whats app only indicated the template namespace |
+| `messageComponents` | * type<br> * sub_type<br> * content<br> * variables<br> * optOut<br> * index<br> * phone_number<br> * height<br> * thumbnailImageAlignment<br> * cardOrientation<br> * serviceAccountNameisSameMessageForNotification<br> * notificationTitlemessageText |
+| `type` | header,body,button,media (grcs only), footer |
+| `sub_type` | For example:<br> Type : “header”<br> sub_type: “image” |
+| `content` | The string (including variables placeholder) <br> For example: “This is a text with a var ${{1}} |
+| `variables` | If the template contains variables it will be reflected here by numbers, for example a configuration for a template with a single var will look like this: “variables: [“1”, “2”, “3”] |
+| `optOut` | The opt out text that will be sent to the consumer |
+| `Index` | For button type only, indicates the order of the button starting from 0, For example 1st out of 2 buttons will be indicated as => index: 0 <br> url: the link attached to the button |
+| `phone_number` | For button type only<br> For example: “phone_number”: “+14xxxxx5674” |
 
-The following attributes are for google rcs only.
+The following attributes are for Google RCS only.
 
 | Attribute | Description |
-| type | media |
-| height | String representing the media height parameters |
-| thumbnailImageAlignment | The Image preview alignment for standalone cards with horizontal layout.|
-| cardOrientation | Indicates the content display orientation, for example: “VERTICAL” |
-| serviceAccountName | The provisioned account for grcs |
-| isSameMessageForNotification | Will the sent message be displayed in the push notification |
-| notificationTitle | The title of the message notification |
-| messageText | Average of the CSAT rating score |
-| cardOrientation | Average of the CSAT rating score |
+| ------ | -------- |
+| `type` | media |
+| `height` | String representing the media height parameters |
+| `thumbnailImageAlignment` | The Image preview alignment for standalone cards with horizontal layout.|
+| `cardOrientation` | Indicates the content display orientation, for example: “VERTICAL” |
+| `serviceAccountName` | The provisioned account for grcs |
+| `isSameMessageForNotification` | Will the sent message be displayed in the push notification |
+| `notificationTitle` | The title of the message notification |
+| `messageText` | Average of the CSAT rating score |
+| `cardOrientation` | Average of the CSAT rating score |
