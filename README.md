@@ -148,6 +148,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
 * `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
 * `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
 * `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
 ## Notes on content and code
 
@@ -219,7 +220,6 @@ Changes that alter site navigation or other changes that change the site as a wh
 * Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
 * Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
-* Follow the header structure of [`blank.md`](/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
