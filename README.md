@@ -145,9 +145,9 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
-* `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
 * `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
 * `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* `noindex`: Set the value to `true`, if you want this file to be ignored by search engines.
 * (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
 ## Notes on content and code
@@ -219,7 +219,7 @@ Changes that alter site navigation or other changes that change the site as a wh
 
 * Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
-* Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
+* Set `noindex` to `true` if you want search engines not to find it.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 
