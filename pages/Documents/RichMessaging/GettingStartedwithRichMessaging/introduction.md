@@ -563,8 +563,7 @@ Each basic element can have specific style rules defined for it, controlling how
 
 ### Element Accessibility Attributes
 
-Each basic element can have specific accessibility attributes defined to them. 
-Some of the widely used attributes are listed below. For the entire list of supported attributes, please refer to [this list](https://github.com/LivePersonInc/json-pollock/blob/master/js/schema/accessibilityWeb.json).
+Each basic element can have specific accessibility attributes defined to them. Some of the widely used attributes are listed below. For the entire list of supported attributes, please refer to [this list](https://github.com/LivePersonInc/json-pollock/blob/master/js/schema/accessibilityWeb.json).
 
 #### Properties
 
@@ -603,5 +602,7 @@ Some of the widely used attributes are listed below. For the entire list of supp
   }
 }
 ```
+
+Date Updated: 10/24/2024
 
 For a list of Rich Messaging capabilities for each channel, browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
