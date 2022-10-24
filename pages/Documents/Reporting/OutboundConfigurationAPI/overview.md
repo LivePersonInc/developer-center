@@ -15,9 +15,7 @@ redirect_from:
 
 The Outbound configuration API provides a complete list of API handoffs created in the Proactive Web Tool. This API allows 1) Fetching all handoffs configurations 2) Fetching all handoff configurations filtered by a specific messaging channel (SMS, WhatsApp, Apple Business Chat, In-app, Google RCS, etc.)
 
-API provides outbound configuration for below services
-* Proactive Messaging 2.0
-
+This API provides outbound configuration for Proactive Messaging 2.0 service.
 
 ### Getting started
 
@@ -80,16 +78,16 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 SMS Twilio 200 Success:
 ```json
 {
-   "type": "sms-twilio",
-   "language": "en",
-   "outboundnumber": "+14156586515",
-   "messageComponents": [
-        {
-        "type": "body",
-        "content": "Hi ${{1}}",
-        "variables": ["1"],
-        "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
-        }
+  "type": "sms-twilio",
+  "language": "en",
+  "outboundnumber": "+14156586515",
+  "messageComponents": [
+    {
+      "type": "body",
+      "content": "Hi ${{1}}",
+      "variables": ["1"],
+      "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
+    }
    ]
 }
 ```
@@ -99,23 +97,23 @@ SMS Twilio 200 Success:
 WhatsApp 200 Success:
 ```json
 ​{
-   "type": "wa",
-   "language": "en",
-   "namespace": "b8520e15_f77b_5f76_fb50_9f756d03676b",
-   "templatename": "newtemplate_button_cta_feb14",
-   "outboundnumber": "12535277322",
-   "messageComponents": [
-       {
-           "type": "body",
-           "content": "Your ticket for ${{1}}\n\nTime - ${{2}}\nVenue - ${{3}}\nSeats - ${{4}} - ${{5}}",
-           "variables": [
-               "1",
-               "2",
-               "3",
-               "4",
-               "5"
-           ]
-       }
+  "type": "wa",
+  "language": "en",
+  "namespace": "b8520e15_f77b_5f76_fb50_9f756d03676b",
+  "templatename": "newtemplate_button_cta_feb14",
+  "outboundnumber": "12535277322",
+  "messageComponents": [
+    {
+      "type": "body",
+      "content": "Your ticket for ${{1}}\n\nTime - ${{2}}\nVenue - ${{3}}\nSeats - ${{4}} - ${{5}}",
+      "variables": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+    }
   ]
 }
 ```
@@ -123,28 +121,28 @@ WhatsApp 200 Success:
 WhatsApp rich content 200 Success:
 ```json
 {
-   "type": "wa",
-   "language": "en",
-   "namespace": "b8520e15_f77b_5f76_fb50_9f756d03676b",
-   "templatename": "newtemplate_button_cta_feb14",
-   "outboundnumber": "12535277322",
-   "messageComponents": [
-                             {
-                                 "type": "body",
-                                 "content": "Your ticket for ${{1}}\n\nTime - ${{2}}\nVenue - ${{3}}\nSeats - ${{4}} - ${{5}}",
-                                 "variables": [
-                                     "1",
-                                     "2",
-                                     "3",
-                                     "4",
-                                     "5"
-                                 ]
-                             },
-                             {
-                                 "type": "footer",
-                                 "content": "Just show this QR code at the cinema"
-                             },
-                        ]
+  "type": "wa",
+  "language": "en",
+  "namespace": "b8520e15_f77b_5f76_fb50_9f756d03676b",
+  "templatename": "newtemplate_button_cta_feb14",
+  "outboundnumber": "12535277322",
+  "messageComponents": [
+    {
+      "type": "body",
+      "content": "Your ticket for ${{1}}\n\nTime - ${{2}}\nVenue - ${{3}}\nSeats - ${{4}} - ${{5}}",
+      "variables": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "type": "footer",
+      "content": "Just show this QR code at the cinema"
+    },
+  ]
 }
 ```
 
@@ -164,30 +162,30 @@ The messageComponents fields can reflect the following fields depending on the t
 In-app 200 response:
 ```json
 [
-    {
-        "type": "inapp",
-        "appNames": [
-            "com.liveperson.sdksample"
-        ],
-        "language": "en",
-        "messageComponents": [
-            {
-                "type": "text",
-                "messageText": "${{3}}",
-                "notificationTitle": "we ${{1}}",
-                "notificationMessage": "wsdc ${{2}}",
-                "isSameMessageForNotification": true,
-                "variables": ["1","2","3"]
-            },
-            {
-                "url": "${{4}}",
-                "type": "image",
-                "isClickable": true,
-                "destinationUrl": "https://www.liveperson.com",
-                "Variables": ["4"]
-            }
-        ]
-    }
+  {
+    "type": "inapp",
+    "appNames": [
+      "com.liveperson.sdksample"
+    ],
+    "language": "en",
+    "messageComponents": [
+      {
+        "type": "text",
+        "messageText": "${{3}}",
+        "notificationTitle": "we ${{1}}",
+        "notificationMessage": "wsdc ${{2}}",
+        "isSameMessageForNotification": true,
+        "variables": ["1","2","3"]
+      },
+      {
+        "url": "${{4}}",
+        "type": "image",
+        "isClickable": true,
+        "destinationUrl": "https://www.liveperson.com",
+        "Variables": ["4"]
+      }
+    ]
+  }
 ]
 ```
 
@@ -196,99 +194,97 @@ In-app 200 response:
 Google RCS 200 response:
 ```json
 {
-   "type": "googlercs",
-   "language": "en",
-   "messageComponents":
-   [
-        // Quick reply object
-        {
-            "type": "button",
-            "index": 0,
-            "content": "I need help",
-            "sub_type": "quick_reply",
-        },
-        {
-            "type": "button",
-            "index": 1,
-            "content": "Support FAQ",
-            "sub_type": "url",
-            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Log_Pod_Mangrtom_und_Rombon_10032015_0593.jpg/1920px-Log_Pod_Mangrtom_und_Rombon_10032015_0593.jpg",
-
-        },
-        // Static media object
-        {
-            "type": "media",
-            "height": "medium",
-            "thumbnailImageAlignment" : "right",
-            "content": "${{3}}",
-            "variables": ["3"]
-        },
-        // Body object
-        {
-            "type": "body",
-            "title": "Thank you for using Freedom Mobile\"s Rich Messaging Service ${{1}}.",
-            "content": "You can now message us while you are on the go! Let us know how we can help you today and remember not to proactively provide confidential information i.e. credit card or account information. ${{2}}",
-            "variables": ["1", "2" ]
-        }
-   ],
-   "cardOrientation": "VERTICAL",
-   "serviceAccountName": "c2m-7453907-grcs"
+  "type": "googlercs",
+  "language": "en",
+  "messageComponents": [
+    // Quick reply object
+    {
+      "type": "button",
+      "index": 0,
+      "content": "I need help",
+      "sub_type": "quick_reply"
+    },
+    {
+      "type": "button",
+      "index": 1,
+      "content": "Support FAQ",
+      "sub_type": "url",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Log_Pod_Mangrtom_und_Rombon_10032015_0593.jpg/1920px-Log_Pod_Mangrtom_und_Rombon_10032015_0593.jpg"
+    },
+    // Static media object
+    {
+      "type": "media",
+      "height": "medium",
+      "thumbnailImageAlignment" : "right",
+      "content": "${{3}}",
+      "variables": ["3"]
+    },
+    // Body object
+    {
+      "type": "body",
+      "title": "Thank you for using Freedom Mobile\"s Rich Messaging Service ${{1}}.",
+      "content": "You can now message us while you are on the go! Let us know how we can help you today and remember not to proactively provide confidential information i.e. credit card or account information. ${{2}}",
+      "variables": ["1", "2" ]
+    }
+  ],
+  "cardOrientation": "VERTICAL",
+  "serviceAccountName": "c2m-7453907-grcs"
 }
  ```
 
 Google RCS channel object with text suggestions:
 ```json
 {
-   "type": "googlercs",
-   "language": "en",
-   "messageComponents": [
-       {
-        // Text
-           "type": "body",
-           "content": "This is example ${{1}}",
-           "variables": ["1"]
-       },
-       {
-        // Dynamic cta
-           "type": "button",
-           "index": 0,
-           "content": "Call us",
-           "sub_type": "phone_number",
-           "phone_number": "+12062061111"
-       },
-       {
-           "type": "button",
-           "index": 1,
-           "content": "Support FAQ",
-           "sub_type": "url",
-           "url": "https://www.freedommobile.ca/",
-       },
-   ],
-   "outboundnumber": "c2m-7453907-grcs",
-   "serviceAccountName": "c2m-7453907-grcs"
+  "type": "googlercs",
+  "language": "en",
+  "messageComponents": [
+    {
+    // Text
+      "type": "body",
+      "content": "This is example ${{1}}",
+      "variables": ["1"]
+    },
+    {
+    // Dynamic cta
+      "type": "button",
+      "index": 0,
+      "content": "Call us",
+      "sub_type": "phone_number",
+      "phone_number": "+12062061111"
+    },
+    {
+      "type": "button",
+      "index": 1,
+      "content": "Support FAQ",
+      "sub_type": "url",
+      "url": "https://www.freedommobile.ca/",
+    },
+  ],
+  "outboundnumber": "c2m-7453907-grcs",
+  "serviceAccountName": "c2m-7453907-grcs"
 }
 ```
 
 Google RCS channel Object with media:
 ```json 
 {
-   "type": "googlercs",
-   "language": "en",
-   "messageComponents": [
-       // Media static
-       {
-           "type": "media",
-           "content": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png",
-           "variables": []
-       },
-       // Media dynamic
-       {
-           "type": "media",
-           "content": "${{1}}",
-           "variables": ["1"]
-       }
-    ],
-   "serviceAccountName": "c2m-7452227-grcs"
+  "type": "googlercs",
+  "language": "en",
+  "messageComponents": [
+    // Media static
+    {
+      "type": "media",
+      "content": "https://upload.wikimedia.org/wikipedia/commons/c/ce/1963_Tornadoes.png",
+      "variables": []
+    },
+    // Media dynamic
+    {
+      "type": "media",
+      "content": "${{1}}",
+      "variables": ["1"]
+    }
+  ],
+  "serviceAccountName": "c2m-7452227-grcs"
 }
 ```
 
@@ -330,45 +326,45 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 Outbound configuration 200 response:
 ```json
 [
-    {
-        "type": "sms-twilio",
-        "language": "en",
-        "outboundnumber": "+13333333333",
-        "messageComponents": [
-            {
-                "type": "body",
-                "content": "Hi this is an outbound message #1",
-                "variables": ["1"],
-                "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
-            }
-        ]
-    },
-    {
-        "type": "sms-twilio",
-        "language": "en",
-        "outboundnumber": "+142222222222",
-        "messageComponents": [
-            {
-                "type": "body",
-                "content": "Hi this is an outbound message #1",
-                "variables": ["1", "2"],
-                "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
-            }
-        ]
-    },
-    {
-        "type": "sms-twilio",
-        "language": "en",
-        "outboundnumber": "+1433333333333",
-        "messageComponents": [
-            {
-                "type": "body",
-                "content": "Hi this is an outbound message #3",
-                "variables": ["1"],
-                "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
-            }
-        ]
-    }
+  {
+    "type": "sms-twilio",
+    "language": "en",
+    "outboundnumber": "+13333333333",
+    "messageComponents": [
+      {
+        "type": "body",
+        "content": "Hi this is an outbound message #1",
+        "variables": ["1"],
+        "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
+      }
+    ]
+  },
+  {
+    "type": "sms-twilio",
+    "language": "en",
+    "outboundnumber": "+142222222222",
+    "messageComponents": [
+      {
+        "type": "body",
+        "content": "Hi this is an outbound message #1",
+        "variables": ["1", "2"],
+        "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
+      }
+    ]
+  },
+  {
+    "type": "sms-twilio",
+    "language": "en",
+    "outboundnumber": "+1433333333333",
+    "messageComponents": [
+      {
+        "type": "body",
+        "content": "Hi this is an outbound message #3",
+        "variables": ["1"],
+        "optOut": "To stop receiving messages, reply STOP. For help, reply HELP."
+      }
+    ]
+  }
 ]
 ```
 
