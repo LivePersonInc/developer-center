@@ -2,9 +2,7 @@
 pagename: Deprecated Scripting Functions
 sitesection: Documents
 categoryname: Hidden
-documentname: Hidden
 permalink: deprecated-scripting-functions.html
-layout: hidden-layout
 published: false
 ---
 
