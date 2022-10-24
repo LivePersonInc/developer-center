@@ -1,13 +1,12 @@
 ---
 pagename: Key Terms & Concepts
 redirect_from:
-    - bot-analytics-key-terms-concepts.html
+  - bot-analytics-key-terms-concepts.html
 sitesection: Documents
 categoryname: Hidden
-documentname: Hidden
 permalink: hidden-key-terms-concepts.html
-layout: hidden-layout
 indicator: Messaging
+noindex: true
 ---
 
 ### Introduction
