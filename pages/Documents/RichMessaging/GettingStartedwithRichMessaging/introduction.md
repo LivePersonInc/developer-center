@@ -15,6 +15,7 @@ documentname: Getting Started with Rich Messaging
 permalink: getting-started-with-rich-messaging-introduction.html
 root-link: true
 indicator: both
+date_updated: 2022/10/25
 ---
 
 Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the Conversational Cloud Structured Content Framework.
@@ -602,7 +603,5 @@ Each basic element can have specific accessibility attributes defined to them. S
   }
 }
 ```
-
-Date Updated: 10/24/2024
 
 For a list of Rich Messaging capabilities for each channel, browse or search the table on the [Knowledge Center](https://knowledge.liveperson.com/messaging-channels-messaging-channels-capabilities-comparison.html).
