@@ -939,6 +939,9 @@
             - subpagename: Agent Activity
             - subpagename: Current Queue State
             - subpagename: SLA Histogram
+    - documentname: Outbound Configuration API
+      pages:
+        - pagename: Overview
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
