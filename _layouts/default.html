@@ -7,6 +7,7 @@
     <meta name="description" content="LivePerson for developers: Build on the LivePerson Conversational Cloud with our powerful digital toolbox">
     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
     <meta name="author" content="LivePerson Inc.">
+    {% if page.noindex == "true" %}<meta name="robots" content="noindex">{% endif %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
   </head>
   <body>
@@ -77,12 +78,12 @@
 
             <div class="documenttitle">
               <div id="documentTitleContainer" class="titlecontainer">
-                <div id="document-title-h1" class="h1">{{ page.pagename }}</div>
+                <h1 id="document-title-h1" class="h1">{{ page.pagename }}</h1>
               </div>
             </div>
             <div class="indicator-container" id="indicator-container">
-              {% if page.indicator != null and page.indicator =="both" or
-              page.indicator =="chat" %}
+              {% if page.indicator != null and page.indicator == "both" or
+              page.indicator == "chat" %}
 
               <div class="indicator chat">Chat</div>
               {% endif %} {% if page.indicator != null and page.indicator
