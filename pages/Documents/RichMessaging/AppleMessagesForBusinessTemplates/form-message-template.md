@@ -103,7 +103,7 @@ Every page has following properties
 }
 ```
 
-### Body Template
+### Example Body Template
 The structured content body will allow you to define spalsh screen of the Business Form. 
 
 Following Properties must be included in Body template
