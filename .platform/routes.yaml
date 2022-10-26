@@ -15,6 +15,9 @@ https://developers.liveperson.com:
   redirects:
     expires: 1w
     paths:
+      '^/assets/Code%20examples/(.*)':
+        to: 'https://{default}/assets/code-examples/$1'
+        regexp: true
       '^/images/(.*)':
         to: 'https://{default}/img/archive/$1'
         regexp: true
