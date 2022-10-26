@@ -224,7 +224,91 @@ The Metadata template consists of two sections
   </tbody>
 </table>
 
-#### Example Metadata Template
+### ReceivedMessage 
+A dictionary with information telling the Messages app what content and how to display it in the received message bubble.
+
+<table>
+  <thead>
+    <td>Property Name</td>
+    <td>Description</td>
+    <td>Type</td>
+    <td>Required</td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>title</td>
+    <td>The main title that the Messages app shows in the header of the recieved message</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>subtitle</td>
+    <td>The subtitle that appears under the main title in the recieved message bubble.</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>style</td>
+    <td>A style that controls the size of the view rendered by Live Layout. The default is icon</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>imageIdentifier</td>
+    <td>The identifier for one of the images specified in images array under BusinessFormEvent</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+ </tbody>
+ </table>
+
+ ### ReplyMessage 
+A dictionary with information telling Messages how and what to display in the reply message bubble.
+
+When the user’s device receives a Business Form, the Messages app uses the ReplyMessage dictionary to set the style, content, and images for the reply message bubble that the Messages app displays after the user makes their selection and returns a reply to the business.
+
+<table>
+  <thead>
+    <td>Property Name</td>
+    <td>Description</td>
+    <td>Type</td>
+    <td>Required</td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>title</td>
+    <td>The main title that the Messages app shows in the header of the reply message bubble. When the user taps the reply message bubble, the Messages app replaces the title with the user’s selection. Limited to 512 characters.</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>subtitle</td>
+    <td>The subtitle that appears under the main title in the reply message bubble. When the user taps the reply message bubble, the Messages app displays the subtitle in the header. Limited to 512 characters.</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>style</td>
+    <td>A style that controls the size of the view rendered by Live Layout. The default is icon</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>imageIdentifier</td>
+    <td>The identifier for one of the images specified in images array under BusinessFormEvent</td>
+    <td>String</td>
+    <td>Y</td>
+  </tr>
+ </tbody>
+ </table>
+
+ ### The possible string values for the received and reply message style are:
+  **icon**: Indicates a message bubble size of 280 x 65 points at @3x scale (840 x 195 pixels).
+  **small**: Indicates a message bubble size of 280 x 85 points at @3x scale (840 x 255 pixels).
+  **large**: Indicates a message bubble size of 280 x 210 pixels at @3x scale (840 x 630 pixels).
+
+ **NOTE**
+Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
 
 ```json
 [
