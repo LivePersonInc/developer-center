@@ -1159,6 +1159,7 @@
         - pagename: Apple Auth Template
         - pagename: Custom Interactive Message Template
         - pagename: Rich Links Template
+        - pagename: Form Message Template
         - pagename: Guidelines and Limitations
     - documentname: Facebook Messenger Templates
       pages:
