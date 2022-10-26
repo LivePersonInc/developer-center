@@ -8,6 +8,13 @@ permalink: liveperson-functions-foundations-error-codes.html
 indicator: both
 ---
 
+{% comment %}
+
+THIS IS USED IN FUNCTION'S LOG MESSAGE AS https://developers.liveperson.com/liveperson-functions-foundations-error-codes.html#error-codes
+IF YOU CHANGE THE NAME, MAKE SURE THAT THERE'S A REDIRECT TO THIS URL.
+
+{% endcomment %}
+
 This chapter will highlight all potential error codes and HTTP responses that our RESTful APIs can return. This is especially relevant for the [external invocation](liveperson-functions-foundations-external-invocation.html).
 
 ### Error Codes

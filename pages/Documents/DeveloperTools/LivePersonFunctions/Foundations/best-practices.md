@@ -10,6 +10,13 @@ redirect_from:
   - function-as-a-service-foundations-best-practices.html
 ---
 
+{% comment %}
+
+THIS IS USED IN FUNCTION'S LOG MESSAGE AS https://developers.liveperson.com/liveperson-functions-foundations-best-practices.html#avoid-cpu-blocking-code
+IF YOU CHANGE THE NAME, MAKE SURE THAT THERE'S A REDIRECT TO THIS URL.
+
+{% endcomment %}
+
 This chapter will highlight some best practices and tips for adequately leveraging the LivePerson Functions platform.
 
 ### Prefer Async/Await over Promises/Callbacks

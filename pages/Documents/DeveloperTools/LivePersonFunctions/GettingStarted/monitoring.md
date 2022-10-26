@@ -8,6 +8,13 @@ permalink: liveperson-functions-getting-started-monitoring.html
 indicator: both
 ---
 
+{% comment %}
+
+THIS IS USED IN FUNCTION'S LOG MESSAGE AS https://developers.liveperson.com/liveperson-functions-getting-started-monitoring.html#limitations
+IF YOU CHANGE THE NAME, MAKE SURE THAT THERE'S A REDIRECT TO THIS URL.
+
+{% endcomment %}
+
 We will introduce you to all the available monitoring features and tools on this page.
 
 ### Email Reporting
