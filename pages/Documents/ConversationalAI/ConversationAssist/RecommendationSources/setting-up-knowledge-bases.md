@@ -45,6 +45,9 @@ Both tutorial series focus primarily on using the Conversation Builder applicati
 2. In **Conversation Assist**, configure the knowledge bases for Conversation Assist.
 3. In **Conversation Assist**, configure relevant settings.
 
+{: .attn-note}
+Under the hood, Conversation Assist automatically searches a knowledge base using the [KnowledgeAI search offering](knowledgeai-search-methods.html#search-offerings). If you’re not [using intents to return articles](knowledgeai-using-intents-with-kbs.html) (and you don’t have to), this search offering uses Knowledge’s [AI Search](knowledgeai-search-methods.html).
+
 ### Step 1: Create the KBs and articles
 
 [Access KnowledgeAI](knowledgeai-overview.html#access-knowledgeai) and create at least one knowledge base (KB) from your [content source](knowledgeai-overview.html#content-sources) or from scratch. You can create and use any type of knowledge base, and the knowledge base can be public or private.
