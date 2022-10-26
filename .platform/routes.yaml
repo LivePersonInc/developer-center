@@ -24,6 +24,9 @@ https://developers.liveperson.com:
       '^/(register-test)':
         to: 'https://www.liveperson.com/demo/'
         regexp: true
+      '^/(thread/3204|test.html)':
+        to: 'https://{default}/'
+        regexp: true
       '/agent-workspace-sdk-overview.htmlhttps://developers.liveperson.com/messaging-agent-sdk-overview.html':
         to: 'https://{default}/messaging-agent-sdk-overview.html'
       '/assets/Code%20examples/WebAppSDK/chatStartingPageWidget/URLWidget.html':
@@ -38,5 +41,3 @@ https://developers.liveperson.com:
         to: 'https://{default}/mobile-app-messaging-sdk-for-ios-overview.html'
       '/predefined-categories-api-methods-general.html':
         to: 'https://{default}/overview.html'
-      '/thread/3204':
-        to: 'https://{default}/'
