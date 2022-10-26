@@ -428,7 +428,7 @@ const response = {
 
 The results can be seen in a demo below:
 
-<img class="fancyimage" style="width:300px" src="img/microsoftbotframework/microsoft_richcontent_demo.gif">
+<img class="fancyimage" style="width:300px" src="img/microsoft_richcontent_demo.gif">
 
 ### Receiving Last consumer message (Messaging Only)
 

@@ -2,7 +2,7 @@
 This is an example widget of how you can use an Engagement Attribute to pass the chat starting page URL to a Google Spreadsheet and then use that data for a custom report.
 
 ## Background
-This widget was built for a client that wanted a way to track which pages a chat was coming from. Currently in LiveEngage, the chat starting page URL is not included in the transcripts, so the only way to track this in the platform would be to create a seperate location for each page.
+This widget was built for a client that wanted a way to track which pages a chat was coming from. Currently in LiveEngage, the chat starting page URL is not included in the transcripts, so the only way to track this in the platform would be to create a separate location for each page.
 
 One idea was to tie the chat starting page to an engagement attribute, and then pass that information to LiveEngage. The issue we had at the time was that the engagement attributes where not available in the transcripts or the APIs. So, I came up with the solution to pass these attributes to another source, Google Sheets.
 
