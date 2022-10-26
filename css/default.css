@@ -1230,6 +1230,7 @@ div.language-plaintext,
 
 .documenttitle .h1 {
   align-self: center;
+  margin-top: 0;
 }
 
 .pagehr {
