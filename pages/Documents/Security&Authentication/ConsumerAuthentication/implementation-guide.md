@@ -1,17 +1,18 @@
 ---
-pagename: Detailed API
+pagename: Implementation Guide
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
+  - consumer-authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication
-permalink: consumer-authentication-detailed-api.html
+permalink: consumer-authentication-implementation-guide.html
 order: 5
 indicator: both
 ---
 
-### Web Interaction Embedded Window API
+### Integrate the Brand’s consumer identities
 
 {: .attn-note}
 It is important to note that we will no longer be relying on the ctmrinfo.customerID engagement attribute to indicate whether the user is authenticated or not. This engagement attribute will still be used but just as a regular engagement attribute. Conversational Cloud monitoring services will be using the new function below to identify if the user is authenticated on each page and not in a session based manner as it was previously. When migrating from using the cutomerID engagement attribute to the new Identity function please contact your LivePerson representative to complete the migration.
