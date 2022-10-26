@@ -1213,7 +1213,7 @@
         - pagename: Implementation Considerations
         - pagename: Configuration
         - pagename: How It Works
-        - pagename: Detailed API
+        - pagename: Implementation Guide
     - documentname: Consumer Delegation
       pages:
         - pagename: Introduction
