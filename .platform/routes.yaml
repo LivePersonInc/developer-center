@@ -1,4 +1,4 @@
-https://developers.liveperson.com:
+https://{default}:
   type: upstream
   upstream: jekyll_app:http
   tls:
@@ -21,3 +21,19 @@ https://developers.liveperson.com:
       '^/(register-test)':
         to: 'https://www.liveperson.com/demo/'
         regexp: true
+      '/agent-workspace-sdk-overview.htmlhttps://developers.liveperson.com/messaging-agent-sdk-overview.html':
+        to: 'https://{default}/messaging-agent-sdk-overview.html'
+      '/assets/Code%20examples/WebAppSDK/chatStartingPageWidget/URLWidget.html':
+        to: 'https://{default}/assets/code-examples/WebAppSDK/chatStartingPageWidget/URLWidget.html'
+      '/conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html':
+        to: 'https://{default}/conversation-builder-overview.html'
+      '/liveperson-functions-external-invocations-client':
+        to: 'https://{default}/liveperson-functions-overview.html'
+      '/liveperson-functions-templates.html':
+        to: 'https://{default}/liveperson-functions-overview.html'
+      '/mobile-app-messaging-sdk-for-ios-methods-showconversation-':
+        to: 'https://{default}/mobile-app-messaging-sdk-for-ios-overview.html'
+      '/predefined-categories-api-methods-general.html':
+        to: 'https://{default}/overview.html'
+      '/thread/3204':
+        to: 'https://{default}/'

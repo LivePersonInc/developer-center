@@ -2,6 +2,7 @@
 pagename: Introduction
 redirect_from:
   - bot-connectors-amazon-lex.html
+  - third-party-bots-amazon-lex.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
