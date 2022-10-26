@@ -19,6 +19,8 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
 
+For any update, follow the [content and code guidelines](#notes-on-content-and-code), and adhere to [code](https://google.github.io/eng-practices/review/reviewer/standard.html) [review](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/) [best](https://medium.com/yemeksepeti-teknoloji/good-manners-of-a-pull-request-some-best-practices-cb2de3c3aea1) [practices](https://blog.palantir.com/code-review-best-practices-19e02780015f).
+
 ### Committing changes to the site
 
 Before making any commits, please make sure to read the _Updating and creating headers_ section. There is now a Git precommit hook that ensures you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputted to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in the documentsupdated.yaml file. Our tests will use that YAML file as the source of truth, so make sure your header naming structure matches the documentsupdated.yaml.
@@ -168,6 +170,7 @@ When contributing to this repository, please observe the following:
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
 * In code samples, indent by two spaces
+* For new pages, document the publication date (`date_published`); for significant updates, add or update the update date (`date_updated`)
 
 #### APIs and SDKs
 
