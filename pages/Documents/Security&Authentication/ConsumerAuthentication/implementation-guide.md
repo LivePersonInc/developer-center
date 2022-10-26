@@ -3,6 +3,7 @@ pagename: Implementation Guide
 redirect_from:
   - guides-authentication-detailedapi.html
   - authentication-detailed-api.html
+  - consumer-authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication
