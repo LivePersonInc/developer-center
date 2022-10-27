@@ -16,16 +16,9 @@ Sending the structured content templates (body and metadata) explained in this d
 
 Below is an image of a Business Forms:
 
-<img  style="width:350px" src="img/form_message_1.PNG">
-<img  style="width:350px" src="img/form_message_2.PNG">
-<img  style="width:350px" src="img/form_message_3.PNG">
-<img  style="width:350px" src="img/form_message_4.PNG">
-<img  style="width:350px" src="img/form_message_5.PNG">
-<img  style="width:350px" src="img/form_message_6.PNG">
-<img  style="width:350px" src="img/form_message_7.PNG">
-<img  style="width:350px" src="img/form_message_8.PNG">
-<img  style="width:350px" src="img/form_message_9.PNG">
-<img  style="width:350px" src="img/form_message_10.PNG">
+<img  style="width:350px" src="img/form_message_1.1.PNG">
+<img  style="width:350px" src="img/form_message_1.2.PNG">
+<img  style="width:350px" src="img/form_message_1.3.PNG">
 
 ### Pages
 Following Types of pages are supported
