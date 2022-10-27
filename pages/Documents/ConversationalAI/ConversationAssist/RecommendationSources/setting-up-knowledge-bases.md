@@ -12,6 +12,7 @@ documentname: Conversation Assist
 subfoldername: Recommendation Sources
 permalink: conversation-assist-recommendation-sources-setting-up-knowledge-bases.html
 indicator: messaging
+date_updated: 2022/10/26
 ---
 
 {: .attn-note}
@@ -46,7 +47,7 @@ Both tutorial series focus primarily on using the Conversation Builder applicati
 3. In **Conversation Assist**, configure relevant settings.
 
 {: .attn-note}
-Under the hood, Conversation Assist automatically searches a knowledge base using the [KnowledgeAI search offering](knowledgeai-search-methods.html#search-offerings). If you’re not [using intents to return articles](knowledgeai-using-intents-with-kbs.html) (and you don’t have to), this search offering uses Knowledge’s [AI Search](knowledgeai-search-methods.html).
+Under the hood, Conversation Assist automatically searches a knowledge base using the [KnowledgeAI search offering](knowledgeai-search-methods.html#search-offerings). If you’re not [using intents to return articles](knowledgeai-using-intents-with-kbs.html) (and you don’t have to), this search offering uses KnowledgeAI’s [AI Search](knowledgeai-search-methods.html).
 
 ### Step 1: Create the KBs and articles
 
