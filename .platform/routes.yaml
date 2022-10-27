@@ -15,7 +15,7 @@ https://developers.liveperson.com:
   redirects:
     expires: 1w
     paths:
-      '^/assets/Code%20examples/(.*)':
+      '^/assets/Code examples/(.*)':
         to: 'https://{default}/assets/code-examples/$1'
         regexp: true
       '^/images/(.*)':
@@ -27,8 +27,6 @@ https://developers.liveperson.com:
       '^/(thread/3204|test.html)':
         to: 'https://{default}/'
         regexp: true
-      '/assets/Code%20examples/WebAppSDK/chatStartingPageWidget/URLWidget.html':
-        to: 'https://{default}/assets/code-examples/WebAppSDK/chatStartingPageWidget/URLWidget.html'
       '/conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html':
         to: 'https://{default}/conversation-builder-overview.html'
       '/liveperson-functions-external-invocations-client':
