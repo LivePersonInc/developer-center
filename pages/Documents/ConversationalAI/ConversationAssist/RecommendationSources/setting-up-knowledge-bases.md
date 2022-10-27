@@ -12,6 +12,7 @@ documentname: Conversation Assist
 subfoldername: Recommendation Sources
 permalink: conversation-assist-recommendation-sources-setting-up-knowledge-bases.html
 indicator: messaging
+date_updated: 2022/10/26
 ---
 
 {: .attn-note}
