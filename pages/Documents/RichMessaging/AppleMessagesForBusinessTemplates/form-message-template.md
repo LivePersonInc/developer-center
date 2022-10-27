@@ -12,7 +12,9 @@ indicator: messaging
 [Messages for Business Forms](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#form-message) allow you to create rich, multi-page interactive flows for users on iOS and iPadOS devices using a single JSON payload.
 This allows brands to collect large amounts of information from customers using a seamless interface that is contained within the Apple Messaging Interface. This can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
-Sending the structured content templates (body and metadata) explained in this document will allow you to send Business Forms to the consumer device.
+Sending the structured content templates (body and metadata) explained in this document will allow you to send Business Forms to the consumer device. 
+
+For instructions on how to send structured content with metadata in Conversational Builder, please follow the steps [here.](https://developers.liveperson.com/conversation-builder-interactions-code.html#updating-conversation-metadata)
 
 Below is an image of a Business Forms:
 
@@ -410,7 +412,7 @@ When the user’s device receives a Business Form, the Messages app uses the Rep
  **NOTE**
  Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
 
- More on Updating Conversation Metadata [here](https://developers.liveperson.com/conversation-builder-interactions-code.html#updating-conversation-metadata)
+
 
 ```json
 [
