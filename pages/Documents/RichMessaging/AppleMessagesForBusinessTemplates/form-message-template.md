@@ -3,7 +3,7 @@ pagename: Form Message Template
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
-permalink: apple-messages-for-business-templates-custom-interactive-message-template.html
+permalink: apple-messages-for-business-templates-form-message-template.html
 indicator: messaging
 ---
 
@@ -13,6 +13,19 @@ indicator: messaging
 This allows brands to collect large amounts of information from customers using a seamless interface that is contained within the Apple Messaging Interface. This can allow for a wide range of interactivity without requiring the consumer to leave the conversation.
 
 Sending the structured content templates (body and metadata) explained in this document will allow you to send Business Forms to the consumer device.
+
+Below is an image of a Business Forms:
+
+<img  style="width:350px" src="img/form_message_1.PNG">
+<img  style="width:350px" src="img/form_message_2.PNG">
+<img  style="width:350px" src="img/form_message_3.PNG">
+<img  style="width:350px" src="img/form_message_4.PNG">
+<img  style="width:350px" src="img/form_message_5.PNG">
+<img  style="width:350px" src="img/form_message_6.PNG">
+<img  style="width:350px" src="img/form_message_7.PNG">
+<img  style="width:350px" src="img/form_message_8.PNG">
+<img  style="width:350px" src="img/form_message_9.PNG">
+<img  style="width:350px" src="img/form_message_10.PNG">
 
 ### Pages
 Following Types of pages are supported
@@ -27,7 +40,7 @@ Following Types of pages are supported
 
 **input** :  A page that can feature various input fields to collect strings of information.
 
-Every page has following properties
+**Every page has following properties**
 
 <table>
   <thead>
@@ -76,13 +89,15 @@ Every page has following properties
   </tr>
     <tr>
     <td>options</td>
-    <td>Dictionary containing optional values for the input field. Some of which are required, keyboardType,inputType, maximumCharacterCount  
+    <td>Dictionary containing optional values for the input field. Some of which are required, keyboardType,inputType, maximumCharacterCount etc. 
 </td>
     <td>JSON</td>
     <td>Y</td>
   </tr>
   </tbody>
   </table>
+
+  For all possible options for page configuration check Apple Documentation [here](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#form-message).
 
 #### Example Page Template
 
@@ -113,8 +128,6 @@ Following Properties must be included in Body template
 
 Every splash screen contains title, subtitle and button, these must be included in elements section.
 
-#### Example Metadata Template
-
 ```json
 {
     "type": "vertical",
@@ -142,14 +155,14 @@ Every splash screen contains title, subtitle and button, these must be included 
 }
 ```
 
-### Metadata Template
+### Example Metadata Template
 
 The structured content metadata will allow you to define pages and visual appreance of the form.
 The Metadata template consists of two sections
 * BusinessFormEvent
 * BusinessChatMessage
 
-#### Metadata Properties (BusinessFormEvent)
+**Metadata Properties (BusinessFormEvent)**
 
 <table>
   <thead>
@@ -168,7 +181,7 @@ The Metadata template consists of two sections
   <tr>
     <td>startPageIdentifier</td>
     <td>Start page identifier defaults to 0 </td>
-    <td>Integer</td>
+    <td>String</td>
     <td>Y</td>
   </tr>
   <tr>
@@ -193,7 +206,7 @@ The Metadata template consists of two sections
 </table>
 
 
-#### Metadata Properties (BusinessChatMessage)
+**Metadata Properties (BusinessChatMessage)**
 
 <table>
   <thead>
@@ -224,7 +237,8 @@ The Metadata template consists of two sections
   </tbody>
 </table>
 
-### ReceivedMessage 
+**ReceivedMessage** 
+
 A dictionary with information telling the Messages app what content and how to display it in the received message bubble.
 
 <table>
@@ -262,7 +276,8 @@ A dictionary with information telling the Messages app what content and how to d
  </tbody>
  </table>
 
- ### ReplyMessage 
+**ReplyMessage**
+
 A dictionary with information telling Messages how and what to display in the reply message bubble.
 
 When the user’s device receives a Business Form, the Messages app uses the ReplyMessage dictionary to set the style, content, and images for the reply message bubble that the Messages app displays after the user makes their selection and returns a reply to the business.
@@ -302,7 +317,7 @@ When the user’s device receives a Business Form, the Messages app uses the Rep
  </tbody>
  </table>
 
- ### The possible string values for the received and reply message style are:
+ **The possible string values for the received and reply message style are:**
   **icon**: Indicates a message bubble size of 280 x 65 points at @3x scale (840 x 195 pixels).
   **small**: Indicates a message bubble size of 280 x 85 points at @3x scale (840 x 255 pixels).
   **large**: Indicates a message bubble size of 280 x 210 pixels at @3x scale (840 x 630 pixels).
