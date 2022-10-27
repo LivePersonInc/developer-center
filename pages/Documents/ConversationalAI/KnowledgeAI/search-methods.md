@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: KnowledgeAI
 permalink: knowledgeai-search-methods.html
 indicator: both
-date_updated: 2022/10/26
+date_updated: 2022/10/27
 ---
 
 ### Introduction
