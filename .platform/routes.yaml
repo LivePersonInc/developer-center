@@ -15,9 +15,27 @@ https://developers.liveperson.com:
   redirects:
     expires: 1w
     paths:
+      '^/assets/Code%20examples/(.*)':
+        to: 'https://{default}/assets/code-examples/$1'
+        regexp: true
       '^/images/(.*)':
         to: 'https://{default}/img/archive/$1'
         regexp: true
       '^/(register-test)':
         to: 'https://www.liveperson.com/demo/'
         regexp: true
+      '^/(thread/3204|test.html)':
+        to: 'https://{default}/'
+        regexp: true
+      '/assets/Code%20examples/WebAppSDK/chatStartingPageWidget/URLWidget.html':
+        to: 'https://{default}/assets/code-examples/WebAppSDK/chatStartingPageWidget/URLWidget.html'
+      '/conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html':
+        to: 'https://{default}/conversation-builder-overview.html'
+      '/liveperson-functions-external-invocations-client':
+        to: 'https://{default}/liveperson-functions-overview.html'
+      '/liveperson-functions-templates.html':
+        to: 'https://{default}/liveperson-functions-overview.html'
+      '/mobile-app-messaging-sdk-for-ios-methods-showconversation-':
+        to: 'https://{default}/mobile-app-messaging-sdk-for-ios-overview.html'
+      '/predefined-categories-api-methods-general.html':
+        to: 'https://{default}/overview.html'
