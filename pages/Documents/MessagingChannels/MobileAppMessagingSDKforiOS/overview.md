@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - consumer-experience-ios-sdk-overview.html
+  - mobile-app-messaging-sdk-for-ios-advanced-configuration-ui.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
