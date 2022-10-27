@@ -21,9 +21,6 @@ In actuality, it’s a little more nuanced than this (more on this later), but t
 
 ### AI Search
 
-{: .attn-note}
-Currently, AI Search is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
-
 AI Search is KnowledgeAI’s powerful, one-size-fits-all search method that’s based on the latest research in deep learning. Key characteristics of this search include the following:
 
 * **There’s no setup required**: This is some of the best news. AI Search works right out of the box. Don’t want to invest the time in creating and tuning intents in Intent Manager? No problem. You don’t have to. Just add your content to the knowledge base. Then expose it via a bot integration (use the [KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions)), or [set up the knowledge base for Conversation Assist](conversation-assist-recommendation-sources-setting-up-knowledge-bases.html) as normal. That’s it.
