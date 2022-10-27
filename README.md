@@ -147,8 +147,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
-* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
-* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* `date_updated`: This sets the date of the last substantial update, which includes the date when the page was published. For example: `date_updated: 2022/01/30`.
 * `noindex`: Set the value to `true`, if you want this file to be ignored by search engines.
 * (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
@@ -170,7 +169,7 @@ When contributing to this repository, please observe the following:
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
 * In code samples, indent by two spaces
-* For new pages, document the publication date (`date_published`); for significant updates, add or update the update date (`date_updated`)
+* For new pages as well as for significant updates, add or update the update date (`date_updated`)
 
 #### APIs and SDKs
 
