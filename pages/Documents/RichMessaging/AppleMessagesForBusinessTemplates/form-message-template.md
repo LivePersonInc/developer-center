@@ -410,6 +410,8 @@ When the user’s device receives a Business Form, the Messages app uses the Rep
  **NOTE**
  Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
 
+ More on Updating Conversation Metadata [here](https://developers.liveperson.com/conversation-builder-interactions-code.html#updating-conversation-metadata)
+
 ```json
 [
     {
