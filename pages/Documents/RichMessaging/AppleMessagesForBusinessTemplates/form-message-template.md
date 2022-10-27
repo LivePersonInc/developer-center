@@ -82,7 +82,7 @@ Following Types of pages are supported
   </tr>
     <tr>
     <td>submitForm</td>
-    <td>A Bool value placed on the pages to denote the end page of the form. Since multiple pages can act as an end page, this object can be set on multiple pages.
+    <td>A Bool value placed on the pages to denote the end page of the form. Since multiple pages can act as an end page, this object can be set on multiple pages.(must be provided on last page)
 </td>
     <td>Bool</td>
     <td>N</td>
@@ -95,6 +95,98 @@ Following Types of pages are supported
     <td>Y</td>
   </tr>
   </tbody>
+  </table>
+
+  **Page Specific Properties**
+  <table>
+  <thead>
+    <td>Page Type</td>
+    <td>Field</td>
+    <td>Description</td>
+  </thead>
+  <tbody>
+  <tr>
+    <td>select</td>
+    <td>multipleSelection</td>
+    <td>A Bool value that defaults to false or singleSelect. Set to true to enable multipleSelection on the page.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>pageItems</td>
+    <td>An array of objects defining the user experience.
+
+- **title**: Localized string value for display.
+
+- **value**: A string value of the object itself.
+
+- **identifier**: A unique identifier for the item.
+
+- **imageIdentifier**: A string containing the image identifier, from the imageItem dictionary. For more information about sending an image, see ImageItem dictionary.
+- **nextPageIdentifier**: A unique page identifier to show the next page. Set this value only when multipleSelection is not defined or set to false.</td>
+  </tr>
+   <tr>
+    <td>picker</td>
+    <td>pickerTitle</td>
+    <td>A string value representing optional text shown next to the picker text field. This value defaults to an empty string. When empty the picker text field centers to the page</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td>selectedItemIndex</td>
+    <td>A zero-indexed number identifying the item in the picker wheel should be selected by default. Defaults to item at index 0.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>pageItems</td>
+    <td>An array of objects defining the user experience.
+
+    - **title**: Localized string value for display. 
+    - **value**: A string value of the object itself.
+    - **identifier**: A unique identifier for the item.</td>
+  </tr>
+   <tr>
+    <td>datePicker</td>
+    <td>hintText</td>
+    <td>A string representing optional text to give the user more input context that displays below the Date field.</td></tr>
+    <tr>
+    <td></td>
+    <td>options</td>
+    <td>Dictionary containing optional values for the Date Picker element.
+
+    - **dateFormat**: A string representing the date format on the page. Defaults to MM/dd/yyyy. Unless this property is explicitly set.
+    - **startDate**: A string representing the date displayed by the date picker. Defaults to current date.
+    - **maximumDate**: A string representing the maximum date that a date picker can show. Defaults to current date.
+    - **minimumDate**: A string representing the minimum date that a date picker can show.
+    - **labelText**: A string representing the text string to be shown next to date field. Defaults to text 'Date'.</td></tr>
+    <tr>
+    <td>input</td>
+    <td>hintText</td>
+    <td>A string representing optional text to give the user more input context that displays below the Input field.</td></tr>
+     <tr>
+    <td></td>
+    <td>options</td>
+    <td>	Dictionary containing optional values for the input field.
+
+    - **regex**: A string representing a JSON encoded regular expression (regex) string to limit the type of input for input field to use. An example is when you want to limit input to only have proper decimal values provide a regex string: ^\\d*\\.?\\d?\\d?$. JSON encode all regex strings.
+    - **placeholder**: A text string used when there is no other text in the input text field. Default value are Required or Optional.
+    - **required**: A Boolean value that defaults to false. When set to true, the next button on page is disabled until the user provides input.
+    - **inputType**: A string value that defaults to singleline. Other values are multiline or singleline.
+    - **labelText**: A string value representing a text label shown to identify the input field. This value defaults to an empty string. Only applies to inputType : singleline.
+    - **prefixText**: A string value representing optional text shown next to the text field. This value defaults to an empty string. For example, you can set this value to denote the $ character for the field. Only applies to inputType : singleline.
+    - **maximumCharacterCount**: An integer value representing the field size in characters for singleline and multiline. The field size defaults to 30 characters for singleline and 300 characters for multiline.
+    - **keyboardType**: Optional string value. Type of keyboard to be shown. Possible values:
+      - **default**: Default value. Specifies the default keyboard for the current input method.
+      - **asciiCapable**: Specifies a keyboard that displays standard ASCII characters.
+      - **numbersAndPunctuation**: Specifies the numbers and punctuation keyboard.
+      - **URL**: Specifies a keyboard optimized for URL entry. This keyboard type prominently features the period (.), forward slash (/) characters, and the .com string.
+      - **numberPad**: Specifies a numeric keypad designed for PIN entry. This keyboard type prominently features the numbers 0 through 9. This keyboard type does not support autocapitalization.
+      - **phonePad**: Specifies a keypad designed for entering telephone numbers. This keyboard type prominently features the numbers 0 through 9 and the asterisk (*) and hash tag (#) characters.
+      - **namePhonePad**: Specifies a keypad designed for entering a person’s name or phone number. This keyboard type does not support auto-capitalization.
+      - **emailAddress**: Specifies a keyboard optimized for entering email addresses. This keyboard type prominently features the at (@), period (.), and space characters.
+      - **decimalPad**: Specifies a keyboard with numbers and a decimal point.
+      - **UIKeyboardTypeTwitter**: Specifies a keyboard optimized for Twitter text entry, with easy access to the at (@) and hash tag (#) characters.
+      - **webSearch**: Specifies a keyboard optimized for web search terms and URL entry. This keyboard type prominently features the space and period (.) characters.
+      - **textContentType**: A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter. Supported values are name, namePrefix, givenName, middleName, familyName, nameSuffix, nickname, jobTitle, organizationName, location, fullStreetAddress, streetAddressLine1, streetAddressLine2, addressCity, addressState, addressCityAndState, sublocality, countryName, postalCode, telephoneNumber, emailAddress, URL, creditCardNumber, username, password, newPassword, and oneTimeCode. </td></tr>
+</tbody>
   </table>
 
   For all possible options for page configuration check Apple Documentation [here](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#form-message).
@@ -323,7 +415,7 @@ When the user’s device receives a Business Form, the Messages app uses the Rep
   **large**: Indicates a message bubble size of 280 x 210 pixels at @3x scale (840 x 630 pixels).
 
  **NOTE**
-Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
+ Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
 
 ```json
 [
