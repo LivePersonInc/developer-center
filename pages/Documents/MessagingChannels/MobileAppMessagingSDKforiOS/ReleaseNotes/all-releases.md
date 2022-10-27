@@ -6,6 +6,9 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: Release Notes
 permalink: mobile-app-messaging-sdk-for-ios-release-notes-all-releases.html
 indicator: messaging
+redirect_from:
+  - mobile-app-messaging-sdk-for-ios-all-release-notes.html
+  - mobile-app-messaging-sdk-for-ios-latest-release-notes.html
 ---
 
 Listed below are all the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, see the [MobileSDK iOS Quick Start guide](/mobile-app-messaging-sdk-for-ios-quick-start.html).
