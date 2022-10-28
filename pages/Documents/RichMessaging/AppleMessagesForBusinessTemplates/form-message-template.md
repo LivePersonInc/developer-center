@@ -19,9 +19,9 @@ For instructions on how to send structured content with metadata in Conversation
 
 Below is an image of a Business Forms:
 
-<img  style="width:350px" src="img/form_message_1.1.png" alt="Splash screen">
-<img  style="width:350px" src="img/form_message_1.2.png" alt="Select page">
-<img  style="width:350px" src="img/form_message_1.3.png" alt="Response page">
+<img  style="width:350px" src="img/form_message_1.png" alt="Splash screen">
+<img  style="width:350px" src="img/form_message_2.png" alt="Select page">
+<img  style="width:350px" src="img/form_message_3.png" alt="Response page">
 
 ### Pages
 Following Types of pages are supported
@@ -44,12 +44,13 @@ Following Types of pages are supported
 |type|Defines Type of page. Use one of the following values: select, picker, datePicker, or input.|String|Y|
 |title|If set this displays the title in bold on the page.|String|N|
 |subtitle|Use this object to display the question for the page.|String|Y|
-|nextPageIdentifier|except for single select option page, where you specify the nextPageIdentifier within each of the item objects. If a page does not have a nextPageIdentifier set on it, the client assumes the current page to be the final page and proceeds to send or provides a summary page based on the data. This is a unique page identifier to show the next page.|String|Y|
+|nextPageIdentifier|Except for single select option page, where you specify the nextPageIdentifier within each of the item objects. If a page does not have a nextPageIdentifier set on it, the client assumes the current page to be the final page and proceeds to send or provides a summary page based on the data. This is a unique page identifier to show the next page.|String|Y|
 |submitForm|A Bool value placed on the pages to denote the end page of the form. Since multiple pages can act as an end page, this object can be set on multiple pages.(must be provided on last page)|Bool|N|
 |options|Dictionary containing optional values for the input field. Some of which are required, keyboardType,inputType, maximumCharacterCount etc.|JSON|Y|
 
-  **Page Specific Properties**
-  |Page Type|Field|Description|
+**Page Specific Properties**
+
+|Page Type|Field|Description|
 |--- |--- |--- |
 |select|multipleSelection|A Bool value that defaults to false or singleSelect. Set to true to enable multipleSelection on the page.|
 ||pageItems|An array of objects defining the user experience.<ul><li>title: Localized string value for display.</li><li>value: A string value of the object itself.</li><li>identifier: A unique identifier for the item.</li><li>imageIdentifier: A string containing the image identifier, from the imageItem dictionary.</li><li>nextPageIdentifier: A unique page identifier to show the next page. Set this value only when multipleSelection is not defined or set to false.</li></ul>|
@@ -67,17 +68,17 @@ Following Types of pages are supported
 
 ```json
 {
-  "pageIdentifier": "1",
-  "type": "input",
-  "nextPageIdentifier": "2",
-  "title": "Your email address",
-  "subtitle": "Enter your email address",
-  "options": {
-      "required": true,
-      "inputType": "singleline",
-      "maximumCharacterCount": 250,
-      "keyboardType": "emailAddress",
-      "textContentType": "emailAddress"
+  "pageIdentifier":"1",
+  "type":"input",
+  "nextPageIdentifier":"2",
+  "title":"Your email address",
+  "subtitle":"Enter your email address",
+  "options":{
+    "required":true,
+    "inputType":"singleline",
+    "maximumCharacterCount":250,
+    "keyboardType":"emailAddress",
+    "textContentType":"emailAddress"
   }
 }
 ```
@@ -94,28 +95,28 @@ A splash screen contains a title, subtitle and button. These must be included in
 
 ```json
 {
-    "type": "vertical",
-    "tag": "form",
-    "elements": [
-        {
-            "type": "text",
-            "text": "Shipping Information",
-            "tag": "title",
-            "style": {
-                "bold": true,
-                "size": "large"
-            }
-        },
-        {
-            "type": "text",
-            "tag": "subtitle",
-            "text": "For Courier Shipping, all information must be provided."
-        },
-        {
-            "type": "button",
-            "title": "Continue"
-        }
-    ]
+  "type":"vertical",
+  "tag":"form",
+  "elements":[
+    {
+      "type":"text",
+      "text":"Shipping Information",
+      "tag":"title",
+      "style":{
+        "bold":true,
+        "size":"large"
+      }
+    },
+    {
+      "type":"text",
+      "tag":"subtitle",
+      "text":"For Courier Shipping, all information must be provided."
+    },
+    {
+      "type":"button",
+      "title":"Continue"
+    }
+  ]
 }
 ```
 
@@ -178,171 +179,169 @@ When the user’s device receives a Business Form, the Messages app uses the Rep
  **NOTE**
  Always provide @3x images at 72 dpi. The system downscales @3x images to generate @2x and @1x versions for use on lower-resolution devices.
 
-
-
 ```json
 [
   {
-    "type": "BusinessFormEvent",
-    "startPageIdentifier": "0",
-    "showSummary": true,
-    "title": "Enter sender information.",
-    "pages": [
-        {
-          "pageIdentifier": "0",
-          "nextPageIdentifier": "1",
-          "type": "input",
-          "title": "Full Name",
-          "subtitle": "Enter your Full Name.",
-          "options": {
-              "placeholder": "Full Name",
-              "labelText": "Full Name",
-              "required": true,
-              "inputType": "singleline",
-              "maximumCharacterCount": 250,
-              "keyboardType": "UIKeyboardTypeTwitter",
-              "textContentType": "name"
-          }
-        },
-        {
-          "pageIdentifier": "1",
-          "type": "input",
-          "nextPageIdentifier": "2",
-          "title": "Your email address",
-          "subtitle": "Enter your email address",
-          "options": {
-              "required": true,
-              "inputType": "singleline",
-              "maximumCharacterCount": 250,
-              "keyboardType": "emailAddress",
-              "textContentType": "emailAddress"
-          }
-        },
-        {
-          "pageIdentifier": "2",
-          "type": "input",
-          "title": "Address",
-          "subtitle": "Enter your address",
-          "nextPageIdentifier": "3",
-          "options": {
-              "required": true,
-              "inputType": "multiline",
-              "maximumCharacterCount": 300,
-              "keyboardType": "UIKeyboardTypeTwitter",
-              "textContentType": "fullStreetAddress"
-          }
-        },
-        {
-          "pageIdentifier": "3",
-          "type": "select",
-          "title": "City",
-          "subtitle": "Select your city",
-          "multipleSelection": false,
-          "nextPageIdentifier": "4",
-          "pageItems": [
-              {
-                  "title": "Berlin",
-                  "value": "Berlin",
-                  "identifier": "001",
-                  "nextPageIdentifier": "4",
-                  "imageIdentifier": "1"
-              },
-              {
-                  "title": "Munich",
-                  "value": "Munich",
-                  "identifier": "002",
-                  "nextPageIdentifier": "4",
-                  "imageIdentifier": "2"
-              }
-          ]
-        },
-        {
-          "pageIdentifier": "4",
-          "type": "input",
-          "title": "Zip/postal code",
-          "subtitle": "Enter your Zip/postal code",
-          "nextPageIdentifier": "5",
-          "options": {
-              "required": true,
-              "inputType": "singleline",
-              "maximumCharacterCount": 5,
-              "keyboardType": "numberPad",
-              "textContentType": "postalCode"
-          }
-        },
-        {
-          "pageIdentifier": "5",
-          "type": "input",
-          "title": "Phone",
-          "subtitle": "Enter your phone number",
-          "nextPageIdentifier": "6",
-          "options": {
-              "required": false,
-              "inputType": "singleline",
-              "maximumCharacterCount": 12,
-              "keyboardType": "numberPad",
-              "textContentType": "telephoneNumber"
-          }
-        },
-        {
-          "pageIdentifier": "6",
-          "type": "datePicker",
-          "title": "Preferred shipping date",
-          "subtitle": "Select preferred shipping date",
-          "nextPageIdentifier": "7",
-          "hintText": "Select preferred shipping date",
-          "options": {
-              "startdate": "2020-07-01",
-              "maximumdate": "2020-12-31",
-              "minimumdate": "2020-07-01",
-              "dateFormat": "MM/dd/yyyy"
-          }
-        },
-        {
-          "pageIdentifier": "7",
-          "type": "picker",
-          "title": "Pick preferred time-slot",
-          "subtitle": "Select preferred time-slot",
-          "pickerTitle": "Select time-slot",
-          "pageItems": [
-              {
-                  "title": "01-02",
-                  "value": "01-02",
-                  "identifier": "001"
-              },
-              {
-                  "title": "02-03",
-                  "value": "02-03",
-                  "identifier": "002"
-              }
-          ],
-          "submitForm": true
+    "type":"BusinessFormEvent",
+    "startPageIdentifier":"0",
+    "showSummary":true,
+    "title":"Enter sender information.",
+    "pages":[
+      {
+        "pageIdentifier":"0",
+        "nextPageIdentifier":"1",
+        "type":"input",
+        "title":"Full Name",
+        "subtitle":"Enter your Full Name.",
+        "options":{
+          "placeholder":"Full Name",
+          "labelText":"Full Name",
+          "required":true,
+          "inputType":"singleline",
+          "maximumCharacterCount":250,
+          "keyboardType":"UIKeyboardTypeTwitter",
+          "textContentType":"name"
         }
-      ],
-      "images": [
-        {
-          "imageUrl": "https://picsum.photos/500?grayscale",
-          "id": "0"
-        },
-        {
-          "imageUrl": "https://picsum.photos/200/300?random=1",
-          "id": "1"
+      },
+      {
+        "pageIdentifier":"1",
+        "type":"input",
+        "nextPageIdentifier":"2",
+        "title":"Your email address",
+        "subtitle":"Enter your email address",
+        "options":{
+          "required":true,
+          "inputType":"singleline",
+          "maximumCharacterCount":250,
+          "keyboardType":"emailAddress",
+          "textContentType":"emailAddress"
         }
-      ]
+      },
+      {
+        "pageIdentifier":"2",
+        "type":"input",
+        "title":"Address",
+        "subtitle":"Enter your address",
+        "nextPageIdentifier":"3",
+        "options":{
+          "required":true,
+          "inputType":"multiline",
+          "maximumCharacterCount":300,
+          "keyboardType":"UIKeyboardTypeTwitter",
+          "textContentType":"fullStreetAddress"
+        }
+      },
+      {
+        "pageIdentifier":"3",
+        "type":"select",
+        "title":"City",
+        "subtitle":"Select your city",
+        "multipleSelection":false,
+        "nextPageIdentifier":"4",
+        "pageItems":[
+          {
+            "title":"Berlin",
+            "value":"Berlin",
+            "identifier":"001",
+            "nextPageIdentifier":"4",
+            "imageIdentifier":"1"
+          },
+          {
+            "title":"Munich",
+            "value":"Munich",
+            "identifier":"002",
+            "nextPageIdentifier":"4",
+            "imageIdentifier":"2"
+          }
+        ]
+      },
+      {
+        "pageIdentifier":"4",
+        "type":"input",
+        "title":"Zip/postal code",
+        "subtitle":"Enter your Zip/postal code",
+        "nextPageIdentifier":"5",
+        "options":{
+          "required":true,
+          "inputType":"singleline",
+          "maximumCharacterCount":5,
+          "keyboardType":"numberPad",
+          "textContentType":"postalCode"
+        }
+      },
+      {
+        "pageIdentifier":"5",
+        "type":"input",
+        "title":"Phone",
+        "subtitle":"Enter your phone number",
+        "nextPageIdentifier":"6",
+        "options":{
+          "required":false,
+          "inputType":"singleline",
+          "maximumCharacterCount":12,
+          "keyboardType":"numberPad",
+          "textContentType":"telephoneNumber"
+        }
+      },
+      {
+        "pageIdentifier":"6",
+        "type":"datePicker",
+        "title":"Preferred shipping date",
+        "subtitle":"Select preferred shipping date",
+        "nextPageIdentifier":"7",
+        "hintText":"Select preferred shipping date",
+        "options":{
+          "startdate":"2020-07-01",
+          "maximumdate":"2020-12-31",
+          "minimumdate":"2020-07-01",
+          "dateFormat":"MM/dd/yyyy"
+        }
+      },
+      {
+        "pageIdentifier":"7",
+        "type":"picker",
+        "title":"Pick preferred time-slot",
+        "subtitle":"Select preferred time-slot",
+        "pickerTitle":"Select time-slot",
+        "pageItems":[
+          {
+            "title":"01-02",
+            "value":"01-02",
+            "identifier":"001"
+          },
+          {
+            "title":"02-03",
+            "value":"02-03",
+            "identifier":"002"
+          }
+        ],
+        "submitForm":true
+      }
+    ],
+    "images":[
+      {
+        "imageUrl":"https://picsum.photos/500?grayscale",
+        "id":"0"
+      },
+      {
+        "imageUrl":"https://picsum.photos/200/300?random=1",
+        "id":"1"
+      }
+    ]
   },
   {
-    "type": "BusinessChatMessage",
-    "receivedMessage": {
-        "title": "Free Shipping",
-        "subtitle": "Easy shipping for individuals",
-        "style": "small",
-        "imageIdentifier": "0"
+    "type":"BusinessChatMessage",
+    "receivedMessage":{
+      "title":"Free Shipping",
+      "subtitle":"Easy shipping for individuals",
+      "style":"small",
+      "imageIdentifier":"0"
     },
-    "replyMessage": {
-        "title": "Tap to view your response.",
-        "subtitle": "",
-        "style": "small",
-        "imageIdentifier": "0"
+    "replyMessage":{
+      "title":"Tap to view your response.",
+      "subtitle":"",
+      "style":"small",
+      "imageIdentifier":"0"
     }
   }
 ]
