@@ -85,7 +85,7 @@ Following Types of pages are supported
 ### Example Body Template
 The structured content body will allow you to define the spalsh screen of the Business Form. 
 
-The Following Properties must be included in Body template
+The Following Properties must be included in the Body template
 * type
 * tag
 * elements
