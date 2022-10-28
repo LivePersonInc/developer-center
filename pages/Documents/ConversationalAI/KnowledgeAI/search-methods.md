@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: KnowledgeAI
 permalink: knowledgeai-search-methods.html
 indicator: both
-date_updated: 2022/10/26
+date_updated: 2022/10/27
 ---
 
 ### Introduction
@@ -20,9 +20,6 @@ When a consumer asks a question or makes an intentful statement, and you pass th
 In actuality, it’s a little more nuanced than this (more on this later), but these are the primary search methods.
 
 ### AI Search
-
-{: .attn-note}
-Currently, AI Search is available to a small number of brands. We plan to make it generally available soon, so stay tuned!
 
 AI Search is KnowledgeAI’s powerful, one-size-fits-all search method that’s based on the latest research in deep learning. Key characteristics of this search include the following:
 
