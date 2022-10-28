@@ -90,7 +90,7 @@ The Following Properties must be included in the Body template
 * tag
 * elements
 
-Each splash screen contains title, subtitle and button, these must be included in elements section.
+A splash screen contains a title, subtitle and button. These must be included in the elements section.
 
 ```json
 {
