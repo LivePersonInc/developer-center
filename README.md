@@ -194,7 +194,11 @@ If you’re adding or deprecating an API or SDK, add it or update its status on 
 * The maximum (view) width for images in this repository is 800 pixels
 * Apart from [special Markdown naming rules](#committing-changes-to-the-site), use lowercase file names, without spaces.
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited.
+
+Content and code guidelines are also subject to change. Please follow LivePerson-internal channels on updates, and review this information occasionally to be aware of the latest. (Note that code reviews may surface previously unknown and undocumented issues. The DX team will work with you to decide whether and how to address such issues.)
+
+Suggestions to these guidelines are welcome.
 
 ## Building the site locally
 
