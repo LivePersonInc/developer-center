@@ -6,7 +6,7 @@ documentname: Outbound Configuration API
 permalink: outbound-configuration-api-overview.html
 root-link: true
 indicator: Proactive Messaging
-date_published: 2022/10/24
+date_updated: 2022/10/24
 redirect_from:
  - proactive-messaging-reporting-api.html
 ---
