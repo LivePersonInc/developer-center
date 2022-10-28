@@ -83,14 +83,14 @@ Following Types of pages are supported
 ```
 
 ### Example Body Template
-The structured content body will allow you to define spalsh screen of the Business Form. 
+The structured content body will allow you to define the spalsh screen of the Business Form. 
 
-Following Properties must be included in Body template
+The Following Properties must be included in Body template
 * type
 * tag
 * elements
 
-Every splash screen contains title, subtitle and button, these must be included in elements section.
+Each splash screen contains title, subtitle and button, these must be included in elements section.
 
 ```json
 {
