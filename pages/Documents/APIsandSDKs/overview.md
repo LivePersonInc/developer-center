@@ -9,7 +9,6 @@ redirect_from:
   - important-updates.html
   - liveperson-apis-and-sdks.html
 indicator: both
-date_published: 2022/08/03
 date_updated: 2022/09/30
 ---
 

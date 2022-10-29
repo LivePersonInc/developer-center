@@ -6,7 +6,7 @@ documentname: Mobile App Messaging SDK for Android
 subfoldername: Release Notes
 permalink: mobile-app-messaging-sdk-for-android-release-notes-supportability.html
 indicator: messaging
-date_published: 2022/10/03
+date_updated: 2022/10/03
 ---
 
 ### Supportability
