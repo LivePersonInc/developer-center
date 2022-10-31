@@ -1,10 +1,8 @@
 ---
 pagename: Overview
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
-
 level-order: 2
 order: 9
 permalink: skills-api-overview.html

@@ -1,7 +1,5 @@
 ---
 pagename: Versions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -10,7 +8,7 @@ permalink: intent-manager-build-versions.html
 indicator: both
 ---
 
-{: .important}
+{: .attn-note}
 This topic applies if your domain is using the LivePerson engine or a third-party NLU engine. The LivePerson (Legacy) engine doesn't require training, nor does it support versions.
 
 ### Train a domain
@@ -31,7 +29,7 @@ The first model version that you create via training is activated automatically.
 
 Each model version starts as a copy of the version before it regardless of whether it has been activated or not. You can (and should!) create and test multiple model versions before choosing to activate one of them. You can activate any model version that was created after the one that is currently activated. Typically, you'll test as you go, so you'll be activating the latest model version.
 
-{: .important}
+{: .attn-note}
 Ensure you test before activating a model version. Once you activate a version, all earlier versions are no longer available, so you can’t deactivate it or revert back to a previous version. To update, you’ll need to activate an even more recent model version. You might already have one if you didn’t activate the most recent version. Or, if you don’t have one, you’ll have to update the domain as needed, retrain to create a new model version, and then activate that version. If you think you might want to revert after an update, you can export the training phrases and entities before updating them. You can then use the export files to create a new model version at any time.
 
 **Example 1:** Assume you're using model version 3, and you create model versions 4, 5, 6 and 7 also. After testing, you activate version 7. Once you do so, versions 3 through 6 are no longer available. From this point, you can train a new version 8, which builds upon version 7.

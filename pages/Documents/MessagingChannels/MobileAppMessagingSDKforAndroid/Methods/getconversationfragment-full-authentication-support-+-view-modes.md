@@ -3,15 +3,11 @@ pagename: getConversationFragment (full authentication support + view modes)
 redirect_from:
   - android-getconversationfragfull.html
   - android-getconversationfrag.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 55
 permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-(full-authentication-support-+-view-modes).html
-
 indicator: messaging
 ---
 

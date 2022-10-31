@@ -1,14 +1,11 @@
 ---
 pagename: Metrics
-redirect_from:
-  - 
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
 permalink: key-messaging-metrics-api-methods-metrics.html
-
 indicator: messaging
 ---
 
@@ -43,9 +40,9 @@ _filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
-|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section. 
+|time {from, to} | Represents events time.  | long — epoch time in milliseconds. | Required | Including bounds. From/to value is rounded to the last/next 1 minutes, respectively. Time range is limited up to the last 24 hours. Note: This field is required, even if you are not requesting metrics from the metricsToRetrieveByTime section but only asking for the metricsToRetrieveCurrentValue section.
 |agentIds| An array of agent IDs.| Array `<String>`| Optional |
-|agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
+|agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional |
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
 
@@ -65,7 +62,7 @@ Request body — JSON example:
        "groupBy"
     ],
     "metricsToRetrieveCurrentValue": [
-        "assigned_conversations",	
+        "assigned_conversations",
 	"human_agent_load"
     ],
     "metricsToRetrieveByTime": [
@@ -139,7 +136,7 @@ _metrics info_
 | queueWaitTime50thPercentile| 50% of the consumers are waiting in the queue this amount of time or less.| Long |
 | queueWaitTime90thPercentile| 90% of the consumers are waiting in the queue this amount of time or less.| Long |
 
-_all info_ 
+_all info_
 
 Contains list of metrics with their values — same as in _metrics info_
 
@@ -172,7 +169,7 @@ Response DTO — JSON example:
     },
     "groupBy": {
         "groupByField": "agentGroupId",
-        "groups": [                
+        "groups": [
             {
                 "key": "1641709730",
 		"keyDescription": "customerAssistanceSkill",

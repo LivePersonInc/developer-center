@@ -1,11 +1,10 @@
 ---
 pagename: Secret Client
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
-permalink: liveperson-functions-toolbelt-documentation-secret-client.html 
+permalink: liveperson-functions-toolbelt-documentation-secret-client.html
 indicator: both
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Your First Function
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -11,10 +10,10 @@ indicator: both
 
 If this is the first time you visit the LivePerson Function platform, you are greeted by the User Agreement Window. In the background, the [provisioning](liveperson-functions-provisioning.html) of the account is automatically performed. In this small walk-through, you will create a function that takes a name as input and use it to greet the caller.
 
-{: .notice}
+{: .attn-alert}
 When you use the LivePerson Functions platform for the first time please make sure that you are using a Conversational Cloud Admin account to ensure that the [provisioning](liveperson-functions-provisioning.html) of the account succeeds.
 
-{: .important}
+{: .attn-note}
 As this is a quick guide, we will not go into details on all the available options for this. Please refer to the [configure page](liveperson-functions-getting-started-configuration.html) or the [deep dive UI](liveperson-functions-getting-started-development-deep-dive-ui.html).
 
 ### Create

@@ -2,13 +2,11 @@
 pagename: TLS Authentication
 redirect_from:
   - push-service-tls.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 order: 20
 permalink: push-notification-service-tls-authentication.html
-
 indicator: messaging
 ---
 

@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 80
 permalink: server-chat-api-methods-retrieve-chat-resources-events-and-information.html
-
 indicator: chat
 ---
 

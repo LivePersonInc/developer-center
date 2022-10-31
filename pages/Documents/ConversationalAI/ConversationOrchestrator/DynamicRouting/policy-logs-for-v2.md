@@ -1,7 +1,5 @@
 ---
 pagename: Policy Logs for v2
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -20,7 +18,7 @@ The benefits of using policy logs include:
 * Narrowing down root causes of errors to policy configurations and context variables
 * Diving deep to understand why certain policies execute more often than others
 
-{: .important}
+{: .attn-note}
 Policy Logs are only available to brands that are upgraded to [Conversation Context Service v2](conversation-orchestrator-conversation-context-service-overview.html#api-versions). Please talk to your LivePerson account representative if you want to use this feature and have not been upgraded.
 
 ### Using policy logs

@@ -30,7 +30,7 @@ encoded metadata you must ensure the following conditions in order to successful
   <li> Metadata size is limited to 5k</li>
 </ul>
 
-{: .important}
+{: .attn-note}
 Failing to comply with the above validation points will cause the message to be dropped.
 This feature is only available for messaging conversations, not for chat conversations
 
@@ -205,7 +205,7 @@ the handover agent should take. Please note private text messages will never be
 shown to the consumer and will be visible only inside the conversation window
 of the agent workspace.
 
-{: .important}
+{: .attn-note}
 Please note If you have not migrated to the new Agent Workspace you will not be able
 to see the `Private` message indicator in the conversation window. Nevertheless,
 private text messages will not be shown to the consumer and only remain visible
@@ -254,7 +254,7 @@ is deployed and running. Furthermore, the user can provide a payload as well tha
 the LivePerson function while invocation. The invoke response is considered an action response.
 An example of such a response can be seen in Figure 4.5.
 
-{: .notice}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 ```json
@@ -395,3 +395,25 @@ can be seen in Figure 4.8:
 <img class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
 
 Figure 4.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
+
+### Receiving Last consumer message (Messaging Only)
+
+When an ongoing conversation gets transferred to a bot connected via the Third-Party Bot connector, the connector forwards the last consumer message to the AI vendor as part of the [the welcome event](third-party-bots-amazon-lex-basic-content.html#the-welcome-event).
+This allows the bot to react to the last consumer message instead of instantiating a new conversation.
+
+In the Custom Endpoint service, the last consumer message is passed via the property `lastConsumerMessage` that is sent with `context` information as part of `lpEvent` data. An example of the request body containing the WelcomeEvent is provided below:
+
+```json
+{
+  "type": "START",
+  "source": "CONVERSATION",
+  "data": {},
+  "context": {
+    "lpEvent": {
+      "type": "ContentEvent",
+      "contentType": "welcome",
+      "lastConsumerMessage": "I need to return my order",
+    }
+  }
+}
+```

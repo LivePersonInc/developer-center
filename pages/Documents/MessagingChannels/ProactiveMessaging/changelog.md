@@ -1,6 +1,6 @@
 ---
 pagename: CHANGELOG
-Keywords: CHANGELOG
+keywords: CHANGELOG
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Proactive Messaging

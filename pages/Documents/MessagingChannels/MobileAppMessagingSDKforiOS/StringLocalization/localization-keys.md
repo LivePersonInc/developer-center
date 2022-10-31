@@ -2,13 +2,11 @@
 pagename: Localization Keys
 redirect_from:
   - consumer-experience-ios-sdk-localizationkeys.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: String Localization
 permalink: mobile-app-messaging-sdk-for-ios-string-localization-localization-keys.html
-
 indicator: messaging
 ---
 

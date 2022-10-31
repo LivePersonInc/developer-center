@@ -3,7 +3,6 @@ pagename: Complex Layout
 redirect_from:
   - rich-messaging-structured-content-complex-layout.html
   - structured-content-mobile-sdk-and-web-templates-complex-layout.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

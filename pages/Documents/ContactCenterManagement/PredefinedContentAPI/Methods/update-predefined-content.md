@@ -2,15 +2,12 @@
 pagename: Update Predefined Content
 redirect_from:
   - account-configuration-predefined-content-update-content-items.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 50
 permalink: predefined-content-api-methods-update-predefined-content.html
-
 indicator: both
 ---
 
@@ -18,7 +15,7 @@ Updates existing Predefined Content items for a specific account.
 
 ### Request
 
- |Method|    URL|    
+ |Method|    URL|
  |:-------  |:-----|
  |PUT|       https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses/ |
 

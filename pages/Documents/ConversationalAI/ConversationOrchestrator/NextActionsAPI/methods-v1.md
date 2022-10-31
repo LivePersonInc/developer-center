@@ -5,7 +5,6 @@ redirect_from:
   - maven-ai-askmaven-methods.html
   - maven-ai-recommendation-api-methods.html
   - conversation-orchestrator-recommendation-api-methods.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -23,8 +22,8 @@ There are two ways to use the Next Actions functionality:
 See the [discussion on the built-in askMaven function](conversation-builder-scripting-functions-askmaven.html) in Conversation Builder.
 
 ### REST API
-Every API call to the Conversation Context Service requires the following auth headers to be accepted:  
-* content-Type: application/json  
+Every API call to the Conversation Context Service requires the following auth headers to be accepted:
+* content-Type: application/json
 * maven-api-key: {YOUR API KEY}
 
 Base URL per environment:
@@ -33,7 +32,7 @@ Base URL per environment:
 * EMEA: https://z2.askmaven.liveperson.net
 * APAC: https://z3.askmaven.liveperson.net
 
-{: .important}
+{: .attn-note}
 The accountId and API key in these examples are fake; please replace them with the accountID and the developer key that you generated.
 
 #### Get Next Actions

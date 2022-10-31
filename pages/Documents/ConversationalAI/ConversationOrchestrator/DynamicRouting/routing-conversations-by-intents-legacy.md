@@ -1,6 +1,5 @@
 ---
 pagename: Routing Conversations by Intents - Legacy
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -41,12 +40,12 @@ Then, save that intent name to the Conversation Context Services conversation sc
 
 ```javascript
 var intentTitle = botContext.getDialogStarterIntent();
- 
+
 var intentNamespace = botContext.getBotVariable('intentRoutingNamespace');
 botContext.setContextDataForConversation(intentNamespace, 'intent', intentTitle);
 ```
 
-{: .important}
+{: .attn-note}
 This process is not limited to just saving the most recent intent for routing. Other variables that you save in your Conversation Builder bots can be preserved in the Context Session Store for the purpose of dynamic routing using the same high-level approach.
 
 ### Creating policies using intents
@@ -142,5 +141,5 @@ Lastly, navigate to our [messaging test page](https://developers.liveperson.com/
 
 <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_prodbot.png" alt="The conversation flow to follow to test the bot">
 
-{: .important}
+{: .attn-note}
 When using this feature in Production, it might be desirable to modify or disable the [automatic messages](https://knowledge.liveperson.com/contact-center-management-messaging-operations-automatic-messages-automatic-messages-overview.html) if you want to mask the transfers to and from each bot.

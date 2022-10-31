@@ -1,7 +1,5 @@
 ---
 pagename: LivePerson NLU Engine
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -27,7 +25,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **15 training phrases per intent** to activate training for a model in the Intent Manager. Anything less adversely affects model performance.
 * Requires the model to be trained (discussed below).
 
-{: .important}
+{: .attn-note}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from the change. No additional tuning is required; simply retrain the domain as is.
 
 ### Benefits of LivePerson over LivePerson (Legacy)
@@ -79,7 +77,7 @@ Note the following:
 * Typically, training takes anywhere between 2 to 10 minutes depending on how big the domain is. Larger domains can take longer.
 * You can train the domain and create as many model versions as you want. There isn't a limit on this. However, you can only [activate](intent-manager-build-versions.html#activate-a-model-version) a model version that was created after the one that is currently activated.
 
-{: .important}
+{: .attn-note}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
 
 **To train a LivePerson domain**
@@ -103,7 +101,7 @@ If you're still using the deprecated LivePerson (Legacy) NLU engine, this sectio
 
 #### What's LivePerson (Legacy) NLU engine?
 
-{: .important}
+{: .attn-note}
 As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this deprecated engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics of the legacy engine include:
@@ -124,7 +122,7 @@ Key characteristics of the legacy engine include:
 
 #### Convert a LivePerson (Legacy) domain to LivePerson
 
-{: .important}
+{: .attn-note}
 Brands with existing domains using the deprecated LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 **To convert a LivePerson (Legacy) domain to the LivePerson engine**

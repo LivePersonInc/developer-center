@@ -2,15 +2,12 @@
 pagename: Get Agent Groups by ID
 redirect_from:
   - administration-get-agent-groups-by-id.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
-
 order: 20
 permalink: agent-groups-api-methods-get-agent-groups-by-id.html
-
 indicator: both
 ---
 

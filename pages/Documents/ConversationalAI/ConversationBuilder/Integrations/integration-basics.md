@@ -3,7 +3,6 @@ pagename: Integration Basics
 redirect_from:
     - conversation-builder-conversation-builder-integrations.html
     - conversation-builder-integrations.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -16,7 +15,7 @@ Conversation Builder allows users to configure API integrations that are invoked
 
 The Conversation Builder [templates](conversation-builder-templates-overview.html) include common integrations. For example, the [Simple FAQ](conversation-builder-templates-simple-faq.html) template includes a Knowledge Base integration.
 
-{: .important}
+{: .attn-note}
 Want some practice with integrations? The [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html) provides a walkthrough of adding one. You'll need to complete the Dialogs and Patterns tutorial and the Intents tutorial first, as they build on each other.
 
 ### Integration types
@@ -166,7 +165,7 @@ The following screen from the API integration setup shows that you must remember
     }
     ```
 
-    {: .important}
+    {: .attn-note}
     The first property of that object is named `api_GetContext`, so adjust this with whatever the name you gave to your Bot Response Variable when defining the integration and append to the “**api_**” prefix.
 
 3. Clean the JSON.
@@ -210,7 +209,7 @@ The following screen from the API integration setup shows that you must remember
     var email = jsonResponse.email || false;
     ```
 
-    {: .important}
+    {: .attn-note}
     The `|| false` construction means if the requested value does not exist, we will return false. This allows us to easily check later on if this was populated. (You could also use **null** in place of false if you prefer, as that is a **FALSE** value within JavaScript when it comes to conditional comparisons.)
 
 5. Set bot-level variables using those values and output them within a text interaction:

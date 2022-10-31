@@ -1,7 +1,5 @@
 ---
 pagename: Welcome Message with Quick Replies
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -14,15 +12,15 @@ indicator: messaging
 
 When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
-You can configure the Welcome message as a simple text message with or without quick replies, for example: 
+You can configure the Welcome message as a simple text message with or without quick replies, for example:
 
-> *Welcome to our support! What can we help you with today?*   
-> 
+> *Welcome to our support! What can we help you with today?*
+>
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace.
 
-{: .important}
+{: .attn-note}
 To use this feature with the Control History API, refer to the following [page](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html#optional-code-sample-to-enable-welcome-message)
 
 ### How to enable
@@ -48,7 +46,7 @@ do {
 } catch {
     print(error.localizedDescription)
 }
-        
+
 //ConversationViewParams
 let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
                                                      containerViewController: nil,
@@ -59,11 +57,11 @@ let conversationViewParams = LPConversationViewParams(conversationQuery: convers
 LPMessaging.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
 ```
 
-{: .notice}
+{: .attn-alert}
 Support for rendering links automatically is available on SDK 6.2.0 and above.
 
 ### Limitations
-- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
+- You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.
 
 - By default, eight quick replies are presented per row and quick replies styles inherit the Agent Bubble styling configuration.
 

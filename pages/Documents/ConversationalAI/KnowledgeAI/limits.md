@@ -3,7 +3,6 @@ pagename: Limits
 redirect_from:
     - knowledge-base-internal-knowledge-bases-limits.html
     - knowledge-base-limits.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -13,7 +12,7 @@ indicator: both
 
 As you add and manage articles, there are a number of validation checks that are performed by the system to enforce limits and thereby promote best practices. This helps to ensure your content is suitable for messages, which should be short.
 
-{: .important}
+{: .attn-note}
 As of March 5, 2021, the limits have changed and are as described below. The limits are enforced by the application, and error messages are shown to inform you of them.
 
 ### Knowledge base-level limits for internal knowledge bases
@@ -32,7 +31,7 @@ If you’re using an [internal knowledge base](knowledgeai-internal-knowledge-ba
 | Attribute or setting | Limit |
 | --- | --- |
 | Title | 128 characters |
-| Summary | 300 characters | 
+| Summary | 300 characters |
 | Detail | 5,000 characters<br><br>If you include HTML markup, take care to test it and ensure it doesn’t break when the content is sent to the consumer. |
 | Intent qualifiers | 40 in number<br><br>*Not applicable when the knowledge base uses Domain intents* |
 | Positive learnings | 10 in number |

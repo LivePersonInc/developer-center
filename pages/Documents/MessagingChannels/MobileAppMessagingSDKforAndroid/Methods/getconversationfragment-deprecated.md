@@ -2,15 +2,11 @@
 pagename: getConversationFragment (Deprecated)
 redirect_from:
   - android-getconversationfragdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 60
 permalink: mobile-app-messaging-sdk-for-android-methods-getconversationfragment-(deprecated).html
-
 indicator: messaging
 ---
 

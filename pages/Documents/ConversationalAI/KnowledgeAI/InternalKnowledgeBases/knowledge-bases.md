@@ -3,7 +3,6 @@ pagename: Knowledge Bases
 redirect_from:
     - knowledge-base-knowledge-bases.html
     - knowledge-base-internal-knowledge-bases-knowledge-bases.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -19,8 +18,8 @@ indicator: both
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 4. Specify the following:
     * **Knowledge Base Name**: Enter a display name for the knowledge base.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below. 
-        
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below.
+
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet.
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
@@ -35,8 +34,8 @@ indicator: both
 
     If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can [disable articles](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article) on a per article basis.
 
-    {: .important}
-    If the system finds errors in the CSV file you are importing, you’re notified of this and offered a **Download errors** button. Use the button to download info on the errors that were found in the import file. Make sure your browser is configured to allow pop-ups, or you won’t be able to complete the download. 
+    {: .attn-note}
+    If the system finds errors in the CSV file you are importing, you’re notified of this and offered a **Download errors** button. Use the button to download info on the errors that were found in the import file. Make sure your browser is configured to allow pop-ups, or you won’t be able to complete the download.
 
 ### Create an import file
 
@@ -44,7 +43,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 <img class="fancyimage" style="width:800px" alt="An example of a well-formed import file" src="img/ConvoBuilder/kb_importFile.png">
 
-{: .important}
+{: .attn-note}
 The import file can contain [a subset of HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article), and it should adhere to [these limits](knowledgeai-limits.html). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
@@ -78,7 +77,7 @@ When you convert Knowledge Base intents to Domain intents, the system takes each
 
 From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the KnowledgeAI application to the Intent Manager application.
 
-{: .important}
+{: .attn-note}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
 
 **To convert from Knowledge Base intents to Domain intents**
@@ -93,7 +92,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
     * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
 
 6. In the confirmation dialog, click **Confirm**.
-    
+
     This converts the intents and associates the selected domain.
 
     <img class="fancyimage" style="width:750px" alt="The Intent Association and Associated Domain settings for a knowledge base" src="img/ConvoBuilder/kb_convertIntents.png">
@@ -102,7 +101,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
 
-{: .important}
+{: .attn-note}
 This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that all new articles in the sheet are enabled by default (which means they are returned in knowledge base searches in KnowledgeAI integrations), so ensure the contents of the sheet are suitable before you sync. You can [disable articles](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article) on a per article basis.
 
 Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.
@@ -112,7 +111,7 @@ Before performing a sync, make sure the Google sheet includes the "id" column th
 2. In the upper-left corner, click **Settings**.
 3. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
 
-### Download a knowledge base 
+### Download a knowledge base
 
 Download of a knowledge base creates a CSV file.
 

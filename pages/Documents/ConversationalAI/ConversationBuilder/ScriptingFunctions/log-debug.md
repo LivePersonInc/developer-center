@@ -2,7 +2,6 @@
 pagename: Log & Debug
 redirect_from:
     - conversation-builder-scripting-functions-debugging-and-logging.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -15,9 +14,9 @@ Use the following built-in functions to log events and print debug messages.
 
 ### Log custom event
 
-Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name. 
+Use `logCustomEvent` for tracking specific bot events for the purpose of analytics. This function requires some type of user message and an event name.
 
-{: .important}
+{: .attn-note}
 The event detail is optional. Keep the event detail short, as it can't be more than 32 kilobytes, i.e., approximately 32,000 characters in length.
 
 | Function Name | Arguments | Returns |
@@ -31,7 +30,7 @@ In this example, we set the user message to the current user message and name th
 botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'API call successful');
 ```
 
-{: .important}
+{: .attn-note}
 See also [this step-by-step, example guide](conversation-builder-best-practices-custom-event-logging.html) on implementing custom event logging.<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
 ### Print debug message

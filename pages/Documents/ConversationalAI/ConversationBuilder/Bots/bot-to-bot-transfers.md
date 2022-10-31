@@ -1,7 +1,5 @@
 ---
 pagename: Bot-to-Bot Transfers
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -18,9 +16,9 @@ However, while it's advantageous to have multiple--even many--bots that automate
 
 ### The importance of seamless transfers
 
-Generally speaking, in a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the user's intent and/or message from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful, "warm" hand-off. 
+Generally speaking, in a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the user's intent and/or message from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful, "warm" hand-off.
 
-As an example, examine the illustration below of a Customer Service bot and a Savings bot engaged in a transfer. The Customer Service bot starts the conversation with the user, determines the user's intent, and passes that information to the Savings bot. As a result, the Savings bot can immediately pick up and handle the user's query. 
+As an example, examine the illustration below of a Customer Service bot and a Savings bot engaged in a transfer. The Customer Service bot starts the conversation with the user, determines the user's intent, and passes that information to the Savings bot. As a result, the Savings bot can immediately pick up and handle the user's query.
 
    <img style="width:650px" src="img/ConvoBuilder/bots_collab3.png" alt="An example transfer, with contextual info passed from the sender bot to the receiver bot">
 
@@ -62,7 +60,7 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png" alt="The Grouped Bots section of the Bots dashboard, with the Collaboration icon displayed for a bot group that has collaboration enabled">
 
-{: .important}
+{: .attn-note}
 While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in automatic, bot-to-bot transfers.
 
 #### Limitations
@@ -84,7 +82,7 @@ A manual, bot-to-bot transfer is one where you transfer the conversation to a sp
 
 Manual transfers are done via:
 
-* An [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (simpler, more convenient) 
+* An [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (simpler, more convenient)
 * A [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) (more complex)
 
 #### Why use a manual transfer?
@@ -102,7 +100,7 @@ In a manual transfer, you can *automatically* pass the intent and/or user messag
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bots_collab9.png" alt="The Advanced tab of the Interaction Settings of an Agent Transfer interaction, with the Transfer Bot Context setting both enabled and highlighted">
 
 Or, if you've used a [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration instead, you can do this in the integration:
-   
+
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_collab1.png" alt="The Integration form to use to configure a LivePerson Agent Escalation integration, with the Transfer Bot Context setting both enabled and highlighted">
 
 No coding is required.
@@ -153,7 +151,7 @@ Bot groups make it easier for a routing bot to automatically transfer control to
 * A Returns bot
 
 The Routing bot is designed to have an initial conversation with the consumer and route the conversation to one of the other two bots. The conversation might look like this:
- 
+
 *Routing bot: Hello, I am routing bot. How can I help you?*
 
 *Consumer: I need to check the status of my order.*
@@ -166,4 +164,4 @@ You can add all three bots to an "eCommerce Operations" bot group. When this is 
 
 <img style="width:450px" src="img/ConvoBuilder/bots_collab14.png" alt="An illustration of three bots in a bot group, with a transfer happening between two of them">
 
-When the user enters, “I need to check the status of my order,” this maps to an "Order Status" intent that is handled by the Order Status bot. Because collaboration in the group is enabled, the routing bot *automatically* finds this association and transfers control to the Order Status bot. 
+When the user enters, “I need to check the status of my order,” this maps to an "Order Status" intent that is handled by the Order Status bot. Because collaboration in the group is enabled, the routing bot *automatically* finds this association and transfers control to the Order Status bot.

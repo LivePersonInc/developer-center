@@ -9,8 +9,13 @@ order: 10
 permalink: monitoring-api-getting-started.html
 indicator: messaging
 ---
+### Step 1 - Retrieve your domain
 
-### Step 1 — Configure your Conversational Cloud account
+Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
+
+	* smt
+
+### Step 2 — Configure your Conversational Cloud account
 
 On your Conversational Cloud account, make sure the following features are enabled:
 
@@ -23,13 +28,13 @@ On your Conversational Cloud account, make sure the following features are enabl
 
 In addition, an authentication server should be configured on the Conversational Cloud account. Refer to the [Authentication Guide — Configuration section](guides-authentication-configuration.html) in the Developer Community for further instructions.
 
-### Step 2 — Login to your Account
+### Step 3 — Login to your Account
 
 * Login to your account and go to Campaign Builder → data sources → conversation sources tab.
 
 ![Data Source](img/monitor_start1.png)
 
-### Step 3 — Create a Mobile App in the Conversational Cloud UI or Develop Your Own Private App
+### Step 4 — Create a Mobile App in the Conversational Cloud UI or Develop Your Own Private App
 
 In order to utilize the Monitoring API, you will need, among other parameters, an `AppInstallationId`. In order to do so, you will first need to create an application, either by using the LE UI to create a Mobile App or by developing your own Private App.
 
@@ -48,8 +53,6 @@ In order to utilize the Monitoring API, you will need, among other parameters, a
 Please contact your Account Team to create a Private App and retrieve your `AppInstallationId`.
 
 You can now create an engagement with the **Mobile App** or **Private App** source.
-
-Before calling the Monitoring API, you will need to fetch the Monitoring API domain, which is the domain for the "smt" service. Please refer to [this document](agent-domain-domain-api.html#overview) for instructions on how to retrieve the "smt" service domain (aka 'baseURI').
 
 You can now try and get an engagement using the Monitoring API **engagement resource**
 
@@ -90,5 +93,5 @@ curl -i \
     -H "X-HTTP-Method-Override: PUT" \
     -H "Content-Type: application/json" \
     -X POST -d '{"clientProperties":{"osName": "MAC_OSX","osVersion": "1.2","appVersion": "1.0","deviceFamily": "MOBILE"},"consumerId":"uniqueIdInBrand","engagementAttributes": [{"type":"impDisplay","campaign":2695999112,"engId":2696029112,"revision":3,"eContext":[{"type":"engagementContext","id":"1"}]}]}' \
-    https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/report?v=1.0&vid=A0ZTA5YTVlYTY5NTI1ODYx&sid=Vo13h4lpShW655STQJi9Jg    
+    https://{Monitor-Domain}/api/account/{account-Id}/app/{app-Installation-Id}/report?v=1.0&vid=A0ZTA5YTVlYTY5NTI1ODYx&sid=Vo13h4lpShW655STQJi9Jg
 ```

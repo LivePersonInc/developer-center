@@ -2,7 +2,6 @@
 pagename: Configuration - Custom Code
 redirect_from:
    - conversation-builder-interactions-details-code.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -16,6 +15,8 @@ You can add custom code to an interaction. The code can be executed before the i
 ### Requirements
 
 Your custom JavaScript code should be compatible with ES5, i.e., ECMAScript 5 (2009). There is an exception: The `toLocaleString` method isn't supported.
+
+Also, your custom JavaScript code must complete within 5 seconds; otherwise, it times out and the execution flow continues on as per the [order of operations](conversation-builder-interactions-interaction-basics.html#order-of-operations).
 
 ### Custom code indicator
 An interaction that contains custom code displays a green dot:
@@ -45,5 +46,5 @@ There are three tabs for adding code:
 
 Use the desired tab to add the code. You can use the built-in [scripting functions](conversation-builder-scripting-functions-functions-list.html) to access variables and manipulate data.
 
-{: .important}
+{: .attn-note}
 For info on the order of operations (i.e., which code is run when), see [this section](conversation-builder-interactions-interaction-basics.html#order-of-operations).

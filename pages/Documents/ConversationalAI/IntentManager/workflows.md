@@ -1,7 +1,5 @@
 ---
 pagename: Workflows
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -42,7 +40,7 @@ Keep in mind the [best practices](intent-manager-best-practices.html).
 2. Click **Discover**, and select a domain.
 3. [Use the Discover page](intent-manager-discover-intent-discovery.html) to filter your view, so you’re looking at only unclassified messages.
 4. Find a message related to the intent you want to create, and click **Discover similar messages**.
-5. Select the messages that you want to use as training phrases for the new intent. 
+5. Select the messages that you want to use as training phrases for the new intent.
 6. Create the intent (specifying the target domain for the intent when you do).
 7. Click **Build**, and select the target domain to display it.
 8. Need more training phrases for the intent? Display the intent, and [generate additional, similar training phrases](intent-manager-build-intents.html#generate-training-phrases).

@@ -1,7 +1,6 @@
 ---
 pagename: Quick Replies Template
-redirect_from:
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Viber Templates

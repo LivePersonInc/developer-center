@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Engagement Window Widget SDK
 subfoldername: Instructions
-
 order: 10
 permalink: engagement-window-widget-sdk-instructions-configuration.html
-
 indicator: both
 ---
 

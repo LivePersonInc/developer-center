@@ -2,15 +2,12 @@
 pagename: Retrieve Agent Survey Structure
 redirect_from:
   - agent-retrieve-survey-structure.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 220
 permalink: chat-agent-api-methods-retrieve-agent-survey-structure.html
-
 indicator: chat
 ---
 This method returns the agent survey structure. The survey structure is in XML that describes the questions of the survey as well as the logic of which questions are hidden.
@@ -60,6 +57,6 @@ The body media type must have one of the following formats:
 
 **Response Codes**
 
-| Code | Response | 
+| Code | Response |
 | :--- | :--- |
 | 200 | OK |

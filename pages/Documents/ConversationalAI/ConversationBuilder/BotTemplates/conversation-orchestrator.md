@@ -3,7 +3,6 @@ pagename: Conversation Orchestrator
 redirect_from:
   - conversation-builder-templates-maven-concierge.html
   - conversation-builder-bot-templates-maven-concierge.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -22,7 +21,7 @@ The following example flow can happen with this template:
 4. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List).
 5. Bot transfers the conversation to a skill or agent based on the policy outcome.
 
-{: .important}
+{: .attn-note}
 This bot template contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 ### Included items
@@ -68,11 +67,11 @@ The *COLLECT_PHONE_NUMBER* interaction contains the following **Process User Res
 var contextNamespace = getBotVar("contextNamespace");
 var success = botContext.registerContextNamespace(contextNamespace);
 debugMsg("Conversation Orchestrator registerContextNamespace:: " + success);
- 
+
 // Pull in the phoneNumber variable captured in the conditions and set to the Conversation scoping in the Conversation Context Service
 var phoneNumber = getBotVar("phoneNumber");
 setContextConv("phoneNumber", phoneNumber);
- 
+
 // Custom Event Logging for setting Context Session Store
 logEventAdv(getUserMessage(), "Conversation Orchestrator Session Store","Maven Session Store was called for namespace labelled '"+ getBotVar("contextNamespace") + "' for account '" + getBotVar("accountId") + "' ("+ getBotVar('conversationId') + ")");
 ```
@@ -84,23 +83,23 @@ The *PROCESS_ASKMAVEN* interaction contains the following **Pre-Process Code** w
 var orchestratorRecommendations = botContext.askMaven();
 var data = JSON.parse(orchestratorRecommendations);
 debugMsg("Maven Recommendations:: " + orchestratorRecommendations);
- 
+
 // Custom Event Log for askMaven response
 logEventAdv(getUserMessage(), "Ask Maven","Ask Maven was called for namespace '"+ getBotVar("contextNamespace") + "' for account '" + getBotVar("accountId") + "' ("+ getBotVar('conversationId') + ")");
- 
+
 // Set transfer param variables
 var agentId = null;
 var skillId = null;
 var skillName = null;
 var transferType = null;
- 
+
 // If a policy is matched, process the policy. If not, transfer via fallback
 if (data.rule) {
  var actions = data.rule.actions;
- 
+
  for (var action in actions) {
    var type = actions[action].type;
- 
+
    switch (type) {
      case "SEND_MESSAGE":
        sendMsg(actions[action].payload.message);
@@ -129,7 +128,7 @@ The *PROCESS_ASKMAVEN* interaction contains the following **Post-Process Code** 
 ```javascript
 // setTriggerNextMessage to appropriate transfer type
 var transferType = getBotVar("transferType");
- 
+
 if (transferType) {
  switch (transferType) {
    case "TRANSFER_TO_AGENT":

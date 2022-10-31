@@ -3,14 +3,11 @@ pagename: Refresh
 redirect_from:
   - agent-refresh.html
 permalink: login-service-api-methods-refresh.html
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Login Service API
 subfoldername: Methods
-
 order: 20
-
 indicator: both
 ---
 

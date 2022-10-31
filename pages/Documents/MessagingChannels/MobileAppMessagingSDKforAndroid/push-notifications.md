@@ -2,7 +2,6 @@
 pagename: Push Notifications
 redirect_from:
   - android-push-notifications.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -26,7 +25,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
 1. Use the registration token for the client app instance and register it using the [registerLPPusher() API](android-registerlppusher.html) call so it knows which device should get each push message.
 
-2. Upon receiving a push message to your app, handle it so it is displayed to the customer. 
+2. Upon receiving a push message to your app, handle it so it is displayed to the customer.
 
    ```java
    public class MyFirebase extends FirebaseMessagingService {
@@ -58,7 +57,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
    **Tip:** You can find the **Package Name** on the Firebase console under **General**, and the **Legacy Key** on the Firebase console under **Cloud Messaging**.
 
-### Step 3. Configure the services and classes 
+### Step 3. Configure the services and classes
 
 1. Under the **application** tab, add the following services + receiver:
 
@@ -285,5 +284,5 @@ To handle a scenario when a push message is clicked, you need to implement a pus
     }
     ```
 
-{: .important}
+{: .attn-note}
 Please note that if user must see the notifications right away by waking devices up from Doze mode, a high priority notification must be sent to user device. To allow sending high priority notifications, please contact your account team to activate the feature on the LivePerson server side.

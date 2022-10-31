@@ -23,7 +23,7 @@ the structured content. Always validate your structured content using
 
 Direct Line bots need to send this payload in the `channelData` property of the message activity.
 
-{: .important}
+{: .attn-note}
 If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration
 (Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list manually. Wildcards are not supported.
@@ -68,7 +68,7 @@ Figure 2.1 Activity with Structured Content
 
 ### Sending Quick Replies
 
-{: .important}
+{: .attn-note}
 Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
@@ -183,14 +183,15 @@ Figure 2.3 Welcome activity on chat
 
 ### Bot Actions
 
-{: .notice}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer
 
 This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
 
-<div class="notice"><strong>Naming conventions:</strong> When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the skill matching to work.</div>
+{: .attn-alert}
+**Naming conventions:** When naming skills the bot can escalate to, you should use the Kebab Case (e.g. human-expert) for the skill matching to work.
 
 #### Transfer To Skill
 
@@ -249,7 +250,7 @@ Figure 2.5 Microsoft BotBuilder example code
 
 #### Transfer To Agent
 
-{: .important}
+{: .attn-note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill

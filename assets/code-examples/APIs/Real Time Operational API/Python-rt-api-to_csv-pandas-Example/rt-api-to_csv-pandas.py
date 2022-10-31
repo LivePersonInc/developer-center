@@ -40,7 +40,7 @@ skillReadOnlyReq = requests.get('https://api.liveperson.net/api/account/' + acco
 if not realTimeReq.ok:
 	print('There was an issue with your Real Time base URI')
 if not skillReadOnlyReq.ok:
-	print('There was an issue with your skills read only base URI') 
+	print('There was an issue with your skills read only base URI')
 realTimeBaseURI = realTimeReq.json()['baseURI']
 skillReadOnlyBaseURI = skillReadOnlyReq.json()['baseURI']
 
@@ -61,7 +61,7 @@ myTimeNow = time.strftime('%H:%M', time.localtime(start_time_epoch))
 myTime15Before = time.strftime('%H:%M', time.localtime(start_time_epoch - 900))
 myTimeFrame = myTime15Before + ' - ' + myTimeNow
 myTimeZone = time.strftime('%Z', time.localtime(start_time_epoch))
-	
+
 ########################
 ## Gather KPI Data   ###
 ## & Build DataFrame ###
@@ -72,7 +72,7 @@ skillIDs = []
 for skill in queueHealthResults['skillsMetrics']:
 	skillIDs.append(skill)
 
-# Print skills to console, just to confirm.			
+# Print skills to console, just to confirm
 print("We're working with these skills: " + ', '.join(skillIDs))
 
 # if there are skills active, do the below
@@ -91,7 +91,6 @@ if skillIDs:
 		df_.set_value(skill, "date", myDate)
 		df_.set_value(skill, "timeframe", myTimeFrame)
 		df_.set_value(skill, "timezone", myTimeZone)
-		
 
 	# Add Chats, ChatsAnswered, abandoned, & Average Speed to Answer to our dataframe
 	for skill in queueHealthResults['skillsMetrics']:
@@ -143,7 +142,7 @@ if skillIDs:
 else:
 	null_index = ["N/A"]
 	df_ = pandas.DataFrame(index=null_index, columns=["skill_name", "date", "timeframe", "timezone", "staff", "chats", "chats_answered", "abandoned", "average_speed_to_answer", "total_handling_time", "average_handling_time"])
-	df_.set_value("N/A", "skill_name", "All Offline")	
+	df_.set_value("N/A", "skill_name", "All Offline")
 	df_.set_value("N/A", "date", myDate)
 	df_.set_value("N/A", "timeframe", myTimeFrame)
 	df_.set_value("N/A", "timezone", myTimeZone)

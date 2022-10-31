@@ -1,6 +1,5 @@
 ---
 pagename: Credentials
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts
@@ -24,14 +23,14 @@ There's also a credential type that supports the use of [third-party NLU engines
 
 - **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
-{: .important}
+{: .attn-note}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
 
 ### Add an OAuth 2.0 credential using the Authorization Code grant type
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
-{: .important}
+{: .attn-note}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
 **To add an OAuth 2.0 credential using the Authorization Code grant type**
@@ -108,7 +107,7 @@ Depending on the configuration of the resource, you might need to manually reaut
 
 You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. A Mutual Authentication credential makes use of a key certificate and a trust certificate.
 
-#### Key certificates 
+#### Key certificates
 A key certificate is a key store file that contains private and public key pairs. A key certificate identifies the LivePerson platform as a valid entity that is allowed to interact with external systems. The recommended format is .p12 (PKCS12). You can generate a self-signed certificate pair using openssl or keytool, for example:
 
 `keytool -genkeypair -alias nt-ms -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore cb-mtls-server.p12 -validity 3650 -ext SAN=dns:localhost,ip:127.0.0.1`
@@ -120,7 +119,7 @@ You can verify the file using:
 #### Trust certificates
 A trust certificate is exported from the external system (e.g., Salesforce) to which the LivePerson platform makes the external call. The recommended file format is .pem.
 
-When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
+When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required.
 
 **Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 
@@ -189,7 +188,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 ### Add a third-party NLU credential
 
-{: .important}
+{: .attn-note}
 This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).

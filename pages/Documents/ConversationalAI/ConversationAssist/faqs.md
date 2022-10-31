@@ -2,7 +2,6 @@
 pagename: FAQs
 redirect_from:
     - conversation-orchestrator-agent-assist-faqs.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
@@ -41,11 +40,15 @@ There’s a bug in the Summary information in this widget. It should show the nu
 
 Currently, the denominator is incorrect. It reflects only the recommendations that weren’t used.
 
+#### When I join a bot a conversation, the bot doesn’t always begin the flow that I expect. Why is this?
+
+When you delegate a bot to a conversation, the specific bot flow that is triggered depends on the consumer’s most recent message. This is the case for bots added to conversations using inline recommendations and also for bots added using the On-Demand Recommendations widget.
+
 #### How are recommendations made?
 
 To make recommendations, Conversation Assist analyzes the available bots and knowledge base articles that match the consumer’s intent, and it finds the best ones. The recommendations are made by choosing those ranked highest by relevance score.
 
-{: .important}
+{: .attn-note}
 No bot or answer recommendations are made when the consumer’s message is non-intentful (a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 24 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
 
 The rules for how the recommendations are made and ordered are as follows:

@@ -3,7 +3,7 @@
 <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
 <script>
 
-    function deParam(str) {            
+    function deParam(str) {
         return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
     }
     var hashParam = deParam(window.location.hash.substr(1));

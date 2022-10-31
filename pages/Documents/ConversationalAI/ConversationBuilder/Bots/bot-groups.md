@@ -1,7 +1,5 @@
 ---
 pagename: Bot Groups
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -18,7 +16,7 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
-{: .important}
+{: .attn-note}
 While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group).
 
 It's common to organize bots into groups based on business function. You could then further organize them based on environment. In the image below, bots are grouped based on business function (Checking and Savings).

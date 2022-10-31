@@ -2,7 +2,7 @@
 pagename: List Message Template
 redirect_from:
   - structured-content-whatsapp-business-messages-templates-list-message-template.html
-Keywords: structured content rich messaging whatsapp business messages list messages picker
+keywords: structured content rich messaging whatsapp business messages list messages picker
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: WhatsApp Business Messages Templates
@@ -79,7 +79,7 @@ The highlighted headline of the list message.
 }
 ```
 
-### Subtitle 
+### Subtitle
 
 The subtitle represents the secondary text of the List Messsage.
 This is generally where the body of the message can be entered.

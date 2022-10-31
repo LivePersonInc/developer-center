@@ -2,7 +2,6 @@
 pagename: Full Lead Gen
 redirect_from:
     - conversation-builder-templates-full-lead-gen.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -75,7 +74,7 @@ The name, email and phone number steps of the LeadGen dialog are performing some
 For email address and phone number capture, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
 
 ```javascript
-// Max count of fail user inputs 
+// Max count of fail user inputs
 setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```
@@ -98,7 +97,7 @@ Navigate to **Global Functions**.
 The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
 
 ```javascript
-// What channel is the user on? If you'd like to force the display of a particular channel's content, 
+// What channel is the user on? If you'd like to force the display of a particular channel's content,
   // set the "channel" variable to: "CustomContext" for ABC, "sms" for SMS. Web will be displayed by default.
   //var channel = "CustomContext";
   var channel = botContext.getChannel(); // Comment this line out if forcing the channel
@@ -295,7 +294,7 @@ If you are going to use the SMS integration instead of email, setup your Twilio 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_8.png" alt="The Twilio console, where you can see your account SID and auth token">
 
-You can find both your account SID and auth token in the [Twilio Console](https://www.twilio.com/console) after [signing up for a free Twilio trial account](https://www.twilio.com/try-twilio). 
+You can find both your account SID and auth token in the [Twilio Console](https://www.twilio.com/console) after [signing up for a free Twilio trial account](https://www.twilio.com/try-twilio).
 
 [How to Work with your Free Twilio Trial Account](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account)
 

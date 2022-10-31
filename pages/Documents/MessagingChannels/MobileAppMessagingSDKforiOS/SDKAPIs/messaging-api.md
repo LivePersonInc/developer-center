@@ -2,11 +2,10 @@
 pagename: Messaging API
 redirect_from:
   - consumer-experience-ios-sdk-messaging-methods.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: SDK APIs 
+subfoldername: SDK APIs
 permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html
 indicator: messaging
 ---
@@ -33,7 +32,7 @@ func checkActiveConversation(_ conversationQuery: ConversationParamProtocol) -> 
 
 Use this API method only when there is no active conversation because it will clear the messages presented on the Conversation Screen. The history is still available both on the Server and Local Database, and will be loaded next time the Conversation Screen is presented.
 
-{: .important}
+{: .attn-note}
 Due to current product limitations, when calling the `logout` method in Authentication Mode, the user's history shows up when they return to the conversation, even if calling `clearHistory` previously.
 
 ```swift
@@ -45,7 +44,7 @@ func clearHistory(_ conversationQuery: ConversationParamProtocol) throws
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number.  |
 
 ### destruct
-Use this method to stop and clear all the metadata of the SDK. It is a destructive method and conducts the following: 
+Use this method to stop and clear all the metadata of the SDK. It is a destructive method and conducts the following:
 
 * Clears all SDK non-persistent data.
 * Stops all connections and operations.
@@ -149,15 +148,15 @@ When unread messages are waiting for the consumer within the brand app, this inf
 
 With every push, the SDK receives the unread messages number through the LP Push Service.
 
-{: .important}
-The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open. 
+{: .attn-note}
+The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open.
 
 **Get the unread message badge counter**
 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache. Otherwise, it will be fetched again with new data.
 
-{: .notice}
-This method doesn't require Consumer to register for Push Notifications. 
+{: .attn-alert}
+This method doesn't require Consumer to register for Push Notifications.
 Additionally if authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
 
 ```swift
@@ -175,7 +174,7 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, auth
 
 This method can be use to check if current consumer and push notification token are registered for Push Notifications on LP Pusher
 
-{: .notice}
+{: .attn-alert}
 If authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
 
 ```swift
@@ -205,7 +204,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 ```
 
-{: .important}
+{: .attn-note}
 The proprietary SDK notification is only for display purposes, interacting with it launches the Application, but won't navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
 ### initialize
@@ -214,7 +213,7 @@ The SDK initialization is done only once, inside AppDelegate, and it checks that
 
 SDK can be initialized once without monitoringInitParams and then have another initialize call using this param.
 
-{: .important}
+{: .attn-note}
 Passing monitoringInitParams is mandatory when using Monitoring API capabilities.
 
 ```swift
@@ -226,7 +225,7 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 | brandId | An account ID of the Brand| Optional Parameter |
 | monitoringInitParams | An initialization parameter of type [LPMonitoringInitParams](consumer-experience-ios-sdk-interfacedefinitions.html). This object contains all relevant parameters for initialization of the SDK for an account, including app install id. | Optional Parameter |
 
-**Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number. 
+**Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number.
 
 ### isUrgent
 
@@ -244,7 +243,7 @@ func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool
 
 ### logout
 
-Use this API method to clean a user's data before a second user logs into the same device or to log the current user out.  
+Use this API method to clean a user's data before a second user logs into the same device or to log the current user out.
 
 The `logout` method conducts the following:
 
@@ -255,8 +254,8 @@ The `logout` method conducts the following:
 * Cleans running operations (see [destruct](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#destruct)).
 
 ```swift
-func logout(unregisterType: LPPusherUnregisterType, 
-            completion: @escaping ()->(), 
+func logout(unregisterType: LPPusherUnregisterType,
+            completion: @escaping ()->(),
             failure: @escaping (_ error: Error)->())
 ```
 
@@ -266,7 +265,7 @@ func logout(unregisterType: LPPusherUnregisterType,
 | Completion block | A completion block for successfully logout. | Completion block invokes only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block invokes if at least one of the logout steps has failed. |
 
-{: .important}
+{: .attn-note}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 #### LPPusherUnregisterType
@@ -336,9 +335,9 @@ func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDK
 | alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-Dev" string to the bundle ID.  |
 | authenticationParams | An optional authentication ([LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html)) param to be used for immediate Pusher registration | If passing authentication params, this method registers immediately to Pusher, otherwise the registration is performed when calling showConversation. |
 
-**Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number. 
+**Tip:** For authenticated users. If you want to register for push notifications immediately, before showing the conversation view, you must initialize the SDK  with an Account number.
 
-{: .important}
+{: .attn-note}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#initialize).
 
 ### removeConversation
@@ -347,7 +346,7 @@ When navigating out of the conversation screen, this API removes the view contro
 
 Use this API method on the container's [deinit function](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Deinitialization.html).
 
-{: .important}
+{: .attn-note}
 Calling this API method from [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear) or [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear) can cause unexpected behavior.
 
 ```swift
@@ -358,7 +357,7 @@ func removeConversation(_ conversationQuery: ConversationParamProtocol)
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations display in the following screens. | Default: sorts the conversations by account number. |
 
-{: .important}
+{: .attn-note}
 When using Custom View Controller Mode, you must configure it so that you remove the Conversation view when leaving the App.  To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View displays, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below:
 
 ```swift
@@ -383,7 +382,7 @@ func resolveConversation(_ conversation: Conversation, completion: (() -> Void)?
 
 ### setLoggingLevel
 
-Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPMessaging). This will be replacing the previous functionality via LogsManager. 
+Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPMessaging). This will be replacing the previous functionality via LogsManager.
 
 ```swift
 class func setLoggingLevel( level: LPLoggingLevel)
@@ -446,7 +445,7 @@ func setUserProfile(_ lpuser: LPUser, brandID: String)
 
 Use this API method to open the conversation screen.
 
-{: .important}
+{: .attn-note}
 Not available on iOS 12 or below
 
 ```swift
@@ -498,8 +497,8 @@ When unread messages are waiting for the consumer within the brand app, this inf
 
 With every push, the SDK receives the unread messages number through the LP Push Service.
 
-{: .important}
-The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open. 
+{: .attn-note}
+The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open.
 
 **Get the unread message badge counter**
 
@@ -542,7 +541,7 @@ func showConversation(_ conversationQuery: ConversationParamProtocol, authentica
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
 | authenticationCode | The SDK can enable code-flow SSO. | If your account uses SSO, pass the auth-code here. Otherwise, skip this parameter. |
-| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |  
+| containerViewController | The SDK needs a container view controller. This can be done in two ways: <br> **View Controller mode**: If you provide a container viewController, the SDK will put itself inside as a child viewController. This mode allows you to keep your own navigation bar intact. Using this method, you can use the provided callbacks to retrieve data from the SDK and show it in the navigation bar (users profile data, avatar URL, calling menu items, etc.) <br> **Window mode**: If you don’t provide a container view controller, the SDK places its UI components on top of the app UI, including the navigation bar.  | | |
 
 #### reconnect (Deprecated)
 *This method was deprecated since SDK version 2.7.0. Use [reconnect(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#reconnect) instead*

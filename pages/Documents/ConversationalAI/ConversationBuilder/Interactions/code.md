@@ -1,6 +1,5 @@
 ---
 pagename: Code
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -19,7 +18,7 @@ The Universal interaction, which is designed for advanced bot developers, is a f
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png" alt="An example Universal interaction in the dialog editor">
 
-{: .important}
+{: .attn-note}
 The Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 #### Adding a Universal interaction
@@ -36,14 +35,14 @@ This opens the editor, which works as follows:
 
 1. Manually enter the JSON into the editor. You are limited only by what’s supported by the Conversational Cloud, as the JSON must adhere to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Otherwise, the interaction won’t render correctly.
 
-    {: .important}
+    {: .attn-note}
     Comments in the JSON aren't supported.
 
 2. Use the templates whenever possible to speed up your work. There are JSON templates for common components like a horizontal card, a basic or complex carousel, and more.
 3. To use a template, click the **Copy** icon to copy it to your clipboard. Then paste it into the editor.
 4. Preview as you work.
 
-    {: .important}
+    {: .attn-note}
     Preview works as long as the JSON doesn't use variables. If it does use variables, use the bot-level Preview tool instead.
 
 5. Toggle on **JSON Preview** to preview the code in the editor. Toggle it off to preview the code for the currently selected template.
@@ -70,7 +69,7 @@ Within the code editor, a validation check is performed to ensure that the code 
 
 However, there is no validation check to ensure that the code adheres to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
 
-{: .important}
+{: .attn-note}
 As mentioned earlier, comments in the JSON aren't supported.
 
 #### Updating conversation metadata

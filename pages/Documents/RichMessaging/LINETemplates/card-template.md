@@ -1,7 +1,6 @@
 ---
 pagename: Card Template
-redirect_from:
-Keywords: structured content rich messaging
+keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: LINE Templates
@@ -24,7 +23,7 @@ The card contains the following elements:
 
 LINE card example:
 
-<img  style="width:350px" src="img/line_sc_card.jpg" alt="">
+<img style="width:350px" src="img/line_sc_card.jpg" alt="">
 
 ### JSON Template Properties
 

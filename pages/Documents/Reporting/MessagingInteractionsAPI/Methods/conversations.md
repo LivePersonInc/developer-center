@@ -1,6 +1,7 @@
 ---
 pagename: Conversations
-redirect_from: data-messaging-interactions-conversations.html
+redirect_from:
+  - data-messaging-interactions-conversations.html
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API
@@ -26,7 +27,7 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
-source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|
 
 **BODY/POST Parameters**
 
@@ -34,7 +35,7 @@ source | Used to describe the originator of the call. The source name should be 
 
 The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the `contentToRetrieve` parameter and specifying the types of content you would like to get i
 
-<div class="important">Because this API retrieves <b>some</b> of the SDEs that are supported in Conversational Cloud by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update Conversational Cloud performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
+<div class="attn-note">Because this API retrieves <b>some</b> of the SDEs that are supported in Conversational Cloud by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update Conversational Cloud performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
 
 When calling the API **without** sending **'contentToRetrieve'** parameter at all, the following default types will be returned:
 
@@ -88,7 +89,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
 |selectedIntentOnly | When TRUE — only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
-|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional, with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|  
+|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional, with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|
 |annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN, SUBMITTED, VETTED |
 
 |Name | Description |
@@ -265,13 +266,13 @@ _Campaign info_
 | engagementApplicationTypeId| Engagement's application type id | alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeName | Engagement's application type name  | alphanumeric  | The engagement which triggered the conversation
 | visitorProfileId  | ID of the visitor profile defined for the campaign.| numeric |
-| visitorProfileName| Name of the visitor profile defined for the campaign. | alphanumeric  | (50)  
+| visitorProfileName| Name of the visitor profile defined for the campaign. | alphanumeric  | (50)
 | lobId | ID of the line of business of the campaign.  | numeric(long) |
 | lobName  | Name of the line of business of the campaign.| alphanumeric  |
 | LocationId  | ID of the location of the engagement on the screen.| numeric |
-| LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.  
+| LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.
 | behaviorSystemDefault| Indicates whether behavioral targeting rule is the default one.| Boolean |
-| profileSystemDefault | Indicates whether behavioral targeting rule is the default one.| Boolean |  
+| profileSystemDefault | Indicates whether behavioral targeting rule is the default one.| Boolean |
 
 _Monitoring_
 
@@ -279,7 +280,7 @@ _Monitoring_
 |------|-------------|------------|------|
 | country |  Name of country. | alphanumeric | |
 | countryCode | Country's code. | alphanumeric | |
-| state | Name of state. | alphanumeric  
+| state | Name of state. | alphanumeric
 | city | Name of the city. | alphanumeric | |
 | isp | Internet service provider's name. | alphanumeric | |
 | org | Name of organization. | alphanumeric  | |
@@ -288,7 +289,7 @@ _Monitoring_
 | browser | Browser of the consumer who engaged in the conversation | alphanumeric  | |
 | operatingSystem | Operating System of the consumer who engageed in the conversation. | alphanumeric | |
 | conversationStartPage | The page's URL from which the conversation started. | alphanumeric| |
-| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |  
+| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |
 
 _Message Info_
 
@@ -644,7 +645,7 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long — epoch time in milliseconds |    
+lastUpdateTime| The AC form revision.                          | long — epoch time in milliseconds |
 submittedAnswers| Agent survey questions.                      | container  |
 
 _Agent Survey Question_
@@ -854,7 +855,7 @@ answerId | Survey answer ID. | string
           "time": "2017-10-24 10:24:52.962+0000",
           "timeL": 1508840692962,
           "device": "undefined",
-          "audience": "ALL",          
+          "audience": "ALL",
           "sentBy": "Agent"
         }
       ],

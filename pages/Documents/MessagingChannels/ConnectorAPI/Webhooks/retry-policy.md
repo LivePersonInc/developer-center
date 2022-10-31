@@ -41,7 +41,7 @@ If an event of type `ms.MessagingEventNotification.ContentEvent` fails, it will 
 
 * Applications should consider that events order is on best effort basis — i.e. it is not guaranteed. For example, if an event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.
 
 ### Retry based on time to live
 
@@ -64,7 +64,7 @@ Retry based on time to live was introduced as an alternative to retry based on n
       }
     }
 }
-``` 
+```
 
 If any event of type `ms.MessagingEventNotification.ContentEvent` or `ms.MessagingEventNotification.RichContentEnvent` cannot be send, all events belonging to the same conversation will be resend multiple times within the next 24 hours (86400 seconds) until they are either delivered or dropped. That is, retry based on time to live does not affect a single webhook but all webhooks at once. For convenience, we refer to all webhooks as app install. For example, an app install fails if at least one webhook fails.
 
@@ -88,10 +88,10 @@ The time between retries increases exponentially. The first retry attempt is mad
      +---------------------------------------------------------------------------+
 ```
 
-An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recovered*. 
-- **Up** An app install is up, when all webhook endpoints accept data within 10 seconds and are responding with 200 (OK) or 201 (CREATED). 
-- **Failed** An app install fails, when at least one webhook endpoint is not responding within 10 seconds or is not replying with 200 or 201. If an app install fails, all events for each webhook endpoint are stored in the retry mechanism, regardless if the endpoint works or not. 
-- **In Transition** An app install is in transition, when all webhook endpoints are responding properly again and there are events stored in the retry mechanism. Events for new conversations are directly sent to the corresponding endpoint. If the endpoint fails again, the app install fails again. Events for conversations in the retry mechanism are appended. All events in the retry mechanism are resent to their endpoints. 
+An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recovered*.
+- **Up** An app install is up, when all webhook endpoints accept data within 10 seconds and are responding with 200 (OK) or 201 (CREATED).
+- **Failed** An app install fails, when at least one webhook endpoint is not responding within 10 seconds or is not replying with 200 or 201. If an app install fails, all events for each webhook endpoint are stored in the retry mechanism, regardless if the endpoint works or not.
+- **In Transition** An app install is in transition, when all webhook endpoints are responding properly again and there are events stored in the retry mechanism. Events for new conversations are directly sent to the corresponding endpoint. If the endpoint fails again, the app install fails again. Events for conversations in the retry mechanism are appended. All events in the retry mechanism are resent to their endpoints.
 - **Recovered** An app install is recovered, when all stored events could be sent. The retry mechanism will now resend those events which were stored during the transition from state *In Transition* to *Recovered*. This period is called drain period. Conversations affected by the drain period are called drain conversations. When an event for a drain conversation should be forwarded by Webhooks, it will wait for 4 second before it sends the event. If all stored events of the drain conversation could be send within this time, the order guarantee is kept, otherwise it is dropped. An app install is up again, when the drain period ends. An app install fails again, when at least one webhook endpoint fails.
 
 #### Limitations
@@ -100,9 +100,9 @@ An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recov
 
 * Applications should consider that data (event) loss is possible. For example, when a failed notification request is retried, once the retry policy is exhausted (e.g. the time to live is exceeded) the event will be dropped.
 
-* Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from Conversational Cloud. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period. 
+* Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from Conversational Cloud. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period.
 
-* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.   
+* Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy — resulting in the same event being sent more than once.
 
 ### Numbers vs. time to live
 
@@ -118,7 +118,7 @@ Retry based on time to live takes precedence over retry based on numbers. When t
         },
         "ms.MessagingEventNotification.ContentEvent": {
           "endpoint": "https://www.application.endpoint.com/",
-          "max_retries": 1 
+          "max_retries": 1
         },
          "ms.MessagingEventNotification.RichContentEvent": {
           "endpoint": "https://www.application.endpoint.com/"
@@ -126,7 +126,7 @@ Retry based on time to live takes precedence over retry based on numbers. When t
       }
     }
 }
-``` 
+```
 
 According to the retry mechanism based on numbers, events of type `ms.MessagingEventNotification.ContentEvent` should be retried once. However, as the `retention_time` is set, the retry mechanism based on time to live will be applied.
 
@@ -144,7 +144,7 @@ While using the retry mechanism based on time to live, one can prevent the retry
         },
         "ms.MessagingEventNotification.ContentEvent": {
           "endpoint": "https://www.application.endpoint.com/",
-          "max_retries": 0 
+          "max_retries": 0
         },
          "ms.MessagingEventNotification.RichContentEvent": {
           "endpoint": "https://www.application.endpoint.com/"
@@ -152,6 +152,6 @@ While using the retry mechanism based on time to live, one can prevent the retry
       }
     }
 }
-``` 
+```
 
 Having a `retention_time` results in the application of the retry mechanism based on time to live. However, as the `max_retries` for events of type `ms.MessagingEventNotification.ContentEvent` is set to 0, failing events of this type will not cause the retry mechanism to be triggered and will be dropped instead. If the corresponding app install is already failing, these events will be put in the retry mechanism and will be resend when the endpoints recover.

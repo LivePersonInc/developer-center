@@ -3,7 +3,6 @@ pagename: Dialog Basics
 redirect_from:
     - conversation-builder-conversation-builder-dialogs.html
     - conversation-builder-dialogs.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -61,7 +60,7 @@ You can import dialogs from one bot to another within your organization. This ca
 - You can import a maximum of 10 dialogs at a time from multiple bots. If you need to import more, you can repeat the process.
 - You can import only dialogs of type Dialog (see *Dialog types* above).
 - You can import dialogs from the bots to which you have access in your organization. For example, you can’t import dialogs from a bot that's owned by another bot developer and isn't [public](conversation-builder-bots-bot-basics.html#configure-bot-settings).
-- The following is imported:  
+- The following is imported:
   - All selected dialogs and the interactions therein
   - All integrations referenced in the selected dialogs
 - The following isn't imported and must be added manually:
@@ -134,7 +133,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSEDI
 
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
-{: .important}
+{: .attn-note}
 These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Close the conversation
@@ -149,7 +148,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSECO
 
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
-{: .important}
+{: .attn-note}
 These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Configure dialog settings

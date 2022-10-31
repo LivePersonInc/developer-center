@@ -2,13 +2,13 @@
 pagename: Introduction
 redirect_from:
     - knowledge-base-internal-knowledge-bases-introduction.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
 permalink: knowledgeai-internal-knowledge-bases-introduction.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### What's an internal knowledge base?
@@ -19,7 +19,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within KnowledgeAI.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within KnowledgeAI.
 
-An internal knowledge base can make use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding-introduction.html) to [evaluate the articles](knowledgeai-search-methods.html) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base can make use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding-introduction.html) to [evaluate the articles](knowledgeai-search-methods.html) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-search-methods.html#match-scores-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -61,7 +61,7 @@ Domain intents make it possible for you to use the same domain in multiple ways,
 
 #### Knowledge Base intents
 
-{: .important}
+{: .attn-note}
 As of March 5, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
 
 If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
@@ -95,7 +95,7 @@ For example, you might run a promotion over a holiday that has an associated FAQ
 
 *Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
-{: .important}
+{: .attn-note}
 As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the deprecated [LivePerson (Legacy)](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy").
 
 #### How positive and negative learnings work

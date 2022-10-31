@@ -10,12 +10,12 @@ indicator: both
 
 This method provides raw data about agent states changes.
 
-{: .important}
+{: .attn-note}
 If you have not done so yet, see the [overview](agent-activity-api-overview.html) of this product.
 
 ### Request
 
-{: .notice}
+{: .attn-alert}
 **v1**: Each page in the API response is limited to 20 state changes * limit parameter * query days. For example, if the limit is set to 10 (agents), 1-day query then limitation per page = 200 state changes. In case of excessive state changes, some of the states/agents may be truncated based on the maximum state's limitation. <br>**v2**: All states are returned in a flat response (not grouped by agent).
 
 Note that this affects the limit and offset parameters (in v1 they refer to an agent while in v2 to records).

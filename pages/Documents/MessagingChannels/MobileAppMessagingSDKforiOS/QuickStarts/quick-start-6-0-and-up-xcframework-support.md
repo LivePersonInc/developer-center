@@ -6,7 +6,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-ios-quick-start.html
   - consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params
   - mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -17,18 +16,18 @@ indicator: messaging
 
 ### Overview
 
-In this Quick Start, we will cover the steps that will get you up and running with SDK version 6.0 and up. SDK V6.0 has been modified in the new format of XCFramework. With the new framework that was introduced by Apple, both architectures arm64 and x86_64 builds of the library are consolidated into one single bundle of LPMessagingSDK.xcframework, the four frameworks (LPMessagingSDK.framework, LPInfra.framework, LPAMS.framework and LPMonitoring.framework) have been unified into one framework (LPMessagingSDK.xcframework), and we have reduced the exposure of CoreData Objects to the brands apps.   
+In this Quick Start, we will cover the steps that will get you up and running with SDK version 6.0 and up. SDK V6.0 has been modified in the new format of XCFramework. With the new framework that was introduced by Apple, both architectures arm64 and x86_64 builds of the library are consolidated into one single bundle of LPMessagingSDK.xcframework, the four frameworks (LPMessagingSDK.framework, LPInfra.framework, LPAMS.framework and LPMonitoring.framework) have been unified into one framework (LPMessagingSDK.xcframework), and we have reduced the exposure of CoreData Objects to the brands apps.
 
-**Here are some of the advantages that the new framework provides:** 
+**Here are some of the advantages that the new framework provides:**
 - XCFramework uses Swift Module Interface which lists out all the public APIs of the module in a textual format that behaves like source code. Since they behave like source code, future versions of the Swift Compiler will be able to import the module interfaces created with older versions. This removes the version-lock which is currently in Swift.
 
 - In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework — in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
 
-- XCFramework packages all dependencies under all target platforms and architectures into one single bundle. More information about XCFramework can be found [here](https://developer.apple.com/videos/play/wwdc2019/416/), and the Xcode help article can be found [here](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07). 
+- XCFramework packages all dependencies under all target platforms and architectures into one single bundle. More information about XCFramework can be found [here](https://developer.apple.com/videos/play/wwdc2019/416/), and the Xcode help article can be found [here](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07).
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](getting-started-with-your-free-trial-account.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
+- Followed the [Getting Started Guide](getting-started-with-your-free-trial-account.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.
 - Bundle ID registered in an Apple developer account.
 - Xcode11 and above
 - Swift 5.1 and above
@@ -41,7 +40,8 @@ You can install Conversational Cloud Mobile App Messaging SDK for iOS using a co
 * [Automatically using CocoaPods](#option-1-cocoapods)
 * [Manually copying the libraries to your Xcode Project](#option-2-libraries-copy-to-xcode-project)
 
-<div class="important">For both methods, you are <b>required</b> to perform a specific step as a workaround for a <a href="http://www.openradar.me/radar?id=6409498411401216" target="_blank">known iOS issue</a>. It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).</div>
+{: .attn-note}
+For both methods, you are **required** to perform a specific step as a workaround for a [known iOS issue](http://www.openradar.me/radar?id=6409498411401216). It's necessary for archiving your app before publishing it to the App Store. The required step involves adding a script that loops through the frameworks embedded in the application and removes unused architectures (used for the simulator).
 
 #### Option 1: Automatically using CocoaPods
 
@@ -59,7 +59,8 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    pod init
    ```
 
-   <div class="important">The Podfile must be created under your project's folder.</div>
+   {: .attn-note}
+   The Podfile must be created under your project's folder.
 
 3. Open the Podfile.
 
@@ -95,13 +96,13 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 4. (**Required**) In your Xcode project settings, navigate to the **Build Phases** tab, and do the following:
 
-   1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.  
+   1. Under **Copy Bundle Resources**, make sure you have **LPMessagingSDKModels.bundle**.
 
 ### Step 2: Configure project settings to connect Conversational Cloud SDK
 
 1. Under **Build Settings**, make sure you set **Always Embed Swift Standard Libraries** to **YES**.
 
-2. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values:  
+2. (**Required for iOS 10 or newer**) In the project's Xcode info.plist, add the following privacy keys and values:
 
   * **NSPhotoLibraryUsageDescription**: Photo Library Privacy Setting for Conversational Cloud Mobile App Messaging SDK for iOS
 
@@ -122,23 +123,23 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 ### Step 3: Initialize the LPMessagingSDK
 
-Before you can show a conversation, you must initialize the Messaging SDK.  
+Before you can show a conversation, you must initialize the Messaging SDK.
 
-1. **Set up your account information.** 
+1. **Set up your account information.**
    1. Provide your Conversational Cloud account number as a string in the `accountID` constant.
-   2. Provide a unique JSON Web Token (JWT) in the `jwt` constant.   
+   2. Provide a unique JSON Web Token (JWT) in the `jwt` constant.
 
 2. **Set up instance of LPMessagingSDK** for the accountID provided.
 
 3. **Show LPMessagingSDK View Stack and Conversation View Controller.** Here, your view controller calls our showConversation method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the Conversation View Controller. In the LPAuthenticationParams object, you can use either a JWT or authentication code from your authentication server. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
 
-4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack. 
+4. **Release the conversation view when deallocating the container.**  The LPMessagingSDK view stack must be released when the client app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
 
- We have provided an example to use for this quick start process:   
+ We have provided an example to use for this quick start process:
    - [Authenticated](#authenticated)
    - [Unauthenticated](#unauthenticated)
 
-#### Authenticated 
+#### Authenticated
 
 ```swift
 import UIKit
@@ -176,26 +177,26 @@ class DocumentationViewController: UIViewController {
                                  redirectURI: nil,
                              certPinningPublicKeys: nil,
                               authenticationType: .authenticated)
-     
+
     let welcomeMessageParam = LPWelcomeMessage(message: "How can I help you today?", frequency: .FirstTimeConversation)
-    
+
     let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
-    
+
     let controlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .all,
                                   historyConversationsMaxDays: -1,
                                        historyMaxDaysType: .startConversationDate)
-    
+
     let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
                             containerViewController: nil,
                                    isViewOnly: false,
                         conversationHistoryControlParam: controlParam,
                                  welcomeMessage: welcomeMessageParam)
-    
+
     LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
   }
 
   // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
-  
+
   deinit {
     let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
     if (conversationQuery.getBrandID() == accountID) {
@@ -249,11 +250,11 @@ NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdG
                                                      campaignInfo:nil];
   LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may I help you today?"
                                        frequency:MessageFrequencyFirstTimeConversation];
-                                          
+
   LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
                                                          historyConversationsMaxDays: -1
                                                               historyMaxDaysType: LPConversationHistoryMaxDaysDateTypeStartConversationDate];
-                                          
+
   LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc]  initWithConversationQuery: conversationQuery
                                                 containerViewController: self.conversationViewController
                                                        isViewOnly: NO
@@ -268,7 +269,7 @@ NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdG
   - (void) dealloc {
     id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery:accountID
                                                     campaignInfo:nil];
-    
+
     if ([[conversationQuery getBrandID] isEqualToString:accountID]) {
       [[LPMessaging instance] removeConversation:conversationQuery];
     }
@@ -295,9 +296,9 @@ class DocumentationViewController: UIViewController {
     super.viewDidLoad()
     /// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
     let monitoringInitParams: LPMonitoringInitParams? = LPMonitoringInitParams(appInstallID: appInstallID)
-  
+
     // MARK: - Setup instance of LPMessagingSDK
-  
+
     /*
     Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
     */
@@ -306,9 +307,9 @@ class DocumentationViewController: UIViewController {
     } catch {
       fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
     }
-  
+
     // MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
-  
+
     /*
     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
     */
@@ -321,7 +322,7 @@ class DocumentationViewController: UIViewController {
   }
 
   // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
-    
+
   deinit {
     let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
     if (conversationQuery.getBrandID() == accountID) {
@@ -339,64 +340,64 @@ class DocumentationViewController: UIViewController {
 @implementation DocumentationViewController
 
   #pragma mark - Setup Account information.
-  
+
   /// Account ID is your site ID for your Conversational Cloud Account.
   NSString * const accountID = @"77690044";
-  
+
   /// appIntallID is a Application identifier generated by Conversational Cloud for Monitoring API.
   NSString * const appInstallID = @"62b50381-4532-42a9-98dd-2045975ce5d3";
 
   - (void)viewDidLoad {
     [super viewDidLoad];
-  
+
     #pragma mark Setup instance of LPMessagingSDK
-    
+
     /// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
     LPMonitoringInitParams * monitoringInitParams = [[LPMonitoringInitParams alloc] initWithAppInstallID:accountID];
-    
+
     /*
     Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
     */
-    
+
     NSError *error = nil;
     [[LPMessaging instance] initialize:accountID
             monitoringInitParams:monitoringInitParams
                    error:&error];
-    
+
     #pragma mark Show LPMessagingSDK View Stack and Conversation View Controller.
-    
+
     /*
     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
     */
-    
+
     LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage: @"How may I help you today?"
                                          frequency: MessageFrequencyFirstTimeConversation];
-    
+
     LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
                                                            historyConversationsMaxDays: -1
                                                                 historyMaxDaysType: LPConversationHistoryMaxDaysDateTypeStartConversationDate];
-    
-    
+
+
     id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery: accountID
                                                     campaignInfo: nil];
-    
-    
-    LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc] initWithConversationQuery:conversationQuery 
-                                                 containerViewController:nil 
-                                                      isViewOnly:false 
-                                            onversationHistoryControlParam:controlParam 
+
+
+    LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc] initWithConversationQuery:conversationQuery
+                                                 containerViewController:nil
+                                                      isViewOnly:false
+                                            onversationHistoryControlParam:controlParam
                                                     welcomeMessage:welcomeMessageParam];
-    
+
     [[LPMessaging instance] showConversation:conversationViewParams
               authenticationParams:nil];
   }
-  
-  #pragma mark - Release LPMessagingSDK view stack when client app is backgrounded or suspended 
-  
+
+  #pragma mark - Release LPMessagingSDK view stack when client app is backgrounded or suspended
+
   - (void) dealloc {
     id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery:accountID
                                                     campaignInfo:nil];
-    
+
     if ([[conversationQuery getBrandID] isEqualToString:accountID]) {
       [[LPMessaging instance] removeConversation:conversationQuery];
     }
@@ -407,10 +408,10 @@ class DocumentationViewController: UIViewController {
 
 ### Supporting Accessibility
 
-When using Window Mode, which is passing a `nil` value as the `containerViewController` on the LPConversationViewParams object, sometimes VO Assistants will read the contents of the ViewController behind the Conversation Screen. 
+When using Window Mode, which is passing a `nil` value as the `containerViewController` on the LPConversationViewParams object, sometimes VO Assistants will read the contents of the ViewController behind the Conversation Screen.
 To prevent this from happening, the accessibility on this VC should be hidden preventing the VO Assistant from reading its content.
 
-```swift 
+```swift
 self.view.accessibilityElementsHidden = true
 // NOTE: if there is a TabBar, it should be hidden too:
 // self.tabBarController?.tabBar.accessibilityElementsHidden = true
@@ -433,7 +434,7 @@ func LPMessagingSDKConversationViewControllerDidDismiss() {
 
 ### Next Steps
 
-Congratulations! You're all set.  
+Congratulations! You're all set.
 
 You can now do any of the following:
 
@@ -441,19 +442,19 @@ You can now do any of the following:
 
 - [Configure push notifications](mobile-app-messaging-sdk-for-ios-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers. They never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
-- Configure [Photo sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device.  
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-ios-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-ios-advanced-features-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device.
 
-- [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
+- [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.
 
 ### Upgrading from older SDK versions to 6.0
 
-This guide will help current users of older versions of the SDK to upgrade to the new SDK 6.0 and upwards.  
+This guide will help current users of older versions of the SDK to upgrade to the new SDK 6.0 and upwards.
 
 **How to upgrade?**
 
 Before you start:
 
-* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version. That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
+* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version. That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency.
 * The class '**LPMessagingSDK**' has been renamed '**LPMessaging**'.
 
 **Step 1:**
@@ -470,7 +471,7 @@ Replace any class/facade function calls to the new LPMessaging class. Examples:
 LPAMSFacade.getUnreadMessagesCount()
 ```
 
-is now 
+is now
 
 ```swift
 LPMessaging.instance.getUnreadMessagesCount()
@@ -480,7 +481,7 @@ LPMessaging.instance.getUnreadMessagesCount()
 LPInfraFacade.getUnreadMessagesCount()
 ```
 
-is now 
+is now
 
 ```swift
 LPMessaging.instance.getUnreadMessagesCount()
@@ -490,7 +491,7 @@ LPMessaging.instance.getUnreadMessagesCount()
 LPMonitoring.sendSDEWithConsumerID()
 ```
 
-is now 
+is now
 
 ```swift
 LPMessaging.instance.sendSDEWithConsumerID()
@@ -507,9 +508,9 @@ Setting up the log level is now
 ```swift
 LPMessaging.instance.setLoggingLevel(level: .TRACE)
 ```
-  
-The old way of subscribing to received logs from LPMessagingSDK  
-  
+
+The old way of subscribing to received logs from LPMessagingSDK
+
 ```swift
 LPMessagingSDK.instance.subscribeLogEvents(.trace)
 ```

@@ -2,7 +2,6 @@
 pagename: Manage Conversation Flow
 redirect_from:
     - conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -48,7 +47,7 @@ By default, a single text interaction has a limit of 320 characters on the word 
 
 To accomplish this, use this function in the pre-process code of the interaction (i.e., before the interaction is rendered). You can then revert it if desired in a subsequent interaction.
 
-{: .important}
+{: .attn-note}
 Keep in mind the limits of the targeted channel(s), which might take precedence over this setting.
 
 | Function Name | Arguments | Returns |

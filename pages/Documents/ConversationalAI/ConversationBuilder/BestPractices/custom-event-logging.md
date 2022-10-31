@@ -1,7 +1,5 @@
 ---
 pagename: Custom Event Logging
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -16,7 +14,7 @@ This topic provides a guide for implementing custom event logging to provide a m
 
 ### Custom Events
 
-Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. See [these details](conversation-builder-scripting-functions-log-debug.html#log-custom-event) on the structure of the scripting function. 
+Custom events originate from a scripting function that is written in either the Pre/Post-Process Code or the Process User Response section of any dialog interaction. See [these details](conversation-builder-scripting-functions-log-debug.html#log-custom-event) on the structure of the scripting function.
 
 Custom events are more flexible than our default analytics, allowing you to specify when and what data is captured for analytic or tracking purposes. We'll cover where to access and how to read these captured events later in this guide, but to start let’s look at our bot and write some custom events.
 
@@ -96,7 +94,7 @@ Download Event Details will provide you with a CSV file that includes all the de
 
 This information allows you to see where your bot isn't performing as expected and is valuable to train and tune your knowledge base intents. All user-reported, mismatched intents for this knowledge base will show here and provide a window into where you can make improvements.
 
-{: .important}
+{: .attn-note}
 When downloading custom events in Bot Analytics, the limit is 100,000 in number.
 
 Custom events provide a powerful way to add functionality to your reporting workflow. Adding them to your bot developer's toolset will enhance the content of your analytics in a number of different scenarios.

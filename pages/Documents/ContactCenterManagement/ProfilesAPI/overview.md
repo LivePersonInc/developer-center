@@ -2,11 +2,9 @@
 pagename: Overview
 redirect_from:
   - administration-profiles-overview.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
-
 level-order: 4
 order: 9
 permalink: profiles-api-overview.html

@@ -2,7 +2,6 @@
 pagename: Mapping Content Metadata
 redirect_from:
     - knowledge-base-external-knowledge-bases-mapping-content-metadata.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -51,7 +50,7 @@ When [adding an external knowledge base with LivePerson AI](knowledgeai-external
 | audioURL | The URL of an audio file. | no, but see note below |
 | videoURL | The URL of a video file. | no, but see note below |
 
-{: .important}
+{: .attn-note}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
 **Tip:** For information on how to send article content to consumers, see [this topic](knowledgeai-sending-content-to-consumers-and-agents.html).
@@ -71,7 +70,7 @@ When [adding an external knowledge base without LivePerson AI](knowledgeai-exter
 | audioURL | see above | no, but see note below |
 | videoURL | see above | no, but see note below |
 
-{: .important}
+{: .attn-note}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
 ### Map content metadata

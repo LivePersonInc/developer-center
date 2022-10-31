@@ -1,16 +1,15 @@
 ---
 pagename: Submit Agent Survey
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Runtime API 
+documentname: Agent Survey For Messaging Runtime API
 subfoldername: Methods
 permalink: agent-survey-for-messaging-runtime-api-methods-submit-agent-survey.html
 indicator: messaging
 ---
 
 Submit the agent survey and produce FormSubmitEvent and Purchase/Lead/ServiceActivity events in case of engagement attribute question.
-Submit is allowed if the agent survey was not dismissed before. 
+Submit is allowed if the agent survey was not dismissed before.
 
 ### Request
 
@@ -27,7 +26,7 @@ Submit is allowed if the agent survey was not dismissed before.
  **Query Parameters**
 
 | Parameter | Description | Type / Value | Required | Notes
-|:----------- |  :------------ | :--------------- | :--- | :--- | 
+|:----------- |  :------------ | :--------------- | :--- | :--- |
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
 | v | API version number | String | Required |
@@ -37,7 +36,7 @@ Submit is allowed if the agent survey was not dismissed before.
 |Header | Description| Notes |
 |:------- | :-------------- | :--- |
 | Authorization | Contains token string to allow request authentication and authorization.|
-| x-lp-state-rev | state revision, use the value last received from the server (response header of the last request) | 
+| x-lp-state-rev | state revision, use the value last received from the server (response header of the last request) |
 
 **Request Body**
 
@@ -64,7 +63,7 @@ Submit is allowed if the agent survey was not dismissed before.
         "service" : {
             "topic": "loan",
             "status" : 3,
-            "category": "business", 
+            "category": "business",
             "serviceId": "544547"
         }
     }
@@ -77,9 +76,9 @@ Submit is allowed if the agent survey was not dismissed before.
         "service" : {
             "topic": "sales",
             "value" : 2.0,
-            "leadId": "878979", 
+            "leadId": "878979",
             "currency": "USD"
-        }      
+        }
     }
 },
 {
@@ -91,7 +90,7 @@ Submit is allowed if the agent survey was not dismissed before.
             "total": 100.5,
             "orderId" : "476847365",
             "currency": "USD"
-        }  
+        }
     }
 }
 ]
@@ -117,7 +116,7 @@ Submit is allowed if the agent survey was not dismissed before.
 
 |Header|  Description|
 |:-------|   :-----  |
-|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |  
+|x-lp-state-rev|  state revision — used in POST/PUT/DELETE requests to avoid data discrepancy |
 
 **Response example**
 

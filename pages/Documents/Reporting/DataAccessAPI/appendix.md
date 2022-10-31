@@ -5,14 +5,12 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 order: 63
 permalink: data-access-api-appendix.html
-
 indicator: chat
 ---
 
-This section contains API details that are common to every API’s resource and action. 
+This section contains API details that are common to every API’s resource and action.
 
 ### Request Headers
 

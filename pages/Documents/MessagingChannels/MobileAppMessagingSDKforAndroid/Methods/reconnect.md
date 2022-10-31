@@ -2,15 +2,11 @@
 pagename: reconnect
 redirect_from:
   - android-reconnectfull.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 75
 permalink: mobile-app-messaging-sdk-for-android-methods-reconnect.html
-
 indicator: messaging
 ---
 

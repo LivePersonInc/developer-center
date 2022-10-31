@@ -2,14 +2,11 @@
 pagename: Appendix
 redirect_from:
   - account-configuration-predefined-content-appendix.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
-
 order: 101
 permalink: predefined-content-api-appendix.html
-
 indicator: both
 ---
 

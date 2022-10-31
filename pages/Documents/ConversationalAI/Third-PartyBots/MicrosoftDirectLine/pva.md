@@ -22,27 +22,27 @@ Figure 4.1 Direct Line Secret in PVA
 <br>
 
 Adding this bot to Third-Party Bots will already enable you to leverage most of the bot functionality.
-For certain features of the PVA platform, however, you should also mark the bot as a PVA bot in the 
+For certain features of the PVA platform, however, you should also mark the bot as a PVA bot in the
 [bot configuration](third-party-bots-microsoft-direct-line-introduction.html#configuration)
 
 ### Limitations
 
-{: .important}
-`End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native 
+{: .attn-note}
+`End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native
 `endOfConversation` activity.
 As this is [not supported by the Direct Line Channel](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-end-conversation?view=azure-bot-service-4.0)
-this connector is also not capable of supporting this node. To close a conversation send custom Channel Data as seen 
+this connector is also not capable of supporting this node. To close a conversation send custom Channel Data as seen
 in Figure 4.4.
 
-{: .important}
-The connector will send any Markdown as provided and not process the text further. 
+{: .attn-note}
+The connector will send any Markdown as provided and not process the text further.
 
 ### Features
 
 Currently Third-Party Bots supports the following features specific to PVA:
 
 #### Greeting Topic
-By enabling the PVA setting the connector will generate a native welcome event on a new or transfered conversation 
+By enabling the PVA setting the connector will generate a native welcome event on a new or transfered conversation
 instead of the custom one described under [Basic Content](third-party-bots-microsoft-direct-line-basic-content.html).
 This will trigger the System Topic `Greeting` configured on the PVA Platform.
 

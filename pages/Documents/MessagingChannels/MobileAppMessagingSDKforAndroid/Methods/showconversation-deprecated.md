@@ -2,15 +2,11 @@
 pagename: showConversation (Deprecated)
 redirect_from:
   - android-showconversationdeprecated.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 30
 permalink: mobile-app-messaging-sdk-for-android-methods-showconversation-(deprecated).html
-
 indicator: messaging
 ---
 *This method was deprecated — please use [showConversation(Activity, LPAuthenticationParams, ConversationViewParams)](android-showconversationfull.html).*

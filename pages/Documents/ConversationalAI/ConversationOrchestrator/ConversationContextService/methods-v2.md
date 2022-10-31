@@ -1,7 +1,5 @@
 ---
 pagename: Methods v2
-redirect_from: 
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -10,7 +8,7 @@ permalink: conversation-orchestrator-conversation-context-service-methods-v2.htm
 indicator: messaging
 ---
 
-There are two ways to manage properties in the Conversation Context Service (CCS). 
+There are two ways to manage properties in the Conversation Context Service (CCS).
 
 * REST APIs can directly access the CCS outside Conversational Cloud. Use the REST APIs when you want to retrieve information from external data sources.
 * A Javascript function wraps the REST API for easy use within Conversational Cloud. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
@@ -23,7 +21,7 @@ See the [discussion on scripting functions for managing the Conversation Context
 
 The APIs can be called as shown below. Every API call requires the [secure token](conversation-orchestrator-api-authorization.html#api-authorization-for-v2):
 
-{domain}/{api}?access_token=<Token> 
+{domain}/{api}?access_token=<Token>
 
 Domain URL per environment:
 * AMERICAS : https://z1.ccs.liveperson.net/
@@ -34,7 +32,7 @@ Domain URL per environment:
 
 This API can be used to add new properties or update existing properties. This API requires accountId, namespace, session (optional) and time to live as parameters. This API overwrites existing properties and inserts non-existing properties.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
 | POST | /v2/context/document/create |
 
@@ -45,9 +43,9 @@ This API can be used to add new properties or update existing properties. This A
   "nameSpace": "myNamespace",
   "sessionId": "mySessionId",
   "ttlSeconds": 3600,
-  "payload": { 
+  "payload": {
     "property1": 100,
-    "Property2": "abc" 
+    "Property2": "abc"
   }
 }
 ```
@@ -74,7 +72,7 @@ status code = 201
 
 This API requires accountId and namespace as input. In its response, it returns all properties within the namespace.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
 | GET | /v2​/context​/document​/{accountId}​/{nameSpace} |
 
@@ -216,7 +214,7 @@ status code = 200
 #### Delete all properties within a namespace or session
 This API takes namespace and session (optional) and deletes all properties within the namespace or session.
 
-| Method | Path | 
+| Method | Path |
 | --- | --- |
 | DELETE | /v2​/context​/document​/property​/delete |
 
@@ -249,7 +247,7 @@ status code = 200
 
 Note the following when using the API:
 
-* The following namespaces are reserved for internal use only 
+* The following namespaces are reserved for internal use only
   * `consumer`
   * `operational`
   * `conversation`

@@ -3,7 +3,6 @@ pagename: Entities
 redirect_from:
     - conversation-builder-intent-builder-entities.html
     - intent-builder-entities.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -14,7 +13,7 @@ indicator: both
 
 ### What's an entity?
 
-An [entity]((intent-manager-key-terms-concepts.html#entities)) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
+An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
 
 ### Add a Value Set entity
 
@@ -33,7 +32,7 @@ An [entity]((intent-manager-key-terms-concepts.html#entities)) is any word(s) or
 
 ### Add a Regular Expression entity
 
-{: .important}
+{: .attn-note}
 Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
@@ -67,7 +66,7 @@ When you click the link, all of the values are placed into a single field. This 
 
 <img style="width:700px" src="img/ConvoBuilder/im_entities_bulkedit2.png" alt="Example of all entity values in a single field">
 
-{: .important}
+{: .attn-note}
 To save your changes, click the **Update Entity** button. Once you save the changes, they can’t be reverted. To cancel, navigate away from the page without saving the changes.
 
 Take care when using this feature to avoid making unintended changes:
@@ -80,7 +79,7 @@ Take care when using this feature to avoid making unintended changes:
 
 Deleting an entity is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .important}
+{: .attn-note}
 Before you delete an entity, ensure that it isn't being used in any intents or Knowledge Base articles.
 
 **To delete an entity**
