@@ -19,7 +19,10 @@ This can be done in order to accomplish many business and operational use cases 
 * To enrich conversation by retrieving information about the consumer
 * To perform an operation on behalf of the consumer
 
-### The Flow
+{: .attn-note}
+LivePerson strongly recommends Consumer Pre-Authentication credentials over Consumer Authentication credentials; [learn why](bot-accounts-credentials.html#how-does-consumer-pre-authentication-differ-from-consumer-authentication).
+
+### The flow
 
 You can create a Consumer Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the bot to make API calls on behalf of the consumer. With this credential, the consumer receives an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls. The general flow is this:
 
@@ -34,36 +37,13 @@ You can create a Consumer Authentication credential and use it in [API integrati
 4. The token is sent to the bot.
 5. The bot runs the integration (with the token) and responds with a result.
 
-### Implementation Steps
+### Implementation steps
 
-**1. Configure Consumer Authentication credentials**
+#### 1. Configure Consumer Authentication credentials
 
-1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-left corner.
-3. Click **Add Credentials** in the upper-right corner.
-4. In the Add Credentials dialog box, specify the following:
-    * **Name**: Enter a descriptive name.
-    * **Authentication Type**: Select "Consumer Authentication."
-5. Click **Next**.
-6. In the Add Credentials dialog box, specify the following:
-   * **Authentication URL**: Enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. The URL is provided by the resource provider; see their documentation for this information.
-  * **Note:**  The authentication URL must include the following query params:
-   * client_id={PROVIDE THE CLIENT ID}
-   * response_type=code
-   * redirectedCode={PROVIDE THE REDIRECT URI}
-   * scope={PROVIDE THE SCOPE}
+In Bot Accounts, [add the Consumer Authentication credential](bot-accounts-credentials.html#add-a-consumer-authentication-credential).
 
-**Authentication URL Example**
-
-```
-https://accounts.brand.com/authorize?client_id=34e83335186541078261d83c6d050a32&response_type=code&redirect_uri=https://va.idp.liveperson.net/callback/12345566/redirectedCode&scope=user-read-private
-```
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png" alt="Configuring the credential, by specifying the authentication URL">
-
-7. Click **Save**.
-
-**2. Integrate with Brand API**
+#### 2. Integrate with your brand's API
 
 To use a defined Consumer Authentication credential in a bot, go into the bot and add an API integration. When you do, select the Consumer Authentication credential that you created and provide the endpoint.
 
@@ -76,17 +56,18 @@ In request headers, add authorization header:
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/authorizationDelegation.png" alt="Adding the authorization header in the request parameters">
 
-**3. Configure Delegated Access Provider**
+#### 3. Configure the delegated access provider
 
 Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
 
-**4. Configure Dialog**
+#### 4. Configure the dialog
 
-Dialog should include an API integration and consumer verification delegation button.
+The dialog should include an API integration and consumer verification delegation button.
 
-**Note:** The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.
+{: .attn-note}
+The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.
 
-***4.1 add integration***
+##### 4.1 Add the integration
 
 Add the integration that requires the consumer access token and make sure the following are applied:
 
@@ -102,7 +83,7 @@ if(cidp_accessToken) {
 }
 ```
 
-***4.2. Add Consumer Delegation Link to the Conversation Flow***
+##### 4.2. Add the consumer delegation link to the conversation flow
 
 Before accessing the protected integrated API, we need to prompt the user to verify their identity. This will be done in the conversation dialog by adding an interactive button to the conversation.
 The following paraeter should be define in the [interactive button/questions](conversation-builder-interactions-questions.html):
