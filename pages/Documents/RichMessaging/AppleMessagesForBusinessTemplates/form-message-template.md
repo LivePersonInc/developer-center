@@ -35,7 +35,7 @@ Following Types of pages are supported
 
 - **datePicker**: Provides Apple’s standard Date Picker with the ability to change the date format and set maximum/minimum dates.
 
-- **input**:  A page that can feature various input fields to collect strings of information.
+- **input**: A page that can feature various input fields to collect strings of information.
 
 **Every page has following properties**
 
@@ -63,9 +63,9 @@ Following Types of pages are supported
 |input|hintText|A string representing optional text to give the user more input context that displays below the Input field.|
 ||options|Dictionary containing optional values for the input field.<ul><li>regex: A string representing a JSON encoded regular expression (regex) string to limit the type of input for input field to use. </li><li>placeholder: A text string used when there is no other text in the input text field. Default value are Required or Optional.</li><li>required: A Boolean value that defaults to false. When set to true, the next button on page is disabled until the user provides input.</li><li>inputType: A string value that defaults to singleline. Other values are multiline or singleline.</li><li>labelText: A string value representing a text label shown to identify the input field. This value defaults to an empty string. Only applies to inputType: singleline.</li><li>prefixText: A string value representing optional text shown next to the text field. This value defaults to an empty string. For example, you can set this value to denote the $ character for the field. Only applies to inputType: singleline.</li><li>maximumCharacterCount: An integer value representing the field size in characters for singleline and multiline. The field size defaults to 30 characters for singleline and 300 characters for multiline.</li><li>keyboardType: Optional string value. Type of keyboard to be shown. Possible values:</li><li>default: Default value. Specifies the default keyboard for the current input method.</li><li>asciiCapable: Specifies a keyboard that displays standard ASCII characters.</li><li>numbersAndPunctuation: Specifies the numbers and punctuation keyboard.</li><li>URL: Specifies a keyboard optimized for URL entry. This keyboard type prominently features the period (.), forward slash (/) characters, and the .com string.</li><li>numberPad: Specifies a numeric keypad designed for PIN entry. This keyboard type prominently features the numbers 0 through 9. This keyboard type does not support autocapitalization.</li><li>phonePad: Specifies a keypad designed for entering telephone numbers. This keyboard type prominently features the numbers 0 through 9 and the asterisk (*) and hash tag (#) characters.</li><li>namePhonePad: Specifies a keypad designed for entering a person’s name or phone number. This keyboard type does not support auto-capitalization.</li><li>emailAddress: Specifies a keyboard optimized for entering email addresses. This keyboard type prominently features the at (@), period (.), and space characters.</li><li>decimalPad: Specifies a keyboard with numbers and a decimal point.</li><li>UIKeyboardTypeTwitter: Specifies a keyboard optimized for Twitter text entry, with easy access to the at (@) and hash tag (#) characters.</li><li>webSearch: Specifies a keyboard optimized for web search terms and URL entry. This keyboard type prominently features the space and period (.) characters.</li><li>textContentType: A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter. Supported values are name, namePrefix, givenName, middleName, familyName, nameSuffix, nickname, jobTitle, organizationName, location, fullStreetAddress, streetAddressLine1, streetAddressLine2, addressCity, addressState, addressCityAndState, sublocality, countryName, postalCode, telephoneNumber, emailAddress, URL, creditCardNumber, username, password, newPassword, and oneTimeCode.</li></ul>|
 
-  For all possible options for page configuration check [Apple Documentation](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#form-message).
+For all possible options for page configuration check [Apple Documentation](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#form-message).
 
-#### Example Page Template
+### Example Page Template
 
 ```json
 {
@@ -88,7 +88,8 @@ Following Types of pages are supported
 
 The structured content body will allow you to define the spalsh screen of the Business Form. 
 
-The Following Properties must be included in the Body template
+The following properties must be included in the body template:
+
 * type
 * tag
 * elements
