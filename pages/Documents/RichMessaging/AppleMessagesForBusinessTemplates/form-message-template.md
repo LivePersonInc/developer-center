@@ -24,6 +24,7 @@ Below is an image of a Business Forms:
 <img  style="width:350px" src="img/form_message_3.png" alt="Response page">
 
 ### Pages
+
 Following Types of pages are supported
 
 - **splash**: An introduction page that includes a title, description, action button and an image.
@@ -84,6 +85,7 @@ Following Types of pages are supported
 ```
 
 ### Example Body Template
+
 The structured content body will allow you to define the spalsh screen of the Business Form. 
 
 The Following Properties must be included in the Body template
