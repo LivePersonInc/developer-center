@@ -24,14 +24,14 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 
 In Conversation Orchestrator:
 
-1. In the Conversation Context Service (CCS), create a namespace to store the queue health info.
-2. Copy your developer key (API key), so you can use it in calls to the CCS.
+1. In the Conversation Context Service (CCS) module, create a namespace to store the queue health info.
+2. Copy your developer key (Maven API key) in the Developers module, so you can use it in calls to the CCS.
 
 #### Step 2: Create a function that retrieves the queue health info and sends it to the CCS
 
 In LivePerson Functions:
 
-1. Save your developer key to your Secret Storage.
+1. Save your developer key (Maven API key) to your Secret Storage.
 2. Create a function that retrieves the current queue info at scheduled intervals and updates the namespace in the CCS with this info. This should be a “No Event” function. You might name it “currentQueueHealth.”
 
     You need to ensure that the CCS URL is accessible from the function. So, in the function’s Coding Details, give access to external domains. Then add `*.context.liveperson.net`. Or, whitelist the domain on the settings page.
