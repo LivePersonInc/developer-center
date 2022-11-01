@@ -58,6 +58,8 @@ Bot settings include:
 
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that Conversation Builder maintains its own session, and Conversational Cloud maintains its own session. This setting only determines the length of the Conversation Builder session.
 
+- **Small Talk**: Enable or disable [support for small talk](conversation-builder-best-practices-support-small-talk.html) (chitchat) in your Conversation Builder bots. When you support small talk, you offer your consumers a more human-like experience.
+
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety of purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.

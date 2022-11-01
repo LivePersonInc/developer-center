@@ -62,6 +62,10 @@ When you create a standard dialog, by default it includes a dialog starter inter
 
 ### FAQs
 
+#### In the case of an intent added to a dialog starter, what must the match score be for the dialog flow to be triggered?
+
+The score must be GOOD or better.
+
 #### When do you use patterns versus intents?
 
 - Use a pattern when the user’s input must match the pattern exactly. Otherwise, it isn’t considered a match, and the dialog isn’t triggered. In practice, patterns are mostly used by routing bots.
