@@ -10,7 +10,9 @@ indicator: both
 
 ### The default fallback behavior
 
-By default, whenever a bot doesn't recognize the user's input in a conversation, it sends a _built-in_, _default_ fallback response of, “Not able to understand your question. Can you please re-phrase it?” It then returns the user to the place where the failure occurred.
+By default, whenever a bot doesn't recognize the user's input in a conversation, it sends a built-in, default fallback response of, “Not able to understand your question. Can you please re-phrase it?” It then returns the user to the place where the failure occurred.
+
+<img style="width:700px" src="img/ConvoBuilder/fallback_behavior.png" alt="Process flow for triggering a fallback response">
 
 ### Why use a Fallback dialog?
 

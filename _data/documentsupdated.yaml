@@ -60,6 +60,7 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Support Small Talk
             - subpagename: Prevent Consumer Interruptions
             - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
