@@ -127,6 +127,9 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png" alt="Previewing the conversation by entering goodbye">
 
+{: .attn-tip}
+Bots can also [support small talk](conversation-builder-best-practices-support-small-talk.html) (chitchat). In your automation solution, consider adding support for this. It offers your consumers a more human-like experience.
+
 ### Step 4: Test the Fallback dialog
 
 You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that hasn't been accounted for? To catch and handle these when they occur, you can provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.

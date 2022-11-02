@@ -30,9 +30,7 @@ When consumers converse with bots, they sometimes engage in small talk. Therefor
 
 When the feature is on, the flow is as follows:
 
-<img style="width:700px" src="img/ConvoBuilder/bp_smalltalk_flow_on.png" alt="Process flow for evaluating a consumer message when Small Talk feature is turned on">
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_smalltalk_flow_on.png" alt="Process flow for evaluating a consumer message when Small Talk feature is turned on">
+<img style="width:700px" src="img/ConvoBuilder/bp_smalltalk_flow_on.png" alt="Process flow that occurs when a consumer message is received, and Small Talk is turned on. Find full description at the bottom of this page.">
 
 Behind the scenes, the system is set up to detect various consumer messages as small talk. Below are a few examples.
 
@@ -45,8 +43,6 @@ Behind the scenes, the system is set up to detect various consumer messages as s
 You can see all this in action here:
 
 <img style="width:700px" src="img/ConvoBuilder/bp_smalltalk_example2.png" alt="Conversation between bot and consumer that includes small talk">
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_smalltalk_example2.png" alt="Conversation between bot and consumer that includes small talk">
 
 #### Answering questions with small talk
 
@@ -215,3 +211,19 @@ If your account was created *after* the November 2022 release, to get started:
 
 1. In Conversation Builder, create a new bot. By default, Small Talk is turned on for your account. And any new bot that you create has it turned on too. 
 2. Use the new bot to evaluate the default behavior.
+
+### Info for Accessibility users
+
+#### Process flow for Small Talk
+
+When the feature is on, the flow is as follows:
+
+1. When a consumer message is received, check it for a match to a pattern or intent (with a match of GOOD or better) in a dialog starter in the bot or in the bot's group, if one exists.
+    * If Yes, trigger the dialog flow.
+    * If No, proceed to step 2.
+2. Check the consumer's message for a match to small talk. 
+    * If Yes, proceed to step 3.
+    * If No, send the fallback response.
+3. Check the consumer's message to see if it contains more than one sentence or if it's greater than 100 characters.
+    * If Yes, send the fallback response because the small talk is inconsequential alongside the consumer's intentful message.
+    * If No, send the bot's response to the small talk.
