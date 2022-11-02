@@ -53,6 +53,7 @@
     - documentname: Common Solutions
       pages:
         - pagename: Set Consumer Expectations about Wait Times for Agents
+        - pagename: Check a Skill's Shift Status before Transferring
     - documentname: Conversation Builder
       pages:
         - pagename: Overview

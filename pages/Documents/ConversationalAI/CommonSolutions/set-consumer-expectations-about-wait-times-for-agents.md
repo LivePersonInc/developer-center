@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Common Solutions
 permalink: common-solutions-set-consumer-expectations-about-wait-times-for-agents.html
 indicator: both
-date_updated: 2022/10/05
+date_updated: 2022/11/14
 ---
 
 ### Use case
@@ -21,6 +21,9 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 ### Workflow
 
 #### Step 1: Create a namespace in the CCS to store the queue health info
+
+{: .attn-note}
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](bot-accounts-account-details.html).
 
 In Conversation Orchestrator:
 
@@ -51,9 +54,7 @@ In LivePerson Functions:
 
 #### Step 3: In the bot, retrieve the queue health info from the CCS and use it as desired
 
-1. [Verify the Conversation Context API is enabled](bot-accounts-account-details.html).
-
-2. Within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
+Within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
 
 ##### Sample code
 
