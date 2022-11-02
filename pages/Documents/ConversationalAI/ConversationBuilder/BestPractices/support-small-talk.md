@@ -32,6 +32,8 @@ When the feature is on, the flow is as follows:
 
 <img style="width:700px" src="img/ConvoBuilder/bp_smalltalk_flow_on.png" alt="Process flow for evaluating a consumer message when Small Talk feature is turned on">
 
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_smalltalk_flow_on.png" alt="Process flow for evaluating a consumer message when Small Talk feature is turned on">
+
 Behind the scenes, the system is set up to detect various consumer messages as small talk. Below are a few examples.
 
 | Small Talk intent | Consumer messages |
@@ -43,6 +45,8 @@ Behind the scenes, the system is set up to detect various consumer messages as s
 You can see all this in action here:
 
 <img style="width:700px" src="img/ConvoBuilder/bp_smalltalk_example2.png" alt="Conversation between bot and consumer that includes small talk">
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bp_smalltalk_example2.png" alt="Conversation between bot and consumer that includes small talk">
 
 #### Answering questions with small talk
 
