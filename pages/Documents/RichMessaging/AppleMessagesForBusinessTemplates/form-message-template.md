@@ -86,7 +86,7 @@ For all possible options for page configuration check [Apple Documentation](http
 
 ### Example Body Template
 
-The structured content body will allow you to define the spalsh screen of the Business Form. 
+The structured content body will allow you to define the splash screen of the Business Form. 
 
 The following properties must be included in the body template:
 
