@@ -346,7 +346,6 @@
         - pagename: Conversation Tester
         - pagename: Bot Status Dashboard
         - pagename: Bot Conversation Errors
-    - documentname: Conversational AI APIs
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
@@ -1213,7 +1212,7 @@
         - pagename: Implementation Considerations
         - pagename: Configuration
         - pagename: How It Works
-        - pagename: Detailed API
+        - pagename: Implementation Guide
     - documentname: Consumer Delegation
       pages:
         - pagename: Introduction

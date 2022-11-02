@@ -19,6 +19,8 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
 
+For any update, follow the [content and code guidelines](#notes-on-content-and-code), and adhere to [code](https://google.github.io/eng-practices/review/reviewer/standard.html) [review](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/) [best](https://medium.com/yemeksepeti-teknoloji/good-manners-of-a-pull-request-some-best-practices-cb2de3c3aea1) [practices](https://blog.palantir.com/code-review-best-practices-19e02780015f).
+
 ### Committing changes to the site
 
 Before making any commits, please make sure to read the _Updating and creating headers_ section. There is now a Git precommit hook that ensures you follow the rules on Markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputted to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in the documentsupdated.yaml file. Our tests will use that YAML file as the source of truth, so make sure your header naming structure matches the documentsupdated.yaml.
@@ -145,8 +147,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
-* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
-* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* `date_updated`: This sets the date of the last substantial update, which includes the date when the page was published. For example: `date_updated: 2022/01/30`.
 * `noindex`: Set the value to `true`, if you want this file to be ignored by search engines.
 * (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
@@ -168,6 +169,7 @@ When contributing to this repository, please observe the following:
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
 * In code samples, indent by two spaces
+* For new pages as well as for significant updates, add or update the update date (`date_updated`)
 
 #### APIs and SDKs
 
