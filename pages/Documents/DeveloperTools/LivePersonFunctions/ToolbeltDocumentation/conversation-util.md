@@ -21,6 +21,9 @@ indicator: both
 
 ### getConversationById
 
+{: .attn-alert}
+Please be aware that the underlying Messaging Interactions API is not meant for real-time decisions, as the API has a delay of up to 1 minute.
+
 ▸ **getConversationById**(`conversationId`, `contentToRetrieve?`): `Promise`<[`IConversation`](#interface-iconversation)\>
 
 Will retrieve a conversation Object from the Live-Engage Messaging Interaction API
