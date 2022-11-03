@@ -6,6 +6,8 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-voice-and-video.html
 indicator: messaging
+redirect_from:
+  - mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-appendix.html
 ---
 
 ### Introduction

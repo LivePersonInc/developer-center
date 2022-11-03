@@ -15,6 +15,7 @@ documentname: Getting Started with Rich Messaging
 permalink: getting-started-with-rich-messaging-introduction.html
 root-link: true
 indicator: both
+date_updated: 2022/10/25
 ---
 
 Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the Conversational Cloud Structured Content Framework.
@@ -301,6 +302,7 @@ You can send images by sharing a URL. Supported formats are JPG and PNG. Since, 
 | rtl           | This parameter changes the direction of text only from left to right to right to left (for languages like Hebrew, Arabic, Urdu, etc). Default is false | Boolean   | N        |            |
 | click         | On-click operation (included metadata and/or actions clauses)                                                                                          |           |          |            |
 | tooltip       | Image tooltip, used also as aria                                                                                                                       | String    | N        |            |
+| alt           | Describes the image to users                                                                                                                           | String    | N        | 2000 chars |
 | style         | Styling elements                                                                                                                                       | Container | N        |            |
 
 For the 'click' property, please see the [Click Operations](#element-click-operations) section.
@@ -557,6 +559,48 @@ Each basic element can have specific style rules defined for it, controlling how
 	"color": "###453533",
 	"background-color": "###3E47A0",
 	"size": "small"
+}
+```
+
+### Element Accessibility Attributes
+
+Each basic element can have specific accessibility attributes defined to them. Some of the widely used attributes are listed below. For the entire list of supported attributes, please refer to [this list](https://github.com/LivePersonInc/json-pollock/blob/master/js/schema/accessibilityWeb.json).
+
+#### Properties
+
+| Property Name    | Description                                                                 |
+| :--------------- | :-------------------------------------------------------------------------- |
+| role             | Describes the role of an element for screen readers                         |
+| tabindex         | Describes the tab navigation order of elements                              |
+| aria-label       | Describes a string value that labels an element                             |
+| aria-level       | Used together with role=heading to specify the heading level of the element |
+| aria-describedby | Reference longer content to provide description with relevant id            |
+| aria-labelledby  | Reference other elements to define accessible name                          |
+| aria-hidden      | Hide/show the element from assistive technology                             |
+
+#### Example
+
+```json
+{
+  "type": "button",
+  "title": "Test Button",
+  "click": {
+    "actions": [
+      {
+        "type": "publishText",
+        "text": "Button 1 was clicked"
+      }
+    ]
+  },
+  "accessibility": {
+      "web": {
+        "role":"heading",
+        "aria-level": "3",
+        "tabindex":"1",
+        "aria-label":"This is aria-label for button",
+        "aria-hidden":"false"
+      }
+  }
 }
 ```
 
