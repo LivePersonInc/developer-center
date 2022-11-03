@@ -150,8 +150,8 @@ Bot-level configuration takes precedence over the account-level configuration.
 2. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icons"> (More items) in the upper-left corner, just to the right of the menu bar. Then select **Bot Settings** from the menu.
 3. Scroll down to the **Small Talk** setting, and click **Customize bot responses**.
 4. Do either or both of the following:
-    1. Customize the bot responses to small talk per your brand’s voice.
-    2. Turn on or off support for individual types of small talk.
+    * Customize the bot responses to small talk per your brand’s voice.
+    * Turn on or off support for individual types of small talk.
     
     {: .attn-note}
     This works just like it does at the account level.
