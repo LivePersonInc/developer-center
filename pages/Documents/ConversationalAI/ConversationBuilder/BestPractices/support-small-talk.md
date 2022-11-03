@@ -207,7 +207,8 @@ Great! Supporting small talk is considered a best practice to offer a human-like
 If your account existed *before* the November 2022 release, to get started:
 
 1. In Bot Accounts, manually turn on Small Talk for your account. (Once you do this, any new bots that you create will have it turned on at the bot level too.)
-2. In Conversation Builder, create a new bot. Use the new bot to evaluate the default behavior.
+2. In Conversation Builder, create a new bot. 
+3. Use the new bot to evaluate the default behavior.
 
 If your account was created *after* the November 2022 release, to get started:
 
