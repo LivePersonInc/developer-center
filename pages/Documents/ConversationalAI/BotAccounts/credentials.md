@@ -120,10 +120,14 @@ The Consumer Pre-Authentication credential lets you securely share those consume
 In this authentication flow, the consumer is authenticated before a conversation with a bot ever begins. To set this up:
 
 1. Configure your IdP service, so you can leverage it in Conversational Cloud.
+
+    {: .attn-note}
+    For help with this, contact your LivePerson representative.
+
 2. In Bot Accounts, [add a Consumer Pre-Authentication credential](bot-accounts-credentials.html#add-a-consumer-pre-authentication-credential-1).
 3. In Conversation Builder, in an API integration in the bot, select the configured credential. This gets the consumer’s unique token from the IdP service when needed for the API call.
 
-<img class="fancyimage" alt="Example API integration that uses a Consumer Pre-Authentication credential" style="width:800px" src="img/ConvoBuilder/creds_consumer_preauth_use.png">
+<img alt="Example API integration that uses a Consumer Pre-Authentication credential" style="width:800px" src="img/ConvoBuilder/creds_consumer_preauth_use.png">
 
 #### How does Consumer Pre-Authentication differ from Consumer Authentication?
 

@@ -92,7 +92,7 @@ This is essentially a 2-step process.
 
 2. Turn on the feature in the bot:
     1. In Conversation Builder, open the bot.
-    2. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Access more items"> in the upper-left corner, just to the right of the menu bar. Then select **Bot Settings** from the menu.
+    2. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (More items) in the upper-left corner, just to the right of the menu bar. Then select **Bot Settings** from the menu.
     3. Scroll down to the **Small Talk** setting, and turn it on. Newer bots might have this turned on by default. But your older bots don’t, to avoid disrupting your current consumer experience.
     4. Click **Save**.
 
@@ -107,7 +107,9 @@ This is essentially a 2-step process.
 {: .attn-note}
 When Small Talk is off for your account, it’s off for all of your bots. This is regardless of how you’ve configured your bots.
 
-When you turn off Small Talk at the account level, the value of a bot's **Small Talk** setting isn't changed. This is so you can turn things back on with a single click in Bot Accounts. However, the bot-level **Small Talk** settings are disabled, so you can’t use them.
+When you turn off Small Talk at the account level, the value of a bot's **Small Talk** setting isn't changed. This is so you can turn things back on with a single click in Bot Accounts. However, the bot-level **Small Talk** settings are disabled, so you can’t use them (as this wouldn't make sense). A warning icon lets you know why they're disabled.
+
+<img style="width:800px" src="img/ConvoBuilder/bp_smalltalk_disabledstg.png" alt="Disabled Small Talk settings within the bot. They're disabled when the feature is turned off at the account level.">
 
 ### Customizing the default behavior
 
@@ -145,7 +147,7 @@ Bot-level configuration takes precedence over the account-level configuration.
 #### To make bot-level overrides
 
 1. In Conversation Builder, open the bot.
-2. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Access more items"> in the upper-left corner, just to the right of the menu bar. Then select **Bot Settings** from the menu.
+2. Click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icons"> (More items) in the upper-left corner, just to the right of the menu bar. Then select **Bot Settings** from the menu.
 3. Scroll down to the **Small Talk** setting, and click **Customize bot responses**.
 4. Do either or both of the following:
     1. Customize the bot responses to small talk per your brand’s voice.
