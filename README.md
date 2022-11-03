@@ -17,9 +17,11 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 
 ## Updating the documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
+In general, please follow the [content and code guidelines](#notes-on-content-and-code), and keep in mind [code](https://google.github.io/eng-practices/review/reviewer/standard.html) [review](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/) [best](https://medium.com/yemeksepeti-teknoloji/good-manners-of-a-pull-request-some-best-practices-cb2de3c3aea1) [practices](https://blog.palantir.com/code-review-best-practices-19e02780015f).
 
-For any update, follow the [content and code guidelines](#notes-on-content-and-code), and adhere to [code](https://google.github.io/eng-practices/review/reviewer/standard.html) [review](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/) [best](https://medium.com/yemeksepeti-teknoloji/good-manners-of-a-pull-request-some-best-practices-cb2de3c3aea1) [practices](https://blog.palantir.com/code-review-best-practices-19e02780015f).
+Every change needs review by a member of LivePerson’s DX team. To get a review, add or mention [j9t](https://github.com/j9t), [itay1313](https://github.com/itay1313), or [lkisoslive](https://github.com/lkisoslive) as a reviewer. The review request will then be handled directly, or handed over to another DX team member as per DX team needs. The DX team works with an [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) of responding within two work days (which may include asking for more time, depending on PR and capacity). If there’s particular urgency, coordinate with the DX team ahead of time (required for requests that involve non-work days), aim to grant as much time as possible, and share context. If you get no response to a request after two work days, email dx-lp@liveperson.com, including a link to your pull request.
+
+All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
 
 ### Committing changes to the site
 
@@ -190,8 +192,13 @@ If you’re adding or deprecating an API or SDK, add it or update its status on 
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
 * The maximum (view) width for images in this repository is 800 pixels
+* Apart from [special Markdown naming rules](#committing-changes-to-the-site), use lowercase file names, without spaces.
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited.
+
+Content and code guidelines are also subject to change. Please follow LivePerson-internal channels on updates, and review this information occasionally to be aware of the latest. (Note that code reviews may surface previously unknown and undocumented issues. The DX team will work with you to decide whether and how to address such issues.)
+
+Suggestions to these guidelines are welcome.
 
 ## Building the site locally
 
