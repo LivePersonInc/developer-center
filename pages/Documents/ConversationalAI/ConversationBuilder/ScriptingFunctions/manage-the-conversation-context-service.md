@@ -31,13 +31,12 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 **To enable the Conversation Context Service API for your account**
 
-1. Access the *Bot Accounts* application, and click the organization name.
+1. [Access the Bot Accounts application](bot-accounts-overview.html#access-bot-accounts), and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use Conversational Cloud Site ID** (Only available for LivePerson accounts.)
-    * **Use Conversation Builder Account ID** (This is your organization ID.)
-4. Enter the ID for your selection in step 5.
-5. Click **Update Account**.
+    * **Use Conversational Cloud Site ID**: Only available for LivePerson accounts.
+    * **Use Conversation Builder Account ID**: This is your organization ID.
+4. Enter the ID for your selection in step 3.
 
 #### Conversation Builder data scopes
 

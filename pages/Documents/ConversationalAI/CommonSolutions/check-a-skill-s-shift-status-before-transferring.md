@@ -67,7 +67,7 @@ Omit the << and >> brackets when entering the JSON.
 #### Step 2: Create a namespace in the CCS to store the shift status info
 
 {: .attn-note}
-Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](bot-accounts-account-details.html).
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
 
 In Conversation Orchestrator:
 

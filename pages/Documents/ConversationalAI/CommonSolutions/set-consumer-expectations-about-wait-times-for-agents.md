@@ -23,7 +23,7 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 #### Step 1: Create a namespace in the CCS to store the queue health info
 
 {: .attn-note}
-Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](bot-accounts-account-details.html).
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
 
 In Conversation Orchestrator:
 
