@@ -22,9 +22,7 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 
 #### Step 1: Get your developer key
 
-In Conversation Orchestrator:
-
-* Copy your developer key (Maven API key) in the Developers module, so you can use it in calls to the CCS.
+In the Developers module in Conversation Orchestrator, copy your developer key (Maven API key), so you can use it in calls to the CCS.
 
 #### Step 2: Create a function that retrieves the queue health info and sends it to the CCS
 
@@ -53,7 +51,7 @@ In LivePerson Functions:
 
 #### Step 3: In the bot, retrieve the queue health info from the CCS and use it as desired
 
-Within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
+In Conversation Builder, within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
 
 ##### Sample code
 

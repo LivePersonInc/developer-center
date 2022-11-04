@@ -66,9 +66,7 @@ Omit the << and >> brackets when entering the JSON.
 
 #### Step 2: Get your developer key
 
-In Conversation Orchestrator:
-
-* Copy your developer key (Maven API key), so you can use it in calls to the CCS.
+In the Developers module of Conversation Orchestrator, copy your developer key (Maven API key), so you can use it in calls to the CCS.
 
 #### Step 3: Create a function that retrieves the shift status info and sends it to the CCS
 
@@ -95,7 +93,7 @@ Back in LivePerson Functions:
 
 #### Step 4: In the bot, retrieve the shift status info from the CCS and use it as desired
 
-Within an interaction in the bot, query the CCS for the skill’s shift status info, and perform the transfer if appropriate.
+In Conversation Builder, within an interaction in the bot, query the CCS for the skill’s shift status info, and perform the transfer if appropriate.
 
 ### Deep dive
 
