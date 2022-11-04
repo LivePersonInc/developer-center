@@ -9,6 +9,7 @@ documentname: Conversation Builder
 subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-manage-the-conversation-context-service.html
 indicator: both
+date_updated: 2022/11/07
 ---
 
 The Conversation Context Service is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.

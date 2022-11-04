@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: Bots Status
 permalink: bots-status-managing-post-conversation-survey-bots.html
 indicator: both
+date_updated: 2022/11/07
 ---
 
 ### Introduction

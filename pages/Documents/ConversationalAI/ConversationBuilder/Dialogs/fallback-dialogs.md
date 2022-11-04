@@ -6,6 +6,7 @@ documentname: Conversation Builder
 subfoldername: Dialogs
 permalink: conversation-builder-dialogs-fallback-dialogs.html
 indicator: both
+date_updated: 2022/11/07
 ---
 
 ### The default fallback behavior

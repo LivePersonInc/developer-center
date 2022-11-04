@@ -10,6 +10,7 @@ documentname: Conversation Builder
 subfoldername: Bots
 permalink: conversation-builder-bots-bot-basics.html
 indicator: both
+date_updated: 2022/11/07
 ---
 
 ### Types of bots

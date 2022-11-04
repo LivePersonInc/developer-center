@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: Bot Accounts
 permalink: bot-accounts-credentials.html
 indicator: both
+date_updated: 2022/11/07
 ---
 
 Resource owners can use the Bot Accounts application to define credentials for accessing resources. Once a credential is defined, you can attach it to a bot [API integration](conversation-builder-integrations-api-integrations.html). When the bot is processing a dialog and needs to call the API integration as a part of the dialog flow, the bot will use the associated credentials to authenticate and perform the necessary actions.
