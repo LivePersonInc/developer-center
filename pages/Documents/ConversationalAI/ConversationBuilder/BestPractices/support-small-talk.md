@@ -190,10 +190,6 @@ No, not at this time.
 
 No, not at this time.
 
-#### When will you support Small Talk in bots that use other languages?
-
-We’re constantly evaluating our language support. To request support for additional languages, contact your LivePerson representative.
-
 #### I’m not ready to support small talk yet. What should I do?
 
 If you’re not ready to support small talk yet, there’s no action required by you. We’ve introduced this feature in our November 2022 release. All accounts that existed before this release remain unaffected: Small Talk is off at the account level, so it’s off for all of your bots too.
