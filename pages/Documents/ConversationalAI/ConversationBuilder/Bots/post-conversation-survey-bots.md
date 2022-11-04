@@ -385,7 +385,7 @@ If you have Bots Status Access [permissions](bot-accounts-permissions.html), you
 
 ### Troubleshooting
 
-Sometimes, in a survey bot, an interaction gets into a state where its ID isn’t synchronized with underlying systems. This can adversely affect reporting. You can fix this situation quickly with the **Synchronize interaction ID** button:
+Sometimes, an interaction in a survey bot gets into a state where its ID isn’t synchronized with underlying systems. This can adversely affect reporting. You can fix this situation quickly with the <img class="inlineimage" style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_pcs_synchids.png"> (Synchronize interaction ID) icon that dynamically appears:
 
 <img style="width:700px" src="img/ConvoBuilder/surveyBot_synchids.png" alt="In interaction, a warning icon in lower-right corner is displayed when there's an issue with interaction's ID. Click refresh button in upper-right corner to synchronize ID and resolve issue.">
 
