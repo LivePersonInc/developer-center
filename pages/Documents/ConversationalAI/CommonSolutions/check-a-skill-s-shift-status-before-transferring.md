@@ -64,16 +64,16 @@ For the value, insert a JSON object with the info you previously retrieved from 
 {: .attn-alert}
 Omit the << and >> brackets when entering the JSON.
 
-#### Step 2: Create a namespace in the CCS to store the shift status info
-
-{: .attn-note}
-Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
+#### Step 2: Get your developer key
 
 In Conversation Orchestrator:
 
 * Copy your developer key (Maven API key), so you can use it in calls to the CCS.
 
 #### Step 3: Create a function that retrieves the shift status info and sends it to the CCS
+
+{: .attn-note}
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
 
 Back in LivePerson Functions:
 

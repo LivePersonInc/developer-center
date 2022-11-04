@@ -20,16 +20,16 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 
 ### Workflow
 
-#### Step 1: Create a namespace in the CCS to store the queue health info
-
-{: .attn-note}
-Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
+#### Step 1: Get your developer key
 
 In Conversation Orchestrator:
 
 * Copy your developer key (Maven API key) in the Developers module, so you can use it in calls to the CCS.
 
 #### Step 2: Create a function that retrieves the queue health info and sends it to the CCS
+
+{: .attn-note}
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
 
 In LivePerson Functions:
 
