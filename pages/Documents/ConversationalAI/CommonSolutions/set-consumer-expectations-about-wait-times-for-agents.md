@@ -27,8 +27,7 @@ Before completing this step, verify the Conversation Context Service is [turned 
 
 In Conversation Orchestrator:
 
-1. In the Conversation Context Service (CCS) module, create a namespace to store the queue health info.
-2. Copy your developer key (Maven API key) in the Developers module, so you can use it in calls to the CCS.
+* Copy your developer key (Maven API key) in the Developers module, so you can use it in calls to the CCS.
 
 #### Step 2: Create a function that retrieves the queue health info and sends it to the CCS
 

@@ -71,8 +71,7 @@ Before completing this step, verify the Conversation Context Service is [turned 
 
 In Conversation Orchestrator:
 
-1. Optionally, in the Conversation Context Service (CCS) module, create a namespace to store the shift status info. If you skip this step, the service creates itself when needed.
-2. Copy your developer key (Maven API key), so you can use it in calls to the CCS.
+* Copy your developer key (Maven API key), so you can use it in calls to the CCS.
 
 #### Step 3: Create a function that retrieves the shift status info and sends it to the CCS
 
