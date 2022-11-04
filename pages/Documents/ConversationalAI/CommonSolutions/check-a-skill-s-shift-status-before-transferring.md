@@ -78,7 +78,7 @@ Before completing this step, verify the Conversation Context Service is [turned 
 Back in LivePerson Functions:
 
 1. Save your developer key (Maven API key) to your Secret Storage.
-2. Create a function that retrieves the shift status info at scheduled intervals and updates the namespace in the CCS with this info. This should be a “No Event” function. You might name it “currentShiftStatus.”
+2. Create a function that retrieves the shift status info at scheduled intervals and updates a namespace in the CCS with this info. This should be a “No Event” function. You might name it “currentShiftStatus.”
 
     You need to ensure that the CCS URL is accessible from the function. So, in the function’s Coding Details, give access to external domains. Then add *.context.liveperson.net. Or, whitelist the domain on the settings page.
 
