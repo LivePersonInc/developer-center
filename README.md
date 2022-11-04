@@ -188,11 +188,11 @@ If you’re adding or deprecating an API or SDK, add it or update its status on 
 
 ### Code and media
 
-* Be consistent
+* For formatting rules not documented here, be consistent and follow the style used by the file(s) being edited (that is, if there is no guidelines on, say, heading markup, use the style used in the files you’re updating)
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
 * The maximum (view) width for images in this repository is 800 pixels
-* Apart from [special Markdown naming rules](#committing-changes-to-the-site), use lowercase file names, without spaces.
+* Apart from [special Markdown naming rules](#committing-changes-to-the-site), use lowercase file names, without spaces
 
 You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited.
 
