@@ -12,6 +12,26 @@ indicator: messaging
 {: .attn-alert}
 Working with this SDK or planning to in the future? Make sure to [subscribe to receive notifications of changes](https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content). When we update the release notes, you'll get a notification straight to your email of choice.
 
+# Android Messaging SDK — Version 5.12.1
+
+**Release date:** October 21, 2022
+
+# Overview
+
+Android Mobile Messaging SDK version 5.12.1 release includes bug fixes around conversation welcome messages.
+
+## Environment requirements
+
+The Android Mobile Messaging SDK version 5.12.1 uses:
+
+- Minimum API version 21
+- Compile API version 33
+- Target API version 33
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.4.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.1”
+- Schedule Slot List Library "com.liveperson.android:lp-appointment-scheduler:2.0.0"
+
 # Android Messaging SDK — Version 5.12.0
 
 **Release date:** September 15, 2022

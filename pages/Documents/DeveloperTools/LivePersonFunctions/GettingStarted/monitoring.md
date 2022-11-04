@@ -6,6 +6,8 @@ documentname: LivePerson Functions
 subfoldername: Getting Started
 permalink: liveperson-functions-getting-started-monitoring.html
 indicator: both
+redirect_from:
+  - liveperson-functions-monitoring-activities.html
 ---
 
 {% comment %}

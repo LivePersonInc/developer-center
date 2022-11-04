@@ -6,6 +6,8 @@ documentname: Conversation Builder
 subfoldername: Testing & Deployment
 permalink: conversation-builder-testing-deployment-debugging.html
 indicator: both
+redirect_from:
+  - conversation-builder-glossary.md
 ---
 
 The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways.
