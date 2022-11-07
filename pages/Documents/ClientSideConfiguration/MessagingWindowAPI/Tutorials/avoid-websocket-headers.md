@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 80
 permalink: messaging-window-api-tutorials-avoid-websocket-headers.html
-
 indicator: messaging
 ---
 

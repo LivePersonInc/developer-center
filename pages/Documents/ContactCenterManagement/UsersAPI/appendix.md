@@ -2,14 +2,11 @@
 pagename: Appendix
 redirect_from:
   - administration-users-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Users API
-
 order: 101
 permalink: users-api-appendix.html
-
 indicator: both
 ---
 

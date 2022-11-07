@@ -2,14 +2,11 @@
 pagename: Chat States
 redirect_from:
   - consumer-experience-javascript-chat-chat-states.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
-
 order: 2
 permalink: javascript-chat-sdk-chat-states.html
-
 indicator: chat
 ---
 

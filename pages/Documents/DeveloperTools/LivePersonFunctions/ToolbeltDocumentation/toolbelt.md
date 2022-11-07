@@ -1,12 +1,13 @@
 ---
 pagename: Toolbelt
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
 permalink: liveperson-functions-toolbelt-documentation-toolbelt.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-toolbelt.html
 ---
 
 ## Table of contents

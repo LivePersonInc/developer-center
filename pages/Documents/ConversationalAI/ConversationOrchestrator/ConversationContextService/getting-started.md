@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator

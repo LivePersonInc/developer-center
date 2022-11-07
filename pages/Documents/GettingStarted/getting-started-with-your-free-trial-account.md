@@ -1,13 +1,13 @@
 ---
 pagename: Getting Started with your Free Trial Account
 redirect_from:
-- first-steps.html
-- before-you-get-started-let-s-get-started.html
+  - first-steps.html
+  - before-you-get-started-let-s-get-started.html
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
-date_published: 2019/01/30
+date_updated: 2019/01/30
 ---
 
 <!-- The Modal -->

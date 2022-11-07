@@ -2,13 +2,10 @@
 pagename: disposeVisitor
 redirect_from:
   - consumer-experience-javascript-chat-disposevisitor.html
-
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 192
 
 permalink: javascript-chat-sdk-methods-disposevisitor.html

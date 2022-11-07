@@ -7,7 +7,6 @@ subfoldername: methods
 order: 10
 permalink: agent-manager-workspace-api.html
 indicator: messaging
-
 ---
 
 ### General

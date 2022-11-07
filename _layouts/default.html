@@ -7,6 +7,7 @@
     <meta name="description" content="LivePerson for developers: Build on the LivePerson Conversational Cloud with our powerful digital toolbox">
     <meta name="keywords" content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
     <meta name="author" content="LivePerson Inc.">
+    {% if page.noindex == "true" %}<meta name="robots" content="noindex">{% endif %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
   </head>
   <body>
@@ -77,12 +78,12 @@
 
             <div class="documenttitle">
               <div id="documentTitleContainer" class="titlecontainer">
-                <div id="document-title-h1" class="h1">{{ page.pagename }}</div>
+                <h1 id="document-title-h1" class="h1">{{ page.pagename }}</h1>
               </div>
             </div>
             <div class="indicator-container" id="indicator-container">
-              {% if page.indicator != null and page.indicator =="both" or
-              page.indicator =="chat" %}
+              {% if page.indicator != null and page.indicator == "both" or
+              page.indicator == "chat" %}
 
               <div class="indicator chat">Chat</div>
               {% endif %} {% if page.indicator != null and page.indicator
@@ -103,14 +104,7 @@
             </div>
             <div class="article-meta gap-8 hidden">
               <div class="flex gap-8">
-                {% if page.date_published %}
-                <!-- show post creation date -->
-                <p>
-                  Published:
-                  <time datetime="{{ page.date_published | date_to_xmlschema }}">{{ page.date_published | date: "%b %-d, %Y" }}</time>
-                </p>
-                {% endif %}
-                <!-- show last updated date -->
+                <!-- Show creation or update date -->
                 {% if page.date_updated %}
                 <p>
                   Updated:
@@ -168,6 +162,13 @@
         <!-- /.container -->
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="{{ "js/jquery.linkunderanim.min.js" }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.8.3/jquery.mark.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
+    <script src="{{ "js/jquery.highlight.js" }}"></script>
+    <script src="{{ "js/additionalscripts.js" }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
     <script src="js/algolia.js"></script>

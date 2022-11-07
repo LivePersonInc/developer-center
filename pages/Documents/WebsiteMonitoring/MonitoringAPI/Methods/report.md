@@ -76,7 +76,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
    * a hashed/salted email address
 
-* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Detailed API](/guides-authentication-detailedapi.html) for additional information on authentication.
+* For authenticated messaging flows: In order to support continuity and reporting, the consumerID must match the 'sub' claim reported inside the JWT. See [Authentication → Implementation Guide](/guides-authentication-detailedapi.html) for additional information on authentication.
 
 ### PUT Request and body entity example
 
@@ -269,7 +269,8 @@ API version 1.1, Status code 202 Accepted -
 | 5xx | There was an error on server side | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 | 202 | Loading account | Retry 4 times with 3, 10, 30, 90 seconds pause interval between retries |
 
-<div class="attn-note">Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the <code>vid</code> from the response body and append it as the value of the <code>vid</code> query param for the retry request (to be issued following a pause interval of a few seconds).</div>
+{: .attn-note}
+Specifically in the case of a "Loading account" response (500 in API version 1.0, 202 in API version 1.1), it is important to retrieve the value of the `vid` from the response body and append it as the value of the `vid` query param for the retry request (to be issued following a pause interval of a few seconds).
 
 ### Limitations
 

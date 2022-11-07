@@ -1,6 +1,5 @@
 ---
 pagename: Rich Links Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates

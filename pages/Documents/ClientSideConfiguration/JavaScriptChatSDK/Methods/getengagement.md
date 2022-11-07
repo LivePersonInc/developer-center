@@ -2,15 +2,12 @@
 pagename: getEngagement
 redirect_from:
   - consumer-experience-javascript-chat-getengagement.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 20
 permalink: javascript-chat-sdk-methods-getengagement.html
-
 indicator: chat
 ---
 

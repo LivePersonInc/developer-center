@@ -1,7 +1,5 @@
 ---
 pagename: Multiple Checklist Template
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates
@@ -211,7 +209,7 @@ The consumer selections will be displayed as a consumer message in the agent wor
           "type": "submitButton",
           "title": "Continue", // the text that is shown on the button
           "disabled": false, // the user can decide to have the submit button disabled or not initially
-          "click": { // This is similar to the existing button element. One key difference is that the actions that are supported for the submitButton is the action "submitAsText". The submit attribute that is in the "submitAsText" action is used to indicate that the checked items will be submitted as text with each item seperated by a comma (this new text becomes part of the transcript). The metadata structure has not been changed.
+          "click": { // This is similar to the existing button element. One key difference is that the actions that are supported for the submitButton is the action "submitAsText". The submit attribute that is in the "submitAsText" action is used to indicate that the checked items will be submitted as text with each item separated by a comma (this new text becomes part of the transcript). The metadata structure has not been changed.
             "metadata": [
               {
                 "type": "ExternalId",

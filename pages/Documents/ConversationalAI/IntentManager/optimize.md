@@ -1,7 +1,5 @@
 ---
 pagename: Optimize
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager

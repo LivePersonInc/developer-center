@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 order: 63
 permalink: data-access-api-appendix.html
-
 indicator: chat
 ---
 

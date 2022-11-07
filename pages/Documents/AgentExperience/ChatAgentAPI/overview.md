@@ -2,17 +2,16 @@
 pagename: Overview
 redirect_from:
   - chat-agent-getting-started.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
-
 level-order: 4
 order: 4
 permalink: chat-agent-api-overview.html
 root-link: true
 indicator: chat
 ---
+
 ### Introduction
 
 Agents within Conversational Cloud play the crucial role of interfacing with customers by answering chat conversations and communicating with customers. The Chat Agent API provides the capabilities of programmatically running agent activities without human intervention.

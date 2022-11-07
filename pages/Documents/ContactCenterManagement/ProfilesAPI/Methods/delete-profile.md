@@ -2,15 +2,12 @@
 pagename: Delete Profile
 redirect_from:
   - administration-delete-profile.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 80
 permalink: profiles-api-methods-delete-profile.html
-
 indicator: both
 ---
 

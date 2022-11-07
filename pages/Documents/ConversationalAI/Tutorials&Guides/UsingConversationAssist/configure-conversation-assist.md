@@ -1,14 +1,14 @@
 ---
 pagename: Configure Conversation Assist
 redirect_from:
-    - tutorials-guides-using-agent-assist-configure-agent-assist.html
-keywords:
+  - tutorials-guides-using-agent-assist-configure-agent-assist.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
 subfoldername: Using Conversation Assist
 permalink: tutorials-guides-using-conversation-assist-configure-conversation-assist.html
 indicator: both
+date_updated: 2022/09/19
 ---
 
 After completing the [prerequisite steps](tutorials-guides-using-conversation-assist-prerequisite-steps.html), you should have an Airlines knowledge base powered by the LP_Airline domain intents, as well as two bots that are connected to agents. We can now move our focus to Conversation Assist to configure its capabilities.

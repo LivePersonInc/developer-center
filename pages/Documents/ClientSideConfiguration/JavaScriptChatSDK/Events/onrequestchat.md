@@ -2,15 +2,12 @@
 pagename: onRequestChat
 redirect_from:
   - consumer-experience-javascript-chat-onrequestchat.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 240
 permalink: javascript-chat-sdk-events-onrequestchat.html
-
 indicator: chat
 ---
 

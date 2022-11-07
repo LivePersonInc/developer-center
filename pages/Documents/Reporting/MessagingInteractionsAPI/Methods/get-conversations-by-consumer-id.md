@@ -8,7 +8,6 @@ documentname: Messaging Interactions API
 subfoldername: Methods
 order: 30
 permalink: messaging-interactions-api-methods-get-conversations-by-consumer-id.html
-
 indicator: messaging
 ---
 

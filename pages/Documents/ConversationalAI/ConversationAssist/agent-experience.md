@@ -1,13 +1,13 @@
 ---
 pagename: Agent Experience
 redirect_from:
-    - conversation-orchestrator-agent-assist-agent-experience.html
-Keywords:
+  - conversation-orchestrator-agent-assist-agent-experience.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
 permalink: conversation-assist-agent-experience.html
 indicator: messaging
+date_updated: 2022/09/29
 ---
 
 {: .attn-note}
@@ -91,4 +91,3 @@ Note the following identified in the image:
 
 1. **Copy reply**: Copy the reply to your clipboard in order to paste it somewhere else
 2. **Edit and send reply**: Copy the reply to the conversation window, where you can edit it before sending it.
-

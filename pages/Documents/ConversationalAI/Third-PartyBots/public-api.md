@@ -45,7 +45,7 @@ In order to use Public API you must create a dedicated Public API bot agent/user
 
 Figure 2.1 shows a simple scenario below where a dedicated Public API user is first making a login call and then sending message via Public API to an ongoing conversation connected happening in LP Messaging with a Third-Party bot.
 
-<img class="fancyimage" style="width:900px" src="img/tpbPublicApi/usage-diagram-public-api-message.png" alt="">
+<img class="fancyimage" style="width:900px" src="img/usage-diagram-public-api-message.png" alt="">
 Figure 2.1 Public API simple flow of sending messages command
 
 #### Step 3. Get Bearer Token
@@ -65,7 +65,7 @@ To perform login requests you will need a valid and dedicated Public API bot use
 You should not use the same user that is already assigned to another bot since they would log each other out.
 If the user belongs to a bot that is active and running on Third-Party-Bots the login request will get rejected.
 
-<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/bot-user-login-method.png" alt="">
 Figure 3.1 Showing two login methods of a Bot user
 
 #### Bearer Token via Username/Password

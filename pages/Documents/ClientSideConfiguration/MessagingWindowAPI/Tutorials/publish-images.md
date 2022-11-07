@@ -2,14 +2,11 @@
 pagename: Publish Images
 redirect_from:
   - consumer-int-publishing-images.html
-
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
 order: 89
 permalink: messaging-window-api-tutorials-publish-images.html
-
 indicator: messaging
 ---
 

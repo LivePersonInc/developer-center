@@ -1,12 +1,13 @@
 ---
 pagename: Monitoring
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Getting Started
 permalink: liveperson-functions-getting-started-monitoring.html
 indicator: both
+redirect_from:
+  - liveperson-functions-monitoring-activities.html
 ---
 
 We will introduce you to all the available monitoring features and tools on this page.

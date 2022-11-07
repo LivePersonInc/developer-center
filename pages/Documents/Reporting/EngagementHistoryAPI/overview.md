@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Engagement History API
-
 level-order: 6
 order: 1
 permalink: engagement-history-api-overview.html

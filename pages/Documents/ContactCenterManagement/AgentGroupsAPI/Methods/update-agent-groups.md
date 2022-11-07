@@ -2,16 +2,13 @@
 pagename: Update Agent Groups
 redirect_from:
   - administration-update-agent-groups.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
-
 order: 50
 
 permalink: agent-groups-api-methods-update-agent-groups.html
-
 indicator: both
 ---
 

@@ -2,15 +2,12 @@
 pagename: getOfflineSurvey
 redirect_from:
   - consumer-experience-javascript-chat-getofflinesurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 110
 permalink: javascript-chat-sdk-methods-getofflinesurvey.html
-
 indicator: chat
 ---
 

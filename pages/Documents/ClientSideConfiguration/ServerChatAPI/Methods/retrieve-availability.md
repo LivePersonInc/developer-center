@@ -2,15 +2,12 @@
 pagename: Retrieve Availability
 redirect_from:
   - consumer-experience-server-chat-retrieve-availability.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 10
 permalink: server-chat-api-methods-retrieve-availability.html
-
 indicator: chat
 ---
 

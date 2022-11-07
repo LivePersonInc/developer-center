@@ -2,14 +2,11 @@
 pagename: System Messages
 redirect_from:
   - agent-system-messages.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
-
 order: 240
 permalink: chat-agent-api-system-messages.html
-
 indicator: chat
 ---
 

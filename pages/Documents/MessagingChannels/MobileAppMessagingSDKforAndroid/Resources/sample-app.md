@@ -2,7 +2,6 @@
 pagename: Sample App
 redirect_from:
   - android-demo-app.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android

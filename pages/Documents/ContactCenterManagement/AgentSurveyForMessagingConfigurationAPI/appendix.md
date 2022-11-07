@@ -2,7 +2,6 @@
 pagename: Appendix
 redirect_from:
   - administration-agentsurvey-config-api-appendix.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API

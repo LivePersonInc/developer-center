@@ -1,6 +1,5 @@
 ---
 pagename: Configure the Android SDK
-
 redirect_from:
   - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
   - android-configuring-changing-fonts.html
@@ -9,8 +8,6 @@ redirect_from:
   - mobile-app-messaging-sdk-for-android-customization-and-branding-configuring-the-message-s-edit-text.html
   - android-configuring-sdk.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-customizing-the-sdk.html
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -245,7 +242,8 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
 
 2. Create **MonitoringParams**.
 
-   <div class="attn-alert">The entry points and engagement attributes used here are dummies.</div>
+{: .attn-alert}
+The entry points and engagement attributes used here are dummies.
 
    ```java
     // Create Entry Points JSON

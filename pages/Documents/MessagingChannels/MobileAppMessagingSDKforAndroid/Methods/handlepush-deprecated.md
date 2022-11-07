@@ -2,15 +2,11 @@
 pagename: handlePush (Deprecated)
 redirect_from:
   - android-handlepush.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 130
 permalink: mobile-app-messaging-sdk-for-android-methods-handlepush-(deprecated).html
-
 indicator: messaging
 ---
 

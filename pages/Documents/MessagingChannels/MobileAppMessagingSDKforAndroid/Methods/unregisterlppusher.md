@@ -2,15 +2,11 @@
 pagename: unregisterLPPusher
 redirect_from:
   - android-unregisterlppusher.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 120
 permalink: mobile-app-messaging-sdk-for-android-methods-unregisterlppusher.html
-
 indicator: messaging
 ---
 

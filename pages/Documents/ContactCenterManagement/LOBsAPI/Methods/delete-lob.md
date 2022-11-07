@@ -2,15 +2,12 @@
 pagename: Delete LOB
 redirect_from:
   - administration-delete-lob.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 80
 permalink: lobs-api-methods-delete-lob.html
-
 indicator: both
 ---
 

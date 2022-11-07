@@ -1,6 +1,5 @@
 ---
 pagename: SDE Util
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -21,6 +20,9 @@ indicator: both
 ## Methods
 
 ### addSDEs
+
+{: .attn-alert}
+Please be aware that the underlying Messaging Interactions API is not meant for real-time decisions, as the API has a delay of up to 1 minute.
 
 ▸ **addSDEs**(`sdes`, `visitorId`, `sessionId`): `Promise`<`void`\>
 

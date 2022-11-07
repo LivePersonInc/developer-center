@@ -1,6 +1,5 @@
 ---
 pagename: Examples
-Keywords:
 sitesection: Documents
 categoryname: Conversational AI
 documentname: Messaging Agent SDK

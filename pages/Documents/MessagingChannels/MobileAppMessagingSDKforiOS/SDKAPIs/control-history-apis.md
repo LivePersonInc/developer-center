@@ -3,7 +3,6 @@ pagename: Control History APIs
 redirect_from:
   - consumer-experience-ios-sdk-advanced-control-history-ios.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-control-history-apis.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS

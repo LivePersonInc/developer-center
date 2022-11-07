@@ -1,6 +1,5 @@
 ---
 pagename: App Extensions Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Link Previews

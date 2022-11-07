@@ -2,15 +2,12 @@
 pagename: onAccountToAccountTransfer
 redirect_from:
   - consumer-experience-javascript-chat-onaccounttoaccounttransfer.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Events
-
 order: 320
 permalink: javascript-chat-sdk-events-onaccounttoaccounttransfer.html
-
 indicator: chat
 ---
 

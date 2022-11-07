@@ -2,7 +2,6 @@
 pagename: Test with the Model Tester
 redirect_from:
     - intent-builder-testing-advanced-model-testing.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -104,7 +103,7 @@ Click the message, and then select **Unselected** to see the list of intents for
 ### View a report
 
 {: .attn-note}
-The system retains the 10 most recent reports.
+Reports are retained for 13 months.
 
 **To view a report**
 

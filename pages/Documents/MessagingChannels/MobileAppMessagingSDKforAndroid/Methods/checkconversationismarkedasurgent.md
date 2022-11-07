@@ -2,15 +2,11 @@
 pagename: checkConversationIsMarkedAsUrgent
 redirect_from:
   - android-checkurgent.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 210
 permalink: mobile-app-messaging-sdk-for-android-methods-checkconversationismarkedasurgent.html
-
 indicator: messaging
 ---
 

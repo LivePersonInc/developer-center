@@ -1,6 +1,5 @@
 ---
 pagename: Onboarding
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: MTLS

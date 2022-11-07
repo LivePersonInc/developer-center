@@ -4,7 +4,6 @@ redirect_from:
   - android-attributes.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html
   - mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -679,7 +678,7 @@ Define the visibility of "Mark as urgent" menu item.
 * **Default value:** true
 
 #### clear_history_menu_item_visible
-Define the visibility of "cCear history" menu item.
+Define the visibility of "Clear history" menu item.
 
 * **Type:** bool
 * **Default value:** true
@@ -1522,6 +1521,9 @@ Define whether or not we should show a real time link preview. A preview while t
 
 #### link_preview_to_use_more_than_og_tags
 parse only &lt;og:> tags or others as well
+
+* **Type:** bool
+* **Default value:** true
 
 * false: use &lt;og:title&gt; tags only
 * true: use &lt;og:title&gt; and &lt;title&gt; tags

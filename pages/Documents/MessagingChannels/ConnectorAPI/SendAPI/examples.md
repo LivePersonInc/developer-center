@@ -18,7 +18,6 @@ subfoldername: Send API
 order: 59
 indicator: messaging
 permalink: connector-api-send-api-examples.html
-
 ---
 
 ### Create a new conversation
@@ -501,7 +500,8 @@ The following example illustrates how to enable the auto messages feature upon c
 }
 ```
 
-<div class="attn-note">In order to receive AUTO MESSAGES, you must make the second request (sending the first message) <b>no later than 10 seconds</b> from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.</div>
+{: .attn-note}
+In order to receive AUTO MESSAGES, you must make the second request (sending the first message) **no later than 10 seconds** from the first request (creating the new conversation). In addition, it is required that the account has enabled the Controller Bot permissions in Account Config; contact your Customer Success Manager in order to do this.
 
 ### Campaign for messaging Routing
 

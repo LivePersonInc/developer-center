@@ -1,11 +1,12 @@
 ---
 pagename: Custom Interactive Message Template
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
 permalink: apple-messages-for-business-templates-custom-interactive-message-template.html
 indicator: messaging
+redirect_from:
+  - apple-business-chat-templates-custom-interactive-message-template.html
 ---
 
 ### Overview

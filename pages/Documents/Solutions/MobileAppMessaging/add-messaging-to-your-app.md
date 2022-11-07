@@ -3,9 +3,7 @@ pagename: Add Messaging to Your App
 redirect_from:
   - products-channels-inapp-messaging.html
 sitesection: Solutions
-
 documentname: Mobile App Messaging
-
 order: 1
 level-order: 1
 root-link: true
@@ -26,7 +24,9 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 * Optimized for network bandwidth and battery usage.
 
-<img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> <img src="img/inapp2.png" style="max-width:230px;max-height:700px;"> <img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
+<img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> 
+<img src="img/inapp2.png" alt="Add Messaging to Your App" style="max-width:230px;max-height:700px;">
+<img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
 
 ### Prerequisites
 
@@ -34,7 +34,11 @@ To begin, you need:
 
 * Conversational Cloud account with messaging enabled.
 
-  <div class="attn-alert">Contact your LivePerson representative to enable messaging on your account.  <b>Tip:</b> If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
+{: .attn-alert}
+Contact your LivePerson representative to enable messaging on your account.
+  
+{: .attn-tip}
+If you see 'All Conversations’ when you log in, your account has messaging enabled.
 
 * LivePerson only supports OAuth 2.0 authentication. For more information, please see [Getting Started with Authentication](/essential-resources-getting-started-with-authentication.html).
 

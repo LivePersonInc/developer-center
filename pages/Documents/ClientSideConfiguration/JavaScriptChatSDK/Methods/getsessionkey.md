@@ -2,15 +2,12 @@
 pagename: getSessionKey
 redirect_from:
   - consumer-experience-javascript-chat-getsessionkey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 180
 permalink: javascript-chat-sdk-methods-getsessionkey.html
-
 indicator: chat
 ---
 
