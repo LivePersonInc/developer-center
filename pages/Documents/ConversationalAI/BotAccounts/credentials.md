@@ -120,7 +120,7 @@ The Consumer Pre-Authentication credential lets you securely share those consume
 
 In this authentication flow, the consumer is authenticated before a conversation with a bot ever begins. To set this up:
 
-1. Configure your IdP service, so you can leverage it in Conversational Cloud.
+1. Configure your IdP service, so you can leverage it in Conversational Cloud. [Learn more.](consumer-authentication-configuration.html)
 
     {: .attn-note}
     For help with this, contact your LivePerson representative.
