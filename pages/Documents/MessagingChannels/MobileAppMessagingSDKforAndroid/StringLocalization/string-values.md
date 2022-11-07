@@ -31,6 +31,7 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_accessibility\_attachment\_menu\_button\_expanded** | The attachment menu button name when expanded | Attachment menu button expanded |
 | **lp\_accessibility\_audio\_pause\_button** | Spoken aloud when a user focuses on the pause button for a voice clip in chat history. | Pause |
 | **lp\_accessibility\_audio\_play\_button** | Spoken aloud when a user focuses on the play button for a voice clip in chat history. | Play |
+| **lp\_accessibility\_back\_button** | Spoken aloud when a user focuses on back button. | Navigate up |
 | **lp\_accessibility\_camera** | Used on the camera button (on the attachment menu) | Camera |
 | **lp\_accessibility\_chat\_message** | Used as a label on the 'Enter message' EditText control | Chat message |
 | **lp\_accessibility\_full\_image** | Used on the image in the full image screen | Full image |
