@@ -349,48 +349,6 @@ code pre {
   position: absolute;
 }
 
-.darken {
-  background-color: var(--primary-black);
-}
-
-.darken::before {
-  background-color: var(--footer-background);
-  color: var(--footer-text);
-}
-
-.darken .highlight {
-  background-color: var(--footer-background);
-}
-
-.darken button {
-  background-color: transparent !important;
-  color: var(--button-text-secondary);
-}
-
-.darken code span::selection {
-  background-color: var(--sky-blue);
-}
-
-.darken .nightbtn {
-  opacity: 1;
-}
-
-.darken .daybtn {
-  opacity: .4;
-}
-
-.darken .codebtn {
-  color: #f2f1f2;
-}
-
-.daybtn:focus {
-  outline: 0;
-}
-
-.nightbtn:focus {
-  outline: 0;
-}
-
 .codebtn:focus {
   outline: 0;
 }
@@ -1167,7 +1125,6 @@ div.language-plaintext,
   position: relative;
   background-color: var(--light-gray);
   display: flex;
-  margin-bottom: 20px;
   align-items: center;
 }
 
@@ -1432,17 +1389,10 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
 }
 
 .highlighter-rouge {
-  background-color: var(--footer-background);
   margin-bottom: 32px;
   margin-top: 32px;
   font-family: 'Roboto Mono', Monaco, courier, monospace;
-  color: var(--widget-text);
   overflow-wrap: anywhere;
-}
-
-/* There is now a dark mode toggle for the whole website, so the dark mode toggle for the .highlighter-rouge was hidden (DX-33) */
-.highlighter-rouge button.nightbtn {
-  display: none;
 }
 
 .mysidebar::-webkit-scrollbar-thumb {

@@ -261,17 +261,10 @@ code {
   width: 89%;
 }
 
-p .darken {
-  color: var(--widget-text);
-}
-
 td code {
   color: #666;
 }
 
-td .darken {
-  color: var(--widget-text) !important;
-}
 
 /* TOC nav bar */
 
