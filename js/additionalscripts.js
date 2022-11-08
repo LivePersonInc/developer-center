@@ -772,7 +772,7 @@ function isExplorer() {
 function searchClick(event) {
   $(".ds-dropdown-menu").on("click", "a", function (event) {
     event.preventDefault()
-    linkclick(event, this)
+    // linkclick(event, this)
   })
 }
 

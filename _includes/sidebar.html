@@ -5,43 +5,36 @@
   <!-- <li class="homeitem folder topfolder active">
     <div class="sidebarimage" style="margin-left:40px;">
     </div>
-    <a onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
+    <a  class="innerlink" href="/index.html">WELCOME</a>
   </li> -->
   {% for category in site.data.documentsupdated %} {% if forloop.last == true %}
   <li class="folder topfolder lowerimage">
     <a class="highlightlink" href="">
-      <span class="sidebarbutton">
-        <span></span>
-      </span>
-      <span> {{ category.categoryname }}</span>
-    </a>
+      <span class="sidebarbutton"><span></span></span>
+      <span> {{ category.categoryname }} </span></a
+    >
     <ul>
       {% for document in category.documents %} {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href="">
-          <span class="sidebarbutton innerArrowAdjust">
-            <span></span>
-          </span>
-          <span> {{ document.documentname }}</span>
-        </a>
+        <a class="highlightlink" href=""
+          ><span class="sidebarbutton innerArrowAdjust"><span></span></span
+          ><span> {{ document.documentname }}</span></a
+        >
         <ul>
           {% for page in document.pages %} {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a href="">
-              <span class="sidebarbutton innerArrowAdjust">
-                <span></span>
-              </span>
-              <span>{{ page.pagename }}</span>
-            </a>
+            <a href=""
+              ><span class="sidebarbutton innerArrowAdjust"> <span></span></span
+              ><span>{{ page.pagename }}</span></a
+            >
             <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
                 <a
-                  onclick="linkclick(event,this)"
                   class="innerlink"
                   href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html"
-                  >{{ subpage.subpagename }}
-                </a>
+                  >{{ subpage.subpagename }}</a
+                >
               </li>
               {% endfor %}
             </ul>
@@ -51,54 +44,51 @@
             <a
               class="innerlink"
               href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html"
-              >{{ page.pagename }}
-            </a>
+              >{{ page.pagename }}</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
       </li>
       {% else %}
       <li class="folder innerfolder sidebarcategory sololink">
-        <a class="innerlink" href="/{{ document.documentname | slugify }}.html"
-          >{{ document.documentname }}
-        </a>
+        <a
+          class="innerlink"
+          href="/{{ document.documentname | slugify }}.html"
+          >{{ document.documentname }}</a
+        >
       </li>
       {% endif %} {% endfor %}
     </ul>
   </li>
   {% else %}
   <li class="folder topfolder lowerimage">
-    <a class="highlightlink" href="">
-      <span class="sidebarbutton">
-        <span></span>
-      </span>
-      <span> {{ category.categoryname }}</span>
-    </a>
+    <a class="highlightlink" href=""
+      ><span class="sidebarbutton"><span></span></span
+      ><span> {{ category.categoryname }}</span></a
+    >
     <ul>
       {% for document in category.documents %} {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href="">
-          <span class="sidebarbutton innerArrowAdjust">
-            <span></span>
-          </span>
-          <span> {{ document.documentname }}</span>
-        </a>
+        <a class="highlightlink" href=""
+          ><span class="sidebarbutton innerArrowAdjust"><span></span></span
+          ><span> {{ document.documentname }}</span></a
+        >
         <ul>
           {% for page in document.pages %} {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a class="highlightlink" href="">
-              <span class="sidebarbutton innerArrowAdjust">
-                <span></span>
-              </span>
-              <span>{{ page.pagename }}</span>
-            </a>
+            <a class="highlightlink" href=""
+              ><span class="sidebarbutton innerArrowAdjust"> <span></span></span
+              ><span>{{ page.pagename }}</span></a
+            >
             <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
                 <a
                   class="innerlink"
-                  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}
-                </a>
+                  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html"
+                  >{{ subpage.subpagename }}</a
+                >
               </li>
               {% endfor %}
             </ul>
@@ -107,16 +97,20 @@
           <li class="pageitem">
             <a
               class="innerlink"
-              href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}
-            </a>
+              href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html"
+              >{{ page.pagename }}</a
+            >
           </li>
           {% endif %} {% endfor %}
         </ul>
       </li>
       {% else %}
       <li class="folder innerfolder sidebarcategory sololink">
-        <a class="innerlink" href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}
-        </a>
+        <a
+          class="innerlink"
+          href="/{{ document.documentname | slugify }}.html"
+          >{{ document.documentname }}</a
+        >
       </li>
       {% endif %} {% endfor %}
     </ul>
@@ -126,8 +120,8 @@
     <a
       target="_blank"
       class="bottombuttons spacebetweenHyperlink"
-      href="http://knowledge.liveperson.com">
-      Knowledge Center
+      href="http://knowledge.liveperson.com"
+      >Knowledge Center
       <span style="float: right">
         <svg
           width="11"
@@ -148,8 +142,8 @@
     <a
       target="_blank"
       class="bottombuttons spacebetweenHyperlink"
-      href="https://status.liveperson.com/">
-      Service Status Dashboard
+      href="https://status.liveperson.com/"
+      >Service Status Dashboard
       <span style="float: right">
         <svg
           width="11"
