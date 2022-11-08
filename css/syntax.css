@@ -315,10 +315,6 @@ button.nightbtn {
   opacity: .4;
 }
 
-.dark .codebtn {
-  color: #f2f1f2;
-}
-
 .daybtn:focus {
   outline: 0;
 }
