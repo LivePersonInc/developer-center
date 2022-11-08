@@ -204,60 +204,60 @@ button.nightbtn {
 
 .highlight .vc {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .nn {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .nl {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .ni {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .bp {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .vg {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .vi {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .nv,
 .highlight .vm {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .w {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .n,
 .highlight .py,
 .highlight .nx {
   color: #ffffff;
-  background-color: #272822;
+  background-color: var(--highlight-bg);
 }
 
 .highlight .ow {
