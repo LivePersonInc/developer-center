@@ -289,23 +289,6 @@ function codeButtons() {
   })
 }
 
-//a function to control a click on internal links
-function linkclick(event, that) {
-  //prevent the link from actually navigating to the url
-  event.preventDefault()
-  //grab the url to which the link is pointing
-  var url = $(that).attr("href")
-  // call the navigateContent function and pass that url to it
-  navigateContent(url)
-  //make sure the window recognizes this and adds it to the history queue for back and refresh actions
-  window.history.pushState(
-    {
-      url: url,
-    },
-    "",
-    url
-  )
-}
 //handle back/forward and refresh events
 $(window).on("popstate", function (e) {
   var state = e.originalEvent.state
@@ -772,7 +755,6 @@ function isExplorer() {
 function searchClick(event) {
   $(".ds-dropdown-menu").on("click", "a", function (event) {
     event.preventDefault()
-    linkclick(event, this)
   })
 }
 
