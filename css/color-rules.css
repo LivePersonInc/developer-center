@@ -73,6 +73,7 @@
   --text-invert: #fff;
   --card-bg-background: linear-gradient(180deg, rgba(41, 43, 51, 0.35) 0%, rgba(41, 43, 51, 0.7) 100%);
   --table-cell: #f4f4f6;
+  --highlight-bg: var(--primary-black);
 }
 
 .dark {
@@ -125,4 +126,5 @@
   --text-invert: #000;
   --card-bg-background: linear-gradient(0deg, rgba(196, 199, 212, 0.7), rgba(196, 199, 212, 0.7));
   --table-cell: #24262E;
+  --highlight-bg: var(--footer-background);
 }
