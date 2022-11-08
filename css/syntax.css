@@ -285,10 +285,6 @@ button.nightbtn {
   color: #f92672;
 }
 
-.dark {
-  background-color: var(--primary-black);
-}
-
 .dark .highlighter-rouge {
   background-color: var(--footer-background);
   color: var(--footer-text);
@@ -296,15 +292,6 @@ button.nightbtn {
 
 .dark .highlight {
   background-color: var(--footer-background);
-}
-
-.dark button {
-  background-color: transparent !important;
-  color: var(--button-text-secondary);
-}
-
-.dark code span::selection {
-  background-color: var(--sky-blue);
 }
 
 .dark .nightbtn {
