@@ -1,5 +1,7 @@
 pre.syntax {
   background: inherit;
+  padding: var(--space4);
+  margin: 0;
 }
 
 button.nightbtn {
