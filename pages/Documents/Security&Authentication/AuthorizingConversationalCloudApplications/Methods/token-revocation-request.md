@@ -1,6 +1,5 @@
 ---
 pagename: Token Revocation Request
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications
@@ -8,7 +7,7 @@ subfoldername: Methods
 order: 12
 permalink: authorizing-conversational-cloud-applications-methods-token-revocation-request.html
 indicator: both
-redirect_from: 
+redirect_from:
   - authorizing-liveengage-applications-methods-token-revocation-request.html
 ---
 
@@ -48,8 +47,8 @@ OAuth is often used to manage users' log in to a certain site or application at 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
 | token | refresh token that was supplied in the application previous token or refresh request | String| Required |  |
-| client_id | Application oAuth2.0 client_id. provided after application registration | String| Required |  |
-| client_secret | Application oAuth2.0 secret provided after application registration | String| Required |  |
+| client_id | Application OAuth 2.0 client_id. provided after application registration | String| Required |  |
+| client_secret | Application OAuth 2.0 secret provided after application registration | String| Required |  |
 
 **Example**:
 
@@ -68,4 +67,3 @@ client_id=d51186e9-e1a1-421e-8b1d-161ade532012&client_secret=r7ufeqb32ore583r6lj
 | 400 | Bad request — Problem with query parameters |
 | 401 | Unauthorized — Bad Authentication (invalid site or application id) |
 | 500 | Internal server error |
-

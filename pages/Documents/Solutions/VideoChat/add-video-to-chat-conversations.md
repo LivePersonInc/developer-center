@@ -3,9 +3,7 @@ pagename: Add Video to Chat Conversations
 redirect_from:
   - products-video-chat-overview.html
 sitesection: Solutions
-
 documentname: Video Chat
-
 order: 1
 level-order: 1
 root-link: true
@@ -15,12 +13,13 @@ indicator:
 
 ### Overview
 
-Consumers prefer to message rather than call brands.  However, in some cases, a higher touch interaction such as a video call can help to make the conversation more effective.  
-<iframe src="https://www.youtube.com/embed/wV9ecP0n7d4" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe>
+Consumers prefer to message rather than call brands. However, in some cases, a higher touch interaction such as a video call can help to make the conversation more effective.
+
+<!-- <iframe src="https://www.youtube.com/embed/wV9ecP0n7d4" allowfullscreen webkitallowfullscreen mozallowfullscreen height="280" width="500"></iframe> -->
 
 ### Benefits of using video chat
 
-* **Solve issues, the first time around**: video gives agents the best tools for achieving first contact resolution and reducing wait time and average hold time. 
+* **Solve issues, the first time around**: video gives agents the best tools for achieving first contact resolution and reducing wait time and average hold time.
 
 * **Build relationships with your customers**: video lets agents meaningfully connect with consumers they are already messaging with, fostering a more personal connection.
 
@@ -28,12 +27,11 @@ Consumers prefer to message rather than call brands.  However, in some cases, a 
 
 ### Use cases
 
-* Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem. 
+* Solve intricate tech support issues or inquiries that would be hard to describe without visuals. For example, guide a customer on resetting the wires on a modem.
 
-* Provide your VIP customers with concierge, premium treatment. 
-Video provides tailored solutions and service for consumers, with their personal choices kept on priority.  
+* Provide your VIP customers with concierge, premium treatment.
+Video provides tailored solutions and service for consumers, with their personal choices kept on priority.
 
 * Replace in-person meetings such as consultations or long application process with real-time assistance and in-store experience.
 
 * Identify consumers when verification is needed on personal and secure issues.
-

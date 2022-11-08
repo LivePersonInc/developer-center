@@ -1,6 +1,5 @@
 ---
 pagename: Web View Integration API
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -13,7 +12,7 @@ indicator: both
 
 When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apple Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
 
-<img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png">
+<img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png" alt="The flow of the Web View integration API">
 
 The Web View API can be used by the external system to:
 
@@ -21,11 +20,11 @@ The Web View API can be used by the external system to:
 - Post a message to the chat client
 - Invoke a dialog starter to trigger a dialog flow
 
-{: .important}
+{: .attn-note}
 Don’t use this API to post Personally Identifiable Information (PII) or Payment Card Industry (PCI) data because the data is not masked.
 
-{: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before using this API. For details, see [here](conversation-builder-networking-security.html).
+{: .attn-note}
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before using this API.
 
 ### Getting started
 
@@ -36,9 +35,6 @@ Retrieve your domain based on your environment:
 | LivePerson Cloud US | va.bc-intg.liveperson.net |
 | LivePerson Cloud UK | lo.bc-intg.liveperson.net |
 | LivePerson Cloud SY | sy.bc-intg.liveperson.net |
-| Amazon Web Services US | platformservice.botcentralapi.com |
-| Amazon Web Services UK | integration-eu.botcentralapi.com |
-| Amazon Web Services SY | integration-ap.botcentralapi.com |
 | Google Cloud Platform PROD | cbsrvc-us-p.liveperson.net |
 
 Also review the [API terms of use](https://policies.liveperson.com/apitou).
@@ -47,7 +43,7 @@ Also review the [API terms of use](https://policies.liveperson.com/apitou).
 
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type) function.
-- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field. 
+- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field.
 - **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-id) function.
 
 ### Request
@@ -95,4 +91,4 @@ Use the [Get Web View Variables](conversation-builder-scripting-functions-get-se
 
 ### Example guide
 
-For a step-by-step, example guide that uses this API, see [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).
+See [this step-by-step guide](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html) that uses this API.

@@ -1,9 +1,8 @@
 ---
 pagename: P12 Key Tester
-keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS 
+documentname: MTLS
 subfoldername: Methods
 permalink: mtls-methods-p12-key-tester.html
 redirect_from:
@@ -14,7 +13,7 @@ This method will allow you to test your P12 Key before uploading a certificate a
 
 ### Request
 
- |Method|      URL|  
+ |Method|      URL|
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/account/{accountId}/p12-test/multipart |
 
@@ -24,7 +23,7 @@ This method will allow you to test your P12 Key before uploading a certificate a
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
  |Content-Type|     Since the endpoint is multipart, this header should be a variation of the multipart request content-type (for example: **multipart/form-data**).  |
- 
+
 
 **Request Body**
 

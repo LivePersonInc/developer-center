@@ -1,8 +1,7 @@
 ---
 pagename: Implementing a Web View Integration
 redirect_from:
- - conversation-builder-tutorials-guides-implementing-a-web-view-integration.html
-Keywords:
+  - conversation-builder-tutorials-guides-implementing-a-web-view-integration.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -28,7 +27,7 @@ In order to call the Web View Integration API, the following data is needed:
 
 The Bot ID can be found in Conversation Builder in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) (expand **More Settings**).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_botID.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_botID.png" alt="The Bot ID setting in Bot Settings">
 
 The conversation ID can be retrieved with the [botContext.getConversationId()](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-id) method in bot code.
 
@@ -59,17 +58,17 @@ function __initConversation() {
 
 In the bot, we have a simple dialog to present the form link to the visitor. The dialog has a simple pattern match for triggering.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_formLink.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_formLink.png" alt="A dialog to send a form link to the consumer">
 
 The dialog also has a single Button Question interaction with a single button. This button uses the **formURL** bot variable that was created in the Global Functions as the **Callback**. This way, when the visitor clicks the button, they will be directed to the form URL.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/guideWebView_buttonConfig.png" alt="">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/guideWebView_buttonConfig.png" alt="A button question with a single button that uses the callback to direct the user to the form URL when the user clicks it">
 
 ### Call the API from the browser
 
 For the purposes of this guide, we created a simple HTML page, with a basic form, in order to submit some collected information back to the bot. We are not performing any validation, but you might want to do so in your form.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/guideWebView_form.png" alt="">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/guideWebView_form.png" alt="A simple example form to collect some info, e.g., what is your name">
 
 After the user fills out the form, the method below is called to submit the data back to the bot. We retrieve the data from the query string, then retrieve the form data, then set the domain and authorization, and finally post data to the bot.
 
@@ -81,18 +80,18 @@ submitForm = async function() {
  const userId = queryParams.get('userId');
  const conversationId = queryParams.get('convId');
  const botId = queryParams.get('botId');
- 
+
  // Get data from form
  const name = document.querySelector('input[name="user_name"]').value;
  const color = document.querySelector('input[name="favorite_color"]').value;
  const swallow = document.querySelector('input[name="unladen_swallow"]').value;
- 
+
  // use correct domain for your region
  const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
   // encode auth string
  const authString = `${conversationId} || ${botId}`;
  const auth = await sha256(authString);
- 
+
  const res = await postData(domain, auth, {
    botId,
    conversationId,
@@ -131,9 +130,9 @@ async function postData(url = '', auth, data = {}) {
 
 When we called the Web View Integration API upon submitting the form, we passed a “message” parameter with a value of “request successful.” This “message” can be used in the dialog flow. You can see in the images below that we have a custom rule to pattern match the message that we sent.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_a.png" alt="">
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_b.png" alt="">
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_c.png" alt="">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_a.png" alt="The Custom Rule button on the button question">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_b.png" alt="The configuration of the custom rule, which pattern matches request successful">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_c.png" alt="The configured custom rule as it appears directly on the button interaction">
 
 In the pre-process code for the interaction, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
 
@@ -146,6 +145,6 @@ botContext.setBotVariable('visitor_color', visitor_color, true, false);
 botContext.setBotVariable('visitor_swallow', visitor_swallow, true, false);
 ```
 
-An end-to-end demo can be found [here](https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/index.html). Simply type “web view” to trigger the appropriate dialog. Click the link to access the form, fill it in, and then submit the form. The bot will then respond, confirming that the form was filled.
+There's an [end-to-end demo](https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/index.html). Simply type “web view” to trigger the appropriate dialog. Click the link to access the form, fill it in, and then submit the form. The bot will then respond, confirming that the form was filled.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/guideWebView_chat.png" alt="">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/guideWebView_chat.png" alt="Testing the conversation using the Messaging test page">

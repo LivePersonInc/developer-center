@@ -12,18 +12,18 @@
     <script src="https://www.microsoftTranslator.com/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&widget=none"></script>
     <style>
         /* centered columns styles */
-        
+
         .row-centered {
             text-align: center;
         }
-        
+
         .col-centered {
             display: block;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
         }
-        
+
         .LTRStyle {
             display: none !important;
         }
@@ -100,7 +100,7 @@
                 //update the hidden div with the visitors chat line
                 document.getElementById('visitorChat2').innerHTML = chatLine;
                 //translate the visitors chat line based on skill group
-                
+
                 if (skill == "Spanish") {
                     Microsoft.Translator.Widget.Translate('es', 'en', onProgress, onError, onComplete2, onRestoreOriginal);
                 } else if (skill == "Russian") {

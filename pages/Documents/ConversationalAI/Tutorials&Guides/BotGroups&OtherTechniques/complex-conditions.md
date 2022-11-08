@@ -1,7 +1,5 @@
 ---
 pagename: Complex Conditions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
@@ -10,8 +8,8 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
-{: .important}
-This is a tutorial series that's cumulative in nature. To start from the beginning, start [here](tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration.html).
+{: .attn-note}
+This is a tutorial series that's cumulative in nature. What's more, this series builds on the beginner's series. To complete this tutorial, [start from the beginning](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 In the [Getting Started](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series, we used conditional logic in the Make Payment dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
 
@@ -21,13 +19,13 @@ Let's return to Conversation Builder, where we will create our "Refund Request" 
 
 1. Navigate to Conversation Builder, and select the Order Bot.
 2. In the lower-left corner, click **Add Dialog**, and create a new standard dialog with the name **Refund Request**.
-3. Open the Assist tool by clicking <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
+3. Open the Assist tool by clicking <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png" alt="Assist icon"> (Assist icon) beside the dialog starter.
 
     Select the “LP_Cross-vertical” domain, followed by the "request refund" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to request a refund." Selecting this intent associates it with the dialog starter.
 
 4. Add a new *Text statement* to acknowledge the user's intent. Add the text, "It looks like you have a question about a refund."
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/refund_request_dialog.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/refund_request_dialog.png" alt="Adding a Text statement to the Refund Request dialog">
 
     Next, we’re going to add the first of two questions that will determine where this conversation flows.
 
@@ -41,7 +39,7 @@ Let's return to Conversation Builder, where we will create our "Refund Request" 
 
     To complete the **Add Next Action Rule** section, start by giving the rule a name of "Yes." Next, click **+ Add Condition**, select **Pattern** from the resulting dropdown, and enter the pattern "Yes". Finally, we’ll capture the result in a variable: Click **+ Add Variable**. Name the variable `within30Days`, and set the value to "true". Click **Save**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/yesrule.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/yesrule.png" alt="Adding a rule using the Edit Next Action Rule window">
 
     Add a second rule, giving it a name of "No." Click **+ Add Condition**, select **Pattern** from the resulting dropdown, and enter the pattern "No". Once again, click **+ Add Variable**. Name the variable `within30Days`, and set the value to "false". Click **Save**.
 
@@ -58,32 +56,32 @@ We’ve now created a dialog that records whether or not a purchase was made in 
 2. Add a total of 4, new text interactions. Give each interaction the following title and text content:
 
     * **Interaction Title**: Store Less 30
-    * **Text Content**: If you purchased your item within 30 days from one of our stores, you can bring the item back for a full refund. 
-    * **Next Action**: End Interaction 
+    * **Text Content**: If you purchased your item within 30 days from one of our stores, you can bring the item back for a full refund.
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Store More 30
     * **Text Content**: If you purchased your item more than 30 days ago from our store, you can bring the item back for a store credit.
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Web Less 30
     * **Text Content**: If you purchased your item within 30 days from our website, you can send the item back for a full refund. We'll even pay the postage!
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
     * **Interaction Title**: Web More 30
     * **Text Content**: If you purchased your item more than 30 days ago from our website, you can return the item for a credit. You could bring the item into one of our stores, or pay for the return shipping.
-    * **Next Action**: End Interaction 
+    * **Next Action**: End Interaction
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/four_text_interactions.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/four_text_interactions.png" alt="The Text interactions that have just been added">
 
 3. Return to the "Online or Instore" multiple choice question, and create a new rule: Click the **Next Action** dropdown, and then click **+ Custom Rule**. We’re going to add a new rule to correspond to each of the text statements that we will be routing to.
 
-    For the first rule, give it a name of "Store Less 30." Click **+ Add Condition**, and set the condition to match a pattern of `*store`. This will match both "In-store" and "store" utterances, which provides flexibility in how our users can respond. 
+    For the first rule, give it a name of "Store Less 30." Click **+ Add Condition**, and set the condition to match a pattern of `*store`. This will match both "In-store" and "store" utterances, which provides flexibility in how our users can respond.
 
     Still in the **Add Condition** section, we want to check the value of the previously stored `within30Days` variable to determine the next step. Click **+ Add Variable Condition**, and under **Variable Name**, type in "within30Days".  In the adjacent dropdown, select **Equals**, and for **Value**, set to "true".
 
     We are now checking multiple conditions to determine what our next step should be. To finish this rule, select the **And Go To** dropdown and select the "Store Less 30" text interaction. Click **Save**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/add_next_action_rule.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/add_next_action_rule.png" alt="Adding a rule using the Edit Next Action rule">
 
 4. Complete the three, remaining rules to point to each of the other text interactions. Create these new rules, and repeat the previous step with the following information for each:
 
@@ -105,13 +103,13 @@ We’ve now created a dialog that records whether or not a purchase was made in 
         * `within30Days` Equals "false"
     * **And Go To**: Web More 30
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/online_or_instore_question.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/online_or_instore_question.png" alt="The Online or instore question with all of its rules configured">
 
 5. With our rules now in place, let’s test the functionality by opening the preview window, resetting the session, and triggering our Refund Request dialog. Navigate through each of the four pathways through the dialog.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview.png" alt="Previewing the conversation using the Preview tool">
 
-    Without a single line of JavaScript code, we now have complex conditional logic to check for multiple variables in determining a flow for our users. 
+    Without a single line of JavaScript code, we now have complex conditional logic to check for multiple variables in determining a flow for our users.
 
 ### What's next?
 

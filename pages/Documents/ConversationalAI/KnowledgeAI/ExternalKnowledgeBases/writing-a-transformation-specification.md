@@ -2,7 +2,6 @@
 pagename: Writing a Transformation Specification
 redirect_from:
   - knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
@@ -17,17 +16,17 @@ The data schema used by your CMS differs from that used by LivePerson KnowledgeA
 
 If you’re using a popular CMS vendor (e.g., Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt spec. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default spec is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
 
-Jolt provides several, out-of-the-box transforms that you can use when writing the spec; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
+Jolt provides several, [out-of-the-box transforms](https://github.com/bazaarvoice/jolt#stock-transforms) that you can use when writing the spec. The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
-The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
+The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson KnowledgeAI article schema. To learn about more complex use cases, see the [Jolt test samples](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
 ### Supported LivePerson attributes
 
-See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
+See [this section](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
 
 ### Reading the examples
 
-**Terminology:** 
+**Terminology:**
 
 LHS = left-hand side = the input JSON tree<br>
 RHS = right-hand side = the output JSON tree
@@ -37,7 +36,7 @@ RHS = right-hand side = the output JSON tree
 #### Example 1
 
 **Input JSON**
-```JSON 
+```JSON
 {
     "results": [
         {
@@ -85,7 +84,7 @@ RHS = right-hand side = the output JSON tree
 **Using the “&” wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
 * The first parameter tells the level to go up on the LHS from current node.
 * The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
- 
+
 The syntaxes below are equal, i.e., parameters/brackets can be ignored for simple mappings:<br>
 & = &0 = &(0) = &(0,0)<br>
 &1 = &(1) = &(1,0)
@@ -119,7 +118,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 
 #### Example 2
 
-**Input JSON** 
+**Input JSON**
 ```JSON
 {
   "results": [
@@ -211,7 +210,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 #### Example 1
 
 **Input JSON**
-```JSON 
+```JSON
 {
    "result": {
        "id": 360048237271,
@@ -256,7 +255,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 #### Example 2
 
 **Input JSON**
-```JSON 
+```JSON
 {
   "articleNumber": "000001000",
   "categoryGroups": [
@@ -315,11 +314,11 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-In the above specification, in the output JSON’s tags attribute, “[ ]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then "tags" is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning "tags" as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings. 
+In the above specification, in the output JSON’s tags attribute, “[ ]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then "tags" is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning "tags" as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings.
 
 **Using the * wildcard:** In the transform operation, " * " considers all fields/keys matching “ * ” pattern at the current level on the LHS.
 
-In the example above, we use “ * “ to consider all objects under the “categoryGroups” array. 
+In the example above, we use “ * “ to consider all objects under the “categoryGroups” array.
 
 “ * “ can be used to match all fields/keys/indexes like in the example above. It can also be used to match part of the key on the LHS. For example, “ categor* ” could match keys like “categoryGroups”, “categories”.
 
@@ -336,7 +335,7 @@ In the example above, we use “ * “ to consider all objects under the “cate
 #### Example 3
 
 **Input JSON**
-```JSON 
+```JSON
 {
   "result": [
     {
@@ -389,7 +388,7 @@ When fetching a single article, some CMS systems might return an array as per th
 #### Example 1
 
 **Input JSON**
-```JSON 
+```JSON
 {
   "results": [
     {
@@ -449,7 +448,7 @@ When fetching a single article, some CMS systems might return an array as per th
 #### Example 2
 
 **Input JSON**
-```JSON 
+```JSON
 {
   "searchRecords": [
     {

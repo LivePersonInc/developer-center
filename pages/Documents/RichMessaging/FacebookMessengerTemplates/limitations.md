@@ -2,7 +2,7 @@
 pagename: Limitations
 redirect_from:
   - structured-content-facebook-messenger-templates-limitations.html
-Keywords: structured content rich messaging
+keywords: structured content rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Facebook Messenger Templates
@@ -27,7 +27,7 @@ Agent or bot will receive an error when trying to send Structured Content elemen
 #### Button and Generic Templates
 
   * If there are more than 3 button items
-  
+
   * If number of characters in text (on main card) larger than 640 (UTF-8-encoded)
 
   * If number of characters on button text title is larger than 20
@@ -43,4 +43,3 @@ Agent or bot will receive an error when trying to send Structured Content elemen
   * If a "image" element is placed **without** a “title” text in the structured content card template
 
   * If a "button" elements are placed **without** a “title” text in the structured content card template
-

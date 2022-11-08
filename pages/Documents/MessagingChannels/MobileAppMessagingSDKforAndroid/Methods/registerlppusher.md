@@ -2,15 +2,11 @@
 pagename: registerLPPusher
 redirect_from:
   - android-registerlppusher.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Methods
-
 order: 110
 permalink: mobile-app-messaging-sdk-for-android-methods-registerlppusher.html
-
 indicator: messaging
 ---
 
@@ -18,7 +14,7 @@ If your system implementation involves an authentication step, use `LPAuthentica
 
 There are 2 authenticated connection methods:
 
-* Authenticated (authenticationKey) 
+* Authenticated (authenticationKey)
 
 * Unauthenticated
 
@@ -53,11 +49,11 @@ Call `LPAuthenticationParams().setAuthKey("yourAuthCode")` to allow the LivePers
 
 **Note:** When using this method, you can also set a special redirect URL when authenticating by calling: `lpAuthenticationParams.setHostAppRedirectUri(yourRedirectUrl)` with JWT — new `LPAuthenticationParams().setHostAppJWT("yourJwt")`.
 
-When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.  
+When using **registerLPPusher** with authentication parameters for JWT renewal (JWT renewal when in the background), the authentication process goes into an infinite loop.  Use `updateTokenInBackground` to separate the *register to push* and the *token update* when in the background.
 
-When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.  
+When the JWT expires or if the registration fails due to an expired token, the `onTokenExpired()` callback gets called.
 
-* If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`. 
+* If the screen is in the background, the host app uses the updateTokenInBackground() API with new authentication parameters instead of calling `registerLPPusher()`.
 
 * If the screen is in the foreground, the host app calls `reconnect()` to renew the JWT.
 

@@ -2,7 +2,6 @@
 pagename: Campaigns
 redirect_from:
   - consumer-experience-android-sdk-advanced-campaigns.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -45,7 +44,7 @@ Monitoring APIs include two APIs:
 
 * [sendSDE](android-monitoring_api.html) - Sends engagement attributes to LivePerson. Should be used whenever the app would like to report on an engagement attribute.
 
-* [getEngagement](android-monitoring_api.html) - In case that there are a matching campaign and engagement, getEngagement returns an engagement.  
+* [getEngagement](android-monitoring_api.html) - In case that there are a matching campaign and engagement, getEngagement returns an engagement.
 
 ### Code Samples
 
@@ -71,11 +70,11 @@ Use this API to send engagement attributes (as part of the request body).  As an
 
    - context: application context
 
-   - consumerID: an optional brand app consumer ID 
+   - consumerID: an optional brand app consumer ID
 
    - monitoringParams: an instance of includes optional PageId, JSONArray of Entry Points and a JSONArray of Engagement Attributes
 
-   - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType 
+   - EngagementCallback: operation callback: onSuccess() response with LPEngagementResponse that contains pageId, sessionId, visitorId and engagementDetailsList onError() response with the MonitoringErrorType
 
 ```java
 // Calling getEngagement and providing the created identityList and monitoringParams (includes entryPoints and engagementAttriutes)
@@ -151,9 +150,9 @@ MonitoringParams monitoringParams = new MonitoringParams("PageId", entryPoints, 
 
 Use this API to report engagement attributes (SDEs).  Available parameters include:
 
-   - context: application context 
-   
-   - consumerID: brand app consumer ID  
+   - context: application context
+
+   - consumerID: brand app consumer ID
 
    - monitoringParams: an instance of LPMonitoringParams that includes an optional Array of Entry Points and an optional dictionary of Engagement Attributes.  An additional optional parameter is PageID, which you use for Page identification for sending events on the current engagement. LPSdeResponse and LPtEngagementResponse received the PageID.
 
@@ -173,4 +172,3 @@ LivepersonMonitoring.sendSde(context, identityList, monitoringParams, new SdeCal
   }
 });
 ```
-

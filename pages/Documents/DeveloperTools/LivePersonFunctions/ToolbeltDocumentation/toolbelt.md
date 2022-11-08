@@ -1,12 +1,13 @@
 ---
 pagename: Toolbelt
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Toolbelt Documentation
 permalink: liveperson-functions-toolbelt-documentation-toolbelt.html
 indicator: both
+redirect_from:
+  - function-as-a-service-developing-with-faas-toolbelt.html
 ---
 
 ## Table of contents
@@ -24,7 +25,7 @@ indicator: both
 - [SFClient](#sfclient)
 - [SecretClient](#secretclient)
 
-{: .important}
+{: .attn-note}
 Please be aware that `ContextServiceClient` **needs** to have the correct (zone-specific) domain added to the [allowlist](liveperson-functions-foundations-features.html#domain-allowlisting). As this is not done by default.
 
 ## Methods

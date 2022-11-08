@@ -1,6 +1,5 @@
 ---
 pagename: Error Codes
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions

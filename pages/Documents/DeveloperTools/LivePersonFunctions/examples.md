@@ -1,6 +1,5 @@
 ---
 pagename: Examples
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -16,7 +15,7 @@ OAuth is an open-standard authorization framework that describes how unrelated s
 
 The following code shows an example that performs a `POST` request with `Authorization Header`.
 
-{: .notice}
+{: .attn-alert}
   It's recommended to store the `consumerKey`, `consumerSecret`, `tokenKey` and `tokenSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
@@ -81,7 +80,7 @@ Clients use the Client Credentials to obtain an [Access Token](https://auth0.com
 
 <img src="img/functions/functions_examples_oauth.png" alt="LivePerson Functions OAuth" class="fancyimage"/>
 
-{: .notice}
+{: .attn-alert}
 It is recommended to store the `clientId` and `clientSecret` in the [secret storage](liveperson-functions-toolbelt-documentation-secret-client.html).
 
 ```javascript
@@ -169,7 +168,7 @@ The following reduced code snippet shows how to obtain the refresh and access to
 ### Caching inside lambdas
 A simple way to make your function more performant and more reliable is caching requested data outside of the context of your function. In the following example, we use caching to improve the interaction with the secret store. Caching the secret makes your code highly reliable against problems that might arise from network congestion. Additionally, it enhances the performance of your functions since you omit unnecessary network calls. The following code uses an environment variable `TTL` to indicate how long to keep the data in memory.
 
-{: .notice}
+{: .attn-alert}
 This cache is in-memory. If your function is down-scaled due to inactivity, data in the cache will be lost. Likewise, if your function is upscaled to multiple instances, there is no mechanism to synchronize the caches.
 
 ```javascript
@@ -186,25 +185,26 @@ class CacheController {
                         _expiry: Date.now() + ttl,
                 };
         }
+        // Be careful secret returned here is value while original secret client returns {key, value}
         getValue(key) {
                 const entry = this.cache[key]
                 if (!entry)
                         return;
                 if (entry._expiry < Date.now()) {
                         this.cache.delete(key)
-                        return
+                        return;
                 } else {
                         return entry.value
                 }
         }
 }
 
-let cache = new CacheController();
+const cache = new CacheController();
 
 async function lambda(input, callback) {
-        const secret = await getSecret("YOUR_SECRET");
+        const secret = await getSecret("YOUR_SECRET"); // Be aware this can be undefined
         // YOUR CODE WHICH NEEDS SECRET
-        callback(null, secret);
+        callback(null, 'Success');
 }
 
 async function getSecret(key) {
@@ -214,12 +214,14 @@ async function getSecret(key) {
                         console.info("Secret taken from cache")
                         return secret;
                 } else {
-                        let secret = await secretClient.readSecret(key);
-                        cache.setValue(key, secret, process.env['TTL'])
-                        return secret
+                        // As cache only works with secret value we only take this from the readSecret response
+                        const { value } = await secretClient.readSecret(key);
+                        cache.setValue(key, value, 100000)
+                        return value
                 }
         } catch (error) {
                 console.error(`received following error message: ${error.message}`);
+                return undefined
         }
 }
 ```

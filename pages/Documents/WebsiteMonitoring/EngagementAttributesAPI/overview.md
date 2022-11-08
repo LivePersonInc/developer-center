@@ -5,14 +5,13 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Engagement Attributes API
-
 order: 1
 permalink: engagement-attributes-api-overview.html
 root-link: true
 level-order: 6
-
 indicator: both
 ---
+
 ### Introduction
 
 This API provides a way to report back to LivePerson consumer events such as the topic and resolution of the conversation during the session (e.g., call). This information is added to the existing session and can be used in the goal reached calculation.

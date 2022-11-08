@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 170
 permalink: server-chat-api-methods-send-a-transcript.html
-
 indicator: chat
 ---
 

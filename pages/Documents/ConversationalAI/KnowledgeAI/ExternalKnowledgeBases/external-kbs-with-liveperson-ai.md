@@ -2,13 +2,13 @@
 pagename: External KBs with LivePerson AI
 redirect_from:
     - knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
 permalink: knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 indicator: both
+date_updated: 2022/10/18
 ---
 
 ### What's an external KB with LivePerson AI?
@@ -33,7 +33,7 @@ When adding an external knowledge base with LivePerson AI, follow this high-leve
     * (Conversation Builder) [Adding a KnowledgeAI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) in a bot
     * (Conversation Orchestrator) Adding a KnowledgeAI integration as a part of an [Conversation Assist](conversation-assist-overview.html) component
 
-{: .important}
+{: .attn-note}
 After making any changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
 
 ### Add an external KB with LivePerson AI
@@ -43,7 +43,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **External Knowledge Base**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_3.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_3.png" alt="Add a Knowledge Base window, where you specify the source name">
 
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
@@ -52,7 +52,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Language**: Select the language of the content. Make an accurate selection here; this helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 4. Click **Next**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png" alt="Add a Knowledge Base window, where you specify how to get the content metadata">
 
 5. Define the request to fetch your content's metadata. The request should return a list of articles, and each article must contain a title and unique identifier. You can optionally retrieve tags and a category as well. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method.
@@ -63,13 +63,13 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
 
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, [map the returned articles' metadata data model (schema) to the LivePerson KnowledgeAI data model](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 
     **Note:** Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping — limiting the content as needed — the knowledge base will perform better and be easier to tune.
 
 6. Click **Next**.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png" alt="">
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png" alt="Add a Knowledge Base window, where you specify how to get the content">
 
 7. Define the request for the on-demand retrieval of a single article. To pass the unique identifier of the article to retrieve, you must use the {externalArticleId} placeholder that's provided as per your CMS' API contract: in the URL, in the request parameters, or in the post body.
 
@@ -83,14 +83,14 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes.
     * **Transformation Spec**: Here again, if you were able to select your **Content Provider** in Step 3 above, a default spec is provided. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
 
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, [map the single article’s content data model (schema) to the LivePerson KnowledgeAI data model](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent
 
-You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
+You must associate articles with intents so that &mdash; during a knowledge base search at run time &mdash; the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest scoring articles that are found in the search are then retrieved from the CMS.
 
-{: .important}
+{: .attn-note}
 An intent can't be used more than once, i.e., in more than one article.
 
 **To associate an article with an intent**
@@ -99,7 +99,7 @@ An intent can't be used more than once, i.e., in more than one article.
 2. Use the **Articles** page to find the article, and select it.
 3. Use the **Intent** dropdown to select the name of the intent to associate with the article. From this dropdown, you can also create the intent on-the-fly if needed.
 
-    <img style="width:700px" src="img/ConvoBuilder/kb_cms_associate_article.png" alt="">
+    <img style="width:700px" src="img/ConvoBuilder/kb_cms_associate_article.png" alt="The Intent dropdown on the Article Configuration window">
 
 ### Sync with the CMS
 
@@ -118,4 +118,4 @@ For details on sync operations, check the knowledge base’s Change History page
 1. Open the knowledge base.
 2. Click **Settings** in the upper-left corner.
 3. Scroll down and expand **More Options**.
-4. Scroll down to **Sync Articles**, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_sync_with_cms.png" alt="">.
+4. Scroll down to **Sync Articles**, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_sync_with_cms.png" alt="Sync icon">.

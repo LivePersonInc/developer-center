@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
-
 order: 100
 permalink: messaging-window-api-api-reference-overview.html
-
 folder: messaging-apis
 docs: https://lpgithub.dev.lprnd.net/pages/Architecture/api-ums/2.0.0.10-SNAPSHOT
 icon_style: style="width:16px; height:16px;" height="16" width="16"
@@ -50,17 +48,17 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-reqs.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-reqs.html"><i class="fa fa-magic" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
 		<td>
-			<a href="consumer-int-msg-resps.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-resps.html"><i class="fa fa-magic" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- notification -->
 		<td>
-			<a href="consumer-int-msg-notifications.html"><i class="fa fa-magic" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-notifications.html"><i class="fa fa-magic" aria-hidden="true"></i></a>
 		</td>
 	</tr>
 	<tr>
@@ -72,7 +70,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-req-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-req-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
@@ -93,8 +91,8 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<!-- request -->
 		<td>
 			<a href="consumer-int-msg-close-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-			<a href="consumer-int-msg-csat-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
-			<a href="consumer-int-msg-conv-ttr.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-csat-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+			<a href="consumer-int-msg-conv-ttr.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
@@ -116,7 +114,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-sub-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-sub-conv.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
@@ -163,7 +161,7 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		</td>
 
 		<!-- response -->
-		<td>		
+		<td>
 			<i class="fa fa-eye" aria-hidden="true"></i>
 		</td>
 
@@ -178,11 +176,11 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<td>SubscribeMessagingEvents</td>
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-sub-events.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-sub-events.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
-		<td>		
+		<td>
 			<i class="fa fa-eye" aria-hidden="true"></i>
 		</td>
 
@@ -198,11 +196,11 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 		<td>InitConnection</td>
 		<!-- request -->
 		<td>
-			<a href="consumer-int-msg-init-con.html"><i class="fa fa-eye" aria-hidden="true"></i></a>		
+			<a href="consumer-int-msg-init-con.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
 		</td>
 
 		<!-- response -->
-		<td>		
+		<td>
 			<i class="fa fa-eye" aria-hidden="true"></i>
 		</td>
 

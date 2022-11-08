@@ -4,7 +4,6 @@ redirect_from:
     - conversation-builder-conversation-builder-automations.html
     - conversation-builder-automations.html
     - conversation-builder-bots.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -22,22 +21,22 @@ There are two, general types of bots:
 
 ### Create a bot
 
-* For details on creating a custom bot, see [here](conversation-builder-bots-custom-bots.html).
-* For details on creating a post-conversation survey bot, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
+* [Create a custom bot](conversation-builder-bots-custom-bots.html).
+* [Create a post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Configure bot settings
 
-{: .important}
-Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#configure-the-survey-bots-settings).
+{: .attn-note}
+Post-conversation survey bots have [a few, unique settings](conversation-builder-bots-post-conversation-survey-bots.html#configure-the-survey-bots-settings) that custom bots don't have.
 
 **To configure bot settings**
-1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
 3. Click **More Settings** to display all the settings.
 4. Configure the settings as needed, and click **Save**.
 
 Bot settings include:
-- **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable. When you import a bot, by default, a date and time stamp is appended to the bot name; consider removing this because dates quickly become obsolete. 
+- **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable. When you import a bot, by default, a date and time stamp is appended to the bot name; consider removing this because dates quickly become obsolete.
 
 - **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.
 
@@ -53,7 +52,7 @@ Bot settings include:
 
 - **Associated Domain**: You can use this option to associate a domain with the bot. However, the [Assist](conversation-builder-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
-- **Public**: When you want other users in your Conversational Cloud account to be able to view and edit the bot, click the slider to On. The default value is Off. 
+- **Public**: When you want other users in your Conversational Cloud account to be able to view and edit the bot, click the slider to On. The default value is Off.
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
@@ -63,23 +62,19 @@ Bot settings include:
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
-- **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as they are. The default value is Disabled (Off). For more on URL shortening, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
-
-    If you enable this setting, the shortened domain might need to be whitelisted. For more on whitelisting, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
-
-    To support backwards compatibility, button interactions use URL shortening even though the new Shorten URLs setting is set initially to Off. To disable URL shortening for buttons, enable the setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
+- **Shorten URLs**: Enable this if you want to [shorten the URLs](conversation-builder-interactions-interaction-basics.html#url-shortening) sent in interactions. This can be desirable if your web links are long. Disable this to keep URLs as they are. The default value is Disabled (Off).
 
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
-    
+
     First, when the bot encounters errors or throws exceptions, many times a default error response of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this message is the same as the built-in, default Fallback message, it might confuse the user. To send a different response when errors occur, enter a value here. It won't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this error response is sent when the bot encounters an error or throws an exception.
-    
+
     Second, during a LivePerson agent escalation, if the [escalation fails](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures) four times, the escalation then stops, and a default failure response of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different response, enter a value here.
 
     To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
 
 - **Agent Annotations**: The purpose of this setting is to automate more of the steps taken when training the bot, and to make it easier for agents to participate.
 
-    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Intent Annotations widget in Conversational Cloud. This allows the agent to review the list and mark utterances needing follow-up, with the goal of re-training the domain and/or updating the bot as needed.
+    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Intent Annotations widget in Conversational Cloud. This allows the agent to [review the list and mark utterances needing follow-up](https://knowledge.liveperson.com/ai-bots-automation-ai-annotator.html/), with the goal of re-training the domain and/or updating the bot as needed.
 
     "Unrecognized utterances" are defined as those that trigger the Fallback dialog. If the Fallback dialog employs a knowledge base search, only the utterances that return no results are added to the review list.
 
@@ -96,13 +91,13 @@ Bot settings include:
 ### Import a bot
 You can add a bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
 
-{: .important}
+{: .attn-note}
 Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To import a bot**
 1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
 
-    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
+    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png" alt="Org dropdown selector">
 
 2. From the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
@@ -118,25 +113,25 @@ You might need to export a bot for a few reasons:
 - You want to move or copy a bot to another environment, so you plan to export it and import it into a different environment.
 - You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
 
-{: .important}
+{: .attn-note}
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To export a bot**
-1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
-3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png">.
+3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png" alt="Export Bot">.
 4. Follow the browser prompts to access and save the JSON file to a location of your choice.
 
 ### Delete a bot
 Deleting a bot is a non-recoverable action, so be certain about doing so before taking this action.
 
-{: .important}
+{: .attn-note}
 If you want to delete a bot that is deployed, first stop the bot, un-deploy it, and remove any enterprise integrations that are running. This helps to ensure there are no adverse effects.
 
 **To delete a bot**
-1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
-3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png">.
+3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="">.
 4. In the confirmation dialog:
     1. If you want to delete all the logs and analytics data for the bot, select the checkbox.
     2. Click **Proceed**.

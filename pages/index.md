@@ -4,7 +4,10 @@ sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
 redirect_from:
-- get-started-LE-APIs.html
+  - get-started-LE-APIs.html
+  - mcs-toolkit-getting-started.html
+  - mcs-toolkit-overview.html
+  - mcs-toolkit-using-api-to-build-the-toolkit.html
 ---
 
 <div class="header-label">
@@ -13,7 +16,7 @@ redirect_from:
 
 <div class="card-container home-container">
   <div class="flex flex-col gap-32">
-    <a href="/platform-overview.html" id="success-stories" class="welcome-card">
+    <a href="/get-started-with-automation.html" id="success-stories" class="welcome-card">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -55,7 +58,7 @@ redirect_from:
       <p class="welcome-content">Learn how to create custom logic, flows, and integrations for your business</p>
     </a>
     <a class="welcome-card" target="_blank"
-      href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html">
+      href="https://knowledge.liveperson.com/live-messaging/">
       <svg class="container-image" width="32" height="32" viewBox="0 0 32 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path

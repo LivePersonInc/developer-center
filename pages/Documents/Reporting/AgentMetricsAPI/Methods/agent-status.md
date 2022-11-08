@@ -8,7 +8,6 @@ documentname: Agent Metrics API
 subfoldername: Methods
 order: 10
 permalink: agent-metrics-api-methods-agent-status.html
-
 indicator: messaging
 ---
 
@@ -25,7 +24,7 @@ Returns the current state of logged in agents that are handling messaging conver
 Name   | Description                                                  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
 offset | The offset specifies from which agent to retrieve the agent list. | numeric    | Optional | Default is 0\. Example: Of 100 agents, the first 20 have already been retrieved. Thus, in the next request will be specified with offset 21.
-limit  | Max amount of agents to be received in the response.  | numeric    | Optional | Default is 50\. Max value is 2500\. The remaining agents can be obtained using pagination (using offset, in a subsequent request).
+limit  | Max amount of agents to be received in the response.  | numeric    | Optional | Default is 50\. Max value is 1000\. The remaining agents can be obtained using pagination (using offset, in a subsequent request).
 sort   | Sort the results in a predefined order.                      | string     | Optional | Example: start:desc will order agents by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 
 _BODY / POST Parameters_
@@ -103,7 +102,7 @@ JSON Example:
 					"currentStatusStartTimeL": 1490033214962,
 					"currentStatusStartTime": "2017-03-20 18:06:54.962+0000",
 					"currentStatusReasonStartTimeL": 1490033214962,
-					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",					
+					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",
 					"agentName": "michal",
 					"agentNickname": "michal",
 					"agentLoginName": "michal@liveperson.com",

@@ -29,7 +29,8 @@ indicator: messaging
 
 The Conversational Cloud Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. This feature is enabled as part of the Messaging Window API.
 
-<div class="important">The below tutorials assume that you have performed the initial steps required in order to work with this API, which can be found <a href="/messaging-window-api-getting-started.html">here</a>.</div>
+{: .attn-note}
+The below tutorials assume that you have performed the initial steps required in order to work with this API, which can be found [here](/messaging-window-api-getting-started.html).
 
 File Sharing can also be enabled by using the Connector API, for cases when images are sent through third party applications. Please refer to the [Connector API documentation](/connector-api-send-api-examples.html#file-sharing) for more information on how to do this.
 

@@ -2,15 +2,12 @@
 pagename: cancelSurvey
 redirect_from:
   - consumer-experience-javascript-chat-cancelsurvey.html
-Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Javascript Chat SDK
 subfoldername: Methods
-
 order: 101
 permalink: javascript-chat-sdk-methods-cancelsurvey.html
-
 indicator: chat
 ---
 

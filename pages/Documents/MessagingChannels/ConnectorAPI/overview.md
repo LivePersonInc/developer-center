@@ -9,7 +9,6 @@ documentname: Connector API
 indicator: messaging
 permalink: connector-api-overview.html
 order: 1
-
 ---
 
 <div class="alert alert-warning" role="alert">

@@ -2,7 +2,6 @@
 pagename: Troubleshooting
 redirect_from:
     - conversation-builder-troubleshooting-transfer-to-an-agent-or-bot.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -31,7 +30,7 @@ If you're trying to transfer a conversation to a live agent or another bot, but 
 
 #### Messages are sent after the transfer
 
-This can happen due to context switching. If, given your use case, you need to prevent context switching from occurring during the transfer, you can do this as described [here](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching).
+This can happen due to context switching. If, given your use case, you need to [prevent context switching](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching) from occurring during the transfer, you can do so.
 
 #### The transfer isn't working
 
@@ -41,7 +40,7 @@ In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperso
 
 ##### Common errors in a manual implementation
 
-{: .important}
+{: .attn-note}
 This section describes common errors when implementing a transfer via code instead of using the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration type. To make your bots more flexible and dynamic, LivePerson recommends that you switch to the LivePerson Agent Escalation integration type. It handles several, variable aspects (like the Transfer API URL) automatically.
 
 The following are common errors in a manual implementation:
@@ -54,4 +53,4 @@ The following are common errors in a manual implementation:
 
 #### After a failed transfer, the bot is acting weird
 
-Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog/message set up to catch this pattern (discussed [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#best-practices)), your bot will treat it like any other user message. In most cases, it will go to the Fallback dialog.
+Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog/message set up to catch this pattern (one of our [best practices](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#best-practices)), your bot will treat it like any other user message. In most cases, it will go to the Fallback dialog.

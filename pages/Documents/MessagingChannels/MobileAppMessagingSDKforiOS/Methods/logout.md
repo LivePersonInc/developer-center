@@ -2,15 +2,11 @@
 pagename: logout
 redirect_from:
   - consumer-experience-ios-sdk-logout.html
-Keywords:
-
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Methods
-
 order: 120
 permalink: mobile-app-messaging-sdk-for-ios-methods-logout.html
-
 indicator: messaging
 ---
 
@@ -23,10 +19,10 @@ This method conducts the following:
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-destruct.html)).
 * Note: This does not end the current messaging conversation.
 
-`func logout(unregisterType: LPPusherUnregisterType, 
-            completion: @escaping ()->(), 
+`func logout(unregisterType: LPPusherUnregisterType,
+            completion: @escaping ()->(),
             failure: @escaping (_ error: Error)->())`
-            
+
 **Important: This method must not be called when the conversation screen is displayed.**
 
 

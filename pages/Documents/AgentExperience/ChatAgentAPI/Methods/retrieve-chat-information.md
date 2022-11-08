@@ -2,15 +2,12 @@
 pagename: Retrieve Chat Information
 redirect_from:
   - agent-retrieve-chat-info.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
-
 order: 150
 permalink: chat-agent-api-methods-retrieve-chat-information.html
-
 indicator: chat
 ---
 
@@ -63,5 +60,5 @@ The body media type must have one of the following formats:
 **Response Codes**
 
 | Code| Response|
-|------|------| 
+|------|------|
  |200  |OK |

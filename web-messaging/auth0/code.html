@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Auth0 Sample - Code Flow</title>
 
     <script>
-        
+
         function getURLParams(search) {
             var queryParams = {}, queryArray, singleQuery;
             queryArray = search.substr(1).split("&");
@@ -33,7 +32,7 @@
                 ssoKey: window.accessToken,
             });
         }
-        
+
         window.lpTag = window.lpTag || {};
         window.lpTag.sdes = window.lpTag.sdes || [];
         lpTag.sdes.push({"type": "ctmrinfo", "info": {customerId: "natiz@liveperson.com"}});
@@ -163,10 +162,10 @@ lock.on("authenticated", function(authResult) {
       // Handle error
       return;
     }
-      
+
       console.log("GOT PROFILE", profile);
       window.accessToken = authResult.accessToken;
-      
+
 
     document.getElementById('nick').textContent = profile.nickname;
 
@@ -176,7 +175,7 @@ lock.on("authenticated", function(authResult) {
 });
 
     </script>
-    
+
 <script>
 </script>
 </body>

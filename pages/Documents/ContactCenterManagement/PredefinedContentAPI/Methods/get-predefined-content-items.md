@@ -2,15 +2,12 @@
 pagename: Get Predefined Content Items
 redirect_from:
   - account-configuration-predefined-content-get-items.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 60
 permalink: predefined-content-api-methods-get-predefined-content-items.html
-
 indicator: both
 ---
 
@@ -106,7 +103,7 @@ Retrieves a list of Predefined Content items from a specific account.
                     "msg": "Thank you for chatting with me!",
                     "lang": "en-us",
                     "title": "Closing",
-                    "isDefault":false  
+                    "isDefault":false
                 },
                 {
                     "msg": "תודה ושלום",

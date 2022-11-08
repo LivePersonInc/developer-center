@@ -2,16 +2,13 @@
 pagename: Delete Agent Groups
 redirect_from:
   - administration-delete-agent-groups.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Groups API
 subfoldername: Methods
-
 order: 70
 
 permalink: agent-groups-api-methods-delete-agent-groups.html
-
 indicator: both
 ---
 
@@ -27,8 +24,8 @@ This API deletes agent groups from a specific account.
 
  |Header | Description|
  |:------ | :-------------- |
- |Authorization | Contains token string to allow request authentication and authorization. 
- |If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization. 
+ |Authorization | Contains token string to allow request authentication and authorization.
+ |If-Match | Contains data revision as known by the client. Allows optimization of the backend, networking, and client resources utilization.
 
 **Request Body**
 
@@ -45,7 +42,7 @@ This API deletes agent groups from a specific account.
 
 |Parameter | Description | Type / Value |
  |:----------- | :------------- | :------------- |
-| accountId  | LP site ID  String  
+| accountId  | LP site ID  String
 
 ### Response
 

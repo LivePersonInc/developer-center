@@ -1,6 +1,5 @@
 ---
 pagename: Managing Custom Bots
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bots Status
@@ -12,13 +11,13 @@ indicator: both
 
 In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page to perform functions on agents (restart, stop, start, etc.).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png" alt="">
+<img class="fancyimage" alt="The Custom Connectors tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png" alt="">
 
 Use the filter controls in the upper-left corner to display the desired agents.
 
 The metrics displayed at the top of the page are affected by the **Environment** filter and no others.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png" alt="">
+<img class="fancyimage" alt="A list of the environment filters that are available" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png" alt="">
 
 ### Supporting failover
 
@@ -30,7 +29,7 @@ As a convenience, the Restart Agents function lets you restart multiple agents a
 
 **To restart multiple agents**
 
-1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 
     The dashboard is displayed by default.
 
@@ -49,7 +48,7 @@ When you stop an agent, in-progress conversations are left as is until the agent
 
 **To stop an agent**
 
-1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 
     The dashboard is displayed by default.
 
@@ -66,7 +65,7 @@ Starting an agent gets the connector running so that new conversations can start
 
 **To start an agent**
 
-1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 
     The dashboard is displayed by default.
 
@@ -84,7 +83,7 @@ This capability to switch the environment eliminates the need to delete the agen
 
 **To redeploy an agent**
 
-1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 
     The dashboard is displayed by default.
 
@@ -93,7 +92,7 @@ This capability to switch the environment eliminates the need to delete the agen
 4. Stop the bot if it is currently online.
 5. Select the checkbox for the bot, and then select **Re-deploy Agent** from the **Actions** list.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png" alt="">
+    <img class="fancyimage" alt="Re-deploy agent form" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png" alt="">
 
 6. In the **Environment** drop-down, select the target environment.
 7. Click **Save Settings**.
@@ -106,7 +105,7 @@ For convenience, you can view and edit an agent connector right from the Bot Age
 
 **To view or edit an agent connector**
 
-1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 
     The dashboard is displayed by default.
 
@@ -116,9 +115,9 @@ For convenience, you can view and edit an agent connector right from the Bot Age
 
     The **Edit Agent Connector** window is displayed, where you can view and edit the information.
 
-5. If desired, edit the agent connector. For more on this, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector).
+5. If desired, edit the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector).
 6. If you edited the agent connector, click **Save**. And at the appropriate time, restart the agent for the changes to take effect.
 
 ### Troubleshooting
 
-If you encounter errors or issues, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#troubleshoot-a-deployment) for troubleshooting information.
+If you encounter errors or issues, see this [troubleshooting info](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#troubleshoot-a-deployment).

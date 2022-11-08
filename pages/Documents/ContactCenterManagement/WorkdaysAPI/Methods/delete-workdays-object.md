@@ -2,7 +2,6 @@
 pagename: Delete Workdays Object
 redirect_from:
   - account-configuration-workdays-delete.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Workdays API
@@ -52,7 +51,7 @@ Delete an existing workday object.
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|
 
 **Response example**
 

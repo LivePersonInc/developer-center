@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-redirect_from:
   - consumer-experience-messaging-history-overview.html
 sitesection: Documents
 categoryname: Reporting
@@ -13,7 +12,7 @@ indicator: messaging
 ---
 ### Introduction
 
-{: .notice}
+{: .attn-alert}
 Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Consumer Messaging History API allows retrieval of up to 13 months of historical conversations data, both metadata and content, for a specific consumer. This includes both archived and closed conversations.

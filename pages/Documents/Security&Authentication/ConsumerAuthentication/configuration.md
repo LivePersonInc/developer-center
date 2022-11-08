@@ -19,7 +19,7 @@ indicator: both
 
 2.	Search for "Consumer Identity Provider"
 
-![Search for Consumer Identity Provider in the Management Console](img/mgmt_search_consumer_idp.png) 
+![Search for Consumer Identity Provider in the Management Console](img/mgmt_search_consumer_idp.png)
 
 {:start="3"}
 3.  Click on 'Click to configure'
@@ -35,7 +35,7 @@ The following parameters should be defined:
 
 * **OAuth 2.0 Authentication Type** - Implicit / Code Flow
 
-* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Seperate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
+* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Separate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
 
 * **OAuth 2.0 Token Endpoint** - An HTTPS URL that used in Code Flow
 
@@ -45,7 +45,7 @@ The following parameters should be defined:
 
 * **OAuth 2.0 Client Secret** - Used in Code Flow
 
-* **JS Method Name** - When Conversational Cloud embedded window is used in Web 
+* **JS Method Name** - When Conversational Cloud embedded window is used in Web
 
 * **JS Context** - When Conversational Cloud embedded window is used in Web
 

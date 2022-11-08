@@ -7,8 +7,9 @@ permalink: outbound-reporting-api-overview.html
 root-link: true
 indicator: Connect To Messaging
 redirect_from:
- - connect-to-messaging-reporting-api.html
- - proactive-messaging-reporting-api.html
+  - connect-to-messaging-reporting-api.html
+  - proactive-messaging-reporting-api.html
+date_updated: 2022/09/21
 ---
 
 ### Introduction
@@ -16,6 +17,7 @@ redirect_from:
 The Outbound Reporting API provides a complete message journey of the conversation from start to finish. It provides a full end to end summary of messages/deflections sent, including how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. This service stitches pre and post conversation events of every message/deflections and provide full analytical data to API clients.
 
 ### API provides reporting for below services
+
 * Proactive Messaging 2.0
 * Connect To Messaging 2.0
 
@@ -67,9 +69,9 @@ Outbound Reporting API provides the following data fields. This table explains t
 
 ### API Specifications
 
-## OAuth 2.0 Authorization 
+## OAuth 2.0 Authorization
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
-![Secrets](img/proactive/proactive-show-secrets.png)  
+![Secrets](img/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 
@@ -232,7 +234,7 @@ Each of the filter options shown above are optional. Regardless of what filter o
 
 ### Campaign API
 
-API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable. 
+API for campaign level details. Returns statuses for each transaction (message) along with error codes and error messages if applicable.
 
 **1. Campaign — analytics API for the campaign**
 
@@ -352,187 +354,17 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 ### Transaction API
 
-API for account level transactions. 
+API for account level transactions.
 
 There are two versions of transaction API's.
 
 | Version | Description  |
 | :--- | :--- |
-| Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
 | Version 2.0 (Recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channels and skills |
+| Version 1.0 (Deprecated) | Existing version of transaction API with filtering on channels and skills |
 
-**1. Get details for Transactions — Version 1.0** 
 
-| Method | URI  |
-| :--- | :--- |
-| POST | https://{domain}/api/account/{accountId}/app/{app}/transactions/
-
-**Path Parameters**
-
-| Name  | Description | Required | Value/Example |
-| :--- | :--- | :--- | :--- |
-| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
-| accountId | LivePerson site ID | Yes | 12345678 |
-| app | App name | Yes | "prmsg" or "c2m" |
-
-**Query Parameters**
-
-| Name  | Description | Required | Value/Example |
-| :--- | :--- | :--- | :--- |
-| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
-| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
-
-**Request Headers**
-
-| Header | Description | Value/Example |
-| :--- | :--- | :--- |
-| Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
-
-**Request Body**
-
-```json
-{
- "channels": [
-   "sms"
- ],
- "skills": [
-   "billing"
- ]
-}
-```
-
-Each of the filter options shown above are optional.
-```json
-    "filters": {
-        "channels": [
-            "sms", "inapp"
-        ],
-        "skills": [
-            "billing", "sales"
-        ]
-    },
-    "page": {
-        "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
-    }
-}
-```
-
-**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records. 
-
-**Response Example**
-
-200 Success
-```json
-{
- "requestMetadata": {
-   "accountId": "123456",
-   "app": "prmsg",
-   "attemptedStartTime": 1602007811000,
-   "attemptedEndTime": 1602008344000,
-   "filters": {
-        "channels": [
-            "sms", 
-            "inapp"
-        ],
-        "skills": [
-            "billing", 
-            "sales"
-        ]
-    }
- },
- "page": {
-    "count": 1111,
-    "currentPage": "MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSWWWsDADDAwLS0yLTIyLTIwMjItNQ==",
-    "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
-  },
- "transactions": [
-        {
-            "channel": "sms",
-            "skill": "billing",
-            "transactionId": "2f88x19d-a5df-6d22-d967-a9cd19108318",
-            "attemptedTime": "2021-02-17T22:57:13.214Z",
-            "cancelledTime": null,
-            "conversationId": null,
-            "conversationsClosedTime": null,
-            "conversationsCreatedTime": null,
-            "consumerId": null,
-            "deliveredTime": "2021-02-17T23:00:18.533Z",
-            "eligibleTime": null,
-            "errorCode": null,
-            "errorMessage": null,
-            "errorSource": null,
-            "failedTime": null,
-            "inviteTime": "2021-02-17T22:57:13.480Z",
-            "optInsTime": null,
-            "optOutsTime": null,
-            "proactiveCampaignId": "campaign125",
-            "readTime": null,
-            "sentTime": "2021-02-17T22:57:13.586Z",
-            "initialSkill": "prmsgoutbound",
-            "initialChannel": "sms",
-            "handOffId": "H000000000000000",
-            "skippedTime": null
-        },
-        {
-            "channel": "inapp",
-            "skill": "sales",
-            "transactionId": "515340ec-0d3c-75d7-0cdb-cbe783fa156c",
-            "attemptedTime": "2021-02-17T22:55:14.228Z",
-            "cancelledTime": null,
-            "conversationId": null,
-            "conversationsClosedTime": null,
-            "conversationsCreatedTime": null,
-            "consumerId": null,
-            "deliveredTime": "2021-02-17T23:00:18.533Z",
-            "eligibleTime": null,
-            "errorCode": "400",
-            "errorMessage": "Message failed to send",
-            "errorSource": "prmsg",
-            "failedTime": "2021-02-17T22:55:14.543Z",
-            "inviteTime": "2021-02-17T22:55:14.543Z",
-            "optInsTime": null,
-            "optOutsTime": null,
-            "proactiveCampaignId": "campaign124",
-            "readTime": null,
-            "sentTime": "2021-02-17T22:55:14.716Z",
-            "initialSkill": "billing",
-            "initialChannel": "sms",
-            "handOffId": "H000000000000000",
-            "skippedTime": null
-        },
-        {
-            "channel": "sms",
-            "skill": "billing",
-            "transactionId": "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9",
-            "attemptedTime": "2021-02-17T22:57:13.235Z",
-            "cancelledTime": null,
-            "conversationId": null,
-            "conversationsClosedTime": null,
-            "conversationsCreatedTime": null,
-            "consumerId": null,
-            "deliveredTime": "2021-02-17T23:00:18.533Z",
-            "eligibleTime": null,
-            "errorCode": null,
-            "errorMessage": null,
-            "errorSource": null,
-            "failedTime": null,
-            "inviteTime": "2021-02-17T22:57:13.503Z",
-            "optInsTime": null,
-            "optOutsTime": null,
-            "proactiveCampaignId": "campaign123",
-            "readTime": null,
-            "sentTime": "2021-02-17T22:57:13.613Z",
-            "initialSkill": "prmsgoutbound",
-            "initialChannel": "sms",
-            "ivrNumber": "",
-            "skippedTime": null
-            },
-          ]
-        }
-```
-
-**2. Get details for Transactions — Version 2.0**
+**1. Get details for Transactions - Version 2.0**
 
 Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=reporting#/Transaction/transactions) to go through API spec to get started.
 
@@ -584,8 +416,8 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
         ],
         "messagestatus": [
             "FAILED", "READ"
-        ], 
-        "transactionids": [
+        ],
+        "transactionids" : [
             "0102dec8-ea9d-aca0-394b-82f6c89b2988", "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9"
         ]
     }
@@ -691,6 +523,177 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 }
 ```
 
+**2. Get details for Transactions - Version 1.0**
+
+| Method | URI  |
+| :--- | :--- |
+| POST | https://{domain}/api/account/{accountId}/app/{app}/transactions/
+
+**Path Parameters**
+
+| Name  | Description | Required | Value/Example |
+| :--- | :--- | :--- | :--- |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
+| accountId | LivePerson site ID | Yes | 12345678 |
+| app | App name | Yes | "prmsg" or "c2m" |
+
+**Query Parameters**
+
+| Name  | Description | Required | Value/Example |
+| :--- | :--- | :--- | :--- |
+| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
+| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
+
+**Request Headers**
+
+| Header | Description | Value/Example |
+| :--- | :--- | :--- |
+| Content-Type | Used to indicate the media type of the resource | application/json |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
+
+**Request Body**
+
+```json
+{
+ "channels": [
+   "sms"
+ ],
+ "skills": [
+   "billing"
+ ]
+}
+```
+
+Each of the filter options shown above are optional.
+```json
+    "filters": {
+        "channels": [
+            "sms", "inapp"
+        ],
+        "skills": [
+            "billing", "sales"
+        ]
+    },
+    "page": {
+        "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
+    }
+}
+```
+
+**After executing transaction version 1.0 request, if there is next page of records available, the response will have the "nextPage" value. Copy and paste it into the request payload as shown above. Executing this new request will return next set of records.
+
+**Response Example**
+
+200 Success
+```json
+{
+ "requestMetadata": {
+   "accountId": "123456",
+   "app": "prmsg",
+   "attemptedStartTime": 1602007811000,
+   "attemptedEndTime": 1602008344000,
+   "filters": {
+        "channels": [
+            "sms",
+            "inapp"
+        ],
+        "skills": [
+            "billing",
+            "sales"
+        ]
+    }
+ },
+ "page": {
+    "count": 1111,
+    "currentPage": "MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSWWWsDADDAwLS0yLTIyLTIwMjItNQ==",
+    "nextPage": "MDAzYzAwMDkzMjJkMzIzMjJkMzIzMDMyMzIwYjMyMmQzMjMyMmQzMjMwMzIzMjJkMzUyNDM3NjY2MjM0N2ZmZmVjNzdmMDdmZmZlYzc3LS0yLTIyLTIwMjItNQ=="
+  },
+ "transactions": [
+        {
+            "channel": "sms",
+            "skill": "billing",
+            "transactionId": "2f88x19d-a5df-6d22-d967-a9cd19108318",
+            "attemptedTime": "2021-02-17T22:57:13.214Z",
+            "cancelledTime": null,
+            "conversationId": null,
+            "conversationsClosedTime": null,
+            "conversationsCreatedTime": null,
+            "consumerId": null,
+            "deliveredTime": "2021-02-17T23:00:18.533Z",
+            "eligibleTime": null,
+            "errorCode": null,
+            "errorMessage": null,
+            "errorSource": null,
+            "failedTime": null,
+            "inviteTime": "2021-02-17T22:57:13.480Z",
+            "optInsTime": null,
+            "optOutsTime": null,
+            "proactiveCampaignId": "campaign125",
+            "readTime": null,
+            "sentTime": "2021-02-17T22:57:13.586Z",
+            "initialSkill": "prmsgoutbound",
+            "initialChannel": "sms",
+            "handOffId": "H000000000000000",
+            "skippedTime": null
+        },
+        {
+            "channel": "inapp",
+            "skill": "sales",
+            "transactionId": "515340ec-0d3c-75d7-0cdb-cbe783fa156c",
+            "attemptedTime": "2021-02-17T22:55:14.228Z",
+            "cancelledTime": null,
+            "conversationId": null,
+            "conversationsClosedTime": null,
+            "conversationsCreatedTime": null,
+            "consumerId": null,
+            "deliveredTime": "2021-02-17T23:00:18.533Z",
+            "eligibleTime": null,
+            "errorCode": "400",
+            "errorMessage": "Message failed to send",
+            "errorSource": "prmsg",
+            "failedTime": "2021-02-17T22:55:14.543Z",
+            "inviteTime": "2021-02-17T22:55:14.543Z",
+            "optInsTime": null,
+            "optOutsTime": null,
+            "proactiveCampaignId": "campaign124",
+            "readTime": null,
+            "sentTime": "2021-02-17T22:55:14.716Z",
+            "initialSkill": "billing",
+            "initialChannel": "sms",
+            "handOffId": "H000000000000000",
+            "skippedTime": null
+        },
+        {
+            "channel": "sms",
+            "skill": "billing",
+            "transactionId": "b19f2x4b-d533-7a2e-dbe0-3efds8f5e5b9",
+            "attemptedTime": "2021-02-17T22:57:13.235Z",
+            "cancelledTime": null,
+            "conversationId": null,
+            "conversationsClosedTime": null,
+            "conversationsCreatedTime": null,
+            "consumerId": null,
+            "deliveredTime": "2021-02-17T23:00:18.533Z",
+            "eligibleTime": null,
+            "errorCode": null,
+            "errorMessage": null,
+            "errorSource": null,
+            "failedTime": null,
+            "inviteTime": "2021-02-17T22:57:13.503Z",
+            "optInsTime": null,
+            "optOutsTime": null,
+            "proactiveCampaignId": "campaign123",
+            "readTime": null,
+            "sentTime": "2021-02-17T22:57:13.613Z",
+            "initialSkill": "prmsgoutbound",
+            "initialChannel": "sms",
+            "ivrNumber": "",
+            "skippedTime": null
+            },
+          ]
+        }
+```
+
 ### Common Error Responses
 
 400 Bad Request
@@ -766,7 +769,7 @@ For Connect To Messaging:
 <strong>6. What is a LP data retention policy? And how long data is persisted for Outbound Reporting API?</strong>
 
 Retention policy period is 13 months.
- 
+
 <strong>7. Is Outbound Reporting API GDPR Compliant?</strong>
 
 Yes

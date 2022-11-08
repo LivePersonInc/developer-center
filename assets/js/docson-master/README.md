@@ -61,7 +61,7 @@ Also, you will need a patched version of [Swagger Client](https://github.com/lbo
    <script src='/lib/swagger.js' type='text/javascript'></script>
 ```
 
-with 
+with
 
 ```
   <script src='https://raw2.github.com/lbovet/swagger-js/models-exposed/lib/swagger.js' type='text/javascript'></script>
@@ -111,4 +111,3 @@ Not implemented:
 Please pull-request your failing schemas in the `tests/` folder and open an issue describing the expected result.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lbovet/docson/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

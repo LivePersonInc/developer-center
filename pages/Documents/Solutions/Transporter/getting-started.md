@@ -1,13 +1,13 @@
 ---
 pagename: Getting Started
-redirect_from:
 sitesection: Solutions
 documentname: Transporter
 permalink: transporter-getting-started.html
 indicator: Both
 ---
 
-<div class="important">Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login. <b>Please be aware that some elements and usability may change as we finalize this feature.</b></div>
+{: .attn-note}
+Transporter is currently a Beta feature — users must agree to our Data Application Beta terms of use upon login. **Please be aware that some elements and usability may change as we finalize this feature.**
 
 ### Requirements
 
@@ -23,7 +23,7 @@ Login to Transporter requires:
 
 Access to Transporter is strictly by request — speak to your account manager to discuss pricing and availability. Once your account is enabled, you can begin by logging in via [https://transporter.liveperson.net](https://transporter.liveperson.net)
 
-#### Login Page  
+#### Login Page
 
 Enter your Conversational Cloud credentials:
 
@@ -35,7 +35,7 @@ Enter your Conversational Cloud credentials:
 
 Note that logging into Transporter will terminate any existing Conversational Cloud sessions — however, you can login to Conversational Cloud after logging into Transporter without disrupting your Transporter session.
 
-#### Two-factor Authentication  
+#### Two-factor Authentication
 
 For security reasons and to protect your data privacy, Transporter also requires mandatory login verification via Two-factor Authentication. If this is the first time you are logging in, you will need to enroll — simply download an Authenticator application, such as:
 
@@ -97,7 +97,8 @@ For security and data protection, all reports shall be encrypted — Transporter
 
 Once your keys are generated, your Public Key will be saved to your account, and you will be prompted to securely store your Private Key and Passphrase (these will not be saved).
 
-<div class="important">If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports — use GPG Suite or GPG4Win to do so.</div>
+{: .attn-note}
+If you do not save your Private Key and/or Passphrase offline, you will not be able to decrypt your completed reports — use GPG Suite or GPG4Win to do so.
 
 **Notes:**
 
@@ -128,4 +129,5 @@ When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-
 Once you have created your keys, enter them into Transporter via the Conversational Cloud section and click create.  Your API keys will be encrypted and stored securely.
 After verifying your keys are valid, you will see the Conversational Cloud setting appear in the table at the bottom of the page — it is now ready for use as your source when you configure your first report.
 
-<div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>
+{: .attn-note}
+Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks. [See this guide](transporter-creating-report-tasks.html) for more information on how to do so.

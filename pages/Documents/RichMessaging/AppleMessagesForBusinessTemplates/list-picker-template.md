@@ -3,7 +3,6 @@ pagename: List Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-listpicker.html
   - structured-content-apple-business-chat-templates-list-picker-template.html
-Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Apple Messages for Business Templates
@@ -17,7 +16,7 @@ indicator: messaging
 
 * Define items information — item name, description, image.
 * Item sections — divide your list of items into sections based on the product categories.
-* Multi-selection — Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
+* Multi-selection — Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections).
 * receivedMessage and replyMessage bubbles style structures — define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
 Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
@@ -166,7 +165,7 @@ The List Picker Metadata JSON is based on [this JSON template](#metadata-json-te
 
 #### List Picker Metadata JSON Properties
 
-The muliple selection property allows the brand to configure which sections will allow for multiple selection and which sections will not. The property is an array of bolleans which will be set to true or false in the order that the sections are configured in the body. If the multi selections property is not set in the property, the default is "false". 
+The muliple selection property allows the brand to configure which sections will allow for multiple selection and which sections will not. The property is an array of bolleans which will be set to true or false in the order that the sections are configured in the body. If the multi selections property is not set in the property, the default is "false".
 
 | Property Name     | Description                                                                                 | Type    | Required | Size Limit |
 | :---------------- | :------------------------------------------------------------------------------------------ | :------ | :------- | :--------- |

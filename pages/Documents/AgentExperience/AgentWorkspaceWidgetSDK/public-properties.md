@@ -2,14 +2,11 @@
 pagename: Public Properties
 redirect_from:
   - agent-workspace-sdk-public-properties.html
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
-
 order: 70
 permalink: agent-workspace-widget-sdk-public-properties.html
-
 indicator: both
 ---
 
@@ -20,4 +17,4 @@ indicator: both
 | appNames   | Names of apps for communication with the agent. |   |
 | cmdNames   | Names of commands for the agent.                |   |
 | reqNames   | Names of requests for the agents.               |   |
-| eventNames | Names of the events sent by the agent           |   | 
+| eventNames | Names of the events sent by the agent           |   |

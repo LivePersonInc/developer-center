@@ -4,8 +4,6 @@
     display: none;
     line-height: 40px;
     position: fixed;
-    justify-content: center;
-    align-items: center;
     gap: 60px;
     z-index: 999;
     right: 0;
@@ -20,6 +18,14 @@
     font-size: 14px;
     line-height: 22px;
   }
+
+  #cookie-notice .max-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
   #cookie-notice p {
     margin: 0;
     text-align: left;
@@ -49,15 +55,29 @@
     align-items: center;
     justify-content: center;
   }
+
   #cookie-notice a.btn:hover {
     background-color: var(--post-link-hover);
     color: var(--button-text);
     border: 1px solid var(--post-link-hover);
   }
+
+  @media (min-width: 1280px) {
+    #cookie-notice .max-width {
+      padding-right: 96px;
+    }
+  }
   @media (max-width: 767px) {
-    #cookie-notice {
-      gap: 20px;
+
+    #cookie-notice .max-width {
       flex-wrap: wrap;
+      flex-direction: column;    
+      padding-right: 0;
+      gap: 20px;
+    }
+
+    #cookie-notice p span {
+      display: none;
     }
     #cookie-notice p span {
       display: none;
@@ -66,18 +86,10 @@
 </style>
 
 <div id="cookie-notice">
-  <p>
-    This website uses cookies to ensure you get the best browsing experience. By
-    continuing to use this website, you consent to our use of these cookies.
-    <span
-      >This website contains proprietary content that belongs to LivePerson and
-      that is intended for educational use by our customers and prospects. Your
-      use of this site is subject to our Terms of Use, which include
-      restrictions on any use of our information for unauthorized
-      purposes.</span
-    >
-  </p>
-  <a id="cookie-notice-accept" class="btn">I agree</a>
+  <div class="flex max-width">
+  <p>This website uses cookies to ensure you get the best browsing experience. By continuing to use this website, you consent to our use of these cookies. <span>This website contains proprietary content that belongs to LivePerson and that is intended for educational use by our customers and prospects. Your use of this site is subject to our <a href="https://www.liveperson.com/policies/apitou/" target="_blank">Terms of Use</a>, which include restrictions on any use of our information for unauthorized purposes.</span></p>
+  <a role="button" id="cookie-notice-accept" class="btn">I agree</a>
+  </div>
 </div>
 
 <script>

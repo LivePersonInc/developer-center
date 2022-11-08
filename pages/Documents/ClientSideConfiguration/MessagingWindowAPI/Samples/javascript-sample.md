@@ -6,7 +6,6 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Samples
-
 order: 90
 
 permalink: messaging-window-api-samples-javascript-sample.html

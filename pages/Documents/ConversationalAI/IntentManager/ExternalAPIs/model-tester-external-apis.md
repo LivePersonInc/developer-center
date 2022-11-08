@@ -2,7 +2,6 @@
 pagename: Model Tester External APIs
 redirect_from:
     - intent-builder-external-apis-model-tester-external-apis.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
@@ -24,7 +23,7 @@ These APIs let you automate test report retrieval. You can call these APIs, and 
 * A permanent token provided by LivePerson. Contact your LivePerson representative to obtain this.
 * Your account (brand) ID in Conversational Cloud.
 
-{: .important}
+{: .attn-note}
 To integrate a second account using these APIs, you must obtain a different permanent token. Each token is valid for only one account.
 
 ### Test Reports API
@@ -45,7 +44,7 @@ Use this API to retrieve the domain IDs and associated test report names for the
 
 ##### Path and query parameters
 
-{: .important}
+{: .attn-note}
 All path and query parameters must be URL-encoded.
 
 | Name | Description | Type/Value | Required? | Notes |
@@ -127,7 +126,7 @@ curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/mod
 
 #### Troubleshooting
 
-Typically, the automation for your use case should always use the domain_name query parameter to filter the results by domain name. However, to troubleshoot, you can remove it and “work backwards” to identify the issue: 
+Typically, the automation for your use case should always use the domain_name query parameter to filter the results by domain name. However, to troubleshoot, you can remove it and “work backwards” to identify the issue:
 
 1. Remove the domain_name query parameter.
 2. Call this API and retrieve the test report name for the report you want.
@@ -151,7 +150,7 @@ Use this API to retrieve CSV files for all the test reports for a domain ID, or 
 
 ##### Path and query parameters
 
-{: .important}
+{: .attn-note}
 All path and query parameters must be URL-encoded.
 
 | Name | Description | Type/Value | Required? | Notes |

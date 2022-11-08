@@ -1,6 +1,5 @@
 ---
 pagename: Disambiguation Dialogs
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -17,11 +16,11 @@ Disambiguation is the process whereby the bot gets clarification from the consum
 
 Sometimes two or more intents match closely to the message, so clarification is needed:
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation1.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation1.png" alt="A conversation where clarification, i.e., disambiguation of intent is needed">
 
 Other times, the consumer has expressed multiple intents in a single message, so, here again, clarification is needed:
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation2.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation2.png" alt="Another conversation where disambiguation of intent is needed">
 
 When a disambiguation dialog is used, the bot presents the best matches to the consumer and lets the consumer choose which is correct. This is shown in the examples above. The result is a better, smoother conversation.
 
@@ -29,15 +28,11 @@ When a disambiguation dialog is used, the bot presents the best matches to the c
 
 As an example, suppose the consumer enters "I lost my" and presses enter by mistake. The intent in this case isn't clear and might yield multiple, close matches. For example, it might mean a lost card or even a bereavement situation. Using a disambiguation dialog to clarify the consumer's intent means you can quickly address the correct issue.
 
-#### Limitations
-
-You can use a disambiguation dialog to disambiguate intents if you’re using the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html). It doesn’t work with third-party NLU engines because they always return a single intent match, not multiple intent matches.
-
 ### How a bot triggers a disambiguation dialog
 
 A disambiguation dialog is triggered when the bot matches the consumer's message to **multiple intents with a Fair Plus score**. Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
 
-<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation4.png" alt="">
+<img style="width:400px" src="img/ConvoBuilder/dialogs_disambiguation4.png" alt="A conversation where disambiguation is triggered">
 
 Once the consumer selects the correct intent, if that intent is associated with a Dialog Starter interaction in one of the bot's dialogs, that dialog's flow begins. Or, in the Disambiguation interaction, you can configure response match conditions to direct the flow as desired.
 
@@ -60,17 +55,22 @@ Also, the disambiguation dialog isn't triggered if the consumer's message matche
     - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
 6. Customize the question text to send to the consumer. As you construct this message, keep in mind that the disambiguation dialog is displayed only when the NLU engine isn’t certain which intent the consumer is expressing, so it’s natural for this to be stressful for the consumer. Try to make this message warm and sympathetic.
-    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png" alt="">
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png" alt="Customizing the question text to send to the consumer">
 
     The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Manager](intent-manager-overview.html). Again, this situation can be stressful for the consumer; try to make the display names as clear as possible.
 
-    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png" alt="">
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png" alt="The Intent Display Name as it appears in Intent Manager">
 
 7. Build out the disambiguation dialog as desired.
 
     You can add any number of interactions to the dialog. For example, you might want to add an [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 
     To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-session-data.html#get-disambiguated-intent).
+
+### Limitations
+
+* **NLU engine**: You can use a disambiguation dialog to disambiguate intents if you’re using the [LivePerson NLU engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html). It doesn’t work with third-party NLU engines because they always return a single intent match, not multiple intent matches.
+* **Bot groups**: Disambiguation is supported within a bot itself, but not across the bots within the group. For example, assume you have a Savings Account bot that handles basic tasks for saving accounts. The consumer sends a related message that matches multiple intents in the bot. If the Savings Account bot has a Disambiguation dialog, it is triggered. However, if the consumer were to ask a question about their checking account, the Savings Account bot couldn’t handle the request. It would then automatically check within its group for a bot that can. At this step, disambiguation is never triggered, neither within nor across the other bots in the group. If the Savings Account bot discovers a capable bot, transfer of the conversation to the best match happens automatically.
 
 ### Customization points
 
@@ -123,4 +123,4 @@ There can be only one disambiguation dialog in a bot.
 
 #### If I must set the dialog's Match Threshold to Fair Plus, what are the other options for?
 
-The other options for the **Match Threshold** dialog setting are for users still using the legacy version of our LivePerson NLU engine. Still on LivePerson (Legacy)? See [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of switching to the LivePerson engine.
+The other options for the **Match Threshold** dialog setting are for users still using the legacy version of our LivePerson NLU engine. Still on LivePerson (Legacy)? There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) of switching over to the LivePerson engine.
