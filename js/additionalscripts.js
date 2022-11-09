@@ -202,6 +202,7 @@ function navigateContent(url) {
 function handleUniquePages() {
   var is_root = location.pathname == "/"
   var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html"
+  var is_customizing_the_conversational_cloud = location.pathname == "/customizing-the-conversational-cloud.html"
   // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
@@ -211,7 +212,7 @@ function handleUniquePages() {
   var $title = $(".h1").text()
   var titleContainer = $("#documentTitleContainer")
 
-  if (is_root || is_getting_started) {
+  if (is_root || is_getting_started || is_customizing_the_conversational_cloud) {
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
