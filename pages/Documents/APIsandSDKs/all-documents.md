@@ -23,13 +23,13 @@ Use this page to view all of the Developers' Community documents in one place. T
               <ul class="alldocumentssubpageslist">
                 {% for subpage in page.subpages %}
                 <li class="alldocumentssubpage">
-                 <a  onclick="linkclick(event,this)" href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                 <a href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
                </li>
                 {% endfor %}
                </ul>
                {% else %}
                <li class="alldocumentspage">
-                 <a  onclick="linkclick(event, this)"   href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+                 <a href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
               {% endif %}
               </li>
             {% endfor %}
