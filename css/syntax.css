@@ -311,10 +311,10 @@ button.nightbtn {
 }
 
 /* Keeping only codes marked with three backticks as code blocks */
-code.language-html.highlighter-rouge {
+code.highlighter-rouge {
   display: inline;
 }
 
-code.language-html.highlighter-rouge::before {
+code.highlighter-rouge::before {
   display: none;
 }
