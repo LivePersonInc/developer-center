@@ -201,7 +201,7 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
   var is_root = location.pathname == "/"
-  var is_getting_started = location.pathname == "/first-steps.html"
+  var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html"
   // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
