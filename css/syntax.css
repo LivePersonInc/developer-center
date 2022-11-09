@@ -309,3 +309,12 @@ button.nightbtn {
 .nightbtn:focus {
   outline: 0;
 }
+
+/* Keeping only codes marked with three backticks as code blocks */
+code.language-html.highlighter-rouge {
+  display: inline;
+}
+
+code.language-html.highlighter-rouge::before {
+  display: none;
+}
