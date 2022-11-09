@@ -151,8 +151,3 @@ date_updated: 2019/01/30
      player.api("pause");
    }
 </script>
-<style>
-   #jumptop {
-      display: none;
-   }
-</style>
