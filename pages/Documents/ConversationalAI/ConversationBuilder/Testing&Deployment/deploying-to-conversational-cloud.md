@@ -8,7 +8,7 @@ documentname: Conversation Builder
 subfoldername: Testing & Deployment
 permalink: conversation-builder-testing-deployment-deploying-to-conversational-cloud.html
 indicator: both
-date_updated: 2022/11/07
+date_updated: 2022/11/13
 ---
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.

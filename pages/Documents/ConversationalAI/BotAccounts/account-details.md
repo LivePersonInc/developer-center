@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Bot Accounts
 permalink: bot-accounts-account-details.html
 indicator: both
-date_updated: 2022/11/07
+date_updated: 2022/11/13
 ---
 
 In the Bot Accounts application, use the **Account Details** page to configure account-level settings:

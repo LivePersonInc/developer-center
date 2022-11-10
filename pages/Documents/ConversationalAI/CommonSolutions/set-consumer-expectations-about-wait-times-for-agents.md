@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Common Solutions
 permalink: common-solutions-set-consumer-expectations-about-wait-times-for-agents.html
 indicator: both
-date_updated: 2022/11/07
+date_updated: 2022/11/13
 ---
 
 ### Use case

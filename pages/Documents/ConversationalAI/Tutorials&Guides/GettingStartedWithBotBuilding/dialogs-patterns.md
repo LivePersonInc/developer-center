@@ -6,7 +6,7 @@ documentname: Tutorials & Guides
 subfoldername: Getting Started with Bot Building
 permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html
 indicator: both
-date_updated: 2022/11/07
+date_updated: 2022/11/13
 ---
 
 <!--

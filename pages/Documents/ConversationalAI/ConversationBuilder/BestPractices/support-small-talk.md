@@ -6,7 +6,7 @@ documentname: Conversation Builder
 subfoldername: Best Practices
 permalink: conversation-builder-best-practices-support-small-talk.html
 indicator: both
-date_updated: 2022/11/07
+date_updated: 2022/11/13
 ---
 
 ### What’s small talk?
