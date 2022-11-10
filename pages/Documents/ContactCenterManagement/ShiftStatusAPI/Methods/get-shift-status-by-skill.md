@@ -48,7 +48,7 @@ If you use the following API while providing a Skill ID which does not exist und
 
 | Attribute | Description | Type/Value | Notes |
 | :--------- | :-------------- | :----------- | :--- | :--- |
-| skill | Skill unique ID | Long | |
+| skillId | Skill unique ID | Long | |
 | onShift | Whether the current skill is on shift or not | Boolean | For skills which did not override the account default configuration, the shift status will be taken from the account level |
 | nextOn | The start time of the next shift | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 |
 | nextOff | The end time of the next shift | Long | Epoch time in milliseconds. This value can be null if the shift is 24\7 or if the skill has no configuration and it uses an account level configuration which is manual and currently off. |
@@ -57,7 +57,7 @@ If you use the following API while providing a Skill ID which does not exist und
 
 ```json
     {
-        "skill": 326244912,
+        "skillId": 326244912,
         "onShift": false,
         "nextOn": 1535979600000,
         "nextOff": 1535997600000

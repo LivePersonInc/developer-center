@@ -19,7 +19,7 @@ port: 4000
 google_analytics: UA-96175782-1
 
 extlinks:
-  attributes: { target: _blank, onclick: "linkclick(event, this)" }
+  attributes: { target: _blank }
 # This tells the extlinks plugin which attribute to add to links
 
 url: https://developers.liveperson.com
@@ -36,8 +36,8 @@ algolia:
   index_name: "devMain"
   # also index the following html elements
   files_to_exclude:
-    - _exclude/**/*
-    - _exclude/**/**/*
+    - _exclude/*
+    - _exclude/*/*
 
 # values for the Algolia plugin
 
@@ -53,17 +53,17 @@ exclude:
   - vendor
 # these are the files and directories that jekyll will exclude from the build
 
+markdown: kramdown
 highlighter: rouge
 # library used for syntax highlighting
-
-markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
   hard_wrap: false
-  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: "syntax"
   smart_quotes: ["apos", "apos", "quot", "quot"]
-
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
 defaults:

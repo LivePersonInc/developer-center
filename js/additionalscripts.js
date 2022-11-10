@@ -201,7 +201,8 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
   var is_root = location.pathname == "/"
-  var is_getting_started = location.pathname == "/first-steps.html"
+  var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html"
+  var is_customizing_the_conversational_cloud = location.pathname == "/customizing-the-conversational-cloud.html"
   // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
@@ -211,7 +212,7 @@ function handleUniquePages() {
   var $title = $(".h1").text()
   var titleContainer = $("#documentTitleContainer")
 
-  if (is_root || is_getting_started) {
+  if (is_root || is_getting_started || is_customizing_the_conversational_cloud) {
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
@@ -289,23 +290,6 @@ function codeButtons() {
   })
 }
 
-//a function to control a click on internal links
-function linkclick(event, that) {
-  //prevent the link from actually navigating to the url
-  event.preventDefault()
-  //grab the url to which the link is pointing
-  var url = $(that).attr("href")
-  // call the navigateContent function and pass that url to it
-  navigateContent(url)
-  //make sure the window recognizes this and adds it to the history queue for back and refresh actions
-  window.history.pushState(
-    {
-      url: url,
-    },
-    "",
-    url
-  )
-}
 //handle back/forward and refresh events
 $(window).on("popstate", function (e) {
   var state = e.originalEvent.state
@@ -772,7 +756,6 @@ function isExplorer() {
 function searchClick(event) {
   $(".ds-dropdown-menu").on("click", "a", function (event) {
     event.preventDefault()
-    linkclick(event, this)
   })
 }
 

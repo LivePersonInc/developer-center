@@ -411,7 +411,7 @@ function lambda(input, callback) {
 
 We can see the above LivePerson function in action below:
 
-<img class="fancyimage" style="width:300px" src="img/faas/faas_richcontent_demo.gif">
+<img class="fancyimage" style="width:300px" src="img/faas_richcontent_demo.gif">
 
 ### Receiving Last consumer message (Messaging Only)
 
