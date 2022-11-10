@@ -324,7 +324,7 @@ function populateAnchors() {
   var anchorlinks = document.getElementsByTagName("h3")
   var anchorlist = document.getElementById("anchorlist")
   let html
-  //if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
+  //if there are no anchrolinks or one, hide the sidebar. 
   if (anchorlinks.length == 0 || anchorlinks.length == 1) {
     $(".anchorlist").css("display", "none")
     //if there are anchorlinks, display the box
