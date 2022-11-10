@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
-date_updated: 2019/01/30
 ---
 
 <!-- The Modal -->
@@ -41,7 +40,7 @@ date_updated: 2019/01/30
 </div>
 <div>
    <div class="attn-note" style="width:90%">
-      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">register</a> for a free 45-day trial.
+      <b>Prerequisites</b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">register</a> for a free 45-day trial.
    </div>
 </div>
 <div class="concierge-bot-header">
