@@ -136,14 +136,14 @@ date_updated: 2019/01/30
 <script>
    var modal = document.getElementById("myModal");
    // Get the button that opens the modal
-   var btn = document.getElementById("teaser-banner");
+   var teaserBtn = document.getElementById("teaser-banner");
    // Get the <span> element that closes the modal
-   var span = document.getElementsByClassName["close"](0);
-   btn.onclick = function() {
+   var closeSpan = document.getElementsByClassName("close")[0];
+   teaserBtn.onclick = function() {
      modal.style.display = "block";
    }
    // When the user clicks on <span> (x), close the modal
-   span.onclick = function() {
+   closeSpan.onclick = function() {
      modal.style.display = "none";
      var iframe = document.getElementById('vimeo-iframe');
      // $f == Froogaloop used for controlling iframe
