@@ -1276,7 +1276,7 @@ div#defaultsidebar .mysidebar .sidebarbuttoncontainer {
   flex-basis: 20%;
 }
 
-/* hide jumpto menu if empty */
+/* Hide jumpto menu if empty */
 #jumpto:has(#anchorlist:empty),
 #jumpto:has(#anchorlist p:empty) {
   flex-basis: 0;
@@ -1767,6 +1767,76 @@ input#csds-button {
   margin: 8px 0;
 }
 
+/* Cookie notice */
+
+#cookie-notice {
+  display: none;
+  position: fixed;
+  gap: 60px;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px 20px;
+  text-align: center;
+  border: 1px solid var(--card-border);
+  background-color: var(--input-search-background);
+  color: var(--body-text);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#cookie-notice .max-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+#cookie-notice p {
+  margin: 0;
+  text-align: left;
+}
+
+#cookie-notice a.btn {
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  padding: 12px 40px;
+  gap: 2px;
+  border: 1px solid var(--body-text);
+  border-radius: 24px;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: var(--body-text);
+  min-width: 148px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cookie-notice a.btn:hover {
+  background-color: var(--post-link-hover);
+  color: var(--button-text);
+  border: 1px solid var(--post-link-hover);
+}
+
+@media (min-width: 1280px) {
+
+  #cookie-notice .max-width {
+    padding-right: 96px;
+  }
+
+}
+
 @media (max-width: 767px) {
 
   .flex-col-mobile {
@@ -1921,6 +1991,19 @@ input#csds-button {
   input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.diagonal.part-2,
   input[type=checkbox].openSidebarMenu:checked~.sidebarIconToggle>.horizontal {
     transition: var(--nav-transition);
+  }
+
+  /* Cookie notice */
+
+  #cookie-notice .max-width {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  #cookie-notice p span {
+    display: none;
   }
 
 }
