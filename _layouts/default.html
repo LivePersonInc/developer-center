@@ -108,7 +108,7 @@
                 {% if page.date_updated %}
                 <p>
                   Updated:
-                  <time datetime="{{ page.date_updated | date_to_xmlschema }}" itemprop="dateModified">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
+                  <time datetime="{{ page.date_updated | date_to_xmlschema }}">{{ page.date_updated | date: "%b %-d, %Y" }}</time>
                 </p>
                 {% endif %}
               </div>
