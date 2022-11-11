@@ -1112,27 +1112,6 @@ Top border color for the Input TextView.
 &nbsp;
 </div>
 
-#### enter_message_divider_visible
-Enable (visible) or disable (hidden) the Enter Message edit text divider.
-
-<div style="float: left; width: 50%;height: 40px;">
-   <ul>
-      <li><b>Type:</b> bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 50%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/android_enter_message_divider_visible.png">
-   </figure>
-</div>
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
-
 #### bubble_system_resolved_text_size
 Defines the Resolved system message text size.
 
@@ -4359,6 +4338,15 @@ _NONE:_ Do not unregister from pusher at all. Consumer will receive push notific
 _ALL (Default):_ Unregister/remove consumer from pusher. No push notifications will be sent if the consumer is logged out.
 
 _AGENT:_ Unregister only for agent push notification messages. Consumers will still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
+
+---
+### Pusher
+
+#### lp_pusher_clear_badge_count
+Enable this configuration (true) to let SDK clear all unread badge counts from Pusher.
+
+* **Type:** bool
+* **Default value:** false
 
 ---
 
