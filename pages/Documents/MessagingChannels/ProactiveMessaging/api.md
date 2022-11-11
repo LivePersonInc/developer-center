@@ -43,7 +43,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 * The access_token retrieved from the above AppJWT response should be used in the Request Header for Authorization.
 
 ## API Domain
-* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the the Domain API to identify the zone of the Proactive API which is to be used for an account.
+* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the Domain API to identify the zone of the Proactive API which is to be used for an account.
 
 | Method | URI |
 | :--- | :--- |

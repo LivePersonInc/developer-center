@@ -72,7 +72,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) to view the Conversational Cloud System Requirements document. Under "Conversational Cloud Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
-* **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.
+* **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the authentication.
 
     * Determine if you will place messaging in authenticated areas of your app?
 

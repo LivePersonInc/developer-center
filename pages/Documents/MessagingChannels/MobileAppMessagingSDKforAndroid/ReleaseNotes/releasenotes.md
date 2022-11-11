@@ -2512,7 +2512,7 @@ Update the Google Maps API key meta tag from `com.google.android.maps.v2.API_KEY
 
 * Brands who do not specify the Maps API key meta tag in the app’s `Manifest.xml`, do not need to perform any change.
 
-* Brands who specify the the Maps API key meta tag in the app’s Manifest.xml as `com.google.android.maps.v2.API_KEY` should change it to `com.google.android.geo.API_KEY`.
+* Brands who specify the Maps API key meta tag in the app’s Manifest.xml as `com.google.android.maps.v2.API_KEY` should change it to `com.google.android.geo.API_KEY`.
 
 #### Bug fixes
 

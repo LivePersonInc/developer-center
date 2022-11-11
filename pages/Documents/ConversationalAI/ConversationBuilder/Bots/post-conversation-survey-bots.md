@@ -247,7 +247,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 #### Handle free text answers
 
-The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
+The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
 
 #### Handle unrecognizable responses
 
