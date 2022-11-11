@@ -14,7 +14,7 @@ indicator: messaging
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
 
 {: .attn-note}
-For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
+For things like Brand name, which is a string, refer to [string values](mobile-app-messaging-sdk-for-android-string-localization-string-values.html).
 
 ---
 
@@ -4362,7 +4362,7 @@ _AGENT:_ Unregister only for agent push notification messages. Consumers will st
 
 ---
 
-### Deprecated Attributes
+### Deprecated attributes
 
 #### custom_button_icon_name
 String. Custom button icon filename without extension. This will be displayed on the toolbar.
