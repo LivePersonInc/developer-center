@@ -24,7 +24,7 @@ You can create policies to recognize a consumer's channel: Web, Facebook Messeng
 
 1. Modify your routing bot to power the desired experience. In the example below, the bot responds to a customer greeting of “Hi," "Hello," etc., and immediately performs dynamic routing.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel1.png" alt="An example dialog flow that's triggered by patterns for ‘hi’">
+    <img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel1.png" alt="An example dialog flow that's triggered by patterns for ‘hi’">
 
 2. In the Dynamic Routing interaction, click **Manage routing policies** to go to the policy management interface.
 
@@ -32,11 +32,11 @@ You can create policies to recognize a consumer's channel: Web, Facebook Messeng
 
     Also configure the action to transfer to a skill. Make sure the skill has at least one or more bot or human agents.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel3.png" alt="Selecting a channel in the policy's condition">
+    <img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel3.png" alt="Selecting a channel in the policy's condition">
 
 4. Save and enable the policy.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel4.png" alt="The final, saved policy">
+    <img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel4.png" alt="The final, saved policy">
 
 5. Launch a messaging conversation from the respective channel and test the flow.
 
@@ -48,8 +48,8 @@ You can create policies to recognize a consumer's channel: Web, Facebook Messeng
 
     Launch messaging. Start by saying “Hi. And then immediately get routed to the respective skill. Here below, “Agent Bob” is an agent who is mapped to the User3Skill.
 
-    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_routechannel5.png" alt="The start of the conversation flow, illustrating transfer to Agent Bob">
+    <img loading="lazy" class="fancyimage" width="250" src="img/convorchestrator/co_dr_routechannel5.png" alt="The start of the conversation flow, illustrating transfer to Agent Bob">
 
 7. You can also create one such policy for every unique channel. And you can also add more conditions to the policies if required.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel4.png" alt="The final, saved policy">
+    <img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_dr_routechannel4.png" alt="The final, saved policy">

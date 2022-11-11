@@ -28,7 +28,7 @@ There are several system variables that store information that's commonly needed
 
 The most common use case for variables is storing consumer responses to [questions](conversation-builder-interactions-questions.html). Frequently, you’ll want to capture what the consumer just said as the value of a variable. You can use `{$userMessage}` to do this, for example:
 
-<img width="700" src="img/ConvoBuilder/storeUserResponse.png" alt="Storing the consumer's most recent message in a variable in a rule">
+<img loading="lazy" width="700" src="img/ConvoBuilder/storeUserResponse.png" alt="Storing the consumer's most recent message in a variable in a rule">
 
 You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
@@ -36,11 +36,11 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 1. In the interaction, click **Next Action**, and then click **+ Custom Rule**.
 
-    <img width="600" src="img/ConvoBuilder/var_customrule.png" alt="The Custom Rule button that appears at the bottom of the dropdown when you click Next Action">
+    <img loading="lazy" width="600" src="img/ConvoBuilder/var_customrule.png" alt="The Custom Rule button that appears at the bottom of the dropdown when you click Next Action">
 
 2. In the window that appears, define the custom rule. To add the variable, click **+ Add Variable**, and then define the variable using the fields provided.
 
-    <img width="800" src="img/ConvoBuilder/var_specify.png" alt="The fields for definining a variable in a rule">
+    <img loading="lazy" width="800" src="img/ConvoBuilder/var_specify.png" alt="The fields for definining a variable in a rule">
 
     For the variable's value, you can specify:
     * A system variable, for example: `{$userMessage}` or `{$firstname}`. See the list of available system variables farther above on this page.

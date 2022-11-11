@@ -14,7 +14,7 @@ Use the Bots Status application to check the status of all your bots from a sing
 
 You can use the application to monitor and manage both custom bots and post-conversation survey (PCS) bots.
 
-<img class="fancyimage" alt="The Custom Connectors tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/botsStatus_bot_agents.png">
+<img loading="lazy" class="fancyimage" alt="The Custom Connectors tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/botsStatus_bot_agents.png">
 
 ### Access Bots Status
 
@@ -30,7 +30,7 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 
 The dashboard provides at-a-glance reporting on the status of your agents. Click any metric to access the **Bot Agents** page with the appropriate filter pre-applied.
 
-<img class="fancyimage" alt="The dashboard in Bots Status that provides at-a-glance reporting on the status of agents" style="width:800px" src="img/ConvoBuilder/botsStatus_dashboard.png">
+<img loading="lazy" class="fancyimage" alt="The dashboard in Bots Status that provides at-a-glance reporting on the status of agents" style="width:800px" src="img/ConvoBuilder/botsStatus_dashboard.png">
 
 * **Active agents**: The number of agents where the Bot Agent Connector status is "Online"
 * **Agents not connected to Conversational Cloud**: The number of agents where the Conversational Cloud Connection status is "Not Connected"
@@ -49,7 +49,7 @@ When monitoring bots, there are three types of statuses:
 
 To view a connector's statuses, scroll to the right in the dashboard.
 
-<img class="fancyimage" alt="A list of a bots and their status indicators" style="width:700px" src="img/ConvoBuilder/bots_status_statuses.png">
+<img loading="lazy" class="fancyimage" alt="A list of a bots and their status indicators" style="width:700px" src="img/ConvoBuilder/bots_status_statuses.png">
 
 #### Bot Agent Connector statuses
 

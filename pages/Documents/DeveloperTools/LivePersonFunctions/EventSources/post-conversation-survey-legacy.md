@@ -18,7 +18,7 @@ PCS Bot can be integrated with Functions. A function can be invoked when the sur
 {: .attn-note}
 Post-Conversation Survey Bot is only available for **messaging**, not for chat.
 
-<img src="img/functions/functions_survey_bot_flow.png" alt="Functions: Post Conversation Survey Flow" style="width:100%;"/>
+<img loading="lazy" src="img/functions/functions_survey_bot_flow.png" alt="Functions: Post Conversation Survey Flow" style="width:100%;"/>
 
 This is the Post Conversation Survey flow with Functions integration:
 

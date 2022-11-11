@@ -311,7 +311,7 @@ const payload = {
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
 Figure showing Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In LivePerson functions Bot integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
@@ -411,7 +411,7 @@ function lambda(input, callback) {
 
 We can see the above LivePerson function in action below:
 
-<img class="fancyimage" style="width:300px" src="img/faas_richcontent_demo.gif">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/faas_richcontent_demo.gif">
 
 ### Receiving Last consumer message (Messaging Only)
 

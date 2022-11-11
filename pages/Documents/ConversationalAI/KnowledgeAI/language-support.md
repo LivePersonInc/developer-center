@@ -11,7 +11,7 @@ indicator: both
 
 When you create an internal or external knowledge base, you specify its language:
 
-<img class="fancyimage" alt="Specify knowledge base language" style="width:700px" src="img/ConvoBuilder/kai_kblanguage.png">
+<img loading="lazy" class="fancyimage" alt="Specify knowledge base language" style="width:700px" src="img/ConvoBuilder/kai_kblanguage.png">
 
 As mentioned elsewhere ([example](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base)), make an accurate selection. This helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 

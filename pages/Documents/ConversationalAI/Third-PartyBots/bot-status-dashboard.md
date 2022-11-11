@@ -17,7 +17,7 @@ To track the efficiency of the bot, the dashboard features an overview for the n
 
 The dashboard can be accessed by clicking on the bot's name.
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_select.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_select.png" alt="">
 
 Figure 1.1 How to access the bot status dashboard
 
@@ -31,7 +31,7 @@ For a running bot, conversation data is limited to a maximum of 7 days of past d
 
 The user will see the following screen after clicking on the bot's name.
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_online_state.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_online_state.png" alt="">
 
 Figure 2.1 Dashboard Main View
 
@@ -63,7 +63,7 @@ The error details contain a human readable error message, the error code and an 
 
 When selecting the Conversation Metrics tab the bot status dashboard provides an overview of specific bot conversation metrics.
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_metrics.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_metrics.png" alt="">
 
 Figure 3.1 Bot conversation metrics
 
@@ -82,7 +82,7 @@ On The right side, in section 2 of *Figure 3.1*, the user can see a timeline rep
 
 When selecting the Conversation Errors tab the bot status dashboard provides an overview of specific bot conversation errors.
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_conversation_errors.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_conversation_errors.png" alt="">
 
 Figure 4.1 Bot conversation error logs
 

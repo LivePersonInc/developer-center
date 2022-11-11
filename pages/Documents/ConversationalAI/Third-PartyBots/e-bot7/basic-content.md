@@ -20,7 +20,7 @@ conversation. As a result, the consumer’s first message will be the entry poin
 In this scenario, all bot messages in the flow which are created before this node will be skipped.
 
 <figure>
- <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-messaging-flow.png" alt="e-bot7 flow without support of the 'Welcome' event">
+ <img loading="lazy" class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-messaging-flow.png" alt="e-bot7 flow without support of the 'Welcome' event">
  <figcaption>Figure 2.1: Example conversation flow for messaging without support of the `Welcome` event</figcaption>
 </figure>
 
@@ -31,7 +31,7 @@ In this scenario, all bot messages in the flow which are created before the firs
 Make sure to have `Bot Message` nodes after the `Start Flow` entry point to utilize the `Welcome` event.
 
 <figure>
- <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-chat-flow.png" alt="e-bot7 flow to support the 'Welcome' event">
+ <img loading="lazy" class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-chat-flow.png" alt="e-bot7 flow to support the 'Welcome' event">
  <figcaption>Figure 2.2: Example conversation flow for chats with support of the `Welcome` event</figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Parameters:
 - `_skill_` **(Case sensitive)** skill name in Conversational Cloud.
 
 <figure>
- <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-skill.png" alt="Example bot message to trigger the transfer to a skill">
+ <img loading="lazy" class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-skill.png" alt="Example bot message to trigger the transfer to a skill">
  <figcaption>Figure 2.3: Configuration for transfer to skill</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Parameters:
 - `_agentId_` **(Case sensitive)** agent id in Conversational Cloud.
 
 <figure>
- <img class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-agent.png" alt="Example bot message to trigger the transfer to an agent">
+ <img loading="lazy" class="fancyimage" style="width:450px" src="img/ThirdPartyBots/e-bot7-transfer-to-agent.png" alt="Example bot message to trigger the transfer to an agent">
  <figcaption>Figure 2.4: Configuration for transfer to agent</figcaption>
 </figure>
 

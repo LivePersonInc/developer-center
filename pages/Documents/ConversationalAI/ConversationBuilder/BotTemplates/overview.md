@@ -19,7 +19,7 @@ To help you get started, every Conversation Builder bot that you create is based
 
 Use a Custom bot template when you want to create a bot from scratch.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_custom_types.png" alt="The Choose a Bot Template window, which shows the two custom types: custom and survey">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_custom_types.png" alt="The Choose a Bot Template window, which shows the two custom types: custom and survey">
 
 There are two templates available:
 
@@ -39,6 +39,6 @@ To support common use cases, Conversation Builder offers a set of predefined, in
 2. Select the bot template.
 3. Review the template’s description, and click **Create Bot**.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_industry_specific.png" alt="The Choose a Bot Template window, which shows the list of industry-specific templates, one with the Create Bot button displayed">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_industry_specific.png" alt="The Choose a Bot Template window, which shows the list of industry-specific templates, one with the Create Bot button displayed">
 
 4. Configure the parts that need to be customized: API integration details, brand voice in dialog interactions, etc.

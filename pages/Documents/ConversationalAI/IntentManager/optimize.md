@@ -21,7 +21,7 @@ You can:
 * Copy an individual message to the clipboard
 * Eport the list of intent annotations as a CSV file
 
-<img class="fancyimage" alt="The Optimize tab in Intent Manager" style="width:800px" src="img/ConvoBuilder/im_optimize1.png">
+<img loading="lazy" class="fancyimage" alt="The Optimize tab in Intent Manager" style="width:800px" src="img/ConvoBuilder/im_optimize1.png">
 
 ### Add intent annotations to an intent
 Once the consumer message has been copied to the clipboard:

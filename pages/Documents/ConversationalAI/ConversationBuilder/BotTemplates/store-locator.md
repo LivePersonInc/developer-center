@@ -15,7 +15,7 @@ While this template takes advantage of rich content interactions, alternatives h
 {: .attn-note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png" alt="The Store Locator dialog in a bot created from the Store Locator bot template">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png" alt="The Store Locator dialog in a bot created from the Store Locator bot template">
 
 ### Included items
 
@@ -32,8 +32,8 @@ This bot template contains a [dialog template](conversation-builder-dialog-templ
     * Returned data is not dependent on the zip code provided by the user. This is included in the API URI simply as a demonstration of its use.
     * You will need to replace the mock API with your own API integration to return store location information.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview1.png" alt="Returning location info in a conversation with a consumer">
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview2.png" alt="A second example of returning location info in a conversation with a consumer">
+<img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview1.png" alt="Returning location info in a conversation with a consumer">
+<img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview2.png" alt="A second example of returning location info in a conversation with a consumer">
 
 ### Configuration needed
 

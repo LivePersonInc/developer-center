@@ -16,7 +16,7 @@ Messaging and conversational experiences have transformed how businesses engage 
 - Fully customizable customer experience including look and feel.
 - Optimized for network bandwidth and battery usage.
 
-<img src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
+<img loading="lazy" src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img loading="lazy" src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img loading="lazy" src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
 
 ### Implementation considerations
 

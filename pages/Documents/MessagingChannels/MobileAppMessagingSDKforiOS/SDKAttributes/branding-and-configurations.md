@@ -148,7 +148,7 @@ Custom font name for conversation feed, which affects all messages, timestamps a
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed" style="width: 324px;">
+   <img loading="lazy" src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed" style="width: 324px;">
    </figure>
 </div> -->
 
@@ -166,7 +166,7 @@ Custom font name for all non conversation feed controls. Such as: buttons, alert
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed" style="width: 324px;">
+   <img loading="lazy" src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed" style="width: 324px;">
    </figure>
 </div> -->
 
@@ -185,7 +185,7 @@ It will need two or more images in the array for the loop to take effect.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray">
+   <img loading="lazy" src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray">
    </figure>
 </div> -->
 
@@ -226,7 +226,7 @@ Color code for the background of the connection status bar while connecting.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
    </figure>
 </div> -->
 
@@ -239,7 +239,7 @@ Color code for the text of the connection status bar while connecting.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
    </figure>
 </div> -->
 
@@ -252,7 +252,7 @@ Connection status toast (failed to connect) background color.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
    </figure>
 </div> -->
 
@@ -265,7 +265,7 @@ Connection status toast (failed to connect) text color.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
    </figure>
 </div> -->
 
@@ -282,7 +282,7 @@ Color code for the text of the controller bubble.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/controllerbubletextcolor.png" alt="controller bubble text color">
+   <img loading="lazy" src="img/controllerbubletextcolor.png" alt="controller bubble text color">
    </figure>
 </div> -->
 
@@ -319,7 +319,7 @@ Conversation separator text and line color.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+   <img loading="lazy" src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
    </figure>
 </div> -->
 
@@ -386,7 +386,7 @@ Define the conversation Closed label to separator line padding.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
    </figure>
 </div> -->
 
@@ -399,7 +399,7 @@ Custom font name for conversation closed separator. Fonts that are not part of t
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName">
+   <img loading="lazy" src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName">
    </figure>
 </div> -->
 
@@ -412,7 +412,7 @@ Define the conversation separator view bottom padding.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
    </figure>
 </div> -->
 
@@ -425,7 +425,7 @@ Define the conversation Closed Separator Top padding.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
    </figure>
 </div> -->
 
@@ -570,7 +570,7 @@ Color code for date separator title background color.
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground">
+   <img loading="lazy" src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground">
    </figure>
 </div> -->
 
@@ -583,7 +583,7 @@ Color code for date separator text color.
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor">
+   <img loading="lazy" src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor">
    </figure>
 </div> -->
 
@@ -596,7 +596,7 @@ Color code for date separator line background color.
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
+   <img loading="lazy" src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
    </figure>
 </div> -->
 
@@ -1092,7 +1092,7 @@ Set the link message text color
 - **Type:** color
 - **Default value:** For iOS 13, we use UIColor.label, anything below that uses UIColor.black
 
-<img src="/img/ios-hyperlink-color-cofiguration.png" alt="Hyperlink color configuration" style="width: 600px;padding: 20px;">
+<img loading="lazy" src="/img/ios-hyperlink-color-cofiguration.png" alt="Hyperlink color configuration" style="width: 600px;padding: 20px;">
 
 ---
 
@@ -1377,7 +1377,7 @@ Photo Sharing menu background color.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor">
+   <img loading="lazy" src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor">
    </figure>
 </div> -->
 
@@ -1390,7 +1390,7 @@ Photo Sharing menu buttons background color.
 <!--    <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
+   <img loading="lazy" src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
    </figure>
 </div> -->
 

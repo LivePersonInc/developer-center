@@ -56,7 +56,7 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME-INTENT’ event.
 
-<img class="fancyimage" style="width:600px" src="img/lex/image_6.png">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/lex/image_6.png">
 
 Figure 2.1
 

@@ -12,7 +12,7 @@ indicator: both
 
 When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apple Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
 
-<img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png" alt="The flow of the Web View integration API">
+<img loading="lazy" style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png" alt="The flow of the Web View integration API">
 
 The Web View API can be used by the external system to:
 

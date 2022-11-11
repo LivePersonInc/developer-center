@@ -23,11 +23,11 @@ The main screen has two buttons to optionally open the conversation in Activity 
 The Language and Region controls are used to test localization.
 
 <div style="float: left; width: 50%;">
-   <img src="img/sampleapplication.png" alt="" style="width: 50%">
+   <img loading="lazy" src="img/sampleapplication.png" alt="" style="width: 50%">
 </div>
 
 <div style="float: right; width: 50%;">
-   <img src="img/sampleapplication_1.png" alt="" style="width: 50%">
+   <img loading="lazy" src="img/sampleapplication_1.png" alt="" style="width: 50%">
 </div>
 
 **setCallBack method**

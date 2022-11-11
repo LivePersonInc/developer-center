@@ -32,7 +32,7 @@ Meta intents are not trained directly, as they are dependent on the intents cont
 
 To test user utterances against your intents and meta intents, use the **Test User Input** tool provided in the "Build" area of Intent Manager. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
-<img style="width:500px" alt="Test User Input tool showing detection of a meta intent and the intents within it" src="img/ConvoBuilder/meta_intent3.png">
+<img loading="lazy" style="width:500px" alt="Test User Input tool showing detection of a meta intent and the intents within it" src="img/ConvoBuilder/meta_intent3.png">
 
 ### Example guide
 

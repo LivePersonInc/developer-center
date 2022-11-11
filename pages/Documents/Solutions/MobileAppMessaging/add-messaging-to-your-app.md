@@ -24,9 +24,9 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 * Optimized for network bandwidth and battery usage.
 
-<img src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> 
-<img src="img/inapp2.png" alt="Add Messaging to Your App" style="max-width:230px;max-height:700px;">
-<img src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
+<img loading="lazy" src="img/inapp1.png" alt="InApp" style="max-width:230px;max-height:700px;"> 
+<img loading="lazy" src="img/inapp2.png" alt="Add Messaging to Your App" style="max-width:230px;max-height:700px;">
+<img loading="lazy" src="img/inapp3.png" alt="InApp" style="max-width:230px;max-height:700px;">
 
 ### Prerequisites
 

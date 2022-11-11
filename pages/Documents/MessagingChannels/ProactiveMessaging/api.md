@@ -633,7 +633,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 **How do we know which field is optional or required?**
 
 - Proactive messaging is using industry recommended Swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
-- <img src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
+- <img loading="lazy" src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
 
 **What are the restrictions on the field in campaign request?**
 
@@ -679,7 +679,7 @@ Below are the limitations:
 For example; if the brand wants to send images from upload.wikimedia.org like
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg or https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg, the brand should add https://upload.wikimedia.org in permitted list of domains in Proactive UI as shown in the screenshot below.
 
-<img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+<img loading="lazy" src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 **Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?**
 

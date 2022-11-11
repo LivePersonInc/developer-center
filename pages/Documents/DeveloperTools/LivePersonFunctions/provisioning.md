@@ -9,7 +9,7 @@ indicator: both
 
 You must perform your first sign-in to the LivePerson Functions platform with a Conversational Cloud Admin account. During your initial agreement to the terms of use, we automatically provision your LivePerson Functions environment.
 
-<img src="img/functions/functions_ui_terms_of_use.png" alt="Functions: Terms of Use" style="width:100%;"/>
+<img loading="lazy" src="img/functions/functions_ui_terms_of_use.png" alt="Functions: Terms of Use" style="width:100%;"/>
 
 The following provisioning tasks will be performed:
 

@@ -26,7 +26,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide before us
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/lex/vendor.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/lex/vendor.png" alt="">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -83,11 +83,11 @@ to see if connection succeed or fail as shown in Figure 1.2 and 1.3 respectively
 your bot should be capable of handling unsupported messages either via [fallback intents](https://docs.aws.amazon.com/lex/latest/dg/built-in-intent-fallback.html)
 or as your design pleases. This will ensure the success of the call to the API of Lex for testing the connection.
 
-<img class="fancyimage" style="width:600px" src="img/lex/connection-success.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/lex/connection-success.png" alt="">
 
 Figure 1.2 Showing the success case of the valid credentials
 
-<img class="fancyimage" style="width:600px" src="img/lex/connection-failed.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/lex/connection-failed.png" alt="">
 
 Figure 1.3 Showing the fail case of the invalid credentials
 

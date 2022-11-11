@@ -47,7 +47,7 @@ In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you
 Start a messaging conversation with an agent by following the steps described in the previous tutorials. The important part is to subscribe to [Conversation Metadata](/consumer-int-conversation-md.html) since the call invitation is sent as part of the metadata.
 If your account is set up correctly, you should see the following button inside the Agent Workspace that allows you to voice and video calls:
 
-<img class="fancyimage" width="750px" src="img/agent_call_invitation.png">
+<img loading="lazy" class="fancyimage" width="750px" src="img/agent_call_invitation.png">
 
 ### Step 3 — Handle call invitation event on Consumer side
 

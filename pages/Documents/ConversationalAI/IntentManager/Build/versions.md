@@ -46,4 +46,4 @@ Ensure you test before activating a model version. Once you activate a version, 
 4. Select the **Versions** page.
 4. Click the **Activate** button beside the latest model version.
 
-    <img class="fancyimage" style="width:900px" alt="Version page showing three versions, one is active and the other two have Activate buttons" src="img/ConvoBuilder/ib_activate.png">   
+    <img loading="lazy" class="fancyimage" style="width:900px" alt="Version page showing three versions, one is active and the other two have Activate buttons" src="img/ConvoBuilder/ib_activate.png">   

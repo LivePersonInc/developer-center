@@ -41,7 +41,7 @@ indicator: both
 
 If you want to import a set of articles into a knowledge base when you add the knowledge base, you'll need to create the import file.
 
-<img class="fancyimage" style="width:800px" alt="An example of a well-formed import file" src="img/ConvoBuilder/kb_importFile.png">
+<img loading="lazy" class="fancyimage" style="width:800px" alt="An example of a well-formed import file" src="img/ConvoBuilder/kb_importFile.png">
 
 {: .attn-note}
 The import file can contain [a subset of HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article), and it should adhere to [these limits](knowledgeai-limits.html). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
@@ -95,7 +95,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 
     This converts the intents and associates the selected domain.
 
-    <img class="fancyimage" style="width:750px" alt="The Intent Association and Associated Domain settings for a knowledge base" src="img/ConvoBuilder/kb_convertIntents.png">
+    <img loading="lazy" class="fancyimage" style="width:750px" alt="The Intent Association and Associated Domain settings for a knowledge base" src="img/ConvoBuilder/kb_convertIntents.png">
 
 ### Sync with a Google sheet
 
@@ -109,7 +109,7 @@ Before performing a sync, make sure the Google sheet includes the "id" column th
 **To sync a knowledge base with a Google sheet**
 1. Open the knowledge base.
 2. In the upper-left corner, click **Settings**.
-3. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
+3. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img loading="lazy" style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
 
 ### Download a knowledge base
 
@@ -124,5 +124,5 @@ You might need to download a knowledge base for a few reasons:
 **To download a knowledge base**
 1. Open the knowledge base.
 2. In the upper-left corner, click **Settings**.
-3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" alt="Download knowledge base icon" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
+3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img loading="lazy" style="width:25px" alt="Download knowledge base icon" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
 4. Follow the browser prompts to access and save the CSV file to a location of your choice.

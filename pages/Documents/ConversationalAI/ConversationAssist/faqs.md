@@ -22,7 +22,7 @@ Yes, you can do this per recommendation source. To do this:
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist).
 2. Click **Recommendations Sources** from the menu at the top.
 3. Click the **Knowledge Bases** tab or the **Bots** tab, as appropriate.
-4. Beside the source, click the <img style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
+4. Beside the source, click the <img loading="lazy" style="width:25px" alt="Pencil icon" src="img/agentassist/icon_managesource.png"> (Manage source) icon.
 5. In the **Manage recommendation source** dialog, change the Status to “OFF.”
 6. Click **Save**.
 

@@ -109,7 +109,7 @@ func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
 _Note: For you to be able to use the method **storyboard.instantiateViewController(withIdentifier:)**, your ViewController needs to have a Storyboard ID on the **Identity Inspector**._
 
   <p align="center">
-    <img src="https://lpgithub.dev.lprnd.net/storage/user/634/files/211f0c9e-b585-11e7-873f-6ba4178093a7" width="45%" height="45%">
+    <img loading="lazy" src="https://lpgithub.dev.lprnd.net/storage/user/634/files/211f0c9e-b585-11e7-873f-6ba4178093a7" width="45%" height="45%">
   </p>
 
 #### Using **LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView**

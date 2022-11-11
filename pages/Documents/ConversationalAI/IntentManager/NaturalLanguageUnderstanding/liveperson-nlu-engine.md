@@ -89,11 +89,11 @@ As communicated in the release notes, on February 17, 2021 LivePerson enhanced t
 
     (If you haven't updated the training data in the domain, i.e., made changes to the intents, their training phrases, or the entities, the **Train** button is disabled.)
 
-    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png" alt="Intents page with the Train button in the upper-right corner">
+    <img loading="lazy" class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png" alt="Intents page with the Train button in the upper-right corner">
 
-    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png" alt="Versions page showing a version with a status of In Progress">
+    <img loading="lazy" class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png" alt="Versions page showing a version with a status of In Progress">
 
-    To refresh the page and check on progress, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png" alt="Refresh icon"> (Refresh icon) in the **Training Status** column.
+    To refresh the page and check on progress, click <img loading="lazy" class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png" alt="Refresh icon"> (Refresh icon) in the **Training Status** column.
 
 ### Still using LivePerson (Legacy) NLU?
 

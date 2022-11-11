@@ -17,7 +17,7 @@ When using a TLS-encrypted endpoint via HTTPS (highly recommended), LivePerson i
 
 To avoid abuse, you need to add external services to the account-specific allowed domain list ([allowlist](liveperson-functions-foundations-features.html#domain-allowlisting)). The domain checks are performed by the service that handles the outbound communication for the functions. The communication to external services runs via HTTP tunnels (via [CONNECT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/CONNECT)), see below.
 
-<img class="fancyimage" alt="Functions: Tunneling" src="img/functions/functions_network_tunneling.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Tunneling" src="img/functions/functions_network_tunneling.png">
 
 The function will reach out to the proxy using the `CONNECT`-method while specifying a target. If the target domain is not on the allowed domain list, it refuses the connection and aborts the request. If it is allowlisted, it will reach the target and establish a TCP connection. Once that is succeeded, it will respond successfully to the function and hand over the TCP connection to the target by tunnelling. The TLS handshake is then performed between the function and the target directly. Therefore, the proxy cannot listen to the ongoing communication between function and target. This implies that LivePerson does not have any insights from the point the TCP handshake happened.
 

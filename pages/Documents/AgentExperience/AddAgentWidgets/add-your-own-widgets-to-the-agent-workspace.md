@@ -64,9 +64,9 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 10. Click **Save parameters**. The complete URL, including visitor parameters will appear in the Complete URL field. This action maps which information will be transferred from Conversational Cloud to the external webpage.
 
-<img src="img/integration_widget.png" alt="IntegrationWidget">
+<img loading="lazy" src="img/integration_widget.png" alt="IntegrationWidget">
 
-<img src="img/visit_info_parameters.png" alt="VisitInfoParameters">
+<img loading="lazy" src="img/visit_info_parameters.png" alt="VisitInfoParameters">
 
 ### Using the data in the widget
 

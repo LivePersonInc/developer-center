@@ -13,7 +13,7 @@ The Apple Messages for Business messaging channel now allows you to send an auth
 
 See the message flow below:
 
-<img style="width:800px" src="img/apple_auth.png" alt="Apple Messages for Business authentication flow">
+<img loading="lazy" style="width:800px" src="img/apple_auth.png" alt="Apple Messages for Business authentication flow">
 
 1. Agent or bot is notified via an engagement attribute if consumer device supports the Apple Auth feature.
 

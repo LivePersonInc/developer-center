@@ -18,7 +18,7 @@ Messaging and conversational experiences have transformed how businesses engage 
 - Fully customizable customer experience including look and feel.
 - Optimized for network bandwidth and battery usage.
 
-<img src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
+<img loading="lazy" src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img loading="lazy" src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img loading="lazy" src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
 
 ### SDK support of XCFramework — a new format of packaging frameworks
 From iOS SDK version 6.0 and up, the SDK will [support the new XCFramework](https://developer.apple.com/videos/play/wwdc2019/416/). The new format packages all dependencies under all target platforms and architectes into one single unified bundle, removing the version-lock in swift as well as eliminating the need to build a fat framework. This means that the installation process from V6.0 and up, and V5.2.1 and down, will have different steps to follow. We have two quick start guides that are dedicated to the different processes, which will help you to install the relevant version on your app.

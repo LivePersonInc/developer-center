@@ -27,7 +27,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
     - **Method**: Select the type of HTTP request method.
     - **URL**: Enter the request target, the URL. You might want to pass variable values via the URL, like so:
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/integrations_api_url.png" alt="The URL field in the integration settings">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/integrations_api_url.png" alt="The URL field in the integration settings">
 
     - **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable. The bot will automatically enhance the request based on the credential's type and data.
     - **Request Headers — Use default headers**: When this toggle is on, the following request headers are included automatically in the API request:
@@ -38,11 +38,11 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
     - **Request Headers — key/value pairs**: Add any message headers to include in the request.
     - **Request Parameters**: Add the request parameters to pass in the URL’s query string. It's more common to pass variable values as key/value pairs added here:
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_request_parameters.png" alt="An example of specifying a request parameter">
+    <img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_request_parameters.png" alt="An example of specifying a request parameter">
 
     - **Post Body**: Enter the payload to send. You can also pass variable values using the post body, by writing them in JSON here:
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_post_body.png" alt="An example of passing variable values using the post body">
+    <img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_api_post_body.png" alt="An example of passing variable values using the post body">
 
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add [the fields](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields) that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields.

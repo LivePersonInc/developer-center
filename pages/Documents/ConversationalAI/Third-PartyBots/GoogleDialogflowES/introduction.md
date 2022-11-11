@@ -22,7 +22,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 You will be presented with following screen to complete the Vendor Settings if you select Dialogflow ES.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-configuration-step.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-configuration-step.png" alt="">
 
 Figure 1.1 Dialogflow ES Vendor Step
 
@@ -125,10 +125,10 @@ Dialogflow ES has a [limitation on the length of the text it can process](https:
 Any query longer than 256 characters will cause Third-Party Bots to invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a **DIALOGFLOW_CHAR_LIMIT** event.
 
-<img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png" alt="">
+<img loading="lazy" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png" alt="">
 
 Figure 1.3 Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-<img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png" alt="">
+<img loading="lazy" style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png" alt="">
 
 Figure 1.4 Add a custom response in the **Text response** section.

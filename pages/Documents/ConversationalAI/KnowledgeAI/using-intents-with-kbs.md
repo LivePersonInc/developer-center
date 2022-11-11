@@ -37,11 +37,11 @@ For more details, see below.
 
 You associate a domain with an external knowledge base when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai):
 
-<img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png" alt="Associating a domain with an external knowledge base">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/kb_add_ext.png" alt="Associating a domain with an external knowledge base">
 
 And you can likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base):
 
-<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png" alt="Associating a domain with an internal knowledge base">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/kb_add_int.png" alt="Associating a domain with an internal knowledge base">
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 
@@ -49,7 +49,7 @@ Associating the domain gives you access to the domain's intents, so you can asso
 
 After you've associated a domain with the knowledge base, you can configure the articles so that each is linked to the appropriate intent.
 
-<img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png" alt="Associating an intent with an article">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/kb_associate_article.png" alt="Associating an intent with an article">
 
 You don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content that can benefit from them. Any articles that don’t have associated intents can be matched to consumer queries using KnowledgeAI’s [AI Search](knowledgeai-search-methods.html). The approach gives you flexibility as you maintain the knowledge base over time.
 

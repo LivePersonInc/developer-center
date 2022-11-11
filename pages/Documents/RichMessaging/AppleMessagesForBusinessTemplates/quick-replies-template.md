@@ -15,7 +15,7 @@ Quick Replies for Apple Messages for Business includes a set of up to 5 buttons 
 
 Below is an image of a Quick Reply template with two quick replies:
 
-<img  style="width:350px" src="img/apple_sc_quickreplies.png">
+<img loading="lazy" style="width:350px" src="img/apple_sc_quickreplies.png">
 
 ### JSON Template Properties
 

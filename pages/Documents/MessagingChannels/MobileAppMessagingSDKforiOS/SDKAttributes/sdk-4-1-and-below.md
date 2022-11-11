@@ -79,7 +79,7 @@ Custom font name for conversation feed, which affects all messages, timestamps a
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed" style="width: 324px;">
+   <img loading="lazy" src="img/customFontNameConversationFeed.png" alt="customFontNameConversationFeed" style="width: 324px;">
    </figure>
 </div>
 
@@ -101,7 +101,7 @@ Custom font name for all non conversation feed controls. Such as: Buttons, Alert
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed" style="width: 324px;">
+   <img loading="lazy" src="img/customFontNameNonConversationFeed.png" alt="customFontNameNonConversationFeed" style="width: 324px;">
    </figure>
 </div>
 
@@ -123,7 +123,7 @@ Array of images for creating the custom refresh controller that loops the images
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray">
+   <img loading="lazy" src="img/customRefreshControllerImagesArray.png" alt="customRefreshControllerImagesArray">
    </figure>
 </div>
 
@@ -177,7 +177,7 @@ Color code for the background of the connection status bar while connecting.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
    </figure>
 </div>
 
@@ -199,7 +199,7 @@ Color code for the text of the connection status bar while connecting.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarConnecting.png" alt="systemBubbleTextColor">
    </figure>
 </div>
 
@@ -221,7 +221,7 @@ Color code for the background of the connection status bar when connection faile
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
    </figure>
 </div>
 
@@ -243,7 +243,7 @@ Color code for the text of the connection status bar when connection failed.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
+   <img loading="lazy" src="img/connectionStatusBarFailedToConnect.png" alt="systemBubbleTextColor">
    </figure>
 </div>
 
@@ -269,7 +269,7 @@ Color code for the text of the controller bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/controllerbubletextcolor.png" alt="controller bubble text color">
+   <img loading="lazy" src="img/controllerbubletextcolor.png" alt="controller bubble text color">
    </figure>
 </div>
 
@@ -316,7 +316,7 @@ Conversation separator text and line color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+   <img loading="lazy" src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
    </figure>
 </div>
 
@@ -338,7 +338,7 @@ Toggle conversation separator text message when conversation resolved from agent
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+   <img loading="lazy" src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
    </figure>
 </div>
 
@@ -360,7 +360,7 @@ Toggle conversation separator line when conversation resolved from agent or cons
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
+   <img loading="lazy" src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor">
    </figure>
 </div>
 
@@ -382,7 +382,7 @@ Define the conversation closed separator font size.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize">
+   <img loading="lazy" src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize">
    </figure>
 </div>
 
@@ -404,7 +404,7 @@ Define the conversation Closed label to separator line padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorBottomPadding.png" alt="conversationClosedSeparatorBottomPadding">
    </figure>
 </div>
 
@@ -426,7 +426,7 @@ Custom font name for conversation closed separator. Fonts that are not part of t
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName">
+   <img loading="lazy" src="img/conversationClosedSeparatorFontName.png" alt="conversationClosedSeparatorFontName">
    </figure>
 </div>
 
@@ -448,7 +448,7 @@ Define the conversation separator view bottom padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorViewBottomPadding.png" alt="conversationClosedSeparatorViewBottomPadding">
    </figure>
 </div>
 
@@ -470,7 +470,7 @@ Define the conversation Closed Separator Top padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
+   <img loading="lazy" src="img/conversationClosedSeparatorTopPadding.png" alt="conversationClosedSeparatorTopPadding">
    </figure>
 </div>
 
@@ -578,7 +578,7 @@ Color code for date separator title background color.
 <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground">
+   <img loading="lazy" src="img/dateseparatortitlebackgroundcolor.png" alt="dateseparatortitlebackground">
    </figure>
 </div>
 
@@ -600,7 +600,7 @@ Color code for date separator text color.
 <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor">
+   <img loading="lazy" src="img/dateseparatortextcolor.png" alt="dateSeparatorTextColor">
    </figure>
 </div>
 
@@ -622,7 +622,7 @@ Color code for date separator line background color.
 <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
+   <img loading="lazy" src="img/dateseparatorlinebackgroundcolor.png" alt="datesepartaorlinebackgroundcolor">
    </figure>
 </div>
 
@@ -644,7 +644,7 @@ Color code for date separator background color.
 <div style="float: right; width: 65%;height: 42px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor">
+   <img loading="lazy" src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor">
    </figure>
 </div>
 
@@ -666,7 +666,7 @@ Define the Date Separator font text style.
 <div style="float: right; width: 65%;height: 36px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
+   <img loading="lazy" src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
    </figure>
 </div>
 
@@ -688,7 +688,7 @@ Custom font name for Timestamp. Fonts that are not part of the iOS families, mus
 <div style="float: right; width: 65%;height: 39px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed">
+   <img loading="lazy" src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed">
    </figure>
 </div>
 
@@ -710,7 +710,7 @@ Define the Date Separator Top padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding">
+   <img loading="lazy" src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding">
    </figure>
 </div>
 
@@ -732,7 +732,7 @@ Define the Date Separator bottom padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding">
+   <img loading="lazy" src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding">
    </figure>
 </div>
 
@@ -765,7 +765,7 @@ Color of checkmark indication signs of Read messages.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
+   <img loading="lazy" src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
    </figure>
 </div>
 
@@ -787,7 +787,7 @@ Color of checkmark indication signs of Distributed messages.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor">
+   <img loading="lazy" src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor">
    </figure>
 </div>
 
@@ -809,7 +809,7 @@ Color of checkmark indication signs of Sent messages.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/checkmarksentcolor.png" alt="checkmarksentcolor">
+   <img loading="lazy" src="img/checkmarksentcolor.png" alt="checkmarksentcolor">
    </figure>
 </div>
 
@@ -831,7 +831,7 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode">
+   <img loading="lazy" src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode">
    </figure>
 </div>
 
@@ -853,7 +853,7 @@ When false (default), time stamps displays information relative to when sent/dis
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly">
+   <img loading="lazy" src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly">
    </figure>
 </div>
 
@@ -930,14 +930,14 @@ Refers to the style in which the link preview cell will be displayed.
 <div style="float: left; width: 35%;height: 250px;">
    <figure>
    <figcaption>Slim</figcaption>
-   <img src="img/linkpreviewstyleslim.png" alt="linkpreviewslim">
+   <img loading="lazy" src="img/linkpreviewstyleslim.png" alt="linkpreviewslim">
    </figure>
 </div>
 
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption>Large</figcaption>
-   <img src="img/linkpreviewstylelarge.png" alt="linkpreviewlarge">
+   <img loading="lazy" src="img/linkpreviewstylelarge.png" alt="linkpreviewlarge">
    </figure>
 </div>
 
@@ -959,7 +959,7 @@ The background color of the url real time preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/realtimepreviewbackgroundcolor.png" alt="realtimepreviewbackgroundcolor">
+   <img loading="lazy" src="img/realtimepreviewbackgroundcolor.png" alt="realtimepreviewbackgroundcolor">
    </figure>
 </div>
 
@@ -981,7 +981,7 @@ The border color of the url real time preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/realtimepreviewbordercolor.png" alt="realtimepreviewbordercolor">
+   <img loading="lazy" src="img/realtimepreviewbordercolor.png" alt="realtimepreviewbordercolor">
    </figure>
 </div>
 
@@ -1003,7 +1003,7 @@ The border width of the url real time preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth">
+   <img loading="lazy" src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth">
    </figure>
 </div>
 
@@ -1025,7 +1025,7 @@ The title text color of the url real time preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewtitletextcolor.png" alt="urlRealTimePreviewTitleTextColor">
+   <img loading="lazy" src="img/urlrealtimepreviewtitletextcolor.png" alt="urlRealTimePreviewTitleTextColor">
    </figure>
 </div>
 
@@ -1047,7 +1047,7 @@ The description text color of the url real time preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewdescriptiontextcolor.png" alt="urlrealtimepreviewdescriptiontextcolor">
+   <img loading="lazy" src="img/urlrealtimepreviewdescriptiontextcolor.png" alt="urlrealtimepreviewdescriptiontextcolor">
    </figure>
 </div>
 
@@ -1143,7 +1143,7 @@ Photo Sharing menu background color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor">
+   <img loading="lazy" src="img/photosharingmenubackgroundcolor.png" alt="photosharingmenubackgroundcolor">
    </figure>
 </div>
 
@@ -1165,7 +1165,7 @@ Photo Sharing menu buttons background color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
+   <img loading="lazy" src="img/photosharingmenubuttonsbackgroundcolor.png" alt="photosharingmenubuttonsbackgroundcolor">
    </figure>
 </div>
 
@@ -1187,7 +1187,7 @@ Photo Sharing menu buttons tint color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor">
+   <img loading="lazy" src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor">
    </figure>
 </div>
 
@@ -1209,7 +1209,7 @@ Photo Sharing menu buttons text color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">
+   <img loading="lazy" src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">
    </figure>
 </div>
 
@@ -1231,7 +1231,7 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
+   <img loading="lazy" src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
    </figure>
 </div>
 
@@ -1253,7 +1253,7 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-  <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
+  <img loading="lazy" src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
    </figure>
 </div>
 
@@ -1275,7 +1275,7 @@ Radial loader fill color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
+   <img loading="lazy" src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
    </figure>
 </div>
 
@@ -1297,7 +1297,7 @@ Radial loader progress color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
+   <img loading="lazy" src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
    </figure>
 </div>
 
@@ -1320,7 +1320,7 @@ Radial loader progress background color.
 <div style="float: right; width: 65%;height: 70px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor">
+   <img loading="lazy" src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor">
    </figure>
 </div>
 <div style="width: 85%;padding: 5px;">
@@ -1343,7 +1343,7 @@ Photo sharing open menu custom button.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_attach_button.png" alt="" style="width: 64px;">
+<img loading="lazy" src="img/ios_fs_attach_button.png" alt="" style="width: 64px;">
 </figure>
 </div>
 
@@ -1366,7 +1366,7 @@ Photo sharing close menu custom button.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_ps_close_button.png" alt="" style="width: 64px;">
+<img loading="lazy" src="img/ios_ps_close_button.png" alt="" style="width: 64px;">
 </figure>
 </div>
 
@@ -1389,7 +1389,7 @@ Custom camera image in the photo sharing menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image:</figcaption>
-   <img src="img/ios_fs_camera_button.png" alt="" style="width: 45px;">
+   <img loading="lazy" src="img/ios_fs_camera_button.png" alt="" style="width: 45px;">
    </figure>
 </div>
 
@@ -1412,7 +1412,7 @@ Custom Library image in the photo sharing menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image:</figcaption>
-   <img src="img/ios_fs_library_button.png" alt="" style="width: 45px;">
+   <img loading="lazy" src="img/ios_fs_library_button.png" alt="" style="width: 45px;">
    </figure>
 </div>
 
@@ -1435,7 +1435,7 @@ Custom file image in the file Sharing Menu.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_document_button.png" alt="" style="width: 45px;">
+<img loading="lazy" src="img/ios_fs_document_button.png" alt="" style="width: 45px;">
 </figure>
 </div>
 
@@ -1458,7 +1458,7 @@ Image for custom the thumbnail of unsupported files in file sharing.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_universal_thumbnail.png" alt="" style="width: 60px;">
+<img loading="lazy" src="img/ios_fs_universal_thumbnail.png" alt="" style="width: 60px;">
 </figure>
 </div>
 
@@ -1481,7 +1481,7 @@ Image for custom the thumbnail of PDF files in file sharing.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_pdf_thumbnail.png" alt="" style="width: 60px;">
+<img loading="lazy" src="img/ios_fs_pdf_thumbnail.png" alt="" style="width: 60px;">
 </figure>
 </div>
 
@@ -1504,7 +1504,7 @@ Image for custom the thumbnail of PDF files in file sharing.
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_pptx_thumbnail.png" alt="" style="width: 60px;">
+<img loading="lazy" src="img/ios_fs_pptx_thumbnail.png" alt="" style="width: 60px;">
 </figure>
 </div>
 
@@ -1527,7 +1527,7 @@ Image for custom the thumbnail of DOCX files in file sharing
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_docx_thumbnail.png" alt="" style="width: 60px;">
+<img loading="lazy" src="img/ios_fs_docx_thumbnail.png" alt="" style="width: 60px;">
 </figure>
 </div>
 
@@ -1550,7 +1550,7 @@ Image for custom the thumbnail of XLSX files in file sharing
 <div style="float: right; width: 50%;">
 <figure>
 <figcaption>Default image:</figcaption>
-<img src="img/ios_fs_xlsx_thumbnail.png" alt="" style="width: 60px;">
+<img loading="lazy" src="img/ios_fs_xlsx_thumbnail.png" alt="" style="width: 60px;">
 </figure>
 </div>
 
@@ -1573,7 +1573,7 @@ Color code for the empty state label.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image:</figcaption>
-   <img src="img/ios_empty_state_no_conversations.png" alt="" style="width: 64px;">
+   <img loading="lazy" src="img/ios_empty_state_no_conversations.png" alt="" style="width: 64px;">
    </figure>
 </div>
 
@@ -1722,7 +1722,7 @@ Secure form bubble form image tint color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName">
+   <img loading="lazy" src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName">
    </figure>
 </div>
 
@@ -1744,7 +1744,7 @@ Secure form flag for hiding the secure form logo in the top of the form.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/secureFormHideLogo.png" alt="secureFormHideLogo">
+   <img loading="lazy" src="img/secureFormHideLogo.png" alt="secureFormHideLogo">
    </figure>
 </div>
 
@@ -1766,7 +1766,7 @@ Secure form loading indicator color while loading form before opening.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor">
+   <img loading="lazy" src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor">
    </figure>
 </div>
 
@@ -1799,7 +1799,7 @@ Send button Image in the conversation screen. The custom image changes only if `
 - **Type:** UIImage
 - **Default value:** SDK bundle sendMessageIcon Icon
 
-<img src="img/DefaultSendButton.png" alt="DefaultSendButton">
+<img loading="lazy" src="img/DefaultSendButton.png" alt="DefaultSendButton">
 
 #### isSendMessageButtonInTextMode
 
@@ -1893,7 +1893,7 @@ Corner radius of the Submit button.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius">
+   <img loading="lazy" src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius">
    </figure>
 </div>
 
@@ -1915,7 +1915,7 @@ Corner radius of the resolution Yes/No buttons.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius">
+   <img loading="lazy" src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius">
    </figure>
 </div>
 
@@ -1937,7 +1937,7 @@ Background color code of the Submit button.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor">
+   <img loading="lazy" src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor">
    </figure>
 </div>
 
@@ -1959,7 +1959,7 @@ Text color code of the Submit button.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor">
+   <img loading="lazy" src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor">
    </figure>
 </div>
 
@@ -1981,7 +1981,7 @@ Background Color code of the rating buttons.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor">
+   <img loading="lazy" src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor">
    </figure>
 </div>
 
@@ -2003,7 +2003,7 @@ Color code for the FCR survey buttons (YES/NO) when selected.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor">
+   <img loading="lazy" src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor">
    </figure>
 </div>
 
@@ -2025,7 +2025,7 @@ Title text color for all labels.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor">
+   <img loading="lazy" src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor">
    </figure>
 </div>
 
@@ -2047,7 +2047,7 @@ Hides the FCR survey (YES/NO) question.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatresolutionhidden.png" alt="csatResolutionHidden">
+   <img loading="lazy" src="img/csatresolutionhidden.png" alt="csatResolutionHidden">
    </figure>
 </div>
 
@@ -2069,7 +2069,7 @@ Hides the view of agent avatar and name.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatagentviewhidden.png" alt="csatagentviewhidden">
+   <img loading="lazy" src="img/csatagentviewhidden.png" alt="csatagentviewhidden">
    </figure>
 </div>
 
@@ -2091,7 +2091,7 @@ Hides the Thank You screen after tapping Submit button.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden">
+   <img loading="lazy" src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden">
    </figure>
 </div>
 
@@ -2113,7 +2113,7 @@ Background color of the navigation of the survey.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor">
+   <img loading="lazy" src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor">
    </figure>
 </div>
 
@@ -2175,7 +2175,7 @@ Color code for the text of the system messages.
 <div style="float: right; width: 55%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
+   <img loading="lazy" src="img/DefaultSendButton.png" alt="DefaultSendButton">
    </figure>
 </div>
 
@@ -2222,7 +2222,7 @@ When set to **true**, the timestamp of the TTR notification displays. Otherwise,
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
+   <img loading="lazy" src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
    </figure>
 </div>
 
@@ -2251,7 +2251,7 @@ When set to **true**, the Urgent button shows in the TTR notification.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification">
+   <img loading="lazy" src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification">
    </figure>
 </div>
 
@@ -2273,7 +2273,7 @@ Enable or disable the off-hours toaster.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
+   <img loading="lazy" src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
    </figure>
 </div>
 
@@ -2295,7 +2295,7 @@ Background color for banner.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor">
+   <img loading="lazy" src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor">
    </figure>
 </div>
 
@@ -2317,7 +2317,7 @@ Text color of the banner.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor">
+   <img loading="lazy" src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor">
    </figure>
 </div>
 
@@ -2339,7 +2339,7 @@ Opacity level of the banner background (values: 0.0 – 1.0).
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha">
+   <img loading="lazy" src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha">
    </figure>
 </div>
 
@@ -2372,7 +2372,7 @@ Scroll to bottom button background color of the whole button.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor">
+   <img loading="lazy" src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor">
    </figure>
 </div>
 
@@ -2394,7 +2394,7 @@ Scroll to bottom button text color of the last unread message preview.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
+   <img loading="lazy" src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
    </figure>
 </div>
 
@@ -2416,7 +2416,7 @@ Scroll to bottom button unread message badge background color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor">
+   <img loading="lazy" src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor">
    </figure>
 </div>
 
@@ -2438,7 +2438,7 @@ Scroll to bottom button unread message badge text color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor">
+   <img loading="lazy" src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor">
    </figure>
 </div>
 
@@ -2460,7 +2460,7 @@ Scroll to bottom button arrow tint color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
+   <img loading="lazy" src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
    </figure>
 </div>
 
@@ -2482,7 +2482,7 @@ Unread Messages divider background color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
+   <img loading="lazy" src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
    </figure>
 </div>
 
@@ -2504,7 +2504,7 @@ Unread Messages divider text color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor">
+   <img loading="lazy" src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor">
    </figure>
 </div>
 
@@ -2550,7 +2550,7 @@ Define the corners radius of the unread messages bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">
+   <img loading="lazy" src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">
    </figure>
 </div>
 
@@ -2572,7 +2572,7 @@ Define the corner radius for the left top and left bottom of the scroll down ind
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius">
+   <img loading="lazy" src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius">
    </figure>
 </div>
 
@@ -2594,7 +2594,7 @@ Define the corners radius of the unread messages counter inside the scroll down 
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius">
+   <img loading="lazy" src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius">
    </figure>
 </div>
 
@@ -2627,7 +2627,7 @@ Define the remote avatar Leading padding (left edge to avatar).
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding">
+   <img loading="lazy" src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding">
    </figure>
 </div>
 
@@ -2649,7 +2649,7 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding">
+   <img loading="lazy" src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding">
    </figure>
 </div>
 
@@ -2678,7 +2678,7 @@ Default Avatar image of the remote user. When assigned, image disables the `remo
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage">
+   <img loading="lazy" src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage">
    </figure>
 </div>
 
@@ -2707,7 +2707,7 @@ Background color of agent's default avatar in CSAT.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor">
+   <img loading="lazy" src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor">
    </figure>
 </div>
 
@@ -2729,7 +2729,7 @@ Icon color of agent's default avatar in CSAT.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor">
+   <img loading="lazy" src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor">
    </figure>
 </div>
 
@@ -2755,7 +2755,7 @@ User Input TextView container background color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor">
+   <img loading="lazy" src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor">
    </figure>
 </div>
 
@@ -2777,7 +2777,7 @@ User Input TextView corner radius.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius">
+   <img loading="lazy" src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius">
    </figure>
 </div>
 
@@ -2803,7 +2803,7 @@ Color code for the background of the remote user's bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor">
+   <img loading="lazy" src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor">
    </figure>
 </div>
 
@@ -2825,7 +2825,7 @@ Color code for the outline color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor">
+   <img loading="lazy" src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor">
    </figure>
 </div>
 
@@ -2847,7 +2847,7 @@ Color code for links in the text of the remote user's bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor">
+   <img loading="lazy" src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor">
    </figure>
 </div>
 <div style="width: 85%;padding: 5px;">
@@ -2868,7 +2868,7 @@ Color code for the text of the remote user's bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor">
+   <img loading="lazy" src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor">
    </figure>
 </div>
 
@@ -2890,7 +2890,7 @@ Double number for the outline width.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubbleborderwidth.png" alt="remoteuserbubbleborderwidth">
+   <img loading="lazy" src="img/remoteuserbubbleborderwidth.png" alt="remoteuserbubbleborderwidth">
    </figure>
 </div>
 
@@ -2912,7 +2912,7 @@ Color code for the timestamp of the remote user's bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor">
+   <img loading="lazy" src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor">
    </figure>
 </div>
 
@@ -2934,7 +2934,7 @@ Color of the remote user typing bubbles animation.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor">
+   <img loading="lazy" src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor">
    </figure>
 </div>
 
@@ -2956,7 +2956,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
+   <img loading="lazy" src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
    </figure>
 </div>
 
@@ -2978,7 +2978,7 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
+   <img loading="lazy" src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
    </figure>
 </div>
 
@@ -3000,7 +3000,7 @@ Top left Radius corner on the Remote bubble. Setting the radius to a value great
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteTopLeft.png" alt="remoteTopLeft">
+   <img loading="lazy" src="img/remoteTopLeft.png" alt="remoteTopLeft">
    </figure>
 </div>
 
@@ -3022,7 +3022,7 @@ Top right Radius corner on the Remote bubble. Setting the radius to a value grea
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteTopRight.png" alt="remoteTopRight">
+   <img loading="lazy" src="img/remoteTopRight.png" alt="remoteTopRight">
    </figure>
 </div>
 
@@ -3044,7 +3044,7 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteBottomLeft.png" alt="remoteBottomLeft">
+   <img loading="lazy" src="img/remoteBottomLeft.png" alt="remoteBottomLeft">
    </figure>
 </div>
 
@@ -3066,7 +3066,7 @@ Bottom right Radius corner on the Remote bubble. Setting the radius to a value g
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/remoteBottomRight.png" alt="remoteBottomRight">
+   <img loading="lazy" src="img/remoteBottomRight.png" alt="remoteBottomRight">
    </figure>
 </div>
 
@@ -3088,7 +3088,7 @@ Color code for the background of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
+   <img loading="lazy" src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
    </figure>
 </div>
 
@@ -3110,7 +3110,7 @@ Color code for the outline color.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-  <img src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
+  <img loading="lazy" src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
    </figure>
 </div>
 
@@ -3132,7 +3132,7 @@ Color code for links in the text of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
+   <img loading="lazy" src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
    </figure>
 </div>
 
@@ -3154,7 +3154,7 @@ Color code for the text of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
+   <img loading="lazy" src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
    </figure>
 </div>
 
@@ -3176,7 +3176,7 @@ Double number for the outline width.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
+   <img loading="lazy" src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
    </figure>
 </div>
 
@@ -3198,7 +3198,7 @@ Color code for the timestamp of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
+   <img loading="lazy" src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
    </figure>
 </div>
 
@@ -3220,7 +3220,7 @@ Color code for the send status text of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
+   <img loading="lazy" src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
    </figure>
 </div>
 
@@ -3242,7 +3242,7 @@ Color code for the error view text of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
+   <img loading="lazy" src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
    </figure>
 </div>
 
@@ -3264,7 +3264,7 @@ Color code for the error view border of the visitor bubble.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
+   <img loading="lazy" src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
    </figure>
 </div>
 
@@ -3286,7 +3286,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+   <img loading="lazy" src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
    </figure>
 </div>
 
@@ -3308,7 +3308,7 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
+   <img loading="lazy" src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
    </figure>
 </div>
 
@@ -3330,7 +3330,7 @@ Top left Radius corner on the user's bubble. Setting the radius to a value great
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userTopLeft.png" alt="userTopLeft">
+   <img loading="lazy" src="img/userTopLeft.png" alt="userTopLeft">
    </figure>
 </div>
 
@@ -3352,7 +3352,7 @@ Top right Radius corner on the user's bubble. Setting the radius to a value grea
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userTopRight.png" alt="userTopRight">
+   <img loading="lazy" src="img/userTopRight.png" alt="userTopRight">
    </figure>
 </div>
 
@@ -3374,7 +3374,7 @@ Bottom left Radius corner on the user's bubble. Setting the radius to a value gr
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userBottomLeft.png" alt="userBottomLeft">
+   <img loading="lazy" src="img/userBottomLeft.png" alt="userBottomLeft">
    </figure>
 </div>
 
@@ -3396,7 +3396,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/userBottomRight.png" alt="userBottomRight">
+   <img loading="lazy" src="img/userBottomRight.png" alt="userBottomRight">
    </figure>
 </div>
 
@@ -3467,7 +3467,7 @@ Define the bubble Trailing Padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding">
+   <img loading="lazy" src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding">
    </figure>
 </div>
 
@@ -3489,7 +3489,7 @@ Define the bubble Timestamp Top Padding.
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding">
+   <img loading="lazy" src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding">
    </figure>
 </div>
 
@@ -3511,7 +3511,7 @@ When true, user and remote user messages containing one or two emojis will be en
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis" style="width: auto; height: 300px;">
+   <img loading="lazy" src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis" style="width: auto; height: 300px;">
    </figure>
 </div>
 
@@ -3538,7 +3538,7 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
 <div style="float: right; width: 65%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/custombuttonimage.png" alt="custombuttonimage">
+   <img loading="lazy" src="img/custombuttonimage.png" alt="custombuttonimage">
    </figure>
 </div>
 

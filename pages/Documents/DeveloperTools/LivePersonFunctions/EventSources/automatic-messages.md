@@ -12,7 +12,7 @@ Automatic Messages (also known as System Messages or Auto Messages) are predefin
 
 Thanks to our integration with Automatic Messages, you can create functions triggered based on selected events. A payload is sent to a function containing metadata related to the specific conversation and based on the selected event during the invocation. This payload can then be used for further processing and referencing.
 
-<img src="img/functions/functions_automessages_flow.png" alt="Functions: Automatic Messages Flow" style="width:100%;"/>
+<img loading="lazy" src="img/functions/functions_automessages_flow.png" alt="Functions: Automatic Messages Flow" style="width:100%;"/>
 
 {: .attn-alert}
 A function will trigger regardless of the state of the enabled flag of an Automatic Message. To avoid a function being triggered, you must undeploy your function. You can choose to ignore a specific event by leveraging the `cbotEventType` property included in the invocation payload. However, the ignored invocations here would still count towards your usage limits.

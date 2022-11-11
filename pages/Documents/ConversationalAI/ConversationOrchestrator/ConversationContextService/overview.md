@@ -46,15 +46,15 @@ CCS attributes can be used in a variety of ways to enhance the conversational ex
 
 * **Power contextual continuity between bots** - In this example, the intent and email is being saved into the CCS by one bot and is being retrieved by another bot to continue the conversation.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase1.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from one bot to another">
+  <img loading="lazy" class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase1.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from one bot to another">
 
 * **Perform context-based dynamic routing at scale** - In this example, a concierge bot saves the intent into the CCS. The CCS links to an external CRM to get customer tier information. A Dynamic Routing policy then makes use of the intent and tier information to power a routing decision.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase2.png" alt="An example conversation with a consumer that illustrates use of the CCS to perform context-based, dynamic routing at scale">
+  <img loading="lazy" class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase2.png" alt="An example conversation with a consumer that illustrates use of the CCS to perform context-based, dynamic routing at scale">
 
 * **Perform human-bot tango** - In this example, bots continue to build context about the consumer and the context information can be exposed to human agents through an agent-facing widget.
 
-  <img class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase3.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from bot to human agent">
+  <img loading="lazy" class="fancyimage" width="700" src="img/convorchestrator/co_ccs_usecase3.png" alt="An example conversation with a consumer that illustrates use of the CCS to maintain contextual info as the conversation is transferred from bot to human agent">
 
 ### How to use the Conversation Context Service
 

@@ -26,7 +26,7 @@ If you plan on implementing a [scheduled invocation](liveperson-functions-founda
 
 This chapter is about the invocation timeline and highlights which part of it counts toward our execution time limit of 30 sec. As highlighted by the graphic below, the invocation process starts with the event raising by a [Trigger](#triggers). Our services will receive the event that will begin invoking every function listening to the specific event. For simplicity, we only considered one function. Our service will invoke the listening functions, which then starts processing based on the code. With the receiving of the event by the function instance, the 30s time limit starts ticking down. Once the processing is finished, our service takes over the response and relays it to the triggering service. Which then will react to the response.
 
-<img class="fancyimage" alt="Functions: Execution Timeline" src="img/functions/functions_concepts_timeline.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Execution Timeline" src="img/functions/functions_concepts_timeline.png">
 
 ### Triggers
 
@@ -34,13 +34,13 @@ Triggers will usually invoke functions, which happen in two ways. Either by call
 
 The following graph also shows the general invocation flow for both invocation styles.
 
-<img class="fancyimage" alt="Functions: Event Invocation" src="img/functions/functions_concept_event_invocation.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Event Invocation" src="img/functions/functions_concept_event_invocation.png">
 
 Before raising an event, the event source will check if there is a function listening for the specified event. Only **productive** functions are considered. If a function listens to the event, the trigger will raise an event. Our platform will search all functions listening to the specified event and start calling them. Once all responses are received, they will be combined and returned to the event source.
 
 {: .attn-alert}
 Please be aware that failing functions will abort the invocation chain for that event.
 
-<img class="fancyimage" alt="Functions: Direct Invocation" src="img/functions/functions_concept_direct_invocation.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Direct Invocation" src="img/functions/functions_concept_direct_invocation.png">
 
 Before calling the external trigger, may check if the function is productive. However, they can also decide to invoke the function and directly handle the potential not-found error. The caller needs to know the function's UUID for a direct call. The execution response will be sent from the FaaS platform to the calling trigger.

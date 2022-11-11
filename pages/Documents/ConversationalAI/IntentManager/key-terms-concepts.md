@@ -139,8 +139,8 @@ You might notice as you are working on your intent taxonomy that the number of i
 
 A meta intent is a wrapper that can contain many other standard intents. This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
 
-<img style="width:600px" alt="Illustration of how several intents funnel into a meta intent" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
-<img style="width:800px" alt="The details of an example intent" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
+<img loading="lazy" style="width:600px" alt="Illustration of how several intents funnel into a meta intent" src="img/ConvoBuilder/im_meta_intents_diagram.png" alt="">
+<img loading="lazy" style="width:800px" alt="The details of an example intent" src="img/ConvoBuilder/im_meta_intents_details.png" alt="">
 
 ### Entities
 
@@ -162,7 +162,7 @@ As their name suggests, Value Set entities are those that have a defined set of 
 * running
 * walking
 
-<img style="width:400px" alt="An example of a Value Set entity" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
+<img loading="lazy" style="width:400px" alt="An example of a Value Set entity" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
@@ -170,7 +170,7 @@ The values for Value Set entities are usually one or two words, as they represen
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
-<img style="width:800px" alt="An example of a Regular Expression entity" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
+<img loading="lazy" style="width:800px" alt="An example of a Regular Expression entity" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
 
 Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
 
@@ -231,11 +231,11 @@ but
 
 As mentioned above, global entities are detected automatically by the system. You can see this at work as you test entities using consumer utterances passed into the **Test User Input** tool. In our example below, we’re using the tool to test one such utterance. In it, the system detects three global entities.
 
-<img style="width:500px" alt="The Test User Input tool detecting three entities in an utterance" src="img/ConvoBuilder/im_entities_global1.png" alt="">
+<img loading="lazy" style="width:500px" alt="The Test User Input tool detecting three entities in an utterance" src="img/ConvoBuilder/im_entities_global1.png" alt="">
 
 If you have defined custom entities within your domain, you’ll see those detected along with the global entities:
 
-<img style="width:800px" alt="The Test User Input tool detecting a custom Value Set entity" src="img/ConvoBuilder/im_entities_global2.png" alt="">
+<img loading="lazy" style="width:800px" alt="The Test User Input tool detecting a custom Value Set entity" src="img/ConvoBuilder/im_entities_global2.png" alt="">
 
 ### Training
 

@@ -31,7 +31,7 @@ Conversation context attributes are those attributes of a conversation, such as 
 * conversation.consumerId
 * conversation.groupId
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_convcontextattributes.png" alt="The Conversation page where you can enable conversation attributes and copy conversation context attributes">
+<img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_ccs_convcontextattributes.png" alt="The Conversation page where you can enable conversation attributes and copy conversation context attributes">
 
 #### Structured Data Entities (SDEs)
 
@@ -65,7 +65,7 @@ Personal info:
 * sde.visitorinfo.personalinfo.language
 * sde.visitorinfo.personalinfo.company
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_sdes.png" alt="The Structured Data Entities page where you can enable the CCS to store SDE values and more">
+<img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_ccs_sdes.png" alt="The Structured Data Entities page where you can enable the CCS to store SDE values and more">
 
 ### Custom attributes
 
@@ -80,12 +80,12 @@ Static variables are useful for storing constant data or lists that can be used 
 1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service → Custom**.
 2. Click the **Add New** button, and select "static."
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_ccs_static.png" alt="Selecting ‘static’ as the type for a new attribute">
+    <img loading="lazy" class="fancyimage" width="400" src="img/convorchestrator/co_ccs_static.png" alt="Selecting ‘static’ as the type for a new attribute">
 
 3. Enter the name and the value of the new variable in the text input area.
 4. Click **Save**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_staticvar.png" alt="An example of a saved static variable">
+    <img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_ccs_staticvar.png" alt="An example of a saved static variable">
 
 {: .attn-note}
 When creating *custom* attributes in the Context Session Service, ensure that you are following naming conventions that avoid spaces in the name (use camel case, snake case, pascal case, etc.). While having an attribute name that contains spaces will not trigger an error message, you will be unable to properly access these attribute’s values from within the policies you will be creating.
@@ -103,10 +103,10 @@ Once you have created a function, you can now use that as an attribute in the Co
 1. Log in to Conversation Orchestrator using your Conversational Cloud credentials, and navigate to **Conversation Context Service → Custom**.
 2. Click the **Add New** button, and select "function."
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_ccs_function.png" alt="Selecting ‘function’ as the type for a new attribute">
+    <img loading="lazy" class="fancyimage" width="400" src="img/convorchestrator/co_ccs_function.png" alt="Selecting ‘function’ as the type for a new attribute">
 
 3. Select the FaaS function using the user credentials that you created.
 
-    <img class="fancyimage" width="400" src="img/convorchestrator/co_ccs_faasfunction.png" alt="Selecting a FaaS function from the Function list">
+    <img loading="lazy" class="fancyimage" width="400" src="img/convorchestrator/co_ccs_faasfunction.png" alt="Selecting a FaaS function from the Function list">
 
 4. Click **Save**.

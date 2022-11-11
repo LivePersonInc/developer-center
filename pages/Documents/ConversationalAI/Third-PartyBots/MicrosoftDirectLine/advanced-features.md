@@ -98,7 +98,7 @@ Third-Party bots allows the collection of engagement attributes (more informatio
 [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in
 the `Conversation Type` step as shown in Figure 3.3.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+<img loading="lazy" class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 3.3 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson
@@ -428,7 +428,7 @@ const response = {
 
 The results can be seen in a demo below:
 
-<img class="fancyimage" style="width:300px" src="img/microsoft_richcontent_demo.gif">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/microsoft_richcontent_demo.gif">
 
 ### Receiving Last consumer message (Messaging Only)
 

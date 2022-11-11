@@ -20,7 +20,7 @@ Version 1 APIs are dependent on an API authorization key. To get your unique key
 
 1. **Access the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." This page displays an API key that you can use.
 
-    <img width="800" src="img/convorchestrator/api_auth1.png" alt="The Developer Key page where you can copy your API key">
+    <img loading="lazy" width="800" src="img/convorchestrator/api_auth1.png" alt="The Developer Key page where you can copy your API key">
 
 2. **Use the API key**: Copy and paste the key provided, and use it in your API headers.
 
@@ -32,7 +32,7 @@ Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Cre
 
 1. **Launch the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." If you have been upgraded to v2, you will see the screen below.
 
-    <img width="800" src="img/convorchestrator/api_auth2.png" alt="The API Authorization page where you can get credentials for the v2 and v1 APIs">
+    <img loading="lazy" width="800" src="img/convorchestrator/api_auth2.png" alt="The API Authorization page where you can get credentials for the v2 and v1 APIs">
 
     The page has three sections:
 

@@ -72,7 +72,7 @@ When you select an answer retrieval method in various parts of the UI, the follo
 
 Here’s an example:
 
-<img class="fancyimage" style="width:800px" alt="The list of search offerings in the Answer Tester" src="img/ConvoBuilder/kb_searchofferings.png">
+<img loading="lazy" class="fancyimage" style="width:800px" alt="The list of search offerings in the Answer Tester" src="img/ConvoBuilder/kb_searchofferings.png">
 
 {: .attn-note}
 The “Intent match only” and “AI search only” options are primarily intended for testing and for diagnosing issues during troubleshooting. In Production, we recommend that you use the “KnowledgeAI” offering.

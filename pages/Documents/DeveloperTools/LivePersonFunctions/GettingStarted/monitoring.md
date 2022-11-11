@@ -23,18 +23,18 @@ You can only select one active report and its frequency. You can choose from the
 
 The data is based on the frequency, e.g. `Weekly` contains the data accumulated over the week while `Daily` only includes information of the last 24 hours. The email report contains the following information.
 
-<img class="fancyimage" alt="Functions: Email Report" src="img/functions/functions_reporting_email_report.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Email Report" src="img/functions/functions_reporting_email_report.png">
 
 #### Enable Email Reporting
 
 The Email Reporting can be configured via the "Reporting"-tab inside the "Settings"-Page by a user meeting the required [permissions](liveperson-functions-permission-system.html). You will observe the currently set frequency and the current list of participants on the page, which are limited to 10 emails. We suggest the usage of mailing lists in case you require more than 10 participants. You can choose from `None`, `Daily` and `Weekly` when clicking on the frequency. Where setting it to `None` will disable the email reporting.
 
-<img class="fancyimage" alt="Functions: Email Report" src="img/functions/functions_reporting_email_configure.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Email Report" src="img/functions/functions_reporting_email_configure.png">
 
 Insert a valid email address and click the "add"-button to add a new participant.
 You may remove users from the list by using the "Trash"-button next to the email. You must confirm your action by pressing "Delete Email Address".
 
-<img class="fancyimage" alt="Functions: Email Remove" src="img/functions/functions_reporting_email_delete.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Email Remove" src="img/functions/functions_reporting_email_delete.png">
 
 ### Logs
 
@@ -66,23 +66,23 @@ The following code will show the JavaScript interface along with examples that s
 
 There are persisted logs and non-persisted logs. Non-persisted logs are best used to test functions. Those logs can be found in the "Logs" container on the "Invoke your Function"-Page. It may sometimes contain warnings that inform you about potential issues with your logging, as shown in the following screenshot:
 
-<img class="fancyimage" alt="Functions: Test Logs" src="img/functions/functions_reporting_logs_test.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Test Logs" src="img/functions/functions_reporting_logs_test.png">
 
 You may click on any individual log entry to open up a dialogue that shows you the full logline and allows you to copy it to your clipboard.
 
-<img class="fancyimage" alt="Functions: Test Logs Detail" src="img/functions/functions_reporting_logs_test_detail.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Test Logs Detail" src="img/functions/functions_reporting_logs_test_detail.png">
 
 You can find all persisted logs either by using the "Logs"-Entry from the context menu in the Functions Overview or by clicking the "Logs" icon located at the sidebar on the left-hand side.
 
-<img alt="Functions: Logs via Context" src="img/functions/functions_reporting_logs_via_context.png">
+<img loading="lazy" alt="Functions: Logs via Context" src="img/functions/functions_reporting_logs_via_context.png">
 
 If you do not navigate to the "Investigate Function Logs" page using the context menu, you must select the function from the dropdown list. All log levels are included in the search by default, but you can remove unwanted levels. Further, the time window by default is one day from now, but it can be extended up to **7 days** within the **last 30 days**.
 
-<img alt="Functions: Logspage" src="img/functions/functions_reporting_logs.png">
+<img loading="lazy" alt="Functions: Logspage" src="img/functions/functions_reporting_logs.png">
 
 You may tick the "Group By RequestID"-box, which will batch all logs belonging to a specific invocation, ensuring you will not mix up logs belonging to different requests.
 
-<img alt="Functions: Logs Grouped" src="img/functions/functions_reporting_logs_grouped.png">
+<img loading="lazy" alt="Functions: Logs Grouped" src="img/functions/functions_reporting_logs_grouped.png">
 
 You can download the logs as a CSV export of your current view by clicking the "Download"-button. Please be aware that we only allow up to 500 log lines to be exported based on your time window and log quantity. You may not download all available logs. In this case, we suggest adjusting the time window to smaller chunks. The CSV export has the following structure:
 
@@ -114,11 +114,11 @@ Given that multiple developers and users may use a Functions account, it can get
 
 All activities will be stored for roughly two months and can be reviewed in this time window. For example, some of the activities, `Lambda Update`, come with different subactivities. The Description field usually discloses those. Sticking to our example of the `Lambda Update`, you may see `Lambda deployed` and `Code changed` as potential subactivities.
 
-<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png">
+<img loading="lazy" alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png">
 
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
-<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png">
+<img loading="lazy" alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png">
 
 ### Invocation Histogram
 
@@ -128,4 +128,4 @@ Please be aware that invocation data will be retained for the last 30 days and n
 
 The invocation histogram is accessible via the details page of a function. You may only choose the following values for the time window `1h`, `24h`, `7d` or `30d`. Please note that the x-axis will adjust based on the chosen time window. In the displayed example the chosen time is `1h`.
 
-<img alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">
+<img loading="lazy" alt="Functions: Invocation Histogram" src="img/functions/functions_reporting_invocation_histogram.png">

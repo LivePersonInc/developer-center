@@ -26,7 +26,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 Once you have completed the guide above, you will be presented with following screen to complete the Vendor Settings in order to add a bot.
 
-<img class="fancyimage" style="width:600px" src="img/vendor.png">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/vendor.png">
 
 Click on the "Create LivePerson Function" button. This will allow you to implement a LivePerson Function. Once you click on the button, you will be redirected to the LivePerson Functions main page. From here, you will need to develop and then deploy a LivePerson Function which will act as the bot connector.
 

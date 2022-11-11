@@ -41,15 +41,15 @@ When dealing with a knowledge base, an intent is the question that the consumer 
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
 
-<img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png" alt="An example intent in Intent Manager">
+<img loading="lazy" style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png" alt="An example intent in Intent Manager">
 
 Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do:
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png" alt="The Add Knowledge Base window, with the Domain field called out with an arrow">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png" alt="The Add Knowledge Base window, with the Domain field called out with an arrow">
 
 Within the newly created knowledge base, you then link each article to an intent in the domain.
 
-<img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png" alt="The Edit Article window, where you can specify an intent to associate to the article">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png" alt="The Edit Article window, where you can specify an intent to associate to the article">
 
 With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding-introduction.html) for intent matching:
 
@@ -66,7 +66,7 @@ As of March 5, 2021, you can no longer create a knowledge base that uses Knowled
 
 If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
-<img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png" alt="An intent with intent qualifiers, which is a legacy feature">
+<img loading="lazy" style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png" alt="An intent with intent qualifiers, which is a legacy feature">
 
 Knowledge Base intents like these are a *legacy feature* that uses the deprecated LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
@@ -79,11 +79,11 @@ An article is either active or inactive. Active articles are returned in knowled
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png" alt="The Enable Article, Valid From, and Valid To settings for an article">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png" alt="The Enable Article, Valid From, and Valid To settings for an article">
 
 In the KnowledgeAI application, you can easily identify an article's current status:
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png" alt="The status indicator for an example article">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png" alt="The status indicator for an example article">
 
 #### Using Valid From and Valid To dates
 

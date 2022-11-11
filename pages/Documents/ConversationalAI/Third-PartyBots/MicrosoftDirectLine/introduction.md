@@ -46,7 +46,7 @@ For details how a bot can acknowledge the request within 15 seconds, see Microso
 
 ### Configuration
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/microsoft-configuration-step.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/microsoft-configuration-step.png" alt="">
 Figure 1.1 The vendor configuration step for Microsoft Direct Line bots
 <br>
 <br>
@@ -107,7 +107,7 @@ Figure 1.2 Detailed parameter description
 The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the
 Configuration of the Direct Line Channel.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/microsoft-secret-azure.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:750px" src="img/ThirdPartyBots/microsoft-secret-azure.png" alt="">
 Figure 1.3 Location of the Direct Line secret in Azure
 <br>
 <br>
@@ -120,7 +120,7 @@ Direct Line API:
 * It will get a client either from the cache or by getting the information from the Direct Line API.
 * In case of a new conversation, a request to start a new conversation is also send to the Direct Line API.
 
-<img class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-init-conversation.png" alt="">
+<img loading="lazy" class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-init-conversation.png" alt="">
 Figure 1.4 Flow for starting/resuming a conversation
 <br>
 <br>
@@ -129,5 +129,5 @@ After a conversation client has been retrieved in this way, the customer message
 The connector does retries on error responses and will poll for the responses after the message has been successfully
 send.
 
-<img class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-send-activity.png" alt="">
+<img loading="lazy" class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-send-activity.png" alt="">
 Figure 1.5 Flow for getting bot responses to a customer message

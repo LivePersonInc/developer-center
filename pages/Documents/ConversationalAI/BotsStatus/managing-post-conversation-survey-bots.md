@@ -13,7 +13,7 @@ You can use the Bots Status application that's intended for monitoring agent con
 
 Successfully deployed survey bots display "Deployed" beneath the bot name.
 
-<img class="fancyimage" alt="The PCS Connector tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
+<img loading="lazy" class="fancyimage" alt="The PCS Connector tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
 
 {: .attn-note}
 Since all survey bots share a single agent connector, performing any operation on the agent connector affects all the survey bots.
@@ -28,7 +28,7 @@ If the connector appears to be in a stuck state, use this as a troubleshooting t
 
 1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
-3. Click <img style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
+3. Click <img loading="lazy" style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
 
 ### Refresh surveys
 
@@ -40,7 +40,7 @@ You might need to refresh surveys as a troubleshooting technique if you find tha
 
 1. [Access the Bots Status application](bots-status-overview.html#access-bots-status).
 2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
-3. Click <img style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Refresh Surveys**.
+3. Click <img loading="lazy" style="width:25px" alt="3-dot icon" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Refresh Surveys**.
 
 ### Disable a single survey bot
 

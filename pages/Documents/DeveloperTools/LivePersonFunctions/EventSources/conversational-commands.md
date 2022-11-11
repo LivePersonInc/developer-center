@@ -10,7 +10,7 @@ indicator: both
 
 Agents can use Conversational Commands to invoke functions from the Agent Workspace. All available commands are displayed by typing `/` into the messaging input in the connections panel, after Conversational Commands are set up. This empowers agents to use a set of preconfigured, account-specific commands to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
 
-<img src="img/functions/functions_conversational_commands.png" alt="Functions: Conversational Commands" style="width:50%;"/>
+<img loading="lazy" src="img/functions/functions_conversational_commands.png" alt="Functions: Conversational Commands" style="width:50%;"/>
 
 Along with the invocation, a payload is sent containing the conversation ID and the arguments provided by the agent. This payload can then be used for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript. The response **is not stored in the conversation transcript**. It will only be stored temporarily in the browser and is only visible to the agent.
 

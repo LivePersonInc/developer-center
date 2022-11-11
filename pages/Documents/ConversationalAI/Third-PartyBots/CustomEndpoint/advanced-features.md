@@ -333,7 +333,7 @@ Third-Party bots allow the collection of engagement attributes (more information
 [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes`
 option is checked in the `Conversation Type` step as shown in Figure 2.4.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+<img loading="lazy" class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 2.4 `Conversation Type step` in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. we send those engagement attributes
@@ -392,7 +392,7 @@ Some important things to notice here are
 A demo of our WhatsApp map example with the response from an example custom endpoint service
 can be seen in Figure 4.8:
 
-<img class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/customendpoint/customendpoint_richcontent_demo.gif">
 
 Figure 4.8 A Demo of sending raw response back from Custom Endpoint Service on receiving Rich Content Event
 

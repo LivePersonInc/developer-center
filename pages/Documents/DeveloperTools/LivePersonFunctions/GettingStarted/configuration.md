@@ -14,17 +14,17 @@ This page will introduce you to all available methods to configure your function
 
 You can use environment variables to make your function more configurable without adjusting the code. Access to the environment variables is possible at runtime using `process.env.NAME_OF_ENV` property. The LivePerson Functions platform does reserve a few environment variables for internal use. In case of a conflict, you will see the following message: `Variable name is reserved and thereby blocked for use.`
 
-<img class="fancyimage" alt="Functions: Reserved Environment Variable" src="img/functions/functions_env_reserved.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Reserved Environment Variable" src="img/functions/functions_env_reserved.png">
 
 #### Creating an Environment Variable
 
 You can create a new environment variable by pressing the "Set variable"-button within the side panel of the editor UI.
 
-<img class="fancyimage" alt="Functions: Environment Variable Sidepannel" src="img/functions/functions_env_sidepannel.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Environment Variable Sidepannel" src="img/functions/functions_env_sidepannel.png">
 
 Once you click the button, a dialogue window will open and ask you to enter a variable name and its value.
 
-<img class="fancyimage" alt="Functions: Environment Variable Creation" src="img/functions/functions_env_creation.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Environment Variable Creation" src="img/functions/functions_env_creation.png">
 
 Any environment variable will be checked against the following restrictions:
 
@@ -39,14 +39,14 @@ Changes made to the environment variable at runtime via `process.env` are local 
 
 The modification of existing environment variables is possible via the side panel of the editor UI. Select the environment variable you want to change by clicking its name on the list.
 
-<img class="fancyimage" alt="Functions: Environment Variable update Sidepannel" src="img/functions/functions_env_update_sitepannel.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Environment Variable update Sidepannel" src="img/functions/functions_env_update_sitepannel.png">
 
 Once you click on "Set", you will have to save the function to store the changes permanently. Environment variables are static.
 
 {: .attn-note}
 Changing an environment variable via the UI will not automatically push this modification to any function in a productive state. Instead, you will need to redeploy the function to have the change take effect.
 
-<img class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Environment Variable update" src="img/functions/functions_env_update.png">
 
 #### Accessing Environment Variables
 
@@ -78,15 +78,15 @@ Any secret will be checked against the following restrictions:
 * Is the name containing any characters that are not `Alphanumeric`, `_` or `-`?
 * Is the value exceeding 10000 characters?
 
-<img class="fancyimage" alt="Functions: Secret Overview Page" src="img/functions/functions_secret_page.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Secret Overview Page" src="img/functions/functions_secret_page.png">
 
 After clicking the button, you will be presented with a dialogue that allows you to select a name and provide the content of the secret.
 
-<img class="fancyimage" alt="Functions: Secret Creation" src="img/functions/functions_secret_creation.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Secret Creation" src="img/functions/functions_secret_creation.png">
 
 You can select the data type of the secret from the drop-down menu. This only modifies the validation and does not influence the [access](#accessing-secrets) to the secrets later. For example, if you select `JSON`, it will check the syntax of the JSON and reject faulty JSON strings.
 
-<img class="fancyimage" alt="Functions: Secret Type Dropdown" src="img/functions/functions_secret_type.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Secret Type Dropdown" src="img/functions/functions_secret_type.png">
 
 You might notice that you cannot see the contents of the secret after the creation. This is intended and related to security restrictions. Therefore, updating a secret is only possible by deleting and recreating the secret. Secrets can be updated during the runtime by the function. The next chapter will explain the details of this process.
 

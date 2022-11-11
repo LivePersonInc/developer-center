@@ -32,7 +32,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide before us
 You will be presented with the following screen to complete the Vendor Settings in order to add bot connector.
 
 <figure>
- <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/e-bot7-configuration.png" alt="vendor configuration step for e-bot7">
+ <img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/e-bot7-configuration.png" alt="vendor configuration step for e-bot7">
  <figcaption>Figure 1.1: Third-Party Bots vendor configuration step for e-bot7</figcaption>
 </figure>
 

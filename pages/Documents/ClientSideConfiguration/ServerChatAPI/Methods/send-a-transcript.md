@@ -43,7 +43,7 @@ Sends a transcript of the chat to the visitor's email address.
 
 Here's an example image of the email:
 
-<img src="img/EmailTranscriptScreenShot.png" style="height: 420px;">
+<img loading="lazy" src="img/EmailTranscriptScreenShot.png" style="height: 420px;">
 
 Request Body Example:
 

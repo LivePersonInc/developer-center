@@ -14,13 +14,13 @@ The Conversation Tester feature aims to help you to identify possible misconfigu
 
 #### Successful Response
 When you are testing your bot, and you are getting a `Processed` response, it means that the bot configuration is valid and the bot responded with a valid message. See the image below.
-<img style="width:800px" src="img/botconnectordashboard/processed_response.png">
+<img loading="lazy" style="width:800px" src="img/botconnectordashboard/processed_response.png">
 
 #### Error Response
 When you are testing your bot, and no valid response is received from the bot you will be shown an error and any data received will be shown in the JSON Editor.
 By hovering on the last alert you will see a tooltip that will give you the possible solutions for your error. See the image below.
 
-<img style="width:800px" src="img/botconnectordashboard/error_response.png">
+<img loading="lazy" style="width:800px" src="img/botconnectordashboard/error_response.png">
 
 ### Limitations
 

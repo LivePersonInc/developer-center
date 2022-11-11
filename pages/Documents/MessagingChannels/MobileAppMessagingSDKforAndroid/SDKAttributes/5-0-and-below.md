@@ -88,7 +88,7 @@ Defines the remote avatar leading spacing (from the left edge to the avatar).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_avatar_margin_leading.png">
+   <img loading="lazy" src="img/android_avatar_margin_leading.png">
    </figure>
 </div>
 
@@ -110,7 +110,7 @@ Defines the remote avatar Trailing spacing (from the avatar to the bubble).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_avatar_margin_trailing.png">
+   <img loading="lazy" src="img/android_avatar_margin_trailing.png">
    </figure>
 </div>
 
@@ -136,7 +136,7 @@ The configuration to change the Brand name / Agent name text color in the header
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_brandname_color.png" style="height: 48px; width: auto;">
+   <img loading="lazy" src="img/android_brandname_color.png" style="height: 48px; width: auto;">
    </figure>
 </div>
 
@@ -158,7 +158,7 @@ Int number for the outline width.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokewidth.png" alt="strokewidth">
+   <img loading="lazy" src="img/strokewidth.png" alt="strokewidth">
    </figure>
 </div>
 
@@ -180,7 +180,7 @@ Color code for the outline color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokecolor.png" alt="strokecolor">
+   <img loading="lazy" src="img/strokecolor.png" alt="strokecolor">
    </figure>
 </div>
 
@@ -202,7 +202,7 @@ Color code for the text of the brand bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/textcolor.png" alt="textcolor">
+   <img loading="lazy" src="img/textcolor.png" alt="textcolor">
    </figure>
 </div>
 
@@ -224,7 +224,7 @@ Color code for links in the text of the brand bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/linktextcolor.png" alt="linktextcolor">
+   <img loading="lazy" src="img/linktextcolor.png" alt="linktextcolor">
    </figure>
 </div>
 
@@ -246,7 +246,7 @@ Color code for the timestamp of the brand bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/timestamptextcolor.png" alt="timestamptextcolor">
+   <img loading="lazy" src="img/timestamptextcolor.png" alt="timestamptextcolor">
    </figure>
 </div>
 
@@ -268,7 +268,7 @@ Color code for the background of the brand bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/backgroundcolor.png" alt="backgroundcolor">
+   <img loading="lazy" src="img/backgroundcolor.png" alt="backgroundcolor">
    </figure>
 </div>
 
@@ -290,7 +290,7 @@ Color code for the background of the default brand logo next to the bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/logobackgroundcolor.png" alt="logobackgroundcolor">
+   <img loading="lazy" src="img/logobackgroundcolor.png" alt="logobackgroundcolor">
    </figure>
 </div>
 
@@ -312,7 +312,7 @@ Brand's welcome message bubble right padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding">
+   <img loading="lazy" src="img/android_brand_bubble_right_padding.png" alt="brand_bubble_right_padding">
    </figure>
 </div>
 
@@ -334,7 +334,7 @@ Brand's welcome message bubble left padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding">
+   <img loading="lazy" src="img/android_brand_bubble_left_padding.png" alt="brand_bubble_left_padding">
    </figure>
 </div>
 
@@ -356,7 +356,7 @@ Brand's welcome message bubble top padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding">
+   <img loading="lazy" src="img/android_brand_bubble_top_padding.png" alt="brand_bubble_top_padding">
    </figure>
 </div>
 
@@ -378,7 +378,7 @@ Brand's welcome message bubble bottom padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding">
+   <img loading="lazy" src="img/android_brand_bubble_bottom_padding.png" alt="brand_bubble_bottom_padding">
    </figure>
 </div>
 
@@ -420,7 +420,7 @@ Define the color of status bar background color while trying to connect.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectingbgcolor.png" alt="connectingbgcolor">
+   <img loading="lazy" src="img/connectingbgcolor.png" alt="connectingbgcolor">
    </figure>
 </div>
 
@@ -442,7 +442,7 @@ Define the color of status bar background color when connection is unavailable.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/notconnectedbgcolor.png" alt="notconnectedbgcolor">
+   <img loading="lazy" src="img/notconnectedbgcolor.png" alt="notconnectedbgcolor">
    </figure>
 </div>
 
@@ -464,7 +464,7 @@ Define the color of status bar text color while trying to connect.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/connectingtextcolor.png" alt="connectingtextcolor">
+   <img loading="lazy" src="img/connectingtextcolor.png" alt="connectingtextcolor">
    </figure>
 </div>
 
@@ -486,7 +486,7 @@ Define the color of status bar text color when connection is unavailable.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/notconnectedtextcolor.png" alt="notconnectedtextcolor">
+   <img loading="lazy" src="img/notconnectedtextcolor.png" alt="notconnectedtextcolor">
    </figure>
 </div>
 
@@ -512,7 +512,7 @@ Color code for the text of the automatic messages.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller">
+   <img loading="lazy" src="img/conversation_controller_message_text_color.png" alt="automaticmessagecoller">
    </figure>
 </div>
 
@@ -530,7 +530,7 @@ Color code for the markdown hyperlink in the automatic messages.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/controller_message_markdown_hyperlink_text_color.png" alt="hyperlinkautomaticmessagecoller">
+   <img loading="lazy" src="img/controller_message_markdown_hyperlink_text_color.png" alt="hyperlinkautomaticmessagecoller">
    </figure>
 </div>
 
@@ -570,7 +570,7 @@ Define the color of menu button and back arrow on toolbar.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_secondary_color.png" alt="secondarycolor">
+   <img loading="lazy" src="img/android_secondary_color.png" alt="secondarycolor">
    </figure>
 </div>
 
@@ -613,7 +613,7 @@ Define the background color of caption preview screen when sending a file.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/captionpreviewbackgroundcolor.png" alt="captionpreviewbackgroundcolor">
+   <img loading="lazy" src="img/captionpreviewbackgroundcolor.png" alt="captionpreviewbackgroundcolor">
    </figure>
 </div>
 
@@ -635,7 +635,7 @@ Conversation resolved message text size.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size">
+   <img loading="lazy" src="img/android_resolved_message_text_size.png" alt="resolved_message_text_size">
    </figure>
 </div>
 
@@ -657,7 +657,7 @@ Conversation resolved message padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_resolved_message_padding.png" alt="resolved_message_padding">
+   <img loading="lazy" src="img/android_resolved_message_padding.png" alt="resolved_message_padding">
    </figure>
 </div>
 
@@ -679,7 +679,7 @@ Conversation resolved message line spacing.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing">
+   <img loading="lazy" src="img/android_resolved_message_line_spacing.png" alt="resolved_message_line_spacing">
    </figure>
 </div>
 
@@ -701,7 +701,7 @@ Enable or disable the conversation resolved message.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
+   <img loading="lazy" src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
    </figure>
 </div>
 
@@ -723,7 +723,7 @@ Enable or disable separators between conversations.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/enable_conversation_resolved_separator.png" alt="conversationresolvedseparator">
+   <img loading="lazy" src="img/enable_conversation_resolved_separator.png" alt="conversationresolvedseparator">
    </figure>
 </div>
 
@@ -745,7 +745,7 @@ Color code for the conversation resolved message and separator.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
+   <img loading="lazy" src="img/enable_conversation_resolved_message.png" alt="conversationresolvedmessage">
    </figure>
 </div>
 
@@ -778,7 +778,7 @@ Defines whether to enable or disable client side only masking. False by default.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/clientonlymasking.png" alt="clientonlymasking">
+   <img loading="lazy" src="img/clientonlymasking.png" alt="clientonlymasking">
    </figure>
 </div>
 
@@ -828,7 +828,7 @@ The character used to mask the real time message.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/realtimemaskcharacter.png" alt="realtimemaskcharacter">
+   <img loading="lazy" src="img/realtimemaskcharacter.png" alt="realtimemaskcharacter">
    </figure>
 </div>
 
@@ -893,7 +893,7 @@ Text color for the Day/date header.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_header_text_color.png" alt="header_text_color">
+   <img loading="lazy" src="img/android_header_text_color.png" alt="header_text_color">
    </figure>
 </div>
 
@@ -915,7 +915,7 @@ Background color for the Day/date header.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_header_background_color.png" alt="header_background_color">
+   <img loading="lazy" src="img/android_header_background_color.png" alt="header_background_color">
    </figure>
 </div>
 
@@ -937,7 +937,7 @@ Font text size for the Date Separator.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_sticky_timestamp_text_size.png">
+   <img loading="lazy" src="img/android_sticky_timestamp_text_size.png">
    </figure>
 </div>
 
@@ -959,7 +959,7 @@ Top margin spacing of the Date Separator.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_sticky_timestamp_margin_top.png">
+   <img loading="lazy" src="img/android_sticky_timestamp_margin_top.png">
    </figure>
 </div>
 
@@ -981,7 +981,7 @@ Top border color for the Input TextView.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_enter_message_top_separator_color.png">
+   <img loading="lazy" src="img/android_enter_message_top_separator_color.png">
    </figure>
 </div>
 
@@ -1003,7 +1003,7 @@ Enable (visible) or disable (hidden) the Enter Message edit text divider.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_enter_message_divider_visible.png">
+   <img loading="lazy" src="img/android_enter_message_divider_visible.png">
    </figure>
 </div>
 
@@ -1025,7 +1025,7 @@ Defines the Resolved system message text size.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_bubble_system_resolved_text_size.png">
+   <img loading="lazy" src="img/android_bubble_system_resolved_text_size.png">
    </figure>
 </div>
 
@@ -1047,7 +1047,7 @@ Defines the Resolved system message padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_bubble_system_resolved_padding.png">
+   <img loading="lazy" src="img/android_bubble_system_resolved_padding.png">
    </figure>
 </div>
 
@@ -1069,7 +1069,7 @@ Defines the Resolved system message line spacing.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_bubble_system_resolved_line_spacing.png">
+   <img loading="lazy" src="img/android_bubble_system_resolved_line_spacing.png">
    </figure>
 </div>
 
@@ -1091,7 +1091,7 @@ Defines the Resolved system message Separator padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_bubble_system_resolved_separator_padding_bottom.png">
+   <img loading="lazy" src="img/android_bubble_system_resolved_separator_padding_bottom.png">
    </figure>
 </div>
 
@@ -1113,7 +1113,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_lp_progress_bar_image.png">
+   <img loading="lazy" src="img/android_lp_progress_bar_image.png">
    </figure>
 </div>
 
@@ -1149,7 +1149,7 @@ You can customize the indicators according to your needs, by using a number betw
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/receiveicons.png" alt="receiveicons">
+   <img loading="lazy" src="img/receiveicons.png" alt="receiveicons">
    </figure>
 </div>
 
@@ -1177,7 +1177,7 @@ If you set the resource [message_receive_icons](#message_receive_icons) to **0**
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/receivetext.png" alt="receivetext" right>
+   <img loading="lazy" src="img/receivetext.png" alt="receivetext" right>
    </figure>
 </div>
 
@@ -1231,7 +1231,7 @@ Define the background color of item when it’s selected to be copied (if multip
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/bubbleselectedbackgroundcolor.png" alt="bubbleselectedbackgroundcolor">
+   <img loading="lazy" src="img/bubbleselectedbackgroundcolor.png" alt="bubbleselectedbackgroundcolor">
    </figure>
 </div>
 
@@ -1297,7 +1297,7 @@ To display an image instead of text, set the `use_send_image_button` boolean to 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image</figcaption>
-   <img src="img/android_disabled_send_button.png" style="width: 64px;">
+   <img loading="lazy" src="img/android_disabled_send_button.png" style="width: 64px;">
    </figure>
 </div>
 
@@ -1319,7 +1319,7 @@ You can replace the existing Gallery image button. Create a drawable file named 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image</figcaption>
-   <img src="img/android_gallery_button.png">
+   <img loading="lazy" src="img/android_gallery_button.png">
    </figure>
 </div>
 
@@ -1341,7 +1341,7 @@ You can replace the existing Library image button. Create a drawable file named 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image</figcaption>
-   <img src="img/android_camera_button.png" alt="">
+   <img loading="lazy" src="img/android_camera_button.png" alt="">
    </figure>
 </div>
 
@@ -1363,7 +1363,7 @@ You can replace the existing Attach image. Create a drawable file named **lpinfr
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image</figcaption>
-   <img src="img/android_attach_button.png" style="width: 64px" alt="">
+   <img loading="lazy" src="img/android_attach_button.png" style="width: 64px" alt="">
    </figure>
 </div>
 
@@ -1385,7 +1385,7 @@ You can replace the existing Close image. Create a drawable file named **lpinfra
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image</figcaption>
-   <img src="img/android_ps_close_button.png" alt="" style="width: 64px;">
+   <img loading="lazy" src="img/android_ps_close_button.png" alt="" style="width: 64px;">
    </figure>
 </div>
 
@@ -1443,7 +1443,7 @@ Color code for the Enter Message control underline color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/underlinecolor.png" alt="underlinecolor">
+   <img loading="lazy" src="img/underlinecolor.png" alt="underlinecolor">
    </figure>
 </div>
 
@@ -1465,7 +1465,7 @@ Define the input message text color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/entermsgtext.png" alt="entermsgtext">
+   <img loading="lazy" src="img/entermsgtext.png" alt="entermsgtext">
    </figure>
 </div>
 
@@ -1487,7 +1487,7 @@ Define the input message hint color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/entermsghint.png" alt="entermsghint">
+   <img loading="lazy" src="img/entermsghint.png" alt="entermsghint">
    </figure>
 </div>
 
@@ -1505,14 +1505,14 @@ Define the color of the send button when it’s enabled.
 <div style="float: left; width: 50%;height: 40px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/buttontextenable.png" alt="buttontextenable">
+   <img loading="lazy" src="img/buttontextenable.png" alt="buttontextenable">
    </figure>
 </div>
 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/buttontextenable2.png" alt="buttontextenable2">
+   <img loading="lazy" src="img/buttontextenable2.png" alt="buttontextenable2">
    </figure>
 </div>
 
@@ -1530,14 +1530,14 @@ Define the color of the send button when it’s disabled.
 <div style="float: left; width: 50%;height: 40px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/buttontextdisable.png" alt="buttontextdisable">
+   <img loading="lazy" src="img/buttontextdisable.png" alt="buttontextdisable">
    </figure>
 </div>
 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/buttontextdisable2.png" alt="buttontextdisable2">
+   <img loading="lazy" src="img/buttontextdisable2.png" alt="buttontextdisable2">
    </figure>
 </div>
 
@@ -1559,7 +1559,7 @@ Use an icon for the send button instead of "Send" text.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/sendimagebutton.png" alt="sendimagebutton">
+   <img loading="lazy" src="img/sendimagebutton.png" alt="sendimagebutton">
    </figure>
 </div>
 
@@ -1647,7 +1647,7 @@ Enable or disable the scroll down indicator (shown or invisible).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/indicatorenabled.png" alt="indicatorenabled">
+   <img loading="lazy" src="img/indicatorenabled.png" alt="indicatorenabled">
    </figure>
 </div>
 
@@ -1667,14 +1667,14 @@ The scroll to bottom button width is dynamic and will be auto adjusted based on 
 <div style="float: left; width: 50%;height: 73px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/summaryenabled1.png" alt="summaryenabled1">
+   <img loading="lazy" src="img/summaryenabled1.png" alt="summaryenabled1">
    </figure>
 </div>
 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/summaryenabled2.png" alt="summaryenabled2">
+   <img loading="lazy" src="img/summaryenabled2.png" alt="summaryenabled2">
    </figure>
 </div>
 
@@ -1696,7 +1696,7 @@ Color of the unread messages counter text color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadcountertextcolor.png" alt="unreadcountertextcolor">
+   <img loading="lazy" src="img/unreadcountertextcolor.png" alt="unreadcountertextcolor">
    </figure>
 </div>
 
@@ -1718,7 +1718,7 @@ Color of the unread message summary (preview) text color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadsummarytextcolor.png" alt="unreadsummarytextcolor">
+   <img loading="lazy" src="img/unreadsummarytextcolor.png" alt="unreadsummarytextcolor">
    </figure>
 </div>
 
@@ -1740,7 +1740,7 @@ Color of the unread messages counter stroke color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadcounterstrokecolor.png" alt="unreadcounterstrokecolor">
+   <img loading="lazy" src="img/unreadcounterstrokecolor.png" alt="unreadcounterstrokecolor">
    </figure>
 </div>
 
@@ -1762,7 +1762,7 @@ Dimension of the unread messages counter stroke width.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadcounterstrokewidth.png" alt="unreadcounterstrokewidth">
+   <img loading="lazy" src="img/unreadcounterstrokewidth.png" alt="unreadcounterstrokewidth">
    </figure>
 </div>
 
@@ -1784,7 +1784,7 @@ Color of the unread messages counter solid color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadcountersolidcolor.png" alt="unreadcountersolidcolor">
+   <img loading="lazy" src="img/unreadcountersolidcolor.png" alt="unreadcountersolidcolor">
    </figure>
 </div>
 
@@ -1802,14 +1802,14 @@ Color of the scroll down background color.
 <div style="float: left; width: 50%;height: 75px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolldownindicatorbackgroundcolor.png" alt="scrolldownindicatorbackgroundcolor">
+   <img loading="lazy" src="img/scrolldownindicatorbackgroundcolor.png" alt="scrolldownindicatorbackgroundcolor">
    </figure>
 </div>
 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolldownindicatorbackgroundcolor2.png" alt="scrolldownindicatorbackgroundcolor2">
+   <img loading="lazy" src="img/scrolldownindicatorbackgroundcolor2.png" alt="scrolldownindicatorbackgroundcolor2">
    </figure>
 </div>
 
@@ -1827,14 +1827,14 @@ Color of the image arrow scrolling down.
 <div style="float: left; width: 50%;height: 73px;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolldownindicatorarrowcolor.png" alt="scrolldownindicatorarrowcolor">
+   <img loading="lazy" src="img/scrolldownindicatorarrowcolor.png" alt="scrolldownindicatorarrowcolor">
    </figure>
 </div>
 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/scrolldownindicatorarrowcolor2.png" alt="scrolldownindicatorarrowcolor2">
+   <img loading="lazy" src="img/scrolldownindicatorarrowcolor2.png" alt="scrolldownindicatorarrowcolor2">
    </figure>
 </div>
 
@@ -1856,7 +1856,7 @@ Left top and left bottom corner radius of the scroll down indicator.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/indicatorenabled.png" alt="indicatorenabled">
+   <img loading="lazy" src="img/indicatorenabled.png" alt="indicatorenabled">
    </figure>
 </div>
 
@@ -1878,7 +1878,7 @@ Corner radius of the unread messages counter inside the scroll down indicator.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/summaryenabled1.png" alt="summaryenabled1">
+   <img loading="lazy" src="img/summaryenabled1.png" alt="summaryenabled1">
    </figure>
 </div>
 
@@ -1953,7 +1953,7 @@ Define the background color of the items in the attachment menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/menuitembackgroundcolor.png" alt="menuitembackgroundcolor">
+   <img loading="lazy" src="img/menuitembackgroundcolor.png" alt="menuitembackgroundcolor">
    </figure>
 </div>
 
@@ -1975,7 +1975,7 @@ Define the background color of the attachment menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/attachmentmenubackgroundcolor.png" alt="attachmentmenubackgroundcolor">
+   <img loading="lazy" src="img/attachmentmenubackgroundcolor.png" alt="attachmentmenubackgroundcolor">
    </figure>
 </div>
 
@@ -1997,7 +1997,7 @@ Define the items’ text color in the attachment menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/attachmentmenuitemtextcolor.png" alt="attachmentmenuitemtextcolor">
+   <img loading="lazy" src="img/attachmentmenuitemtextcolor.png" alt="attachmentmenuitemtextcolor">
    </figure>
 </div>
 
@@ -2019,7 +2019,7 @@ Define the items’ icon color in the attachment menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/menuitemiconcolor.png" alt="menuitemiconcolor">
+   <img loading="lazy" src="img/menuitemiconcolor.png" alt="menuitemiconcolor">
    </figure>
 </div>
 
@@ -2113,7 +2113,7 @@ Background color for the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentbackground.png" alt="fragmentbackground">
+   <img loading="lazy" src="img/fragmentbackground.png" alt="fragmentbackground">
    </figure>
 </div>
 
@@ -2135,7 +2135,7 @@ Title color for the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmenttitle.png" alt="fragmenttitle">
+   <img loading="lazy" src="img/fragmenttitle.png" alt="fragmenttitle">
    </figure>
 </div>
 
@@ -2157,7 +2157,7 @@ Start color for the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentstar.png" alt="fragmentstar">
+   <img loading="lazy" src="img/fragmentstar.png" alt="fragmentstar">
    </figure>
 </div>
 
@@ -2179,7 +2179,7 @@ Rating title color for the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentratetext.png" alt="fragmentratetext">
+   <img loading="lazy" src="img/fragmentratetext.png" alt="fragmentratetext">
    </figure>
 </div>
 
@@ -2201,7 +2201,7 @@ Yes and no color for the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmenttitleyesno.png" alt="fragmenttitleyesno">
+   <img loading="lazy" src="img/fragmenttitleyesno.png" alt="fragmenttitleyesno">
    </figure>
 </div>
 
@@ -2223,7 +2223,7 @@ Background color of the yes or no selected in the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentyesnobtn.png" alt="fragmentyexnobtn">
+   <img loading="lazy" src="img/fragmentyesnobtn.png" alt="fragmentyexnobtn">
    </figure>
 </div>
 
@@ -2245,7 +2245,7 @@ Default background of the yes and no of the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmenyesnobtndeafult.png" alt="feedback_fragment_yesno_btn_default_background">
+   <img loading="lazy" src="img/fragmenyesnobtndeafult.png" alt="feedback_fragment_yesno_btn_default_background">
    </figure>
 </div>
 
@@ -2267,7 +2267,7 @@ Text color for the yes/no buttons when selected in the feedback dialog.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentyesnobtntext.png" alt="fragmentratetext">
+   <img loading="lazy" src="img/fragmentyesnobtntext.png" alt="fragmentratetext">
    </figure>
 </div>
 
@@ -2289,7 +2289,7 @@ Feedback dialog yes/no text color when in default.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentbtntextdefault.png" alt="fragmentbtntextdefault">
+   <img loading="lazy" src="img/fragmentbtntextdefault.png" alt="fragmentbtntextdefault">
    </figure>
 </div>
 
@@ -2311,7 +2311,7 @@ Feedback dialog yes/no stroke color when in default.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentyesnobtbstroke.png" alt="fragmentyesnobtbstroke">
+   <img loading="lazy" src="img/fragmentyesnobtbstroke.png" alt="fragmentyesnobtbstroke">
    </figure>
 </div>
 
@@ -2333,7 +2333,7 @@ Feedback dialog yes/no stroke color when selected.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/yesnobtnstrokeselected.png" alt="yesnobtnstrokeselected">
+   <img loading="lazy" src="img/yesnobtnstrokeselected.png" alt="yesnobtnstrokeselected">
    </figure>
 </div>
 
@@ -2355,7 +2355,7 @@ Feedback dialog yes/no stroke width size when in default.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/yesnobtbnstrokewidth.png" alt="yesnobtbnstrokewidth">
+   <img loading="lazy" src="img/yesnobtbnstrokewidth.png" alt="yesnobtbnstrokewidth">
    </figure>
 </div>
 
@@ -2377,7 +2377,7 @@ Feedback dialog yes/no stroke width size when in selected.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/yesnobtnstrokewidthselected.png" alt="yesnobtnstrokewidthselected">
+   <img loading="lazy" src="img/yesnobtnstrokewidthselected.png" alt="yesnobtnstrokewidthselected">
    </figure>
 </div>
 
@@ -2399,7 +2399,7 @@ Feedback dialog submit message text color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentsubmitmessage.png" alt="fragmentsubmitmessage">
+   <img loading="lazy" src="img/fragmentsubmitmessage.png" alt="fragmentsubmitmessage">
    </figure>
 </div>
 
@@ -2421,7 +2421,7 @@ Feedback dialog submit button color when enabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentsubmitbtnenabled.png" alt="fragmentsubmitbtnenabled">
+   <img loading="lazy" src="img/fragmentsubmitbtnenabled.png" alt="fragmentsubmitbtnenabled">
    </figure>
 </div>
 
@@ -2443,7 +2443,7 @@ Feedback dialog submit button text color when enabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentbtntextenabled.png" alt="fragmentbtntextenabled">
+   <img loading="lazy" src="img/fragmentbtntextenabled.png" alt="fragmentbtntextenabled">
    </figure>
 </div>
 
@@ -2465,7 +2465,7 @@ Feedback dialog submit button color when disabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentsubmitbtndisabled.png" alt="fragmentsubmitbtndisabled">
+   <img loading="lazy" src="img/fragmentsubmitbtndisabled.png" alt="fragmentsubmitbtndisabled">
    </figure>
 </div>
 
@@ -2487,7 +2487,7 @@ Feedback dialog submit button text color when disabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/submitbtntextdisabled.png" alt="submitbtntextdisabled">
+   <img loading="lazy" src="img/submitbtntextdisabled.png" alt="submitbtntextdisabled">
    </figure>
 </div>
 
@@ -2509,7 +2509,7 @@ Feedback dialog submit button stroke color when enabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/submitbtnstrokeenabled.png" alt="submitbtnstrokeenabled">
+   <img loading="lazy" src="img/submitbtnstrokeenabled.png" alt="submitbtnstrokeenabled">
    </figure>
 </div>
 
@@ -2531,7 +2531,7 @@ Feedback dialog submit button stroke color when disabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/submitbtnstrokedisabled.png" alt="submitbtnstrokedisabled">
+   <img loading="lazy" src="img/submitbtnstrokedisabled.png" alt="submitbtnstrokedisabled">
    </figure>
 </div>
 
@@ -2553,7 +2553,7 @@ Feedback dialog submit button stroke width size when enabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/btnstrokewidthenabled.png" alt="btnstrokewidthenabled">
+   <img loading="lazy" src="img/btnstrokewidthenabled.png" alt="btnstrokewidthenabled">
    </figure>
 </div>
 
@@ -2575,7 +2575,7 @@ Feedback dialog submit button stroke width size when disabled.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/btnstrokewidthdisabled.png" alt="btnstrokewidthdisabled">
+   <img loading="lazy" src="img/btnstrokewidthdisabled.png" alt="btnstrokewidthdisabled">
    </figure>
 </div>
 
@@ -2597,7 +2597,7 @@ Define the color of the agent name on agent details section in feedback dialog.V
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/fragmentagentdetailnames.png" alt="fragmentagentdetailnames">
+   <img loading="lazy" src="img/fragmentagentdetailnames.png" alt="fragmentagentdetailnames">
    </figure>
 </div>
 
@@ -2633,7 +2633,7 @@ If both [show_yes_no_question](#show_yes_no_question) and [show_agent_details_cs
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/showyesno.png" alt="showyesno">
+   <img loading="lazy" src="img/showyesno.png" alt="showyesno">
    </figure>
 </div>
 
@@ -2658,7 +2658,7 @@ If both `show_yes_no_question` and [show_agent_details_csat](#show_agent_details
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/showyesno.png" alt="showyesno">
+   <img loading="lazy" src="img/showyesno.png" alt="showyesno">
    </figure>
 </div>
 
@@ -2691,7 +2691,7 @@ Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimen
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_csat_yesno_radius.png">
+   <img loading="lazy" src="img/android_csat_yesno_radius.png">
    </figure>
 </div>
 
@@ -2812,7 +2812,7 @@ Color code for the text of the system messages.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/conversation_separator_text_color.png" alt="separatortextcolor">
+   <img loading="lazy" src="img/conversation_separator_text_color.png" alt="separatortextcolor">
    </figure>
 </div>
 
@@ -2897,7 +2897,7 @@ Enable or disable the unread message indicator (shown or invisible) - true by de
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor">
+   <img loading="lazy" src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor">
    </figure>
 </div>
 
@@ -2919,7 +2919,7 @@ Color code for the background of the unread messages bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unread_indicator_bubble_background_color.png" alt="unread_indicator_bubble_background_color">
+   <img loading="lazy" src="img/unread_indicator_bubble_background_color.png" alt="unread_indicator_bubble_background_color">
    </figure>
 </div>
 
@@ -2945,7 +2945,7 @@ Int number for the outline width.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_stroke_width.png" alt="strokewidth">
+   <img loading="lazy" src="img/agent_bubble_stroke_width.png" alt="strokewidth">
    </figure>
 </div>
 
@@ -2967,7 +2967,7 @@ Color code for the outline color.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_stroke_color.png" alt="strokecolor">
+   <img loading="lazy" src="img/agent_bubble_stroke_color.png" alt="strokecolor">
    </figure>
 </div>
 
@@ -2989,7 +2989,7 @@ Color code for the text of the agent bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_message_link_text_color.png" alt="textcolor">
+   <img loading="lazy" src="img/agent_bubble_message_link_text_color.png" alt="textcolor">
    </figure>
 </div>
 
@@ -3011,7 +3011,7 @@ Color code for links in the text of the agent bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_message_link_text_color.png" alt="linktextcolor">
+   <img loading="lazy" src="img/agent_bubble_message_link_text_color.png" alt="linktextcolor">
    </figure>
 </div>
 
@@ -3033,7 +3033,7 @@ Color code for the timestamp of the agent bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_timestamp_text_color.png" alt="timestamptextcolor">
+   <img loading="lazy" src="img/agent_bubble_timestamp_text_color.png" alt="timestamptextcolor">
    </figure>
 </div>
 
@@ -3055,7 +3055,7 @@ Color code for the background of the agent bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agentbubblebackgroundcolor.png" alt="backgroundcolor">
+   <img loading="lazy" src="img/agentbubblebackgroundcolor.png" alt="backgroundcolor">
    </figure>
 </div>
 
@@ -3077,7 +3077,7 @@ Color code for the background of the agent default avatar next to the bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agentavatarbackgroundcolor.png" alt="agentavatarbackgroundcolor">
+   <img loading="lazy" src="img/agentavatarbackgroundcolor.png" alt="agentavatarbackgroundcolor">
    </figure>
 </div>
 
@@ -3099,7 +3099,7 @@ Color code for the agent default icon in the avatar next to the bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_avatar_icon_color.png" alt="iconcolor">
+   <img loading="lazy" src="img/agent_avatar_icon_color.png" alt="iconcolor">
    </figure>
 </div>
 
@@ -3135,7 +3135,7 @@ Color code for the background of the agent bubble when url is presented.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
+   <img loading="lazy" src="img/agent_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
    </figure>
 </div>
 
@@ -3157,7 +3157,7 @@ Color code for the background of the agent title text color when url is presente
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_link_preview_title_text_color.png" alt="titletextcolor">
+   <img loading="lazy" src="img/agent_bubble_link_preview_title_text_color.png" alt="titletextcolor">
    </figure>
 </div>
 
@@ -3179,7 +3179,7 @@ Color code for the background of the agent description text color when url is pr
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
+   <img loading="lazy" src="img/agent_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
    </figure>
 </div>
 
@@ -3201,7 +3201,7 @@ background color of the form invitation bubble
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_background_color.png" alt="invitationbackgroundcolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_background_color.png" alt="invitationbackgroundcolor">
    </figure>
 </div>
 
@@ -3223,7 +3223,7 @@ background color of the form invitation button only
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="buttontextcolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="buttontextcolor">
    </figure>
 </div>
 
@@ -3245,7 +3245,7 @@ color of the stroke (border) of the form invitation bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_stroke_color.png" alt="strokecolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_stroke_color.png" alt="strokecolor">
    </figure>
 </div>
 
@@ -3267,7 +3267,7 @@ color of the text on the button
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="invitationbuttoncolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_button_text_color.png" alt="invitationbuttoncolor">
    </figure>
 </div>
 
@@ -3289,7 +3289,7 @@ Text color on the description in the form invitation bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_description_text_color.png" alt="descriptiontextcolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_description_text_color.png" alt="descriptiontextcolor">
    </figure>
 </div>
 
@@ -3311,7 +3311,7 @@ text color on the title in the form invitation bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_title_text_color.png" alt="titletextcolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_title_text_color.png" alt="titletextcolor">
    </figure>
 </div>
 
@@ -3333,7 +3333,7 @@ color of the icon in the form invitation bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor">
+   <img loading="lazy" src="img/agent_bubble_pci_form_invitation_icon_tint_color.png" alt="tintcolor">
    </figure>
 </div>
 
@@ -3355,7 +3355,7 @@ Chat message (agent/consumer) bubble right padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding">
+   <img loading="lazy" src="img/android_agent_bubble_right_padding.png" alt="agent_bubble_right_padding">
    </figure>
 </div>
 
@@ -3377,7 +3377,7 @@ Chat message (agent/consumer) bubble left padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding">
+   <img loading="lazy" src="img/android_agent_bubble_left_padding.png" alt="agent_bubble_left_padding">
    </figure>
 </div>
 
@@ -3399,7 +3399,7 @@ Chat message (agent/consumer) bubble top padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding">
+   <img loading="lazy" src="img/android_agent_bubble_top_padding.png" alt="agent_bubble_top_padding">
    </figure>
 </div>
 
@@ -3421,7 +3421,7 @@ Chat message (agent/consumer) bubble bottom padding.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding">
+   <img loading="lazy" src="img/android_agent_bubble_bottom_padding.png" alt="agent_bubble_bottom_padding">
    </figure>
 </div>
 
@@ -3447,7 +3447,7 @@ Only available as long as the announce_agent_typing configuration is on (set as 
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <td><img src="img/android_agent_typing_bubble.png"></td>
+   <td><img loading="lazy" src="img/android_agent_typing_bubble.png"></td>
    </figure>
 </div>
 
@@ -3486,7 +3486,7 @@ integer in dp for the bubble stroke width of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth">
+   <img loading="lazy" src="img/consumer_bubble_stroke_width.png" alt="strokewidth">
    </figure>
 </div>
 
@@ -3508,7 +3508,7 @@ Color code for the text of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_message_text_color.png" alt="messagetextcolor">
+   <img loading="lazy" src="img/consumer_bubble_message_text_color.png" alt="messagetextcolor">
    </figure>
 </div>
 
@@ -3530,7 +3530,7 @@ Color code for links in the text of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_message_link_text_color.png" alt="linktextcolor">
+   <img loading="lazy" src="img/consumer_bubble_message_link_text_color.png" alt="linktextcolor">
    </figure>
 </div>
 
@@ -3552,7 +3552,7 @@ Color code for the timestamp of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_timestamp_text_color.png" alt="timestamptextcolor">
+   <img loading="lazy" src="img/consumer_bubble_timestamp_text_color.png" alt="timestamptextcolor">
    </figure>
 </div>
 
@@ -3574,7 +3574,7 @@ Color code for the background of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_background_color.png" alt="bubblebackgroundcolor">
+   <img loading="lazy" src="img/consumer_bubble_background_color.png" alt="bubblebackgroundcolor">
    </figure>
 </div>
 
@@ -3596,7 +3596,7 @@ Color code for state text next to the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_state_text_color.png" alt="statetextcolor">
+   <img loading="lazy" src="img/consumer_bubble_state_text_color.png" alt="statetextcolor">
    </figure>
 </div>
 
@@ -3618,7 +3618,7 @@ Color code for the stroke of the consumer bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_color.png" alt="strokecolor">
+   <img loading="lazy" src="img/consumer_bubble_stroke_color.png" alt="strokecolor">
    </figure>
 </div>
 
@@ -3640,7 +3640,7 @@ Color code for the background of the consumer bubble when url is presented.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
+   <img loading="lazy" src="img/consumer_bubble_link_preview_background_color.png" alt="previewbackgroundcolor">
    </figure>
 </div>
 
@@ -3662,7 +3662,7 @@ Color code for the background of the consumer title text color when url is prese
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_link_preview_title_text_color.png" alt="titletextcolor">
+   <img loading="lazy" src="img/consumer_bubble_link_preview_title_text_color.png" alt="titletextcolor">
    </figure>
 </div>
 
@@ -3684,7 +3684,7 @@ Color code for the background of the consumer description text color when url is
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
+   <img loading="lazy" src="img/consumer_bubble_link_preview_description_text_color.png" alt="descriptiontextcolor">
    </figure>
 </div>
 
@@ -3706,7 +3706,7 @@ Color code for the read status icon (if enable).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_read_status_color.png" alt="readstatuscolor">
+   <img loading="lazy" src="img/consumer_bubble_read_status_color.png" alt="readstatuscolor">
    </figure>
 </div>
 
@@ -3728,7 +3728,7 @@ Color code for the received status icon (if enable).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_received_status_color.png" alt="statuscolor">
+   <img loading="lazy" src="img/consumer_bubble_received_status_color.png" alt="statuscolor">
    </figure>
 </div>
 
@@ -3750,7 +3750,7 @@ Color code for the sent status icon (if enable).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_sent_status_color.png" alt="sentstatuscolor">
+   <img loading="lazy" src="img/consumer_bubble_sent_status_color.png" alt="sentstatuscolor">
    </figure>
 </div>
 
@@ -3772,7 +3772,7 @@ Color code for the sending status icon (if enable).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor">
+   <img loading="lazy" src="img/consumer_bubble_sending_status_color.png" alt="sendingstatuscolor">
    </figure>
 </div>
 
@@ -3808,7 +3808,7 @@ Corner radius of bottom left consumer bubbles (on the right side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
+   <img loading="lazy" src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
    </figure>
 </div>
 
@@ -3830,7 +3830,7 @@ Corner radius of top left consumer bubbles (on the right side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
+   <img loading="lazy" src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
    </figure>
 </div>
 
@@ -3852,7 +3852,7 @@ Corner radius of top right consumer bubbles (on the right side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
+   <img loading="lazy" src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
    </figure>
 </div>
 
@@ -3874,7 +3874,7 @@ Corner radius of bottom right consumer bubbles (on the right side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
+   <img loading="lazy" src="img/consumer_bubble_stroke_width.png" alt="strokewidth_consumer">
    </figure>
 </div>
 
@@ -3896,7 +3896,7 @@ Corner radius of the bottom left agent/brand bubbles (on the left side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokewidth.png" alt="strokewidth_agnet">
+   <img loading="lazy" src="img/strokewidth.png" alt="strokewidth_agnet">
    </figure>
 </div>
 
@@ -3918,7 +3918,7 @@ Corner radius of the top left agent/brand bubbles (on the left side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokewidth.png" alt="strokewidth_agnet">
+   <img loading="lazy" src="img/strokewidth.png" alt="strokewidth_agnet">
    </figure>
 </div>
 
@@ -3940,7 +3940,7 @@ Corner radius of the top right agent/brand bubbles (on the left side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokewidth.png" alt="strokewidth_agnet">
+   <img loading="lazy" src="img/strokewidth.png" alt="strokewidth_agnet">
    </figure>
 </div>
 
@@ -3962,7 +3962,7 @@ Corner radius of the bottom right agent/brand bubbles (on the left side).
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/strokewidth.png" alt="strokewidth_agnet">
+   <img loading="lazy" src="img/strokewidth.png" alt="strokewidth_agnet">
    </figure>
 </div>
 
@@ -3984,7 +3984,7 @@ Corner radius of the unread messages bubble.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor">
+   <img loading="lazy" src="img/unreadindicatorbubbletextcolor.png" alt="unreadindicatorbubbletextcolor">
    </figure>
 </div>
 
@@ -4006,7 +4006,7 @@ Enable or disable hyperlink support. Agent won’t be able to send hyperlink mes
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption></figcaption>
-   <img src="img/markdownhyperlinkmessage.png" alt="markdownhyperlinkmessage">
+   <img loading="lazy" src="img/markdownhyperlinkmessage.png" alt="markdownhyperlinkmessage">
    </figure>
 </div>
 

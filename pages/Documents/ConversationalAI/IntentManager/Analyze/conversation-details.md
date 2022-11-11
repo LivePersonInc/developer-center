@@ -18,8 +18,8 @@ The Agent Conversations table shows a list of all conversations and associated m
 
 Under **Analyze → Conversation Details**, you can review individual conversations to conduct a detailed transcript analysis.  Click on one of the rows in the Agent Conversations table to open the transcript viewer for that conversation. Below each consumer message, you can see the intent associated with that turn in the conversation and track changes in the MCS score. Use the **Prev Intent** and **Next Intent** buttons to jump between identified intents in the conversation.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails1.png" alt="The Conversation Details tab on the Analyze page">
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails2.png" alt="Using the Prev Intent and Next Intent buttons to jump between identified intents in the conversation">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails1.png" alt="The Conversation Details tab on the Analyze page">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails2.png" alt="Using the Prev Intent and Next Intent buttons to jump between identified intents in the conversation">
 
 ### Power filters for transcript analysis
 
@@ -29,4 +29,4 @@ Simply click on a conversation to populate the transcript view.
 
 By conversations, you can see CSAT score, MCS score, turns in conversation, numbers of transfers, duration, first intents, etc.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails3.png" alt="A selected conversation with the transcript view populated">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_analyze_convdetails3.png" alt="A selected conversation with the transcript view populated">

@@ -18,13 +18,13 @@ There are two ways to log in to your Functions account using the CLI. You can us
 
 To initialize a login, either use your `lpf login` and follow the command prompt entering `accountId`, `username` and the user's `password` in succession:
 
-<img class="fancyimage" alt="Functions: cli login wizard" src="img/functions/functions_cli_login.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: cli login wizard" src="img/functions/functions_cli_login.gif">
 
 Once you have successfully logged in, the CLI will save your login information locally for easy access later on. The CLI will retain `accountId` and `username` and any valid auth token.
 
 You can sign-out using the `lpf logout` command. There are situations where you want to delete the login information completely (e.g. you want to use a different user for the same account). `lpf logout --delete` will let you altogether remove the login information of any account you select from your local machine:
 
-<img class="fancyimage" alt="Functions: cli logout and delete account data" src="img/functions/functions_cli_logout.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: cli logout and delete account data" src="img/functions/functions_cli_logout.gif">
 
 ## Install and Initialize
 
@@ -43,7 +43,7 @@ After using `npm init` to initialize your Functions folder you can use `lpf crea
 
 Let's create a function using the inline method. Before we can start, we can start using the `lpf get events` command to receive an up-to-date list of all events and their respective Ids:
 
-<img class="fancyimage" alt="Functions: cli shows list of events" src="img/functions/functions_cli_eventIds.png">
+<img loading="lazy" class="fancyimage" alt="Functions: cli shows list of events" src="img/functions/functions_cli_eventIds.png">
 
 You can now either select an event from the list or use `"No Event"` as an Id to create a function that does not react to any event. In this example, we will use:
 
@@ -116,7 +116,7 @@ Your code editor should automatically pick up the `.vscode` and `.idea` folders 
 
 Snippets should be easily activated using the code completion of your IDE like here shown for vscode:
 
-<img class="fancyimage" alt="Functions: snippets in vscode animation" src="img/functions/functions_cli_snippets.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: snippets in vscode animation" src="img/functions/functions_cli_snippets.gif">
 
 An up-to-date list of all snippets can be found in the CLI's public [GitHub repository](https://github.com/LivePersonInc/faas-cli/blob/master/bin/example/vscode/faas-snippets.code-snippets)
 
@@ -124,7 +124,7 @@ An up-to-date list of all snippets can be found in the CLI's public [GitHub repo
 
 Debugging your function on your local machine can give you valuable information about its behaviour. Use the `lpf debug YOUR_FUNCTION` command to start the debugging process. This will generate some boilerplate code around your function required by the debugger to mock specific dependencies:
 
-<img class="fancyimage" alt="Functions: use cli debugging in vscode" src="img/functions/functions_cli_debugger.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: use cli debugging in vscode" src="img/functions/functions_cli_debugger.gif">
 
 You can configure your local account set up to reflect your production account by changing the `settings.json` created during the `lpf init` of your repository. The following properties can be changed:
 
@@ -146,14 +146,14 @@ Deployment of your function is a two-step process:
 
 First, you have to upload your function to your account using the `lpf push` method:
 
-<img class="fancyimage" alt="Functions: cli push wizard" src="img/functions/functions_cli_push.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: cli push wizard" src="img/functions/functions_cli_push.gif">
 
 {: .attn-alert}
 If your function is currently in the process of being (un)deployed, we will not allow you to push and update your function.
 
 Once pushed, you can confirm its location by using the `lpf get functions | grep YOUR_FUNCTIONNAME` command. It should be in `Draft` or `Modified` state depending on whether or not the function has already been deployed in the past on your account. Next, use the command `lpf deploy FUNCTION_NAME`. This will cause the function to be (re)deployed. After a short period, you should receive the confirmation.
 
-<img class="fancyimage" alt="Functions: cli deploy wizard" src="img/functions/functions_cli_deploy.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: cli deploy wizard" src="img/functions/functions_cli_deploy.gif">
 
 {: .attn-note}
 The CLI can fail during the deployment process for reasons such as timeouts or network issues. The deployment process does not require continuous connection to your local CLI. Therefore, you should use the `lpf get functions | grep YOUR_FUNCTIONNAME` to check the state of your function before retrying.

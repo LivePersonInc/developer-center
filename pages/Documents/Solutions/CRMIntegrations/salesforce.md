@@ -291,7 +291,7 @@ Now that you’ve configured your app in Salesforce, it’s time to go back to t
 <!-- {: .attn-note}
 If your Salesforce org has My Domain feature activated, the URL for the widget should include it same as your regular URL does, and should look like this:
 
-<img src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
+<img loading="lazy" src="/img/salesforce-integration-guide-link.png" alt="https://<mydomain>.visualforce.com/apex/ChatLink"/>
 </div>
 
 **Tip:** You can stand on the Customization Settings tab, copy the first part of the URL and add to it the “ChatLink” suffix in order to ensure using the correct link.

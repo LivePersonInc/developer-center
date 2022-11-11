@@ -18,10 +18,10 @@ In this flow, the consumer will not be considered as an Authenticated Consumer w
 Delegation flow is based on OAuth 2.0 [Authorization Code Flow](https://tools.ietf.org/html/rfc6749#section-1.3.1). Access Tokens are stored within the context of the current conversation and are not shared with other conversations. Refresh Tokens are ignored and not stored. In case of an expired access token, the consumer will be re-challenged to verify his identity.
 
 High-level flow diagram:
- <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/delegation_flow.png" alt="">
+ <img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/delegation_flow.png" alt="">
 
 Example of an identity verification challange sent by a Bot:
- <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/creds_consumer_auth_2.png" alt="">
+ <img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/creds_consumer_auth_2.png" alt="">
 
 ### Why delegating consumer's access to a Bot?
 

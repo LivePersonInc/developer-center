@@ -18,31 +18,31 @@ It’s the consumer that starts things off by supplying some input: a message or
 
 As an example, the Goodbye dialog below is triggered when the bot matches the consumer’s message to some form (pattern) of “good-bye.”
 
-<img style="width:700px" src="img/ConvoBuilder/interactions_dialogStarter1.png" alt="An example dialog starter that's triggered by patterns of bye">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/interactions_dialogStarter1.png" alt="An example dialog starter that's triggered by patterns of bye">
 
 In contrast, the Billing dialog below is triggered when the bot matches the user’s message to a “Billing question” intent.
 
-<img style="width:800px" src="img/ConvoBuilder/interactions_dialogStarter2.png" alt="An example dialog starter that's triggered by a Billing question intent">
+<img loading="lazy" style="width:800px" src="img/ConvoBuilder/interactions_dialogStarter2.png" alt="An example dialog starter that's triggered by a Billing question intent">
 
 What’s an intent? An intent is a consumer request for action or info from your brand. In our example, the intent is to ask a billing question. You create intents in [Intent Manager](intent-manager-overview.html).
 
-<img style="width:800px" src="img/ConvoBuilder/interactions_dialogStarter5.png" alt="An example intent in Intent Manager, this one for a Billing question">
+<img loading="lazy" style="width:800px" src="img/ConvoBuilder/interactions_dialogStarter5.png" alt="An example intent in Intent Manager, this one for a Billing question">
 
 ### Add a dialog starter
 
 When you create a standard dialog, by default it includes a dialog starter interaction. So, typically, you don’t need to add one. But, if you delete the dialog starter, you can use the Interaction Palette to add it back. Just click the **Dialog Starter** icon.
 
-<img style="width:300px" src="img/ConvoBuilder/interactions_dialogStarter6.png" alt="The Dialog Starter tool on the Interactions tool palette">
+<img loading="lazy" style="width:300px" src="img/ConvoBuilder/interactions_dialogStarter6.png" alt="The Dialog Starter tool on the Interactions tool palette">
 
 ### Add patterns to a dialog starter
 
 1. Click the **+ Pattern** button.
 
-    <img style="width:700px" alt="The Pattern button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter7.png">
+    <img loading="lazy" style="width:700px" alt="The Pattern button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter7.png">
 
     This opens up the **Patterns & Intent** tab of the **Interaction Settings** window, where you perform the work.
 
-    <img style="width:800px" alt="The Patterns field on the Patterns and Intent tab in the Interaction Settings" src="img/ConvoBuilder/interactions_dialogStarter8.png">
+    <img loading="lazy" style="width:800px" alt="The Patterns field on the Patterns and Intent tab in the Interaction Settings" src="img/ConvoBuilder/interactions_dialogStarter8.png">
 
 2. [Enter the patterns](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) (text strings) against which to match the consumer input.
 
@@ -54,7 +54,7 @@ When you create a standard dialog, by default it includes a dialog starter inter
 
 1. Click the **+ Intent** button.
 
-   <img style="width:700px" alt="The Intent button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter9.png">
+   <img loading="lazy" style="width:700px" alt="The Intent button on the Dialog Starter interaction" src="img/ConvoBuilder/interactions_dialogStarter9.png">
 
 2. Use the [Assist tool](conversation-builder-assist.html) to associate the dialog starter with a domain. Then associate the dialog starter with an intent.
 

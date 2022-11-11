@@ -22,10 +22,10 @@ Before you can add an Integration interaction, you need to [create the integrati
 
 **To add an Integration interaction**
 
-1. Select the interaction just above where you want to add the integration, and click <img style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="Integration icon"> (Integration) on the interactions toolbar.
+1. Select the interaction just above where you want to add the integration, and click <img loading="lazy" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="Integration icon"> (Integration) on the interactions toolbar.
 2. In the interaction, select the name of the integration to invoke.
 
-    <img style="width:550px" src="img/ConvoBuilder/integrations_api.png" alt="Selecting the integration for the Integration interaction">
+    <img loading="lazy" style="width:550px" src="img/ConvoBuilder/integrations_api.png" alt="Selecting the integration for the Integration interaction">
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
@@ -36,11 +36,11 @@ It's recommended that you take advantage of the ability to define rules based on
 
 In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction…
 
- <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png" alt="Configuring a Success rule when the API call succeeds">
+ <img loading="lazy" style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png" alt="Configuring a Success rule when the API call succeeds">
 
 …so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
- <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png" alt="The rest of the dialog flow based on whether the API call succeeds or fails">
+ <img loading="lazy" style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png" alt="The rest of the dialog flow based on whether the API call succeeds or fails">
 
 ### Knowledge AI interactions
 
@@ -65,7 +65,7 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 
 When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, i.e., one of these:
 
-<img style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png" alt="The options for the Answer layout setting">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png" alt="The options for the Answer layout setting">
 
 The first two options are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
@@ -77,7 +77,7 @@ Select an answer layout based on the target channels and your requirements. (See
 
 This layout looks like this:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png" alt="How the rich layout appears to the consumer">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png" alt="How the rich layout appears to the consumer">
 
 With this layout:
 
@@ -88,11 +88,11 @@ With this layout:
 
 This layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png" alt="How the plain layout appears to the consumer in Web messaging">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png" alt="How the plain layout appears to the consumer in Web messaging">
 
 On all other channels, it looks like this:
 
-<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png" alt="How the plain layout appears to the consumer in all other channels">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png" alt="How the plain layout appears to the consumer in all other channels">
 
 With this layout:
 
@@ -107,18 +107,18 @@ In contrast, strategies that are less targeted can yield a lower answer rate. Fo
 
 #### Add a Knowledge AI interaction
 
-1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png" alt="KnowledgeAI icon"> (Knowledge AI) on the interactions toolbar.
+1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img loading="lazy" style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png" alt="KnowledgeAI icon"> (Knowledge AI) on the interactions toolbar.
 2. In the interaction, select the knowledge base to search.
 
-    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png" alt="Selecting the knowledge base to search on the KnowledgeAI interaction">
+    <img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png" alt="Selecting the knowledge base to search on the KnowledgeAI interaction">
 
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
+3. In the upper-right corner of the interaction, click <img loading="lazy" style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
 4. On the Basic tab, specify the following:
     * **Message When Results Not Found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. If you don't want this message to be sent, enter "BLANK_MESSAGE".
 5. Review the rest of the [basic settings](conversation-builder-interactions-configuration-settings.html#basic-settings), and make any changes desired.
 6. Switch to the Advanced tab, and specify the following:
 
-    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png" alt="The settings on the Advanced tab">
+    <img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png" alt="The settings on the Advanced tab">
 
     * **Min Confidence Score for Answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this [threshold](knowledgeai-search-methods.html#match-scores-and-thresholds) to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 
@@ -149,7 +149,7 @@ To display a single, best result, use the syntax below, where "variableName" is 
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png" alt="An example of using a custom answer layout to send the answer to the consumer">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png" alt="An example of using a custom answer layout to send the answer to the consumer">
 
 To iterate over and display multiple results, use the syntax below in a similar manner:
 
@@ -161,21 +161,21 @@ To iterate over and display multiple results, use the syntax below in a similar 
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png" alt="An example of how to configure things so that multiple results are iterated over and each is displayed">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png" alt="An example of how to configure things so that multiple results are iterated over and each is displayed">
 
 #### Direct the conversation flow based on the result
 
 By default, a Knowledge AI interaction includes two custom rules: one rule for when the knowledge base search returns an answer and the other rule for when the search doesn’t.
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png" alt="Custom rules in the interaction, for directing the flow based on whether a match in the knowledge base was found">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png" alt="Custom rules in the interaction, for directing the flow based on whether a match in the knowledge base was found">
 
 Within each rule, the condition specifies the particular search result, either "Found" or "Not Found."
 
-<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png" alt="Configuring the KB Result condition in the rule">
+<img loading="lazy" style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png" alt="Configuring the KB Result condition in the rule">
 
 Configure the **Next Action** for each of these rules based on the direction in which the conversation should flow in each case.
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png" alt="Configuring the next action for the rules for success and failure">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png" alt="Configuring the next action for the rules for success and failure">
 
 If you delete the **Match Not Found** rule, then when a search is performed and no answer is found, the fallback message is sent ("Sorry, I could not find anything for that."). However, if you've configured the **Message when results not found** setting in the interaction, then that message is sent instead.
 
@@ -193,14 +193,14 @@ Implementing a bot-to-bot transfer? See [this section](conversation-builder-bots
 
 #### Add an Agent Transfer interaction
 
-1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt="Agent Transfer icon"> (Agent Transfer) on the interactions toolbar.
+1. Select the interaction just above where you want to add the transfer, and click <img loading="lazy" style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png" alt="Agent Transfer icon"> (Agent Transfer) on the interactions toolbar.
 2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n.
 
     This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent…"
 
-    <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png" alt="The default message to send to the consumer, which appears on the interaction's face">
+    <img loading="lazy" style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png" alt="The default message to send to the consumer, which appears on the interaction's face">
 
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
+3. In the upper-right corner of the interaction, click <img loading="lazy" style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
 4. Select the **Advanced** tab, and specify the following:
 
     * **Agent ID**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID occurs if the agent is available. If the agent isn't available, the conversation is added to the queue for the skill specified in **Agent Skill ID** in this interaction, and the conversation is routed according to Conversational Cloud’s [Transfer to agent](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html/) rules.
@@ -256,23 +256,23 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 **To add a File Upload interaction**
 
-1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png" alt="File Upload icon"> (File Upload) on the interactions toolbar.
+1. Select the interaction just above where you want to add the File Upload interaction, and click <img loading="lazy" style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png" alt="File Upload icon"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
 
-    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png" alt="Entering the message to send to the consumer directly on the interaction's face">
+    <img loading="lazy" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png" alt="Entering the message to send to the consumer directly on the interaction's face">
 
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
-3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
+3. In the File Upload interaction, in the upper-right corner click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
     * **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
     * **Success Message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     * **Failure Message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
     * **Validation Failure Message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
     * **In-progress Message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file…"
 
-4. Immediately after the File Upload interaction, add an Integration interaction <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="Integration icon">. In the Integration interaction, select the File integration to invoke (Integration type = File).
+4. Immediately after the File Upload interaction, add an Integration interaction <img loading="lazy" class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_integration.png" alt="Integration icon">. In the Integration interaction, select the File integration to invoke (Integration type = File).
 
-    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png" alt="Adding an integration of type File">
+    <img loading="lazy" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png" alt="Adding an integration of type File">
 
     The File integration handles upload of the file from Conversational Cloud to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
@@ -348,12 +348,12 @@ Enabling the Conversation Context Service for your account is necessary because 
 
 #### Add a Dynamic Routing interaction
 
-1. Select the interaction just above where you want to perform the dynamic routing, and click <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png" alt="Dynamic Routing icon"> (Dynamic Routing) on the interactions toolbar.
+1. Select the interaction just above where you want to perform the dynamic routing, and click <img loading="lazy" class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png" alt="Dynamic Routing icon"> (Dynamic Routing) on the interactions toolbar.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png" alt="">
+    <img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png" alt="">
 
 2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can [define and prioritize your routing policies](conversation-orchestrator-dynamic-routing-managing-routing-policies.html) if you haven’t done so already.
-3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
+3. In the upper-right corner of the interaction, click <img loading="lazy" style="width:20px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
 4. On the **Basic** tab, specify the following:
 
     * **Fallback Skill ID**: If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value. If this setting isn’t set, the conversation flow continues to the next action in the dialog.
@@ -407,11 +407,11 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 #### Interaction configuration
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png" alt="The default state of the Apple Pay interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png" alt="The default state of the Apple Pay interaction">
 <br>
-<img style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png" alt="How the interaction is rendered to the consumer">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png" alt="How the interaction is rendered to the consumer">
 <br>
-<img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png" alt="Another view of how the interaction renders to the consumer">
+<img loading="lazy" style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png" alt="Another view of how the interaction renders to the consumer">
 
 ##### Tile settings
 
@@ -426,7 +426,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 ##### Advanced interaction settings
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png" alt="The Advanced settings in an Apple Pay interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png" alt="The Advanced settings in an Apple Pay interaction">
 
 **Merchant Information**
 

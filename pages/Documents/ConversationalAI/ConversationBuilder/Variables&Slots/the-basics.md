@@ -40,7 +40,7 @@ To reference variables and slots and thereby insert dynamic values in interactio
 
 When you define a variable or slot, you specify how long to keep the stored data.
 
-<img width="800" src="img/ConvoBuilder/variablesSlotsDuration.png" alt="The options for specifying a duration">
+<img loading="lazy" width="800" src="img/ConvoBuilder/variablesSlotsDuration.png" alt="The options for specifying a duration">
 
 There are three options for the duration:
 

@@ -17,11 +17,11 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 ### Access the Conversational AI applications
 
 1. Log into Conversational Cloud.
-2. On the left sidebar, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt="The Conversational AI icon"> icon.
+2. On the left sidebar, click the <img loading="lazy" class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt="The Conversational AI icon"> icon.
 
 This displays the dashboard of applications.
 
-<img class="fancyimage" alt="The page that displays the access points to all of the applications in the Conversational AI suite" style="width:800px" src="img/ConvoBuilder/platform_main.png">
+<img loading="lazy" class="fancyimage" alt="The page that displays the access points to all of the applications in the Conversational AI suite" style="width:800px" src="img/ConvoBuilder/platform_main.png">
 
 ### Before you begin
 

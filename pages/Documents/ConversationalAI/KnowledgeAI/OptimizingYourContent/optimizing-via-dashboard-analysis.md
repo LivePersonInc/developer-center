@@ -18,13 +18,13 @@ This article orients you to a few things you can do with the KnowledgeAI analyti
 
 Take note of the alerts and warnings in the upper-right corner. These let you know about potential issues that need your attention, such as when a knowledge base is incomplete or  underperforming.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_alertswarnings.png" alt="Example alerts and warnings">
+<img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_alertswarnings.png" alt="Example alerts and warnings">
 
 ### Identify usage and tuning opportunities
 
 To find opportunities to answer questions in conversations, evaluate the **Bot conversations using answers** panel:
 
-<img style="width:800px" src="img/ConvoBuilder/kb_botconvsusinganswers.png" alt="Example metrics on bot conversations using answers">
+<img loading="lazy" style="width:800px" src="img/ConvoBuilder/kb_botconvsusinganswers.png" alt="Example metrics on bot conversations using answers">
 
 This data shows you how well KnowledgeAI is supporting automated consumer conversations. It helps you to see the opportunities to better leverage answers in your conversations. For example:
 
@@ -42,7 +42,7 @@ This data shows you how well KnowledgeAI is supporting automated consumer conver
 
     To progress here, check out the **Knowledge base usage** panel next.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_kbusage.png" alt="Example metrics on knowledge base usage">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_kbusage.png" alt="Example metrics on knowledge base usage">
 
     Look at the “Top 5” knowledge bases to see the high-level performance for your most active knowledge bases. A low rate of responses to queries indicates that consumers are asking questions that aren’t supported by the knowledge base. In cases like these, add answers or enhance your intents.
 
@@ -56,7 +56,7 @@ The **Active articles** panel identifies:
 * The 5 articles that were served the least number of times
 * For each article, the retrieval method (intent-based match or text-based search) that was used to return the article
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_activearticles.png" alt="Example metrics on active articles">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_activearticles.png" alt="Example metrics on active articles">
 
 Use this information to help improve answer performance.
 
@@ -72,7 +72,7 @@ On the Home dashboard and the individual knowledge base dashboards, you’ll see
 
 #### Active, Idle and Incomplete
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_kbsummary.png" alt="Knowledge base status that are shown in the Knowledge base summary pie chart">
+<img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_kbsummary.png" alt="Knowledge base status that are shown in the Knowledge base summary pie chart">
 
 * **Active**: Configuration of the knowledge base is complete, and the knowledge base has been used in the last 7 days. By “used,” we mean that it has powered answers to consumers in bot conversations (via a Conversation Builder integration) and/or served recommended answers to agents (via a Conversation Assist integration).
 * **Idle**: Configuration of the knowledge base is complete, but the knowledge base hasn’t been used in the last 7 days.

@@ -23,11 +23,11 @@ Rich link configurable content includes:
 
 *Consumer view of rich links template*
 
-<img src="img/link_preview_abc0.jpg" style="width:300px" alt="consumer view">
+<img loading="lazy" src="img/link_preview_abc0.jpg" style="width:300px" alt="consumer view">
 
 *Agent view of rich links template*
 
-<img src="img/link_preview_abc1.png" style="width:400px" alt="agent view">
+<img loading="lazy" src="img/link_preview_abc1.png" style="width:400px" alt="agent view">
 
 ### Example Template
 

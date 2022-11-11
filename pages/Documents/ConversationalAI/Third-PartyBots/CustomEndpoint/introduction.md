@@ -73,7 +73,7 @@ To complete the Custom Endpoint vendor configuration step, please ensure you hav
 
 Once you have completed the prerequisite for Vendor configuration you can continue with the wizard.
 
-<img class="fancyimage" style="width:600px" src="img/customendpoint/custom-endpoint-wizard.png">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/customendpoint/custom-endpoint-wizard.png">
 
 Figure 1.1 Custom Endpoint Vendor Step
 
@@ -143,7 +143,7 @@ Common use cases of the Custom Endpoint bot Test Connection failure can be the f
 
 You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
 
-<img class="fancyimage" style="width:600px" src="img/customendpoint/test-connection-failed.png">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/customendpoint/test-connection-failed.png">
 
 Figure 1.4 Showing the failure case when testing the connection.
 

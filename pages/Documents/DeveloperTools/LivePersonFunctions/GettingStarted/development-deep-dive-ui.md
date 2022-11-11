@@ -16,7 +16,7 @@ When you use the LivePerson Functions platform for the first time please make su
 ### Creation Process
 
 Head to the function management view using the "Lambda" icon in the side panel on the left-hand side to create new functions. Here you can see all available functions on the account and their current state.
-<img class="fancyimage" alt="Functions: invoke function" src="img/functions/functions_select_invoke.png">
+<img loading="lazy" class="fancyimage" alt="Functions: invoke function" src="img/functions/functions_select_invoke.png">
 A function can behold the following states:
 
 * **Draft:** function is not yet deployed
@@ -40,7 +40,7 @@ If you want a function to be triggered only by specific skills, you may choose t
 
 By default, the function will respond to all skills. The maximum number of skills is **50**.
 
-<img src="img/functions/functions_select_skill.png" alt="Functions: select multiple skill" style="width:100%;"/>
+<img loading="lazy" src="img/functions/functions_select_skill.png" alt="Functions: select multiple skill" style="width:100%;"/>
 
 {: .attn-alert}
 The drop-down menu is always disabled if the selected function template is not an Automatic Messages template.
@@ -76,7 +76,7 @@ Next, ensure that you allowlisted the correct domain when working with subdomain
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. Be aware that we only support one wildcard in the domain, so `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_allowlist_step.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Add allowlist step" src="img/functions/functions_add_allowlist_step.png">
 
 The domain is added by inserting it and clicking the "Add"-button next to the input field. Once it is saved, it will be reflected in the domain list below.
 
@@ -87,13 +87,13 @@ Adding a domain might take up to to 5 minutes until being "active"
 
 In this final step, you will need to provide a name and a description of your function. Names within an account need to be unique.  Provide a meaningful description of what your function does in the "Description" field.
 
-<img class="fancyimage" alt="Functions: name and approve function creation" src="img/functions/functions_name_function.png">
+<img loading="lazy" class="fancyimage" alt="Functions: name and approve function creation" src="img/functions/functions_name_function.png">
 
 ### Deployment Process
 
 The deployment process is started by pressing on the three dots next to the function you like to deploy. In the context menu, please select "Deploy Function". Once you press the button, you will be presented with the deployment review dialogue. Here you have a final chance to see which code will be deployed.
 
-<img class="fancyimage" alt="Functions: approve deployment" src="img/functions/functions_approve_deployment.png">
+<img loading="lazy" class="fancyimage" alt="Functions: approve deployment" src="img/functions/functions_approve_deployment.png">
 
 As mentioned previously, a deployment can encounter an error either in the build or deployment stage. In both cases, please attempt a retry after a couple of minutes to see if the issue persists.
 
@@ -101,7 +101,7 @@ As mentioned previously, a deployment can encounter an error either in the build
 
 To test your function, you can leverage our test invocation. Press the "Play"-button next to your deployed function to use it.
 
-<img class="fancyimage" alt="Functions: modify invocation payload" src="img/functions/functions_modify_payload.png">
+<img loading="lazy" class="fancyimage" alt="Functions: modify invocation payload" src="img/functions/functions_modify_payload.png">
 
 The displayed payload will be different based on the event you selected initially. You can modify the payload before performing the invocation. This enables you to test and debug edge cases within your function.
 
@@ -125,7 +125,7 @@ The debugger allows you to simulate and analyse an invocation within the Functio
 
 Start working with the debugger by navigating the *Debug* tab Functions Editor sidebar. From there, you have several options:
 
-<img class="fancyimage" alt="Functions: debugger overview" src="img/functions/functions_ui_debugger.png">
+<img loading="lazy" class="fancyimage" alt="Functions: debugger overview" src="img/functions/functions_ui_debugger.png">
 
 * **Code**: Here, you can set breakpoints and your execution current position.
 * **Debug Sidebar**: Change the debug payload and control the debug execution.
@@ -133,7 +133,7 @@ Start working with the debugger by navigating the *Debug* tab Functions Editor s
 
 Before you start debugging your function, you might want to modify the debug input/payload for your function:
 
-<img class="fancyimage" alt="Functions: debugger overview" src="img/functions/functions_ui_debugger_payload.png">
+<img loading="lazy" class="fancyimage" alt="Functions: debugger overview" src="img/functions/functions_ui_debugger_payload.png">
 
 We supply each event with a default payload that can be used without modification but might not give you deep insights into the behaviour of your functions.
 
@@ -142,7 +142,7 @@ Payloads are not saved on the server. Make sure to keep your payload locally if 
 
 Once you are inside the *debug* tab, you can place breakpoints as you'd expect in any IDE. Breakpoints will halt the debug execution as expected in your local environment. Breakpoints can be set before or during a debugging session by clicking on the space left of the line numbers.
 
-<img class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_sidebar.png">
+<img loading="lazy" class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_sidebar.png">
 
 To start a debugging session, click the Start Debugger"-button. This step will create a debugging session and takes a few moments to prepare the enviroment. Once the debugging session is created, you have four options:
 
@@ -158,7 +158,7 @@ During the execution, the easiest way to analyse the state of the execution is u
 
 For additional information, the debug output will print out any ``console`` commands and the invocation result. Unlike an actual invocation, the ``console.debug`` commands will also be logged during a debugging session.
 
-<img class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_output.png">
+<img loading="lazy" class="fancyimage" alt="Functions: debugger sideview" src="img/functions/functions_ui_debugger_output.png">
 
 Once you close the editor, the debugging session will be closed.
 
@@ -166,27 +166,27 @@ Once you close the editor, the debugging session will be closed.
 
 Our editor is based on [Monaco](https://microsoft.github.io/monaco-editor/), offering you access to a variety of its features. The context menu is most notable, which will provide you with access to snippets, general code suggestions, and context-aware code suggestions.
 
-<img class="fancyimage" alt="Functions: context menu in action" src="img/functions/functions_editor_context_menu.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: context menu in action" src="img/functions/functions_editor_context_menu.gif">
 
 You can access a menu that allows basic code navigation and access to replacement/renaming functionality by right-clicking. You can also leverage this menu to reach the command palette, which offers a variety of features.
 
-<img class="fancyimage" alt="Functions: access command palette" src="img/functions/functions_editor_access_palette.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: access command palette" src="img/functions/functions_editor_access_palette.gif">
 
 To update the skills on an existing function, you will find the skills drop-down menu inside the General information accordion menu on the right side of the code Editor. Updating skills does not require redeployment. The change is reflected within 5 minutes after saving.
 
-<img src="img/functions/functions_select_skill_edit.png" alt="Functions: select multiple skill" style="width:100%;"/>
+<img loading="lazy" src="img/functions/functions_select_skill_edit.png" alt="Functions: select multiple skill" style="width:100%;"/>
 
 ##### Code Navigation
 
 You can leverage code navigation offered within the editor. Right-Click on functions or variables that allow you to show references or definitions. Further, you can also change all occurrences from here or rename the symbol. Some of the functionalities have shortcuts that are displayed. Please be aware that macOS users might need to include the `fn` key when using the displayed shortcuts.
 
-<img class="fancyimage" alt="Functions: code navigation menu" src="img/functions/functions_editor_left_click_menu.png">
+<img loading="lazy" class="fancyimage" alt="Functions: code navigation menu" src="img/functions/functions_editor_left_click_menu.png">
 
 ##### Snippets
 
 We added our snippets to the context service, accessible by typing in `Snippet` and activating the context menu with `Control + Space`. Each available snippet will include everything needed to run it (including the imports). Hence you might want to remove the imports if you have already performed them before. Also important to consider is that if a template is generated with a `try-catch`, you must assume that the code may throw errors, so do not forget to handle the error.
 
-<img class="fancyimage" alt="Functions: snippets in action" src="img/functions/functions_editor_snippet.gif">
+<img loading="lazy" class="fancyimage" alt="Functions: snippets in action" src="img/functions/functions_editor_snippet.gif">
 
 ##### Code Documentation and Types
 
@@ -194,6 +194,6 @@ Our internal runtime library, the [Toolbelt](liveperson-functions-foundations-fe
 
 Further, that information is also extended to function, parameters, and objects you specify within your code.
 
-<img class="fancyimage" alt="Functions: code navigation menu" src="img/functions/functions_editor_jsdoc.png">
+<img loading="lazy" class="fancyimage" alt="Functions: code navigation menu" src="img/functions/functions_editor_jsdoc.png">
 
 Please be aware that types are usually derived based on assignments or your definitions, but they are not checked. This implies that having a variable initially assigned a number will not fail if you assign it a string later.

@@ -18,7 +18,7 @@ A post-conversation survey bot lets you collect feedback from consumers at the e
 
 Use a post-conversation survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
 
-<img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png" alt="An example survey as seen in the Preview tool">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/surveyBot_example.png" alt="An example survey as seen in the Preview tool">
 
 See also this [in-depth introduction to surveys and survey metrics](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
 
@@ -109,11 +109,11 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 
     This creates a survey bot that includes a single dialog of type "Survey" (that's also named "survey" by default). Define the survey in this dialog.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_newSurvey.png" alt="The Survey dialog, with a pointer to the dialog name and a pointer to the survey-specific interactions on the Interactions tool palette">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_newSurvey.png" alt="The Survey dialog, with a pointer to the dialog name and a pointer to the survey-specific interactions on the Interactions tool palette">
 
     For easy visibility, in the dashboard that lists your bots, the skill(s) assigned to a survey bot are listed beneath the bot name.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_dashboard.png" alt="A survey bot as it appears on the Bots dashboard, with the assigned skill name just below the bot name">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_dashboard.png" alt="A survey bot as it appears on the Bots dashboard, with the assigned skill name just below the bot name">
 
 ### Build out the survey bot
 
@@ -123,29 +123,29 @@ In the dialog that's of type "Survey," define the survey. There are several type
 
 This question is used to measure operational efficiency in resolving consumer issues. This interaction asks a standard FCR question: *Were you able to resolve your inquiry today?* Feedback on this helps you to measure and improve agent/bot and skill performance.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png" alt="An example of a First Call Resolution interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png" alt="An example of a First Call Resolution interaction">
 
 #### Customer Satisfaction (CSAT)
 
 Customer Satisfaction (CSAT) metrics are used to measure the frequency at which your brand meets or exceeds consumer expectations. This interaction asks a standard CSAT question: *How would you rate your overall satisfaction with the service you received?*
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png" alt="An example of a Customer Satisfaction interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png" alt="An example of a Customer Satisfaction interaction">
 
 #### Net Promoter Score (NPS)
 
 Net Promoter Score (NPS) metrics are commonly used to measure the loyalty of a consumer to a brand. This interaction asks a standard NPS question: *Based on your experience today, how likely are you to recommend us to a friend or colleague?*
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png" alt="An example of a Net Promoter Score interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png" alt="An example of a Net Promoter Score interaction">
 
 #### Closed-ended, custom
 
 A closed-ended question is a multiple choice question that has a custom, predefined list of answer choices. Use this interaction when you need quantifiable data and want to categorize your consumers.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png" alt="An example of a closed-end, custom interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png" alt="An example of a closed-end, custom interaction">
 
 In the closed-ended question, every answer choice has two values:
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png" alt="The Text value and Reporting value for an answer choice in a closed-ended, custom interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed2.png" alt="The Text value and Reporting value for an answer choice in a closed-ended, custom interaction">
 
 * **Text value**: This value is shown to the consumer as the answer choice.
 * **Reporting value**: When the answer choice is selected by the consumer, this value is reported in Analytics Builder and the Messaging Interactions API.
@@ -156,7 +156,7 @@ As you can see from the Acknowledgment checkbox in the image above, changing the
 
 An open-ended question allows the consumer to provide an answer in their own words, instead of being constrained by a predefined list of answer choices. Use this interaction when you want to offer the opportunity for this type of free-form feedback.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png" alt="An open-ended, custom interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png" alt="An open-ended, custom interaction">
 
 #### All survey questions
 
@@ -164,8 +164,8 @@ An open-ended question allows the consumer to provide an answer in their own wor
 * Have a limit of 256 characters for the survey question.
 * Support any emojis. Just copy and paste them in, but remember to update the rules accordingly.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji1.png" alt="An example of emoji use in a Customer Satisfaction interaction">
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji2.png" alt="An example of updating the rules accordingly in the interaction when its changed to use emojis">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji1.png" alt="An example of emoji use in a Customer Satisfaction interaction">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji2.png" alt="An example of updating the rules accordingly in the interaction when its changed to use emojis">
 
 #### FCR, CSAT and NPS questions
 
@@ -187,7 +187,7 @@ You can customize the question text and the answer choice text for the FCR, CSAT
 
 When working with the answer choices, if you move your mouse over an answer, you can see both the answer text (text value) and the actual, underlying value that’s reported to [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png" alt="The tooltip that shows the Text value and Actual value for an answer choice when you move your mouse over an answer">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png" alt="The tooltip that shows the Text value and Actual value for an answer choice when you move your mouse over an answer">
 
 The actual value never changes, not even when you change the answer text (text value).
 
@@ -200,7 +200,7 @@ Reordering an answer choice has no impact on its text value or actual value. You
 
 To reorder an answer choice, select it so that it’s in focus, and click the “<” (Previous) or “>” (Next) button.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png" alt="The left and right arrow buttons you can use to reorder answer choices">
+<img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png" alt="The left and right arrow buttons you can use to reorder answer choices">
 
 Alternatively, you can use the hotkeys:
 
@@ -211,7 +211,7 @@ Alternatively, you can use the hotkeys:
 
 To add a Skip option to an FCR, CSAT or NPS question and thereby make the question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png" alt="The Skip option you can turn on to make a survey question optional">
+<img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png" alt="The Skip option you can turn on to make a survey question optional">
 
 Clicking **Skip** automatically adds a custom rule for the "skip" response, so you can build out the survey logic as you require.
 
@@ -236,7 +236,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 * **Button**: Select this to send the answer choices as buttons in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
 * **Do not display**: Select this to hide the answer choices in *all* channels. Only the survey question will be sent to the consumer. If you select this, the **List Style for Choices** setting plays no role.
 
-<img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png" alt="An illustration of the visual rendering of quick replies versus buttons, for comparison purposes">
+<img loading="lazy" style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png" alt="An illustration of the visual rendering of quick replies versus buttons, for comparison purposes">
 
 2 — The **Choices per Row** setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row in the Web Messaging channel. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows. **Important**: Used in Web messaging only. In all other channels, all choices are on 1 row.
 
@@ -253,7 +253,7 @@ The handling of free text answers works in a survey bot just like it does in a c
 
 In the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png" alt="The Message When Response Unrecognized field in the Advanced settings of a survey interaction">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png" alt="The Message When Response Unrecognized field in the Advanced settings of a survey interaction">
 
 You can customize the default fallback responses in the survey interactions.
 
@@ -265,7 +265,7 @@ You can use only a subset of the standard interaction types in the Survey dialog
 
 ### Configure the survey bot's settings
 
-1. Open the survey bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+1. Open the survey bot, and click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png" alt="Three-dot icon"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
 2. Select **Bot Settings**.
 3. Configure the survey bot settings as needed; these are described below.
 4. [Configured other bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) as needed.
@@ -284,13 +284,13 @@ Survey bot settings include:
 
 If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_offerTranscript.png" alt="An example conversation with the consumer where the consumer is offered an emailed transcript">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_offerTranscript.png" alt="An example conversation with the consumer where the consumer is offered an emailed transcript">
 
 There are a few steps involved in the setup.
 
 First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), enable the **Email Transcript** bot setting. This adds an Email Transcript survey interaction to the end of the survey dialog.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email1.png" alt="The Email Transcript survey interaction that gets added to the end of the dialog">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email1.png" alt="The Email Transcript survey interaction that gets added to the end of the dialog">
 
 (Disabling the bot setting removes the Email Transcript interaction from the dialog. And if you manually delete the interaction, this disables the bot setting.)
 
@@ -299,7 +299,7 @@ Second, configure the Email Transcript interaction:
 * Change the message text and the label for the Decline button as desired.
 * Configure the interaction's basic and advanced settings. Most notably, specify the **Sender Name** and **Sender Email**. These are the name and email address from whom the consumer receives the email.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png" alt="The settings in the Email Transcript interaction for specifying the sender name and sender email address">
+    <img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png" alt="The settings in the Email Transcript interaction for specifying the sender name and sender email address">
 
 * Keep the Next Action as "Close Dialog" (which is the default) to close the conversation if appropriate.
 
@@ -312,13 +312,13 @@ Note the following:
 
 If desired, you can add support for sending a Thank You message to the consumer at the end of the survey.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_thanks1.png" alt="An example conversation where the consumer is thanked by the survey bot">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_thanks1.png" alt="An example conversation where the consumer is thanked by the survey bot">
 
 There are a few steps involved in the setup.
 
 First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), enable the **Thank You Message** bot setting. This adds a Thank You Message interaction to the end of the survey dialog.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_thanks2.png" alt="An example of a Thank You Message interaction that gets added to the end of the dialog">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_thanks2.png" alt="An example of a Thank You Message interaction that gets added to the end of the dialog">
 
 (Disabling the bot setting removes the Thank You Message interaction from the dialog. And if you manually delete the interaction, this disables the bot setting.)
 
@@ -345,7 +345,7 @@ You don't manually deploy a survey bot. When LivePerson enables this feature for
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes, the survey will be triggered, and the agent workspace will show the caption, “Survey in progress.”
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png" alt="The Survey in progress indicator in the Agent Workspace">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png" alt="The Survey in progress indicator in the Agent Workspace">
 
 While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next action) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
 
@@ -353,17 +353,17 @@ While the survey is active the agent won’t be able to write in the conversatio
 
 Once a conversation ends and a survey begins, the conversation no longer appears in the **Open Conversations** list in Conversational Cloud. Instead, it appears in the **All Conversations** list with a status that indicates the survey is in progress:
 
-<img class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png" alt="The All Conversations list with a pointer to the status icon that indicates a survey is in progress for the conversation">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png" alt="The All Conversations list with a pointer to the status icon that indicates a survey is in progress for the conversation">
 
 If an agent has permissions to view survey results, the agent can see the survey transcript.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/surveyBot_agent2.png" alt="An example of the survey transcript that the agent can see">
+<img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/surveyBot_agent2.png" alt="An example of the survey transcript that the agent can see">
 
 ### The manager experience
 
 In the **Conversations panel** of the **Manager Workspace**, managers can view the survey scores (CSAT and NPS only) for all conversations shown.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_manager1.png" alt="The survey metrics that the agent manager can see in the Manager Workspace">
+<img loading="lazy" class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_manager1.png" alt="The survey metrics that the agent manager can see in the Manager Workspace">
 
 ### Reporting
 

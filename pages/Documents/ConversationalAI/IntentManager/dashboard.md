@@ -15,7 +15,7 @@ The Intent Manager dashboard is the landing page you are taken to after accessin
 
 From the dashboard, you can control settings and quickly navigate to the Discover, Build, Optimize, and Analyze sections of Intent Manager for each domain.
 
-<img class="fancyimage" alt="The Intent Manager dashboard" style="width:800px" src="img/ConvoBuilder/im_dashboard1.png" alt="">
+<img loading="lazy" class="fancyimage" alt="The Intent Manager dashboard" style="width:800px" src="img/ConvoBuilder/im_dashboard1.png" alt="">
 
 ### Domain list
 

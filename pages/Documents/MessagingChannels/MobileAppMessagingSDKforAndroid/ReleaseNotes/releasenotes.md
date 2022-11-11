@@ -237,8 +237,8 @@ The Android Mobile Messaging SDK version 5.8.0 uses:
 ## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+    <img loading="lazy" src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img loading="lazy" src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
 </div>
 
 {: .attn-alert}
@@ -247,8 +247,8 @@ ScheduleSlotList JSON schema is only supported on accounts using UMS version 4.2
 ## [Date Picker](mobile-sdk-and-web-templates-date-picker-template.html) now supports Dark Mode.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/android_datepicker_single_darkmode.png" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="/img/android_datepicker_range_darkmode.png" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img loading="lazy" src="/img/android_datepicker_single_darkmode.png" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img loading="lazy" src="/img/android_datepicker_range_darkmode.png" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs fixed
@@ -319,8 +319,8 @@ The Android Mobile Messaging SDK version 5.7.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img loading="lazy" src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img loading="lazy" src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs fixed
@@ -377,8 +377,8 @@ repositories {
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img loading="lazy" src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img loading="lazy" src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {: .attn-note}
@@ -754,7 +754,7 @@ The Android Mobile Messaging SDK version 5.3.0 uses:
 
 Users using the enhanced Agent Workspace have the ability to share hyperlinks with consumers during a messaging conversation. Now, they can share it with consumers that are messaging over the Mobile SDK.
 
-<img src="img/mobilesdkhyperlinkandroidversion5_3.png" alt="mobilesdkhyperlinkandroid" height="600px">
+<img loading="lazy" src="img/mobilesdkhyperlinkandroidversion5_3.png" alt="mobilesdkhyperlinkandroid" height="600px">
 
 ### How to enable
 
@@ -1072,8 +1072,8 @@ The Android Mobile Messaging SDK version 4.10.0 uses:
 ## Schedule Slot List allows brand agents to send the Structured Content to consumers to share available appointment slots within in-app messaging. [Here](mobile-sdk-and-web-templates-schedule-slot-list-template.html) is the Schedule Slot List Template.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
+    <img loading="lazy" src="/img/AndroidAppointmentSlotGif1.gif" alt="Schedule Slot List Dark Mode" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img loading="lazy" src="/img/AndroidAppointmentSlotGif2.gif" alt="Schedule Slot List Light Mode" style="width: 30%;height: auto;">
 </div>
 
 {: .attn-alert}
@@ -1150,8 +1150,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img loading="lazy" src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img loading="lazy" src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs fixed
@@ -1206,8 +1206,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img loading="lazy" src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img loading="lazy" src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {: .attn-note}
@@ -1603,7 +1603,7 @@ The Android Mobile Messaging SDK version 4.5.0 uses:
 
 Users using the enhanced Agent Workspace have the ability to share hyperlinks with consumers during a messaging conversation. Now, they can share it with consumers that are messaging over the Mobile SDK.
 
-<img src="img/mobilesdkhyperlinkandroid.png" alt="mobilesdkhyperlinkandroid" height="600px">
+<img loading="lazy" src="img/mobilesdkhyperlinkandroid.png" alt="mobilesdkhyperlinkandroid" height="600px">
 
 ### How to enable
 
@@ -2088,7 +2088,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ##### How photo and file sharing works
 
-<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img loading="lazy" src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 ---
 
@@ -3402,7 +3402,7 @@ The new parameters may control text, padding of conversation UI elements and mor
  <td>The configuration to change the Brand name / Agent name text color in the header
 </td>
  <td>Black</td>
- <td><img src="img/android_brandname_color.png"></td>
+ <td><img loading="lazy" src="img/android_brandname_color.png"></td>
  </tr>
  <tr>
  <td>&lt;bool name="show_agent_typing_in_message_bubble"&gt;false&lt;/bool&gt;</td>
@@ -3415,14 +3415,14 @@ The new parameters may control text, padding of conversation UI elements and mor
 </td>
  <td>false
 </td>
-<td><img src="img/android_agent_typing_bubble.png"></td>
+<td><img loading="lazy" src="img/android_agent_typing_bubble.png"></td>
  </tr>
  <tr>
  <td>lp_messaging_ui_typing_animation_frames.xml
 </td>
  <td>In case the brand wants to present a different animation / different image resources. They may create a file named "lp_messaging_ui_typing_animation_frames.xml", this will override the SDK's original animation.</td>
  <td>LivePerson animation</td>
- <td><img src="img/android_custom_agent_typing_bubble.png.png"></td>
+ <td><img loading="lazy" src="img/android_custom_agent_typing_bubble.png.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_send_disabled.xml</td>
@@ -3433,14 +3433,14 @@ The brand create a drawable file named "lpinfra_ui_ic_send_disabled.xml" which w
 Please notice that in order to display an image instead of a text the boolean
 use_send_image_button
 should be set to true</td>
- <td><img src="img/android_disabled_send_button.png"></td>
+ <td><img loading="lazy" src="img/android_disabled_send_button.png"></td>
  </tr>
  <tr>
  <td>lpmessaging_ui_ic_gallery.xml
 </td>
  <td> In order to replace the existing add image from library button (photo sharing). The brand may create a drawable file named "lpmessaging_ui_ic_gallery.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="img/android_gallery_button.png"></td>
+ <td><img loading="lazy" src="img/android_gallery_button.png"></td>
  </tr>
  <tr>
  <td>lpmessaging_ui_ic_camera.xml
@@ -3448,7 +3448,7 @@ should be set to true</td>
  <td>In Order to replace the add image from camera button (photo sharing), the brand may create a drawable file named "lpmessaging_ui_ic_camera.xml" which will override the SDK's default drawable.
 </td>
  <td>LivePerson image</td>
- <td><img src="img/android_camera_button.png"></td>
+ <td><img loading="lazy" src="img/android_camera_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_attach.xml
@@ -3456,20 +3456,20 @@ should be set to true</td>
  <td>In case the brand wants to display a different drawable for opening the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_attach.xml" which will override the SDK's default drawable.
 </td>
  <td>LivePerson image</td>
- <td><img src="img/android_attach_button.png"></td>
+ <td><img loading="lazy" src="img/android_attach_button.png"></td>
  </tr>
  <tr>
  <td>lpinfra_ui_ic_close.xml</td>
  <td>In case the brand wants to display a different drawable for closing the photo-sharing menu tab. They may create a drawable file named "lpinfra_ui_ic_close.xml" which will override the SDK's default drawable.</td>
  <td>LivePerson image</td>
- <td><img src="img/android_ps_close_button.png"></td>
+ <td><img loading="lazy" src="img/android_ps_close_button.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="button_corner_radius"&gt;30dp&lt;/dimen&gt;
 </td>
  <td>Makes CSAT Yes/No and Submit buttons corner radiuses customizable (through dimens.xml).</td>
  <td>30dp</td>
- <td><img src="img/android_csat_yesno_radius.png"></td>
+ <td><img loading="lazy" src="img/android_csat_yesno_radius.png"></td>
  </tr>
  </tbody>
 </table>
@@ -3619,62 +3619,62 @@ New parameters may control text, padding of conversation UI elements and more.
  <tr>
  <td>&lt;dimen name="sticky_timestamp_text_size"&gt;@dimen/small_text_size</dimen></td>
  <td>Defines the Date Separator font text size.</td>
- <td><img src="img/android_sticky_timestamp_text_size.png"></td>
+ <td><img loading="lazy" src="img/android_sticky_timestamp_text_size.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="sticky_timestamp_margin_top">8dp</dimen></td>
  <td>Defines the Date Separator top spacing.</td>
- <td><img src="img/android_sticky_timestamp_margin_top.png"></td>
+ <td><img loading="lazy" src="img/android_sticky_timestamp_margin_top.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="avatar_margin_leading"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar leading spacing (from the left edge to the avatar).</td>
- <td><img src="img/android_avatar_margin_leading.png"></td>
+ <td><img loading="lazy" src="img/android_avatar_margin_leading.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="avatar_margin_trailing"&gt;@dimen/margin_regular</dimen></td>
  <td>Defines the remote avatar Trailing spacing (from the avatar to the bubble).</td>
- <td><img src="img/android_avatar_margin_trailing.png"></td>
+ <td><img loading="lazy" src="img/android_avatar_margin_trailing.png"></td>
  </tr>
  <tr>
  <td>
   &lt;color name="enter_message_top_separator_color"&gt;@android:color/darker_gray&lt;/color&gt;</td>
  <td>Input TextView top border color. The default color is clear.</td>
- <td><img src="img/android_enter_message_top_separator_color.png"></td>
+ <td><img loading="lazy" src="img/android_enter_message_top_separator_color.png"></td>
  </tr>
  <tr>
  <td>&lt;bool name="enter_message_divider_visible"&gt;false&lt;/bool&gt;
 </td>
  <td>Determine if the Enter Message edit text divider is visible or not.</td>
- <td><img src="img/android_enter_message_divider_visible.png"></td>
+ <td><img loading="lazy" src="img/android_enter_message_divider_visible.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size</dimen>
 </td>
  <td>Defines the Resolved system message text size.</td>
- <td><img src="img/android_bubble_system_resolved_text_size.png"></td>
+ <td><img loading="lazy" src="img/android_bubble_system_resolved_text_size.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half</dimen></td>
  <td>Defines the Resolved system message padding.</td>
- <td><img src="img/android_bubble_system_resolved_padding.png"></td>
+ <td><img loading="lazy" src="img/android_bubble_system_resolved_padding.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_line_spacing">0dp</dimen>
 </td>
  <td>Defines the Resolved system message line spacing.</td>
- <td><img src="img/android_bubble_system_resolved_line_spacing.png"></td>
+ <td><img loading="lazy" src="img/android_bubble_system_resolved_line_spacing.png"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_separator_padding_bottom"&gt;@dimen/margin_half</dimen>
 </td>
  <td>Defines the Resolved system message Separator padding.</td>
- <td><img src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
+ <td><img loading="lazy" src="img/android_bubble_system_resolved_separator_padding_bottom.png"></td>
  </tr>
  <tr>
  <td>&lt;drawable name="lp_progress_bar_image"&gt;&lt;/drawable&gt;</td>
  <td>Defines the Progress bar image. If empty, the default Progress bar appears.</td>
- <td><img src="img/android_lp_progress_bar_image.png"></td>
+ <td><img loading="lazy" src="img/android_lp_progress_bar_image.png"></td>
  </tr>
  </tbody>
 </table>
@@ -3739,72 +3739,72 @@ New parameters may control text, padding of conversation UI elements and more.
  <tr>
  <td>&lt;color name="lp_header_background_color"&gt;@android:color/white (#FFFFFF)</td>
  <td>Day/date sticky header background color.</td>
- <td><img src="img/androidheaderbackground.png" alt="androidheaderbackground"></td>
+ <td><img loading="lazy" src="img/androidheaderbackground.png" alt="androidheaderbackground"></td>
  </tr>
  <tr>
  <td>&lt;color name="lp_header_text_color"&gt;@color/lp_dark_gray_1 (#46474a)</td>
  <td>Day/date sticky header text color.</td>
- <td><img src="img/androidtextcolor.png" alt="androidtextcolor"></td>
+ <td><img loading="lazy" src="img/androidtextcolor.png" alt="androidtextcolor"></td>
  </tr>
  <tr>
  <td>&lt;color name="lp_textColorSecondary"&gt;@android:color/black (#000000)</td>
  <td>Color of menu button and back arrow on toolbar (Activity Mode).</td>
- <td><img src="img/textcolorsecondary.png" alt="lp_textColorSecondary"></td>
+ <td><img loading="lazy" src="img/textcolorsecondary.png" alt="lp_textColorSecondary"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="brand_bubble_padding_bottom"&gt;8dp</td>
  <td>Brand welcome message bubble (brand) bottom spacing.</td>
- <td><img src="img/androidpaddingbottom.png" alt="androidpaddingbottom"></td>
+ <td><img loading="lazy" src="img/androidpaddingbottom.png" alt="androidpaddingbottom"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="brand_bubble_padding_left"&gt;8dp</td>
  <td>Brand welcome message bubble (brand) left spacing.</td>
- <td><img src="img/androidpaddingleft.png" alt="androidpaddingleft"></td>
+ <td><img loading="lazy" src="img/androidpaddingleft.png" alt="androidpaddingleft"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="brand_bubble_padding_right"&gt;8dp</td>
  <td>Brand welcome message bubble (brand) right spacing.</td>
- <td><img src="img/androidpaddingright.png" alt="androidpaddingright"></td>
+ <td><img loading="lazy" src="img/androidpaddingright.png" alt="androidpaddingright"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="brand_bubble_padding_top"&gt;8dp</td>
  <td>Brand welcome message bubble (brand) top spacing.</td>
- <td><img src="img/androidpaddingtop.png" alt="androidpaddingtop"></td>
+ <td><img loading="lazy" src="img/androidpaddingtop.png" alt="androidpaddingtop"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_line_spacing"&gt;0dp</td>
  <td>Resolve message spacing from above.</td>
- <td><img src="img/linespacing.png" alt="linespacing"></td>
+ <td><img loading="lazy" src="img/linespacing.png" alt="linespacing"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_padding"&gt;@dimen/margin_half (4dp)</td>
  <td>Resolve message spacing from below.</td>
- <td><img src="img/systemresolved.png" alt="systemresolved"></td>
+ <td><img loading="lazy" src="img/systemresolved.png" alt="systemresolved"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="bubble_system_resolved_text_size"&gt;@dimen/small_text_size (12sp)</td>
  <td>Resolve message text size.</td>
- <td><img src="img/androidtextsize.png" alt="androidtextsize"></td>
+ <td><img loading="lazy" src="img/androidtextsize.png" alt="androidtextsize"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="chat_bubble_padding_bottom"&gt;8dp</td>
  <td>Conversation message (agent / consumer) bottom spacing.</td>
- <td><img src="img/androidbubblepaddingbottom.png" alt="androidbubblepaddingbottom"></td>
+ <td><img loading="lazy" src="img/androidbubblepaddingbottom.png" alt="androidbubblepaddingbottom"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="chat_bubble_padding_left"&gt;8dp</td>
  <td>Conversation message (agent / consumer) left spacing.</td>
- <td><img src="img/androidbubblepaddingleft.png" alt="androidbubblepaddingleft"></td>
+ <td><img loading="lazy" src="img/androidbubblepaddingleft.png" alt="androidbubblepaddingleft"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="chat_bubble_padding_right"&gt;8dp</td>
  <td>Conversation message (agent / consumer) right spacing.</td>
- <td><img src="img/androidbubblepaddingright.png" alt="androidbubblepaddingright"></td>
+ <td><img loading="lazy" src="img/androidbubblepaddingright.png" alt="androidbubblepaddingright"></td>
  </tr>
  <tr>
  <td>&lt;dimen name="chat_bubble_padding_top"&gt;8dp</td>
  <td>Conversation message (agent / consumer) top padding</td>
- <td><img src="img/androidbubblepaddingtop.png" alt="androidbubblepaddingtop"></td>
+ <td><img loading="lazy" src="img/androidbubblepaddingtop.png" alt="androidbubblepaddingtop"></td>
  </tr>
  </tbody>
 </table>

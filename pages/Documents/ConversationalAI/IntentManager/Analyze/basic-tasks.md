@@ -43,17 +43,17 @@ Filters provide you with increased flexibility and the ability to cover more gra
 1. Go to the **Analyze** tab, and filter by “undefined.”
 2. Click the **Add Filter** button at the top left of **Intent Trends**.
 
-    <img class="fancyimage" style="width:800px" alt="Add Filter button in upper-left corner of Intent Trends tab on the Analyze page" src="img/ConvoBuilder/im_analyze_filters1.png">
+    <img loading="lazy" class="fancyimage" style="width:800px" alt="Add Filter button in upper-left corner of Intent Trends tab on the Analyze page" src="img/ConvoBuilder/im_analyze_filters1.png">
 
 3. In the pop-up window, select “Intents” as your filter type on the left, and then select “unclassified” from the dropdown on the right.
 
-    <img class="fancyimage" style="width:800px" alt="An example of defining a filter where intents includes unclassified" src="img/ConvoBuilder/im_analyze_filters2.png">
+    <img loading="lazy" class="fancyimage" style="width:800px" alt="An example of defining a filter where intents includes unclassified" src="img/ConvoBuilder/im_analyze_filters2.png">
 
 #### Rule-based power filters
 
 You can save and manage complex filters that let you surface and track specific insights on exact topics. You can use regular expressions to instantly mine and query up to 13 months of conversation data that matches specific criteria. This functionality is complementary to machine learning-powered intents and allows you to cover analysis use cases that don’t work within the intent taxonomy.
 
-<img class="fancyimage" style="width:800px" alt="The load/edit search filters window" src="img/ConvoBuilder/im_analyze_filters3.png">
+<img loading="lazy" class="fancyimage" style="width:800px" alt="The load/edit search filters window" src="img/ConvoBuilder/im_analyze_filters3.png">
 
 #### Filters and REGEX
 

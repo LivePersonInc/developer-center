@@ -21,22 +21,22 @@ Also, your custom JavaScript code must complete within 5 seconds; otherwise, it 
 ### Custom code indicator
 An interaction that contains custom code displays a green dot:
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator.png" alt="The green dot that indicates the presence of custom code in the interaction">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator.png" alt="The green dot that indicates the presence of custom code in the interaction">
 
 Check for this to understand at a glance whether there's code in the Pre-Process Code, Process User Response code, or Post-Process Code in the interaction.
 
 You'll also see this green dot next to the name of any code tab that contains custom code:
 
-<img style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator2.png" alt="The green dot that indicates the presence of custom code in the code panel">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/interactions_codeIndicator2.png" alt="The green dot that indicates the presence of custom code in the code panel">
 
 ### Access the Custom Code panel
 
 1. Select the interaction.
-2. In the interaction's upper-right corner, click <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_customCode_int.png" alt="Custom Code icon"> (Custom Code icon).
+2. In the interaction's upper-right corner, click <img loading="lazy" class="inlineimage" style="width:25px" src="img/ConvoBuilder/icon_customCode_int.png" alt="Custom Code icon"> (Custom Code icon).
 
     This displays the Custom Code panel.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_customCode2.png" alt="The Process User Response panel for entering custom code">
+    <img loading="lazy" style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_customCode2.png" alt="The Process User Response panel for entering custom code">
 
 There are three tabs for adding code:
 

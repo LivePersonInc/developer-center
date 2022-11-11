@@ -21,7 +21,7 @@ Every interaction has a specified next action. This determines the direction of 
 
 You specify an interaction's **Next Action** directly on the interaction tile:
 
-<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_nextStep.png" alt="A Statement interaction and a Question interaction, both with Next Action settings that are shown directly on the interaction">
+<img loading="lazy" style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_nextStep.png" alt="A Statement interaction and a Question interaction, both with Next Action settings that are shown directly on the interaction">
 
 When specifying the next action, you can select from the following options:
 
@@ -42,7 +42,7 @@ A custom rule contains a set of instructions for how to respond to the user inpu
 
 As an example, the following rule says that if the user responds to a Yes/No question with the pattern "yes," "yah," or "yup," the dialog flow should continue to the Yes statement.
 
-<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_rule.png" alt="An example of a custom rule">
+<img loading="lazy" style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_rule.png" alt="An example of a custom rule">
 
 In question and integration interactions, you can create one or multiple custom rules depending on how many responses you need to support.
 
@@ -57,7 +57,7 @@ Use the guided Add/Edit Next Action Rule window to:
 
 You can create more complex rules by adding one or more variable conditions using **+ Add Variable Condition**.
 
-<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition1.png" alt="The Add Variable Condition button in a Add Next Action Rule window, where you define a custom rule">
+<img loading="lazy" style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition1.png" alt="The Add Variable Condition button in a Add Next Action Rule window, where you define a custom rule">
 
 If you add a variable condition, *both* the first defined condition *and* the variable condition must be true for the next action to be performed.
 
@@ -65,7 +65,7 @@ To specify a `botContext` variable in a variable condition, enter only the varia
 
 In our example below, the consumer must answer "yes" to our question, and the `channel` variable must be "AMB" for Apple Messages for Business. If both are true, then the consumer is offered a promotion.
 
-<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition2.png" alt="A callout to the word and that joins the condition and the variable condition">
+<img loading="lazy" style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition2.png" alt="A callout to the word and that joins the condition and the variable condition">
 
 We could further expand the example to include additional custom rules with variable conditions that checked for other channels, e.g., SMS and so on, and configure next actions for those as well.
 
@@ -81,7 +81,7 @@ Within the above confines, the rules are then evaluated in the order they are li
 
 To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
 
-<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_rule2.png" alt="The up and down arrows you can use to reorder custom rules">
+<img loading="lazy" style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_rule2.png" alt="The up and down arrows you can use to reorder custom rules">
 
 For information on the match types mentioned above, see *Conditions*, which is discussed next.
 
@@ -93,11 +93,11 @@ Conditions are "if…, then…" statements that, when combined with pattern matc
 
 Consider the following question that asks the user for their 6-digit account number.
 
-<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions1.png" alt="A question that asks the consumer for their six-digit account number">
+<img loading="lazy" style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions1.png" alt="A question that asks the consumer for their six-digit account number">
 
 The question contains a single rule, which is this:
 
-<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions2.png" alt="The rule that checks whether the consumer's response is valid">
+<img loading="lazy" style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions2.png" alt="The rule that checks whether the consumer's response is valid">
 
 In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a [slot](conversation-builder-variables-slots-slots.html), and the dialog flow continues to the next interaction.
 
@@ -109,7 +109,7 @@ Like in the example above, when you define a condition (in a rule) in a question
 * **Exact Value**: This triggers the Next Action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 * **Evaluate Options**: Available for multiple choice questions only. This triggers the Next Action when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the interaction's settings).
 
-    <img style="width:200px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions4.png" alt="Interaction settings for specifying the list style">
+    <img loading="lazy" style="width:200px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions4.png" alt="Interaction settings for specifying the list style">
 
     If you need more flexibility (e.g., you have a Yes/No question but you want to account for "Yeah" and "Yup" in the condition), use a different method instead.
 
@@ -119,9 +119,9 @@ Like in the example above, when you define a condition (in a rule) in a question
 
     The No Match option is a great way to repeat the same interaction until the consumer enters an expected utterance. This is done below.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch.png" alt="An example rule that uses a No Match condition">
+    <img loading="lazy" style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch.png" alt="An example rule that uses a No Match condition">
 
-    <img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch2.png" alt="The configuration of the No Match rule">
+    <img loading="lazy" style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch2.png" alt="The configuration of the No Match rule">
 
     Keep in mind the following when using the "No Match" match type:
 
@@ -133,4 +133,4 @@ Like in the example above, when you define a condition (in a rule) in a question
 
 You can define a condition (in a rule) in an integration interaction to [direct the dialog flow based on the result of the API integration call](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration). This is a best practice that's recommended by LivePerson.
 
-<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions3.png" alt="Defining a rule in an API integration that directs the flow based on the result of the API call">
+<img loading="lazy" style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions3.png" alt="Defining a rule in an API integration that directs the flow based on the result of the API call">

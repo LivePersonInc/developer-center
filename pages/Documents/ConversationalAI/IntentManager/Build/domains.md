@@ -25,7 +25,7 @@ Domains added from [prebuilt domains](intent-manager-key-terms-concepts.html#pre
 3. In the Add Domain window, select the **Prebuilt domains** tab.
 4. Move your mouse over the desired domain. Then click **Preview** to see a description of the domain and some example intents. This helps you to verify that the domain is one you want.
 
-    <img class="fancyimage" style="width:800px" alt="Preview of the Cross-vertical domain, showing a sampling of intents within" src="img/ConvoBuilder/im_domains_prebuilt_add.png">
+    <img loading="lazy" class="fancyimage" style="width:800px" alt="Preview of the Cross-vertical domain, showing a sampling of intents within" src="img/ConvoBuilder/im_domains_prebuilt_add.png">
 
 5. If you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager, you can specify the following for the domain:
     * **Intent Tracking**: Select "Enabled" to enable “intent listening” ([intent tracking](intent-manager-key-terms-concepts.html#intent-tracking)) for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances.
@@ -55,7 +55,7 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 6. Move your mouse over the desired domain, and click the **Add** button that's displayed.
 7. In the Warning dialog that appears, click **Continue**.
 
-    <img class="fancyimage" style="width:400px" alt="Warning dialog that the domain already exists" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
+    <img loading="lazy" class="fancyimage" style="width:400px" alt="Warning dialog that the domain already exists" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
 
 ### Add a domain manually or using an import file
 
@@ -93,18 +93,18 @@ The easiest way to ensure that the import file is well-formatted is to export a 
 
 The following illustrates a well-formatted intents file:
 
-<img class="fancyimage" style="width:600px" alt="Example of a well-formatted import file" src="img/ConvoBuilder/ib_importFile_intents_a.png">
+<img loading="lazy" class="fancyimage" style="width:600px" alt="Example of a well-formatted import file" src="img/ConvoBuilder/ib_importFile_intents_a.png">
 
 {: .attn-note}
 Key phrases are only applicable to the LivePerson (Legacy) engine. You can leave this section blank if you're using another NLU engine. For information on key phrase matching, see *Configure domain settings*, which follows below.
 
 Additionally, having said the above, the following, simplified format also works. It should suit most use cases.
 
-<img class="fancyimage" style="width:700px" alt="A simplified format of a well-formatted import file" src="img/ConvoBuilder/ib_importFile_intents_b.png">
+<img loading="lazy" class="fancyimage" style="width:700px" alt="A simplified format of a well-formatted import file" src="img/ConvoBuilder/ib_importFile_intents_b.png">
 
 The following illustrates a well-formatted entities file:
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_importFile_entities.png" alt="A well-formatted entities import file">
+<img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_importFile_entities.png" alt="A well-formatted entities import file">
 
 If you're creating a Google sheet, add the intents to the first tab in the sheet, and name the tab "Intents." Then add the entities to a second tab named "Entities." The Google sheet must be public, i.e., with no file restrictions in place.
 
@@ -138,17 +138,17 @@ A key phrase is a critical noun or verb. If you enable Key Phrase Matching for t
 
 Key Phrase Matching uses a threshold that you must specify when you enable the domain setting. As an example, if you set the threshold to 2, then if 2 of the intent’s key phrases are found in the consumer’s utterance, the intent is considered a match.
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch3.png" alt="Enable Key Phrase Match toggle and threshold setting">
+<img loading="lazy" class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch3.png" alt="Enable Key Phrase Match toggle and threshold setting">
 
 Key Phrase Matching can be helpful when you know there are specific words that directly correlate with an intent because it boosts the score when appropriate. For example, with the LivePerson (Legacy) engine, the NLU score is penalized when the consumer’s utterance is too long when compared to the training phrases. Let’s say the consumer says, “The weather is nice, but I forgot my password, and now my whole day is ruined as a result of my forgetfulness. Please help. I don't know what to do.” In your domain, you have a “Forgot password” intent, but it doesn’t yield a match because of the length of the consumer's utterance. Without key phrase matching, there isn’t a match. However, if you know that any time the consumer says something that contains the words “forgot” and “password” that it’s related to the “Forgot password” intent, you can add those words as key phrases and boost the score to GOOD when they are found in the utterance. (Since the intent is matched, this also means it can be in contention for disambiguation if [disambiguation](conversation-builder-dialogs-disambiguation-dialogs.html) used.)
 
 Here's a test example without Key Phrase Matching enabled:
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">
+<img loading="lazy" class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch1.png" alt="Example utterance with Key Phrase Matching disabled">
 
 And here's a test example with Key Phrase Matching enabled:
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch2.png" alt="Example utterance with Key Phrase Matching enabled">
+<img loading="lazy" class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch2.png" alt="Example utterance with Key Phrase Matching enabled">
 
 ### Sync with a Google sheet
 
@@ -162,7 +162,7 @@ This action overwrites the content in the domain with the content in the Google 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
 3. Move your mouse over the name of the relevant domain, and select **Domain Settings** from the menu that appears.
-4. Scroll down to the advanced settings, and beside **Sync Google Sheet**, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png" alt="Refresh icon"> (Refresh icon).
+4. Scroll down to the advanced settings, and beside **Sync Google Sheet**, click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png" alt="Refresh icon"> (Refresh icon).
 5. Train the domain so that the changes are reflected in a new model version.
 
 ### Train a domain
@@ -205,5 +205,5 @@ Before you delete a domain, ensure that it isn't being used by any bots or knowl
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard.
 3. Select the name of the relevant domain, and then select **Domain Settings** from the menu that appears.
-4. Scroll down to the advanced settings, and beside **Delete Domain**, click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="Delete domain icon"> (Delete domain).
+4. Scroll down to the advanced settings, and beside **Delete Domain**, click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_delete.png" alt="Delete domain icon"> (Delete domain).
 5. In the confirmation dialog, click **Yes**.

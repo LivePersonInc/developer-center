@@ -24,9 +24,9 @@ In this tutorial, you walk through how to link your bot to Conversational Cloud.
 
 In this step, you create a new user agent and skill for the bot, create a new engagement for web messaging, and connect the bot agent to the engagement.
 
-1. Click on the User Management icon <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_user_mgmt.png" alt="User Management icon"> along the left side of the Conversational Cloud page.
+1. Click on the User Management icon <img loading="lazy" class="inlineimage" style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_user_mgmt.png" alt="User Management icon"> along the left side of the Conversational Cloud page.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/users_tab.png" alt="Manage Users and Skills icon">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/users_tab.png" alt="Manage Users and Skills icon">
 
 2. On the Users tab, click **+ Add user** in the lower-left corner.
 3. Fill out the **Add user** form with the following user details:
@@ -48,7 +48,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 ### Step 12: Create an engagement
 
-1. Click the Campaign Builder icon <img class="inlineimage"  style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png" alt="Campaign Builder icon"> along the left side of the Conversational Cloud page.
+1. Click the Campaign Builder icon <img loading="lazy" class="inlineimage"  style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png" alt="Campaign Builder icon"> along the left side of the Conversational Cloud page.
 2. Click **+ Add Campaign** in the lower-left corner.
 3. On the page that appears, specify the following:
 
@@ -56,14 +56,14 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
     * **Engagement**: Click **+ Add engagement**. For the engagement source, select "Web." In the gallery that appears next, select a messaging template, and click **Next**. In the resulting Engagement Settings, select "Messaging" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/engagement_settings.png" alt="Engagement settings, including the Routing to specific skill setting">
+    <img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/engagement_settings.png" alt="Engagement settings, including the Routing to specific skill setting">
 
 4. Click **Next**.
 5. In the Engagement Studio, click **Next**.
 6. In the Engagement Window Library, click **Done**.
 7. Click **Publish** in the upper-right corner. Then click **Publish** again to confirm the action.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/engagement.png" alt="The finished, published campaign">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/engagement.png" alt="The finished, published campaign">
 
 ### Step 13: Add the agent connector
 
@@ -77,12 +77,12 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Conversation Type**: Messaging
     * **Deploy to**: Demo
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_agent_connector.png" alt="The Add Agent Connector window">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_agent_connector.png" alt="The Add Agent Connector window">
 
 5. Click **Save**.
 6. As a result, you will see a row on the Agent Connectors page listing your new bot agent. Select the **Start** button on that row to start the agent connector. This fully deploys the bot.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/agent_connector.png" alt="The Start button to start the agent connector">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/agent_connector.png" alt="The Start button to start the agent connector">
 
     It might take a few minutes for the connection to be established.
 
@@ -96,14 +96,14 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 1. In a browser, navigate to the [Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html).
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png" alt="The Messaging test page">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png" alt="The Messaging test page">
 
 2. Enter your account number, and click **Show Window**.
 3. After a moment, you will see a Messaging "call to action," which corresponds to what you selected in the Campaign Builder. Click the Messaging call to action.
 4. Start the bot by entering ‘hi’ or ‘hello.’
 5. Test the bot's functionality as you would in Conversation Builder's Preview.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test.png" alt="Testing the bot on the Messaging test page">
+    <img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test.png" alt="Testing the bot on the Messaging test page">
 
     Congratulations! You’ve successfully deployed your automation to a demo environment.
 

@@ -16,7 +16,7 @@ Once your third-party bot is ready, you can [set up routing policies](conversati
 
 Please see the representation below.
 
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_outsidecc1.png" alt="An architectural diagram illustrating how to use Dynamic Routing outside of Conversational Cloud">
+<img loading="lazy" class="fancyimage" width="800" src="img/convorchestrator/co_dr_outsidecc1.png" alt="An architectural diagram illustrating how to use Dynamic Routing outside of Conversational Cloud">
 
 ### Example using the Next Actions API from Google DialogFlow
 

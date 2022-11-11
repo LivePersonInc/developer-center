@@ -26,7 +26,7 @@ indicator: both
    <div id="teaser-banner" class="welcome-card-modified">
       <div style="display: flex;">
          <p class="teaser-header">Watch a quick product overview of LivePerson Platform and its tools</p>
-         <img src="img/play_icon.svg" alt="" class="play-icon">
+         <img loading="lazy" src="img/play_icon.svg" alt="" class="play-icon">
       </div>
    </div>
 </div>
@@ -64,12 +64,12 @@ indicator: both
 </div>
 <div class="card-container" style="margin-top:24px;">
    <a class="welcome-card" href="/starting-with-your-concierge-bot.html">
-      <img src="img/ic_robot.svg" alt="" class="container-image">
+      <img loading="lazy" src="img/ic_robot.svg" alt="" class="container-image">
       <h5 class="getstarted-title">Conversational AI</h5>
       <p class="getstarted-content ">Starting with your Concierge Bot</p>
    </a>
    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html">
-      <img src="img/ic_robot.svg" alt="" class="container-image">
+      <img loading="lazy" src="img/ic_robot.svg" alt="" class="container-image">
       <h5 class="getstarted-title">Conversational AI</h5>
       <p class="getstarted-content ">Learn more about the Conversation Builder</p>
    </a>
@@ -84,17 +84,17 @@ indicator: both
 </div>
 <div class="card-container" style="margin-top:24px;">
    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html">
-      <img src="img/ic_Facebook.svg" alt="" class="container-image">
+      <img loading="lazy" src="img/ic_Facebook.svg" alt="" class="container-image">
       <h5 class="getstarted-title">Messaging Channels</h5>
       <h5 class="getstarted-content ">Enable Facebook Messenger</h5>
    </a>
    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html">
-      <img src="img/ic_SMS.svg" alt="" class="container-image">
+      <img loading="lazy" src="img/ic_SMS.svg" alt="" class="container-image">
       <h5 class="getstarted-title">Messaging Channels</h5>
       <h5 class="getstarted-content ">Enable SMS </h5>
    </a>
    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html">
-      <img src="img/ic_messaging.svg" alt="" class="container-image">
+      <img loading="lazy" src="img/ic_messaging.svg" alt="" class="container-image">
       <h5 class="getstarted-title">Messaging Channels</h5>
       <h5 class="getstarted-content ">Channels overview </h5>
    </a>

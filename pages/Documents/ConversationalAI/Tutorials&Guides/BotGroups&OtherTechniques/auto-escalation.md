@@ -26,7 +26,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
     The threshold refers to how many times a user can fail a validation prior to offering escalation. We’ll keep it at 2 for the purpose of demonstration, which will escalate at the 3rd failure. In practice, it is recommended to escalate sooner rather than later when a user hits a roadblock.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/add_dialog.png" alt="The Add Dialog window when adding an Auto Escalation dialog">
+    <img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/add_dialog.png" alt="The Add Dialog window when adding an Auto Escalation dialog">
 
     Click **Save**.
 
@@ -40,7 +40,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
 3. Modify the content of the multiple choice interaction to match the voice of your brand. Note that two rules have been automatically created to match the ‘yes’ and ‘no’ responses, so they will need to be updated should you change the response options.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/auto_esc_mcq.png" alt="Customizing the interactions in the Auto Escalation dialog to suit the brand's voice">
+    <img loading="lazy" class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/auto_esc_mcq.png" alt="Customizing the interactions in the Auto Escalation dialog to suit the brand's voice">
 
 4. In the Agent Transfer (escalation) interaction, click the **Settings** wheel in the upper-right corner, and navigate to the **Advanced** section to confirm that your Agent Skill ID has been properly added.
 
@@ -48,15 +48,15 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
 6. The question to capture the order number has a validation to ensure that it meets the A001001 format. Type in a message that *fails* this validation, so you receive a re-prompt of the question.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_1.png" alt="Simulating a conversation to test the functionality using the Messaging test page">
+    <img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_1.png" alt="Simulating a conversation to test the functionality using the Messaging test page">
 
 7. Follow this with additional messages that also fail the validation. On the 3rd failure, the Auto Escalation dialog will be triggered and will provide the user with the option to escalate to an agent. Select "Yes" to confirm that the escalation has been implemented correctly.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_2.png" alt="Simulating more conversation to test the functionality using the Messaging test page">
+    <img loading="lazy" class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_2.png" alt="Simulating more conversation to test the functionality using the Messaging test page">
 
 8. If set to the proper skill ID, you should hear a ring from the Conversational Cloud and see an option to accept the incoming conversation.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/auto_esc_cc.png" alt="Continuing the conversation as an agent using the Agent Workspace">
+    <img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/auto_esc_cc.png" alt="Continuing the conversation as an agent using the Agent Workspace">
 
 ### What's next?
 

@@ -16,7 +16,7 @@ indicator:
 
 The Direct Line secret necessary to add the bot on Third-Party Bots can be found in the `Manage` Section of the PVA bot.
 
-<img class="fancyimage" alt="PVA-secret" src="img/ThirdPartyBots/microsoft-secret-pva.png">
+<img loading="lazy" class="fancyimage" alt="PVA-secret" src="img/ThirdPartyBots/microsoft-secret-pva.png">
 Figure 4.1 Direct Line Secret in PVA
 <br>
 <br>
@@ -50,7 +50,7 @@ This will trigger the System Topic `Greeting` configured on the PVA Platform.
 A question node in PVA can be defined to provide predefined options for users.
 Third-Party Bots will automatically translate these options to quick replies.
 
-<img class="fancyimage" alt="Multiple Choice Example" src="img/ThirdPartyBots/microsoft-example-pva-multiple-choice.png">
+<img loading="lazy" class="fancyimage" alt="Multiple Choice Example" src="img/ThirdPartyBots/microsoft-example-pva-multiple-choice.png">
 Figure 4.2 Question node in PVA
 <br>
 <br>
@@ -58,7 +58,7 @@ Figure 4.2 Question node in PVA
 #### Transfer to Agent
 This PVA node can be selected under `End the conversation`=>`Transfer to agent` and will create a native event activity with the name `handoff.initiate`. Third-Party Bots supports this event. It is, however, crucial to take an additional step for it to work as a Conversational Cloud transfer request. A variable named `skill` needs to be set before the transfer node is executed. This can e.g. be achieved by calling a Power Automation Action that returns such a value.
 
-<img class="fancyimage" alt="Transfer example" src="img/ThirdPartyBots/microsoft-example-pva-transfer.png">
+<img loading="lazy" class="fancyimage" alt="Transfer example" src="img/ThirdPartyBots/microsoft-example-pva-transfer.png">
 Figure 4.3 Transfer to agent
 <br>
 <br>
@@ -72,5 +72,5 @@ However, the connector will assume any valid JSON content sent in the message fi
 This means all channelData objects documented for this connector can also be sent as a JSON string in the `Message` node.
 In the following example this is used to send a Close Conversation action.
 
-<img class="fancyimage" alt="Channel Data example" src="img/ThirdPartyBots/microsoft-example-pva-structured-content.png">
+<img loading="lazy" class="fancyimage" alt="Channel Data example" src="img/ThirdPartyBots/microsoft-example-pva-structured-content.png">
 Figure 4.4 Close Conversation as Channel Data in PVA

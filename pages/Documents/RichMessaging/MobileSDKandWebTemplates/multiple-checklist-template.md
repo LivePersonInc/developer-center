@@ -9,7 +9,7 @@ indicator: messaging
 
 The Multiple Checklist Template for the Web Messaging channel enables human or bot agents to share a list of items, while allowing the consumer to select multiple items and reply back with the selection.
 
-<img class="fancyimage" src="img/multipleChecklist.png">
+<img loading="lazy" class="fancyimage" src="img/multipleChecklist.png">
 
 ### Overview
 

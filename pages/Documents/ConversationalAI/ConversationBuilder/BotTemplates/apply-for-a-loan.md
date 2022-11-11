@@ -17,7 +17,7 @@ The template uses text interactions only, so it can be deployed to any channel w
 {: .attn-note}
 This bot template contains [dialog templates](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_de.png" alt="The Home Loan dialog in a bot created from the Apply for a Loan bot template, with a sample conversation shown in the Preview tool">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_de.png" alt="The Home Loan dialog in a bot created from the Apply for a Loan bot template, with a sample conversation shown in the Preview tool">
 
 ### Included items
 
@@ -89,7 +89,7 @@ Click **Global Functions** to access all the global functions and variables to b
 
 You’ll want to customize the `generateLoanTemplate` and `getEmailBody` functions within Global Functions to reflect your branding and voice.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf1.png" alt="The Global Functions page in the bot">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf1.png" alt="The Global Functions page in the bot">
 
 #### Send Email integration
 
@@ -104,7 +104,7 @@ Modify the following values in Global Functions:
 | emailSubject | Email subject line content |
 | emailText | Initial email text, default value of "Loan Consultation Request Results" |
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf2.png" alt="The Global Functions page in the bot">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_gf2.png" alt="The Global Functions page in the bot">
 
 The bot captures relevant user information in several variables. These values are used in the `generateLoanTemplate` and `getEmailBody` global functions to dynamically generate the email body.
 

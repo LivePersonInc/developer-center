@@ -27,11 +27,11 @@ Undeploying a scheduled function will result in the **deletion** of the associat
 
 Schedules can be created by heading to the "Schedule an Invocation"-page reachable via the "Watch" icon on the sidebar. Here you will also see any existing Schedule. Further, it will show you the last and next invocation times in your **local** time. The "STATE" column will indicate if the previous invocation was successful or a failure.
 
-<img class="fancyimage" alt="Functions: Schedules" src="img/functions/functions_schedules_list.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Schedules" src="img/functions/functions_schedules_list.png">
 
 To create a Schedule, click "Create a schedule"-button. Then you can choose your productive functions from the drop-down. After that, provide a valid cron expression. The UI will always calculate the next invocation in your **local** time and display it. The UI will provide valid example values if you use an invalid expression. You may adjust the displayed payload. It will be then used for the scheduled invocation and therefore is available to the function during the invocation.
 
-<img class="fancyimage" alt="Functions: Create Schedule" src="img/functions/functions_schedules_create.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Create Schedule" src="img/functions/functions_schedules_create.png">
 
 ### Toolbelt
 
@@ -64,7 +64,7 @@ You can only perform the deletion of a secret via the UI. The secret will become
 {: .attn-note}
 During the [provisioning](liveperson-functions-provisioning.html) process, a couple of default secrets are created. Those are not displayed by default, but they are viewable for debugging purposes.
 
-<img class="fancyimage" alt="Functions: Default Secrets" src="img/functions/functions_secret_defaults.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Default Secrets" src="img/functions/functions_secret_defaults.png">
 
 ### Domain Allowlisting
 
@@ -93,7 +93,7 @@ Next, ensure that you safe list the correct domain when working with subdomains.
 
 Finally, as shown above, we do support the use of wildcards by setting `*`. But you should be aware that we only support one wildcard in the domain, `*.*.liveperson.com` is not possible, while `*.liveperson.com` is possible.
 
-<img class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_allowlist_add.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Add to allowlist" src="img/functions/functions_allowlist_add.png">
 
 Type the domain in the text field and click the "Add"-button. Once it is saved, it will be reflected in the domain list below.
 
@@ -104,4 +104,4 @@ Be aware that adding a domain can take up to 5 minutes until being "active".
 
 Removing a domain allowlist entry is only possible from the "Domain Allowlist"-Tab located inside the "Settings"-Page. Click on the "Bin" icon next to the entry you want to remove.
 
-<img class="fancyimage" alt="Functions: Remove from allowlist" src="img/functions/functions_allowlist_remove.png">
+<img loading="lazy" class="fancyimage" alt="Functions: Remove from allowlist" src="img/functions/functions_allowlist_remove.png">

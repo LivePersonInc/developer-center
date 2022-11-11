@@ -47,7 +47,7 @@ For some practice at deployment, complete the [Deploy the Bot](tutorials-guides-
 ### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details on the individual components that support the end-to-end connection. Use the Start/Stop toggle button to start and stop an agent connector.
 
-<img class="fancyimage" style="width:1100px" src="img/ConvoBuilder/deploy_agntCntrPg.png" alt="The Agent Connectors page for a bot, which shows the Start button for starting a connector">
+<img loading="lazy" class="fancyimage" style="width:1100px" src="img/ConvoBuilder/deploy_agntCntrPg.png" alt="The Agent Connectors page for a bot, which shows the Start button for starting a connector">
 
 ### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target Conversational Cloud environment.
@@ -63,7 +63,7 @@ An agent can belong to only one bot.
 
     The Add Agent Connector dialog appears.
 
-4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png" alt="Right-facing orange chevron button">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+4. Enter your account number in the field provided, and click <img loading="lazy" class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png" alt="Right-facing orange chevron button">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
 
     **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through Conversational Cloud (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever Conversational Cloud account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the Conversational Cloud account, an error is displayed.
 
@@ -91,7 +91,7 @@ You can edit an agent connector as long as 1) the agent connector isn't running,
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
-4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Edit** from the menu that appears.
+4. Move your mouse over the connector in the table, click the <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Edit** from the menu that appears.
 5. Edit the information, and click **Save**.
 
 ### Delete an agent connector
@@ -102,7 +102,7 @@ You can delete an agent connector as long as it isn't running.
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
-4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Delete** from the menu that appears.
+4. Move your mouse over the connector in the table, click the <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Delete** from the menu that appears.
 5. Click **Yes** to confirm the deletion.
 
 ### Start an agent connector
@@ -121,7 +121,7 @@ Establishing the connection can take a few minutes.
 ### Troubleshoot a deployment
 If a connector enters an Offline status, which is an error status, click **Details** to view the statuses of the individual, underlying components that support the end-to-end connection.
 
-<img class="fancyimage" style="width:375px" src="img/ConvoBuilder/deploy_detailsMsgs.png" alt="The tooltip of info that is shown when you click the Details link for a connector">
+<img loading="lazy" class="fancyimage" style="width:375px" src="img/ConvoBuilder/deploy_detailsMsgs.png" alt="The tooltip of info that is shown when you click the Details link for a connector">
 
 * **Failed connection**: In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
 
@@ -136,7 +136,7 @@ Custom configuration fields are optional key/value pairs that you can add to alt
 
 You add these fields in the **Advanced Options** of the agent connector.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png" alt="The Custom Configurations button for adding custom configuration fields to an agent connector">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png" alt="The Custom Configurations button for adding custom configuration fields to an agent connector">
 
 {: .attn-note}
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.

@@ -22,7 +22,7 @@ Looking for more? See [this in-depth introduction](https://knowledge.liveperson.
 
 A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), which contains Human Resources FAQs.
 
-<img class="fancyimage" style="width:800px" alt="Example articles in an example internal knowledge base" src="img/ConvoBuilder/kb_overview.png">
+<img loading="lazy" class="fancyimage" style="width:800px" alt="Example articles in an example internal knowledge base" src="img/ConvoBuilder/kb_overview.png">
 
 When used in a bot, a knowledge base is a great tool to answer questions about a variety of topics specific to the bot's area of expertise. Typically, in Conversation Builder, you might add a knowledge base integration in a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) to provide simple answers to topics not covered elsewhere in the bot. Alternatively, you might have an FAQ bot that is driven by a knowledge base full of articles. Powering bots with intelligent answers can **increase containment**: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
 

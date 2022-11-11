@@ -44,7 +44,7 @@ You can quickly search for and find an article that you want to edit.
     {: .attn-note}
     If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail, tags).
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png" alt="Using the Search box to find an article">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png" alt="Using the Search box to find an article">
 
 3. In the list that appears, select the article.
 
@@ -90,18 +90,18 @@ Note the following:
 
 1. Open the knowledge base, and use the Search box at the top of the page to find the article.
 
-2. Click the <img class="inlineimage" style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png" alt="Three-dot icon"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
+2. Click the <img loading="lazy" class="inlineimage" style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png" alt="Three-dot icon"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png" alt="Content Versions menu option for an article">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png" alt="Content Versions menu option for an article">
 
     The system displays the current version and the previous version of the article’s content. The date shown for each version reflects when it was created. The name shown is the user who created that version of the article.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article.png" alt="The Article Content Versions window tht displays the current version and the previous version">
+    <img loading="lazy" class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article.png" alt="The Article Content Versions window tht displays the current version and the previous version">
 
     To display a different, earlier version (the last three are available), click the dropdown arrow beside **Previous Version**, and select the version from the list.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article2.png" alt="The dropdown arrow that lets you select a different, previous version">
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article3.png" alt="The dropdown of additional, previous versions from which you can select">
+    <img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article2.png" alt="The dropdown arrow that lets you select a different, previous version">
+    <img loading="lazy" class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article3.png" alt="The dropdown of additional, previous versions from which you can select">
 
 3. Review the earlier version. To restore it, click its **Restore** button.
 
@@ -119,5 +119,5 @@ Before you delete a knowledge base, ensure it isn't being used in any KnowledgeA
 1. Open the knowledge base.
 2. Click **Settings** in the menu in the upper-left corner.
 3. Scroll down and click **More Options**.
-4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png" alt="Delete icon"> (Delete icon).
+4. In the **Delete Knowledge Base** section, click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png" alt="Delete icon"> (Delete icon).
 5. In the confirmation dialog, click **Yes**.

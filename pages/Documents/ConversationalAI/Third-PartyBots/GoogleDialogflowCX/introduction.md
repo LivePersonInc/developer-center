@@ -21,7 +21,7 @@ See the [Getting Started](third-party-bots-getting-started.html) guide first to 
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard.png" alt="">
 
 Figure 1.1 Dialogflow CX Vendor Step
 
@@ -118,7 +118,7 @@ The config wizard expects each of the pieces of auth data to be copied from the 
 #### Environments
 The Connector supports [Dialogflow CX environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-environments.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-environments.png" alt="">
 
 Figure 1.3 Environments in the Dialogflow CX Console
 
@@ -137,7 +137,7 @@ You will be able to save the configuration even if the test fails, but your bot 
 **Please note** that your bot should be capable of handling unsupported messages either via fallback intents
 or as your design pleases. This will ensure the success of the call to the API of Dialogflow CX for testing the connection.
 
-<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png" alt="">
 
 Figure 1.4 Showing the failure case when testing the connection.
 
@@ -155,12 +155,12 @@ The Dialogflow CX service has a [limitation](https://dialogflow.com/docs/referen
 
 1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-   <img style="width:600px" src="img/dialogflowcx/image_7.png" alt="">
+   <img loading="lazy" style="width:600px" src="img/dialogflowcx/image_7.png" alt="">
 
    Figure 1.5
 
 2. Do not forget to add a custom response in the **Text response** section.
 
-   <img style="width:700px" src="img/dialogflowcx/image_8.png" alt="">
+   <img loading="lazy" style="width:700px" src="img/dialogflowcx/image_8.png" alt="">
 
    Figure 1.6

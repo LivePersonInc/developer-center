@@ -138,7 +138,7 @@ The above request is much better as it also includes the user SDEs which will po
 The best practice to target conversations to skills when using messaging is to set up campaigns.
 You can send the **Campaign ID** and **Enagagement ID** to Conversational Cloud in order to route the consumer conversation to the desired skill as designed by the Campaign Builder. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
 
-<img src="img/ConnectorAPI3.png" alt="connectoroverview">
+<img loading="lazy" src="img/ConnectorAPI3.png" alt="connectoroverview">
 
 In order to retrieve the campaign properties, you need to use the [Monitoring API](rt-interactions-monitoring-overview.html). This API method, [Engagement](rt-interactions-monitoring-methods-engagement.html), allows you to send Conversational Cloud the user information (`consumerId` OR the `visitorId` and `sessionId`) along with the `installation Id` and in return to get the engagement properties: `campaignId`, `engagementId`, `visitorId`, `sessionId` and more. See the following  [response example](rt-interactions-monitoring-methods-engagement.html#response-entity-examples).
 

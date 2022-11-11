@@ -26,7 +26,7 @@ The campaign must be of the Messaging conversation type. Recommendations aren’
 
 Also, the engagement must route to specific skills. It should not be set to route to all skills.
 
-<img width="500" alt="Route to specific skill setting" src="img/agentassist/routing.png">
+<img loading="lazy" width="500" alt="Route to specific skill setting" src="img/agentassist/routing.png">
 
 If you instead set the engagement to route to “All skills,” the effect is that conversations within the engagement don’t have an assigned skill. As a result, there are no recommendations within the Conversational Cloud agent workspace since all recommendations are made based on the conversation’s skills.
 

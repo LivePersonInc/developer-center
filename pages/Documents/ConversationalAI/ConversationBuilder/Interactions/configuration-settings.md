@@ -18,7 +18,7 @@ The **Interaction Settings** dialog is where you can configure some key settings
 ### Access the Interaction Settings dialog
 
 1. Select the interaction.
-2. In the interaction's upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
+2. In the interaction's upper-right corner, click <img loading="lazy" style="width:25px" src="img/ConvoBuilder/icon_settings.png" alt="Settings icon"> (Settings icon).
 
 ### Basic settings
 

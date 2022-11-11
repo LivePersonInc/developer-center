@@ -17,7 +17,7 @@ Test intents on the **Intents** tab and test entities on the **Entities** tab. Y
 
 You can use the **Test User Input** tool to test how a single utterance performs against an intent or the domain. The tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the tool, you can quickly and easily test that phrase to see how it behaves.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug3.png" alt="Test User Input tool showing a matched intent">
+<img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug3.png" alt="Test User Input tool showing a matched intent">
 
 {: .attn-note}
 If the domain uses the LivePerson engine for NLU, on occasion you might notice a change in the matched intent for the test phrase after retraining with no additional training samples. For more, see [this explanation](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
@@ -35,13 +35,13 @@ If the domain uses the LivePerson engine for NLU, on occasion you might notice a
 
     **Model version**: Select the trained model version test. You can select from all existing versions.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png" alt="Default state of the Test User Input tool for detecting matched intents">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png" alt="Default state of the Test User Input tool for detecting matched intents">
 
 5. Click **Test**.
 
     The search results show matched intents and their [confidence scores](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png" alt="Matched intent results for an example utterance">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png" alt="Matched intent results for an example utterance">
 
     If you searched in the domain, you can select a result to see a more detailed breakdown.
 
@@ -59,14 +59,14 @@ If the domain uses the LivePerson engine for NLU, on occasion you might notice a
 
     **Model version**: Skip this, as the saved entities are always used, both within the tool and by other applications (e.g., Conversation Builder). While you need to have a trained intent model in order to test, the entity configuration is not a part of the model versioning.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities1.png" alt="Default state of the Test User Input tool for testing entity detection">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities1.png" alt="Default state of the Test User Input tool for testing entity detection">
 
 3. Click **Test**.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities2.png" alt="Example results when testing entity detection in the Test User Input Tool">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities2.png" alt="Example results when testing entity detection in the Test User Input Tool">
 
     The **SUMMARY** tab shows the custom and global entities that were recognized. The **DETAILS** tab shows more info on recognition, including the confidence score for global entities. Custom entities are either recognized with 100% confidence or not, so no confidence score is shown for these.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities3.png" alt="Details tab showing the recognition info for detected entities">
+    <img loading="lazy" class="fancyimage" style="width:400px" src="img/ConvoBuilder/im_testuserinput_entities3.png" alt="Details tab showing the recognition info for detected entities">
 
     If the results for custom entities aren't what you expect, update the defined entity. If the results for global entities aren't what you expect, provide this feedback to your LivePerson representative.

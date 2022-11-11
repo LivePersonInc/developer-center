@@ -210,7 +210,7 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 - Ensure that the bot is set up with API OAuth login rather than password login.
 - Ensure that the OAuth keys have permission to Engagement History.
 
-<img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
+<img loading="lazy" class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
 ### Get conversation metadata
 

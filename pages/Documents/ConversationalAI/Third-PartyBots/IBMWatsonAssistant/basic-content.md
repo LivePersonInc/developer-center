@@ -22,7 +22,7 @@ Watson Assistant allows the user to define native response types to the dialog n
 include Image, List, Pause, and Text. Users can define single or multiple native content per dialog. The native content types can
 be defined with Watson wizard or using the JSON editor (Figure 2.1 shows how to access both ways in IBM Watson website).
 
-<img class="fancyimage" style="width:100%" src="img/watsonassistant/watson-json-editor.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:100%" src="img/watsonassistant/watson-json-editor.png" alt="">
 
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
@@ -46,7 +46,7 @@ If you use **JSON Editor** then the usual body of the native content is as follo
 User can define Image type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold
 image response. Click on the "Add response type" and select Image from the select box as shown in Figure 2.2.
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Select-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Select-Response.png" alt="">
 
 Figure 2.2 Response type of Image is highlighted
 
@@ -58,7 +58,7 @@ Image URLs must be added to a whitelist via internal LivePerson configuration (H
 Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains
 must be HTTPS secure.
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png" alt="">
 
 Figure 2.3 Image fields filled example
 
@@ -85,7 +85,7 @@ If you are using **JSON editor** you can add a Image type by posting following J
 User can define List type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that
 will hold list response. Click on the "Add response type" and select Option from the select box as shown in Figure 2.4.
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Select-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Select-Response.png" alt="">
 
 Figure 2.4 Response type of List is highlighted
 
@@ -93,7 +93,7 @@ Once the "Option" is selected the form need to be filled will be shown. You must
 Furthermore, different choices of options can be added via clicking "Add option" button. Once the button is clicked you
 will be asked to put a label of option and value. Make sure you fill both of them (example filled form shown in Figure 2.5).
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Fields-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Fields-Response.png" alt="">
 
 Figure 2.5 List fields filled example
 
@@ -160,7 +160,7 @@ is the value that you set for an option.
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node
 will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.6
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png" alt="">
 
 Figure 2.6 Response type of Pause is highlighted
 
@@ -169,7 +169,7 @@ conversation to be paused for the amount of time defined in "Duration" field. Mo
 indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.7).
 This will show a indication like "Agent is typing…" for the amount of time of delay that is set in "Duration".
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png" alt="">
 
 Figure 2.7 Pause fields filled example
 
@@ -195,14 +195,14 @@ will pause for 5 milliseconds with typing indication on.
 Users can define a Text type to send some textual response. For adding this type dialog node will need to select
 that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.8
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png" alt="">
 
 Figure 2.8 Response type of Text is highlighted
 
 Once the "Text" is selected the form will allow you to add the response texts. You can add multiple responses variation
 (example filled form is shown in Figure 2.9).
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Fields-Response.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Fields-Response.png" alt="">
 
 Figure 2.9 Text fields filled example
 
@@ -284,19 +284,19 @@ As a result, the Bot Connector also supports this.
 To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to
 select the dialog node that will hold the structured content (Figure 2.10).
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png" alt="">
 
 Figure 2.10 Watson Dialog Node
 
 From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 2.11)
 
-<img class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png" alt="">
 
 Figure 2.11 Watson Assistant Dialog JSON Editor
 
 In the JSON Editor you will need to add your custom JSON response (Figure 2.12).
 
-<img class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:500px" src="img/watsonassistant/jsoneditor.png" alt="">
 
 Figure 2.12 Watson Assistant JSON Editor
 
@@ -369,7 +369,7 @@ Figure 2.14 Structured Content Watson JSON Example (JSON Editor should contain t
 
 For new IAM workspaces that have a new Watson response, `Then respond with` "text" should be used:
 
-<img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png" alt="">
 
 Put the structured content objects that is shown in Figure 2.15 with the metadata in the text field.
 
@@ -490,7 +490,7 @@ this should be configured in the following way:
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png" alt="">
 
 Figure 2.17
 
@@ -529,7 +529,7 @@ If the agent is not available, the conversation will be transferred to an availa
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 ‘agentId **(Case sensitive)** with ‘value’ of agentId in Conversational Cloud.
 
-<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_7.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:850px" src="img/watsonassistant/image_7.png" alt="">
 
 Figure 2.18
 

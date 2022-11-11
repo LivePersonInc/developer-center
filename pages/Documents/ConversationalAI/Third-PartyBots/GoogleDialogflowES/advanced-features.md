@@ -30,7 +30,7 @@ Figure 3.1 Example payload for a delay
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png" alt="">
 Figure 3.2 An example of Message — Delay — Message configuration in the Dialogflow console's intent editor
 
 **Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without visibly responding to the consumer.
@@ -71,14 +71,14 @@ There are two properties, `text` and `messageAudience`, which are part of the Cu
 
 Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message — Private Text Message — Action) can be seen in Figure 9.1.
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-private_message.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-private_message.png" alt="">
 Figure 3.4 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
 
 ### Message Context
 
 Third-Party Bots provides additional message context to Dialogflow ES on the payload property. In order to access the payload in Dialogflow ES you need to configure a [Fulfillment](https://cloud.google.com/dialogflow/es/docs/fulfillment-overview) and ensure it is actived for the intent in question. Fulfillments can either be handled with Google Cloud Functions, or an external webhook can be configured. See Figure 3.5 for an example using Google Cloud Function.
 
-<img class="fancyimage" alt="fulfillment with metadata" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-advanced-features-metadata-code.png" alt="">
+<img loading="lazy" class="fancyimage" alt="fulfillment with metadata" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-advanced-features-metadata-code.png" alt="">
 Figure 3.5 Accessing the message context on a Fulfillment
 
 <br/>
@@ -136,7 +136,7 @@ Figure 3.6 How to access the metadata of a customer message
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 12.1.
 
-<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png" alt="">
 Figure 3.7 Conversation Type step in creation/modification of bot configuration
 
 These attributes are **only** collected at the start of a conversation.
@@ -177,7 +177,7 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 3.9 below.
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata.png" alt="">
 Figure 3.9 Use custom payload for Encoded Metadata
 
 <br/>
@@ -204,7 +204,7 @@ Figure 3.10 Custom payload of text message with encoded metadata
 
 <br/>
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-text.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-text.png" alt="">
 Figure 3.11 Configuration in the Dialogflow ES Console
 
 #### Sending Rich Content (structured content) with Encoded Metadata
@@ -244,7 +244,7 @@ Figure 3.12 Custom payload for structured content with encoded metadata
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-structured-content.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-structured-content.png" alt="">
 Figure 3.13 Configuration in the Dialogflow ES Console
 <br />
 
@@ -268,7 +268,7 @@ In addition, it is possible to send your own payload to the function. Set your c
 
 The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
 
-<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-function-invocation.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-function-invocation.png" alt="">
 Figure 3.14 Configure a LivePerson Function invocation
 
 ### Receiving Rich Content Response (Messaging Only)
@@ -284,7 +284,7 @@ An example use case of the Rich Content event response sent by Third-Party Bots 
 
 Customer needs to create a intent which should have training phase `com.liveperson.bot-connectors.consumer.send-rich-content` as shown in the Figure 4.1 below.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-intent.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-intent.png" alt="">
 Figure 4.1 Intent creation in Dialogflow ES console
 
 #### Create Google Cloud Function
@@ -368,13 +368,13 @@ This fulfillment can be found in the Google Dialogflow ES console as shown in th
 Webhook need to be enabled and filled with the relevant information of the cloud function.
 (e.g. Auth Data and the Trigger URL)
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png" alt="">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png" alt="">
 Figure 4.2 Webhook configuration that need to be added for calling Cloud Function
 
 Once Webhook configuration is added then the Google Dialogflow ES bot will be able to respond to the requests via the cloud function.
 A demo of our WhatsApp map example with Google Cloud Function (defined above) can be seen below:
 
-<img class="fancyimage" style="width:300px" src="img/dialogflowes/dialog_flow_2_richcontent_demo.gif">
+<img loading="lazy" class="fancyimage" style="width:300px" src="img/dialogflowes/dialog_flow_2_richcontent_demo.gif">
 
 ### Receiving Last consumer message (Messaging Only)
 
@@ -387,7 +387,7 @@ We will describe an example of how to set up and access the WelcomeEvent respons
 
 Ensure you have an ‘entry point’ intent that utilizes the default ‘WELCOME’ event, if not you can create new intent triggered by the default `WELCOME` event. After that enable webhook call for this intent in the fulfillment section, to be able to access the message context.
 
-<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-hook.png">
+<img loading="lazy" class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-hook.png">
 
 Figure 4.3 Configuration of the welcome event
 
@@ -446,7 +446,7 @@ This fulfillment can be found in the Google Dialogflow ES console as shown in th
 Webhook needs to be enabled and filled with the relevant information of the cloud function.
 (e.g. Auth Data and the Trigger URL)
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png">
+<img loading="lazy" class="fancyimage" style="width:800px" src="img/dialogflowes/dialogflow_es_richcontentevent-cloud-function-data.png">
 Figure 4.4 Webhook configuration that needs to be added for calling Cloud Function
 
 Once Webhook configuration is added then the Google Dialogflow ES bot will be able to respond to the requests via the cloud function.

@@ -11,13 +11,13 @@ indicator: both
 
 In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page to perform functions on agents (restart, stop, start, etc.).
 
-<img class="fancyimage" alt="The Custom Connectors tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png" alt="">
+<img loading="lazy" class="fancyimage" alt="The Custom Connectors tab on the Bot Agents page in Bots Status" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png" alt="">
 
 Use the filter controls in the upper-left corner to display the desired agents.
 
 The metrics displayed at the top of the page are affected by the **Environment** filter and no others.
 
-<img class="fancyimage" alt="A list of the environment filters that are available" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png" alt="">
+<img loading="lazy" class="fancyimage" alt="A list of the environment filters that are available" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png" alt="">
 
 ### Supporting failover
 
@@ -92,7 +92,7 @@ This capability to switch the environment eliminates the need to delete the agen
 4. Stop the bot if it is currently online.
 5. Select the checkbox for the bot, and then select **Re-deploy Agent** from the **Actions** list.
 
-    <img class="fancyimage" alt="Re-deploy agent form" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png" alt="">
+    <img loading="lazy" class="fancyimage" alt="Re-deploy agent form" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png" alt="">
 
 6. In the **Environment** drop-down, select the target environment.
 7. Click **Save Settings**.

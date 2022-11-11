@@ -12,7 +12,7 @@ permalink: push-notification-service-configuration-push-proxy.html
 indicator: messaging
 ---
 
-<img src="/img/pusher/PushProxyFlow.png" alt="Push Proxy Outbound Flow" style="width: 800px;padding: 20px;">
+<img loading="lazy" src="/img/pusher/PushProxyFlow.png" alt="Push Proxy Outbound Flow" style="width: 800px;padding: 20px;">
 
 Push proxy is a feature that can be self-managed in the Conversational Cloud console.
 
@@ -57,4 +57,4 @@ In order to enable the push proxy feature, you will require the following data a
 
 This information can be added to the Mobile app management section under Data Sources
 
-<img src="/img/pusher/ProxyHeaders.png" alt="Push Notification Proxy" style="width: 800px;padding: 20px;">
+<img loading="lazy" src="/img/pusher/ProxyHeaders.png" alt="Push Notification Proxy" style="width: 800px;padding: 20px;">

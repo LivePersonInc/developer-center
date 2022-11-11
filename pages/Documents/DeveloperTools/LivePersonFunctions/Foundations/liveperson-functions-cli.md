@@ -19,7 +19,7 @@ The CLI is optimized for use with macOS and Linux. If you want to use the CLI fr
 
 Use the command `npm install -g liveperson-functions-cli` or `yarn global add liveperson-functions-cli` to install the CLI on your local machine. Once the CLI has been successfully installed you can display the current version using `lpf version`:
 
-<img class="fancyimage" alt="Functions: cli version" src="img/functions/functions_cli_version.png">
+<img loading="lazy" class="fancyimage" alt="Functions: cli version" src="img/functions/functions_cli_version.png">
 
 {: .attn-alert}
 The user using CLI should have admin privileges. Otherwise, the correct functionality of the CLI cannot be guaranteed.
@@ -69,7 +69,7 @@ Pushing the function with `lpf push FUNCTION_NAME` will create or update a funct
 
 Once the function exists on the platform or is already deployed, you can check its status using `lpf get functions`:
 
-<img class="fancyimage" alt="Functions: cli get functions" src="img/functions/functions_cli_get_functions.png">
+<img loading="lazy" class="fancyimage" alt="Functions: cli get functions" src="img/functions/functions_cli_get_functions.png">
 
 Using `lpf deploy FUNCTION_NAME`, you can (re)deploy your function. This will changes its state to productive.
 ### Example CI Setup
@@ -78,15 +78,15 @@ You can use the CLI to integrate into a CI/CD solution to automate your developm
 
 We recommend authenticating with a bot user to use the CLI in an automated environment. To create a bot user, first create an API key in your Conversational Cloud:
 
- <img class="fancyimage" alt="Functions: create an API key" src="img/functions/functions_create_api_key.png">
+ <img loading="lazy" class="fancyimage" alt="Functions: create an API key" src="img/functions/functions_create_api_key.png">
 
 This API key should have **Data Access** and **User Login** permissions. Afterwards, create a profile with the Functions developer permission checked:
 
- <img class="fancyimage" alt="Functions: create CI/CD profile" src="img/functions/functions_create_cicd_profile.png">
+ <img loading="lazy" class="fancyimage" alt="Functions: create CI/CD profile" src="img/functions/functions_create_cicd_profile.png">
 
  Lastly, we create the actual bot user. Choose "bot" as user type. Next, choose the API key as the login method and select the previously created key from the list. Assign the Functions Developer profile and save the user:
 
- <img class="fancyimage" alt="Functions: create a bot user" src="img/functions/functions_create_bot_user.png">
+ <img loading="lazy" class="fancyimage" alt="Functions: create a bot user" src="img/functions/functions_create_bot_user.png">
 
 When executing the following curl command you should receive a valid BEARER token which can be used to log into the account using the cli:
 ```sh

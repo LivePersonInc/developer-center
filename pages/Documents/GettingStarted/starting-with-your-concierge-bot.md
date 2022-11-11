@@ -29,7 +29,7 @@ When you are ready to start getting to know your bot, you can check out your Con
 
 Then you will see a screen like this:
 
-<img class="fancyimage" style="width:700px; margin-left: 16px;" src="img/conciergeBot/Concierge-bot-1.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px; margin-left: 16px;" src="img/conciergeBot/Concierge-bot-1.jpeg" alt="">
 From here you can test your bot by clicking <b>Preview</b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>,
 <i> ‘Contact’ </i>, etc. to see your bot from behind the scenes.
 
@@ -43,11 +43,11 @@ The Conversation Builder lets you easily update and change what your bot says. L
 
 1. Load up your Concierge Bot in Conversation Builder
 2. Click on the <i>‘Welcome’</i> dialog to expand it
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-2.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-2.jpeg" alt="">
 3. Click on the text in <i> WELCOME_BODY</i> to select and edit that statement
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-3.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-3.jpeg" alt="">
 4. Replace [Brand] with your company’s name and click <b>Save</b>.
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-4.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-4.jpeg" alt="">
 5. Test your changes using <b>Preview</b>.
 
 You can update any other dialog in this bot as you see fit.
@@ -60,11 +60,11 @@ Your bot can understand some messages from your customers out-of-the-box.  For e
 
 1. Open your Concierge Bot in Conversation Builder
 2. Click on the <i> ‘Welcome’ </i>dialog to expand it
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-5.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-5.jpeg" alt="">
 3. Click on <b> Pattern </b>
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-6.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-6.jpeg" alt="">
 4. Add <i> ‘hey’ </i> and <i> ‘aloha’ </i> to the pattern then click <b>Save</b>.
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-7.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-7.jpeg" alt="">
 5. Test your changes using <b> Preview</b>.
 
 You can update the dialog starters for each of the dialogs in this bot in the same way.
@@ -77,11 +77,11 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
 
 1. Open your Concierge Bot in Conversation Builder
 2. Click on <b> Integrations</b>
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-8.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-8.jpeg" alt="">
 3. Select <i>‘Send_Email’</i>
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-9.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-9.jpeg" alt="">
 4. Update the  <i>‘To’</i> and <i>‘Reply To’</i> fields with your desired email addresses.   Update  <i>‘Subject’</i> with your desired email subject line.
-<img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-10.jpeg" alt="">
+<img loading="lazy" class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-10.jpeg" alt="">
 5. Click <b>Save</b>.
 6. Test your changes using <b>Preview</b>.
 

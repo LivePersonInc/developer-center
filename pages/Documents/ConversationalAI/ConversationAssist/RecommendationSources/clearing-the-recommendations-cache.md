@@ -29,4 +29,4 @@ If you don’t clear the cache when appropriate, your agents might not receive t
 1. [Access Conversation Assist](conversation-assist-overview.html#access-conversation-assist), and click **Settings**.
 2. Scroll down to **Clear recommendations cache**, and click **Clear cache**.
 
-    <img width="800" alt="Button on Settings page for clearing recommendations cache" src="img/agentassist/clear_recommendations_cache.png">
+    <img loading="lazy" width="800" alt="Button on Settings page for clearing recommendations cache" src="img/agentassist/clear_recommendations_cache.png">

@@ -18,11 +18,11 @@ User responses to question interactions can be saved in [variables](conversation
 
 Multiple choice questions let the consumer select an answer from a list of choices.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png" alt="An example of a Multiple Choice question as it appears in the Preview tool">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_mcq1.png" alt="An example of a Multiple Choice question as it appears in the Preview tool">
 
 One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-manager-key-terms-concepts.html#entities).
 
-<img style="width:650px" src="img/ConvoBuilder/questions_mcq3.png" alt="The default state of the Multiple Choice question">
+<img loading="lazy" style="width:650px" src="img/ConvoBuilder/questions_mcq3.png" alt="The default state of the Multiple Choice question">
 
 #### Question text
 
@@ -40,7 +40,7 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 - **Display Choices as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
 
-<img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png" alt="An example of quick replies">
+<img loading="lazy" style="width:350px" src="img/ConvoBuilder/questions_mcq2.png" alt="An example of quick replies">
 
 - **Choices per Row**: This setting is available when you select to display the choices as quick reply "chips" (in **Display Choices as**). Select the number of answer choices to present in a single row. Example: You have 8 answer choices, and you select "3" here. So, 3 choices will be presented in the first row, 3 in the second row, and the remaining 2 in the last row. Note that a maximum of 3 rows are used; the third row includes all the answer choices not included in the first 2 rows.
 
@@ -56,11 +56,11 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 Text questions expect and wait for a text-based response from the consumer.
 
-<img style="width:375px" src="img/ConvoBuilder/questions_text1.png" alt="An example of a Text question as it appears in the Preview tool">
+<img loading="lazy" style="width:375px" src="img/ConvoBuilder/questions_text1.png" alt="An example of a Text question as it appears in the Preview tool">
 
 With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
 
-<img style="width:650px" src="img/ConvoBuilder/questions_text2.png" alt="The default state of a Text question">
+<img loading="lazy" style="width:650px" src="img/ConvoBuilder/questions_text2.png" alt="The default state of a Text question">
 
 #### Question text
 
@@ -77,11 +77,11 @@ Like with any question, a structured question expects and waits for the user res
 {: .attn-note}
 Structured questions aren't supported on all channels. Be sure to [verify the channel's support](conversation-builder-interactions-interaction-support.html) before designing your bot. For example, Facebook supports structured questions, but Apple Messages for Business doesn't. Apple Messages for Business offers its list picker instead.
 
-<img style="width:600px" src="img/ConvoBuilder/questions_structured2.png" alt="The default state of a Structured question">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_structured2.png" alt="The default state of a Structured question">
 
 #### Tile settings
 
-<img style="width:400px" src="img/ConvoBuilder/questions_structured.png" alt="An illustration of the various parts of the Structured question that are controlled by various settings">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_structured.png" alt="An illustration of the various parts of the Structured question that are controlled by various settings">
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ Structured questions aren't supported on all channels. Be sure to [verify the ch
 
 You can populate the tiles with static information, or they can be dynamically populated during run time, for example, [using data received from an API integration](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
-<img style="width:300px" src="img/ConvoBuilder/questions_structured3.png" alt="An example of well-formed syntax for populating a Structured question dynamically">
+<img loading="lazy" style="width:300px" src="img/ConvoBuilder/questions_structured3.png" alt="An example of well-formed syntax for populating a Structured question dynamically">
 
 #### Button clicks: Sending metadata back to the bot
 
@@ -121,19 +121,19 @@ There are many use cases where this capability can be useful. Here are a few:
 
 2. Switch to the **Metadata** tab, and click **Add Metadata**.
 
-    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata1.png" alt="The Add Metadata button on the Metadata tab">
+    <img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata1.png" alt="The Add Metadata button on the Metadata tab">
 
 3. Select the type of metadata to add; you can add any of the types described in [this section](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). In the Conversation Builder UI, the available choices are named by metadata type.
 
-    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata2.png" alt="Selecting the type of metadata to add">
+    <img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata2.png" alt="Selecting the type of metadata to add">
 
 4. Enter the JSON. As a help, some default JSON is provided to illustrate the proper format to use.
 
-    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata3.png" alt="Entering the JSON">
+    <img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata3.png" alt="Entering the JSON">
 
     When writing the JSON, ensure it’s well-formed and conforms to the [proper format](messaging-agent-sdk-conversation-metadata-guide.html#available-metadata). You can reference botContext variables as well as the custom data fields in API integrations. In our example below, we’re referencing the latter.
 
-    <img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata4.png" alt="Referencing a custom data field in an API integration in the metadata">
+    <img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata4.png" alt="Referencing a custom data field in an API integration in the metadata">
 
 5. Click **Save**.
 
@@ -145,23 +145,23 @@ As an example, let’s break down one of the aforementioned use cases with some 
 
 Assume you have a bot that includes a Structured question that gets populated with products the consumer is interested in. This is accomplished with an API call to your system for the data. In your API integration, you capture the response data in a number of custom data fields:
 
-<img style="width:800px" src="img/ConvoBuilder/questions_structured_metadata5.png" alt="Some example custom data fields in an API integration">
+<img loading="lazy" style="width:800px" src="img/ConvoBuilder/questions_structured_metadata5.png" alt="Some example custom data fields in an API integration">
 
 Back in the dialog, the Structured question looks like this below. For each product, there’s a “Details on this” button that links to the product’s details page on your website.
 
-<img style="width:700px" src="img/ConvoBuilder/questions_structured_metadata6.png" alt="Configuration of the Structured question, with a view of the interaction's face">
+<img loading="lazy" style="width:700px" src="img/ConvoBuilder/questions_structured_metadata6.png" alt="Configuration of the Structured question, with a view of the interaction's face">
 
 On the **Settings** tab, the button is configured to use the “Web URL” action type, so the callback is set to the URL to which to take the consumer.
 
-<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata7.png" alt="Configuration of the Structured question, with a view of the Settings tab">
+<img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata7.png" alt="Configuration of the Structured question, with a view of the Settings tab">
 
 On the **Metadata** tab, there’s one metadata object added: “ExternalId.” This is used to track the consumer’s selection of the “Details on this” button.
 
-<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata8.png" alt="Configuration of the Structured question, with a view of the Metadata tab">
+<img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata8.png" alt="Configuration of the Structured question, with a view of the Metadata tab">
 
 The metadata object is configured so that, when the consumer clicks the button, the product’s ID is sent back to the bot in the conversation metadata.
 
-<img style="width:500px" src="img/ConvoBuilder/questions_structured_metadata9.png" alt="A view of the metadata settings">
+<img loading="lazy" style="width:500px" src="img/ConvoBuilder/questions_structured_metadata9.png" alt="A view of the metadata settings">
 
 Finally, in the **Process User Response** code of the interaction, the bot retrieves and uses the product ID to log a custom event to track the click event, and to determine the next action in the flow. The code looks like this:
 
@@ -188,11 +188,11 @@ Need help understanding custom data fields in API integrations? See [this sectio
 
 A button question lets you ask a question that expects a simple, short reply and present the consumer with button choices.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_button1.png" alt="A Button question as it appears in the Preview tool">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_button1.png" alt="A Button question as it appears in the Preview tool">
 
 Clicking a button can perform an action defined by you as the bot developer. For example, if the consumer were to click “Sure!” above, they could be taken to the URL for your feedback form.
 
-<img style="width:600px" src="img/ConvoBuilder/questions_button2.png" alt="The default configuration of a Button question">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_button2.png" alt="The default configuration of a Button question">
 
 #### Question text
 
@@ -216,15 +216,15 @@ In a Button question, you can set metadata in a button’s configuration. During
 
 A quick reply question lets you ask a question that expects a simple, short reply and present the consumer with choices from which to select. The response choices appear as “chips” beneath the question.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_quickReply1.png" alt="A Quick Reply question as it appears in the Preview tool">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_quickReply1.png" alt="A Quick Reply question as it appears in the Preview tool">
 
 And the chips disappear once the consumer selects one:
 
-<img style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png" alt="A view of the conversation after the consumer has selected one of the quick reply choices and the chips disappear">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png" alt="A view of the conversation after the consumer has selected one of the quick reply choices and the chips disappear">
 
 Details vary by channel. For example, Apple Messages for Business does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult these [guidelines and best practices](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
 
-<img style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png" alt="The default configuration of a Quick Reply question">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png" alt="The default configuration of a Quick Reply question">
 
 #### Question text
 
@@ -266,15 +266,15 @@ You can create a list picker that displays a static (fixed) list of items that y
 
 The interaction has been developed per Apple's List Picker [specifications](https://register.apple.com/resources/messages/msp-rest-api/type-interactive#list-picker-message). Keep in mind [Apple's guidelines](https://developer.apple.com/design/human-interface-guidelines/technologies/messages-for-business/introduction).
 
-<img style="width:600px" src="img/ConvoBuilder/questions_listPicker5.png" alt="The default configuration of an Apple Pay interaction">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_listPicker5.png" alt="The default configuration of an Apple Pay interaction">
 
-<img style="width:600px" src="img/ConvoBuilder/questions_listPicker6.png" alt="The rest of the default configuration of the interaction">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_listPicker6.png" alt="The rest of the default configuration of the interaction">
 
 #### Response Message settings
 
 The Response Message settings define how to initially display the list picker to the consumer:
 
-<img style="width:400px" src="img/ConvoBuilder/questions_listPicker1.png" alt="An illustration of how the list picker is initially displayed to the consumer and what the various parts are">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_listPicker1.png" alt="An illustration of how the list picker is initially displayed to the consumer and what the various parts are">
 
 Response Message settings also provide the text in the header of the actual list picker.
 
@@ -289,7 +289,7 @@ Response Message settings also provide the text in the header of the actual list
 
 Section and item settings define how to display the sections and individual items in the list picker.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_listPicker2.png" alt="An illustration of the various parts of the sections and items in the list picker">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_listPicker2.png" alt="An illustration of the various parts of the sections and items in the list picker">
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -304,7 +304,7 @@ Section and item settings define how to display the sections and individual item
 
 The Reply Message settings define how to display the consumer’s reply after the consumer picks one or more items from the list.
 
-<img style="width:300px" src="img/ConvoBuilder/questions_listPicker3.png" alt="An illustration of the various parts of the reply message after the consumer has made a selection in the list picker">
+<img loading="lazy" style="width:300px" src="img/ConvoBuilder/questions_listPicker3.png" alt="An illustration of the various parts of the reply message after the consumer has made a selection in the list picker">
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -333,7 +333,7 @@ If you’re hard-coding the sections and items, their display order is as you co
 
 Once a user makes their selection in the list picker, the reply is sent back to the bot as "User Selected: " plus the item title. If the user has selected multiple items, they are concatenated with "and."
 
-<img style="width:350px" src="img/ConvoBuilder/questions_listPicker4.png" alt="How the consumer's response is rendered in the conversation">
+<img loading="lazy" style="width:350px" src="img/ConvoBuilder/questions_listPicker4.png" alt="How the consumer's response is rendered in the conversation">
 
 ### Apple Time Picker
 
@@ -345,15 +345,15 @@ The interaction has been developed per Apple's Time Picker [specifications](http
 
 You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
-<img style="width:600px" src="img/ConvoBuilder/questions_timePicker1.png" alt="The default configuration of a time picker">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_timePicker1.png" alt="The default configuration of a time picker">
 
-<img style="width:600px" src="img/ConvoBuilder/questions_timePicker12.png" alt="More of the view of the default configuration of a time picker">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_timePicker12.png" alt="More of the view of the default configuration of a time picker">
 
 #### Response Message settings
 
 The Response Message settings define how to display the time picker that’s initially presented to the consumer.
 
-<img style="width:450px" src="img/ConvoBuilder/questions_timePicker2.png" alt="An illustration of how the time picker is initially rendered to the consumer and what the various parts are">
+<img loading="lazy" style="width:450px" src="img/ConvoBuilder/questions_timePicker2.png" alt="An illustration of how the time picker is initially rendered to the consumer and what the various parts are">
 
 Response Message settings also provide the text in the header of the actual time picker.
 
@@ -385,15 +385,15 @@ Location settings support features that play a role after the consumer has selec
 
 #### Time slot settings
 
-<img style="width:250px" src="img/ConvoBuilder/questions_timePicker3.png" alt="An illustration of how the time slots are rendered">
+<img loading="lazy" style="width:250px" src="img/ConvoBuilder/questions_timePicker3.png" alt="An illustration of how the time slots are rendered">
 
 Use the fields below to specify a *static* start date and start time:
 
-<img style="width:350px" src="img/ConvoBuilder/questions_timePicker9.png" alt="Specifing a static start date and start time">
+<img loading="lazy" style="width:350px" src="img/ConvoBuilder/questions_timePicker9.png" alt="Specifing a static start date and start time">
 
 Or, use the field below to specify a *variable* start date and start time:
 
-<img style="width:250px" src="img/ConvoBuilder/questions_timePicker10.png" alt="Specifying a variable start date and start time">
+<img loading="lazy" style="width:250px" src="img/ConvoBuilder/questions_timePicker10.png" alt="Specifying a variable start date and start time">
 
 You can switch between the two options using the blue link (shown above) beneath the fields. See below for more details.
 
@@ -405,17 +405,17 @@ You can switch between the two options using the blue link (shown above) beneath
 | Duration | The duration in minutes of the event. | Required | 30 |
 | Timeslot ID | An ID for the time slot. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   time123 |
 
-<img style="width:600px" src="img/ConvoBuilder/questions_timePicker7.png" alt="Specifying dates and times in GMT and how they are shown to the consumer with an unset timezone offset">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_timePicker7.png" alt="Specifying dates and times in GMT and how they are shown to the consumer with an unset timezone offset">
 
 #### Populating a time picker dynamically
 
 As mentioned earlier, a time picker can be populated dynamically during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). As an example, in the image below, we're retrieving a list of appointment dates and times that are returned from an API integration named "Appointment." In the integration, the returned data is stored in a custom data field named "start."
 
-<img style="width:600px" src="img/ConvoBuilder/questions_timePicker11.png" alt="The custom data fields in an API integration that calls for a list of appointment dates and times">
+<img loading="lazy" style="width:600px" src="img/ConvoBuilder/questions_timePicker11.png" alt="The custom data fields in an API integration that calls for a list of appointment dates and times">
 
 We can then reference this custom data field in the **Variable Date & Time** field in the time picker, using the following [notation](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) (i.e., with `{apiName.variableName}`):
 
-<img style="width:300px" src="img/ConvoBuilder/questions_timePicker10.png" alt="How to reference the custom data fields in the time picker itself">
+<img loading="lazy" style="width:300px" src="img/ConvoBuilder/questions_timePicker10.png" alt="How to reference the custom data fields in the time picker itself">
 
 During run time, the time picker iterates over the list and populates the list of start times.
 
@@ -431,7 +431,7 @@ The Duration field can't be populated dynamically; you must manually specify thi
 
 The Reply Message settings define how to display the consumer’s reply after the consumer picks a time slot.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_timePicker4.png" alt="An illustration of the reply message that's sent to the consumer and what the various parts are">
+<img loading="lazy" style="width:400px" src="img/ConvoBuilder/questions_timePicker4.png" alt="An illustration of the reply message that's sent to the consumer and what the various parts are">
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
@@ -444,4 +444,4 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 Once a user makes their selection in the time picker, the reply is sent back to the bot as "For" plus the event title, followed by "User Selected: " plus the date and time expressed in GMT.
 
-<img style="width:350px" src="img/ConvoBuilder/questions_timePicker5.png" alt="How the consumer response is rendered in the conversation">
+<img loading="lazy" style="width:350px" src="img/ConvoBuilder/questions_timePicker5.png" alt="How the consumer response is rendered in the conversation">
