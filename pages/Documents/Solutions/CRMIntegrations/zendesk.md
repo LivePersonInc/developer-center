@@ -8,6 +8,9 @@ permalink: crm-integrations-zendesk.html
 indicator: both
 ---
 
+{: .attn-deprecation}
+The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, <a href="https://navomi.com/crm-connect/" target="_blank">NAVOMI</a> will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
+
 This integration will allow you to see and create your Zendesk Contact tickets right from within Conversational Cloud. It will also record all Conversational Cloud transcripts in Zendesk so all your customer interactions are in one place.
 
 <div class="inntertext configlink"><a href="assets/CRM_Widget_Zendesk_Admin_Guide_2019_v2.pdf" target="_blank">Click here</a> for the Zendesk Widget Integration Guide.</div>
