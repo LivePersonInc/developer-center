@@ -203,7 +203,7 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 CTRL+ENTER: Hold control and hit enter/return.
 
 {: .attn-note}
-This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
+This does not render when using the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
 
 #### Character limit
 

@@ -66,7 +66,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig1.png" alt="The Basic interaction settings in a Dynamic Routing interaction, which includes the field for entering a fallback skill ID">
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig2.png" alt="The Advanced interaction settings in a Dynamic Routing interaction, which includes the field for entering an escalation message">
 
-    * **Option 2: Handling fallbacks within the Dynamic Routing bot**: In this case, select the appropriate interaction or select Next Interaction (whichever is appropriate) in the the dropdown in the Dynamic Routing interaction, as shown below.
+    * **Option 2: Handling fallbacks within the Dynamic Routing bot**: In this case, select the appropriate interaction or select Next Interaction (whichever is appropriate) in the dropdown in the Dynamic Routing interaction, as shown below.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig3.png" alt="Selecting the next action in a Dynamic Routing interaction">
 
