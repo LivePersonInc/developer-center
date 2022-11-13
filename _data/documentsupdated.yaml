@@ -53,6 +53,7 @@
     - documentname: Common Solutions
       pages:
         - pagename: Set Consumer Expectations about Wait Times for Agents
+        - pagename: Check a Skill's Shift Status before Transferring
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
@@ -60,6 +61,7 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Support Small Talk
             - subpagename: Prevent Consumer Interruptions
             - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging

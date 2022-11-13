@@ -8,6 +8,7 @@ documentname: Conversation Builder
 subfoldername: Interactions
 permalink: conversation-builder-interactions-dialog-starter.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 ### What's a dialog starter?
@@ -61,6 +62,10 @@ When you create a standard dialog, by default it includes a dialog starter inter
     For some practice with this, try the try the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial.
 
 ### FAQs
+
+#### In the case of an intent added to a dialog starter, what must the match score be for the dialog flow to be triggered?
+
+The score must be GOOD or better.
 
 #### When do you use patterns versus intents?
 
