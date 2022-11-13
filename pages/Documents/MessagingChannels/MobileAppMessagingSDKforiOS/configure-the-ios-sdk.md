@@ -132,7 +132,7 @@ For information about the methods, see to [Messaging API](mobile-app-messaging-s
 
 #### Delegates
 
-* Triggered when the the user submits the survey and dismisses the customer satisfaction survey:
+* Triggered when the user submits the survey and dismisses the customer satisfaction survey:
 
    ```swift
    <LPMessagingSDKdelegate> optional func LPMessagingSDKConversationCSATDismissedOnSubmittion(conversationID: String?)

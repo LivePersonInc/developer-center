@@ -417,7 +417,7 @@ Now that we created records from the Conversational Cloud, you may view all our 
 #### **Looking at your chat transcripts**
 
 1. Login to Salesforce — click on the application menu in the top right of your screen.
-2. Make sure you have the the "Conversational Cloud" application selected (or any other app in which you’ve included the tab).
+2. Make sure you have the "Conversational Cloud" application selected (or any other app in which you’ve included the tab).
 3. Click on the “Chat Transcripts” tab.
 4. Select one of the recently synced chat transcripts by clicking on the “Chat Transcript Name” under the Recent Chat Transcript list.
 5. There you have it — depending on your chat transcript settings, you will see a number of fields populated.

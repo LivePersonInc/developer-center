@@ -52,7 +52,7 @@ Once you start the process of adding the knowledge base — i.e., you provide a 
 
 Click **Yes** to save the knowledge base.
 
-You can find your incomplete external knowledge bases listed along with your other knowledge bases on the dashboard. They're given an "Incomplete" status to indicate the the configuration is incomplete.
+You can find your incomplete external knowledge bases listed along with your other knowledge bases on the dashboard. They're given an "Incomplete" status to indicate the configuration is incomplete.
 
 <img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png" alt="An example of an incomplete external knowledge base">
 
