@@ -9,7 +9,7 @@ indicator: chat
 ---
 
 {: .attn-deprecation}
-The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, <a href="https://navomi.com/crm-connect/" target="_blank">NAVOMI</a> will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
+The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, [NAVOMI](https://navomi.com/crm-connect/) will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
 
 This integration will allow you to see and create your Microsoft Dynamics Contact, Lead, Account record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Microsoft Dynamics.
 

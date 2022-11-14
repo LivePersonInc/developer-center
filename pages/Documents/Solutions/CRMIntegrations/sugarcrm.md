@@ -9,7 +9,7 @@ indicator: both
 ---
 
 {: .attn-deprecation}
-The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, <a href="https://navomi.com/crm-connect/" target="_blank">NAVOMI</a> will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
+The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, [NAVOMI](https://navomi.com/crm-connect/) will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
 
 This integration enables brands to see and create Sugar Contact, Lead, Account and Opportunity record data right from within Conversational Cloud. It will also allow you to view your Conversational Cloud transcripts from within Sugar CRM. Brands that use Conversational Cloud for sales and support can offer a more personalized, informed experience with access to SugarCRM, by giving agents a full overview of the account, including previous or existing cases, opportunities and even potential leads.
 

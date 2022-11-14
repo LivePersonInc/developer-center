@@ -22,7 +22,7 @@ Furthermore, agents have the ability to easily create records in Salesforce as p
 -->
 
 {: .attn-deprecation}
-The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, <a href="https://navomi.com/crm-connect/" target="_blank">NAVOMI</a> will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
+The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, [NAVOMI](https://navomi.com/crm-connect/) will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
 
 The Conversational Cloud Salesforce Widget will allow SFDC information to be viewed inside the platform, as well as enabling records to be created and chat/messaging transcripts to be attached to them. In addition, the app will include back-end setup that will allow the SFDC admin to customize the default settings for their organization. This guide sets out the steps to install, configure, and start working with the Conversational Cloud app for Salesforce.
 
