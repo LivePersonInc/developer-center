@@ -71,32 +71,6 @@ The import file can contain [a subset of HTML](knowledgeai-common-settings-tasks
 | validFrom | Specify the date and time on which the article becomes [active](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles) in Epoch time in milliseconds. |
 | validTo | Specify the date and time on which the article becomes [inactive](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles) in Epoch time in milliseconds. |
 
-### Convert Knowledge Base intents to Domain intents
-
-When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
-
-From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the KnowledgeAI application to the Intent Manager application.
-
-{: .attn-note}
-Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
-
-**To convert from Knowledge Base intents to Domain intents**
-1. Open the knowledge base.
-2. In the upper-left corner, click **Settings**.
-3. Click **More Options**, and scroll down to the **Intent Association** section.
-4. Click **Convert to Domain Intents**.
-5. In the dialog that appears, select the domain.
-
-    * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
-    * If you select a domain that uses the deprecated LivePerson (Legacy) NLU engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to using the LivePerson engine, not the LivePerson (Legacy) engine. While the legacy engine stil works, it's no longer supported apart from security updates.
-    * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
-
-6. In the confirmation dialog, click **Confirm**.
-
-    This converts the intents and associates the selected domain.
-
-    <img class="fancyimage" style="width:750px" alt="The Intent Association and Associated Domain settings for a knowledge base" src="img/ConvoBuilder/kb_convertIntents.png">
-
 ### Sync with a Google sheet
 
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
@@ -126,3 +100,29 @@ You might need to download a knowledge base for a few reasons:
 2. In the upper-left corner, click **Settings**.
 3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" alt="Download knowledge base icon" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
 4. Follow the browser prompts to access and save the CSV file to a location of your choice.
+
+### Convert Knowledge Base intents to Domain intents
+
+When you convert Knowledge Base intents to [Domain intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
+
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the KnowledgeAI application to the Intent Manager application.
+
+{: .attn-note}
+Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
+
+**To convert from Knowledge Base intents to Domain intents**
+1. Open the knowledge base.
+2. In the upper-left corner, click **Settings**.
+3. Click **More Options**, and scroll down to the **Intent Association** section.
+4. Click **Convert to Domain Intents**.
+5. In the dialog that appears, select the domain.
+
+    * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
+    * If you select a domain that uses the deprecated LivePerson (Legacy) NLU engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. There are [many benefits](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#benefits-of-liveperson-over-liveperson-legacy) to using the LivePerson engine, not the LivePerson (Legacy) engine. While the legacy engine stil works, it's no longer supported apart from security updates.
+    * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
+
+6. In the confirmation dialog, click **Confirm**.
+
+    This converts the intents and associates the selected domain.
+
+    <img class="fancyimage" style="width:750px" alt="The Intent Association and Associated Domain settings for a knowledge base" src="img/ConvoBuilder/kb_convertIntents.png">

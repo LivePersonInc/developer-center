@@ -123,7 +123,7 @@ The following table identifies the JSON node for article information that's ofte
 
 ### Using entities within a knowledge base (Legacy)
 
-{: .attn-note}
+{: .attn-deprecation}
 This section is applicable to knowledge bases using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (i.e., intent qualifiers), which is a legacy feature. In this case, behind the scenes the LivePerson (Legacy) engine is used for intent matching.<br><br>For better performance and a more scalable solution, LivePerson recommends that you convert from *Knowledge Base intents* to *Domain intents* as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).<br><br>If you're using entities within your knowledge base (as discussed in this section), first [convert the knowledge base to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents). Then, if the domain itself uses LivePerson (Legacy), [convert the domain to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson).
 
 [Entities](intent-manager-key-terms-concepts.html#entities) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.

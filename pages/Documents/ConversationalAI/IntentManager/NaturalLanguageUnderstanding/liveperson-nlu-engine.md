@@ -101,7 +101,7 @@ If you're still using the deprecated LivePerson (Legacy) NLU engine, this sectio
 
 #### What's LivePerson (Legacy) NLU engine?
 
-{: .attn-note}
+{: .attn-deprecation}
 As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this deprecated engine are encouraged to [migrate to the LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics of the legacy engine include:
@@ -122,7 +122,7 @@ Key characteristics of the legacy engine include:
 
 #### Convert a LivePerson (Legacy) domain to LivePerson
 
-{: .attn-note}
+{: .attn-deprecation}
 Brands with existing domains using the deprecated LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. While the legacy engine still works, it's no longer supported apart from security updates. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 **To convert a LivePerson (Legacy) domain to the LivePerson engine**

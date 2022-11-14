@@ -13,7 +13,18 @@ indicator: both
 
 ### What's an entity?
 
-An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
+An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY.
+
+There are three types of entities:
+
+* [Value Set](intent-manager-key-terms-concepts.html#value-set-entities) - You define these.
+* [Regular Expression](intent-manager-key-terms-concepts.html#regular-expression-entities) - You define these.
+* [Global](intent-manager-key-terms-concepts.html#global-entities) - These are automatically detected by the system; see [the complete list](intent-manager-key-terms-concepts.html#global-entities).
+
+Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
+
+{: .attn-info}
+Interested in the performance? Check out the discussion on precision and recall in our [October 2022 blog post](https://www.liveperson.com/blog/improving-named-entity-recognition/).
 
 ### Add a Value Set entity
 
