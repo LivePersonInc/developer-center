@@ -56,12 +56,12 @@ Input messages by a visitor which will be delivered to a bot can have different 
 
 Bots can trigger different forms of actions.
 
-{: .note}
+{: .attn-note}
 Please note we only support **ONE ACTION** per response.
 
 #### Transfer
 
-{: .alert}
+{: .attn-alert}
 If you use the node 'Handover to Agent' inside of an e-bot7 flow, the conversation won't be transferred within Conversational Cloud. Instead, it will be transferred within the application of e-bot7 which is not supported by this connector.
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to tell the connector to transfer the conversation to a given skill.
@@ -98,7 +98,7 @@ Parameters:
 
 ##### Transfer to Agent
 
-{: .note}
+{: .attn-note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided `agentId` and `skill`. If the agent is not available, the conversation will be transferred to an available agent with the same skill

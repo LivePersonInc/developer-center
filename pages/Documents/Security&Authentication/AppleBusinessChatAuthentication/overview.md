@@ -1,6 +1,5 @@
 ---
 pagename: Overview
-Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Apple Business Chat Authentication

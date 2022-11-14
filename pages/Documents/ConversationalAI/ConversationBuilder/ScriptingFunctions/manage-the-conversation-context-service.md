@@ -3,13 +3,13 @@ pagename: Manage the Conversation Context Service
 redirect_from:
     - conversation-builder-scripting-functions-context-session-store-wrapper.html
     - conversation-builder-scripting-functions-manage-the-context-session-store.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-manage-the-conversation-context-service.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 The Conversation Context Service is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
@@ -18,12 +18,12 @@ Within the Conversation Context Service, you can have multiple namespaces for di
 
 In Conversation Builder, the following built-in functions for managing the Conversation Context Service are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 
-{: .note}
+{: .attn-note}
 Don't store personally identifiable information (PII) in the Conversation Context Service.<br><br>All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
 For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html).
 
-{: .note}
+{: .attn-note}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
 ### Getting started
@@ -32,13 +32,12 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 **To enable the Conversation Context Service API for your account**
 
-1. Access the *Bot Accounts* application, and click the organization name.
+1. [Access the Bot Accounts application](bot-accounts-overview.html#access-bot-accounts), and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use Conversational Cloud Site ID** (Only available for LivePerson accounts.)
-    * **Use Conversation Builder Account ID** (This is your organization ID.)
-4. Enter the ID for your selection in step 5.
-5. Click **Update Account**.
+    * **Use Conversational Cloud Site ID**: Only available for LivePerson accounts.
+    * **Use Conversation Builder Account ID**: This is your organization ID.
+4. Enter the ID for your selection in step 3.
 
 #### Conversation Builder data scopes
 
@@ -56,7 +55,7 @@ The `isContextApiEnabled` method checks whether the Context API is enabled.
 | --- | --- | --- |
 | `isContextApiEnabled()` | none | Boolean |
 
-#### Example 
+#### Example
 
 ```javascript
 var success = botContext.isContextApiEnabled();
@@ -67,7 +66,7 @@ botContext.printDebugMessage("context API enabled: " + success);
 
 The `registerContextNamespace` method creates a custom namespace.
 
-{: .note}
+{: .attn-note}
 If the namespace already exists, this method does not create an additional one. It uses the existing namespace.
 
 | Function Name | Arguments | Returns |
@@ -86,7 +85,7 @@ botContext.printDebugMessage("Register Namespace: " + success);
 
 The `deleteContextNamespace` method deletes a custom namespace.
 
-{: .note}
+{: .attn-note}
 It is not mandatory to delete a previously registered namespace.
 
 | Function Name | Arguments | Returns |
@@ -160,7 +159,7 @@ Both methods return a java.util.HashMap. To retrieve a specific property, use th
 ```
 function displayAllVars(map) {
   var stringOfMap = map.toString();
- 
+
   for each (var i in map.keySet()) {
 
        botContext.printDebugMessage('Key → ' + i);

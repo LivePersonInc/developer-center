@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started - Legacy
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -9,7 +8,7 @@ permalink: conversation-orchestrator-dynamic-routing-getting-started-legacy.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you [switch to the newer template](conversation-orchestrator-dynamic-routing-getting-started.html), which is much simpler. This legacy topic remains available for those who still have bots based on the older template.
 
 ### Introduction
@@ -105,7 +104,7 @@ On the top navigation, click **Global Functions**, and edit the following fields
 * **mavenNamespace**: The Conversation Orchestrator namespace is used for organizing a set of attributes you might want to use in a policy. See [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for more information on how this works. Please enter “myNamespace” here. You will use this name in a routing policy.
 * **fallbackSkillName**, **fallbackSkillId**, and **fallbackMessage**: Set up an optional fallback skill by editing these values. This will be the fallback skill the conversation will be routed to in case there is some failure in Dynamic Routing logic.
 
-{: .note}
+{: .attn-note}
 Conversation Builder is already integrated with the Conversation Context Service. You can manage the Conversation Context Service from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-conversation-context-service.html). Make sure you have enabled the Context API in the Bot Accounts application, using your Conversational Cloud Site Id. This is discussed farther above.
 
 [Deploy the bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) in Conversational Cloud. See the next step (“Set up Conversational Cloud”) for information on how to set up a skill in Conversational Cloud to accept the incoming conversations.
@@ -118,7 +117,7 @@ Conversation Builder is already integrated with the Conversation Context Service
 4. Set up a regular agent skill (e.g., Regular Support). Add agents (e.g., Regular Agent) and assign them to the Regular Support skill.
 5. Save the skill and agent ids to be used with policy.
 
-{: .note}
+{: .attn-note}
 For some practice at creating skills, users, and campaigns, see the[tutorial on deploying a bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 #### Create a simple policy using static context attributes
@@ -173,7 +172,7 @@ In this example, you will create and use static attributes. To check if a custom
 5. Select “attribute”, and select “custom.vipPhoneNumberList” from the drop-down.
 6. In the **Actions** block, in the first dropdown box select “Transfer to a skill”, and then select the “Vip Support” skill from the dropdown (Skills must be created in Conversational Cloud prior to this step).
 
-    {: .note}
+    {: .attn-note}
     Don’t select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy.
 
 7. Click **Save** to save the policy.
@@ -278,7 +277,7 @@ In the previous example, you checked for the phone number in a static list. Main
 
 Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false based on whether the phone number is for a VIP customer. The function can internally call a CRM backend to check this status.
 
-{: .note}
+{: .attn-note}
 Creating and deploying a [LivePerson function](liveperson-functions-overview.html) (FaaS function) is beyond the scope of this topic and hence not covered in this topic.
 
 With the function created and deployed, now add a custom attribute of type “function” in Conversation Orchestrator.
@@ -388,13 +387,13 @@ Code:
 function __initConversation() {
   // Define the Namespace you will access from Orchestrator
   var mavenNamespace = "myNamespace";
-  
+
   // Define the Fallback/Default skill
   // This will be the skill name, SkillId and transfer message used by the bot if no policies are returned by Conversation Orchestrator
   var fallbackSkillName = "**Your_Fallback_Skill_Name***";
   var fallbackSkillId = "***Your_Fallback_Skill_ID***";
   var fallbackMessage = "BLANK_MESSAGE";
-  
+
   // Set our variables to the botContext so we can access them later
   botContext.setBotVariable("accountId", botContext.getLPAccountId(), true, false);
   botContext.setBotVariable("mavenNamespace", mavenNamespace, true, false);
@@ -415,7 +414,7 @@ Code:
 ```javascript
 function setTransferParameters(agentId, skillId, skillName, transferType) {
   // This function recieves our Transfer Parameters and sets them if available.
-  // If they are not available the Transfer Parameters will be set to 
+  // If they are not available the Transfer Parameters will be set to
   // the Fallback/Default Skill Defined in __initConversation()
   var fallbackSkillId = botContext.getBotVariable("fallbackSkillId");
   var fallbackSkillName = botContext.getBotVariable("fallbackSkillName");
@@ -474,7 +473,7 @@ For testing, we will trigger the dialog starter with the pattern “agent”.
 
 #### Create the Ask Maven API call and transfer to the relevant escalation
 
-{: .note}
+{: .attn-note}
 As this interaction makes the dynamic routing decision, all the dialog endpoints that will escalate to an agent need to be directed here.
 
 Create a text interaction, and set the text to BLANK_MESSAGE.
@@ -705,7 +704,7 @@ The Conversation Context Service is useful for storing any context information g
 
 ```javascript
 const contextUrl = 'https://z1.context.liveperson.net/v1/account/55884191/namespace1/' + conversationId + '/properties';
- 
+
 var data = {
    'key1': 'val1',
    'key2': 'val2',
@@ -713,8 +712,8 @@ var data = {
 };
 
 axios.patch(
-   contextUrl, 
-   data, 
+   contextUrl,
+   data,
    { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
 );
 ```
@@ -725,17 +724,17 @@ Now that you have the conversation ID, use it to call the [Next Actions API](con
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
- 
+
 axios.get(
-   askMavenUrl, 
+   askMavenUrl,
    { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
 ).then(function(response){
    const rule = response.rule;
    if (rule && rule.actions) {
       // You can inspect the actions and do something according to the actions
-      //   e.g. transfer to an agent or skill, or send back a message.  
+      //   e.g. transfer to an agent or skill, or send back a message.
       //        Here we just log the actions to the console.
-      console.log(rule.actions); 
+      console.log(rule.actions);
    }
 });
 ```

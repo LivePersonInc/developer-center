@@ -2,15 +2,12 @@
 pagename: Create Predefined Content
 redirect_from:
   - account-configuration-predefined-content-create-content.html
-Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Predefined Content API
 subfoldername: Methods
-
 order: 40
 permalink: predefined-content-api-methods-create-predefined-content.html
-
 indicator: both
 ---
 
@@ -42,7 +39,7 @@ Creates new Predefined Content for an account.
 
 |Header | Description |
  |:------- | :-------------- |
-| Authorization  |Contains token string to allow request authentication and authorization.|  
+| Authorization  |Contains token string to allow request authentication and authorization.|
 
 **Request Body**
 

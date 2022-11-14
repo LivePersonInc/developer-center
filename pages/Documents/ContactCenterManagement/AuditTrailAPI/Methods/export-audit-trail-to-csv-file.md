@@ -2,7 +2,6 @@
 pagename: Export Audit Trail to CSV File
 redirect_from:
   - account-configuration-meta-data-audit-trail-export.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Audit Trail API

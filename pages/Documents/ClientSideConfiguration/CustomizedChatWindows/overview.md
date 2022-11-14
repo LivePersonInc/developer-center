@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Customized Chat Windows
-
 permalink: customized-chat-windows-overview.html
 root-link: true
 level-order: 3
@@ -13,7 +12,7 @@ order: 1
 indicator: chat
 ---
 
-{: .alert}
+{: .attn-alert}
 If you're looking to simply customize the default Conversational Cloud window, check out [our Window Customization API](window-customization-api-overview.html). The Customized Chat Windows API should be used for more involved projects where a custom window is built from scratch.
 
 ### Introduction

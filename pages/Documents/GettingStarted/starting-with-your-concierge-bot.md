@@ -13,7 +13,7 @@ Your Conversational Cloud free trial account comes preloaded with a Concierge Bo
 This bot provides basic information and contact options to your consumers. If you don’t have an agent available, it can also collect consumer contact information and then send it to an email address that you provided so you can respond later. This means you can engage with your consumers 24/7 without needing a 24-hour support staff.
 
 <div>
-    <div class="note" style="width:100%">
+    <div class="attn-note" style="width:100%">
     <b>Prerequisites:</b> To use this guide, please create a 45-day trial account <a href="https://developers.liveperson.com/register.html" alt="Trial Registration">here</a>.
   </div>
 </div>

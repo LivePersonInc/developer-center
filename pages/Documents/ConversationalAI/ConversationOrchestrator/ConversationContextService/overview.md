@@ -4,7 +4,7 @@ redirect_from:
   - maven-context-warehouse-overview.html
   - maven-ai-context-warehouse-overview.html
   - conversation-orchestrator-context-warehouse-overview.html
-Keywords:
+  - conversation-orchestrator-conversation-context-service-conversation-context-service.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -25,13 +25,13 @@ CCS provides a system to hierarchically organize data using *key-value pairs*. A
 { Namespace
 
   <Group-related attributes, e.g., customer info>
-  
+
   { Session ID
-  
+
   <Identifier to group KVPs, e.g., a session ID>
-  
+
     { Key-Value Pairs
-    
+
     <Attributes, e.g., customer name, email>
 ```
 
@@ -39,7 +39,7 @@ CCS stores data in key-value pairs and includes developer tools like js-librarie
 
 ### When to use the Conversation Context Service
 
-{: .note}
+{: .attn-note}
 Don’t store personally identifiable information (PII) in the Conversation Context Service.
 
 CCS attributes can be used in a variety of ways to enhance the conversational experience of consumers. Attributes are accessible at any point in the conversational journey, and they can be used in the following ways:
@@ -79,5 +79,5 @@ v2 of the Conversation Orchestrator APIs was released in July 2021. The new vers
 
 All accounts will gradually be migrated from v1 to v2 starting July 2021. Please talk to your LivePerson account executive if you want to be moved to v2 sooner. The v1 APIs will be deprecated on December 31, 2022. Please refer to the [v1](conversation-orchestrator-conversation-context-service-methods-v1.html) or [v2](conversation-orchestrator-conversation-context-service-methods-v2.html) documentation as appropriate for your case.
 
-{: .note}
+{: .attn-note}
 To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application, and consult the discussion on [API Authorization](conversation-orchestrator-api-authorization.html).

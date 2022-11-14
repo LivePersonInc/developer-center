@@ -1,13 +1,12 @@
 ---
 pagename: Post-Conversation Survey Bots
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Bots
 permalink: conversation-builder-bots-post-conversation-survey-bots.html
 indicator: messaging
+date_updated: 2022/11/13
 ---
 
 ### What's a post-conversation survey bot?
@@ -24,7 +23,7 @@ Use a post-conversation survey bot to measure bot/agent and skill performance an
 
 See also this [in-depth introduction to surveys and survey metrics](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
 
-{: .note}
+{: .attn-note}
 To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.
 
 ### The survey flow
@@ -63,7 +62,7 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 
 There are a few account-level, survey settings that you can configure; these settings affect all survey bots in the account.
 
-{: .note}
+{: .attn-note}
 For changes to take effect, you must [redeploy the Post-Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector).
 
 **To configure account-level settings**
@@ -73,7 +72,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 3. On the **Account Details** tab, specify the following:
 
     * **Name & Avatar for Survey Bots**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you. If you leave the picture URL unspecified (this is an optional field), no picture is used.
-    
+
     * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
 
         Note that a message's status isn't taken into account when counting the number of messages sent by an agent or a user. This means that a message will be counted as sent in the situation where the message was sent but wasn't delivered to the recipient for some reason.
@@ -92,7 +91,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 
     * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
 
-    {: .note}
+    {: .attn-note}
     The conditions for all enabled rules must be met in order for the survey to be triggered. For example, if you enable two of these settings, but the conditions for just one setting are met, then the survey is not triggered.
 
 4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
@@ -180,7 +179,7 @@ An open-ended question allows the consumer to provide an answer in their own wor
 * In a survey bot, you can include as many of these as required.
 * You can add a skip option to closed-ended questions but not to open-ended questions.
 
-{: .note}
+{: .attn-note}
 When the target channel is Apple Messages for Business, applicable survey questions are automatically sent to the consumer as List Picker interactions.
 
 #### Customize interaction text (FCR, CSAT and NPS)
@@ -193,7 +192,7 @@ When working with the answer choices, if you move your mouse over an answer, you
 
 The actual value never changes, not even when you change the answer text (text value).
 
-{: .note}
+{: .attn-note}
 Take care when changing the answer text; remember to update the conditions in the rules accordingly.
 
 #### Reorder answer choices (FCR, CSAT and NPS)
@@ -221,7 +220,7 @@ To add a Skip option to a closed-ended, custom question, manually add "Skip" as 
 
 You cannot add a Skip opton to an open-ended, custom question.
 
-{: .note}
+{: .attn-note}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
 #### Configure the display format
@@ -249,7 +248,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 #### Handle free text answers
 
-The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
+The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
 
 #### Handle unrecognizable responses
 
@@ -336,7 +335,7 @@ The Thank You Message interaction can precede or follow an Email Transcript inte
 
 Close a survey conversation by setting [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) as the Next Action in the final interaction in the survey dialog.
 
-{: .note}
+{: .attn-note}
 Make sure that a custom bot *that triggers a survey bot* also uses Close Dialog. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) allows a post-conversation survey to be triggered, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
 
 ### Deploy the survey bot
@@ -384,6 +383,12 @@ If you make use of survey, question, and answer IDs in your reporting, you can d
 ### Monitoring
 
 If you have Bots Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to [monitor your survey bots](bots-status-managing-post-conversation-survey-bots.html). In Bots Status, you can redeploy the connector as a troubleshooting technique.
+
+### Troubleshooting
+
+Sometimes, an interaction in a survey bot gets into a state where its ID isn’t synchronized with underlying systems. This can adversely affect reporting. You can fix this situation quickly with the <img class="inlineimage" style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_pcs_synchids.png"> (Synchronize interaction ID) icon that dynamically appears:
+
+<img style="width:700px" src="img/ConvoBuilder/surveyBot_synchids.png" alt="In interaction, a warning icon in lower-right corner is displayed when there's an issue with interaction's ID. Click refresh button in upper-right corner to synchronize ID and resolve issue.">
 
 ### FAQs
 

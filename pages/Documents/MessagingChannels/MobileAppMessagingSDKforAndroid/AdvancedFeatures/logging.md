@@ -1,7 +1,5 @@
 ---
 pagename: Logging
-
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
@@ -57,7 +55,7 @@ public class MyHostApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        
+
         if (BuildConfig.DEBUG) {
             LivePerson.Logging.setSDKLoggingLevel(LogLevel. /* YOUR DEBUG LOG LEVEL */);
             LivePerson.Logging.setDataMaskingEnabled( /* YOUR DEBUG DATA MASKING BOOL */ );
@@ -113,4 +111,3 @@ Lines already written to the System Logs (logcat) are not affected, only the log
 ```java
 LivePerson.Logging.clearHistory();
 ```
-

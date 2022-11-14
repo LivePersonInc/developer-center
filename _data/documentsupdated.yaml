@@ -4,11 +4,11 @@
     - documentname: Getting Started with your Free Trial Account
     - documentname: Customizing the Conversational Cloud
     - documentname: Starting with your Concierge Bot
-    - documentname: LivePerson APIs and SDKs
 
-- categoryname: API Guidelines
+- categoryname: APIs and SDKs
   image: api-guidelines
   documents:
+    - documentname: Overview
     - documentname: Accessing LivePerson APIs
     - documentname: OAuth 1.0 API keys
     - documentname: OAuth 2.0 Client Credentials
@@ -19,105 +19,10 @@
     - documentname: Analytics Builder Data Metrics
     - documentname: Retry Policy Recommendations
 
-- categoryname: Agent Experience
-  image: agent-experience-new
-  documents:
-    - documentname: Add Agent Widgets
-      pages:
-        - pagename: Add Your Own Widgets to the Agent Workspace
-    - documentname: Agent Workspace Widget SDK
-      pages:
-        - pagename: Overview
-        - pagename: Limitations
-        - pagename: Methods
-        - pagename: Public Model Structure
-        - pagename: Public Properties
-        - pagename: Best Practices and Troubleshooting
-        - pagename: Release Notes
-    - documentname: Chat Agent API
-      basedomain: https://{domain}/api/account/{accountId}/agentSession
-      pages:
-        - pagename: Overview
-        - pagename: Methods
-          subpages:
-            - subpagename: Start Agent Session
-              methodurl:
-              httpmethod: POST
-            - subpagename: Retrieve Current Availability
-              methodurl: /{agentSessionId}/availability
-              httpmethod: GET
-            - subpagename: Set Agent Availability
-              methodurl: /{agentSessionId}/availability
-              httpmethod: POST
-            - subpagename: Retrieve Available Agents
-              methodurl: /{agentSessionId}/availableAgents
-              httpmethod: GET
-            - subpagename: Retrieve Available Slots
-              methodurl: /{agentSessionId}/chat/availableSlots
-              httpmethod: GET
-            - subpagename: Retrieve Agent Information
-              methodurl: /{agentSessionId}/info
-              httpmethod: GET
-            - subpagename: Determine Incoming Chat Request
-              methodurl: /{agentSessionId}/incomingRequests
-              httpmethod: GET
-            - subpagename: Accept a Chat
-              methodurl: /{agentSessionId}/incomingRequests
-              httpmethod: POST
-            - subpagename: Retrieve Chat Sessions
-              methodurl: /{agentSessionId}/chatSessions
-              httpmethod: GET
-            - subpagename: Retrieve Chat Resources, Events and Information
-              methodurl: /chat/{chatId}
-              httpmethod: GET
-            - subpagename: Retrieve Data for Multiple Chats
-              methodurl: See document for more info.
-              httpmethod: GET
-            - subpagename: Retrieve Chat Events
-              methodurl: /chat/{chatId}/events
-              httpmethod: GET
-            - subpagename: Send Lines and Structured Content
-              methodurl: /chat/{chatId}/events
-              httpmethod: POST
-            - subpagename: End Chat
-              methodurl: /chat/{chatId}/events
-              httpmethod: POST
-            - subpagename: Retrieve Chat Information
-              methodurl: /chat/{chatId}/info
-              httpmethod: GET
-            - subpagename: Retrieve Participant Info
-            - subpagename: Retrieve Visitor's Name
-              methodurl: /chat/{chatId}/info/visitorName
-              httpmethod: GET
-            - subpagename: Retrieve Agent's Typing Status
-              methodurl: /chat/{chatId}/info/agentTyping
-              httpmethod: GET
-            - subpagename: Set Agent's Typing Status
-              methodurl: /chat/{chatId}/info/agentTyping
-              httpmethod: POST
-            - subpagename: Retrieve Visitor's Typing Status
-              methodurl: /chat/{chatId}/info/visitorTyping
-              httpmethod: GET
-            - subpagename: Retrieve Available Skills
-              methodurl: /chat/{chatId}/transfer
-              httpmethod: GET
-            - subpagename: Transfer a Chat
-              methodurl: /chat/{chatId}/transfer
-              httpmethod: POST
-            - subpagename: Retrieve Agent Survey Structure
-              methodurl: /chat/{chatId}/survey
-              httpmethod: GET
-            - subpagename: Submit Survey Data
-              methodurl: /chat/{chatId}/survey
-              httpmethod: PUT
-        - pagename: System Messages
-        - pagename: Sample App
-        - pagename: Postman Resources
-
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-    - documentname: Platform Overview
+    - documentname: Get Started with Automation
     - documentname: Tutorials & Guides
       pages:
         - pagename: Getting Started With Bot Building
@@ -145,6 +50,10 @@
             - subpagename: Prerequisite Steps
             - subpagename: Configure Conversation Assist
             - subpagename: Test Conversation Assist
+    - documentname: Common Solutions
+      pages:
+        - pagename: Set Consumer Expectations about Wait Times for Agents
+        - pagename: Check a Skill's Shift Status before Transferring
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
@@ -152,6 +61,7 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Support Small Talk
             - subpagename: Prevent Consumer Interruptions
             - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
@@ -438,6 +348,7 @@
         - pagename: Conversation Tester
         - pagename: Bot Status Dashboard
         - pagename: Bot Conversation Errors
+    - documentname: Conversational AI APIs
     - documentname: Messaging Agent SDK
       pages:
         - pagename: Overview
@@ -445,6 +356,102 @@
         - pagename: Events
         - pagename: Examples
         - pagename: Conversation Metadata Guide
+
+- categoryname: Agent Experience
+  image: agent-experience-new
+  documents:
+    - documentname: Add Agent Widgets
+      pages:
+        - pagename: Add Your Own Widgets to the Agent Workspace
+    - documentname: Agent Workspace Widget SDK
+      pages:
+        - pagename: Overview
+        - pagename: Limitations
+        - pagename: Methods
+        - pagename: Public Model Structure
+        - pagename: Public Properties
+        - pagename: Best Practices and Troubleshooting
+        - pagename: Release Notes
+    - documentname: Chat Agent API
+      basedomain: https://{domain}/api/account/{accountId}/agentSession
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Start Agent Session
+              methodurl:
+              httpmethod: POST
+            - subpagename: Retrieve Current Availability
+              methodurl: /{agentSessionId}/availability
+              httpmethod: GET
+            - subpagename: Set Agent Availability
+              methodurl: /{agentSessionId}/availability
+              httpmethod: POST
+            - subpagename: Retrieve Available Agents
+              methodurl: /{agentSessionId}/availableAgents
+              httpmethod: GET
+            - subpagename: Retrieve Available Slots
+              methodurl: /{agentSessionId}/chat/availableSlots
+              httpmethod: GET
+            - subpagename: Retrieve Agent Information
+              methodurl: /{agentSessionId}/info
+              httpmethod: GET
+            - subpagename: Determine Incoming Chat Request
+              methodurl: /{agentSessionId}/incomingRequests
+              httpmethod: GET
+            - subpagename: Accept a Chat
+              methodurl: /{agentSessionId}/incomingRequests
+              httpmethod: POST
+            - subpagename: Retrieve Chat Sessions
+              methodurl: /{agentSessionId}/chatSessions
+              httpmethod: GET
+            - subpagename: Retrieve Chat Resources, Events and Information
+              methodurl: /chat/{chatId}
+              httpmethod: GET
+            - subpagename: Retrieve Data for Multiple Chats
+              methodurl: See document for more info.
+              httpmethod: GET
+            - subpagename: Retrieve Chat Events
+              methodurl: /chat/{chatId}/events
+              httpmethod: GET
+            - subpagename: Send Lines and Structured Content
+              methodurl: /chat/{chatId}/events
+              httpmethod: POST
+            - subpagename: End Chat
+              methodurl: /chat/{chatId}/events
+              httpmethod: POST
+            - subpagename: Retrieve Chat Information
+              methodurl: /chat/{chatId}/info
+              httpmethod: GET
+            - subpagename: Retrieve Participant Info
+            - subpagename: Retrieve Visitor's Name
+              methodurl: /chat/{chatId}/info/visitorName
+              httpmethod: GET
+            - subpagename: Retrieve Agent's Typing Status
+              methodurl: /chat/{chatId}/info/agentTyping
+              httpmethod: GET
+            - subpagename: Set Agent's Typing Status
+              methodurl: /chat/{chatId}/info/agentTyping
+              httpmethod: POST
+            - subpagename: Retrieve Visitor's Typing Status
+              methodurl: /chat/{chatId}/info/visitorTyping
+              httpmethod: GET
+            - subpagename: Retrieve Available Skills
+              methodurl: /chat/{chatId}/transfer
+              httpmethod: GET
+            - subpagename: Transfer a Chat
+              methodurl: /chat/{chatId}/transfer
+              httpmethod: POST
+            - subpagename: Retrieve Agent Survey Structure
+              methodurl: /chat/{chatId}/survey
+              httpmethod: GET
+            - subpagename: Submit Survey Data
+              methodurl: /chat/{chatId}/survey
+              httpmethod: PUT
+        - pagename: System Messages
+        - pagename: Sample App
+        - pagename: Postman Resources
+
 - categoryname: Client Side Configuration
   image: client-side
   documents:
@@ -934,9 +941,13 @@
             - subpagename: Agent Activity
             - subpagename: Current Queue State
             - subpagename: SLA Histogram
+    - documentname: Outbound Configuration API
+      pages:
+        - pagename: Overview
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
+        - pagename: Error Dictionary
     - documentname: Key Messaging Metrics API
       basedomain: https://{domain}/manager_workspace/api/account/{accountID}
       pages:
@@ -1042,6 +1053,7 @@
           subpages:
             - subpagename: Latest Release Notes
             - subpagename: All Release Notes
+            - subpagename: Supportability
         - pagename: Resources
           subpages:
             - subpagename: Authentication
@@ -1203,7 +1215,7 @@
         - pagename: Implementation Considerations
         - pagename: Configuration
         - pagename: How It Works
-        - pagename: Detailed API
+        - pagename: Implementation Guide
     - documentname: Consumer Delegation
       pages:
         - pagename: Introduction
@@ -1317,7 +1329,7 @@
         - pagename: Visit Information
 
 - categoryname: Solutions
-  image: mcs-toolkit
+  image: toolkit
   documents:
     - documentname: CRM Integrations
       pages:
@@ -1329,11 +1341,6 @@
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
-    - documentname: MCS Toolkit
-      pages:
-        - pagename: Overview
-        - pagename: Getting Started
-        - pagename: Using API to Build the Toolkit
     - documentname: Transporter
       pages:
         - pagename: Overview

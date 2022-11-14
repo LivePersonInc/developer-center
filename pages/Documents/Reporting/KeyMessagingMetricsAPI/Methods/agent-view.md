@@ -1,14 +1,11 @@
 ---
 pagename: Agent View
-redirect_from:
-  - 
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
 permalink: key-messaging-metrics-api-methods-agent-view.html
-
 indicator: messaging
 ---
 
@@ -36,10 +33,10 @@ limit  | Max amount of agents to be received in the response.  | numeric | Optio
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required |
 |includeAgentMetadata| Indicates whether the response should include agent's metadata. | Boolean | Optional | Default value: true.
-|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>close_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>avg_conversations_duration<br/>
+|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>closed_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>avg_conversations_duration<br/>
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>active_conversations<br/>assigned_conversations<br/>agent_load<br/>agent_current_status<br/>agent_current_status_start_time<br/>agent_current_status_reason<br/>agent_current_status_reason_start_time<br/>pending_agent_response<br/>pending_agent_response_rate<br/>available_slots<br/>max_slots
 
-_filters info_ 
+_filters info_
 
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
@@ -48,8 +45,8 @@ _filters info_
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional |
 |agentSkillIds| An array of skill IDs.| Array `<String>`| Optional | The agent's configured skills. This filter impacts the returned agents' population so that only agents which are assigned to the given skills will be returned.
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: SYSTEM, HUMAN, BOT.
-|effectiveAgentStatus | Current agent availablity.  | Array `<String>`  | Optional | Valid values: ONLINE, OFFLINE, AWAY, BACK_SOON.<br/>OFFLINE agents population will include agents which were logged in within the selected time frame and are currently logged out.<br/>Default value: ["ONLINE","BACK_SOON","AWAY"] 
-    
+|effectiveAgentStatus | Current agent availablity.  | Array `<String>`  | Optional | Valid values: ONLINE, OFFLINE, AWAY, BACK_SOON.<br/>OFFLINE agents population will include agents which were logged in within the selected time frame and are currently logged out.<br/>Default value: ["ONLINE","BACK_SOON","AWAY"]
+
 Request body — JSON example:
 
 ```json
@@ -115,12 +112,12 @@ _agentViewRecords info_
 
 | Name| Description | Type/ Value| Notes|
 |-----|-------------|------------|------|
-| agentMetadata| Agent's configuration data. | container | 
-| agentId| The id of the agent. | String | 
-| agentGroupId| The group the agent is assigned to. | long | 
+| agentMetadata| Agent's configuration data. | container |
+| agentId| The id of the agent. | String |
+| agentGroupId| The group the agent is assigned to. | long |
 | agentCurrentStatus| The current status of the agent. | String |
-| agentCurrentStatusStartTime  | The start time of the current status as timestamp. Can be used for duration calculation. | Long| 
-| agentCurrentStatusReason  | The current status reason in case of AWAY status | 
+| agentCurrentStatusStartTime  | The start time of the current status as timestamp. Can be used for duration calculation. | Long|
+| agentCurrentStatusReason  | The current status reason in case of AWAY status |
 | agentCurrentStatusReasonStartTime  | The start time of the current status reason as timestamp. Can be used for duration calculation. | Long|
 | activeConversations| The current active conversations of the agent.| Long |
 | assignedConversations  | The current open conversations that are assigned to the agent  | Long|
@@ -210,7 +207,7 @@ Response DTO — JSON example:
             "assignedConversations": 4,
             "agentLoad": 0.133,
             "onlineDuration": 6555810,
-            "loginDuration": 6555810, 
+            "loginDuration": 6555810,
             "avgWaitTime": 71470.5,
             "avgWaitTimeFirstResponse": 136519.0,
             "avgTimeToResponse": 68209.5,
@@ -245,4 +242,3 @@ Response DTO — JSON example:
     ]
 }
 ```
-

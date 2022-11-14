@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
   </head>
   <body>
 
-    
+
     <div id="container">
         <div id="container-header">
             <label for="website">Current URL:</label>
@@ -30,14 +30,14 @@
         <i><div class="myTimer">
             <span id="countdown" class="togOn">Refreshing in (approx.) 20 seconds.</span>
             <span class="togOff" style="visibility:hidden;">(Click to turn on Auto Refresh countdown)</span>
-        </div></i>                
-        
+        </div></i>
+
     </div>
 
     <div class ="aspect-ratio iframeStyle">
       <iframe id="myFrame" class="iframeStyle" height=100% width=100% frameborder="0" allowfullscreen></iframe>
     </div>
-        
+
     <script>
 
         var counter = 20;
@@ -73,7 +73,7 @@
                 if(counter <= 0)
                     clearInterval(id);
             }, 1000);
-        }                
+        }
 
         function popoutWindow(){
             window.open(visitorURL, "", "width=1000,height=600");
@@ -128,7 +128,6 @@
         });
 
     </script>
-    
+
   </body>
 </html>
-

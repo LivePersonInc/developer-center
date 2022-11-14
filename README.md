@@ -1,3 +1,5 @@
+![Logo](https://knowledge.liveperson.com/images/logo.svg)
+
 # LivePerson’s Developer Center and Community
 
 **This site is maintained by LivePerson’s Developer Experience team. Please contact dx-lp@liveperson.com for issues, comments, or questions.**
@@ -14,6 +16,10 @@ This repository hosts LivePerson’s Developer Center, which can be found at [de
 6. 📜 [Licensing](#licensing)
 
 ## Updating the documentation
+
+In general, please follow the [content and code guidelines](#notes-on-content-and-code), and keep in mind [code](https://google.github.io/eng-practices/review/reviewer/standard.html) [review](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/) [best](https://medium.com/yemeksepeti-teknoloji/good-manners-of-a-pull-request-some-best-practices-cb2de3c3aea1) [practices](https://blog.palantir.com/code-review-best-practices-19e02780015f).
+
+Every change needs review by a member of LivePerson’s DX team. To get a review, add or mention [j9t](https://github.com/j9t), [itay1313](https://github.com/itay1313), or [lkisoslive](https://github.com/lkisoslive) as a reviewer. The review request will then be handled directly, or handed over to another DX team member as per DX team needs. The DX team works with an [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) of responding within two work days (which may include asking for more time, depending on PR and capacity). If there’s particular urgency, coordinate with the DX team ahead of time (required for requests that involve non-work days), aim to grant as much time as possible, and share context. If you get no response to a request after two work days, email dx-lp@liveperson.com, including a link to your pull request.
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question, and create a pull request back to the master branch.
 
@@ -65,7 +71,7 @@ Example of a normal layout:
       - documentname: Chat Agent API
         basedomain: https://{domain}/api/account/{accountId}/agentSession
         pages:
-        - pagename: Overview 
+        - pagename: Overview
 
 1. The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
 2. `Add Agent Widgets` is a folder in layer 1 with the `AgentExperience/AddAgentWidgets` path. The `Add Agent Widgets` folder only contains one page.
@@ -89,14 +95,14 @@ Example of a subfolder layout:
               - subpagename: Using Meta Intents with Conversation Builder
               - subpagename: Implementing a Web View Integration
               - subpagename: Using LivePerson Functions with a Bot
-  
+
 1. The `pagename` entry `Tutorial & Guides` is not a file, but a folder, because it has subpages.
 2. In the Markdown file for `Using Meta Intents with Conversation Builder`, the `pagename` must match the `subpagename`.
-3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2. 
-4. The file must include `Conversation Builder` as a `documentname` in the header. 
+3. The file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2.
+4. The file must include `Conversation Builder` as a `documentname` in the header.
 5. The permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`.
 6. Notice how the `&` in the `subfoldername` is replaced by a dash in the permalink.
-  
+
 Another example:
 
     - categoryname: Getting Started
@@ -117,7 +123,7 @@ Another example:
         - pagename: Engagement Attributes
         - pagename: Analytics Builder Data Metrics
         - pagename: Retry Policy Recommendations
-        
+
 1. The `documentname` entry `Getting Started with your Free Trial Account` does not represent a folder, because it does not contain a pages key.
 2. Since this above file only contains one parent, there should not be a `documentname` in the file `getting-started-with-your-free-trial-account.md`.
 3. The `pagename` for `getting-started-with-your-free-trial-account.md` must match the `documentname` in the YAML file `Getting Started with your Free Trial Account`.
@@ -143,9 +149,9 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) block to ar
   - If the page has a `subfoldername` value: `documentname-subfoldername-pagename`. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`.
   - If the page does not have a `subfoldername` value: `documentname-pagename`. For example: `users-api-overview.html`.
 * `indicator`: This key contains a chat or messaging indicator (or both) for a document. It accepts `chat`, `messaging`, or `both` as its values.
-* `layout`: Sets the value to `hidden-layout`, if you want this file to be ignored in search engines.
-* `date_published`: This displays the date when the page was published (needs to be done manually). For example: `date_published: 2019/01/30`.
-* `date_updated`: This defines and shows the date of the last substantial update. For example: `date_updated: 2022/01/30`.
+* `date_updated`: This sets the date of the last substantial update, which includes the date when the page was published. For example: `date_updated: 2022/01/30`.
+* `noindex`: Set the value to `true`, if you want this file to be ignored by search engines.
+* (`published: false`: This prevents a file from being exported altogether. This can be an option for drafts containing immaterial information close to publication, but should otherwise be avoided.)
 
 ## Notes on content and code
 
@@ -164,25 +170,35 @@ When contributing to this repository, please observe the following:
 * For dashes, use an [em dash](https://www.thepunctuationguide.com/em-dash.html), surrounded by spaces (“ — ”)
 * Avoid “here” links
 * Use the [singular “they,”](https://en.wikipedia.org/wiki/Singular_they) whenever a single-person reference is needed
+* In code samples, indent by two spaces
+* For new pages as well as for significant updates, add or update the update date (`date_updated`)
 
 #### APIs and SDKs
 
-If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/liveperson-apis-and-sdks.html).
+If you’re adding or deprecating an API or SDK, add it or update its status on the [APIs and SDKs overview](https://developers.liveperson.com/overview.html).
+
+### Special formatting
+
+* You can precede a paragraph with the following to highlight the content:
+  - `{: .attn-note}` — important info to pay attention to
+  - `{: .attn-alert}` — warnings or alerts (anything that indicates a problem)
+  - `{: .attn-deprecation}` — info on features that are discouraged or no longer supported
+  - `{: .attn-tip}` — useful suggestions or ideas
+  - `{: .attn-info}` — complementary or auxiliary info
 
 ### Code and media
 
-* Be consistent
+* For formatting rules not documented here, be consistent and follow the style used by the file(s) being edited (that is, if there is no guidelines on, say, heading markup, use the style used in the files you’re updating)
 * Use [Markdown](https://www.markdownguide.org/basic-syntax/) wherever possible (i.e., avoid HTML in Markdown files)
 * Make sure all images have an appropriate replacement text (“alt text”) (this is a forward-looking rule, though one to be applied to existing images when possible)
-* You can precede a paragraph with the following to highlight the content:
-  - `{: .note}` - important info to pay attention to
-  - `{: .alert}` - warnings or alerts (anything that indicates a problem)
-  - `{: .deprecation}` - info on features that are discouraged or no longer supported
-  - `{: .tip}` - useful suggestions or ideas
-  - `{: .info}` - complementary or auxiliary info
 * The maximum (view) width for images in this repository is 800 pixels
+* Apart from [special Markdown naming rules](#committing-changes-to-the-site), use lowercase file names, without spaces
 
-You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited. Contributions are welcome—thank you!
+You’ll find that few pages follow all these rules yet. This is subject to change as content and code are being edited.
+
+Content and code guidelines are also subject to change. Please follow LivePerson-internal channels on updates, and review this information occasionally to be aware of the latest. (Note that code reviews may surface previously unknown and undocumented issues. The DX team will work with you to decide whether and how to address such issues.)
+
+Suggestions to these guidelines are welcome.
 
 ## Building the site locally
 
@@ -212,8 +228,7 @@ Changes that alter site navigation or other changes that change the site as a wh
 
 * Add the files to the [Hidden/Hidden folder](/tree/Staging/pages/Documents/Hidden/Hidden).
 * Do not include them in the documentsupdated.yaml file.
-* Ensure the `layout` header is set to `hidden-layout` so that search engines do not find it.
-* Follow the header structure of [`blank.md`](/blob/Staging/pages/Documents/Hidden/Hidden/blank.md) in the Hidden/Hidden folder to set the headers correctly.
+* Set `noindex` to `true` if you want search engines not to find it.
 
 **Any other parameters not documented here, but in the front matter of other files, are deprecated and only present for backwards-compatibility. They should not be used.**
 

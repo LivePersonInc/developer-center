@@ -7,10 +7,10 @@ permalink: agent-activity-api-overview.html
 indicator: both
 ---
 
-{: .note}
+{: .attn-note}
 This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
 
-{: .alert}
+{: .attn-alert}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
 
 ### Introduction
@@ -34,8 +34,8 @@ A few things you'll need to get started with this API:
 2. This API requires authorization using an API key methodology.
 
 	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
-	
-	* To access this API, the API key must have the `Data → Workforce Management → Agent Activity API` permission.  
+
+	* To access this API, the API key must have the `Data → Workforce Management → Agent Activity API` permission.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
@@ -44,7 +44,7 @@ A few things you'll need to get started with this API:
 ### Use cases
 
 * Evaluate how much time agents spend in each away state.
-  
+
 * Measures agent schedule adherence by monitoring agent login and logout behavior.
 
 * Tracking agent behavior by monitoring agent status updates.

@@ -1,11 +1,11 @@
 ---
 pagename: Credentials
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts
 permalink: bot-accounts-credentials.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 Resource owners can use the Bot Accounts application to define credentials for accessing resources. Once a credential is defined, you can attach it to a bot [API integration](conversation-builder-integrations-api-integrations.html). When the bot is processing a dialog and needs to call the API integration as a part of the dialog flow, the bot will use the associated credentials to authenticate and perform the necessary actions.
@@ -16,7 +16,9 @@ You define credentials per organization.
 There are several types of credentials that you can define to support [API integrations](conversation-builder-integrations-api-integrations.html):
 
 - **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. You can obtain the access token using the client’s credentials plus an authorization code (Authorization Code grant type) or using just the client’s credentials (Client Credentials grant type). OAuth 2.0 and Mutual Authentication are more secure choices than others in this list.
-- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. Mutual Authentication and OAuth 2.0 are more secure choices than others in this list.
+- **Consumer Pre-Authentication**: A type of OAuth 2.0 authentication. If you’re authenticating your consumers and then storing and managing their digital identities using an identity provider (IdP) service, you can leverage that functionality in the Conversational Cloud, effectively federating their identities to LivePerson. This credential lets you securely share those consumer tokens with registered LivePerson services (Conversation Builder, etc.). In turn, our services can use the tokens to validate consumers; to carry on authenticated conversations, without prompting the consumer to re-authenticate when powering multiple LivePerson use cases; and to make API calls to your brand’s services on the consumer’s behalf (retrieve order details, make a payment, etc.). In this authentication flow, the consumer is authenticated before a conversation with a bot ever begins.
+- **Consumer Authentication**: A type of OAuth 2.0 authentication. In this authentication flow, the consumer is sent an authentication challenge (a link) during the bot conversation. Once it’s completed successfully and the consumer is authenticated, the consumer’s unique token is obtained from your identity provider (IdP) service and sent to the bot. This lets the bot carry on an authenticated conversation with the consumer and make API calls on the consumer’s behalf. While this credential is available, LivePerson strongly recommends the Consumer Pre-Authentication credential instead for [several reasons](bot-accounts-credentials.html#how-does-consumer-pre-authentication-differ-from-consumer-authentication).
+- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. Mutual Authentication and OAuth 2.0 are more secure choices than others in this list (for example, Basic Authentication).
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
 
@@ -24,17 +26,17 @@ There's also a credential type that supports the use of [third-party NLU engines
 
 - **Third-party NLU**: If you're using a [Google Dialogflow or IBM Watson](intent-manager-natural-language-understanding-google-dialogflow-and-ibm-watson-nlu-engines.html) NLU engine for NLU intelligence, you can use this credential to authenticate with that engine.
 
-{: .note}
+{: .attn-alert}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
 
 ### Add an OAuth 2.0 credential using the Authorization Code grant type
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
-{: .note}
+{: .attn-note}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
-**To add an OAuth 2.0 credential using the Authorization Code grant type**
+#### To add an OAuth 2.0 credential using the Authorization Code grant type
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
@@ -73,7 +75,7 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
-**To add an OAuth 2.0 credential using the Client Credentials grant type**
+#### To add an OAuth 2.0 credential using the Client Credentials grant type
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
@@ -104,11 +106,91 @@ Depending on the configuration of the resource, you might need to manually reaut
 
     <img class="fancyimage" alt="Menu for a credential; provides options for Edit, Delete, and Authorize" style="width:125px" src="img/ConvoBuilder/creds_oauth2_img6.png">
 
+### Add a Consumer Pre-Authentication credential
+
+Consumer Pre-Authentication is a type of OAuth 2.0 authentication. If you’re authenticating your consumers and then storing and managing their digital identities using an identity provider (IdP) service, you can leverage that functionality in the Conversational Cloud, effectively federating their identities to LivePerson.
+
+The Consumer Pre-Authentication credential lets you securely share those consumer tokens with registered LivePerson services (Conversation Builder, etc.). In turn, our services can use the tokens to:
+
+* Validate consumers.
+* Carry on authenticated conversations, without prompting the consumer to re-authenticate when powering multiple LivePerson use cases.
+* Make API calls to your brand’s services on the consumer’s behalf (retrieve order details, make a payment, etc.).
+
+#### Using Consumer Pre-Authentication
+
+In this authentication flow, the consumer is authenticated before a conversation with a bot ever begins. To set this up:
+
+1. Configure your IdP service, so you can leverage it in Conversational Cloud. [Learn more](consumer-authentication-configuration.html).
+
+2. In Bot Accounts, [add a Consumer Pre-Authentication credential](bot-accounts-credentials.html#add-a-consumer-pre-authentication-credential-1).
+3. In Conversation Builder, in an API integration in the bot, select the configured credential. This gets the consumer’s unique token from the IdP service when needed for the API call.
+
+<img alt="Example API integration that uses a Consumer Pre-Authentication credential" style="width:800px" src="img/ConvoBuilder/creds_consumer_preauth_use.png">
+
+#### How does Consumer Pre-Authentication differ from Consumer Authentication?
+
+The Consumer Pre-Authentication credential is somewhat similar to the [Consumer Authentication credential](bot-accounts-credentials.html#add-a-consumer-authentication-credential): Both use an IdP service to provide consumer tokens when requested.
+
+However, the authentication flows are different. With the former, the consumer is “pre-authenticated,” i.e., they’re authenticated before a conversation with the bot begins. With the latter, the consumer must complete an authentication challenge during the conversation in order to be authenticated.
+
+Consumer Pre-Authentication is strongly recommended over Consumer Authentication for several reasons: 
+
+* It’s more secure. LivePerson securely stores and manages the consumer tokens in one, central place for use by all registered LivePerson services.
+* It’s simpler for you. Lifecycle management is easier because you update the policies in one, central place instead of in multiple LivePerson services. What’s more, within your bot, the integration is implemented differently and more simply: Just select the Consumer Pre-Authentication credential as the one to use. That’s it.
+* It’s simpler for your consumers. There’s no work for the consumer to do during the bot conversation.
+* Token renewal is done automatically upon expiry.
+
+#### Add a Consumer Pre-Authentication credential
+
+{: .attn-note}
+Only one Consumer Pre-Authentication credential can exist per account.
+
+1. In the Bot Accounts application, select the name of the organization for which to create the credential.
+2. Click **Credentials** in the upper-left corner.
+3. Click **Add Credentials** in the upper-right corner.
+4. In the Add Credentials dialog box, specify the following:
+    * **Name**: Enter a descriptive name.
+    * **Authentication Type**: Select “Consumer Pre-Authentication.”
+    <img class="fancyimage" alt="Adding a Consumer Pre-Authentication credential" style="width:800px" src="img/ConvoBuilder/creds_consumer_preauth_add.png">
+5. Click **Save**.
+
+### Add a Consumer Authentication credential
+
+Unfamiliar with this credential? [Learn more](conversation-builder-integrations-using-consumer-access-tokens.html).
+
+{: .attn-note}
+Consider using Consumer Pre-Authentication instead. It’s strongly recommended over this credential; [learn why](bot-accounts-credentials.html#how-does-consumer-pre-authentication-differ-from-consumer-authentication).
+
+#### To add a Consumer Authentication credential
+
+1. In the Bot Accounts application, select the name of the organization for which to create the credential.
+2. Click **Credentials** in the upper-left corner.
+3. Click **Add Credentials** in the upper-right corner.
+4. In the Add Credentials dialog box, specify the following:
+    * **Name**: Enter a descriptive name.
+    * **Authentication Type**: Select “Consumer Authentication.”
+5. Click **Next**.
+6. For **Authentication URL**, enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. An example is below. The URL is provided by the resource provider; see their documentation for this info.
+
+    The authentication URL must include the following query params:
+    * client_id={PROVIDE THE CLIENT ID}
+    * response_type=code
+    * redirectedCode={PROVIDE THE REDIRECT URI}
+    * scope={PROVIDE THE SCOPE}
+
+7. Click **Save**.
+
+##### Authentication URL Example
+
+```
+https://accounts.brand.com/authorize?client_id=34e83335186541078261d83c6d050a32&response_type=code&redirect_uri=https://va.idp.liveperson.net/callback/12345566/redirectedCode&scope=user-read-private
+```
+
 ### Add a Mutual Authentication credential
 
 You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. A Mutual Authentication credential makes use of a key certificate and a trust certificate.
 
-#### Key certificates 
+#### Key certificates
 A key certificate is a key store file that contains private and public key pairs. A key certificate identifies the LivePerson platform as a valid entity that is allowed to interact with external systems. The recommended format is .p12 (PKCS12). You can generate a self-signed certificate pair using openssl or keytool, for example:
 
 `keytool -genkeypair -alias nt-ms -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore cb-mtls-server.p12 -validity 3650 -ext SAN=dns:localhost,ip:127.0.0.1`
@@ -120,7 +202,7 @@ You can verify the file using:
 #### Trust certificates
 A trust certificate is exported from the external system (e.g., Salesforce) to which the LivePerson platform makes the external call. The recommended file format is .pem.
 
-When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
+When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required.
 
 **Note:** The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
 
@@ -189,7 +271,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 ### Add a third-party NLU credential
 
-{: .note}
+{: .attn-note}
 This procedure applies if you're using a Google Dialogflow or IBM Watson NLU engine for NLU intelligence.
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a third-party NLU credential is different in that it's used during *domain training* in [Intent Manager](intent-manager-overview.html).

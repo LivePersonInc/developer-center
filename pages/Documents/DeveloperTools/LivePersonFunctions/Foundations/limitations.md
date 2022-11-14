@@ -1,6 +1,5 @@
 ---
 pagename: Limitations
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
@@ -32,7 +31,7 @@ This page will offer you a high-level overview of all limitations in place. It s
 
 #### Timeouts
 
-This is not a direct limitation but a strong discouragement from our side. Please avoid the usage of `setTimeout` in your code. Given that a single function instance might handle more than one request, running timeouts may negatively impact performance. Such issues can arise when the function is experiencing high traffic volumes. Generally, any code that blocks or fills up the [event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) should be avoided. 
+This is not a direct limitation but a strong discouragement from our side. Please avoid the usage of `setTimeout` in your code. Given that a single function instance might handle more than one request, running timeouts may negatively impact performance. Such issues can arise when the function is experiencing high traffic volumes. Generally, any code that blocks or fills up the [event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) should be avoided.
 
 ### Communication
 

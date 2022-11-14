@@ -2,15 +2,12 @@
 pagename: Update Profile
 redirect_from:
   - administration-update-profile.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Profiles API
 subfoldername: Methods
-
 order: 60
 permalink: profiles-api-methods-update-profile.html
-
 indicator: both
 ---
 

@@ -1,6 +1,5 @@
 ---
 pagename: Getting Started
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
@@ -9,7 +8,7 @@ permalink: conversation-orchestrator-dynamic-routing-getting-started.html
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 In August 2021, LivePerson updated the Conversation Orchestrator Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed in this topic. If you're still using bots based on the older template, see [this setup info](conversation-orchestrator-dynamic-routing-getting-started-legacy.html) instead.
 
 ### Introduction
@@ -28,7 +27,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
 
 1. Enable the Conversation Context Service for Conversation Builder.
 
-    {: .note}
+    {: .attn-note}
     You don’t have to complete this step if your Conversational Cloud account was created after August 20, 2021. If you have an older account, complete this step.
 
     In Conversational Cloud, from the dashboard of Conversational AI applications, select **Bot Accounts** to access the application. Then, enable the settings as shown below. Turn on **Enable Context API**, and select **Use Conversational Cloud Site Id**.
@@ -67,7 +66,7 @@ This helps you get up and running in a few simple steps. Please [familiarize you
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig1.png" alt="The Basic interaction settings in a Dynamic Routing interaction, which includes the field for entering a fallback skill ID">
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig2.png" alt="The Advanced interaction settings in a Dynamic Routing interaction, which includes the field for entering an escalation message">
 
-    * **Option 2: Handling fallbacks within the Dynamic Routing bot**: In this case, select the appropriate interaction or select Next Interaction (whichever is appropriate) in the the dropdown in the Dynamic Routing interaction, as shown below.
+    * **Option 2: Handling fallbacks within the Dynamic Routing bot**: In this case, select the appropriate interaction or select Next Interaction (whichever is appropriate) in the dropdown in the Dynamic Routing interaction, as shown below.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drtileconfig3.png" alt="Selecting the next action in a Dynamic Routing interaction">
 

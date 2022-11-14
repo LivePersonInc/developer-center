@@ -2,11 +2,11 @@
 
 This folder contains examples for connecting to the Agent Groups API. Curerntly there are examples for: Python 3.5 and NodeJS. You can find more information about these examples in the README.md file inside this folder.
 
-# Engagement History API 
+# Engagement History API
 
 This folder contains examples for connecting to the Engagement History API. Curerntly there are examples for: C#, Java, NodeJS, Python 3.5, and R. You can find more information about these examples in the README.md file inside this folder.
 
-# External Engagements API 
+# External Engagements API
 
 This folder contains examples for connecting to the External Engagements API. Curerntly there are examples for: Python 3.5. You can find more information about these examples in the README.md file inside this folder.
 
@@ -24,14 +24,14 @@ In order to use the Scribe classes, you will need to add this Maven Dependency t
 </dependency>
 ```
 
-# Real Time Operational API 
+# Real Time Operational API
 
 This folder contains examples for connecting to the Real Time Operational API. Curerntly there are examples for: Python 3.5 and NodeJS. You can find more information about these examples in the README.md file inside this folder.
 
-# Skills API 
+# Skills API
 
 This folder contains examples for connecting to the Skills API. Curerntly there are examples in: Python 3.5, NodeJS, Java, and R. You can find more information about these examples in the README.md file inside this folder.
 
-# Users API 
+# Users API
 
 This folder contains examples for connecting to the Users API. Curerntly there are examples in: Java, Python 3.5 and NodeJS. You can find more information about these examples in the README.md file inside this folder.

@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 70
 permalink: server-chat-api-methods-start-chat.html
-
 indicator: chat
 ---
 
@@ -158,6 +156,7 @@ Request Body Example
   | :--- | :--- |
   | 201 | Created |
 
-<div class="note">This method returns an empty response body. Instead, all the info you require is received via the response headers. Most crucially, the "Location" header contains the <code>chatId</code> (sometimes known as "chat key") as part of its URL. See example screenshot below.</div>
+{: .attn-note}
+This method returns an empty response body. Instead, all the info you require is received via the response headers. Most crucially, the "Location" header contains the `chatId` (sometimes known as "chat key") as part of its URL. See example screenshot below.
 
 ![Start Chat Location](img/startchatlocation.png)

@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Data Access API
-
 level-order: 1
 order: 1
 permalink: data-access-api-overview.html
@@ -15,7 +14,7 @@ indicator: chat
 
 ### Introduction
 
-{: .alert}
+{: .attn-alert}
 Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
@@ -34,7 +33,7 @@ The Data Access API retrieves historical data. This API is based on the REST arc
 
 **Data Retention**
 
-Data Access retention is limited to a 30 days period. The files will be deleted 30 days from the time they were created, in order to meet GDPR regulation. 
+Data Access retention is limited to a 30 days period. The files will be deleted 30 days from the time they were created, in order to meet GDPR regulation.
 
 ### Getting Started
 
@@ -50,7 +49,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using API key that is available in the Conversational Cloud API Keys tab.
 
-3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).  
+3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
 4. This API requires backend enablement, please contact your account manager to do so.
 

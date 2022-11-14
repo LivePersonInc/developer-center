@@ -2,13 +2,13 @@
 pagename: Deploying to Conversational Cloud
 redirect_from:
   - conversation-builder-testing-deployment-deploying-to-liveengage.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Testing & Deployment
 permalink: conversation-builder-testing-deployment-deploying-to-conversational-cloud.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.
@@ -22,7 +22,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-{: .note}
+{: .attn-note}
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some [whitelisting](conversation-builder-networking-security.html) before adding agent connectors.
 
 Before you can deploy a bot, you must complete the following, pre-requisite steps in Conversational Cloud:
@@ -39,7 +39,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 1. Add the agent connector. This establishes the necessary connections to make the bot operational.
 2. Start the agent connector. This gets the agent connector running in the target environment.
 
-{: .note}
+{: .attn-note}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).<br><br>
 There is no limit to the number of agent connectors that a bot can have.
 
@@ -53,7 +53,7 @@ The Agent Connectors page makes it fast and easy to understand the status of the
 ### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target Conversational Cloud environment.
 
-{: .note}
+{: .attn-note}
 An agent can belong to only one bot.
 
 **To add an agent connector**
@@ -61,7 +61,7 @@ An agent can belong to only one bot.
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-left corner.
 3. Click **Add Agent Connector** in the upper-right corner.
-    
+
     The Add Agent Connector dialog appears.
 
 4. Enter your account number in the field provided, and click <img class="inlineimage" style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png" alt="Right-facing orange chevron button">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
@@ -81,8 +81,8 @@ An agent can belong to only one bot.
 7. Click **Save**.
 
     This establishes the connection between the bot and the bot agent in the target Conversational Cloud environment.
-    
-    To fully deploy the bot, now you must start the agent connector. 
+
+    To fully deploy the bot, now you must start the agent connector.
 
 ### Edit an agent connector
 You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in Conversational Cloud.
@@ -104,14 +104,14 @@ You can delete an agent connector as long as it isn't running.
 2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
 4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png" alt="Three-dot icon"> icon, and select **Delete** from the menu that appears.
-5. Click **Yes** to confirm the deletion. 
+5. Click **Yes** to confirm the deletion.
 
 ### Start an agent connector
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-left corner.
 3. Locate the connector in the table, and click its **Start** button.
 
-{: .note}
+{: .attn-note}
 Establishing the connection can take a few minutes.
 
 ### Stop an agent connector
@@ -134,12 +134,12 @@ For status descriptions, see [this section](bots-status-overview.html#statuses).
 ### Custom configuration fields
 
 Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
- 
+
 You add these fields in the **Advanced Options** of the agent connector.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png" alt="The Custom Configurations button for adding custom configuration fields to an agent connector">
 
-{: .note}
+{: .attn-note}
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.
 
 #### acceptStatusEventValue
@@ -152,7 +152,7 @@ By default, a message from the consumer is shown to the consumer as "Read' once 
 #### defaultGreetingMessage
 The greeting message sent to the bot when the bot agent connects to a new conversation. This message is sent to the bot if a message is not received from the consumer within *3 seconds* of the bot agent joining the conversation. The value of 3 seconds cannot be adjusted.
 
-Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot includes a dialog flow that supports receipt of whatever message you use here.
+Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot [supports Small Talk](conversation-builder-best-practices-support-small-talk.html) or includes a dialog flow that supports receipt of whatever message you use here.
 
 See also `disableGreetings`, which is farther below.
 
@@ -178,7 +178,7 @@ See also `defaultGreetingMessage`, which is farther above.
 
 #### enableButtonTextOnPostback
 
-{: .note}
+{: .attn-note}
 This custom configuration field controls the behavior of Structured and Button questions, not Quick Reply questions.
 
 By default, when you specify a callback value for a button in a [Structured](conversation-builder-interactions-questions.html) or [Button](conversation-builder-interactions-questions.html) question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice.
@@ -199,7 +199,7 @@ If this is true, and if the bot is stuck, the conversation is transferred to a s
 **Default value**: null<br>
 **Messaging**: Yes<br>
 **Chat**: No
- 
+
 #### escalationMessageOnStuckConversation
 If the conversation is transferred to a skill because the bot is stuck, this is the message to send to the consumer before the transfer is performed. Used in conjunction with `escalateOnStuckConversation`. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
@@ -255,7 +255,7 @@ You can customize this per your requirements; for example, to use a 3-second win
 #### messageResendMaxRetries
 This is the maximum number of times to send the consumer's message to the bot. You can use this field to retry the consumer's last message when the bot fails to respond the first time. See the best practice discussion in [this topic](conversation-builder-best-practices-resolve-stuck-conversations.html).
 
- Note that this number represents the total tries, not the retries alone. Examples: 
+ Note that this number represents the total tries, not the retries alone. Examples:
 
 * For 1 retry, set this to 2. (1 for the original try + 1 for the single retry)
 * For 2 retries, set this to 3.

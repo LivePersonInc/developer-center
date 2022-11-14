@@ -1,7 +1,5 @@
 ---
 pagename: Global Functions
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -15,7 +13,7 @@ Global functions are functions that you define in the Global Functions area of a
 <img class="fancyimage" width="800" src="img/ConvoBuilder/gf_example.png" alt="The Global Functions tab in a bot">
 
 Global functions have two key benefits:
-* Code reuse 
+* Code reuse
 * Initialization of the conversation
 
 First, any function that you define in Global Functions can be called from anywhere else in the bot, i.e., from any interaction in any dialog. This allows you to easily reuse code.
@@ -63,7 +61,7 @@ With these variables initialized at the start of the conversation, they are avai
 
 In short, take advantage of the Global Helper Functions dialog template. Since much of the Global Functions work is done for you, you can import the template to speed up and streamline your code elsewhere in your bot.
 
-{: .note}
+{: .attn-note}
 LivePerson recommends that you import the template into a bot **before** you start building your bot. This is because, if you have existing, defined global functions, there might be naming conflicts. Therefore, it’s a good idea to check the functions after the import.
 
 ### Global Helper Functions bot template

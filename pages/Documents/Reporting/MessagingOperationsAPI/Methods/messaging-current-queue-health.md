@@ -8,7 +8,6 @@ documentname: Messaging Operations API
 subfoldername: Methods
 order: 30
 permalink: messaging-operations-api-methods-messaging-current-queue-health.html
-
 indicator: messaging
 ---
 
@@ -34,14 +33,16 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 **URL Parameters**
 
-| Name      |  Description | Type / Value | Required |
-| :-----    | :--------------- | :-------------- | :--- |
-| v | Version of API, for example, v=1. | numeric | required |
-| skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
-| overdueConversations | When set to true, metrics in the response will also contain overdue conversations metrics. Defaults to false. For example: overdueConversations=true | boolean | optional |
-| breakdown | When set to false, metrics in the response will not contain skills breakdown, only total values. Defaults to true. For example: breakdown=false | boolean | optional |
-| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: queue, waittimes, overdue, all. example: metrics=queue,overdue. Default if not specified will return only queue and waittimes metrics. | string, comma separated | optional |
-| groupIds | When provided, the overdueConversationsAssigned metric on the response will be filtered by the list provided. You can provide one or more agent group IDs. <br> Example: groupIds=123,124. To filter by all group IDs (which are allowed depending on the requesting user's permission), use groupIds=all. Default value is null and no filtering will occur.| numeric, comma separated | optional |
+| Name      | Description  | Type / Value | Required |
+| :--- |:---| :--- | :--- |
+| v | Version of API, for example, v=1.                                                                                                                                                                                                                                                                                                                             | numeric | required |
+| fromMillis | The start time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is 72 hours before the current time.                                                                                                                                                                                                                        | numeric | required  only if the version is 2 |
+| toMillis   | The end time in epoch time (in milliseconds ), which data can be filtered by. The maximum value is  the current time.                                                                                                                                                                                                                          | numeric | required  only if the version is 2 |
+| skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all.                                                 | numeric, comma separated | optional |
+| overdueConversations | When set to true, metrics in the response will also contain overdue conversations metrics. Defaults to false. For example: overdueConversations=true                                                                                                                                                                                                          | boolean | optional |
+| breakdown | When set to false, metrics in the response will not contain skills breakdown, only total values. Defaults to true. For example: breakdown=false                                                                                                                                                                                                               | boolean | optional |
+| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: queue, waittimes, overdue, all. example: metrics=queue,overdue. Default if not specified will return only queue and waittimes metrics.                                                                                                                        | string, comma separated | optional |
+| groupIds | When provided, the overdueConversationsAssigned metric on the response will be filtered by the list provided. You can provide one or more agent group IDs. <br> Example: groupIds=123,124. To filter by all group IDs (which are allowed depending on the requesting user's permission), use groupIds=all. Default value is null and no filtering will occur. | numeric, comma separated | optional |
 
 ### Response
 
@@ -70,7 +71,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 150,
                 "overdueConversationsInQueue": 0,
                 "overdueConversationsAssigned": 2,
-                "overdueConversationsTotal": 2        
+                "overdueConversationsTotal": 2
             },
             "13": {
                 "time": 1516277646515,
@@ -83,7 +84,6 @@ Request by skillIds=12,13 and overdueConversations=true
                 "notActionableDuringTransfer": 0,
                 "notActionableAndManualSla": 0,
                 "unassignedConversationsAndFirstTimeConsumer": 0,
-                "unassignedConversationsAndFirstTimeConsumer": 0,
                 "avgWaitTimeForAgentAssignment_NewConversation": 300,
                 "avgWaitTimeForAgentAssignment_AfterTransfer": 245,
                 "maxWaitTimeForAgentAssignment": 370,
@@ -91,7 +91,7 @@ Request by skillIds=12,13 and overdueConversations=true
                 "waitTimeForAgentAssignment_90thPercentile": 240,
                 "overdueConversationsInQueue": 1,
                 "overdueConversationsAssigned": 0,
-                "overdueConversationsTotal": 1                
+                "overdueConversationsTotal": 1
             }
         },
         "metricsTotal": {
@@ -111,17 +111,18 @@ Request by skillIds=12,13 and overdueConversations=true
             "waitTimeForAgentAssignment_90thPercentile": 224,
             "overdueConversationsInQueue": 1,
             "overdueConversationsAssigned": 2,
-            "overdueConversationsTotal": 3            
+            "overdueConversationsTotal": 3
         }
     }
 ```
 
 **Elements in the Response**
 
-<div class="note">All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. <b>In case there is no relevant data on metrics the default value is -1</b>.</div>
+{: .attn-alert}
+All metrics under the hierarchy of 'skillsMetrics' represent the most recent values for each skill. Metrics under the 'metricsTotal' entity will contain the summation of all skills listed. **In case there is no relevant data on metrics the default value is -1**.
 
 | Name |  Description | Type / Value |
-| :------ | :------------- | :------------- |
+| :--- | :--- | :--- |
 | skillsMetrics | An array of skills with their metrics. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested skills per each interval. | element |
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |

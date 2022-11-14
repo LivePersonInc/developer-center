@@ -5,10 +5,8 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Interactions API
-
 order: 32
 permalink: messaging-interactions-api-engagement-attributes.html
-
 indicator: messaging
 ---
 Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart abandonment etc., from the webpage into Conversational Cloud. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
@@ -24,7 +22,7 @@ v2 — will allow to retrieve both authenticated and unauthenticated engagement 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |
 | :-------------- | :------------------------------------------ | :--------------------------------------------------------------------   | :--------------------------- |
 | originalTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
-| serverTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                | 
+| serverTimeStamp | Event creation time stamp.                | long — epoch time in milliseconds                |
 | customerStatus  | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType    | Customer type — will be matched against customer type entity name. Case insensitive. | alphanumeric|
 | balance         | The current balance of the customer. | v1- alphanumeric, v2- double|

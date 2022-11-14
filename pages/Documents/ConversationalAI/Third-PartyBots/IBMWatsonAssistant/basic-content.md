@@ -8,11 +8,11 @@ permalink: third-party-bots-ibm-watson-assistant-basic-content.html
 indicator:
 ---
 
-{: .alert}
+{: .attn-alert}
 **Please note** that the new IBM Watson Assistant experience is not fully supported yet. So please switch to the
 classic experience using this [guide](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-welcome-new-assistant)
 
-{: .note}
+{: .attn-note}
 Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**.
 It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
 
@@ -26,7 +26,7 @@ be defined with Watson wizard or using the JSON editor (Figure 2.1 shows how to 
 
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
-{: .note}
+{: .attn-note}
 **Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
@@ -53,7 +53,7 @@ Figure 2.2 Response type of Image is highlighted
 Once image is selected you will be asked to fill the information. "Image Source" url must be provided. You can also describe the
 image title and description (example filled form is shown in the Figure 2.3).
 
-{: .alert}
+{: .attn-alert}
 Image URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains
 must be HTTPS secure.
@@ -154,7 +154,7 @@ is the value that you set for an option.
 
 #### Pause/Delay
 
-{: .note}
+{: .attn-note}
 **Note:** Using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node
@@ -268,12 +268,12 @@ Users can define a response with various content types. The following example sh
 
 ### Sending Rich Content (Structured Content)
 
-{: .alert}
+{: .attn-alert}
 If Images are sent in Rich Content, then their URLs must be added to a whitelist via internal LivePerson
 configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible
 domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
-{: .note}
+{: .attn-note}
 **Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response
 in Third-Party Bots.
 
@@ -397,7 +397,7 @@ Figure 2.15 Structured Content Watson JSON Example (IAM)
 
 ### Sending Quick Replies (Structured Content)
 
-{: .note}
+{: .attn-note}
 **Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
@@ -470,15 +470,14 @@ Figure 2.16 Quick Replies StructuredContent example.
 
 ### Bot Actions
 
-{: .alert}
+{: .attn-alert}
 Please note we only support **ONE ACTION** per response
 
 #### Transfer / Escalations
 
-<div class="alert">
-<p><strong>Naming conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.</p>
-<p>Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.</p>
-</div>
+{: .attn-alert}
+**Naming conventions:** Before going into **actions** and **skills** is the naming convention between each. All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by **Watson** needs to be **CLOSE\_CONVERSATION**.
+Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention. For escalations, the naming convention for these skills should use a "-" instead of whitespace. Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.
 
 #### Transfer To Skill
 
@@ -521,7 +520,7 @@ in the `skill` parameter. This will be sent in an object to the chat/messaging c
 
 #### Transfer to Agent
 
-{: .note}
+{: .attn-note}
 This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill.

@@ -1,13 +1,13 @@
 ---
 pagename: Voice and Video
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-voice-and-video.html
 indicator: messaging
+redirect_from:
+  - mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-appendix.html
 ---
 
 ### Introduction
@@ -18,7 +18,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
     <img src="/img/iosSDK/in_app_sdk_ios_video_call.png" alt="Video call example screen" style="width: 15%;height: auto;">
 </div>
 
-{: .note}
+{: .attn-note}
 Voice & Video capabilities are available only on iOS SDK 6.3.0 and above
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-live-chat-cobrowse-for-live-chat.html)
@@ -31,8 +31,8 @@ To enable the feature on your Conversational Cloud account please review the KB 
     LPConfig.defaultConfiguration.enableVoiceVideoCall = true
 ```
 
-{: .alert}
-Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call. 
+{: .attn-alert}
+Known limitations: Due some compatibility issues with WebRTC some iOS 12.X device might not be able to connect voice or video call.
 
 ### Branding and configurations
 

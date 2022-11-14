@@ -1,6 +1,5 @@
 ---
 pagename: Best Practices and Troubleshooting
-Keywords:
 sitesection: Documents
 categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK

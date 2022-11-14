@@ -3,7 +3,6 @@ pagename: Control History APIs
 redirect_from:
   - consumer-experience-ios-sdk-advanced-control-history-ios.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-control-history-apis.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
@@ -30,9 +29,9 @@ The APIs lets brands:
 
 - When opening the window with closed conversations only, the window opens as a view only mode.
 
-- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForHistoryControlAPI`
+- To enable the presentation of the Welcome Message, the following configuration needs to be set to true: `enableWelcomeMessageForControlHistoryAPI`
 
-{: .note}
+{: .attn-note}
 To see more about the Welcome Message with Quick Replies, visit the following [page](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
 
 ### Parameters
@@ -72,7 +71,7 @@ Used to present open conversations or closed conversations or all conversations.
 Used to choose how much conversation history presents to the consumer by days.
 Not providing a value allows consumers to see the last 2 conversations (more can be seen by scrolling up to fetch additional conversations if stored on the local database, otherwise they'll be retrieved from the LP server).
 
-{: .note}
+{: .attn-note}
 When using this property, you must also use `LPConversationHistoryMaxDaysDateType`.
 
 #### LPConversationHistoryMaxDaysDateType
@@ -113,7 +112,7 @@ Used to decide whether to count the days from the conversation start date or end
 ```swift
  func showConversation() {
     // Configuration needs to be set to true to present Welcome Message if one is configured
-    LPConfig.defaultConfiguration.enableWelcomeMessageForHistoryControlAPI = true
+    LPConfig.defaultConfiguration.enableWelcomeMessageForControlHistoryAPI = true
 
     // Welcome Message Configuration
 

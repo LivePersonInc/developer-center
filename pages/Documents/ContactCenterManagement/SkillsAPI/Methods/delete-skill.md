@@ -2,15 +2,12 @@
 pagename: Delete Skill
 redirect_from:
   - administration-delete-skill.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Skills API
 subfoldername: Methods
-
 order: 80
 permalink: skills-api-methods-delete-skill.html
-
 indicator: both
 ---
 
@@ -18,7 +15,7 @@ This API deletes a skill from a specific account.
 
 ### Request
 
-| Method | URL| 
+| Method | URL|
  |:----- | :---- |
  |DELETE | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/skills/{skillId} |
 
@@ -33,13 +30,13 @@ This API deletes a skill from a specific account.
 **Path Parameters**
 
  |Parameter|  Description | Type / Value |
- |:----------- | :-------------  |:------------- | 
+ |:----------- | :-------------  |:------------- |
  |accountId | LP site ID  |String  |
  |skillId | Skill ID  | Positive long number greater than zero |
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -53,7 +50,7 @@ This API deletes a skill from a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. | 
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
 **Response Body**
 

@@ -6,10 +6,8 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: API Reference
-
 order: 160
 layout: page
-
 permalink: messaging-window-api-api-reference-send-consumer-satisfaction-csat.html
 indicator: messaging
 ---

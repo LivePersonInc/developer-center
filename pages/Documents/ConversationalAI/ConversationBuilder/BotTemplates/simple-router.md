@@ -2,7 +2,6 @@
 pagename: Simple Router
 redirect_from:
     - conversation-builder-templates-simple-router.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -92,8 +91,8 @@ switch(intent){
       transferMessage = "Hold on while I transfer you to someone who can help with your issue…";
       skillId = '1680373730';
       skillName = 'help';
-      break;  
-  }      
+      break;
+  }
 ```
 
 For each of your skill options:

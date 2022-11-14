@@ -1,12 +1,13 @@
 ---
 pagename: Monitoring
-keywords:
 sitesection: Documents
 categoryname: Developer Tools
 documentname: LivePerson Functions
 subfoldername: Getting Started
 permalink: liveperson-functions-getting-started-monitoring.html
 indicator: both
+redirect_from:
+  - liveperson-functions-monitoring-activities.html
 ---
 
 We will introduce you to all the available monitoring features and tools on this page.
@@ -44,7 +45,7 @@ Within your function code, you can write logs of different levels. Those are the
 * Warn
 * Error
 
-{: .alert}
+{: .attn-alert}
 Logs written as part of a [test invocation](liveperson-functions-getting-started-your-first-function.html#test) will not be stored permanently. Further `Debug` logs are never stored and will be only visible as part of [test invocations](liveperson-functions-getting-started-your-first-function.html#test), allowing to debug and verify without the risk of having sensitive data leak into persistent logs.
 
 The following code will show the JavaScript interface along with examples that should highlight the use of optional `extras`:
@@ -113,11 +114,11 @@ Given that multiple developers and users may use a Functions account, it can get
 
 All activities will be stored for roughly two months and can be reviewed in this time window. For example, some of the activities, `Lambda Update`, come with different subactivities. The Description field usually discloses those. Sticking to our example of the `Lambda Update`, you may see `Lambda deployed` and `Code changed` as potential subactivities.
 
-<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png"> 
+<img alt="Functions:Activity Stream" src="img/functions/functions_reporting_activities.png">
 
 Clicking on an individual activity within the activity stream will bring you to a page based on the content. For example, a `Code changed` activity will bring you to a page comparing the previous and that versions. Things like changes to the allowlisting will get you to the allowlist settings.
 
-<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png"> 
+<img alt="Functions:Activity Context Action" src="img/functions/functions_reporting_activties_context_action.png">
 
 ### Invocation Histogram
 

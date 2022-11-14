@@ -5,12 +5,10 @@ redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Engagement Trigger API
-
 order: 1
 permalink: engagement-trigger-api-overview.html
 root-link: true
 level-order: 7
-
 indicator: both
 ---
 ### Introduction

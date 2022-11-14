@@ -1,13 +1,12 @@
 ---
 pagename: Dialogs & Patterns
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Tutorials & Guides
 subfoldername: Getting Started with Bot Building
 permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 <!--
@@ -35,7 +34,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/welcome_dialog.png" alt="Default Welcome dialog">
 
-6. Examine the Welcome dialog, which is displayed by default. 
+6. Examine the Welcome dialog, which is displayed by default.
 
     (Learn about the different parts of the [workspace](conversation-builder-bot-workspace.html) in Conversation Builder.)
 
@@ -65,7 +64,7 @@ Let’s see the interactions in action!
 
     By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend.” Using parentheses and pipes allows you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there” and “hey you.”
 
-    {: .note}
+    {: .attn-note}
     Patterns are a great way to create hard-coded logic in the bot while you build out the design. As your bot grows, you’ll want to incorporate Natural Language Understanding to provide a more conversational experience for users. Our next tutorial on "intents" and "entities" serves as an introduction to these topics.
 
 4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, and “hola”). Click **Save**.
@@ -129,11 +128,14 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png" alt="Previewing the conversation by entering goodbye">
 
+{: .attn-tip}
+Bots can also [support small talk](conversation-builder-best-practices-support-small-talk.html) (chitchat). In your automation solution, consider adding support for this. It offers your consumers a more human-like experience.
+
 ### Step 4: Test the Fallback dialog
 
 You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that hasn't been accounted for? To catch and handle these when they occur, you can provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
 
-{: .note}
+{: .attn-note}
 There can be only one dialog of type Fallback per bot.
 
 1. In the Dialogs panel on the left, click **2 Fallback**. This opens the Fallback dialog.

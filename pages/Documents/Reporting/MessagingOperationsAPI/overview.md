@@ -5,7 +5,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Messaging Operations API
-
 level-order: 4
 order: 1
 permalink: messaging-operations-api-overview.html
@@ -14,7 +13,7 @@ indicator: messaging
 ---
 ### Introduction
 
-{: .alert}
+{: .attn-alert}
 Our Data APIs enable you to retrieve many attributes and information types. Please refer to [API Data Metrics](https://developers.liveperson.com/api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Messaging Operations API extracts data according to the search query. The API allows agent managers to extract information about their call center on the account, skill, and agent level. The data includes closed conversations and their associated attributes, such as customer satisfaction, average conversation length, resolved status and so on.

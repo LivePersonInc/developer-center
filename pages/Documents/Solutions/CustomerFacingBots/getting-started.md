@@ -2,15 +2,10 @@
 pagename: Getting Started
 redirect_from:
   - products-bots-gettingstarted.html
-
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 3
-
 permalink: customer-facing-bots-getting-started.html
-
 indicator:
 ---
 

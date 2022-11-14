@@ -1,6 +1,5 @@
 ---
 pagename: Configuring Settings
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Assist
@@ -55,7 +54,7 @@ Customize the **bot messages** if you’re using bots as recommendation sources.
 
 ### On-Demand Recommendations widget
 
-Your agents can use this widget to look up bots, knowledge answers, and [predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) (replies to greetings, closings, etc.) on demand. Turn on this setting to display the widget in the Agent Workspace. (To see the change, you might need to refresh your browser or log in again.)
+Your agents can use this widget to look up bots, knowledge answers, and [predefined content](https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-predefined-content-overview.html/) (replies to greetings, closings, etc.) on demand. Turn on this setting to display the widget in the Agent Workspace to all agents. (To see the change, you might need to refresh your browser or log in again.)
 
 <img width="800" alt="On-Demand Recommendation on and off setting" src="img/agentassist/settings_ondemandrecs.png">
 

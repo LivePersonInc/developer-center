@@ -2,15 +2,12 @@
 pagename: Delete LOBs
 redirect_from:
   - administration-delete-lobs.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 70
 permalink: lobs-api-methods-delete-lobs.html
-
 indicator: both
 ---
 
@@ -18,7 +15,7 @@ This API deletes LoBs from a specific account.
 
 ### Request
 
- |Method    |  URL    |     
+ |Method    |  URL    |
  |:-------- |  :--------- |
  |DELETE   |   https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-users/lobs |
 

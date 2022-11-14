@@ -4,7 +4,7 @@ redirect_from:
   - quick-replies-mobile-sdk-web-template.html
   - rich-messaging-quick-replies-overview.html
   - quick-replies-introduction-to-quick-replies.html
-Keywords: quick replies rich messaging
+keywords: quick replies rich messaging
 sitesection: Documents
 categoryname: "Rich Messaging"
 documentname: Mobile SDK and Web Templates

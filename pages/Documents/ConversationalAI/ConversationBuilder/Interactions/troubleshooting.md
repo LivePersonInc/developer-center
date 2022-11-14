@@ -2,7 +2,6 @@
 pagename: Troubleshooting
 redirect_from:
     - conversation-builder-troubleshooting-interactions.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder

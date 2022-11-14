@@ -2,7 +2,6 @@
 pagename: Travel Notification
 redirect_from:
     - conversation-builder-templates-travel-notification.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -15,7 +14,7 @@ The Travel Notifications template allows an authenticated user to report their f
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-{: .note}
+{: .attn-note}
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be used in other bots in your account.<br><br>This bot template also contains global functions brought over from the [Global Helper Functions bot template](conversation-builder-bot-templates-global-helper-functions.html).
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png" alt="The Travel Info dialog in a bot created from the Travel Notification bot template">
@@ -42,7 +41,7 @@ Review each of the dialogs, starting with Welcome, and customize the verbiage us
 If you want to remove any capture interactions, be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog.
 
 #### Travel Info dialog
-Travel dates, destinations, and the approved card steps of the Travel Info dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if preferred. 
+Travel dates, destinations, and the approved card steps of the Travel Info dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if preferred.
 
 Additionally, dates are validated to ensure they are appropriate (e.g., dates cannot occur in the past, return date on or after depart date). These can be customized with JavaScript as needed in the interaction's Process User Response section.
 
@@ -51,7 +50,7 @@ Additionally, dates are validated to ensure they are appropriate (e.g., dates ca
 For the date captures, we allow a certain number of attempts before we escalate to an agent. In addition, we apply the same logic to the information confirmation interactions. These can be configured to your liking in the Global Functions.
 
 ```
- // Max count of fail user inputs 
+ // Max count of fail user inputs
   setVariable('maxAttempts', 2);
   setVariable('departAttempts', 0);
   setVariable('returnAttempts', 0);
@@ -75,7 +74,7 @@ var response = botContext.getCurrentUserMessage();
 botContext.logCustomEvent(response, 'Interaction Name', '');
 ```
 
-{: .note}
+{: .attn-note}
 Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
 
 #### Global Function customization
@@ -124,8 +123,8 @@ Modify the following values in Global Functions:
 
 | Variable Name | Description |
 | --- | --- |
-| escalationBotMessage | What the bot should say prior to hand off | 
-| botAgentSkillId | The skill ID to transfer to | 
+| escalationBotMessage | What the bot should say prior to hand off |
+| botAgentSkillId | The skill ID to transfer to |
 | botAgentSkillName | The skill name to transfer to |
 
 ### Dialog templates

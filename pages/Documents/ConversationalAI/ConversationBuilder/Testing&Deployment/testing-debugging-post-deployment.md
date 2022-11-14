@@ -1,6 +1,5 @@
 ---
 pagename: Testing & Debugging Post-Deployment
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -24,7 +23,7 @@ The Conversation Tester lets you quickly start a conversation and view both the 
 
 With the Conversation Tester, the conversation travels from the Conversational Cloud Web channel, to Conversational Cloud, to the agent connector, to the bot server, and back again. In short, there is end-to-end testing of the entire flow over the Web.
 
-{: .note}
+{: .attn-note}
 Currently, you can’t use the Conversation Tester to test post-conversation survey bots.
 
 ### Prerequisites

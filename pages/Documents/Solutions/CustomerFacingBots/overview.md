@@ -3,9 +3,7 @@ pagename: Overview
 redirect_from:
   - products-customer-facing-bots-overview.html
 sitesection: Solutions
-
 documentname: Customer Facing Bots
-
 order: 1
 level-order: 1
 root-link: true

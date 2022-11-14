@@ -1,23 +1,25 @@
 ---
 pagename: All Releases
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Release Notes
 permalink: mobile-app-messaging-sdk-for-ios-release-notes-all-releases.html
 indicator: messaging
+redirect_from:
+  - mobile-app-messaging-sdk-for-ios-all-release-notes.html
+  - mobile-app-messaging-sdk-for-ios-latest-release-notes.html
 ---
 
 Listed below are all the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, see the [MobileSDK iOS Quick Start guide](/mobile-app-messaging-sdk-for-ios-quick-start.html).
 
-{: .note}
+{: .attn-note}
 The Latest SDK version are now using the XCFramework format. For more information on XCFramework, see [Apple documentation](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b).
 
-{: .alert}
+{: .attn-alert}
 SDK versions are not downgrade-compatible.
 
-{: .alert}
+{: .attn-alert}
 SDK releases only supports 3 iOS versions, and each SDK release will state with versions it supports as part of the **Environmental Requirements**.
 
 <hr/>
@@ -42,7 +44,7 @@ These releases are generally used to address any critical bugs on the SDK and/or
 <hr/>
 <h3>Limited Release</h3>
 
-1. "Customized Builds" provided to customers to address specific business impacting requirements for e.g. supporting specific older version of Swift etc. Note that this would be only a one time custom build and will not have any progressive increments on this build. 
+1. "Customized Builds" provided to customers to address specific business impacting requirements for e.g. supporting specific older version of Swift etc. Note that this would be only a one time custom build and will not have any progressive increments on this build.
 2. Beta releases also comes under this category where the team builds an SDK around the beta OS versions from Apple.
 
 These builds may undergo limited  or focused regression testing only.

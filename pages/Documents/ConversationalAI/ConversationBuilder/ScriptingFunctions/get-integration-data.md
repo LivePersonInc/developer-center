@@ -1,7 +1,5 @@
 ---
 pagename: Get Integration Data
-redirect_from:
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -16,7 +14,7 @@ Use the following built-in functions to get information on the results of an int
 
 `isApiExecutionSuccessful` is used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.
 
-{: .note}
+{: .attn-note}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
 
 | Function Name | Arguments | Returns |
@@ -37,26 +35,26 @@ var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
 if(isApiExecutionSuccessful){
   var apiStatusCode = botContext.getApiStatusCode();
   botContext.printDebugMessage("API Execution Successful with Status Code: "+apiStatusCode);
- 
+
   if(apiStatusCode == "200"|apiStatusCode == "201"|apiStatusCode == "203"){
     // request was successful
     botContext.printDebugMessage("All is well.");
   }else{
     // request was not successful
     botContext.printDebugMessage("Something went wrong!");
-  }  
-     
+  }
+
 }
 ```
 
-{: .note}
+{: .attn-note}
 You can also [define rules in an interaction based on the result of an API integration](conversation-builder-interactions-integrations.html#integration-interactions).
 
 ### Get API integration status code
 
 `getApiStatusCode` is used to retrieve the HTTP status (response) code returned from execution of an API integration. The returned code might indicate success or failure, and, in the case of a failure, it can provide insight into the type of error that occurred.
 
-{: .note}
+{: .attn-note}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
 
 | Function Name | Arguments | Returns |

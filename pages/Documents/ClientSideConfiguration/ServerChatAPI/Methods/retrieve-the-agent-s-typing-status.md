@@ -7,11 +7,9 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Server Chat API
 subfoldername: Methods
-
 order: 131
 
 permalink: server-chat-api-methods-retrieve-the-agent-s-typing-status.html
-
 indicator: chat
 ---
 

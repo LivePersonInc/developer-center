@@ -6,7 +6,6 @@ permalink: customizing-the-conversational-cloud.html
 redirect_from:
   - do-more-with-the-conversational-cloud.html
 indicator: both
-date_published: 2019/01/30
 date_updated: 2022/07/25
 ---
 
@@ -16,7 +15,7 @@ date_updated: 2022/07/25
             </div>
 </div>
 <div>
-    <div class="important" style="width:91%">
+    <div class="attn-note" style="width:91%">
     <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide">Getting Started with your Free Trial Account</a> which outlines the first steps to take in the Conversational Cloud.
   </div>
 </div>
@@ -104,14 +103,14 @@ date_updated: 2022/07/25
         </div>
     </div>
 
-<!-- 
+<!--
 <div class="lp-container">
     <div class="header-paragraph">
    The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a guide below to learn more.
             </div>
 </div>
 <div class="container-note">
-    <div class="important" style="width:91%">
+    <div class="attn-note" style="width:91%">
         <b> Prerequisites </b>  Before you begin, check out the <a  href="/api-guidelines-accessing-liveperson-apis.html" alt="Start free trial">Accessing LivePerson APIs</a> article to familiarize yourself with our guidelines.
     </div>
 </div>

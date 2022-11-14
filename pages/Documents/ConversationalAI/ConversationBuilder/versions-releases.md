@@ -1,10 +1,9 @@
 ---
 pagename: Versions & Releases
-redirect_from: 
+redirect_from:
     - conversation-builder-getting-started-getting-started-part-4.html
     - conversation-builder-best-practices-versions-releases-change-management.html
     - conversation-builder-best-practices-versions-releases.html
-Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
@@ -12,13 +11,13 @@ permalink: conversation-builder-versions-releases.html
 indicator: both
 ---
 
-Throughout the bot creation lifecycle, it's important to follow good change management practices. Conversation Builder has two features that support this: 
+Throughout the bot creation lifecycle, it's important to follow good change management practices. Conversation Builder has two features that support this:
 
 * **Versions** let you save your progress at crucial moments during bot development. When you save a new version, the system takes a snapshot of the bot at that moment and saves it. You can then recover the bot to the state of a previous version. This is helpful if you ever make mistakes or break something and need to go back.
 
 * **Releases** are similar to versions in that they also involve creation of a snapshot of the bot. However, releases are used to push the snapshot to a different bot, updating it with the new bot code.
 
-{: .note}
+{: .attn-note}
 Use *versions* during the development cycle to take snapshots at different milestones. Use *releases* to push snapshots to different bots, e.g., to push a snapshot from a Development bot to a Production bot.<br><br>Conversation Builder stores only the last 10 versions.
 
 ### Save a version
@@ -39,9 +38,9 @@ Any time you might be making large changes to the functionality of a bot, there 
     * **Description**: Briefly explain what's changed in the version. While this info is optional, it can be helpful when debugging later.
 5. Click **Save**.
 
-### Restore a previous version 
+### Restore a previous version
 
-{: .note}
+{: .attn-note}
 A "restore" completely overwrites your existing bot with the selected, previous version, so use caution when restoring versions.
 
 **To restore a previous version**
@@ -79,7 +78,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     This creates a release "snapshot." To complete the push, the new bot must accept the release.
 
-7. Click the link to the new bot that's provided. 
+7. Click the link to the new bot that's provided.
 
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases2.png" alt="The link to the new bot">
 
@@ -95,7 +94,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version of the Production bot has been created.
 
-{: .note}
+{: .attn-note}
 The bot user agents attached to the Development bot are not pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
 
 **Tip:** If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-environment-variables.html) to maintain the values externally.

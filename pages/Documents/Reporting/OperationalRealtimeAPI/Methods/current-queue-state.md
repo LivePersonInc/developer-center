@@ -8,7 +8,6 @@ documentname: Operational Realtime API
 subfoldername: Methods
 order: 40
 permalink: operational-realtime-api-methods-current-queue-state.html
-
 indicator: chat
 ---
 
@@ -32,127 +31,127 @@ If your request is throttled in this manner, it is recommended that you provide 
 
 You can request queue state data using the following parameters:
 
-| Name | Description | Type / Value | Required |
+| Name | Description | Type/Value | Required |
 | :------ | :------------- | :-------------- | :--- |
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, the default will be 'skillIds=all', and metrics on the response will be calculated by all skills with queue state data. You can provide one or more skill IDs. <br> Example: skillIds=4,15,3. To retrieve all skills active for the time period use skillIds=all (same as default if not provided). | numeric, comma separated | optional |
 
 ### Response
 
-**JSON Example**
+#### JSON example
 
-Request by all skills, when v=1
-
-```json
-    {  
-        "skills":{  
-            "1":{  
-                "currentAvailableSlots":5,
-                "currentQueueSize":5
-            },
-            "2":{  
-                "currentAvailableSlots":11,
-                "currentQueueSize":14
-            },
-            "3":{  
-                "currentAvailableSlots":6,
-                "currentQueueSize":15
-            },
-            "4":{  
-                "currentAvailableSlots":27,
-                "currentQueueSize":0
-            }
-        },
-        "totals":{  
-            "currentAvailableSlots":49,
-            "currentQueueSize":34
-        }
-    }
-```
-
-Request by all skills, whene v=2
+Request by all skills, when v=1:
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
-                "currentAvailableSlots":5,
-                "currentQueueSize":5,
-                "currentMaxWaitTimeInQueue": 15253
-            },
-            "2":{  
-                "currentAvailableSlots":11,
-                "currentQueueSize":14,
-                "currentMaxWaitTimeInQueue": 75388
-            },
-            "3":{  
-                "currentAvailableSlots":6,
-                "currentQueueSize":15,
-                "currentMaxWaitTimeInQueue": 15253
-            },
-            "4":{  
-                "currentAvailableSlots":27,
-                "currentQueueSize":0,
-                "currentMaxWaitTimeInQueue": -1
-            }
-        },
-        "totals":{  
-            "currentAvailableSlots":49,
-            "currentQueueSize":34,
-            "currentMaxWaitTimeInQueue": 75388
-        }
+  {
+    "skills":{
+      "1":{
+        "currentAvailableSlots":5,
+        "currentQueueSize":5
+      },
+      "2":{
+        "currentAvailableSlots":11,
+        "currentQueueSize":14
+      },
+      "3":{
+        "currentAvailableSlots":6,
+        "currentQueueSize":15
+      },
+      "4":{
+        "currentAvailableSlots":27,
+        "currentQueueSize":0
+      }
+    },
+    "totals":{
+      "currentAvailableSlots":49,
+      "currentQueueSize":34
     }
+  }
 ```
 
-Request by skills=1,2 and v=1
+Request by all skills, when v=2:
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
-                "currentAvailableSlots":5,
-                "currentQueueSize":5
-            },
-            "2":{  
-                "currentAvailableSlots":11,
-                "currentQueueSize":14
-            }
-        },
-        "totals":{  
-            "currentAvailableSlots":16,
-            "currentQueueSize":19
-        }
+  {
+    "skills":{
+      "1":{
+        "currentAvailableSlots":5,
+        "currentQueueSize":5,
+        "currentMaxWaitTimeInQueue": 15253
+      },
+      "2":{
+        "currentAvailableSlots":11,
+        "currentQueueSize":14,
+        "currentMaxWaitTimeInQueue": 75388
+      },
+      "3":{
+        "currentAvailableSlots":6,
+        "currentQueueSize":15,
+        "currentMaxWaitTimeInQueue": 15253
+      },
+      "4":{
+        "currentAvailableSlots":27,
+        "currentQueueSize":0,
+        "currentMaxWaitTimeInQueue": -1
+      }
+    },
+    "totals":{
+      "currentAvailableSlots":49,
+      "currentQueueSize":34,
+      "currentMaxWaitTimeInQueue": 75388
     }
+  }
 ```
 
-Request by skills=1,100 and v=2 (skill 100 has no queue state data)
+Request by skills=1,2 and v=1:
 
 ```json
-    {  
-        "skills":{  
-            "1":{  
-                "currentAvailableSlots":5,
-                "currentQueueSize":5,
-                "currentMaxWaitTimeInQueue": 65203
-
-            },
-            "100":{  
-                "currentAvailableSlots":-1,
-                "currentQueueSize":-1,
-                "currentMaxWaitTimeInQueue": -1
-            }
-        },
-        "totals":{  
-            "currentAvailableSlots":5,
-            "currentQueueSize":5,
-            "currentMaxWaitTimeInQueue": 65203
-        }
+  {
+    "skills":{
+      "1":{
+        "currentAvailableSlots":5,
+        "currentQueueSize":5
+      },
+      "2":{
+        "currentAvailableSlots":11,
+        "currentQueueSize":14
+      }
+    },
+    "totals":{
+      "currentAvailableSlots":16,
+      "currentQueueSize":19
     }
+  }
 ```
 
-**Elements in the Response**
+Request by skills=1,100 and v=2 (skill 100 has no queue state data):
 
-| Name | Description | Type / Value |
+```json
+  {
+    "skills":{
+      "1":{
+        "currentAvailableSlots":5,
+        "currentQueueSize":5,
+        "currentMaxWaitTimeInQueue": 65203
+
+      },
+      "100":{
+        "currentAvailableSlots":-1,
+        "currentQueueSize":-1,
+        "currentMaxWaitTimeInQueue": -1
+      }
+    },
+    "totals":{
+      "currentAvailableSlots":5,
+      "currentQueueSize":5,
+      "currentMaxWaitTimeInQueue": 65203
+    }
+  }
+```
+
+#### Elements in the response
+
+| Name | Description | Type/Value |
 | :----- | :-------------- | :-------------- |
 | skills | An object that represent the current queue state per skills. Each entry represents a skill id and its corresponding current queue size and available slots values. | element |
 | totals | An object that represents the total values of all queue sizes and available slots listed under 'skills’. Note that in any case that for a certain skill there is no queue state data (hence a -1 value), it will not be aggregated to totals, meaning only valid (non -1) skill queue state values are summed up. The currentMaxWaitTimeInQueue nested under this element represents the max wait time in queue out of all available skills. | Element |
@@ -160,7 +159,7 @@ Request by skills=1,100 and v=2 (skill 100 has no queue state data)
 | currentQueueSize | The current queue size | long |
 | currentMaxWaitTimeInQueue | The current max wait time in the queue in milliseconds. If no one is waiting in queue returns -1 | long
 
-Optional Response Status Codes
+#### Optional response status codes
 
 | Name | Description |
 | :----- | :-------------- |

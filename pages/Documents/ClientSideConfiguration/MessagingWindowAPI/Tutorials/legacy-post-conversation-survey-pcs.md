@@ -11,7 +11,7 @@ permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.ht
 indicator: messaging
 ---
 
-{: .note}
+{: .attn-note}
 This topic discusses a legacy solution for post-conversation surveys (PCS) and is made available for the benefit of brands using this solution. **If you're new to post-conversation surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
 
 In this tutorial, we demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation. When we use the term "Post Conversation Survey" in this tutorial, we refer to this solution,  not the [older survey solution](messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html) where only a single CSAT question could be presented to the consumer when the conversation ends. Once the Post Conversation Survey is configured and working, it will be presented to the consumer instead of the older CSAT one. There is no situation in which both work together.
@@ -46,7 +46,8 @@ The Messaging Window API was enhanced to support the multi-dialog concept by pro
 
 ### Prerequisites
 
-<div class="note">The below tutorial assumes that you have performed the initial steps required in order to work with this API, which can be found <a href="/messaging-window-api-getting-started.html">here</a>.</div>
+{: .attn-note}
+The below tutorial assumes that you have performed the initial steps required in order to work with this API, which can be found [here](/messaging-window-api-getting-started.html).
 
 * Configure the Post Conversation Survey (PCS) and get familiar with it. Please refer to [this guide](https://s3-eu-west-1.amazonaws.com/ce-sr/botstudio/Conversation+Survey+-+Configuration+Guide.pdf) for more information.
 
@@ -143,7 +144,7 @@ Input the following command:
 
 **Expected Notification**
 
-* In this example, the `changes` array is still empty since there are still no conversations  
+* In this example, the `changes` array is still empty since there are still no conversations
 
 ```json
 {
@@ -202,7 +203,7 @@ Type a few messages in the Agent Workspace and send them to the consumer.
 
 ### Step 7 — Subscribe to Conversation Content
 
-In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the `__YOUR_CONVERSATION_ID__` with the the `conversationId` you got in the response of the previous step, and paste it into the opened WebSocket.
+In order to get existing or new messages from the agent side, the consumer should subscribe to the content of the conversation. Substitute the `__YOUR_CONVERSATION_ID__` with the `conversationId` you got in the response of the previous step, and paste it into the opened WebSocket.
 
 ```json
 {"kind":"req","id":"2","type":"ms.SubscribeMessagingEvents","body":{"dialogId":"__YOUR_CONVERSATION_ID__","conversationId":"__YOUR_CONVERSATION_ID__","fromSeq":0}}
@@ -486,7 +487,8 @@ As we said, we do not actually close the Conversation. We only close the Main Di
 {"kind":"req","id":"2","type":"cm.UpdateConversationField","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"DialogChange","type":"UPDATE","dialog":{"dialogId":"__YOUR_CONVERSATION_ID__","state":"CLOSE","closedCause":"Closed by consumer"}}}}
 ```
 
-<div class="note">In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.</div>
+{: .attn-note}
+In the above case, the dialogId (MAIN) is the same value of its conversationId but in general that doesn't have to be the case. For example, the Post-Survey dialogue would get a different dialogId.
 
 Important fields:
 

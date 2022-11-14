@@ -19,7 +19,7 @@ let errorCounter = 0;
 
             item.documents.forEach(doc => {
                 var document_path = solution_path
-                //check if document is a folder 
+                //check if document is a folder
                 if (doc.documentname.pages) {
                     // console.log("Doc is a folder")
                     document_path += commonMethods.convertToExpectedFolderName(doc.documentname) + '/'
@@ -77,4 +77,3 @@ let errorCounter = 0;
     }
     return errorCounter;
 }());
-

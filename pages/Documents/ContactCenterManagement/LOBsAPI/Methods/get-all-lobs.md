@@ -2,15 +2,12 @@
 pagename: Get all LOBs
 redirect_from:
   - administration-get-all-lobs.html
-keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: LOBs API
 subfoldername: Methods
-
 order: 10
 permalink: lobs-api-methods-get-all-lobs.html
-
 indicator: both
 ---
 
@@ -34,8 +31,8 @@ This API retrieves a list of LoBs for a specific account.
 
 **Path Parameters**
 
-| Parameter   |  Description   |   Type / Value  |              
- |:---------- |  :------------- |  :-------------  |            
+| Parameter   |  Description   |   Type / Value  |
+ |:---------- |  :------------- |  :-------------  |
 | accountId |    LP site ID    |   String  |
 
 ### Response
