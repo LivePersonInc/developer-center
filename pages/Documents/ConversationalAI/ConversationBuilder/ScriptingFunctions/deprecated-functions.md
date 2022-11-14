@@ -6,6 +6,7 @@ documentname: Conversation Builder
 subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 Most deprecated functions are still supported but not recommended. Bot developers are encouraged to use stated alternatives instead.

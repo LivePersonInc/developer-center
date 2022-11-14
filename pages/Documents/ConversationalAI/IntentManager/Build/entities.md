@@ -9,6 +9,7 @@ documentname: Intent Manager
 subfoldername: Build
 permalink: intent-manager-build-entities.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### What's an entity?

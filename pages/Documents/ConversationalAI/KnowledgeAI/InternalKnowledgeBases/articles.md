@@ -9,6 +9,7 @@ documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
 permalink: knowledgeai-internal-knowledge-bases-articles.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### Add an article

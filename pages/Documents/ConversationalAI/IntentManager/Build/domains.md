@@ -8,6 +8,7 @@ documentname: Intent Manager
 subfoldername: Build
 permalink: intent-manager-build-domains.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### What's a domain?

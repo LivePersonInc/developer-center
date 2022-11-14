@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-key-terms-concepts.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### Key terms

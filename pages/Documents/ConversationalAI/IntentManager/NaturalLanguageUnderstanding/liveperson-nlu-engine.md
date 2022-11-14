@@ -6,6 +6,7 @@ documentname: Intent Manager
 subfoldername: Natural Language Understanding
 permalink: intent-manager-natural-language-understanding-liveperson-nlu-engine.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 There are two versions of LivePerson's NLU engine:
