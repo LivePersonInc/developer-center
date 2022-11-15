@@ -82,7 +82,7 @@ If your target channel is Apple Messages for Business, you might need to support
 
 In this example, metadata is added at the interaction level in order to send an[authentication request](apple-messages-for-business-templates-apple-auth-template.html#sending-an-apple-authentication-request-to-a-consumer) to the consumer.
 
-```javascript
+```json
 {
   "type": "vertical",
   "elements": [{
@@ -126,7 +126,7 @@ Once the consumer authenticates by signing in with a username and password, you 
 
 In this example, metadata is set in a button’s configuration. During a conversation, when the consumer clicks the button, that metadata is sent back to the bot in the conversation’s metadata. You can retrieve the metadata using Conversation Builder’s [getMetadata](conversation-builder-scripting-functions-get-set-session-data.html#get-conversation-metadata) scripting function.
 
-```javascript
+```json
 {
   "message": "Title message",
   "type": "quickReplies",
