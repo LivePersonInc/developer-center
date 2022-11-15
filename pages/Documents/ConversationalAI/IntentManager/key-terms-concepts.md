@@ -5,6 +5,7 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-key-terms-concepts.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### Key terms
@@ -150,9 +151,12 @@ Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in
 
 There are three types of entities:
 
-* Value Set entities
-* Regular Expression entities
-* Global (built-in) entities
+* Value Set
+* Regular Expression
+* Global (built-in)
+
+{: .attn-info}
+Interested in the performance? Check out the discussion on precision and recall in our [October 2022 blog post](https://www.liveperson.com/blog/improving-named-entity-recognition/).
 
 #### Value Set entities
 

@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Common Solutions
 permalink: common-solutions-set-consumer-expectations-about-wait-times-for-agents.html
 indicator: both
-date_updated: 2022/10/05
+date_updated: 2022/11/13
 ---
 
 ### Use case
@@ -20,19 +20,19 @@ In a Conversation Builder bot, you’re implementing a flow to transfer the cons
 
 ### Workflow
 
-#### Step 1: Create a namespace in the CCS to store the queue health info
+#### Step 1: Get your developer key
 
-In Conversation Orchestrator:
-
-1. In the Conversation Context Service (CCS), create a namespace to store the queue health info.
-2. Copy your developer key (API key), so you can use it in calls to the CCS.
+In the Developers module in Conversation Orchestrator, copy your developer key (Maven API key), so you can use it in calls to the CCS.
 
 #### Step 2: Create a function that retrieves the queue health info and sends it to the CCS
 
+{: .attn-note}
+Before completing this step, verify the Conversation Context Service is [turned on in Bot Accounts](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started).
+
 In LivePerson Functions:
 
-1. Save your developer key to your Secret Storage.
-2. Create a function that retrieves the current queue info at scheduled intervals and updates the namespace in the CCS with this info. This should be a “No Event” function. You might name it “currentQueueHealth.”
+1. Save your developer key (Maven API key) to your Secret Storage.
+2. Create a function that retrieves the current queue info at scheduled intervals and updates a namespace in the CCS with this info. This should be a “No Event” function. You might name it “currentQueueHealth.”
 
     You need to ensure that the CCS URL is accessible from the function. So, in the function’s Coding Details, give access to external domains. Then add `*.context.liveperson.net`. Or, whitelist the domain on the settings page.
 
@@ -51,9 +51,7 @@ In LivePerson Functions:
 
 #### Step 3: In the bot, retrieve the queue health info from the CCS and use it as desired
 
-1. [Verify the Conversation Context API is enabled](bot-accounts-account-details.html).
-
-2. Within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
+In Conversation Builder, within an interaction in the bot, query the CCS for the queue health info, and send the consumer a message to set their expectations on wait times accordingly. Sample code is below.
 
 ##### Sample code
 

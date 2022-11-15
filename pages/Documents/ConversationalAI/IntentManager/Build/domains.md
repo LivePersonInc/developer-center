@@ -8,6 +8,7 @@ documentname: Intent Manager
 subfoldername: Build
 permalink: intent-manager-build-domains.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### What's a domain?
@@ -132,6 +133,7 @@ If you're creating a Google sheet, add the intents to the first tab in the sheet
 
 #### Key Phrase Matching: LivePerson (Legacy) only
 
+{: .attn-deprecation}
 Enable Key Phrase Match is a domain setting that’s only available in domains that use the LivePerson (Legacy) NLU engine. It’s designed to improve the NLU matching by adding another “layer” of matching during intent prediction.
 
 A key phrase is a critical noun or verb. If you enable Key Phrase Matching for the domain, you can specify a collection of key phrases for each intent. During intent prediction, the key phrases are evaluated after the training phrases. If the key phrases are found in the user’s utterance, the NLU score for the intent is boosted to GOOD even if the utterance doesn’t match any of the intent’s training phrases.
