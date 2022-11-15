@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-key-terms-concepts.html
 indicator: both
-date_updated: 2022/11/15
+date_updated: 2022/11/16
 ---
 
 ### Key terms
@@ -145,9 +145,22 @@ A meta intent is a wrapper that can contain many other standard intents. This fu
 
 ### Entities
 
-Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
+Entities are the things, and their attributes, referred to in consumer conversations. More formally, a named entity is a set of elements that is important to understanding raw text, but is not necessarily related to the *intent* of the raw text. In general, entities can be swapped while preserving the general intent of the text.
+
+Often, named entities are the nouns and adjectives in a sentence, but they can be almost any part of speech. LivePerson’s entity definitions are flexible, meaning entities are whatever you want to capture from your customer conversations. Some examples:
+
+<img style="width:600px" alt="Examples of entities in consumer messages" src="img/ConvoBuilder/im_entities_examples.jpg">
+
+In other words, entities enable artificial intelligence to understand text at a deeper level. Without entities, artificial intelligence would know someone wants to buy something, but wouldn’t know *what* they want to buy, or *where* they want it delivered, or *how* they want to pay. That’s why [named entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition), a natural language processing technique for automatically identifying entities in a sentence and classifying them into pre-defined categories, is so important.
+
+{: .attn-info}
+Interested in the performance? Check out the discussion on precision and recall in our [October 2022 blog post](https://www.liveperson.com/blog/improving-named-entity-recognition/).
+
+#### How to use entities?
 
 Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots. A slot is a special &mdash; and powerful &mdash; type of variable that brings dynamic, fluid behavior to storing consumer input. See [these examples](conversation-builder-variables-slots-slots.html) on automatically detecting entities within Question interactions and storing the entity values in slots. The examples demonstrate how this can pre-populate consumer answers to questions and thereby streamline the data collection process significantly.
+
+#### Types of entities
 
 There are three types of entities:
 
@@ -155,24 +168,25 @@ There are three types of entities:
 * Regular Expression
 * Global (built-in)
 
-{: .attn-info}
-Interested in the performance? Check out the discussion on precision and recall in our [October 2022 blog post](https://www.liveperson.com/blog/improving-named-entity-recognition/).
+##### Value Set entities
 
-#### Value Set entities
+As their name suggests, Value Set entities represent a list of entity values to an entity type. For example, a fast food restaurant might have a `SANDWICH` entity represented by a list of three entity values:
 
-As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
+* Reuben
+* Veggie
+* Grilled cheese
 
-* football
-* running
-* walking
-
-<img style="width:400px" alt="An example of a Value Set entity" src="img/ConvoBuilder/im_entities_value_set_ex.png" alt="">
+<img style="width:600px" alt="An example of a Value Set entity" src="img/ConvoBuilder/im_entities_value_set_ex.png">
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
-#### Regular Expression entities
+Generally, list entities are a good choice when there are a limited number of potential entity values that can be easily enumerated within a list. However, when hundreds or even thousands of values are possible, a Regular Expression entity is a better choice.
 
-Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
+##### Regular Expression entities
+
+Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/).
+
+Regular Expression entities allow matching patterns, so there is no need to list each possibility, nor is there a limit on the potential list of entity values that can be recognized. For example, if a serial number is always “a,” “b,” or “c” followed by 5 digits and the letter “x,” then the regular expression `[a|b|c]\d{5}x` would match all values of that entity. In our example below, we’ve defined an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
 <img style="width:800px" alt="An example of a Regular Expression entity" src="img/ConvoBuilder/im_entities_regex_ex.png" alt="">
 
@@ -182,13 +196,18 @@ Use a Regular Expression entity in situations where the entity's possible values
 * Order numbers
 * Help Desk ticket numbers
 
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
+Some important notes: 
 
-#### Global entities
+* Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
+* Regex entities can require careful consideration to not over-match. For example, if a hotel room number were a three- or four-digit number, `\d{3,4}` would find all the room numbers, but it would also match the first four digits of a zip code.
 
-Global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t need to add them manually in Intent Manager.
+##### Global entities
 
-Global entities include:
+Global entities are machine-learning entities that are recognized using a model that is trained on large amounts of data that has been labeled with the desired entities. Machine learning is most useful for recognizing entities that cannot easily be enumerated or defined by a format. In other words, machine learning can detect entities where Value Set and Regular Expression entities won’t work.
+
+As examples, global entities include keywords like POSTAL_CODE, where enumerating the full list would be difficult, and STREET, where predefining a format would be impossible. Global entities are automatically detected by the system, so you don’t need to add them manually in Intent Manager.
+
+The complete list of global entities includes:
 
 | Entity | Description | Example |
 | --- | --- | --- |
@@ -212,8 +231,6 @@ Global entities include:
 | STREET | United States descriptors for street names | Main St.<br>123 Main St. NE<br>123 East-West Highway Apt. 107 |
 | TIME | Time of day | 2 p.m.<br>23:00<br>morning |
 | URL | A URL | https://www.google.com/search?&lt;param&gt; |
-
-**Detection of global entities**
 
 The detection of global entities is highly dependent on context. As a result, the system is powerful and capable of detecting the following:
 

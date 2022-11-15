@@ -9,18 +9,18 @@ documentname: Intent Manager
 subfoldername: Build
 permalink: intent-manager-build-entities.html
 indicator: both
-date_updated: 2022/11/15
+date_updated: 2022/11/16
 ---
 
 ### What's an entity?
 
-An [entity](intent-manager-key-terms-concepts.html#entities) is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY.
+An entity is any word(s) or series of characters that consistently refers to (an attribute of) a single person, place, or thing, or set of same, e.g., SPORT, SIZE, HELP_DESK_TICKET_NUMBER, or CITY. [Learn more](intent-manager-key-terms-concepts.html#entities).
 
 There are three types of entities:
 
-* [Value Set](intent-manager-key-terms-concepts.html#value-set-entities) - You define these.
-* [Regular Expression](intent-manager-key-terms-concepts.html#regular-expression-entities) - You define these.
-* [Global](intent-manager-key-terms-concepts.html#global-entities) - These are automatically detected by the system; see [the complete list](intent-manager-key-terms-concepts.html#global-entities).
+* [Value Set](intent-manager-key-terms-concepts.html#value-set-entities) - You define these, so they're brand-specific.
+* [Regular Expression](intent-manager-key-terms-concepts.html#regular-expression-entities) - You define these, so they're brand-specific.
+* [Global](intent-manager-key-terms-concepts.html#global-entities) - These universal entities are automatically detected by the system; see [the complete list](intent-manager-key-terms-concepts.html#global-entities).
 
 Use entities to fill [slots](conversation-builder-variables-slots-slots.html) in Conversation Builder bots.
 
