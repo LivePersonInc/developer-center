@@ -13,37 +13,6 @@ This SDK is no longer maintained.
 {: .attn-note}
 In depth documentation for this SDK, including a code sample, can be found [on GitHub](https://github.com/LivePersonInc/messaging-window-sdk).
 
-<div  class="attn-alert">
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-</div>
-
-<div  class="attn-info">
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-</div>
-
-<div  class="attn-note">
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-</div>
-
-<div  class="attn-tip">
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-</div>
-
-<div  class="attn-deprecation">
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-<ul>
-<li>list item1</li>
-<li>list item1</li>
-<li>list item1</li>
-</ul>
-<p>For SDK 6.0.X and below, the default log level is <strong>INFO</strong> in Release builds, and <strong>TRACE</strong> in Debug builds.</p>
-</div>
-
 This Messaging Window SDK for the Conversational Cloud [Messaging Window API](messaging-window-api-overview.html) makes building custom messaging windows and JavaScript applications efficient and stable. The SDK does a lot of the work of connecting to LivePerson's messaging servers, subscribing to notifications, and managing conversations for you. Thus, you can use this SDK to build your own messaging windows for your consumers to use or even moving the conversation entirely out of a window-type experience and embedding it into the webpage.
 
 ### Prerequisites
