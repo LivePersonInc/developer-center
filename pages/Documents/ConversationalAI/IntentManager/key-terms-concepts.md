@@ -5,7 +5,7 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-key-terms-concepts.html
 indicator: both
-date_updated: 2022/11/16
+date_updated: 2022/11/17
 ---
 
 ### Key terms
@@ -147,7 +147,7 @@ A meta intent is a wrapper that can contain many other standard intents. This fu
 
 Entities are the things, and their attributes, referred to in consumer conversations. More formally, a named entity is a set of elements that is important to understanding raw text, but is not necessarily related to the *intent* of the raw text. In general, entities can be swapped while preserving the general intent of the text.
 
-Often, named entities are the nouns and adjectives in a sentence, but they can be almost any part of speech. LivePerson’s entity definitions are flexible, meaning entities are whatever you want to capture from your customer conversations. Some examples:
+Often, named entities are the nouns and adjectives in a sentence, but they can be almost any part of speech. LivePerson’s entity definitions are flexible, meaning entities are whatever you want to capture from your consumer conversations. Some examples:
 
 <img style="width:600px" alt="Examples of entities in consumer messages" src="img/ConvoBuilder/im_entities_examples.jpg">
 
