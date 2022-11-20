@@ -44,7 +44,7 @@ The following parameters should be defined:
 
 * **Authentication Endpoint** - An HTTPS URL OAuth 2.0 Authorization Endpoint that is used by LivePerson to initiate the authentication flow with your idenitity principal. (this endpoint is invoked in case the conversation window opens as an external window)
 
-* **Token Endpoint** - An HTTPS URL for token exchange. used in Code Flow.
+* **Token Endpoint** - An HTTPS URL for token exchange, used in Code Flow.
 
 * **Client ID** - Used in Access Token Request
 
