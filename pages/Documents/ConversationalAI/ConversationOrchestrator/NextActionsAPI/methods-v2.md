@@ -6,6 +6,7 @@ documentname: Conversation Orchestrator
 subfoldername: Next Actions API
 permalink: conversation-orchestrator-next-actions-api-methods-v2.html
 indicator: messaging
+date_updated: 2022/11/17
 ---
 
 There are two ways to use the Next Actions functionality:
@@ -40,12 +41,12 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 
 | Name | Type | Description | Required? |
 | --- | --- | --- | --- |
-| accountId | string | The accountId of the brand | required |
-| conversationId | string | The conversation ID of the current conversation | optional |
-| customerId | string | LivePerson customer ID of the current conversation | optional |
-| sessionId | string | The group ID associated with the session store variable call to set values. If no session is specified, then the conversationId is used to associate with the session store variables. | optional |
-| lpToken | string | Bearer {bearer token} | optional |
-| policyId | string | The ID of the policy | optional |
+| accountId | String | The account ID of the brand | Required |
+| conversationId | String | The conversation ID of the current conversation | Optional |
+| customerId | String | LivePerson customer ID of the current conversation | Optional. However, this parameter is required if you're using SDEs to route in your dynamic policy. |
+| sessionId | String | The group ID associated with the session store variable call to set values. If no session is specified, then the conversationId is used to associate with the session store variables. | Optional |
+| lpToken | String | Bearer {bearer token} | Optional |
+| policyId | String | The ID of the policy | Optional |
 
 ##### Request payload example
 ```
