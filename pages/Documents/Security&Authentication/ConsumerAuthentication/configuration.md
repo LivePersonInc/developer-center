@@ -40,9 +40,9 @@ The following parameters should be defined:
 
 * **Issuer Display Name** - The presentation name for the identity provider issuer
 
-* **JWT issuer (iss)** - The identifier of the principal that issued the JWT. The 'iss' value is a case-sensitive string containing a URL value.
+* **JWT issuer (iss)** - The identifier of the principal that issued the JWT. The "iss" value is a case-sensitive string containing a URL value.
 
-* **Authentication Endpoint** - An HTTPS URL OAuth 2.0 Authorization Endpoint that is used by LivePerson to initiate the authentication flow with your idenitity principal. (this endpoint is invoked in case the conversation window opens as an external window)
+* **Authentication Endpoint** - An HTTPS URL OAuth 2.0 Authorization Endpoint that is used by LivePerson to initiate the authentication flow with your idenitity principal (this endpoint is invoked in case the conversation window opens as an external window).
 
 * **Token Endpoint** - An HTTPS URL for token exchange, used in Code Flow.
 
