@@ -201,8 +201,6 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
   var is_root = location.pathname == "/"
-  var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html"
-  var is_customizing_the_conversational_cloud = location.pathname == "/customizing-the-conversational-cloud.html"
   // console.log("checking if is unique page")
   var jumpto = $("#jumpto")
   var sidebar = $("#defaultsidebar")
@@ -212,7 +210,7 @@ function handleUniquePages() {
   var $title = $(".h1").text()
   var titleContainer = $("#documentTitleContainer")
 
-  if (is_root || is_getting_started || is_customizing_the_conversational_cloud) {
+  if (is_root) {
     jumpto.css("display", "none")
 
     sidebar.css("margin-right", "0%")
@@ -326,9 +324,9 @@ function populateAnchors() {
   var anchorlinks = document.getElementsByTagName("h3")
   var anchorlist = document.getElementById("anchorlist")
   let html
-  //if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
-  if (anchorlinks.length == 0) {
-    $(".anchorlist").css("visibility", "hidden")
+  //if there are no anchrolinks or one, hide the sidebar. 
+  if (anchorlinks.length == 0 || anchorlinks.length == 1) {
+    $(".anchorlist").css("display", "none")
     //if there are anchorlinks, display the box
   } else {
     html = '<p class="jumpToAnchor jump-top-title">Jump to:</p>'
@@ -758,12 +756,6 @@ function searchClick(event) {
     event.preventDefault()
   })
 }
-
-//legacy function, probably not needed
-$("#mysidebar").height($(".nav").height())
-
-//images center
-$("p").has("img").css({ textAlign: "center" })
 
 function domainTool() {
   var $title = $(".h1").text()

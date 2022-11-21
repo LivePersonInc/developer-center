@@ -125,7 +125,7 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
     openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
     ```
 
-7. Enter a passphrase for the keyWithPassword.pem file, which you use for the the RSA hostkey.pem key.
+7. Enter a passphrase for the keyWithPassword.pem file, which you use for the RSA hostkey.pem key.
 
 8. Create the RSA hostkey.pem key and enter the passphrase created in the previous step.
 

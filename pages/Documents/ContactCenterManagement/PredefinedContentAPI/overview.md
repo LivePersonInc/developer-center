@@ -134,7 +134,7 @@ _Note: To get the `accountConfigReadWriteDomain` for your account, see the [Gett
 
 ![Predefined Content 3](img/predefinedcontent3.png)
 
-Set the the new predefined content JSON object into the request's body section.
+Set the new predefined content JSON object into the request's body section.
 Example:
 
 ```json

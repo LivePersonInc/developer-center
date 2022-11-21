@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
-date_updated: 2019/01/30
 ---
 
 <!-- The Modal -->
@@ -31,17 +30,17 @@ date_updated: 2019/01/30
       </div>
    </div>
 </div>
-<div class="welcome-card-modified">
+<!-- <div class="welcome-card-modified">
    <div class="small-header">
       About your Free Trial Account
    </div>
    <div class="convo-cloud-paragraph">
       Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a href="/starting-with-your-concierge-bot.html">here</a>.
    </div>
-</div>
+</div>-->
 <div>
    <div class="attn-note" style="width:90%">
-      <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">register</a> for a free 45-day trial.
+      <b>Prerequisites</b> If you don't already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">request</a> a LivePerson demo.
    </div>
 </div>
 <div class="concierge-bot-header">

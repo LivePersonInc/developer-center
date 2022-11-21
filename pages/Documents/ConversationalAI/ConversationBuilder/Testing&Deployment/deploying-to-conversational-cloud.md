@@ -8,6 +8,7 @@ documentname: Conversation Builder
 subfoldername: Testing & Deployment
 permalink: conversation-builder-testing-deployment-deploying-to-conversational-cloud.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 As a bot developer, you can use Conversation Builder to quickly deploy bots to a Conversational Cloud environment.
@@ -151,7 +152,7 @@ By default, a message from the consumer is shown to the consumer as "Read' once 
 #### defaultGreetingMessage
 The greeting message sent to the bot when the bot agent connects to a new conversation. This message is sent to the bot if a message is not received from the consumer within *3 seconds* of the bot agent joining the conversation. The value of 3 seconds cannot be adjusted.
 
-Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot includes a dialog flow that supports receipt of whatever message you use here.
+Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot [supports Small Talk](conversation-builder-best-practices-support-small-talk.html) or includes a dialog flow that supports receipt of whatever message you use here.
 
 See also `disableGreetings`, which is farther below.
 

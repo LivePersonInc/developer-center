@@ -9,6 +9,7 @@ documentname: Conversation Builder
 subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-manage-the-conversation-context-service.html
 indicator: both
+date_updated: 2022/11/17
 ---
 
 The Conversation Context Service is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
@@ -31,13 +32,12 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 **To enable the Conversation Context Service API for your account**
 
-1. Access the *Bot Accounts* application, and click the organization name.
+1. [Access the Bot Accounts application](bot-accounts-overview.html#access-bot-accounts), and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use Conversational Cloud Site ID** (Only available for LivePerson accounts.)
-    * **Use Conversation Builder Account ID** (This is your organization ID.)
-4. Enter the ID for your selection in step 5.
-5. Click **Update Account**.
+    * **Use Conversational Cloud Site ID**: Only available for LivePerson accounts.
+    * **Use Conversation Builder Account ID**: This is your organization ID.
+4. Enter the ID for your selection in step 3.
 
 #### Conversation Builder data scopes
 
@@ -72,7 +72,7 @@ If the namespace already exists, this method does not create an additional one. 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `registerContextNamespace(namespace)` | namespace (string) — The name of the namespace | Boolean |
-| `registerContextNamespace(namespace, ttl)` | namespace (string) — The name of the namespace<br><br>ttl (long) — "time to live," i.e., how long in seconds that the properties in the namespace are available (3 hours = 10,800 seconds, 1 day = 86,400 seconds, 1 week = 604,800 seconds, etc.). The namespace still exists after the `ttl` expires. If you set the `ttl` and subsequently change it, the new `ttl` only applies to properties added to the namespace after the change; existing properties remain unaffected.  | Boolean |
+| `registerContextNamespace(namespace, ttl)` | namespace (string) — The name of the namespace<br><br>ttl (long) — "Time to live," i.e., how long in seconds that the properties in the namespace are available (3 hours = 10,800 seconds, 1 day = 86,400 seconds, 1 week = 604,800 seconds, etc.). LivePerson recommends you use a `ttl` of 13 months so that properties don’t persist forever. The namespace still exists after the `ttl` expires. If you set the `ttl` and subsequently change it, the new `ttl` only applies to properties added to the namespace after the change; existing properties remain unaffected. | Boolean |
 
 ##### Example
 
