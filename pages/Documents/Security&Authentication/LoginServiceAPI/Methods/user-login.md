@@ -21,7 +21,7 @@ indicator: both
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| v | API version number | number| Required | Default Value: 1.3 |
+| v | API version number | Number | Required | Default Value: 1.3 |
 
 #### Headers
 
