@@ -16,7 +16,7 @@ indicator: chat
 
 The Visit Information API provides a way to pull data in real-time, when a session is active and exists in memory. After a maximum of 6 hours, the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
 
-The data is about the visitor, engagement, and session to be used by the agent during the conversation. For example, referrer, engagement attributes, etc.
+The data is about the visitor, engagement, and session for the agent to use during the conversation. For example, referrer, engagement attributes, etc.
 
 ### Getting started
 
