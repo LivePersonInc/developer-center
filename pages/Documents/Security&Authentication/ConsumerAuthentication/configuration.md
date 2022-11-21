@@ -25,7 +25,7 @@ indicator: both
 
 
 {:start="3"}
-3.  Click on 'Click to configure'
+3.  Click on ״Click to configure״
 
 ![Click to configure the Consumer Identity Provider](img/mgmt_consumer_idp_configure.png)
 
