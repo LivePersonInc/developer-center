@@ -94,7 +94,7 @@ function navigateContent(url) {
       //once done, figure out if we're being redirected by the redirect plugin or not
       if (
         content.indexOf("<title>Redirecting…</title>") > -1 ||
-        content.indexOf("<title>Redirecting&hellip;</title>") > -1
+        content.indexOf("<title>Redirecting…</title>") > -1
       ) {
         //if we are, set the URL to match the original one before redirect and then call navigate content again
         url = content.match(/<script>location=\"([^\"]+)\"<\/script>/)[1]
@@ -324,7 +324,7 @@ function populateAnchors() {
   var anchorlinks = document.getElementsByTagName("h3")
   var anchorlist = document.getElementById("anchorlist")
   let html
-  //if there are no anchrolinks or one, hide the sidebar. 
+  //if there are no anchrolinks or one, hide the sidebar.
   if (anchorlinks.length == 0 || anchorlinks.length == 1) {
     $(".anchorlist").css("display", "none")
     //if there are anchorlinks, display the box
