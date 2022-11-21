@@ -229,7 +229,7 @@ In this section you can define the search filters for the Widget Search Screen. 
 
 In addition to the widget integration which creates chat transcript records when the chat/messaging conversation starts, an extra offline sync process was built into this package to sync between Salesforce and Conversational Cloud Servers.
 
-This process is used to preserve data integrity and to make sure the chat/messaging conversation transcript information saved in Salesforce is full, accurate and up to date.
+This process is used to preserve data integrity and to make sure the chat/messaging conversation transcript information saved in Salesforce is full, accurate and up-to-date.
 
 **The sync process includes 4 sync options:**
 

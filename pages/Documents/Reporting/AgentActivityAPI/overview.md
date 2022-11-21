@@ -8,10 +8,10 @@ indicator: both
 ---
 
 {: .attn-note}
-This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
+The Agent Activity API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
 
 {: .attn-alert}
-This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
+The Agent Activity API is intended for reporting and information purposes — not for real-time decisions, such as routing.
 
 ### Introduction
 
