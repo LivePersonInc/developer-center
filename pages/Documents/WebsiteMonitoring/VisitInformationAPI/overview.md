@@ -11,14 +11,16 @@ permalink: visit-information-api-overview.html
 root-link: true
 indicator: chat
 ---
+
 ### Introduction
 
-This API provides a way to pull data in real-time — only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
-The data is about the visitor, engagement and session to be used by the agent during the conversation, for example, referrer, engagement attributes, etc.
+The Visit Information API provides a way to pull data in real-time, when a session is active and exists in memory. After a maximum of 6 hours, the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
 
-### Getting Started
+The data is about the visitor, engagement, and session to be used by the agent during the conversation. For example, referrer, engagement attributes, etc.
 
-A few things you'll need to get started with this API:
+### Getting started
+
+A few things you’ll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
@@ -40,4 +42,4 @@ This API can be used to display context information to agents about the session,
 
 Example of how visitor information is displayed to agents within the Agent Workspace:
 
-![VisitInformation](img/visitinformation.png)
+![Screenshot of the Agent Workspace](img/visitinformation.png)
