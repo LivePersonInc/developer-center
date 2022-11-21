@@ -38,11 +38,10 @@ indicator: both
       Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a href="/starting-with-your-concierge-bot.html">here</a>.
    </div>
 </div>-->
-<div>
-   <div class="attn-note" style="width:90%">
-      <b>Prerequisites</b> If you don't already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">request</a> a LivePerson demo.
-   </div>
-</div>
+
+{: .attn-note}
+Prerequisites: If you don't already have a Conversational Cloud account, [request](https://developers.liveperson.com/register.html) a LivePerson demo.
+
 <div class="concierge-bot-header">
    Connect to mobile channels and customize your Concierge Bot
 </div>
