@@ -21,7 +21,8 @@ Refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou). We 
 
 Before you can choose your login method, you must retrieve your domain using the [Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html).
 
-**Tip:** Use the `agentVep` service name to retrieve your domain.
+{: .attn-tip}
+Use the `agentVep` service name to retrieve your domain.
 
 ```html
 https://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?version=1.0
@@ -41,4 +42,4 @@ To login as an application, you must have the _User Type — Bot_ feature activa
 
 ### Step 3. Create an OAuth 1.0 API key and new Bot
 
-[Refer to our Getting Started guide for more information on creating API keys](common-resources-create-api-keys.html). You'll need the details (like username or app secert) to use the methods of this API mentioned above so make sure to note them.
+Refer to our Getting Started guide for [more information on creating API keys](common-resources-create-api-keys.html). You'll need the details (like username or app secret) to use the methods of this API mentioned above so make sure to note them.

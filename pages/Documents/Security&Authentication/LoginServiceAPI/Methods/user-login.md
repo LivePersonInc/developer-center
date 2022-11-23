@@ -17,48 +17,49 @@ indicator: both
 | :--- | :--- |
 | POST |  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/login?v=1.3 |
 
-**Query Parameters**
+#### Query parameters
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| v | API version number | number| Required | Default Value: 1.3 |
+| v | API version number | Number | Required | Default Value: 1.3 |
 
-**Headers**
+#### Headers
 
 | Header |  Description |
 | :--- | :--- |
 | Content-Type | Application/JSON |
 | Accept | Application/JSON |
 
-**Body**
+#### Body
 
 Example:
 
 ```json
-    {
-        "username": "name",
-        "password": "password"
-    }
+  {
+    "username": "name",
+    "password": "password"
+  }
 ```
 
 ### Response
 
-**Response Codes**
+#### Response codes
 
 | Code | Response |
 | :--- | :--- |
-| 200 | OK — Successfully logged in (see note) |
+| 200 | OK — Successfully logged in |
 | 400 | Bad request — Problem with body or query parameters |
 | 401  | Unauthorized — Bad Authentication (invalid site or agent) |
 | 500 | Internal server error |
 
-**Response cookies**
+#### Response cookies
 
 | Cookie | Description |
 | :--- | :--- |
-| Session_id | Login session ID (should be passed to the refresh and logout methods). |
+| Session_id | Login session ID (should be passed to the refresh and logout methods) |
 
-*Note: The Bearer can be found at the bottom of the response.*
+{: .attn-note}
+The Bearer can be found at the bottom of the response.
 
 Example:
 
@@ -118,4 +119,5 @@ Example:
 }
 ```
 
-*Note: Response contains csrf (should be saved and used in refresh and logout), bearer, wsuk, siteConfig, csdsCollectionResponse, accountData and sessionTTl.*
+{: .attn-note}
+The response contains csrf (should be saved and used in refresh and logout), bearer, wsuk, siteConfig, csdsCollectionResponse, accountData and sessionTTl.
