@@ -485,6 +485,14 @@ td {
   margin: 0 auto;
 }
 
+@media (max-width: 1200px) {
+
+  #jumpto {
+    display: none !important;
+  }
+
+}
+
 @media (max-width: 1024px) {
 
   .flex-col-ipad {
@@ -515,10 +523,6 @@ td {
   .max-width {
     max-width: 100%;
     margin: inherit;
-  }
-
-  #jumpto {
-    display: none !important;
   }
 
 }
