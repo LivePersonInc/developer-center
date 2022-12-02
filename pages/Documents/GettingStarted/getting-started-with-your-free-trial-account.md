@@ -30,19 +30,18 @@ indicator: both
       </div>
    </div>
 </div>
-<div class="welcome-card-modified">
+<!-- <div class="welcome-card-modified">
    <div class="small-header">
       About your Free Trial Account
    </div>
    <div class="convo-cloud-paragraph">
       Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a href="/starting-with-your-concierge-bot.html">here</a>.
    </div>
-</div>
-<div>
-   <div class="attn-note" style="width:90%">
-      <b>Prerequisites</b> if you don’t already have a Conversational Cloud account, <a href="https://developers.liveperson.com/register.html">register</a> for a free 45-day trial.
-   </div>
-</div>
+</div>-->
+
+{: .attn-note}
+Prerequisites: If you don't already have a Conversational Cloud account, [request](https://developers.liveperson.com/register.html) a LivePerson demo.
+
 <div class="concierge-bot-header">
    Connect to mobile channels and customize your Concierge Bot
 </div>

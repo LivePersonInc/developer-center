@@ -6,6 +6,7 @@ documentname: Conversation Builder
 subfoldername: Bots
 permalink: conversation-builder-bots-post-conversation-survey-bots.html
 indicator: messaging
+date_updated: 2022/11/13
 ---
 
 ### What's a post-conversation survey bot?
@@ -247,7 +248,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 #### Handle free text answers
 
-The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
+The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
 
 #### Handle unrecognizable responses
 
@@ -382,6 +383,12 @@ If you make use of survey, question, and answer IDs in your reporting, you can d
 ### Monitoring
 
 If you have Bots Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to [monitor your survey bots](bots-status-managing-post-conversation-survey-bots.html). In Bots Status, you can redeploy the connector as a troubleshooting technique.
+
+### Troubleshooting
+
+Sometimes, an interaction in a survey bot gets into a state where its ID isn’t synchronized with underlying systems. This can adversely affect reporting. You can fix this situation quickly with the <img class="inlineimage" style="width:25px" alt="Refresh icon" src="img/ConvoBuilder/icon_pcs_synchids.png"> (Synchronize interaction ID) icon that dynamically appears:
+
+<img style="width:700px" src="img/ConvoBuilder/surveyBot_synchids.png" alt="In interaction, a warning icon in lower-right corner is displayed when there's an issue with interaction's ID. Click refresh button in upper-right corner to synchronize ID and resolve issue.">
 
 ### FAQs
 

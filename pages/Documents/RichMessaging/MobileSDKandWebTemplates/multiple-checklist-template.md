@@ -256,4 +256,4 @@ Please note current limitations:
 
 - This feature is not available for the enhanced agent workspace
 - It is supported for the web messaging channel only.
-- If the new structured content is wrapped with other structured content, the the multiple checklist will be removed from the transcript and its header will not be displayed.
+- If the new structured content is wrapped with other structured content, the multiple checklist will be removed from the transcript and its header will not be displayed.

@@ -21,6 +21,9 @@ Furthermore, agents have the ability to easily create records in Salesforce as p
 
 -->
 
+{: .attn-deprecation}
+The legacy LivePerson CRM widgets have been deprecated. For those still requiring services related to LivePerson's legacy CRM widgets, [NAVOMI](https://navomi.com/crm-connect/) will provide the option of continued service and support at a fee starting October 15, 2022. For more information, please contact your CSM or Account Team.
+
 The Conversational Cloud Salesforce Widget will allow SFDC information to be viewed inside the platform, as well as enabling records to be created and chat/messaging transcripts to be attached to them. In addition, the app will include back-end setup that will allow the SFDC admin to customize the default settings for their organization. This guide sets out the steps to install, configure, and start working with the Conversational Cloud app for Salesforce.
 
 **Please note:** The information in this guide refers to both chat and messaging, unless otherwise indicated.
@@ -226,7 +229,7 @@ In this section you can define the search filters for the Widget Search Screen. 
 
 In addition to the widget integration which creates chat transcript records when the chat/messaging conversation starts, an extra offline sync process was built into this package to sync between Salesforce and Conversational Cloud Servers.
 
-This process is used to preserve data integrity and to make sure the chat/messaging conversation transcript information saved in Salesforce is full, accurate and up to date.
+This process is used to preserve data integrity and to make sure the chat/messaging conversation transcript information saved in Salesforce is full, accurate and up-to-date.
 
 **The sync process includes 4 sync options:**
 
@@ -417,7 +420,7 @@ Now that we created records from the Conversational Cloud, you may view all our 
 #### **Looking at your chat transcripts**
 
 1. Login to Salesforce — click on the application menu in the top right of your screen.
-2. Make sure you have the the "Conversational Cloud" application selected (or any other app in which you’ve included the tab).
+2. Make sure you have the "Conversational Cloud" application selected (or any other app in which you’ve included the tab).
 3. Click on the “Chat Transcripts” tab.
 4. Select one of the recently synced chat transcripts by clicking on the “Chat Transcript Name” under the Recent Chat Transcript list.
 5. There you have it — depending on your chat transcript settings, you will see a number of fields populated.

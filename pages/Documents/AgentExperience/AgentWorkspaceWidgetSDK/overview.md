@@ -53,7 +53,7 @@ All public properties and methods can be found in the namespace `lpTag.agentSDK`
 
 * Through integration with the Engagement Window Widget SDK, allow rich media to be shared between the consumer and the agent. Using unique session IDs, an external platform facilitates a direct connection between the two SDKs, providing a seamless widget integration framework.
 
-* Knowledge based integration to provide agents with up to date and comprehensive answers
+* Knowledge based integration to provide agents with up-to-date, comprehensive answers
 
 * Video chat integration
 

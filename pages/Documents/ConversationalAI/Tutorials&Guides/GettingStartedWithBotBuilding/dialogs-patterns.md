@@ -6,6 +6,7 @@ documentname: Tutorials & Guides
 subfoldername: Getting Started with Bot Building
 permalink: tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html
 indicator: both
+date_updated: 2022/11/13
 ---
 
 <!--
@@ -126,6 +127,9 @@ Let’s create another dialog to put these concepts into more practice. Since th
 9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png" alt="Previewing the conversation by entering goodbye">
+
+{: .attn-tip}
+Bots can also [support small talk](conversation-builder-best-practices-support-small-talk.html) (chitchat). In your automation solution, consider adding support for this. It offers your consumers a more human-like experience.
 
 ### Step 4: Test the Fallback dialog
 

@@ -1326,7 +1326,9 @@ Radial loader progress background color.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-<div class="attn-note">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
+
+{: .attn-note}
+The disabled/enabled color of the Camera button, which is in the input text view, changes according to the `sendButtonDisabledTextColor` and `sendButtonEnabledTextColor` parameters.
 
 #### photoSharingOpenMenuImageButton
 
