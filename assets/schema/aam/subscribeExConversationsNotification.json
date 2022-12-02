@@ -40,7 +40,7 @@
                                     },
                                     "metaDataLastUpdateTs": {
                                         "type": "Long",
-                                        "description": "Time stamp of last update on this conversation. Can be used for handling out of order notifications"
+                                        "description": "Timestamp of last update on this conversation. Can be used for handling out of order notifications"
                                     },
                                     "state": {
                                         "type": "string",
@@ -48,11 +48,11 @@
                                     },
                                     "startTs": {
                                         "type": "integer",
-                                        "description": "Time stamp of the conversation beginning"
+                                        "description": "Timestamp of the conversation beginning"
                                     },
                                     "endTs": {
                                         "type": "integer",
-                                        "description": "Time stamp of the conversation end"
+                                        "description": "Timestamp of the conversation end"
                                     },
                                     "ttr": {
                                         "type": "object",
@@ -83,7 +83,7 @@
                                                 "enum": ["NIGHT", "WEEKEND", "HOLIDAY"]
                                             },
                                             "tillWhen": {
-                                                "description": "Time stamp of when the contact center will be available again to handle this conversation.",
+                                                "description": "Timestamp of when the contact center will be available again to handle this conversation.",
                                                 "type": "integer"
                                             }
                                         },

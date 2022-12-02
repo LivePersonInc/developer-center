@@ -841,7 +841,7 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 
 #### messageStatusNumericTimestampOnly
 
-When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+When false (default), timestamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
 
 <div style="float: left; width: 35%;height: 515px;">
    <ul>

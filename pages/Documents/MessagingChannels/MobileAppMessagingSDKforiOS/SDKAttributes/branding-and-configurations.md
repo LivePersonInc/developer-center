@@ -1042,7 +1042,7 @@ If false = Read receipt “icon mode”.
 - **Default value:** true
 
 #### messageStatusNumericTimestampOnly
-When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+When false (default), timestamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
 
 - **Type:** Bool
 - **Default value:** false

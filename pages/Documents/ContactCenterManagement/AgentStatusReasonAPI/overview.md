@@ -49,7 +49,7 @@ JSON
 
 | Header | Description |
 | --- | --- |
-|Authorization |Contains token string to allow request authentication and authorization. See the [Authentication document](guides-authentication-introduction.html) for more details. |
+|Authorization |Contains token string to allow request authentication and authorization. See the [authentication documentation](guides-authentication-introduction.html) for more details. |
 
 #### Query Parameters
 

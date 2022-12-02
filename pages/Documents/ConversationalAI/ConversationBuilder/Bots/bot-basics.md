@@ -37,7 +37,7 @@ Post-conversation survey bots have [a few, unique settings](conversation-builder
 4. Configure the settings as needed, and click **Save**.
 
 Bot settings include:
-- **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable. When you import a bot, by default, a date and time stamp is appended to the bot name; consider removing this because dates quickly become obsolete.
+- **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable. When you import a bot, by default, a date and timestamp is appended to the bot name; consider removing this because dates quickly become obsolete.
 
 - **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.
 
@@ -104,7 +104,7 @@ Before you import a bot from a different environment (that is, from one region o
 
 2. From the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
-    The bot is imported and given a name that includes a date and time stamp.
+    The bot is imported and given a name that includes a date and timestamp.
 4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) above.
 
 ### Export a bot

@@ -70,7 +70,7 @@ This is an example response which contains information for two skills, skills=2,
 | estimatedWaitTimeResponse | A list that contains elements which represent skills' data. | element |
 | skillId | The skill Id. | long |
 | estimatedWaitTime | The estimated wait time in seconds. | long |
-| timestamp | The time of the response in UTC time stamp in milliseconds. | long |
+| timestamp | The time of the response in UTC timestamp in milliseconds. | long |
 
 **Possible Response Codes**
 
