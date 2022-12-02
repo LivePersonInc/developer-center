@@ -24,7 +24,7 @@ In WhatsApp Business Messages, a Reply Button Message has the following structur
 
 **Examples of WhatsApp Reply Button**
 
-![Whatsapp Reply Button Examples](img/connectors/wa_replybutton.png)
+![WhatsApp Reply Button Examples](img/connectors/wa_replybutton.png)
 
 ### Reply Button
 

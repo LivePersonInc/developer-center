@@ -32,7 +32,7 @@ All Brands who use Proactive Messaging version 2.0 and Connect To Messaging vers
 LivePerson clients who use Proactive Messaging and Connect To Messaging need to have a complete picture of their campaigns and deflections. What Message channels are supported in this API:
 
 * SMS — Twilio Messaging Gateway
-* INAPP — LivePerson Mobile SDK
+* InApp — LivePerson Mobile SDK
 * WhatsApp
 
 **Feature Details**
@@ -51,7 +51,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 | 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
 | 10 | CSAT | Average of the CSAT rating score |
 
-*Delivered count for Whatsapp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by Whatsapp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
+*Delivered count for WhatsApp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
 
 **Full Funnel Overview board**
 
