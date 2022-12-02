@@ -44,7 +44,7 @@ A few things you’ll need to get started with this API:
 		* **OAuth 2.0 Client Credentials flow** — [follow the instructions](oauth-2-0-client-credentials.html), to register an OAuth 2.0 application and generate a JWT access token **(Using version 2 of the Authorization API)**.
 
 		{: .attn-note}
-	When registering an OAuth 2.0 application for using the Users API, use the “users.read” and “users.write” scopes
+	When registering an OAuth 2.0 application for using the Users API, use the “users.external” scope.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
