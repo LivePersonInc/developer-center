@@ -13,6 +13,14 @@ The Agent Activity API is currently in an early adoption phase. To participate i
 {: .attn-alert}
 The Agent Activity API is intended for reporting and information purposes — not for real-time decisions, such as routing.
 
+{: .notice}
+<div class="notice">
+  <p>In V1: Each page in the API response is limited to 20 state changes * limit parameter * query days. For example, if the limit is set to 10 (agents), 1-day query then limitation per page = 200 state changes.</p>
+  <p>In case of excessive state changes, some of the states/agents may be truncated based on the maximum state’s limitation.</p>
+  <p>In v2 the API response contains all state changes in a flat response (not grouped by agent). This has been done to resolve the limitation in V1.
+</p>
+</div>
+
 ### Introduction
 
 The Agent Activity API provides an historical raw data solution to track agent adherence on both messaging and chat channels.

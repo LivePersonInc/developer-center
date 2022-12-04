@@ -22,6 +22,7 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 
 | Method | URL |
 | --- | --- |
+
 | GET | https://[{domain}](/agent-domain-domain-api.html)/api/v2/account/{accountID}/status-changes?source={source} |
 
 #### Request Query Parameters
@@ -34,10 +35,12 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | to | This filters the results to status changes occurred within the timeframe between `from` and `to`  | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional | request time |{::nomarkdown}<ul> <li>If provided, `from` must also be provided</li> <li>Maximum timeframe between `from` and `to`: 1 month</li> </ul>{:/}|
 | agentId | This filters the results to status changes of the agent with the specified LivePerson ID | number | Optional | |{::nomarkdown}<ul> <li>If provided, `empId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | empId | This filters the results to status changes of the employee with the specified employee ID | string | Optional | |{::nomarkdown}<ul> <li>If provided, `agentId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
-| limit | This limits the number of agents, for which status changes will be included in the results | number | Optional | 50 | **v1**: limit the number of agents <br> **v2**: limit the number of state changes records |
-| offset | This allows to get more results in case you have more agents than `limit` | number | Optional | 0 | **v1**: refer to the number of agents <br> **v2**: refer to the number of state changes records |
+| limit | This limits the number of records in the response to this value | number | Optional | V1: 50 Agents V2: 1000 state changes | Maximum value: V1: 100 <br> Agents V2: 5000 state changes |
+| offset | This allows getting more results in case you have more records than `limit` | number | Optional | 0 | Example: <br> V1: <br> offset = 20 will skip the first 20 agents <br> V2: <br> offset = 20 will skip the first 20 state changes |
 
 ### Response
+
+#### V1
 
 | Property Name | Description | Type | Notes |
 | --- | --- | --- | --- |
@@ -137,6 +140,58 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
   ]
 }
 ```
+
+#### V2
+
+| Property Name | Description | Type | Notes |
+| --- | --- | --- | --- |
+| timeframe | | object | |
+| startTime | The start of the requested time frame | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
+| endTime | The end of the requested time frame | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
+| stateChanges | | array | |
+| agentId | Agent's LivePerson ID | number | |
+| employeeId | Agent's employee ID | string | |
+| agentLoginName | | string | |
+| agentUserName | | string | |
+| agentGroupId | The ID of the group the agent is assigned to | number | |
+| time | Time of this status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
+| sessionId | Identifier of the session during which this status change took place | number | |
+| sequenceNumber | Sequential number of this status change within the session | number | |
+| statusType | Type of status change | number |{::nomarkdown}<ul> <li>1 - status changed, see `statusSubType`</li> <li>3 - login</li> <li>4 - logout</li> </ul>{:/}|
+| statusSubType | Subtype of status change with `statusType`=1 | number |{::nomarkdown}<ul> <li>1 - offline</li> <li>2 - online</li> <li>3 - occupied</li> <li>4 - away</li> </ul>{:/}|
+| statusReasonId | Identifier of optional custom reason for the status change | number | -1 if no custom reason was provided by the agent |
+| statusReasonText | Optional custom reason for the status change | string | null if no custom reason was provided by the agent |
+| prevStatusChangeTime | Time of this agent’s previous status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | null if value is missing |
+
+#### Response Example
+
+```json
+{
+    "timeframe": {
+        "startTime": "2021-08-25T15:00:00Z",
+        "endTime": "2021-08-25T23:59:00Z"
+    },
+    "stateChanges": [
+        {
+            "agentId": #,
+            "employeeId": "1234567",
+            "agentLoginName": "testuser",
+            "agentUserName": "test user",
+            "agentGroupId": 118643451,
+            "time": "2021-08-25T00:17:59.747Z",
+            "sessionId": 95354544,
+            "sequenceNumber": 1,
+            "statusType": 1,
+            "statusSubType": 4,
+            "statusReasonId": 1,
+            "statusReasonText": "Training",
+            "prevStatusChangeTime": "2021-08-25T00:15:59.747Z",
+        },
+        ...
+    ]
+}
+```
+
 
 ### Error Codes
 
