@@ -71,7 +71,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 
 ## OAuth 2.0 Authorization
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
-![Secrets](img/proactive/proactive-show-secrets.png)
+![Secrets](img/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from above AppJWT response should be used in the Request Header for Authorization.
 

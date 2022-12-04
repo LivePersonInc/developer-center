@@ -8,7 +8,7 @@ documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
 permalink: knowledgeai-internal-knowledge-bases-introduction.html
 indicator: both
-date_updated: 2022/10/18
+date_updated: 2022/11/15
 ---
 
 ### What's an internal knowledge base?
@@ -37,6 +37,9 @@ When adding an internal knowledge base, follow this workflow:
 
 #### Domain intents
 
+{: .attn-note}
+You don't need to set up domain intents to support high-quality answer retrieval, although you certainly can. KnowledgeAI's AI Search is a powerful, one-size-fits-all search method that works out of the box. No setup required. [Learn more](knowledgeai-search-methods.html).
+
 When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password.").
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
@@ -61,7 +64,7 @@ Domain intents make it possible for you to use the same domain in multiple ways,
 
 #### Knowledge Base intents
 
-{: .attn-note}
+{: .attn-deprecation}
 As of March 5, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
 
 If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
@@ -95,7 +98,7 @@ For example, you might run a promotion over a holiday that has an associated FAQ
 
 *Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
-{: .attn-note}
+{: .attn-deprecation}
 As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the deprecated [LivePerson (Legacy)](intent-manager-natural-language-understanding-liveperson-nlu-engine.html) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy").
 
 #### How positive and negative learnings work

@@ -12,72 +12,76 @@ indicator: chat
 
 ### Request
 
-| Method    | URL |
+| Method | URL |
 | :------ | :------- |
 | GET | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/monitoring/visitors/{visitorId}/visits/current/state |
 
-This API allows access to visitor data only when the session is active and exists in memory. After a maximum of 6 hours (maybe less), the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
+This API allows access to visitor data only when the session is active and exists in memory. After a maximum of 6 hours, the session will expire and be removed from memory, so a 404 response (internal code 12) will be returned.
 
-**OAuth**
+#### OAuth
 
-This API supports OAuth 1.0 authentication patterns and requires SSL protocol. Please see [this document's overview](rt-interactions-visit-information-overview.html) for more information on how to retrieve your API keys.
+This API supports OAuth 1.0 authentication patterns and requires SSL protocol. Please see [this document’s overview](rt-interactions-visit-information-overview.html) for more information on how to retrieve your API keys.
 
-**Path Parameters**
+#### Path parameters
 
-| Parameter | Description | Type | Required | Notes |
+| Parameter | Description | Type | Required |
 | :--- | :--- | :--- | :--- |
-| accountId | LP site ID | string | Required |  |
-| visitorId | Visitor ID | string | Required | |
+| accountId | LP site ID | String | Required |
+| visitorId | Visitor ID | String | Required |
 
-**Query Parameters**
+#### Query parameters
 
-| Name     | Description | Type | Required |
-| :------ | :------- | :-------- | :--------| :--- |
-| filter | Set to "agent"  | string | Optional |
-| v | API version  | string | Required |
+| Name | Description | Type | Required |
+| :--- | :--- | :--- | :--- |
+| filter | Set to "agent" | String | Optional |
+| v | API version | string | Required |
 | sid | Session ID | string | Required |
 
 {: .attn-note}
 The **visitorId** and the **sid** parameters referenced above are retrieved from the Web Tag. Each visitor receives from the Tag their own **visitorId** (also called **vid**) and **sid** (also called **Session ID**) which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation [here](/lp-tag-engagement-window.html).
-**This method of retrieving the parameters is relevant to monitored sessions only**. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default Conversational Cloud window), you'll need to use the [App Engagement API](/rt-interactions-app-engagement-overview.html) instead, specifically the Create Session method which returns both of these parameters.
 
-**Request Example**
+{: .attn-note}
+**This method of retrieving the parameters is relevant to monitored sessions only**. If you’re trying to retrieve information on unmonitored sessions (for example, chat windows you built using our APIs and not the default Conversational Cloud window), you’ll need to use the [App Engagement API](/rt-interactions-app-engagement-overview.html) instead, specifically the Create Session method which returns both of these parameters.
 
-`https://lo.v.liveperson.net/api/account/12345678/monitoring/visitors/cyNGViYjc4MmU2MzEzZThm/visits/current/state?v=1&filter=agent&sid=qCsUrTldTh0UEWLjLCGqkQ`
+#### Request example
+
+```
+https://lo.v.liveperson.net/api/account/12345678/monitoring/visitors/cyNGViYjc4MmU2MzEzZThm/visits/current/state?v=1&filter=agent&sid=qCsUrTldTh0UEWLjLCGqkQ
+```
 
 ### Response
 
-See [JSON Example](#json-example).
+See [JSON example](#json-example).
 
-**Elements in the Response**
+#### Elements in the response
 
-| Name     | Description | Type/Value |
+| Name | Description | Type/Value |
 | :------ | :------- | :-------- |
-| id | Monitoring session ID |  string    |
-| engagements | Array of engagements displayed to the consumer |  array |
-| pages | Array of the pages visited by the consumer |  array    |
-| userAgent | Consumer browser's user agent |  string |
-| deviceOS | Consumer's operating system |  string |
-| deviceFamily | Consumer's device |  string |
-| lpv4 | Consumer's IP|  string |
-| geo | Consumer’s Geo information (country, state, city etc.) |  object    |
-| externalReferrer | Referrer page |  string |
-| events | Engagement Attributes events reported during the session | array  |
+| id | Monitoring session ID | String |
+| engagements | Array of engagements displayed to the consumer | Array |
+| pages | Array of the pages visited by the consumer | Array |
+| userAgent | Consumer browser’s user agent | String |
+| deviceOS | Consumer’s operating system | String |
+| deviceFamily | Consumer’s device | String |
+| lpv4 | Consumer’s IP| String |
+| geo | Consumer’s Geo information (country, state, city etc.) | Object |
+| externalReferrer | Referrer page | String |
+| events | Engagement Attributes events reported during the session | Array |
 
-**Response Codes**
+#### Response codes
 
-| Code     | Internal Code | Description |
+| Code | Internal code | Description |
 | :------ | :------- | :-------- |
-| 200 | -- |  OK; Operation performed successfully  |
-| 400 | 33 |  Bad Request; Problem with body or query parameters |
-| 401 | 10 |  Unauthorized (no permissions) |
-| 404 | 6 |  Invalid Account ID |
-| 404 | 37 |  Invalid Visitor ID  |
-| 404 | 39 |  Invalid Session ID |
-| 404 | 12 |  Requested session not found. Check if you are trying to access a session that started more than 6 hours ago |
-| 500 | -- |  Internal Server Error |
+| 200 | — | OK; Operation performed successfully |
+| 400 | 33 | Bad Request; problem with body or query parameters |
+| 401 | 10 | Unauthorized (no permissions) |
+| 404 | 6 | Invalid Account ID |
+| 404 | 37 | Invalid Visitor ID |
+| 404 | 39 | Invalid Session ID |
+| 404 | 12 | Requested session not found; check if you are trying to access a session that started more than 6 hours ago |
+| 500 | — | Internal Server Error |
 
-**JSON Example:**
+#### JSON example
 
 ```json
 {

@@ -9,7 +9,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 permalink: get-started-with-automation.html
 indicator: both
-date_published: 2022/09/30
+date_updated: 2022/09/30
 ---
 
 LivePerson's Conversational AI is a suite of integrated applications that work together to provide an all-in-one automation and AI solution.
@@ -19,9 +19,9 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 1. Log into Conversational Cloud.
 2. On the left sidebar, click the <img class="inlineimage" style="width:30px" src="img/ConvoBuilder/icon_cb.png" alt="The Conversational AI icon"> icon.
 
-    This displays the dashboard of applications.
+This displays the dashboard of applications.
 
-    <img class="fancyimage" alt="The page that displays the access points to all of the applications in the Conversational AI suite" style="width:800px" src="img/ConvoBuilder/platform_main.png">
+<img class="fancyimage" alt="The page that displays the access points to all of the applications in the Conversational AI suite" style="width:800px" src="img/ConvoBuilder/platform_main.png">
 
 ### Before you begin
 

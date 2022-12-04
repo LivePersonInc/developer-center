@@ -1,5 +1,6 @@
 ---
 pagename: Overview
+redirect_from:
   - consumer-experience-messaging-history-overview.html
 sitesection: Documents
 categoryname: Reporting
@@ -10,6 +11,7 @@ permalink: consumer-messaging-history-api-overview.html
 root-link: true
 indicator: messaging
 ---
+
 ### Introduction
 
 {: .attn-alert}
@@ -19,9 +21,9 @@ The Conversational Cloud Consumer Messaging History API allows retrieval of up t
 
 This API is based on the REST architecture and supports the HTTPS GET protocol. All retrieved data is returned in JSON format. This API supports CORS which enables cross-domain data transfers.
 
-### Getting Started
+### Getting started
 
-A few things you'll need to get started with this API:
+A few things you’ll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
@@ -31,6 +33,6 @@ A few things you'll need to get started with this API:
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/apitou).
 
-### Use Cases
+### Use cases
 
-This is a complementary API for the [Messaging Window API](consumer-int-overview.html). It should be used to retrieve the historical conversations when using the Messaging Window API for the different use cases / scenarios described [here](consumer-int-overview.html#use-cases).
+This is a complementary API for the [Messaging Window API](consumer-int-overview.html). It should be used to retrieve the historical conversations when using the Messaging Window API for the different use cases and scenarios described [here](consumer-int-overview.html#use-cases).

@@ -38,12 +38,12 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 ## OAuth 2.0 Authorization
 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
-![Secrets](img/proactive/proactive-show-secrets.png)
+![Secrets](img/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from the above AppJWT response should be used in the Request Header for Authorization.
 
 ## API Domain
-* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the the Domain API to identify the zone of the Proactive API which is to be used for an account.
+* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the Domain API to identify the zone of the Proactive API which is to be used for an account.
 
 | Method | URI |
 | :--- | :--- |

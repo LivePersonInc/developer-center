@@ -87,7 +87,7 @@ redirect_from:
     </a>
     </div>
   <div class="flex flex-col gap-32">
-  <a class="welcome-card" href="/first-steps.html">
+  <a class="welcome-card" href="/getting-started-with-your-free-trial-account.html">
       <svg class="container-image" width="33" height="32" viewBox="0 0 33 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M1.83333 24.1693L16.5 28.1693" stroke="var(--body-text)" stroke-width="2" stroke-linecap="round"

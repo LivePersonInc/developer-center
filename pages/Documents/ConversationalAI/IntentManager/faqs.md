@@ -5,12 +5,13 @@ categoryname: "Conversational AI"
 documentname: Intent Manager
 permalink: intent-manager-faqs.html
 indicator: both
+date_updated: 2022/11/15
 ---
 
 ### Model performance
 
 #### What is a confidence score?
-The [confidence score](intent-manager-key-terms-concepts.html#confidence-score-and-threshold) approximates how likely an intent is present in the message. A score of VERY GOOD means the system is strongly confident that a message contains an intent. A score close of POOR suggests that a particular intent likely is not present in a message.
+The [confidence score](intent-manager-key-terms-concepts.html#confidence-score-and-threshold) approximates how likely an intent is present in the message. A score of VERY GOOD means the system is strongly confident that a message contains an intent. A score of POOR suggests that a particular intent likely is not present in a message.
 
 #### What is a good confidence score?
 The system is designed to be conservative in how it assigns scores. It cannot assign every message a confidence score of VERY GOOD, and it only assigns an intent to a message if the confidence score reaches a certain threshold. The current threshold is set at 60%. Anything below this is assigned the intent of “Undefined.” A score of 65%, for example, means that the message is assigned an intent with less than strong confidence, whereas a score around 90% would represent a high likelihood that the message has the intent.

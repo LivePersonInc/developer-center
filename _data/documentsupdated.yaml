@@ -53,6 +53,7 @@
     - documentname: Common Solutions
       pages:
         - pagename: Set Consumer Expectations about Wait Times for Agents
+        - pagename: Check a Skill's Shift Status before Transferring
     - documentname: Conversation Builder
       pages:
         - pagename: Overview
@@ -60,6 +61,7 @@
           subpages:
             - subpagename: Conversational Design
             - subpagename: Train & Tune NLU
+            - subpagename: Support Small Talk
             - subpagename: Prevent Consumer Interruptions
             - subpagename: Resolve Stuck Conversations
             - subpagename: Custom Event Logging
@@ -939,6 +941,9 @@
             - subpagename: Agent Activity
             - subpagename: Current Queue State
             - subpagename: SLA Histogram
+    - documentname: Outbound Configuration API
+      pages:
+        - pagename: Overview
     - documentname: Outbound Reporting API
       pages:
         - pagename: Overview
@@ -1210,7 +1215,7 @@
         - pagename: Implementation Considerations
         - pagename: Configuration
         - pagename: How It Works
-        - pagename: Detailed API
+        - pagename: Implementation Guide
     - documentname: Consumer Delegation
       pages:
         - pagename: Introduction

@@ -8,10 +8,10 @@ indicator: both
 ---
 
 {: .attn-note}
-This API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
+The Agent Activity API is currently in an early adoption phase. To participate in this program, please reach to your LivePerson representative.
 
 {: .attn-alert}
-This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
+The Agent Activity API is intended for reporting and information purposes — not for real-time decisions, such as routing.
 
 
 {: .notice}
@@ -41,7 +41,7 @@ A few things you'll need to get started with this API:
 
 	* [Follow the instructions](guides-gettingstarted.html), to create and use an API key.
 
-	* To access this API, the API key must have the `Data → Workforce Management → Agent Activity API` permission.
+	* To access this API, the API key must have the `Data → Workforce Management → Agent Status Changes` permission.
 
 3. Note the [API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
