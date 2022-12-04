@@ -36,7 +36,7 @@ Note that this affects the limit and offset parameters (in v1 they refer to an a
 | agentId | This filters the results to status changes of the agent with the specified LivePerson ID | number | Optional | |{::nomarkdown}<ul> <li>If provided, `empId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | empId | This filters the results to status changes of the employee with the specified employee ID | string | Optional | |{::nomarkdown}<ul> <li>If provided, `agentId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | limit | This limits the number of records in the response to this value | number | Optional | V1: 50 Agents V2: 1000 state changes | Maximum value: V1: 100 <br/> Agents V2: 5000 state changes |
-| offset | This allows getting more results in case you have more records than `limit` | number | Optional | 0 | Example: <br/> V1: <br/> offset = 20 will skip the first 20 agents <br/> V2: <br/> offset = 20 will skip the first 20 state changes |
+| offset | This allows getting more results in case you have more records than `limit` | number | Optional | 0 | Example: <br> V1: <br> offset = 20 will skip the first 20 agents <br> V2: <br> offset = 20 will skip the first 20 state changes |
 
 ### Response
 
