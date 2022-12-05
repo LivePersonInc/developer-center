@@ -17,8 +17,12 @@ Connect To Messaging (C2M) is a product offering from LivePerson allowing brands
 
 1. Onboarding to C2M is a mandatory process before running APIs.
 2. The brand’s system should integrate with two C2M API endpoints, which are ***Eligibility*** and ***Invite***.
-  * ***Eligibility:*** Brands call this endpoint to check whether a consumer is reachable via a messaging channel. NOTE: One exception to eligibility API is that it will not check eligibility for the WhatsApp channel. This is as per Meta’s privacy policy. Instead, when this API is invoked for the WhatsApp channel, we will always return true irrespective of the real eligibility state. It will be the brand’s responsibility to ensure that the customer is indeed WhatsApp enabled before calling the Invite API, otherwise, brands may see higher Invite failures.
+  * ***Eligibility:*** Brands call this endpoint to check whether a consumer is reachable via a messaging channel. 
   * ***Invite:*** Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
+  
+  {: .attn-note} 
+  One exception to Eligibility API is that it will not check eligibility for the WhatsApp channel. This is as per Meta’s privacy policy. Instead, when this API is invoked for the WhatsApp channel, we will always return true irrespective of the real eligibility state. It will be the brand’s responsibility to ensure that the customer is indeed WhatsApp enabled before calling the Invite API, otherwise, brands may see higher Invite failures.
+
 
 ### API Specifications
 
