@@ -7,6 +7,16 @@ permalink: messaging-agent-sdk-overview.html
 indicator: messaging
 ---
 
+##<span style="color:red">DEPRECATED</span>
+
+<span style="color:red">
+Please note that this SDK is now deprecrated, meaning that there will be no new releases or documentation updates.
+We will continue to support existing applications, but strongly advise that they transition to new SDK.
+</span>
+
+[Liveperson Messaging SDK](lp-messaging-sdk-overview.html) has replaced Messaging Agent SDK (aka Node Agent SDK) as the
+recommended method for interacting with UMS from a Node.js application.
+
 ### Overview
 
 The Messaging Agent SDK for Node.js was built to provide a fully custom way of programmatically building a bot with LivePerson. This SDK provides access to an [Agent Messaging API](https://developers.liveperson.com/agent-int-api-reference.html) and enables the bot to handle consumer conversations, escalate to a human when needed, and perform all agent actions.
