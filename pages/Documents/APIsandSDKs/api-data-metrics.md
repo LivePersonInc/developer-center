@@ -9,7 +9,7 @@ redirect_from:
   - api-guidelines-api-data-metrics.html
 ---
 
-The table below outlines all of the data metrics available when using our Data APIs. These represent the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+The table below outlines all of the data metrics available when using our Data APIs. These represent the different types of information and attributes which are retrievable via both [our Historical and Real Time Data APIs](overview.html).
 
 <div id="metrics">
 <input id="metricsSearch" placeholder="Search by Metric or API Method" />

@@ -21,9 +21,9 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| customerStatus | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| customerStatus | Customer status — will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType | Customer type — will be matched against customer type entity name. Case insensitive | alphanumeric|
 | balance | The current balance of the customer | v1- alphanumeric, v2- double|
 | currency | Currency code | alphanumeric|
@@ -45,8 +45,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | name | Personal name | alphanumeric|
 | surname | Surname | alphanumeric|
 | gender | Visitor’s gender | alphanumeric|
@@ -61,8 +61,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total cart value | double |
 | currency | Currency code | alphanumeric|
 | numItems | Number of items in cart | int|
@@ -78,8 +78,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total amount of purchase. | double |
 | currency | Currency code | alphanumeric|
 | orderId | Purchase order ID.| alphanumeric|
@@ -89,8 +89,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | originatingChannel | Channel which originated the campaign | int |
 | affiliate | Affiliate | alphanumeric|
 | campaignId |Unique identifier of the campaign.| alphanumeric|
@@ -99,16 +99,16 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | keywords | Array of the search keywords | array, alphanumeric |
 
 ### viewedProduct (viewed product)
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | products | List of products | container |
 | quantity | Number of products | int|
 | currency | Currency code | alphanumeric|
@@ -124,8 +124,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | contextId | Error context ID (from the customer) | alphanumeric |
 | message | Error message | alphanumeric|
 | code |Error code | alphanumeric|
@@ -136,8 +136,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic | Lead topic | alphanumeric |
 | value | Lead value | double|
 | currency | Currency code | alphanumeric|
@@ -147,8 +147,8 @@ The two versions of this API support engagement attributes in different ways:
 
 | Name | Description | Type/Value | Notes |
 | :--- | :--- | :--- | :--- |
-| originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds |
-| serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
+| originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
+| serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds | Default value — event creation time. If processing occurred, the value is updated to the processing time.
 | topic | Topic of service activity | alphanumeric |
 | status | Status of service activity | int|
 | category | Category of service activity | alphanumeric|

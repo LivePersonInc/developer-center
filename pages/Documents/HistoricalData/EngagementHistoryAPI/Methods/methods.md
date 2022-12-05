@@ -1352,7 +1352,7 @@ Example:
 					{
 						"scope": "Session",
 						"source": "Exit",
-						"displayName": "How was the visit ?",
+						"displayName": "How was the visit?",
 						"value": "It was good",
 						"values": [
 							"It was good"
@@ -1369,7 +1369,7 @@ Example:
 					{
 						"scope": "Session",
 						"source": "Exit",
-						"displayName": "Will you recommentd us ?",
+						"displayName": "Will you recommend us?",
 						"value": "Yes",
 						"values": [
 							"Yes"

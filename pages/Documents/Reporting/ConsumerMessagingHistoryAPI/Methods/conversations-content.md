@@ -36,7 +36,7 @@ Name | Description | Type/Value | Notes
 :--- | :--- | :--- | :---
 sequence | The event sequence within the conversation | Int | Currently available only for message of type “ContentEvent”
 originatorId | The id of the participant who wrote/accepted the message | String |
-serverTimestamp | Event time stamp | long |
+serverTimestamp | Event timestamp | long |
 dialogId | The dialog Id of this message dialog | string |
 event | Contains message event data | container | Valid types: ContentEvent, RichContentEvent, AcceptStatusEvent
 originatorMetadata | Contains metadata regarding the message originator| container |
@@ -46,7 +46,7 @@ event — ContentEvent:
 Name | Description | Type/Value | Notes
 :--- | :--- | :--- | :---
 type | The type of the message | string | Valid values: "ContentEvent"
-contentType | The type of the contnet | string | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
+contentType | The type of the content | string | Valid values: "text/plain", "hosted/file", "forms/secure-submission", "forms/secure-invitation"
 message | The message content | MessageContent | The content structure is different per type
 
 message — text/plain:
