@@ -544,8 +544,8 @@ lastUpdatedTime | Time the conversation’s summary was last updated | long
 Name| Description| Type/Value | Notes
 :--- | :--- | :--- | :---
 events | The SDEs that were received from the brand | Container (see [Appendix](messaging-interactions-api-engagement-attributes.html)) |
-originalTimeStamp | Event creation time stamp | long — epoch time in milliseconds|
-serverTimeStamp | Event processing time stamp | long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
+originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds|
+serverTimeStamp | Event processing timestamp | long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
 sdeType| Type of SDE | enum |
 
 [Here](messaging-interactions-api-engagement-attributes.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.

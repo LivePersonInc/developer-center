@@ -61,7 +61,7 @@ closeReason | The close reason for the main dialog | string |
 Conversation participants:
 
 Name | Description | Type/Value | Notes
-:--- |:--- | :--- | :---
+:--- | :--- | :--- | :---
 id | ID of the participant (Agent or Consumer) | string |
 role | The role of the participant | string | Valid values: "CONSUMER", "ASSIGNED_AGENT", "READER", "MANAGER"
 
