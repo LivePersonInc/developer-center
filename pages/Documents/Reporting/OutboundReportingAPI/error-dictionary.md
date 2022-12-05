@@ -59,7 +59,7 @@ indicator: messaging
  | proactive_1001 | Consumer ineligible to receive message | The recipient number is not eligibile to receive messages for the specifc channel. Please check if its a landline number or invalid number. |
  | proactive_1301| Recipient validation failed | Recipient validation failed while publishing campaign. If this continues to fail, please contact LP support. |
  | proactive_1302 | Too many variables used | The template expects less variables for creating the message to the recipient. |
- | proactive_1303 | INSUFFICIENT_VARIABLES | The template expects more variables for creating the message to the recipient. |
+ | proactive_1303 | Insufficient variables | The template expects more variables for creating the message to the recipient. |
  | proactive_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry. |
  | proactive_1401 | Bad request / Invalid Input | There was an internal error. If this continues to fail, please contact LP support. |
  | proactive_1800 | Open conversation already exists for inapp | There is an open conversation for this customer on the inapp channel. Make sure all the conversation from this customer on the specific channel are closed and retry. |
