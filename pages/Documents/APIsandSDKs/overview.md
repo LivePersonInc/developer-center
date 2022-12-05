@@ -86,7 +86,7 @@ Building a custom automation solution? These Conversational AI APIs can help:
 | [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) | Add custom widgets to the Engagement Window |
 | [JavaScript Chat SDK](javascript-chat-sdk-overview.html) | Create a chat window from scratch |
 | [Liveperson Messaging SDK](lp-messaging-sdk-overview.html) | Facilitates agent and consumer interactions on Liveperson's Messaging Platform from Node.js and web applications. Can be used to create bots, system tests, or custom UIs. |
-| [Messaging Agent SDK](messaging-agent-sdk-overview.html) | <span style="color:red">**[DEPRECATED]**</span> Provide access to Agent Messaging API, enable bots to handle consumer conversations, and perform agent actions |
+| [Messaging Agent SDK](messaging-agent-sdk-overview.html) | **[DEPRECATED]** Provide access to Agent Messaging API, enable bots to handle consumer conversations, and perform agent actions |
 | [Messaging Window SDK](messaging-window-sdk-overview.html) | Connect to messaging servers, subscribe to notifications, and manage conversations |
 | [Mobile App Messaging SDK for Android](mobile-app-messaging-sdk-for-android-overview.html) | |
 | [Mobile App Messaging SDK for iOS](mobile-app-messaging-sdk-for-ios-overview.html) | |

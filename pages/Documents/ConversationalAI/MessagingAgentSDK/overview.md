@@ -7,12 +7,12 @@ permalink: messaging-agent-sdk-overview.html
 indicator: messaging
 ---
 
-##<span style="color:red">DEPRECATED</span>
+{: .attn-deprecation}
+## DEPRECATED
 
-<span style="color:red">
-Please note that this SDK is now deprecrated, meaning that there will be no new releases or documentation updates.
+{: .attn-deprecation}
+Please note that this SDK is now deprecated, meaning that there will be no new releases or documentation updates.
 We will continue to support existing applications, but strongly advise that they transition to new SDK.
-</span>
 
 [Liveperson Messaging SDK](lp-messaging-sdk-overview.html) has replaced Messaging Agent SDK (aka Node Agent SDK) as the
 recommended method for interacting with UMS from a Node.js application.
