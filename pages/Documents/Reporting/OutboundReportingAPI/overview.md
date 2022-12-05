@@ -32,7 +32,7 @@ All Brands who use Proactive Messaging version 2.0 and Connect To Messaging vers
 LivePerson clients who use Proactive Messaging and Connect To Messaging need to have a complete picture of their campaigns and deflections. What Message channels are supported in this API:
 
 * SMS — Twilio Messaging Gateway
-* INAPP — LivePerson Mobile SDK
+* InApp — LivePerson Mobile SDK
 * WhatsApp
 
 **Feature Details**
@@ -51,7 +51,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 | 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
 | 10 | CSAT | Average of the CSAT rating score |
 
-*Delivered count for Whatsapp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by Whatsapp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
+Delivered count for the WhatsApp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only the read notificationn will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore, the delivered count can be less than the read count in such scenarios.
 
 **Full Funnel Overview board**
 
@@ -756,7 +756,7 @@ All Brands who use Proactive Messaging version 2.0 and Connect To Messaging vers
 - Proactive Campaign API, rate: 10 TPS
 - Proactive Campaign Analytics API, rate: 10 TPS
 
-<strong>4. How can a brand find out which version of the Proactive Messaging or Connect To Messaging it uses ?</strong>
+<strong>4. How can a brand find out which version of the Proactive Messaging or Connect To Messaging it uses?</strong>
 
 For Proactive Messaging:
 - Sign in to [this url](https://proactive-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for Proactive Messaging.
@@ -788,5 +788,5 @@ The caller can pull the data for a given 60 day time interval from today or any 
 - For Proactive Campaign API, pagination is not supported yet.
 - For Proactive Campaign Analytics API, pagination is not needed.
 
-<strong>11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created ?</strong>
+<strong>11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created?</strong>
 - Data in outbound reporting API can be delayed by up to 20 min. e.g. Proactive campaign created now will take up to 20 min to be reflected in the Reporting API. Similarly other messaging data like message delivered, opted out, conversation created etc will also take up to 20 min from the time the event occured.

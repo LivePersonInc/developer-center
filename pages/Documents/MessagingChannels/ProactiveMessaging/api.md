@@ -2,6 +2,7 @@
 pagename: API
 redirect_from:
   - ProactiveMessaging.html
+  - proactive-messaging-changelog.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Proactive Messaging
@@ -11,20 +12,24 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatApp and Inapp. And it supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA.
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud, creating two-way messaging conversations.
+
+The Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. It comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatsApp and InApp.
+
+The API also supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA.
 
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
-### Getting Started
+### Getting started
 
 1. Onboarding to the [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For the Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded.
-2. To onboard on Proactive 2.0 API, perform steps as mentioned below
-- Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
-    * Click on Settings tab in menu bar.
-    * Click on Enable button to onboard to the Proactive API.
-    * Click on show secrets to get app Id and secrets which will be used later to create AppJWT.
+2. To onboard on Proactive 2.0 API, perform steps as mentioned below:
+    * Log into the [Proactive web app](https://proactive-messaging.fs.liveperson.com/) with a user with admin rights.
+    * Click on the “Settings” tab in menu bar.
+    * Click on the “Enable” button to onboard to the Proactive API.
+    * Click on “show secrets” to get the app Id and secrets which will be used later to create AppJWT.
 
-### Proactive 2.0 API Limits
+### Proactive 2.0 API limits
 
 | Details | 2.0 API |
 | :--- | :--- |
@@ -33,16 +38,17 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Send rate | SMS — 9** MPS <br /> WhatsApp — 9** MPS <br /> In-App — 9** MPS <br /> <br /> MPS — message per sec <br /> (**Reach Proactive team for higher MPS) |
 | API recipients batching limit per request | 100** recipients per request <br /> (**Reach Proactive team for increasing recipients per request) |
 
-### API Specifications
+### API specifications
 
-## OAuth 2.0 Authorization
+#### OAuth 2.0 authorization
 
 * Either Administrator or LPA can get client_id and client_secret by clicking the show secrets on the web UI as shown below.
 ![Secrets](img/proactive-show-secrets.png)
 * The client_id and client_secret will than be used to create AppJWT. Click here to learn how to use [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 * The access_token retrieved from the above AppJWT response should be used in the Request Header for Authorization.
 
-## API Domain
+#### API domain
+
 * Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the Domain API to identify the zone of the Proactive API which is to be used for an account.
 
 | Method | URI |
@@ -57,13 +63,13 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-| If Sentinel **baseURI** then | Proactive Region | Proactive **API domain** | API Documentation |
+| If Sentinel **baseURI** then | Proactive region | Proactive **API domain** | API documentation |
 |---|---|---|---|
 | **va**.sentinel.liveperson.net | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec |
 | **lo**.sentinel.liveperson.net | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec |
 | **sy**.sentinel.liveperson.net | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec |
 
-## Campaign API: Example Request and Response
+### Campaign API: Example request and response
 
 * Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) to go through API spec and use example here to get started.
 
@@ -71,21 +77,21 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | :--- | :--- |
 | POST | https://{domain}/api/v2/account/{ACCOUNT_ID}/campaign|
 
-**Path Parameters**
+#### Path parameters
 
 | Name | Description | Value/Example |
 | :--- | :--- | :--- |
 | domain | see [API Domain](#api-domain-and-documentation) | proactive-messaging.**z1**.fs.liveperson.com or proactive-messaging.**z2**.fs.liveperson.com or proactive-messaging.**z3**.fs.liveperson.com |
 | ACCOUNT_ID | LivePerson site ID | 34567231 |
 
-**Request Headers**
+#### Request headers
 
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) as mentioned in OAuth 2.0 Authorization section above. | Bearer <<APP_JWT>> |
 
-**Request Body Example — JSON Payload — Whatsapp With Rich Template, including customer SDE**
+#### Request body example — JSON payload — WhatsApp with Rich Template, including customer SDE
 
 ```json
 {
@@ -169,7 +175,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
   ]
 }
 ```
-**Response Example**
+
+#### Response example
 
 ```json
 {
@@ -207,7 +214,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
   ]
 }
 ```
-**Request Body Example — JSON Payload — Whatsapp With Rich Template containing header image and buttons**
+
+#### Request body example — JSON payload — WhatsApp with Rich Template containing header image and buttons
 
 ```json
 {
@@ -233,7 +241,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
   ]
 }
 ```
-**Response Example**
+
+#### Response example
 
 ```json
 {
@@ -254,7 +263,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example — JSON Payload — SMS channel**
+#### Request body example — JSON payload — SMS channel
 
 ```json
 {
@@ -279,7 +288,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
   ]
 }
 ```
-**Response Example**
+
+#### Response example
 
 ```json
 {
@@ -307,7 +317,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example — JSON Payload — SMS + Whatsapp (Without Rich Template)**
+#### Request body example — JSON payload — SMS + WhatsApp (without Rich Template)
 
 ```json
 {
@@ -336,7 +346,8 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
   ]
 }
 ```
-**Response Example**
+
+#### Response example
 
 ```json
 {
@@ -366,7 +377,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example — JSON Payload — SMS Multi-Variables (Handoff with SMS multi variables)**
+#### Request body example — JSON payload — SMS multi-variables (handoff with SMS multi-variables)
 
 ```json
 {
@@ -386,7 +397,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Response Example**
+#### Response example
 
 ```json
 {
@@ -408,7 +419,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example — JSON Payload — New Version — Inapp Handoff**
+#### Request body example — JSON payload — new version — InApp handoff
 
 ```json
 {
@@ -430,9 +441,9 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 1. All fields are required.
 2. If variables is empty object, the default value set in handoff will be used.
 3. The value of consent must be true.
-4. If the vaule of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned.
+4. If the value of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned.
 
-**Response Example**
+#### Response example
 
 ```json
 {
@@ -452,7 +463,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Request Body Example — JSON Payload — Old Version**
+#### Request body example — JSON payload — old version
 
 ```json
 {
@@ -473,7 +484,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-**Response Example**
+#### Response example
 
 ```json
 {
@@ -491,43 +502,43 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
-### Reporting API: Example Request and Response
+### Reporting API: example request and response
 
-* Refer [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) to get the status of messages.
-* Refer [Error Dictionary](outbound-reporting-api-error-dictionary.html) to get more details about error codes.
+* Refer to the [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) to get the status of messages.
+* Refer to the [Error Dictionary](outbound-reporting-api-error-dictionary.html) to get more details about error codes.
 
 ### Proactive 2.0 API: Frequently Asked Questions
 
-**Can we share the bot users for proactive 2.0 API with other systems?**
+#### Can we share the bot users for proactive 2.0 API with other systems?
 
 The bot users should only be used for proactive 2.0 API. The bot users are needed since we need to send messages on behalf of agent to consumers. The bot users session in proactive 2.0 api can break if these bot users are logged in some where else in some other services.
 
-**What is the rate limit for the API?**
+#### What is the rate limit for the API?
 
 The current rate limit is 10 TPS/second/brand per api.
 
-**What is the daily limit when sending outbound messages?**
+#### What is the daily limit when sending outbound messages?
 
 It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K – R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
 
-**Which channels are supported as of now?**
+#### Which channels are supported as of now?
 
-- Proactive messaging supports SMS, WA and INAPP channels only. The channel is decided based on templateId in campaigns API request.
-- Choose templateId="1234567890" for SMS messages and WA templateId for sending WA messages.
+- Proactive messaging supports SMS, WhatsApp and InApp channels only. The channel is decided based on templateId in campaigns API request.
+- Choose templateId="1234567890" for SMS messages and WhatsApp templateId for sending WhatsApp messages.
 
-**Does Proactive Messaging provide a way to send SMS messages within a certain time window (TCPA compliance)?**
+#### Does Proactive Messaging provide a way to send SMS messages within a certain time window (TCPA compliance)?
 
  Proactive Messaging ensures that recipients only receive messages within the time window brands specifies. This time window is calculated based on the recipient phone number. This helps brands adhere to one of the legal requirements for sending SMS texts i.e. SMS can only be sent between 8 am and 9 pm to avoid spamming consumers after business hours.
 
-**Once a campaign is submitted, how soon will these recipients receive the messages?**
+#### Once a campaign is submitted, how soon will these recipients receive the messages?
 
 Messages are sent at a rate up to 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 – (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
-**How will batching capability work?**
+#### How will batching capability work?
 
 A single campaign can have from 1 recipient and not more than 100 recipients. It is recommended to batch recipients in a campaign.
 
-**What are the error codes for invalid recipients information in the campaign?**
+#### What are the error codes for invalid recipients information in the campaign?
 
 Consider an example response of campaigns API:
 
@@ -567,29 +578,29 @@ Consider an example response of campaigns API:
 | 'HEADER_VARIABLE_INVALID_URL' | At least one of the consumers had a header that is not a valid URL for a rich text campaign. |
 | 'IMAGE_URL_NOT_WHITELISTED' | At least one of the consumers had a image link that is not from a whitelisted host for for a rich text campaign. |
 
-**What kind of security, encryption, parameter, failures?**
+#### What kind of security, encryption, parameter, failures?
 
 The API uses AppJWT OAuth 2.0 authentication.
 
-**Does the API have status call backs? How do we get the status of the message?**
+#### Does the API have status call backs? How do we get the status of the message?
 
 Proactive Messaging does not have call backs to inform the status. Proactive Messaging provides status of messages through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
 
-**Does LivePerson return some sort of error response when the user already opted out? For example if we try to send to a number that's blocked?**
+#### Does LivePerson return some sort of error response when the user already opted out? For example if we try to send to a number that's blocked?
 
 - Proactive guarantees opt-out from SMS only. If a consumer opts out from twilio SMS, we guarantee that no future Proactive messages will be sent to the consumer until they re-opt-in again. For messages that are sent to consumer who opted out, the state of recipient will be marked 'SKIPPED' in [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
-- Proactive messaging does not have the ability to capture opt-out from WA channels.
+- Proactive messaging does not have the ability to capture opt-out from WhatsApp channels.
 
-**Is there a throughput limitation for the data that gets passed from Twilio to LP? For example, if brand sends 100 Twilio msgs/sec (their max throughput), then can the data flow through to LP at the same rate?**
+#### Is there a throughput limitation for the data that gets passed from Twilio to LP? For example, if brand sends 100 Twilio msgs/sec (their max throughput), then can the data flow through to LP at the same rate?
 
 - Proactive Messaging does not have any limitations on the message size while sending messages to twilio or other channels. However a large message may translate to more than one message when the recipient receives it.
 - Example: A message of more than 140 characters will be divided into two messages and sent to recipients.
 
-**What reporting metrics do I get? What metrics are available now?**
+#### What reporting metrics do I get? What metrics are available now?
 
 - Proactive Messaging provides the status of messages delivered to recipients through [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html).
 
-**What is the lifespan of the app JWT? When we do need to get a new JWT, do we have to first make the call to LivePerson Domain API in order to get the sentinel service domain, or is that domain consistent enough that we can hard code that in?**
+#### What is the lifespan of the app JWT? When we do need to get a new JWT, do we have to first make the call to LivePerson Domain API in order to get the sentinel service domain, or is that domain consistent enough that we can hard code that in?
 
 - An AppJWT expiration time is 1 hour from the time it is created. To get an app JWT from sentinel API, a call to domain API has to be made to get the Sentinel API domain. This domain can be cached for some duration. We expect the domain to change in very rare cases. It’s still recommended that cache duration should not be more than 1 day.
 
@@ -601,41 +612,41 @@ Proactive Messaging does not have call backs to inform the status. Proactive Mes
 	}
 	```
 
-**Do we need any other JWT other than AppJWT e.g. Consumer JWT?**
+#### Do we need any other JWT other than AppJWT e.g. Consumer JWT?
 
 Proactive Messaging service does not create or consume consumer JWT or other JWT except AppJWT. Proactive Messaging API only consumes AppJWT created from provided clientId and Secret for authentication.
 
-**What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?**
+#### What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?
 
 AppJWT will be consumed as Bearer Token. No other key, secret or token will be consumed by Proactive Messaging api.
 
-**How does Proactive 2.0 API provide status of message e.g. success/failure of delivery ?**
+#### How does Proactive 2.0 API provide status of message e.g. success/failure of delivery?
 
 The Proactive 2.0 campaign API is asynchronous meaning that the success and failure of a message to a recipient is noted only when the recipient is picked from the proactive internal queue and a message is sent as per pre configured message rate. The [Reporting API](https://developers.liveperson.com/outbound-reporting-api-overview.html) will provide the status of recipients tied to the campaign created.
 
-**Of the error cases described above, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry. Which error cases that we could get back from the /campaigns endpoint are retryable and how should we handle a retry to avoid sending duplicate messages to a customer?**
+#### Of the error cases described above, which of those errors should we consider “retry-able”? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry. Which error cases that we could get back from the /campaigns endpoint are retryable and how should we handle a retry to avoid sending duplicate messages to a customer?
 
 Proactive Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
 
-**What’s the lookback period?**
+#### What’s the lookback period?
 
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive API.
 - Example: When a message is sent to consumer using Proactive Messaging API and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
-**Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?**
+#### Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?
 
 - As indicated in the Swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am – 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am – 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
 
-**One variable is required for SMS but what happens when more than 1 variable is passed? Will the payload fail, or will it just take the first variable?**
+#### One variable is required for SMS but what happens when more than 1 variable is passed? Will the payload fail, or will it just take the first variable?
 
 - Proactive messaging performs strict checking for variables. If more variables are specified than what are required, proactive messaging will mark the recipient failed with error 'TOO_MANY_VARIABLES' which will be part of campaign response.
 
-**How do we know which field is optional or required?**
+#### How do we know which field is optional or required?
 
-- Proactive messaging is using industry recommended Swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
+- Proactive messaging is using industry recommended Swagger specifications for API documentation. The Swagger model specification will specify required and optional fields. Visit the [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec for an example, and click on “model” as indicated by the image below in order to learn about campaign request optional and required fields.
 - <img src="img/archive/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
 
-**What are the restrictions on the field in campaign request?**
+#### What are the restrictions on the field in campaign request?
 
 | FIELD_NAME | LIMITATIONS | EXPLANATION |
 |---|---|---|
@@ -645,30 +656,30 @@ Proactive Messaging service has retry mechanism internally on dependent services
 | outboundNumber | 16 char max length | Phone number cannot be more than 16 digit |
 | variable | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |
 
-**Is Whatsapp Rich template enabled for all accounts?**
+#### Is the WhatsApp Rich template enabled for all accounts?
 
 Yes.
 
-**What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?**
+#### What are different components of a WhatsApp template? Are all the components mandatory to be present in a rich template?
 
-There are four different components of a Whatsapp template
+There are four different components of a WhatsApp template:
 
 - Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
 - Body
 - Footer
 - Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
 
-Message body in WA Rich template is mandatory. Header, footer, buttons are optional in WA Rich template depending on template design.
+Message body in WhatsApp Rich template is mandatory. Header, footer, buttons are optional in WhatsApp Rich template depending on template design.
 
-**What extensions are supported for WA rich template in the header section?**
+#### What extensions are supported for WhatsApp rich template in the header section?
 
 Allowed extensions for different types of header for a rich template:
 
-- Image: [jpg,png],
-- Document: [pdf],
+- Image: [jpg,png]
+- Document: [pdf]
 - Video: [mp4]
 
-**Are there any limitations on the URL added for header image/video/document type?**
+#### Are there any limitations on the URL added for header image/video/document type?
 
 Below are the limitations:
 
@@ -681,18 +692,18 @@ https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg or https:/
 
 <img src="img/archive/proactive_domain_update.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
-**Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?**
+#### Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?
 
 Footer and quick reply buttons have static values and do not need any user input while campaign creation. However, call to action buttons can accept variables for Website URL which can be provided during campaign creation.
 
-**What kind of customers can get Inapp message through Proactive Messaging?**
+#### What kind of customers can get InApp message through Proactive Messaging?
 
 Only registered customers can.
 
-**How does first Inapp message display in agent workspace?**
+#### How does first InApp message display in agent workspace?
 
-First Inapp message is not part of conversations because customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it.
+First InApp message is not part of conversations because customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it.
 
-**Is customer SDE enabled for all accounts?**
+#### Is customer SDE enabled for all accounts?
 
 To use customer SDE via API, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
