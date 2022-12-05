@@ -802,4 +802,4 @@ The caller can pull the data for a given 60 day time interval from today or any 
 
 #### 11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created?
 
-- Data in the Outbound Reporting API can be delayed by up to 20 minutes, i.e., a proactive campaign created now will take up to 20 min to be reflected in the Reporting API. Similarly, other messaging data like message delivered, opted out, conversation created, etc. will also take up to 20 min from the time the event occured.
+Data in the Outbound Reporting API can be delayed by up to 20 minutes, i.e., a proactive campaign created now will take up to 20 min to be reflected in the Reporting API. Similarly, other messaging data like message delivered, opted out, conversation created, etc. will also take up to 20 min from the time the event occured.
