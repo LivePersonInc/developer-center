@@ -23,7 +23,7 @@ The two versions of this API support engagement attributes in different ways:
 | :--- | :--- | :--- | :--- |
 | originalTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
 | serverTimeStamp | Event creation timestamp | long — epoch time in milliseconds |
-| customerStatus | Customer status- will be matched against customer status entity name. Case insensitive.|alphanumeric|
+| customerStatus | Customer status — will be matched against customer status entity name. Case insensitive.|alphanumeric|
 | customerType | Customer type — will be matched against customer type entity name. Case insensitive | alphanumeric|
 | balance | The current balance of the customer | v1- alphanumeric, v2- double|
 | currency | Currency code | alphanumeric|

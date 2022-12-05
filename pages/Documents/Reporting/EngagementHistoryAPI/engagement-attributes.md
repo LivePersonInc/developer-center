@@ -64,8 +64,8 @@ Example:
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation timestamp.| long — epoch time in milliseconds|
 |serverTimeStamp | Event processing timestamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
-| customerStatus | Customer status- will be matched against customer status entity name. | alphanumeric | Case insensitive.  |
-| customerType | Customer type — will be matched against customer type entity name.  | alphanumeric | Case insensitive. |
+| customerStatus | Customer status — will be matched against customer status entity name. | alphanumeric | Case insensitive. |
+| customerType | Customer type — will be matched against customer type entity name. | alphanumeric | Case insensitive. |
 | balance | The current balance of the customer. | | |
 | customerId | The customer ID. | alphanumeric | |
 | socialId | The social ID of your choice: Facebook, Twitter etc. | alphanumeric | |
@@ -196,7 +196,7 @@ Example:
 | :----- | :------- | :------ | :------ |
 |originalTimeStamp | Event creation timestamp.| long — epoch time in milliseconds|
 |serverTimeStamp | Event processing timestamp.| long — epoch time in milliseconds| Default value — event creation time. If processing occurred, the value is updated to the processing time.
-| name | Personal name. | alphanumeric  |
+| name | Personal name. | alphanumeric |
 | surname | Surname. | alphanumeric |
 | gender | Visitor’s gender. | alphanumeric |
 | company | Visitor's company. | alphanumeric |

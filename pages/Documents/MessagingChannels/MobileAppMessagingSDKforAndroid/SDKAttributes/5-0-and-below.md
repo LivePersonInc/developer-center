@@ -863,7 +863,7 @@ Define date-time format.
 
 #### message_status_numeric_timestamp_only
 
-When false (default), timestamps displays information relative to when sent/distributed/read, for example, '5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+When false (default), timestamps display information relative to when sent/distributed/read, for example, "5 minutes ago". When true, shows as numeric only, for example, "11:32".
 
 * **Type:** bool
 * **Default value:** false
