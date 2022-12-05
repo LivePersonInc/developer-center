@@ -20,8 +20,8 @@ indicator: messaging
  | outbound_wa_1014 (outbound_1014) | WA error  - Cannot access media | Upload failed on bad image (image not uploaded correctly) or endpoint not found |
  | outbound_wa_1026 (outbound_1026) | WA error  - Consumer's WA version incompatible  | WhatsApp could not send the message as the consumer's WA version is incompatible for the message. The receiver is incapable of receiving message. |
  | outbound_wa_1031 (outbound_1031) | WA error - Sender account locked | You account has been locked to send any message due to policy violation by WhatsApp. Please contact your LP business partner. |
- | outbound_wa_5002 | Network error occured in connector | Network error occured in internal connector component while processing WhatsApp message. If this continues to fail, please contact LP support. |
- | outbound_twilio_5002 | Network error occured in connector | Network error occured in internal connector component while processing SMS message. If this continues to fail, please contact LP support. |
+ | outbound_wa_ntw_err | Network error occured in connector | Network error occured in internal connector component while processing WhatsApp message. If this continues to fail, please contact LP support. |
+ | outbound_twilio_ntw_err | Network error occured in connector | Network error occured in internal connector component while processing SMS message. If this continues to fail, please contact LP support. |
  | outbound_twilio_20003 (outbound_20003) | Twilio error - Permission denied | [Twilio - 20003](https://www.twilio.com/docs/api/errors/20003) |
  | outbound_twilio_20500 (outbound_20500) | Twilio internal error | [Twilio - 20500](https://www.twilio.com/docs/api/errors/20500) |
  | outbound_twilio_21211 (outbound_21211) | Twilio error - Invalid "To" Phone number | [Twilio - 21211](https://www.twilio.com/docs/api/errors/21211) |
@@ -42,8 +42,10 @@ indicator: messaging
  | twilio_30006 | Twilio error - Unreachable carrier | [Twilio - 30006](https://www.twilio.com/docs/api/errors/30006) |
  | twilio_30007 | Twilio error - Carrier violation | [Twilio - 30007](https://www.twilio.com/docs/api/errors/30007) |
  | twilio_30008 | Twilio error - unknown error | [Twilio - 30008](https://www.twilio.com/docs/api/errors/30008) |
+ | twilio_30032 | Twilio error - Toll-Free Number Has Not Been Verified | [Twilio - 30032](https://www.twilio.com/docs/api/errors/30032) |
+ | c2m_1001 | Consumer ineligible to receive message | The recipient number is not eligibile to receive messages for the specific channel. Please check if its a landline number or invalid number. |
  | c2m_1300 | No engagement found for skill | Engagement not found for the skill. Please check if the skill is added in Conversational Cloud and is also activated from C2M self-service web tool. |
- | c2m_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry |
+ | c2m_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry. |
  | c2m_5000 | Unexpected error occured  | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
  | c2m_5401 | Internal Server Error | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
  | c2m_5403 | Message sent failed - timeout error | There was an internal timeout sending the message. If this continues to fail, please contact LP support. |
@@ -55,9 +57,12 @@ indicator: messaging
  | proactive_28 | InApp - Consumer is not authenticated | There was an internal error. If this continues to fail, please contact LP support. |
  | proactive_500 | Message could not be sent | This error can occur because of any of the following reasons: open conversation exists, invalid input, network errors, internal connector error. If this continues to fail in spite of no open conversations, please contact LP support. |
  | proactive_1001 | Consumer ineligible to receive message | The recipient number is not eligibile to receive messages for the specifc channel. Please check if its a landline number or invalid number. |
- | proactive_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry |
+ | proactive_1301| Recipient validation failed | Recipient validation failed while publishing campaign. If this continues to fail, please contact LP support. |
+ | proactive_1302 | Too many variables used | The template expects less variables for creating the message to the recipient. |
+ | proactive_1303 | INSUFFICIENT_VARIABLES | The template expects more variables for creating the message to the recipient. |
+ | proactive_1400 | Open conversation already exists | There is an open conversation for this customer. Make sure all the conversation from this customer on the specific channel are closed and retry. |
  | proactive_1401 | Bad request / Invalid Input | There was an internal error. If this continues to fail, please contact LP support. |
- | proactive_1800 | Open conversation already exists for inapp | There is an open conversation for this customer on the inapp channel. Make sure all the conversation from this customer on the specific channel are closed and retry |
+ | proactive_1800 | Open conversation already exists for inapp | There is an open conversation for this customer on the inapp channel. Make sure all the conversation from this customer on the specific channel are closed and retry. |
  | proactive_5000 | Unexpected error occured  | An internal error occured in sending this message. If this continues to fail, please contact LP support. |
  | proactive_5002 | Network error occured | Network error occured. If this continues to fail, please contact LP support. |
  | proactive_5403 | Internal error occured | There was an error in internal connector component. If this continues to fail, please contact LP support. |
