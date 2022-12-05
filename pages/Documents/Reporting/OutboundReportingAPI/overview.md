@@ -51,7 +51,7 @@ Outbound Reporting API provides the following data fields. This table explains t
 | 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
 | 10 | CSAT | Average of the CSAT rating score |
 
-*Delivered count for WhatsApp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notificationn will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
+Delivered count for the WhatsApp channel — For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only the read notificationn will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore, the delivered count can be less than the read count in such scenarios.
 
 **Full Funnel Overview board**
 
