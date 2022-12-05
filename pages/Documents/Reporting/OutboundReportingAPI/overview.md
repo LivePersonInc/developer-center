@@ -51,7 +51,7 @@ The Outbound Reporting API provides the following data fields. This table explai
 | 9 | Skipped | Count of messages that were not sent by the system since the phone numbers were opted out to receive any messages from the brand |
 | 10 | CSAT | Average of the CSAT rating score |
 
-Delivered count for the WhatsApp channel: For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notifications will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore the delivered count can be less than the read count in such scenarios.
+Delivered count for the WhatsApp channel: For a status to be read, it must have been delivered. In some scenarios, such as when a user is in the chat screen and a message arrives, the message is delivered and read almost simultaneously. In this or other similar scenarios, the delivered notification will not be sent and only read notifications will be sent by WhatsApp as it is implied that a message has been delivered if it has been read. Therefore, the delivered count can be less than the read count in such scenarios.
 
 #### Full funnel overview board
 
@@ -365,7 +365,7 @@ There are two versions of transaction APIs:
 
 | Version | Description |
 | :--- | :--- |
-| Version 2.0 (recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction id's along with channels and skills |
+| Version 2.0 (recommended) | New version with simplified way for pagination and with additional filtering on message status and transaction ids along with channels and skills |
 | Version 1.0 (deprecated) | Existing version of transaction API with filtering on channels and skills |
 
 ##### 1. Get details for Transactions - Version 2.0
@@ -777,9 +777,9 @@ For Connect To Messaging:
 - Sign in to [Connect To Messaging](https://connect-to-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for Connect To Messaging.
 - Click on the user icon at top right corner and see the version.
 
-#### 6. What is a LP data retention policy? And how long data is persisted for Outbound Reporting API?
+#### 6. What is LivePerson’s data retention policy? And how long data is persisted for Outbound Reporting API?
 
-Retention policy period is 13 months.
+The retention policy period is 13 months.
 
 #### 7. Is the Outbound Reporting API GDPR-compliant?
 
@@ -791,7 +791,7 @@ The caller can pull the data for a given 24-hour time interval from today or any
 
 #### 9. What date range is supported by the Outbound Reporting API to pull analytical data?
 
-The caller can pull the data for a given 60 day time interval from today or any previous day up to 13 months ago.
+The caller can pull the data for a given 60-day time interval from today or any previous day up to 13 months ago.
 
 #### 10. Does the Outbound Reporting API support pagination when providing the data? What is the max number of records users can retrieve in one request?
 
@@ -800,6 +800,6 @@ The caller can pull the data for a given 60 day time interval from today or any 
 - For Proactive Campaign API, pagination is not supported yet.
 - For Proactive Campaign Analytics API, pagination is not needed.
 
-#### 11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created?
+#### 11. Is the Outbound Reporting API real-time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created?
 
 Data in the Outbound Reporting API can be delayed by up to 20 minutes, i.e., a proactive campaign created now will take up to 20 min to be reflected in the Reporting API. Similarly, other messaging data like message delivered, opted out, conversation created, etc. will also take up to 20 min from the time the event occured.
