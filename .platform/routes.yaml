@@ -37,3 +37,5 @@ https://developers.liveperson.com:
         to: 'https://{default}/mobile-app-messaging-sdk-for-ios-overview.html'
       '/predefined-categories-api-methods-general.html':
         to: 'https://{default}/overview.html'
+      '/register.html':
+        to: 'https://www.liveperson.com/demo/'
