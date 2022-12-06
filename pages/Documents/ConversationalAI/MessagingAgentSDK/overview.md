@@ -7,7 +7,6 @@ permalink: messaging-agent-sdk-overview.html
 indicator: messaging
 ---
 
-{: .attn-deprecation}
 ## DEPRECATED
 
 {: .attn-deprecation}
