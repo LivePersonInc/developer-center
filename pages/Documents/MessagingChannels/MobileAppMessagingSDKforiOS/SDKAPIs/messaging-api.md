@@ -105,7 +105,8 @@ func getConversationBrandQuery(_ brandID: String, campaignInfo: LPCampaignInfo? 
 | brandID | brandID to request the conversation query for | -- |
 | campaignInfo | an optional campaign info (LPCampaignInfo) to use advanced routing for the consumer. This object based on campaignID(mandatory), engagementID(mandatory), contextID(mandatory), sessionID(optional) and visitorID(optional) |  -- |
 
-**Note:** For information about the how to initialize the SDK with MonitoringParams and get the Campaign, click [here](consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params).
+{: .attn-note}
+For information about the how to initialize the SDK with MonitoringParams and get the Campaign, [consult the quick start guide](mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html#step-3-initialize-the-lpmessagingsdk).
 
 ### getConversationConsumerQuery
 
@@ -231,7 +232,8 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 
 Use this API method to check if the active conversation, if existing, is marked as urgent; otherwise, it returns false.
 
-**Note:** You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.
+{: .attn-note}
+You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.
 
 ```swift
 func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool
@@ -322,7 +324,8 @@ func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPar
 
 Use this API method, in AppDelegate, to register to LPMessagingSDK push notifications.
 
-**Note:** Push notifications must be pre-configured, and you must upload an APN certificate to Conversational Cloud. For details, see [how to configure push notifications](push-service-overview.html).
+{: .attn-note}
+Push notifications must be pre-configured, and you must upload an APN certificate to Conversational Cloud. For details, see [how to configure push notifications](push-service-overview.html).
 
 ```swift
 func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)
@@ -366,7 +369,8 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note:** When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessaging.instance.removeConversation(self.conversationQuery!)`.
+{: .attn-note}
+When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessaging.instance.removeConversation(self.conversationQuery!)`.
 
 ### resolveConversation
 

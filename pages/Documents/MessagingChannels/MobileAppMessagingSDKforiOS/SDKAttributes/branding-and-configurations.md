@@ -1233,7 +1233,8 @@ Country code — when it is not nil, it will be combined with 'language' ("<lang
 
 The combined value has to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
 
-**Note:** The 24/12 Hours time style also will be affected by using the specific Locale when formatting times.
+{: .attn-note}
+The 24/12 hours time style also will be affected by using the specific Locale when formatting times.
 
 If no value is provided, the SDK will use the country according to the device's locale.
 
@@ -1308,34 +1309,20 @@ Status bar style in conversation screen.
 #### lpNavigationBarLeftItemImageButton
 LivePerson Navigation Bar Left Item custom button.
 
-**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
+   - **Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
+   - **Type:** UIImage?
+   - **Default value:**
 
-  **Type:** UIImage?
-
- **Default value:**
-
- <embed src="img/iosSDK/lpNavigationBarLeftItemImageButton_lpClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
- <div style="width: 50%;padding: 5px;">
- &nbsp;
- </div>
-
-
+      <embed src="img/iosSDK/lpNavigationBarLeftItemImageButton_lpClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### lpNavigationBarRightItemImageButton
 LivePerson Navigation Bar Right Item custom button.
 
-**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
-
-**Type:** UIImage?
-
-**Default value:**
-
-<embed src="img/iosSDK/lpNavigationBarRightItemImageButton_lpMore.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+    - **Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
+    - **Type:** UIImage?
+    - **Default value:**
+    
+      <embed src="img/iosSDK/lpNavigationBarRightItemImageButton_lpMore.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 ---
 
@@ -1356,7 +1343,8 @@ Enable or disable file/photo sharing feature from consumer.
 #### maxNumberOfSavedFilesOnDisk
 Max number of allowed saved files on disk. This refers only to full photo files.
 
-**Note:** The validation of allowed max number of files will take place when showing and removing conversations.
+{: .attn-note}
+The validation of allowed max number of files will take place when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20
@@ -1442,75 +1430,52 @@ The disabled/enabled color of the Camera button, which is in the input text view
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
 
-**Note:** This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
+{: .attn-note}
+This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
 
-**Type:** UIImage?
-
-**Default value:**
-<embed src="img/iosSDK/photoSharingOpenMenuImageButton_attachment.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** UIImage?
+- **Default value:**
+   <embed src="img/iosSDK/photoSharingOpenMenuImageButton_attachment.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
 
-**Note:** This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
+{: .attn-note}
+This property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` — depending on button state.
 
-**Type:** UIImage?
-
-**Default value:**
-<embed src="img/iosSDK/photoSharingCloseMenuImageButton_menuClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** UIImage?
+- **Default value:**
+   <embed src="img/iosSDK/photoSharingCloseMenuImageButton_menuClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### photoSharingMenuCameraImage
 Custom camera image in the photo sharing menu.
 
+{: .attn-note}
 **Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
-**Type:** UIImage?
-
-**Default value:**
-
-<embed src="img/iosSDK/photoSharingMenuCameraImage_Camera.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** UIImage?
+- **Default value:**
+   <embed src="img/iosSDK/photoSharingMenuCameraImage_Camera.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### photoSharingMenuLibraryImage
 Custom Library image in the photo sharing menu.
 
-**Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
+{: .attn-note}
+This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
 - **Type:** UIImage?
-
-**Default value:**
-
-<embed src="img/iosSDK/photoSharingMenuLibraryImage_gallery_menu.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+- **Default value:**
+   <embed src="img/iosSDK/photoSharingMenuLibraryImage_gallery_menu.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### fileSharingMenuFileImage
 Custom file image in the file sharing menu.
 
-**Note:** This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
+{: .attn-note}
+This property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`.
 
-**Type:** UIImage?
-
-**Default value:**
-
-<embed src="img/iosSDK/fileSharingMenuFileImage_document.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
-<div style="width: 50%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** UIImage?
+- **Default value:**
+   <embed src="img/iosSDK/fileSharingMenuFileImage_document.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### fileSharingUniversalFileThumbnailimage
 Image for custom the thumbnail of unsupported files in file sharing.
@@ -1720,18 +1685,12 @@ Send button Image in the conversation screen. The custom image changes only if `
 
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
 
-**Note:** This property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` — depending on state.
+{: .attn-note}
+This property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` — depending on state.
 
-**Type:** UIImage
-
- **Default value:**
-
- <embed src="img/iosSDK/sendButtonImage_sendMessageIcon.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
-
- <div style="width: 50%;padding: 5px;">
- &nbsp;
- </div>
-
+- **Type:** UIImage
+- **Default value:**
+   <embed src="img/iosSDK/sendButtonImage_sendMessageIcon.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
 #### isSendMessageButtonInTextMode
 Two options for the send message button mode:
@@ -2465,7 +2424,8 @@ When true, user and remote user messages containing one or two emojis will be en
 #### customButtonImage
 Custom button icon image that displays on the navigation bar.
 
-**Note:** This property gets its tintColor from `conversationNavigationTitleColor`.
+{: .attn-note}
+This property gets its tintColor from `conversationNavigationTitleColor`.
 
 When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdkcustombuttontapped) callback gets invoked.
 

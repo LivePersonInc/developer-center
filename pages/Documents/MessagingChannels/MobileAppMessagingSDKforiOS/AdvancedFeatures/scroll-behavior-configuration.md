@@ -85,7 +85,8 @@ configurations.conversationScrollConfiguration.scrollToBottomButtonPressed = Scr
 `pushNotificationTapped`
 scenario when a push notification is tapped.
 
-**Note:** This requires the call `LPMessagingSDK.instance.setPushNotificationTapped()` immediately after it is determined that a push notification was tapped.
+{: .attn-note}
+This requires the call `LPMessagingSDK.instance.setPushNotificationTapped()` immediately after it is determined that a push notification was tapped.
 
 Default option: **Bottom**
 

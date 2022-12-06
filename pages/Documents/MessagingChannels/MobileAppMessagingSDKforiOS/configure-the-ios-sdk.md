@@ -24,7 +24,6 @@ permalink: mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html
 indicator: messaging
 ---
 
-
 You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from Conversational Cloud to your app, and display consumer information to agents or vice versus.
 
 The most suitable time to customize configuration is right after the SDK initialization and before calling `showConversation()`.
@@ -41,7 +40,7 @@ The most suitable time to customize configuration is right after the SDK initial
    LPConfig.printAllConfigurations()
    ```
 
-### App Extensions
+### App extensions
 
 To make sure the SDK uses the iOS keyboard only, and not third party ones, disable app extensions for keyboard as follows:
 
@@ -50,13 +49,13 @@ In your **AppDelegate**, add the method application(_:shouldAllowExtensionPointI
 
 ```swift
 func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
-    return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
+  return extensionPointIdentifier != UIApplicationExtensionPointIdentifier.keyboard
  }
 ```
 
 ### Branding
 
-You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize.  For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
+You can customize the look and feel of your app using the `LPConfig` object. Create your configuration instance and assign the attributes you want to customize. For the list of all the attributes to can configure, see [Attributes](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html).
 
 **Example configuration:**
 
@@ -66,7 +65,7 @@ configuration.brandName = "Brand Name"
 configuration.remoteUserBubbleBorderWidth = 0.5
 ```
 
-### Conversations Lifecycle
+### Conversations lifecycle
 
 During the course of the conversation, consumers can take several actions such as Mark as urgent to receive a faster service, or Resolve conversation to let your agents know they have received their answers.
 
@@ -82,13 +81,13 @@ For information about the methods, see to [Messaging API](mobile-app-messaging-s
    public func checkActiveConversation(conversationQuery: ConversationParamProtocol) -> Bool
    ```
 
-* Mark the current conversation as Urgent:
+* Mark the current conversation as urgent:
 
    ```swift
    public func markAsUrgent(conversationQuery: ConversationParamProtocol)
    ```
 
-* Check if the current conversation is marked as Urgent:
+* Check if the current conversation is marked as urgent:
 
    ```swift
    public func isUrgent(conversationQuery: ConversationParamProtocol) -> Bool
@@ -116,7 +115,8 @@ For information about the methods, see to [Messaging API](mobile-app-messaging-s
    public func clearHistory(conversationQuery: ConversationParamProtocol) throws
    ```
 
-   **Note:** Use clear history only if there is no open/active conversation.
+  {: .attn-note}
+  Use clear history only if there is no open/active conversation.
 
 * Logout Current User from LPMessagingSDK:
 
@@ -169,15 +169,17 @@ For information about the methods, see to [Messaging API](mobile-app-messaging-s
    ```
 
 ### Customer Experience Survey
-The Customer Experience Survey contains the agent avatar, and by default, the agent's name is empty.  If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image displays in the view.  Also, if the conversation has an assigned agent, the agent's nickName is used.  If no avatar image, then the default avatar image displays with the background and tint color configuration for the agent bubble.
 
-The survey only shows if the CSAT configured to appear according to `LPConfig.defaultConfiguration.csatShowSurveyView`, the conversation has an assigned agent, or the CSAT wasn't previously submitted.  The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT.  The CSAT gets automatically dismissed if the consumer filled it in on another device.  If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.
+The Customer Experience Survey contains the agent avatar, and by default, the agent's name is empty. If the conversation has an assigned agent and its image was downloaded previously using profileUrl, this image displays in the view. Also, if the conversation has an assigned agent, the agent's nickName is used. If there's no avatar image, then the default avatar image displays with the background and tint color configuration for the agent bubble.
 
-**Note:** When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
+The survey only shows if the CSAT configured to appear according to `LPConfig.defaultConfiguration.csatShowSurveyView`, the conversation has an assigned agent, or the CSAT wasn't previously submitted. The survey gets dismissed when the user completes the survey and then presses the submit button or if they chose to skip the CSAT. The CSAT gets automatically dismissed if the consumer filled it in on another device. If the CSAT is visible when an agent resumes the conversation, the CSAT gets dismissed automatically.
+
+{: .attn-note}
+When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
-    LPMessaging.instance.removeConversation(self.conversationQuery!)
+  LPMessaging.instance.removeConversation(self.conversationQuery!)
 }
 ```
 
@@ -221,7 +223,7 @@ When ViewController Mode is used, on the Navigation Bar Back Button, you can sim
 
 **Example configuration:**
 
- ```swift
+```swift
 let configuration = LPConfig.defaultConfiguration
 configuration.csatSubmitButtonBackgroundColor = UIColor.lightGray
 configuration.csatRatingButtonSelectedColor = UIColor.lightGray
@@ -271,7 +273,7 @@ configuration.csatNavigationBackgroundColor = UIColor.lightGray
 
 For more details on the different attributes you are able to customize, refer to [Attributes](mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html#surveys-buttons-csat-and-fcr).
 
-### Logs and Info
+### Logs and info
 
 Send logs from Conversational Cloud to your app. Logs include different severity levels of errors and warnings.
 
@@ -281,7 +283,8 @@ Send logs from Conversational Cloud to your app. Logs include different severity
    public func setLoggingLevel( level: LPLoggingLevel)
    ```
 
-    **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
+  {: .attn-note}
+  Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
 
 * Triggered when the SDK version you're using is obselete and needs an update:
 
@@ -313,7 +316,7 @@ Send logs from Conversational Cloud to your app. Logs include different severity
    public func getAllSupportedLanguages() -> [String : String]
    ```
 
-### LPMessagingSDK Delegates
+### LPMessagingSDK delegates
 
 The SDK uses 2 delegates:
 
@@ -331,7 +334,7 @@ The SDK uses 2 delegates:
 
 You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.
 
-#### Conversation Functions
+#### Conversation functions
 
 * Get the conversation screen and determine which of the conversations to display in the Conversation Window.
 
@@ -423,8 +426,9 @@ You can customize the messaging screen by adding more options to the LPMessaging
 
 For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
 
-### Push Notifications
-Currently, our default flow for the process of loading the Conversation View Controller (such as registering with several of our internal domains) also registers the consumer to our Push Notification service. If this is not desired, you can now opt out of this process by setting the following flag to "false".  The default is set to "true", and in order for the changes to take effect the consumer must log out of the LPMessagingSDK:
+### Push notifications
+
+Currently, our default flow for the process of loading the Conversation View Controller (such as registering with several of our internal domains) also registers the consumer to our Push Notification service. If this is not desired, you can now opt out of this process by setting the following flag to "false". The default is set to "true", and in order for the changes to take effect the consumer must log out of the LPMessagingSDK:
 
 ```swift
 configuration.enableLpPusherService: Bool = true
@@ -434,7 +438,8 @@ configuration.enableLpPusherService: Bool = true
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.
 
-**Note:** The following methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode).
+{: .attn-note}
+The following methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode).
 
 * Change the state of the action menu of the conversation for brandID:
 
@@ -442,7 +447,8 @@ To determine the layout of messaging within the app, you can utilize various act
    public func toggleChatActions(accountID: String, sender: UIBarButtonItem? = nil)
    ```
 
-   **Note:** Refer to [[Messaging API](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#togglechatactions) to learn more about `toggleChatActions`.
+  {: .attn-note}
+  Refer to [[Messaging API](mobile-app-messaging-sdk-for-ios-sdk-apis-messaging-api.html#togglechatactions) to learn more about `toggleChatActions`.
 
 * Triggered each time the SDK menu is opened/closed:
 
@@ -462,11 +468,12 @@ To determine the layout of messaging within the app, you can utilize various act
    <LPMessagingSDKdelegate> optional func LPMessagingSDKOffHoursStateChanged(isOffHours: Bool, brandID: String)
    ```
 
-### User Data
+### User data
 
 Pass and display consumer information to agents, and agent information to consumers.
 
-**Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
+{: .attn-note}
+Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
 
 * Set the user profile on Conversational Cloud:
 

@@ -31,7 +31,7 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 - The SDK must be initialized with the `LPMonitoringInitParams` object.
 
-### Notes and Best Practices
+### Notes and best practices
 
 * To start a conversation with a specific campaign and engagement, provide an `LPCampaignInfo` object to the `LPConversationViewParams` object.
 
@@ -41,13 +41,13 @@ While web messaging allows automatic capturing of events (using the Web Tag), wh
 
 ### Monitoring APIs
 
-The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions.  Monitoring APIs include:
+The Monitoring APIs provide brands access to the LivePerson monitoring system. The eligibility of an engagement is based on campaigns and an engagement's definitions. Monitoring APIs include:
 
 * [sendSDE](consumer-experience-ios-sdk-monitoring-methods.html) - Sends engagement attributes to LivePerson. Use whenever the app would like to report on an engagement attribute.
 
 * [getEngagement](consumer-experience-ios-sdk-monitoring-methods.html) - Returns an engagement if there is a matching campaign and engagement. Use to send engagement attributes (as part of the request body) as well.
 
-### Code Samples
+### Code samples
 
 ```swift
 // 1. Init SDK with Monitoring
