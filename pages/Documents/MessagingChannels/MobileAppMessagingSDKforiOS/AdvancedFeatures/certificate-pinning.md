@@ -14,21 +14,22 @@ Certificate Pinning allows increased security on top of the commonly used SSL pr
 
 In order to use Certificate Pinning, the brand will need to go through an on-boarding process. This process includes setting up the Vanity URL feature, which is a prerequisite to using Certificate Pinning. The on-boarding process includes the following steps:
 
-  * Request to use the feature from the account team.
+* Request to use the feature from the account team.
 
-  * Filling the Vanity URL feature request form.
+* Filling the Vanity URL feature request form.
 
-  * Purchasing a SAN certificate according to a CSR which will be provided by the account team.
+* Purchasing a SAN certificate according to a CSR which will be provided by the account team.
 
-  * Providing the purchased certificate to LivePerson.
+* Providing the purchased certificate to LivePerson.
 
-  * LivePerson internal configuration.
+* LivePerson internal configuration.
 
 The duration of the on-boarding process will be according to LivePerson's SLA.
 
-### Using the Feature
+### Using the feature
 
-   **Please note** - Using the described functionality without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
+{: .attn-note}
+Using the described functionality without having the feature configured will result in failures while trying to communicate with LivePerson’s servers.
 
 ### iOS
 
@@ -43,11 +44,11 @@ In order to add the feature on iOS, please perform the following steps:
 The configuration should be added anywhere inside the code **before** calling the method `showConversation(conversationViewParams, authenticationParams: authenticationParams)`
 
 {:start="2"}
-2. Adding the public keys to the SDK — The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
+2. Adding the public keys to the SDK: The brand should extract the public keys of the SAN certificate that was provided to LivePerson. The keys should be added to the object `LPAuthenticationParams`.
 
 Multiple keys can be added, as long as one of the keys will match the returned key, the connection will be initiated.
 
-#### Code Sample
+#### Code sample
 
 ```swift
 func certPinningExample() {

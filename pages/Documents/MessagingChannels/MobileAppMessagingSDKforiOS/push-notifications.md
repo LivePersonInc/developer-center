@@ -19,7 +19,7 @@ For push notifications to work, you must have a physical device and two .pem fil
 
 Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-start.html) and you are now ready to implement and enable features.
 
-### Step 1. Set up push notifications in your project
+### Step 1: Set up push notifications in your project
 
 1. In your Xcode project, under **Capabilities**, flip the toggle on for the following:
 
@@ -72,7 +72,7 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
    {: .attn-note}
    The proprietary SDK notification is only for display purposes, interacting with it launches the app, but does not navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
 
-### Step 2. Create a Certificate Signing Request
+### Step 2: Create a Certificate Signing Request
 
 In this step, you create a Certificate Signing Request (CSR) file that contains a public/private key pair. With this file, you create a key file with a password and a certificate file using a pem format.
 
@@ -92,7 +92,7 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
 
 5. Click **Save**.
 
-### Step 3. Create the SSL certificate
+### Step 3: Create the SSL certificate
 
 1. Go to your Apple Developer Portal, under Push Notification, select **Apple Push Notifications service SSL Certificates** and then click **Create Certificate** for either Development or Production.
 
@@ -166,9 +166,9 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
 This method should be called before calling 'logout' on the SDK.
 
 ```swift
-    LPMessaging.instance.unregisterPusher(brandId: "ACCOUNT_NUM", completion: {
+LPMessaging.instance.unregisterPusher(brandId: "ACCOUNT_NUM", completion: {
 
-    }) { error in
+}) { error in
 
-    }
+}
 ```

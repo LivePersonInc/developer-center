@@ -68,7 +68,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
    open -a Xcode Podfile
    ```
 
-   Add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name to YOUR target name:
+   Add the **LPMessagingSDK** pod to integrate it into your Xcode project. Make sure you change the target name to **your** target name:
 
    ```ruby
   platform :ios, '13.0'

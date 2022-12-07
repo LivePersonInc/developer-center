@@ -12,25 +12,25 @@ indicator: messaging
 
 You can find all the related configurations in the resources ID table, under Survey Screen.
 
+[comment]: <> TODO: Refactor
 <div class="flex gap-16 flex-col-mobile">
-   <div>
-   <p><b>Show CSAT if:</b></p>
-      <ul>
-         <li>CSAT configured to appear according to: <br><code>LPConfig.defaultConfiguration.csatShowSurveyView</code></li>
-         <li>Conversation has an assigned agent.</li>
-         <li>Conversation’s CSAT wasn’t previously submitted.</li>
-      </ul>
-   </div>
-
-   <div>
-   <p><b>Dismiss CSAT if:</b></p>
-      <ul>
-         <li>User presses the submit button (answers get sent to the survey).</li>
-         <li>User chooses to skip the CSAT (skipped button pressed).</li>
-         <li>User fills in the CSAT details on another device.</li>
-         <li>If the CSAT is visible and the agent resumed the conversation.</li>
-      </ul>
-   </div>
+  <div>
+    <p><b>Show CSAT if:</b></p>
+    <ul>
+      <li>CSAT configured to appear according to: <br><code>LPConfig.defaultConfiguration.csatShowSurveyView</code></li>
+      <li>Conversation has an assigned agent.</li>
+      <li>Conversation’s CSAT wasn’t previously submitted.</li>
+    </ul>
+  </div>
+  <div>
+    <p><b>Dismiss CSAT if:</b></p>
+    <ul>
+      <li>User presses the submit button (answers get sent to the survey).</li>
+      <li>User chooses to skip the CSAT (skipped button pressed).</li>
+      <li>User fills in the CSAT details on another device.</li>
+      <li>If the CSAT is visible and the agent resumed the conversation.</li>
+    </ul>
+  </div>
 </div>
 
 ---
@@ -44,6 +44,7 @@ The CSAT screen includes several content containers:
 * [csatResolutionHidden (yes/no)](#csatresolutionhidden-yesno)
 
 ### Custom View Controller Mode requirements
+
 When using Custom View Controller Mode, the Conversation view must be removed when leaving the App. To avoid dismissing the View when CSAT/SecureForms/PhotoSharing View is presented, you should only dismiss the Conversation view if Moving From ParentView, as demonstrated below.
 
 ```swift
@@ -52,7 +53,8 @@ if (self.conversationQuery != nil && self.isMovingToParentViewController){
 }
 ```
 
-**Note:** When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
+{: .attn-note}
+When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
 
 ### csatAgentViewHidden (avatar and agent name)
 
@@ -72,8 +74,8 @@ LPConfig.defaultConfiguration.csatAgentAvatarIconColor
 ```
 
 - Contains agent name:
-	- By default it’s an empty label.
-	- If conversation has assigned agent, the agent’s nickName will be used.
+  - By default it’s an empty label.
+  - If conversation has assigned agent, the agent’s nickName will be used.
 
 ### csatRatingButtonSelectedColor (stars)
 

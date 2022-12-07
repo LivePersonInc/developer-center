@@ -13,7 +13,8 @@ indicator: messaging
 {: .attn-alert}
 This guide was written for SDK v2.8.3.0, iOS 11.0, and Swift 4.
 
-**Note:** Once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior.
+{: .attn-note}
+Once your app is capable of receiving Push Notifications, you can customize the way In-App notifications are displayed, and their behavior.
 
 ### Step 0: Adding Push Notifications (Optional)
 
@@ -167,7 +168,8 @@ return view
 view.backgroundColor = UIColor(red:0.04, green:0.00, blue:0.00, alpha:0.8)
 ```
 
-**Note:** You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
+{: .attn-note}
+You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
 
   - To change the color of the Text shown on the Toast:
 
@@ -176,7 +178,8 @@ view.backgroundColor = UIColor(red:0.04, green:0.00, blue:0.00, alpha:0.8)
 NSAttributedStringKey.foregroundColor : UIColor.white,
 ```
 
-**Note:** You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
+{: .attn-note}
+You can select a color from the available ones on the UIColor [Library](https://developer.apple.com/documentation/uikit/uicolor), or you can use UIColor(red:green:blue:alpha:) to create your own.
 
   - To change the Font or Size of the Text shown on the Toast:
 
@@ -194,7 +197,7 @@ let toast = Toast().getView(message: notification.text)
 return toast
 ```
 
-**Note:** Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
+Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
 
 - **text**: Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
 
@@ -217,7 +220,8 @@ view.isUserInteractionEnabled = true
 view.tag = 0xDEADBEEF
 ```
 
-**Note:** With this action, we are performing two things: we enable the UIView for user interaction, and we give the UIView a tag so we can reference it later.
+{: .attn-note}
+With this action, we are performing two things: we enable the UIView for user interaction, and we give the UIView a tag so we can reference it later.
 
 2. On your **AppDelegate** locate the **LPMessagingSDKNotification(customLocalPushNotificationView notification:** method and before your return statement add the following:
 
