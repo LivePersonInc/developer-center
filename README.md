@@ -2,7 +2,7 @@
 
 # LivePerson’s Developer Center and Community
 
-**⚠️ The LivePerson Developer Center is in the process of being moved to a new, internal-only repository. LivePerson teams can reach out to LivePerson’s DX team for further details.**
+**⚠️ The LivePerson Developer Center has been moved to a new, internal-only repository. LivePerson teams can reach out to LivePerson’s DX team for further details.**
 
 This site is maintained by LivePerson’s Developer Experience team.
 
